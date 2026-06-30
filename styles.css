@@ -282,6 +282,52 @@ h1 {
   font-family: Arial, sans-serif;
   font-size: 17px;
 }
+.chat-drama {
+  display: grid;
+  gap: 22px;
+  font-size: 18px;
+}
+.chat-scene {
+  border: 1px solid var(--line);
+  background: #fffaf0;
+  border-radius: 6px;
+  padding: 18px;
+}
+.chat-scene h2 {
+  margin: 0 0 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+  font-family: Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.25;
+  color: #6d4930;
+}
+.chat-line {
+  margin: 0;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(91, 67, 48, .12);
+  line-height: 1.48;
+}
+.chat-line:last-child {
+  border-bottom: 0;
+}
+.chat-line strong {
+  display: inline;
+  color: var(--ink);
+  font-family: Arial, sans-serif;
+}
+.chat-line span {
+  color: #2f2a24;
+}
+.scene-note {
+  margin: 10px 0;
+  padding: 10px 12px;
+  background: #f2eadc;
+  border-left: 3px solid var(--accent);
+  color: var(--muted);
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
 .share-box {
   margin-top: 34px;
   padding: 18px;
