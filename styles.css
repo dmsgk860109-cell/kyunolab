@@ -55,10 +55,14 @@ a:hover { color: var(--accent); }
   width: 46px;
   height: 46px;
   background: var(--ink);
-  color: #fff;
   border-radius: 4px;
-  font-family: Arial, sans-serif;
-  font-weight: 800;
+  flex: 0 0 46px;
+  overflow: hidden;
+}
+.brand-mark img {
+  display: block;
+  width: 46px;
+  height: 46px;
 }
 .brand strong {
   display: block;

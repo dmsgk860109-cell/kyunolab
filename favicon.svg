@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Kyunolab archive icon">
+  <rect width="512" height="512" rx="72" fill="#141311"/>
+  <path d="M154 104h162l48 48v256H154z" fill="#f2ead8"/>
+  <path d="M316 104v58h48z" fill="#d8cbb6"/>
+  <path d="M190 178h132" stroke="#141311" stroke-width="18" stroke-linecap="round" opacity=".82"/>
+  <path d="M190 228h112" stroke="#141311" stroke-width="16" stroke-linecap="round" opacity=".35"/>
+  <path d="M190 272h94" stroke="#141311" stroke-width="16" stroke-linecap="round" opacity=".28"/>
+  <circle cx="338" cy="338" r="38" fill="#6f211d"/>
+  <path d="M338 307l9 20 22 2-17 15 5 22-19-11-19 11 5-22-17-15 22-2z" fill="#c8aa72" opacity=".9"/>
+</svg>
