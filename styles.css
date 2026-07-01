@@ -1,9 +1,9 @@
 :root {
   --ink: #191919;
   --muted: #64615d;
-  --line: #D8E0EA;
-  --paper: #F7F9FC;
-  --panel: #EEF3F8;
+  --line: #E1E7EF;
+  --paper: #FCFDFE;
+  --panel: #F6F8FB;
   --accent: #b3261e;
   --accent-2: #1f5f5b;
   --gold: #c98b2c;
@@ -138,7 +138,7 @@ h1 {
 .notice {
   margin: 24px 0;
   padding: 16px 18px;
-  background: #F0F5FB;
+  background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 4px;
   font-family: Arial, sans-serif;
