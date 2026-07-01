@@ -510,6 +510,23 @@ textarea {
   font: 14px/1.45 Arial, sans-serif;
   background: #fff;
 }
+.ad-slot {
+  display: grid;
+  place-items: center;
+  min-height: 120px;
+  margin: 28px 0;
+  border: 1px dashed #cfc7ba;
+  border-radius: 4px;
+  background: #faf6ee;
+  color: var(--muted);
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.ad-slot[data-empty="true"] {
+  display: none;
+}
 @media (max-width: 850px) {
   .header-inner, .hero, .ranking-grid { grid-template-columns: 1fr; }
   .header-inner {
