@@ -58,3 +58,46 @@ The site should immediately communicate:
 - strange places
 - fantasy-like mysteries
 - source-aware retellings
+
+## Article Data Fields
+
+Every story entry should define:
+
+- title
+- slug
+- metaTitle
+- metaDescription
+- category
+- tag
+- readTime
+- storyType
+- sourceStatus
+- excerpt
+- publishedAt or updatedAt
+- relatedStoryIds
+
+## Standard Article Structure
+
+1. Article header with category, tag, read time, story type, source status, date, title, and deck.
+2. Opening hook of roughly 150 to 250 words.
+3. Story Map table of contents near the top.
+4. Main H2 sections:
+   - What Is [Main Keyword]?
+   - The Most Famous Version of the Story
+   - Where the Story May Have Started
+   - How the Legend Changed Over Time
+   - Why People Kept Telling It
+   - Similar Legends and Related Stories
+   - Is There Any Truth Behind It?
+   - Why the Story Still Works Today
+   - Story & Source Note
+5. Related articles with specific internal link text.
+6. Previous and next article navigation when useful.
+
+## SEO Rules
+
+- H1 should combine the main keyword, a question or curiosity gap, and a story-like angle.
+- Meta title should stay close to the H1 and avoid clickbait.
+- Meta description should aim for about 140 to 160 characters, include the keyword naturally, and describe the actual article.
+- H2 headings should include related search phrases naturally.
+- Avoid generic anchors such as "click here" or "read more."
