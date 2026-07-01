@@ -3,19 +3,19 @@
   "short_name": "Kyunolab",
   "icons": [
     {
-      "src": "/favicon.svg?v=20260701-t",
+      "src": "/favicon.svg?v=20260702-cold-clean",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
     },
     {
-      "src": "/apple-touch-icon.png?v=20260701-t",
+      "src": "/apple-touch-icon.png?v=20260702-cold-clean",
       "sizes": "180x180",
       "type": "image/png",
       "purpose": "any"
     }
   ],
-  "theme_color": "#141311",
-  "background_color": "#fffdf8",
+  "theme_color": "#102A56",
+  "background_color": "#FAFDFF",
   "display": "minimal-ui"
 }
