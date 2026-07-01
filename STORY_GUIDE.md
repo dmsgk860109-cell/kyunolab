@@ -1,86 +1,60 @@
 # Story Guide
 
-Use `Board President's Daughter / New Tenant / Package Locker Log` as the quality reference for future stories.
+The Strange Archive is a quiet story publication for legends, folklore, mysteries, strange places, mythic creatures, and fantasy-like tales from the edges of memory.
 
-Kyunolab stories are dialogue-driven fictional drama scenes. They should feel like tense scenes from a realistic television drama, with the emotional payoff of a movie ending.
+The site should feel like a calm archive, not a fear site, gossip site, crime site, or sensational horror site.
 
-Do not describe, prompt, title, summarize, categorize, or format Kyunolab stories as chat, SMS, messenger, or text-message content. Dialogue is the delivery method. Drama is the product.
+## Core Direction
 
-## Banned Terms
+- Preserve curiosity, atmosphere, and ambiguity.
+- Treat legends and rumors as stories, traditions, interpretations, or retellings unless reliable sources support them as fact.
+- Prefer careful language: "some versions say," "the origin is uncertain," "in later retellings," "one common version suggests."
+- Avoid overclaiming, panic framing, graphic detail, gore, crime-focused framing, and direct fear exaggeration.
+- Write in an elegant magazine/archive voice with short, readable paragraphs.
+- Do not copy the wording or structure of reference sites. Use them only as mood references.
 
-Do not use these terms in prompts, metadata, headings, titles, summaries, categories, share text, or visible story content:
+## Content Types
 
-- chat
-- SMS
-- text message
-- messenger
-- message thread
-- chat log
-- chat window
-- messaging app
-- messenger-style
-- text conversation
-- phone messages
+- Urban Legends
+- Internet Folklore
+- Classic Folklore
+- Mythic Creatures
+- Strange Places
+- Unexplained Mysteries
+- Legend Origins
 
-Use these terms instead:
+## Source & Fiction Notice
 
-- dialogue-driven drama
-- dialogue-format fiction
-- fictional dialogue drama
-- drama scene
-- screenplay-style tension
-- conversation-driven story
-- cinematic payoff
-- dramatic exchange
-- dialogue sequence
+Every entry should make its status clear:
 
-## Core Pattern
+- documented tradition
+- public-domain source
+- modern retelling
+- speculative interpretation
+- original work inspired by folklore
 
-- Keep the cast focused.
-- Build the conflict through repeated small violations.
-- Let the antagonist rely on social position, informal privilege, or local status.
-- Let a neutral evidence system expose the truth.
-- Make the antagonist lose the exact privilege they abused.
-- Give the victim a visible practical win.
-- End with one strong final image.
-
-## Preferred Cast Shape
-
-- 1 victim with a clear vulnerable position.
-- 1 antagonist with clear social or positional power.
-- 1 authority figure who can make the consequence official.
-- 1 helper or quiet witness only if needed.
-- 1 evidence/system speaker such as a log, receipt, file history, approval record, or timestamp record.
-
-Keep total speaker labels at 5 or fewer.
-
-## Story Rhythm
-
-1. Start inside the ordinary conflict.
-2. Show the power imbalance within the first 10 dialogue exchanges.
-3. Add at least two small unfair moments before the main public line-crossing.
-4. Let the antagonist pressure, mock, dismiss, or threaten the victim.
-5. Seed evidence early without explaining it too much.
-6. Delay the reveal until the conflict has had time to tighten.
-7. Let the antagonist double down before the record appears.
-8. Reveal the truth through evidence, records, timestamps, witnesses, or official review.
-9. Make the consequence match the abuse.
-10. Show the victim receiving relief, protection, recognition, money, opportunity, status, or peace.
+Do not present folklore, rumors, or internet legends as verified fact unless reliable sources support them.
 
 ## Tone
 
-- Dialogue-format fiction, not a report or summary.
-- Drama-scene tension, not literary narration or app-like formatting.
-- Short bracketed action beats when silence, embarrassment, hesitation, or pressure needs to be visible.
-- Role-based speaker labels that instantly show who has power and who is being pressured.
-- Clearly fictional, with no real people, real companies, or real public figures.
-- Do not use long narration, inner monologue, poetic prose, timestamps unless they are evidence, or any interface-like framing.
-- Write as if a camera is watching the pressure, pauses, public humiliation, reversal, and final image.
+- Quiet
+- Curious
+- Atmospheric
+- Source-aware
+- Classic
+- Slightly mysterious
+- Never gore-centered
+- Never sensational
 
-## Ending Standard
+## Homepage Promise
 
-The antagonist should not simply leave or go quiet. The ending should make them lose face, control, credibility, money, access, authority, status, or emotional dominance.
+Strange legends. Forgotten folklore. Mysteries that refuse to disappear.
 
-The victim should receive a practical visible win in the same social space where they were pressured or humiliated.
+The site should immediately communicate:
 
-Truth revealed is not the ending. The consequence landing is the ending. The antagonist reacting to the consequence is part of the ending. The victim receiving visible relief or gain is part of the ending.
+- urban legends
+- internet folklore
+- old myths
+- strange places
+- fantasy-like mysteries
+- source-aware retellings
