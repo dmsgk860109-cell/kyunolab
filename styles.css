@@ -110,6 +110,7 @@ h1 {
   line-height: .94;
   letter-spacing: 0;
   margin: 10px 0 20px;
+  overflow-wrap: break-word;
 }
 .hero-copy p:last-child {
   font-size: 20px;
@@ -523,7 +524,19 @@ textarea {
 }
 @media (max-width: 560px) {
   .category-grid { grid-template-columns: 1fr; }
+  .hero-copy, .feature-card, .brand, .brand > span:last-child {
+    min-width: 0;
+  }
   .brand strong { font-size: 21px; }
+  .nav {
+    gap: 10px;
+    font-size: 13px;
+  }
+  h1 { font-size: 28px; }
+  .feature-card h2 { font-size: 23px; }
+  .hero-copy p, .feature-card h2, .feature-card p {
+    overflow-wrap: break-word;
+  }
   .story-row h3 { font-size: 25px; }
   .ranking-card a { font-size: 20px; }
   .article-meta-grid, .related-grid, .prev-next { grid-template-columns: 1fr; }
