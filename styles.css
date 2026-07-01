@@ -15,6 +15,7 @@ body {
   color: var(--ink);
   background: var(--paper);
   line-height: 1.55;
+  overflow-x: hidden;
 }
 a { color: inherit; text-decoration: none; }
 a:hover { color: var(--accent); }
@@ -235,11 +236,53 @@ h1 {
   grid-template-columns: repeat(4, 1fr);
   gap: 14px;
 }
-.category-grid a {
+.category-grid > a,
+.category-hub article {
   border: 1px solid var(--line);
   background: #fffaf0;
   padding: 18px;
   border-radius: 4px;
+}
+.category-hub {
+  grid-template-columns: repeat(3, 1fr);
+}
+.category-hub article {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.category-hub h3 {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.1;
+}
+.category-hub p {
+  margin: 0;
+  color: var(--muted);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+.category-links {
+  display: grid;
+  gap: 8px;
+  margin-top: auto;
+}
+.category-links a {
+  display: block;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+.text-link {
+  color: var(--accent);
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .07em;
+  text-transform: uppercase;
 }
 .category-grid strong {
   display: block;
@@ -250,6 +293,59 @@ h1 {
   color: var(--muted);
   font-family: Arial, sans-serif;
   font-size: 14px;
+}
+.compact-grid,
+.board-items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.compact-grid a,
+.board-items a {
+  border: 1px solid var(--line);
+  background: #fffaf0;
+  border-radius: 4px;
+  padding: 17px;
+}
+.compact-grid span,
+.board-items span {
+  display: block;
+  color: var(--accent);
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .07em;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.compact-grid strong,
+.board-items strong {
+  display: block;
+  font-size: 20px;
+  line-height: 1.15;
+}
+.board-items {
+  grid-template-columns: repeat(3, 1fr);
+}
+.archive-cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 22px;
+  margin-top: 34px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--panel);
+}
+.archive-cta h2 {
+  margin: 6px 0 8px;
+  font-size: 30px;
+  line-height: 1.08;
+}
+.archive-cta p {
+  margin: 0;
+  color: #3e3933;
 }
 .site-footer {
   border-top: 1px solid var(--line);
@@ -534,27 +630,86 @@ textarea {
     flex-direction: column;
   }
   .nav { width: 100%; }
-  .category-grid { grid-template-columns: 1fr 1fr; }
+  .category-grid, .category-hub, .compact-grid, .board-items { grid-template-columns: 1fr 1fr; }
   .feature-card { min-height: 260px; }
   .article-meta-grid, .related-grid { grid-template-columns: 1fr 1fr; }
   .story-map ol { columns: 1; }
+  .archive-cta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
 @media (max-width: 560px) {
-  .category-grid { grid-template-columns: 1fr; }
-  .hero-copy, .feature-card, .brand, .brand > span:last-child {
+  .category-grid, .category-hub, .compact-grid, .board-items { grid-template-columns: 1fr; }
+  .hero,
+  .hero-copy,
+  .feature-card,
+  .notice,
+  .story-row,
+  .ranking-grid,
+  .ranking-card,
+  .side-panel,
+  .category-hub article,
+  .compact-grid a,
+  .board-items a,
+  .archive-cta,
+  .brand,
+  .brand > span:last-child {
     min-width: 0;
+    max-width: 100%;
+  }
+  main {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  .hero,
+  .notice,
+  .latest,
+  .board,
+  .categories,
+  .essential-reads,
+  .mystery-preview,
+  .archive-cta,
+  .story-row,
+  .section-head {
+    width: calc(100vw - 40px);
+  }
+  .feature-card {
+    width: calc(100vw - 40px);
+    padding: 24px 22px;
   }
   .brand strong { font-size: 21px; }
   .nav {
     gap: 10px;
     font-size: 13px;
   }
-  h1 { font-size: 28px; }
-  .feature-card h2 { font-size: 23px; }
-  .hero-copy p, .feature-card h2, .feature-card p {
-    overflow-wrap: break-word;
+  .section-head {
+    align-items: flex-start;
+    flex-direction: column;
   }
-  .story-row h3 { font-size: 25px; }
+  h1 { font-size: 25px; }
+  .feature-card h2 { font-size: 21px; }
+  h1,
+  h2,
+  h3,
+  a,
+  strong,
+  span,
+  .hero-copy p,
+  .feature-card h2,
+  .feature-card h2 a,
+  .feature-card p,
+  .story-row h3,
+  .story-row h3 a,
+  .story-row p,
+  .compact-grid strong,
+  .board-items strong,
+  .archive-cta h2 {
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+  .story-row h3 { font-size: 22px; }
   .ranking-card a { font-size: 20px; }
   .article-meta-grid, .related-grid, .prev-next { grid-template-columns: 1fr; }
   .article-title { font-size: 36px; }
