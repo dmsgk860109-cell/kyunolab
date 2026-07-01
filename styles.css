@@ -355,6 +355,29 @@ h1 {
   font-family: Arial, sans-serif;
   font-weight: 700;
 }
+.related-inline span {
+  display: block;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .07em;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+.related-inline strong {
+  display: block;
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1.2;
+}
+.faq-list {
+  margin-top: 12px;
+}
+.faq-list h3 {
+  margin-top: 1.35em;
+  padding-top: 1em;
+  border-top: 1px solid var(--line);
+}
 .related-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
