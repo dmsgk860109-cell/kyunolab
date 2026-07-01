@@ -209,6 +209,65 @@ Ads nearby:
 
 - `ad-article-after-story-map` may appear after it
 
+## ArticleRail
+
+Purpose: Keep article navigation and recommended paths visible while the reader is inside a story.
+
+Appears on:
+
+- article pages
+
+Required data:
+
+- current article section anchors
+- current category URL
+- archive index URL
+- source notice URL
+- read-next article
+- 3 related records
+- broader archive shelf links
+
+Desktop behavior:
+
+- left rail shows in-article navigation and archive paths
+- right rail shows read-next, related records, and broader shelf links
+- rails may be sticky
+- rails must not overlap the article body
+
+Mobile behavior:
+
+- rails stack below the main article content
+- no sticky behavior on mobile
+- links remain tappable and readable
+
+Ad relationship:
+
+- do not place ads inside rail cards
+- rail cards are navigation, not ad inventory
+
+## ReadingBridge
+
+Purpose: Provide an early, in-flow set of related paths before the reader reaches the bottom of the article.
+
+Appears on:
+
+- article pages, usually after StoryMap and before the main body
+
+Required data:
+
+- 2 related records
+- 1 category or archive shelf link
+
+Mobile behavior:
+
+- single column
+- should appear before long body content
+
+Ad relationship:
+
+- no ad inside the bridge
+- `ad-article-after-story-map` may appear near it only if clearly separated
+
 ## MetadataBlock
 
 Purpose: Show category, tag, read time, story type, source status, and date.
