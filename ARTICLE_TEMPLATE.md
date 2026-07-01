@@ -2,6 +2,30 @@
 
 Copy this file when drafting a new Kyunolab article. Replace bracketed placeholders before publishing.
 
+## How to Use This Template
+
+This template is a flexible article scaffold, not a fixed article limit.
+
+Use it to make sure each Kyunolab article has the necessary structure, metadata, source-awareness, FAQ, related links, and final QA. Do not cut, omit, or compress useful content just to fit the template.
+
+If the topic needs more depth, add extra H2 or H3 sections. If a section grows too large, split it into smaller sections instead of cutting it.
+
+If the topic is simple, merge or remove unnecessary optional sections. Optional sections may be added, removed, renamed, or expanded depending on the topic.
+
+Keep required elements unless there is a strong reason:
+
+- Article metadata
+- Source Status
+- Story Map
+- FAQ
+- Story & Source Note
+- Related Articles
+- Final QA Checklist
+
+The article should follow the topic's natural shape while preserving Kyunolab's calm, mysterious, archival tone and fact-safety rules.
+
+If the article becomes too broad, recommend splitting it into a series or separate related articles.
+
 ## Article Brief
 
 - Working title: [TITLE]
