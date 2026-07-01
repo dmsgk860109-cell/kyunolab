@@ -1,103 +1,375 @@
-# Story Guide
+# Kyunolab Article Writing Rules v1
 
-The Strange Archive is a quiet story publication for legends, folklore, mysteries, strange places, mythic creatures, and fantasy-like tales from the edges of memory.
+## 1. Core Identity
 
-The site should feel like a calm archive, not a fear site, gossip site, crime site, or sensational horror site.
+Kyunolab is a quiet archive of strange stories.
 
-## Core Direction
-
-- Preserve curiosity, atmosphere, and ambiguity.
-- Treat legends and rumors as stories, traditions, interpretations, or retellings unless reliable sources support them as fact.
-- Prefer careful language: "some versions say," "the origin is uncertain," "in later retellings," "one common version suggests."
-- Avoid overclaiming, panic framing, graphic detail, gore, crime-focused framing, and direct fear exaggeration.
-- Write in an elegant magazine/archive voice with short, readable paragraphs.
-- Do not copy the wording or structure of reference sites. Use them only as mood references.
-
-## Content Types
-
-- Urban Legends
-- Internet Folklore
-- Classic Folklore
-- Mythic Creatures
-- Strange Places
-- Unexplained Mysteries
-- Legend Origins
-
-## Source & Fiction Notice
-
-Every entry should make its status clear:
-
-- documented tradition
-- public-domain source
-- modern retelling
-- speculative interpretation
-- original work inspired by folklore
-
-Do not present folklore, rumors, or internet legends as verified fact unless reliable sources support them.
-
-## Tone
-
-- Quiet
-- Curious
-- Atmospheric
-- Source-aware
-- Classic
-- Slightly mysterious
-- Never gore-centered
-- Never sensational
-
-## Homepage Promise
-
-Strange legends. Forgotten folklore. Mysteries that refuse to disappear.
-
-The site should immediately communicate:
+The site covers:
 
 - urban legends
-- internet folklore
-- old myths
+- folklore
+- myths
 - strange places
-- fantasy-like mysteries
-- source-aware retellings
+- unexplained mysteries
+- internet folklore
+- eerie cultural stories
+- fictionalized retellings based on public folklore patterns
 
-## Article Data Fields
+The tone should feel:
 
-Every story entry should define:
+- calm
+- literary
+- mysterious
+- archival
+- source-aware
+- thoughtful
+- readable
 
-- title
-- slug
-- metaTitle
-- metaDescription
-- category
-- tag
-- readTime
-- storyType
-- sourceStatus
-- excerpt
-- publishedAt or updatedAt
-- relatedStoryIds
+The tone should not feel:
 
-## Standard Article Structure
+- cheap horror
+- gore-focused
+- crime-exploitative
+- exaggerated
+- clickbait
+- fake documentary
+- conspiracy-heavy
 
-1. Article header with category, tag, read time, story type, source status, date, title, and deck.
-2. Opening hook of roughly 150 to 250 words.
-3. Story Map table of contents near the top.
-4. Main H2 sections:
-   - What Is [Main Keyword]?
-   - The Most Famous Version of the Story
-   - Where the Story May Have Started
-   - How the Legend Changed Over Time
-   - Why People Kept Telling It
-   - Similar Legends and Related Stories
-   - Is There Any Truth Behind It?
-   - Why the Story Still Works Today
-   - Story & Source Note
-5. Related articles with specific internal link text.
-6. Previous and next article navigation when useful.
+Kyunolab should feel like a strange story archive for readers who enjoy folklore, mystery, and quiet unease.
 
-## SEO Rules
+It should not feel like a shock horror blog.
 
-- H1 should combine the main keyword, a question or curiosity gap, and a story-like angle.
-- Meta title should stay close to the H1 and avoid clickbait.
-- Meta description should aim for about 140 to 160 characters, include the keyword naturally, and describe the actual article.
-- H2 headings should include related search phrases naturally.
-- Avoid generic anchors such as "click here" or "read more."
+## 2. Standard Article Length
+
+Default article length:
+
+- 1,200 to 1,800 words
+
+Short article:
+
+- 800 to 1,100 words
+- Use only for simple internet folklore, brief legends, or minor mystery entries.
+
+Long article:
+
+- 1,900 to 2,500 words
+- Use only for major topics with many versions, history, cultural context, or strong SEO potential.
+
+Avoid:
+
+- articles under 700 words unless they are intentionally short archive notes
+- articles over 2,500 words unless the topic truly deserves it
+
+## 3. Common Article Structure
+
+Every standard article should include:
+
+1. Category label
+2. Title
+3. Deck / subtitle
+4. Metadata:
+   - Category
+   - Tag
+   - Read time
+   - Story Type
+   - Source Status
+   - Updated date
+5. Story Map
+6. Opening hook
+7. Main explanatory sections
+8. Similar legends or related stories
+9. "Is There Any Truth Behind It?" or an equivalent fact-status section
+10. FAQ section
+11. Story & Source Note
+12. Related Articles
+13. Previous / Next navigation
+
+The opening should start with a clear image, situation, or question. Do not begin too abstractly.
+
+Good opening style:
+
+> A driver stops on a quiet road. A passenger gets in. By the time they reach the address, the back seat is empty.
+
+Weak opening style:
+
+> Some stories survive because they represent cultural uncertainty.
+
+## 4. Category-Specific Templates
+
+### Urban Legends
+
+Recommended structure:
+
+- What Is This Legend?
+- The Most Famous Version
+- Where the Story May Have Started
+- How the Story Changed Over Time
+- Why People Kept Telling It
+- Similar Legends and Related Stories
+- Is There Any Truth Behind It?
+- Why the Story Still Works Today
+- FAQ
+- Story & Source Note
+
+Use for:
+
+- vanishing hitchhiker
+- woman in white
+- black-eyed children
+- haunted roads
+- local rumor-based legends
+
+### Folklore / Mythic Creatures
+
+Recommended structure:
+
+- What Is This Creature or Figure?
+- The Most Common Description
+- Where the Story Comes From
+- Regional Variations
+- What the Creature Represents
+- Similar Creatures in Other Traditions
+- Is It Folklore, Myth, or Something Else?
+- Why the Story Still Matters
+- FAQ
+- Story & Source Note
+
+Use for:
+
+- yokai
+- banshee
+- changelings
+- lake monsters
+- forest spirits
+
+### Strange Places
+
+Recommended structure:
+
+- What Is This Place?
+- Why People Call It Strange
+- The Most Common Stories About It
+- History and Local Context
+- Rumors, Legends, and Reported Experiences
+- What Is Verified and What Is Not
+- Similar Places
+- Why the Place Still Attracts Attention
+- FAQ
+- Story & Source Note
+
+Use for:
+
+- haunted roads
+- abandoned towns
+- strange islands
+- mystery forests
+- cursed locations
+
+### Internet Folklore
+
+Recommended structure:
+
+- What Is This Internet Legend?
+- How It First Spread
+- The Core Story or Image
+- Why People Believed or Shared It
+- How the Story Changed Online
+- Memes, Retellings, and Later Versions
+- What Is Verified and What Is Not
+- Why It Still Feels Unsettling
+- FAQ
+- Story & Source Note
+
+Use for:
+
+- Backrooms
+- Slender Man-style internet folklore
+- cursed images
+- viral mystery posts
+- creepypasta-adjacent topics
+
+## 5. Title Rules
+
+Titles should be clear, searchable, and slightly mysterious.
+
+Good title formulas:
+
+- [Legend Name]: Why This [Type] Never Disappeared
+- The Story Behind [Legend Name]
+- Why People Still Tell the Story of [Legend Name]
+- [Place Name]: The Strange History Behind the Legend
+- Is [Legend Name] Real, or Just an Urban Legend?
+- The Internet Legend That Turned an Ordinary Image Into a Mystery
+
+Avoid:
+
+- You Won't Believe...
+- The Terrifying Truth About...
+- This Will Haunt You Forever
+- Real Proof of...
+- The Scariest Story Ever Told
+
+Titles may be dramatic, but they must not promise proof the article does not have.
+
+## 6. Deck / Meta Description Rules
+
+The deck should:
+
+- summarize the story in 1 to 2 sentences
+- include the main keyword naturally
+- create curiosity without exaggeration
+- clarify that the article is about folklore, legend, or mystery if needed
+
+Example:
+
+> The vanishing hitchhiker legend has appeared on lonely roads for generations. Its details change, but the image remains the same: a quiet passenger, a short ride, and an empty seat.
+
+Meta descriptions should:
+
+- aim for 140 to 160 characters
+- include the main keyword naturally
+- describe the article honestly
+- avoid proof claims, panic language, and exaggerated fear
+
+## 7. Source and Fact Rules
+
+Never present folklore as verified fact unless reliable sources support it.
+
+Use cautious language:
+
+- according to some retellings
+- in many versions
+- local folklore often describes
+- the story is usually told as
+- there is no single confirmed origin
+- this should be understood as folklore rather than verified history
+
+Avoid fake certainty:
+
+- this really happened
+- the truth is
+- historians confirmed
+- the real ghost was
+- scientists proved
+
+Every article should include a Source Status label, such as:
+
+- Folklore / Retelling / Unverified oral tradition
+- Internet folklore / Fictional origin / Community retelling
+- Local legend / Unverified reports
+- Mythological tradition / Cultural folklore
+- Historical event with later folklore additions
+
+## 8. SEO Rules
+
+Each article should define:
+
+- Main keyword: usually the legend or topic name
+- Secondary keywords:
+  - related legend terms
+  - urban legend
+  - folklore
+  - origin
+  - is it real
+  - story explained
+  - meaning
+  - variants
+
+Use the main keyword:
+
+- in the title
+- in the deck
+- in the first 100 words
+- in at least one H2
+- in the FAQ
+- in the closing section if natural
+
+Do not keyword stuff. The article should read like an essay, not an SEO template.
+
+## 9. FAQ Rules
+
+Every standard article should include 3 to 5 FAQ questions.
+
+Good FAQ types:
+
+- Is [topic] real?
+- Where did [topic] come from?
+- Why is [topic] famous?
+- What does [topic] symbolize?
+- Are there similar legends?
+
+Answers should be:
+
+- 2 to 4 sentences each
+- clear
+- source-aware
+- free of fake proof
+
+## 10. Internal Link Rules
+
+Each article should include:
+
+- 3 related articles
+- 1 previous article
+- 1 next article if available
+
+Related articles should be chosen by:
+
+- same category
+- similar emotional pattern
+- similar setting
+- similar folklore type
+- reader curiosity path
+
+Example:
+
+For "The Vanishing Hitchhiker," related articles could be:
+
+- The Woman in White
+- Haunted Roads and Phantom Passengers
+- The Backrooms and the Birth of a Digital Labyrinth
+
+Avoid unrelated links just to fill space.
+
+Related article titles must never run together in one paragraph. They should appear as clean cards, list items, or separated links.
+
+## 11. Repetition and Quality Control
+
+Before publishing, check for:
+
+- repeated phrases such as "the story survives because..."
+- too many abstract sentences
+- fake historical certainty
+- overuse of "mysterious," "strange," and "unsettling"
+- weak section endings
+- generic conclusions
+- missing concrete examples
+- related article layout issues
+- broken spacing in Previous / Next navigation
+
+Every article should contain at least:
+
+- one clear scene
+- one concrete version of the legend
+- one explanation of why the story spread
+- one fact-status clarification
+- one connection to similar stories
+
+## 12. Final Publishing Checklist
+
+Before publishing, confirm:
+
+- Title is clear and searchable.
+- Deck creates curiosity without clickbait.
+- Read time matches article length.
+- Story Map matches actual headings.
+- Headings are ordered cleanly.
+- Main keyword appears naturally.
+- FAQ is included.
+- Source Status is accurate.
+- Story & Source Note is present.
+- Related articles are separated visually.
+- Previous / Next links are clean.
+- No unverified legend is presented as fact.
+- No cheap horror language is used.
+- The article feels calm, premium, mysterious, and readable.
