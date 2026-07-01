@@ -1,7 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Kyunolab archive icon">
-  <rect width="512" height="512" rx="76" fill="#101316"/>
-  <path d="M148 86h216v340H148z" fill="#dce8f2"/>
-  <path d="M190 160h132" stroke="#101316" stroke-width="30" stroke-linecap="round" opacity=".84"/>
-  <circle cx="346" cy="344" r="64" fill="#7d1f2a"/>
-  <circle cx="346" cy="344" r="19" fill="#dce8f2"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="The Strange Archive monogram">
+  <rect width="512" height="512" rx="92" fill="#eef3f7"/>
+  <text x="256" y="314" fill="#101316" font-family="Georgia, 'Times New Roman', serif" font-size="196" font-weight="700" text-anchor="middle" letter-spacing="-16">TA</text>
+  <rect x="172" y="356" width="168" height="24" rx="12" fill="#7d1f2a"/>
 </svg>
