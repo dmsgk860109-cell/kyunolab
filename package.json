@@ -1,11 +1,12 @@
 {
   "private": true,
   "scripts": {
-    "build": "node scripts/validate-tags.js && node scripts/generate-site.js && node scripts/generate-tags.js",
+    "build": "node scripts/validate-tags.js && node scripts/generate-site.js && node scripts/generate-guides.js && node scripts/generate-tags.js",
     "generate:site": "node scripts/generate-site.js",
+    "generate:guides": "node scripts/generate-guides.js",
     "generate:tags": "node scripts/generate-tags.js",
     "validate:tags": "node scripts/validate-tags.js",
     "validate:publish": "node scripts/validate-publish.js",
-    "qa:full": "node scripts/validate-tags.js && node scripts/generate-site.js && node scripts/generate-tags.js && node scripts/validate-publish.js --all"
+    "qa:full": "node scripts/validate-tags.js && node scripts/generate-site.js && node scripts/generate-guides.js && node scripts/generate-tags.js && node scripts/validate-publish.js --all"
   }
 }

@@ -9,6 +9,7 @@ const errors = [];
 const args = parseArgs(process.argv.slice(2));
 const stories = readJson(path.join(root, 'data', 'stories.json'));
 const categories = readOptionalJson(path.join(root, 'data', 'categories.json'));
+const guides = readOptionalJson(path.join(root, 'data', 'guides.json'));
 const storyBySlug = new Map(stories.map((story) => [story.slug, story]));
 const categoryBySlug = new Map(categories.map((category) => [category.slug, category]));
 const targetSlugs = args.all ? stories.map((story) => story.slug) : args.slugs;
@@ -33,6 +34,7 @@ for (const slug of targetSlugs) {
 }
 
 validateGlobalStructure();
+validateGuideStructure();
 validateListPagination('newest');
 validateListPagination('popular');
 validateListPagination('archive');
@@ -237,6 +239,52 @@ function validateGlobalStructure() {
     const filePath = path.join(root, 'categories', `${category.slug}.html`);
     if (!fs.existsSync(filePath)) {
       errors.push(`${category.slug}: missing category archive page`);
+    }
+  }
+}
+
+function validateGuideStructure() {
+  const seenSlugs = new Set();
+  const sitemap = readText('sitemap.xml');
+  const board = readText('mystery-board.html');
+
+  for (const guide of guides) {
+    if (!guide.slug) {
+      errors.push(`${guide.title || 'guide'}: missing guide slug`);
+      continue;
+    }
+    if (seenSlugs.has(guide.slug)) {
+      errors.push(`${guide.slug}: duplicate guide slug`);
+    }
+    seenSlugs.add(guide.slug);
+
+    if (!Array.isArray(guide.tags) || guide.tags.length < 3 || guide.tags.length > 5) {
+      errors.push(`${guide.slug}: expected 3 to 5 tags in data/guides.json`);
+    }
+
+    const guideUrl = guide.url || `/mystery-board/${guide.slug}`;
+    const filePath = path.join(root, 'mystery-board', `${guide.slug}.html`);
+    if (!fs.existsSync(filePath)) {
+      errors.push(`${guide.slug}: missing mystery-board/${guide.slug}.html`);
+      continue;
+    }
+
+    const html = fs.readFileSync(filePath, 'utf8');
+    mustInclude(html, `<link rel="canonical" href="${siteUrl}${guideUrl}">`, guide.slug, 'guide clean canonical URL');
+    mustInclude(html, `<meta property="og:url" content="${siteUrl}${guideUrl}">`, guide.slug, 'guide clean og:url');
+    mustNotInclude(html, `${guideUrl}.html`, guide.slug, 'public .html guide URL');
+    mustInclude(board, `href="${guideUrl}"`, guide.slug, 'Mystery Board list link');
+    mustInclude(sitemap, `<loc>${siteUrl}${guideUrl}</loc>`, guide.slug, 'sitemap guide URL');
+  }
+
+  const guideDir = path.join(root, 'mystery-board');
+  if (fs.existsSync(guideDir)) {
+    for (const entry of fs.readdirSync(guideDir, { withFileTypes: true })) {
+      if (!entry.isFile() || !entry.name.endsWith('.html')) continue;
+      const slug = entry.name.replace(/\.html$/, '');
+      if (!seenSlugs.has(slug)) {
+        errors.push(`${entry.name}: orphan Mystery Board file without data/guides.json record`);
+      }
     }
   }
 }

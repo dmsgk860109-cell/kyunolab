@@ -1,9 +1,525 @@
 [
   {
+    "id": "how-to-read-urban-legends",
+    "slug": "how-to-read-urban-legends",
+    "title": "How to Read Urban Legends: A Calm Guide to Roadside Stories, Doorway Warnings, and Modern Folklore",
+    "shortTitle": "How to Read Urban Legends",
+    "metaTitle": "How to Read Urban Legends: Meaning, Patterns, and Source Status",
+    "metaDescription": "A practical Kyunolab guide to reading urban legends, modern folklore, source status, recurring motifs, warning stories, and why ordinary settings make strange stories feel real.",
+    "ogTitle": "How to Read Urban Legends",
+    "ogDescription": "A calm guide to urban legends, modern folklore, warning stories, recurring motifs, and source-aware reading.",
+    "excerpt": "A practical guide to urban legends, warning stories, recurring motifs, source status, and why ordinary places make strange stories feel possible.",
+    "deck": "Urban legends are not only scary stories. They are modern folklore shaped by ordinary places, repeated warnings, unstable evidence, and the feeling that something almost happened nearby.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Urban legend guide",
+    "tags": [
+      "Urban Legend Meaning",
+      "Modern Folklore",
+      "Warning Story",
+      "Source Status",
+      "Recurring Motif"
+    ],
+    "bestFor": "Readers starting with modern legends",
+    "readTime": "10 min read",
+    "url": "/mystery-board/how-to-read-urban-legends",
+    "publishedAt": "2026-07-03",
+    "updatedAt": "2026-07-03",
+    "relatedStoryIds": [
+      "woman-in-white-roadside-legend",
+      "black-eyed-children-doorway-legend",
+      "phantom-bus-stop-after-midnight"
+    ],
+    "relatedGuideIds": [
+      "what-is-an-urban-legend",
+      "how-to-check-source-status"
+    ],
+    "sections": [
+      {
+        "id": "what-you-are-reading",
+        "title": "What you are reading when you read an urban legend",
+        "nav": "What an urban legend is",
+        "paragraphs": [
+          "An urban legend is a story that behaves as if it might belong to real life. It may involve a driver, a tenant, a cashier, a student, a passenger, a neighbor, or a stranger at the door. The setting is usually ordinary enough that the reader does not need a fantasy map to enter it.",
+          "The useful question is not always whether the story can be proven exactly as told. A better first question is what the story is doing. Is it warning people about a place? Explaining a local fear? Giving shape to distrust? Making a public space feel personal? Urban legends survive because they organize unease into a form people can retell."
+        ]
+      },
+      {
+        "id": "ordinary-settings",
+        "title": "Why ordinary settings matter",
+        "nav": "Ordinary settings",
+        "paragraphs": [
+          "Roads, elevators, bus stops, hotels, apartment corridors, parking lots, schools, and shops work well in urban legends because readers already know how those places are supposed to behave. The strange part lands harder when the background is familiar.",
+          "A vanishing passenger is memorable because the car ride is normal. A doorway legend works because everyone understands the small social pressure of opening a door. A closed floor story works because elevators are routine machines with one uncomfortable weakness: when the doors open, the person inside has to look."
+        ]
+      },
+      {
+        "id": "warning-shape",
+        "title": "The warning shape behind many legends",
+        "nav": "Warning shape",
+        "paragraphs": [
+          "Many urban legends carry a rule. Do not pick up the stranger. Do not invite the children inside. Do not stop at the wrong platform. Do not follow the road after the sign repeats. The rule may be impossible to verify, but it makes the story portable.",
+          "That warning shape does not make the story childish. It makes it socially useful. People repeat stories that feel like they protect someone from embarrassment, danger, isolation, or being fooled. The legend becomes a way to rehearse caution without saying, directly, what the community fears."
+        ]
+      },
+      {
+        "id": "evidence-and-status",
+        "title": "Evidence, source status, and careful reading",
+        "nav": "Evidence status",
+        "paragraphs": [
+          "Urban legends often arrive with soft evidence: a friend heard it, a local remembers it, a screenshot circulated, a receipt was mentioned, a building employee once said something, or a road has a reputation. Soft evidence can be interesting, but it is not the same as confirmation.",
+          "Kyunolab separates story value from factual proof. A record may be culturally important even when it is listed as folklore, retelling, unverified local tradition, or source-aware archive note. That distinction lets readers enjoy the mystery without treating every dramatic claim as established fact."
+        ]
+      },
+      {
+        "id": "where-to-start",
+        "title": "Where to start in the archive",
+        "nav": "Where to start",
+        "paragraphs": [
+          "For a classic entry point, start with [[The Woman in White at the Bend|/stories/woman-in-white-roadside-legend]]. It shows how a roadside apparition can feel both old and modern. Then read [[Black-Eyed Children|/stories/black-eyed-children-doorway-legend]] for a doorway legend shaped by invitation, politeness, and refusal.",
+          "If public space interests you, move to [[The Phantom Bus Stop After Midnight|/stories/phantom-bus-stop-after-midnight]]. Together, these records show how urban legends turn normal routes, doors, and waiting places into scenes people remember."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Are urban legends supposed to be true?",
+        "answer": "Urban legends are usually told as if they might be true, but most should be read as folklore unless reliable evidence supports the exact claim."
+      },
+      {
+        "question": "Why do urban legends spread so easily?",
+        "answer": "They spread because they are short, vivid, easy to retell, and attached to ordinary fears or familiar places."
+      },
+      {
+        "question": "What is the difference between an urban legend and a ghost story?",
+        "answer": "A ghost story may focus on a haunting, while an urban legend focuses on a modern rumor pattern. Some stories are both."
+      },
+      {
+        "question": "How should I use Kyunolab source notes?",
+        "answer": "Use them as a signal for how carefully to treat the claim. Folklore and retelling labels mean the story is being archived as a cultural pattern, not confirmed news."
+      }
+    ],
+    "sourceNote": "This guide explains urban legends as folklore and story patterns. It does not claim that any listed legend is a confirmed event."
+  },
+  {
+    "id": "how-to-check-source-status",
+    "slug": "how-to-check-source-status",
+    "title": "How to Check Source Status in Strange Stories Without Ruining the Mystery",
+    "shortTitle": "How to Check Source Status",
+    "metaTitle": "How to Check Source Status in Urban Legends and Strange Stories",
+    "metaDescription": "A source-aware Kyunolab guide to checking evidence, folklore labels, eyewitness claims, screenshots, retellings, and uncertainty in urban legends and mysteries.",
+    "ogTitle": "How to Check Source Status in Strange Stories",
+    "ogDescription": "A practical guide to evidence, uncertainty, folklore labels, and careful reading in strange records.",
+    "excerpt": "A guide to source status, evidence levels, retellings, screenshots, eyewitness claims, and how to keep mystery without confusing folklore with confirmed fact.",
+    "deck": "A strange story can be worth reading even when it is not proven. Source status helps preserve that difference instead of flattening every mystery into true or fake.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Source status guide",
+    "tags": [
+      "Source Status",
+      "Evidence Check",
+      "Folklore Label",
+      "Eyewitness Claim",
+      "Archive Method"
+    ],
+    "bestFor": "Readers comparing evidence and folklore",
+    "readTime": "11 min read",
+    "url": "/mystery-board/how-to-check-source-status",
+    "publishedAt": "2026-07-03",
+    "updatedAt": "2026-07-03",
+    "relatedStoryIds": [
+      "village-clock-that-stopped-together",
+      "footprints-ending-in-fresh-snow",
+      "sealed-letter-opened-itself"
+    ],
+    "relatedGuideIds": [
+      "how-to-read-urban-legends",
+      "why-mystery-stories-go-viral"
+    ],
+    "sections": [
+      {
+        "id": "why-status-matters",
+        "title": "Why source status matters",
+        "nav": "Why it matters",
+        "paragraphs": [
+          "Source status is the difference between saying a story exists and saying an event happened. That difference is small on the page but large for trust. A careful archive can preserve rumors, legends, local memories, and strange patterns without pretending all of them have the same evidence.",
+          "Readers do not need every mystery solved before it can be interesting. They do need to know what kind of material they are reading: reported event, local tradition, modern retelling, internet folklore, source-aware interpretation, or unresolved record."
+        ]
+      },
+      {
+        "id": "evidence-levels",
+        "title": "Useful evidence levels",
+        "nav": "Evidence levels",
+        "paragraphs": [
+          "Strong evidence usually includes independent documentation, dateable records, clear authorship, official statements, reliable archives, or multiple sources that do not appear to copy one another. Weak evidence includes vague screenshots, unsourced quotes, anonymous reposts, memory-only claims, and details that change every time the story is retold.",
+          "Most folklore sits between those poles. A local story may have a named place, repeated versions, and consistent imagery without having proof of the supernatural claim. That does not make the story worthless. It simply means the record should be labeled carefully."
+        ]
+      },
+      {
+        "id": "screenshots-and-reposts",
+        "title": "Screenshots, reposts, and internet evidence",
+        "nav": "Internet evidence",
+        "paragraphs": [
+          "Online stories often use screenshots as proof, but screenshots are fragile evidence. They can be cropped, reposted, edited, detached from context, or repeated until the copy is more famous than the source.",
+          "When reading internet folklore, ask where the image first appeared, whether the original page still exists, whether later versions added details, and whether the screenshot is being used as documentation or as atmosphere. A viral image can become folklore even when it is not reliable evidence."
+        ]
+      },
+      {
+        "id": "unresolved-does-not-mean-proven",
+        "title": "Unresolved does not mean proven",
+        "nav": "Unresolved claims",
+        "paragraphs": [
+          "A story being unresolved does not automatically make its most dramatic explanation true. It only means the available record has not settled the question. That is why Kyunolab avoids turning uncertainty into certainty.",
+          "The careful phrase is often more useful than the exciting one. Unknown source, unverified retelling, local tradition, internet folklore, and source-aware archive note all tell the reader how to stand near the story without leaning too far into it."
+        ]
+      },
+      {
+        "id": "how-kyunolab-labels-records",
+        "title": "How Kyunolab labels strange records",
+        "nav": "Kyunolab labels",
+        "paragraphs": [
+          "A Kyunolab record may mark a story as folklore, retelling, modern legend, internet folklore, unresolved mystery, or source-aware archive note. These labels are not decorations. They are part of the reading contract.",
+          "For example, [[Footprints Ending in Fresh Snow|/stories/footprints-ending-in-fresh-snow]] works as a mystery pattern even if each version changes. [[The Sealed Letter That Opened Itself|/stories/sealed-letter-opened-itself]] belongs to a different kind of uncertainty: small domestic evidence, repeated memory, and a claim that resists clean confirmation."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Does unverified mean fake?",
+        "answer": "No. Unverified means the available evidence does not confirm the claim. A story can be unverified and still important as folklore."
+      },
+      {
+        "question": "Are eyewitness stories reliable?",
+        "answer": "Eyewitness stories can be valuable, but memory, retelling, pressure, and missing context all matter. They should not automatically be treated as proof."
+      },
+      {
+        "question": "Why does Kyunolab keep uncertain stories?",
+        "answer": "Because uncertainty is often part of folklore. The goal is to record the pattern while being clear about evidence limits."
+      },
+      {
+        "question": "Should every mystery article have a source note?",
+        "answer": "Yes. A source note helps readers understand whether the article is discussing folklore, reported claims, interpretation, or documented history."
+      }
+    ],
+    "sourceNote": "This guide is about evidence literacy and source labels. It does not verify any specific mystery claim by itself."
+  },
+  {
+    "id": "folklore-vs-myth-vs-urban-legend",
+    "slug": "folklore-vs-myth-vs-urban-legend",
+    "title": "Folklore vs Myth vs Urban Legend: The Differences That Help Strange Stories Make Sense",
+    "shortTitle": "Folklore vs Myth vs Urban Legend",
+    "metaTitle": "Folklore vs Myth vs Urban Legend: Key Differences Explained",
+    "metaDescription": "A clear guide to folklore, myth, urban legend, modern legend, internet folklore, and how Kyunolab organizes strange stories by source, setting, and recurring pattern.",
+    "ogTitle": "Folklore vs Myth vs Urban Legend",
+    "ogDescription": "A calm explanation of the differences between folklore, myths, urban legends, and modern internet folklore.",
+    "excerpt": "A clear guide to the difference between folklore, myth, urban legend, modern legend, and internet folklore, with examples from the archive.",
+    "deck": "The words folklore, myth, and urban legend are often used together, but each points to a different way stories move through culture.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Story type guide",
+    "tags": [
+      "Folklore Category",
+      "Myth",
+      "Urban Legend",
+      "Modern Legend",
+      "Story Type"
+    ],
+    "bestFor": "Readers browsing categories",
+    "readTime": "10 min read",
+    "url": "/mystery-board/folklore-vs-myth-vs-urban-legend",
+    "publishedAt": "2026-07-03",
+    "updatedAt": "2026-07-03",
+    "relatedStoryIds": [
+      "chair-kept-empty-for-the-night-visitor",
+      "star-that-waited-behind-the-mountain",
+      "woman-in-white-roadside-legend"
+    ],
+    "relatedGuideIds": [
+      "what-is-an-urban-legend",
+      "how-to-read-urban-legends"
+    ],
+    "sections": [
+      {
+        "id": "why-the-terms-overlap",
+        "title": "Why these terms overlap",
+        "nav": "Why they overlap",
+        "paragraphs": [
+          "Folklore, myth, and urban legend overlap because stories do not respect neat shelves. A ghostly road story can borrow from older spirit traditions. A mythic creature can become a local tourist rumor. An internet image can behave like a modern myth if enough people repeat it with belief.",
+          "The categories are still useful. They help readers understand whether a story is rooted in inherited tradition, sacred explanation, modern rumor, public warning, online repetition, or symbolic storytelling."
+        ]
+      },
+      {
+        "id": "folklore",
+        "title": "What folklore means",
+        "nav": "Folklore",
+        "paragraphs": [
+          "Folklore is the broadest term. It includes stories, customs, warnings, sayings, rituals, jokes, local beliefs, repeated motifs, and small practices people inherit or pass along. Folklore may be old or new, rural or urban, serious or playful.",
+          "A record like [[The Chair Kept Empty for the Night Visitor|/stories/chair-kept-empty-for-the-night-visitor]] belongs near folklore because it concerns custom, hospitality, and repeated belief. The important part is not only what happens, but how people behave because the story exists."
+        ]
+      },
+      {
+        "id": "myth",
+        "title": "What myth means",
+        "nav": "Myth",
+        "paragraphs": [
+          "Myth usually points toward symbolic explanation. Myths may explain origins, gods, sacred orders, celestial events, heroic figures, forbidden places, or why the world has a certain shape. They often carry more ritual or cultural weight than a casual rumor.",
+          "A mythic record such as [[The Star That Waited Behind the Mountain|/stories/star-that-waited-behind-the-mountain]] is not trying to sound like a local police report. It works through image, pattern, meaning, and inherited imagination."
+        ]
+      },
+      {
+        "id": "urban-legend",
+        "title": "What urban legend means",
+        "nav": "Urban legend",
+        "paragraphs": [
+          "An urban legend is modern folklore told as if it could have happened nearby. It often uses ordinary settings, almost-believable evidence, social warning, and a small dramatic turn. The story may be supernatural, but it does not have to be.",
+          "A roadside apparition, a dangerous invitation, a missing passenger, or a strange public place can become an urban legend when people repeat it as a modern cautionary story. The label helps readers avoid confusing contemporary rumor with ancient myth."
+        ]
+      },
+      {
+        "id": "internet-folklore",
+        "title": "Where internet folklore fits",
+        "nav": "Internet folklore",
+        "paragraphs": [
+          "Internet folklore is not separate from folklore. It is folklore moving through digital spaces. Screenshots, forums, images, game spaces, comment threads, shared files, and repeated jokes can carry stories the same way older communities carried oral tales.",
+          "The difference is speed and format. A story that once needed years of local retelling can now become recognizable in days. That does not make it less folkloric. It only changes the path it takes."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is folklore always old?",
+        "answer": "No. Folklore can be old, new, local, digital, serious, playful, inherited, or invented through repetition."
+      },
+      {
+        "question": "Is myth the same as falsehood?",
+        "answer": "No. In story studies, myth does not simply mean false. It often means a symbolic or culturally important narrative."
+      },
+      {
+        "question": "Can an urban legend become folklore?",
+        "answer": "Urban legends are already a form of folklore, especially when they spread through repeated tellings and shared belief."
+      },
+      {
+        "question": "Why separate categories at all?",
+        "answer": "Categories help readers find similar story patterns and understand how a record should be read."
+      }
+    ],
+    "sourceNote": "This guide explains story categories for archive navigation. It is not a claim that every culture uses these terms in exactly the same way."
+  },
+  {
+    "id": "why-mystery-stories-go-viral",
+    "slug": "why-mystery-stories-go-viral",
+    "title": "Why Mystery Stories Go Viral: Screenshots, Warnings, Liminal Places, and the Feeling of Proof",
+    "shortTitle": "Why Mystery Stories Go Viral",
+    "metaTitle": "Why Mystery Stories Go Viral Online: Internet Folklore Explained",
+    "metaDescription": "A Kyunolab guide to why mystery stories go viral online, including screenshots, liminal spaces, warning posts, evidence theater, digital legends, and internet folklore.",
+    "ogTitle": "Why Mystery Stories Go Viral",
+    "ogDescription": "A guide to screenshots, warnings, liminal spaces, digital legends, and the feeling of proof in online folklore.",
+    "excerpt": "A guide to why mystery stories spread online through screenshots, warnings, liminal places, evidence theater, and the feeling of almost-proof.",
+    "deck": "Online mystery stories spread when a claim looks shareable, a place feels familiar, and the evidence is just clear enough to invite argument.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Internet folklore guide",
+    "tags": [
+      "Internet Folklore",
+      "Viral Mystery",
+      "Screenshot Evidence",
+      "Liminal Space",
+      "Digital Legend"
+    ],
+    "bestFor": "Readers exploring online legends",
+    "readTime": "11 min read",
+    "url": "/mystery-board/why-mystery-stories-go-viral",
+    "publishedAt": "2026-07-03",
+    "updatedAt": "2026-07-03",
+    "relatedStoryIds": [
+      "backrooms-digital-labyrinth",
+      "cursed-image-that-kept-being-shared",
+      "screenshot-that-was-always-one-pixel-wrong"
+    ],
+    "relatedGuideIds": [
+      "why-internet-folklore-spreads",
+      "how-to-check-source-status"
+    ],
+    "sections": [
+      {
+        "id": "viral-shape",
+        "title": "The shape of a viral mystery",
+        "nav": "Viral shape",
+        "paragraphs": [
+          "A viral mystery usually has a clear object: an image, a short warning, a map, a room, a sound, a strange file, a half-remembered place, or a screenshot that seems to show too much and too little at the same time.",
+          "The story must be easy to pass along. If the reader can summarize it in one sentence, the mystery has a better chance of moving. A photograph that looks wrong, a room that should not exist, or a warning that sounds practical gives the audience something to repeat."
+        ]
+      },
+      {
+        "id": "feeling-of-proof",
+        "title": "The feeling of proof",
+        "nav": "Feeling of proof",
+        "paragraphs": [
+          "Many viral mysteries do not provide proof. They provide the feeling of proof. A screenshot, timestamp, blurred image, file name, old comment, map pin, or archived page can make a story feel documented even when the evidence is incomplete.",
+          "That feeling is powerful because it invites participation. Readers zoom in, compare copies, search for earlier versions, argue about edits, and add their own memories. The investigation becomes part of the folklore."
+        ]
+      },
+      {
+        "id": "liminal-places",
+        "title": "Why liminal places spread online",
+        "nav": "Liminal places",
+        "paragraphs": [
+          "Liminal spaces work online because they look public and private at once. Empty halls, carpeted rooms, service corridors, closed shops, old schools, hotel exits, and blank offices feel familiar without belonging to anyone in particular.",
+          "That is why [[The Backrooms and the Birth of a Digital Labyrinth|/stories/backrooms-digital-labyrinth]] became such a strong digital legend. It gives the internet an image that feels remembered before it is explained."
+        ]
+      },
+      {
+        "id": "warnings-and-participation",
+        "title": "Warnings make stories portable",
+        "nav": "Warnings",
+        "paragraphs": [
+          "A warning post travels faster than a long explanation. Do not open the file. Do not share the image. Do not enter the room. Do not answer the account. The warning gives the reader a role, even if the story is fictional or unverified.",
+          "Online folklore often grows when people half-believe, half-play, and fully participate. Comments, remixes, reposts, skeptical threads, and debunking attempts can all keep the story alive."
+        ]
+      },
+      {
+        "id": "how-to-read-viral-mysteries",
+        "title": "How to read viral mysteries carefully",
+        "nav": "Careful reading",
+        "paragraphs": [
+          "Start by separating the artifact from the claim. The image may exist, but the story attached to it may be later. The screenshot may be real, but the explanation may be invented. The location may be ordinary, but repetition can make it strange.",
+          "Kyunolab treats digital legends as folklore when source status is uncertain. That lets records like [[The Cursed Image That Kept Being Shared|/stories/cursed-image-that-kept-being-shared]] remain interesting without turning every repost into proof."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Why do creepy images spread so fast?",
+        "answer": "They spread because they are easy to share, visually immediate, and open enough for viewers to add their own interpretations."
+      },
+      {
+        "question": "Is internet folklore always fictional?",
+        "answer": "No. It can mix real images, jokes, rumors, mistakes, performance, memory, and fiction."
+      },
+      {
+        "question": "What is evidence theater?",
+        "answer": "Evidence theater is the appearance of proof: screenshots, timestamps, and fragments that make a story feel documented even when the underlying claim is uncertain."
+      },
+      {
+        "question": "Can debunking make a story stronger?",
+        "answer": "Yes. Debate, correction, and skepticism can keep a story visible and give it more versions to circulate."
+      }
+    ],
+    "sourceNote": "This guide discusses online story behavior and source awareness. It does not claim that viral mystery posts are automatically true or false."
+  },
+  {
+    "id": "how-strange-places-become-legends",
+    "slug": "how-strange-places-become-legends",
+    "title": "How Strange Places Become Legends: Roads, Hotels, Islands, Maps, and Rooms People Keep Retelling",
+    "shortTitle": "How Strange Places Become Legends",
+    "metaTitle": "How Strange Places Become Legends: Roads, Hotels, Maps, and Folklore",
+    "metaDescription": "A Kyunolab guide to strange places, legendary locations, haunted roads, impossible rooms, missing islands, map mysteries, and how places become folklore.",
+    "ogTitle": "How Strange Places Become Legends",
+    "ogDescription": "A guide to roads, hotels, islands, maps, rooms, and the place-based patterns that turn locations into folklore.",
+    "excerpt": "A guide to place-based legends: roads, hotels, islands, maps, rooms, and why some locations become stories people keep retelling.",
+    "deck": "Some strange stories are attached less to a person than to a location: a road, a room, a platform, an island, a field, or a place that seems to refuse ordinary explanation.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Strange places guide",
+    "tags": [
+      "Strange Places",
+      "Legendary Location",
+      "Place Folklore",
+      "Map Mystery",
+      "Haunted Road"
+    ],
+    "bestFor": "Readers browsing place-based records",
+    "readTime": "10 min read",
+    "url": "/mystery-board/how-strange-places-become-legends",
+    "publishedAt": "2026-07-03",
+    "updatedAt": "2026-07-03",
+    "relatedStoryIds": [
+      "road-that-returns-to-the-same-sign",
+      "hotel-room-that-is-never-assigned",
+      "town-printed-on-one-map-and-nowhere-else"
+    ],
+    "relatedGuideIds": [
+      "how-to-read-urban-legends",
+      "how-to-check-source-status"
+    ],
+    "sections": [
+      {
+        "id": "place-as-character",
+        "title": "When the place becomes the main character",
+        "nav": "Place as character",
+        "paragraphs": [
+          "In place-based legends, the location does more than hold the story. It behaves like the story's engine. A road repeats, a room stays empty, a platform has no train, a town appears on one map, or a field goes silent at its edge.",
+          "These legends work because places are easier to revisit than events. A person may disappear from the story, but the bend in the road remains. The hotel still has corridors. The map can still be checked. The place gives the story a physical anchor."
+        ]
+      },
+      {
+        "id": "roads-and-routes",
+        "title": "Roads and routes",
+        "nav": "Road legends",
+        "paragraphs": [
+          "Road legends often involve repetition, wrong turns, phantom passengers, warning signs, or a route that feels longer than it should. The road is already a transitional space, which makes it perfect for stories about crossing from ordinary life into uncertainty.",
+          "[[The Road That Returns to the Same Sign|/stories/road-that-returns-to-the-same-sign]] uses one of the strongest place motifs: the impossible loop. A road that refuses progress makes geography feel personal, as if the landscape itself is answering back."
+        ]
+      },
+      {
+        "id": "rooms-and-buildings",
+        "title": "Rooms, hotels, and buildings",
+        "nav": "Rooms and buildings",
+        "paragraphs": [
+          "Buildings create legends through rules. Do not use that stairwell. Do not rent that room. Do not press that floor. Do not stay past closing. A building already has access limits, locked doors, maintenance areas, and records, which makes the violation feel documentable.",
+          "A hotel room that is never assigned or an elevator that opens on a closed floor turns architecture into suspense. The reader understands the layout just enough to notice when the layout stops behaving."
+        ]
+      },
+      {
+        "id": "maps-and-absence",
+        "title": "Maps, islands, and absence",
+        "nav": "Maps and absence",
+        "paragraphs": [
+          "Map legends are built from absence. A town appears once and disappears. An island is named but cannot be reached. A road exists on paper but not on the ground. A place is remembered by people who cannot agree where it was.",
+          "[[The Town Printed on One Map and Nowhere Else|/stories/town-printed-on-one-map-and-nowhere-else]] shows how a missing place can become more interesting than a visible one. The blank space does part of the storytelling."
+        ]
+      },
+      {
+        "id": "reading-place-records",
+        "title": "How to read strange place records",
+        "nav": "Reading place records",
+        "paragraphs": [
+          "When reading a strange place story, ask what anchors it. Is there a named location, a recurring route, a physical rule, a document, a repeated witness, a map, or only a mood? The stronger the anchor, the easier it is to separate local tradition from pure invention.",
+          "At the same time, a weak factual claim can still produce a strong legend. People remember places through stories. Sometimes the legend is not proof that the place is impossible; it is proof that the place has become emotionally charged."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "What makes a place become legendary?",
+        "answer": "A place becomes legendary when repeated stories attach meaning, warning, fear, wonder, or mystery to it."
+      },
+      {
+        "question": "Are strange place stories always haunted?",
+        "answer": "No. Some involve maps, missing rooms, impossible routes, local customs, unusual nature, or unexplained records."
+      },
+      {
+        "question": "Why are roads common in legends?",
+        "answer": "Roads are transitional spaces. They naturally support stories about wrong turns, strangers, loops, and arrivals that should not happen."
+      },
+      {
+        "question": "Can a real place have fictional legends?",
+        "answer": "Yes. Real places often gather fictional, exaggerated, or uncertain stories over time."
+      }
+    ],
+    "sourceNote": "This guide explains place-based folklore and archive reading. It does not confirm that any specific strange location has supernatural properties."
+  },
+  {
     "id": "what-is-an-urban-legend",
     "slug": "what-is-an-urban-legend",
     "title": "What Is an Urban Legend? Meaning, Examples, and Why These Stories Feel Real",
+    "shortTitle": "What Is an Urban Legend?",
+    "metaTitle": "What Is an Urban Legend? Meaning, Examples, and Source Status",
+    "metaDescription": "What is an urban legend? A clear guide to urban legend meaning, examples, modern folklore, cautionary tales, source status, and why these strange stories feel real.",
+    "ogTitle": "What Is an Urban Legend?",
+    "ogDescription": "A Kyunolab guide to urban legends, modern folklore, believable rumors, cautionary tales, and why ordinary settings make strange stories feel real.",
     "excerpt": "A clear guide to urban legend meaning, examples, modern folklore, cautionary tales, source status, and why ordinary settings make strange stories feel real.",
+    "deck": "Urban legends are modern folklore: strange stories told as if they might have happened nearby, to someone almost close enough to know.",
     "category": "Mystery Board",
     "categorySlug": "mystery-board",
     "tag": "Urban legends explained",
@@ -14,16 +530,98 @@
       "Believable Rumor",
       "Source Status"
     ],
+    "bestFor": "New readers",
     "readTime": "9 min read",
     "url": "/mystery-board/what-is-an-urban-legend",
     "publishedAt": "2026-07-02",
-    "updatedAt": "2026-07-02"
+    "updatedAt": "2026-07-03",
+    "relatedStoryIds": [
+      "woman-in-white-roadside-legend",
+      "black-eyed-children-doorway-legend",
+      "phantom-bus-stop-after-midnight"
+    ],
+    "relatedGuideIds": [
+      "how-to-read-urban-legends",
+      "folklore-vs-myth-vs-urban-legend"
+    ],
+    "sections": [
+      {
+        "id": "meaning",
+        "title": "What does urban legend mean?",
+        "nav": "Urban legend meaning",
+        "paragraphs": [
+          "An urban legend is a modern story that spreads because it sounds possible. It usually takes place in a familiar setting: a road, school, hotel, apartment building, workplace, store, parking lot, or quiet neighborhood.",
+          "The important word is not only urban. Many urban legends happen outside cities. The phrase means the story belongs to contemporary rumor culture: ordinary people, ordinary places, and ordinary fears."
+        ]
+      },
+      {
+        "id": "examples",
+        "title": "Common urban legend examples",
+        "nav": "Common examples",
+        "paragraphs": [
+          "Common examples include the vanishing hitchhiker, the woman in white, black-eyed children, the phantom bus stop, the dangerous phone call, the cursed object, the unassigned hotel room, and the figure seen before an accident.",
+          "These examples differ in detail, but they share a structure. A normal situation begins, one detail goes wrong, and the ordinary setting stays visible enough to make the impossible detail feel sharp."
+        ]
+      },
+      {
+        "id": "why-real",
+        "title": "Why urban legends feel real",
+        "nav": "Why they feel real",
+        "paragraphs": [
+          "Urban legends feel real because they borrow the texture of everyday life. They do not need a distant kingdom or a supernatural world with complicated rules. They need a road, a door, a receipt, a hallway, or a warning.",
+          "They also use social proof. The story is often framed as something that happened to a friend, a local family, a driver, a student, or a worker. That almost-close connection is part of the form."
+        ]
+      },
+      {
+        "id": "folklore",
+        "title": "Urban legend vs folklore vs myth",
+        "nav": "Urban legend vs folklore",
+        "paragraphs": [
+          "Urban legends are a type of folklore, but not all folklore is urban legend. Folklore is the wider field: stories, customs, warnings, beliefs, jokes, rituals, songs, motifs, and repeated patterns.",
+          "Myths usually work differently. A myth often explains a world, a sacred order, a natural pattern, or a symbolic origin. Urban legends work closer to the ground, explaining why a place feels unsafe or why a warning should be remembered."
+        ]
+      },
+      {
+        "id": "source-status",
+        "title": "How Kyunolab treats source status",
+        "nav": "Source status",
+        "paragraphs": [
+          "Kyunolab does not present urban legends as proven events unless reliable evidence supports a specific claim. Most are listed as folklore, retelling, source-aware interpretation, unverified local tradition, or modern legend.",
+          "That distinction protects the story and the reader. A legend can be culturally durable without being factually proven."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Are urban legends true?",
+        "answer": "Some may contain details inspired by real events, but most should be understood as modern folklore unless reliable sources support the exact claim."
+      },
+      {
+        "question": "What is the most famous urban legend?",
+        "answer": "The vanishing hitchhiker is one of the best-known urban legend patterns."
+      },
+      {
+        "question": "Why are urban legends popular?",
+        "answer": "They are easy to retell, emotionally clear, and close to ordinary life."
+      },
+      {
+        "question": "Where should I start on Kyunolab?",
+        "answer": "Start with the Urban Legends shelf, then move to Internet Folklore and Modern Legends."
+      }
+    ],
+    "sourceNote": "This guide explains urban legends as folklore and story patterns. It is not claiming that any specific legend is a confirmed event."
   },
   {
     "id": "why-internet-folklore-spreads",
     "slug": "why-internet-folklore-spreads",
     "title": "Why Internet Folklore Spreads: Memes, Cursed Images, Digital Legends, and Online Mythmaking",
+    "shortTitle": "Why Internet Folklore Spreads",
+    "metaTitle": "Why Internet Folklore Spreads: Digital Legends and Online Mythmaking",
+    "metaDescription": "A guide to internet folklore, digital legends, cursed images, liminal spaces, online myths, and why strange stories spread online.",
+    "ogTitle": "Why Internet Folklore Spreads",
+    "ogDescription": "A guide to internet folklore, digital legends, cursed images, liminal spaces, online myths, and why strange stories spread online.",
     "excerpt": "A guide to internet folklore, digital legends, cursed images, liminal spaces, online myths, and why strange stories spread online.",
+    "deck": "Internet folklore spreads when a digital artifact becomes repeatable: an image, a phrase, a warning, a room, a screenshot, or a story that keeps inviting new versions.",
     "category": "Mystery Board",
     "categorySlug": "mystery-board",
     "tag": "Internet folklore",
@@ -34,9 +632,85 @@
       "Online Mythmaking",
       "Shared Memory"
     ],
+    "bestFor": "Internet folklore readers",
     "readTime": "10 min read",
     "url": "/mystery-board/why-internet-folklore-spreads",
     "publishedAt": "2026-07-02",
-    "updatedAt": "2026-07-02"
+    "updatedAt": "2026-07-03",
+    "relatedStoryIds": [
+      "backrooms-digital-labyrinth",
+      "cursed-image-that-kept-being-shared",
+      "empty-server-room-online-myth"
+    ],
+    "relatedGuideIds": [
+      "why-mystery-stories-go-viral",
+      "how-to-check-source-status"
+    ],
+    "sections": [
+      {
+        "id": "digital-folklore",
+        "title": "Digital folklore is still folklore",
+        "nav": "Digital folklore",
+        "paragraphs": [
+          "Internet folklore is not a separate species of story. It is folklore moving through digital spaces. Forums, images, games, shared files, screenshots, comments, and social feeds become the places where stories are repeated.",
+          "The material may look modern, but the behavior is familiar: people share warnings, test boundaries, repeat jokes, remember strange places, and turn uncertain claims into recognizable patterns."
+        ]
+      },
+      {
+        "id": "memes-and-legends",
+        "title": "How memes become legends",
+        "nav": "Memes and legends",
+        "paragraphs": [
+          "A meme becomes legend-like when repetition gives it more than a punchline. The image begins to carry a story. The caption becomes a rule. The setting becomes a place readers feel they have visited.",
+          "This is why online myths often begin small. A strange room, an uncomfortable image, or a warning about a file can become a shared reference if enough people treat it as something worth returning to."
+        ]
+      },
+      {
+        "id": "cursed-images",
+        "title": "Cursed images and shared unease",
+        "nav": "Cursed images",
+        "paragraphs": [
+          "Cursed images work because they are difficult to resolve. The viewer knows the image is probably ordinary, staged, cropped, or accidental, but one detail refuses to settle.",
+          "That unresolved feeling creates participation. People describe what feels wrong, invent possible contexts, search for origins, and repost the image with new framing."
+        ]
+      },
+      {
+        "id": "liminal-archives",
+        "title": "Liminal spaces as shared memory",
+        "nav": "Liminal spaces",
+        "paragraphs": [
+          "Liminal spaces are powerful online because they look familiar without being personal. A hallway, pool room, office corridor, empty mall, or blank stairwell can feel like a memory no one owns.",
+          "[[The Backrooms and the Birth of a Digital Labyrinth|/stories/backrooms-digital-labyrinth]] shows how a single atmosphere can become a full digital legend when readers keep adding rooms, rules, and exits."
+        ]
+      },
+      {
+        "id": "source-awareness",
+        "title": "Reading internet folklore with source awareness",
+        "nav": "Source awareness",
+        "paragraphs": [
+          "The internet makes stories easier to preserve and easier to distort. A screenshot can outlive its original post. A joke can be detached from its source. A debunking thread can become part of the legend.",
+          "That is why Kyunolab treats internet folklore as story behavior first. The point is not to believe every claim. The point is to understand how digital repetition turns fragments into folklore."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "What is internet folklore?",
+        "answer": "Internet folklore is folklore that forms and spreads through digital spaces such as forums, images, social feeds, games, screenshots, and shared files."
+      },
+      {
+        "question": "Are cursed images folklore?",
+        "answer": "They can become folklore when they are repeated, interpreted, warned about, and given a shared story pattern."
+      },
+      {
+        "question": "Why do liminal spaces feel familiar?",
+        "answer": "They use common architecture without personal context, creating a memory-like feeling that many people can project into."
+      },
+      {
+        "question": "Can internet folklore be true?",
+        "answer": "It can include real artifacts or events, but the folklore layer should still be separated from verified evidence."
+      }
+    ],
+    "sourceNote": "This guide explains internet folklore as a digital story process. It does not treat viral claims as automatically verified."
   }
 ]
