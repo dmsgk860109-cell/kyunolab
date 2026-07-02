@@ -65,8 +65,9 @@
   function getArticleTags() {
     const labels = Array.from(article.querySelectorAll('.article-meta-grid dt'));
     const picked = labels
-      .filter((dt) => /^(tag|topic)$/i.test(dt.textContent.trim()))
+      .filter((dt) => /^(tag|tags|topic|topics)$/i.test(dt.textContent.trim()))
       .map((dt) => dt.nextElementSibling?.textContent.trim())
+      .flatMap((value) => value ? value.split(/[,;]+/).map((tag) => tag.trim()) : [])
       .filter(Boolean);
     return Array.from(new Set(picked));
   }

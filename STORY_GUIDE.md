@@ -69,7 +69,7 @@ Every standard article should include:
 3. Deck / subtitle
 4. Metadata:
    - Category
-   - Tag
+   - Tags
    - Read time
    - Story Type
    - Source Status
@@ -286,6 +286,58 @@ Use the main keyword:
 
 Do not keyword stuff. The article should read like an essay, not an SEO template.
 
+## 8A. Tag Assignment Rules
+
+Each article should use 3 to 5 tags.
+
+Tags are smaller internal pathways. They should connect articles by recurring subject, motif, setting, figure, object, emotional pattern, or reader path. Tags do not replace categories.
+
+When choosing tags, aim for a balanced set:
+
+- one story pattern tag
+- one setting or place tag
+- one figure or object tag
+- one theme, emotion, or atmosphere tag
+- one reader path or broader motif tag when useful
+
+Good tag examples:
+
+- Roadside Legend
+- Phantom Traveler
+- Vanishing Passenger
+- Woman in White
+- Haunted Road
+- Lost Island
+- Unmapped Place
+- Impossible Geography
+- Cartographic Mystery
+- Forbidden Woods
+- Enchanted Forest
+- Old Folklore
+- Omen Object
+- Haunted Bell
+- Warning Sound
+- Internet Folklore
+- Viral Image
+- Digital Legend
+- Liminal Space
+
+Avoid:
+
+- vague standalone tags such as Mystery, Story, Legend, Strange, Interesting, Article, or Folklore
+- repeating the category as a tag unless the tag is clearly more specific
+- forcing an article into an existing tag when the subject needs a new one
+- creating multiple tags with the same meaning, such as Vanishing Passenger and Disappearing Passenger
+
+Use Title Case labels. URL slugs are generated automatically.
+
+Before publishing, ask:
+
+- Are the tags more specific than the category?
+- Could each tag lead to a useful archive page?
+- Does at least one tag connect this article to another article or a likely future article?
+- Are there 3 to 5 tags, not fewer and not more?
+
 ## 9. FAQ Rules
 
 Every standard article should include 3 to 5 FAQ questions.
@@ -365,6 +417,9 @@ Before publishing, confirm:
 - Story Map matches actual headings.
 - Headings are ordered cleanly.
 - Main keyword appears naturally.
+- Tags include 3 to 5 specific internal pathways.
+- Tags are more specific than the category.
+- Tags avoid vague standalone words and duplicate meanings.
 - FAQ is included.
 - Source Status is accurate.
 - Story & Source Note is present.

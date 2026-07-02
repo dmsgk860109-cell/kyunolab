@@ -1,7 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "build": "node scripts/generate-tags.js",
-    "generate:tags": "node scripts/generate-tags.js"
+    "build": "node scripts/validate-tags.js && node scripts/generate-tags.js",
+    "generate:tags": "node scripts/generate-tags.js",
+    "validate:tags": "node scripts/validate-tags.js"
   }
 }

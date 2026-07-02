@@ -54,9 +54,7 @@ function collectTagGroups(items) {
 }
 
 function getTags(item) {
-  const values = [];
-  if (Array.isArray(item.tags)) values.push(...item.tags);
-  if (typeof item.tag === 'string') values.push(item.tag);
+  const values = Array.isArray(item.tags) && item.tags.length ? item.tags : [item.tag];
   return Array.from(new Set(values.map((tag) => String(tag).trim()).filter(Boolean)));
 }
 

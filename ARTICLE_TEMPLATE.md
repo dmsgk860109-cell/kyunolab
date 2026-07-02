@@ -31,12 +31,33 @@ If the article becomes too broad, recommend splitting it into a series or separa
 - Working title: [TITLE]
 - Slug: [SLUG]
 - Category: [CATEGORY]
-- Tag: [TAG]
+- Tags: [TAG 1], [TAG 2], [TAG 3], [OPTIONAL TAG 4], [OPTIONAL TAG 5]
 - Article type: [Urban Legend / Folklore / Mythic Creature / Strange Place / Internet Folklore / Mystery / Myth]
 - Source status: [SOURCE STATUS]
 - Target length: [SHORT / STANDARD / LONG]
 - Read time: [READ TIME]
 - Updated date: [MONTH DAY, YEAR]
+
+## Tag Assignment
+
+Use 3 to 5 tags per article. Tags are narrow internal paths, not category replacements.
+
+Choose tags from these roles when natural:
+
+- Story pattern: [Roadside Legend / Vanishing Passenger / Forbidden Room]
+- Setting or place: [Haunted Road / Lost Island / Hidden Valley]
+- Figure or object: [Woman in White / Haunted Bell / Mythic Object]
+- Theme or mood: [Threshold Fear / Shared Unease / Quiet Mystery]
+- Reader path or broader motif: [Modern Myth / Old Folklore / Cartographic Mystery]
+
+Rules:
+
+- Prefer specific tags over broad tags.
+- Do not use vague standalone tags like Mystery, Story, Legend, Strange, Interesting, Article, or Folklore.
+- Do not repeat the category as a tag unless the tag is more specific.
+- Reuse an existing tag when it fits naturally.
+- Create a new tag when the article's real subject needs it.
+- Use Title Case labels. Slugs are generated automatically.
 
 ## Keywords
 
@@ -63,7 +84,7 @@ If the article becomes too broad, recommend splitting it into a series or separa
 Metadata:
 
 - Category: [CATEGORY]
-- Tag: [TAG]
+- Tags: [TAG 1], [TAG 2], [TAG 3], [OPTIONAL TAG 4], [OPTIONAL TAG 5]
 - Read time: [READ TIME]
 - Story Type: [STORY TYPE]
 - Source Status: [SOURCE STATUS]
@@ -274,6 +295,9 @@ Use the section set that best matches the article category.
 - [ ] Main keyword appears in the first 100 words.
 - [ ] Story Map matches the actual headings.
 - [ ] Source Status is accurate.
+- [ ] Tags include 3 to 5 specific internal paths.
+- [ ] Tags are more specific than the category and avoid vague standalone words.
+- [ ] Each tag could lead to a useful tag archive page.
 - [ ] Article separates folklore, rumor, and verified fact.
 - [ ] FAQ includes 3 to 5 useful questions.
 - [ ] Related articles are relevant and visually separated.
