@@ -286,7 +286,63 @@ Use the main keyword:
 
 Do not keyword stuff. The article should read like an essay, not an SEO template.
 
-## 8A. Tag Assignment Rules
+## 8A. Topic Selection and SEO Fit
+
+Before drafting a new article, evaluate whether the topic is worth publishing for Kyunolab. This is an internal editorial step, not reader-facing content.
+
+Each topic should define:
+
+- `displayTitle`: the public article title shown on the site
+- `seoTitle`: the search-focused title used for metadata when useful
+- `seedKeyword`: the main searchable phrase
+- `searchIntent`: meaning, origin, legend, true-story, identity, comparison, list, symbolism, or archive-story
+- `articleFormat`: search-info, story-archive, comparison, or list-collection
+- `topicScore`: total score out of 100
+- `topicStatus`: priority, approved, hold, or reject
+- `primaryTag`: the strongest tag for the article
+- `cluster`: the article's broader topic group
+- `relatedKeywords`: useful surrounding search terms
+- `summaryAnswer`: a 2 to 3 sentence answer placed near the beginning
+
+Topic score:
+
+- Search demand: 30 points
+- Click curiosity: 25 points
+- Kyunolab fit: 20 points
+- Expansion potential: 15 points
+- Differentiation: 10 points
+
+Status rules:
+
+- 85-100: priority. Write early.
+- 70-84: approved. Good candidate.
+- 60-69: hold. Rework the angle, title, keyword, or cluster.
+- 0-59: reject. Do not publish as a search-focused article unless the concept changes.
+
+Scoring guidance:
+
+- Search demand is high when the topic has a clear searchable phrase, origin question, meaning question, "is it real" query, or recognizable legend name.
+- Click curiosity is high when the title creates a real question without fake proof, panic, or exaggerated fear.
+- Kyunolab fit is high when the subject belongs naturally to folklore, myth, mystery, strange places, internet folklore, or source-aware archive writing.
+- Expansion potential is high when the topic can support at least three related articles, useful tags, or a recurring cluster.
+- Differentiation is high when Kyunolab can add calm interpretation, source-status clarity, atmosphere, or structure beyond a generic summary.
+
+For `search-info` and `comparison` articles, place the `summaryAnswer` near the beginning so readers and search systems can understand the answer quickly.
+
+Do not expose topic score, score breakdown, or internal status on public article pages unless a future admin interface is created.
+
+## 8B. Article Format Rules
+
+Use `articleFormat` to choose the article's natural structure:
+
+- `search-info`: answer the main query early, then explain origin, meaning, variants, fact status, and FAQ.
+- `story-archive`: begin with the story pattern and atmosphere, then explain variations, interpretation, source status, and why the record lasts.
+- `comparison`: define both topics, compare overlap and differences, clarify confusion, and summarize carefully.
+- `list-collection`: introduce the collection, explain each item with useful detail, then show shared motifs.
+
+The format guides the article, but it is not a length limit. If a topic needs more depth, add sections. If a section becomes too large, split it.
+
+## 8C. Tag Assignment Rules
 
 Each article should use 3 to 5 tags.
 
@@ -367,6 +423,9 @@ Each article should include:
 
 Related articles should be chosen by:
 
+- same cluster
+- same primary tag
+- overlapping tags
 - same category
 - similar emotional pattern
 - similar setting
@@ -411,6 +470,11 @@ Every article should contain at least:
 
 Before publishing, confirm:
 
+- Topic score is 70 or higher, or the topic was held and reworked.
+- Search intent is clear.
+- Article format matches the topic.
+- Display title and SEO title are separated when useful.
+- Summary answer appears near the beginning.
 - Title is clear and searchable.
 - Deck creates curiosity without clickbait.
 - Read time matches article length.
@@ -420,6 +484,8 @@ Before publishing, confirm:
 - Tags include 3 to 5 specific internal pathways.
 - Tags are more specific than the category.
 - Tags avoid vague standalone words and duplicate meanings.
+- Primary tag and cluster are defined.
+- Related keywords are present.
 - FAQ is included.
 - Source Status is accurate.
 - Story & Source Note is present.

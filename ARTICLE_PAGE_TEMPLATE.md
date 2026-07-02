@@ -45,21 +45,41 @@ Every article page should include these blocks unless there is a strong editoria
 
 ```yaml
 title: [TITLE]
+displayTitle: [PUBLIC ARTICLE TITLE]
+seoTitle: [SEARCH-FOCUSED TITLE]
 slug: [SLUG]
 category: [CATEGORY]
 categorySlug: [CATEGORY SLUG]
 categoryGroup: [CATEGORY GROUP]
 tag: [PRIMARY DISPLAY TAG]
+primaryTag: [PRIMARY TAG]
 tags:
   - [TAG 1]
   - [TAG 2]
   - [TAG 3]
   - [OPTIONAL TAG 4]
   - [OPTIONAL TAG 5]
+seedKeyword: [MAIN SEARCHABLE TOPIC]
+searchIntent: [meaning / origin / legend / true-story / identity / comparison / list / symbolism / archive-story]
+articleFormat: [search-info / story-archive / comparison / list-collection]
+cluster: [TOPIC CLUSTER]
+relatedKeywords:
+  - [RELATED KEYWORD 1]
+  - [RELATED KEYWORD 2]
+  - [RELATED KEYWORD 3]
+topicScore: [0-100]
+topicStatus: [priority / approved / hold / reject]
+scoreBreakdown:
+  searchDemand: [0-30]
+  clickCuriosity: [0-25]
+  siteFit: [0-20]
+  expansionPotential: [0-15]
+  differentiation: [0-10]
 readTime: [READ TIME]
 storyType: [STORY TYPE]
 sourceStatus: [SOURCE STATUS]
 excerpt: [SHORT EXCERPT]
+summaryAnswer: [2 TO 3 SENTENCE DIRECT ANSWER FOR SEARCHERS]
 publishedAt: [YYYY-MM-DD]
 updatedAt: [YYYY-MM-DD]
 relatedStoryIds:
@@ -68,14 +88,20 @@ relatedStoryIds:
   - [RELATED STORY SLUG 3]
 ```
 
+Editorial scoring fields are internal production fields. They may live in draft notes, admin metadata, or article data, but they should not be printed as visible reader-facing content.
+
 ## SEO Fields
 
 ```yaml
-metaTitle: [SEARCHABLE META TITLE]
+metaTitle: [SEO TITLE]
 metaDescription: [155-170 CHARACTER DESCRIPTION]
 canonical: https://kyunolab.com/stories/[SLUG]
 ogTitle: [OG TITLE]
 ogDescription: [OG DESCRIPTION]
+structuredDataHeadline: [SEO TITLE]
+structuredDataKeywords:
+  - [TAG 1]
+  - [RELATED KEYWORD 1]
 ```
 
 SEO rules:
@@ -84,6 +110,29 @@ SEO rules:
 - Include the main keyword naturally.
 - Do not make the title fake, exaggerated, or misleading.
 - Do not imply uncertain folklore is verified fact.
+- Use `seoTitle` for metadata when it is stronger than the display title.
+- Use `displayTitle` for the visible article title unless the SEO title is also the best reader-facing title.
+
+## Topic Selection Gate
+
+Before drafting, score the topic:
+
+| Factor | Max | Check |
+| --- | ---: | --- |
+| Search demand | 30 | Does the topic match a real query, phrase, legend name, origin question, meaning question, or "is it real" intent? |
+| Click curiosity | 25 | Would the title make a reader want the answer without fake proof or cheap shock? |
+| Kyunolab fit | 20 | Does it belong in folklore, mystery, myth, strange place, internet folklore, or source-aware archive territory? |
+| Expansion potential | 15 | Can it support related articles, tags, cluster pages, or future internal links? |
+| Differentiation | 10 | Can Kyunolab add calm interpretation, source status, atmosphere, or structure beyond a generic summary? |
+
+Status:
+
+- `priority`: 85-100
+- `approved`: 70-84
+- `hold`: 60-69
+- `reject`: 0-59
+
+Do not draft a search-focused article below 70 unless the angle, keyword, or title has been reworked.
 
 ## Header Block
 
@@ -91,6 +140,8 @@ SEO rules:
 # [TITLE]
 
 [DECK / SUBTITLE]
+
+[SUMMARY ANSWER: answer the main search question in 2 to 3 sentences before moving into deeper context.]
 
 - Category: [CATEGORY]
 - Tags: [TAG 1], [TAG 2], [TAG 3], [OPTIONAL TAG 4], [OPTIONAL TAG 5]
@@ -126,6 +177,7 @@ Start with a concrete image, situation, object, place, or question.
 Requirements:
 
 - Introduce the main keyword within the first 100 words.
+- Put the summary answer near the beginning for search-info and comparison articles.
 - Make the reader understand the subject quickly.
 - Keep the tone calm, mysterious, and source-aware.
 - Avoid cheap horror language.
@@ -141,6 +193,15 @@ Requirements:
 ## Flexible Body Structure
 
 Choose the section set that fits the topic. Add, remove, split, or rename optional sections when the topic needs it.
+
+Use `articleFormat` to choose the structure:
+
+- `search-info`: direct answer first, then origin, meaning, variants, fact status, and FAQ.
+- `story-archive`: atmosphere and story pattern first, then interpretation, variants, source status, and related records.
+- `comparison`: define both topics, compare overlap and differences, clarify confusion, then summarize.
+- `list-collection`: introduce the collection, give useful item-level explanations, then explain shared motifs.
+
+The format guides the article. It does not cap the length.
 
 ### Urban Legend / Modern Legend
 
@@ -340,6 +401,8 @@ Rules:
 - Use real existing story slugs.
 - Do not point to planned articles that do not exist yet.
 - Related links should connect by motif, category, place, figure, evidence type, or reader intent.
+- Prefer same cluster first, then same primary tag, then overlapping tags, then same category.
+- Use 3 related articles minimum when available; use 4 to 6 when the cluster is strong.
 
 ## Previous / Next
 
@@ -352,6 +415,12 @@ Rules:
 
 Content:
 
+- [ ] Topic score is 70 or higher, or the topic was held/reworked.
+- [ ] Score breakdown is filled in before drafting.
+- [ ] Search intent is clear.
+- [ ] Article format fits the topic.
+- [ ] Display title and SEO title are separated when useful.
+- [ ] Summary answer appears near the beginning.
 - [ ] The article follows the topic's natural length.
 - [ ] Useful detail was not cut to satisfy a template.
 - [ ] Weak sections were not padded with empty wording.
@@ -376,8 +445,14 @@ Metadata:
 
 - [ ] Slug is unique.
 - [ ] Category slug exists in `data/categories.json`.
+- [ ] Seed keyword is present.
+- [ ] Search intent is present.
+- [ ] Article format is present.
+- [ ] Topic cluster is present.
+- [ ] Primary tag is present.
 - [ ] Tags are 3 to 5 specific internal paths.
 - [ ] Tags do not duplicate the category.
+- [ ] Related keywords are present.
 - [ ] Related story IDs exist.
 - [ ] Canonical URL is clean and has no `.html`.
 - [ ] Meta title and description are accurate.

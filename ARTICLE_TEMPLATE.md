@@ -42,6 +42,41 @@ If the article becomes too broad, recommend splitting it into a series or separa
 - Read time: [READ TIME]
 - Updated date: [MONTH DAY, YEAR]
 
+## Topic Selection / SEO Fit
+
+Use this section before drafting. These fields are for production and editorial judgment; do not display the score or scoring notes to readers.
+
+- Display title: [PUBLIC ARTICLE TITLE]
+- SEO title: [SEARCH-FOCUSED TITLE]
+- Seed keyword: [MAIN SEARCHABLE TOPIC]
+- Search intent: [meaning / origin / legend / true-story / identity / comparison / list / symbolism / archive-story]
+- Article format: [search-info / story-archive / comparison / list-collection]
+- Cluster: [TOPIC CLUSTER]
+- Primary tag: [PRIMARY TAG]
+- Related keywords: [RELATED KEYWORD 1], [RELATED KEYWORD 2], [RELATED KEYWORD 3]
+- Summary answer: [2 TO 3 SENTENCES THAT ANSWER THE MAIN SEARCH QUESTION EARLY]
+- Topic score: [0-100]
+- Topic status: [priority / approved / hold / reject]
+
+### Topic Score Breakdown
+
+Score the topic before writing:
+
+- Search demand: [0-30]
+- Click curiosity: [0-25]
+- Kyunolab fit: [0-20]
+- Expansion potential: [0-15]
+- Differentiation: [0-10]
+
+Status rules:
+
+- 85-100: priority. Strong candidate for early publishing.
+- 70-84: approved. Suitable for publishing.
+- 60-69: hold. Improve angle, title, keyword, or cluster before drafting.
+- 0-59: reject. Do not publish as a search-focused article unless the concept changes.
+
+Do not force a weak topic into the site. Improve the angle first, or save it for a future cluster if it can support better related articles.
+
 ## Tag Assignment
 
 Use 3 to 5 tags per article. Tags are narrow internal paths, not category replacements.
@@ -70,20 +105,26 @@ Rules:
 - Secondary keyword 2: [SECONDARY KEYWORD 2]
 - Secondary keyword 3: [SECONDARY KEYWORD 3]
 - Search intent: [WHAT THE READER WANTS TO UNDERSTAND]
+- Related keywords: [RELATED KEYWORD 1], [RELATED KEYWORD 2], [RELATED KEYWORD 3]
+- Cluster: [TOPIC CLUSTER]
 
 ## SEO Fields
 
-- Meta title: [META TITLE]
+- Meta title: [SEO TITLE]
 - Meta description: [META DESCRIPTION]
 - Canonical URL: https://kyunolab.com/stories/[SLUG]
-- OG title: [OG TITLE]
+- OG title: [SEO TITLE OR DISPLAY TITLE]
 - OG description: [OG DESCRIPTION]
+- Structured data headline: [SEO TITLE]
+- Structured data keywords: [TAGS + RELATED KEYWORDS]
 
 ## Article Header
 
-# [TITLE]
+# [DISPLAY TITLE]
 
 [DECK / SUBTITLE]
+
+[SUMMARY ANSWER: 2 to 3 sentences that answer the reader's main question early, before the article widens into atmosphere and context.]
 
 Metadata:
 
@@ -109,7 +150,7 @@ Metadata:
 
 ## Opening Hook
 
-[Start with a concrete image, situation, or question. Introduce the main keyword within the first 100 words.]
+[Start with a concrete image, situation, or question. Introduce the main keyword within the first 100 words. If the topic is search-info, place the summary answer before or inside the opening.]
 
 [OPENING PARAGRAPH 1]
 
@@ -287,6 +328,15 @@ Use the section set that best matches the article category.
 - [RELATED ARTICLE 2] - [WHY THIS IS RELATED]
 - [RELATED ARTICLE 3] - [WHY THIS IS RELATED]
 
+Related article priority:
+
+1. Same cluster
+2. Same primary tag
+3. Overlapping tags
+4. Same category
+
+Show at least 3 related articles when available. Use 4 to 6 when the cluster is strong.
+
 ## Previous / Next
 
 - Previous: [PREVIOUS ARTICLE TITLE] - [PREVIOUS ARTICLE URL]
@@ -294,17 +344,26 @@ Use the section set that best matches the article category.
 
 ## Final QA
 
+- [ ] Topic score is 70 or higher, or the topic was intentionally held/reworked.
+- [ ] Score breakdown was considered before drafting.
+- [ ] Search intent is clear.
+- [ ] Article format matches the topic.
+- [ ] Display title and SEO title are separated when useful.
 - [ ] Title is clear, searchable, and not clickbait.
 - [ ] Deck includes the main keyword naturally.
+- [ ] Summary answer appears near the beginning.
 - [ ] Main keyword appears in the first 100 words.
 - [ ] Story Map matches the actual headings.
 - [ ] Source Status is accurate.
 - [ ] Tags include 3 to 5 specific internal paths.
 - [ ] Tags are more specific than the category and avoid vague standalone words.
+- [ ] Primary tag and cluster are defined.
+- [ ] Related keywords are present.
 - [ ] Each tag could lead to a useful tag archive page.
 - [ ] Article separates folklore, rumor, and verified fact.
 - [ ] FAQ includes 3 to 5 useful questions.
 - [ ] Related articles are relevant and visually separated.
+- [ ] Related articles are selected by cluster, tag, or reader intent, not by convenience.
 - [ ] Previous / Next links are clean.
 - [ ] No fake proof, gore focus, cheap horror, or conspiracy-heavy framing.
 - [ ] The article feels calm, premium, mysterious, and readable.

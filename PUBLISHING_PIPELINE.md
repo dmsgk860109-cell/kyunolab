@@ -28,6 +28,43 @@ For normal publishing, validate only:
 
 Full-site QA is reserved for layout, navigation, template, generator, or CSS changes.
 
+## Topic Qualification Rule
+
+Before drafting or publishing a new article, qualify the topic.
+
+Each candidate should have:
+
+- `seedKeyword`
+- `searchIntent`
+- `articleFormat`
+- `displayTitle`
+- `seoTitle`
+- `summaryAnswer`
+- `primaryTag`
+- `cluster`
+- `relatedKeywords`
+- `topicScore`
+- `topicStatus`
+
+Score each topic out of 100:
+
+- Search demand: 30
+- Click curiosity: 25
+- Kyunolab fit: 20
+- Expansion potential: 15
+- Differentiation: 10
+
+Status:
+
+- `priority`: 85-100
+- `approved`: 70-84
+- `hold`: 60-69
+- `reject`: 0-59
+
+Normal search-focused publishing should use `priority` or `approved` topics. If a topic is `hold`, improve the angle, title, keyword, or cluster before writing. If it is `reject`, do not publish it unless the concept changes.
+
+The score and breakdown are production metadata. They should not appear as visible reader-facing article content.
+
 ## Common Commands
 
 Validate one or more newly published stories:
@@ -64,12 +101,14 @@ npm run qa:full
 
 For 1, 10, or 100 new articles:
 
-1. Add records to `data/stories.json`.
-2. Add the matching `stories/[slug].html` files.
-3. Run `npm run generate:site`.
-4. Run `npm run generate:tags`.
-5. Run `npm run validate:publish -- --slugs=[changed-slugs]`.
-6. Run `npm run validate:tags`.
+1. Qualify each topic with the topic score rules.
+2. Keep only `priority` or `approved` topics for normal publishing.
+3. Add records to `data/stories.json`.
+4. Add the matching `stories/[slug].html` files.
+5. Run `npm run generate:site`.
+6. Run `npm run generate:tags`.
+7. Run `npm run validate:publish -- --slugs=[changed-slugs]`.
+8. Run `npm run validate:tags`.
 
 The changed slug list is the release boundary. It prevents a 100-article release from becoming a full manual review of every old article.
 
