@@ -26,7 +26,7 @@
       <div class="article-tags" aria-label="Article tags">
         <p class="engagement-kicker">Tags</p>
         <div class="tag-list">
-          ${tagNames.map((tag) => `<a href="/tags/${slugify(tag)}.html" rel="tag">${escapeHtml(tag)}</a>`).join('')}
+          ${tagNames.map((tag) => `<a href="/tags/${slugify(tag)}/" rel="tag">${escapeHtml(tag)}</a>`).join('')}
         </div>
       </div>
     ` : ''}

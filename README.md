@@ -7,3 +7,7 @@ The site is a quiet archive for urban legends, internet folklore, classic myths,
 ## Deploy
 
 Cloudflare Pages is connected to the GitHub repository. Pushes to main deploy automatically.
+
+## Build
+
+Run `npm run build` before deploy. The build generates tag archive pages from article metadata and updates `sitemap.xml`.
