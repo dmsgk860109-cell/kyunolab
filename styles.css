@@ -871,6 +871,7 @@ textarea {
     max-width: 100vw;
   }
   .article-layout > article,
+  .archive-page-main,
   .archive-article-header,
   .story-body,
   .story-map,
@@ -882,6 +883,16 @@ textarea {
     width: calc(100vw - 40px);
     max-width: calc(100vw - 40px);
   }
+  .archive-page-main,
+  .category-group,
+  .category-hub,
+  .category-hub article {
+    overflow-x: hidden;
+  }
+  .deck {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
   .hero,
   .notice,
   .latest,
@@ -891,12 +902,83 @@ textarea {
   .mystery-preview,
   .archive-cta,
   .story-row,
-  .section-head {
+  .section-head,
+  .category-group,
+  .category-hub {
     width: calc(100vw - 40px);
+    max-width: calc(100vw - 40px);
   }
   .feature-card {
     width: calc(100vw - 40px);
     padding: 24px 22px;
+  }
+  .category-group {
+    margin-top: 22px;
+  }
+  .category-group + .category-group {
+    margin-top: 30px;
+  }
+  .category-group-head {
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .category-group-head h2 {
+    font-size: 24px;
+  }
+  .category-group-head span {
+    font-size: 13px;
+    line-height: 1.35;
+  }
+  .category-hub {
+    gap: 10px;
+  }
+  .category-hub article {
+    padding: 13px 14px 14px;
+    gap: 8px;
+    border-left: 4px solid var(--structure);
+  }
+  .category-group-label {
+    font-size: 10px;
+    letter-spacing: .07em;
+  }
+  .category-hub h3 {
+    font-size: 20px;
+    line-height: 1.08;
+  }
+  .category-hub p {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-size: 13px;
+    line-height: 1.42;
+  }
+  .category-links {
+    display: flex;
+    gap: 8px;
+    margin-top: 2px;
+    overflow-x: auto;
+    padding: 1px 2px 8px 0;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+  }
+  .category-links a {
+    flex: 0 0 min(78vw, 280px);
+    padding: 8px 9px;
+    font-size: 13px;
+    line-height: 1.22;
+    scroll-snap-align: start;
+  }
+  .category-links::-webkit-scrollbar {
+    height: 4px;
+  }
+  .category-links::-webkit-scrollbar-thumb {
+    background: var(--line);
+    border-radius: 999px;
+  }
+  .category-hub .text-link {
+    margin-top: 0;
+    font-size: 11px;
   }
   .brand strong { font-size: 21px; }
   .nav {
