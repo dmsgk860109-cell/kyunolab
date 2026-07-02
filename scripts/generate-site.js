@@ -3,7 +3,7 @@ const path = require('path');
 
 const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://kyunolab.com';
-const styleVersion = '20260702-category-expansion';
+const styleVersion = '20260703-home-stream';
 const pageSize = 12;
 const rssLimit = 20;
 
@@ -89,7 +89,10 @@ function renderHomePage({ featuredStory, latestStories, popularStories, essentia
       ${renderFeaturedStory(featuredStory)}
     </section>
     <section class="notice"><strong>Story &amp; Source Notice:</strong> This site explores folklore, legends, mysteries, and source-aware retellings. Unverified traditions are presented as stories, not as verified fact.</section>
-    <section id="latest" class="latest"><div class="section-head"><h2>Latest Stories</h2><span>${stories.length} archive entries</span></div><div class="story-list">${latestStories.map(renderStoryRow).join('')}</div></section>
+    <div class="home-stream">
+      <section id="latest" class="latest latest-compact"><div class="section-head"><h2>Latest Stories</h2><a href="/newest.html">View all newest</a></div><div class="home-story-list">${latestStories.map(renderHomeStoryRow).join('')}</div></section>
+      ${renderHomeRail({ featuredStory, popularStories, essentialStories })}
+    </div>
     <section class="board" id="rankings"><div class="section-head"><h2>Popular Records</h2><a href="/mystery-board.html">Open mystery board</a></div><div class="ranking-grid"><ol class="ranking-card">${popularStories.map(renderRankingItem).join('')}</ol><aside class="side-panel"><h3>Reader Paths</h3><a href="/newest.html">Newest stories</a><a href="/categories.html">Browse by category</a><a href="#essential-reads">Start with essential reads</a><a href="/fiction-disclaimer.html">Story &amp; source notice</a></aside></div></section>
     <section id="categories" class="categories"><div class="section-head"><h2>Browse By Category</h2><a href="/categories.html">View all categories</a></div><div class="home-category-groups">${categoryGroups.map(renderHomeCategoryGroup).join('')}</div></section>
     <section id="essential-reads" class="essential-reads"><div class="section-head"><h2>Essential Reads</h2><span>Start here</span></div><div class="compact-grid">${essentialStories.map(renderEssentialStory).join('')}</div></section>
@@ -210,6 +213,17 @@ function renderHomeCategoryCard(category) {
         <div class="category-links">${categoryStories.map(renderCategoryStoryLink).join('')}</div>
         <a class="text-link" href="/categories/${escapeAttr(category.slug)}.html">View ${escapeHtml(category.title)}</a>
       </article>`;
+}
+
+function renderHomeRail({ featuredStory, popularStories, essentialStories }) {
+  const popular = popularStories.slice(0, 3);
+  const essentials = essentialStories.slice(0, 3);
+  return `<aside class="home-rail" aria-label="Homepage reader paths">
+      <div class="rail-card rail-feature"><p class="rail-label">Start here</p><a href="/stories/${escapeAttr(featuredStory.slug)}"><span>${escapeHtml(featuredStory.category)}</span><strong>${escapeHtml(featuredStory.title)}</strong></a></div>
+      <div class="rail-card"><p class="rail-label">Popular records</p>${popular.map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}</div>
+      <div class="rail-card rail-card-subtle"><p class="rail-label">Archive paths</p><a href="/newest.html">Newest Records</a><a href="/popular.html">Popular Records</a><a href="/categories.html">Browse Categories</a><a href="/mystery-board.html">Mystery Board</a></div>
+      <div class="rail-card"><p class="rail-label">Essential reads</p>${essentials.map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}</div>
+    </aside>`;
 }
 
 function getHomeCategoryGroups() {
@@ -396,6 +410,14 @@ function renderStoryRow(story) {
           <h3><a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a></h3>
           <p>${escapeHtml(story.excerpt || story.metaDescription || '')}</p>
           <div class="meta">${escapeHtml([story.category, story.tag, story.readTime].filter(Boolean).join(' - '))}</div>
+        </article>`;
+}
+
+function renderHomeStoryRow(story) {
+  return `<article class="home-story-row">
+          <div><span class="tag">${escapeHtml(story.category)}</span><h3><a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a></h3></div>
+          <p>${escapeHtml(story.excerpt || story.metaDescription || '')}</p>
+          <div class="meta">${escapeHtml([story.tag, story.readTime].filter(Boolean).join(' - '))}</div>
         </article>`;
 }
 

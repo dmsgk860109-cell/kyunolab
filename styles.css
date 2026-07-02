@@ -160,6 +160,52 @@ h1 {
   font-size: 28px;
 }
 .section-head a, .section-head span { color: var(--muted); }
+.home-stream {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 300px);
+  gap: 28px;
+  align-items: start;
+  margin-top: 34px;
+}
+.home-stream .section-head {
+  margin-top: 0;
+}
+.home-rail {
+  position: sticky;
+  top: 118px;
+  display: grid;
+  gap: 14px;
+  font-family: Arial, sans-serif;
+}
+.home-story-list {
+  display: grid;
+  gap: 0;
+}
+.home-story-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(210px, .7fr) auto;
+  gap: 16px;
+  align-items: start;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--line);
+}
+.home-story-row h3 {
+  margin: 4px 0 0;
+  font-size: 23px;
+  line-height: 1.12;
+}
+.home-story-row p {
+  margin: 1px 0 0;
+  color: #3e3933;
+  font-size: 15px;
+  line-height: 1.42;
+}
+.home-story-row .meta {
+  justify-self: end;
+  max-width: 150px;
+  text-align: right;
+  line-height: 1.35;
+}
 .ranking-grid {
   display: grid;
   grid-template-columns: 1fr 290px;
@@ -981,7 +1027,20 @@ textarea {
   display: none;
 }
 @media (max-width: 850px) {
-  .header-inner, .hero, .ranking-grid, .archive-page-grid { grid-template-columns: 1fr; }
+  .header-inner, .hero, .ranking-grid, .archive-page-grid, .home-stream { grid-template-columns: 1fr; }
+  .home-rail {
+    position: static;
+    grid-template-columns: 1fr 1fr;
+  }
+  .home-story-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 6px;
+  }
+  .home-story-row .meta {
+    justify-self: start;
+    max-width: none;
+    text-align: left;
+  }
   .article-layout {
     display: flex;
     flex-direction: column;
@@ -1082,6 +1141,9 @@ textarea {
   .hero,
   .notice,
   .latest,
+  .home-stream,
+  .home-story-row,
+  .home-rail,
   .board,
   .categories,
   .essential-reads,
@@ -1177,6 +1239,22 @@ textarea {
   }
   h1 { font-size: 25px; }
   .feature-card h2 { font-size: 21px; }
+  .home-rail {
+    grid-template-columns: 1fr;
+  }
+  .home-story-row {
+    padding: 13px 0;
+  }
+  .home-story-row h3 {
+    font-size: 20px;
+  }
+  .home-story-row p {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-size: 14px;
+  }
   h1,
   h2,
   h3,
