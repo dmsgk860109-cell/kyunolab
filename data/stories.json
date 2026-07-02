@@ -1,5 +1,408 @@
 [
   {
+    "id": "elevator-that-always-stops-at-the-closed-floor",
+    "slug": "elevator-that-always-stops-at-the-closed-floor",
+    "title": "The Elevator That Always Stops at the Closed Floor: Why This Building Legend Feels So Easy to Believe",
+    "metaTitle": "The Elevator That Always Stops at the Closed Floor: Why This Building Legend Feels So Easy to Believe",
+    "metaDescription": "A normal elevator, a floor no one is supposed to enter, and the uncomfortable pause when the doors open anyway. A source-aware Kyunolab archive record about building legend, recurring motifs, evidence limits, and why the story lasts.",
+    "category": "Urban Legends",
+    "categorySlug": "urban-legends",
+    "categoryGroup": "Modern Strange Records",
+    "tag": "Building Legend",
+    "readTime": "9 min read",
+    "storyType": "Urban Legend",
+    "sourceStatus": "Folklore / Retelling / Source-aware archive note",
+    "excerpt": "A normal elevator, a floor no one is supposed to enter, and the uncomfortable pause when the doors open anyway.",
+    "publishedAt": "2026-07-02",
+    "updatedAt": "2026-07-02",
+    "relatedStoryIds": [
+      "woman-in-white-roadside-legend",
+      "black-eyed-children-doorway-legend",
+      "phantom-bus-stop-after-midnight"
+    ],
+    "tags": [
+      "Building Legend",
+      "Closed Floor",
+      "Elevator Story",
+      "Threshold Fear",
+      "Urban Rumor"
+    ],
+    "detail": "the button panel lights a number that residents are told does not matter anymore",
+    "evidence": "maintenance notices, tenant memory, floor plans, and repeated local tellings"
+  },
+  {
+    "id": "screenshot-that-was-always-one-pixel-wrong",
+    "slug": "screenshot-that-was-always-one-pixel-wrong",
+    "title": "The Screenshot That Was Always One Pixel Wrong: How Tiny Digital Errors Become Internet Folklore",
+    "metaTitle": "The Screenshot That Was Always One Pixel Wrong: How Tiny Digital Errors Become Internet Folklore",
+    "metaDescription": "A shared image that looks almost normal, except for one detail viewers keep noticing after the fact. A source-aware Kyunolab archive record about digital glitch, recurring motifs, evidence limits, and why the story lasts.",
+    "category": "Internet Folklore",
+    "categorySlug": "internet-folklore",
+    "categoryGroup": "Modern Strange Records",
+    "tag": "Digital Glitch",
+    "readTime": "8 min read",
+    "storyType": "Internet Folklore",
+    "sourceStatus": "Folklore / Retelling / Source-aware archive note",
+    "excerpt": "A shared image that looks almost normal, except for one detail viewers keep noticing after the fact.",
+    "publishedAt": "2026-07-02",
+    "updatedAt": "2026-07-02",
+    "relatedStoryIds": [
+      "backrooms-digital-labyrinth",
+      "cursed-image-that-kept-being-shared",
+      "empty-server-room-online-myth"
+    ],
+    "tags": [
+      "Digital Glitch",
+      "Viral Image",
+      "Online Unease",
+      "Pixel Error",
+      "Digital Legend"
+    ],
+    "detail": "the image changes meaning only after people compare copies and notice the mismatch",
+    "evidence": "saved files, repost chains, comments, timestamps, and altered captions"
+  },
+  {
+    "id": "motel-exit-that-leads-back-to-reception",
+    "slug": "motel-exit-that-leads-back-to-reception",
+    "title": "The Motel Exit That Leads Back to Reception: A Strange Place Story About Loops and Bad Directions",
+    "metaTitle": "The Motel Exit That Leads Back to Reception: A Strange Place Story About Loops and Bad Directions",
+    "metaDescription": "A guest follows the exit signs, reaches the front desk again, and begins to wonder whether the hallway is helping or refusing. A source-aware Kyunolab archive record about looping hallway, recurring motifs, evidence limits, and why the story lasts.",
+    "category": "Strange Places",
+    "categorySlug": "strange-places",
+    "categoryGroup": "Modern Strange Records",
+    "tag": "Looping Hallway",
+    "readTime": "9 min read",
+    "storyType": "Strange Place Record",
+    "sourceStatus": "Folklore / Retelling / Source-aware archive note",
+    "excerpt": "A guest follows the exit signs, reaches the front desk again, and begins to wonder whether the hallway is helping or refusing.",
+    "publishedAt": "2026-07-02",
+    "updatedAt": "2026-07-02",
+    "relatedStoryIds": [
+      "hotel-room-that-is-never-assigned",
+      "island-no-one-could-map-twice",
+      "train-platform-that-never-arrives"
+    ],
+    "tags": [
+      "Looping Hallway",
+      "Motel Legend",
+      "Impossible Route",
+      "Liminal Place",
+      "Bad Directions"
+    ],
+    "detail": "every route appears reasonable until it ends at the same quiet desk",
+    "evidence": "floor diagrams, guest stories, exit signs, and the way people describe repeated turns"
+  },
+  {
+    "id": "phone-that-rang-after-the-line-was-cut",
+    "slug": "phone-that-rang-after-the-line-was-cut",
+    "title": "The Phone That Rang After the Line Was Cut: A Careful Mystery Record About Impossible Calls",
+    "metaTitle": "The Phone That Rang After the Line Was Cut: A Careful Mystery Record About Impossible Calls",
+    "metaDescription": "A disconnected phone should be silent, which is exactly why one late ring can become a story people keep repeating. A source-aware Kyunolab archive record about impossible call, recurring motifs, evidence limits, and why the story lasts.",
+    "category": "Unexplained Mysteries",
+    "categorySlug": "unexplained-mysteries",
+    "categoryGroup": "Modern Strange Records",
+    "tag": "Impossible Call",
+    "readTime": "9 min read",
+    "storyType": "Unexplained Mystery",
+    "sourceStatus": "Folklore / Retelling / Source-aware archive note",
+    "excerpt": "A disconnected phone should be silent, which is exactly why one late ring can become a story people keep repeating.",
+    "publishedAt": "2026-07-02",
+    "updatedAt": "2026-07-02",
+    "relatedStoryIds": [
+      "station-clock-that-paused-at-the-same-minute",
+      "number-station-that-repeated-a-name",
+      "missing-minute-on-the-security-camera"
+    ],
+    "tags": [
+      "Impossible Call",
+      "Disconnected Line",
+      "Phone Mystery",
+      "Last Ring",
+      "Quiet Evidence"
+    ],
+    "detail": "the ring is remembered more clearly than the explanation ever is",
+    "evidence": "service records, household accounts, timing notes, and the limits of memory"
+  },
+  {
+    "id": "chair-kept-empty-for-the-night-visitor",
+    "slug": "chair-kept-empty-for-the-night-visitor",
+    "title": "The Chair Kept Empty for the Night Visitor: Why Hospitality Folklore Leaves a Place at the Table",
+    "metaTitle": "The Chair Kept Empty for the Night Visitor: Why Hospitality Folklore Leaves a Place at the Table",
+    "metaDescription": "An extra chair remains at the table, not for a named guest, but for the possibility that someone might arrive after dark. A source-aware Kyunolab archive record about hospitality folklore, recurring motifs, evidence limits, and why the story lasts.",
+    "category": "Classic Folklore",
+    "categorySlug": "classic-folklore",
+    "categoryGroup": "Old Folklore & Belief",
+    "tag": "Hospitality Folklore",
+    "readTime": "8 min read",
+    "storyType": "Classic Folklore",
+    "sourceStatus": "Folklore / Retelling / Source-aware archive note",
+    "excerpt": "An extra chair remains at the table, not for a named guest, but for the possibility that someone might arrive after dark.",
+    "publishedAt": "2026-07-02",
+    "updatedAt": "2026-07-02",
+    "relatedStoryIds": [
+      "old-bell-that-rang-before-touch",
+      "bread-left-on-the-windowsill",
+      "well-that-answers-after-sunset"
+    ],
+    "tags": [
+      "Hospitality Folklore",
+      "Empty Chair",
+      "Night Visitor",
+      "Household Ritual",
+      "Old Folklore"
+    ],
+    "detail": "the household prepares for a guest who may be human, remembered, or symbolic",
+    "evidence": "family customs, oral retellings, seasonal rituals, and repeated table rules"
+  },
+  {
+    "id": "last-train-passenger-no-one-saw-board",
+    "slug": "last-train-passenger-no-one-saw-board",
+    "title": "The Last Train Passenger No One Saw Board: A Modern Legend About Public Silence",
+    "metaTitle": "The Last Train Passenger No One Saw Board: A Modern Legend About Public Silence",
+    "metaDescription": "A passenger is suddenly sitting in the carriage, though no one remembers the doors opening for them. A source-aware Kyunolab archive record about transit sighting, recurring motifs, evidence limits, and why the story lasts.",
+    "category": "Modern Legends",
+    "categorySlug": "modern-legends",
+    "categoryGroup": "Old Folklore & Belief",
+    "tag": "Transit Sighting",
+    "readTime": "9 min read",
+    "storyType": "Modern Legend",
+    "sourceStatus": "Folklore / Retelling / Source-aware archive note",
+    "excerpt": "A passenger is suddenly sitting in the carriage, though no one remembers the doors opening for them.",
+    "publishedAt": "2026-07-02",
+    "updatedAt": "2026-07-02",
+    "relatedStoryIds": [
+      "phantom-bus-stop-after-midnight",
+      "woman-in-white-roadside-legend",
+      "last-message-on-the-office-printer"
+    ],
+    "tags": [
+      "Transit Sighting",
+      "Last Train",
+      "Public Silence",
+      "Modern Ghost",
+      "Unnoticed Passenger"
+    ],
+    "detail": "everyone notices the passenger only after deciding not to say anything",
+    "evidence": "station routines, timetable habits, repeated passenger accounts, and urban quiet"
+  },
+  {
+    "id": "star-that-waited-behind-the-mountain",
+    "slug": "star-that-waited-behind-the-mountain",
+    "title": "The Star That Waited Behind the Mountain: A Myth About Delay, Light, and Return",
+    "metaTitle": "The Star That Waited Behind the Mountain: A Myth About Delay, Light, and Return",
+    "metaDescription": "A village watches the sky stay dark a little too long and turns the delay into a story about patience and return. A source-aware Kyunolab archive record about sky myth, recurring motifs, evidence limits, and why the story lasts.",
+    "category": "Myths",
+    "categorySlug": "myths",
+    "categoryGroup": "Old Folklore & Belief",
+    "tag": "Sky Myth",
+    "readTime": "8 min read",
+    "storyType": "Myth",
+    "sourceStatus": "Folklore / Retelling / Source-aware archive note",
+    "excerpt": "A village watches the sky stay dark a little too long and turns the delay into a story about patience and return.",
+    "publishedAt": "2026-07-02",
+    "updatedAt": "2026-07-02",
+    "relatedStoryIds": [
+      "moon-that-forgot-its-reflection",
+      "rain-that-fell-upward",
+      "dragon-river-that-changed-course"
+    ],
+    "tags": [
+      "Sky Myth",
+      "Delayed Light",
+      "Mountain Myth",
+      "Returning Star",
+      "Patience Motif"
+    ],
+    "detail": "the horizon becomes a threshold where light chooses when to appear",
+    "evidence": "sky motifs, seasonal retellings, mountain symbolism, and repeated teaching stories"
+  },
+  {
+    "id": "glass-deer-at-the-edge-of-winter",
+    "slug": "glass-deer-at-the-edge-of-winter",
+    "title": "The Glass Deer at the Edge of Winter: A Mythic Creature Made of Silence and Cold Light",
+    "metaTitle": "The Glass Deer at the Edge of Winter: A Mythic Creature Made of Silence and Cold Light",
+    "metaDescription": "At the edge of winter, a bright animal appears in the trees and leaves no tracks except the quiet it creates. A source-aware Kyunolab archive record about winter creature, recurring motifs, evidence limits, and why the story lasts.",
+    "category": "Mythic Creatures",
+    "categorySlug": "mythic-creatures",
+    "categoryGroup": "Old Folklore & Belief",
+    "tag": "Winter Creature",
+    "readTime": "9 min read",
+    "storyType": "Mythic Creature",
+    "sourceStatus": "Folklore / Retelling / Source-aware archive note",
+    "excerpt": "At the edge of winter, a bright animal appears in the trees and leaves no tracks except the quiet it creates.",
+    "publishedAt": "2026-07-02",
+    "updatedAt": "2026-07-02",
+    "relatedStoryIds": [
+      "shadow-fox-that-crosses-no-snow",
+      "giant-under-the-frozen-hill",
+      "sea-being-that-sang-from-the-fog"
+    ],
+    "tags": [
+      "Winter Creature",
+      "Glass Deer",
+      "Forest Figure",
+      "Cold Light",
+      "Boundary Animal"
+    ],
+    "detail": "the creature is seen only when the forest becomes too still",
+    "evidence": "seasonal motifs, forest warnings, animal symbolism, and local retellings"
+  },
+  {
+    "id": "town-printed-on-one-map-and-nowhere-else",
+    "slug": "town-printed-on-one-map-and-nowhere-else",
+    "title": "The Town Printed on One Map and Nowhere Else: A Lost World Built From Cartographic Doubt",
+    "metaTitle": "The Town Printed on One Map and Nowhere Else: A Lost World Built From Cartographic Doubt",
+    "metaDescription": "One old map names a town that later maps forget, leaving readers to ask whether the place vanished or was never there. A source-aware Kyunolab archive record about map anomaly, recurring motifs, evidence limits, and why the story lasts.",
+    "category": "Lost Worlds",
+    "categorySlug": "lost-worlds",
+    "categoryGroup": "Places, Objects & Natural Anomalies",
+    "tag": "Map Anomaly",
+    "readTime": "9 min read",
+    "storyType": "Lost World Record",
+    "sourceStatus": "Folklore / Retelling / Source-aware archive note",
+    "excerpt": "One old map names a town that later maps forget, leaving readers to ask whether the place vanished or was never there.",
+    "publishedAt": "2026-07-02",
+    "updatedAt": "2026-07-02",
+    "relatedStoryIds": [
+      "city-under-the-sand-map",
+      "country-that-appeared-in-a-footnote",
+      "harbor-that-lost-its-name"
+    ],
+    "tags": [
+      "Map Anomaly",
+      "Lost Town",
+      "Cartographic Mystery",
+      "Unmapped Place",
+      "Paper Geography"
+    ],
+    "detail": "the printed name outlives the evidence that should have supported it",
+    "evidence": "map editions, gazetteers, road indexes, settlement records, and absence itself"
+  },
+  {
+    "id": "field-where-crickets-stop-at-the-fence",
+    "slug": "field-where-crickets-stop-at-the-fence",
+    "title": "The Field Where Crickets Stop at the Fence: A Strange Nature Record About Sudden Silence",
+    "metaTitle": "The Field Where Crickets Stop at the Fence: A Strange Nature Record About Sudden Silence",
+    "metaDescription": "The field sounds ordinary until the fence line, where the insects seem to stop as if they have reached a rule. A source-aware Kyunolab archive record about sudden silence, recurring motifs, evidence limits, and why the story lasts.",
+    "category": "Strange Nature",
+    "categorySlug": "strange-nature",
+    "categoryGroup": "Places, Objects & Natural Anomalies",
+    "tag": "Sudden Silence",
+    "readTime": "8 min read",
+    "storyType": "Strange Nature Record",
+    "sourceStatus": "Folklore / Retelling / Source-aware archive note",
+    "excerpt": "The field sounds ordinary until the fence line, where the insects seem to stop as if they have reached a rule.",
+    "publishedAt": "2026-07-02",
+    "updatedAt": "2026-07-02",
+    "relatedStoryIds": [
+      "forest-that-appears-in-old-stories",
+      "lake-that-reflects-no-stars",
+      "rain-that-fell-upward"
+    ],
+    "tags": [
+      "Sudden Silence",
+      "Field Folklore",
+      "Sound Boundary",
+      "Nature Omen",
+      "Fence Line"
+    ],
+    "detail": "the boundary is heard before it is seen",
+    "evidence": "local observation, seasonal sound, fence lore, and environmental uncertainty"
+  },
+  {
+    "id": "chapel-door-that-opens-only-in-fog",
+    "slug": "chapel-door-that-opens-only-in-fog",
+    "title": "The Chapel Door That Opens Only in Fog: A Legendary Place Record About Weather and Access",
+    "metaTitle": "The Chapel Door That Opens Only in Fog: A Legendary Place Record About Weather and Access",
+    "metaDescription": "A chapel stands locked in clear weather, but local stories say fog changes the door before anyone reaches it. A source-aware Kyunolab archive record about fog chapel, recurring motifs, evidence limits, and why the story lasts.",
+    "category": "Legendary Places",
+    "categorySlug": "legendary-places",
+    "categoryGroup": "Places, Objects & Natural Anomalies",
+    "tag": "Fog Chapel",
+    "readTime": "9 min read",
+    "storyType": "Legendary Place",
+    "sourceStatus": "Folklore / Retelling / Source-aware archive note",
+    "excerpt": "A chapel stands locked in clear weather, but local stories say fog changes the door before anyone reaches it.",
+    "publishedAt": "2026-07-02",
+    "updatedAt": "2026-07-02",
+    "relatedStoryIds": [
+      "bridge-that-counts-your-steps",
+      "island-no-one-could-map-twice",
+      "forest-that-appears-in-old-stories"
+    ],
+    "tags": [
+      "Fog Chapel",
+      "Legendary Place",
+      "Locked Door",
+      "Weather Omen",
+      "Sacred Threshold"
+    ],
+    "detail": "weather becomes part of the lock",
+    "evidence": "place memory, weather stories, threshold motifs, and repeated local warnings"
+  },
+  {
+    "id": "key-that-fits-every-door-except-its-own",
+    "slug": "key-that-fits-every-door-except-its-own",
+    "title": "The Key That Fits Every Door Except Its Own: A Mythic Object Record About Refusal",
+    "metaTitle": "The Key That Fits Every Door Except Its Own: A Mythic Object Record About Refusal",
+    "metaDescription": "The key works everywhere it should not, then fails at the one door it was supposedly made to open. A source-aware Kyunolab archive record about impossible key, recurring motifs, evidence limits, and why the story lasts.",
+    "category": "Mythic Objects",
+    "categorySlug": "mythic-objects",
+    "categoryGroup": "Places, Objects & Natural Anomalies",
+    "tag": "Impossible Key",
+    "readTime": "8 min read",
+    "storyType": "Mythic Object",
+    "sourceStatus": "Folklore / Retelling / Source-aware archive note",
+    "excerpt": "The key works everywhere it should not, then fails at the one door it was supposedly made to open.",
+    "publishedAt": "2026-07-02",
+    "updatedAt": "2026-07-02",
+    "relatedStoryIds": [
+      "mirror-that-shows-the-wrong-room",
+      "lamp-that-stays-lit-underwater",
+      "sword-that-cannot-be-drawn"
+    ],
+    "tags": [
+      "Impossible Key",
+      "Object Legend",
+      "Locked Door",
+      "Refusal Motif",
+      "Household Relic"
+    ],
+    "detail": "the object grants access until the moment access actually matters",
+    "evidence": "family retellings, object motifs, inheritance stories, and symbolic failure"
+  },
+  {
+    "id": "how-a-warning-becomes-a-legend",
+    "slug": "how-a-warning-becomes-a-legend",
+    "title": "How a Warning Becomes a Legend: The Shape of a Story That Survives Retelling",
+    "metaTitle": "How a Warning Becomes a Legend: The Shape of a Story That Survives Retelling",
+    "metaDescription": "A warning begins as advice, but if it gains an image, a place, and a consequence, it can become a legend. A source-aware Kyunolab archive record about legend formation, recurring motifs, evidence limits, and why the story lasts.",
+    "category": "Legend Origins",
+    "categorySlug": "legend-origins",
+    "categoryGroup": "Archive Method",
+    "tag": "Legend Formation",
+    "readTime": "10 min read",
+    "storyType": "Legend Origins Guide",
+    "sourceStatus": "Folklore / Retelling / Source-aware archive note",
+    "excerpt": "A warning begins as advice, but if it gains an image, a place, and a consequence, it can become a legend.",
+    "publishedAt": "2026-07-02",
+    "updatedAt": "2026-07-02",
+    "relatedStoryIds": [
+      "woman-in-white-roadside-legend",
+      "backrooms-digital-labyrinth",
+      "phantom-bus-stop-after-midnight"
+    ],
+    "tags": [
+      "Legend Formation",
+      "Warning Story",
+      "Folklore Pattern",
+      "Retelling Cycle",
+      "Believable Rumor"
+    ],
+    "detail": "the warning becomes easier to repeat than to verify",
+    "evidence": "repeated phrasing, practical advice, social fear, local examples, and changing details"
+  },
+  {
     "id": "woman-in-white-roadside-legend",
     "slug": "woman-in-white-roadside-legend",
     "title": "The Woman in White at the Bend: Why This Roadside Legend Still Feels Familiar",
