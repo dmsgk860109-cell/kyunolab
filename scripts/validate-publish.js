@@ -8,9 +8,9 @@ const errors = [];
 
 const args = parseArgs(process.argv.slice(2));
 const stories = readJson(path.join(root, 'data', 'stories.json'));
-const guides = readOptionalJson(path.join(root, 'data', 'guides.json'));
+const categories = readOptionalJson(path.join(root, 'data', 'categories.json'));
 const storyBySlug = new Map(stories.map((story) => [story.slug, story]));
-const guideBySlug = new Map(guides.map((guide) => [guide.slug, guide]));
+const categoryBySlug = new Map(categories.map((category) => [category.slug, category]));
 const targetSlugs = args.all ? stories.map((story) => story.slug) : args.slugs;
 
 if (!args.all && targetSlugs.length === 0) {
@@ -32,6 +32,7 @@ for (const slug of targetSlugs) {
   validateRss(story);
 }
 
+validateGlobalStructure();
 validateListPagination('newest');
 validateListPagination('popular');
 validateListPagination('archive');
@@ -113,6 +114,24 @@ function validateStoryRecord(story) {
   if (story.relatedStoryIds && !Array.isArray(story.relatedStoryIds)) {
     errors.push(`${story.slug}: relatedStoryIds must be an array`);
   }
+
+  if (!categoryBySlug.has(story.categorySlug)) {
+    errors.push(`${story.slug}: categorySlug "${story.categorySlug}" is not defined in data/categories.json`);
+  }
+
+  const relatedKeys = new Set();
+  for (const relatedId of story.relatedStoryIds || []) {
+    if (relatedId === story.slug || relatedId === story.id) {
+      errors.push(`${story.slug}: relatedStoryIds cannot include itself`);
+    }
+    if (relatedKeys.has(relatedId)) {
+      errors.push(`${story.slug}: duplicate relatedStoryId "${relatedId}"`);
+    }
+    if (!storyBySlug.has(relatedId)) {
+      errors.push(`${story.slug}: relatedStoryId "${relatedId}" does not exist`);
+    }
+    relatedKeys.add(relatedId);
+  }
 }
 
 function validateStoryPage(story) {
@@ -183,6 +202,41 @@ function validateListPagination(baseName) {
     const filePath = path.join(root, fileName);
     if (!fs.existsSync(filePath)) {
       errors.push(`${baseName}: missing expected pagination file ${fileName}`);
+    }
+  }
+}
+
+function validateGlobalStructure() {
+  const seenSlugs = new Set();
+  const seenIds = new Set();
+
+  for (const story of stories) {
+    if (seenSlugs.has(story.slug)) {
+      errors.push(`${story.slug}: duplicate story slug`);
+    }
+    seenSlugs.add(story.slug);
+
+    if (story.id) {
+      if (seenIds.has(story.id)) {
+        errors.push(`${story.slug}: duplicate story id "${story.id}"`);
+      }
+      seenIds.add(story.id);
+    }
+  }
+
+  const storyDir = path.join(root, 'stories');
+  for (const entry of fs.readdirSync(storyDir, { withFileTypes: true })) {
+    if (!entry.isFile() || !entry.name.endsWith('.html')) continue;
+    const slug = entry.name.replace(/\.html$/, '');
+    if (!storyBySlug.has(slug)) {
+      errors.push(`${entry.name}: orphan story file without data/stories.json record`);
+    }
+  }
+
+  for (const category of categories) {
+    const filePath = path.join(root, 'categories', `${category.slug}.html`);
+    if (!fs.existsSync(filePath)) {
+      errors.push(`${category.slug}: missing category archive page`);
     }
   }
 }
