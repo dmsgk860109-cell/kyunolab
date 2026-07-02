@@ -3,6 +3,8 @@
   "scripts": {
     "build": "node scripts/validate-tags.js && node scripts/generate-tags.js",
     "generate:tags": "node scripts/generate-tags.js",
-    "validate:tags": "node scripts/validate-tags.js"
+    "validate:tags": "node scripts/validate-tags.js",
+    "validate:publish": "node scripts/validate-publish.js",
+    "qa:full": "node scripts/validate-tags.js && node scripts/generate-tags.js && node scripts/validate-publish.js --all"
   }
 }

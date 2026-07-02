@@ -1,0 +1,103 @@
+# Kyunolab Publishing Pipeline
+
+This file defines the scalable publishing workflow for Kyunolab.
+
+## Source of Truth
+
+- Article metadata lives in `data/stories.json`.
+- Guide and Mystery Board metadata lives in `data/guides.json`.
+- Story detail pages live in `stories/`.
+- Tag archive pages are generated from metadata by `scripts/generate-tags.js`.
+- Public story URLs must stay clean: `/stories/[slug]`.
+
+## Publishing Rule
+
+Do not manually inspect the whole site for every article release.
+
+For normal publishing, validate only:
+
+- the new or changed story records
+- their story detail pages
+- the category pages they affect
+- the tag pages they affect
+- pagination files
+- `sitemap.xml`
+- `rss.xml` when the story is recent enough to appear there
+
+Full-site QA is reserved for layout, navigation, template, generator, or CSS changes.
+
+## Common Commands
+
+Validate one or more newly published stories:
+
+```bash
+npm run validate:publish -- --slugs=story-slug,another-story-slug
+```
+
+Validate tag quality:
+
+```bash
+npm run validate:tags
+```
+
+Regenerate tag archives:
+
+```bash
+npm run generate:tags
+```
+
+Run full structural QA only after template or generator changes:
+
+```bash
+npm run qa:full
+```
+
+## Batch Publishing
+
+For 1, 10, or 100 new articles:
+
+1. Add records to `data/stories.json`.
+2. Add the matching `stories/[slug].html` files.
+3. Regenerate affected generated pages.
+4. Run `npm run validate:publish -- --slugs=[changed-slugs]`.
+5. Run `npm run validate:tags`.
+
+The changed slug list is the release boundary. It prevents a 100-article release from becoming a full manual review of every old article.
+
+## When Full QA Is Needed
+
+Run full QA when changing:
+
+- article layout
+- header or footer navigation
+- category architecture
+- pagination generator logic
+- tag archive generator logic
+- sitemap or RSS generation
+- global CSS affecting cards, sidebars, or article pages
+
+## Scale Notes
+
+At 1,000+ articles:
+
+- keep metadata as the source of truth
+- generate index, category, tag, sitemap, and RSS files from data
+- split sitemap files if URL count approaches search-engine limits
+- keep article validation slug-based
+
+At 10,000+ articles:
+
+- avoid rewriting every static page for small releases
+- split generated archives into stable chunks
+- consider moving to a dedicated static generator or build pipeline
+- keep manual review focused on changed articles and templates
+
+## Release Checklist
+
+- Changed story slugs are known.
+- Clean canonical URLs are present.
+- Category pages contain the new links.
+- Tag pages exist and contain the new links.
+- Sitemap contains the new public URLs.
+- RSS contains only the appropriate newest stories.
+- No `.html` story public URL is introduced.
