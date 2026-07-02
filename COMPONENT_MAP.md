@@ -500,3 +500,11 @@ Mobile behavior:
 Ads nearby:
 
 - no ads directly attached to the search box
+
+## Category Architecture: Two 6-Category Groups
+
+Kyunolab uses two visible category groups. **Modern Strange Records** contains Urban Legends, Internet Folklore, Strange Places, Unexplained Mysteries, Classic Folklore, and Modern Legends. **Mythic & Imagined Realms** contains Myths, Mythic Creatures, Lost Worlds, Strange Nature, Legendary Places, and Mythic Objects.
+
+Use the distinction carefully: Vanishing Hitchhiker belongs in Urban Legends; Backrooms belongs in Internet Folklore; modern sighting cycles such as Loch Ness-style records belong in Modern Legends; dragons belong in Mythic Creatures; vanished cities, islands, and impossible geographies usually belong in Lost Worlds; unusual forests or natural phenomena belong in Strange Nature unless the place itself is the central legend, where Legendary Places may fit better.
+
+Keep legacy category URLs live. Legend Origins remains a supplemental archive shelf for existing material, but it is not part of the visible 6:6 category system.

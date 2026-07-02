@@ -304,6 +304,38 @@ h1 {
   font-weight: 700;
   line-height: 1.25;
 }
+.category-group {
+  margin-top: 28px;
+}
+.category-group + .category-group {
+  margin-top: 38px;
+}
+.category-group-head {
+  margin-top: 0;
+}
+.category-group-label {
+  margin: 0 0 -2px;
+  color: var(--accent);
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.category-hub-single {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 420px;
+}
+.home-category-groups {
+  display: grid;
+  gap: 24px;
+}
+.home-category-group > .label {
+  margin: 0 0 12px;
+}
+.category-page-links {
+  max-width: 520px;
+}
 .text-link {
   display: inline-block;
   margin-top: 2px;

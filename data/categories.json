@@ -1,0 +1,211 @@
+[
+  {
+    "title": "Urban Legends",
+    "slug": "urban-legends",
+    "group": "Modern Strange Records",
+    "description": "Modern rumors, cautionary tales, social legends, and stories that spread because they feel almost possible.",
+    "featureLinks": [
+      [
+        "The Vanishing Hitchhiker",
+        "/stories/vanishing-hitchhiker-roadside-legend"
+      ],
+      [
+        "The Island No One Could Map Twice",
+        "/stories/island-no-one-could-map-twice"
+      ]
+    ]
+  },
+  {
+    "title": "Internet Folklore",
+    "slug": "internet-folklore",
+    "group": "Modern Strange Records",
+    "description": "Digital legends, online myths, and stories born in forums, images, games, shared files, and repeated screenshots.",
+    "featureLinks": [
+      [
+        "The Backrooms",
+        "/stories/backrooms-digital-labyrinth"
+      ],
+      [
+        "A Single Image Legend",
+        "/stories/single-image-internet-legend"
+      ]
+    ]
+  },
+  {
+    "title": "Strange Places",
+    "slug": "strange-places",
+    "group": "Modern Strange Records",
+    "description": "Real or legendary places surrounded by unusual records, disappearances, impossible rumors, and uncertain maps.",
+    "featureLinks": [
+      [
+        "The Island No One Could Map Twice",
+        "/stories/island-no-one-could-map-twice"
+      ],
+      [
+        "A Roadside Legend",
+        "/stories/vanishing-hitchhiker-roadside-legend"
+      ]
+    ]
+  },
+  {
+    "title": "Unexplained Mysteries",
+    "slug": "unexplained-mysteries",
+    "group": "Modern Strange Records",
+    "description": "Careful mystery notes, unresolved questions, and strange records presented without sensational certainty.",
+    "featureLinks": [
+      [
+        "The Old Bell That Rang",
+        "/stories/old-bell-rang-before-touched"
+      ],
+      [
+        "Uncertain Maps",
+        "/stories/island-no-one-could-map-twice"
+      ]
+    ]
+  },
+  {
+    "title": "Classic Folklore",
+    "slug": "classic-folklore",
+    "group": "Modern Strange Records",
+    "description": "Older oral traditions, inherited warnings, local beliefs, folk motifs, and stories carried across generations.",
+    "featureLinks": [
+      [
+        "The Forest in Old Stories",
+        "/stories/forest-in-too-many-old-stories"
+      ],
+      [
+        "The Old Bell Mystery",
+        "/stories/old-bell-rang-before-touched"
+      ]
+    ]
+  },
+  {
+    "title": "Modern Legends",
+    "slug": "modern-legends",
+    "group": "Modern Strange Records",
+    "description": "Near-modern reported legends, sighting stories, rumor cycles, and cryptid-like accounts shaped by repetition.",
+    "featureLinks": [
+      [
+        "The Vanishing Hitchhiker",
+        "/stories/vanishing-hitchhiker-roadside-legend"
+      ],
+      [
+        "Internet Folklore",
+        "/categories/internet-folklore.html"
+      ]
+    ]
+  },
+  {
+    "title": "Myths",
+    "slug": "myths",
+    "group": "Mythic & Imagined Realms",
+    "description": "Traditional mythic stories, creation tales, sacred narratives, gods, heroes, and symbolic explanations of the world.",
+    "featureLinks": [
+      [
+        "Why Dragons Look Different",
+        "/stories/dragons-across-the-world"
+      ],
+      [
+        "Mythic Creatures",
+        "/categories/mythic-creatures.html"
+      ]
+    ]
+  },
+  {
+    "title": "Mythic Creatures",
+    "slug": "mythic-creatures",
+    "group": "Mythic & Imagined Realms",
+    "description": "Dragons, krakens, giants, spirits, sea beings, forest figures, and creatures shaped by belief.",
+    "featureLinks": [
+      [
+        "Why Dragons Look Different",
+        "/stories/dragons-across-the-world"
+      ],
+      [
+        "The Forest That Returns",
+        "/stories/forest-in-too-many-old-stories"
+      ]
+    ]
+  },
+  {
+    "title": "Lost Worlds",
+    "slug": "lost-worlds",
+    "group": "Mythic & Imagined Realms",
+    "description": "Lost cities, vanished islands, unmapped lands, impossible geographies, and worlds that resist being fixed.",
+    "featureLinks": [
+      [
+        "The Island No One Could Map Twice",
+        "/stories/island-no-one-could-map-twice"
+      ],
+      [
+        "Strange Places",
+        "/categories/strange-places.html"
+      ]
+    ]
+  },
+  {
+    "title": "Strange Nature",
+    "slug": "strange-nature",
+    "group": "Mythic & Imagined Realms",
+    "description": "Unusual forests, strange plants, sky and sea phenomena, and natural places that attract impossible stories.",
+    "featureLinks": [
+      [
+        "The Forest in Old Stories",
+        "/stories/forest-in-too-many-old-stories"
+      ],
+      [
+        "Classic Folklore",
+        "/categories/classic-folklore.html"
+      ]
+    ]
+  },
+  {
+    "title": "Legendary Places",
+    "slug": "legendary-places",
+    "group": "Mythic & Imagined Realms",
+    "description": "Sacred mountains, forbidden lakes, ruins, hidden temples, and named places given power through legend.",
+    "featureLinks": [
+      [
+        "The Island No One Could Map Twice",
+        "/stories/island-no-one-could-map-twice"
+      ],
+      [
+        "The Forest That Returns",
+        "/stories/forest-in-too-many-old-stories"
+      ]
+    ]
+  },
+  {
+    "title": "Mythic Objects",
+    "slug": "mythic-objects",
+    "group": "Mythic & Imagined Realms",
+    "description": "Legendary swords, bells, mirrors, relics, books, charms, and objects that seem to carry more than function.",
+    "featureLinks": [
+      [
+        "The Old Bell That Rang",
+        "/stories/old-bell-rang-before-touched"
+      ],
+      [
+        "Unexplained Mysteries",
+        "/categories/unexplained-mysteries.html"
+      ]
+    ]
+  },
+  {
+    "title": "Legend Origins",
+    "slug": "legend-origins",
+    "group": "Supplemental Archive",
+    "legacy": true,
+    "description": "Records focused on where a story shape begins, changes, and becomes recognizable.",
+    "featureLinks": [
+      [
+        "How a Single Image Became an Internet Legend",
+        "/stories/single-image-internet-legend"
+      ],
+      [
+        "The Backrooms",
+        "/stories/backrooms-digital-labyrinth"
+      ]
+    ]
+  }
+]
