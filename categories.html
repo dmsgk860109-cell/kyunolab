@@ -14,7 +14,7 @@
   <link rel="icon" href="/favicon.svg?v=20260702-cold-clean" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=20260702-cold-clean">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="/styles.css?v=20260702-cold-clean">
+  <link rel="stylesheet" href="/styles.css?v=20260702-archive-rails">
 </head>
 <body>
   <header class="site-header">
@@ -24,7 +24,8 @@
       <nav class="nav"><a href="/newest.html">Newest</a><a href="/popular.html">Popular</a><a href="/categories.html">Categories</a><a href="/mystery-board.html">Mystery Board</a><a href="/about.html">About</a></nav>
     </div>
   </header>
-  <main class="article-shell">
+  <main class="article-shell archive-page-grid">
+    <div class="archive-page-main">
     <p class="label">Archive Categories</p>
     <h1 class="article-title">Browse by category</h1>
     <p class="deck">Move through the archive by story shelf, from roadside legends and internet folklore to old myths, strange places, and careful mystery notes.</p>
@@ -72,6 +73,25 @@
         <a class="text-link" href="/categories/legend-origins.html">View Legend Origins</a>
       </article>
     </section>
+    </div>
+    <aside class="archive-page-rail" aria-label="Category page reading paths">
+      <div class="rail-card rail-feature">
+        <p class="rail-label">Essential Read</p>
+        <a href="/stories/vanishing-hitchhiker-roadside-legend"><strong>The Vanishing Hitchhiker</strong><span>Begin with a familiar legend before moving through the shelves.</span></a>
+      </div>
+      <div class="rail-card">
+        <p class="rail-label">Popular Shelves</p>
+        <a href="/categories/urban-legends.html">Urban Legends</a>
+        <a href="/categories/internet-folklore.html">Internet Folklore</a>
+        <a href="/categories/strange-places.html">Strange Places</a>
+      </div>
+      <div class="rail-card rail-card-subtle">
+        <p class="rail-label">Continue Reading</p>
+        <a href="/popular.html">Popular Records</a>
+        <a href="/newest.html">Newest Stories</a>
+        <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a>
+      </div>
+    </aside>
   </main>
   <footer class="site-footer">
     <p><strong>The Strange Archive</strong> is a quiet story publication by Kyuno Lab, dedicated to legends, folklore, mysteries, and strange tales from the edges of memory.</p>
