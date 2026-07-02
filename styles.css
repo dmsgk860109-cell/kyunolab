@@ -777,6 +777,58 @@ textarea {
   font: 14px/1.45 Arial, sans-serif;
   background: #fff;
 }
+.pagination {
+  margin: 28px 0 4px;
+  padding: 16px 0 0;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  font-family: Arial, sans-serif;
+}
+.pagination-status {
+  color: var(--muted);
+  font-size: 13px;
+}
+.pagination-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+}
+.page-link {
+  min-width: 34px;
+  min-height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 10px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1;
+}
+.page-step {
+  min-width: 76px;
+}
+.page-link:hover {
+  border-color: var(--structure);
+  color: var(--accent);
+}
+.page-link.is-current {
+  background: var(--structure);
+  border-color: var(--structure);
+  color: #fff;
+}
+.page-link.is-disabled {
+  opacity: .42;
+  pointer-events: none;
+}
+
 .ad-slot {
   display: grid;
   place-items: center;
@@ -1014,6 +1066,17 @@ textarea {
   .ranking-card a { font-size: 20px; }
   .article-meta-grid, .related-grid, .prev-next { grid-template-columns: 1fr; }
   .reading-bridge > div { grid-template-columns: 1fr; }
+  .pagination {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .pagination-links {
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .page-step {
+    flex: 1 1 96px;
+  }
   .article-title {
     font-size: 30px;
     overflow-wrap: anywhere;

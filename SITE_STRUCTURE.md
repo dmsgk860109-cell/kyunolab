@@ -18,6 +18,22 @@ Secondary reader paths:
 
 No important page should be a dead end.
 
+## Pagination Rules
+
+Kyunolab uses numbered pagination for archive-style list pages instead of infinite scroll.
+
+Rules:
+
+- List pages should show up to 12 records per page.
+- The first page keeps the stable base URL, such as `/newest.html`, `/archive.html`, or `/categories/urban-legends.html`.
+- Additional pages use a predictable static suffix: `/newest-2.html`, `/newest-3.html`, `/archive-2.html`, and so on.
+- Category pages should follow the same pattern when a category grows beyond 12 records, such as `/categories/urban-legends-2.html`.
+- Every paginated list page should include a visible pagination block near the bottom of the main list.
+- Paginated pages should use their own canonical URL.
+- Paginated pages should include `rel="prev"` and `rel="next"` links where applicable.
+- The sitemap should include every public paginated URL.
+- Do not use infinite scroll as the primary archive navigation because it weakens reader orientation and is less reliable for static SEO discovery.
+
 ## Required Pages
 
 ### Home
