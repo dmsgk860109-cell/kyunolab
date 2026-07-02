@@ -10,7 +10,9 @@ const rssLimit = 20;
 const stories = readJson(path.join(root, 'data', 'stories.json'));
 const categories = readJson(path.join(root, 'data', 'categories.json'));
 const guides = readOptionalJson(path.join(root, 'data', 'guides.json'));
+const siteConfig = readOptionalJson(path.join(root, 'data', 'site.json'), {});
 
+generateHomePage();
 generateArchivePageSet({
   baseName: 'newest',
   label: 'Newest Records',
@@ -41,6 +43,63 @@ generateRss();
 generateSitemap();
 
 console.log(`Generated site index pages for ${stories.length} stories, ${categories.length} categories, and ${guides.length} guides.`);
+
+function generateHomePage() {
+  const featuredStory = getConfiguredStory(siteConfig.featuredStoryId) || stories[0];
+  const latestStories = stories.slice(0, 8);
+  const popularStories = getConfiguredStories(siteConfig.popularStoryIds).slice(0, 5);
+  const essentialStories = getConfiguredStories(siteConfig.essentialStoryIds).slice(0, 4);
+  const categoryGroups = getHomeCategoryGroups();
+
+  writeFile('index.html', renderHomePage({
+    featuredStory,
+    latestStories,
+    popularStories,
+    essentialStories,
+    categoryGroups
+  }));
+}
+
+function renderHomePage({ featuredStory, latestStories, popularStories, essentialStories, categoryGroups }) {
+  const title = 'The Strange Archive - Urban Legends, Folklore, Mysteries, and Mythic Stories';
+  const description = "Explore urban legends, internet folklore, strange places, myths, lost worlds, and recurring mystery patterns in Kyunolab's quiet archive.";
+  return `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>${escapeHtml(title)}</title>
+  <meta name="description" content="${escapeAttr(description)}">
+  <meta property="og:title" content="${escapeAttr(title)}">
+  <meta property="og:description" content="${escapeAttr(description)}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="${siteUrl}/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="${siteUrl}/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles.css?v=${styleVersion}">
+</head>
+<body>
+  ${renderHeader()}
+  <main>
+    <section class="hero">
+      <div class="hero-copy"><p class="label">Strange Story Archive</p><h1>Strange legends. Forgotten folklore. Mysteries that refuse to disappear.</h1><p>A quiet archive of urban legends, internet folklore, strange places, myths, lost worlds, and recurring mystery patterns.</p></div>
+      ${renderFeaturedStory(featuredStory)}
+    </section>
+    <section class="notice"><strong>Story &amp; Source Notice:</strong> This site explores folklore, legends, mysteries, and source-aware retellings. Unverified traditions are presented as stories, not as verified fact.</section>
+    <section id="latest" class="latest"><div class="section-head"><h2>Latest Stories</h2><span>${stories.length} archive entries</span></div><div class="story-list">${latestStories.map(renderStoryRow).join('')}</div></section>
+    <section class="board" id="rankings"><div class="section-head"><h2>Popular Records</h2><a href="/mystery-board.html">Open mystery board</a></div><div class="ranking-grid"><ol class="ranking-card">${popularStories.map(renderRankingItem).join('')}</ol><aside class="side-panel"><h3>Reader Paths</h3><a href="/newest.html">Newest stories</a><a href="/categories.html">Browse by category</a><a href="#essential-reads">Start with essential reads</a><a href="/fiction-disclaimer.html">Story &amp; source notice</a></aside></div></section>
+    <section id="categories" class="categories"><div class="section-head"><h2>Browse By Category</h2><a href="/categories.html">View all categories</a></div><div class="home-category-groups">${categoryGroups.map(renderHomeCategoryGroup).join('')}</div></section>
+    <section id="essential-reads" class="essential-reads"><div class="section-head"><h2>Essential Reads</h2><span>Start here</span></div><div class="compact-grid">${essentialStories.map(renderEssentialStory).join('')}</div></section>
+    <section class="archive-cta"><div><p class="label">Archive Index</p><h2>Explore every open file in The Strange Archive.</h2><p>Move through the full collection by category, source status, story type, and recurring motif.</p></div><a class="button" href="/archive.html">Browse all current stories</a></section>
+  </main>
+  ${renderFooter()}
+</body>
+</html>
+`;
+}
 
 function generateArchivePageSet({ baseName, label, title, description, items }) {
   const pages = chunk(items, pageSize);
@@ -124,6 +183,49 @@ function generateCategoryPages() {
       writeFile(fileName, renderCategoryPage({ category, pageItems, pageNumber, totalPages: pages.length, pageTitle, canonicalPath }));
     });
   }
+}
+
+function renderFeaturedStory(story) {
+  return `<article class="feature-card"><span class="pill">Featured Record</span><h2><a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a></h2><p>${escapeHtml(story.excerpt || story.metaDescription || '')}</p><div class="meta">${escapeHtml([story.category, story.readTime, story.tag].filter(Boolean).join(' - '))}</div></article>`;
+}
+
+function renderRankingItem(story) {
+  return `<li><a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a><span>${escapeHtml([story.category, story.tag].filter(Boolean).join(' - '))}</span></li>`;
+}
+
+function renderEssentialStory(story) {
+  return `<a href="/stories/${escapeAttr(story.slug)}"><span>${escapeHtml(story.category)}</span><strong>${escapeHtml(story.title)}</strong></a>`;
+}
+
+function renderHomeCategoryGroup(group) {
+  return `<div class="home-category-group"><p class="label">${escapeHtml(group.label)}</p><div class="category-grid category-hub category-hub-compact">${group.categories.map(renderHomeCategoryCard).join('')}</div></div>`;
+}
+
+function renderHomeCategoryCard(category) {
+  const categoryStories = stories.filter((story) => story.categorySlug === category.slug).slice(0, 3);
+  return `      <article>
+        <p class="category-group-label">${escapeHtml(category.group)}</p>
+        <h3><a href="/categories/${escapeAttr(category.slug)}.html">${escapeHtml(category.title)}</a></h3>
+        <p>${escapeHtml(category.description)}</p>
+        <div class="category-links">${categoryStories.map(renderCategoryStoryLink).join('')}</div>
+        <a class="text-link" href="/categories/${escapeAttr(category.slug)}.html">View ${escapeHtml(category.title)}</a>
+      </article>`;
+}
+
+function getHomeCategoryGroups() {
+  const configuredGroups = Array.isArray(siteConfig.homeCategoryGroups) ? siteConfig.homeCategoryGroups : [];
+  if (configuredGroups.length) {
+    return configuredGroups.map((group) => ({
+      label: group.label,
+      categories: (group.categorySlugs || []).map((slug) => categories.find((category) => category.slug === slug)).filter(Boolean)
+    })).filter((group) => group.categories.length);
+  }
+
+  const grouped = groupCategories();
+  return Object.entries(grouped).slice(0, 2).map(([label, groupCategories]) => ({
+    label,
+    categories: groupCategories.slice(0, 3)
+  }));
 }
 
 function generateRss() {
@@ -363,6 +465,18 @@ function groupCategories() {
   }, {});
 }
 
+function getConfiguredStory(id) {
+  if (!id) return null;
+  return stories.find((story) => story.id === id || story.slug === id) || null;
+}
+
+function getConfiguredStories(ids) {
+  const configuredIds = Array.isArray(ids) ? ids : [];
+  const configuredStories = configuredIds.map(getConfiguredStory).filter(Boolean);
+  if (configuredStories.length) return configuredStories;
+  return stories.slice(0, configuredIds.length || 5);
+}
+
 function newestDate(items) {
   return items
     .map((item) => item.updatedAt || item.publishedAt)
@@ -388,8 +502,8 @@ function readJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, 'utf8'));
 }
 
-function readOptionalJson(filePath) {
-  if (!fs.existsSync(filePath)) return [];
+function readOptionalJson(filePath, fallback = []) {
+  if (!fs.existsSync(filePath)) return fallback;
   return readJson(filePath);
 }
 

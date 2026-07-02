@@ -10,7 +10,9 @@ const args = parseArgs(process.argv.slice(2));
 const stories = readJson(path.join(root, 'data', 'stories.json'));
 const categories = readOptionalJson(path.join(root, 'data', 'categories.json'));
 const guides = readOptionalJson(path.join(root, 'data', 'guides.json'));
+const siteConfig = readOptionalJson(path.join(root, 'data', 'site.json'), {});
 const storyBySlug = new Map(stories.map((story) => [story.slug, story]));
+const storyById = new Map(stories.map((story) => [story.id || story.slug, story]));
 const categoryBySlug = new Map(categories.map((category) => [category.slug, category]));
 const targetSlugs = args.all ? stories.map((story) => story.slug) : args.slugs;
 
@@ -35,6 +37,7 @@ for (const slug of targetSlugs) {
 
 validateGlobalStructure();
 validateGuideStructure();
+validateHomeConfig();
 validateListPagination('newest');
 validateListPagination('popular');
 validateListPagination('archive');
@@ -289,6 +292,50 @@ function validateGuideStructure() {
   }
 }
 
+function validateHomeConfig() {
+  const home = readText('index.html');
+
+  validateConfiguredStoryId(siteConfig.featuredStoryId, 'featuredStoryId');
+
+  for (const key of ['popularStoryIds', 'essentialStoryIds']) {
+    if (!Array.isArray(siteConfig[key])) {
+      errors.push(`data/site.json: "${key}" must be an array`);
+      continue;
+    }
+    for (const id of siteConfig[key]) {
+      validateConfiguredStoryId(id, key);
+    }
+  }
+
+  const featuredStory = getStoryByConfiguredId(siteConfig.featuredStoryId);
+  if (featuredStory) {
+    mustInclude(home, `href="/stories/${featuredStory.slug}"`, 'homepage', 'configured featured story link');
+  }
+
+  for (const group of siteConfig.homeCategoryGroups || []) {
+    for (const slug of group.categorySlugs || []) {
+      if (!categoryBySlug.has(slug)) {
+        errors.push(`data/site.json: home category slug "${slug}" is not defined in data/categories.json`);
+      }
+      mustInclude(home, `href="/categories/${slug}.html"`, 'homepage', `configured home category ${slug}`);
+    }
+  }
+}
+
+function validateConfiguredStoryId(id, key) {
+  if (!id) {
+    errors.push(`data/site.json: missing "${key}" value`);
+    return;
+  }
+  if (!getStoryByConfiguredId(id)) {
+    errors.push(`data/site.json: "${key}" references unknown story "${id}"`);
+  }
+}
+
+function getStoryByConfiguredId(id) {
+  return storyBySlug.get(id) || storyById.get(id);
+}
+
 function mustInclude(haystack, needle, label, reason) {
   if (!haystack.includes(needle)) {
     errors.push(`${label}: missing ${reason}`);
@@ -305,8 +352,8 @@ function readJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, 'utf8'));
 }
 
-function readOptionalJson(filePath) {
-  if (!fs.existsSync(filePath)) return [];
+function readOptionalJson(filePath, fallback = []) {
+  if (!fs.existsSync(filePath)) return fallback;
   return readJson(filePath);
 }
 

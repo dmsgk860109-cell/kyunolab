@@ -1,0 +1,34 @@
+{
+  "featuredStoryId": "woman-in-white-roadside-legend",
+  "popularStoryIds": [
+    "woman-in-white-roadside-legend",
+    "backrooms-digital-labyrinth",
+    "forest-that-goes-silent-at-noon",
+    "bell-under-the-lake-folklore",
+    "dragons-across-the-world"
+  ],
+  "essentialStoryIds": [
+    "woman-in-white-roadside-legend",
+    "backrooms-digital-labyrinth",
+    "forest-that-goes-silent-at-noon",
+    "bell-under-the-lake-folklore"
+  ],
+  "homeCategoryGroups": [
+    {
+      "label": "Modern Strange Records",
+      "categorySlugs": [
+        "urban-legends",
+        "internet-folklore",
+        "strange-places"
+      ]
+    },
+    {
+      "label": "Mythic & Imagined Realms",
+      "categorySlugs": [
+        "myths",
+        "mythic-creatures",
+        "lost-worlds"
+      ]
+    }
+  ]
+}
