@@ -1,0 +1,392 @@
+# Kyunolab Article Page Production Template
+
+Use this template when producing a full Kyunolab article page.
+
+This is a flexible production scaffold, not a length limit.
+
+## Non-Negotiable Length Rule
+
+Do not cut useful content just to fit this template.
+
+If the topic is small, use the scaffold to make the article complete, clear, and useful.
+
+If the topic is large, expand the scaffold. Add H2 or H3 sections, split long sections into smaller sections, and preserve useful context.
+
+The template defines minimum structure, not maximum length.
+
+## Expansion Rules
+
+- Add sections when the subject naturally needs them.
+- Split a large section instead of compressing it.
+- Keep source-awareness visible when adding depth.
+- If the article becomes too broad, recommend a series or separate related articles.
+- Do not remove strong material only because it does not fit a preset section count.
+- Do not pad weak material. Add useful explanation, context, variants, examples, or source-status clarity.
+- Keep the article readable on mobile by using shorter paragraphs and clear headings.
+
+## Required Page Blocks
+
+Every article page should include these blocks unless there is a strong editorial reason:
+
+- SEO metadata
+- Article metadata
+- Story Map
+- Opening hook
+- Main body sections
+- Fact-status or source-status section
+- FAQ
+- Story & Source Note
+- Article engagement area
+- Related Articles
+- Previous / Next
+- Final QA
+
+## Article Metadata
+
+```yaml
+title: [TITLE]
+slug: [SLUG]
+category: [CATEGORY]
+categorySlug: [CATEGORY SLUG]
+categoryGroup: [CATEGORY GROUP]
+tag: [PRIMARY DISPLAY TAG]
+tags:
+  - [TAG 1]
+  - [TAG 2]
+  - [TAG 3]
+  - [OPTIONAL TAG 4]
+  - [OPTIONAL TAG 5]
+readTime: [READ TIME]
+storyType: [STORY TYPE]
+sourceStatus: [SOURCE STATUS]
+excerpt: [SHORT EXCERPT]
+publishedAt: [YYYY-MM-DD]
+updatedAt: [YYYY-MM-DD]
+relatedStoryIds:
+  - [RELATED STORY SLUG 1]
+  - [RELATED STORY SLUG 2]
+  - [RELATED STORY SLUG 3]
+```
+
+## SEO Fields
+
+```yaml
+metaTitle: [SEARCHABLE META TITLE]
+metaDescription: [155-170 CHARACTER DESCRIPTION]
+canonical: https://kyunolab.com/stories/[SLUG]
+ogTitle: [OG TITLE]
+ogDescription: [OG DESCRIPTION]
+```
+
+SEO rules:
+
+- Use the clean URL without `.html`.
+- Include the main keyword naturally.
+- Do not make the title fake, exaggerated, or misleading.
+- Do not imply uncertain folklore is verified fact.
+
+## Header Block
+
+```markdown
+# [TITLE]
+
+[DECK / SUBTITLE]
+
+- Category: [CATEGORY]
+- Tags: [TAG 1], [TAG 2], [TAG 3], [OPTIONAL TAG 4], [OPTIONAL TAG 5]
+- Read time: [READ TIME]
+- Story Type: [STORY TYPE]
+- Source Status: [SOURCE STATUS]
+- Updated: [MONTH DAY, YEAR]
+```
+
+## Story Map
+
+The Story Map should match the actual article headings.
+
+```markdown
+1. [WHAT THE RECORD IS]
+2. [FAMOUS / COMMON VERSION]
+3. [ORIGIN OR BACKGROUND]
+4. [VARIANTS OR CHANGES]
+5. [WHY IT SPREAD OR WHY IT LASTS]
+6. [SIMILAR STORIES OR INTERNAL LINKS]
+7. [WHAT IS VERIFIED AND WHAT IS NOT]
+8. [WHY IT STILL MATTERS]
+9. FAQ
+10. Story & Source Note
+```
+
+If the article needs more depth, add more Story Map items. Do not compress important material to keep the map short.
+
+## Opening Hook
+
+Start with a concrete image, situation, object, place, or question.
+
+Requirements:
+
+- Introduce the main keyword within the first 100 words.
+- Make the reader understand the subject quickly.
+- Keep the tone calm, mysterious, and source-aware.
+- Avoid cheap horror language.
+
+```markdown
+[OPENING PARAGRAPH 1]
+
+[OPENING PARAGRAPH 2]
+
+[OPENING PARAGRAPH 3]
+```
+
+## Flexible Body Structure
+
+Choose the section set that fits the topic. Add, remove, split, or rename optional sections when the topic needs it.
+
+### Urban Legend / Modern Legend
+
+```markdown
+## What Is [MAIN KEYWORD]?
+
+## The Most Familiar Version
+
+## Where the Story May Have Started
+
+## How the Legend Changed Over Time
+
+## Why People Kept Telling It
+
+## Similar Legends and Related Stories
+
+## What Is Verified and What Is Not
+
+## Why the Story Still Works Today
+```
+
+### Internet Folklore
+
+```markdown
+## What Is [MAIN KEYWORD]?
+
+## How It First Spread
+
+## The Core Image or Story
+
+## Why People Shared It
+
+## How the Story Changed Online
+
+## What Is Verified and What Is Not
+
+## Why It Still Feels Unsettling
+```
+
+### Strange Place / Legendary Place / Lost World
+
+```markdown
+## What Is [MAIN KEYWORD]?
+
+## Why People Call It Strange
+
+## The Most Common Stories About It
+
+## History and Local Context
+
+## Rumors, Legends, and Reported Experiences
+
+## What Is Verified and What Is Not
+
+## Similar Places
+
+## Why the Place Still Attracts Attention
+```
+
+### Folklore / Myth / Mythic Creature / Mythic Object
+
+```markdown
+## What Is [MAIN KEYWORD]?
+
+## The Most Common Description
+
+## Where the Story Comes From
+
+## Regional Variations
+
+## What [MAIN KEYWORD] Represents
+
+## Similar Figures, Objects, or Stories
+
+## Is It Folklore, Myth, or Something Else?
+
+## Why the Story Still Matters
+```
+
+### Unexplained Mystery
+
+```markdown
+## What Is [MAIN KEYWORD]?
+
+## The Basic Record
+
+## What People Usually Claim
+
+## What Can Be Checked
+
+## What Remains Uncertain
+
+## Similar Mystery Patterns
+
+## Why the Question Still Holds Attention
+```
+
+## Optional Expansion Sections
+
+Use these only when they help:
+
+```markdown
+## Timeline of the Story
+
+## Versions by Region
+
+## Common Motifs
+
+## Why This Detail Matters
+
+## How Later Retellings Changed It
+
+## What Readers Often Misunderstand
+
+## Source Problems and Evidence Limits
+
+## Related Archive Paths
+```
+
+## Internal Linking Plan
+
+Add internal links naturally inside the body and in the related section.
+
+```markdown
+- Primary category link: [CATEGORY PAGE]
+- Related story 1: [RELATED STORY 1]
+- Related story 2: [RELATED STORY 2]
+- Related story 3: [RELATED STORY 3]
+- Useful tag paths: [TAG 1], [TAG 2], [TAG 3]
+```
+
+Rules:
+
+- Do not force unrelated links.
+- Prefer contextually useful links over decorative links.
+- Use existing articles when possible.
+- New tags should create useful future archive paths.
+
+## FAQ
+
+Use 3 to 6 questions. Add more only if the topic truly needs them.
+
+```markdown
+### Is [MAIN KEYWORD] real?
+
+[Source-aware answer.]
+
+### Where did [MAIN KEYWORD] come from?
+
+[Careful origin answer.]
+
+### Why is [MAIN KEYWORD] famous?
+
+[Reader-intent answer.]
+
+### What does [MAIN KEYWORD] mean?
+
+[Interpretive answer.]
+
+### Are there similar stories?
+
+[Internal-link-friendly answer.]
+```
+
+## Story & Source Note
+
+```markdown
+[Explain whether the article is based on folklore, local legend, internet folklore, myth, public-domain tradition, documented records, or source-aware retelling.]
+
+[Clarify that uncertain claims are not being presented as verified fact.]
+```
+
+## Article Engagement Placement
+
+This block is structural and should come from the common article layout, not from hand-written article content.
+
+Expected order:
+
+```markdown
+1. Article body
+2. Story & Source Note
+3. Interesting / Tags / Share
+4. Related Articles
+5. Previous / Next
+```
+
+## Related Articles
+
+```markdown
+- [RELATED ARTICLE 1] - [WHY THIS IS RELATED]
+- [RELATED ARTICLE 2] - [WHY THIS IS RELATED]
+- [RELATED ARTICLE 3] - [WHY THIS IS RELATED]
+```
+
+Rules:
+
+- Use real existing story slugs.
+- Do not point to planned articles that do not exist yet.
+- Related links should connect by motif, category, place, figure, evidence type, or reader intent.
+
+## Previous / Next
+
+```markdown
+- Previous: [PREVIOUS ARTICLE TITLE] - [PREVIOUS ARTICLE URL]
+- Next: [NEXT ARTICLE TITLE] - [NEXT ARTICLE URL]
+```
+
+## Final QA Checklist
+
+Content:
+
+- [ ] The article follows the topic's natural length.
+- [ ] Useful detail was not cut to satisfy a template.
+- [ ] Weak sections were not padded with empty wording.
+- [ ] The article opens with a concrete image or question.
+- [ ] The main keyword appears naturally near the start.
+- [ ] The source status is clear.
+- [ ] Folklore, rumor, interpretation, and verified fact are separated.
+- [ ] The article stays calm, mysterious, literary, and archival.
+- [ ] The article avoids cheap horror, gore focus, fake proof, and conspiracy framing.
+
+Structure:
+
+- [ ] Story Map matches the actual headings.
+- [ ] Sections are split when they become too large.
+- [ ] Extra H2/H3 sections were added if the topic needed them.
+- [ ] FAQ answers real reader questions.
+- [ ] Story & Source Note is present.
+- [ ] Related Articles use existing slugs only.
+- [ ] Previous / Next links are clean.
+
+Metadata:
+
+- [ ] Slug is unique.
+- [ ] Category slug exists in `data/categories.json`.
+- [ ] Tags are 3 to 5 specific internal paths.
+- [ ] Tags do not duplicate the category.
+- [ ] Related story IDs exist.
+- [ ] Canonical URL is clean and has no `.html`.
+- [ ] Meta title and description are accurate.
+
+Publishing:
+
+- [ ] Article record is added to `data/stories.json`.
+- [ ] Detail page exists at `stories/[SLUG].html`.
+- [ ] Run `node scripts/generate-site.js`.
+- [ ] Run `node scripts/generate-tags.js`.
+- [ ] Run `node scripts/validate-publish.js --slugs=[SLUG]`.
+- [ ] Run `node scripts/validate-tags.js`.

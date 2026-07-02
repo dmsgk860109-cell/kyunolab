@@ -6,9 +6,13 @@ Copy this file when drafting a new Kyunolab article. Replace bracketed placehold
 
 This template is a flexible article scaffold, not a fixed article limit.
 
+Important: this template defines minimum structure, not maximum article length. Do not cut useful content to fit the template. If a topic needs more depth, expand the article with additional H2 or H3 sections.
+
 Use it to make sure each Kyunolab article has the necessary structure, metadata, source-awareness, FAQ, related links, and final QA. Do not cut, omit, or compress useful content just to fit the template.
 
 If the topic needs more depth, add extra H2 or H3 sections. If a section grows too large, split it into smaller sections instead of cutting it.
+
+If a topic is large enough for multiple full articles, recommend splitting it into a series instead of compressing the material into one thin overview.
 
 If the topic is simple, merge or remove unnecessary optional sections. Optional sections may be added, removed, renamed, or expanded depending on the topic.
 
