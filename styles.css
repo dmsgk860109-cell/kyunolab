@@ -683,6 +683,65 @@ h1 {
   gap: 12px;
   margin-top: 30px;
 }
+.article-engagement {
+  margin: 34px 0 30px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--surface);
+  display: grid;
+  gap: 18px;
+  font-family: Arial, sans-serif;
+}
+.engagement-kicker {
+  margin: 0 0 8px;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.engagement-button,
+.tag-list a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 7px 11px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--panel);
+  color: inherit;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.2;
+  cursor: pointer;
+}
+.engagement-button:hover,
+.tag-list a:hover {
+  border-color: rgba(16, 42, 86, .3);
+  color: var(--accent);
+}
+.engagement-button:focus-visible,
+.tag-list a:focus-visible {
+  outline: 3px solid rgba(29, 78, 216, .22);
+  outline-offset: 2px;
+}
+.interesting-button.is-active {
+  border-color: rgba(179, 38, 30, .35);
+  background: rgba(179, 38, 30, .06);
+}
+.tag-list,
+.share-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.article-share {
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+}
 .dialogue {
   background: var(--panel);
   border: 1px solid var(--line);
