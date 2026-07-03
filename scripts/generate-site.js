@@ -61,8 +61,21 @@ function generateHomePage() {
 }
 
 function renderHomePage({ featuredStory, latestStories, popularStories, essentialStories, categoryGroups }) {
-  const title = 'The Strange Archive - Urban Legends, Folklore, Mysteries, and Mythic Stories';
+  const title = 'The Strange Archive | Legends, Folklore, Mysteries & Strange Tales';
   const description = "Explore urban legends, internet folklore, strange places, myths, lost worlds, and recurring mystery patterns in Kyunolab's quiet archive.";
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'The Strange Archive',
+    alternateName: 'Kyuno Lab Strange Archive',
+    url: `${siteUrl}/`,
+    description,
+    publisher: {
+      '@type': 'Organization',
+      name: 'Kyuno Lab'
+    },
+    inLanguage: 'en'
+  };
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -80,6 +93,7 @@ function renderHomePage({ featuredStory, latestStories, popularStories, essentia
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="/styles.css?v=${styleVersion}">
+  <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
 </head>
 <body>
   ${renderHeader()}

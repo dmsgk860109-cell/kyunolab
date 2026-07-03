@@ -133,7 +133,8 @@ function renderStoryPage(story, previousStory, nextStory) {
   const cleanUrl = `${siteUrl}/stories/${story.slug}`;
   const title = story.displayTitle || story.title;
   const metaTitle = story.metaTitle || story.seoTitle || title;
-  const description = story.metaDescription || story.excerpt || story.summaryAnswer || '';
+  const pageTitle = buildMetaPageTitle(metaTitle, title);
+  const description = buildMetaDescription(story.metaDescription || story.excerpt || story.summaryAnswer || '');
   const relatedStories = getRelatedStories(story);
   const dna = story.contentDNA;
   const sections = buildBodySections(story);
@@ -143,7 +144,7 @@ function renderStoryPage(story, previousStory, nextStory) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>${escapeHtml(metaTitle)} | The Strange Archive</title>
+  <title>${escapeHtml(pageTitle)}</title>
   <meta name="description" content="${escapeAttr(description)}">
   <meta property="og:title" content="${escapeAttr(title)}">
   <meta property="og:description" content="${escapeAttr(description)}">
@@ -311,7 +312,7 @@ function renderSourceNote(story) {
   const profile = getQualityProfile(story);
   return `<h2 id="source-note">Story &amp; Source Note</h2>
         <p>This article discusses ${escapeHtml(story.sourceStatus || story.category)} with a source-aware approach. The record is useful for reading motif, setting, circulation, and evidence limits; it is not presented as confirmed fact.</p>
-        <p>For this subject, the strongest responsible reading is ${escapeHtml(profile.sourceReading)}. Claims beyond that would need clearer, dated, and independently checkable material.</p>`;
+        <p>For this subject, the strongest responsible reading is ${escapeHtml(profile.sourceReading)}. Claims beyond that would need clearer, dated, and independently checkable material. See the <a href="/fiction-disclaimer.html#source-status">Story &amp; Source Notice</a> for how The Strange Archive separates documented sources, modern retellings, speculative interpretation, and original work.</p>`;
 }
 
 function renderMetaGrid(story) {
@@ -320,8 +321,8 @@ function renderMetaGrid(story) {
           <div><dt>Category</dt><dd>${escapeHtml(story.category)}</dd></div>
           <div><dt>Tags</dt><dd>${escapeHtml((story.tags || []).join(', '))}</dd></div>
           <div><dt>Read time</dt><dd>${escapeHtml(story.readTime)}</dd></div>
-          <div><dt>Story Type</dt><dd>${escapeHtml(story.storyType)}</dd></div>
-          <div><dt>Source Status</dt><dd>${escapeHtml(story.sourceStatus)}</dd></div>
+          <div><dt>Story Type</dt><dd><a href="/fiction-disclaimer.html#story-types">${escapeHtml(story.storyType)}</a></dd></div>
+          <div><dt>Source Status</dt><dd><a href="/fiction-disclaimer.html#source-status">${escapeHtml(story.sourceStatus)}</a></dd></div>
           <div><dt>Updated</dt><dd>${escapeHtml(updated)}</dd></div>
         </dl>`;
 }
@@ -567,18 +568,77 @@ function shortSubject(story) {
   return String(story.displayTitle || story.title || story.slug).replace(/:.*$/, '').trim();
 }
 
+function buildMetaPageTitle(metaTitle, fallbackTitle) {
+  const brand = 'The Strange Archive';
+  const source = String(metaTitle || fallbackTitle || '').trim();
+  const full = `${source} | ${brand}`;
+  if (full.length <= 70) return full;
+
+  const subject = source.split(':')[0].trim();
+  if (subject.length >= 22 && `${subject} | ${brand}`.length <= 70) {
+    return `${subject} | ${brand}`;
+  }
+
+  return `${trimToLength(source, 45)} | ${brand}`;
+}
+
+function buildMetaDescription(description) {
+  const source = String(description || '').replace(/\s+/g, ' ').trim();
+  if (source.length <= 160) return source;
+  return trimToLength(source, 157);
+}
+
+function trimToLength(value, maxLength) {
+  const source = String(value || '').replace(/\s+/g, ' ').trim();
+  if (source.length <= maxLength) return source;
+  const slice = source.slice(0, maxLength + 1);
+  const boundary = Math.max(slice.lastIndexOf('.'), slice.lastIndexOf(';'), slice.lastIndexOf(':'), slice.lastIndexOf(','));
+  const wordBoundary = slice.lastIndexOf(' ');
+  const cut = boundary >= Math.floor(maxLength * 0.65) ? boundary : wordBoundary;
+  return `${source.slice(0, Math.max(1, cut)).replace(/[,:;.\s]+$/, '')}...`;
+}
+
 function renderJsonLd(story, cleanUrl, description) {
   return {
     '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: story.seoTitle || story.title,
-    description,
-    datePublished: story.publishedAt,
-    dateModified: story.updatedAt,
-    author: { '@type': 'Organization', name: 'Kyuno Lab' },
-    publisher: { '@type': 'Organization', name: 'Kyuno Lab' },
-    mainEntityOfPage: cleanUrl,
-    keywords: [...(story.tags || []), ...(story.relatedKeywords || [])].join(', ')
+    '@graph': [
+      {
+        '@type': 'Article',
+        '@id': `${cleanUrl}#article`,
+        headline: story.seoTitle || story.title,
+        description,
+        datePublished: story.publishedAt,
+        dateModified: story.updatedAt,
+        author: { '@type': 'Organization', name: 'Kyuno Lab' },
+        publisher: { '@type': 'Organization', name: 'Kyuno Lab' },
+        mainEntityOfPage: cleanUrl,
+        keywords: [...(story.tags || []), ...(story.relatedKeywords || [])].join(', ')
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${cleanUrl}#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'The Strange Archive',
+            item: `${siteUrl}/`
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: story.category,
+            item: `${siteUrl}/categories/${story.categorySlug}.html`
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: story.title,
+            item: cleanUrl
+          }
+        ]
+      }
+    ]
   };
 }
 
