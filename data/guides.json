@@ -1,5 +1,108 @@
 [
   {
+    "id": "how-to-follow-recurring-motifs-across-the-archive",
+    "slug": "how-to-follow-recurring-motifs-across-the-archive",
+    "title": "How to Follow Recurring Motifs Across The Strange Archive Without Treating Every Story as Fact",
+    "shortTitle": "How to Follow Recurring Motifs",
+    "metaTitle": "How to Follow Recurring Motifs in Urban Legends, Folklore, and Mystery Stories",
+    "metaDescription": "A Mystery Board guide to following recurring motifs across Kyunolab: roads, thresholds, missing records, objects, maps, weather, and source-aware folklore patterns.",
+    "ogTitle": "How to Follow Recurring Motifs",
+    "ogDescription": "A calm guide to reading recurring motifs across strange stories without confusing folklore patterns with verified fact.",
+    "excerpt": "A practical guide to following roads, thresholds, maps, objects, weather, and evidence motifs across Kyunolab without turning every pattern into proof.",
+    "deck": "Recurring motifs are the archive’s hidden pathways. They let readers move from roads to objects, from maps to memory, and from folklore to mystery while keeping source status clear.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Motif Reading Guide",
+    "tags": [
+      "Recurring Motif",
+      "Archive Navigation",
+      "Source Status",
+      "Folklore Pattern",
+      "Reading Path"
+    ],
+    "bestFor": "Readers building deeper internal paths through the archive",
+    "readTime": "10 min read",
+    "url": "/mystery-board/how-to-follow-recurring-motifs-across-the-archive",
+    "publishedAt": "2026-07-03",
+    "updatedAt": "2026-07-03",
+    "relatedStoryIds": [
+      "shopping-cart-that-rolls-back-alone",
+      "draft-email-that-sent-itself",
+      "library-basement-that-has-no-catalog-number"
+    ],
+    "relatedGuideIds": [
+      "how-to-choose-which-mystery-topic-to-read-next",
+      "how-to-check-source-status",
+      "how-to-read-urban-legends"
+    ],
+    "sections": [
+      {
+        "id": "what-a-motif-is",
+        "title": "What a motif is inside a strange-story archive",
+        "nav": "What a motif is",
+        "paragraphs": [
+          "A motif is a repeating story shape: a door that should not open, a road that refuses a map, a receipt with the wrong date, or an object that seems to remember a person. It is not proof by itself. It is a pattern worth following.",
+          "Kyunolab uses motifs to connect records without claiming that all versions came from one source or one real event. The pattern is useful because it shows what kinds of unease people keep returning to."
+        ]
+      },
+      {
+        "id": "motifs-are-not-evidence",
+        "title": "Motifs are not evidence by themselves",
+        "nav": "Not evidence",
+        "paragraphs": [
+          "A repeated detail can be culturally important without being factual proof. If five stories involve a window, that does not prove the window exists. It proves the window is a useful story device.",
+          "This is why source status matters. Motifs help readers compare stories, while source notes help readers avoid treating comparison as confirmation."
+        ]
+      },
+      {
+        "id": "how-to-follow-a-path",
+        "title": "How to follow one motif across shelves",
+        "nav": "Follow a path",
+        "paragraphs": [
+          "Start with one image: a receipt, a closed door, a wrong map, an empty chair, a final train, or a mirror. Then look for the same pressure in different categories.",
+          "A receipt may lead to modern legends. A mirror may lead to mythic objects. A doorway may lead to classic folklore, urban legends, and strange places. The path works because the emotional question repeats."
+        ]
+      },
+      {
+        "id": "use-tags-carefully",
+        "title": "Use tags as small paths, not as new categories",
+        "nav": "Use tags carefully",
+        "paragraphs": [
+          "Tags are useful because they are narrow. They should not replace categories or create endless thin pages for search engines. They are internal paths first, and only strong repeated tags should become indexable archive pages.",
+          "This keeps the site readable for people and healthier for search. A thin tag can still help a reader move, but it does not need to be presented as a major public index."
+        ]
+      },
+      {
+        "id": "where-to-start",
+        "title": "Where to start reading by motif",
+        "nav": "Where to start",
+        "paragraphs": [
+          "Start with [[The Shopping Cart That Rolls Back Alone|/stories/shopping-cart-that-rolls-back-alone]] if ordinary objects interest you. Try [[The Draft Email That Sent Itself|/stories/draft-email-that-sent-itself]] for digital evidence motifs.",
+          "For place and record motifs, move to [[The Library Basement With No Catalog Number|/stories/library-basement-that-has-no-catalog-number]]. Each one shows how a small repeated pattern can open a larger shelf."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is a recurring motif proof that a story is true?",
+        "answer": "No. A recurring motif shows that a story pattern repeats. It does not prove the event happened."
+      },
+      {
+        "question": "Why does Kyunolab use tags?",
+        "answer": "Tags connect specific motifs across categories so readers can follow smaller paths through the archive."
+      },
+      {
+        "question": "Should every tag be indexed by Google?",
+        "answer": "No. Thin tags with only one or two records are better kept as internal paths with noindex, follow."
+      },
+      {
+        "question": "What is the best way to read motif-based articles?",
+        "answer": "Read the motif as a cultural pattern, then check the source status before treating any claim as factual."
+      }
+    ],
+    "sourceNote": "This guide explains archive navigation and folklore motif reading. It does not verify any individual legend, mystery, or strange-story claim."
+  },
+  {
     "id": "how-to-choose-which-mystery-topic-to-read-next",
     "slug": "how-to-choose-which-mystery-topic-to-read-next",
     "title": "How to Choose Which Mystery Topic to Read Next Without Getting Lost in the Archive",
