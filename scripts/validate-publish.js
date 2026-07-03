@@ -235,14 +235,35 @@ function validateStoryPage(story) {
 }
 
 function validateCategoryPage(story) {
-  const filePath = path.join(root, 'categories', `${story.categorySlug}.html`);
-  if (!fs.existsSync(filePath)) {
+  const categoryHtml = readCategoryPageSet(story.categorySlug);
+  if (!categoryHtml) {
     errors.push(`${story.slug}: missing category page categories/${story.categorySlug}.html`);
     return;
   }
 
-  const html = fs.readFileSync(filePath, 'utf8');
-  mustInclude(html, `href="/stories/${story.slug}"`, story.slug, `category link on ${story.categorySlug}`);
+  mustInclude(categoryHtml, `href="/stories/${story.slug}"`, story.slug, `category link on ${story.categorySlug}`);
+}
+
+function readCategoryPageSet(categorySlug) {
+  const categoryDir = path.join(root, 'categories');
+  const firstPage = path.join(categoryDir, `${categorySlug}.html`);
+  if (!fs.existsSync(firstPage)) return '';
+
+  const pageFiles = fs.readdirSync(categoryDir)
+    .filter((fileName) => fileName === `${categorySlug}.html` || fileName.startsWith(`${categorySlug}-`) && fileName.endsWith('.html'))
+    .sort((a, b) => pageNumberFromCategoryFile(a, categorySlug) - pageNumberFromCategoryFile(b, categorySlug));
+
+  return pageFiles.map((fileName) => fs.readFileSync(path.join(categoryDir, fileName), 'utf8')).join('\n');
+}
+
+function pageNumberFromCategoryFile(fileName, categorySlug) {
+  if (fileName === `${categorySlug}.html`) return 1;
+  const match = fileName.match(new RegExp(`^${escapeRegExp(categorySlug)}-(\\d+)\\.html$`));
+  return match ? Number(match[1]) : 9999;
+}
+
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
 function validateTagPages(story) {

@@ -1,5 +1,1035 @@
 [
   {
+    "id": "how-to-use-tags-without-creating-thin-archive-pages",
+    "slug": "how-to-use-tags-without-creating-thin-archive-pages",
+    "title": "How to Use Tags Without Creating Thin Archive Pages",
+    "shortTitle": "Use Tags Without Creating Thin Archive Pages",
+    "metaTitle": "How to Use Tags Without Creating Thin Archive Pages",
+    "metaDescription": "A guide to using tags as internal paths while keeping thin tag pages out of the sitemap until they have enough connected records.",
+    "ogTitle": "How to Use Tags Without Creating Thin Archive Pages",
+    "ogDescription": "A guide to using tags as internal paths while keeping thin tag pages out of the sitemap until they have enough connected records.",
+    "excerpt": "A guide to using tags as internal paths while keeping thin tag pages out of the sitemap until they have enough connected records.",
+    "deck": "How to Use Tags Without Creating Thin Archive Pages is a practical Mystery Board guide for readers who want to move through The Strange Archive with more context, cleaner source awareness, and stronger internal reading paths.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Tag Strategy Guide",
+    "tags": [
+      "Tag Strategy Guide",
+      "Archive Method",
+      "Source Status",
+      "Reading Path",
+      "Story Structure"
+    ],
+    "bestFor": "Readers who want a clearer way to navigate strange records without confusing atmosphere with proof",
+    "readTime": "9 min read",
+    "url": "/mystery-board/how-to-use-tags-without-creating-thin-archive-pages",
+    "publishedAt": "2026-07-03",
+    "updatedAt": "2026-07-03",
+    "relatedStoryIds": [
+      "the-ruined-tower-that-points-away-from-north",
+      "the-forbidden-lake-with-a-shore-that-changes-shape",
+      "the-mountain-shrine-that-refuses-a-second-photograph"
+    ],
+    "relatedGuideIds": [
+      "why-mystery-articles-should-name-the-limit",
+      "how-to-build-a-reading-path-through-the-strange-archive",
+      "why-strange-nature-stories-need-careful-evidence"
+    ],
+    "sections": [
+      {
+        "id": "what-this-guide-is-for",
+        "title": "What this guide is for",
+        "nav": "What this guide is for",
+        "paragraphs": [
+          "This guide helps readers understand how to use tags without creating thin archive pages without treating every strange claim as confirmed fact. It gives the archive a practical reading path instead of leaving readers to move by headline alone.",
+          "The point is not to remove mystery. The point is to make the mystery readable: what is documented, what is repeated, what is interpreted, and what remains only a story pattern."
+        ]
+      },
+      {
+        "id": "why-the-distinction-matters",
+        "title": "Why the distinction matters",
+        "nav": "Why the distinction matters",
+        "paragraphs": [
+          "Legends, folklore, internet rumors, and source-aware mystery records can all be valuable, but they do not carry the same evidence weight. A careful article names the kind of material before asking readers to trust it.",
+          "That distinction helps both readers and search engines. It keeps verified context separate from unverified tradition, and it makes the site feel like an archive rather than a pile of claims."
+        ]
+      },
+      {
+        "id": "how-to-use-it-in-the-archive",
+        "title": "How to use this inside the archive",
+        "nav": "How to use this inside the archive",
+        "paragraphs": [
+          "Start with the category, then follow the tags and Story Map. If a record feels related, check whether the connection is setting, motif, source status, or evidence type.",
+          "This method lets one page lead naturally to another without forcing every article to solve the same question or repeat the same explanation."
+        ]
+      },
+      {
+        "id": "what-to-watch-for",
+        "title": "What to watch for",
+        "nav": "What to watch for",
+        "paragraphs": [
+          "Be careful with pages that sound certain but cannot name sources, dates, versions, or limits. The most useful strange records often say exactly where the evidence becomes thin.",
+          "A strong archive page can remain atmospheric while still showing restraint. It should make the reader curious, not misled."
+        ]
+      },
+      {
+        "id": "where-to-go-next",
+        "title": "Where to go next",
+        "nav": "Where to go next",
+        "paragraphs": [
+          "Read this guide alongside [[How Elevator Legends Became Modern Threshold Stories|/stories/how-elevator-legends-became-modern-threshold-stories]] and then compare it with the broader [[Story & Source Notice|/fiction-disclaimer.html]].",
+          "The best reading path is usually small: one guide, one article, one source note, then a related record with a similar motif."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is tag strategy guide the same as proof?",
+        "answer": "No. It is a reading or navigation label. It helps organize the archive, but it does not prove the claim inside a story."
+      },
+      {
+        "question": "Why does Kyunolab use guide pages?",
+        "answer": "Guide pages explain how to read the archive, how source status works, and how related records connect without turning every legend into a factual claim."
+      },
+      {
+        "question": "Should these guides replace article source notes?",
+        "answer": "No. Guides explain the method. Individual article source notes still describe the limits of each specific record."
+      },
+      {
+        "question": "How should readers use this page?",
+        "answer": "Use it as a map. Follow one concept into related stories, then check each article category, tags, source status, and Story & Source Note."
+      }
+    ],
+    "sourceNote": "This Mystery Board guide is an editorial reading aid. It explains archive structure and source-aware reading, not the verified truth of any individual legend, mystery, or folklore claim."
+  },
+  {
+    "id": "why-mystery-articles-should-name-the-limit",
+    "slug": "why-mystery-articles-should-name-the-limit",
+    "title": "Why Mystery Articles Should Name the Limit Instead of Solving Too Much",
+    "shortTitle": "Mystery Articles Should Name the Limit Instead of Solving Too Much",
+    "metaTitle": "Why Mystery Articles Should Name the Limit Instead of Solving Too Much",
+    "metaDescription": "A guide to preserving mystery responsibly by naming what can be checked, what cannot, and where speculation begins.",
+    "ogTitle": "Why Mystery Articles Should Name the Limit Instead of Solving Too Much",
+    "ogDescription": "A guide to preserving mystery responsibly by naming what can be checked, what cannot, and where speculation begins.",
+    "excerpt": "A guide to preserving mystery responsibly by naming what can be checked, what cannot, and where speculation begins.",
+    "deck": "Why Mystery Articles Should Name the Limit Instead of Solving Too Much is a practical Mystery Board guide for readers who want to move through The Strange Archive with more context, cleaner source awareness, and stronger internal reading paths.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Evidence Limit Guide",
+    "tags": [
+      "Evidence Limit Guide",
+      "Archive Method",
+      "Source Status",
+      "Reading Path",
+      "Story Structure"
+    ],
+    "bestFor": "Readers who want a clearer way to navigate strange records without confusing atmosphere with proof",
+    "readTime": "11 min read",
+    "url": "/mystery-board/why-mystery-articles-should-name-the-limit",
+    "publishedAt": "2026-07-03",
+    "updatedAt": "2026-07-03",
+    "relatedStoryIds": [
+      "the-bridge-of-names-no-one-reads-aloud",
+      "the-cave-door-that-opens-only-to-returning-travelers",
+      "the-pilgrim-road-that-skips-one-milestone"
+    ],
+    "relatedGuideIds": [
+      "how-to-build-a-reading-path-through-the-strange-archive",
+      "why-strange-nature-stories-need-careful-evidence",
+      "how-to-read-folklore-without-flattening-it-into-fact"
+    ],
+    "sections": [
+      {
+        "id": "what-this-guide-is-for",
+        "title": "What this guide is for",
+        "nav": "What this guide is for",
+        "paragraphs": [
+          "This guide helps readers understand why mystery articles should name the limit instead of solving too much without treating every strange claim as confirmed fact. It gives the archive a practical reading path instead of leaving readers to move by headline alone.",
+          "The point is not to remove mystery. The point is to make the mystery readable: what is documented, what is repeated, what is interpreted, and what remains only a story pattern."
+        ]
+      },
+      {
+        "id": "why-the-distinction-matters",
+        "title": "Why the distinction matters",
+        "nav": "Why the distinction matters",
+        "paragraphs": [
+          "Legends, folklore, internet rumors, and source-aware mystery records can all be valuable, but they do not carry the same evidence weight. A careful article names the kind of material before asking readers to trust it.",
+          "That distinction helps both readers and search engines. It keeps verified context separate from unverified tradition, and it makes the site feel like an archive rather than a pile of claims."
+        ]
+      },
+      {
+        "id": "how-to-use-it-in-the-archive",
+        "title": "How to use this inside the archive",
+        "nav": "How to use this inside the archive",
+        "paragraphs": [
+          "Start with the category, then follow the tags and Story Map. If a record feels related, check whether the connection is setting, motif, source status, or evidence type.",
+          "This method lets one page lead naturally to another without forcing every article to solve the same question or repeat the same explanation."
+        ]
+      },
+      {
+        "id": "what-to-watch-for",
+        "title": "What to watch for",
+        "nav": "What to watch for",
+        "paragraphs": [
+          "Be careful with pages that sound certain but cannot name sources, dates, versions, or limits. The most useful strange records often say exactly where the evidence becomes thin.",
+          "A strong archive page can remain atmospheric while still showing restraint. It should make the reader curious, not misled."
+        ]
+      },
+      {
+        "id": "where-to-go-next",
+        "title": "Where to go next",
+        "nav": "Where to go next",
+        "paragraphs": [
+          "Read this guide alongside [[Why Receipt Legends Keep Returning in Modern Folklore|/stories/why-receipt-legends-keep-returning-in-modern-folklore]] and then compare it with the broader [[Story & Source Notice|/fiction-disclaimer.html]].",
+          "The best reading path is usually small: one guide, one article, one source note, then a related record with a similar motif."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is evidence limit guide the same as proof?",
+        "answer": "No. It is a reading or navigation label. It helps organize the archive, but it does not prove the claim inside a story."
+      },
+      {
+        "question": "Why does Kyunolab use guide pages?",
+        "answer": "Guide pages explain how to read the archive, how source status works, and how related records connect without turning every legend into a factual claim."
+      },
+      {
+        "question": "Should these guides replace article source notes?",
+        "answer": "No. Guides explain the method. Individual article source notes still describe the limits of each specific record."
+      },
+      {
+        "question": "How should readers use this page?",
+        "answer": "Use it as a map. Follow one concept into related stories, then check each article category, tags, source status, and Story & Source Note."
+      }
+    ],
+    "sourceNote": "This Mystery Board guide is an editorial reading aid. It explains archive structure and source-aware reading, not the verified truth of any individual legend, mystery, or folklore claim."
+  },
+  {
+    "id": "how-to-build-a-reading-path-through-the-strange-archive",
+    "slug": "how-to-build-a-reading-path-through-the-strange-archive",
+    "title": "How to Build a Reading Path Through The Strange Archive",
+    "shortTitle": "Build a Reading Path Through The Strange Archive",
+    "metaTitle": "How to Build a Reading Path Through The Strange Archive",
+    "metaDescription": "A practical guide to moving from categories to tags, from story maps to source notes, and from one recurring motif to another.",
+    "ogTitle": "How to Build a Reading Path Through The Strange Archive",
+    "ogDescription": "A practical guide to moving from categories to tags, from story maps to source notes, and from one recurring motif to another.",
+    "excerpt": "A practical guide to moving from categories to tags, from story maps to source notes, and from one recurring motif to another.",
+    "deck": "How to Build a Reading Path Through The Strange Archive is a practical Mystery Board guide for readers who want to move through The Strange Archive with more context, cleaner source awareness, and stronger internal reading paths.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Archive Reading Path",
+    "tags": [
+      "Archive Reading Path",
+      "Archive Method",
+      "Source Status",
+      "Reading Path",
+      "Story Structure"
+    ],
+    "bestFor": "Readers who want a clearer way to navigate strange records without confusing atmosphere with proof",
+    "readTime": "10 min read",
+    "url": "/mystery-board/how-to-build-a-reading-path-through-the-strange-archive",
+    "publishedAt": "2026-07-03",
+    "updatedAt": "2026-07-03",
+    "relatedStoryIds": [
+      "the-old-well-that-shows-a-different-sky",
+      "the-hill-fort-heard-beneath-the-grass",
+      "the-temple-courtyard-where-rain-falls-sideways"
+    ],
+    "relatedGuideIds": [
+      "why-strange-nature-stories-need-careful-evidence",
+      "how-to-read-folklore-without-flattening-it-into-fact",
+      "why-mythic-objects-work-as-story-anchors"
+    ],
+    "sections": [
+      {
+        "id": "what-this-guide-is-for",
+        "title": "What this guide is for",
+        "nav": "What this guide is for",
+        "paragraphs": [
+          "This guide helps readers understand how to build a reading path through the strange archive without treating every strange claim as confirmed fact. It gives the archive a practical reading path instead of leaving readers to move by headline alone.",
+          "The point is not to remove mystery. The point is to make the mystery readable: what is documented, what is repeated, what is interpreted, and what remains only a story pattern."
+        ]
+      },
+      {
+        "id": "why-the-distinction-matters",
+        "title": "Why the distinction matters",
+        "nav": "Why the distinction matters",
+        "paragraphs": [
+          "Legends, folklore, internet rumors, and source-aware mystery records can all be valuable, but they do not carry the same evidence weight. A careful article names the kind of material before asking readers to trust it.",
+          "That distinction helps both readers and search engines. It keeps verified context separate from unverified tradition, and it makes the site feel like an archive rather than a pile of claims."
+        ]
+      },
+      {
+        "id": "how-to-use-it-in-the-archive",
+        "title": "How to use this inside the archive",
+        "nav": "How to use this inside the archive",
+        "paragraphs": [
+          "Start with the category, then follow the tags and Story Map. If a record feels related, check whether the connection is setting, motif, source status, or evidence type.",
+          "This method lets one page lead naturally to another without forcing every article to solve the same question or repeat the same explanation."
+        ]
+      },
+      {
+        "id": "what-to-watch-for",
+        "title": "What to watch for",
+        "nav": "What to watch for",
+        "paragraphs": [
+          "Be careful with pages that sound certain but cannot name sources, dates, versions, or limits. The most useful strange records often say exactly where the evidence becomes thin.",
+          "A strong archive page can remain atmospheric while still showing restraint. It should make the reader curious, not misled."
+        ]
+      },
+      {
+        "id": "where-to-go-next",
+        "title": "Where to go next",
+        "nav": "Where to go next",
+        "paragraphs": [
+          "Read this guide alongside [[How Vanishing Road Stories Move From Travelers to Maps|/stories/how-vanishing-road-stories-move-from-travelers-to-maps]] and then compare it with the broader [[Story & Source Notice|/fiction-disclaimer.html]].",
+          "The best reading path is usually small: one guide, one article, one source note, then a related record with a similar motif."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is archive reading path the same as proof?",
+        "answer": "No. It is a reading or navigation label. It helps organize the archive, but it does not prove the claim inside a story."
+      },
+      {
+        "question": "Why does Kyunolab use guide pages?",
+        "answer": "Guide pages explain how to read the archive, how source status works, and how related records connect without turning every legend into a factual claim."
+      },
+      {
+        "question": "Should these guides replace article source notes?",
+        "answer": "No. Guides explain the method. Individual article source notes still describe the limits of each specific record."
+      },
+      {
+        "question": "How should readers use this page?",
+        "answer": "Use it as a map. Follow one concept into related stories, then check each article category, tags, source status, and Story & Source Note."
+      }
+    ],
+    "sourceNote": "This Mystery Board guide is an editorial reading aid. It explains archive structure and source-aware reading, not the verified truth of any individual legend, mystery, or folklore claim."
+  },
+  {
+    "id": "why-strange-nature-stories-need-careful-evidence",
+    "slug": "why-strange-nature-stories-need-careful-evidence",
+    "title": "Why Strange Nature Stories Need Careful Evidence",
+    "shortTitle": "Strange Nature Stories Need Careful Evidence",
+    "metaTitle": "Why Strange Nature Stories Need Careful Evidence",
+    "metaDescription": "A Mystery Board guide to weather records, animal behavior, landscape observation, local memory, and nature folklore limits.",
+    "ogTitle": "Why Strange Nature Stories Need Careful Evidence",
+    "ogDescription": "A Mystery Board guide to weather records, animal behavior, landscape observation, local memory, and nature folklore limits.",
+    "excerpt": "A Mystery Board guide to weather records, animal behavior, landscape observation, local memory, and nature folklore limits.",
+    "deck": "Why Strange Nature Stories Need Careful Evidence is a practical Mystery Board guide for readers who want to move through The Strange Archive with more context, cleaner source awareness, and stronger internal reading paths.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Strange Nature Evidence",
+    "tags": [
+      "Strange Nature Evidence",
+      "Archive Method",
+      "Source Status",
+      "Reading Path",
+      "Story Structure"
+    ],
+    "bestFor": "Readers who want a clearer way to navigate strange records without confusing atmosphere with proof",
+    "readTime": "9 min read",
+    "url": "/mystery-board/why-strange-nature-stories-need-careful-evidence",
+    "publishedAt": "2026-07-03",
+    "updatedAt": "2026-07-03",
+    "relatedStoryIds": [
+      "the-mirror-with-a-back-made-of-moonlight",
+      "the-brass-key-that-opens-only-empty-rooms",
+      "the-roadside-stone-that-turns-toward-home"
+    ],
+    "relatedGuideIds": [
+      "how-to-read-folklore-without-flattening-it-into-fact",
+      "why-mythic-objects-work-as-story-anchors",
+      "how-to-follow-map-mysteries-and-lost-place-records"
+    ],
+    "sections": [
+      {
+        "id": "what-this-guide-is-for",
+        "title": "What this guide is for",
+        "nav": "What this guide is for",
+        "paragraphs": [
+          "This guide helps readers understand why strange nature stories need careful evidence without treating every strange claim as confirmed fact. It gives the archive a practical reading path instead of leaving readers to move by headline alone.",
+          "The point is not to remove mystery. The point is to make the mystery readable: what is documented, what is repeated, what is interpreted, and what remains only a story pattern."
+        ]
+      },
+      {
+        "id": "why-the-distinction-matters",
+        "title": "Why the distinction matters",
+        "nav": "Why the distinction matters",
+        "paragraphs": [
+          "Legends, folklore, internet rumors, and source-aware mystery records can all be valuable, but they do not carry the same evidence weight. A careful article names the kind of material before asking readers to trust it.",
+          "That distinction helps both readers and search engines. It keeps verified context separate from unverified tradition, and it makes the site feel like an archive rather than a pile of claims."
+        ]
+      },
+      {
+        "id": "how-to-use-it-in-the-archive",
+        "title": "How to use this inside the archive",
+        "nav": "How to use this inside the archive",
+        "paragraphs": [
+          "Start with the category, then follow the tags and Story Map. If a record feels related, check whether the connection is setting, motif, source status, or evidence type.",
+          "This method lets one page lead naturally to another without forcing every article to solve the same question or repeat the same explanation."
+        ]
+      },
+      {
+        "id": "what-to-watch-for",
+        "title": "What to watch for",
+        "nav": "What to watch for",
+        "paragraphs": [
+          "Be careful with pages that sound certain but cannot name sources, dates, versions, or limits. The most useful strange records often say exactly where the evidence becomes thin.",
+          "A strong archive page can remain atmospheric while still showing restraint. It should make the reader curious, not misled."
+        ]
+      },
+      {
+        "id": "where-to-go-next",
+        "title": "Where to go next",
+        "nav": "Where to go next",
+        "paragraphs": [
+          "Read this guide alongside [[Why Mirror Legends Cross From Folklore Into Internet Stories|/stories/why-mirror-legends-cross-from-folklore-into-internet-stories]] and then compare it with the broader [[Story & Source Notice|/fiction-disclaimer.html]].",
+          "The best reading path is usually small: one guide, one article, one source note, then a related record with a similar motif."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is strange nature evidence the same as proof?",
+        "answer": "No. It is a reading or navigation label. It helps organize the archive, but it does not prove the claim inside a story."
+      },
+      {
+        "question": "Why does Kyunolab use guide pages?",
+        "answer": "Guide pages explain how to read the archive, how source status works, and how related records connect without turning every legend into a factual claim."
+      },
+      {
+        "question": "Should these guides replace article source notes?",
+        "answer": "No. Guides explain the method. Individual article source notes still describe the limits of each specific record."
+      },
+      {
+        "question": "How should readers use this page?",
+        "answer": "Use it as a map. Follow one concept into related stories, then check each article category, tags, source status, and Story & Source Note."
+      }
+    ],
+    "sourceNote": "This Mystery Board guide is an editorial reading aid. It explains archive structure and source-aware reading, not the verified truth of any individual legend, mystery, or folklore claim."
+  },
+  {
+    "id": "how-to-read-folklore-without-flattening-it-into-fact",
+    "slug": "how-to-read-folklore-without-flattening-it-into-fact",
+    "title": "How to Read Folklore Without Flattening It Into Fact",
+    "shortTitle": "Read Folklore Without Flattening It Into Fact",
+    "metaTitle": "How to Read Folklore Without Flattening It Into Fact",
+    "metaDescription": "A guide to reading oral tradition, local belief, symbolic motifs, and retellings without turning every story into a literal claim.",
+    "ogTitle": "How to Read Folklore Without Flattening It Into Fact",
+    "ogDescription": "A guide to reading oral tradition, local belief, symbolic motifs, and retellings without turning every story into a literal claim.",
+    "excerpt": "A guide to reading oral tradition, local belief, symbolic motifs, and retellings without turning every story into a literal claim.",
+    "deck": "How to Read Folklore Without Flattening It Into Fact is a practical Mystery Board guide for readers who want to move through The Strange Archive with more context, cleaner source awareness, and stronger internal reading paths.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Folklore Reading Guide",
+    "tags": [
+      "Folklore Reading Guide",
+      "Archive Method",
+      "Source Status",
+      "Reading Path",
+      "Story Structure"
+    ],
+    "bestFor": "Readers who want a clearer way to navigate strange records without confusing atmosphere with proof",
+    "readTime": "11 min read",
+    "url": "/mystery-board/how-to-read-folklore-without-flattening-it-into-fact",
+    "publishedAt": "2026-07-03",
+    "updatedAt": "2026-07-03",
+    "relatedStoryIds": [
+      "the-lantern-that-burns-underwater",
+      "the-comb-that-straightens-a-river",
+      "the-bell-that-rings-when-a-promise-is-kept"
+    ],
+    "relatedGuideIds": [
+      "why-mythic-objects-work-as-story-anchors",
+      "how-to-follow-map-mysteries-and-lost-place-records",
+      "how-internet-folklore-turns-errors-into-stories"
+    ],
+    "sections": [
+      {
+        "id": "what-this-guide-is-for",
+        "title": "What this guide is for",
+        "nav": "What this guide is for",
+        "paragraphs": [
+          "This guide helps readers understand how to read folklore without flattening it into fact without treating every strange claim as confirmed fact. It gives the archive a practical reading path instead of leaving readers to move by headline alone.",
+          "The point is not to remove mystery. The point is to make the mystery readable: what is documented, what is repeated, what is interpreted, and what remains only a story pattern."
+        ]
+      },
+      {
+        "id": "why-the-distinction-matters",
+        "title": "Why the distinction matters",
+        "nav": "Why the distinction matters",
+        "paragraphs": [
+          "Legends, folklore, internet rumors, and source-aware mystery records can all be valuable, but they do not carry the same evidence weight. A careful article names the kind of material before asking readers to trust it.",
+          "That distinction helps both readers and search engines. It keeps verified context separate from unverified tradition, and it makes the site feel like an archive rather than a pile of claims."
+        ]
+      },
+      {
+        "id": "how-to-use-it-in-the-archive",
+        "title": "How to use this inside the archive",
+        "nav": "How to use this inside the archive",
+        "paragraphs": [
+          "Start with the category, then follow the tags and Story Map. If a record feels related, check whether the connection is setting, motif, source status, or evidence type.",
+          "This method lets one page lead naturally to another without forcing every article to solve the same question or repeat the same explanation."
+        ]
+      },
+      {
+        "id": "what-to-watch-for",
+        "title": "What to watch for",
+        "nav": "What to watch for",
+        "paragraphs": [
+          "Be careful with pages that sound certain but cannot name sources, dates, versions, or limits. The most useful strange records often say exactly where the evidence becomes thin.",
+          "A strong archive page can remain atmospheric while still showing restraint. It should make the reader curious, not misled."
+        ]
+      },
+      {
+        "id": "where-to-go-next",
+        "title": "Where to go next",
+        "nav": "Where to go next",
+        "paragraphs": [
+          "Read this guide alongside [[How Doorway Warnings Become Household Folklore|/stories/how-doorway-warnings-become-household-folklore]] and then compare it with the broader [[Story & Source Notice|/fiction-disclaimer.html]].",
+          "The best reading path is usually small: one guide, one article, one source note, then a related record with a similar motif."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is folklore reading guide the same as proof?",
+        "answer": "No. It is a reading or navigation label. It helps organize the archive, but it does not prove the claim inside a story."
+      },
+      {
+        "question": "Why does Kyunolab use guide pages?",
+        "answer": "Guide pages explain how to read the archive, how source status works, and how related records connect without turning every legend into a factual claim."
+      },
+      {
+        "question": "Should these guides replace article source notes?",
+        "answer": "No. Guides explain the method. Individual article source notes still describe the limits of each specific record."
+      },
+      {
+        "question": "How should readers use this page?",
+        "answer": "Use it as a map. Follow one concept into related stories, then check each article category, tags, source status, and Story & Source Note."
+      }
+    ],
+    "sourceNote": "This Mystery Board guide is an editorial reading aid. It explains archive structure and source-aware reading, not the verified truth of any individual legend, mystery, or folklore claim."
+  },
+  {
+    "id": "why-mythic-objects-work-as-story-anchors",
+    "slug": "why-mythic-objects-work-as-story-anchors",
+    "title": "Why Mythic Objects Work as Story Anchors",
+    "shortTitle": "Mythic Objects Work as Story Anchors",
+    "metaTitle": "Why Mythic Objects Work as Story Anchors",
+    "metaDescription": "A guide to keys, bells, mirrors, swords, books, lanterns, and objects that carry memory, warning, and symbolic power.",
+    "ogTitle": "Why Mythic Objects Work as Story Anchors",
+    "ogDescription": "A guide to keys, bells, mirrors, swords, books, lanterns, and objects that carry memory, warning, and symbolic power.",
+    "excerpt": "A guide to keys, bells, mirrors, swords, books, lanterns, and objects that carry memory, warning, and symbolic power.",
+    "deck": "Why Mythic Objects Work as Story Anchors is a practical Mystery Board guide for readers who want to move through The Strange Archive with more context, cleaner source awareness, and stronger internal reading paths.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Mythic Object Guide",
+    "tags": [
+      "Mythic Object Guide",
+      "Archive Method",
+      "Source Status",
+      "Reading Path",
+      "Story Structure"
+    ],
+    "bestFor": "Readers who want a clearer way to navigate strange records without confusing atmosphere with proof",
+    "readTime": "10 min read",
+    "url": "/mystery-board/why-mythic-objects-work-as-story-anchors",
+    "publishedAt": "2026-07-03",
+    "updatedAt": "2026-07-03",
+    "relatedStoryIds": [
+      "the-bowl-that-never-holds-the-same-reflection",
+      "the-needle-that-points-toward-forgotten-roads",
+      "the-book-that-opens-to-the-readers-last-question"
+    ],
+    "relatedGuideIds": [
+      "how-to-follow-map-mysteries-and-lost-place-records",
+      "how-internet-folklore-turns-errors-into-stories",
+      "why-urban-legends-use-ordinary-places"
+    ],
+    "sections": [
+      {
+        "id": "what-this-guide-is-for",
+        "title": "What this guide is for",
+        "nav": "What this guide is for",
+        "paragraphs": [
+          "This guide helps readers understand why mythic objects work as story anchors without treating every strange claim as confirmed fact. It gives the archive a practical reading path instead of leaving readers to move by headline alone.",
+          "The point is not to remove mystery. The point is to make the mystery readable: what is documented, what is repeated, what is interpreted, and what remains only a story pattern."
+        ]
+      },
+      {
+        "id": "why-the-distinction-matters",
+        "title": "Why the distinction matters",
+        "nav": "Why the distinction matters",
+        "paragraphs": [
+          "Legends, folklore, internet rumors, and source-aware mystery records can all be valuable, but they do not carry the same evidence weight. A careful article names the kind of material before asking readers to trust it.",
+          "That distinction helps both readers and search engines. It keeps verified context separate from unverified tradition, and it makes the site feel like an archive rather than a pile of claims."
+        ]
+      },
+      {
+        "id": "how-to-use-it-in-the-archive",
+        "title": "How to use this inside the archive",
+        "nav": "How to use this inside the archive",
+        "paragraphs": [
+          "Start with the category, then follow the tags and Story Map. If a record feels related, check whether the connection is setting, motif, source status, or evidence type.",
+          "This method lets one page lead naturally to another without forcing every article to solve the same question or repeat the same explanation."
+        ]
+      },
+      {
+        "id": "what-to-watch-for",
+        "title": "What to watch for",
+        "nav": "What to watch for",
+        "paragraphs": [
+          "Be careful with pages that sound certain but cannot name sources, dates, versions, or limits. The most useful strange records often say exactly where the evidence becomes thin.",
+          "A strong archive page can remain atmospheric while still showing restraint. It should make the reader curious, not misled."
+        ]
+      },
+      {
+        "id": "where-to-go-next",
+        "title": "Where to go next",
+        "nav": "Where to go next",
+        "paragraphs": [
+          "Read this guide alongside [[Why Missing-Record Mysteries Feel More Convincing Than Full Stories|/stories/why-missing-record-mysteries-feel-more-convincing-than-full-stories]] and then compare it with the broader [[Story & Source Notice|/fiction-disclaimer.html]].",
+          "The best reading path is usually small: one guide, one article, one source note, then a related record with a similar motif."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is mythic object guide the same as proof?",
+        "answer": "No. It is a reading or navigation label. It helps organize the archive, but it does not prove the claim inside a story."
+      },
+      {
+        "question": "Why does Kyunolab use guide pages?",
+        "answer": "Guide pages explain how to read the archive, how source status works, and how related records connect without turning every legend into a factual claim."
+      },
+      {
+        "question": "Should these guides replace article source notes?",
+        "answer": "No. Guides explain the method. Individual article source notes still describe the limits of each specific record."
+      },
+      {
+        "question": "How should readers use this page?",
+        "answer": "Use it as a map. Follow one concept into related stories, then check each article category, tags, source status, and Story & Source Note."
+      }
+    ],
+    "sourceNote": "This Mystery Board guide is an editorial reading aid. It explains archive structure and source-aware reading, not the verified truth of any individual legend, mystery, or folklore claim."
+  },
+  {
+    "id": "how-to-follow-map-mysteries-and-lost-place-records",
+    "slug": "how-to-follow-map-mysteries-and-lost-place-records",
+    "title": "How to Follow Map Mysteries and Lost-Place Records",
+    "shortTitle": "Follow Map Mysteries and Lost-Place Records",
+    "metaTitle": "How to Follow Map Mysteries and Lost-Place Records",
+    "metaDescription": "A calm reading guide for lost cities, missing roads, map gaps, strange coordinates, and places that survive through records.",
+    "ogTitle": "How to Follow Map Mysteries and Lost-Place Records",
+    "ogDescription": "A calm reading guide for lost cities, missing roads, map gaps, strange coordinates, and places that survive through records.",
+    "excerpt": "A calm reading guide for lost cities, missing roads, map gaps, strange coordinates, and places that survive through records.",
+    "deck": "How to Follow Map Mysteries and Lost-Place Records is a practical Mystery Board guide for readers who want to move through The Strange Archive with more context, cleaner source awareness, and stronger internal reading paths.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Map Mystery Guide",
+    "tags": [
+      "Map Mystery Guide",
+      "Archive Method",
+      "Source Status",
+      "Reading Path",
+      "Story Structure"
+    ],
+    "bestFor": "Readers who want a clearer way to navigate strange records without confusing atmosphere with proof",
+    "readTime": "9 min read",
+    "url": "/mystery-board/how-to-follow-map-mysteries-and-lost-place-records",
+    "publishedAt": "2026-07-03",
+    "updatedAt": "2026-07-03",
+    "relatedStoryIds": [
+      "how-elevator-legends-became-modern-threshold-stories",
+      "the-door-knocker-that-answers-before-it-is-touched",
+      "the-sword-that-grows-heavy-near-false-names"
+    ],
+    "relatedGuideIds": [
+      "how-internet-folklore-turns-errors-into-stories",
+      "why-urban-legends-use-ordinary-places",
+      "how-to-read-source-status-before-sharing-a-strange-story"
+    ],
+    "sections": [
+      {
+        "id": "what-this-guide-is-for",
+        "title": "What this guide is for",
+        "nav": "What this guide is for",
+        "paragraphs": [
+          "This guide helps readers understand how to follow map mysteries and lost-place records without treating every strange claim as confirmed fact. It gives the archive a practical reading path instead of leaving readers to move by headline alone.",
+          "The point is not to remove mystery. The point is to make the mystery readable: what is documented, what is repeated, what is interpreted, and what remains only a story pattern."
+        ]
+      },
+      {
+        "id": "why-the-distinction-matters",
+        "title": "Why the distinction matters",
+        "nav": "Why the distinction matters",
+        "paragraphs": [
+          "Legends, folklore, internet rumors, and source-aware mystery records can all be valuable, but they do not carry the same evidence weight. A careful article names the kind of material before asking readers to trust it.",
+          "That distinction helps both readers and search engines. It keeps verified context separate from unverified tradition, and it makes the site feel like an archive rather than a pile of claims."
+        ]
+      },
+      {
+        "id": "how-to-use-it-in-the-archive",
+        "title": "How to use this inside the archive",
+        "nav": "How to use this inside the archive",
+        "paragraphs": [
+          "Start with the category, then follow the tags and Story Map. If a record feels related, check whether the connection is setting, motif, source status, or evidence type.",
+          "This method lets one page lead naturally to another without forcing every article to solve the same question or repeat the same explanation."
+        ]
+      },
+      {
+        "id": "what-to-watch-for",
+        "title": "What to watch for",
+        "nav": "What to watch for",
+        "paragraphs": [
+          "Be careful with pages that sound certain but cannot name sources, dates, versions, or limits. The most useful strange records often say exactly where the evidence becomes thin.",
+          "A strong archive page can remain atmospheric while still showing restraint. It should make the reader curious, not misled."
+        ]
+      },
+      {
+        "id": "where-to-go-next",
+        "title": "Where to go next",
+        "nav": "Where to go next",
+        "paragraphs": [
+          "Read this guide alongside [[How Weather Omens Become Local Legends|/stories/how-weather-omens-become-local-legends]] and then compare it with the broader [[Story & Source Notice|/fiction-disclaimer.html]].",
+          "The best reading path is usually small: one guide, one article, one source note, then a related record with a similar motif."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is map mystery guide the same as proof?",
+        "answer": "No. It is a reading or navigation label. It helps organize the archive, but it does not prove the claim inside a story."
+      },
+      {
+        "question": "Why does Kyunolab use guide pages?",
+        "answer": "Guide pages explain how to read the archive, how source status works, and how related records connect without turning every legend into a factual claim."
+      },
+      {
+        "question": "Should these guides replace article source notes?",
+        "answer": "No. Guides explain the method. Individual article source notes still describe the limits of each specific record."
+      },
+      {
+        "question": "How should readers use this page?",
+        "answer": "Use it as a map. Follow one concept into related stories, then check each article category, tags, source status, and Story & Source Note."
+      }
+    ],
+    "sourceNote": "This Mystery Board guide is an editorial reading aid. It explains archive structure and source-aware reading, not the verified truth of any individual legend, mystery, or folklore claim."
+  },
+  {
+    "id": "how-internet-folklore-turns-errors-into-stories",
+    "slug": "how-internet-folklore-turns-errors-into-stories",
+    "title": "How Internet Folklore Turns Errors Into Stories",
+    "shortTitle": "How Internet Folklore Turns Errors Into Stories",
+    "metaTitle": "How Internet Folklore Turns Errors Into Stories",
+    "metaDescription": "A guide to screenshots, timestamps, deleted posts, archives, and platform glitches that become repeatable online folklore.",
+    "ogTitle": "How Internet Folklore Turns Errors Into Stories",
+    "ogDescription": "A guide to screenshots, timestamps, deleted posts, archives, and platform glitches that become repeatable online folklore.",
+    "excerpt": "A guide to screenshots, timestamps, deleted posts, archives, and platform glitches that become repeatable online folklore.",
+    "deck": "How Internet Folklore Turns Errors Into Stories is a practical Mystery Board guide for readers who want to move through The Strange Archive with more context, cleaner source awareness, and stronger internal reading paths.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Internet Folklore Patterns",
+    "tags": [
+      "Internet Folklore Patterns",
+      "Archive Method",
+      "Source Status",
+      "Reading Path",
+      "Story Structure"
+    ],
+    "bestFor": "Readers who want a clearer way to navigate strange records without confusing atmosphere with proof",
+    "readTime": "11 min read",
+    "url": "/mystery-board/how-internet-folklore-turns-errors-into-stories",
+    "publishedAt": "2026-07-03",
+    "updatedAt": "2026-07-03",
+    "relatedStoryIds": [
+      "why-mirror-legends-cross-from-folklore-into-internet-stories",
+      "how-vanishing-road-stories-move-from-travelers-to-maps",
+      "why-receipt-legends-keep-returning-in-modern-folklore"
+    ],
+    "relatedGuideIds": [
+      "why-urban-legends-use-ordinary-places",
+      "how-to-read-source-status-before-sharing-a-strange-story",
+      "how-to-follow-recurring-motifs-across-the-archive"
+    ],
+    "sections": [
+      {
+        "id": "what-this-guide-is-for",
+        "title": "What this guide is for",
+        "nav": "What this guide is for",
+        "paragraphs": [
+          "This guide helps readers understand how internet folklore turns errors into stories without treating every strange claim as confirmed fact. It gives the archive a practical reading path instead of leaving readers to move by headline alone.",
+          "The point is not to remove mystery. The point is to make the mystery readable: what is documented, what is repeated, what is interpreted, and what remains only a story pattern."
+        ]
+      },
+      {
+        "id": "why-the-distinction-matters",
+        "title": "Why the distinction matters",
+        "nav": "Why the distinction matters",
+        "paragraphs": [
+          "Legends, folklore, internet rumors, and source-aware mystery records can all be valuable, but they do not carry the same evidence weight. A careful article names the kind of material before asking readers to trust it.",
+          "That distinction helps both readers and search engines. It keeps verified context separate from unverified tradition, and it makes the site feel like an archive rather than a pile of claims."
+        ]
+      },
+      {
+        "id": "how-to-use-it-in-the-archive",
+        "title": "How to use this inside the archive",
+        "nav": "How to use this inside the archive",
+        "paragraphs": [
+          "Start with the category, then follow the tags and Story Map. If a record feels related, check whether the connection is setting, motif, source status, or evidence type.",
+          "This method lets one page lead naturally to another without forcing every article to solve the same question or repeat the same explanation."
+        ]
+      },
+      {
+        "id": "what-to-watch-for",
+        "title": "What to watch for",
+        "nav": "What to watch for",
+        "paragraphs": [
+          "Be careful with pages that sound certain but cannot name sources, dates, versions, or limits. The most useful strange records often say exactly where the evidence becomes thin.",
+          "A strong archive page can remain atmospheric while still showing restraint. It should make the reader curious, not misled."
+        ]
+      },
+      {
+        "id": "where-to-go-next",
+        "title": "Where to go next",
+        "nav": "Where to go next",
+        "paragraphs": [
+          "Read this guide alongside [[Why Object Legends Often Begin With Ordinary Tools|/stories/why-object-legends-often-begin-with-ordinary-tools]] and then compare it with the broader [[Story & Source Notice|/fiction-disclaimer.html]].",
+          "The best reading path is usually small: one guide, one article, one source note, then a related record with a similar motif."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is internet folklore patterns the same as proof?",
+        "answer": "No. It is a reading or navigation label. It helps organize the archive, but it does not prove the claim inside a story."
+      },
+      {
+        "question": "Why does Kyunolab use guide pages?",
+        "answer": "Guide pages explain how to read the archive, how source status works, and how related records connect without turning every legend into a factual claim."
+      },
+      {
+        "question": "Should these guides replace article source notes?",
+        "answer": "No. Guides explain the method. Individual article source notes still describe the limits of each specific record."
+      },
+      {
+        "question": "How should readers use this page?",
+        "answer": "Use it as a map. Follow one concept into related stories, then check each article category, tags, source status, and Story & Source Note."
+      }
+    ],
+    "sourceNote": "This Mystery Board guide is an editorial reading aid. It explains archive structure and source-aware reading, not the verified truth of any individual legend, mystery, or folklore claim."
+  },
+  {
+    "id": "why-urban-legends-use-ordinary-places",
+    "slug": "why-urban-legends-use-ordinary-places",
+    "title": "Why Urban Legends Use Ordinary Places So Well",
+    "shortTitle": "Urban Legends Use Ordinary Places So Well",
+    "metaTitle": "Why Urban Legends Use Ordinary Places So Well",
+    "metaDescription": "A Mystery Board guide to roads, elevators, parking lots, schools, stores, and other ordinary places that make modern legends feel close.",
+    "ogTitle": "Why Urban Legends Use Ordinary Places So Well",
+    "ogDescription": "A Mystery Board guide to roads, elevators, parking lots, schools, stores, and other ordinary places that make modern legends feel close.",
+    "excerpt": "A Mystery Board guide to roads, elevators, parking lots, schools, stores, and other ordinary places that make modern legends feel close.",
+    "deck": "Why Urban Legends Use Ordinary Places So Well is a practical Mystery Board guide for readers who want to move through The Strange Archive with more context, cleaner source awareness, and stronger internal reading paths.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Urban Legend Settings",
+    "tags": [
+      "Urban Legend Settings",
+      "Archive Method",
+      "Source Status",
+      "Reading Path",
+      "Story Structure"
+    ],
+    "bestFor": "Readers who want a clearer way to navigate strange records without confusing atmosphere with proof",
+    "readTime": "10 min read",
+    "url": "/mystery-board/why-urban-legends-use-ordinary-places",
+    "publishedAt": "2026-07-03",
+    "updatedAt": "2026-07-03",
+    "relatedStoryIds": [
+      "how-weather-omens-become-local-legends",
+      "why-missing-record-mysteries-feel-more-convincing-than-full-stories",
+      "how-doorway-warnings-become-household-folklore"
+    ],
+    "relatedGuideIds": [
+      "how-to-read-source-status-before-sharing-a-strange-story",
+      "how-to-follow-recurring-motifs-across-the-archive",
+      "how-to-choose-which-mystery-topic-to-read-next"
+    ],
+    "sections": [
+      {
+        "id": "what-this-guide-is-for",
+        "title": "What this guide is for",
+        "nav": "What this guide is for",
+        "paragraphs": [
+          "This guide helps readers understand why urban legends use ordinary places so well without treating every strange claim as confirmed fact. It gives the archive a practical reading path instead of leaving readers to move by headline alone.",
+          "The point is not to remove mystery. The point is to make the mystery readable: what is documented, what is repeated, what is interpreted, and what remains only a story pattern."
+        ]
+      },
+      {
+        "id": "why-the-distinction-matters",
+        "title": "Why the distinction matters",
+        "nav": "Why the distinction matters",
+        "paragraphs": [
+          "Legends, folklore, internet rumors, and source-aware mystery records can all be valuable, but they do not carry the same evidence weight. A careful article names the kind of material before asking readers to trust it.",
+          "That distinction helps both readers and search engines. It keeps verified context separate from unverified tradition, and it makes the site feel like an archive rather than a pile of claims."
+        ]
+      },
+      {
+        "id": "how-to-use-it-in-the-archive",
+        "title": "How to use this inside the archive",
+        "nav": "How to use this inside the archive",
+        "paragraphs": [
+          "Start with the category, then follow the tags and Story Map. If a record feels related, check whether the connection is setting, motif, source status, or evidence type.",
+          "This method lets one page lead naturally to another without forcing every article to solve the same question or repeat the same explanation."
+        ]
+      },
+      {
+        "id": "what-to-watch-for",
+        "title": "What to watch for",
+        "nav": "What to watch for",
+        "paragraphs": [
+          "Be careful with pages that sound certain but cannot name sources, dates, versions, or limits. The most useful strange records often say exactly where the evidence becomes thin.",
+          "A strong archive page can remain atmospheric while still showing restraint. It should make the reader curious, not misled."
+        ]
+      },
+      {
+        "id": "where-to-go-next",
+        "title": "Where to go next",
+        "nav": "Where to go next",
+        "paragraphs": [
+          "Read this guide alongside [[How Internet Glitches Become Folklore Instead of Error Reports|/stories/how-internet-glitches-become-folklore-instead-of-error-reports]] and then compare it with the broader [[Story & Source Notice|/fiction-disclaimer.html]].",
+          "The best reading path is usually small: one guide, one article, one source note, then a related record with a similar motif."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is urban legend settings the same as proof?",
+        "answer": "No. It is a reading or navigation label. It helps organize the archive, but it does not prove the claim inside a story."
+      },
+      {
+        "question": "Why does Kyunolab use guide pages?",
+        "answer": "Guide pages explain how to read the archive, how source status works, and how related records connect without turning every legend into a factual claim."
+      },
+      {
+        "question": "Should these guides replace article source notes?",
+        "answer": "No. Guides explain the method. Individual article source notes still describe the limits of each specific record."
+      },
+      {
+        "question": "How should readers use this page?",
+        "answer": "Use it as a map. Follow one concept into related stories, then check each article category, tags, source status, and Story & Source Note."
+      }
+    ],
+    "sourceNote": "This Mystery Board guide is an editorial reading aid. It explains archive structure and source-aware reading, not the verified truth of any individual legend, mystery, or folklore claim."
+  },
+  {
+    "id": "how-to-read-source-status-before-sharing-a-strange-story",
+    "slug": "how-to-read-source-status-before-sharing-a-strange-story",
+    "title": "How to Read Source Status Before Sharing a Strange Story",
+    "shortTitle": "Read Source Status Before Sharing a Strange Story",
+    "metaTitle": "How to Read Source Status Before Sharing a Strange Story",
+    "metaDescription": "A practical guide to checking source labels, evidence limits, and retelling language before sharing a legend, mystery, or folklore record.",
+    "ogTitle": "How to Read Source Status Before Sharing a Strange Story",
+    "ogDescription": "A practical guide to checking source labels, evidence limits, and retelling language before sharing a legend, mystery, or folklore record.",
+    "excerpt": "A practical guide to checking source labels, evidence limits, and retelling language before sharing a legend, mystery, or folklore record.",
+    "deck": "How to Read Source Status Before Sharing a Strange Story is a practical Mystery Board guide for readers who want to move through The Strange Archive with more context, cleaner source awareness, and stronger internal reading paths.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Source Status Guide",
+    "tags": [
+      "Source Status Guide",
+      "Archive Method",
+      "Source Status",
+      "Reading Path",
+      "Story Structure"
+    ],
+    "bestFor": "Readers who want a clearer way to navigate strange records without confusing atmosphere with proof",
+    "readTime": "9 min read",
+    "url": "/mystery-board/how-to-read-source-status-before-sharing-a-strange-story",
+    "publishedAt": "2026-07-03",
+    "updatedAt": "2026-07-03",
+    "relatedStoryIds": [
+      "why-lost-place-legends-need-maps-even-when-the-place-is-uncertain",
+      "how-internet-glitches-become-folklore-instead-of-error-reports",
+      "why-object-legends-often-begin-with-ordinary-tools"
+    ],
+    "relatedGuideIds": [
+      "how-to-follow-recurring-motifs-across-the-archive",
+      "how-to-choose-which-mystery-topic-to-read-next",
+      "how-to-read-urban-legends"
+    ],
+    "sections": [
+      {
+        "id": "what-this-guide-is-for",
+        "title": "What this guide is for",
+        "nav": "What this guide is for",
+        "paragraphs": [
+          "This guide helps readers understand how to read source status before sharing a strange story without treating every strange claim as confirmed fact. It gives the archive a practical reading path instead of leaving readers to move by headline alone.",
+          "The point is not to remove mystery. The point is to make the mystery readable: what is documented, what is repeated, what is interpreted, and what remains only a story pattern."
+        ]
+      },
+      {
+        "id": "why-the-distinction-matters",
+        "title": "Why the distinction matters",
+        "nav": "Why the distinction matters",
+        "paragraphs": [
+          "Legends, folklore, internet rumors, and source-aware mystery records can all be valuable, but they do not carry the same evidence weight. A careful article names the kind of material before asking readers to trust it.",
+          "That distinction helps both readers and search engines. It keeps verified context separate from unverified tradition, and it makes the site feel like an archive rather than a pile of claims."
+        ]
+      },
+      {
+        "id": "how-to-use-it-in-the-archive",
+        "title": "How to use this inside the archive",
+        "nav": "How to use this inside the archive",
+        "paragraphs": [
+          "Start with the category, then follow the tags and Story Map. If a record feels related, check whether the connection is setting, motif, source status, or evidence type.",
+          "This method lets one page lead naturally to another without forcing every article to solve the same question or repeat the same explanation."
+        ]
+      },
+      {
+        "id": "what-to-watch-for",
+        "title": "What to watch for",
+        "nav": "What to watch for",
+        "paragraphs": [
+          "Be careful with pages that sound certain but cannot name sources, dates, versions, or limits. The most useful strange records often say exactly where the evidence becomes thin.",
+          "A strong archive page can remain atmospheric while still showing restraint. It should make the reader curious, not misled."
+        ]
+      },
+      {
+        "id": "where-to-go-next",
+        "title": "Where to go next",
+        "nav": "Where to go next",
+        "paragraphs": [
+          "Read this guide alongside [[Why Lost-Place Legends Need Maps Even When the Place Is Uncertain|/stories/why-lost-place-legends-need-maps-even-when-the-place-is-uncertain]] and then compare it with the broader [[Story & Source Notice|/fiction-disclaimer.html]].",
+          "The best reading path is usually small: one guide, one article, one source note, then a related record with a similar motif."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is source status guide the same as proof?",
+        "answer": "No. It is a reading or navigation label. It helps organize the archive, but it does not prove the claim inside a story."
+      },
+      {
+        "question": "Why does Kyunolab use guide pages?",
+        "answer": "Guide pages explain how to read the archive, how source status works, and how related records connect without turning every legend into a factual claim."
+      },
+      {
+        "question": "Should these guides replace article source notes?",
+        "answer": "No. Guides explain the method. Individual article source notes still describe the limits of each specific record."
+      },
+      {
+        "question": "How should readers use this page?",
+        "answer": "Use it as a map. Follow one concept into related stories, then check each article category, tags, source status, and Story & Source Note."
+      }
+    ],
+    "sourceNote": "This Mystery Board guide is an editorial reading aid. It explains archive structure and source-aware reading, not the verified truth of any individual legend, mystery, or folklore claim."
+  },
+  {
     "id": "how-to-follow-recurring-motifs-across-the-archive",
     "slug": "how-to-follow-recurring-motifs-across-the-archive",
     "title": "How to Follow Recurring Motifs Across The Strange Archive Without Treating Every Story as Fact",
