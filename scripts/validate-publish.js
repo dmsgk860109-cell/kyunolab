@@ -1,5 +1,11 @@
 const fs = require('fs');
 const path = require('path');
+const {
+  validateContentDNA,
+  findBannedPhrases,
+  findGenericFaqQuestions,
+  countVocabularyHits
+} = require('./article-dna-utils');
 
 const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://kyunolab.com';
@@ -122,6 +128,8 @@ function validateStoryRecord(story) {
     errors.push(`${story.slug}: relatedStoryIds must be an array`);
   }
 
+  validateStoryContentDNA(story);
+
   if (!categoryBySlug.has(story.categorySlug)) {
     errors.push(`${story.slug}: categorySlug "${story.categorySlug}" is not defined in data/categories.json`);
   }
@@ -141,6 +149,37 @@ function validateStoryRecord(story) {
   }
 }
 
+function validateStoryContentDNA(story) {
+  const result = validateContentDNA(story, stories);
+  for (const error of result.errors) {
+    errors.push(`${story.slug}: ${error}`);
+  }
+
+  const requiredMetadata = [
+    'seoTitle',
+    'displayTitle',
+    'metaDescription',
+    'seedKeyword',
+    'searchIntent',
+    'articleFormat',
+    'sourceStatus',
+    'primaryTag',
+    'relatedKeywords',
+    'summaryAnswer'
+  ];
+
+  for (const key of requiredMetadata) {
+    const value = story[key];
+    if (Array.isArray(value) ? value.length === 0 : !String(value || '').trim()) {
+      errors.push(`${story.slug}: missing SEO/content metadata "${key}"`);
+    }
+  }
+
+  if (Array.isArray(story.relatedKeywords) && story.relatedKeywords.some((keyword) => /\/|\.html|https?:/i.test(String(keyword)))) {
+    errors.push(`${story.slug}: relatedKeywords must not be URL/page-generation targets`);
+  }
+}
+
 function validateStoryPage(story) {
   const filePath = path.join(root, 'stories', `${story.slug}.html`);
   if (!fs.existsSync(filePath)) {
@@ -149,6 +188,7 @@ function validateStoryPage(story) {
   }
 
   const html = fs.readFileSync(filePath, 'utf8');
+  const bodyText = stripHtml(html);
   const cleanUrl = `${siteUrl}/stories/${story.slug}`;
   mustInclude(html, `<link rel="canonical" href="${cleanUrl}">`, story.slug, 'clean canonical URL');
   mustInclude(html, `<meta property="og:url" content="${cleanUrl}">`, story.slug, 'clean og:url');
@@ -157,6 +197,41 @@ function validateStoryPage(story) {
   mustInclude(html, 'class="article-title"', story.slug, 'article title');
   mustInclude(html, 'engagement.js', story.slug, 'shared engagement script');
   mustInclude(html, 'Tags</dt>', story.slug, 'metadata tags row');
+
+  const bannedPhrases = findBannedPhrases(bodyText);
+  if (bannedPhrases.length) {
+    errors.push(`${story.slug}: forbidden repeated phrase found: ${bannedPhrases.join(' | ')}`);
+  }
+
+  const genericFaq = findGenericFaqQuestions(html);
+  if (genericFaq.length) {
+    errors.push(`${story.slug}: FAQ questions are too generic: ${genericFaq.join(' | ')}`);
+  }
+
+  if (story.contentDNA?.targetQuery && !bodyText.toLowerCase().includes(String(story.contentDNA.targetQuery).toLowerCase())) {
+    errors.push(`${story.slug}: opening/body does not include contentDNA.targetQuery`);
+  }
+
+  if (story.summaryAnswer) {
+    const firstArticleText = bodyText.slice(0, 2500).toLowerCase();
+    const summaryKey = String(story.summaryAnswer).split(/\s+/).slice(0, 8).join(' ').toLowerCase();
+    if (summaryKey && !firstArticleText.includes(summaryKey)) {
+      errors.push(`${story.slug}: summaryAnswer is not reflected near the beginning`);
+    }
+  }
+
+  const vocabHits = countVocabularyHits(bodyText, story.contentDNA?.subjectSpecificVocabulary || []);
+  if (vocabHits < 5) {
+    errors.push(`${story.slug}: subjectSpecificVocabulary usage is too low (${vocabHits}/5)`);
+  }
+
+  const headings = extractHeadings(html);
+  const blueprintTitles = (story.contentDNA?.sectionBlueprint || []).map((item) => typeof item === 'string' ? item : item.title).filter(Boolean);
+  for (const title of blueprintTitles.slice(0, 4)) {
+    if (!headings.some((heading) => normalize(heading) === normalize(title))) {
+      errors.push(`${story.slug}: contentDNA heading missing from article page: "${title}"`);
+    }
+  }
 }
 
 function validateCategoryPage(story) {
@@ -407,6 +482,30 @@ function readText(fileName) {
 
 function countRssStoryLinks(rss) {
   return (rss.match(/<link>https:\/\/kyunolab\.com\/stories\//g) || []).length;
+}
+
+function stripHtml(html) {
+  return String(html || '')
+    .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function extractHeadings(html) {
+  const headings = [];
+  const pattern = /<h2[^>]*>([\s\S]*?)<\/h2>/gi;
+  let match;
+  while ((match = pattern.exec(html))) {
+    headings.push(stripHtml(match[1]));
+  }
+  return headings;
 }
 
 function normalize(value) {

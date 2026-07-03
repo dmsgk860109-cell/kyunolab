@@ -86,9 +86,41 @@ relatedStoryIds:
   - [RELATED STORY SLUG 1]
   - [RELATED STORY SLUG 2]
   - [RELATED STORY SLUG 3]
+contentDNA:
+  targetQuery: [MAIN SEARCH QUERY]
+  canonicalQuery: [DEDUPLICATED SEARCH INTENT]
+  searchQuestion: [QUESTION THIS ARTICLE DIRECTLY ANSWERS]
+  readerIntent: [WHAT THE READER WANTS TO UNDERSTAND]
+  uniqueAngle: [WHAT MAKES THIS ARTICLE DIFFERENT FROM NEARBY ARTICLES]
+  subjectClass: [object-haunting / digital-glitch / road-legend / strange-place / etc.]
+  narrativeLens: [folklore-lens / technology-lens / symbolic-lens / public-space-lens / etc.]
+  evidencePosture: [unverified-rumor / folklore-pattern / anecdotal-record / symbolic-reading / etc.]
+  culturalFrame: [SPECIFIC ORDINARY-LIFE OR CULTURAL SETTING]
+  sceneAnchor: [CONCRETE FIRST IMAGE, PLACE, OBJECT, OR SITUATION]
+  subjectSpecificVocabulary:
+    - [SPECIFIC TERM 1]
+    - [SPECIFIC TERM 2]
+    - [SPECIFIC TERM 3]
+    - [SPECIFIC TERM 4]
+    - [SPECIFIC TERM 5]
+  requiredSpecificDetails:
+    - [DETAIL THAT MUST APPEAR IN BODY 1]
+    - [DETAIL THAT MUST APPEAR IN BODY 2]
+    - [DETAIL THAT MUST APPEAR IN BODY 3]
+    - [DETAIL THAT MUST APPEAR IN BODY 4]
+    - [DETAIL THAT MUST APPEAR IN BODY 5]
+  prohibitedGenericPhrases:
+    - [PHRASE TO AVOID]
+  sectionBlueprint:
+    - title: [CUSTOM H2 FOR THIS ARTICLE]
+      nav: [SHORT NAV LABEL]
+    - title: [CUSTOM H2 FOR THIS ARTICLE]
+      nav: [SHORT NAV LABEL]
 ```
 
 Editorial scoring fields are internal production fields. They may live in draft notes, admin metadata, or article data, but they should not be printed as visible reader-facing content.
+
+`contentDNA` is internal production metadata. It is used to keep articles unique, avoid duplicate search intent, vary the H2 structure, and force topic-specific vocabulary into the body. It should not be printed as a reader-facing block.
 
 ## SEO Fields
 
@@ -178,9 +210,12 @@ Requirements:
 
 - Introduce the main keyword within the first 100 words.
 - Put the summary answer near the beginning for search-info and comparison articles.
+- Answer `contentDNA.searchQuestion` directly in the first 2 to 3 sentences.
+- Include the `sceneAnchor` or another concrete detail from `contentDNA`.
 - Make the reader understand the subject quickly.
 - Keep the tone calm, mysterious, and source-aware.
 - Avoid cheap horror language.
+- Do not begin with stock phrasing like "The story begins with..." or "The central record is simple..."
 
 ```markdown
 [OPENING PARAGRAPH 1]
@@ -202,6 +237,8 @@ Use `articleFormat` to choose the structure:
 - `list-collection`: introduce the collection, give useful item-level explanations, then explain shared motifs.
 
 The format guides the article. It does not cap the length.
+
+The actual H2 structure should come from `contentDNA.sectionBlueprint` whenever possible. Do not reuse the same H2 set across many new articles.
 
 ### Urban Legend / Modern Legend
 
@@ -344,6 +381,8 @@ Rules:
 
 Use 3 to 6 questions. Add more only if the topic truly needs them.
 
+FAQ questions must be specific to the article subject. Do not repeat generic questions such as "Is this story true?", "Where did this story come from?", or "Why is this story scary?" across many articles.
+
 ```markdown
 ### Is [MAIN KEYWORD] real?
 
@@ -421,6 +460,10 @@ Content:
 - [ ] Article format fits the topic.
 - [ ] Display title and SEO title are separated when useful.
 - [ ] Summary answer appears near the beginning.
+- [ ] `contentDNA.searchQuestion` is answered near the beginning.
+- [ ] `contentDNA.sectionBlueprint` gives this article a custom H2 structure.
+- [ ] At least five `subjectSpecificVocabulary` items appear naturally in the body.
+- [ ] No banned generic phrase appears in the body.
 - [ ] The article follows the topic's natural length.
 - [ ] Useful detail was not cut to satisfy a template.
 - [ ] Weak sections were not padded with empty wording.
@@ -454,6 +497,8 @@ Metadata:
 - [ ] Tags do not duplicate the category.
 - [ ] Related keywords are present.
 - [ ] Related story IDs exist.
+- [ ] Content DNA is present.
+- [ ] `canonicalQuery` does not duplicate an existing story.
 - [ ] Canonical URL is clean and has no `.html`.
 - [ ] Meta title and description are accurate.
 

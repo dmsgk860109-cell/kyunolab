@@ -5,6 +5,7 @@ This file defines the scalable publishing workflow for Kyunolab.
 ## Source of Truth
 
 - Article metadata lives in `data/stories.json`.
+- Article uniqueness rules live in each record's `contentDNA` object.
 - Full article drafting should follow `ARTICLE_PAGE_TEMPLATE.md`.
 - Guide and Mystery Board metadata lives in `data/guides.json`.
 - Story detail pages live in `stories/`.
@@ -91,6 +92,12 @@ Regenerate list pages, category pages, RSS, and sitemap:
 npm run generate:site
 ```
 
+Apply or refresh Content DNA before publishing:
+
+```bash
+npm run apply:content-dna
+```
+
 Run full structural QA only after template or generator changes:
 
 ```bash
@@ -105,12 +112,52 @@ For 1, 10, or 100 new articles:
 2. Keep only `priority` or `approved` topics for normal publishing.
 3. Add records to `data/stories.json`.
 4. Add the matching `stories/[slug].html` files.
-5. Run `npm run generate:site`.
-6. Run `npm run generate:tags`.
-7. Run `npm run validate:publish -- --slugs=[changed-slugs]`.
-8. Run `npm run validate:tags`.
+5. Run `npm run apply:content-dna`.
+6. Run `npm run generate:site`.
+7. Run `npm run generate:tags`.
+8. Run `npm run validate:publish -- --slugs=[changed-slugs]`.
+9. Run `npm run validate:tags`.
 
 The changed slug list is the release boundary. It prevents a 100-article release from becoming a full manual review of every old article.
+
+## Content DNA Rule
+
+Every article should have a `contentDNA` object with:
+
+- `targetQuery`
+- `canonicalQuery`
+- `searchQuestion`
+- `readerIntent`
+- `uniqueAngle`
+- `subjectClass`
+- `narrativeLens`
+- `evidencePosture`
+- `culturalFrame`
+- `sceneAnchor`
+- `subjectSpecificVocabulary`
+- `requiredSpecificDetails`
+- `prohibitedGenericPhrases`
+- `sectionBlueprint`
+
+`canonicalQuery` prevents duplicate search intent. `sectionBlueprint` controls the article's H2 structure so new pages do not reuse the same generic body pattern.
+
+`scripts/apply-content-dna.js` can backfill missing production metadata and regenerate article detail pages from article records. It does not create new hub, compare, glossary, or `relatedKeywords` URLs.
+
+## Repetition Guard
+
+`scripts/validate-publish.js` fails publication when a story page contains known repeated generic phrases, overly generic FAQ questions, missing Content DNA, duplicate canonical intent, or weak subject-specific vocabulary usage.
+
+Do not publish new article bodies that use stock lines such as:
+
+- "That is the image at the center of this Kyunolab record."
+- "The story begins with an ordinary scene..."
+- "The central record is simple..."
+- "That compactness makes the story portable..."
+- "The familiar version begins with routine..."
+- "There is no single confirmed origin..."
+- "What makes this story unsettling is..."
+- "Like many modern legends..."
+- "Whether true or not..."
 
 ## When Full QA Is Needed
 
@@ -149,3 +196,7 @@ At 10,000+ articles:
 - Sitemap contains the new public URLs.
 - RSS contains only the appropriate newest stories.
 - No `.html` story public URL is introduced.
+- Content DNA is present and specific.
+- `canonicalQuery` does not duplicate an existing article.
+- Subject-specific vocabulary appears naturally in the article body.
+- Generic repeated phrases and generic FAQ questions are absent.
