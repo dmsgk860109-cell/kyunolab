@@ -274,18 +274,11 @@ function generateSitemap() {
   ];
 
   for (const urlPath of staticPages) urls.push({ loc: `${siteUrl}${urlPath}`, lastmod: latest });
-  addPagedUrls(urls, 'newest', stories.length, latest);
-  addPagedUrls(urls, 'popular', stories.length, latest);
-  addPagedUrls(urls, 'archive', stories.length, latest);
 
   for (const category of categories) {
     const categoryStories = stories.filter((story) => story.categorySlug === category.slug);
     const categoryDate = newestDate(categoryStories) || latest;
-    const totalPages = Math.max(1, Math.ceil(categoryStories.length / pageSize));
     urls.push({ loc: `${siteUrl}/categories/${category.slug}.html`, lastmod: categoryDate });
-    for (let page = 2; page <= totalPages; page += 1) {
-      urls.push({ loc: `${siteUrl}/categories/${category.slug}-${page}.html`, lastmod: categoryDate });
-    }
   }
 
   for (const story of stories) {
@@ -302,6 +295,8 @@ function generateSitemap() {
 ${rows}
 </urlset>
 `);
+
+  console.log(`Sitemap base indexable URLs: ${urls.length} (pagination URLs excluded).`);
 }
 
 function renderListPage({ canonicalPath, label, title, h1, description, items, baseName, pageNumber, totalPages }) {

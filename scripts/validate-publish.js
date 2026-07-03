@@ -11,6 +11,7 @@ const stories = readJson(path.join(root, 'data', 'stories.json'));
 const categories = readOptionalJson(path.join(root, 'data', 'categories.json'));
 const guides = readOptionalJson(path.join(root, 'data', 'guides.json'));
 const siteConfig = readOptionalJson(path.join(root, 'data', 'site.json'), {});
+const tagGroups = collectTagGroups([...stories, ...guides]);
 const storyBySlug = new Map(stories.map((story) => [story.slug, story]));
 const storyById = new Map(stories.map((story) => [story.id || story.slug, story]));
 const categoryBySlug = new Map(categories.map((category) => [category.slug, category]));
@@ -41,6 +42,7 @@ validateHomeConfig();
 validateListPagination('newest');
 validateListPagination('popular');
 validateListPagination('archive');
+validateSitemapIndexRules();
 
 if (errors.length) {
   console.error(errors.join('\n'));
@@ -170,7 +172,8 @@ function validateCategoryPage(story) {
 
 function validateTagPages(story) {
   for (const tag of story.tags || []) {
-    const tagSlug = slugify(tag);
+    const tagLabel = normalizeTagLabel(tag);
+    const tagSlug = slugify(tagLabel);
     const filePath = path.join(root, 'tags', tagSlug, 'index.html');
     if (!fs.existsSync(filePath)) {
       errors.push(`${story.slug}: missing tag page tags/${tagSlug}/index.html`);
@@ -179,6 +182,12 @@ function validateTagPages(story) {
 
     const html = fs.readFileSync(filePath, 'utf8');
     mustInclude(html, `href="/stories/${story.slug}"`, story.slug, `tag page link for ${tag}`);
+    const tagGroup = tagGroups.get(tagSlug);
+    if (tagGroup && tagGroup.indexable) {
+      mustInclude(html, '<meta name="robots" content="index, follow">', story.slug, `index robots for tag ${tag}`);
+    } else {
+      mustInclude(html, '<meta name="robots" content="noindex, follow">', story.slug, `noindex robots for thin tag ${tag}`);
+    }
   }
 }
 
@@ -186,8 +195,14 @@ function validateSitemap(story) {
   const sitemap = readText('sitemap.xml');
   mustInclude(sitemap, `<loc>${siteUrl}/stories/${story.slug}</loc>`, story.slug, 'sitemap story URL');
   for (const tag of story.tags || []) {
-    const tagSlug = slugify(tag);
-    mustInclude(sitemap, `<loc>${siteUrl}/tags/${tagSlug}/</loc>`, story.slug, `sitemap tag URL ${tagSlug}`);
+    const tagSlug = slugify(normalizeTagLabel(tag));
+    const tagGroup = tagGroups.get(tagSlug);
+    const tagUrl = `<loc>${siteUrl}/tags/${tagSlug}/</loc>`;
+    if (tagGroup && tagGroup.indexable) {
+      mustInclude(sitemap, tagUrl, story.slug, `sitemap indexable tag URL ${tagSlug}`);
+    } else if (sitemap.includes(tagUrl)) {
+      errors.push(`${story.slug}: thin/noindex tag "${tagSlug}" should not be included in sitemap`);
+    }
   }
 }
 
@@ -242,6 +257,30 @@ function validateGlobalStructure() {
     const filePath = path.join(root, 'categories', `${category.slug}.html`);
     if (!fs.existsSync(filePath)) {
       errors.push(`${category.slug}: missing category archive page`);
+    }
+  }
+}
+
+function validateSitemapIndexRules() {
+  const sitemap = readText('sitemap.xml');
+  const forbiddenPatterns = [
+    /<loc>https:\/\/kyunolab\.com\/(?:newest|popular|archive)-\d+\.html<\/loc>/,
+    /<loc>https:\/\/kyunolab\.com\/categories\/[^<]+-\d+\.html<\/loc>/
+  ];
+
+  for (const pattern of forbiddenPatterns) {
+    if (pattern.test(sitemap)) {
+      errors.push('sitemap.xml: pagination URL should not be included');
+    }
+  }
+
+  for (const [tagSlug, tagGroup] of tagGroups.entries()) {
+    const tagUrl = `<loc>${siteUrl}/tags/${tagSlug}/</loc>`;
+    if (!tagGroup.indexable && sitemap.includes(tagUrl)) {
+      errors.push(`sitemap.xml: noindex tag "${tagSlug}" should not be included`);
+    }
+    if (tagGroup.indexable && !sitemap.includes(tagUrl)) {
+      errors.push(`sitemap.xml: indexable tag "${tagSlug}" is missing`);
     }
   }
 }
@@ -372,6 +411,59 @@ function countRssStoryLinks(rss) {
 
 function normalize(value) {
   return String(value || '').trim().toLowerCase();
+}
+
+function normalizeTagLabel(label) {
+  const value = String(label || '').trim();
+  const key = value.toLowerCase();
+  const aliasMap = new Map([
+    ['도깨비 전설', '도깨비'],
+    ['한국 도깨비', '도깨비'],
+    ['도깨비 이야기', '도깨비'],
+    ['구미호 전설', '구미호'],
+    ['한국 구미호', '구미호'],
+    ['아홉 꼬리 여우', '구미호'],
+    ['인어 전설', '인어'],
+    ['바다 인어', '인어'],
+    ['인어 이야기', '인어'],
+    ['일본 요괴', '요괴'],
+    ['요괴 이야기', '요괴'],
+    ['요괴 전설', '요괴']
+  ]);
+
+  return aliasMap.get(key) || value;
+}
+
+function collectTagGroups(items) {
+  const groups = new Map();
+
+  for (const item of items) {
+    const tags = Array.isArray(item.tags) && item.tags.length ? item.tags : [item.tag];
+    for (const tag of tags) {
+      const label = normalizeTagLabel(tag);
+      const slug = slugify(label);
+      if (!slug) continue;
+      if (!groups.has(slug)) {
+        groups.set(slug, { label, slug, articles: [] });
+      }
+      groups.get(slug).articles.push(item);
+    }
+  }
+
+  for (const group of groups.values()) {
+    group.description = getTagDescription(group);
+    group.indexable = group.articles.length >= 3 && Boolean(group.description) && group.articles.length > 0;
+  }
+
+  return groups;
+}
+
+function getTagDescription(group) {
+  const count = group.articles.length;
+  const categorySet = new Set(group.articles.map((article) => article.category).filter(Boolean));
+  if (count < 3) return '';
+  if (categorySet.size < 1) return '';
+  return `A focused archive path for ${group.label}, collecting ${count} related Kyunolab records across ${categorySet.size} shelf${categorySet.size === 1 ? '' : 'ves'}.`;
 }
 
 function slugify(value) {

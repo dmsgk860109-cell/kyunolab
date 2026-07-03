@@ -10,6 +10,7 @@ const stories = readJson(path.join(root, 'data', 'stories.json'));
 const guides = readOptionalJson(path.join(root, 'data', 'guides.json'));
 const articles = [...stories, ...guides];
 const tagGroups = collectTagGroups(articles);
+const tagStats = buildTagStats(tagGroups);
 
 prepareTagDirectory();
 for (const tagGroup of tagGroups) {
@@ -17,7 +18,7 @@ for (const tagGroup of tagGroups) {
 }
 updateSitemap(tagGroups);
 
-console.log(`Generated ${tagGroups.length} tag archive pages.`);
+logUrlStats(tagStats);
 
 function readJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, 'utf8'));
@@ -33,10 +34,11 @@ function collectTagGroups(items) {
 
   for (const item of items) {
     for (const label of getTags(item)) {
-      const slug = slugify(label);
+      const normalized = normalizeTagLabel(label);
+      const slug = slugify(normalized);
       if (!slug) continue;
       if (!groups.has(slug)) {
-        groups.set(slug, { label, slug, articles: [] });
+        groups.set(slug, { label: normalized, slug, articles: [] });
       }
       groups.get(slug).articles.push(toArchiveArticle(item));
     }
@@ -46,6 +48,8 @@ function collectTagGroups(items) {
     .filter((group) => group.articles.length > 0)
     .map((group) => ({
       ...group,
+      description: getTagDescription(group),
+      indexable: isIndexableTagGroup(group),
       articles: sortArticles(group.articles),
       lastmod: newestDate(group.articles)
     }))
@@ -55,6 +59,39 @@ function collectTagGroups(items) {
 function getTags(item) {
   const values = Array.isArray(item.tags) && item.tags.length ? item.tags : [item.tag];
   return Array.from(new Set(values.map((tag) => String(tag).trim()).filter(Boolean)));
+}
+
+function normalizeTagLabel(label) {
+  const value = String(label || '').trim();
+  const key = value.toLowerCase();
+  const aliasMap = new Map([
+    ['도깨비 전설', '도깨비'],
+    ['한국 도깨비', '도깨비'],
+    ['도깨비 이야기', '도깨비'],
+    ['구미호 전설', '구미호'],
+    ['한국 구미호', '구미호'],
+    ['아홉 꼬리 여우', '구미호'],
+    ['인어 전설', '인어'],
+    ['바다 인어', '인어'],
+    ['인어 이야기', '인어'],
+    ['일본 요괴', '요괴'],
+    ['요괴 이야기', '요괴'],
+    ['요괴 전설', '요괴']
+  ]);
+
+  return aliasMap.get(key) || value;
+}
+
+function getTagDescription(group) {
+  const count = group.articles.length;
+  const categorySet = new Set(group.articles.map((article) => article.category).filter(Boolean));
+  if (count < 3) return '';
+  if (categorySet.size < 1) return '';
+  return `A focused archive path for ${group.label}, collecting ${count} related Kyunolab records across ${categorySet.size} shelf${categorySet.size === 1 ? '' : 'ves'}.`;
+}
+
+function isIndexableTagGroup(group) {
+  return group.articles.length >= 3 && Boolean(getTagDescription(group)) && group.articles.length > 0;
 }
 
 function toArchiveArticle(item) {
@@ -131,9 +168,10 @@ function writeTagPage(tagGroup) {
 function renderTagPage(tagGroup) {
   const canonicalPath = `/tags/${tagGroup.slug}/`;
   const title = `Stories Tagged "${tagGroup.label}"`;
-  const description = 'A collection of archive entries connected by this recurring story pattern.';
+  const description = tagGroup.description || 'A small internal archive path for related Kyunolab records.';
   const firstArticle = tagGroup.articles[0];
   const storyRows = tagGroup.articles.map(renderStoryRow).join('\n');
+  const robots = tagGroup.indexable ? 'index, follow' : 'noindex, follow';
 
   return `<!doctype html>
 ${generatedMarker}
@@ -143,6 +181,7 @@ ${generatedMarker}
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${escapeHtml(title)} | The Strange Archive</title>
   <meta name="description" content="${escapeHtml(description)}">
+  <meta name="robots" content="${robots}">
   <meta property="og:title" content="${escapeHtml(title)}">
   <meta property="og:description" content="${escapeHtml(description)}">
   <meta property="og:type" content="website">
@@ -240,11 +279,46 @@ function updateSitemap(groups) {
   const sitemap = fs.readFileSync(sitemapPath, 'utf8');
   const withoutOldTags = sitemap.replace(/\s*<url><loc>https:\/\/kyunolab\.com\/tags\/[^<]+<\/loc><lastmod>[^<]+<\/lastmod><\/url>/g, '');
   const tagUrls = groups
+    .filter((group) => group.indexable)
     .map((group) => `  <url><loc>${siteUrl}/tags/${group.slug}/</loc><lastmod>${group.lastmod}</lastmod></url>`)
     .join('\n');
 
   const nextSitemap = withoutOldTags.replace(/\s*<\/urlset>\s*$/, `\n${tagUrls}\n</urlset>\n`);
   fs.writeFileSync(sitemapPath, nextSitemap, 'utf8');
+}
+
+function buildTagStats(groups) {
+  const indexableTags = groups.filter((group) => group.indexable);
+  const oneArticleTags = groups.filter((group) => group.articles.length === 1);
+  const noindexTags = groups.filter((group) => !group.indexable);
+  return {
+    totalGeneratedTagUrls: groups.length,
+    sitemapTagUrls: indexableTags.length,
+    indexableTagUrls: indexableTags.length,
+    noindexTagUrls: noindexTags.length,
+    oneArticleTagUrls: oneArticleTags.length,
+    relatedKeywordsGeneratedUrls: 0
+  };
+}
+
+function logUrlStats(stats) {
+  const storyUrlCount = stories.length;
+  const categoryUrlCount = new Set(stories.map((story) => story.categorySlug).filter(Boolean)).size;
+  const guideUrlCount = guides.length;
+  const staticIndexableUrlCount = 9;
+  const sitemapUrlCount = staticIndexableUrlCount + storyUrlCount + categoryUrlCount + guideUrlCount + stats.sitemapTagUrls;
+  const totalGeneratedUrlCount = staticIndexableUrlCount + storyUrlCount + categoryUrlCount + guideUrlCount + stats.totalGeneratedTagUrls;
+
+  console.log(`Generated ${stats.totalGeneratedTagUrls} tag archive pages.`);
+  console.log('URL generation report:');
+  console.log(`- Total generated URL count: ${totalGeneratedUrlCount}`);
+  console.log(`- Sitemap included URL count: ${sitemapUrlCount}`);
+  console.log(`- Index-allowed URL count: ${sitemapUrlCount}`);
+  console.log(`- Story detail URL count: ${storyUrlCount}`);
+  console.log(`- Tag page count: ${stats.totalGeneratedTagUrls}`);
+  console.log(`- Noindex tag page count: ${stats.noindexTagUrls}`);
+  console.log(`- One-article tag count: ${stats.oneArticleTagUrls}`);
+  console.log(`- relatedKeywords-generated URL count: ${stats.relatedKeywordsGeneratedUrls}`);
 }
 
 function escapeHtml(value) {
