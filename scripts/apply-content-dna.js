@@ -54,7 +54,9 @@ function backfillStoryMetadata(story) {
   story.displayTitle = story.displayTitle || title;
   story.seoTitle = story.seoTitle || title;
   story.metaTitle = story.metaTitle || story.seoTitle || title;
-  story.metaDescription = story.metaDescription || excerpt;
+  if (!story.metaDescription || shouldRefreshMetaDescription(story.metaDescription)) {
+    story.metaDescription = buildConciseMetaDescription(story, subject, tag, excerpt);
+  }
   story.seedKeyword = story.seedKeyword || query;
   story.searchIntent = story.searchIntent || inferSearchIntent(story);
   story.articleFormat = story.articleFormat || inferArticleFormat(story);
@@ -105,21 +107,61 @@ function buildRelatedKeywords(story, subject, tag) {
 function buildSummaryAnswer(story, subject) {
   const category = String(story.category || 'archive').toLowerCase();
   const detail = story.detail || story.excerpt || `a recurring ${category} motif`;
-  return `${subject} is a source-aware ${category} record about ${scenePhrase(detail)}. It is not presented as verified fact; the useful reading is how the scene, motif, and evidence limits make the story worth preserving.`;
+  const scene = scenePhrase(detail);
+  const variants = [
+    `${subject} is best read as ${articleFor(category)} ${category} entry built around ${scene}. The article keeps the source limits visible while explaining why the image keeps returning.`,
+    `${subject} follows ${scene}, then asks why that detail became memorable enough to retell. It treats the material as folklore or source-aware record, not as confirmed fact.`,
+    `At the center of ${subject} is ${scene}. The useful question is not whether every version is literal, but why this detail gives the story such a durable shape.`,
+    `${subject} works because ${scene} is specific enough to picture and uncertain enough to keep moving through retellings. The article preserves that tension without overstating the record.`
+  ];
+  return variants[stableIndex(story.slug, variants.length)];
 }
 
 function refineSearchQuestion(story, fallback) {
   const subject = shortSubject(story).replace(/^The\s+/i, '');
   const tag = story.primaryTag || story.tag || story.category;
   const detail = story.detail || story.excerpt || subject;
-  return story.searchQuestion || `What makes ${subject} work as ${articleFor(tag)} ${tag} record built around ${scenePhrase(detail)}?`;
+  const scene = scenePhrase(detail);
+  const variants = [
+    `Why does ${subject} remain memorable as ${articleFor(tag)} ${tag} story?`,
+    `What makes ${subject} work as ${articleFor(tag)} ${tag} pattern?`,
+    `How does ${subject} turn ${scene} into a story readers keep following?`,
+    `Why does ${scene} give ${subject} enough shape to survive retelling?`
+  ];
+  return story.searchQuestion || variants[stableIndex(`${story.slug}-query`, variants.length)];
 }
 
 function refineUniqueAngle(story, fallback) {
   const profile = getQualityProfile(story);
   const subject = shortSubject(story);
   const detail = story.detail || story.excerpt || subject;
-  return story.uniqueAngle || `${subject} is read through ${profile.lens}, with the focus kept on ${detail} instead of broad atmosphere or unsupported certainty.`;
+  const scene = scenePhrase(detail);
+  const variants = [
+    `${subject} is approached through ${profile.lens}, using ${scene} as the concrete anchor rather than making the article depend on atmosphere alone.`,
+    `The article reads ${subject} through ${profile.lens}; its strength is the specific pressure of ${scene}, not a forced claim of certainty.`,
+    `${subject} stays useful because ${scene} gives the record a narrow image to test against source status, motif, and reader memory.`,
+    `The angle is intentionally narrow: ${subject} follows ${scene} through ${profile.lens}, then stops where the source record stops.`
+  ];
+  return story.uniqueAngle || variants[stableIndex(`${story.slug}-angle`, variants.length)];
+}
+
+function shouldRefreshMetaDescription(value) {
+  const text = String(value || '');
+  return text.trim().split(/\s+/).filter(Boolean).length > 35
+    || /source-aware Kyunolab record about/i.test(text)
+    || /recurring motifs, evidence limits, and why the story/i.test(text);
+}
+
+function buildConciseMetaDescription(story, subject, tag, excerpt) {
+  const category = String(story.category || 'strange story').toLowerCase();
+  const tagText = String(tag || story.category || 'recurring motif').toLowerCase();
+  const scene = scenePhrase(story.detail || excerpt || subject);
+  const variants = [
+    `${subject} explores ${scene}, tracing how this ${tagText} pattern works inside ${category} without treating the record as confirmed fact.`,
+    `A source-aware look at ${subject}, the ${tagText} motif behind it, and why ${scene} keeps the story readable.`,
+    `${subject} examines ${scene} through ${category}, separating memorable folklore from what the record can actually support.`
+  ];
+  return trimToLength(variants[stableIndex(`${story.slug}-meta`, variants.length)], 158);
 }
 
 function titleFromSlug(slug) {
@@ -226,17 +268,27 @@ function sectionParagraphs(story, heading, index, vocabulary, details) {
   const scene = scenePhrase(detail);
 
   if (index === 0) {
+    const followups = [
+      `${vocabSentence} These are the pieces that keep the article attached to the actual ${tag.toLowerCase()} pattern instead of drifting into a loose mood piece.`,
+      `${vocabSentence} Their job is practical: each term gives the reader a handle on the specific shape of the record.`,
+      `${vocabSentence} The terms matter because they keep the article close to what can be pictured, repeated, or checked.`
+    ];
     return [
       firstAnalysisParagraph(story, subject, scene, profile),
-      `${vocabSentence} Those terms are not decorative. They are the pieces that stop the article from becoming a loose summary and keep the reader inside the actual ${tag.toLowerCase()} pattern.`
+      followups[stableIndex(`${story.slug}-p0`, followups.length)]
     ];
   }
 
   if (index === 1) {
     const carriers = listForSentence(specificTerms.slice(0, 3));
+    const secondParagraphs = [
+      `The important move is scale: the story does not need a whole mythology to work. It needs ${scene}, then supporting carriers such as ${carriers}. That is why ${tag} works as a smaller internal path while ${story.category} keeps the article on the right archive shelf.`,
+      `The scale stays deliberately small. Once ${scene} is in place, carriers such as ${carriers} are enough to show how the record travels without pretending the article has solved the whole tradition.`,
+      `This is where tags help. ${tag} names the smaller pattern, while ${story.category} keeps the article inside the larger archive shelf built around ${carriers}.`
+    ];
     return [
       `${heading} depends on material details rather than mood. ${detailSentence}`,
-      `The important move is scale: the story does not need a whole mythology to work. It needs ${scene}, then supporting carriers such as ${carriers}. That is why ${tag} works as a smaller internal path while ${story.category} keeps the article on the right archive shelf.`
+      secondParagraphs[stableIndex(`${story.slug}-p1`, secondParagraphs.length)]
     ];
   }
 
@@ -248,15 +300,25 @@ function sectionParagraphs(story, heading, index, vocabulary, details) {
   }
 
   if (index === 3) {
-    return [
+    const evidenceOpeners = [
       `The evidence posture is deliberately narrow. The available material can support a source-aware reading through ${evidence}; it can show how the motif circulates, which details survive, and which version of the story readers are actually repeating.`,
+      `The record can do useful work without proving everything inside it. At this stage, ${evidence} helps identify circulation, recurring detail, and source limits rather than a final answer.`,
+      `A careful archive reading starts by asking what the material can actually bear. Here, ${evidence} can support pattern, setting, and repetition before it can support any stronger claim.`
+    ];
+    return [
+      evidenceOpeners[stableIndex(`${story.slug}-p3`, evidenceOpeners.length)],
       `${profile.evidenceLimit} Stronger support would need ${profile.strongEvidence}, especially records that preserve the same concrete details instead of only repeating the same title.`
     ];
   }
 
+  const closers = [
+    `For Kyunolab, the value is in preserving the precise shape of the record. The article should leave the reader with ${profile.finalImage}, plus a clear boundary between folklore value, searchable context, and verified fact.`,
+    `The ending should leave the record usable rather than inflated. A reader should come away with ${profile.finalImage}, while still knowing which parts are tradition, interpretation, or documented context.`,
+    `That balance is the archive's purpose: keep ${profile.finalImage} vivid, but keep the boundary between a memorable story and a verified claim intact.`
+  ];
   return [
     `${subject} remains readable because it gives readers something ordinary to look at differently: ${scene}. That is stronger than a vague claim because it creates a repeatable image without demanding that the reader accept more than the source status can carry.`,
-    `For Kyunolab, the value is in preserving the precise shape of the record. The article should leave the reader with ${profile.finalImage}, plus a clear boundary between folklore value, searchable context, and verified fact.`
+    closers[stableIndex(`${story.slug}-p4`, closers.length)]
   ];
 }
 
@@ -488,10 +550,26 @@ function firstAnalysisParagraph(story, subject, scene, profile) {
 
 function evidenceHeading(story) {
   const posture = String(story.contentDNA?.evidencePosture || story.sourceStatus || '').toLowerCase();
-  if (posture.includes('digital')) return 'What Logs or Screenshots Would Need to Show';
-  if (posture.includes('place')) return 'What Local Records Could Actually Prove';
-  if (posture.includes('symbolic')) return 'Where Symbolic Reading Ends';
-  return 'Where the Evidence Becomes Thin';
+  if (posture.includes('digital')) return pickStable(story.slug, [
+    'What Logs or Screenshots Would Need to Show',
+    'Where the Digital Trail Gets Uncertain',
+    'What an Archive Copy Could Actually Prove'
+  ]);
+  if (posture.includes('place')) return pickStable(story.slug, [
+    'What Local Records Could Actually Prove',
+    'Where the Map Stops Being Enough',
+    'What the Location Evidence Can Support'
+  ]);
+  if (posture.includes('symbolic')) return pickStable(story.slug, [
+    'Where Symbolic Reading Ends',
+    'What the Symbol Can and Cannot Prove',
+    'How Far the Motif Can Be Taken'
+  ]);
+  return pickStable(story.slug, [
+    'Where the Evidence Becomes Thin',
+    'What the Record Can Support',
+    'Where the Source Trail Starts to Fade'
+  ]);
 }
 
 function sentenceFromTerms(terms, subject) {
@@ -562,6 +640,10 @@ function stableIndex(value, length) {
     hash = (hash + source.charCodeAt(index) * (index + 1)) % 9973;
   }
   return hash % length;
+}
+
+function pickStable(seed, values) {
+  return values[stableIndex(seed, values.length)];
 }
 
 function shortSubject(story) {

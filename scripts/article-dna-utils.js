@@ -235,22 +235,66 @@ function buildReaderIntent(story, shortSubject) {
 
 function categoryMiddleHeading(story, subject) {
   const category = String(story.categorySlug || '').toLowerCase();
-  if (category.includes('internet')) return `Why the Digital Trace Matters More Than the Scare`;
-  if (category.includes('place') || category.includes('world')) return `Why the Location Becomes the Main Character`;
-  if (category.includes('nature')) return `Why the Landscape Makes the Pattern Believable`;
-  if (category.includes('myth') || category.includes('folklore')) return `What the Motif Says Before It Explains Anything`;
-  if (category.includes('origin')) return `How ${subject} Turns Into a Repeatable Pattern`;
-  if (category.includes('mysteries')) return `Why the Missing Piece Matters More Than the Answer`;
-  return `Why the Ordinary Setting Makes the Rumor Work`;
+  if (category.includes('internet')) return pickBySlug(story.slug, [
+    'Why the Digital Trace Matters More Than the Scare',
+    'How a Small Online Detail Becomes the Whole Story',
+    'Why Screenshots Make the Rumor Feel Close'
+  ]);
+  if (category.includes('place') || category.includes('world')) return pickBySlug(story.slug, [
+    'Why the Location Becomes the Main Character',
+    'How the Map Keeps the Story Alive',
+    'Why the Setting Does More Than Hold the Plot'
+  ]);
+  if (category.includes('nature')) return pickBySlug(story.slug, [
+    'Why the Landscape Makes the Pattern Believable',
+    'How a Natural Detail Turns Into a Local Sign',
+    'Why Repeated Weather or Animal Details Matter'
+  ]);
+  if (category.includes('myth') || category.includes('folklore')) return pickBySlug(story.slug, [
+    'What the Motif Reveals Before It Explains Anything',
+    'Why the Rule Matters More Than the Literal Claim',
+    'How the Symbol Carries the Story Forward'
+  ]);
+  if (category.includes('origin')) return pickBySlug(story.slug, [
+    `How ${subject} Turns Into a Repeatable Pattern`,
+    `Why ${subject} Becomes Easier to Retell`,
+    `What Changes When ${subject} Becomes a Motif`
+  ]);
+  if (category.includes('mysteries')) return pickBySlug(story.slug, [
+    'Why the Missing Piece Matters More Than the Answer',
+    'How the Gap in the Record Holds the Reader',
+    'Why the Unconfirmed Detail Does So Much Work'
+  ]);
+  return pickBySlug(story.slug, [
+    'Why the Ordinary Setting Makes the Rumor Work',
+    'How a Familiar Place Turns Uneasy',
+    'Why the Small Public Detail Keeps Returning'
+  ]);
 }
 
 function evidenceHeadingFor(story) {
   const posture = String(story.contentDNA?.evidencePosture || story.evidencePosture || story.sourceStatus || '').toLowerCase();
   if (posture.includes('fiction')) return 'What the Archive Frame Can Support';
-  if (posture.includes('symbolic')) return 'Where Symbolic Reading Ends';
-  if (posture.includes('digital')) return 'What Logs or Screenshots Would Need to Show';
-  if (posture.includes('place')) return 'What Local Records Could Actually Prove';
-  return 'Where the Evidence Becomes Thin';
+  if (posture.includes('symbolic')) return pickBySlug(story.slug, [
+    'Where Symbolic Reading Ends',
+    'What the Symbol Can and Cannot Prove',
+    'How Far the Motif Can Be Taken'
+  ]);
+  if (posture.includes('digital')) return pickBySlug(story.slug, [
+    'What Logs or Screenshots Would Need to Show',
+    'Where the Digital Trail Gets Uncertain',
+    'What an Archive Copy Could Actually Prove'
+  ]);
+  if (posture.includes('place')) return pickBySlug(story.slug, [
+    'What Local Records Could Actually Prove',
+    'Where the Map Stops Being Enough',
+    'What the Location Evidence Can Support'
+  ]);
+  return pickBySlug(story.slug, [
+    'Where the Evidence Becomes Thin',
+    'What the Record Can Support',
+    'Where the Source Trail Starts to Fade'
+  ]);
 }
 
 function buildUniqueAngle(story, shortSubject, detail) {
@@ -346,6 +390,15 @@ function toTitleCase(value) {
 
 function normalize(value) {
   return String(value || '').trim().toLowerCase().replace(/\s+/g, ' ');
+}
+
+function pickBySlug(slug, values) {
+  const source = String(slug || '');
+  let hash = 0;
+  for (let index = 0; index < source.length; index += 1) {
+    hash = (hash + source.charCodeAt(index) * (index + 1)) % 7919;
+  }
+  return values[hash % values.length];
 }
 
 module.exports = {
