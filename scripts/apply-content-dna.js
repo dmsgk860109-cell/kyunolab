@@ -17,9 +17,18 @@ for (const story of stories) {
 
 for (const story of stories) {
   backfillStoryMetadata(story);
+  const generatedDNA = buildContentDNA(story, existingQueries);
+  const existingDNA = story.contentDNA || {};
   story.contentDNA = {
-    ...buildContentDNA(story, existingQueries),
-    ...(story.contentDNA || {})
+    ...generatedDNA,
+    ...existingDNA,
+    readerIntent: generatedDNA.readerIntent,
+    searchQuestion: refineSearchQuestion(story, generatedDNA.searchQuestion),
+    uniqueAngle: refineUniqueAngle(story, generatedDNA.uniqueAngle),
+    sceneAnchor: generatedDNA.sceneAnchor,
+    subjectSpecificVocabulary: generatedDNA.subjectSpecificVocabulary,
+    requiredSpecificDetails: generatedDNA.requiredSpecificDetails,
+    sectionBlueprint: generatedDNA.sectionBlueprint
   };
 }
 
@@ -55,7 +64,7 @@ function backfillStoryMetadata(story) {
   story.relatedKeywords = Array.isArray(story.relatedKeywords) && story.relatedKeywords.length
     ? story.relatedKeywords
     : buildRelatedKeywords(story, subject, tag);
-  story.summaryAnswer = story.summaryAnswer || buildSummaryAnswer(story, subject);
+  story.summaryAnswer = buildSummaryAnswer(story, subject);
   story.topicScore = story.topicScore || 72;
   story.topicStatus = story.topicStatus || 'approved';
   story.scoreBreakdown = story.scoreBreakdown || {
@@ -95,8 +104,22 @@ function buildRelatedKeywords(story, subject, tag) {
 
 function buildSummaryAnswer(story, subject) {
   const category = String(story.category || 'archive').toLowerCase();
-  const source = story.sourceStatus || `${story.category} / Source-aware retelling`;
-  return `${subject} is best read as a source-aware ${category} record, not as a verified factual claim. The article explains the story pattern, the useful evidence limits, and why this motif remains memorable inside ${source}.`;
+  const detail = story.detail || story.excerpt || `a recurring ${category} motif`;
+  return `${subject} is a source-aware ${category} record about ${scenePhrase(detail)}. It is not presented as verified fact; the useful reading is how the scene, motif, and evidence limits make the story worth preserving.`;
+}
+
+function refineSearchQuestion(story, fallback) {
+  const subject = shortSubject(story).replace(/^The\s+/i, '');
+  const tag = story.primaryTag || story.tag || story.category;
+  const detail = story.detail || story.excerpt || subject;
+  return story.searchQuestion || `What makes ${subject} work as ${articleFor(tag)} ${tag} record built around ${scenePhrase(detail)}?`;
+}
+
+function refineUniqueAngle(story, fallback) {
+  const profile = getQualityProfile(story);
+  const subject = shortSubject(story);
+  const detail = story.detail || story.excerpt || subject;
+  return story.uniqueAngle || `${subject} is read through ${profile.lens}, with the focus kept on ${detail} instead of broad atmosphere or unsupported certainty.`;
 }
 
 function titleFromSlug(slug) {
@@ -193,40 +216,46 @@ function sectionParagraphs(story, heading, index, vocabulary, details) {
   const subject = shortSubject(story);
   const detail = story.detail || story.excerpt || dna.sceneAnchor;
   const evidence = story.evidence || `${story.sourceStatus}, ${story.primaryTag || story.tag}, repeated retellings`;
+  const profile = getQualityProfile(story);
+  const tag = story.primaryTag || story.tag || story.category;
+  const specificTerms = meaningfulTerms([...vocabulary, ...details]);
   const vocabSentence = sentenceFromTerms(vocabulary.slice(index, index + 3), subject);
-  const detailSentence = sentenceFromTerms(details.slice(index, index + 3), subject);
+  const detailSentence = `${heading} works because the article can name specific carriers: ${listForSentence(specificTerms.slice(0, 4))}.`;
+  const concreteTerms = listForSentence(meaningfulTerms(vocabulary).slice(0, 4));
+  const scene = scenePhrase(detail);
 
   if (index === 0) {
     return [
-      `${subject} answers a narrow search question: ${dna.searchQuestion} The strongest answer is not a claim of proof, but a pattern built around ${detail}.`,
-      `${vocabSentence} Those details keep the record attached to a particular scene instead of letting it blur into a generic strange story.`
+      firstAnalysisParagraph(story, subject, scene, profile),
+      `${vocabSentence} Those terms are not decorative. They are the pieces that stop the article from becoming a loose summary and keep the reader inside the actual ${tag.toLowerCase()} pattern.`
     ];
   }
 
   if (index === 1) {
+    const carriers = listForSentence(specificTerms.slice(0, 3));
     return [
-      `${heading} depends on material details rather than atmosphere alone. ${detailSentence}`,
-      `The record stays useful because ${story.primaryTag || story.tag} gives readers a clear path into the subject while the category keeps it connected to ${story.category}.`
+      `${heading} depends on material details rather than mood. ${detailSentence}`,
+      `The important move is scale: the story does not need a whole mythology to work. It needs ${scene}, then supporting carriers such as ${carriers}. That is why ${tag} works as a smaller internal path while ${story.category} keeps the article on the right archive shelf.`
     ];
   }
 
   if (index === 2) {
     return [
-      `Retellings usually change the names, dates, or setting before they change the pressure point. In this case, the pressure point is ${detail}.`,
-      `That is why the article treats the story through ${dna.narrativeLens} and ${dna.culturalFrame}. The angle is specific enough to separate it from nearby records.`
+      `${profile.contextSentence} In this entry, the pressure point is ${scene}.`,
+      `That is why the article treats the subject through ${profile.lens}. The frame matters because it explains why ${concreteTerms || tag} can feel memorable without turning uncertainty into proof.`
     ];
   }
 
   if (index === 3) {
     return [
-      `The available material can support a source-aware reading: ${evidence}. It can show how a motif circulates, which details survive, and where the story gains its shape.`,
-      `It cannot, by itself, turn an unverified or symbolic claim into a confirmed event. Better evidence would include dated records, stable witnesses, original files, location records, or archived versions that match the same details.`
+      `The evidence posture is deliberately narrow. The available material can support a source-aware reading through ${evidence}; it can show how the motif circulates, which details survive, and which version of the story readers are actually repeating.`,
+      `${profile.evidenceLimit} Stronger support would need ${profile.strongEvidence}, especially records that preserve the same concrete details instead of only repeating the same title.`
     ];
   }
 
   return [
-    `${subject} remains readable because it gives readers a concrete object, place, or rule to test against ordinary life. The story does not need to become louder to work; it needs the details to stay precise.`,
-    `For Kyunolab, the value is in preserving that precision while keeping the source status visible. The record can be memorable without pretending uncertainty has disappeared.`
+    `${subject} remains readable because it gives readers something ordinary to look at differently: ${scene}. That is stronger than a vague claim because it creates a repeatable image without demanding that the reader accept more than the source status can carry.`,
+    `For Kyunolab, the value is in preserving the precise shape of the record. The article should leave the reader with ${profile.finalImage}, plus a clear boundary between folklore value, searchable context, and verified fact.`
   ];
 }
 
@@ -234,8 +263,10 @@ function renderOpening(story) {
   const dna = story.contentDNA;
   const subject = shortSubject(story);
   const summary = story.summaryAnswer || `${subject} is best read as a source-aware ${String(story.category || 'archive').toLowerCase()} record.`;
-  return `<p>${escapeHtml(dna.targetQuery)} points to a specific reader question: ${escapeHtml(dna.searchQuestion)} ${escapeHtml(summary)}</p>
-        <p>${escapeHtml(dna.sceneAnchor)} gives the article its first usable image. The focus stays on ${escapeHtml(dna.uniqueAngle)}</p>`;
+  const profile = getQualityProfile(story);
+  const scene = scenePhrase(story.detail || story.excerpt || dna.sceneAnchor || subject);
+  return `<p>${escapeHtml(summary)} In practical terms, ${escapeHtml(dna.targetQuery)} leads to one useful question: ${escapeHtml(dna.searchQuestion)}</p>
+        <p>The article keeps returning to ${escapeHtml(scene)}. The point is not to inflate the mystery, but to read it through ${escapeHtml(profile.lens)} while keeping the boundary between memorable folklore and confirmed record visible.</p>`;
 }
 
 function renderSection(section) {
@@ -247,22 +278,25 @@ function renderFaq(story) {
   const subject = shortSubject(story);
   const tag = story.primaryTag || story.tag || story.category;
   const dna = story.contentDNA;
+  const profile = getQualityProfile(story);
+  const detail = story.detail || story.excerpt || dna.sceneAnchor || subject;
+  const scene = scenePhrase(detail);
   const questions = [
     {
-      q: `Can ${subject.toLowerCase()} be verified from the available record?`,
-      a: `Only part of the record can usually be checked. Kyunolab treats it through ${dna.evidencePosture}, so the article separates circulation, motif, and possible evidence from any stronger claim.`
+      q: `What is the main idea behind ${subject.toLowerCase()}?`,
+      a: `The main idea is not simply that something strange happened. It is that ${scene} gives the story a concrete shape, making the ${tag.toLowerCase()} motif easy to remember and retell.`
     },
     {
-      q: `Why does ${tag.toLowerCase()} make this story easier to remember?`,
-      a: `${tag} gives the reader a compact path into the story. It names the recurring pattern without replacing the more specific details that make this article distinct.`
+      q: `Why does this ${String(story.category || 'archive').toLowerCase()} entry still attract searches?`,
+      a: `It combines a recognizable setting with a small unresolved pressure point. Readers can picture the scene quickly, then return to the question of what the record can and cannot support.`
     },
     {
       q: `What evidence would make ${subject.toLowerCase()} more credible?`,
-      a: `Useful evidence would include dated records, original files, location details, stable witness accounts, or archived versions that preserve the same concrete details. A repeated rumor can prove circulation, but not every claim inside the rumor.`
+      a: `Useful evidence would include ${profile.strongEvidence}. A repeated rumor can prove circulation, but it does not automatically prove the event or claim inside the rumor.`
     },
     {
-      q: `How should readers use this Kyunolab entry?`,
-      a: `Read it as a calm archive record: a way to understand the motif, the source limits, and the reason the story keeps returning. It is not presented as verified fact.`
+      q: `How is this record different from a simple retelling?`,
+      a: `The article keeps the source status visible, identifies the story pattern, and explains why details such as ${listForSentence(meaningfulTerms(dna.subjectSpecificVocabulary || []).slice(0, 3))} matter. That makes it an archive reading, not just a repeated version of the tale.`
     }
   ];
 
@@ -274,8 +308,10 @@ ${questions.map((item) => `        <h3>${escapeHtml(item.q)}</h3>
 }
 
 function renderSourceNote(story) {
+  const profile = getQualityProfile(story);
   return `<h2 id="source-note">Story &amp; Source Note</h2>
-        <p>This article discusses ${escapeHtml(story.sourceStatus || story.category)} with a source-aware approach. Unverified claims, folklore patterns, symbolic readings, and archive-style retellings are not presented as confirmed fact.</p>`;
+        <p>This article discusses ${escapeHtml(story.sourceStatus || story.category)} with a source-aware approach. The record is useful for reading motif, setting, circulation, and evidence limits; it is not presented as confirmed fact.</p>
+        <p>For this subject, the strongest responsible reading is ${escapeHtml(profile.sourceReading)}. Claims beyond that would need clearer, dated, and independently checkable material.</p>`;
 }
 
 function renderMetaGrid(story) {
@@ -357,6 +393,98 @@ function relatedScore(a, b) {
   return score;
 }
 
+function getQualityProfile(story) {
+  const category = String(story.categorySlug || '').toLowerCase();
+  if (category.includes('internet')) {
+    return {
+      lens: 'screenshots, reposting habits, platform memory, and the way small digital traces become folklore',
+      memoryTrigger: 'a trace that looks ordinary until people notice the wrong detail',
+      contextSentence: 'Digital folklore often changes when a file is copied, cropped, reposted, or explained by someone who did not see the first version.',
+      evidenceLimit: 'Screenshots, comments, repost dates, and cached pages can show circulation, but they can still miss the first upload, the original context, or the person who shaped the claim.',
+      strongEvidence: 'original uploads, archived pages, file metadata, stable timestamps, platform logs, and preserved comment chains',
+      finalImage: 'a reader looking back at an ordinary screen and noticing why the small wrong detail kept spreading',
+      sourceReading: 'a digital folklore reading that separates searchable circulation from proof of origin'
+    };
+  }
+  if (category.includes('place') || category.includes('world')) {
+    return {
+      lens: 'maps, routes, local memory, built space, and the way a location becomes larger than its coordinates',
+      memoryTrigger: 'a place that seems ordinary until one detail refuses to stay fixed',
+      contextSentence: 'Place legends usually survive because the setting can be pointed to, visited, misremembered, or placed on a map even when the claim remains uncertain.',
+      evidenceLimit: 'Maps, addresses, travel records, and local accounts can support the setting, but they do not automatically prove the strange event attached to it.',
+      strongEvidence: 'dated maps, property records, transit records, photographs, local archives, and independently preserved location accounts',
+      finalImage: 'a specific road, room, island, station, or border that still feels slightly unsettled after the explanation ends',
+      sourceReading: 'a place-record reading that keeps location evidence separate from legendary interpretation'
+    };
+  }
+  if (category.includes('nature')) {
+    return {
+      lens: 'weather, animal behavior, seasonal timing, landscape memory, and the border between observation and story',
+      memoryTrigger: 'a natural detail that feels too patterned to dismiss immediately',
+      contextSentence: 'Nature legends often begin with something someone could have seen, then gain force when the same sign is said to return under the same conditions.',
+      evidenceLimit: 'Anecdotes can preserve what people noticed, but weather, animal movement, and landscape change need records before they can support stronger claims.',
+      strongEvidence: 'dated weather data, environmental records, photographs, field notes, local reports, and repeated observations from independent sources',
+      finalImage: 'a landscape that remains calm on the surface while one repeated detail keeps asking to be explained',
+      sourceReading: 'a landscape-folklore reading that respects observation while avoiding exaggerated certainty'
+    };
+  }
+  if (category.includes('myth') || category.includes('folklore')) {
+    return {
+      lens: 'symbol, custom, inherited warning, ritual pattern, and the way older stories teach before they explain',
+      memoryTrigger: 'a symbolic image or rule that can be remembered without a full plot',
+      contextSentence: 'Older folklore and mythic material often survives by changing surface details while preserving a rule, warning, object, creature, or sacred pattern.',
+      evidenceLimit: 'Collected versions and motif parallels can show tradition and variation, but symbolic material should not be flattened into literal proof.',
+      strongEvidence: 'folklore collections, dated variants, regional notes, translation history, motif indexes, and documented oral-tradition records',
+      finalImage: 'a symbol or creature that still carries a rule after the literal question has been set aside',
+      sourceReading: 'a motif-aware reading that treats symbolic meaning and historical documentation as different kinds of evidence'
+    };
+  }
+  if (category.includes('origin')) {
+    return {
+      lens: 'motif history, repeated structure, changing versions, and the moment a rumor becomes recognizable',
+      memoryTrigger: 'a story shape that readers recognize before they can name where it began',
+      contextSentence: 'Origin records work best when they follow the repeatable structure rather than pretending a single first telling can always be found.',
+      evidenceLimit: 'Early examples can show development, but a motif may predate the sources that survive.',
+      strongEvidence: 'dated early versions, publication history, oral-history notes, archive copies, and clear links between variants',
+      finalImage: 'a familiar story shape becoming visible across many versions rather than one isolated claim',
+      sourceReading: 'an origin-pattern reading that favors documented development over unsupported first-source claims'
+    };
+  }
+  if (category.includes('mysteries')) {
+    return {
+      lens: 'records, gaps, witness limits, alternative explanations, and the discipline of not solving what the evidence cannot solve',
+      memoryTrigger: 'a missing piece that makes the ordinary record feel unfinished',
+      contextSentence: 'Mystery records gain power when the available facts are specific enough to matter but incomplete enough to leave competing readings open.',
+      evidenceLimit: 'A gap in the record can be important, but it is not the same as proof of the most dramatic explanation.',
+      strongEvidence: 'primary documents, dated reports, location records, contemporaneous accounts, and independent confirmation of key details',
+      finalImage: 'a record that stays open because the missing piece is named honestly rather than filled with certainty',
+      sourceReading: 'an evidence-limits reading that preserves the question without selling speculation as an answer'
+    };
+  }
+  return {
+    lens: 'public routine, social repetition, ordinary settings, and the way a small impossible detail becomes easy to retell',
+    memoryTrigger: 'a familiar routine interrupted by one detail that does not behave normally',
+    contextSentence: 'Urban legends survive because they attach uncertainty to places and routines readers already understand.',
+    evidenceLimit: 'Retellings can show that a rumor circulated, but circulation alone does not prove the event inside the rumor.',
+    strongEvidence: 'dated local reports, original accounts, security records, photographs, location details, and independent witnesses',
+    finalImage: 'an everyday scene that feels normal again, except for the one detail the reader now knows to watch',
+    sourceReading: 'an urban-legend reading that separates social plausibility from verified fact'
+  };
+}
+
+function firstAnalysisParagraph(story, subject, scene, profile) {
+  const category = String(story.category || 'archive').toLowerCase();
+  const tag = story.primaryTag || story.tag || story.category;
+  const patterns = [
+    `${subject} works best when it is read from the scene outward. The important detail is ${scene}; from there, the ${tag.toLowerCase()} motif becomes a way to understand how ${profile.memoryTrigger} can make an uncertain story feel organized.`,
+    `The durable part of ${subject} is not the loudest claim, but the small pressure it puts on an ordinary setting. Once the reader notices ${scene}, the record becomes ${articleFor(story.category)} ${category} entry about how familiar routines collect uneasy meanings.`,
+    `A useful reading of ${subject} starts with what can be pictured. Here, that picture is ${scene}. The article uses that image to separate the story's emotional force from any stronger claim the sources cannot yet support.`,
+    `${subject} should not be flattened into a generic strange tale. Its value comes from ${scene}, a detail precise enough to hold the reader's attention while the source status stays visible.`,
+    `The first thing to preserve in ${subject} is the shape of the encounter. The record depends on ${scene}, then asks why that detail keeps returning in a form readers recognize as ${tag.toLowerCase()}.`
+  ];
+  return patterns[stableIndex(story.slug, patterns.length)];
+}
+
 function evidenceHeading(story) {
   const posture = String(story.contentDNA?.evidencePosture || story.sourceStatus || '').toLowerCase();
   if (posture.includes('digital')) return 'What Logs or Screenshots Would Need to Show';
@@ -369,6 +497,70 @@ function sentenceFromTerms(terms, subject) {
   const clean = (terms || []).map((term) => String(term || '').trim()).filter(Boolean).slice(0, 3);
   if (!clean.length) return `${subject} depends on details that keep the record specific.`;
   return `${subject} depends on details such as ${clean.join(', ')}.`;
+}
+
+function listForSentence(values) {
+  const clean = (values || [])
+    .map((value) => String(value || '').replace(/[.?!]+$/, '').trim())
+    .filter(Boolean)
+    .slice(0, 3);
+  if (!clean.length) return 'the recurring details';
+  if (clean.length === 1) return clean[0];
+  if (clean.length === 2) return `${clean[0]} and ${clean[1]}`;
+  return `${clean[0]}, ${clean[1]}, and ${clean[2]}`;
+}
+
+function scenePhrase(value) {
+  const text = String(value || '').replace(/[.?!]+$/, '').trim();
+  if (!text) return 'a concrete detail the record keeps returning to';
+  if (/^(a|an|the)\s/i.test(text)) {
+    const lowered = lowerFirst(text);
+    if (/\b(crosses|appears|refuses|opens|stops|rings|sounds|waits|glides|shows|turns|prints|lights|names|remembers|ends|leads|returns|arrives|sends|changes|moves|bends|flowers|answers|plays|fits|points|faces|goes|keeps|rolls)\b/i.test(text)) {
+      return `the scene where ${lowered}`;
+    }
+    return `the image of ${lowered}`;
+  }
+  if (/^(someone|people|readers|drivers|travelers|children|visitors)\s/i.test(text)) return `the moment when ${text}`;
+  return text;
+}
+
+function meaningfulTerms(values) {
+  const blocked = new Set([
+    'the',
+    'this',
+    'that',
+    'story',
+    'record',
+    'legend',
+    'archive',
+    'strange'
+  ]);
+  return (values || [])
+    .map((value) => String(value || '').replace(/[.?!]+$/, '').trim())
+    .filter((value) => value.length >= 4)
+    .filter((value) => {
+      const words = value.toLowerCase().split(/\s+/).filter(Boolean);
+      if (!words.length) return false;
+      if (words.length === 1 && blocked.has(words[0])) return false;
+      return true;
+    });
+}
+
+function articleFor(value) {
+  return /^[aeiou]/i.test(String(value || '').trim()) ? 'an' : 'a';
+}
+
+function lowerFirst(value) {
+  return String(value || '').replace(/^([A-Z])/, (letter) => letter.toLowerCase());
+}
+
+function stableIndex(value, length) {
+  const source = String(value || '');
+  let hash = 0;
+  for (let index = 0; index < source.length; index += 1) {
+    hash = (hash + source.charCodeAt(index) * (index + 1)) % 9973;
+  }
+  return hash % length;
 }
 
 function shortSubject(story) {

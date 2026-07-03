@@ -113,7 +113,7 @@ function buildContentDNA(story, existingQueries = new Set()) {
     targetQuery,
     canonicalQuery,
     searchQuestion: story.searchQuestion || `Why does ${targetQuery} feel memorable as a ${String(story.category || 'folklore').toLowerCase()} record?`,
-    readerIntent: story.readerIntent || `Understand the motif, source status, evidence limits, and why ${shortSubject.toLowerCase()} remains readable as folklore.`,
+    readerIntent: story.readerIntent || buildReaderIntent(story, shortSubject),
     uniqueAngle: story.uniqueAngle || buildUniqueAngle(story, shortSubject, detail),
     subjectClass: story.subjectClass || defaults.subjectClass,
     narrativeLens: story.narrativeLens || defaults.narrativeLens,
@@ -190,13 +190,13 @@ function countVocabularyHits(text, vocabulary = []) {
 
 function buildVocabulary(story, shortSubject, evidenceBits) {
   const terms = [];
-  terms.push(...splitUsefulPhrases(shortSubject));
   terms.push(...(story.tags || []));
   terms.push(story.primaryTag || story.tag);
   terms.push(...(story.relatedKeywords || []));
   terms.push(...splitUsefulPhrases(story.detail));
   terms.push(...evidenceBits);
   terms.push(story.category);
+  terms.push(shortSubject);
   return uniqueTerms(terms)
     .filter((term) => term.length >= 4)
     .slice(0, 12);
@@ -217,13 +217,31 @@ function buildRequiredDetails(story, detail, evidenceBits, vocabulary) {
 function buildSectionBlueprint(story, shortSubject) {
   const tag = story.primaryTag || story.tag || story.category;
   const subject = toTitleCase(shortSubject).replace(/^(The|A|An)\s+/i, '');
-  return [
-    `Why ${subject} Feels Specific`,
-    `${tag} Details That Carry the Record`,
-    `How the Retelling Changes the Meaning`,
+  const middle = categoryMiddleHeading(story, subject);
+  return uniqueTerms([
+    `What ${subject} Is Really About`,
+    `${tag} Clues That Make the Story Travel`,
+    middle,
     evidenceHeadingFor(story),
-    `Why This ${story.storyType || 'Record'} Stays Readable`
-  ].map((title) => ({ title, nav: shortNav(title) }));
+    `How to Read This ${story.storyType || 'Record'} Without Flattening It`
+  ]).map((title) => ({ title, nav: shortNav(title) }));
+}
+
+function buildReaderIntent(story, shortSubject) {
+  const category = String(story.category || 'archive record').toLowerCase();
+  const tag = story.primaryTag || story.tag || story.category;
+  return `Find a clear, source-aware answer about ${shortSubject.toLowerCase()}, including the ${tag.toLowerCase()} motif, the evidence limits, and the reason this ${category} subject still attracts readers.`;
+}
+
+function categoryMiddleHeading(story, subject) {
+  const category = String(story.categorySlug || '').toLowerCase();
+  if (category.includes('internet')) return `Why the Digital Trace Matters More Than the Scare`;
+  if (category.includes('place') || category.includes('world')) return `Why the Location Becomes the Main Character`;
+  if (category.includes('nature')) return `Why the Landscape Makes the Pattern Believable`;
+  if (category.includes('myth') || category.includes('folklore')) return `What the Motif Says Before It Explains Anything`;
+  if (category.includes('origin')) return `How ${subject} Turns Into a Repeatable Pattern`;
+  if (category.includes('mysteries')) return `Why the Missing Piece Matters More Than the Answer`;
+  return `Why the Ordinary Setting Makes the Rumor Work`;
 }
 
 function evidenceHeadingFor(story) {
