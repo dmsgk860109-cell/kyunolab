@@ -455,6 +455,18 @@ h1 {
   margin: 0;
   color: #3e3933;
 }
+.not-found-page {
+  margin: 0 auto;
+  max-width: 760px;
+  padding: 104px 24px 120px;
+}
+.not-found-actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 28px;
+}
 .site-footer {
   border-top: 1px solid var(--line);
   padding: 26px 20px 40px;

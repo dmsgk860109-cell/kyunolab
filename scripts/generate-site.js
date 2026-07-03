@@ -41,6 +41,7 @@ generateCategoryHub();
 generateCategoryPages();
 generateRss();
 generateSitemap();
+generateRoutingFiles();
 
 console.log(`Generated site index pages for ${stories.length} stories, ${categories.length} categories, and ${guides.length} guides.`);
 
@@ -313,6 +314,30 @@ ${rows}
   console.log(`Sitemap base indexable URLs: ${urls.length} (pagination URLs excluded).`);
 }
 
+function generateRoutingFiles() {
+  writeFile('_redirects', [
+    'https://www.kyunolab.com/* https://kyunolab.com/:splat 301',
+    'http://www.kyunolab.com/* https://kyunolab.com/:splat 301',
+    'http://kyunolab.com/* https://kyunolab.com/:splat 301'
+  ].join('\n') + '\n');
+
+  writeFile('404.html', renderPage({
+    canonicalPath: '/404.html',
+    title: 'Page Not Found',
+    description: 'The requested archive page could not be found.',
+    robots: 'noindex, follow',
+    content: `  <main class="not-found-page">
+    <p class="label">Archive Missing</p>
+    <h1 class="article-title">This record is not in the archive.</h1>
+    <p class="deck">The page may have moved, the address may be mistyped, or the record may not exist.</p>
+    <div class="not-found-actions">
+      <a class="button" href="/">Return home</a>
+      <a class="text-link" href="/archive.html">Browse the archive</a>
+    </div>
+  </main>`
+  }));
+}
+
 function renderListPage({ canonicalPath, label, title, h1, description, items, baseName, pageNumber, totalPages }) {
   return renderPage({
     canonicalPath,
@@ -342,7 +367,8 @@ function renderCategoryPage({ category, pageItems, pageNumber, totalPages, pageT
   });
 }
 
-function renderPage({ canonicalPath, title, description, content }) {
+function renderPage({ canonicalPath, title, description, content, robots }) {
+  const robotsMeta = robots ? `  <meta name="robots" content="${escapeAttr(robots)}">\n` : '';
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -350,7 +376,7 @@ function renderPage({ canonicalPath, title, description, content }) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${escapeHtml(title)} | The Strange Archive</title>
   <meta name="description" content="${escapeAttr(description)}">
-  <meta property="og:title" content="${escapeAttr(title)}">
+${robotsMeta}  <meta property="og:title" content="${escapeAttr(title)}">
   <meta property="og:description" content="${escapeAttr(description)}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="${siteUrl}${canonicalPath}">
