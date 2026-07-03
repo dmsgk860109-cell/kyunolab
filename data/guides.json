@@ -1,5 +1,108 @@
 [
   {
+    "id": "how-to-choose-which-mystery-topic-to-read-next",
+    "slug": "how-to-choose-which-mystery-topic-to-read-next",
+    "title": "How to Choose Which Mystery Topic to Read Next Without Getting Lost in the Archive",
+    "shortTitle": "How to Choose a Mystery Topic",
+    "metaTitle": "How to Choose a Mystery Topic: Urban Legends, Folklore, Myths, and Strange Places",
+    "metaDescription": "A practical Mystery Board guide for choosing what to read next in Kyunolab: urban legends, internet folklore, myths, strange places, lost worlds, objects, and source-aware mystery records.",
+    "ogTitle": "How to Choose a Mystery Topic",
+    "ogDescription": "A calm guide to choosing the next Kyunolab mystery path by setting, evidence, motif, and reader curiosity.",
+    "excerpt": "A practical guide to choosing the next archive path by mood, setting, source status, motif, and the kind of mystery you actually want to read.",
+    "deck": "A large strange-story archive works best when readers have a way to choose their next door. This guide explains how to move through Kyunolab by setting, evidence, motif, and curiosity instead of scrolling at random.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Reading Path Guide",
+    "tags": [
+      "Mystery Topic Ideas",
+      "Reading Path",
+      "Urban Legend Guide",
+      "Folklore Categories",
+      "Archive Navigation"
+    ],
+    "bestFor": "Readers choosing where to start or what to read next",
+    "readTime": "10 min read",
+    "url": "/mystery-board/how-to-choose-which-mystery-topic-to-read-next",
+    "publishedAt": "2026-07-03",
+    "updatedAt": "2026-07-03",
+    "relatedStoryIds": [
+      "last-train-passenger-who-never-gets-off",
+      "profile-picture-that-changed-after-deletion",
+      "hotel-room-that-faces-the-wrong-city"
+    ],
+    "relatedGuideIds": [
+      "how-to-read-urban-legends",
+      "how-to-check-source-status",
+      "what-is-an-urban-legend"
+    ],
+    "sections": [
+      {
+        "id": "start-with-setting",
+        "title": "Start with the setting, not the scare",
+        "nav": "Start with setting",
+        "paragraphs": [
+          "The easiest way to choose a mystery topic is to begin with the place where the story happens. Roads, hotels, elevators, rivers, doors, platforms, mirrors, and maps all create different kinds of unease.",
+          "A roadside record usually asks what happens when travel becomes uncertain. A household record asks what ordinary objects remember. A digital record asks why a screen can feel haunted without leaving the real world."
+        ]
+      },
+      {
+        "id": "choose-the-evidence-level",
+        "title": "Choose the evidence level you want",
+        "nav": "Evidence level",
+        "paragraphs": [
+          "Some readers want source-aware folklore: stories clearly labeled as legend, retelling, or motif. Others prefer records where screenshots, maps, dates, or physical details can be compared carefully.",
+          "Neither path is better. They simply ask different questions. Folklore asks why a story lasts. Evidence-heavy mystery asks what can be checked and what still refuses to settle."
+        ]
+      },
+      {
+        "id": "follow-recurring-motifs",
+        "title": "Follow recurring motifs across categories",
+        "nav": "Recurring motifs",
+        "paragraphs": [
+          "Kyunolab is built so a reader can follow motifs instead of only categories. A vanishing passenger may lead from urban legends to trains, ferry stories, and lost-world records. A mirror can lead toward household customs, object legends, and source-status questions.",
+          "Tags are useful for this. They are smaller than categories and better for following a specific pattern across different shelves."
+        ]
+      },
+      {
+        "id": "use-categories-as-shelves",
+        "title": "Use categories as shelves, not walls",
+        "nav": "Categories as shelves",
+        "paragraphs": [
+          "Categories keep the archive organized, but they should not trap a reader. Urban Legends, Internet Folklore, Strange Places, Myths, and Mythic Objects often overlap in mood and structure.",
+          "A good reading path moves from one shelf to the next when the motif asks for it. That is why related records, tag pages, and Mystery Board guides exist as crossing points."
+        ]
+      },
+      {
+        "id": "where-to-go-next",
+        "title": "Where to go next",
+        "nav": "Where to go next",
+        "paragraphs": [
+          "If you want modern unease, start with [[The Last Train Passenger Who Never Gets Off|/stories/last-train-passenger-who-never-gets-off]]. If you want digital folklore, try [[The Profile Picture That Changed After Deletion|/stories/profile-picture-that-changed-after-deletion]].",
+          "If place-based mystery is more appealing, move to [[The Hotel Room That Faces the Wrong City|/stories/hotel-room-that-faces-the-wrong-city]]. Each path opens a different part of the same archive logic."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "What is the best Kyunolab category to start with?",
+        "answer": "Urban Legends is usually the easiest starting point because the settings are familiar and the story shapes are immediately recognizable."
+      },
+      {
+        "question": "Should I read by category or by tag?",
+        "answer": "Use categories for broad shelves and tags for recurring motifs. Tags are better when you want to follow one specific idea across multiple kinds of stories."
+      },
+      {
+        "question": "Are Mystery Board pages fiction?",
+        "answer": "Mystery Board pages are editorial guides and source-aware explainers. They discuss how to read the archive rather than presenting a specific legend as confirmed fact."
+      },
+      {
+        "question": "How do I avoid confusing folklore with fact?",
+        "answer": "Check the source status, read the Story & Source Note, and treat unverified retellings as cultural records rather than confirmed reports."
+      }
+    ],
+    "sourceNote": "This guide explains how to navigate Kyunolab topics and source labels. It does not verify any individual legend, mystery, or folklore claim."
+  },
+  {
     "id": "how-to-read-urban-legends",
     "slug": "how-to-read-urban-legends",
     "title": "How to Read Urban Legends: A Calm Guide to Roadside Stories, Doorway Warnings, and Modern Folklore",
