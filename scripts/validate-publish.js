@@ -49,6 +49,7 @@ validateListPagination('newest');
 validateListPagination('popular');
 validateListPagination('archive');
 validateSitemapIndexRules();
+validatePublicCleanUrls();
 
 if (errors.length) {
   console.error(errors.join('\n'));
@@ -361,7 +362,9 @@ function validateSitemapIndexRules() {
   const sitemap = readText('sitemap.xml');
   const forbiddenPatterns = [
     /<loc>https:\/\/kyunolab\.com\/(?:newest|popular|archive)-\d+\.html<\/loc>/,
-    /<loc>https:\/\/kyunolab\.com\/categories\/[^<]+-\d+\.html<\/loc>/
+    /<loc>https:\/\/kyunolab\.com\/(?:newest|popular|archive)-\d+<\/loc>/,
+    /<loc>https:\/\/kyunolab\.com\/categories\/[^<]+-\d+\.html<\/loc>/,
+    /<loc>https:\/\/kyunolab\.com\/categories\/[^<]+-\d+<\/loc>/
   ];
 
   for (const pattern of forbiddenPatterns) {
@@ -379,6 +382,48 @@ function validateSitemapIndexRules() {
       errors.push(`sitemap.xml: indexable tag "${tagSlug}" is missing`);
     }
   }
+}
+
+function validatePublicCleanUrls() {
+  const publicFiles = collectPublicFiles(root);
+  const patterns = [
+    /https:\/\/www\.kyunolab\.com/g,
+    /https:\/\/kyunolab\.com\/[^"'<>?\s#]+\.html(?=([#?"'<>\s]|$))/g,
+    /(href|content|item)=["']\/[^"'#?]+\.html(?=([#?"']))/g,
+    /<loc>https:\/\/kyunolab\.com\/[^<]+\.html<\/loc>/g
+  ];
+
+  for (const filePath of publicFiles) {
+    const content = fs.readFileSync(filePath, 'utf8');
+    for (const pattern of patterns) {
+      pattern.lastIndex = 0;
+      const match = pattern.exec(content);
+      if (match) {
+        errors.push(`${path.relative(root, filePath)}: public URL should use clean canonical path, found "${match[0]}"`);
+        break;
+      }
+    }
+  }
+}
+
+function collectPublicFiles(dir) {
+  const files = [];
+  const skipDirs = new Set(['.git', '.agents', '.codex', 'data', 'scripts', 'functions']);
+  const publicExtensions = new Set(['.html', '.xml']);
+
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    if (skipDirs.has(entry.name)) continue;
+    const entryPath = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      files.push(...collectPublicFiles(entryPath));
+      continue;
+    }
+    if (publicExtensions.has(path.extname(entry.name))) {
+      files.push(entryPath);
+    }
+  }
+
+  return files;
 }
 
 function validateGuideStructure() {
@@ -452,7 +497,7 @@ function validateHomeConfig() {
       if (!categoryBySlug.has(slug)) {
         errors.push(`data/site.json: home category slug "${slug}" is not defined in data/categories.json`);
       }
-      mustInclude(home, `href="/categories/${slug}.html"`, 'homepage', `configured home category ${slug}`);
+      mustInclude(home, `href="/categories/${slug}"`, 'homepage', `configured home category ${slug}`);
     }
   }
 }
