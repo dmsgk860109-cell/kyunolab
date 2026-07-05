@@ -1,5 +1,521 @@
 [
   {
+    "id": "how-to-read-a-mystery-story-before-believing-it",
+    "slug": "how-to-read-a-mystery-story-before-believing-it",
+    "title": "How to Read a Mystery Story Before Believing It",
+    "shortTitle": "Read a Mystery Story Before Believing It",
+    "metaTitle": "How to Read a Mystery Story Before Believing It",
+    "metaDescription": "A practical guide to reading mystery stories, urban legends, strange records, and folklore claims before deciding what to believe.",
+    "ogTitle": "How to Read a Mystery Story Before Believing It",
+    "ogDescription": "A practical guide to reading mystery stories, urban legends, strange records, and folklore claims before deciding what to believe.",
+    "excerpt": "A practical guide to reading mystery stories, urban legends, strange records, and folklore claims before deciding what to believe.",
+    "deck": "A careful reading guide for separating atmosphere, repeated folklore, documented details, and speculation before a strange story becomes something you accept as fact.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Critical Reading Guide",
+    "tags": [
+      "Critical Reading Guide",
+      "Source Status",
+      "Evidence Limit",
+      "Urban Legends",
+      "Folklore Reading"
+    ],
+    "bestFor": "Readers who enjoy strange stories but want a calm method for checking what the article can actually support",
+    "readTime": "10 min read",
+    "url": "/mystery-board/how-to-read-a-mystery-story-before-believing-it",
+    "publishedAt": "2026-07-06",
+    "updatedAt": "2026-07-06",
+    "relatedStoryIds": [
+      "the-town-clock-that-matched-a-power-outage-elsewhere",
+      "the-hospital-wristband-found-in-a-closed-wing",
+      "the-weather-report-that-named-the-wrong-lake"
+    ],
+    "relatedGuideIds": [
+      "why-mystery-articles-should-name-the-limit",
+      "how-to-read-source-status-before-sharing-a-strange-story",
+      "how-to-check-source-status"
+    ],
+    "sections": [
+      {
+        "id": "start-with-the-claim",
+        "title": "Start with the exact claim",
+        "nav": "Start with the claim",
+        "paragraphs": [
+          "The first step is to name what the story is actually asking you to accept. A mystery may contain a place, a date, a witness, an object, a rumor, and a feeling, but not every part has the same evidentiary weight.",
+          "A useful reader slows down at the sentence that sounds most certain. Is the article saying something happened, or is it describing a repeated story pattern? That distinction changes the whole reading."
+        ]
+      },
+      {
+        "id": "separate-record-from-atmosphere",
+        "title": "Separate record from atmosphere",
+        "nav": "Record vs atmosphere",
+        "paragraphs": [
+          "Atmosphere makes a mystery readable. It does not make the claim proven. A quiet road, an empty platform, a wrong timestamp, or a door that should not open may be the detail that gives the story shape, but the detail still needs source context.",
+          "This is why Kyunolab Mystery Archive keeps source status visible. The atmosphere belongs in the article, but it should not be allowed to impersonate evidence."
+        ]
+      },
+      {
+        "id": "check-what-can-be-verified",
+        "title": "Check what can be verified",
+        "nav": "Checkable details",
+        "paragraphs": [
+          "Look for details that could be checked without accepting the full legend: a place name, a transit route, a public record, a photograph history, an archive copy, or a known folklore motif.",
+          "If the article cannot verify those details, that does not always make the story worthless. It does mean the story should be read as folklore, modern legend, speculative interpretation, or original archive-style writing rather than confirmed fact.",
+          "A good comparison is [[The Town Clock That Matched a Power Outage Elsewhere|/stories/the-town-clock-that-matched-a-power-outage-elsewhere]], where the unusual detail matters most when the limit around it stays visible."
+        ]
+      },
+      {
+        "id": "notice-repetition",
+        "title": "Notice repetition before certainty",
+        "nav": "Repetition",
+        "paragraphs": [
+          "Many strange stories survive because they repeat well. A repeated image can be culturally meaningful even if no single version can be proven. That is folklore value, not courtroom proof.",
+          "When a story appears in several versions, ask what stays the same. The returning element often tells you more than the most dramatic version does."
+        ]
+      },
+      {
+        "id": "read-without-flattening",
+        "title": "Read without flattening the mystery",
+        "nav": "Read carefully",
+        "paragraphs": [
+          "The goal is not to drain the story of mystery. The goal is to keep the mystery honest. A reader can enjoy the unease, pattern, and symbolic pressure of a story while still refusing to call it proven without enough support.",
+          "That kind of reading makes the archive stronger. It lets a strange story remain strange without asking the reader to surrender judgment."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Should I assume every mystery story is false?",
+        "answer": "No. The better approach is to separate what is documented from what is repeated, interpreted, symbolic, or unresolved."
+      },
+      {
+        "question": "What should I check first in a strange story?",
+        "answer": "Start with the exact claim, then look for source status, dates, places, records, archive copies, and whether the article names its limits."
+      },
+      {
+        "question": "Can an unverified story still be worth reading?",
+        "answer": "Yes. Folklore, urban legends, myths, and internet stories can be culturally useful even when they are not confirmed events."
+      },
+      {
+        "question": "Why does Kyunolab keep source notes visible?",
+        "answer": "Source notes help readers enjoy mystery without confusing atmosphere, repeated tradition, and evidence."
+      }
+    ],
+    "sourceNote": "This Mystery Board guide is an editorial reading aid. It does not verify any individual mystery claim. It explains how readers can separate documented details, folklore value, atmosphere, and speculation before deciding how much weight to give a story."
+  },
+  {
+    "id": "how-to-compare-different-versions-of-the-same-legend",
+    "slug": "how-to-compare-different-versions-of-the-same-legend",
+    "title": "How to Compare Different Versions of the Same Legend",
+    "shortTitle": "Compare Different Versions of the Same Legend",
+    "metaTitle": "How to Compare Different Versions of the Same Legend",
+    "metaDescription": "A guide to comparing urban legend and folklore versions by setting, motif, source status, repeated details, and cultural function.",
+    "ogTitle": "How to Compare Different Versions of the Same Legend",
+    "ogDescription": "A guide to comparing urban legend and folklore versions by setting, motif, source status, repeated details, and cultural function.",
+    "excerpt": "A guide to comparing urban legend and folklore versions by setting, motif, source status, repeated details, and cultural function.",
+    "deck": "A method for reading multiple versions of one legend without forcing them into a single answer or treating every variation as a contradiction.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Legend Version Guide",
+    "tags": [
+      "Legend Version Guide",
+      "Urban Legends",
+      "Folklore Motif",
+      "Source Status",
+      "Story Pattern"
+    ],
+    "bestFor": "Readers who want to understand why the same legend changes across roads, towns, families, websites, and retellings",
+    "readTime": "11 min read",
+    "url": "/mystery-board/how-to-compare-different-versions-of-the-same-legend",
+    "publishedAt": "2026-07-06",
+    "updatedAt": "2026-07-06",
+    "relatedStoryIds": [
+      "woman-in-white-roadside-legend",
+      "phantom-bus-stop-after-midnight",
+      "black-eyed-children-doorway-legend"
+    ],
+    "relatedGuideIds": [
+      "folklore-vs-myth-vs-urban-legend",
+      "how-to-read-urban-legends",
+      "how-to-follow-recurring-motifs-across-the-archive"
+    ],
+    "sections": [
+      {
+        "id": "versions-are-not-errors",
+        "title": "Different versions are not automatically errors",
+        "nav": "Versions are not errors",
+        "paragraphs": [
+          "A legend changes because people retell it. A road becomes a bridge, a passenger becomes a woman in white, a doorway warning moves from one town to another. Those changes do not always weaken the story; often they show how the story travels.",
+          "The mistake is treating every difference as either proof or disproof. A version can be inaccurate as a factual claim and still important as part of the legend pattern."
+        ]
+      },
+      {
+        "id": "compare-the-stable-parts",
+        "title": "Compare the stable parts first",
+        "nav": "Stable parts",
+        "paragraphs": [
+          "Start by asking what stays in place across versions. Is there always a road? A warning? A missing passenger? A repeated object? A threshold? A timestamp? Stable details often reveal the core motif.",
+          "For example, [[The Woman in White at the Bend|/stories/woman-in-white-roadside-legend]] belongs to a wider pattern of roadside apparitions even when local details change."
+        ]
+      },
+      {
+        "id": "compare-the-moving-parts",
+        "title": "Then compare the moving parts",
+        "nav": "Moving parts",
+        "paragraphs": [
+          "Moving parts show adaptation. A legend set near a bus stop may speak to public transit anxiety. The same pattern set at a doorway may become about invitation, politeness, or danger entering the home.",
+          "Changes in setting, technology, and social fear help explain why older motifs keep finding modern surfaces."
+        ]
+      },
+      {
+        "id": "source-status-by-version",
+        "title": "Give each version its own source status",
+        "nav": "Source by version",
+        "paragraphs": [
+          "One version may have a published source, while another survives as a local retelling. One may be internet folklore, while another is family tradition. Do not give all versions the same evidentiary status just because they share a motif.",
+          "A careful archive can compare versions without flattening them into one claim."
+        ]
+      },
+      {
+        "id": "what-comparison-reveals",
+        "title": "What comparison reveals",
+        "nav": "What it reveals",
+        "paragraphs": [
+          "Comparison often reveals why a legend lasts. The exact details change, but the emotional problem remains: a stranger at the road, a child at the door, a place that should be ordinary but suddenly feels unsafe.",
+          "That is the useful discovery. The legend is not just one story; it is a pattern that finds new ways to feel close."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Why do legends have so many versions?",
+        "answer": "Legends change as they move through places, communities, technologies, and retellings. Variation is part of how folklore survives."
+      },
+      {
+        "question": "Does the oldest version prove the real story?",
+        "answer": "Not necessarily. The oldest version can be important, but source quality and context still matter."
+      },
+      {
+        "question": "Should Kyunolab combine all versions into one article?",
+        "answer": "Only when the shared motif is strong enough. Otherwise, versions may deserve separate articles or related links."
+      },
+      {
+        "question": "What is the best detail to compare first?",
+        "answer": "Start with the recurring motif, then compare setting, source status, emotional function, and what changes in each retelling."
+      }
+    ],
+    "sourceNote": "This guide explains a method for comparing legend variants. It does not claim that any one version is the original or verified form unless a specific article provides reliable supporting sources."
+  },
+  {
+    "id": "why-ordinary-places-make-urban-legends-stronger",
+    "slug": "why-ordinary-places-make-urban-legends-stronger",
+    "title": "Why Ordinary Places Make Urban Legends Stronger",
+    "shortTitle": "Ordinary Places Make Urban Legends Stronger",
+    "metaTitle": "Why Ordinary Places Make Urban Legends Stronger",
+    "metaDescription": "A guide to why urban legends often use elevators, roads, laundromats, parking lots, bus stops, and ordinary public spaces.",
+    "ogTitle": "Why Ordinary Places Make Urban Legends Stronger",
+    "ogDescription": "A guide to why urban legends often use elevators, roads, laundromats, parking lots, bus stops, and ordinary public spaces.",
+    "excerpt": "A guide to why urban legends often use elevators, roads, laundromats, parking lots, bus stops, and ordinary public spaces.",
+    "deck": "A look at why ordinary settings make strange stories easier to believe, easier to retell, and harder for readers to dismiss completely.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Ordinary Place Guide",
+    "tags": [
+      "Ordinary Place Guide",
+      "Urban Legends",
+      "Strange Places",
+      "Modern Folklore",
+      "Setting Motif"
+    ],
+    "bestFor": "Readers who want to understand why the most familiar locations often produce the most durable modern legends",
+    "readTime": "10 min read",
+    "url": "/mystery-board/why-ordinary-places-make-urban-legends-stronger",
+    "publishedAt": "2026-07-06",
+    "updatedAt": "2026-07-06",
+    "relatedStoryIds": [
+      "the-crosswalk-signal-that-counts-down-from-thirteen",
+      "the-laundromat-dryer-that-returns-one-extra-sock",
+      "the-parking-space-that-is-always-left-empty"
+    ],
+    "relatedGuideIds": [
+      "why-urban-legends-use-ordinary-places",
+      "how-elevator-legends-became-modern-threshold-stories",
+      "how-a-shortcut-becomes-a-haunted-road"
+    ],
+    "sections": [
+      {
+        "id": "familiarity-does-the-work",
+        "title": "Familiarity does part of the work",
+        "nav": "Familiarity",
+        "paragraphs": [
+          "An urban legend does not always need a castle, graveyard, or abandoned mansion. A crosswalk, elevator, bus stop, laundromat, vending machine, or parking space can be stronger because readers already know how those places should behave.",
+          "When the ordinary setting breaks one rule, the story becomes easy to picture. The reader does not have to learn the world before feeling the wrongness."
+        ]
+      },
+      {
+        "id": "small-breaks-feel-plausible",
+        "title": "Small breaks feel more plausible than big ones",
+        "nav": "Small breaks",
+        "paragraphs": [
+          "A signal counts down from the wrong number. A dryer returns one extra item. A parking space is always empty. These are not world-ending events, which is why they feel close enough to notice.",
+          "The small break lets the legend stay near real life. A reader can imagine dismissing it once, then thinking about it again later."
+        ]
+      },
+      {
+        "id": "public-spaces-create-witness-pressure",
+        "title": "Public spaces create witness pressure",
+        "nav": "Witness pressure",
+        "paragraphs": [
+          "Ordinary public places come with silent witnesses: cameras, receipts, route maps, building logs, people waiting in line. A legend set there can borrow the feeling of documentation even when the actual evidence is limited.",
+          "That is why the article must separate the setting from the source status. A realistic place makes the story vivid, not automatically verified."
+        ]
+      },
+      {
+        "id": "technology-adds-modern-proof-feeling",
+        "title": "Technology adds a modern proof feeling",
+        "nav": "Technology",
+        "paragraphs": [
+          "Modern urban legends often include ordinary machines: cameras, intercoms, elevators, receipt printers, ticket scanners, delivery apps. These devices make a story feel recordable.",
+          "But a recordable setting is not the same as a record. Kyunolab articles use that difference to keep the mystery readable without overstating what is known."
+        ]
+      },
+      {
+        "id": "where-to-read-next",
+        "title": "Where to read next",
+        "nav": "Read next",
+        "paragraphs": [
+          "Start with [[The Crosswalk Signal That Counts Down From Thirteen|/stories/the-crosswalk-signal-that-counts-down-from-thirteen]], then compare it with [[The Laundromat Dryer That Returns One Extra Sock|/stories/the-laundromat-dryer-that-returns-one-extra-sock]]. Both use ordinary places as the pressure point.",
+          "The point is not that ordinary places are secretly supernatural. The point is that ordinary places make one wrong detail feel personal."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Why do urban legends use ordinary places?",
+        "answer": "Ordinary places are easy to imagine, easy to retell, and close enough to daily life that one strange detail can feel believable."
+      },
+      {
+        "question": "Are ordinary-place legends more likely to be true?",
+        "answer": "No. A realistic setting can make a story vivid, but it does not prove the claim."
+      },
+      {
+        "question": "What ordinary places appear often in modern folklore?",
+        "answer": "Elevators, roads, bus stops, parking lots, hotels, laundromats, convenience stores, schools, and apartment buildings appear often."
+      },
+      {
+        "question": "How should I read these stories?",
+        "answer": "Notice the place, the broken rule, the source status, and whether the article can support more than atmosphere."
+      }
+    ],
+    "sourceNote": "This guide explains why ordinary settings make urban legends memorable. It describes story mechanics and reader response, not verified supernatural activity in public places."
+  },
+  {
+    "id": "how-to-use-faqs-in-mystery-articles-without-sounding-generic",
+    "slug": "how-to-use-faqs-in-mystery-articles-without-sounding-generic",
+    "title": "How to Use FAQs in Mystery Articles Without Sounding Generic",
+    "shortTitle": "Use FAQs Without Sounding Generic",
+    "metaTitle": "How to Use FAQs in Mystery Articles Without Sounding Generic",
+    "metaDescription": "A guide to writing useful FAQ sections for mystery articles, folklore pages, urban legends, myths, and source-aware archive entries.",
+    "ogTitle": "How to Use FAQs in Mystery Articles Without Sounding Generic",
+    "ogDescription": "A guide to writing useful FAQ sections for mystery articles, folklore pages, urban legends, myths, and source-aware archive entries.",
+    "excerpt": "A guide to writing useful FAQ sections for mystery articles, folklore pages, urban legends, myths, and source-aware archive entries.",
+    "deck": "A practical guide to making FAQ sections answer real reader questions without repeating the article, overclaiming evidence, or flattening mystery into bland summary.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "FAQ Writing Guide",
+    "tags": [
+      "FAQ Writing Guide",
+      "SEO Structure",
+      "Source Status",
+      "Article Template",
+      "Reader Intent"
+    ],
+    "bestFor": "Writers and readers who want mystery articles to answer search questions while preserving uncertainty and story texture",
+    "readTime": "9 min read",
+    "url": "/mystery-board/how-to-use-faqs-in-mystery-articles-without-sounding-generic",
+    "publishedAt": "2026-07-06",
+    "updatedAt": "2026-07-06",
+    "relatedStoryIds": [
+      "why-receipt-legends-keep-returning-in-modern-folklore",
+      "why-missing-record-mysteries-feel-more-convincing-than-full-stories",
+      "how-internet-glitches-become-folklore-instead-of-error-reports"
+    ],
+    "relatedGuideIds": [
+      "why-mystery-articles-should-name-the-limit",
+      "how-to-use-tags-without-creating-thin-archive-pages",
+      "how-to-read-source-status-before-sharing-a-strange-story"
+    ],
+    "sections": [
+      {
+        "id": "faqs-should-answer-real-pressure",
+        "title": "FAQs should answer real reader pressure",
+        "nav": "Real questions",
+        "paragraphs": [
+          "A good FAQ is not a place to repeat the article in smaller pieces. It should answer the questions a reader is likely to ask after encountering the legend: Is it true? Where did it come from? Why does it keep spreading? What should I read next?",
+          "For mystery articles, those questions are especially important because readers often arrive with curiosity and uncertainty at the same time."
+        ]
+      },
+      {
+        "id": "avoid-empty-certainty",
+        "title": "Avoid empty certainty",
+        "nav": "Avoid certainty",
+        "paragraphs": [
+          "The weakest FAQ answer pretends to settle what the article cannot prove. If the source status is uncertain, the FAQ should say so clearly and calmly.",
+          "That does not make the page less useful. It makes the answer trustworthy. A reader who sees the limit is more likely to believe the page when it does make a careful claim."
+        ]
+      },
+      {
+        "id": "make-each-answer-specific",
+        "title": "Make each answer specific to the story",
+        "nav": "Specific answers",
+        "paragraphs": [
+          "Generic answers weaken a mystery archive. If every article says the same thing about folklore, source status, and truth, the FAQ stops helping both readers and search engines.",
+          "A stronger FAQ names the article?s actual setting, motif, object, place, or evidence problem. The answer should feel like it belongs to that record, not to any page on the site."
+        ]
+      },
+      {
+        "id": "use-faqs-for-navigation",
+        "title": "Use FAQs for navigation when it helps",
+        "nav": "Navigation",
+        "paragraphs": [
+          "One FAQ can point readers toward the next useful shelf: category, tag, related guide, or source notice. This should be done naturally, not as a pile of links.",
+          "For example, a question about whether a claim is verified can point toward [[How to Read Source Status Before Sharing a Strange Story|/mystery-board/how-to-read-source-status-before-sharing-a-strange-story]]."
+        ]
+      },
+      {
+        "id": "keep-the-tone-human",
+        "title": "Keep the tone human",
+        "nav": "Human tone",
+        "paragraphs": [
+          "FAQs can become stiff when they are written only for search engines. Kyunolab Mystery Archive uses them as reader help first: direct, calm, and specific.",
+          "The best answer should sound like a careful editor speaking plainly. It should not sound like a machine trying to fill a structured-data box."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "How many FAQs should a mystery article have?",
+        "answer": "Three to five useful questions are usually enough. The goal is to answer real reader uncertainty, not to inflate the page."
+      },
+      {
+        "question": "Should every FAQ include keywords?",
+        "answer": "Keywords can appear naturally, but the answer should first be specific, accurate, and useful."
+      },
+      {
+        "question": "Can an FAQ say a legend is unverified?",
+        "answer": "Yes. If the article cannot verify the claim, the FAQ should say that plainly instead of implying certainty."
+      },
+      {
+        "question": "Should FAQ answers link to other pages?",
+        "answer": "Only when the link helps the reader continue by source status, category, motif, or related article."
+      }
+    ],
+    "sourceNote": "This guide explains FAQ structure for source-aware mystery articles. It is an editorial guide, not a claim that any specific folklore, legend, or mystery is verified."
+  },
+  {
+    "id": "how-to-spot-a-thin-mystery-page-before-publishing",
+    "slug": "how-to-spot-a-thin-mystery-page-before-publishing",
+    "title": "How to Spot a Thin Mystery Page Before Publishing",
+    "shortTitle": "Spot a Thin Mystery Page Before Publishing",
+    "metaTitle": "How to Spot a Thin Mystery Page Before Publishing",
+    "metaDescription": "A guide to identifying thin mystery pages before publishing by checking source status, unique angle, article depth, links, and reader value.",
+    "ogTitle": "How to Spot a Thin Mystery Page Before Publishing",
+    "ogDescription": "A guide to identifying thin mystery pages before publishing by checking source status, unique angle, article depth, links, and reader value.",
+    "excerpt": "A guide to identifying thin mystery pages before publishing by checking source status, unique angle, article depth, links, and reader value.",
+    "deck": "A publishing checklist for making sure a mystery, folklore, or urban legend page has enough substance to help readers and deserve a place in the archive.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Quality Control Guide",
+    "tags": [
+      "Quality Control Guide",
+      "SEO Structure",
+      "Source Status",
+      "Article Template",
+      "Archive Method"
+    ],
+    "bestFor": "Archive maintenance, publishing checks, and deciding whether a topic needs more depth before it becomes a public page",
+    "readTime": "10 min read",
+    "url": "/mystery-board/how-to-spot-a-thin-mystery-page-before-publishing",
+    "publishedAt": "2026-07-06",
+    "updatedAt": "2026-07-06",
+    "relatedStoryIds": [
+      "why-missing-record-mysteries-feel-more-convincing-than-full-stories",
+      "the-returned-library-book-with-no-borrower-history",
+      "the-file-name-that-keeps-renaming-itself"
+    ],
+    "relatedGuideIds": [
+      "how-to-use-tags-without-creating-thin-archive-pages",
+      "why-mystery-articles-should-name-the-limit",
+      "how-to-build-a-reading-path-through-the-strange-archive"
+    ],
+    "sections": [
+      {
+        "id": "thin-does-not-mean-short",
+        "title": "Thin does not simply mean short",
+        "nav": "Thin vs short",
+        "paragraphs": [
+          "A short page can be useful if it answers a narrow question clearly. A long page can still be thin if it repeats generic statements, avoids source status, and never gives the reader a reason to continue.",
+          "For Kyunolab Mystery Archive, thinness is about missing purpose. The page should have a specific subject, a clear angle, enough context, and a useful place in the archive."
+        ]
+      },
+      {
+        "id": "check-the-unique-angle",
+        "title": "Check the unique angle",
+        "nav": "Unique angle",
+        "paragraphs": [
+          "Before publishing, ask what this page does that another page does not. Does it explain a particular motif, setting, source problem, version history, or reader question?",
+          "If the answer is only that the keyword is different, the page probably needs more work or should be folded into a stronger existing page."
+        ]
+      },
+      {
+        "id": "check-source-status",
+        "title": "Check source status before adding atmosphere",
+        "nav": "Source status",
+        "paragraphs": [
+          "Atmosphere should sit on top of structure, not replace it. A mystery article needs to say whether the material is documented, folklore, a modern retelling, speculative interpretation, or original archive-style writing.",
+          "This is especially important for strange records that sound factual. The more realistic the detail feels, the more clearly the source limit should be named."
+        ]
+      },
+      {
+        "id": "check-internal-links",
+        "title": "Check whether the page connects anywhere useful",
+        "nav": "Internal links",
+        "paragraphs": [
+          "A thin page often has nowhere to send the reader next. It may mention a category or tag, but it does not create a meaningful path into related records, guides, or source notes.",
+          "A stronger page should connect to nearby shelves: a related legend, a source-status guide, a category page, or a tag that has enough depth to matter."
+        ]
+      },
+      {
+        "id": "decide-publish-expand-or-merge",
+        "title": "Decide whether to publish, expand, or merge",
+        "nav": "Publish or merge",
+        "paragraphs": [
+          "If the page has a clear angle, useful context, source status, and at least a few meaningful internal paths, it can publish. If it has a good subject but not enough depth, expand it.",
+          "If it only repeats an existing page in thinner form, merge the idea into the stronger article and save the standalone URL for a topic that deserves it."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is a short mystery article always thin?",
+        "answer": "No. A short article can be useful if it answers a narrow reader question with specific context and clear source status."
+      },
+      {
+        "question": "What is the biggest warning sign of a thin page?",
+        "answer": "Generic writing. If the same paragraphs could fit dozens of topics, the page probably needs a sharper angle."
+      },
+      {
+        "question": "Should thin tag pages be indexed?",
+        "answer": "No. Thin tag pages can remain useful internal links, but they should not enter the sitemap until they have enough connected records and description depth."
+      },
+      {
+        "question": "When should a topic become a separate page?",
+        "answer": "When it has a specific reader purpose, enough context, and a natural connection to the archive structure."
+      }
+    ],
+    "sourceNote": "This Mystery Board guide is an editorial quality-control aid. It explains page depth, internal linking, and source-status checks for archive publishing. It does not evaluate any specific story as true or false."
+  },
+  {
     "id": "how-to-use-tags-without-creating-thin-archive-pages",
     "slug": "how-to-use-tags-without-creating-thin-archive-pages",
     "title": "How to Use Tags Without Creating Thin Archive Pages",
