@@ -1,4 +1,4 @@
-# The Strange Archive
+# Kyunolab Mystery Archive
 
 Static Cloudflare Pages site for kyunolab.com.
 

@@ -59,7 +59,7 @@ const refinements = {
     ]
   },
   'how-to-build-a-reading-path-through-the-strange-archive': {
-    deck: 'A guide to moving through The Strange Archive by category, tag, source status, and recurring motif instead of wandering by headline alone.',
+    deck: 'A guide to moving through Kyunolab Mystery Archive by category, tag, source status, and recurring motif instead of wandering by headline alone.',
     bestFor: 'Readers who want a clear route through related strange records',
     sections: [
       ['What this guide is for', [

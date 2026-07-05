@@ -16,7 +16,7 @@ const awkwardPatterns = [
   },
   {
     label: 'repeated Mystery Board deck',
-    pattern: /practical Mystery Board guide for readers who want to move through The Strange Archive with more context/i
+    pattern: /practical Mystery Board guide for readers who want to move through Kyunolab Mystery Archive with more context/i
   },
   {
     label: 'repeated guide source disclaimer',

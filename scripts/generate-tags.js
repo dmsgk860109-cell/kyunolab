@@ -179,11 +179,12 @@ ${generatedMarker}
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>${escapeHtml(title)} | The Strange Archive</title>
+  <title>${escapeHtml(title)} | Kyunolab Mystery Archive</title>
   <meta name="description" content="${escapeHtml(description)}">
   <meta name="robots" content="${robots}">
   <meta property="og:title" content="${escapeHtml(title)}">
   <meta property="og:description" content="${escapeHtml(description)}">
+  <meta property="og:site_name" content="Kyunolab Mystery Archive">
   <meta property="og:type" content="website">
   <meta property="og:url" content="${siteUrl}${canonicalPath}">
   <meta name="twitter:card" content="summary_large_image">
@@ -259,7 +260,7 @@ function renderHeader() {
   return `<header class="site-header">
     <div class="topline">A Kyuno Lab publication</div>
     <div class="header-inner">
-      <a class="brand" href="/"><span class="brand-mark"><img src="/favicon.svg" alt="" aria-hidden="true"></span><span><strong>The Strange Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
+      <a class="brand" href="/"><span class="brand-mark"><img src="/favicon.svg" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
       <nav class="nav"><a href="/newest.html">Newest</a><a href="/popular.html">Popular</a><a href="/categories.html">Categories</a><a href="/mystery-board.html">Mystery Board</a><a href="/about.html">About</a></nav>
     </div>
   </header>`;
@@ -267,7 +268,7 @@ function renderHeader() {
 
 function renderFooter() {
   return `<footer class="site-footer">
-    <p><strong>The Strange Archive</strong> is a quiet story publication by Kyuno Lab, dedicated to legends, folklore, mysteries, and strange tales from the edges of memory.</p>
+    <p><strong>Kyunolab Mystery Archive</strong> is a quiet story publication by Kyuno Lab, dedicated to legends, folklore, mysteries, and strange tales from the edges of memory.</p>
     <p><a href="/archive.html">Archive Index</a> - <a href="/newest.html">Newest</a> - <a href="/popular.html">Popular</a> - <a href="/categories.html">Categories</a> - <a href="/about.html">About</a> - <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a> - <a href="/privacy.html">Privacy</a> - <a href="/rss.xml">RSS</a></p>
   </footer>`;
 }

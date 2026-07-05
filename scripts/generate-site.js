@@ -17,7 +17,7 @@ generateArchivePageSet({
   baseName: 'newest',
   label: 'Newest Records',
   title: 'Newest stories in the archive',
-  description: 'The latest open files from The Strange Archive, arranged for readers who want to move through the newest legends, mysteries, strange places, and folklore notes first.',
+  description: 'The latest open files from Kyunolab Mystery Archive, arranged for readers who want to move through the newest legends, mysteries, strange places, and folklore notes first.',
   items: sortNewest(stories)
 });
 
@@ -25,14 +25,14 @@ generateArchivePageSet({
   baseName: 'popular',
   label: 'Popular Records',
   title: 'Popular records in the archive',
-  description: 'A curated path through the strongest entry points in The Strange Archive.',
+  description: 'A curated path through the strongest entry points in Kyunolab Mystery Archive.',
   items: stories
 });
 
 generateArchivePageSet({
   baseName: 'archive',
   label: 'Archive Index',
-  title: 'Explore every open file in The Strange Archive',
+  title: 'Explore every open file in Kyunolab Mystery Archive',
   description: 'Move through the full collection by category, source status, story type, and recurring motif.',
   items: sortArchive(stories)
 });
@@ -62,13 +62,13 @@ function generateHomePage() {
 }
 
 function renderHomePage({ featuredStory, latestStories, popularStories, essentialStories, categoryGroups }) {
-  const title = 'The Strange Archive | Legends, Folklore, Mysteries & Strange Tales';
-  const description = "Explore urban legends, internet folklore, strange places, myths, lost worlds, and recurring mystery patterns in Kyunolab's quiet archive.";
+  const title = 'Kyunolab Mystery Archive | Urban Legends, Folklore, Myths & Strange Tales';
+  const description = "Explore urban legends, internet folklore, myths, strange places, lost worlds, and mystery patterns in Kyunolab's calm archive.";
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'The Strange Archive',
-    alternateName: 'Kyuno Lab Strange Archive',
+    name: 'Kyunolab Mystery Archive',
+    alternateName: ['Kyunolab', 'Kyuno Lab Mystery Archive'],
     url: `${siteUrl}/`,
     description,
     publisher: {
@@ -86,6 +86,7 @@ function renderHomePage({ featuredStory, latestStories, popularStories, essentia
   <meta name="description" content="${escapeAttr(description)}">
   <meta property="og:title" content="${escapeAttr(title)}">
   <meta property="og:description" content="${escapeAttr(description)}">
+  <meta property="og:site_name" content="Kyunolab Mystery Archive">
   <meta property="og:type" content="website">
   <meta property="og:url" content="${siteUrl}/">
   <meta name="twitter:card" content="summary_large_image">
@@ -111,7 +112,7 @@ function renderHomePage({ featuredStory, latestStories, popularStories, essentia
     <section class="board" id="rankings"><div class="section-head"><h2>Popular Records</h2><a href="/mystery-board.html">Open mystery board</a></div><div class="ranking-grid"><ol class="ranking-card">${popularStories.map(renderRankingItem).join('')}</ol><aside class="side-panel"><h3>Reader Paths</h3><a href="/newest.html">Newest stories</a><a href="/categories.html">Browse by category</a><a href="#essential-reads">Start with essential reads</a><a href="/fiction-disclaimer.html">Story &amp; source notice</a></aside></div></section>
     <section id="categories" class="categories"><div class="section-head"><h2>Browse By Category</h2><a href="/categories.html">View all categories</a></div><div class="home-category-groups">${categoryGroups.map(renderHomeCategoryGroup).join('')}</div></section>
     <section id="essential-reads" class="essential-reads"><div class="section-head"><h2>Essential Reads</h2><span>Start here</span></div><div class="compact-grid">${essentialStories.map(renderEssentialStory).join('')}</div></section>
-    <section class="archive-cta"><div><p class="label">Archive Index</p><h2>Explore every open file in The Strange Archive.</h2><p>Move through the full collection by category, source status, story type, and recurring motif.</p></div><a class="button" href="/archive.html">Browse all current stories</a></section>
+    <section class="archive-cta"><div><p class="label">Archive Index</p><h2>Explore every open file in Kyunolab Mystery Archive.</h2><p>Move through the full collection by category, source status, story type, and recurring motif.</p></div><a class="button" href="/archive.html">Browse all current stories</a></section>
   </main>
   ${renderFooter()}
 </body>
@@ -173,7 +174,7 @@ ${cards}
   writeFile('categories.html', renderPage({
     canonicalPath: '/categories.html',
     title: 'Categories',
-    description: 'Browse The Strange Archive through organized category groups, each with active records and internal reading paths.',
+    description: 'Browse Kyunolab Mystery Archive through organized category groups, each with active records and internal reading paths.',
     content: `  <main class="article-shell article-layout">
     ${renderLeftRail('Category paths')}
     <div class="archive-page-main">
@@ -267,7 +268,7 @@ function generateRss() {
     </item>`).join('\n');
 
   writeFile('rss.xml', `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0"><channel><title>The Strange Archive</title><link>${siteUrl}/</link><description>Legends, folklore, mysteries, and strange tales.</description>
+<rss version="2.0"><channel><title>Kyunolab Mystery Archive</title><link>${siteUrl}/</link><description>Legends, folklore, mysteries, and strange tales.</description>
 ${items}
   </channel></rss>
 `);
@@ -374,10 +375,11 @@ function renderPage({ canonicalPath, title, description, content, robots }) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>${escapeHtml(title)} | The Strange Archive</title>
+  <title>${escapeHtml(title)} | Kyunolab Mystery Archive</title>
   <meta name="description" content="${escapeAttr(description)}">
 ${robotsMeta}  <meta property="og:title" content="${escapeAttr(title)}">
   <meta property="og:description" content="${escapeAttr(description)}">
+  <meta property="og:site_name" content="Kyunolab Mystery Archive">
   <meta property="og:type" content="website">
   <meta property="og:url" content="${siteUrl}${canonicalPath}">
   <meta name="twitter:card" content="summary_large_image">
@@ -400,7 +402,7 @@ function renderHeader() {
   return `<header class="site-header">
     <div class="topline">A Kyuno Lab publication</div>
     <div class="header-inner">
-      <a class="brand" href="/"><span class="brand-mark"><img src="/favicon.svg" alt="" aria-hidden="true"></span><span><strong>The Strange Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
+      <a class="brand" href="/"><span class="brand-mark"><img src="/favicon.svg" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
       <nav class="nav"><a href="/newest.html">Newest</a><a href="/popular.html">Popular</a><a href="/categories.html">Categories</a><a href="/mystery-board.html">Mystery Board</a><a href="/about.html">About</a></nav>
     </div>
   </header>`;
@@ -408,7 +410,7 @@ function renderHeader() {
 
 function renderFooter() {
   return `<footer class="site-footer">
-    <p><strong>The Strange Archive</strong> is a quiet story publication by Kyuno Lab, dedicated to legends, folklore, mysteries, and strange tales from the edges of memory.</p>
+    <p><strong>Kyunolab Mystery Archive</strong> is a quiet story publication by Kyuno Lab, dedicated to legends, folklore, mysteries, and strange tales from the edges of memory.</p>
     <p><a href="/archive.html">Archive Index</a> - <a href="/newest.html">Newest</a> - <a href="/popular.html">Popular</a> - <a href="/categories.html">Categories</a> - <a href="/about.html">About</a> - <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a> - <a href="/privacy.html">Privacy</a> - <a href="/rss.xml">RSS</a></p>
   </footer>`;
 }

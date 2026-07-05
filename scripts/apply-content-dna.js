@@ -190,6 +190,7 @@ function renderStoryPage(story, previousStory, nextStory) {
   <meta name="description" content="${escapeAttr(description)}">
   <meta property="og:title" content="${escapeAttr(title)}">
   <meta property="og:description" content="${escapeAttr(description)}">
+  <meta property="og:site_name" content="Kyunolab Mystery Archive">
   <meta property="og:type" content="article">
   <meta property="og:url" content="${cleanUrl}">
   <meta name="twitter:card" content="summary_large_image">
@@ -374,7 +375,7 @@ function renderSourceNote(story) {
   const profile = getQualityProfile(story);
   return `<h2 id="source-note">Story &amp; Source Note</h2>
         <p>This article discusses ${escapeHtml(story.sourceStatus || story.category)} with a source-aware approach. The record is useful for reading motif, setting, circulation, and evidence limits; it is not presented as confirmed fact.</p>
-        <p>For this subject, the strongest responsible reading is ${escapeHtml(profile.sourceReading)}. Claims beyond that would need clearer, dated, and independently checkable material. See the <a href="/fiction-disclaimer.html#source-status">Story &amp; Source Notice</a> for how The Strange Archive separates documented sources, modern retellings, speculative interpretation, and original work.</p>`;
+        <p>For this subject, the strongest responsible reading is ${escapeHtml(profile.sourceReading)}. Claims beyond that would need clearer, dated, and independently checkable material. See the <a href="/fiction-disclaimer.html#source-status">Story &amp; Source Notice</a> for how Kyunolab Mystery Archive separates documented sources, modern retellings, speculative interpretation, and original work.</p>`;
 }
 
 function renderMetaGrid(story) {
@@ -651,7 +652,7 @@ function shortSubject(story) {
 }
 
 function buildMetaPageTitle(metaTitle, fallbackTitle) {
-  const brand = 'The Strange Archive';
+  const brand = 'Kyunolab Mystery Archive';
   const source = String(metaTitle || fallbackTitle || '').trim();
   const full = `${source} | ${brand}`;
   if (full.length <= 70) return full;
@@ -703,7 +704,7 @@ function renderJsonLd(story, cleanUrl, description) {
           {
             '@type': 'ListItem',
             position: 1,
-            name: 'The Strange Archive',
+            name: 'Kyunolab Mystery Archive',
             item: `${siteUrl}/`
           },
           {
@@ -725,11 +726,11 @@ function renderJsonLd(story, cleanUrl, description) {
 }
 
 function renderHeader() {
-  return `<header class="site-header"><div class="topline">A Kyuno Lab publication</div><div class="header-inner"><a class="brand" href="/"><span class="brand-mark"><img src="/favicon.svg" alt="" aria-hidden="true"></span><span><strong>The Strange Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a><nav class="nav"><a href="/newest.html">Newest</a><a href="/popular.html">Popular</a><a href="/categories.html">Categories</a><a href="/mystery-board.html">Mystery Board</a><a href="/about.html">About</a></nav></div></header>`;
+  return `<header class="site-header"><div class="topline">A Kyuno Lab publication</div><div class="header-inner"><a class="brand" href="/"><span class="brand-mark"><img src="/favicon.svg" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a><nav class="nav"><a href="/newest.html">Newest</a><a href="/popular.html">Popular</a><a href="/categories.html">Categories</a><a href="/mystery-board.html">Mystery Board</a><a href="/about.html">About</a></nav></div></header>`;
 }
 
 function renderFooter() {
-  return `<footer class="site-footer"><p><strong>The Strange Archive</strong> is a quiet story publication by Kyuno Lab, dedicated to legends, folklore, mysteries, and strange tales from the edges of memory.</p><p><a href="/archive.html">Archive Index</a> - <a href="/newest.html">Newest</a> - <a href="/popular.html">Popular</a> - <a href="/categories.html">Categories</a> - <a href="/about.html">About</a> - <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a> - <a href="/privacy.html">Privacy</a> - <a href="/rss.xml">RSS</a></p></footer>`;
+  return `<footer class="site-footer"><p><strong>Kyunolab Mystery Archive</strong> is a quiet story publication by Kyuno Lab, dedicated to legends, folklore, mysteries, and strange tales from the edges of memory.</p><p><a href="/archive.html">Archive Index</a> - <a href="/newest.html">Newest</a> - <a href="/popular.html">Popular</a> - <a href="/categories.html">Categories</a> - <a href="/about.html">About</a> - <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a> - <a href="/privacy.html">Privacy</a> - <a href="/rss.xml">RSS</a></p></footer>`;
 }
 
 function formatDate(value) {

@@ -185,7 +185,7 @@ const guidePlans = [
   ['why-mythic-objects-work-as-story-anchors', 'Why Mythic Objects Work as Story Anchors', 'Mythic Object Guide', 'mythic objects folklore guide', 'A guide to keys, bells, mirrors, swords, books, lanterns, and objects that carry memory, warning, and symbolic power.'],
   ['how-to-read-folklore-without-flattening-it-into-fact', 'How to Read Folklore Without Flattening It Into Fact', 'Folklore Reading Guide', 'how to read folklore source aware', 'A guide to reading oral tradition, local belief, symbolic motifs, and retellings without turning every story into a literal claim.'],
   ['why-strange-nature-stories-need-careful-evidence', 'Why Strange Nature Stories Need Careful Evidence', 'Strange Nature Evidence', 'strange nature stories evidence', 'A Mystery Board guide to weather records, animal behavior, landscape observation, local memory, and nature folklore limits.'],
-  ['how-to-build-a-reading-path-through-the-strange-archive', 'How to Build a Reading Path Through The Strange Archive', 'Archive Reading Path', 'strange archive reading path', 'A practical guide to moving from categories to tags, from story maps to source notes, and from one recurring motif to another.'],
+  ['how-to-build-a-reading-path-through-the-strange-archive', 'How to Build a Reading Path Through Kyunolab Mystery Archive', 'Archive Reading Path', 'kyunolab mystery archive reading path', 'A practical guide to moving from categories to tags, from story maps to source notes, and from one recurring motif to another.'],
   ['why-mystery-articles-should-name-the-limit', 'Why Mystery Articles Should Name the Limit Instead of Solving Too Much', 'Evidence Limit Guide', 'mystery articles evidence limits', 'A guide to preserving mystery responsibly by naming what can be checked, what cannot, and where speculation begins.'],
   ['how-to-use-tags-without-creating-thin-archive-pages', 'How to Use Tags Without Creating Thin Archive Pages', 'Tag Strategy Guide', 'tag archive pages noindex guide', 'A guide to using tags as internal paths while keeping thin tag pages out of the sitemap until they have enough connected records.']
 ];
@@ -287,7 +287,7 @@ function makeGuide(plan, index) {
     ogTitle: title,
     ogDescription: excerpt,
     excerpt,
-    deck: `${title} is a practical Mystery Board guide for readers who want to move through The Strange Archive with more context, cleaner source awareness, and stronger internal reading paths.`,
+    deck: `${title} is a practical Mystery Board guide for readers who want to move through Kyunolab Mystery Archive with more context, cleaner source awareness, and stronger internal reading paths.`,
     category: 'Mystery Board',
     categorySlug: 'mystery-board',
     tag,

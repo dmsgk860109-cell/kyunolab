@@ -52,7 +52,7 @@ function renderBoardPage() {
     <div class="archive-page-main">
       <p class="label">Mystery Board</p>
       <h1 class="article-title">Guides for reading legends, folklore, myths, and strange records.</h1>
-      <p class="deck">Mystery Board is the editorial side of The Strange Archive: practical reading guides, source notes, and search-friendly explainers for understanding why mysterious stories spread.</p>
+      <p class="deck">Mystery Board is the editorial side of Kyunolab Mystery Archive: practical reading guides, source notes, and search-friendly explainers for understanding why mysterious stories spread.</p>
 
       <section class="notice">
         <strong>What this page is for:</strong> These articles explain the patterns behind the archive. They help readers understand source status, folklore categories, recurring motifs, and the difference between a strange story and a confirmed claim.
@@ -186,6 +186,7 @@ function renderPage({ canonicalPath, title, description, ogTitle, ogDescription,
   <meta name="description" content="${escapeAttr(description)}">
   <meta property="og:title" content="${escapeAttr(ogTitle || title)}">
   <meta property="og:description" content="${escapeAttr(ogDescription || description)}">
+  <meta property="og:site_name" content="Kyunolab Mystery Archive">
   <meta property="og:type" content="${escapeAttr(type)}">
   <meta property="og:url" content="${siteUrl}${canonicalPath}">
   <meta name="twitter:card" content="summary_large_image">
@@ -209,7 +210,7 @@ function renderHeader() {
   return `<header class="site-header">
     <div class="topline">A Kyuno Lab publication</div>
     <div class="header-inner">
-      <a class="brand" href="/"><span class="brand-mark"><img src="/favicon.svg" alt="" aria-hidden="true"></span><span><strong>The Strange Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
+      <a class="brand" href="/"><span class="brand-mark"><img src="/favicon.svg" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
       <nav class="nav"><a href="/newest.html">Newest</a><a href="/popular.html">Popular</a><a href="/categories.html">Categories</a><a href="/mystery-board.html">Mystery Board</a><a href="/about.html">About</a></nav>
     </div>
   </header>`;
@@ -217,7 +218,7 @@ function renderHeader() {
 
 function renderFooter() {
   return `<footer class="site-footer">
-    <p><strong>The Strange Archive</strong> is a quiet story publication by Kyuno Lab, dedicated to legends, folklore, mysteries, and strange tales from the edges of memory.</p>
+    <p><strong>Kyunolab Mystery Archive</strong> is a quiet story publication by Kyuno Lab, dedicated to legends, folklore, mysteries, and strange tales from the edges of memory.</p>
     <p><a href="/archive.html">Archive Index</a> - <a href="/newest.html">Newest</a> - <a href="/popular.html">Popular</a> - <a href="/categories.html">Categories</a> - <a href="/about.html">About</a> - <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a> - <a href="/privacy.html">Privacy</a> - <a href="/rss.xml">RSS</a></p>
   </footer>`;
 }
