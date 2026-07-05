@@ -3,7 +3,7 @@ const path = require('path');
 
 const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://kyunolab.com';
-const styleVersion = '20260703-guide-pipeline';
+const styleVersion = '20260705-contrast-fix';
 const guides = readJson(path.join(root, 'data', 'guides.json'));
 const stories = readJson(path.join(root, 'data', 'stories.json'));
 const storyById = new Map(stories.map((story) => [story.id || story.slug, story]));

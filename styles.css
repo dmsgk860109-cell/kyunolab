@@ -5,10 +5,12 @@
   --paper: #FAFDFF;
   --panel: #F7FBFF;
   --accent: #b3261e;
+  --accent-on-dark: #ffb3aa;
   --accent-2: #1f5f5b;
   --gold: #5B5FC7;
   --surface: #FFFFFF;
   --structure: #102A56;
+  --muted-strong: #4b5563;
 }
 * { box-sizing: border-box; }
 body {
@@ -135,7 +137,13 @@ h1 {
   line-height: 1.02;
   margin: 12px 0;
 }
-.feature-card .meta { color: #D7E6F6; }
+.feature-card .pill {
+  color: var(--accent-on-dark);
+}
+.feature-card p {
+  color: #F4F8FC;
+}
+.feature-card .meta { color: #EAF3FF; }
 .notice {
   margin: 24px 0;
   padding: 16px 18px;
@@ -159,7 +167,7 @@ h1 {
   font-family: Georgia, "Times New Roman", serif;
   font-size: 28px;
 }
-.section-head a, .section-head span { color: var(--muted); }
+.section-head a, .section-head span { color: var(--muted-strong); }
 .home-stream {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(240px, 300px);
@@ -242,7 +250,7 @@ h1 {
 .ranking-card span {
   display: block;
   grid-column: 2;
-  color: var(--muted);
+  color: var(--muted-strong);
   font-family: Arial, sans-serif;
   font-size: 13px;
   margin-top: 4px;
@@ -298,7 +306,7 @@ h1 {
   font-size: 18px;
 }
 .meta {
-  color: var(--muted);
+  color: var(--muted-strong);
   font-family: Arial, sans-serif;
   font-size: 13px;
 }
@@ -398,7 +406,7 @@ h1 {
   margin-bottom: 8px;
 }
 .category-grid span {
-  color: var(--muted);
+  color: var(--muted-strong);
   font-family: Arial, sans-serif;
   font-size: 14px;
 }
@@ -534,6 +542,9 @@ h1 {
   background: var(--ink);
   color: #fff;
 }
+.rail-feature .rail-label {
+  color: var(--accent-on-dark);
+}
 .rail-feature a {
   border-color: rgba(255, 255, 255, .18);
   color: #fff;
@@ -549,7 +560,7 @@ h1 {
 }
 .rail-feature span {
   margin-top: 8px;
-  color: #D7E6F6;
+  color: #EAF3FF;
   font-size: 12px;
   font-weight: 400;
 }
@@ -871,7 +882,7 @@ h1 {
 }
 .share-status {
   min-height: 18px;
-  color: var(--muted);
+  color: var(--muted-strong);
   font-size: 12px;
   line-height: 1.2;
 }
@@ -980,7 +991,7 @@ textarea {
   font-family: Arial, sans-serif;
 }
 .pagination-status {
-  color: var(--muted);
+  color: var(--muted-strong);
   font-size: 13px;
 }
 .pagination-links {
