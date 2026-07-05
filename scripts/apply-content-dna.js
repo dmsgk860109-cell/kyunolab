@@ -176,7 +176,7 @@ function renderStoryPage(story, previousStory, nextStory) {
   const title = story.displayTitle || story.title;
   const metaTitle = story.metaTitle || story.seoTitle || title;
   const pageTitle = buildMetaPageTitle(metaTitle, title);
-  const description = buildMetaDescription(story.metaDescription || story.excerpt || story.summaryAnswer || '');
+  const description = buildStoryMetaDescription(story);
   const relatedStories = getRelatedStories(story);
   const dna = story.contentDNA;
   const sections = buildBodySections(story);
@@ -654,21 +654,83 @@ function shortSubject(story) {
 function buildMetaPageTitle(metaTitle, fallbackTitle) {
   const brand = 'Kyunolab Mystery Archive';
   const source = String(metaTitle || fallbackTitle || '').trim();
-  const full = `${source} | ${brand}`;
-  if (full.length <= 70) return full;
-
-  const subject = source.split(':')[0].trim();
-  if (subject.length >= 22 && `${subject} | ${brand}`.length <= 70) {
-    return `${subject} | ${brand}`;
-  }
-
-  return `${trimToLength(source, 45)} | ${brand}`;
+  return `${source} | ${brand}`;
 }
 
-function buildMetaDescription(description) {
-  const source = String(description || '').replace(/\s+/g, ' ').trim();
-  if (source.length <= 160) return source;
-  return trimToLength(source, 157);
+function buildStoryMetaDescription(story) {
+  const subject = shortSubject(story) || titleFromSlug(story.slug);
+  const category = String(story.category || 'mystery record').trim();
+  const tag = String(story.primaryTag || story.tag || (story.tags || [])[0] || '').trim();
+  const scene = scenePhrase(story.detail || story.excerpt || story.summaryAnswer || subject);
+  const description = sanitizeStoryMetaDescription(story.metaDescription || story.excerpt || story.summaryAnswer || '');
+  let source = description;
+
+  if (!source || isCommonSiteDescription(source)) {
+    source = `${subject} examines ${scene} as ${articleFor(category)} ${category.toLowerCase()} entry, tracing the setting, motif, and source limits behind the mystery.`;
+  }
+
+  if (!mentionsSubject(source, subject)) {
+    source = `${subject}: ${lowerFirst(source)}`;
+  }
+
+  if (source.length < 130) {
+    const tagPhrase = tag ? `${tag.toLowerCase()} motif` : `${category.toLowerCase()} pattern`;
+    source = `${source.replace(/[.\s]+$/, '')}, with source-aware notes on the ${tagPhrase}, setting, and unresolved details.`;
+  }
+
+  if (source.length < 130) {
+    source = `${source.replace(/[.\s]+$/, '')}, without presenting the legend as confirmed fact.`;
+  }
+
+  return fitMetaDescription(source, story, subject, category, tag);
+}
+
+function sanitizeStoryMetaDescription(description) {
+  return String(description || '')
+    .replace(/\s+/g, ' ')
+    .replace(/\.\.\.$/, '')
+    .trim();
+}
+
+function isCommonSiteDescription(description) {
+  const source = sanitizeStoryMetaDescription(description).toLowerCase();
+  return source.includes('is a quiet story publication')
+    || source.includes('legends, folklore, mysteries, and strange tales from the edges of memory')
+    || source.includes('a quiet archive of urban legends, internet folklore, strange places, myths');
+}
+
+function mentionsSubject(description, subject) {
+  const source = sanitizeStoryMetaDescription(description).toLowerCase();
+  const firstWords = String(subject || '').toLowerCase().split(/\s+/).filter(Boolean).slice(0, 4).join(' ');
+  return firstWords && source.includes(firstWords);
+}
+
+function fitMetaDescription(description, story, subject, category, tag) {
+  let source = sanitizeStoryMetaDescription(description);
+  if (source.length > 160) {
+    source = trimMetaDescription(source, 157);
+  }
+
+  if (source.length >= 125) return ensureTerminalPunctuation(source);
+
+  const fallback = `${subject} follows ${scenePhrase(story.detail || story.excerpt || subject)} as ${articleFor(category)} ${category.toLowerCase()} record, connecting ${tag || category} to source limits and the mystery that keeps it circulating.`;
+  return ensureTerminalPunctuation(trimMetaDescription(fallback, 158));
+}
+
+function ensureTerminalPunctuation(value) {
+  const source = sanitizeStoryMetaDescription(value);
+  if (/[.!?]$/.test(source)) return source;
+  if (source.length <= 159) return `${source}.`;
+  return trimMetaDescription(`${source}.`, 158);
+}
+
+function trimMetaDescription(value, maxLength) {
+  const source = sanitizeStoryMetaDescription(value);
+  if (source.length <= maxLength) return source;
+  const slice = source.slice(0, maxLength + 1);
+  const wordBoundary = slice.lastIndexOf(' ');
+  const cut = wordBoundary >= Math.floor(maxLength * 0.8) ? wordBoundary : maxLength;
+  return `${source.slice(0, cut).replace(/[,:;.\s]+$/, '')}.`;
 }
 
 function trimToLength(value, maxLength) {
