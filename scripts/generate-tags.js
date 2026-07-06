@@ -168,7 +168,7 @@ function writeTagPage(tagGroup) {
 function renderTagPage(tagGroup) {
   const canonicalPath = `/tags/${tagGroup.slug}/`;
   const title = `Stories Tagged "${tagGroup.label}"`;
-  const description = tagGroup.description || 'A small internal archive path for related Kyunolab records.';
+  const description = tagGroup.description || `A small internal archive path for Kyunolab records connected to ${tagGroup.label}.`;
   const firstArticle = tagGroup.articles[0];
   const storyRows = tagGroup.articles.map(renderStoryRow).join('\n');
   const robots = tagGroup.indexable ? 'index, follow' : 'noindex, follow';
@@ -202,10 +202,10 @@ ${generatedMarker}
       <div class="rail-card">
         <p class="rail-label">This tag</p>
         <a href="${canonicalPath}">${escapeHtml(tagGroup.label)}</a>
-        <a href="/categories.html">Browse all categories</a>
-        <a href="/newest.html">Latest articles</a>
-        <a href="/popular.html">Popular articles</a>
-        <a href="/archive.html">Archive Index</a>
+        <a href="/categories">Browse all categories</a>
+        <a href="/newest">Latest articles</a>
+        <a href="/popular">Popular articles</a>
+        <a href="/archive">Archive Index</a>
       </div>
     </aside>
 
@@ -233,9 +233,9 @@ ${storyRows}
       </div>
       <div class="rail-card rail-card-subtle">
         <p class="rail-label">Same archive shelf</p>
-        <a href="/newest.html">Newest Records</a>
-        <a href="/popular.html">Popular Records</a>
-        <a href="/mystery-board.html">Mystery Board</a>
+        <a href="/newest">Newest Records</a>
+        <a href="/popular">Popular Records</a>
+        <a href="/mystery-board">Mystery Board</a>
       </div>
     </aside>
   </main>
@@ -261,7 +261,7 @@ function renderHeader() {
     <div class="topline">A Kyuno Lab publication</div>
     <div class="header-inner">
       <a class="brand" href="/"><span class="brand-mark"><img src="/favicon.svg" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
-      <nav class="nav"><a href="/newest.html">Newest</a><a href="/popular.html">Popular</a><a href="/categories.html">Categories</a><a href="/mystery-board.html">Mystery Board</a><a href="/about.html">About</a></nav>
+      <nav class="nav"><a href="/newest">Newest</a><a href="/popular">Popular</a><a href="/categories">Categories</a><a href="/mystery-board">Mystery Board</a><a href="/about">About</a></nav>
     </div>
   </header>`;
 }
@@ -269,7 +269,7 @@ function renderHeader() {
 function renderFooter() {
   return `<footer class="site-footer">
     <p><strong>Kyunolab Mystery Archive</strong> is a quiet story publication by Kyuno Lab, dedicated to legends, folklore, mysteries, and strange tales from the edges of memory.</p>
-    <p><a href="/archive.html">Archive Index</a> - <a href="/newest.html">Newest</a> - <a href="/popular.html">Popular</a> - <a href="/categories.html">Categories</a> - <a href="/about.html">About</a> - <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a> - <a href="/privacy.html">Privacy</a> - <a href="/rss.xml">RSS</a></p>
+    <p><a href="/archive">Archive Index</a> - <a href="/newest">Newest</a> - <a href="/popular">Popular</a> - <a href="/categories">Categories</a> - <a href="/about">About</a> - <a href="/fiction-disclaimer">Story &amp; Source Notice</a> - <a href="/privacy">Privacy</a> - <a href="/rss.xml">RSS</a></p>
   </footer>`;
 }
 

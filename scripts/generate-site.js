@@ -16,16 +16,16 @@ generateHomePage();
 generateArchivePageSet({
   baseName: 'newest',
   label: 'Newest Records',
-  title: 'Newest stories in the archive',
-  description: 'The latest open files from Kyunolab Mystery Archive, arranged for readers who want to move through the newest legends, mysteries, strange places, and folklore notes first.',
+  title: 'Newest folklore, legend, and mystery records',
+  description: 'The latest Kyunolab Mystery Archive entries, including urban legends, internet folklore, myths, strange places, and source-aware mystery notes.',
   items: sortNewest(stories)
 });
 
 generateArchivePageSet({
   baseName: 'popular',
   label: 'Popular Records',
-  title: 'Popular records in the archive',
-  description: 'A curated path through the strongest entry points in Kyunolab Mystery Archive.',
+  title: 'Popular urban legends, folklore, and mystery records',
+  description: 'A curated path through reader-friendly entry points for urban legends, internet folklore, classic myths, strange places, and recurring mystery motifs.',
   items: stories
 });
 
@@ -33,7 +33,7 @@ generateArchivePageSet({
   baseName: 'archive',
   label: 'Archive Index',
   title: 'Explore every open file in Kyunolab Mystery Archive',
-  description: 'Move through the full collection by category, source status, story type, and recurring motif.',
+  description: 'Move through every record by category, source status, story type, folklore motif, legend origin, and recurring mystery pattern.',
   items: sortArchive(stories)
 });
 
@@ -63,7 +63,7 @@ function generateHomePage() {
 
 function renderHomePage({ featuredStory, latestStories, popularStories, essentialStories, categoryGroups }) {
   const title = 'Kyunolab Mystery Archive | Urban Legends, Folklore, Myths & Strange Tales';
-  const description = "Explore urban legends, internet folklore, myths, strange places, lost worlds, and mystery patterns in Kyunolab's calm archive.";
+  const description = "Explore urban legends, folklore origins, internet myths, strange places, mythic creatures, and source-aware mystery stories in Kyunolab's calm archive.";
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
@@ -101,7 +101,7 @@ function renderHomePage({ featuredStory, latestStories, popularStories, essentia
   ${renderHeader()}
   <main>
     <section class="hero">
-      <div class="hero-copy"><p class="label">Strange Story Archive</p><h1>Strange legends. Forgotten folklore. Mysteries that refuse to disappear.</h1><p>A quiet archive of urban legends, internet folklore, strange places, myths, lost worlds, and recurring mystery patterns.</p></div>
+      <div class="hero-copy"><p class="label">Strange Story Archive</p><h1>Strange legends. Forgotten folklore. Mysteries that refuse to disappear.</h1><p>A quiet archive of urban legends, folklore origins, internet myths, strange places, mythic creatures, and recurring mystery patterns.</p></div>
       ${renderFeaturedStory(featuredStory)}
     </section>
     <section class="notice"><strong>Story &amp; Source Notice:</strong> This site explores folklore, legends, mysteries, and source-aware retellings. Unverified traditions are presented as stories, not as verified fact.</section>
@@ -112,7 +112,7 @@ function renderHomePage({ featuredStory, latestStories, popularStories, essentia
     <section class="board" id="rankings"><div class="section-head"><h2>Popular Records</h2><a href="/mystery-board.html">Open mystery board</a></div><div class="ranking-grid"><ol class="ranking-card">${popularStories.map(renderRankingItem).join('')}</ol><aside class="side-panel"><h3>Reader Paths</h3><a href="/newest.html">Newest stories</a><a href="/categories.html">Browse by category</a><a href="#essential-reads">Start with essential reads</a><a href="/fiction-disclaimer.html">Story &amp; source notice</a></aside></div></section>
     <section id="categories" class="categories"><div class="section-head"><h2>Browse By Category</h2><a href="/categories.html">View all categories</a></div><div class="home-category-groups">${categoryGroups.map(renderHomeCategoryGroup).join('')}</div></section>
     <section id="essential-reads" class="essential-reads"><div class="section-head"><h2>Essential Reads</h2><span>Start here</span></div><div class="compact-grid">${essentialStories.map(renderEssentialStory).join('')}</div></section>
-    <section class="archive-cta"><div><p class="label">Archive Index</p><h2>Explore every open file in Kyunolab Mystery Archive.</h2><p>Move through the full collection by category, source status, story type, and recurring motif.</p></div><a class="button" href="/archive.html">Browse all current stories</a></section>
+    <section class="archive-cta"><div><p class="label">Archive Index</p><h2>Explore every open file in Kyunolab Mystery Archive.</h2><p>Move through the full collection by category, source status, story type, folklore motif, legend origin, and recurring mystery pattern.</p></div><a class="button" href="/archive.html">Browse all current stories</a></section>
   </main>
   ${renderFooter()}
 </body>
@@ -340,10 +340,14 @@ function generateRoutingFiles() {
 }
 
 function renderListPage({ canonicalPath, label, title, h1, description, items, baseName, pageNumber, totalPages }) {
+  const metaDescription = pageNumber === 1
+    ? description
+    : `${description} Page ${pageNumber} of ${totalPages} continues the archive list with more source-aware legend, folklore, and mystery entries.`;
   return renderPage({
     canonicalPath,
     title,
     description,
+    metaDescription,
     content: `  <main class="article-shell article-layout">
     ${renderLeftRail('Reader paths')}
     <div class="archive-page-main"><p class="label">${escapeHtml(label)}</p><h1 class="article-title">${escapeHtml(h1)}</h1><p class="deck">${escapeHtml(description)}</p><div class="story-list">${items.map(renderStoryRow).join('\n')}</div>${renderPagination(baseName, pageNumber, totalPages)}</div>
@@ -353,10 +357,14 @@ function renderListPage({ canonicalPath, label, title, h1, description, items, b
 }
 
 function renderCategoryPage({ category, pageItems, pageNumber, totalPages, pageTitle, canonicalPath }) {
+  const metaDescription = pageNumber === 1
+    ? category.description
+    : `${category.description} Page ${pageNumber} of ${totalPages} continues this category with more related archive entries.`;
   return renderPage({
     canonicalPath,
     title: pageTitle,
     description: category.description,
+    metaDescription,
     content: `  <main class="article-shell article-layout">
     <aside class="article-rail article-rail-left" aria-label="This shelf">
       <div class="rail-card"><p class="rail-label">This shelf</p><a href="/categories/${escapeAttr(category.slug)}.html">${escapeHtml(category.title)}</a><a href="/categories.html">All Categories</a><a href="/archive.html">Archive Index</a><a href="/fiction-disclaimer.html">Story &amp; Source Notice</a></div>
@@ -368,7 +376,8 @@ function renderCategoryPage({ category, pageItems, pageNumber, totalPages, pageT
   });
 }
 
-function renderPage({ canonicalPath, title, description, content, robots }) {
+function renderPage({ canonicalPath, title, description, metaDescription, content, robots }) {
+  const pageDescription = metaDescription || description;
   const robotsMeta = robots ? `  <meta name="robots" content="${escapeAttr(robots)}">\n` : '';
   return `<!doctype html>
 <html lang="en">
@@ -376,9 +385,9 @@ function renderPage({ canonicalPath, title, description, content, robots }) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${escapeHtml(title)} | Kyunolab Mystery Archive</title>
-  <meta name="description" content="${escapeAttr(description)}">
+  <meta name="description" content="${escapeAttr(pageDescription)}">
 ${robotsMeta}  <meta property="og:title" content="${escapeAttr(title)}">
-  <meta property="og:description" content="${escapeAttr(description)}">
+  <meta property="og:description" content="${escapeAttr(pageDescription)}">
   <meta property="og:site_name" content="Kyunolab Mystery Archive">
   <meta property="og:type" content="website">
   <meta property="og:url" content="${siteUrl}${canonicalPath}">

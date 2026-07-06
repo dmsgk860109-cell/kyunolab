@@ -215,16 +215,48 @@ function buildRequiredDetails(story, detail, evidenceBits, vocabulary) {
 }
 
 function buildSectionBlueprint(story, shortSubject) {
-  const tag = story.primaryTag || story.tag || story.category;
   const subject = toTitleCase(shortSubject).replace(/^(The|A|An)\s+/i, '');
   const middle = categoryMiddleHeading(story, subject);
   return uniqueTerms([
-    `What ${subject} Is Really About`,
-    `${tag} Clues That Make the Story Travel`,
+    `What Is the ${subject} Story?`,
+    originHeadingFor(story, subject),
+    versionsHeadingFor(story, subject),
     middle,
     evidenceHeadingFor(story),
-    `How to Read This ${story.storyType || 'Record'} Without Flattening It`
+    meaningHeadingFor(story, subject)
   ]).map((title) => ({ title, nav: shortNav(title) }));
+}
+
+function originHeadingFor(story, subject) {
+  const category = String(story.categorySlug || '').toLowerCase();
+  if (category.includes('internet')) return `How ${subject} Became Internet Folklore`;
+  if (category.includes('myth')) return `The Mythic Origin and Meaning Behind ${subject}`;
+  if (category.includes('folklore')) return `The Folklore Origin Behind ${subject}`;
+  if (category.includes('place') || category.includes('world')) return `The Place Legend Behind ${subject}`;
+  if (category.includes('nature')) return `The Natural Sign Behind ${subject}`;
+  if (category.includes('origin')) return `The Origin Pattern Behind ${subject}`;
+  if (category.includes('mysteries')) return `The Record and the Unanswered Question Behind ${subject}`;
+  return `The Origin and Folklore Behind ${subject}`;
+}
+
+function versionsHeadingFor(story, subject) {
+  const category = String(story.categorySlug || '').toLowerCase();
+  if (category.includes('internet')) return `Common Online Versions of ${subject}`;
+  if (category.includes('myth')) return `Common Versions and Symbols in ${subject}`;
+  if (category.includes('place') || category.includes('world')) return `Common Versions of the Place Legend`;
+  if (category.includes('nature')) return `Common Versions of the Natural Omen`;
+  if (category.includes('mysteries')) return `Different Ways Readers Explain ${subject}`;
+  return `Common Versions of the Legend`;
+}
+
+function meaningHeadingFor(story, subject) {
+  const category = String(story.categorySlug || '').toLowerCase();
+  if (category.includes('internet')) return `Why This Internet Folklore Still Spreads`;
+  if (category.includes('myth')) return `What ${subject} Means in Myth and Folklore`;
+  if (category.includes('place') || category.includes('world')) return `Why This Place Legend Still Feels Possible`;
+  if (category.includes('nature')) return `What This Nature Folklore Means`;
+  if (category.includes('mysteries')) return `Why the Mystery Still Lasts`;
+  return `Why This Folklore Still Lasts`;
 }
 
 function buildReaderIntent(story, shortSubject) {

@@ -52,11 +52,9 @@ function backfillStoryMetadata(story) {
 
   story.title = title;
   story.displayTitle = story.displayTitle || title;
-  story.seoTitle = story.seoTitle || title;
-  story.metaTitle = story.metaTitle || story.seoTitle || title;
-  if (!story.metaDescription || shouldRefreshMetaDescription(story.metaDescription)) {
-    story.metaDescription = buildConciseMetaDescription(story, subject, tag, excerpt);
-  }
+  story.seoTitle = buildSeoArticleTitle(story, subject);
+  story.metaTitle = story.seoTitle;
+  story.metaDescription = buildConciseMetaDescription(story, subject, tag, excerpt);
   story.seedKeyword = story.seedKeyword || query;
   story.searchIntent = story.searchIntent || inferSearchIntent(story);
   story.articleFormat = story.articleFormat || inferArticleFormat(story);
@@ -152,14 +150,38 @@ function shouldRefreshMetaDescription(value) {
     || /recurring motifs, evidence limits, and why the story/i.test(text);
 }
 
+function buildSeoArticleTitle(story, subject) {
+  const category = String(story.categorySlug || '').toLowerCase();
+  const cleanSubject = String(subject || story.title || '').trim();
+  if (cleanSubject.length > 62) return cleanSubject;
+  const shortSuffix = cleanSubject.length > 48;
+  if (shortSuffix) {
+    if (category.includes('internet')) return `${cleanSubject}: Internet Folklore`;
+    if (category.includes('myth')) return `${cleanSubject}: Myth and Meaning`;
+    if (category.includes('place') || category.includes('world')) return `${cleanSubject}: Place Legend`;
+    if (category.includes('nature')) return `${cleanSubject}: Nature Folklore`;
+    return `${cleanSubject}: Folklore Meaning`;
+  }
+  if (category.includes('internet')) return `${cleanSubject} Explained: Internet Folklore, Meaning, and Why It Spreads`;
+  if (category.includes('mythic-creatures')) return `${cleanSubject}: Mythic Creature Folklore, Meaning, and Versions`;
+  if (category.includes('mythic-objects')) return `${cleanSubject}: Mythic Object Meaning, Folklore, and Versions`;
+  if (category.includes('myths')) return `${cleanSubject}: Myth, Meaning, and Folklore`;
+  if (category.includes('folklore')) return `${cleanSubject}: Folklore Meaning, Origin, and Versions`;
+  if (category.includes('place') || category.includes('world')) return `${cleanSubject}: Place Legend, Meaning, and Folklore`;
+  if (category.includes('nature')) return `${cleanSubject}: Nature Folklore, Meaning, and Local Omen`;
+  if (category.includes('origin')) return `${cleanSubject}: Origin, Meaning, and Folklore Pattern`;
+  if (category.includes('mysteries')) return `${cleanSubject}: Mystery, Meaning, and What the Record Can Support`;
+  return `${cleanSubject}: Origin, Meaning, and Why the Legend Lasts`;
+}
+
 function buildConciseMetaDescription(story, subject, tag, excerpt) {
   const category = String(story.category || 'strange story').toLowerCase();
   const tagText = String(tag || story.category || 'recurring motif').toLowerCase();
   const scene = scenePhrase(story.detail || excerpt || subject);
   const variants = [
-    `${subject} explores ${scene}, tracing how this ${tagText} pattern works inside ${category} without treating the record as confirmed fact.`,
-    `A source-aware look at ${subject}, the ${tagText} motif behind it, and why ${scene} keeps the story readable.`,
-    `${subject} examines ${scene} through ${category}, separating memorable folklore from what the record can actually support.`
+    `${subject} explores the origin, meaning, and folklore behind ${scene}, tracing why this ${tagText} story keeps circulating.`,
+    `A calm guide to ${subject}, its common versions, source limits, and the ${tagText} motif that makes ${scene} memorable.`,
+    `${subject} explains ${scene} through ${category}, separating folklore meaning from what the available record can support.`
   ];
   return trimToLength(variants[stableIndex(`${story.slug}-meta`, variants.length)], 158);
 }
