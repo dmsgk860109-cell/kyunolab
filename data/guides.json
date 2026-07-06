@@ -1,5 +1,905 @@
 [
   {
+    "id": "how-to-choose-a-mystery-topic-that-can-become-a-strong-article",
+    "slug": "how-to-choose-a-mystery-topic-that-can-become-a-strong-article",
+    "title": "How to Choose a Mystery Topic That Can Become a Strong Article",
+    "shortTitle": "Choose a Mystery Topic That Can Become a Strong Article",
+    "metaTitle": "How to Choose a Mystery Topic That Can Become a Strong Article",
+    "metaDescription": "A practical guide for choosing mystery, folklore, and urban legend topics that can support a full article instead of becoming a thin page.",
+    "ogTitle": "How to Choose a Mystery Topic That Can Become a Strong Article",
+    "ogDescription": "A practical guide for choosing mystery, folklore, and urban legend topics that can support a full article instead of becoming a thin page.",
+    "excerpt": "A practical guide for choosing mystery, folklore, and urban legend topics that can support a full article instead of becoming a thin page.",
+    "deck": "A practical guide for choosing mystery, folklore, and urban legend topics that can support a full article instead of becoming a thin page. The goal is practical structure: better reader trust, cleaner internal movement, and stronger long-term search value.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Topic Selection",
+    "tags": [
+      "Topic Selection",
+      "Mystery SEO",
+      "Archive Structure",
+      "Content Quality",
+      "Reader Trust"
+    ],
+    "bestFor": "Editors building a source-aware mystery archive with many articles and recurring motifs",
+    "readTime": "9 min read",
+    "url": "/mystery-board/how-to-choose-a-mystery-topic-that-can-become-a-strong-article",
+    "publishedAt": "2026-07-06",
+    "updatedAt": "2026-07-06",
+    "relatedStoryIds": [
+      "the-sparrow-that-carried-the-first-dawn-a-myth-about-small-wings-and-returning-light",
+      "the-mountain-that-drank-the-thunder-a-myth-about-storms-silence-and-stone",
+      "the-weaver-who-tied-the-seasons-together-a-myth-about-thread-weather-and-time"
+    ],
+    "relatedGuideIds": [
+      "how-to-read-a-mystery-story-before-believing-it",
+      "how-to-compare-different-versions-of-the-same-legend",
+      "why-ordinary-places-make-urban-legends-stronger"
+    ],
+    "sections": [
+      {
+        "id": "why-topic-selection-matters",
+        "title": "Why topic selection matters",
+        "nav": "Why it matters",
+        "paragraphs": [
+          "A mystery archive grows by repetition, but it loses trust when every page repeats the same shape. Topic Selection gives the editor a way to decide what belongs, what needs more evidence, and what should remain a short internal note.",
+          "The useful test is whether the page gives a reader a clear reason to continue. A good guide does not make the story louder. It makes the path through the archive easier to follow."
+        ]
+      },
+      {
+        "id": "what-to-check-before-publishing",
+        "title": "What to check before publishing",
+        "nav": "Pre-publish checks",
+        "paragraphs": [
+          "Before publishing, check whether the title promises more certainty than the article can support. Then check whether the opening names the subject quickly, gives a concrete image, and avoids generic mystery language.",
+          "The second check is structural. A page should have a clear role in the archive: category, motif, related records, source status, and a next place for the reader to go."
+        ]
+      },
+      {
+        "id": "how-to-use-it-in-kyunolab",
+        "title": "How to use it inside Kyunolab",
+        "nav": "Kyunolab use",
+        "paragraphs": [
+          "Inside Kyunolab, this rule should support the existing archive rather than create a separate content island. Use it to strengthen titles, metadata, source notes, internal links, and page purpose.",
+          "If a draft cannot connect to at least one category, one motif, and one reader question, it may need to be merged, rewritten, or held until the archive has enough related material."
+        ]
+      },
+      {
+        "id": "common-mistakes-to-avoid",
+        "title": "Common mistakes to avoid",
+        "nav": "Mistakes",
+        "paragraphs": [
+          "The most common mistake is treating SEO as a list of phrases rather than a reader path. Search terms matter, but they should help the article answer a real curiosity instead of flattening the archive voice.",
+          "Another mistake is creating pages for every small keyword. Thin tag pages, duplicated openings, and overly similar titles make the site feel larger but weaker. A better archive grows through durable records."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "Should every mystery idea become a separate article?",
+        "No. A separate article works best when the idea has a clear subject, source status, reader question, and enough related material to support internal links."
+      ],
+      [
+        "Can SEO and a quiet archive tone work together?",
+        "Yes. SEO should clarify the subject and search intent while the writing keeps the site calm, careful, and source-aware."
+      ],
+      [
+        "What is the safest way to grow the archive?",
+        "Add strong article records first, then let categories, tags, and internal links organize them without creating unnecessary indexable pages."
+      ]
+    ],
+    "sourceNote": "This guide is an editorial framework for Kyunolab Mystery Archive. It is not a claim about a real legend or event."
+  },
+  {
+    "id": "how-to-write-source-notes-for-urban-legends-without-killing-the-mystery",
+    "slug": "how-to-write-source-notes-for-urban-legends-without-killing-the-mystery",
+    "title": "How to Write Source Notes for Urban Legends Without Killing the Mystery",
+    "shortTitle": "Write Source Notes for Urban Legends Without Killing the Mystery",
+    "metaTitle": "How to Write Source Notes for Urban Legends Without Killing the Mystery",
+    "metaDescription": "A guide to explaining source limits clearly while preserving the atmosphere that makes an urban legend worth reading.",
+    "ogTitle": "How to Write Source Notes for Urban Legends Without Killing the Mystery",
+    "ogDescription": "A guide to explaining source limits clearly while preserving the atmosphere that makes an urban legend worth reading.",
+    "excerpt": "A guide to explaining source limits clearly while preserving the atmosphere that makes an urban legend worth reading.",
+    "deck": "A guide to explaining source limits clearly while preserving the atmosphere that makes an urban legend worth reading. The goal is practical structure: better reader trust, cleaner internal movement, and stronger long-term search value.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Source Notes",
+    "tags": [
+      "Source Notes",
+      "Mystery SEO",
+      "Archive Structure",
+      "Content Quality",
+      "Reader Trust"
+    ],
+    "bestFor": "Editors building a source-aware mystery archive with many articles and recurring motifs",
+    "readTime": "10 min read",
+    "url": "/mystery-board/how-to-write-source-notes-for-urban-legends-without-killing-the-mystery",
+    "publishedAt": "2026-07-06",
+    "updatedAt": "2026-07-06",
+    "relatedStoryIds": [
+      "the-well-where-the-sky-learned-its-name-a-myth-about-reflection-and-first-words",
+      "the-fox-that-hid-the-last-star-a-myth-about-trickery-night-and-morning",
+      "why-lost-place-legends-need-maps-even-when-the-place-is-uncertain"
+    ],
+    "relatedGuideIds": [
+      "how-to-read-a-mystery-story-before-believing-it",
+      "how-to-compare-different-versions-of-the-same-legend",
+      "why-ordinary-places-make-urban-legends-stronger"
+    ],
+    "sections": [
+      {
+        "id": "why-source-notes-matters",
+        "title": "Why source notes matters",
+        "nav": "Why it matters",
+        "paragraphs": [
+          "A mystery archive grows by repetition, but it loses trust when every page repeats the same shape. Source Notes gives the editor a way to decide what belongs, what needs more evidence, and what should remain a short internal note.",
+          "The useful test is whether the page gives a reader a clear reason to continue. A good guide does not make the story louder. It makes the path through the archive easier to follow."
+        ]
+      },
+      {
+        "id": "what-to-check-before-publishing",
+        "title": "What to check before publishing",
+        "nav": "Pre-publish checks",
+        "paragraphs": [
+          "Before publishing, check whether the title promises more certainty than the article can support. Then check whether the opening names the subject quickly, gives a concrete image, and avoids generic mystery language.",
+          "The second check is structural. A page should have a clear role in the archive: category, motif, related records, source status, and a next place for the reader to go."
+        ]
+      },
+      {
+        "id": "how-to-use-it-in-kyunolab",
+        "title": "How to use it inside Kyunolab",
+        "nav": "Kyunolab use",
+        "paragraphs": [
+          "Inside Kyunolab, this rule should support the existing archive rather than create a separate content island. Use it to strengthen titles, metadata, source notes, internal links, and page purpose.",
+          "If a draft cannot connect to at least one category, one motif, and one reader question, it may need to be merged, rewritten, or held until the archive has enough related material."
+        ]
+      },
+      {
+        "id": "common-mistakes-to-avoid",
+        "title": "Common mistakes to avoid",
+        "nav": "Mistakes",
+        "paragraphs": [
+          "The most common mistake is treating SEO as a list of phrases rather than a reader path. Search terms matter, but they should help the article answer a real curiosity instead of flattening the archive voice.",
+          "Another mistake is creating pages for every small keyword. Thin tag pages, duplicated openings, and overly similar titles make the site feel larger but weaker. A better archive grows through durable records."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "Should every mystery idea become a separate article?",
+        "No. A separate article works best when the idea has a clear subject, source status, reader question, and enough related material to support internal links."
+      ],
+      [
+        "Can SEO and a quiet archive tone work together?",
+        "Yes. SEO should clarify the subject and search intent while the writing keeps the site calm, careful, and source-aware."
+      ],
+      [
+        "What is the safest way to grow the archive?",
+        "Add strong article records first, then let categories, tags, and internal links organize them without creating unnecessary indexable pages."
+      ]
+    ],
+    "sourceNote": "This guide is an editorial framework for Kyunolab Mystery Archive. It is not a claim about a real legend or event."
+  },
+  {
+    "id": "how-to-build-internal-links-between-mystery-articles-naturally",
+    "slug": "how-to-build-internal-links-between-mystery-articles-naturally",
+    "title": "How to Build Internal Links Between Mystery Articles Naturally",
+    "shortTitle": "Build Internal Links Between Mystery Articles Naturally",
+    "metaTitle": "How to Build Internal Links Between Mystery Articles Naturally",
+    "metaDescription": "A guide to connecting archive entries through motifs, categories, and reader questions without making links feel forced.",
+    "ogTitle": "How to Build Internal Links Between Mystery Articles Naturally",
+    "ogDescription": "A guide to connecting archive entries through motifs, categories, and reader questions without making links feel forced.",
+    "excerpt": "A guide to connecting archive entries through motifs, categories, and reader questions without making links feel forced.",
+    "deck": "A guide to connecting archive entries through motifs, categories, and reader questions without making links feel forced. The goal is practical structure: better reader trust, cleaner internal movement, and stronger long-term search value.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Internal Linking",
+    "tags": [
+      "Internal Linking",
+      "Mystery SEO",
+      "Archive Structure",
+      "Content Quality",
+      "Reader Trust"
+    ],
+    "bestFor": "Editors building a source-aware mystery archive with many articles and recurring motifs",
+    "readTime": "11 min read",
+    "url": "/mystery-board/how-to-build-internal-links-between-mystery-articles-naturally",
+    "publishedAt": "2026-07-06",
+    "updatedAt": "2026-07-06",
+    "relatedStoryIds": [
+      "how-internet-glitches-become-folklore-instead-of-error-reports",
+      "why-object-legends-often-begin-with-ordinary-tools",
+      "how-weather-omens-become-local-legends"
+    ],
+    "relatedGuideIds": [
+      "how-to-read-a-mystery-story-before-believing-it",
+      "how-to-compare-different-versions-of-the-same-legend",
+      "why-ordinary-places-make-urban-legends-stronger"
+    ],
+    "sections": [
+      {
+        "id": "why-internal-linking-matters",
+        "title": "Why internal linking matters",
+        "nav": "Why it matters",
+        "paragraphs": [
+          "A mystery archive grows by repetition, but it loses trust when every page repeats the same shape. Internal Linking gives the editor a way to decide what belongs, what needs more evidence, and what should remain a short internal note.",
+          "The useful test is whether the page gives a reader a clear reason to continue. A good guide does not make the story louder. It makes the path through the archive easier to follow."
+        ]
+      },
+      {
+        "id": "what-to-check-before-publishing",
+        "title": "What to check before publishing",
+        "nav": "Pre-publish checks",
+        "paragraphs": [
+          "Before publishing, check whether the title promises more certainty than the article can support. Then check whether the opening names the subject quickly, gives a concrete image, and avoids generic mystery language.",
+          "The second check is structural. A page should have a clear role in the archive: category, motif, related records, source status, and a next place for the reader to go."
+        ]
+      },
+      {
+        "id": "how-to-use-it-in-kyunolab",
+        "title": "How to use it inside Kyunolab",
+        "nav": "Kyunolab use",
+        "paragraphs": [
+          "Inside Kyunolab, this rule should support the existing archive rather than create a separate content island. Use it to strengthen titles, metadata, source notes, internal links, and page purpose.",
+          "If a draft cannot connect to at least one category, one motif, and one reader question, it may need to be merged, rewritten, or held until the archive has enough related material."
+        ]
+      },
+      {
+        "id": "common-mistakes-to-avoid",
+        "title": "Common mistakes to avoid",
+        "nav": "Mistakes",
+        "paragraphs": [
+          "The most common mistake is treating SEO as a list of phrases rather than a reader path. Search terms matter, but they should help the article answer a real curiosity instead of flattening the archive voice.",
+          "Another mistake is creating pages for every small keyword. Thin tag pages, duplicated openings, and overly similar titles make the site feel larger but weaker. A better archive grows through durable records."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "Should every mystery idea become a separate article?",
+        "No. A separate article works best when the idea has a clear subject, source status, reader question, and enough related material to support internal links."
+      ],
+      [
+        "Can SEO and a quiet archive tone work together?",
+        "Yes. SEO should clarify the subject and search intent while the writing keeps the site calm, careful, and source-aware."
+      ],
+      [
+        "What is the safest way to grow the archive?",
+        "Add strong article records first, then let categories, tags, and internal links organize them without creating unnecessary indexable pages."
+      ]
+    ],
+    "sourceNote": "This guide is an editorial framework for Kyunolab Mystery Archive. It is not a claim about a real legend or event."
+  },
+  {
+    "id": "how-to-keep-fictional-archive-writing-from-sounding-like-fake-news",
+    "slug": "how-to-keep-fictional-archive-writing-from-sounding-like-fake-news",
+    "title": "How to Keep Fictional Archive Writing From Sounding Like Fake News",
+    "shortTitle": "Keep Fictional Archive Writing From Sounding Like Fake News",
+    "metaTitle": "How to Keep Fictional Archive Writing From Sounding Like Fake News",
+    "metaDescription": "A guide to using fictional or speculative language responsibly so readers understand what is record, retelling, and invention.",
+    "ogTitle": "How to Keep Fictional Archive Writing From Sounding Like Fake News",
+    "ogDescription": "A guide to using fictional or speculative language responsibly so readers understand what is record, retelling, and invention.",
+    "excerpt": "A guide to using fictional or speculative language responsibly so readers understand what is record, retelling, and invention.",
+    "deck": "A guide to using fictional or speculative language responsibly so readers understand what is record, retelling, and invention. The goal is practical structure: better reader trust, cleaner internal movement, and stronger long-term search value.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Fact Safety",
+    "tags": [
+      "Fact Safety",
+      "Mystery SEO",
+      "Archive Structure",
+      "Content Quality",
+      "Reader Trust"
+    ],
+    "bestFor": "Editors building a source-aware mystery archive with many articles and recurring motifs",
+    "readTime": "9 min read",
+    "url": "/mystery-board/how-to-keep-fictional-archive-writing-from-sounding-like-fake-news",
+    "publishedAt": "2026-07-06",
+    "updatedAt": "2026-07-06",
+    "relatedStoryIds": [
+      "why-missing-record-mysteries-feel-more-convincing-than-full-stories",
+      "how-doorway-warnings-become-household-folklore",
+      "why-mirror-legends-cross-from-folklore-into-internet-stories"
+    ],
+    "relatedGuideIds": [
+      "how-to-read-a-mystery-story-before-believing-it",
+      "how-to-compare-different-versions-of-the-same-legend",
+      "why-ordinary-places-make-urban-legends-stronger"
+    ],
+    "sections": [
+      {
+        "id": "why-fact-safety-matters",
+        "title": "Why fact safety matters",
+        "nav": "Why it matters",
+        "paragraphs": [
+          "A mystery archive grows by repetition, but it loses trust when every page repeats the same shape. Fact Safety gives the editor a way to decide what belongs, what needs more evidence, and what should remain a short internal note.",
+          "The useful test is whether the page gives a reader a clear reason to continue. A good guide does not make the story louder. It makes the path through the archive easier to follow."
+        ]
+      },
+      {
+        "id": "what-to-check-before-publishing",
+        "title": "What to check before publishing",
+        "nav": "Pre-publish checks",
+        "paragraphs": [
+          "Before publishing, check whether the title promises more certainty than the article can support. Then check whether the opening names the subject quickly, gives a concrete image, and avoids generic mystery language.",
+          "The second check is structural. A page should have a clear role in the archive: category, motif, related records, source status, and a next place for the reader to go."
+        ]
+      },
+      {
+        "id": "how-to-use-it-in-kyunolab",
+        "title": "How to use it inside Kyunolab",
+        "nav": "Kyunolab use",
+        "paragraphs": [
+          "Inside Kyunolab, this rule should support the existing archive rather than create a separate content island. Use it to strengthen titles, metadata, source notes, internal links, and page purpose.",
+          "If a draft cannot connect to at least one category, one motif, and one reader question, it may need to be merged, rewritten, or held until the archive has enough related material."
+        ]
+      },
+      {
+        "id": "common-mistakes-to-avoid",
+        "title": "Common mistakes to avoid",
+        "nav": "Mistakes",
+        "paragraphs": [
+          "The most common mistake is treating SEO as a list of phrases rather than a reader path. Search terms matter, but they should help the article answer a real curiosity instead of flattening the archive voice.",
+          "Another mistake is creating pages for every small keyword. Thin tag pages, duplicated openings, and overly similar titles make the site feel larger but weaker. A better archive grows through durable records."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "Should every mystery idea become a separate article?",
+        "No. A separate article works best when the idea has a clear subject, source status, reader question, and enough related material to support internal links."
+      ],
+      [
+        "Can SEO and a quiet archive tone work together?",
+        "Yes. SEO should clarify the subject and search intent while the writing keeps the site calm, careful, and source-aware."
+      ],
+      [
+        "What is the safest way to grow the archive?",
+        "Add strong article records first, then let categories, tags, and internal links organize them without creating unnecessary indexable pages."
+      ]
+    ],
+    "sourceNote": "This guide is an editorial framework for Kyunolab Mystery Archive. It is not a claim about a real legend or event."
+  },
+  {
+    "id": "how-to-use-motifs-to-organize-urban-legends-and-folklore",
+    "slug": "how-to-use-motifs-to-organize-urban-legends-and-folklore",
+    "title": "How to Use Motifs to Organize Urban Legends and Folklore",
+    "shortTitle": "Use Motifs to Organize Urban Legends and Folklore",
+    "metaTitle": "How to Use Motifs to Organize Urban Legends and Folklore",
+    "metaDescription": "A guide to grouping legends by repeated signals such as doorways, roads, receipts, missing rooms, and strange records.",
+    "ogTitle": "How to Use Motifs to Organize Urban Legends and Folklore",
+    "ogDescription": "A guide to grouping legends by repeated signals such as doorways, roads, receipts, missing rooms, and strange records.",
+    "excerpt": "A guide to grouping legends by repeated signals such as doorways, roads, receipts, missing rooms, and strange records.",
+    "deck": "A guide to grouping legends by repeated signals such as doorways, roads, receipts, missing rooms, and strange records. The goal is practical structure: better reader trust, cleaner internal movement, and stronger long-term search value.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Motif Planning",
+    "tags": [
+      "Motif Planning",
+      "Mystery SEO",
+      "Archive Structure",
+      "Content Quality",
+      "Reader Trust"
+    ],
+    "bestFor": "Editors building a source-aware mystery archive with many articles and recurring motifs",
+    "readTime": "10 min read",
+    "url": "/mystery-board/how-to-use-motifs-to-organize-urban-legends-and-folklore",
+    "publishedAt": "2026-07-06",
+    "updatedAt": "2026-07-06",
+    "relatedStoryIds": [
+      "how-vanishing-road-stories-move-from-travelers-to-maps",
+      "why-receipt-legends-keep-returning-in-modern-folklore",
+      "how-elevator-legends-became-modern-threshold-stories"
+    ],
+    "relatedGuideIds": [
+      "how-to-read-a-mystery-story-before-believing-it",
+      "how-to-compare-different-versions-of-the-same-legend",
+      "why-ordinary-places-make-urban-legends-stronger"
+    ],
+    "sections": [
+      {
+        "id": "why-motif-planning-matters",
+        "title": "Why motif planning matters",
+        "nav": "Why it matters",
+        "paragraphs": [
+          "A mystery archive grows by repetition, but it loses trust when every page repeats the same shape. Motif Planning gives the editor a way to decide what belongs, what needs more evidence, and what should remain a short internal note.",
+          "The useful test is whether the page gives a reader a clear reason to continue. A good guide does not make the story louder. It makes the path through the archive easier to follow."
+        ]
+      },
+      {
+        "id": "what-to-check-before-publishing",
+        "title": "What to check before publishing",
+        "nav": "Pre-publish checks",
+        "paragraphs": [
+          "Before publishing, check whether the title promises more certainty than the article can support. Then check whether the opening names the subject quickly, gives a concrete image, and avoids generic mystery language.",
+          "The second check is structural. A page should have a clear role in the archive: category, motif, related records, source status, and a next place for the reader to go."
+        ]
+      },
+      {
+        "id": "how-to-use-it-in-kyunolab",
+        "title": "How to use it inside Kyunolab",
+        "nav": "Kyunolab use",
+        "paragraphs": [
+          "Inside Kyunolab, this rule should support the existing archive rather than create a separate content island. Use it to strengthen titles, metadata, source notes, internal links, and page purpose.",
+          "If a draft cannot connect to at least one category, one motif, and one reader question, it may need to be merged, rewritten, or held until the archive has enough related material."
+        ]
+      },
+      {
+        "id": "common-mistakes-to-avoid",
+        "title": "Common mistakes to avoid",
+        "nav": "Mistakes",
+        "paragraphs": [
+          "The most common mistake is treating SEO as a list of phrases rather than a reader path. Search terms matter, but they should help the article answer a real curiosity instead of flattening the archive voice.",
+          "Another mistake is creating pages for every small keyword. Thin tag pages, duplicated openings, and overly similar titles make the site feel larger but weaker. A better archive grows through durable records."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "Should every mystery idea become a separate article?",
+        "No. A separate article works best when the idea has a clear subject, source status, reader question, and enough related material to support internal links."
+      ],
+      [
+        "Can SEO and a quiet archive tone work together?",
+        "Yes. SEO should clarify the subject and search intent while the writing keeps the site calm, careful, and source-aware."
+      ],
+      [
+        "What is the safest way to grow the archive?",
+        "Add strong article records first, then let categories, tags, and internal links organize them without creating unnecessary indexable pages."
+      ]
+    ],
+    "sourceNote": "This guide is an editorial framework for Kyunolab Mystery Archive. It is not a claim about a real legend or event."
+  },
+  {
+    "id": "how-to-decide-whether-a-strange-story-needs-its-own-page",
+    "slug": "how-to-decide-whether-a-strange-story-needs-its-own-page",
+    "title": "How to Decide Whether a Strange Story Needs Its Own Page",
+    "shortTitle": "Decide Whether a Strange Story Needs Its Own Page",
+    "metaTitle": "How to Decide Whether a Strange Story Needs Its Own Page",
+    "metaDescription": "A guide to deciding when a mystery idea deserves a separate article and when it belongs as a section inside a broader guide.",
+    "ogTitle": "How to Decide Whether a Strange Story Needs Its Own Page",
+    "ogDescription": "A guide to deciding when a mystery idea deserves a separate article and when it belongs as a section inside a broader guide.",
+    "excerpt": "A guide to deciding when a mystery idea deserves a separate article and when it belongs as a section inside a broader guide.",
+    "deck": "A guide to deciding when a mystery idea deserves a separate article and when it belongs as a section inside a broader guide. The goal is practical structure: better reader trust, cleaner internal movement, and stronger long-term search value.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Page Planning",
+    "tags": [
+      "Page Planning",
+      "Mystery SEO",
+      "Archive Structure",
+      "Content Quality",
+      "Reader Trust"
+    ],
+    "bestFor": "Editors building a source-aware mystery archive with many articles and recurring motifs",
+    "readTime": "11 min read",
+    "url": "/mystery-board/how-to-decide-whether-a-strange-story-needs-its-own-page",
+    "publishedAt": "2026-07-06",
+    "updatedAt": "2026-07-06",
+    "relatedStoryIds": [
+      "the-door-knocker-that-answers-before-it-is-touched",
+      "the-sword-that-grows-heavy-near-false-names",
+      "the-bowl-that-never-holds-the-same-reflection"
+    ],
+    "relatedGuideIds": [
+      "how-to-read-a-mystery-story-before-believing-it",
+      "how-to-compare-different-versions-of-the-same-legend",
+      "why-ordinary-places-make-urban-legends-stronger"
+    ],
+    "sections": [
+      {
+        "id": "why-page-planning-matters",
+        "title": "Why page planning matters",
+        "nav": "Why it matters",
+        "paragraphs": [
+          "A mystery archive grows by repetition, but it loses trust when every page repeats the same shape. Page Planning gives the editor a way to decide what belongs, what needs more evidence, and what should remain a short internal note.",
+          "The useful test is whether the page gives a reader a clear reason to continue. A good guide does not make the story louder. It makes the path through the archive easier to follow."
+        ]
+      },
+      {
+        "id": "what-to-check-before-publishing",
+        "title": "What to check before publishing",
+        "nav": "Pre-publish checks",
+        "paragraphs": [
+          "Before publishing, check whether the title promises more certainty than the article can support. Then check whether the opening names the subject quickly, gives a concrete image, and avoids generic mystery language.",
+          "The second check is structural. A page should have a clear role in the archive: category, motif, related records, source status, and a next place for the reader to go."
+        ]
+      },
+      {
+        "id": "how-to-use-it-in-kyunolab",
+        "title": "How to use it inside Kyunolab",
+        "nav": "Kyunolab use",
+        "paragraphs": [
+          "Inside Kyunolab, this rule should support the existing archive rather than create a separate content island. Use it to strengthen titles, metadata, source notes, internal links, and page purpose.",
+          "If a draft cannot connect to at least one category, one motif, and one reader question, it may need to be merged, rewritten, or held until the archive has enough related material."
+        ]
+      },
+      {
+        "id": "common-mistakes-to-avoid",
+        "title": "Common mistakes to avoid",
+        "nav": "Mistakes",
+        "paragraphs": [
+          "The most common mistake is treating SEO as a list of phrases rather than a reader path. Search terms matter, but they should help the article answer a real curiosity instead of flattening the archive voice.",
+          "Another mistake is creating pages for every small keyword. Thin tag pages, duplicated openings, and overly similar titles make the site feel larger but weaker. A better archive grows through durable records."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "Should every mystery idea become a separate article?",
+        "No. A separate article works best when the idea has a clear subject, source status, reader question, and enough related material to support internal links."
+      ],
+      [
+        "Can SEO and a quiet archive tone work together?",
+        "Yes. SEO should clarify the subject and search intent while the writing keeps the site calm, careful, and source-aware."
+      ],
+      [
+        "What is the safest way to grow the archive?",
+        "Add strong article records first, then let categories, tags, and internal links organize them without creating unnecessary indexable pages."
+      ]
+    ],
+    "sourceNote": "This guide is an editorial framework for Kyunolab Mystery Archive. It is not a claim about a real legend or event."
+  },
+  {
+    "id": "how-to-make-category-pages-useful-for-mystery-readers",
+    "slug": "how-to-make-category-pages-useful-for-mystery-readers",
+    "title": "How to Make Category Pages Useful for Mystery Readers",
+    "shortTitle": "Make Category Pages Useful for Mystery Readers",
+    "metaTitle": "How to Make Category Pages Useful for Mystery Readers",
+    "metaDescription": "A guide to building category pages that help readers move through the archive instead of simply listing posts.",
+    "ogTitle": "How to Make Category Pages Useful for Mystery Readers",
+    "ogDescription": "A guide to building category pages that help readers move through the archive instead of simply listing posts.",
+    "excerpt": "A guide to building category pages that help readers move through the archive instead of simply listing posts.",
+    "deck": "A guide to building category pages that help readers move through the archive instead of simply listing posts. The goal is practical structure: better reader trust, cleaner internal movement, and stronger long-term search value.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Category Strategy",
+    "tags": [
+      "Category Strategy",
+      "Mystery SEO",
+      "Archive Structure",
+      "Content Quality",
+      "Reader Trust"
+    ],
+    "bestFor": "Editors building a source-aware mystery archive with many articles and recurring motifs",
+    "readTime": "9 min read",
+    "url": "/mystery-board/how-to-make-category-pages-useful-for-mystery-readers",
+    "publishedAt": "2026-07-06",
+    "updatedAt": "2026-07-06",
+    "relatedStoryIds": [
+      "the-needle-that-points-toward-forgotten-roads",
+      "the-book-that-opens-to-the-readers-last-question",
+      "the-lantern-that-burns-underwater"
+    ],
+    "relatedGuideIds": [
+      "how-to-read-a-mystery-story-before-believing-it",
+      "how-to-compare-different-versions-of-the-same-legend",
+      "why-ordinary-places-make-urban-legends-stronger"
+    ],
+    "sections": [
+      {
+        "id": "why-category-strategy-matters",
+        "title": "Why category strategy matters",
+        "nav": "Why it matters",
+        "paragraphs": [
+          "A mystery archive grows by repetition, but it loses trust when every page repeats the same shape. Category Strategy gives the editor a way to decide what belongs, what needs more evidence, and what should remain a short internal note.",
+          "The useful test is whether the page gives a reader a clear reason to continue. A good guide does not make the story louder. It makes the path through the archive easier to follow."
+        ]
+      },
+      {
+        "id": "what-to-check-before-publishing",
+        "title": "What to check before publishing",
+        "nav": "Pre-publish checks",
+        "paragraphs": [
+          "Before publishing, check whether the title promises more certainty than the article can support. Then check whether the opening names the subject quickly, gives a concrete image, and avoids generic mystery language.",
+          "The second check is structural. A page should have a clear role in the archive: category, motif, related records, source status, and a next place for the reader to go."
+        ]
+      },
+      {
+        "id": "how-to-use-it-in-kyunolab",
+        "title": "How to use it inside Kyunolab",
+        "nav": "Kyunolab use",
+        "paragraphs": [
+          "Inside Kyunolab, this rule should support the existing archive rather than create a separate content island. Use it to strengthen titles, metadata, source notes, internal links, and page purpose.",
+          "If a draft cannot connect to at least one category, one motif, and one reader question, it may need to be merged, rewritten, or held until the archive has enough related material."
+        ]
+      },
+      {
+        "id": "common-mistakes-to-avoid",
+        "title": "Common mistakes to avoid",
+        "nav": "Mistakes",
+        "paragraphs": [
+          "The most common mistake is treating SEO as a list of phrases rather than a reader path. Search terms matter, but they should help the article answer a real curiosity instead of flattening the archive voice.",
+          "Another mistake is creating pages for every small keyword. Thin tag pages, duplicated openings, and overly similar titles make the site feel larger but weaker. A better archive grows through durable records."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "Should every mystery idea become a separate article?",
+        "No. A separate article works best when the idea has a clear subject, source status, reader question, and enough related material to support internal links."
+      ],
+      [
+        "Can SEO and a quiet archive tone work together?",
+        "Yes. SEO should clarify the subject and search intent while the writing keeps the site calm, careful, and source-aware."
+      ],
+      [
+        "What is the safest way to grow the archive?",
+        "Add strong article records first, then let categories, tags, and internal links organize them without creating unnecessary indexable pages."
+      ]
+    ],
+    "sourceNote": "This guide is an editorial framework for Kyunolab Mystery Archive. It is not a claim about a real legend or event."
+  },
+  {
+    "id": "how-to-refresh-old-mystery-articles-without-changing-their-urls",
+    "slug": "how-to-refresh-old-mystery-articles-without-changing-their-urls",
+    "title": "How to Refresh Old Mystery Articles Without Changing Their URLs",
+    "shortTitle": "Refresh Old Mystery Articles Without Changing Their URLs",
+    "metaTitle": "How to Refresh Old Mystery Articles Without Changing Their URLs",
+    "metaDescription": "A guide to improving old archive entries while protecting canonical URLs, internal links, and search continuity.",
+    "ogTitle": "How to Refresh Old Mystery Articles Without Changing Their URLs",
+    "ogDescription": "A guide to improving old archive entries while protecting canonical URLs, internal links, and search continuity.",
+    "excerpt": "A guide to improving old archive entries while protecting canonical URLs, internal links, and search continuity.",
+    "deck": "A guide to improving old archive entries while protecting canonical URLs, internal links, and search continuity. The goal is practical structure: better reader trust, cleaner internal movement, and stronger long-term search value.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Content Refresh",
+    "tags": [
+      "Content Refresh",
+      "Mystery SEO",
+      "Archive Structure",
+      "Content Quality",
+      "Reader Trust"
+    ],
+    "bestFor": "Editors building a source-aware mystery archive with many articles and recurring motifs",
+    "readTime": "10 min read",
+    "url": "/mystery-board/how-to-refresh-old-mystery-articles-without-changing-their-urls",
+    "publishedAt": "2026-07-06",
+    "updatedAt": "2026-07-06",
+    "relatedStoryIds": [
+      "the-comb-that-straightens-a-river",
+      "the-bell-that-rings-when-a-promise-is-kept",
+      "the-mirror-with-a-back-made-of-moonlight"
+    ],
+    "relatedGuideIds": [
+      "how-to-read-a-mystery-story-before-believing-it",
+      "how-to-compare-different-versions-of-the-same-legend",
+      "why-ordinary-places-make-urban-legends-stronger"
+    ],
+    "sections": [
+      {
+        "id": "why-content-refresh-matters",
+        "title": "Why content refresh matters",
+        "nav": "Why it matters",
+        "paragraphs": [
+          "A mystery archive grows by repetition, but it loses trust when every page repeats the same shape. Content Refresh gives the editor a way to decide what belongs, what needs more evidence, and what should remain a short internal note.",
+          "The useful test is whether the page gives a reader a clear reason to continue. A good guide does not make the story louder. It makes the path through the archive easier to follow."
+        ]
+      },
+      {
+        "id": "what-to-check-before-publishing",
+        "title": "What to check before publishing",
+        "nav": "Pre-publish checks",
+        "paragraphs": [
+          "Before publishing, check whether the title promises more certainty than the article can support. Then check whether the opening names the subject quickly, gives a concrete image, and avoids generic mystery language.",
+          "The second check is structural. A page should have a clear role in the archive: category, motif, related records, source status, and a next place for the reader to go."
+        ]
+      },
+      {
+        "id": "how-to-use-it-in-kyunolab",
+        "title": "How to use it inside Kyunolab",
+        "nav": "Kyunolab use",
+        "paragraphs": [
+          "Inside Kyunolab, this rule should support the existing archive rather than create a separate content island. Use it to strengthen titles, metadata, source notes, internal links, and page purpose.",
+          "If a draft cannot connect to at least one category, one motif, and one reader question, it may need to be merged, rewritten, or held until the archive has enough related material."
+        ]
+      },
+      {
+        "id": "common-mistakes-to-avoid",
+        "title": "Common mistakes to avoid",
+        "nav": "Mistakes",
+        "paragraphs": [
+          "The most common mistake is treating SEO as a list of phrases rather than a reader path. Search terms matter, but they should help the article answer a real curiosity instead of flattening the archive voice.",
+          "Another mistake is creating pages for every small keyword. Thin tag pages, duplicated openings, and overly similar titles make the site feel larger but weaker. A better archive grows through durable records."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "Should every mystery idea become a separate article?",
+        "No. A separate article works best when the idea has a clear subject, source status, reader question, and enough related material to support internal links."
+      ],
+      [
+        "Can SEO and a quiet archive tone work together?",
+        "Yes. SEO should clarify the subject and search intent while the writing keeps the site calm, careful, and source-aware."
+      ],
+      [
+        "What is the safest way to grow the archive?",
+        "Add strong article records first, then let categories, tags, and internal links organize them without creating unnecessary indexable pages."
+      ]
+    ],
+    "sourceNote": "This guide is an editorial framework for Kyunolab Mystery Archive. It is not a claim about a real legend or event."
+  },
+  {
+    "id": "how-to-avoid-repetitive-openings-in-mystery-articles",
+    "slug": "how-to-avoid-repetitive-openings-in-mystery-articles",
+    "title": "How to Avoid Repetitive Openings in Mystery Articles",
+    "shortTitle": "Avoid Repetitive Openings in Mystery Articles",
+    "metaTitle": "How to Avoid Repetitive Openings in Mystery Articles",
+    "metaDescription": "A guide to varying article openings so new mystery entries do not sound generated from the same mold.",
+    "ogTitle": "How to Avoid Repetitive Openings in Mystery Articles",
+    "ogDescription": "A guide to varying article openings so new mystery entries do not sound generated from the same mold.",
+    "excerpt": "A guide to varying article openings so new mystery entries do not sound generated from the same mold.",
+    "deck": "A guide to varying article openings so new mystery entries do not sound generated from the same mold. The goal is practical structure: better reader trust, cleaner internal movement, and stronger long-term search value.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Article Voice",
+    "tags": [
+      "Article Voice",
+      "Mystery SEO",
+      "Archive Structure",
+      "Content Quality",
+      "Reader Trust"
+    ],
+    "bestFor": "Editors building a source-aware mystery archive with many articles and recurring motifs",
+    "readTime": "11 min read",
+    "url": "/mystery-board/how-to-avoid-repetitive-openings-in-mystery-articles",
+    "publishedAt": "2026-07-06",
+    "updatedAt": "2026-07-06",
+    "relatedStoryIds": [
+      "the-brass-key-that-opens-only-empty-rooms",
+      "the-roadside-stone-that-turns-toward-home",
+      "the-old-well-that-shows-a-different-sky"
+    ],
+    "relatedGuideIds": [
+      "how-to-read-a-mystery-story-before-believing-it",
+      "how-to-compare-different-versions-of-the-same-legend",
+      "why-ordinary-places-make-urban-legends-stronger"
+    ],
+    "sections": [
+      {
+        "id": "why-article-voice-matters",
+        "title": "Why article voice matters",
+        "nav": "Why it matters",
+        "paragraphs": [
+          "A mystery archive grows by repetition, but it loses trust when every page repeats the same shape. Article Voice gives the editor a way to decide what belongs, what needs more evidence, and what should remain a short internal note.",
+          "The useful test is whether the page gives a reader a clear reason to continue. A good guide does not make the story louder. It makes the path through the archive easier to follow."
+        ]
+      },
+      {
+        "id": "what-to-check-before-publishing",
+        "title": "What to check before publishing",
+        "nav": "Pre-publish checks",
+        "paragraphs": [
+          "Before publishing, check whether the title promises more certainty than the article can support. Then check whether the opening names the subject quickly, gives a concrete image, and avoids generic mystery language.",
+          "The second check is structural. A page should have a clear role in the archive: category, motif, related records, source status, and a next place for the reader to go."
+        ]
+      },
+      {
+        "id": "how-to-use-it-in-kyunolab",
+        "title": "How to use it inside Kyunolab",
+        "nav": "Kyunolab use",
+        "paragraphs": [
+          "Inside Kyunolab, this rule should support the existing archive rather than create a separate content island. Use it to strengthen titles, metadata, source notes, internal links, and page purpose.",
+          "If a draft cannot connect to at least one category, one motif, and one reader question, it may need to be merged, rewritten, or held until the archive has enough related material."
+        ]
+      },
+      {
+        "id": "common-mistakes-to-avoid",
+        "title": "Common mistakes to avoid",
+        "nav": "Mistakes",
+        "paragraphs": [
+          "The most common mistake is treating SEO as a list of phrases rather than a reader path. Search terms matter, but they should help the article answer a real curiosity instead of flattening the archive voice.",
+          "Another mistake is creating pages for every small keyword. Thin tag pages, duplicated openings, and overly similar titles make the site feel larger but weaker. A better archive grows through durable records."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "Should every mystery idea become a separate article?",
+        "No. A separate article works best when the idea has a clear subject, source status, reader question, and enough related material to support internal links."
+      ],
+      [
+        "Can SEO and a quiet archive tone work together?",
+        "Yes. SEO should clarify the subject and search intent while the writing keeps the site calm, careful, and source-aware."
+      ],
+      [
+        "What is the safest way to grow the archive?",
+        "Add strong article records first, then let categories, tags, and internal links organize them without creating unnecessary indexable pages."
+      ]
+    ],
+    "sourceNote": "This guide is an editorial framework for Kyunolab Mystery Archive. It is not a claim about a real legend or event."
+  },
+  {
+    "id": "how-to-balance-search-keywords-with-a-calm-archive-voice",
+    "slug": "how-to-balance-search-keywords-with-a-calm-archive-voice",
+    "title": "How to Balance Search Keywords With a Calm Archive Voice",
+    "shortTitle": "Balance Search Keywords With a Calm Archive Voice",
+    "metaTitle": "How to Balance Search Keywords With a Calm Archive Voice",
+    "metaDescription": "A guide to using search phrases inside mystery articles without breaking the quiet, literary archive tone.",
+    "ogTitle": "How to Balance Search Keywords With a Calm Archive Voice",
+    "ogDescription": "A guide to using search phrases inside mystery articles without breaking the quiet, literary archive tone.",
+    "excerpt": "A guide to using search phrases inside mystery articles without breaking the quiet, literary archive tone.",
+    "deck": "A guide to using search phrases inside mystery articles without breaking the quiet, literary archive tone. The goal is practical structure: better reader trust, cleaner internal movement, and stronger long-term search value.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "SEO Writing",
+    "tags": [
+      "SEO Writing",
+      "Mystery SEO",
+      "Archive Structure",
+      "Content Quality",
+      "Reader Trust"
+    ],
+    "bestFor": "Editors building a source-aware mystery archive with many articles and recurring motifs",
+    "readTime": "9 min read",
+    "url": "/mystery-board/how-to-balance-search-keywords-with-a-calm-archive-voice",
+    "publishedAt": "2026-07-06",
+    "updatedAt": "2026-07-06",
+    "relatedStoryIds": [
+      "the-hill-fort-heard-beneath-the-grass",
+      "the-temple-courtyard-where-rain-falls-sideways",
+      "the-bridge-of-names-no-one-reads-aloud"
+    ],
+    "relatedGuideIds": [
+      "how-to-read-a-mystery-story-before-believing-it",
+      "how-to-compare-different-versions-of-the-same-legend",
+      "why-ordinary-places-make-urban-legends-stronger"
+    ],
+    "sections": [
+      {
+        "id": "why-seo-writing-matters",
+        "title": "Why seo writing matters",
+        "nav": "Why it matters",
+        "paragraphs": [
+          "A mystery archive grows by repetition, but it loses trust when every page repeats the same shape. SEO Writing gives the editor a way to decide what belongs, what needs more evidence, and what should remain a short internal note.",
+          "The useful test is whether the page gives a reader a clear reason to continue. A good guide does not make the story louder. It makes the path through the archive easier to follow."
+        ]
+      },
+      {
+        "id": "what-to-check-before-publishing",
+        "title": "What to check before publishing",
+        "nav": "Pre-publish checks",
+        "paragraphs": [
+          "Before publishing, check whether the title promises more certainty than the article can support. Then check whether the opening names the subject quickly, gives a concrete image, and avoids generic mystery language.",
+          "The second check is structural. A page should have a clear role in the archive: category, motif, related records, source status, and a next place for the reader to go."
+        ]
+      },
+      {
+        "id": "how-to-use-it-in-kyunolab",
+        "title": "How to use it inside Kyunolab",
+        "nav": "Kyunolab use",
+        "paragraphs": [
+          "Inside Kyunolab, this rule should support the existing archive rather than create a separate content island. Use it to strengthen titles, metadata, source notes, internal links, and page purpose.",
+          "If a draft cannot connect to at least one category, one motif, and one reader question, it may need to be merged, rewritten, or held until the archive has enough related material."
+        ]
+      },
+      {
+        "id": "common-mistakes-to-avoid",
+        "title": "Common mistakes to avoid",
+        "nav": "Mistakes",
+        "paragraphs": [
+          "The most common mistake is treating SEO as a list of phrases rather than a reader path. Search terms matter, but they should help the article answer a real curiosity instead of flattening the archive voice.",
+          "Another mistake is creating pages for every small keyword. Thin tag pages, duplicated openings, and overly similar titles make the site feel larger but weaker. A better archive grows through durable records."
+        ]
+      }
+    ],
+    "faq": [
+      [
+        "Should every mystery idea become a separate article?",
+        "No. A separate article works best when the idea has a clear subject, source status, reader question, and enough related material to support internal links."
+      ],
+      [
+        "Can SEO and a quiet archive tone work together?",
+        "Yes. SEO should clarify the subject and search intent while the writing keeps the site calm, careful, and source-aware."
+      ],
+      [
+        "What is the safest way to grow the archive?",
+        "Add strong article records first, then let categories, tags, and internal links organize them without creating unnecessary indexable pages."
+      ]
+    ],
+    "sourceNote": "This guide is an editorial framework for Kyunolab Mystery Archive. It is not a claim about a real legend or event."
+  },
+  {
     "id": "how-to-read-a-mystery-story-before-believing-it",
     "slug": "how-to-read-a-mystery-story-before-believing-it",
     "title": "How to Read a Mystery Story Before Believing It",
