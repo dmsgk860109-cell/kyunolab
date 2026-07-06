@@ -880,11 +880,132 @@ h1 {
   width: 36px;
   height: 36px;
 }
+.community-kit-trigger {
+  margin-left: 7px;
+  position: relative;
+}
+.community-kit-trigger::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 7px;
+  bottom: 7px;
+  width: 1px;
+  background: var(--line);
+}
 .share-status {
   min-height: 18px;
   color: var(--muted-strong);
   font-size: 12px;
   line-height: 1.2;
+}
+.community-kit-open {
+  overflow: hidden;
+}
+.community-kit-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  font-family: Arial, sans-serif;
+}
+.community-kit-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(9, 18, 35, .48);
+}
+.community-kit-panel {
+  position: relative;
+  z-index: 1;
+  width: min(720px, 100%);
+  max-height: min(86vh, 820px);
+  overflow: auto;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface);
+  box-shadow: 0 24px 70px rgba(9, 18, 35, .25);
+}
+.community-kit-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 14px;
+}
+.community-kit-header h2 {
+  margin: 0;
+  font-family: Georgia, serif;
+  font-size: 28px;
+  line-height: 1.1;
+}
+.community-kit-field {
+  display: grid;
+  gap: 6px;
+  margin: 12px 0;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 800;
+}
+.community-kit-field span {
+  color: var(--muted-strong);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  font-size: 11px;
+}
+.community-kit-field input,
+.community-kit-field select,
+.community-kit-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--panel);
+  color: var(--ink);
+  font: 14px/1.45 Arial, sans-serif;
+  padding: 9px 10px;
+}
+.community-kit-field textarea {
+  resize: vertical;
+}
+.community-kit-field input:focus,
+.community-kit-field select:focus,
+.community-kit-field textarea:focus {
+  outline: 3px solid rgba(29, 78, 216, .22);
+  outline-offset: 1px;
+}
+.community-kit-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.community-kit-status {
+  min-height: 18px;
+  color: var(--muted-strong);
+  font-size: 12px;
+  line-height: 1.2;
+}
+@media (max-width: 560px) {
+  .community-kit-trigger {
+    margin-left: 0;
+  }
+  .community-kit-trigger::before {
+    display: none;
+  }
+  .community-kit-panel {
+    padding: 16px;
+  }
+  .community-kit-header h2 {
+    font-size: 24px;
+  }
 }
 .dialogue {
   background: var(--panel);
