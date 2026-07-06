@@ -4,7 +4,7 @@ const { buildContentDNA } = require('./article-dna-utils');
 
 const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://kyunolab.com';
-const styleVersion = '20260706-canonical-share';
+const styleVersion = '20260706-kit-ui';
 const storiesPath = path.join(root, 'data', 'stories.json');
 const stories = readJson(storiesPath);
 const categories = readJson(path.join(root, 'data', 'categories.json'));
@@ -226,7 +226,7 @@ function renderStoryPage(story, previousStory, nextStory) {
     ${renderRightRail(story, relatedStories, nextStory)}
   </main>
   ${renderFooter()}
-  <script src="/engagement.js?v=20260706-canonical-share" defer></script>
+  <script src="/engagement.js?v=20260706-kit-ui" defer></script>
 </body>
 </html>
 `;

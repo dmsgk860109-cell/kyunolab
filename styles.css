@@ -910,6 +910,7 @@ h1 {
   place-items: center;
   padding: 18px;
   font-family: Arial, sans-serif;
+  overflow: hidden;
 }
 .community-kit-backdrop {
   position: absolute;
@@ -919,10 +920,12 @@ h1 {
 .community-kit-panel {
   position: relative;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
   width: min(720px, 100%);
-  max-height: min(86vh, 820px);
-  overflow: auto;
-  padding: 18px;
+  max-height: 85vh;
+  overflow: hidden;
+  padding: 0;
   border: 1px solid var(--line);
   border-radius: 6px;
   background: var(--surface);
@@ -933,9 +936,10 @@ h1 {
   align-items: flex-start;
   justify-content: space-between;
   gap: 14px;
-  padding-bottom: 12px;
+  flex: 0 0 auto;
+  padding: 18px 18px 12px;
   border-bottom: 1px solid var(--line);
-  margin-bottom: 14px;
+  margin-bottom: 0;
 }
 .community-kit-header h2 {
   margin: 0;
@@ -946,10 +950,27 @@ h1 {
 .community-kit-field {
   display: grid;
   gap: 6px;
-  margin: 12px 0;
+  margin: 10px 0;
   color: var(--ink);
   font-size: 13px;
   font-weight: 800;
+}
+.community-kit-content {
+  flex: 1 1 auto;
+  overflow: auto;
+  overscroll-behavior: contain;
+  padding: 12px 18px 0;
+}
+.community-kit-top-fields {
+  display: grid;
+  grid-template-columns: minmax(150px, .75fr) minmax(220px, 1.4fr);
+  gap: 0 12px;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+}
+.community-kit-url-field {
+  grid-column: 1 / -1;
 }
 .community-kit-field span {
   color: var(--muted-strong);
@@ -983,9 +1004,11 @@ h1 {
   flex-wrap: wrap;
   align-items: center;
   gap: 8px;
-  margin-top: 14px;
-  padding-top: 14px;
+  flex: 0 0 auto;
+  margin-top: 0;
+  padding: 12px 18px 14px;
   border-top: 1px solid var(--line);
+  background: var(--surface);
 }
 .community-kit-status {
   min-height: 18px;
@@ -1001,7 +1024,25 @@ h1 {
     display: none;
   }
   .community-kit-panel {
-    padding: 16px;
+    max-height: 85vh;
+    padding: 0;
+  }
+  .community-kit-header {
+    padding: 16px 16px 10px;
+  }
+  .community-kit-content {
+    padding: 10px 16px 0;
+  }
+  .community-kit-top-fields {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .community-kit-actions {
+    padding: 12px 16px;
+  }
+  .community-kit-actions .engagement-button {
+    flex: 1 1 auto;
+    justify-content: center;
   }
   .community-kit-header h2 {
     font-size: 24px;

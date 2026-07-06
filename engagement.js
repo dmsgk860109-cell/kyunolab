@@ -264,7 +264,7 @@
     dialog.setAttribute('role', 'dialog');
     dialog.setAttribute('aria-modal', 'true');
     dialog.setAttribute('aria-labelledby', 'community-kit-title');
-    const tags = articleTags.length ? articleTags.slice(0, 6).join(', ') : 'Urban Legends, Folklore, Mystery';
+    const sourceTags = articleTags.length ? articleTags.slice(0, 6).join(', ') : 'folklore, urban legend, mystery, short fiction';
     dialog.innerHTML = `
       <div class="community-kit-backdrop" aria-hidden="true"></div>
       <div class="community-kit-panel">
@@ -277,40 +277,44 @@
             <span class="engagement-icon" aria-hidden="true">${icon('close')}</span>
           </button>
         </div>
-        <label class="community-kit-field">
-          <span>Platform</span>
-          <select data-kit-field="platform">
-            <option value="reddit">Reddit</option>
-            <option value="threads">Threads</option>
-            <option value="facebook">Facebook</option>
-            <option value="x">X</option>
-            <option value="generic">Generic</option>
-          </select>
-        </label>
-        <label class="community-kit-field">
-          <span>Share Title</span>
-          <input data-kit-field="title" type="text" value="${escapeAttr(articleTitle)}">
-        </label>
-        <label class="community-kit-field">
-          <span>Community Body</span>
-          <textarea data-kit-field="body" rows="5"></textarea>
-        </label>
-        <label class="community-kit-field">
-          <span>Discussion Question</span>
-          <textarea data-kit-field="question" rows="3"></textarea>
-        </label>
-        <label class="community-kit-field">
-          <span>Recommended Tags</span>
-          <textarea data-kit-field="tags" rows="2">${escapeHtml(tags)}</textarea>
-        </label>
-        <label class="community-kit-field">
-          <span>URL</span>
-          <input data-kit-field="url" type="url" value="${escapeAttr(articleUrl)}">
-        </label>
-        <input data-kit-field="description" type="hidden" value="${escapeAttr(articleDescription || '')}">
+        <div class="community-kit-content">
+          <div class="community-kit-top-fields">
+            <label class="community-kit-field">
+              <span>Platform</span>
+              <select data-kit-field="platform">
+                <option value="reddit">Reddit</option>
+                <option value="threads">Threads</option>
+                <option value="facebook">Facebook</option>
+                <option value="x">X</option>
+                <option value="generic">Generic</option>
+              </select>
+            </label>
+            <label class="community-kit-field">
+              <span>Share Title</span>
+              <input data-kit-field="title" type="text" value="${escapeAttr(articleTitle)}">
+            </label>
+            <label class="community-kit-field community-kit-url-field">
+              <span>URL</span>
+              <input data-kit-field="url" type="url" value="${escapeAttr(articleUrl)}">
+            </label>
+          </div>
+          <label class="community-kit-field">
+            <span>Community Body</span>
+            <textarea data-kit-field="body" rows="3"></textarea>
+          </label>
+          <label class="community-kit-field">
+            <span>Discussion Question</span>
+            <textarea data-kit-field="question" rows="2"></textarea>
+          </label>
+          <label class="community-kit-field">
+            <span>Recommended Tags</span>
+            <textarea data-kit-field="tags" rows="2"></textarea>
+          </label>
+          <input data-kit-field="description" type="hidden" value="${escapeAttr(articleDescription || '')}">
+          <input data-kit-field="source-tags" type="hidden" value="${escapeAttr(sourceTags)}">
+        </div>
         <div class="community-kit-actions">
           <button class="engagement-button" type="button" data-copy-kit="full">Copy Full Post</button>
-          <button class="engagement-button" type="button" data-copy-kit="title">Copy Title</button>
           <button class="engagement-button" type="button" data-copy-kit="body">Copy Body</button>
           <button class="engagement-button" type="button" data-copy-kit="tags">Copy Tags</button>
           <button class="engagement-button" type="button" data-copy-kit="url">Copy URL</button>
@@ -326,50 +330,56 @@
     const platform = fieldValue(dialog, 'platform');
     const title = field(dialog, 'title').value;
     const url = field(dialog, 'url').value;
-    const tags = field(dialog, 'tags').value;
     const description = fieldValue(dialog, 'description');
-    const templates = kitTemplates(title, url, tags, description);
+    const sourceTags = fieldValue(dialog, 'source-tags');
+    const templates = kitTemplates(title, url, sourceTags, description);
     field(dialog, 'body').value = templates[platform].body;
     field(dialog, 'question').value = templates[platform].question;
+    field(dialog, 'tags').value = templates[platform].tags;
   }
 
   function kitTemplates(title, url, tags, description) {
-    const summary = description ? `\n\n${description}` : '';
+    const summary = firstSentence(description) || 'A quiet mystery record where folklore, memory, and source limits matter more than easy certainty.';
+    const naturalTags = formatNaturalTags(tags);
+    const hashtagTags = formatHashtags(tags);
     return {
       reddit: {
-        body: `I found this Kyunolab Mystery Archive piece and liked how it treats the subject as folklore rather than confirmed fact.\n\n${title}${summary}`,
-        question: 'What detail in this legend makes it feel believable enough to keep retelling?'
+        body: `I found this Kyunolab Mystery Archive piece interesting because it treats the subject as folklore instead of pretending every detail is verified.\n\n${summary}`,
+        question: 'What detail in this story makes it feel believable enough to keep being retold?',
+        tags: naturalTags
       },
       threads: {
-        body: `${title}${summary}\n\nA quiet folklore/mystery read from Kyunolab Mystery Archive. The interesting part is how ordinary the setting feels before the story turns strange.`,
-        question: 'Would this kind of story feel stronger as a legend, a memory, or a warning?'
+        body: `A quiet folklore/mystery read from Kyunolab Mystery Archive.\n\n${summary}`,
+        question: 'Does this work better as a legend, a memory, or a warning?',
+        tags: hashtagTags
       },
       facebook: {
-        body: `${title}${summary}\n\nThis one is written as a source-aware mystery/folklore record, so it keeps the atmosphere without claiming the story is verified.`,
-        question: 'Have you heard a similar version of this kind of story?'
+        body: `This one keeps the atmosphere without treating an uncertain legend as confirmed fact.\n\n${summary}`,
+        question: 'Have you heard a similar version of this kind of story?',
+        tags: naturalTags
       },
       x: {
-        body: `${title}${summary}\n\nA source-aware mystery archive read.`,
-        question: 'What makes this motif stick?'
+        body: `${summary}`,
+        question: 'What makes this motif stick?',
+        tags: hashtagTags
       },
       generic: {
-        body: `${title}${summary}\n\nA quiet mystery and folklore article from Kyunolab Mystery Archive, with the source limits kept visible.`,
-        question: 'Which part of this story feels most memorable, and why?'
+        body: `A quiet mystery and folklore article from Kyunolab Mystery Archive.\n\n${summary}`,
+        question: 'Which part of this story feels most memorable, and why?',
+        tags: naturalTags
       }
     };
   }
 
   function getCopyValue(dialog, target) {
-    const title = fieldValue(dialog, 'title');
     const body = fieldValue(dialog, 'body');
     const question = fieldValue(dialog, 'question');
     const tags = fieldValue(dialog, 'tags');
     const url = fieldValue(dialog, 'url');
-    if (target === 'title') return title;
     if (target === 'body') return body;
     if (target === 'tags') return tags;
     if (target === 'url') return url;
-    return `${title}\n\n${body}\n\nDiscussion question:\n${question}\n\nRecommended tags:\n${tags}\n\n${url}`;
+    return `${body}\n\n${question}\n\n${url}\n\n${tags}`;
   }
 
   function platformUrl(platform) {
@@ -389,6 +399,33 @@
 
   function fieldValue(dialog, name) {
     return field(dialog, name)?.value.trim() || '';
+  }
+
+  function firstSentence(value) {
+    const cleaned = String(value || '').replace(/\s+/g, ' ').trim();
+    if (!cleaned) return '';
+    const match = cleaned.match(/^(.+?[.!?])(?:\s|$)/);
+    return match ? match[1].trim() : cleaned;
+  }
+
+  function formatNaturalTags(value) {
+    return tagParts(value).join(', ');
+  }
+
+  function formatHashtags(value) {
+    return tagParts(value)
+      .map((tag) => `#${tag.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '')}`)
+      .filter((tag) => tag.length > 1)
+      .join(' ');
+  }
+
+  function tagParts(value) {
+    const raw = String(value || 'folklore, urban legend, mystery, short fiction')
+      .split(/[,;]+/)
+      .map((tag) => tag.trim())
+      .filter(Boolean);
+    const tags = raw.length ? raw : ['folklore', 'urban legend', 'mystery', 'short fiction'];
+    return Array.from(new Set(tags)).slice(0, 6);
   }
 
   function pulse(element) {
