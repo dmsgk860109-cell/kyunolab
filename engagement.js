@@ -3,8 +3,9 @@
   const article = document.querySelector('.article-layout > article');
   if (!articleType || !article) return;
 
-  const canonical = document.querySelector('link[rel="canonical"]')?.href || window.location.href;
+  const canonical = getCanonicalShareUrl();
   const title = document.querySelector('.article-title')?.textContent.trim() || document.title.replace(/\s*\|.*$/, '');
+  const description = getShareDescription();
   const slug = new URL(canonical, window.location.origin).pathname.split('/').filter(Boolean).pop() || 'article';
   const isStoryPage = new URL(canonical, window.location.origin).pathname.startsWith('/stories/');
   const related = article.querySelector('.related-articles');
@@ -46,7 +47,7 @@
         <a class="engagement-button icon-button" href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(canonical)}" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook">
           <span class="engagement-icon brand-icon" aria-hidden="true">${icon('facebook')}</span><span class="sr-only">Facebook</span>
         </a>
-        <a class="engagement-button icon-button" href="https://twitter.com/intent/tweet?url=${encodeURIComponent(canonical)}&text=${encodeURIComponent(title)}" target="_blank" rel="noopener noreferrer" aria-label="Share on X">
+        <a class="engagement-button icon-button" href="https://twitter.com/intent/tweet?url=${encodeURIComponent(canonical)}&text=${encodeURIComponent(composeShareText(title, description))}" target="_blank" rel="noopener noreferrer" aria-label="Share on X">
           <span class="engagement-icon brand-icon" aria-hidden="true">${icon('x')}</span><span class="sr-only">X</span>
         </a>
         ${isStoryPage ? `
@@ -66,8 +67,36 @@
   }
 
   setupInteresting(section, slug);
-  setupShare(section, title, canonical);
-  if (isStoryPage) setupCommunityKit(section, title, canonical, tagNames);
+  setupShare(section, title, canonical, description);
+  if (isStoryPage) setupCommunityKit(section, title, canonical, tagNames, description);
+
+  function getCanonicalShareUrl() {
+    const canonicalHref = document.querySelector('link[rel="canonical"]')?.href;
+    const source = canonicalHref || window.location.href;
+    try {
+      const url = new URL(source, window.location.origin);
+      url.search = '';
+      url.hash = '';
+      return url.href;
+    } catch (_) {
+      const fallback = new URL(window.location.href);
+      fallback.search = '';
+      fallback.hash = '';
+      return fallback.href;
+    }
+  }
+
+  function getShareDescription() {
+    return document.querySelector('meta[name="description"]')?.content.trim()
+      || document.querySelector('meta[property="og:description"]')?.content.trim()
+      || document.querySelector('.deck')?.textContent.trim()
+      || '';
+  }
+
+  function composeShareText(shareTitle, shareDescription) {
+    if (!shareDescription) return shareTitle;
+    return `${shareTitle} - ${shareDescription}`;
+  }
 
   function getArticleTags() {
     const labels = Array.from(article.querySelectorAll('.article-meta-grid dt'));
@@ -130,7 +159,7 @@
     }
   }
 
-  function setupShare(root, shareTitle, shareUrl) {
+  function setupShare(root, shareTitle, shareUrl, shareDescription) {
     const copyButton = root.querySelector('.copy-link');
     const nativeButton = root.querySelector('.share-native');
     const status = root.querySelector('.share-status');
@@ -140,7 +169,7 @@
       nativeButton.addEventListener('click', async () => {
         pulse(nativeButton);
         try {
-          await navigator.share({ title: shareTitle, url: shareUrl });
+          await navigator.share({ title: shareTitle, text: shareDescription || shareTitle, url: shareUrl });
         } catch (_) {}
       });
     }
@@ -163,7 +192,7 @@
     }
   }
 
-  function setupCommunityKit(root, articleTitle, articleUrl, articleTags) {
+  function setupCommunityKit(root, articleTitle, articleUrl, articleTags, articleDescription) {
     const trigger = root.querySelector('.community-kit-trigger');
     if (!trigger) return;
 
@@ -177,7 +206,7 @@
 
     function openModal() {
       previouslyFocused = document.activeElement;
-      modal = buildModal(articleTitle, articleUrl, articleTags);
+      modal = buildModal(articleTitle, articleUrl, articleTags, articleDescription);
       document.body.appendChild(modal);
       document.body.classList.add('community-kit-open');
       hydratePlatformFields(modal);
@@ -229,7 +258,7 @@
     }
   }
 
-  function buildModal(articleTitle, articleUrl, articleTags) {
+  function buildModal(articleTitle, articleUrl, articleTags, articleDescription) {
     const dialog = document.createElement('div');
     dialog.className = 'community-kit-modal';
     dialog.setAttribute('role', 'dialog');
@@ -278,6 +307,7 @@
           <span>URL</span>
           <input data-kit-field="url" type="url" value="${escapeAttr(articleUrl)}">
         </label>
+        <input data-kit-field="description" type="hidden" value="${escapeAttr(articleDescription || '')}">
         <div class="community-kit-actions">
           <button class="engagement-button" type="button" data-copy-kit="full">Copy Full Post</button>
           <button class="engagement-button" type="button" data-copy-kit="title">Copy Title</button>
@@ -297,31 +327,33 @@
     const title = field(dialog, 'title').value;
     const url = field(dialog, 'url').value;
     const tags = field(dialog, 'tags').value;
-    const templates = kitTemplates(title, url, tags);
+    const description = fieldValue(dialog, 'description');
+    const templates = kitTemplates(title, url, tags, description);
     field(dialog, 'body').value = templates[platform].body;
     field(dialog, 'question').value = templates[platform].question;
   }
 
-  function kitTemplates(title, url, tags) {
+  function kitTemplates(title, url, tags, description) {
+    const summary = description ? `\n\n${description}` : '';
     return {
       reddit: {
-        body: `I found this Kyunolab Mystery Archive piece and liked how it treats the subject as folklore rather than confirmed fact.\n\n${title}`,
+        body: `I found this Kyunolab Mystery Archive piece and liked how it treats the subject as folklore rather than confirmed fact.\n\n${title}${summary}`,
         question: 'What detail in this legend makes it feel believable enough to keep retelling?'
       },
       threads: {
-        body: `${title}\n\nA quiet folklore/mystery read from Kyunolab Mystery Archive. The interesting part is how ordinary the setting feels before the story turns strange.`,
+        body: `${title}${summary}\n\nA quiet folklore/mystery read from Kyunolab Mystery Archive. The interesting part is how ordinary the setting feels before the story turns strange.`,
         question: 'Would this kind of story feel stronger as a legend, a memory, or a warning?'
       },
       facebook: {
-        body: `${title}\n\nThis one is written as a source-aware mystery/folklore record, so it keeps the atmosphere without claiming the story is verified.`,
+        body: `${title}${summary}\n\nThis one is written as a source-aware mystery/folklore record, so it keeps the atmosphere without claiming the story is verified.`,
         question: 'Have you heard a similar version of this kind of story?'
       },
       x: {
-        body: `${title}\n\nA source-aware mystery archive read.`,
+        body: `${title}${summary}\n\nA source-aware mystery archive read.`,
         question: 'What makes this motif stick?'
       },
       generic: {
-        body: `${title}\n\nA quiet mystery and folklore article from Kyunolab Mystery Archive, with the source limits kept visible.`,
+        body: `${title}${summary}\n\nA quiet mystery and folklore article from Kyunolab Mystery Archive, with the source limits kept visible.`,
         question: 'Which part of this story feels most memorable, and why?'
       }
     };

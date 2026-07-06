@@ -3,7 +3,7 @@ const path = require('path');
 
 const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://kyunolab.com';
-const styleVersion = '20260706-community-kit';
+const styleVersion = '20260706-canonical-share';
 const guides = readJson(path.join(root, 'data', 'guides.json'));
 const stories = readJson(path.join(root, 'data', 'stories.json'));
 const storyById = new Map(stories.map((story) => [story.id || story.slug, story]));
@@ -200,7 +200,7 @@ function renderPage({ canonicalPath, title, description, ogTitle, ogDescription,
   ${renderHeader()}
 ${content}
   ${renderFooter()}
-  <script src="/engagement.js?v=20260706-community-kit" defer></script>
+  <script src="/engagement.js?v=20260706-canonical-share" defer></script>
 </body>
 </html>
 `;
