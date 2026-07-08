@@ -1,5 +1,1034 @@
 [
   {
+    "id": "how-to-review-a-new-kyunolab-article-before-publishing",
+    "slug": "how-to-review-a-new-kyunolab-article-before-publishing",
+    "title": "How to Review a New Kyunolab Article Before Publishing",
+    "shortTitle": "Review a New Kyunolab Article Before Publishing",
+    "metaTitle": "How to Review a New Kyunolab Article Before Publishing | Kyunolab Mystery Archive",
+    "metaDescription": "A practical checklist for reviewing title, source status, internal links, tags, canonical URL, and reader value before publishing.",
+    "ogTitle": "How to Review a New Kyunolab Article Before Publishing",
+    "ogDescription": "A practical checklist for reviewing title, source status, internal links, tags, canonical URL, and reader value before publishing.",
+    "excerpt": "A practical checklist for reviewing title, source status, internal links, tags, canonical URL, and reader value before publishing.",
+    "deck": "How to Review a New Kyunolab Article Before Publishing is a practical Mystery Board guide for keeping Kyunolab Mystery Archive useful, source-aware, and easy to navigate as the archive grows.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Publishing QA",
+    "tags": [
+      "Publishing QA",
+      "Archive Method",
+      "Source Status",
+      "Internal Links"
+    ],
+    "bestFor": "Readers and operators who want a clearer way to move through folklore, mystery, and source-aware archive records",
+    "readTime": "8 min read",
+    "url": "/mystery-board/how-to-review-a-new-kyunolab-article-before-publishing",
+    "publishedAt": "2026-07-08",
+    "updatedAt": "2026-07-08",
+    "relatedStoryIds": [
+      "the-creek-that-runs-warm-during-snow-a-strange-nature-record",
+      "the-field-where-dandelions-bloom-in-a-circle-a-nature-folklore-reading",
+      "the-lake-that-freezes-around-one-footprint-a-winter-mystery-record"
+    ],
+    "relatedGuideIds": [
+      "how-to-refresh-category-pages-as-the-archive-grows",
+      "how-to-keep-myth-articles-search-friendly-without-flattening-symbolism",
+      "how-to-decide-when-a-mystery-topic-belongs-on-the-board"
+    ],
+    "sections": [
+      {
+        "id": "why-this-matters",
+        "title": "Why this matters",
+        "nav": "Why this matters",
+        "paragraphs": [
+          "A growing mystery archive needs more than volume. Review a New Kyunolab Article Before Publishing helps each article earn its place by giving readers a reason to continue from one record to the next.",
+          "The goal is a quieter kind of usefulness: clear labels, stable URLs, source limits, and article paths that feel intentional rather than forced."
+        ]
+      },
+      {
+        "id": "what-to-check-first",
+        "title": "What to check first",
+        "nav": "What to check first",
+        "paragraphs": [
+          "Start with the reader question behind the page. If the subject is a legend, ask whether the strongest angle is origin, meaning, versions, place, or evidence limit.",
+          "Then check whether the title, deck, tags, and related links all point toward that same reader need without exaggerating the story as verified fact."
+        ]
+      },
+      {
+        "id": "how-to-apply-it",
+        "title": "How to apply it inside Kyunolab",
+        "nav": "How to apply it inside Kyunolab",
+        "paragraphs": [
+          "Use categories for the broad shelf and tags for recurring motifs. Keep related links close to genuine reader curiosity: same setting, same evidence problem, same folklore pattern, or same source status.",
+          "If a page starts serving too many jobs, split the idea into a guide and a story record instead of making one article carry every search intent."
+        ]
+      },
+      {
+        "id": "what-to-avoid",
+        "title": "What to avoid",
+        "nav": "What to avoid",
+        "paragraphs": [
+          "Avoid keyword lists, invented certainty, thin pages, and repeated openings that make different articles feel interchangeable.",
+          "A strong page can be search-friendly and still sound like Kyunolab: calm, literary, specific, and honest about what the record can and cannot prove."
+        ]
+      },
+      {
+        "id": "where-to-go-next",
+        "title": "Where to go next",
+        "nav": "Where to go next",
+        "paragraphs": [
+          "Compare this guide with [[Why Empty Roads Become Vanishing Passenger Legends: Origin and Meaning|/stories/why-empty-roads-become-vanishing-passenger-legends-origin-and-meaning]] and the [[Story & Source Notice|/fiction-disclaimer.html]].",
+          "The most useful next step is usually one article, one source note, and one related path that tests whether the idea holds together."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is this guide a rule for every page?",
+        "answer": "No. It is a practical editorial guide. Simple topics can stay simple, and deeper topics can expand when the subject needs more room."
+      },
+      {
+        "question": "Should SEO change the archive voice?",
+        "answer": "No. Search structure should clarify the topic, not flatten the tone or turn folklore into a factual claim."
+      },
+      {
+        "question": "Do guide pages replace article source notes?",
+        "answer": "No. Guides explain the method. Each article still needs its own source status and limits."
+      },
+      {
+        "question": "What is the safest publishing habit?",
+        "answer": "Keep the slug stable, name the source limits, avoid thin indexable pages, and make sure each related link helps a reader continue naturally."
+      }
+    ],
+    "sourceNote": "This Mystery Board page is an editorial guide for reading and maintaining Kyunolab Mystery Archive. It does not verify any individual legend, mystery, or folklore claim."
+  },
+  {
+    "id": "how-to-refresh-category-pages-as-the-archive-grows",
+    "slug": "how-to-refresh-category-pages-as-the-archive-grows",
+    "title": "How to Refresh Category Pages as the Archive Grows",
+    "shortTitle": "Refresh Category Pages as the Archive Grows",
+    "metaTitle": "How to Refresh Category Pages as the Archive Grows | Kyunolab Mystery Archive",
+    "metaDescription": "A guide to keeping category pages useful as an archive gains more stories, tags, and reading paths.",
+    "ogTitle": "How to Refresh Category Pages as the Archive Grows",
+    "ogDescription": "A guide to keeping category pages useful as an archive gains more stories, tags, and reading paths.",
+    "excerpt": "A guide to keeping category pages useful as an archive gains more stories, tags, and reading paths.",
+    "deck": "How to Refresh Category Pages as the Archive Grows is a practical Mystery Board guide for keeping Kyunolab Mystery Archive useful, source-aware, and easy to navigate as the archive grows.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Category Refresh",
+    "tags": [
+      "Category Refresh",
+      "Archive Method",
+      "Source Status",
+      "Internal Links",
+      "Publishing QA"
+    ],
+    "bestFor": "Readers and operators who want a clearer way to move through folklore, mystery, and source-aware archive records",
+    "readTime": "10 min read",
+    "url": "/mystery-board/how-to-refresh-category-pages-as-the-archive-grows",
+    "publishedAt": "2026-07-08",
+    "updatedAt": "2026-07-08",
+    "relatedStoryIds": [
+      "the-pond-reflecting-clouds-from-yesterday-a-strange-nature-legend",
+      "the-fog-bank-that-keeps-the-shape-of-a-door-a-landscape-mystery-explained",
+      "the-orchard-where-fruit-falls-upward-in-stories-a-strange-nature-folklore-note"
+    ],
+    "relatedGuideIds": [
+      "how-to-keep-myth-articles-search-friendly-without-flattening-symbolism",
+      "how-to-decide-when-a-mystery-topic-belongs-on-the-board",
+      "how-to-build-related-paths-for-strange-place-articles"
+    ],
+    "sections": [
+      {
+        "id": "why-this-matters",
+        "title": "Why this matters",
+        "nav": "Why this matters",
+        "paragraphs": [
+          "A growing mystery archive needs more than volume. Refresh Category Pages as the Archive Grows helps each article earn its place by giving readers a reason to continue from one record to the next.",
+          "The goal is a quieter kind of usefulness: clear labels, stable URLs, source limits, and article paths that feel intentional rather than forced."
+        ]
+      },
+      {
+        "id": "what-to-check-first",
+        "title": "What to check first",
+        "nav": "What to check first",
+        "paragraphs": [
+          "Start with the reader question behind the page. If the subject is a legend, ask whether the strongest angle is origin, meaning, versions, place, or evidence limit.",
+          "Then check whether the title, deck, tags, and related links all point toward that same reader need without exaggerating the story as verified fact."
+        ]
+      },
+      {
+        "id": "how-to-apply-it",
+        "title": "How to apply it inside Kyunolab",
+        "nav": "How to apply it inside Kyunolab",
+        "paragraphs": [
+          "Use categories for the broad shelf and tags for recurring motifs. Keep related links close to genuine reader curiosity: same setting, same evidence problem, same folklore pattern, or same source status.",
+          "If a page starts serving too many jobs, split the idea into a guide and a story record instead of making one article carry every search intent."
+        ]
+      },
+      {
+        "id": "what-to-avoid",
+        "title": "What to avoid",
+        "nav": "What to avoid",
+        "paragraphs": [
+          "Avoid keyword lists, invented certainty, thin pages, and repeated openings that make different articles feel interchangeable.",
+          "A strong page can be search-friendly and still sound like Kyunolab: calm, literary, specific, and honest about what the record can and cannot prove."
+        ]
+      },
+      {
+        "id": "where-to-go-next",
+        "title": "Where to go next",
+        "nav": "Where to go next",
+        "paragraphs": [
+          "Compare this guide with [[How Wrong Receipts Turn Into Modern Folklore: Origin of a Paper-Clue Legend|/stories/how-wrong-receipts-turn-into-modern-folklore-origin-of-a-paper-clue-legend]] and the [[Story & Source Notice|/fiction-disclaimer.html]].",
+          "The most useful next step is usually one article, one source note, and one related path that tests whether the idea holds together."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is this guide a rule for every page?",
+        "answer": "No. It is a practical editorial guide. Simple topics can stay simple, and deeper topics can expand when the subject needs more room."
+      },
+      {
+        "question": "Should SEO change the archive voice?",
+        "answer": "No. Search structure should clarify the topic, not flatten the tone or turn folklore into a factual claim."
+      },
+      {
+        "question": "Do guide pages replace article source notes?",
+        "answer": "No. Guides explain the method. Each article still needs its own source status and limits."
+      },
+      {
+        "question": "What is the safest publishing habit?",
+        "answer": "Keep the slug stable, name the source limits, avoid thin indexable pages, and make sure each related link helps a reader continue naturally."
+      }
+    ],
+    "sourceNote": "This Mystery Board page is an editorial guide for reading and maintaining Kyunolab Mystery Archive. It does not verify any individual legend, mystery, or folklore claim."
+  },
+  {
+    "id": "how-to-keep-myth-articles-search-friendly-without-flattening-symbolism",
+    "slug": "how-to-keep-myth-articles-search-friendly-without-flattening-symbolism",
+    "title": "How to Keep Myth Articles Search-Friendly Without Flattening Symbolism",
+    "shortTitle": "Keep Myth Articles Search-Friendly Without Flattening Symbolism",
+    "metaTitle": "How to Keep Myth Articles Search-Friendly Without Flattening Symbolism | Kyunolab Mystery Archive",
+    "metaDescription": "A guide to writing myth articles that answer searches while preserving symbolic meaning and source-aware tone.",
+    "ogTitle": "How to Keep Myth Articles Search-Friendly Without Flattening Symbolism",
+    "ogDescription": "A guide to writing myth articles that answer searches while preserving symbolic meaning and source-aware tone.",
+    "excerpt": "A guide to writing myth articles that answer searches while preserving symbolic meaning and source-aware tone.",
+    "deck": "How to Keep Myth Articles Search-Friendly Without Flattening Symbolism is a practical Mystery Board guide for keeping Kyunolab Mystery Archive useful, source-aware, and easy to navigate as the archive grows.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Myth SEO Balance",
+    "tags": [
+      "Myth SEO Balance",
+      "Archive Method",
+      "Source Status",
+      "Internal Links",
+      "Publishing QA"
+    ],
+    "bestFor": "Readers and operators who want a clearer way to move through folklore, mystery, and source-aware archive records",
+    "readTime": "9 min read",
+    "url": "/mystery-board/how-to-keep-myth-articles-search-friendly-without-flattening-symbolism",
+    "publishedAt": "2026-07-08",
+    "updatedAt": "2026-07-08",
+    "relatedStoryIds": [
+      "the-orchard-island-seen-from-the-wrong-shore-a-legendary-place-record",
+      "the-hill-of-bells-no-map-names-twice-a-legendary-place-explained",
+      "the-stone-that-gathers-frost-in-summer-a-natural-folklore-mystery"
+    ],
+    "relatedGuideIds": [
+      "how-to-decide-when-a-mystery-topic-belongs-on-the-board",
+      "how-to-build-related-paths-for-strange-place-articles",
+      "how-to-group-similar-legends-without-changing-old-urls"
+    ],
+    "sections": [
+      {
+        "id": "why-this-matters",
+        "title": "Why this matters",
+        "nav": "Why this matters",
+        "paragraphs": [
+          "A growing mystery archive needs more than volume. Keep Myth Articles Search-Friendly Without Flattening Symbolism helps each article earn its place by giving readers a reason to continue from one record to the next.",
+          "The goal is a quieter kind of usefulness: clear labels, stable URLs, source limits, and article paths that feel intentional rather than forced."
+        ]
+      },
+      {
+        "id": "what-to-check-first",
+        "title": "What to check first",
+        "nav": "What to check first",
+        "paragraphs": [
+          "Start with the reader question behind the page. If the subject is a legend, ask whether the strongest angle is origin, meaning, versions, place, or evidence limit.",
+          "Then check whether the title, deck, tags, and related links all point toward that same reader need without exaggerating the story as verified fact."
+        ]
+      },
+      {
+        "id": "how-to-apply-it",
+        "title": "How to apply it inside Kyunolab",
+        "nav": "How to apply it inside Kyunolab",
+        "paragraphs": [
+          "Use categories for the broad shelf and tags for recurring motifs. Keep related links close to genuine reader curiosity: same setting, same evidence problem, same folklore pattern, or same source status.",
+          "If a page starts serving too many jobs, split the idea into a guide and a story record instead of making one article carry every search intent."
+        ]
+      },
+      {
+        "id": "what-to-avoid",
+        "title": "What to avoid",
+        "nav": "What to avoid",
+        "paragraphs": [
+          "Avoid keyword lists, invented certainty, thin pages, and repeated openings that make different articles feel interchangeable.",
+          "A strong page can be search-friendly and still sound like Kyunolab: calm, literary, specific, and honest about what the record can and cannot prove."
+        ]
+      },
+      {
+        "id": "where-to-go-next",
+        "title": "Where to go next",
+        "nav": "Where to go next",
+        "paragraphs": [
+          "Compare this guide with [[Why Locked Rooms Attract Return Stories: A Folklore Origin Note|/stories/why-locked-rooms-attract-return-stories-a-folklore-origin-note]] and the [[Story & Source Notice|/fiction-disclaimer.html]].",
+          "The most useful next step is usually one article, one source note, and one related path that tests whether the idea holds together."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is this guide a rule for every page?",
+        "answer": "No. It is a practical editorial guide. Simple topics can stay simple, and deeper topics can expand when the subject needs more room."
+      },
+      {
+        "question": "Should SEO change the archive voice?",
+        "answer": "No. Search structure should clarify the topic, not flatten the tone or turn folklore into a factual claim."
+      },
+      {
+        "question": "Do guide pages replace article source notes?",
+        "answer": "No. Guides explain the method. Each article still needs its own source status and limits."
+      },
+      {
+        "question": "What is the safest publishing habit?",
+        "answer": "Keep the slug stable, name the source limits, avoid thin indexable pages, and make sure each related link helps a reader continue naturally."
+      }
+    ],
+    "sourceNote": "This Mystery Board page is an editorial guide for reading and maintaining Kyunolab Mystery Archive. It does not verify any individual legend, mystery, or folklore claim."
+  },
+  {
+    "id": "how-to-decide-when-a-mystery-topic-belongs-on-the-board",
+    "slug": "how-to-decide-when-a-mystery-topic-belongs-on-the-board",
+    "title": "How to Decide When a Mystery Topic Belongs on the Board",
+    "shortTitle": "Decide When a Mystery Topic Belongs on the Board",
+    "metaTitle": "How to Decide When a Mystery Topic Belongs on the Board | Kyunolab Mystery Archive",
+    "metaDescription": "A guide to deciding when a topic should be a guide, a category article, a tag path, or no page at all.",
+    "ogTitle": "How to Decide When a Mystery Topic Belongs on the Board",
+    "ogDescription": "A guide to deciding when a topic should be a guide, a category article, a tag path, or no page at all.",
+    "excerpt": "A guide to deciding when a topic should be a guide, a category article, a tag path, or no page at all.",
+    "deck": "How to Decide When a Mystery Topic Belongs on the Board is a practical Mystery Board guide for keeping Kyunolab Mystery Archive useful, source-aware, and easy to navigate as the archive grows.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Board Topic Selection",
+    "tags": [
+      "Board Topic Selection",
+      "Archive Method",
+      "Source Status",
+      "Internal Links",
+      "Publishing QA"
+    ],
+    "bestFor": "Readers and operators who want a clearer way to move through folklore, mystery, and source-aware archive records",
+    "readTime": "8 min read",
+    "url": "/mystery-board/how-to-decide-when-a-mystery-topic-belongs-on-the-board",
+    "publishedAt": "2026-07-08",
+    "updatedAt": "2026-07-08",
+    "relatedStoryIds": [
+      "the-coast-road-leading-to-a-paper-harbor-a-legendary-place-explained",
+      "the-valley-where-names-return-as-echoes-a-legendary-place-record",
+      "the-village-gate-in-old-postcards-a-legendary-place-explained"
+    ],
+    "relatedGuideIds": [
+      "how-to-build-related-paths-for-strange-place-articles",
+      "how-to-group-similar-legends-without-changing-old-urls",
+      "how-to-use-evidence-limits-as-reader-trust-signals"
+    ],
+    "sections": [
+      {
+        "id": "why-this-matters",
+        "title": "Why this matters",
+        "nav": "Why this matters",
+        "paragraphs": [
+          "A growing mystery archive needs more than volume. Decide When a Mystery Topic Belongs on the Board helps each article earn its place by giving readers a reason to continue from one record to the next.",
+          "The goal is a quieter kind of usefulness: clear labels, stable URLs, source limits, and article paths that feel intentional rather than forced."
+        ]
+      },
+      {
+        "id": "what-to-check-first",
+        "title": "What to check first",
+        "nav": "What to check first",
+        "paragraphs": [
+          "Start with the reader question behind the page. If the subject is a legend, ask whether the strongest angle is origin, meaning, versions, place, or evidence limit.",
+          "Then check whether the title, deck, tags, and related links all point toward that same reader need without exaggerating the story as verified fact."
+        ]
+      },
+      {
+        "id": "how-to-apply-it",
+        "title": "How to apply it inside Kyunolab",
+        "nav": "How to apply it inside Kyunolab",
+        "paragraphs": [
+          "Use categories for the broad shelf and tags for recurring motifs. Keep related links close to genuine reader curiosity: same setting, same evidence problem, same folklore pattern, or same source status.",
+          "If a page starts serving too many jobs, split the idea into a guide and a story record instead of making one article carry every search intent."
+        ]
+      },
+      {
+        "id": "what-to-avoid",
+        "title": "What to avoid",
+        "nav": "What to avoid",
+        "paragraphs": [
+          "Avoid keyword lists, invented certainty, thin pages, and repeated openings that make different articles feel interchangeable.",
+          "A strong page can be search-friendly and still sound like Kyunolab: calm, literary, specific, and honest about what the record can and cannot prove."
+        ]
+      },
+      {
+        "id": "where-to-go-next",
+        "title": "Where to go next",
+        "nav": "Where to go next",
+        "paragraphs": [
+          "Compare this guide with [[How Doorway Rules Become Household Legends: Folklore Origin and Meaning|/stories/how-doorway-rules-become-household-legends-folklore-origin-and-meaning]] and the [[Story & Source Notice|/fiction-disclaimer.html]].",
+          "The most useful next step is usually one article, one source note, and one related path that tests whether the idea holds together."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is this guide a rule for every page?",
+        "answer": "No. It is a practical editorial guide. Simple topics can stay simple, and deeper topics can expand when the subject needs more room."
+      },
+      {
+        "question": "Should SEO change the archive voice?",
+        "answer": "No. Search structure should clarify the topic, not flatten the tone or turn folklore into a factual claim."
+      },
+      {
+        "question": "Do guide pages replace article source notes?",
+        "answer": "No. Guides explain the method. Each article still needs its own source status and limits."
+      },
+      {
+        "question": "What is the safest publishing habit?",
+        "answer": "Keep the slug stable, name the source limits, avoid thin indexable pages, and make sure each related link helps a reader continue naturally."
+      }
+    ],
+    "sourceNote": "This Mystery Board page is an editorial guide for reading and maintaining Kyunolab Mystery Archive. It does not verify any individual legend, mystery, or folklore claim."
+  },
+  {
+    "id": "how-to-build-related-paths-for-strange-place-articles",
+    "slug": "how-to-build-related-paths-for-strange-place-articles",
+    "title": "How to Build Related Article Paths for Strange Places",
+    "shortTitle": "Build Related Article Paths for Strange Places",
+    "metaTitle": "How to Build Related Article Paths for Strange Places | Kyunolab Mystery Archive",
+    "metaDescription": "A Mystery Board guide to connecting strange places by setting, motif, source status, and reader curiosity.",
+    "ogTitle": "How to Build Related Article Paths for Strange Places",
+    "ogDescription": "A Mystery Board guide to connecting strange places by setting, motif, source status, and reader curiosity.",
+    "excerpt": "A Mystery Board guide to connecting strange places by setting, motif, source status, and reader curiosity.",
+    "deck": "How to Build Related Article Paths for Strange Places is a practical Mystery Board guide for keeping Kyunolab Mystery Archive useful, source-aware, and easy to navigate as the archive grows.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Related Paths",
+    "tags": [
+      "Related Paths",
+      "Archive Method",
+      "Source Status",
+      "Internal Links",
+      "Publishing QA"
+    ],
+    "bestFor": "Readers and operators who want a clearer way to move through folklore, mystery, and source-aware archive records",
+    "readTime": "10 min read",
+    "url": "/mystery-board/how-to-build-related-paths-for-strange-place-articles",
+    "publishedAt": "2026-07-08",
+    "updatedAt": "2026-07-08",
+    "relatedStoryIds": [
+      "the-house-marked-only-by-smoke-in-winter-a-legendary-place-record",
+      "the-meadow-drawn-on-maps-before-it-existed-a-legendary-place-mystery",
+      "the-watchtower-facing-a-disappeared-road-a-landmark-legend-explained"
+    ],
+    "relatedGuideIds": [
+      "how-to-group-similar-legends-without-changing-old-urls",
+      "how-to-use-evidence-limits-as-reader-trust-signals",
+      "how-to-write-a-folklore-opening-that-still-sounds-human"
+    ],
+    "sections": [
+      {
+        "id": "why-this-matters",
+        "title": "Why this matters",
+        "nav": "Why this matters",
+        "paragraphs": [
+          "A growing mystery archive needs more than volume. Build Related Article Paths for Strange Places helps each article earn its place by giving readers a reason to continue from one record to the next.",
+          "The goal is a quieter kind of usefulness: clear labels, stable URLs, source limits, and article paths that feel intentional rather than forced."
+        ]
+      },
+      {
+        "id": "what-to-check-first",
+        "title": "What to check first",
+        "nav": "What to check first",
+        "paragraphs": [
+          "Start with the reader question behind the page. If the subject is a legend, ask whether the strongest angle is origin, meaning, versions, place, or evidence limit.",
+          "Then check whether the title, deck, tags, and related links all point toward that same reader need without exaggerating the story as verified fact."
+        ]
+      },
+      {
+        "id": "how-to-apply-it",
+        "title": "How to apply it inside Kyunolab",
+        "nav": "How to apply it inside Kyunolab",
+        "paragraphs": [
+          "Use categories for the broad shelf and tags for recurring motifs. Keep related links close to genuine reader curiosity: same setting, same evidence problem, same folklore pattern, or same source status.",
+          "If a page starts serving too many jobs, split the idea into a guide and a story record instead of making one article carry every search intent."
+        ]
+      },
+      {
+        "id": "what-to-avoid",
+        "title": "What to avoid",
+        "nav": "What to avoid",
+        "paragraphs": [
+          "Avoid keyword lists, invented certainty, thin pages, and repeated openings that make different articles feel interchangeable.",
+          "A strong page can be search-friendly and still sound like Kyunolab: calm, literary, specific, and honest about what the record can and cannot prove."
+        ]
+      },
+      {
+        "id": "where-to-go-next",
+        "title": "Where to go next",
+        "nav": "Where to go next",
+        "paragraphs": [
+          "Compare this guide with [[Why Bridges Keep Appearing in Warning Tales: Origin of a Crossing Motif|/stories/why-bridges-keep-appearing-in-warning-tales-origin-of-a-crossing-motif]] and the [[Story & Source Notice|/fiction-disclaimer.html]].",
+          "The most useful next step is usually one article, one source note, and one related path that tests whether the idea holds together."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is this guide a rule for every page?",
+        "answer": "No. It is a practical editorial guide. Simple topics can stay simple, and deeper topics can expand when the subject needs more room."
+      },
+      {
+        "question": "Should SEO change the archive voice?",
+        "answer": "No. Search structure should clarify the topic, not flatten the tone or turn folklore into a factual claim."
+      },
+      {
+        "question": "Do guide pages replace article source notes?",
+        "answer": "No. Guides explain the method. Each article still needs its own source status and limits."
+      },
+      {
+        "question": "What is the safest publishing habit?",
+        "answer": "Keep the slug stable, name the source limits, avoid thin indexable pages, and make sure each related link helps a reader continue naturally."
+      }
+    ],
+    "sourceNote": "This Mystery Board page is an editorial guide for reading and maintaining Kyunolab Mystery Archive. It does not verify any individual legend, mystery, or folklore claim."
+  },
+  {
+    "id": "how-to-group-similar-legends-without-changing-old-urls",
+    "slug": "how-to-group-similar-legends-without-changing-old-urls",
+    "title": "How to Group Similar Legends Without Changing Old URLs",
+    "shortTitle": "Group Similar Legends Without Changing Old URLs",
+    "metaTitle": "How to Group Similar Legends Without Changing Old URLs | Kyunolab Mystery Archive",
+    "metaDescription": "A guide to building better clusters, tags, and related paths while keeping published slugs stable.",
+    "ogTitle": "How to Group Similar Legends Without Changing Old URLs",
+    "ogDescription": "A guide to building better clusters, tags, and related paths while keeping published slugs stable.",
+    "excerpt": "A guide to building better clusters, tags, and related paths while keeping published slugs stable.",
+    "deck": "How to Group Similar Legends Without Changing Old URLs is a practical Mystery Board guide for keeping Kyunolab Mystery Archive useful, source-aware, and easy to navigate as the archive grows.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "URL-Safe Grouping",
+    "tags": [
+      "URL-Safe Grouping",
+      "Archive Method",
+      "Source Status",
+      "Internal Links",
+      "Publishing QA"
+    ],
+    "bestFor": "Readers and operators who want a clearer way to move through folklore, mystery, and source-aware archive records",
+    "readTime": "9 min read",
+    "url": "/mystery-board/how-to-group-similar-legends-without-changing-old-urls",
+    "publishedAt": "2026-07-08",
+    "updatedAt": "2026-07-08",
+    "relatedStoryIds": [
+      "the-lantern-wick-that-burns-backward-a-mythic-object-folklore-note",
+      "the-red-thread-that-measures-a-promise-a-mythic-object-explained",
+      "the-needle-kept-inside-a-locked-bell-a-mythic-object-record"
+    ],
+    "relatedGuideIds": [
+      "how-to-use-evidence-limits-as-reader-trust-signals",
+      "how-to-write-a-folklore-opening-that-still-sounds-human",
+      "how-to-choose-search-intent-for-urban-legend-articles"
+    ],
+    "sections": [
+      {
+        "id": "why-this-matters",
+        "title": "Why this matters",
+        "nav": "Why this matters",
+        "paragraphs": [
+          "A growing mystery archive needs more than volume. Group Similar Legends Without Changing Old URLs helps each article earn its place by giving readers a reason to continue from one record to the next.",
+          "The goal is a quieter kind of usefulness: clear labels, stable URLs, source limits, and article paths that feel intentional rather than forced."
+        ]
+      },
+      {
+        "id": "what-to-check-first",
+        "title": "What to check first",
+        "nav": "What to check first",
+        "paragraphs": [
+          "Start with the reader question behind the page. If the subject is a legend, ask whether the strongest angle is origin, meaning, versions, place, or evidence limit.",
+          "Then check whether the title, deck, tags, and related links all point toward that same reader need without exaggerating the story as verified fact."
+        ]
+      },
+      {
+        "id": "how-to-apply-it",
+        "title": "How to apply it inside Kyunolab",
+        "nav": "How to apply it inside Kyunolab",
+        "paragraphs": [
+          "Use categories for the broad shelf and tags for recurring motifs. Keep related links close to genuine reader curiosity: same setting, same evidence problem, same folklore pattern, or same source status.",
+          "If a page starts serving too many jobs, split the idea into a guide and a story record instead of making one article carry every search intent."
+        ]
+      },
+      {
+        "id": "what-to-avoid",
+        "title": "What to avoid",
+        "nav": "What to avoid",
+        "paragraphs": [
+          "Avoid keyword lists, invented certainty, thin pages, and repeated openings that make different articles feel interchangeable.",
+          "A strong page can be search-friendly and still sound like Kyunolab: calm, literary, specific, and honest about what the record can and cannot prove."
+        ]
+      },
+      {
+        "id": "where-to-go-next",
+        "title": "Where to go next",
+        "nav": "Where to go next",
+        "paragraphs": [
+          "Compare this guide with [[How Unused Floors Become Building Myths: Origin of a Modern Place Legend|/stories/how-unused-floors-become-building-myths-origin-of-a-modern-place-legend]] and the [[Story & Source Notice|/fiction-disclaimer.html]].",
+          "The most useful next step is usually one article, one source note, and one related path that tests whether the idea holds together."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is this guide a rule for every page?",
+        "answer": "No. It is a practical editorial guide. Simple topics can stay simple, and deeper topics can expand when the subject needs more room."
+      },
+      {
+        "question": "Should SEO change the archive voice?",
+        "answer": "No. Search structure should clarify the topic, not flatten the tone or turn folklore into a factual claim."
+      },
+      {
+        "question": "Do guide pages replace article source notes?",
+        "answer": "No. Guides explain the method. Each article still needs its own source status and limits."
+      },
+      {
+        "question": "What is the safest publishing habit?",
+        "answer": "Keep the slug stable, name the source limits, avoid thin indexable pages, and make sure each related link helps a reader continue naturally."
+      }
+    ],
+    "sourceNote": "This Mystery Board page is an editorial guide for reading and maintaining Kyunolab Mystery Archive. It does not verify any individual legend, mystery, or folklore claim."
+  },
+  {
+    "id": "how-to-use-evidence-limits-as-reader-trust-signals",
+    "slug": "how-to-use-evidence-limits-as-reader-trust-signals",
+    "title": "How to Use Evidence Limits as Reader Trust Signals",
+    "shortTitle": "Use Evidence Limits as Reader Trust Signals",
+    "metaTitle": "How to Use Evidence Limits as Reader Trust Signals | Kyunolab Mystery Archive",
+    "metaDescription": "A guide to using source status, uncertainty, and clear limits as a trust signal in mystery and folklore articles.",
+    "ogTitle": "How to Use Evidence Limits as Reader Trust Signals",
+    "ogDescription": "A guide to using source status, uncertainty, and clear limits as a trust signal in mystery and folklore articles.",
+    "excerpt": "A guide to using source status, uncertainty, and clear limits as a trust signal in mystery and folklore articles.",
+    "deck": "How to Use Evidence Limits as Reader Trust Signals is a practical Mystery Board guide for keeping Kyunolab Mystery Archive useful, source-aware, and easy to navigate as the archive grows.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Evidence Limits",
+    "tags": [
+      "Evidence Limits",
+      "Archive Method",
+      "Source Status",
+      "Internal Links",
+      "Publishing QA"
+    ],
+    "bestFor": "Readers and operators who want a clearer way to move through folklore, mystery, and source-aware archive records",
+    "readTime": "8 min read",
+    "url": "/mystery-board/how-to-use-evidence-limits-as-reader-trust-signals",
+    "publishedAt": "2026-07-08",
+    "updatedAt": "2026-07-08",
+    "relatedStoryIds": [
+      "the-black-key-wrapped-in-blue-cloth-a-mythic-object-record",
+      "the-ring-that-tightens-near-false-doors-a-mythic-object-explained",
+      "the-stone-comb-found-under-the-bridge-a-mythic-object-meaning"
+    ],
+    "relatedGuideIds": [
+      "how-to-write-a-folklore-opening-that-still-sounds-human",
+      "how-to-choose-search-intent-for-urban-legend-articles",
+      "how-to-plan-a-mystery-article-cluster-without-thin-pages"
+    ],
+    "sections": [
+      {
+        "id": "why-this-matters",
+        "title": "Why this matters",
+        "nav": "Why this matters",
+        "paragraphs": [
+          "A growing mystery archive needs more than volume. Use Evidence Limits as Reader Trust Signals helps each article earn its place by giving readers a reason to continue from one record to the next.",
+          "The goal is a quieter kind of usefulness: clear labels, stable URLs, source limits, and article paths that feel intentional rather than forced."
+        ]
+      },
+      {
+        "id": "what-to-check-first",
+        "title": "What to check first",
+        "nav": "What to check first",
+        "paragraphs": [
+          "Start with the reader question behind the page. If the subject is a legend, ask whether the strongest angle is origin, meaning, versions, place, or evidence limit.",
+          "Then check whether the title, deck, tags, and related links all point toward that same reader need without exaggerating the story as verified fact."
+        ]
+      },
+      {
+        "id": "how-to-apply-it",
+        "title": "How to apply it inside Kyunolab",
+        "nav": "How to apply it inside Kyunolab",
+        "paragraphs": [
+          "Use categories for the broad shelf and tags for recurring motifs. Keep related links close to genuine reader curiosity: same setting, same evidence problem, same folklore pattern, or same source status.",
+          "If a page starts serving too many jobs, split the idea into a guide and a story record instead of making one article carry every search intent."
+        ]
+      },
+      {
+        "id": "what-to-avoid",
+        "title": "What to avoid",
+        "nav": "What to avoid",
+        "paragraphs": [
+          "Avoid keyword lists, invented certainty, thin pages, and repeated openings that make different articles feel interchangeable.",
+          "A strong page can be search-friendly and still sound like Kyunolab: calm, literary, specific, and honest about what the record can and cannot prove."
+        ]
+      },
+      {
+        "id": "where-to-go-next",
+        "title": "Where to go next",
+        "nav": "Where to go next",
+        "paragraphs": [
+          "Compare this guide with [[Why Missing Minutes Make Strong Mystery Records: Origin of a Time Motif|/stories/why-missing-minutes-make-strong-mystery-records-origin-of-a-time-motif]] and the [[Story & Source Notice|/fiction-disclaimer.html]].",
+          "The most useful next step is usually one article, one source note, and one related path that tests whether the idea holds together."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is this guide a rule for every page?",
+        "answer": "No. It is a practical editorial guide. Simple topics can stay simple, and deeper topics can expand when the subject needs more room."
+      },
+      {
+        "question": "Should SEO change the archive voice?",
+        "answer": "No. Search structure should clarify the topic, not flatten the tone or turn folklore into a factual claim."
+      },
+      {
+        "question": "Do guide pages replace article source notes?",
+        "answer": "No. Guides explain the method. Each article still needs its own source status and limits."
+      },
+      {
+        "question": "What is the safest publishing habit?",
+        "answer": "Keep the slug stable, name the source limits, avoid thin indexable pages, and make sure each related link helps a reader continue naturally."
+      }
+    ],
+    "sourceNote": "This Mystery Board page is an editorial guide for reading and maintaining Kyunolab Mystery Archive. It does not verify any individual legend, mystery, or folklore claim."
+  },
+  {
+    "id": "how-to-write-a-folklore-opening-that-still-sounds-human",
+    "slug": "how-to-write-a-folklore-opening-that-still-sounds-human",
+    "title": "How to Write a Folklore Article Opening That Still Sounds Human",
+    "shortTitle": "Write a Folklore Article Opening That Still Sounds Human",
+    "metaTitle": "How to Write a Folklore Article Opening That Still Sounds Human | Kyunolab Mystery Archive",
+    "metaDescription": "A guide to opening folklore articles with atmosphere, clarity, and search context without sounding mechanical.",
+    "ogTitle": "How to Write a Folklore Article Opening That Still Sounds Human",
+    "ogDescription": "A guide to opening folklore articles with atmosphere, clarity, and search context without sounding mechanical.",
+    "excerpt": "A guide to opening folklore articles with atmosphere, clarity, and search context without sounding mechanical.",
+    "deck": "How to Write a Folklore Article Opening That Still Sounds Human is a practical Mystery Board guide for keeping Kyunolab Mystery Archive useful, source-aware, and easy to navigate as the archive grows.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Folklore Openings",
+    "tags": [
+      "Folklore Openings",
+      "Archive Method",
+      "Source Status",
+      "Internal Links",
+      "Publishing QA"
+    ],
+    "bestFor": "Readers and operators who want a clearer way to move through folklore, mystery, and source-aware archive records",
+    "readTime": "10 min read",
+    "url": "/mystery-board/how-to-write-a-folklore-opening-that-still-sounds-human",
+    "publishedAt": "2026-07-08",
+    "updatedAt": "2026-07-08",
+    "relatedStoryIds": [
+      "how-wrong-receipts-turn-into-modern-folklore-origin-of-a-paper-clue-legend",
+      "why-empty-roads-become-vanishing-passenger-legends-origin-and-meaning",
+      "the-clock-hand-buried-under-the-hearth-a-mythic-object-meaning"
+    ],
+    "relatedGuideIds": [
+      "how-to-choose-search-intent-for-urban-legend-articles",
+      "how-to-plan-a-mystery-article-cluster-without-thin-pages",
+      "how-to-choose-a-mystery-topic-that-can-become-a-strong-article"
+    ],
+    "sections": [
+      {
+        "id": "why-this-matters",
+        "title": "Why this matters",
+        "nav": "Why this matters",
+        "paragraphs": [
+          "A growing mystery archive needs more than volume. Write a Folklore Article Opening That Still Sounds Human helps each article earn its place by giving readers a reason to continue from one record to the next.",
+          "The goal is a quieter kind of usefulness: clear labels, stable URLs, source limits, and article paths that feel intentional rather than forced."
+        ]
+      },
+      {
+        "id": "what-to-check-first",
+        "title": "What to check first",
+        "nav": "What to check first",
+        "paragraphs": [
+          "Start with the reader question behind the page. If the subject is a legend, ask whether the strongest angle is origin, meaning, versions, place, or evidence limit.",
+          "Then check whether the title, deck, tags, and related links all point toward that same reader need without exaggerating the story as verified fact."
+        ]
+      },
+      {
+        "id": "how-to-apply-it",
+        "title": "How to apply it inside Kyunolab",
+        "nav": "How to apply it inside Kyunolab",
+        "paragraphs": [
+          "Use categories for the broad shelf and tags for recurring motifs. Keep related links close to genuine reader curiosity: same setting, same evidence problem, same folklore pattern, or same source status.",
+          "If a page starts serving too many jobs, split the idea into a guide and a story record instead of making one article carry every search intent."
+        ]
+      },
+      {
+        "id": "what-to-avoid",
+        "title": "What to avoid",
+        "nav": "What to avoid",
+        "paragraphs": [
+          "Avoid keyword lists, invented certainty, thin pages, and repeated openings that make different articles feel interchangeable.",
+          "A strong page can be search-friendly and still sound like Kyunolab: calm, literary, specific, and honest about what the record can and cannot prove."
+        ]
+      },
+      {
+        "id": "where-to-go-next",
+        "title": "Where to go next",
+        "nav": "Where to go next",
+        "paragraphs": [
+          "Compare this guide with [[How Old Maps Create Lost Place Legends: Origin of a Cartographic Motif|/stories/how-old-maps-create-lost-place-legends-origin-of-a-cartographic-motif]] and the [[Story & Source Notice|/fiction-disclaimer.html]].",
+          "The most useful next step is usually one article, one source note, and one related path that tests whether the idea holds together."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is this guide a rule for every page?",
+        "answer": "No. It is a practical editorial guide. Simple topics can stay simple, and deeper topics can expand when the subject needs more room."
+      },
+      {
+        "question": "Should SEO change the archive voice?",
+        "answer": "No. Search structure should clarify the topic, not flatten the tone or turn folklore into a factual claim."
+      },
+      {
+        "question": "Do guide pages replace article source notes?",
+        "answer": "No. Guides explain the method. Each article still needs its own source status and limits."
+      },
+      {
+        "question": "What is the safest publishing habit?",
+        "answer": "Keep the slug stable, name the source limits, avoid thin indexable pages, and make sure each related link helps a reader continue naturally."
+      }
+    ],
+    "sourceNote": "This Mystery Board page is an editorial guide for reading and maintaining Kyunolab Mystery Archive. It does not verify any individual legend, mystery, or folklore claim."
+  },
+  {
+    "id": "how-to-choose-search-intent-for-urban-legend-articles",
+    "slug": "how-to-choose-search-intent-for-urban-legend-articles",
+    "title": "How to Choose Search Intent for Urban Legend Articles",
+    "shortTitle": "Choose Search Intent for Urban Legend Articles",
+    "metaTitle": "How to Choose Search Intent for Urban Legend Articles | Kyunolab Mystery Archive",
+    "metaDescription": "A guide to matching urban legend topics with origin, meaning, version, folklore, and explanation searches.",
+    "ogTitle": "How to Choose Search Intent for Urban Legend Articles",
+    "ogDescription": "A guide to matching urban legend topics with origin, meaning, version, folklore, and explanation searches.",
+    "excerpt": "A guide to matching urban legend topics with origin, meaning, version, folklore, and explanation searches.",
+    "deck": "How to Choose Search Intent for Urban Legend Articles is a practical Mystery Board guide for keeping Kyunolab Mystery Archive useful, source-aware, and easy to navigate as the archive grows.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Search Intent",
+    "tags": [
+      "Search Intent",
+      "Archive Method",
+      "Source Status",
+      "Internal Links",
+      "Publishing QA"
+    ],
+    "bestFor": "Readers and operators who want a clearer way to move through folklore, mystery, and source-aware archive records",
+    "readTime": "9 min read",
+    "url": "/mystery-board/how-to-choose-search-intent-for-urban-legend-articles",
+    "publishedAt": "2026-07-08",
+    "updatedAt": "2026-07-08",
+    "relatedStoryIds": [
+      "how-unused-floors-become-building-myths-origin-of-a-modern-place-legend",
+      "why-bridges-keep-appearing-in-warning-tales-origin-of-a-crossing-motif",
+      "how-doorway-rules-become-household-legends-folklore-origin-and-meaning"
+    ],
+    "relatedGuideIds": [
+      "how-to-plan-a-mystery-article-cluster-without-thin-pages",
+      "how-to-choose-a-mystery-topic-that-can-become-a-strong-article",
+      "how-to-write-source-notes-for-urban-legends-without-killing-the-mystery"
+    ],
+    "sections": [
+      {
+        "id": "why-this-matters",
+        "title": "Why this matters",
+        "nav": "Why this matters",
+        "paragraphs": [
+          "A growing mystery archive needs more than volume. Choose Search Intent for Urban Legend Articles helps each article earn its place by giving readers a reason to continue from one record to the next.",
+          "The goal is a quieter kind of usefulness: clear labels, stable URLs, source limits, and article paths that feel intentional rather than forced."
+        ]
+      },
+      {
+        "id": "what-to-check-first",
+        "title": "What to check first",
+        "nav": "What to check first",
+        "paragraphs": [
+          "Start with the reader question behind the page. If the subject is a legend, ask whether the strongest angle is origin, meaning, versions, place, or evidence limit.",
+          "Then check whether the title, deck, tags, and related links all point toward that same reader need without exaggerating the story as verified fact."
+        ]
+      },
+      {
+        "id": "how-to-apply-it",
+        "title": "How to apply it inside Kyunolab",
+        "nav": "How to apply it inside Kyunolab",
+        "paragraphs": [
+          "Use categories for the broad shelf and tags for recurring motifs. Keep related links close to genuine reader curiosity: same setting, same evidence problem, same folklore pattern, or same source status.",
+          "If a page starts serving too many jobs, split the idea into a guide and a story record instead of making one article carry every search intent."
+        ]
+      },
+      {
+        "id": "what-to-avoid",
+        "title": "What to avoid",
+        "nav": "What to avoid",
+        "paragraphs": [
+          "Avoid keyword lists, invented certainty, thin pages, and repeated openings that make different articles feel interchangeable.",
+          "A strong page can be search-friendly and still sound like Kyunolab: calm, literary, specific, and honest about what the record can and cannot prove."
+        ]
+      },
+      {
+        "id": "where-to-go-next",
+        "title": "Where to go next",
+        "nav": "Where to go next",
+        "paragraphs": [
+          "Compare this guide with [[Why Weather Omens Become Local Folklore: Origin of a Repeated Sign|/stories/why-weather-omens-become-local-folklore-origin-of-a-repeated-sign]] and the [[Story & Source Notice|/fiction-disclaimer.html]].",
+          "The most useful next step is usually one article, one source note, and one related path that tests whether the idea holds together."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is this guide a rule for every page?",
+        "answer": "No. It is a practical editorial guide. Simple topics can stay simple, and deeper topics can expand when the subject needs more room."
+      },
+      {
+        "question": "Should SEO change the archive voice?",
+        "answer": "No. Search structure should clarify the topic, not flatten the tone or turn folklore into a factual claim."
+      },
+      {
+        "question": "Do guide pages replace article source notes?",
+        "answer": "No. Guides explain the method. Each article still needs its own source status and limits."
+      },
+      {
+        "question": "What is the safest publishing habit?",
+        "answer": "Keep the slug stable, name the source limits, avoid thin indexable pages, and make sure each related link helps a reader continue naturally."
+      }
+    ],
+    "sourceNote": "This Mystery Board page is an editorial guide for reading and maintaining Kyunolab Mystery Archive. It does not verify any individual legend, mystery, or folklore claim."
+  },
+  {
+    "id": "how-to-plan-a-mystery-article-cluster-without-thin-pages",
+    "slug": "how-to-plan-a-mystery-article-cluster-without-thin-pages",
+    "title": "How to Plan a Mystery Article Cluster Without Creating Thin Pages",
+    "shortTitle": "Plan a Mystery Article Cluster Without Creating Thin Pages",
+    "metaTitle": "How to Plan a Mystery Article Cluster Without Creating Thin Pages | Kyunolab Mystery Archive",
+    "metaDescription": "A practical guide to planning category growth, internal links, and article depth without creating thin archive pages.",
+    "ogTitle": "How to Plan a Mystery Article Cluster Without Creating Thin Pages",
+    "ogDescription": "A practical guide to planning category growth, internal links, and article depth without creating thin archive pages.",
+    "excerpt": "A practical guide to planning category growth, internal links, and article depth without creating thin archive pages.",
+    "deck": "How to Plan a Mystery Article Cluster Without Creating Thin Pages is a practical Mystery Board guide for keeping Kyunolab Mystery Archive useful, source-aware, and easy to navigate as the archive grows.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Article Cluster Planning",
+    "tags": [
+      "Article Cluster Planning",
+      "Archive Method",
+      "Source Status",
+      "Internal Links",
+      "Publishing QA"
+    ],
+    "bestFor": "Readers and operators who want a clearer way to move through folklore, mystery, and source-aware archive records",
+    "readTime": "8 min read",
+    "url": "/mystery-board/how-to-plan-a-mystery-article-cluster-without-thin-pages",
+    "publishedAt": "2026-07-08",
+    "updatedAt": "2026-07-08",
+    "relatedStoryIds": [
+      "how-repeated-screenshots-become-internet-legends-origin-of-digital-folklore",
+      "why-weather-omens-become-local-folklore-origin-of-a-repeated-sign",
+      "how-old-maps-create-lost-place-legends-origin-of-a-cartographic-motif"
+    ],
+    "relatedGuideIds": [
+      "how-to-choose-a-mystery-topic-that-can-become-a-strong-article",
+      "how-to-write-source-notes-for-urban-legends-without-killing-the-mystery",
+      "how-to-build-internal-links-between-mystery-articles-naturally"
+    ],
+    "sections": [
+      {
+        "id": "why-this-matters",
+        "title": "Why this matters",
+        "nav": "Why this matters",
+        "paragraphs": [
+          "A growing mystery archive needs more than volume. Plan a Mystery Article Cluster Without Creating Thin Pages helps each article earn its place by giving readers a reason to continue from one record to the next.",
+          "The goal is a quieter kind of usefulness: clear labels, stable URLs, source limits, and article paths that feel intentional rather than forced."
+        ]
+      },
+      {
+        "id": "what-to-check-first",
+        "title": "What to check first",
+        "nav": "What to check first",
+        "paragraphs": [
+          "Start with the reader question behind the page. If the subject is a legend, ask whether the strongest angle is origin, meaning, versions, place, or evidence limit.",
+          "Then check whether the title, deck, tags, and related links all point toward that same reader need without exaggerating the story as verified fact."
+        ]
+      },
+      {
+        "id": "how-to-apply-it",
+        "title": "How to apply it inside Kyunolab",
+        "nav": "How to apply it inside Kyunolab",
+        "paragraphs": [
+          "Use categories for the broad shelf and tags for recurring motifs. Keep related links close to genuine reader curiosity: same setting, same evidence problem, same folklore pattern, or same source status.",
+          "If a page starts serving too many jobs, split the idea into a guide and a story record instead of making one article carry every search intent."
+        ]
+      },
+      {
+        "id": "what-to-avoid",
+        "title": "What to avoid",
+        "nav": "What to avoid",
+        "paragraphs": [
+          "Avoid keyword lists, invented certainty, thin pages, and repeated openings that make different articles feel interchangeable.",
+          "A strong page can be search-friendly and still sound like Kyunolab: calm, literary, specific, and honest about what the record can and cannot prove."
+        ]
+      },
+      {
+        "id": "where-to-go-next",
+        "title": "Where to go next",
+        "nav": "Where to go next",
+        "paragraphs": [
+          "Compare this guide with [[How Repeated Screenshots Become Internet Legends: Origin of Digital Folklore|/stories/how-repeated-screenshots-become-internet-legends-origin-of-digital-folklore]] and the [[Story & Source Notice|/fiction-disclaimer.html]].",
+          "The most useful next step is usually one article, one source note, and one related path that tests whether the idea holds together."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is this guide a rule for every page?",
+        "answer": "No. It is a practical editorial guide. Simple topics can stay simple, and deeper topics can expand when the subject needs more room."
+      },
+      {
+        "question": "Should SEO change the archive voice?",
+        "answer": "No. Search structure should clarify the topic, not flatten the tone or turn folklore into a factual claim."
+      },
+      {
+        "question": "Do guide pages replace article source notes?",
+        "answer": "No. Guides explain the method. Each article still needs its own source status and limits."
+      },
+      {
+        "question": "What is the safest publishing habit?",
+        "answer": "Keep the slug stable, name the source limits, avoid thin indexable pages, and make sure each related link helps a reader continue naturally."
+      }
+    ],
+    "sourceNote": "This Mystery Board page is an editorial guide for reading and maintaining Kyunolab Mystery Archive. It does not verify any individual legend, mystery, or folklore claim."
+  },
+  {
     "id": "how-to-choose-a-mystery-topic-that-can-become-a-strong-article",
     "slug": "how-to-choose-a-mystery-topic-that-can-become-a-strong-article",
     "title": "How to Choose a Mystery Topic That Can Become a Strong Article",
