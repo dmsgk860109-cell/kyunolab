@@ -1,5 +1,1035 @@
 [
   {
+    "id": "how-to-audit-a-large-static-archive-before-deployment",
+    "slug": "how-to-audit-a-large-static-archive-before-deployment",
+    "title": "How to Audit a Large Static Archive Before Deployment",
+    "shortTitle": "Audit a Large Static Archive Before Deployment",
+    "metaTitle": "How to Audit a Large Static Archive Before Deployment | Kyunolab Mystery Archive",
+    "metaDescription": "A deployment checklist for duplicate metadata, broken links, canonical URLs, sitemap scope, and generated-page growth.",
+    "ogTitle": "How to Audit a Large Static Archive Before Deployment",
+    "ogDescription": "A deployment checklist for duplicate metadata, broken links, canonical URLs, sitemap scope, and generated-page growth.",
+    "excerpt": "A deployment checklist for duplicate metadata, broken links, canonical URLs, sitemap scope, and generated-page growth.",
+    "deck": "How to Audit a Large Static Archive Before Deployment is a practical Mystery Board guide for building a clearer, source-aware folklore and mystery archive without weakening its voice.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Archive Deployment Audit",
+    "tags": [
+      "Archive Deployment Audit",
+      "Archive Method",
+      "Source Status",
+      "Internal Links",
+      "Publishing QA"
+    ],
+    "bestFor": "Editors and readers who want a more trustworthy way to organize folklore, mystery, and archive records",
+    "readTime": "8 min read",
+    "url": "/mystery-board/how-to-audit-a-large-static-archive-before-deployment",
+    "publishedAt": "2026-07-09",
+    "updatedAt": "2026-07-09",
+    "relatedStoryIds": [
+      "the-forest-province-missing-from-the-census-a-lost-world-tradition-explained",
+      "the-underground-city-lit-by-reflected-noon-the-maps-and-myths-behind-a-hidden-realm",
+      "the-island-named-in-three-captains-dreams-why-imagined-geography-feels-almost-real"
+    ],
+    "relatedGuideIds": [
+      "how-to-balance-atmosphere-and-answers-in-mystery-writing",
+      "how-to-decide-which-tags-deserve-indexable-archive-pages",
+      "how-to-avoid-repetitive-openings-in-folklore-articles"
+    ],
+    "sections": [
+      {
+        "id": "why-this-matters",
+        "title": "Why this matters",
+        "nav": "Why this matters",
+        "paragraphs": [
+          "Audit a Large Static Archive Before Deployment matters because a growing archive can become repetitive or unclear long before it runs out of topics.",
+          "The practical goal is to protect reader trust: one clear purpose, stable URLs, useful internal paths, and honest limits for every page."
+        ]
+      },
+      {
+        "id": "what-to-check-first",
+        "title": "What to check first",
+        "nav": "What to check first",
+        "paragraphs": [
+          "Begin with the reader question and the page type. Decide whether the subject needs an origin, meaning, explanation, source review, or editorial guide.",
+          "Then compare the title, opening, tags, source status, and related links. They should support the same need without making the evidence sound stronger than it is."
+        ]
+      },
+      {
+        "id": "how-to-apply-it",
+        "title": "How to apply it in Kyunolab",
+        "nav": "How to apply it in Kyunolab",
+        "paragraphs": [
+          "Use the category as the broad shelf and tags as narrower recurring motifs. Let the article body follow the natural shape of the subject instead of a fixed word limit.",
+          "When a section becomes too broad, split the idea into a separate related article. When it is thin, merge it into a stronger section instead of manufacturing length."
+        ]
+      },
+      {
+        "id": "common-failures",
+        "title": "Common failures to avoid",
+        "nav": "Common failures to avoid",
+        "paragraphs": [
+          "Avoid copied openings, keyword chains, unsupported claims, and links that exist only to increase crawl paths.",
+          "A good archive page is specific enough to be useful, restrained enough to be credible, and distinct enough that a reader can remember why it exists."
+        ]
+      },
+      {
+        "id": "a-practical-final-pass",
+        "title": "A practical final pass",
+        "nav": "A practical final pass",
+        "paragraphs": [
+          "Review one recent story such as [[Why Empty Elevators Became a Modern Legend Setting: History and Folklore Development|/stories/why-empty-elevators-became-a-modern-legend-setting-history-and-folklore-development]] beside the [[Story & Source Notice|/fiction-disclaimer.html]].",
+          "Confirm that the page answers its central question, names its uncertainty, offers a natural next path, and does not create unnecessary indexable URLs."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Does every article need the same length?",
+        "answer": "No. Length should follow the available material and reader need. Useful depth should not be cut, and thin subjects should not be padded."
+      },
+      {
+        "question": "Should search intent replace the archive voice?",
+        "answer": "No. Search intent clarifies the page purpose. It should not erase atmosphere or turn uncertain folklore into a factual claim."
+      },
+      {
+        "question": "When should an idea become a separate article?",
+        "answer": "Create a separate article when it serves a distinct reader question and can support a useful, source-aware page of its own."
+      },
+      {
+        "question": "What should remain stable during updates?",
+        "answer": "Keep the public slug and canonical URL stable unless there is a compelling technical reason to change them."
+      }
+    ],
+    "sourceNote": "This Mystery Board entry is an editorial guide for Kyunolab Mystery Archive. It explains publishing and reading methods and does not verify any individual folklore or mystery claim."
+  },
+  {
+    "id": "how-to-balance-atmosphere-and-answers-in-mystery-writing",
+    "slug": "how-to-balance-atmosphere-and-answers-in-mystery-writing",
+    "title": "How to Balance Atmosphere and Answers in Mystery Writing",
+    "shortTitle": "Balance Atmosphere and Answers in Mystery Writing",
+    "metaTitle": "How to Balance Atmosphere and Answers in Mystery Writing | Kyunolab Mystery Archive",
+    "metaDescription": "A guide to keeping a quiet mysterious tone while still answering the reader’s central question clearly.",
+    "ogTitle": "How to Balance Atmosphere and Answers in Mystery Writing",
+    "ogDescription": "A guide to keeping a quiet mysterious tone while still answering the reader’s central question clearly.",
+    "excerpt": "A guide to keeping a quiet mysterious tone while still answering the reader’s central question clearly.",
+    "deck": "How to Balance Atmosphere and Answers in Mystery Writing is a practical Mystery Board guide for building a clearer, source-aware folklore and mystery archive without weakening its voice.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Atmosphere and Answers",
+    "tags": [
+      "Atmosphere and Answers",
+      "Archive Method",
+      "Source Status",
+      "Internal Links",
+      "Publishing QA"
+    ],
+    "bestFor": "Editors and readers who want a more trustworthy way to organize folklore, mystery, and archive records",
+    "readTime": "10 min read",
+    "url": "/mystery-board/how-to-balance-atmosphere-and-answers-in-mystery-writing",
+    "publishedAt": "2026-07-09",
+    "updatedAt": "2026-07-09",
+    "relatedStoryIds": [
+      "the-orchard-realm-where-no-fruit-falls-the-maps-and-myths-behind-a-hidden-realm",
+      "the-railway-atlas-with-a-missing-capital-why-imagined-geography-feels-almost-real",
+      "the-monastery-beyond-the-repeating-mountain-a-lost-world-tradition-explained"
+    ],
+    "relatedGuideIds": [
+      "how-to-decide-which-tags-deserve-indexable-archive-pages",
+      "how-to-avoid-repetitive-openings-in-folklore-articles",
+      "how-to-refresh-old-articles-without-changing-their-slugs"
+    ],
+    "sections": [
+      {
+        "id": "why-this-matters",
+        "title": "Why this matters",
+        "nav": "Why this matters",
+        "paragraphs": [
+          "Balance Atmosphere and Answers in Mystery Writing matters because a growing archive can become repetitive or unclear long before it runs out of topics.",
+          "The practical goal is to protect reader trust: one clear purpose, stable URLs, useful internal paths, and honest limits for every page."
+        ]
+      },
+      {
+        "id": "what-to-check-first",
+        "title": "What to check first",
+        "nav": "What to check first",
+        "paragraphs": [
+          "Begin with the reader question and the page type. Decide whether the subject needs an origin, meaning, explanation, source review, or editorial guide.",
+          "Then compare the title, opening, tags, source status, and related links. They should support the same need without making the evidence sound stronger than it is."
+        ]
+      },
+      {
+        "id": "how-to-apply-it",
+        "title": "How to apply it in Kyunolab",
+        "nav": "How to apply it in Kyunolab",
+        "paragraphs": [
+          "Use the category as the broad shelf and tags as narrower recurring motifs. Let the article body follow the natural shape of the subject instead of a fixed word limit.",
+          "When a section becomes too broad, split the idea into a separate related article. When it is thin, merge it into a stronger section instead of manufacturing length."
+        ]
+      },
+      {
+        "id": "common-failures",
+        "title": "Common failures to avoid",
+        "nav": "Common failures to avoid",
+        "paragraphs": [
+          "Avoid copied openings, keyword chains, unsupported claims, and links that exist only to increase crawl paths.",
+          "A good archive page is specific enough to be useful, restrained enough to be credible, and distinct enough that a reader can remember why it exists."
+        ]
+      },
+      {
+        "id": "a-practical-final-pass",
+        "title": "A practical final pass",
+        "nav": "A practical final pass",
+        "paragraphs": [
+          "Review one recent story such as [[How the Wrong Passenger Became a Roadside Legend Motif: How the Motif Changed Across Retellings|/stories/how-the-wrong-passenger-became-a-roadside-legend-motif-how-the-motif-changed-across-retellings]] beside the [[Story & Source Notice|/fiction-disclaimer.html]].",
+          "Confirm that the page answers its central question, names its uncertainty, offers a natural next path, and does not create unnecessary indexable URLs."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Does every article need the same length?",
+        "answer": "No. Length should follow the available material and reader need. Useful depth should not be cut, and thin subjects should not be padded."
+      },
+      {
+        "question": "Should search intent replace the archive voice?",
+        "answer": "No. Search intent clarifies the page purpose. It should not erase atmosphere or turn uncertain folklore into a factual claim."
+      },
+      {
+        "question": "When should an idea become a separate article?",
+        "answer": "Create a separate article when it serves a distinct reader question and can support a useful, source-aware page of its own."
+      },
+      {
+        "question": "What should remain stable during updates?",
+        "answer": "Keep the public slug and canonical URL stable unless there is a compelling technical reason to change them."
+      }
+    ],
+    "sourceNote": "This Mystery Board entry is an editorial guide for Kyunolab Mystery Archive. It explains publishing and reading methods and does not verify any individual folklore or mystery claim."
+  },
+  {
+    "id": "how-to-decide-which-tags-deserve-indexable-archive-pages",
+    "slug": "how-to-decide-which-tags-deserve-indexable-archive-pages",
+    "title": "How to Decide Which Tags Deserve Indexable Archive Pages",
+    "shortTitle": "Decide Which Tags Deserve Indexable Archive Pages",
+    "metaTitle": "How to Decide Which Tags Deserve Indexable Archive Pages | Kyunolab Mystery Archive",
+    "metaDescription": "A guide to evaluating tag depth, descriptions, article count, and reader usefulness before allowing indexing.",
+    "ogTitle": "How to Decide Which Tags Deserve Indexable Archive Pages",
+    "ogDescription": "A guide to evaluating tag depth, descriptions, article count, and reader usefulness before allowing indexing.",
+    "excerpt": "A guide to evaluating tag depth, descriptions, article count, and reader usefulness before allowing indexing.",
+    "deck": "How to Decide Which Tags Deserve Indexable Archive Pages is a practical Mystery Board guide for building a clearer, source-aware folklore and mystery archive without weakening its voice.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Tag Indexing",
+    "tags": [
+      "Tag Indexing",
+      "Archive Method",
+      "Source Status",
+      "Internal Links",
+      "Publishing QA"
+    ],
+    "bestFor": "Editors and readers who want a more trustworthy way to organize folklore, mystery, and archive records",
+    "readTime": "9 min read",
+    "url": "/mystery-board/how-to-decide-which-tags-deserve-indexable-archive-pages",
+    "publishedAt": "2026-07-09",
+    "updatedAt": "2026-07-09",
+    "relatedStoryIds": [
+      "the-forest-wind-heard-beneath-still-leaves-a-natural-mystery-explained",
+      "the-snow-circle-that-melts-from-the-outside-in-folklore-observation-and-possible-explanations",
+      "the-pond-that-echoes-before-a-sound-is-made-why-this-landscape-story-endures"
+    ],
+    "relatedGuideIds": [
+      "how-to-avoid-repetitive-openings-in-folklore-articles",
+      "how-to-refresh-old-articles-without-changing-their-slugs",
+      "how-to-choose-between-origin-meaning-and-explained-search-intent"
+    ],
+    "sections": [
+      {
+        "id": "why-this-matters",
+        "title": "Why this matters",
+        "nav": "Why this matters",
+        "paragraphs": [
+          "Decide Which Tags Deserve Indexable Archive Pages matters because a growing archive can become repetitive or unclear long before it runs out of topics.",
+          "The practical goal is to protect reader trust: one clear purpose, stable URLs, useful internal paths, and honest limits for every page."
+        ]
+      },
+      {
+        "id": "what-to-check-first",
+        "title": "What to check first",
+        "nav": "What to check first",
+        "paragraphs": [
+          "Begin with the reader question and the page type. Decide whether the subject needs an origin, meaning, explanation, source review, or editorial guide.",
+          "Then compare the title, opening, tags, source status, and related links. They should support the same need without making the evidence sound stronger than it is."
+        ]
+      },
+      {
+        "id": "how-to-apply-it",
+        "title": "How to apply it in Kyunolab",
+        "nav": "How to apply it in Kyunolab",
+        "paragraphs": [
+          "Use the category as the broad shelf and tags as narrower recurring motifs. Let the article body follow the natural shape of the subject instead of a fixed word limit.",
+          "When a section becomes too broad, split the idea into a separate related article. When it is thin, merge it into a stronger section instead of manufacturing length."
+        ]
+      },
+      {
+        "id": "common-failures",
+        "title": "Common failures to avoid",
+        "nav": "Common failures to avoid",
+        "paragraphs": [
+          "Avoid copied openings, keyword chains, unsupported claims, and links that exist only to increase crawl paths.",
+          "A good archive page is specific enough to be useful, restrained enough to be credible, and distinct enough that a reader can remember why it exists."
+        ]
+      },
+      {
+        "id": "a-practical-final-pass",
+        "title": "A practical final pass",
+        "nav": "A practical final pass",
+        "paragraphs": [
+          "Review one recent story such as [[Where the Forbidden Room Legend Comes From: Origins, Variants, and Modern Meaning|/stories/where-the-forbidden-room-legend-comes-from-origins-variants-and-modern-meaning]] beside the [[Story & Source Notice|/fiction-disclaimer.html]].",
+          "Confirm that the page answers its central question, names its uncertainty, offers a natural next path, and does not create unnecessary indexable URLs."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Does every article need the same length?",
+        "answer": "No. Length should follow the available material and reader need. Useful depth should not be cut, and thin subjects should not be padded."
+      },
+      {
+        "question": "Should search intent replace the archive voice?",
+        "answer": "No. Search intent clarifies the page purpose. It should not erase atmosphere or turn uncertain folklore into a factual claim."
+      },
+      {
+        "question": "When should an idea become a separate article?",
+        "answer": "Create a separate article when it serves a distinct reader question and can support a useful, source-aware page of its own."
+      },
+      {
+        "question": "What should remain stable during updates?",
+        "answer": "Keep the public slug and canonical URL stable unless there is a compelling technical reason to change them."
+      }
+    ],
+    "sourceNote": "This Mystery Board entry is an editorial guide for Kyunolab Mystery Archive. It explains publishing and reading methods and does not verify any individual folklore or mystery claim."
+  },
+  {
+    "id": "how-to-avoid-repetitive-openings-in-folklore-articles",
+    "slug": "how-to-avoid-repetitive-openings-in-folklore-articles",
+    "title": "How to Avoid Repetitive Openings in Folklore Articles",
+    "shortTitle": "Avoid Repetitive Openings in Folklore Articles",
+    "metaTitle": "How to Avoid Repetitive Openings in Folklore Articles | Kyunolab Mystery Archive",
+    "metaDescription": "A guide to varying scene, question, object, place, and source-led openings across a large archive.",
+    "ogTitle": "How to Avoid Repetitive Openings in Folklore Articles",
+    "ogDescription": "A guide to varying scene, question, object, place, and source-led openings across a large archive.",
+    "excerpt": "A guide to varying scene, question, object, place, and source-led openings across a large archive.",
+    "deck": "How to Avoid Repetitive Openings in Folklore Articles is a practical Mystery Board guide for building a clearer, source-aware folklore and mystery archive without weakening its voice.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Opening Variety",
+    "tags": [
+      "Opening Variety",
+      "Archive Method",
+      "Source Status",
+      "Internal Links",
+      "Publishing QA"
+    ],
+    "bestFor": "Editors and readers who want a more trustworthy way to organize folklore, mystery, and archive records",
+    "readTime": "8 min read",
+    "url": "/mystery-board/how-to-avoid-repetitive-openings-in-folklore-articles",
+    "publishedAt": "2026-07-09",
+    "updatedAt": "2026-07-09",
+    "relatedStoryIds": [
+      "the-thunder-heard-only-inside-the-valley-folklore-observation-and-possible-explanations",
+      "the-field-where-frost-forms-in-straight-lines-why-this-landscape-story-endures",
+      "the-hill-shadow-that-arrives-before-sunset-a-natural-mystery-explained"
+    ],
+    "relatedGuideIds": [
+      "how-to-refresh-old-articles-without-changing-their-slugs",
+      "how-to-choose-between-origin-meaning-and-explained-search-intent",
+      "how-to-write-source-notes-for-modern-internet-folklore"
+    ],
+    "sections": [
+      {
+        "id": "why-this-matters",
+        "title": "Why this matters",
+        "nav": "Why this matters",
+        "paragraphs": [
+          "Avoid Repetitive Openings in Folklore Articles matters because a growing archive can become repetitive or unclear long before it runs out of topics.",
+          "The practical goal is to protect reader trust: one clear purpose, stable URLs, useful internal paths, and honest limits for every page."
+        ]
+      },
+      {
+        "id": "what-to-check-first",
+        "title": "What to check first",
+        "nav": "What to check first",
+        "paragraphs": [
+          "Begin with the reader question and the page type. Decide whether the subject needs an origin, meaning, explanation, source review, or editorial guide.",
+          "Then compare the title, opening, tags, source status, and related links. They should support the same need without making the evidence sound stronger than it is."
+        ]
+      },
+      {
+        "id": "how-to-apply-it",
+        "title": "How to apply it in Kyunolab",
+        "nav": "How to apply it in Kyunolab",
+        "paragraphs": [
+          "Use the category as the broad shelf and tags as narrower recurring motifs. Let the article body follow the natural shape of the subject instead of a fixed word limit.",
+          "When a section becomes too broad, split the idea into a separate related article. When it is thin, merge it into a stronger section instead of manufacturing length."
+        ]
+      },
+      {
+        "id": "common-failures",
+        "title": "Common failures to avoid",
+        "nav": "Common failures to avoid",
+        "paragraphs": [
+          "Avoid copied openings, keyword chains, unsupported claims, and links that exist only to increase crawl paths.",
+          "A good archive page is specific enough to be useful, restrained enough to be credible, and distinct enough that a reader can remember why it exists."
+        ]
+      },
+      {
+        "id": "a-practical-final-pass",
+        "title": "A practical final pass",
+        "nav": "A practical final pass",
+        "paragraphs": [
+          "Review one recent story such as [[Why Mirrors Appear in So Many Warning Legends: History and Folklore Development|/stories/why-mirrors-appear-in-so-many-warning-legends-history-and-folklore-development]] beside the [[Story & Source Notice|/fiction-disclaimer.html]].",
+          "Confirm that the page answers its central question, names its uncertainty, offers a natural next path, and does not create unnecessary indexable URLs."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Does every article need the same length?",
+        "answer": "No. Length should follow the available material and reader need. Useful depth should not be cut, and thin subjects should not be padded."
+      },
+      {
+        "question": "Should search intent replace the archive voice?",
+        "answer": "No. Search intent clarifies the page purpose. It should not erase atmosphere or turn uncertain folklore into a factual claim."
+      },
+      {
+        "question": "When should an idea become a separate article?",
+        "answer": "Create a separate article when it serves a distinct reader question and can support a useful, source-aware page of its own."
+      },
+      {
+        "question": "What should remain stable during updates?",
+        "answer": "Keep the public slug and canonical URL stable unless there is a compelling technical reason to change them."
+      }
+    ],
+    "sourceNote": "This Mystery Board entry is an editorial guide for Kyunolab Mystery Archive. It explains publishing and reading methods and does not verify any individual folklore or mystery claim."
+  },
+  {
+    "id": "how-to-refresh-old-articles-without-changing-their-slugs",
+    "slug": "how-to-refresh-old-articles-without-changing-their-slugs",
+    "title": "How to Refresh Old Articles Without Changing Their Slugs",
+    "shortTitle": "Refresh Old Articles Without Changing Their Slugs",
+    "metaTitle": "How to Refresh Old Articles Without Changing Their Slugs | Kyunolab Mystery Archive",
+    "metaDescription": "A practical update process for improving titles, sections, links, and source notes while preserving public URLs.",
+    "ogTitle": "How to Refresh Old Articles Without Changing Their Slugs",
+    "ogDescription": "A practical update process for improving titles, sections, links, and source notes while preserving public URLs.",
+    "excerpt": "A practical update process for improving titles, sections, links, and source notes while preserving public URLs.",
+    "deck": "How to Refresh Old Articles Without Changing Their Slugs is a practical Mystery Board guide for building a clearer, source-aware folklore and mystery archive without weakening its voice.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Stable Refresh",
+    "tags": [
+      "Stable Refresh",
+      "Archive Method",
+      "Source Status",
+      "Internal Links",
+      "Publishing QA"
+    ],
+    "bestFor": "Editors and readers who want a more trustworthy way to organize folklore, mystery, and archive records",
+    "readTime": "10 min read",
+    "url": "/mystery-board/how-to-refresh-old-articles-without-changing-their-slugs",
+    "publishedAt": "2026-07-09",
+    "updatedAt": "2026-07-09",
+    "relatedStoryIds": [
+      "the-cave-chapel-with-a-tide-calendar-a-legendary-place-explained",
+      "the-ruined-tower-that-marks-no-former-border-history-folklore-and-local-memory",
+      "the-hill-shrine-that-faces-away-from-sunrise-why-the-site-became-part-of-local-tradition"
+    ],
+    "relatedGuideIds": [
+      "how-to-choose-between-origin-meaning-and-explained-search-intent",
+      "how-to-write-source-notes-for-modern-internet-folklore",
+      "how-to-find-internal-link-opportunities-without-forcing-them"
+    ],
+    "sections": [
+      {
+        "id": "why-this-matters",
+        "title": "Why this matters",
+        "nav": "Why this matters",
+        "paragraphs": [
+          "Refresh Old Articles Without Changing Their Slugs matters because a growing archive can become repetitive or unclear long before it runs out of topics.",
+          "The practical goal is to protect reader trust: one clear purpose, stable URLs, useful internal paths, and honest limits for every page."
+        ]
+      },
+      {
+        "id": "what-to-check-first",
+        "title": "What to check first",
+        "nav": "What to check first",
+        "paragraphs": [
+          "Begin with the reader question and the page type. Decide whether the subject needs an origin, meaning, explanation, source review, or editorial guide.",
+          "Then compare the title, opening, tags, source status, and related links. They should support the same need without making the evidence sound stronger than it is."
+        ]
+      },
+      {
+        "id": "how-to-apply-it",
+        "title": "How to apply it in Kyunolab",
+        "nav": "How to apply it in Kyunolab",
+        "paragraphs": [
+          "Use the category as the broad shelf and tags as narrower recurring motifs. Let the article body follow the natural shape of the subject instead of a fixed word limit.",
+          "When a section becomes too broad, split the idea into a separate related article. When it is thin, merge it into a stronger section instead of manufacturing length."
+        ]
+      },
+      {
+        "id": "common-failures",
+        "title": "Common failures to avoid",
+        "nav": "Common failures to avoid",
+        "paragraphs": [
+          "Avoid copied openings, keyword chains, unsupported claims, and links that exist only to increase crawl paths.",
+          "A good archive page is specific enough to be useful, restrained enough to be credible, and distinct enough that a reader can remember why it exists."
+        ]
+      },
+      {
+        "id": "a-practical-final-pass",
+        "title": "A practical final pass",
+        "nav": "A practical final pass",
+        "paragraphs": [
+          "Review one recent story such as [[How Lost Media Became Internet Folklore: How the Motif Changed Across Retellings|/stories/how-lost-media-became-internet-folklore-how-the-motif-changed-across-retellings]] beside the [[Story & Source Notice|/fiction-disclaimer.html]].",
+          "Confirm that the page answers its central question, names its uncertainty, offers a natural next path, and does not create unnecessary indexable URLs."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Does every article need the same length?",
+        "answer": "No. Length should follow the available material and reader need. Useful depth should not be cut, and thin subjects should not be padded."
+      },
+      {
+        "question": "Should search intent replace the archive voice?",
+        "answer": "No. Search intent clarifies the page purpose. It should not erase atmosphere or turn uncertain folklore into a factual claim."
+      },
+      {
+        "question": "When should an idea become a separate article?",
+        "answer": "Create a separate article when it serves a distinct reader question and can support a useful, source-aware page of its own."
+      },
+      {
+        "question": "What should remain stable during updates?",
+        "answer": "Keep the public slug and canonical URL stable unless there is a compelling technical reason to change them."
+      }
+    ],
+    "sourceNote": "This Mystery Board entry is an editorial guide for Kyunolab Mystery Archive. It explains publishing and reading methods and does not verify any individual folklore or mystery claim."
+  },
+  {
+    "id": "how-to-choose-between-origin-meaning-and-explained-search-intent",
+    "slug": "how-to-choose-between-origin-meaning-and-explained-search-intent",
+    "title": "How to Choose Between Origin, Meaning, and Explained Search Intent",
+    "shortTitle": "Choose Between Origin, Meaning, and Explained Search Intent",
+    "metaTitle": "How to Choose Between Origin, Meaning, and Explained Search Intent | Kyunolab Mystery Archive",
+    "metaDescription": "A guide to selecting one clear search intent while preserving room for folklore context and interpretation.",
+    "ogTitle": "How to Choose Between Origin, Meaning, and Explained Search Intent",
+    "ogDescription": "A guide to selecting one clear search intent while preserving room for folklore context and interpretation.",
+    "excerpt": "A guide to selecting one clear search intent while preserving room for folklore context and interpretation.",
+    "deck": "How to Choose Between Origin, Meaning, and Explained Search Intent is a practical Mystery Board guide for building a clearer, source-aware folklore and mystery archive without weakening its voice.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Search Intent Choice",
+    "tags": [
+      "Search Intent Choice",
+      "Archive Method",
+      "Source Status",
+      "Internal Links",
+      "Publishing QA"
+    ],
+    "bestFor": "Editors and readers who want a more trustworthy way to organize folklore, mystery, and archive records",
+    "readTime": "9 min read",
+    "url": "/mystery-board/how-to-choose-between-origin-meaning-and-explained-search-intent",
+    "publishedAt": "2026-07-09",
+    "updatedAt": "2026-07-09",
+    "relatedStoryIds": [
+      "the-crossroads-shrine-moved-by-every-new-map-history-folklore-and-local-memory",
+      "the-mountain-door-painted-in-every-generation-why-the-site-became-part-of-local-tradition",
+      "the-harbor-steps-dedicated-to-a-missing-ship-a-legendary-place-explained"
+    ],
+    "relatedGuideIds": [
+      "how-to-write-source-notes-for-modern-internet-folklore",
+      "how-to-find-internal-link-opportunities-without-forcing-them",
+      "how-to-build-topic-briefs-for-a-growing-mystery-archive"
+    ],
+    "sections": [
+      {
+        "id": "why-this-matters",
+        "title": "Why this matters",
+        "nav": "Why this matters",
+        "paragraphs": [
+          "Choose Between Origin, Meaning, and Explained Search Intent matters because a growing archive can become repetitive or unclear long before it runs out of topics.",
+          "The practical goal is to protect reader trust: one clear purpose, stable URLs, useful internal paths, and honest limits for every page."
+        ]
+      },
+      {
+        "id": "what-to-check-first",
+        "title": "What to check first",
+        "nav": "What to check first",
+        "paragraphs": [
+          "Begin with the reader question and the page type. Decide whether the subject needs an origin, meaning, explanation, source review, or editorial guide.",
+          "Then compare the title, opening, tags, source status, and related links. They should support the same need without making the evidence sound stronger than it is."
+        ]
+      },
+      {
+        "id": "how-to-apply-it",
+        "title": "How to apply it in Kyunolab",
+        "nav": "How to apply it in Kyunolab",
+        "paragraphs": [
+          "Use the category as the broad shelf and tags as narrower recurring motifs. Let the article body follow the natural shape of the subject instead of a fixed word limit.",
+          "When a section becomes too broad, split the idea into a separate related article. When it is thin, merge it into a stronger section instead of manufacturing length."
+        ]
+      },
+      {
+        "id": "common-failures",
+        "title": "Common failures to avoid",
+        "nav": "Common failures to avoid",
+        "paragraphs": [
+          "Avoid copied openings, keyword chains, unsupported claims, and links that exist only to increase crawl paths.",
+          "A good archive page is specific enough to be useful, restrained enough to be credible, and distinct enough that a reader can remember why it exists."
+        ]
+      },
+      {
+        "id": "a-practical-final-pass",
+        "title": "A practical final pass",
+        "nav": "A practical final pass",
+        "paragraphs": [
+          "Review one recent story such as [[Why Bells Signal Boundaries in Folklore: Origins, Variants, and Modern Meaning|/stories/why-bells-signal-boundaries-in-folklore-origins-variants-and-modern-meaning]] beside the [[Story & Source Notice|/fiction-disclaimer.html]].",
+          "Confirm that the page answers its central question, names its uncertainty, offers a natural next path, and does not create unnecessary indexable URLs."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Does every article need the same length?",
+        "answer": "No. Length should follow the available material and reader need. Useful depth should not be cut, and thin subjects should not be padded."
+      },
+      {
+        "question": "Should search intent replace the archive voice?",
+        "answer": "No. Search intent clarifies the page purpose. It should not erase atmosphere or turn uncertain folklore into a factual claim."
+      },
+      {
+        "question": "When should an idea become a separate article?",
+        "answer": "Create a separate article when it serves a distinct reader question and can support a useful, source-aware page of its own."
+      },
+      {
+        "question": "What should remain stable during updates?",
+        "answer": "Keep the public slug and canonical URL stable unless there is a compelling technical reason to change them."
+      }
+    ],
+    "sourceNote": "This Mystery Board entry is an editorial guide for Kyunolab Mystery Archive. It explains publishing and reading methods and does not verify any individual folklore or mystery claim."
+  },
+  {
+    "id": "how-to-write-source-notes-for-modern-internet-folklore",
+    "slug": "how-to-write-source-notes-for-modern-internet-folklore",
+    "title": "How to Write Source Notes for Modern Internet Folklore",
+    "shortTitle": "Write Source Notes for Modern Internet Folklore",
+    "metaTitle": "How to Write Source Notes for Modern Internet Folklore | Kyunolab Mystery Archive",
+    "metaDescription": "A source-aware method for describing screenshots, reposts, forum claims, and uncertain digital origins.",
+    "ogTitle": "How to Write Source Notes for Modern Internet Folklore",
+    "ogDescription": "A source-aware method for describing screenshots, reposts, forum claims, and uncertain digital origins.",
+    "excerpt": "A source-aware method for describing screenshots, reposts, forum claims, and uncertain digital origins.",
+    "deck": "How to Write Source Notes for Modern Internet Folklore is a practical Mystery Board guide for building a clearer, source-aware folklore and mystery archive without weakening its voice.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Digital Source Notes",
+    "tags": [
+      "Digital Source Notes",
+      "Archive Method",
+      "Source Status",
+      "Internal Links",
+      "Publishing QA"
+    ],
+    "bestFor": "Editors and readers who want a more trustworthy way to organize folklore, mystery, and archive records",
+    "readTime": "8 min read",
+    "url": "/mystery-board/how-to-write-source-notes-for-modern-internet-folklore",
+    "publishedAt": "2026-07-09",
+    "updatedAt": "2026-07-09",
+    "relatedStoryIds": [
+      "the-bell-that-rings-only-for-returning-travelers-a-mythic-object-tradition-explained",
+      "the-mirror-that-shows-a-room-before-it-is-entered-meaning-symbolism-and-folklore",
+      "the-key-forged-for-a-door-not-yet-built-what-the-object-gives-takes-or-remembers"
+    ],
+    "relatedGuideIds": [
+      "how-to-find-internal-link-opportunities-without-forcing-them",
+      "how-to-build-topic-briefs-for-a-growing-mystery-archive",
+      "how-to-separate-a-legend-hook-from-a-factual-claim"
+    ],
+    "sections": [
+      {
+        "id": "why-this-matters",
+        "title": "Why this matters",
+        "nav": "Why this matters",
+        "paragraphs": [
+          "Write Source Notes for Modern Internet Folklore matters because a growing archive can become repetitive or unclear long before it runs out of topics.",
+          "The practical goal is to protect reader trust: one clear purpose, stable URLs, useful internal paths, and honest limits for every page."
+        ]
+      },
+      {
+        "id": "what-to-check-first",
+        "title": "What to check first",
+        "nav": "What to check first",
+        "paragraphs": [
+          "Begin with the reader question and the page type. Decide whether the subject needs an origin, meaning, explanation, source review, or editorial guide.",
+          "Then compare the title, opening, tags, source status, and related links. They should support the same need without making the evidence sound stronger than it is."
+        ]
+      },
+      {
+        "id": "how-to-apply-it",
+        "title": "How to apply it in Kyunolab",
+        "nav": "How to apply it in Kyunolab",
+        "paragraphs": [
+          "Use the category as the broad shelf and tags as narrower recurring motifs. Let the article body follow the natural shape of the subject instead of a fixed word limit.",
+          "When a section becomes too broad, split the idea into a separate related article. When it is thin, merge it into a stronger section instead of manufacturing length."
+        ]
+      },
+      {
+        "id": "common-failures",
+        "title": "Common failures to avoid",
+        "nav": "Common failures to avoid",
+        "paragraphs": [
+          "Avoid copied openings, keyword chains, unsupported claims, and links that exist only to increase crawl paths.",
+          "A good archive page is specific enough to be useful, restrained enough to be credible, and distinct enough that a reader can remember why it exists."
+        ]
+      },
+      {
+        "id": "a-practical-final-pass",
+        "title": "A practical final pass",
+        "nav": "A practical final pass",
+        "paragraphs": [
+          "Review one recent story such as [[The Origin of the Road That Repeats Itself: History and Folklore Development|/stories/the-origin-of-the-road-that-repeats-itself-history-and-folklore-development]] beside the [[Story & Source Notice|/fiction-disclaimer.html]].",
+          "Confirm that the page answers its central question, names its uncertainty, offers a natural next path, and does not create unnecessary indexable URLs."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Does every article need the same length?",
+        "answer": "No. Length should follow the available material and reader need. Useful depth should not be cut, and thin subjects should not be padded."
+      },
+      {
+        "question": "Should search intent replace the archive voice?",
+        "answer": "No. Search intent clarifies the page purpose. It should not erase atmosphere or turn uncertain folklore into a factual claim."
+      },
+      {
+        "question": "When should an idea become a separate article?",
+        "answer": "Create a separate article when it serves a distinct reader question and can support a useful, source-aware page of its own."
+      },
+      {
+        "question": "What should remain stable during updates?",
+        "answer": "Keep the public slug and canonical URL stable unless there is a compelling technical reason to change them."
+      }
+    ],
+    "sourceNote": "This Mystery Board entry is an editorial guide for Kyunolab Mystery Archive. It explains publishing and reading methods and does not verify any individual folklore or mystery claim."
+  },
+  {
+    "id": "how-to-find-internal-link-opportunities-without-forcing-them",
+    "slug": "how-to-find-internal-link-opportunities-without-forcing-them",
+    "title": "How to Find Internal Link Opportunities Without Forcing Them",
+    "shortTitle": "Find Internal Link Opportunities Without Forcing Them",
+    "metaTitle": "How to Find Internal Link Opportunities Without Forcing Them | Kyunolab Mystery Archive",
+    "metaDescription": "A guide to connecting archive records by genuine reader curiosity instead of inserting repetitive links.",
+    "ogTitle": "How to Find Internal Link Opportunities Without Forcing Them",
+    "ogDescription": "A guide to connecting archive records by genuine reader curiosity instead of inserting repetitive links.",
+    "excerpt": "A guide to connecting archive records by genuine reader curiosity instead of inserting repetitive links.",
+    "deck": "How to Find Internal Link Opportunities Without Forcing Them is a practical Mystery Board guide for building a clearer, source-aware folklore and mystery archive without weakening its voice.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Natural Internal Links",
+    "tags": [
+      "Natural Internal Links",
+      "Archive Method",
+      "Source Status",
+      "Internal Links",
+      "Publishing QA"
+    ],
+    "bestFor": "Editors and readers who want a more trustworthy way to organize folklore, mystery, and archive records",
+    "readTime": "10 min read",
+    "url": "/mystery-board/how-to-find-internal-link-opportunities-without-forcing-them",
+    "publishedAt": "2026-07-09",
+    "updatedAt": "2026-07-09",
+    "relatedStoryIds": [
+      "the-wooden-mask-that-remembers-every-voice-meaning-symbolism-and-folklore",
+      "the-ring-that-must-be-returned-through-water-what-the-object-gives-takes-or-remembers",
+      "the-stone-book-no-one-reads-from-the-beginning-a-mythic-object-tradition-explained"
+    ],
+    "relatedGuideIds": [
+      "how-to-build-topic-briefs-for-a-growing-mystery-archive",
+      "how-to-separate-a-legend-hook-from-a-factual-claim",
+      "how-to-review-a-new-kyunolab-article-before-publishing"
+    ],
+    "sections": [
+      {
+        "id": "why-this-matters",
+        "title": "Why this matters",
+        "nav": "Why this matters",
+        "paragraphs": [
+          "Find Internal Link Opportunities Without Forcing Them matters because a growing archive can become repetitive or unclear long before it runs out of topics.",
+          "The practical goal is to protect reader trust: one clear purpose, stable URLs, useful internal paths, and honest limits for every page."
+        ]
+      },
+      {
+        "id": "what-to-check-first",
+        "title": "What to check first",
+        "nav": "What to check first",
+        "paragraphs": [
+          "Begin with the reader question and the page type. Decide whether the subject needs an origin, meaning, explanation, source review, or editorial guide.",
+          "Then compare the title, opening, tags, source status, and related links. They should support the same need without making the evidence sound stronger than it is."
+        ]
+      },
+      {
+        "id": "how-to-apply-it",
+        "title": "How to apply it in Kyunolab",
+        "nav": "How to apply it in Kyunolab",
+        "paragraphs": [
+          "Use the category as the broad shelf and tags as narrower recurring motifs. Let the article body follow the natural shape of the subject instead of a fixed word limit.",
+          "When a section becomes too broad, split the idea into a separate related article. When it is thin, merge it into a stronger section instead of manufacturing length."
+        ]
+      },
+      {
+        "id": "common-failures",
+        "title": "Common failures to avoid",
+        "nav": "Common failures to avoid",
+        "paragraphs": [
+          "Avoid copied openings, keyword chains, unsupported claims, and links that exist only to increase crawl paths.",
+          "A good archive page is specific enough to be useful, restrained enough to be credible, and distinct enough that a reader can remember why it exists."
+        ]
+      },
+      {
+        "id": "a-practical-final-pass",
+        "title": "A practical final pass",
+        "nav": "A practical final pass",
+        "paragraphs": [
+          "Review one recent story such as [[How the Unknown Floor Entered Building Legends: How the Motif Changed Across Retellings|/stories/how-the-unknown-floor-entered-building-legends-how-the-motif-changed-across-retellings]] beside the [[Story & Source Notice|/fiction-disclaimer.html]].",
+          "Confirm that the page answers its central question, names its uncertainty, offers a natural next path, and does not create unnecessary indexable URLs."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Does every article need the same length?",
+        "answer": "No. Length should follow the available material and reader need. Useful depth should not be cut, and thin subjects should not be padded."
+      },
+      {
+        "question": "Should search intent replace the archive voice?",
+        "answer": "No. Search intent clarifies the page purpose. It should not erase atmosphere or turn uncertain folklore into a factual claim."
+      },
+      {
+        "question": "When should an idea become a separate article?",
+        "answer": "Create a separate article when it serves a distinct reader question and can support a useful, source-aware page of its own."
+      },
+      {
+        "question": "What should remain stable during updates?",
+        "answer": "Keep the public slug and canonical URL stable unless there is a compelling technical reason to change them."
+      }
+    ],
+    "sourceNote": "This Mystery Board entry is an editorial guide for Kyunolab Mystery Archive. It explains publishing and reading methods and does not verify any individual folklore or mystery claim."
+  },
+  {
+    "id": "how-to-build-topic-briefs-for-a-growing-mystery-archive",
+    "slug": "how-to-build-topic-briefs-for-a-growing-mystery-archive",
+    "title": "How to Build Topic Briefs for a Growing Mystery Archive",
+    "shortTitle": "Build Topic Briefs for a Growing Mystery Archive",
+    "metaTitle": "How to Build Topic Briefs for a Growing Mystery Archive | Kyunolab Mystery Archive",
+    "metaDescription": "A guide to preparing useful article briefs with search intent, source status, motifs, and expansion paths.",
+    "ogTitle": "How to Build Topic Briefs for a Growing Mystery Archive",
+    "ogDescription": "A guide to preparing useful article briefs with search intent, source status, motifs, and expansion paths.",
+    "excerpt": "A guide to preparing useful article briefs with search intent, source status, motifs, and expansion paths.",
+    "deck": "How to Build Topic Briefs for a Growing Mystery Archive is a practical Mystery Board guide for building a clearer, source-aware folklore and mystery archive without weakening its voice.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Topic Briefs",
+    "tags": [
+      "Topic Briefs",
+      "Archive Method",
+      "Source Status",
+      "Internal Links",
+      "Publishing QA"
+    ],
+    "bestFor": "Editors and readers who want a more trustworthy way to organize folklore, mystery, and archive records",
+    "readTime": "9 min read",
+    "url": "/mystery-board/how-to-build-topic-briefs-for-a-growing-mystery-archive",
+    "publishedAt": "2026-07-09",
+    "updatedAt": "2026-07-09",
+    "relatedStoryIds": [
+      "how-lost-media-became-internet-folklore-how-the-motif-changed-across-retellings",
+      "why-mirrors-appear-in-so-many-warning-legends-history-and-folklore-development",
+      "where-the-forbidden-room-legend-comes-from-origins-variants-and-modern-meaning"
+    ],
+    "relatedGuideIds": [
+      "how-to-separate-a-legend-hook-from-a-factual-claim",
+      "how-to-review-a-new-kyunolab-article-before-publishing",
+      "how-to-refresh-category-pages-as-the-archive-grows"
+    ],
+    "sections": [
+      {
+        "id": "why-this-matters",
+        "title": "Why this matters",
+        "nav": "Why this matters",
+        "paragraphs": [
+          "Build Topic Briefs for a Growing Mystery Archive matters because a growing archive can become repetitive or unclear long before it runs out of topics.",
+          "The practical goal is to protect reader trust: one clear purpose, stable URLs, useful internal paths, and honest limits for every page."
+        ]
+      },
+      {
+        "id": "what-to-check-first",
+        "title": "What to check first",
+        "nav": "What to check first",
+        "paragraphs": [
+          "Begin with the reader question and the page type. Decide whether the subject needs an origin, meaning, explanation, source review, or editorial guide.",
+          "Then compare the title, opening, tags, source status, and related links. They should support the same need without making the evidence sound stronger than it is."
+        ]
+      },
+      {
+        "id": "how-to-apply-it",
+        "title": "How to apply it in Kyunolab",
+        "nav": "How to apply it in Kyunolab",
+        "paragraphs": [
+          "Use the category as the broad shelf and tags as narrower recurring motifs. Let the article body follow the natural shape of the subject instead of a fixed word limit.",
+          "When a section becomes too broad, split the idea into a separate related article. When it is thin, merge it into a stronger section instead of manufacturing length."
+        ]
+      },
+      {
+        "id": "common-failures",
+        "title": "Common failures to avoid",
+        "nav": "Common failures to avoid",
+        "paragraphs": [
+          "Avoid copied openings, keyword chains, unsupported claims, and links that exist only to increase crawl paths.",
+          "A good archive page is specific enough to be useful, restrained enough to be credible, and distinct enough that a reader can remember why it exists."
+        ]
+      },
+      {
+        "id": "a-practical-final-pass",
+        "title": "A practical final pass",
+        "nav": "A practical final pass",
+        "paragraphs": [
+          "Review one recent story such as [[Why Anonymous Photographs Generate Modern Legends: Origins, Variants, and Modern Meaning|/stories/why-anonymous-photographs-generate-modern-legends-origins-variants-and-modern-meaning]] beside the [[Story & Source Notice|/fiction-disclaimer.html]].",
+          "Confirm that the page answers its central question, names its uncertainty, offers a natural next path, and does not create unnecessary indexable URLs."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Does every article need the same length?",
+        "answer": "No. Length should follow the available material and reader need. Useful depth should not be cut, and thin subjects should not be padded."
+      },
+      {
+        "question": "Should search intent replace the archive voice?",
+        "answer": "No. Search intent clarifies the page purpose. It should not erase atmosphere or turn uncertain folklore into a factual claim."
+      },
+      {
+        "question": "When should an idea become a separate article?",
+        "answer": "Create a separate article when it serves a distinct reader question and can support a useful, source-aware page of its own."
+      },
+      {
+        "question": "What should remain stable during updates?",
+        "answer": "Keep the public slug and canonical URL stable unless there is a compelling technical reason to change them."
+      }
+    ],
+    "sourceNote": "This Mystery Board entry is an editorial guide for Kyunolab Mystery Archive. It explains publishing and reading methods and does not verify any individual folklore or mystery claim."
+  },
+  {
+    "id": "how-to-separate-a-legend-hook-from-a-factual-claim",
+    "slug": "how-to-separate-a-legend-hook-from-a-factual-claim",
+    "title": "How to Separate a Legend Hook From a Factual Claim",
+    "shortTitle": "Separate a Legend Hook From a Factual Claim",
+    "metaTitle": "How to Separate a Legend Hook From a Factual Claim | Kyunolab Mystery Archive",
+    "metaDescription": "A practical guide to writing compelling folklore hooks without presenting an unverified story as established fact.",
+    "ogTitle": "How to Separate a Legend Hook From a Factual Claim",
+    "ogDescription": "A practical guide to writing compelling folklore hooks without presenting an unverified story as established fact.",
+    "excerpt": "A practical guide to writing compelling folklore hooks without presenting an unverified story as established fact.",
+    "deck": "How to Separate a Legend Hook From a Factual Claim is a practical Mystery Board guide for building a clearer, source-aware folklore and mystery archive without weakening its voice.",
+    "category": "Mystery Board",
+    "categorySlug": "mystery-board",
+    "tag": "Claim Safety",
+    "tags": [
+      "Claim Safety",
+      "Archive Method",
+      "Source Status",
+      "Internal Links",
+      "Publishing QA"
+    ],
+    "bestFor": "Editors and readers who want a more trustworthy way to organize folklore, mystery, and archive records",
+    "readTime": "8 min read",
+    "url": "/mystery-board/how-to-separate-a-legend-hook-from-a-factual-claim",
+    "publishedAt": "2026-07-09",
+    "updatedAt": "2026-07-09",
+    "relatedStoryIds": [
+      "how-weather-omens-survive-in-modern-storytelling-history-and-folklore-development",
+      "why-anonymous-photographs-generate-modern-legends-origins-variants-and-modern-meaning",
+      "how-the-unknown-floor-entered-building-legends-how-the-motif-changed-across-retellings"
+    ],
+    "relatedGuideIds": [
+      "how-to-review-a-new-kyunolab-article-before-publishing",
+      "how-to-refresh-category-pages-as-the-archive-grows",
+      "how-to-keep-myth-articles-search-friendly-without-flattening-symbolism"
+    ],
+    "sections": [
+      {
+        "id": "why-this-matters",
+        "title": "Why this matters",
+        "nav": "Why this matters",
+        "paragraphs": [
+          "Separate a Legend Hook From a Factual Claim matters because a growing archive can become repetitive or unclear long before it runs out of topics.",
+          "The practical goal is to protect reader trust: one clear purpose, stable URLs, useful internal paths, and honest limits for every page."
+        ]
+      },
+      {
+        "id": "what-to-check-first",
+        "title": "What to check first",
+        "nav": "What to check first",
+        "paragraphs": [
+          "Begin with the reader question and the page type. Decide whether the subject needs an origin, meaning, explanation, source review, or editorial guide.",
+          "Then compare the title, opening, tags, source status, and related links. They should support the same need without making the evidence sound stronger than it is."
+        ]
+      },
+      {
+        "id": "how-to-apply-it",
+        "title": "How to apply it in Kyunolab",
+        "nav": "How to apply it in Kyunolab",
+        "paragraphs": [
+          "Use the category as the broad shelf and tags as narrower recurring motifs. Let the article body follow the natural shape of the subject instead of a fixed word limit.",
+          "When a section becomes too broad, split the idea into a separate related article. When it is thin, merge it into a stronger section instead of manufacturing length."
+        ]
+      },
+      {
+        "id": "common-failures",
+        "title": "Common failures to avoid",
+        "nav": "Common failures to avoid",
+        "paragraphs": [
+          "Avoid copied openings, keyword chains, unsupported claims, and links that exist only to increase crawl paths.",
+          "A good archive page is specific enough to be useful, restrained enough to be credible, and distinct enough that a reader can remember why it exists."
+        ]
+      },
+      {
+        "id": "a-practical-final-pass",
+        "title": "A practical final pass",
+        "nav": "A practical final pass",
+        "paragraphs": [
+          "Review one recent story such as [[How Weather Omens Survive in Modern Storytelling: History and Folklore Development|/stories/how-weather-omens-survive-in-modern-storytelling-history-and-folklore-development]] beside the [[Story & Source Notice|/fiction-disclaimer.html]].",
+          "Confirm that the page answers its central question, names its uncertainty, offers a natural next path, and does not create unnecessary indexable URLs."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Does every article need the same length?",
+        "answer": "No. Length should follow the available material and reader need. Useful depth should not be cut, and thin subjects should not be padded."
+      },
+      {
+        "question": "Should search intent replace the archive voice?",
+        "answer": "No. Search intent clarifies the page purpose. It should not erase atmosphere or turn uncertain folklore into a factual claim."
+      },
+      {
+        "question": "When should an idea become a separate article?",
+        "answer": "Create a separate article when it serves a distinct reader question and can support a useful, source-aware page of its own."
+      },
+      {
+        "question": "What should remain stable during updates?",
+        "answer": "Keep the public slug and canonical URL stable unless there is a compelling technical reason to change them."
+      }
+    ],
+    "sourceNote": "This Mystery Board entry is an editorial guide for Kyunolab Mystery Archive. It explains publishing and reading methods and does not verify any individual folklore or mystery claim."
+  },
+  {
     "id": "how-to-review-a-new-kyunolab-article-before-publishing",
     "slug": "how-to-review-a-new-kyunolab-article-before-publishing",
     "title": "How to Review a New Kyunolab Article Before Publishing",

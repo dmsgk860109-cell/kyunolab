@@ -183,7 +183,11 @@ function buildConciseMetaDescription(story, subject, tag, excerpt) {
     `A calm guide to ${subject}, its common versions, source limits, and the ${tagText} motif that makes ${scene} memorable.`,
     `${subject} explains ${scene} through ${category}, separating folklore meaning from what the available record can support.`
   ];
-  return trimToLength(variants[stableIndex(`${story.slug}-meta`, variants.length)], 158);
+  let description = variants[stableIndex(`${story.slug}-meta`, variants.length)];
+  if (description.length < 130) {
+    description += ' It also separates recurring story details from verified evidence.';
+  }
+  return ensureTerminalPunctuation(trimMetaDescription(description, 158));
 }
 
 function titleFromSlug(slug) {
@@ -293,10 +297,11 @@ function sectionParagraphs(story, heading, index, vocabulary, details) {
   const scene = scenePhrase(detail);
 
   if (index === 0) {
+    const definingTerms = listForSentence(meaningfulTerms(vocabulary), 5);
     const followups = [
-      `${vocabSentence} These are the pieces that keep the article attached to the actual ${tag.toLowerCase()} pattern instead of drifting into a loose mood piece.`,
-      `${vocabSentence} Their job is practical: each term gives the reader a handle on the specific shape of the record.`,
-      `${vocabSentence} The terms matter because they keep the article close to what can be pictured, repeated, or checked.`
+      `${vocabSentence} The defining vocabulary also includes ${definingTerms}. Together, these details keep the article attached to the actual ${tag.toLowerCase()} pattern instead of drifting into a loose mood piece.`,
+      `${vocabSentence} The defining vocabulary also includes ${definingTerms}. Each term gives the reader a practical handle on the specific shape of the record.`,
+      `${vocabSentence} The defining vocabulary also includes ${definingTerms}. These terms keep the article close to what can be pictured, repeated, or checked.`
     ];
     return [
       firstAnalysisParagraph(story, subject, scene, profile),
@@ -603,15 +608,15 @@ function sentenceFromTerms(terms, subject) {
   return `${subject} depends on details such as ${clean.join(', ')}.`;
 }
 
-function listForSentence(values) {
+function listForSentence(values, limit = 3) {
   const clean = (values || [])
     .map((value) => String(value || '').replace(/[.?!]+$/, '').trim())
     .filter(Boolean)
-    .slice(0, 3);
+    .slice(0, limit);
   if (!clean.length) return 'the recurring details';
   if (clean.length === 1) return clean[0];
   if (clean.length === 2) return `${clean[0]} and ${clean[1]}`;
-  return `${clean[0]}, ${clean[1]}, and ${clean[2]}`;
+  return `${clean.slice(0, -1).join(', ')}, and ${clean[clean.length - 1]}`;
 }
 
 function scenePhrase(value) {
