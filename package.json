@@ -9,8 +9,5 @@
     "validate:tags": "node scripts/validate-tags.js",
     "validate:publish": "node scripts/validate-publish.js",
     "qa:full": "node scripts/apply-content-dna.js && node scripts/validate-tags.js && node scripts/generate-site.js && node scripts/generate-guides.js && node scripts/generate-tags.js && node scripts/normalize-public-urls.js && node scripts/validate-publish.js --all"
-  },
-  "dependencies": {
-    "@amplitude/unified": "^1.1.20"
   }
 }

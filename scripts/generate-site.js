@@ -117,8 +117,6 @@ function renderHomePage({ featuredStory, latestStories, popularStories, essentia
     <section class="archive-cta"><div><p class="label">Archive Index</p><h2>Explore every open file in Kyunolab Mystery Archive.</h2><p>Move through the full collection by category, source status, story type, folklore motif, legend origin, and recurring mystery pattern.</p></div><a class="button" href="/archive.html">Browse all current stories</a></section>
   </main>
   ${renderFooter()}
-  <script src="/vendor/amplitude-unified-1.1.20.min.js" defer></script>
-  <script src="/amplitude-init.js?v=20260708-amplitude" defer></script>
 </body>
 </html>
 `;
@@ -408,8 +406,6 @@ ${robotsMeta}  <meta property="og:title" content="${escapeAttr(title)}">
   ${renderHeader()}
 ${content}
   ${renderFooter()}
-  <script src="/vendor/amplitude-unified-1.1.20.min.js" defer></script>
-  <script src="/amplitude-init.js?v=20260708-amplitude" defer></script>
 </body>
 </html>
 `;

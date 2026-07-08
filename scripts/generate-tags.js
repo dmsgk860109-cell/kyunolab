@@ -243,8 +243,6 @@ ${storyRows}
   </main>
 
   ${renderFooter()}
-  <script src="/vendor/amplitude-unified-1.1.20.min.js" defer></script>
-  <script src="/amplitude-init.js?v=20260708-amplitude" defer></script>
 </body>
 </html>
 `;
