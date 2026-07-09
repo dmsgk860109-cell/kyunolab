@@ -4,10 +4,11 @@ const { buildContentDNA } = require('./article-dna-utils');
 
 const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://kyunolab.com';
-const styleVersion = '20260706-kit-ui';
+const styleVersion = '20260709-seo-structure';
 const storiesPath = path.join(root, 'data', 'stories.json');
 const stories = readJson(storiesPath);
 const categories = readJson(path.join(root, 'data', 'categories.json'));
+const seoOverrides = readOptionalJson(path.join(root, 'data', 'story-seo-overrides.json'), {});
 
 const storyBySlug = new Map(stories.map((story) => [story.slug, story]));
 const existingQueries = new Set();
@@ -17,6 +18,7 @@ for (const story of stories) {
 
 for (const story of stories) {
   backfillStoryMetadata(story);
+  if (seoOverrides[story.slug]) Object.assign(story, seoOverrides[story.slug]);
   const generatedDNA = buildContentDNA(story, existingQueries);
   const existingDNA = story.contentDNA || {};
   story.contentDNA = {
@@ -28,7 +30,9 @@ for (const story of stories) {
     sceneAnchor: generatedDNA.sceneAnchor,
     subjectSpecificVocabulary: generatedDNA.subjectSpecificVocabulary,
     requiredSpecificDetails: generatedDNA.requiredSpecificDetails,
-    sectionBlueprint: generatedDNA.sectionBlueprint
+    sectionBlueprint: Array.isArray(story.seoHeadings) && story.seoHeadings.length
+      ? story.seoHeadings.map((title) => ({ title, nav: title }))
+      : generatedDNA.sectionBlueprint
   };
 }
 
@@ -52,10 +56,13 @@ function backfillStoryMetadata(story) {
 
   story.title = title;
   story.displayTitle = story.displayTitle || title;
+  story.h1 = story.h1 || story.displayTitle;
+  story.introSummary = story.introSummary || story.excerpt || story.summaryAnswer || excerpt;
   story.seoTitle = buildSeoArticleTitle(story, subject);
   story.metaTitle = story.seoTitle;
   story.metaDescription = buildConciseMetaDescription(story, subject, tag, excerpt);
   story.seedKeyword = story.seedKeyword || query;
+  story.primaryKeyword = story.primaryKeyword || story.seedKeyword;
   story.searchIntent = story.searchIntent || inferSearchIntent(story);
   story.articleFormat = story.articleFormat || inferArticleFormat(story);
   story.primaryTag = story.primaryTag || tag;
@@ -64,6 +71,12 @@ function backfillStoryMetadata(story) {
   story.relatedKeywords = Array.isArray(story.relatedKeywords) && story.relatedKeywords.length
     ? story.relatedKeywords
     : buildRelatedKeywords(story, subject, tag);
+  story.secondaryKeywords = Array.isArray(story.secondaryKeywords) && story.secondaryKeywords.length
+    ? story.secondaryKeywords
+    : story.relatedKeywords;
+  story.relatedStorySlugs = Array.isArray(story.relatedStorySlugs) && story.relatedStorySlugs.length
+    ? story.relatedStorySlugs
+    : (story.relatedStoryIds || []);
   story.summaryAnswer = buildSummaryAnswer(story, subject);
   story.topicScore = story.topicScore || 72;
   story.topicStatus = story.topicStatus || 'approved';
@@ -199,10 +212,11 @@ function titleFromSlug(slug) {
 
 function renderStoryPage(story, previousStory, nextStory) {
   const cleanUrl = `${siteUrl}/stories/${story.slug}`;
-  const title = story.displayTitle || story.title;
+  const title = story.h1 || story.displayTitle || story.title;
   const metaTitle = story.metaTitle || story.seoTitle || title;
   const pageTitle = buildMetaPageTitle(metaTitle, title);
   const description = buildStoryMetaDescription(story);
+  const socialImage = absoluteImageUrl(story.socialImage || story.image || '/icon-512.png');
   const relatedStories = getRelatedStories(story);
   const dna = story.contentDNA;
   const sections = buildBodySections(story);
@@ -219,7 +233,11 @@ function renderStoryPage(story, previousStory, nextStory) {
   <meta property="og:site_name" content="Kyunolab Mystery Archive">
   <meta property="og:type" content="article">
   <meta property="og:url" content="${cleanUrl}">
+  <meta property="og:image" content="${escapeAttr(socialImage)}">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${escapeAttr(title)}">
+  <meta name="twitter:description" content="${escapeAttr(description)}">
+  <meta name="twitter:image" content="${escapeAttr(socialImage)}">
   <link rel="canonical" href="${cleanUrl}">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
@@ -234,12 +252,16 @@ function renderStoryPage(story, previousStory, nextStory) {
   <main class="article-shell article-layout">
     ${renderLeftRail(story, sections)}
     <article>
+      ${renderBreadcrumb(story)}
       <header class="archive-article-header">
         <p class="label">${escapeHtml(story.category)}</p>
         <h1 class="article-title">${escapeHtml(title)}</h1>
-        <p class="deck">${escapeHtml(story.excerpt || story.summaryAnswer || description)}</p>
+        <p class="deck">${escapeHtml(story.introSummary || story.excerpt || story.summaryAnswer || description)}</p>
+        <p class="article-updated">Updated ${escapeHtml(formatDate(story.updatedAt || story.publishedAt))}</p>
+${renderHeroImage(story)}
         ${renderMetaGrid(story)}
       </header>
+      ${renderSearchSummary(story)}
       ${renderStoryMap(sections)}
       ${renderReadingBridge(story, relatedStories)}
       <div class="story-body archive-entry">
@@ -374,7 +396,7 @@ function renderFaq(story) {
   const profile = getQualityProfile(story);
   const detail = story.detail || story.excerpt || dna.sceneAnchor || subject;
   const scene = scenePhrase(detail);
-  const questions = [
+  const defaultQuestions = [
     {
       q: `What is the main idea behind ${subject.toLowerCase()}?`,
       a: `The main idea is not simply that something strange happened. It is that ${scene} gives the story a concrete shape, making the ${tag.toLowerCase()} motif easy to remember and retell.`
@@ -393,10 +415,11 @@ function renderFaq(story) {
     }
   ];
 
-  return `<h2 id="faq">FAQ</h2>
+  const questions = Array.isArray(story.faq) && story.faq.length ? story.faq : defaultQuestions;
+  return `<h2 id="faq">Frequently Asked Questions</h2>
       <div class="faq-list">
-${questions.map((item) => `        <h3>${escapeHtml(item.q)}</h3>
-        <p>${escapeHtml(item.a)}</p>`).join('\n')}
+${questions.map((item) => `        <h3>${escapeHtml(item.q || item.question)}</h3>
+        <p>${escapeHtml(item.a || item.answer)}</p>`).join('\n')}
       </div>`;
 }
 
@@ -409,9 +432,10 @@ function renderSourceNote(story) {
 
 function renderMetaGrid(story) {
   const updated = formatDate(story.updatedAt || story.publishedAt);
+  const tags = (story.tags || []).map((tag) => `<a href="/tags/${escapeAttr(slugify(tag))}/">${escapeHtml(tag)}</a>`).join(', ');
   return `<dl class="article-meta-grid">
-          <div><dt>Category</dt><dd>${escapeHtml(story.category)}</dd></div>
-          <div><dt>Tags</dt><dd>${escapeHtml((story.tags || []).join(', '))}</dd></div>
+          <div><dt>Category</dt><dd><a href="/categories/${escapeAttr(story.categorySlug)}.html">${escapeHtml(story.category)}</a></dd></div>
+          <div><dt>Tags</dt><dd>${tags}</dd></div>
           <div><dt>Read time</dt><dd>${escapeHtml(story.readTime)}</dd></div>
           <div><dt>Story Type</dt><dd><a href="/fiction-disclaimer.html#story-types">${escapeHtml(story.storyType)}</a></dd></div>
           <div><dt>Source Status</dt><dd><a href="/fiction-disclaimer.html#source-status">${escapeHtml(story.sourceStatus)}</a></dd></div>
@@ -421,7 +445,33 @@ function renderMetaGrid(story) {
 
 function renderStoryMap(sections) {
   const items = sections.map((section) => `<li><a href="#${escapeAttr(section.id)}">${escapeHtml(section.title)}</a></li>`).join('');
-  return `<section class="story-map" aria-label="Story map"><h2>Story Map</h2><ol>${items}<li><a href="#faq">FAQ</a></li><li><a href="#source-note">Story &amp; Source Note</a></li></ol></section>`;
+  return `<section class="story-map" aria-label="Story map"><h2>Story Map</h2><ol>${items}<li><a href="#faq">Frequently Asked Questions</a></li><li><a href="#source-note">Story &amp; Source Note</a></li></ol></section>`;
+}
+
+function renderBreadcrumb(story) {
+  return `<nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/categories/${escapeAttr(story.categorySlug)}.html">${escapeHtml(story.category)}</a><span aria-hidden="true">/</span><span aria-current="page">${escapeHtml(story.h1 || story.displayTitle || story.title)}</span></nav>`;
+}
+
+function renderHeroImage(story) {
+  if (!story.image) return '';
+  const alt = story.imageAlt || `${story.h1 || story.displayTitle || story.title} archive illustration`;
+  const caption = story.imageCaption ? `<figcaption>${escapeHtml(story.imageCaption)}</figcaption>` : '';
+  return `        <figure class="article-hero-image"><img src="${escapeAttr(story.image)}" alt="${escapeAttr(alt)}">${caption}</figure>`;
+}
+
+function renderSearchSummary(story) {
+  const summary = story.searchSummary || {};
+  const what = summary.whatItIs || story.introSummary || story.summaryAnswer;
+  const where = summary.whereItAppears || `This record belongs to ${story.category} and connects with ${(story.tags || []).slice(0, 3).join(', ')}.`;
+  const why = summary.whyItMatters || story.contentDNA?.uniqueAngle || story.summaryAnswer;
+  return `<aside class="search-summary" aria-labelledby="quick-answer-title">
+      <h2 id="quick-answer-title">Quick Answer</h2>
+      <dl>
+        <div><dt>What it is</dt><dd>${escapeHtml(what)}</dd></div>
+        <div><dt>Where it appears</dt><dd>${escapeHtml(where)}</dd></div>
+        <div><dt>Why it matters</dt><dd>${escapeHtml(why)}</dd></div>
+      </dl>
+    </aside>`;
 }
 
 function renderLeftRail(story, sections) {
@@ -463,7 +513,8 @@ function renderRightRail(story, relatedStories, nextStory) {
 }
 
 function getRelatedStories(story) {
-  const manual = (story.relatedStoryIds || []).map((id) => storyBySlug.get(id)).filter(Boolean);
+  const manualIds = story.relatedStorySlugs || story.relatedStoryIds || [];
+  const manual = manualIds.map((id) => storyBySlug.get(id)).filter(Boolean);
   const manualSlugs = new Set(manual.map((item) => item.slug));
   const scored = stories
     .filter((item) => item.slug !== story.slug && !manualSlugs.has(item.slug))
@@ -773,6 +824,7 @@ function trimToLength(value, maxLength) {
 }
 
 function renderJsonLd(story, cleanUrl, description) {
+  const image = story.socialImage || story.image || '/icon-512.png';
   return {
     '@context': 'https://schema.org',
     '@graph': [
@@ -786,6 +838,8 @@ function renderJsonLd(story, cleanUrl, description) {
         author: { '@type': 'Organization', name: 'Kyuno Lab' },
         publisher: { '@type': 'Organization', name: 'Kyuno Lab' },
         mainEntityOfPage: cleanUrl,
+        url: cleanUrl,
+        image: absoluteImageUrl(image),
         keywords: [...(story.tags || []), ...(story.relatedKeywords || [])].join(', ')
       },
       {
@@ -807,13 +861,19 @@ function renderJsonLd(story, cleanUrl, description) {
           {
             '@type': 'ListItem',
             position: 3,
-            name: story.title,
+            name: story.h1 || story.title,
             item: cleanUrl
           }
         ]
       }
     ]
   };
+}
+
+function absoluteImageUrl(value) {
+  const source = String(value || '').trim();
+  if (/^https?:\/\//i.test(source)) return source;
+  return `${siteUrl}${source.startsWith('/') ? source : `/${source}`}`;
 }
 
 function renderHeader() {
@@ -839,6 +899,10 @@ function normalize(value) {
 
 function readJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, 'utf8'));
+}
+
+function readOptionalJson(filePath, fallback) {
+  return fs.existsSync(filePath) ? readJson(filePath) : fallback;
 }
 
 function writeJson(filePath, data) {

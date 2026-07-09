@@ -216,7 +216,10 @@ function validateStoryPage(story) {
   if (story.summaryAnswer) {
     const firstArticleText = bodyText.slice(0, 2500).toLowerCase();
     const summaryKey = String(story.summaryAnswer).split(/\s+/).slice(0, 8).join(' ').toLowerCase();
-    if (summaryKey && !firstArticleText.includes(summaryKey)) {
+    const introKey = String(story.introSummary || '').split(/\s+/).slice(0, 8).join(' ').toLowerCase();
+    const hasSummary = summaryKey && firstArticleText.includes(summaryKey);
+    const hasIntro = introKey && firstArticleText.includes(introKey);
+    if (!hasSummary && !hasIntro) {
       errors.push(`${story.slug}: summaryAnswer is not reflected near the beginning`);
     }
   }

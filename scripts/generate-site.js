@@ -3,7 +3,7 @@ const path = require('path');
 
 const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://kyunolab.com';
-const styleVersion = '20260706-kit-ui';
+const styleVersion = '20260709-seo-structure';
 const pageSize = 12;
 const rssLimit = 20;
 
@@ -89,7 +89,11 @@ function renderHomePage({ featuredStory, latestStories, popularStories, essentia
   <meta property="og:site_name" content="Kyunolab Mystery Archive">
   <meta property="og:type" content="website">
   <meta property="og:url" content="${siteUrl}/">
+  <meta property="og:image" content="${siteUrl}/icon-512.png">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${escapeAttr(title)}">
+  <meta name="twitter:description" content="${escapeAttr(description)}">
+  <meta name="twitter:image" content="${siteUrl}/icon-512.png">
   <link rel="canonical" href="${siteUrl}/">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
@@ -192,7 +196,7 @@ ${body}
 
 function generateCategoryPages() {
   for (const category of categories) {
-    const categoryStories = stories.filter((story) => story.categorySlug === category.slug);
+    const categoryStories = sortNewest(stories.filter((story) => story.categorySlug === category.slug));
     const pages = chunk(categoryStories, pageSize);
     cleanupPagedFiles(`categories/${category.slug}`, pages.length);
 
@@ -200,7 +204,7 @@ function generateCategoryPages() {
       const pageNumber = index + 1;
       const fileName = pageNumber === 1 ? `categories/${category.slug}.html` : `categories/${category.slug}-${pageNumber}.html`;
       const canonicalPath = pageNumber === 1 ? `/categories/${category.slug}.html` : `/categories/${category.slug}-${pageNumber}.html`;
-      const pageTitle = pageNumber === 1 ? category.title : `${category.title} - Page ${pageNumber}`;
+      const pageTitle = pageNumber === 1 ? categorySeoTitle(category) : `${category.title} - Page ${pageNumber}`;
       writeFile(fileName, renderCategoryPage({ category, pageItems, pageNumber, totalPages: pages.length, pageTitle, canonicalPath }));
     });
   }
@@ -372,7 +376,7 @@ function renderCategoryPage({ category, pageItems, pageNumber, totalPages, pageT
       <div class="rail-card"><p class="rail-label">This shelf</p><a href="/categories/${escapeAttr(category.slug)}.html">${escapeHtml(category.title)}</a><a href="/categories.html">All Categories</a><a href="/archive.html">Archive Index</a><a href="/fiction-disclaimer.html">Story &amp; Source Notice</a></div>
       <div class="rail-card rail-card-subtle"><p class="rail-label">Archive groups</p>${categories.slice(0, 3).map((item) => `<a href="/categories/${escapeAttr(item.slug)}.html">${escapeHtml(item.title)}</a>`).join('')}</div>
     </aside>
-    <div class="archive-page-main"><p class="label">${escapeHtml(category.group)}</p><h1 class="article-title">${escapeHtml(category.title)}</h1><p class="deck">${escapeHtml(category.description)}</p><div class="story-list">${pageItems.map(renderStoryRow).join('\n')}</div>${renderPagination(`categories/${category.slug}`, pageNumber, totalPages)}</div>
+    <div class="archive-page-main"><p class="label">${escapeHtml(category.group)}</p><h1 class="article-title">${escapeHtml(category.title)}</h1><p class="deck">${escapeHtml(category.description)}</p>${pageNumber === 1 ? renderCategoryIntro(category) : ''}<div class="story-list">${pageItems.map(renderStoryRow).join('\n')}</div>${renderPagination(`categories/${category.slug}`, pageNumber, totalPages)}</div>
     ${renderRightRail(pageItems, 'Recommended archive paths')}
   </main>`
   });
@@ -380,6 +384,7 @@ function renderCategoryPage({ category, pageItems, pageNumber, totalPages, pageT
 
 function renderPage({ canonicalPath, title, description, metaDescription, content, robots }) {
   const pageDescription = metaDescription || description;
+  const socialImage = `${siteUrl}/icon-512.png`;
   const robotsMeta = robots ? `  <meta name="robots" content="${escapeAttr(robots)}">\n` : '';
   return `<!doctype html>
 <html lang="en">
@@ -393,7 +398,11 @@ ${robotsMeta}  <meta property="og:title" content="${escapeAttr(title)}">
   <meta property="og:site_name" content="Kyunolab Mystery Archive">
   <meta property="og:type" content="website">
   <meta property="og:url" content="${siteUrl}${canonicalPath}">
+  <meta property="og:image" content="${socialImage}">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${escapeAttr(title)}">
+  <meta name="twitter:description" content="${escapeAttr(pageDescription)}">
+  <meta name="twitter:image" content="${socialImage}">
   <link rel="canonical" href="${siteUrl}${canonicalPath}">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
@@ -459,8 +468,62 @@ function renderStoryRow(story) {
           <span class="tag">${escapeHtml(story.category)}</span>
           <h3><a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a></h3>
           <p>${escapeHtml(story.excerpt || story.metaDescription || '')}</p>
-          <div class="meta">${escapeHtml([story.category, story.tag, story.readTime].filter(Boolean).join(' - '))}</div>
+          <div class="meta">${escapeHtml([story.category, story.tag, story.readTime, `Updated ${formatDate(story.updatedAt || story.publishedAt)}`].filter(Boolean).join(' - '))}</div>
         </article>`;
+}
+
+function categorySeoTitle(category) {
+  const endings = {
+    'urban-legends': 'Urban Legends: Origins, Meanings, and Modern Folklore',
+    'internet-folklore': 'Internet Folklore: Digital Legends, Origins, and Meanings',
+    'strange-places': 'Strange Places: Haunted Locations, Maps, and Place Legends',
+    'unexplained-mysteries': 'Unexplained Mysteries: Evidence, Records, and Open Questions',
+    'classic-folklore': 'Classic Folklore: Traditional Beliefs, Meanings, and Origins',
+    'modern-legends': 'Modern Legends: Contemporary Folklore and Urban Myths',
+    myths: 'Mythology: Origins, Meanings, Symbols, and Sacred Stories',
+    'mythic-creatures': 'Mythic Creatures: Dragon, Spirit, and Monster Folklore',
+    'lost-worlds': 'Lost Worlds: Hidden Cities, Vanished Islands, and Map Legends',
+    'strange-nature': 'Strange Nature: Weather Folklore, Omens, and Landscape Mysteries',
+    'legendary-places': 'Legendary Places: Sacred Sites, Ruins, and Local Folklore',
+    'mythic-objects': 'Mythic Objects: Legendary Relics, Symbols, and Folklore',
+    'legend-origins': 'Legend Origins: Folklore History, Motifs, and Early Versions'
+  };
+  return endings[category.slug] || category.title;
+}
+
+function renderCategoryIntro(category) {
+  const focus = {
+    'urban-legends': 'roadside ghosts, warning stories, vanishing passengers, neighborhood rumors, and legends attached to ordinary public places',
+    'internet-folklore': 'digital legends, cursed images, liminal spaces, forum stories, screenshots, games, and rumors shaped by online communities',
+    'strange-places': 'haunted locations, impossible rooms, vanished roads, map anomalies, and places remembered differently by local witnesses',
+    'unexplained-mysteries': 'documents, timestamps, photographs, missing records, uncertain evidence, and questions that remain open after careful review',
+    'classic-folklore': 'household customs, protective rules, oral traditions, weather beliefs, thresholds, and inherited warnings',
+    'modern-legends': 'apps, workplaces, delivery systems, smart devices, transport, and the everyday technologies around which new folklore forms',
+    myths: 'creation stories, sacred narratives, natural origins, culture heroes, gods, and symbolic explanations of the world',
+    'mythic-creatures': 'dragons, water beings, giants, spirits, guardian animals, monsters, and regional creature traditions',
+    'lost-worlds': 'hidden kingdoms, drowned lands, vanished islands, impossible maps, and imagined geography',
+    'strange-nature': 'weather omens, unusual landscapes, strange water, seasonal signs, sound boundaries, and natural events interpreted through folklore',
+    'legendary-places': 'sacred mountains, shrines, ruins, pilgrimage roads, forbidden lakes, and sites preserved through local memory',
+    'mythic-objects': 'legendary swords, keys, mirrors, bells, books, vessels, charms, and ritual tools',
+    'legend-origins': 'motif history, early variants, cultural exchange, media adaptation, and the process by which a repeated story becomes recognizable'
+  }[category.slug] || 'recurring folklore motifs, source traditions, local memory, and the way stories change across retellings';
+
+  return `<section class="category-seo-intro" aria-label="${escapeAttr(category.title)} overview">
+      <p>${escapeHtml(category.title)} is a Kyunolab Mystery Archive reading path for ${escapeHtml(focus)}. The collection approaches each subject through origin, meaning, common versions, cultural setting, and source status. It preserves the atmosphere that makes a legend memorable while separating documented context from oral tradition, community retelling, symbolic interpretation, and original narrative framing.</p>
+      <p>Readers can use this page to compare how similar motifs change across regions and formats. Some records follow older folklore; others examine modern rumors, internet circulation, archival gaps, or stories attached to familiar places and objects. Titles and summaries are written to answer a clear question, but no repeated claim is treated as proof simply because it appears in many versions.</p>
+      <p>The entries below are ordered by their latest update. Each article links to related records, narrower tags, source notes, and the wider archive shelf, making this category a starting point rather than a dead-end list. Begin with the topic closest to your question, then follow the connected motifs to see what changes, what persists, and where the available evidence stops.</p>
+      <p>Because the archive includes legends, retellings, symbolic readings, and evidence-limited mysteries, source labels remain visible throughout. That distinction lets readers enjoy the story pattern without confusing cultural importance, online popularity, or local tradition with independent verification.</p>
+    </section>`;
+}
+
+function formatDate(value) {
+  if (!value) return '';
+  return new Date(`${value}T00:00:00Z`).toLocaleDateString('en-US', {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+    timeZone: 'UTC'
+  });
 }
 
 function renderHomeStoryRow(story) {

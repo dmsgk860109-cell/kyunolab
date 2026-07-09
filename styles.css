@@ -281,6 +281,21 @@ h1 {
   min-width: 0;
   max-width: 820px;
 }
+.category-seo-intro {
+  margin: 22px 0 30px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--surface);
+}
+.category-seo-intro p {
+  margin: 0 0 1em;
+  font-size: 16px;
+  line-height: 1.65;
+}
+.category-seo-intro p:last-child {
+  margin-bottom: 0;
+}
 .archive-page-main .ranking-grid {
   grid-template-columns: 1fr;
 }
@@ -580,6 +595,76 @@ h1 {
   color: #3c3832;
   border-left: 4px solid var(--accent);
   padding-left: 16px;
+}
+.breadcrumb {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.breadcrumb span[aria-current="page"] {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.article-updated {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+.article-hero-image {
+  margin: 22px 0 0;
+}
+.article-hero-image img {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  object-fit: cover;
+}
+.article-hero-image figcaption {
+  margin-top: 8px;
+  color: var(--muted);
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+}
+.search-summary {
+  margin: 24px 0 30px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: 4px;
+  background: var(--surface);
+}
+.search-summary h2 {
+  margin: 0 0 14px;
+  font-size: 24px;
+}
+.search-summary dl {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+}
+.search-summary dl div {
+  display: grid;
+  grid-template-columns: 118px minmax(0, 1fr);
+  gap: 12px;
+}
+.search-summary dt {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+}
+.search-summary dd {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.45;
 }
 .story-body {
   font-size: 20px;
@@ -1305,6 +1390,7 @@ textarea {
   .archive-article-header,
   .story-body,
   .story-map,
+  .search-summary,
   .reading-bridge,
   .related-articles,
   .prev-next,
@@ -1322,6 +1408,10 @@ textarea {
   .deck {
     max-width: 100%;
     overflow-wrap: break-word;
+  }
+  .search-summary dl div {
+    grid-template-columns: 1fr;
+    gap: 3px;
   }
   .hero,
   .notice,
