@@ -255,33 +255,36 @@ function renderStoryPage(story, previousStory, nextStory) {
 </head>
 <body>
   ${renderHeader()}
-  <main class="article-shell article-layout">
-    ${renderLeftRail(story, sections)}
-    <article>
-      ${renderBreadcrumb(story)}
-      <header class="archive-article-header">
-        <p class="label">${escapeHtml(story.category)}</p>
-        <h1 class="article-title">${escapeHtml(title)}</h1>
-        <p class="deck">${escapeHtml(story.introSummary || story.excerpt || story.summaryAnswer || description)}</p>
-        <p class="article-updated">Updated ${escapeHtml(formatDate(story.updatedAt || story.publishedAt))}</p>
+  <div class="network-page-shell">
+    <main class="article-shell article-layout">
+      ${renderLeftRail(story, sections)}
+      <article>
+        ${renderBreadcrumb(story)}
+        <header class="archive-article-header">
+          <p class="label">${escapeHtml(story.category)}</p>
+          <h1 class="article-title">${escapeHtml(title)}</h1>
+          <p class="deck">${escapeHtml(story.introSummary || story.excerpt || story.summaryAnswer || description)}</p>
+          <p class="article-updated">Updated ${escapeHtml(formatDate(story.updatedAt || story.publishedAt))}</p>
 ${renderHeroImage(story)}
-        ${renderMetaGrid(story)}
-      </header>
-      ${renderSearchSummary(story)}
-      ${renderStoryMap(sections)}
-      ${renderReadingBridge(story, relatedStories)}
-      <div class="story-body archive-entry">
-        ${renderOpening(story)}
-        ${sections.map((section) => renderSection(section)).join('\n')}
-        ${renderFaq(story)}
-        ${renderSourceNote(story)}
-      </div>
-${scriptCta ? `      ${scriptCta}
-` : ''}      ${renderRelatedArticles(relatedStories)}
-      ${renderPrevNext(previousStory, nextStory)}
-    </article>
-    ${renderRightRail(story, relatedStories, nextStory)}
-  </main>
+          ${renderMetaGrid(story)}
+        </header>
+        ${renderSearchSummary(story)}
+        ${renderStoryMap(sections)}
+        ${renderReadingBridge(story, relatedStories)}
+        <div class="story-body archive-entry">
+          ${renderOpening(story)}
+          ${sections.map((section) => renderSection(section)).join('\n')}
+          ${renderFaq(story)}
+          ${renderSourceNote(story)}
+        </div>
+${scriptCta ? `        ${scriptCta}
+` : ''}        ${renderRelatedArticles(relatedStories)}
+        ${renderPrevNext(previousStory, nextStory)}
+      </article>
+      ${renderRightRail(story, relatedStories, nextStory)}
+    </main>
+    ${renderKyunolabNetworkRail()}
+  </div>
   ${renderFooter()}
   <script src="/engagement.js?v=20260706-kit-ui" defer></script>
 </body>
@@ -523,15 +526,16 @@ function renderPrevNext(previousStory, nextStory) {
 
 function renderRightRail(story, relatedStories, nextStory) {
   return `<aside class="article-rail article-rail-right" aria-label="Recommended reading">
-      ${renderExploreKyunolabCard()}
       <div class="rail-card rail-feature"><p class="rail-label">Read next</p><a href="/stories/${escapeAttr(nextStory.slug)}"><strong>${escapeHtml(nextStory.title)}</strong><span>${escapeHtml(nextStory.category)}</span></a></div>
       <div class="rail-card"><p class="rail-label">Related records</p>${relatedStories.slice(0, 4).map((item) => `<a href="/stories/${escapeAttr(item.slug)}">${escapeHtml(item.title)}</a>`).join('')}</div>
       <div class="rail-card rail-card-subtle"><p class="rail-label">Same archive shelf</p><a href="/newest.html">Newest Records</a><a href="/popular.html">Popular Records</a><a href="/mystery-board.html">Mystery Board</a></div>
     </aside>`;
 }
 
-function renderExploreKyunolabCard() {
-  return `<div class="rail-card project-switcher-card"><p class="rail-label">Explore Kyunolab</p><strong>Creator Library</strong><span>Free mystery YouTube scripts, Shorts scripts, image prompts, and thumbnail ideas for video creators.</span><a class="button" href="/scripts/">Open Creator Library</a></div>`;
+function renderKyunolabNetworkRail() {
+  return `<aside class="kyunolab-network-rail" aria-label="Kyunolab Network">
+      <div class="network-card"><p class="rail-label">Kyunolab Network</p><strong>Creator Library</strong><span>Free mystery YouTube scripts, Shorts scripts, image prompts, and thumbnail ideas for video creators.</span><a class="button" href="/scripts/">Open Creator Library</a></div>
+    </aside>`;
 }
 
 function getRelatedStories(story) {
