@@ -100,56 +100,43 @@ main {
   margin: 0 auto;
   padding: 28px 20px 60px;
 }
-.kyunolab-network-rail {
-  position: fixed;
-  top: 140px;
-  left: calc(50% + 590px + 24px);
-  display: block;
-  width: 240px;
-  z-index: 20;
+.kyunolab-network-bar {
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--surface), var(--panel));
   font-family: Arial, sans-serif;
 }
-.network-card {
-  padding: 16px;
-  border: 1px solid rgba(16, 42, 86, .2);
-  border-radius: 4px;
-  background: linear-gradient(180deg, var(--surface), var(--panel));
-  box-shadow: 0 8px 24px rgba(16, 42, 86, .06);
+.network-bar-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: center;
 }
-.network-card strong,
-.network-card span {
+.network-bar-copy strong,
+.network-bar-copy span {
   display: block;
 }
-.network-card strong {
-  font-size: 18px;
+.network-bar-copy .rail-label {
+  margin-bottom: 3px;
+}
+.network-bar-copy strong {
+  font-size: 16px;
   line-height: 1.15;
 }
-.network-card span {
-  margin-top: 8px;
+.network-bar-copy span {
+  margin-top: 4px;
   color: var(--muted);
   font-size: 13px;
   line-height: 1.45;
 }
-.network-card .button {
+.network-bar-inner .button {
   display: inline-block;
-  margin-top: 13px;
   padding: 9px 12px;
   color: #fff;
   font-size: 13px;
   line-height: 1.2;
-}
-body:has(main.article-layout) .kyunolab-network-rail {
-  left: calc(50% + 740px + 24px);
-}
-@media (max-width: 1720px) {
-  .kyunolab-network-rail {
-    display: none;
-  }
-}
-@media (max-width: 2040px) {
-  body:has(main.article-layout) .kyunolab-network-rail {
-    display: none;
-  }
 }
 .hero {
   display: grid;
@@ -1622,6 +1609,14 @@ textarea {
   .header-inner {
     align-items: flex-start;
     flex-direction: column;
+  }
+  .network-bar-inner {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    align-items: start;
+  }
+  .network-bar-inner .button {
+    justify-self: start;
   }
   .nav { width: 100%; }
   .category-grid, .category-hub, .compact-grid, .board-items, .script-card-grid, .script-category-grid, .script-resource-links { grid-template-columns: 1fr 1fr; }

@@ -200,6 +200,7 @@ function renderPage({ canonicalPath, title, description, ogTitle, ogDescription,
 </head>
 <body>
   ${renderHeader()}
+  ${renderKyunolabNetworkBar()}
 ${content}
   ${renderFooter()}
   <script src="/engagement.js?v=20260706-kit-ui" defer></script>
@@ -216,6 +217,15 @@ function renderHeader() {
       <nav class="nav"><a href="/newest.html">Newest</a><a href="/popular.html">Popular</a><a href="/categories.html">Categories</a><a href="/mystery-board.html">Mystery Board</a><a href="/about.html">About</a></nav>
     </div>
   </header>`;
+}
+
+function renderKyunolabNetworkBar() {
+  return `<aside class="kyunolab-network-bar" aria-label="Kyunolab Network">
+    <div class="network-bar-inner">
+      <div class="network-bar-copy"><p class="rail-label">Kyunolab Network</p><strong>Creator Library</strong><span>Free mystery YouTube scripts, Shorts scripts, image prompts, and thumbnail ideas for video creators.</span></div>
+      <a class="button" href="/scripts/">Open Creator Library</a>
+    </div>
+  </aside>`;
 }
 
 function renderFooter() {

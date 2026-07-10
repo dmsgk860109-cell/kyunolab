@@ -198,6 +198,7 @@ ${generatedMarker}
 </head>
 <body>
   ${renderHeader()}
+  ${renderKyunolabNetworkBar()}
 
   <main class="article-shell article-layout">
     <aside class="article-rail article-rail-left" aria-label="Tag archive paths">
@@ -266,6 +267,15 @@ function renderHeader() {
       <nav class="nav"><a href="/newest">Newest</a><a href="/popular">Popular</a><a href="/categories">Categories</a><a href="/mystery-board">Mystery Board</a><a href="/about">About</a></nav>
     </div>
   </header>`;
+}
+
+function renderKyunolabNetworkBar() {
+  return `<aside class="kyunolab-network-bar" aria-label="Kyunolab Network">
+    <div class="network-bar-inner">
+      <div class="network-bar-copy"><p class="rail-label">Kyunolab Network</p><strong>Creator Library</strong><span>Free mystery YouTube scripts, Shorts scripts, image prompts, and thumbnail ideas for video creators.</span></div>
+      <a class="button" href="/scripts/">Open Creator Library</a>
+    </div>
+  </aside>`;
 }
 
 function renderFooter() {

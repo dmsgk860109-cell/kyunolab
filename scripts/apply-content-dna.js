@@ -255,6 +255,7 @@ function renderStoryPage(story, previousStory, nextStory) {
 </head>
 <body>
   ${renderHeader()}
+  ${renderKyunolabNetworkBar()}
   <main class="article-shell article-layout">
       ${renderLeftRail(story, sections)}
       <article>
@@ -282,7 +283,6 @@ ${scriptCta ? `        ${scriptCta}
       </article>
       ${renderRightRail(story, relatedStories, nextStory)}
   </main>
-  ${renderKyunolabNetworkRail()}
   ${renderFooter()}
   <script src="/engagement.js?v=20260706-kit-ui" defer></script>
 </body>
@@ -530,10 +530,13 @@ function renderRightRail(story, relatedStories, nextStory) {
     </aside>`;
 }
 
-function renderKyunolabNetworkRail() {
-  return `<aside class="kyunolab-network-rail" aria-label="Kyunolab Network">
-      <div class="network-card"><p class="rail-label">Kyunolab Network</p><strong>Creator Library</strong><span>Free mystery YouTube scripts, Shorts scripts, image prompts, and thumbnail ideas for video creators.</span><a class="button" href="/scripts/">Open Creator Library</a></div>
-    </aside>`;
+function renderKyunolabNetworkBar() {
+  return `<aside class="kyunolab-network-bar" aria-label="Kyunolab Network">
+    <div class="network-bar-inner">
+      <div class="network-bar-copy"><p class="rail-label">Kyunolab Network</p><strong>Creator Library</strong><span>Free mystery YouTube scripts, Shorts scripts, image prompts, and thumbnail ideas for video creators.</span></div>
+      <a class="button" href="/scripts/">Open Creator Library</a>
+    </div>
+  </aside>`;
 }
 
 function getRelatedStories(story) {

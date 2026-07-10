@@ -107,6 +107,7 @@ function renderHomePage({ featuredStory, latestStories, popularStories, essentia
 </head>
 <body>
   ${renderHeader()}
+  ${renderKyunolabNetworkBar('archive')}
   <main>
     <section class="hero">
       <div class="hero-copy"><p class="label">Strange Story Archive</p><h1>Strange legends. Forgotten folklore. Mysteries that refuse to disappear.</h1><p>A quiet archive of urban legends, folklore origins, internet myths, strange places, mythic creatures, and recurring mystery patterns.</p></div>
@@ -122,7 +123,6 @@ function renderHomePage({ featuredStory, latestStories, popularStories, essentia
     <section id="essential-reads" class="essential-reads"><div class="section-head"><h2>Essential Reads</h2><span>Start here</span></div><div class="compact-grid">${essentialStories.map(renderEssentialStory).join('')}</div></section>
     <section class="archive-cta"><div><p class="label">Archive Index</p><h2>Explore every open file in Kyunolab Mystery Archive.</h2><p>Move through the full collection by category, source status, story type, folklore motif, legend origin, and recurring mystery pattern.</p></div><a class="button" href="/archive.html">Browse all current stories</a></section>
   </main>
-  ${renderKyunolabNetworkRail('archive')}
   ${renderFooter()}
 </body>
 </html>
@@ -776,8 +776,8 @@ ${robotsMeta}  <meta property="og:title" content="${escapeAttr(pageTitle)}">
 </head>
 <body>
   ${renderHeader(canonicalPath)}
+${networkSection ? `  ${renderKyunolabNetworkBar(networkSection)}\n` : ''}
 ${content}
-${networkSection ? `  ${renderKyunolabNetworkRail(networkSection)}\n` : ''}
   ${renderFooter()}
 </body>
 </html>
@@ -838,7 +838,7 @@ function isScriptsPath(currentPath) {
   return currentPath === '/scripts' || currentPath.startsWith('/scripts/');
 }
 
-function renderKyunolabNetworkCard(section) {
+function renderKyunolabNetworkBar(section) {
   const isScripts = section === 'scripts';
   const itemTitle = isScripts ? 'Mystery Archive' : 'Creator Library';
   const description = isScripts
@@ -846,13 +846,12 @@ function renderKyunolabNetworkCard(section) {
     : 'Free mystery YouTube scripts, Shorts scripts, image prompts, and thumbnail ideas for video creators.';
   const buttonText = isScripts ? 'Open Mystery Archive' : 'Open Creator Library';
   const href = isScripts ? '/' : '/scripts/';
-  return `<div class="network-card"><p class="rail-label">Kyunolab Network</p><strong>${escapeHtml(itemTitle)}</strong><span>${escapeHtml(description)}</span><a class="button" href="${href}">${escapeHtml(buttonText)}</a></div>`;
-}
-
-function renderKyunolabNetworkRail(section) {
-  return `<aside class="kyunolab-network-rail" aria-label="Kyunolab Network">
-      ${renderKyunolabNetworkCard(section)}
-    </aside>`;
+  return `<aside class="kyunolab-network-bar" aria-label="Kyunolab Network">
+    <div class="network-bar-inner">
+      <div class="network-bar-copy"><p class="rail-label">Kyunolab Network</p><strong>${escapeHtml(itemTitle)}</strong><span>${escapeHtml(description)}</span></div>
+      <a class="button" href="${href}">${escapeHtml(buttonText)}</a>
+    </div>
+  </aside>`;
 }
 
 function renderFooter() {
