@@ -101,43 +101,40 @@ main {
   padding: 28px 20px 60px;
 }
 .network-page-shell {
+  position: relative;
   width: 100%;
-  max-width: 1760px;
+  max-width: 1180px;
   margin: 0 auto;
   padding: 28px 20px 60px;
-  display: grid;
-  grid-template-columns: minmax(0, 1480px) 240px;
-  gap: 28px;
-  align-items: start;
 }
 .network-page-shell > main,
 .network-page-main {
   width: 100%;
   min-width: 0;
-  justify-self: center;
+  max-width: 100%;
 }
-.network-page-shell > main {
-  max-width: 1480px;
-}
+.network-page-shell > main,
 .network-page-main {
-  max-width: 1180px;
-}
-main.network-page-shell {
-  max-width: 1760px;
-}
-.network-page-shell > main {
   margin: 0;
   padding: 0;
 }
 .network-page-main > *:first-child {
   margin-top: 0;
 }
+.network-page-shell:has(> .article-layout) {
+  max-width: 1480px;
+}
 .kyunolab-network-rail {
-  position: sticky;
+  position: absolute;
   top: 120px;
+  left: calc(100% + 28px);
   display: block;
   width: 240px;
   font-family: Arial, sans-serif;
+}
+.kyunolab-network-rail .network-card {
+  position: sticky;
+  top: 120px;
 }
 .network-card {
   padding: 16px;
@@ -167,6 +164,28 @@ main.network-page-shell {
   color: #fff;
   font-size: 13px;
   line-height: 1.2;
+}
+@media (max-width: 1720px) {
+  .kyunolab-network-rail {
+    position: static;
+    width: 100%;
+    margin: 24px 0 0;
+  }
+  .kyunolab-network-rail .network-card {
+    position: static;
+    max-width: 520px;
+  }
+}
+@media (max-width: 2040px) {
+  .network-page-shell:has(> .article-layout) .kyunolab-network-rail {
+    position: static;
+    width: 100%;
+    margin: 24px 0 0;
+  }
+  .network-page-shell:has(> .article-layout) .network-card {
+    position: static;
+    max-width: 520px;
+  }
 }
 .hero {
   display: grid;
@@ -1597,21 +1616,17 @@ textarea {
 @media (max-width: 850px) {
   .header-inner, .hero, .ranking-grid, .archive-page-grid, .home-stream, .scripts-hero, .script-board, .script-detail-page { grid-template-columns: 1fr; }
   .network-page-shell {
-    display: flex;
-    flex-direction: column;
     max-width: 820px;
     padding: 28px 20px 60px;
   }
   .network-page-shell > main,
   .network-page-main {
-    order: 2;
     max-width: 100%;
   }
   .kyunolab-network-rail {
-    order: 1;
     position: static;
     width: 100%;
-    margin: 0 0 18px;
+    margin: 22px 0 0;
   }
   .network-card {
     max-width: 100%;
