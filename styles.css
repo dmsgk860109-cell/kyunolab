@@ -100,6 +100,26 @@ main {
   margin: 0 auto;
   padding: 28px 20px 60px;
 }
+main.home-shell {
+  max-width: 1480px;
+}
+.home-layout {
+  display: grid;
+  grid-template-columns: minmax(180px, 240px) minmax(0, 1fr) minmax(220px, 300px);
+  gap: 28px;
+  align-items: start;
+}
+.home-main-column {
+  min-width: 0;
+}
+.home-left-rail,
+.home-layout > .home-rail {
+  position: sticky;
+  top: 118px;
+  display: grid;
+  gap: 14px;
+  font-family: Arial, sans-serif;
+}
 .kyunolab-network-bar {
   border-bottom: 1px solid var(--line);
   background: linear-gradient(180deg, var(--surface), var(--panel));
@@ -215,18 +235,13 @@ h1 {
 }
 .section-head a, .section-head span { color: var(--muted-strong); }
 .home-stream {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(240px, 300px);
-  gap: 28px;
-  align-items: start;
+  display: block;
   margin-top: 34px;
 }
 .home-stream .section-head {
   margin-top: 0;
 }
 .home-rail {
-  position: sticky;
-  top: 118px;
   display: grid;
   gap: 14px;
   font-family: Arial, sans-serif;
@@ -1565,8 +1580,21 @@ textarea {
   display: none;
 }
 @media (max-width: 850px) {
-  .header-inner, .hero, .ranking-grid, .archive-page-grid, .home-stream, .scripts-hero, .script-board, .script-detail-page { grid-template-columns: 1fr; }
+  .header-inner, .hero, .ranking-grid, .archive-page-grid, .home-layout, .home-stream, .scripts-hero, .script-board, .script-detail-page { grid-template-columns: 1fr; }
+  .home-layout {
+    max-width: 820px;
+    margin: 0 auto;
+  }
+  .home-main-column {
+    order: 1;
+  }
+  .home-left-rail {
+    order: 2;
+    position: static;
+    grid-template-columns: 1fr 1fr;
+  }
   .home-rail {
+    order: 3;
     position: static;
     grid-template-columns: 1fr 1fr;
   }
@@ -1693,6 +1721,9 @@ textarea {
   }
   .hero,
   .notice,
+  .home-layout,
+  .home-main-column,
+  .home-left-rail,
   .latest,
   .home-stream,
   .home-story-row,
@@ -1793,6 +1824,9 @@ textarea {
   }
   h1 { font-size: 25px; }
   .feature-card h2 { font-size: 21px; }
+  .home-left-rail {
+    grid-template-columns: 1fr;
+  }
   .home-rail {
     grid-template-columns: 1fr;
   }
