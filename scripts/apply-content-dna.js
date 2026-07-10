@@ -526,7 +526,6 @@ function renderRightRail(story, relatedStories, nextStory) {
   return `<aside class="article-rail article-rail-right" aria-label="Recommended reading">
       <div class="rail-card rail-feature"><p class="rail-label">Read next</p><a href="/stories/${escapeAttr(nextStory.slug)}"><strong>${escapeHtml(nextStory.title)}</strong><span>${escapeHtml(nextStory.category)}</span></a></div>
       <div class="rail-card"><p class="rail-label">Related records</p>${relatedStories.slice(0, 4).map((item) => `<a href="/stories/${escapeAttr(item.slug)}">${escapeHtml(item.title)}</a>`).join('')}</div>
-      <div class="rail-card rail-card-subtle"><p class="rail-label">Same archive shelf</p><a href="/newest.html">Newest Records</a><a href="/popular.html">Popular Records</a><a href="/mystery-board.html">Mystery Board</a></div>
     </aside>`;
 }
 

@@ -117,7 +117,7 @@ main.home-shell {
   position: sticky;
   top: 118px;
   display: grid;
-  gap: 14px;
+  gap: 16px;
   font-family: Arial, sans-serif;
 }
 .kyunolab-network-bar {
@@ -608,17 +608,18 @@ h1 {
 }
 .script-card,
 .script-genre-card {
-  padding: 18px;
+  padding: 20px;
 }
 .script-card h3,
 .script-genre-card h3 {
   margin: 0 0 10px;
   font-size: 25px;
-  line-height: 1.1;
+  line-height: 1.18;
 }
 .script-card p,
 .script-genre-card p {
   margin: 0 0 14px;
+  line-height: 1.45;
 }
 .script-badges {
   display: grid;
@@ -803,14 +804,14 @@ h1 {
   position: sticky;
   top: 118px;
   display: grid;
-  gap: 14px;
+  gap: 16px;
   font-family: Arial, sans-serif;
 }
 .rail-card {
   border: 1px solid var(--line);
   border-radius: 4px;
   background: var(--surface);
-  padding: 15px;
+  padding: 18px;
 }
 .rail-card-subtle {
   background: var(--panel);
@@ -825,12 +826,12 @@ h1 {
 }
 .rail-card a {
   display: block;
-  padding: 9px 0;
+  padding: 10px 0;
   border-top: 1px solid var(--line);
   color: var(--ink);
   font-size: 14px;
   font-weight: 700;
-  line-height: 1.25;
+  line-height: 1.32;
 }
 .rail-card a:first-of-type {
   border-top: 0;
@@ -842,6 +843,9 @@ h1 {
 }
 .rail-feature .rail-label {
   color: var(--accent-on-dark);
+}
+.rail-feature strong {
+  line-height: 1.18;
 }
 .rail-feature a {
   border-color: rgba(255, 255, 255, .18);

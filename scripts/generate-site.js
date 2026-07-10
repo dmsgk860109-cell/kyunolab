@@ -467,7 +467,6 @@ function renderScriptDetailPage(script) {
     <aside class="article-rail article-rail-right">
       <div class="rail-card rail-feature"><p class="rail-label">Scripts Home</p><a href="/scripts/"><strong>Free Mystery YouTube Scripts</strong><span>Longform, Shorts, prompts, thumbnails</span></a></div>
       <div class="rail-card"><p class="rail-label">More scripts</p>${relatedScripts.map((item) => `<a href="/scripts/${escapeAttr(item.slug)}">${escapeHtml(item.title)}</a>`).join('')}</div>
-      <div class="rail-card rail-card-subtle"><p class="rail-label">Creator paths</p><a href="/scripts/categories/">Script Categories</a><a href="/scripts/board/">Script Board</a><a href="/scripts/resources/">Creator Resources</a></div>
     </aside>
   </main>`;
   return renderPage({
@@ -600,7 +599,6 @@ function renderHomeRail({ featuredStory, popularStories, essentialStories }) {
   return `<aside class="home-rail" aria-label="Homepage reader paths">
       <div class="rail-card rail-feature"><p class="rail-label">Start here</p><a href="/stories/${escapeAttr(featuredStory.slug)}"><span>${escapeHtml(featuredStory.category)}</span><strong>${escapeHtml(featuredStory.title)}</strong></a></div>
       <div class="rail-card"><p class="rail-label">Popular records</p>${popular.map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}</div>
-      <div class="rail-card rail-card-subtle"><p class="rail-label">Archive paths</p><a href="/newest.html">Newest Records</a><a href="/popular.html">Popular Records</a><a href="/categories.html">Browse Categories</a><a href="/mystery-board.html">Mystery Board</a></div>
       <div class="rail-card"><p class="rail-label">Essential reads</p>${essentials.map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}</div>
     </aside>`;
 }
@@ -729,7 +727,7 @@ function renderListPage({ canonicalPath, label, title, h1, description, items, b
     metaDescription,
     networkSection: 'archive',
     content: `  <main class="article-shell article-layout">
-    ${renderLeftRail('Reader paths')}
+    ${renderLeftRail()}
     <div class="archive-page-main"><p class="label">${escapeHtml(label)}</p><h1 class="article-title">${escapeHtml(h1)}</h1><p class="deck">${escapeHtml(description)}</p><div class="story-list">${items.map(renderStoryRow).join('\n')}</div>${renderPagination(baseName, pageNumber, totalPages)}</div>
     ${renderRightRail(items, 'Recommended archive paths')}
   </main>`
@@ -747,10 +745,7 @@ function renderCategoryPage({ category, pageItems, pageNumber, totalPages, pageT
     metaDescription,
     networkSection: 'archive',
     content: `  <main class="article-shell article-layout">
-    <aside class="article-rail article-rail-left" aria-label="This shelf">
-      <div class="rail-card"><p class="rail-label">This shelf</p><a href="/categories/${escapeAttr(category.slug)}.html">${escapeHtml(category.title)}</a><a href="/categories.html">All Categories</a><a href="/archive.html">Archive Index</a><a href="/fiction-disclaimer.html">Story &amp; Source Notice</a></div>
-      <div class="rail-card rail-card-subtle"><p class="rail-label">Archive groups</p>${categories.slice(0, 3).map((item) => `<a href="/categories/${escapeAttr(item.slug)}.html">${escapeHtml(item.title)}</a>`).join('')}</div>
-    </aside>
+    ${renderLeftRail()}
     <div class="archive-page-main"><p class="label">${escapeHtml(category.group)}</p><h1 class="article-title">${escapeHtml(category.title)}</h1><p class="deck">${escapeHtml(category.description)}</p>${pageNumber === 1 ? renderCategoryIntro(category) : ''}<div class="story-list">${pageItems.map(renderStoryRow).join('\n')}</div>${renderPagination(`categories/${category.slug}`, pageNumber, totalPages)}</div>
     ${renderRightRail(pageItems, 'Recommended archive paths')}
   </main>`
@@ -874,25 +869,29 @@ function renderFooter() {
   </footer>`;
 }
 
-function renderLeftRail(label) {
-  return `<aside class="article-rail article-rail-left" aria-label="${escapeAttr(label)}"><div class="rail-card"><p class="rail-label">${escapeHtml(label)}</p><a href="/newest.html">Newest Records</a><a href="/popular.html">Popular Records</a><a href="/categories.html">Browse Categories</a><a href="/archive.html">Archive Index</a><a href="/fiction-disclaimer.html">Story &amp; Source Notice</a></div></aside>`;
+function renderLeftRail(label = 'Archive navigation') {
+  return `<aside class="article-rail article-rail-left" aria-label="${escapeAttr(label)}">
+    <div class="rail-card"><p class="rail-label">Reader Paths</p><a href="/newest.html">Newest Records</a><a href="/popular.html">Popular Records</a><a href="/categories.html">Browse Categories</a><a href="/mystery-board.html">Mystery Board</a></div>
+    <div class="rail-card rail-card-subtle"><p class="rail-label">Archive Shelves</p><a href="/categories/urban-legends.html">Urban Legends</a><a href="/categories/internet-folklore.html">Internet Folklore</a><a href="/categories/myths.html">Myths</a><a href="/categories/strange-places.html">Strange Places</a></div>
+    <div class="rail-card"><p class="rail-label">Source Guide</p><a href="/fiction-disclaimer.html">Story &amp; Source Notice</a><a href="/about.html">About Kyunolab</a></div>
+  </aside>`;
 }
 
 function renderRightRail(items, label) {
   const safeItems = items.length ? items : stories.slice(0, 4);
   const feature = safeItems[0];
   const related = safeItems.slice(1, 4);
-  return `<aside class="article-rail article-rail-right" aria-label="${escapeAttr(label)}"><div class="rail-card rail-feature"><p class="rail-label">Start here</p><a href="/stories/${escapeAttr(feature.slug)}"><span>${escapeHtml(feature.category)}</span><strong>${escapeHtml(feature.title)}</strong></a></div><div class="rail-card"><p class="rail-label">Related records</p>${related.map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}</div><div class="rail-card rail-card-subtle"><p class="rail-label">Same archive shelf</p><a href="/newest.html">Newest Records</a><a href="/popular.html">Popular Records</a><a href="/mystery-board.html">Mystery Board</a></div></aside>`;
+  return `<aside class="article-rail article-rail-right" aria-label="${escapeAttr(label)}"><div class="rail-card rail-feature"><p class="rail-label">Start here</p><a href="/stories/${escapeAttr(feature.slug)}"><span>${escapeHtml(feature.category)}</span><strong>${escapeHtml(feature.title)}</strong></a></div><div class="rail-card"><p class="rail-label">Related records</p>${related.map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}</div></aside>`;
 }
 
 function renderCategoryRightRail() {
-  const modern = categories.filter((category) => category.group === 'Modern Strange Records');
-  const mythic = categories.filter((category) => category.group === 'Mythic & Imagined Realms');
   const start = stories[0];
+  const popular = stories.slice(1, 4);
+  const essentials = stories.slice(4, 7);
   return `<aside class="article-rail article-rail-right" aria-label="Category page reading paths">
       <div class="rail-card rail-feature"><p class="rail-label">Start here</p><a href="/stories/${escapeAttr(start.slug)}"><span>${escapeHtml(start.category)}</span><strong>${escapeHtml(start.title)}</strong></a></div>
-      <div class="rail-card"><p class="rail-label">Modern Strange Records</p>${modern.map(renderCategoryRailLink).join('')}</div>
-      <div class="rail-card rail-card-subtle"><p class="rail-label">Mythic &amp; Imagined Realms</p>${mythic.map(renderCategoryRailLink).join('')}</div>
+      <div class="rail-card"><p class="rail-label">Popular records</p>${popular.map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}</div>
+      <div class="rail-card"><p class="rail-label">Essential reads</p>${essentials.map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}</div>
     </aside>`;
 }
 

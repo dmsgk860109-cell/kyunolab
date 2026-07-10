@@ -234,12 +234,6 @@ ${storyRows}
         <p class="rail-label">Start here</p>
         <a href="${escapeAttr(firstArticle.url)}"><strong>${escapeHtml(firstArticle.title)}</strong><span>${escapeHtml(firstArticle.category)}</span></a>
       </div>
-      <div class="rail-card rail-card-subtle">
-        <p class="rail-label">Same archive shelf</p>
-        <a href="/newest">Newest Records</a>
-        <a href="/popular">Popular Records</a>
-        <a href="/mystery-board">Mystery Board</a>
-      </div>
     </aside>
   </main>
 

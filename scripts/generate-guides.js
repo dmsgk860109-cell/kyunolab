@@ -37,15 +37,23 @@ function renderBoardPage() {
     content: `  <main class="article-shell article-layout">
     <aside class="article-rail article-rail-left" aria-label="Mystery Board topics">
       <div class="rail-card">
-        <p class="rail-label">Board topics</p>
-        ${newest.slice(0, 5).map((guide) => `<a href="${escapeAttr(guide.url || `/mystery-board/${guide.slug}`)}">${escapeHtml(guide.shortTitle || guide.title)}</a>`).join('')}
+        <p class="rail-label">Reader Paths</p>
+        <a href="/newest.html">Newest Records</a>
+        <a href="/popular.html">Popular Records</a>
+        <a href="/categories.html">Browse Categories</a>
+        <a href="/mystery-board.html">Mystery Board</a>
       </div>
       <div class="rail-card rail-card-subtle">
-        <p class="rail-label">Archive shelves</p>
+        <p class="rail-label">Archive Shelves</p>
         <a href="/categories/urban-legends.html">Urban Legends</a>
         <a href="/categories/internet-folklore.html">Internet Folklore</a>
-        <a href="/categories/strange-places.html">Strange Places</a>
         <a href="/categories/myths.html">Myths</a>
+        <a href="/categories/strange-places.html">Strange Places</a>
+      </div>
+      <div class="rail-card">
+        <p class="rail-label">Source Guide</p>
+        <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a>
+        <a href="/about.html">About Kyunolab</a>
       </div>
     </aside>
 
@@ -70,12 +78,6 @@ ${rows}
       <div class="rail-card">
         <p class="rail-label">Related archive records</p>
         ${stories.slice(0, 3).map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}
-      </div>
-      <div class="rail-card rail-card-subtle">
-        <p class="rail-label">Archive paths</p>
-        <a href="/newest.html">Newest Records</a>
-        <a href="/popular.html">Popular Records</a>
-        <a href="/archive.html">Archive Index</a>
       </div>
     </aside>
   </main>`
