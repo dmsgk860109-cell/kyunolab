@@ -223,6 +223,9 @@ function generateCategoryPages() {
 function generateScriptsPages() {
   const scripts = sortNewest(creatorScripts);
   writeFile('scripts/index.html', renderScriptsHomePage(scripts));
+  writeFile('scripts/categories/index.html', renderScriptCategoriesPage(scripts));
+  writeFile('scripts/board/index.html', renderScriptBoardPage(scripts));
+  writeFile('scripts/resources/index.html', renderScriptResourcesPage(scripts));
   for (const script of scripts) {
     writeFile(`scripts/${script.slug}.html`, renderScriptDetailPage(script));
   }
@@ -288,6 +291,122 @@ function renderScriptsHomePage(scripts) {
   });
 }
 
+function renderScriptCategoriesPage(scripts) {
+  const genres = groupScriptsByGenre(scripts);
+  return renderPage({
+    canonicalPath: '/scripts/categories/',
+    title: 'Script Categories | Kyunolab Video Scripts',
+    description: 'Browse mystery YouTube script categories for longform narration, Shorts planning, image prompts, thumbnail ideas, and creator-ready video materials.',
+    metaDescription: 'Browse mystery YouTube script categories for creators, including urban legend scripts, folklore scripts, Shorts scripts, image prompts, and thumbnail ideas.',
+    content: `  <main class="scripts-page">
+    <section class="scripts-hero scripts-subpage-hero">
+      <div>
+        <p class="label">Script Categories</p>
+        <h1 class="article-title">Browse mystery scripts by creator use.</h1>
+        <p class="deck">Move through creator-ready script packages by genre, video length, visual planning needs, and story format.</p>
+      </div>
+      <aside class="script-creator-panel">
+        <p class="rail-label">Scripts Navigation</p>
+        <a href="/scripts/">Scripts Home</a>
+        <a href="/scripts/board/">Script Board</a>
+        <a href="/scripts/resources/">Creator Resources</a>
+      </aside>
+    </section>
+    <section class="scripts-section">
+      <div class="section-head"><h2>Script Categories</h2><span>${genres.length} active category path${genres.length === 1 ? '' : 's'}</span></div>
+      <div class="script-category-grid">${genres.map(renderScriptGenreCard).join('')}</div>
+    </section>
+  </main>`
+  });
+}
+
+function renderScriptBoardPage(scripts) {
+  const latestScripts = sortNewest(scripts).slice(0, 9);
+  return renderPage({
+    canonicalPath: '/scripts/board/',
+    title: 'Mystery Script Board | Kyunolab Video Scripts',
+    description: 'A planning board for mystery YouTube scripts, longform narration ideas, Shorts hooks, image prompts, thumbnail concepts, and creator workflow notes.',
+    metaDescription: 'Use the Mystery Script Board to plan YouTube mystery videos with longform scripts, Shorts hooks, image prompts, thumbnail concepts, and creator workflow notes.',
+    content: `  <main class="scripts-page">
+    <section class="scripts-hero scripts-subpage-hero">
+      <div>
+        <p class="label">Mystery Script Board</p>
+        <h1 class="article-title">Plan the video before the voiceover begins.</h1>
+        <p class="deck">A compact board for choosing script packages by format, hook, visual style, and production need.</p>
+      </div>
+      <aside class="script-creator-panel">
+        <p class="rail-label">Script Paths</p>
+        <a href="/scripts/">Scripts Home</a>
+        <a href="/scripts/categories/">Script Categories</a>
+        <a href="/scripts/resources/">Creator Resources</a>
+      </aside>
+    </section>
+    <section class="scripts-section script-board">
+      <div>
+        <p class="label">Creator workflow</p>
+        <h2>Choose the package that matches the video you want to make.</h2>
+        <p>Each entry separates narration, Shorts structure, visual prompts, thumbnail ideas, and subtitle lines so creators can move from idea to production without mixing it with the original archive article.</p>
+      </div>
+      <div class="script-board-grid">
+        <article><strong>Longform YouTube</strong><span>Use when the video needs atmosphere, pacing, and a complete narration arc.</span></article>
+        <article><strong>Shorts Hooks</strong><span>Use when the concept needs a fast opening, one clear mystery, and a tight ending beat.</span></article>
+        <article><strong>Visual Planning</strong><span>Use for image prompts, thumbnail angles, and subtitle lines before editing begins.</span></article>
+      </div>
+    </section>
+    <section class="scripts-section">
+      <div class="section-head"><h2>Latest Script Packages</h2><span>Creator-ready materials</span></div>
+      <div class="script-card-grid">${latestScripts.map(renderScriptCard).join('')}</div>
+    </section>
+  </main>`
+  });
+}
+
+function renderScriptResourcesPage() {
+  return renderPage({
+    canonicalPath: '/scripts/resources/',
+    title: 'Creator Resources | Kyunolab Video Scripts',
+    description: 'Creator resources for adapting Kyunolab mystery archive stories into YouTube scripts, Shorts, image prompts, thumbnails, and subtitle lines.',
+    metaDescription: 'Creator resources for turning mystery archive stories into YouTube scripts, Shorts scripts, image prompts, thumbnails, and subtitle lines.',
+    content: `  <main class="scripts-page">
+    <section class="scripts-hero scripts-subpage-hero">
+      <div>
+        <p class="label">Creator Resources</p>
+        <h1 class="article-title">Use the archive without confusing story and script.</h1>
+        <p class="deck">These resources keep original archive stories separate from creator-facing scripts, prompts, thumbnail ideas, and short-form adaptations.</p>
+      </div>
+      <aside class="script-creator-panel">
+        <p class="rail-label">Creator Links</p>
+        <a href="/scripts/">Scripts Home</a>
+        <a href="/scripts/categories/">Script Categories</a>
+        <a href="/scripts/board/">Script Board</a>
+      </aside>
+    </section>
+    <section class="scripts-section">
+      <div class="section-head"><h2>Creator Resources</h2><span>Useful paths</span></div>
+      <div class="script-resource-links">
+        <a href="/scripts/">Free Mystery YouTube Scripts</a>
+        <a href="/scripts/categories/">Browse Script Categories</a>
+        <a href="/scripts/board/">Open the Script Board</a>
+        <a href="/archive.html">Browse Original Archive Stories</a>
+        <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a>
+      </div>
+    </section>
+    <section class="scripts-section script-board">
+      <div>
+        <p class="label">Adaptation note</p>
+        <h2>Scripts are creator materials, not replacement archive articles.</h2>
+        <p>Original stories remain under the mystery archive. Script pages are production aids for narration, visual planning, Shorts, and thumbnail development.</p>
+      </div>
+      <div class="script-board-grid">
+        <article><strong>Start with the archive</strong><span>Read the original story first so the video script keeps the right source-aware tone.</span></article>
+        <article><strong>Use scripts as drafts</strong><span>Edit narration, pacing, and visual prompts to match your own channel format.</span></article>
+        <article><strong>Keep claims careful</strong><span>Present legends, folklore, and mysteries without implying unverified events are proven facts.</span></article>
+      </div>
+    </section>
+  </main>`
+  });
+}
+
 function renderScriptDetailPage(script) {
   const originalStory = stories.find((story) => story.slug === script.originalStorySlug);
   const relatedScripts = sortNewest(creatorScripts).filter((item) => item.slug !== script.slug).slice(0, 4);
@@ -295,7 +414,7 @@ function renderScriptDetailPage(script) {
   const usageNote = script.usageNote || 'This script is provided as a reference for video creators. You may adapt and edit it for your own video format. Credit to Kyunolab is appreciated when used as a source or inspiration. Please present the story as a mystery, legend, or fictional-style narration rather than a confirmed real event.';
   const content = `  <main class="script-detail-page article-shell">
     <article>
-      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/scripts/">Scripts</a><span aria-hidden="true">/</span><span aria-current="page">${escapeHtml(script.title)}</span></nav>
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/scripts/">Scripts Home</a><span aria-hidden="true">/</span><span aria-current="page">${escapeHtml(script.title)}</span></nav>
       <header class="archive-article-header">
         <p class="label">${escapeHtml(script.genre)}</p>
         <h1 class="article-title">${escapeHtml(script.title)}</h1>
@@ -345,7 +464,7 @@ function renderScriptDetailPage(script) {
     <aside class="article-rail article-rail-right">
       <div class="rail-card rail-feature"><p class="rail-label">Scripts Home</p><a href="/scripts/"><strong>Free Mystery YouTube Scripts</strong><span>Longform, Shorts, prompts, thumbnails</span></a></div>
       <div class="rail-card"><p class="rail-label">More scripts</p>${relatedScripts.map((item) => `<a href="/scripts/${escapeAttr(item.slug)}">${escapeHtml(item.title)}</a>`).join('')}</div>
-      <div class="rail-card rail-card-subtle"><p class="rail-label">Creator paths</p><a href="/archive.html">Original Archive</a><a href="/mystery-board.html">Mystery Board</a><a href="/fiction-disclaimer.html">Story &amp; Source Notice</a></div>
+      <div class="rail-card rail-card-subtle"><p class="rail-label">Creator paths</p><a href="/scripts/categories/">Script Categories</a><a href="/scripts/board/">Script Board</a><a href="/scripts/resources/">Creator Resources</a><a href="/">Mystery Archive</a></div>
     </aside>
   </main>`;
   return renderPage({
@@ -524,6 +643,9 @@ function generateSitemap() {
     '/categories.html',
     '/archive.html',
     '/scripts/',
+    '/scripts/categories/',
+    '/scripts/board/',
+    '/scripts/resources/',
     '/mystery-board.html',
     '/about.html',
     '/fiction-disclaimer.html',
@@ -652,7 +774,7 @@ ${robotsMeta}  <meta property="og:title" content="${escapeAttr(pageTitle)}">
   <link rel="stylesheet" href="/styles.css?v=${styleVersion}">
 </head>
 <body>
-  ${renderHeader()}
+  ${renderHeader(canonicalPath)}
 ${content}
   ${renderFooter()}
 </body>
@@ -660,14 +782,60 @@ ${content}
 `;
 }
 
-function renderHeader() {
+function renderHeader(currentPath = '/') {
+  const pathForNav = normalizeNavPath(currentPath);
+  if (isScriptsPath(pathForNav)) {
+    return renderScriptsHeader(pathForNav);
+  }
+  return renderMainHeader(pathForNav);
+}
+
+function renderMainHeader(currentPath) {
   return `<header class="site-header">
     <div class="topline">A Kyuno Lab publication</div>
     <div class="header-inner">
       <a class="brand" href="/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
-      <nav class="nav"><a href="/newest.html">Newest</a><a href="/popular.html">Popular</a><a href="/categories.html">Categories</a><a href="/scripts/">Scripts</a><a href="/mystery-board.html">Mystery Board</a><a href="/about.html">About</a></nav>
+      <nav class="nav">${[
+        navLink('/newest.html', 'Newest', currentPath === '/newest'),
+        navLink('/popular.html', 'Popular', currentPath === '/popular'),
+        navLink('/categories.html', 'Categories', currentPath === '/categories' || currentPath.startsWith('/categories/')),
+        navLink('/scripts/', 'Scripts', currentPath === '/scripts' || currentPath.startsWith('/scripts/')),
+        navLink('/mystery-board.html', 'Mystery Board', currentPath === '/mystery-board' || currentPath.startsWith('/mystery-board/')),
+        navLink('/about.html', 'About', currentPath === '/about')
+      ].join('')}</nav>
     </div>
   </header>`;
+}
+
+function renderScriptsHeader(currentPath) {
+  return `<header class="site-header site-header-scripts">
+    <div class="topline">A Kyuno Lab creator resource</div>
+    <div class="header-inner">
+      <a class="brand" href="/scripts/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Video Scripts</strong><em>Free mystery YouTube scripts for creators.</em></span></a>
+      <nav class="nav">${[
+        navLink('/scripts/', 'Scripts Home', currentPath === '/scripts' || (currentPath.startsWith('/scripts/') && !currentPath.startsWith('/scripts/categories') && !currentPath.startsWith('/scripts/board') && !currentPath.startsWith('/scripts/resources'))),
+        navLink('/scripts/categories/', 'Script Categories', currentPath.startsWith('/scripts/categories')),
+        navLink('/scripts/board/', 'Script Board', currentPath.startsWith('/scripts/board')),
+        navLink('/scripts/resources/', 'Creator Resources', currentPath.startsWith('/scripts/resources')),
+        navLink('/', 'Mystery Archive', false)
+      ].join('')}</nav>
+    </div>
+  </header>`;
+}
+
+function navLink(href, label, isActive) {
+  return `<a href="${href}"${isActive ? ' class="active" aria-current="page"' : ''}>${escapeHtml(label)}</a>`;
+}
+
+function normalizeNavPath(currentPath) {
+  const withoutHash = String(currentPath || '/').split('#')[0].split('?')[0];
+  let normalized = withoutHash.replace(/\/index\.html$/, '/').replace(/\.html$/, '');
+  if (normalized.length > 1 && normalized.endsWith('/')) normalized = normalized.slice(0, -1);
+  return normalized || '/';
+}
+
+function isScriptsPath(currentPath) {
+  return currentPath === '/scripts' || currentPath.startsWith('/scripts/');
 }
 
 function renderFooter() {
