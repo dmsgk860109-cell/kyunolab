@@ -8,9 +8,11 @@ const styleVersion = '20260709-seo-structure';
 const storiesPath = path.join(root, 'data', 'stories.json');
 const stories = readJson(storiesPath);
 const categories = readJson(path.join(root, 'data', 'categories.json'));
+const scripts = readOptionalJson(path.join(root, 'data', 'scripts.json'), []);
 const seoOverrides = readOptionalJson(path.join(root, 'data', 'story-seo-overrides.json'), {});
 
 const storyBySlug = new Map(stories.map((story) => [story.slug, story]));
+const scriptByStorySlug = new Map(scripts.map((script) => [script.originalStorySlug, script]));
 const existingQueries = new Set();
 for (const story of stories) {
   if (story.contentDNA?.canonicalQuery) existingQueries.add(normalize(story.contentDNA.canonicalQuery));
@@ -77,6 +79,8 @@ function backfillStoryMetadata(story) {
   story.relatedStorySlugs = Array.isArray(story.relatedStorySlugs) && story.relatedStorySlugs.length
     ? story.relatedStorySlugs
     : (story.relatedStoryIds || []);
+  const linkedScript = scriptByStorySlug.get(story.slug);
+  if (linkedScript) story.scriptSlug = linkedScript.slug;
   story.summaryAnswer = buildSummaryAnswer(story, subject);
   story.topicScore = story.topicScore || 72;
   story.topicStatus = story.topicStatus || 'approved';
@@ -220,6 +224,7 @@ function renderStoryPage(story, previousStory, nextStory) {
   const relatedStories = getRelatedStories(story);
   const dna = story.contentDNA;
   const sections = buildBodySections(story);
+  const scriptCta = renderScriptCta(story);
 
   return `<!doctype html>
 <html lang="en">
@@ -270,7 +275,8 @@ ${renderHeroImage(story)}
         ${renderFaq(story)}
         ${renderSourceNote(story)}
       </div>
-      ${renderRelatedArticles(relatedStories)}
+${scriptCta ? `      ${scriptCta}
+` : ''}      ${renderRelatedArticles(relatedStories)}
       ${renderPrevNext(previousStory, nextStory)}
     </article>
     ${renderRightRail(story, relatedStories, nextStory)}
@@ -428,6 +434,16 @@ function renderSourceNote(story) {
   return `<h2 id="source-note">Story &amp; Source Note</h2>
         <p>This article discusses ${escapeHtml(story.sourceStatus || story.category)} with a source-aware approach. The record is useful for reading motif, setting, circulation, and evidence limits; it is not presented as confirmed fact.</p>
         <p>For this subject, the strongest responsible reading is ${escapeHtml(profile.sourceReading)}. Claims beyond that would need clearer, dated, and independently checkable material. See the <a href="/fiction-disclaimer.html#source-status">Story &amp; Source Notice</a> for how Kyunolab Mystery Archive separates documented sources, modern retellings, speculative interpretation, and original work.</p>`;
+}
+
+function renderScriptCta(story) {
+  const script = scriptByStorySlug.get(story.slug);
+  if (!script) return '';
+  return `<aside class="script-version-cta" aria-label="YouTube script version">
+        <p class="rail-label">Creator script version</p>
+        <p>Want to turn this story into a video? View the YouTube script version with Shorts script, image prompts, and thumbnail ideas.</p>
+        <a class="button" href="/scripts/${escapeAttr(script.slug)}">View the YouTube script version</a>
+      </aside>`;
 }
 
 function renderMetaGrid(story) {
@@ -877,11 +893,11 @@ function absoluteImageUrl(value) {
 }
 
 function renderHeader() {
-  return `<header class="site-header"><div class="topline">A Kyuno Lab publication</div><div class="header-inner"><a class="brand" href="/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a><nav class="nav"><a href="/newest.html">Newest</a><a href="/popular.html">Popular</a><a href="/categories.html">Categories</a><a href="/mystery-board.html">Mystery Board</a><a href="/about.html">About</a></nav></div></header>`;
+  return `<header class="site-header"><div class="topline">A Kyuno Lab publication</div><div class="header-inner"><a class="brand" href="/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a><nav class="nav"><a href="/newest.html">Newest</a><a href="/popular.html">Popular</a><a href="/categories.html">Categories</a><a href="/scripts/">Scripts</a><a href="/mystery-board.html">Mystery Board</a><a href="/about.html">About</a></nav></div></header>`;
 }
 
 function renderFooter() {
-  return `<footer class="site-footer"><p><strong>Kyunolab Mystery Archive</strong> is a quiet story publication by Kyuno Lab, dedicated to legends, folklore, mysteries, and strange tales from the edges of memory.</p><p><a href="/archive.html">Archive Index</a> - <a href="/newest.html">Newest</a> - <a href="/popular.html">Popular</a> - <a href="/categories.html">Categories</a> - <a href="/about.html">About</a> - <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a> - <a href="/privacy.html">Privacy</a> - <a href="/rss.xml">RSS</a></p></footer>`;
+  return `<footer class="site-footer"><p><strong>Kyunolab Mystery Archive</strong> is a quiet story publication by Kyuno Lab, dedicated to legends, folklore, mysteries, and strange tales from the edges of memory.</p><p><a href="/archive.html">Archive Index</a> - <a href="/newest.html">Newest</a> - <a href="/popular.html">Popular</a> - <a href="/categories.html">Categories</a> - <a href="/scripts/">Scripts</a> - <a href="/about.html">About</a> - <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a> - <a href="/privacy.html">Privacy</a> - <a href="/rss.xml">RSS</a></p></footer>`;
 }
 
 function formatDate(value) {

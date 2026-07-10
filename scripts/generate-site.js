@@ -10,6 +10,7 @@ const rssLimit = 20;
 const stories = readJson(path.join(root, 'data', 'stories.json'));
 const categories = readJson(path.join(root, 'data', 'categories.json'));
 const guides = readOptionalJson(path.join(root, 'data', 'guides.json'));
+const creatorScripts = readOptionalJson(path.join(root, 'data', 'scripts.json'));
 const siteConfig = readOptionalJson(path.join(root, 'data', 'site.json'), {});
 
 generateHomePage();
@@ -39,11 +40,12 @@ generateArchivePageSet({
 
 generateCategoryHub();
 generateCategoryPages();
+generateScriptsPages();
 generateRss();
 generateSitemap();
 generateRoutingFiles();
 
-console.log(`Generated site index pages for ${stories.length} stories, ${categories.length} categories, and ${guides.length} guides.`);
+console.log(`Generated site index pages for ${stories.length} stories, ${categories.length} categories, ${guides.length} guides, and ${creatorScripts.length} scripts.`);
 
 function generateHomePage() {
   const featuredStory = getConfiguredStory(siteConfig.featuredStoryId) || stories[0];
@@ -210,6 +212,201 @@ function generateCategoryPages() {
   }
 }
 
+function generateScriptsPages() {
+  const scripts = sortNewest(creatorScripts);
+  writeFile('scripts/index.html', renderScriptsHomePage(scripts));
+  for (const script of scripts) {
+    writeFile(`scripts/${script.slug}.html`, renderScriptDetailPage(script));
+  }
+}
+
+function renderScriptsHomePage(scripts) {
+  const featuredScripts = scripts.slice(0, 3);
+  const latestScripts = scripts.slice(0, 8);
+  const genres = groupScriptsByGenre(scripts);
+  return renderPage({
+    canonicalPath: '/scripts/',
+    title: 'Free Mystery YouTube Scripts',
+    description: 'Free mystery YouTube scripts for creators, including longform YouTube scripts, Shorts scripts, image prompts, thumbnail ideas, and subtitle lines.',
+    metaDescription: 'Browse free mystery YouTube scripts with longform YouTube scripts, Shorts scripts, image prompts, thumbnail ideas, and subtitle lines for creators.',
+    content: `  <main class="scripts-page">
+    <section class="scripts-hero">
+      <div>
+        <p class="label">Creator Script Library</p>
+        <h1 class="article-title">Free Mystery YouTube Scripts</h1>
+        <p class="deck">A creator-focused library for longform YouTube scripts, Shorts scripts, image prompts, thumbnail ideas, subtitle lines, and mystery video planning.</p>
+      </div>
+      <aside class="script-creator-panel">
+        <p class="rail-label">Creator Resources</p>
+        <a href="#featured-scripts">Featured Scripts</a>
+        <a href="#latest-scripts">Latest Scripts</a>
+        <a href="#script-board">Mystery Script Board</a>
+        <a href="#script-categories">Script Categories</a>
+      </aside>
+    </section>
+    <section id="featured-scripts" class="scripts-section">
+      <div class="section-head"><h2>Featured Scripts</h2><span>Ready for video planning</span></div>
+      <div class="script-card-grid">${featuredScripts.map(renderScriptCard).join('')}</div>
+    </section>
+    <section id="latest-scripts" class="scripts-section">
+      <div class="section-head"><h2>Latest Scripts</h2><span>New creator materials</span></div>
+      <div class="script-list">${latestScripts.map(renderScriptRow).join('')}</div>
+    </section>
+    <section id="script-board" class="scripts-section script-board">
+      <div>
+        <p class="label">Mystery Script Board</p>
+        <h2>Choose a format before you write the voiceover.</h2>
+        <p>Each script package separates the original archive story from creator-facing assets: longform narration, Shorts structure, visual prompts, thumbnail angles, and subtitle lines.</p>
+      </div>
+      <div class="script-board-grid">
+        <article><strong>Longform YouTube</strong><span>8-13 minute narration structures for mystery, folklore, and legend videos.</span></article>
+        <article><strong>Shorts</strong><span>Compressed hooks and ending beats for vertical video.</span></article>
+        <article><strong>Visual Planning</strong><span>Image prompts, thumbnail ideas, and subtitle lines kept separate from the archive article.</span></article>
+      </div>
+    </section>
+    <section id="script-categories" class="scripts-section">
+      <div class="section-head"><h2>Script Categories</h2><span>Browse by creator use</span></div>
+      <div class="script-category-grid">${genres.map(renderScriptGenreCard).join('')}</div>
+    </section>
+    <section id="creator-resources" class="scripts-section creator-resources">
+      <div class="section-head"><h2>Creator Resources</h2><a href="/archive.html">Browse original archive stories</a></div>
+      <div class="script-resource-links">
+        <a href="/scripts/">Free Mystery YouTube Scripts</a>
+        <a href="/mystery-board.html">Mystery Board</a>
+        <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a>
+      </div>
+    </section>
+  </main>`
+  });
+}
+
+function renderScriptDetailPage(script) {
+  const originalStory = stories.find((story) => story.slug === script.originalStorySlug);
+  const canonicalPath = `/scripts/${script.slug}`;
+  const content = `  <main class="script-detail-page article-shell">
+    <article>
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/scripts/">Scripts</a><span aria-hidden="true">/</span><span aria-current="page">${escapeHtml(script.title)}</span></nav>
+      <header class="archive-article-header">
+        <p class="label">${escapeHtml(script.genre)}</p>
+        <h1 class="article-title">${escapeHtml(script.title)}</h1>
+        <p class="deck">${escapeHtml(script.deck)}</p>
+        ${renderScriptMetaGrid(script)}
+      </header>
+      <section class="search-summary script-summary" aria-label="Script package summary">
+        <h2>Creator Package</h2>
+        <dl>
+          <div><dt>Video angle</dt><dd>${escapeHtml(script.logline)}</dd></div>
+          <div><dt>Best for</dt><dd>${escapeHtml([script.genre, script.estimatedVideoLength, 'YouTube narration and Shorts planning'].filter(Boolean).join(' - '))}</dd></div>
+          <div><dt>Included assets</dt><dd>${escapeHtml(scriptFeatureSummary(script))}</dd></div>
+        </dl>
+      </section>
+      <section class="script-material">
+        <h2>Longform YouTube Script</h2>
+        ${script.longformScript.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join('\n')}
+      </section>
+      <section class="script-material">
+        <h2>Shorts Script</h2>
+        <ol>${script.shortsScript.map((line) => `<li>${escapeHtml(line)}</li>`).join('')}</ol>
+      </section>
+      <section class="script-material">
+        <h2>Image Prompts</h2>
+        <div class="script-prompt-list">${script.imagePrompts.map((prompt) => `<p>${escapeHtml(prompt)}</p>`).join('')}</div>
+      </section>
+      <section class="script-material">
+        <h2>Thumbnail Ideas</h2>
+        <ul>${script.thumbnailIdeas.map((idea) => `<li>${escapeHtml(idea)}</li>`).join('')}</ul>
+      </section>
+      <section class="script-material">
+        <h2>Subtitle Lines</h2>
+        <div class="script-subtitle-lines">${script.subtitleLines.map((line) => `<span>${escapeHtml(line)}</span>`).join('')}</div>
+      </section>
+      ${originalStory ? `<aside class="script-version-cta"><p class="rail-label">Original archive story</p><p>Read the original archive story.</p><a class="button" href="/stories/${escapeAttr(originalStory.slug)}">${escapeHtml(originalStory.title)}</a></aside>` : ''}
+    </article>
+    <aside class="article-rail article-rail-right">
+      <div class="rail-card rail-feature"><p class="rail-label">Scripts Home</p><a href="/scripts/"><strong>Free Mystery YouTube Scripts</strong><span>Longform, Shorts, prompts, thumbnails</span></a></div>
+      <div class="rail-card"><p class="rail-label">More scripts</p>${sortNewest(creatorScripts).filter((item) => item.slug !== script.slug).slice(0, 4).map((item) => `<a href="/scripts/${escapeAttr(item.slug)}">${escapeHtml(item.title)}</a>`).join('')}</div>
+      <div class="rail-card rail-card-subtle"><p class="rail-label">Creator paths</p><a href="/archive.html">Original Archive</a><a href="/mystery-board.html">Mystery Board</a><a href="/fiction-disclaimer.html">Story &amp; Source Notice</a></div>
+    </aside>
+  </main>`;
+  return renderPage({
+    canonicalPath,
+    title: script.seoTitle || script.title,
+    description: script.deck,
+    metaDescription: script.metaDescription,
+    content
+  });
+}
+
+function renderScriptCard(script) {
+  return `<article class="script-card">
+        <p class="rail-label">${escapeHtml(script.genre)}</p>
+        <h3><a href="/scripts/${escapeAttr(script.slug)}">${escapeHtml(script.title)}</a></h3>
+        <p>${escapeHtml(script.deck)}</p>
+        ${renderScriptBadges(script)}
+      </article>`;
+}
+
+function renderScriptRow(script) {
+  return `<article class="script-row">
+        <div><span class="tag">${escapeHtml(script.genre)}</span><h3><a href="/scripts/${escapeAttr(script.slug)}">${escapeHtml(script.title)}</a></h3></div>
+        <p>${escapeHtml(script.deck)}</p>
+        <div class="meta">${escapeHtml([script.estimatedVideoLength, scriptFeatureSummary(script)].filter(Boolean).join(' - '))}</div>
+      </article>`;
+}
+
+function renderScriptGenreCard(group) {
+  return `<article class="script-genre-card">
+        <h3>${escapeHtml(group.genre)}</h3>
+        <p>${group.items.length} script package${group.items.length === 1 ? '' : 's'} available.</p>
+        <div class="category-links">${group.items.slice(0, 3).map((script) => `<a href="/scripts/${escapeAttr(script.slug)}">${escapeHtml(script.title)}</a>`).join('')}</div>
+      </article>`;
+}
+
+function renderScriptMetaGrid(script) {
+  return `<dl class="article-meta-grid script-meta-grid">
+          <div><dt>Genre</dt><dd>${escapeHtml(script.genre)}</dd></div>
+          <div><dt>Estimated video length</dt><dd>${escapeHtml(script.estimatedVideoLength)}</dd></div>
+          <div><dt>Longform script included</dt><dd>${yesNo(script.longformIncluded)}</dd></div>
+          <div><dt>Shorts script included</dt><dd>${yesNo(script.shortsIncluded)}</dd></div>
+          <div><dt>Image prompts included</dt><dd>${yesNo(script.imagePromptsIncluded)}</dd></div>
+          <div><dt>Thumbnail ideas included</dt><dd>${yesNo(script.thumbnailIdeasIncluded)}</dd></div>
+        </dl>`;
+}
+
+function renderScriptBadges(script) {
+  const badges = [
+    ['Video length', script.estimatedVideoLength],
+    ['Longform', script.longformIncluded ? 'included' : 'not included'],
+    ['Shorts', script.shortsIncluded ? 'included' : 'not included'],
+    ['Image prompts', script.imagePromptsIncluded ? 'included' : 'not included'],
+    ['Thumbnail ideas', script.thumbnailIdeasIncluded ? 'included' : 'not included']
+  ];
+  return `<dl class="script-badges">${badges.map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join('')}</dl>`;
+}
+
+function groupScriptsByGenre(scripts) {
+  const groups = new Map();
+  for (const script of scripts) {
+    const genre = script.genre || 'Mystery Script';
+    if (!groups.has(genre)) groups.set(genre, []);
+    groups.get(genre).push(script);
+  }
+  return Array.from(groups, ([genre, items]) => ({ genre, items }));
+}
+
+function scriptFeatureSummary(script) {
+  return [
+    script.longformIncluded ? 'longform script' : '',
+    script.shortsIncluded ? 'Shorts script' : '',
+    script.imagePromptsIncluded ? 'image prompts' : '',
+    script.thumbnailIdeasIncluded ? 'thumbnail ideas' : ''
+  ].filter(Boolean).join(', ');
+}
+
+function yesNo(value) {
+  return value ? 'Yes' : 'No';
+}
+
 function renderFeaturedStory(story) {
   return `<article class="feature-card"><span class="pill">Featured Record</span><h2><a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a></h2><p>${escapeHtml(story.excerpt || story.metaDescription || '')}</p><div class="meta">${escapeHtml([story.category, story.readTime, story.tag].filter(Boolean).join(' - '))}</div></article>`;
 }
@@ -289,6 +486,7 @@ function generateSitemap() {
     '/popular.html',
     '/categories.html',
     '/archive.html',
+    '/scripts/',
     '/mystery-board.html',
     '/about.html',
     '/fiction-disclaimer.html',
@@ -309,6 +507,10 @@ function generateSitemap() {
 
   for (const guide of guides) {
     urls.push({ loc: `${siteUrl}${guide.url || `/mystery-board/${guide.slug}`}`, lastmod: guide.updatedAt || guide.publishedAt || latest });
+  }
+
+  for (const script of creatorScripts) {
+    urls.push({ loc: `${siteUrl}/scripts/${script.slug}`, lastmod: script.updatedAt || script.publishedAt || latest });
   }
 
   const rows = urls.map((url) => `  <url><loc>${escapeXml(url.loc)}</loc><lastmod>${escapeXml(url.lastmod)}</lastmod></url>`).join('\n');
@@ -425,7 +627,7 @@ function renderHeader() {
     <div class="topline">A Kyuno Lab publication</div>
     <div class="header-inner">
       <a class="brand" href="/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
-      <nav class="nav"><a href="/newest.html">Newest</a><a href="/popular.html">Popular</a><a href="/categories.html">Categories</a><a href="/mystery-board.html">Mystery Board</a><a href="/about.html">About</a></nav>
+      <nav class="nav"><a href="/newest.html">Newest</a><a href="/popular.html">Popular</a><a href="/categories.html">Categories</a><a href="/scripts/">Scripts</a><a href="/mystery-board.html">Mystery Board</a><a href="/about.html">About</a></nav>
     </div>
   </header>`;
 }
@@ -433,7 +635,7 @@ function renderHeader() {
 function renderFooter() {
   return `<footer class="site-footer">
     <p><strong>Kyunolab Mystery Archive</strong> is a quiet story publication by Kyuno Lab, dedicated to legends, folklore, mysteries, and strange tales from the edges of memory.</p>
-    <p><a href="/archive.html">Archive Index</a> - <a href="/newest.html">Newest</a> - <a href="/popular.html">Popular</a> - <a href="/categories.html">Categories</a> - <a href="/about.html">About</a> - <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a> - <a href="/privacy.html">Privacy</a> - <a href="/rss.xml">RSS</a></p>
+    <p><a href="/archive.html">Archive Index</a> - <a href="/newest.html">Newest</a> - <a href="/popular.html">Popular</a> - <a href="/categories.html">Categories</a> - <a href="/scripts/">Scripts</a> - <a href="/about.html">About</a> - <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a> - <a href="/privacy.html">Privacy</a> - <a href="/rss.xml">RSS</a></p>
   </footer>`;
 }
 
