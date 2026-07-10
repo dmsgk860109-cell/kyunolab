@@ -113,6 +113,14 @@ function renderHomePage({ featuredStory, latestStories, popularStories, essentia
       ${renderFeaturedStory(featuredStory)}
     </section>
     <section class="notice"><strong>Story &amp; Source Notice:</strong> This site explores folklore, legends, mysteries, and source-aware retellings. Unverified traditions are presented as stories, not as verified fact.</section>
+    <section class="creator-entry-card" aria-label="Creator scripts">
+      <div>
+        <p class="label">Video Scripts for Creators</p>
+        <h2>Free mystery YouTube scripts built from archive stories.</h2>
+        <p>Find longform narration, Shorts scripts, image prompts, thumbnail ideas, and subtitle lines without mixing creator assets into the original story archive.</p>
+      </div>
+      <a class="button" href="/scripts/">Open Scripts</a>
+    </section>
     <div class="home-stream">
       <section id="latest" class="latest latest-compact"><div class="section-head"><h2>Latest Stories</h2><a href="/newest.html">View all newest</a></div><div class="home-story-list">${latestStories.map(renderHomeStoryRow).join('')}</div></section>
       ${renderHomeRail({ featuredStory, popularStories, essentialStories })}
@@ -226,9 +234,9 @@ function renderScriptsHomePage(scripts) {
   const genres = groupScriptsByGenre(scripts);
   return renderPage({
     canonicalPath: '/scripts/',
-    title: 'Free Mystery YouTube Scripts',
+    title: 'Free Mystery YouTube Scripts | Kyunolab',
     description: 'Free mystery YouTube scripts for creators, including longform YouTube scripts, Shorts scripts, image prompts, thumbnail ideas, and subtitle lines.',
-    metaDescription: 'Browse free mystery YouTube scripts with longform YouTube scripts, Shorts scripts, image prompts, thumbnail ideas, and subtitle lines for creators.',
+    metaDescription: 'Free mystery, horror, urban legend, and strange history YouTube scripts for creators. Includes longform narration, Shorts scripts, image prompts, thumbnail ideas, and subtitle lines.',
     content: `  <main class="scripts-page">
     <section class="scripts-hero">
       <div>
@@ -282,7 +290,9 @@ function renderScriptsHomePage(scripts) {
 
 function renderScriptDetailPage(script) {
   const originalStory = stories.find((story) => story.slug === script.originalStorySlug);
+  const relatedScripts = sortNewest(creatorScripts).filter((item) => item.slug !== script.slug).slice(0, 4);
   const canonicalPath = `/scripts/${script.slug}`;
+  const usageNote = script.usageNote || 'This script is provided as a reference for video creators. You may adapt and edit it for your own video format. Credit to Kyunolab is appreciated when used as a source or inspiration. Please present the story as a mystery, legend, or fictional-style narration rather than a confirmed real event.';
   const content = `  <main class="script-detail-page article-shell">
     <article>
       <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/scripts/">Scripts</a><span aria-hidden="true">/</span><span aria-current="page">${escapeHtml(script.title)}</span></nav>
@@ -293,11 +303,13 @@ function renderScriptDetailPage(script) {
         ${renderScriptMetaGrid(script)}
       </header>
       <section class="search-summary script-summary" aria-label="Script package summary">
-        <h2>Creator Package</h2>
+        <h2>Script Info</h2>
         <dl>
-          <div><dt>Video angle</dt><dd>${escapeHtml(script.logline)}</dd></div>
-          <div><dt>Best for</dt><dd>${escapeHtml([script.genre, script.estimatedVideoLength, 'YouTube narration and Shorts planning'].filter(Boolean).join(' - '))}</dd></div>
-          <div><dt>Included assets</dt><dd>${escapeHtml(scriptFeatureSummary(script))}</dd></div>
+          <div><dt>Genre</dt><dd>${escapeHtml(script.genre)}</dd></div>
+          <div><dt>Estimated video length</dt><dd>${escapeHtml(script.estimatedVideoLength)}</dd></div>
+          <div><dt>Recommended format</dt><dd>${escapeHtml(script.recommendedFormat || 'Longform narration with Shorts cutdowns')}</dd></div>
+          <div><dt>Mood</dt><dd>${escapeHtml(script.mood || 'Quiet, mysterious, source-aware')}</dd></div>
+          <div><dt>Best for</dt><dd>${escapeHtml(script.bestFor || 'YouTube narration, Shorts planning, and visual prompt development')}</dd></div>
         </dl>
       </section>
       <section class="script-material">
@@ -309,8 +321,8 @@ function renderScriptDetailPage(script) {
         <ol>${script.shortsScript.map((line) => `<li>${escapeHtml(line)}</li>`).join('')}</ol>
       </section>
       <section class="script-material">
-        <h2>Image Prompts</h2>
-        <div class="script-prompt-list">${script.imagePrompts.map((prompt) => `<p>${escapeHtml(prompt)}</p>`).join('')}</div>
+        <h2>Scene-by-Scene Visual Guide</h2>
+        ${renderSceneVisualGuide(script)}
       </section>
       <section class="script-material">
         <h2>Thumbnail Ideas</h2>
@@ -320,11 +332,19 @@ function renderScriptDetailPage(script) {
         <h2>Subtitle Lines</h2>
         <div class="script-subtitle-lines">${script.subtitleLines.map((line) => `<span>${escapeHtml(line)}</span>`).join('')}</div>
       </section>
+      <section class="script-material">
+        <h2>Usage Note</h2>
+        <p>${escapeHtml(usageNote)}</p>
+      </section>
       ${originalStory ? `<aside class="script-version-cta"><p class="rail-label">Original archive story</p><p>Read the original archive story.</p><a class="button" href="/stories/${escapeAttr(originalStory.slug)}">${escapeHtml(originalStory.title)}</a></aside>` : ''}
+      <section class="related-articles" aria-label="Related scripts">
+        <div class="section-head"><h2>Related Scripts</h2></div>
+        <div class="related-grid">${relatedScripts.map(renderRelatedScriptLink).join('')}</div>
+      </section>
     </article>
     <aside class="article-rail article-rail-right">
       <div class="rail-card rail-feature"><p class="rail-label">Scripts Home</p><a href="/scripts/"><strong>Free Mystery YouTube Scripts</strong><span>Longform, Shorts, prompts, thumbnails</span></a></div>
-      <div class="rail-card"><p class="rail-label">More scripts</p>${sortNewest(creatorScripts).filter((item) => item.slug !== script.slug).slice(0, 4).map((item) => `<a href="/scripts/${escapeAttr(item.slug)}">${escapeHtml(item.title)}</a>`).join('')}</div>
+      <div class="rail-card"><p class="rail-label">More scripts</p>${relatedScripts.map((item) => `<a href="/scripts/${escapeAttr(item.slug)}">${escapeHtml(item.title)}</a>`).join('')}</div>
       <div class="rail-card rail-card-subtle"><p class="rail-label">Creator paths</p><a href="/archive.html">Original Archive</a><a href="/mystery-board.html">Mystery Board</a><a href="/fiction-disclaimer.html">Story &amp; Source Notice</a></div>
     </aside>
   </main>`;
@@ -335,6 +355,23 @@ function renderScriptDetailPage(script) {
     metaDescription: script.metaDescription,
     content
   });
+}
+
+function renderSceneVisualGuide(script) {
+  const prompts = script.visualGuide || (script.imagePrompts || []).map((prompt, index) => ({
+    suggestedImageDescription: `Scene ${index + 1} visual`,
+    aiImagePrompt: prompt,
+    directionTip: index === 0 ? 'Open with atmosphere before revealing the central mystery.' : 'Keep the image quiet, readable, and useful for narration pacing.'
+  }));
+  return `<div class="script-prompt-list">${prompts.map((item) => `<article>
+          <h3>${escapeHtml(item.suggestedImageDescription || 'Suggested Image Description')}</h3>
+          <p><strong>AI Image Prompt:</strong> ${escapeHtml(item.aiImagePrompt || item.prompt || '')}</p>
+          <p><strong>Direction Tip:</strong> ${escapeHtml(item.directionTip || 'Use this visual as a calm supporting scene, not as a jump-scare image.')}</p>
+        </article>`).join('')}</div>`;
+}
+
+function renderRelatedScriptLink(script) {
+  return `<a href="/scripts/${escapeAttr(script.slug)}"><span>${escapeHtml([script.genre, script.estimatedVideoLength].filter(Boolean).join(' - '))}</span><strong>${escapeHtml(script.title)}</strong></a>`;
 }
 
 function renderScriptCard(script) {
@@ -586,6 +623,7 @@ function renderCategoryPage({ category, pageItems, pageNumber, totalPages, pageT
 
 function renderPage({ canonicalPath, title, description, metaDescription, content, robots }) {
   const pageDescription = metaDescription || description;
+  const pageTitle = title.includes('|') ? title : `${title} | Kyunolab Mystery Archive`;
   const socialImage = `${siteUrl}/icon-512.png`;
   const robotsMeta = robots ? `  <meta name="robots" content="${escapeAttr(robots)}">\n` : '';
   return `<!doctype html>
@@ -593,16 +631,16 @@ function renderPage({ canonicalPath, title, description, metaDescription, conten
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>${escapeHtml(title)} | Kyunolab Mystery Archive</title>
+  <title>${escapeHtml(pageTitle)}</title>
   <meta name="description" content="${escapeAttr(pageDescription)}">
-${robotsMeta}  <meta property="og:title" content="${escapeAttr(title)}">
+${robotsMeta}  <meta property="og:title" content="${escapeAttr(pageTitle)}">
   <meta property="og:description" content="${escapeAttr(pageDescription)}">
   <meta property="og:site_name" content="Kyunolab Mystery Archive">
   <meta property="og:type" content="website">
   <meta property="og:url" content="${siteUrl}${canonicalPath}">
   <meta property="og:image" content="${socialImage}">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="${escapeAttr(title)}">
+  <meta name="twitter:title" content="${escapeAttr(pageTitle)}">
   <meta name="twitter:description" content="${escapeAttr(pageDescription)}">
   <meta name="twitter:image" content="${socialImage}">
   <link rel="canonical" href="${siteUrl}${canonicalPath}">

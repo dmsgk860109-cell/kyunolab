@@ -57,6 +57,7 @@ function backfillStoryMetadata(story) {
   const query = story.seedKeyword || story.targetQuery || subject.toLowerCase().replace(/^the\s+/i, '');
 
   story.title = title;
+  story.contentType = 'story';
   story.displayTitle = story.displayTitle || title;
   story.h1 = story.h1 || story.displayTitle;
   story.introSummary = story.introSummary || story.excerpt || story.summaryAnswer || excerpt;

@@ -478,6 +478,27 @@ h1 {
   margin: 0;
   color: #3e3933;
 }
+.creator-entry-card {
+  max-width: 1280px;
+  margin: 0 auto 32px;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 22px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--surface);
+}
+.creator-entry-card h2 {
+  margin: 6px 0 8px;
+  font-size: 30px;
+  line-height: 1.08;
+}
+.creator-entry-card p {
+  margin: 0;
+  max-width: 760px;
+}
 .scripts-page {
   max-width: 1180px;
   margin: 0 auto;
@@ -635,6 +656,22 @@ h1 {
 .script-prompt-list {
   display: grid;
   gap: 10px;
+}
+.script-prompt-list article {
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--surface);
+}
+.script-prompt-list h3 {
+  margin: 0 0 8px;
+  font-size: 19px;
+}
+.script-prompt-list article p {
+  margin: 8px 0 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
 }
 .script-prompt-list p,
 .script-subtitle-lines span {
@@ -1532,7 +1569,8 @@ textarea {
   .feature-card { min-height: 260px; }
   .article-meta-grid, .related-grid { grid-template-columns: 1fr 1fr; }
   .story-map ol { columns: 1; }
-  .archive-cta {
+  .archive-cta,
+  .creator-entry-card {
     align-items: flex-start;
     flex-direction: column;
   }
@@ -1551,6 +1589,7 @@ textarea {
   .compact-grid a,
   .board-items a,
   .archive-cta,
+  .creator-entry-card,
   .brand,
   .brand > span:last-child {
     min-width: 0;
@@ -1609,6 +1648,7 @@ textarea {
   .essential-reads,
   .mystery-preview,
   .archive-cta,
+  .creator-entry-card,
   .story-row,
   .section-head,
   .category-group,
@@ -1730,7 +1770,8 @@ textarea {
   .story-row p,
   .compact-grid strong,
   .board-items strong,
-  .archive-cta h2 {
+  .archive-cta h2,
+  .creator-entry-card h2 {
     overflow-wrap: anywhere;
     word-break: normal;
   }
