@@ -107,8 +107,7 @@ function renderHomePage({ featuredStory, latestStories, popularStories, essentia
 </head>
 <body>
   ${renderHeader()}
-  <main class="network-page-shell network-page-shell-home">
-    <div class="network-page-main">
+  <main>
     <section class="hero">
       <div class="hero-copy"><p class="label">Strange Story Archive</p><h1>Strange legends. Forgotten folklore. Mysteries that refuse to disappear.</h1><p>A quiet archive of urban legends, folklore origins, internet myths, strange places, mythic creatures, and recurring mystery patterns.</p></div>
       ${renderFeaturedStory(featuredStory)}
@@ -122,9 +121,8 @@ function renderHomePage({ featuredStory, latestStories, popularStories, essentia
     <section id="categories" class="categories"><div class="section-head"><h2>Browse By Category</h2><a href="/categories.html">View all categories</a></div><div class="home-category-groups">${categoryGroups.map(renderHomeCategoryGroup).join('')}</div></section>
     <section id="essential-reads" class="essential-reads"><div class="section-head"><h2>Essential Reads</h2><span>Start here</span></div><div class="compact-grid">${essentialStories.map(renderEssentialStory).join('')}</div></section>
     <section class="archive-cta"><div><p class="label">Archive Index</p><h2>Explore every open file in Kyunolab Mystery Archive.</h2><p>Move through the full collection by category, source status, story type, folklore motif, legend origin, and recurring mystery pattern.</p></div><a class="button" href="/archive.html">Browse all current stories</a></section>
-    </div>
-    ${renderKyunolabNetworkRail('archive')}
   </main>
+  ${renderKyunolabNetworkRail('archive')}
   ${renderFooter()}
 </body>
 </html>
@@ -778,18 +776,12 @@ ${robotsMeta}  <meta property="og:title" content="${escapeAttr(pageTitle)}">
 </head>
 <body>
   ${renderHeader(canonicalPath)}
-${networkSection ? renderNetworkWrappedContent(content, networkSection) : content}
+${content}
+${networkSection ? `  ${renderKyunolabNetworkRail(networkSection)}\n` : ''}
   ${renderFooter()}
 </body>
 </html>
 `;
-}
-
-function renderNetworkWrappedContent(content, section) {
-  return `  <div class="network-page-shell">
-${content}
-    ${renderKyunolabNetworkRail(section)}
-  </div>`;
 }
 
 function renderHeader(currentPath = '/') {

@@ -255,8 +255,7 @@ function renderStoryPage(story, previousStory, nextStory) {
 </head>
 <body>
   ${renderHeader()}
-  <div class="network-page-shell">
-    <main class="article-shell article-layout">
+  <main class="article-shell article-layout">
       ${renderLeftRail(story, sections)}
       <article>
         ${renderBreadcrumb(story)}
@@ -282,9 +281,8 @@ ${scriptCta ? `        ${scriptCta}
         ${renderPrevNext(previousStory, nextStory)}
       </article>
       ${renderRightRail(story, relatedStories, nextStory)}
-    </main>
-    ${renderKyunolabNetworkRail()}
-  </div>
+  </main>
+  ${renderKyunolabNetworkRail()}
   ${renderFooter()}
   <script src="/engagement.js?v=20260706-kit-ui" defer></script>
 </body>
