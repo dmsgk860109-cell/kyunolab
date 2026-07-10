@@ -783,6 +783,34 @@ h1 {
   border-top: 0;
   padding-top: 0;
 }
+.project-switcher-card {
+  background: var(--panel);
+}
+.project-switcher-card strong,
+.project-switcher-card span {
+  display: block;
+}
+.project-switcher-card strong {
+  font-size: 19px;
+  line-height: 1.15;
+}
+.project-switcher-card span {
+  margin-top: 8px;
+  color: var(--muted);
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.45;
+}
+.rail-card.project-switcher-card .button,
+.script-creator-panel .project-switcher-card .button {
+  display: inline-block;
+  margin-top: 13px;
+  padding: 9px 12px;
+  border-top: 0;
+  color: #fff;
+  font-size: 13px;
+  line-height: 1.2;
+}
 .rail-feature {
   background: var(--ink);
   color: #fff;

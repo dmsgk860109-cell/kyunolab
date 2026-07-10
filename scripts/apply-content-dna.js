@@ -523,10 +523,15 @@ function renderPrevNext(previousStory, nextStory) {
 
 function renderRightRail(story, relatedStories, nextStory) {
   return `<aside class="article-rail article-rail-right" aria-label="Recommended reading">
+      ${renderExploreKyunolabCard()}
       <div class="rail-card rail-feature"><p class="rail-label">Read next</p><a href="/stories/${escapeAttr(nextStory.slug)}"><strong>${escapeHtml(nextStory.title)}</strong><span>${escapeHtml(nextStory.category)}</span></a></div>
       <div class="rail-card"><p class="rail-label">Related records</p>${relatedStories.slice(0, 4).map((item) => `<a href="/stories/${escapeAttr(item.slug)}">${escapeHtml(item.title)}</a>`).join('')}</div>
       <div class="rail-card rail-card-subtle"><p class="rail-label">Same archive shelf</p><a href="/newest.html">Newest Records</a><a href="/popular.html">Popular Records</a><a href="/mystery-board.html">Mystery Board</a></div>
     </aside>`;
+}
+
+function renderExploreKyunolabCard() {
+  return `<div class="rail-card project-switcher-card"><p class="rail-label">Explore Kyunolab</p><strong>Creator Library</strong><span>Free mystery YouTube scripts, Shorts scripts, image prompts, and thumbnail ideas for video creators.</span><a class="button" href="/scripts/">Open Creator Library</a></div>`;
 }
 
 function getRelatedStories(story) {
@@ -894,7 +899,7 @@ function absoluteImageUrl(value) {
 }
 
 function renderHeader() {
-  return `<header class="site-header"><div class="topline">A Kyuno Lab publication</div><div class="header-inner"><a class="brand" href="/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a><nav class="nav"><a href="/newest.html">Newest</a><a href="/popular.html">Popular</a><a href="/categories.html">Categories</a><a href="/scripts/">Scripts</a><a href="/mystery-board.html">Mystery Board</a><a href="/about.html">About</a></nav></div></header>`;
+  return `<header class="site-header"><div class="topline">A Kyuno Lab publication</div><div class="header-inner"><a class="brand" href="/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a><nav class="nav"><a href="/newest.html">Newest</a><a href="/popular.html">Popular</a><a href="/categories.html">Categories</a><a href="/mystery-board.html">Mystery Board</a><a href="/about.html">About</a></nav></div></header>`;
 }
 
 function renderFooter() {

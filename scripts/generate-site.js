@@ -113,14 +113,6 @@ function renderHomePage({ featuredStory, latestStories, popularStories, essentia
       ${renderFeaturedStory(featuredStory)}
     </section>
     <section class="notice"><strong>Story &amp; Source Notice:</strong> This site explores folklore, legends, mysteries, and source-aware retellings. Unverified traditions are presented as stories, not as verified fact.</section>
-    <section class="creator-entry-card" aria-label="Creator scripts">
-      <div>
-        <p class="label">Video Scripts for Creators</p>
-        <h2>Free mystery YouTube scripts built from archive stories.</h2>
-        <p>Find longform narration, Shorts scripts, image prompts, thumbnail ideas, and subtitle lines without mixing creator assets into the original story archive.</p>
-      </div>
-      <a class="button" href="/scripts/">Open Scripts</a>
-    </section>
     <div class="home-stream">
       <section id="latest" class="latest latest-compact"><div class="section-head"><h2>Latest Stories</h2><a href="/newest.html">View all newest</a></div><div class="home-story-list">${latestStories.map(renderHomeStoryRow).join('')}</div></section>
       ${renderHomeRail({ featuredStory, popularStories, essentialStories })}
@@ -248,6 +240,7 @@ function renderScriptsHomePage(scripts) {
         <p class="deck">A creator-focused library for longform YouTube scripts, Shorts scripts, image prompts, thumbnail ideas, subtitle lines, and mystery video planning.</p>
       </div>
       <aside class="script-creator-panel">
+        ${renderExploreKyunolabCard('scripts')}
         <p class="rail-label">Creator Resources</p>
         <a href="#featured-scripts">Featured Scripts</a>
         <a href="#latest-scripts">Latest Scripts</a>
@@ -306,7 +299,8 @@ function renderScriptCategoriesPage(scripts) {
         <p class="deck">Move through creator-ready script packages by genre, video length, visual planning needs, and story format.</p>
       </div>
       <aside class="script-creator-panel">
-        <p class="rail-label">Scripts Navigation</p>
+        ${renderExploreKyunolabCard('scripts')}
+        <p class="rail-label">Creator Library</p>
         <a href="/scripts/">Scripts Home</a>
         <a href="/scripts/board/">Script Board</a>
         <a href="/scripts/resources/">Creator Resources</a>
@@ -335,7 +329,8 @@ function renderScriptBoardPage(scripts) {
         <p class="deck">A compact board for choosing script packages by format, hook, visual style, and production need.</p>
       </div>
       <aside class="script-creator-panel">
-        <p class="rail-label">Script Paths</p>
+        ${renderExploreKyunolabCard('scripts')}
+        <p class="rail-label">Creator Library</p>
         <a href="/scripts/">Scripts Home</a>
         <a href="/scripts/categories/">Script Categories</a>
         <a href="/scripts/resources/">Creator Resources</a>
@@ -375,7 +370,8 @@ function renderScriptResourcesPage() {
         <p class="deck">These resources keep original archive stories separate from creator-facing scripts, prompts, thumbnail ideas, and short-form adaptations.</p>
       </div>
       <aside class="script-creator-panel">
-        <p class="rail-label">Creator Links</p>
+        ${renderExploreKyunolabCard('scripts')}
+        <p class="rail-label">Creator Library</p>
         <a href="/scripts/">Scripts Home</a>
         <a href="/scripts/categories/">Script Categories</a>
         <a href="/scripts/board/">Script Board</a>
@@ -464,7 +460,8 @@ function renderScriptDetailPage(script) {
     <aside class="article-rail article-rail-right">
       <div class="rail-card rail-feature"><p class="rail-label">Scripts Home</p><a href="/scripts/"><strong>Free Mystery YouTube Scripts</strong><span>Longform, Shorts, prompts, thumbnails</span></a></div>
       <div class="rail-card"><p class="rail-label">More scripts</p>${relatedScripts.map((item) => `<a href="/scripts/${escapeAttr(item.slug)}">${escapeHtml(item.title)}</a>`).join('')}</div>
-      <div class="rail-card rail-card-subtle"><p class="rail-label">Creator paths</p><a href="/scripts/categories/">Script Categories</a><a href="/scripts/board/">Script Board</a><a href="/scripts/resources/">Creator Resources</a><a href="/">Mystery Archive</a></div>
+      <div class="rail-card rail-card-subtle"><p class="rail-label">Creator paths</p><a href="/scripts/categories/">Script Categories</a><a href="/scripts/board/">Script Board</a><a href="/scripts/resources/">Creator Resources</a></div>
+      ${renderExploreKyunolabCard('scripts')}
     </aside>
   </main>`;
   return renderPage({
@@ -594,6 +591,7 @@ function renderHomeRail({ featuredStory, popularStories, essentialStories }) {
   const popular = popularStories.slice(0, 3);
   const essentials = essentialStories.slice(0, 3);
   return `<aside class="home-rail" aria-label="Homepage reader paths">
+      ${renderExploreKyunolabCard('archive')}
       <div class="rail-card rail-feature"><p class="rail-label">Start here</p><a href="/stories/${escapeAttr(featuredStory.slug)}"><span>${escapeHtml(featuredStory.category)}</span><strong>${escapeHtml(featuredStory.title)}</strong></a></div>
       <div class="rail-card"><p class="rail-label">Popular records</p>${popular.map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}</div>
       <div class="rail-card rail-card-subtle"><p class="rail-label">Archive paths</p><a href="/newest.html">Newest Records</a><a href="/popular.html">Popular Records</a><a href="/categories.html">Browse Categories</a><a href="/mystery-board.html">Mystery Board</a></div>
@@ -799,7 +797,6 @@ function renderMainHeader(currentPath) {
         navLink('/newest.html', 'Newest', currentPath === '/newest'),
         navLink('/popular.html', 'Popular', currentPath === '/popular'),
         navLink('/categories.html', 'Categories', currentPath === '/categories' || currentPath.startsWith('/categories/')),
-        navLink('/scripts/', 'Scripts', currentPath === '/scripts' || currentPath.startsWith('/scripts/')),
         navLink('/mystery-board.html', 'Mystery Board', currentPath === '/mystery-board' || currentPath.startsWith('/mystery-board/')),
         navLink('/about.html', 'About', currentPath === '/about')
       ].join('')}</nav>
@@ -811,13 +808,12 @@ function renderScriptsHeader(currentPath) {
   return `<header class="site-header site-header-scripts">
     <div class="topline">A Kyuno Lab creator resource</div>
     <div class="header-inner">
-      <a class="brand" href="/scripts/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Video Scripts</strong><em>Free mystery YouTube scripts for creators.</em></span></a>
+      <a class="brand" href="/scripts/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Creator Library</strong><em>Free mystery YouTube scripts for creators.</em></span></a>
       <nav class="nav">${[
-        navLink('/scripts/', 'Scripts Home', currentPath === '/scripts' || (currentPath.startsWith('/scripts/') && !currentPath.startsWith('/scripts/categories') && !currentPath.startsWith('/scripts/board') && !currentPath.startsWith('/scripts/resources'))),
+        navLink('/scripts/', 'Creator Home', currentPath === '/scripts' || (currentPath.startsWith('/scripts/') && !currentPath.startsWith('/scripts/categories') && !currentPath.startsWith('/scripts/board') && !currentPath.startsWith('/scripts/resources'))),
         navLink('/scripts/categories/', 'Script Categories', currentPath.startsWith('/scripts/categories')),
         navLink('/scripts/board/', 'Script Board', currentPath.startsWith('/scripts/board')),
-        navLink('/scripts/resources/', 'Creator Resources', currentPath.startsWith('/scripts/resources')),
-        navLink('/', 'Mystery Archive', false)
+        navLink('/scripts/resources/', 'Creator Resources', currentPath.startsWith('/scripts/resources'))
       ].join('')}</nav>
     </div>
   </header>`;
@@ -838,6 +834,17 @@ function isScriptsPath(currentPath) {
   return currentPath === '/scripts' || currentPath.startsWith('/scripts/');
 }
 
+function renderExploreKyunolabCard(section) {
+  const isScripts = section === 'scripts';
+  const itemTitle = isScripts ? 'Mystery Archive' : 'Creator Library';
+  const description = isScripts
+    ? 'Read the original legends, folklore, strange stories, and mystery records.'
+    : 'Free mystery YouTube scripts, Shorts scripts, image prompts, and thumbnail ideas for video creators.';
+  const buttonText = isScripts ? 'Open Mystery Archive' : 'Open Creator Library';
+  const href = isScripts ? '/' : '/scripts/';
+  return `<div class="rail-card project-switcher-card"><p class="rail-label">Explore Kyunolab</p><strong>${escapeHtml(itemTitle)}</strong><span>${escapeHtml(description)}</span><a class="button" href="${href}">${escapeHtml(buttonText)}</a></div>`;
+}
+
 function renderFooter() {
   return `<footer class="site-footer">
     <p><strong>Kyunolab Mystery Archive</strong> is a quiet story publication by Kyuno Lab, dedicated to legends, folklore, mysteries, and strange tales from the edges of memory.</p>
@@ -853,7 +860,7 @@ function renderRightRail(items, label) {
   const safeItems = items.length ? items : stories.slice(0, 4);
   const feature = safeItems[0];
   const related = safeItems.slice(1, 4);
-  return `<aside class="article-rail article-rail-right" aria-label="${escapeAttr(label)}"><div class="rail-card rail-feature"><p class="rail-label">Start here</p><a href="/stories/${escapeAttr(feature.slug)}"><span>${escapeHtml(feature.category)}</span><strong>${escapeHtml(feature.title)}</strong></a></div><div class="rail-card"><p class="rail-label">Related records</p>${related.map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}</div><div class="rail-card rail-card-subtle"><p class="rail-label">Same archive shelf</p><a href="/newest.html">Newest Records</a><a href="/popular.html">Popular Records</a><a href="/mystery-board.html">Mystery Board</a></div></aside>`;
+  return `<aside class="article-rail article-rail-right" aria-label="${escapeAttr(label)}">${renderExploreKyunolabCard('archive')}<div class="rail-card rail-feature"><p class="rail-label">Start here</p><a href="/stories/${escapeAttr(feature.slug)}"><span>${escapeHtml(feature.category)}</span><strong>${escapeHtml(feature.title)}</strong></a></div><div class="rail-card"><p class="rail-label">Related records</p>${related.map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}</div><div class="rail-card rail-card-subtle"><p class="rail-label">Same archive shelf</p><a href="/newest.html">Newest Records</a><a href="/popular.html">Popular Records</a><a href="/mystery-board.html">Mystery Board</a></div></aside>`;
 }
 
 function renderCategoryRightRail() {
@@ -861,6 +868,7 @@ function renderCategoryRightRail() {
   const mythic = categories.filter((category) => category.group === 'Mythic & Imagined Realms');
   const start = stories[0];
   return `<aside class="article-rail article-rail-right" aria-label="Category page reading paths">
+      ${renderExploreKyunolabCard('archive')}
       <div class="rail-card rail-feature"><p class="rail-label">Start here</p><a href="/stories/${escapeAttr(start.slug)}"><span>${escapeHtml(start.category)}</span><strong>${escapeHtml(start.title)}</strong></a></div>
       <div class="rail-card"><p class="rail-label">Modern Strange Records</p>${modern.map(renderCategoryRailLink).join('')}</div>
       <div class="rail-card rail-card-subtle"><p class="rail-label">Mythic &amp; Imagined Realms</p>${mythic.map(renderCategoryRailLink).join('')}</div>
