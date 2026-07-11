@@ -66,9 +66,19 @@ Kyunolab supports two independent generation modes.
 
 ### Original Archive Mode
 
-Original Archive Mode is the existing default mode for newly imagined Kyunolab-style archive stories. Keep its current behavior unchanged.
+Original Archive Mode is the existing default mode for newly imagined Kyunolab-style archive stories. Keep its current article style, Story & Source Note, SEO structure, category system, and output behavior unchanged.
 
 Use Original Archive Mode when creating a new fictional legend, invented archive record, or original Kyunolab story pattern.
+
+Before drafting an Original Archive article, perform a research stage. Review related urban legends, ghost stories, folklore, myths, mysteries, internet legends, local legends, modern folklore, motifs, and similar story structures.
+
+The research stage is not for rewriting or translating existing legends. It is for understanding repeated scenes, familiar structures, common motifs, known settings, and famous patterns so the new article can avoid accidental duplication.
+
+After research, create a new independent Kyunolab record with a new situation, place, central scene, development, or structure.
+
+If the planned article is too similar to a known legend in core setup, plot movement, motif, ending, or symbolic meaning, change the direction or use Canonical Archive Mode instead.
+
+Full Original Mode rules live in `ORIGINAL_ARCHIVE_MODE.md`.
 
 ### Canonical Archive Mode
 

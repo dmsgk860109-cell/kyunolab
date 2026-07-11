@@ -183,12 +183,17 @@ function validateStoryContentDNA(story) {
 }
 
 function validateGenerationMode(story) {
+  const hasExplicitMode = Object.prototype.hasOwnProperty.call(story, 'generationMode');
   const mode = story.generationMode || 'original-archive';
   const allowedModes = new Set(['original-archive', 'canonical-archive']);
 
   if (!allowedModes.has(mode)) {
     errors.push(`${story.slug}: generationMode must be "original-archive" or "canonical-archive"`);
     return;
+  }
+
+  if (hasExplicitMode && mode === 'original-archive') {
+    validateOriginalArchiveResearch(story);
   }
 
   if (mode !== 'canonical-archive') return;
@@ -215,6 +220,22 @@ function validateGenerationMode(story) {
   }
   if (!Array.isArray(notes.unsupportedClaimsToAvoid)) {
     errors.push(`${story.slug}: canonical-archive mode requires sourceNotes.unsupportedClaimsToAvoid array`);
+  }
+}
+
+function validateOriginalArchiveResearch(story) {
+  const notes = story.originalResearchNotes || {};
+  const requiredArrays = [
+    'relatedMotifsReviewed',
+    'repeatedScenesObserved',
+    'similarityRisks',
+    'originalityChanges'
+  ];
+
+  for (const key of requiredArrays) {
+    if (!Array.isArray(notes[key]) || notes[key].length === 0) {
+      errors.push(`${story.slug}: original-archive mode requires originalResearchNotes.${key}`);
+    }
   }
 }
 

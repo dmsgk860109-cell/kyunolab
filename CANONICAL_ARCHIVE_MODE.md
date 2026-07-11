@@ -177,8 +177,10 @@ If the subject includes both historical records and later legend, name that spli
 
 Original Archive Mode:
 
+- researches related folklore patterns before drafting
 - creates new Kyunolab-style fictional or fictionalized archive stories
 - may invent a new legend pattern
+- must not rewrite, translate, or lightly alter a famous existing legend
 - still follows source-awareness and fact-safety rules
 
 Canonical Archive Mode:

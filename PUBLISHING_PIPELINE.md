@@ -74,7 +74,22 @@ Choose a generation mode before drafting.
 
 Use `original-archive` for newly imagined Kyunolab archive stories, fictional legends, and original story patterns.
 
-This is the existing mode. Do not change its prompts, validation assumptions, or article behavior when adding or using another mode.
+This is the existing mode. Keep its current article style, Story & Source Note, SEO structure, category system, and output format unchanged.
+
+Original Archive Mode now requires a pre-writing research stage.
+
+Before drafting an Original Mode article:
+
+1. Review related urban legends, ghost stories, folklore, myths, mysteries, internet legends, local legends, modern folklore, motifs, and similar story structures.
+2. Identify repeated scenes, common structures, familiar motifs, known settings, and famous endings.
+3. Use the research to understand patterns, not to copy sentences, translate existing material, or rewrite a famous legend.
+4. Create a new independent Kyunolab record with a new situation, place, central scene, development, or structure.
+5. If the planned story is too close to a known legend, change the setting, central scene, structure, motif, or emotional question.
+6. If the article should stay close to the known legend, switch to Canonical Archive Mode instead.
+
+Search is for research, not copying.
+
+Full rules live in `ORIGINAL_ARCHIVE_MODE.md`.
 
 ### Canonical Archive Mode
 

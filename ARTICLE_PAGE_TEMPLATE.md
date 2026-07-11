@@ -68,6 +68,15 @@ relatedKeywords:
   - [RELATED KEYWORD 1]
   - [RELATED KEYWORD 2]
   - [RELATED KEYWORD 3]
+originalResearchNotes:
+  relatedMotifsReviewed:
+    - [RELATED LEGEND / MOTIF / STORY STRUCTURE]
+  repeatedScenesObserved:
+    - [REPEATED SCENE OR STRUCTURE]
+  similarityRisks:
+    - [KNOWN LEGEND OR MOTIF THAT IS TOO CLOSE]
+  originalityChanges:
+    - [NEW PLACE / NEW SCENE / NEW DEVELOPMENT / NEW STRUCTURE]
 researchSources:
   - title: [SOURCE TITLE]
     url: [SOURCE URL]
@@ -137,6 +146,14 @@ Editorial scoring fields are internal production fields. They may live in draft 
 ## Generation Mode Selection
 
 Use `original-archive` for newly imagined Kyunolab archive stories. This is the existing default mode and its behavior should not be changed.
+
+Original Archive Mode requires motif research before drafting:
+
+- review related urban legends, ghost stories, folklore, myths, mysteries, internet legends, local legends, modern folklore, and similar story structures
+- identify repeated scenes, common motifs, familiar settings, and famous endings
+- do not rewrite, translate, or lightly alter an existing famous legend
+- create a new independent situation, place, central scene, development, or structure
+- if the idea is too close to a famous existing legend, change direction or use Canonical Archive Mode
 
 Use `canonical-archive` only when the article is about an existing well-known legend, myth, folklore subject, urban legend, internet legend, supernatural tradition, or historically known mystery.
 
@@ -483,6 +500,9 @@ Rules:
 Content:
 
 - [ ] Generation mode is set to `original-archive` or `canonical-archive`.
+- [ ] If `original-archive` is used, related legends and motifs were researched before drafting.
+- [ ] If `original-archive` is used, the article does not rewrite, translate, or lightly alter an existing famous legend.
+- [ ] If `original-archive` is used, the final concept has a new situation, place, scene, development, or structure.
 - [ ] If `canonical-archive` is used, at least 3 reliable sources were reviewed before drafting.
 - [ ] If `canonical-archive` is used, `researchSources` and `sourceNotes` are filled in.
 - [ ] If `canonical-archive` is used, the article does not invent a new legend or force variants into one false canon.

@@ -49,6 +49,14 @@ Use `original-archive` for newly imagined Kyunolab archive stories.
 
 Use `canonical-archive` for existing well-known legends, folklore, myths, mysteries, internet legends, and historically known strange records.
 
+If `original-archive` is selected:
+
+- do motif research before drafting
+- review related legends, folklore, myths, mysteries, internet legends, and similar story structures
+- identify repeated scenes, common motifs, familiar settings, and famous endings
+- do not rewrite, translate, or lightly alter an existing famous legend
+- create a new independent situation, place, scene, development, or structure
+
 If `canonical-archive` is selected:
 
 - do source review before drafting
@@ -135,6 +143,17 @@ Use this section for Canonical Archive Mode. For Original Archive Mode, keep onl
 - Shared verified points: [WHAT MULTIPLE SOURCES SUPPORT]
 - Known variants: [DIFFERENT VERSIONS WITHOUT FORCING ONE CANON]
 - Unverified claims to avoid treating as fact: [CLAIMS / RUMORS / UNSOURCED DETAILS]
+
+## Original Research Notes
+
+Use this section for Original Archive Mode. These are production notes, not reader-facing content.
+
+- Related legends or motifs reviewed: [MOTIF / LEGEND / STRUCTURE 1], [MOTIF / LEGEND / STRUCTURE 2], [MOTIF / LEGEND / STRUCTURE 3]
+- Repeated scenes observed: [WHAT OFTEN REPEATS]
+- Familiar settings to avoid copying: [KNOWN SETTING / SCENE]
+- Similarity risk: [LOW / MEDIUM / HIGH]
+- Originality changes made: [NEW PLACE / NEW SCENE / NEW STRUCTURE / NEW MOTIF]
+- Canonical Mode fallback needed? [NO / YES, IF TOO CLOSE TO A KNOWN LEGEND]
 
 ## SEO Fields
 
@@ -373,6 +392,9 @@ Show at least 3 related articles when available. Use 4 to 6 when the cluster is 
 ## Final QA
 
 - [ ] Generation mode is set to `original-archive` or `canonical-archive`.
+- [ ] If Original Archive Mode is used, related legends and motifs were researched before drafting.
+- [ ] If Original Archive Mode is used, the article does not rewrite, translate, or lightly alter an existing famous legend.
+- [ ] If Original Archive Mode is used, the final concept has a new situation, place, scene, development, or structure.
 - [ ] If Canonical Archive Mode is used, at least 3 reliable sources were reviewed before drafting.
 - [ ] If Canonical Archive Mode is used, the article does not invent a new legend or force variants into one false canon.
 - [ ] Topic score is 70 or higher, or the topic was intentionally held/reworked.
