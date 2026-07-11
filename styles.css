@@ -1221,7 +1221,8 @@ h1 {
   color: var(--accent);
 }
 .interesting-button.is-pulsing,
-.icon-button.is-pulsing {
+.icon-button.is-pulsing,
+.naver-prompt-button.is-pulsing {
   animation: engagementPulse .26s ease-out;
 }
 .interesting-count {
@@ -1282,6 +1283,21 @@ h1 {
   bottom: 7px;
   width: 1px;
   background: var(--line);
+}
+.naver-prompt-button {
+  gap: 6px;
+  min-height: 40px;
+  padding: 7px 10px;
+  color: var(--muted-strong);
+}
+.naver-prompt-button:hover,
+.naver-prompt-button:focus-visible {
+  color: var(--accent);
+}
+.naver-prompt-label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .02em;
 }
 .share-status {
   min-height: 18px;
@@ -1412,6 +1428,9 @@ h1 {
   }
   .community-kit-trigger::before {
     display: none;
+  }
+  .naver-prompt-button {
+    flex: 0 0 auto;
   }
   .community-kit-panel {
     max-height: 85vh;

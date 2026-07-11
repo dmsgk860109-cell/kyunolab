@@ -54,6 +54,9 @@
           <button class="community-kit-trigger engagement-button icon-button" type="button" aria-label="Create community share post" title="Create community share post">
             <span class="engagement-icon" aria-hidden="true">${icon('filePen')}</span><span class="sr-only">Create community share post</span>
           </button>
+          <button class="naver-prompt-trigger engagement-button naver-prompt-button" type="button" aria-label="네이버 블로그 원고 프롬프트 복사" title="네이버 블로그 원고 프롬프트 복사">
+            <span class="engagement-icon" aria-hidden="true">${icon('clipboardEdit')}</span><span class="naver-prompt-label">Naver</span>
+          </button>
         ` : ''}
         <span class="share-status" aria-live="polite"></span>
       </div>
@@ -68,7 +71,10 @@
 
   setupInteresting(section, slug);
   setupShare(section, title, canonical, description);
-  if (isStoryPage) setupCommunityKit(section, title, canonical, tagNames, description);
+  if (isStoryPage) {
+    setupCommunityKit(section, title, canonical, tagNames, description);
+    setupNaverPromptCopy(section, { title, canonical, description, tags: tagNames });
+  }
 
   function getCanonicalShareUrl() {
     const canonicalHref = document.querySelector('link[rel="canonical"]')?.href;
@@ -106,6 +112,14 @@
       .flatMap((value) => value ? value.split(/[,;]+/).map((tag) => tag.trim()) : [])
       .filter(Boolean);
     return Array.from(new Set(picked));
+  }
+
+  function getArticleCategory() {
+    const labels = Array.from(article.querySelectorAll('.article-meta-grid dt'));
+    const picked = labels
+      .find((dt) => /^category$/i.test(dt.textContent.trim()))
+      ?.nextElementSibling?.textContent.trim();
+    return picked || article.querySelector('.archive-article-header .label')?.textContent.trim() || '';
   }
 
   function setupInteresting(root, articleSlug) {
@@ -178,18 +192,19 @@
       pulse(copyButton);
       try {
         await copyText(shareUrl);
-        showStatus('Copied');
+        showTransientStatus(status, 'Copied');
       } catch (_) {
-        showStatus('Copy failed');
+        showTransientStatus(status, 'Copy failed');
       }
     });
+  }
 
-    function showStatus(value) {
+  function showTransientStatus(status, value, duration = 1400) {
+    if (!status) return;
       status.textContent = value;
       window.setTimeout(() => {
         status.textContent = '';
-      }, 1400);
-    }
+    }, duration);
   }
 
   function setupCommunityKit(root, articleTitle, articleUrl, articleTags, articleDescription) {
@@ -256,6 +271,116 @@
         if (url) window.open(url, '_blank', 'noopener,noreferrer');
       });
     }
+  }
+
+  function setupNaverPromptCopy(root, articleData) {
+    const trigger = root.querySelector('.naver-prompt-trigger');
+    const status = root.querySelector('.share-status');
+    if (!trigger) return;
+
+    trigger.addEventListener('click', async () => {
+      pulse(trigger);
+      try {
+        const prompt = buildNaverBlogPrompt(articleData);
+        await copyText(prompt);
+        showTransientStatus(status, '네이버 블로그 원고용 프롬프트를 복사했습니다.', 2200);
+      } catch (_) {
+        showTransientStatus(status, '복사하지 못했습니다. 브라우저의 클립보드 권한을 확인해주세요.', 2600);
+      }
+    });
+  }
+
+  function buildNaverBlogPrompt(articleData) {
+    const articleTitle = articleData.title || '';
+    const articleCategory = getArticleCategory();
+    const articleDescription = articleData.description || '';
+    const articleUrl = articleData.canonical || getCanonicalShareUrl();
+    const articleBody = extractArticleBodyText();
+
+    const fields = [];
+    if (articleTitle) fields.push(`제목:\n${articleTitle}`);
+    if (articleCategory) fields.push(`카테고리:\n${articleCategory}`);
+    if (articleDescription) fields.push(`설명:\n${articleDescription}`);
+    if (articleUrl) fields.push(`원문 주소:\n${articleUrl}`);
+    if (articleBody) fields.push(`원문:\n\n${articleBody}`);
+
+    return `${naverPromptInstructions()}\n\nKyunolab 글 정보:\n\n${fields.join('\n\n')}`.trim();
+  }
+
+  function naverPromptInstructions() {
+    return `아래 Kyunolab의 영문 원문을 바탕으로 네이버 블로그에 게시할 자연스러운 한국어 글을 작성해줘.
+
+단순한 직역이나 문장별 번역이 아니라, 원문의 사실관계와 핵심 내용을 유지하면서 한국 독자가 편하게 읽을 수 있는 독립적인 한국어 블로그 글로 재구성해야 한다.
+
+작성 구조:
+
+1. 제목
+2. 흥미를 끄는 도입부
+3. 원문에서 중요한 내용만 선별한 본문
+4. 자연스러운 마무리
+5. Kyunolab 원문 안내와 현재 글 링크
+6. 네이버 블로그용 해시태그
+
+작성 조건:
+
+- 제목은 한국어 검색 사용자가 내용을 쉽게 이해할 수 있도록 작성한다.
+- 제목에 지나친 과장, 낚시성 표현, 확인되지 않은 단정은 사용하지 않는다.
+- 도입부는 2~4문단 정도로 작성한다.
+- 본문은 원문의 핵심 사건, 배경, 특징, 의미를 중심으로 구성한다.
+- 중요하지 않은 반복 설명과 지나치게 세부적인 내용은 줄인다.
+- 한국인이 읽기에 자연스러운 문장과 문단 흐름으로 재작성한다.
+- 영어식 문장 구조와 번역투를 사용하지 않는다.
+- 원문에 없는 사실, 인물, 날짜, 장소, 주장, 해석을 임의로 추가하지 않는다.
+- 사실과 전설, 주장, 추측이 구분되어 있다면 그 구분을 유지한다.
+- 미스터리나 괴담을 사실로 단정하지 않는다.
+- 소제목을 적절히 사용해 읽기 쉽게 구성한다.
+- 같은 내용을 반복하지 않는다.
+- 전체 분량은 공백 포함 약 1,500~2,500자 정도를 기본으로 한다.
+- 원문 내용이 짧다면 억지로 분량을 늘리지 않는다.
+- 원문 내용이 길더라도 핵심 내용 위주로 압축한다.
+- 이모지는 사용하지 않는다.
+- 표는 사용하지 않는다.
+- 링크는 임의로 만들지 않는다.
+- 최종 결과에는 작성 과정이나 설명을 붙이지 말고, 게시할 완성 원고만 출력한다.
+
+마무리에는 아래 의미가 자연스럽게 포함되어야 한다.
+
+“더 자세한 이야기와 전체 기록은 Kyunolab Mystery Archive에서 확인할 수 있습니다.”
+
+그 바로 아래에 제공된 원문 주소를 그대로 표시한다.
+
+해시태그는 글 내용과 직접 관련된 한국어 태그를 8~12개 작성한다.`;
+  }
+
+  function extractArticleBodyText() {
+    const source = article.querySelector('.story-body');
+    if (!source) return '';
+    const clone = source.cloneNode(true);
+    clone.querySelectorAll('script, style, iframe, noscript, button, input, select, textarea, [hidden], [aria-hidden="true"]').forEach((node) => node.remove());
+
+    const blocks = [];
+    clone.querySelectorAll('h2, h3, h4, p, li, blockquote').forEach((node) => {
+      const text = normalizeText(node.textContent);
+      if (!text || /^advertisement$/i.test(text)) return;
+      blocks.push(text);
+    });
+    return dedupeSequential(blocks).join('\n\n');
+  }
+
+  function normalizeText(value) {
+    return String(value || '')
+      .replace(/\u00a0/g, ' ')
+      .replace(/[ \t\r\f\v]+/g, ' ')
+      .replace(/\n{3,}/g, '\n\n')
+      .trim();
+  }
+
+  function dedupeSequential(values) {
+    const result = [];
+    values.forEach((value) => {
+      if (result[result.length - 1] !== value) result.push(value);
+    });
+    return result;
   }
 
   function buildModal(articleTitle, articleUrl, articleTags, articleDescription) {
@@ -443,6 +568,7 @@
       facebook: '<svg viewBox="0 0 24 24" focusable="false"><path d="M14 8.6V7.1c0-.7.2-1.1 1.1-1.1H17V3h-2.8C11.4 3 10 4.6 10 7v1.6H7.8V12H10v9h4v-9h2.7l.5-3.4H14Z"/></svg>',
       x: '<svg viewBox="0 0 24 24" focusable="false"><path d="M14.3 10.4 21 3h-2.4l-5.4 6-4.3-6H3l7 9.7L3.3 21h2.4l5.5-6.6 4.8 6.6h5.9l-7.6-10.6Zm-2 2.4-.9-1.2-4-5.8h1.8l3.3 4.7.9 1.2 4.3 6.4h-1.8l-3.6-5.3Z"/></svg>',
       filePen: '<svg viewBox="0 0 24 24" focusable="false"><path d="M6 3h8.2L19 7.8V12h-2V9h-4V5H6v14h6v2H5a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Zm9 2.4V7h1.6L15 5.4Zm5.7 9.9-1-1a1 1 0 0 0-1.4 0l-5 5V22h2.7l5-5a1 1 0 0 0 0-1.4l-.3-.3Zm-5.5 4.9 3.8-3.8.6.6-3.8 3.8h-.6v-.6Z"/></svg>',
+      clipboardEdit: '<svg viewBox="0 0 24 24" focusable="false"><path d="M9 3h6a2 2 0 0 1 2 2h1.2A1.8 1.8 0 0 1 20 6.8V12h-2V7h-2.2A2 2 0 0 1 14 8H10a2 2 0 0 1-1.8-1H6v13h6v2H5.8A1.8 1.8 0 0 1 4 20.2V6.8A1.8 1.8 0 0 1 5.8 5H7a2 2 0 0 1 2-2Zm0 2a1 1 0 0 0 1 1h4a1 1 0 1 0 0-2h-4a1 1 0 0 0-1 1Zm11.7 10.3-1-1a1 1 0 0 0-1.4 0l-5 5V22H16l5-5a1 1 0 0 0 0-1.4l-.3-.3Zm-5.5 4.9 3.8-3.8.6.6-3.8 3.8h-.6v-.6Z"/></svg>',
       close: '<svg viewBox="0 0 24 24" focusable="false"><path d="m6.4 5 5.6 5.6L17.6 5 19 6.4 13.4 12l5.6 5.6-1.4 1.4-5.6-5.6L6.4 19 5 17.6l5.6-5.6L5 6.4 6.4 5Z"/></svg>'
     };
     return icons[name] || '';
