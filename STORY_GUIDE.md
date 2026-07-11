@@ -64,6 +64,10 @@ Avoid:
 
 Kyunolab supports two independent generation modes.
 
+Mode selection commands are optional. If a user requests a new article without specifying a mode, use the existing normal generation rules.
+
+If the user uses a mode alias, keep that selected mode fixed. Do not switch Original to Canonical, or Canonical to Original, based on assistant preference or search results.
+
 ### Original Archive Mode
 
 Original Archive Mode is the existing default mode for newly imagined Kyunolab-style archive stories. Keep its current article style, Story & Source Note, SEO structure, category system, and output behavior unchanged.
@@ -79,6 +83,13 @@ After research, create a new independent Kyunolab record with a new situation, p
 If the planned article is too similar to a known legend in core setup, plot movement, motif, ending, or symbolic meaning, change the direction or use Canonical Archive Mode instead.
 
 Full Original Mode rules live in `ORIGINAL_ARCHIVE_MODE.md`.
+
+Original Archive Mode aliases:
+
+- 창작
+- 창작글
+- 오리지널
+- Original
 
 ### Canonical Archive Mode
 
@@ -99,6 +110,16 @@ Canonical Mode articles must include:
 - Story & Source Note
 
 Full Canonical Mode rules live in `CANONICAL_ARCHIVE_MODE.md`.
+
+Canonical Archive Mode aliases:
+
+- 기록
+- 기록글
+- 유명
+- 유명글
+- Canonical
+
+Full mode alias rules live in `MODE_SELECTION_COMMANDS.md`.
 
 ## 3. Common Article Structure
 

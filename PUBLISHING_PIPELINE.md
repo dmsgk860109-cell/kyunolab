@@ -70,6 +70,27 @@ The score and breakdown are production metadata. They should not appear as visib
 
 Choose a generation mode before drafting.
 
+Mode selection commands are optional. If no mode is specified, keep the existing generation flow.
+
+Supported Original Archive Mode aliases:
+
+- 창작
+- 창작글
+- 오리지널
+- Original
+
+Supported Canonical Archive Mode aliases:
+
+- 기록
+- 기록글
+- 유명
+- 유명글
+- Canonical
+
+If a user explicitly selects a mode, that choice is binding. Do not switch modes because of search results, assistant preference, or topic familiarity.
+
+Full alias rules live in `MODE_SELECTION_COMMANDS.md`.
+
 ### Original Archive Mode
 
 Use `original-archive` for newly imagined Kyunolab archive stories, fictional legends, and original story patterns.

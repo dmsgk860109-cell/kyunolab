@@ -49,6 +49,13 @@ Use `original-archive` for newly imagined Kyunolab archive stories.
 
 Use `canonical-archive` for existing well-known legends, folklore, myths, mysteries, internet legends, and historically known strange records.
 
+Mode aliases are optional:
+
+- `창작`, `창작글`, `오리지널`, or `Original` means `original-archive`.
+- `기록`, `기록글`, `유명`, `유명글`, or `Canonical` means `canonical-archive`.
+
+If the user gives a mode alias, keep that mode fixed. Do not switch modes during research.
+
 If `original-archive` is selected:
 
 - do motif research before drafting

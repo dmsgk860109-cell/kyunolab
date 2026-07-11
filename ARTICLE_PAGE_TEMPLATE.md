@@ -147,6 +147,15 @@ Editorial scoring fields are internal production fields. They may live in draft 
 
 Use `original-archive` for newly imagined Kyunolab archive stories. This is the existing default mode and its behavior should not be changed.
 
+Mode aliases are optional:
+
+- `창작`, `창작글`, `오리지널`, or `Original` means `original-archive`.
+- `기록`, `기록글`, `유명`, `유명글`, or `Canonical` means `canonical-archive`.
+
+If no mode alias is provided, keep the existing normal generation flow.
+
+If a mode alias is provided, do not switch modes during research or drafting.
+
 Original Archive Mode requires motif research before drafting:
 
 - review related urban legends, ghost stories, folklore, myths, mysteries, internet legends, local legends, modern folklore, and similar story structures
