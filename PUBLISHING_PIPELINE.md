@@ -66,6 +66,42 @@ Normal search-focused publishing should use `priority` or `approved` topics. If 
 
 The score and breakdown are production metadata. They should not appear as visible reader-facing article content.
 
+## Generation Mode Rule
+
+Choose a generation mode before drafting.
+
+### Original Archive Mode
+
+Use `original-archive` for newly imagined Kyunolab archive stories, fictional legends, and original story patterns.
+
+This is the existing mode. Do not change its prompts, validation assumptions, or article behavior when adding or using another mode.
+
+### Canonical Archive Mode
+
+Use `canonical-archive` for well-known existing subjects such as famous urban legends, ghost stories, myths, folklore, unexplained mysteries, supernatural traditions, internet legends, and historically known mysteries.
+
+Canonical Archive Mode must not create a new legend. It starts with source review, then rewrites the known subject in Kyunolab's calm, source-aware archive style.
+
+Before drafting a Canonical Mode article:
+
+1. Consult at least 3 reliable sources.
+2. Record the sources in `researchSources` or production notes.
+3. List the facts or details that multiple sources support.
+4. List known variants without forcing them into one invented version.
+5. Mark unsupported claims that should not be presented as fact.
+
+Canonical Mode articles must include:
+
+- introduction
+- core story or best-known version
+- historical background or tradition
+- why the subject is still remembered
+- what is documented, folkloric, rumored, or interpretive
+- Kyunolab viewpoint
+- Story & Source Note
+
+Full rules live in `CANONICAL_ARCHIVE_MODE.md`.
+
 ## Common Commands
 
 Validate one or more newly published stories:

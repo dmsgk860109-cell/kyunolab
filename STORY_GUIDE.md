@@ -60,6 +60,36 @@ Avoid:
 - articles under 700 words unless they are intentionally short archive notes
 - articles over 2,500 words unless the topic truly deserves it
 
+## 2A. Generation Modes
+
+Kyunolab supports two independent generation modes.
+
+### Original Archive Mode
+
+Original Archive Mode is the existing default mode for newly imagined Kyunolab-style archive stories. Keep its current behavior unchanged.
+
+Use Original Archive Mode when creating a new fictional legend, invented archive record, or original Kyunolab story pattern.
+
+### Canonical Archive Mode
+
+Canonical Archive Mode is an additional mode for existing well-known legends, folklore, myths, mysteries, urban legends, internet legends, and historically known strange records.
+
+Use Canonical Archive Mode for subjects such as Atlantis, Excalibur, Bigfoot, Yeti, Bloody Mary, Slender Man, Mothman, Area 51, the Bermuda Triangle, Dyatlov Pass, or Roanoke Colony.
+
+Canonical Archive Mode must not invent a new legend. It must research the existing subject first, consult at least 3 reliable sources, and write only from commonly supported facts, documented tradition, known variants, and cautious interpretation.
+
+Canonical Mode articles must include:
+
+- introduction
+- core story or best-known version
+- historical background or tradition
+- why the story is still remembered
+- what is record, folklore, rumor, or interpretation
+- Kyunolab viewpoint
+- Story & Source Note
+
+Full Canonical Mode rules live in `CANONICAL_ARCHIVE_MODE.md`.
+
 ## 3. Common Article Structure
 
 Every standard article should include:

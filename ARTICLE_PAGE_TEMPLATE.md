@@ -44,6 +44,7 @@ Every article page should include these blocks unless there is a strong editoria
 ## Article Metadata
 
 ```yaml
+generationMode: [original-archive / canonical-archive]
 title: [TITLE]
 displayTitle: [PUBLIC ARTICLE TITLE]
 seoTitle: [SEARCH-FOCUSED TITLE]
@@ -67,6 +68,17 @@ relatedKeywords:
   - [RELATED KEYWORD 1]
   - [RELATED KEYWORD 2]
   - [RELATED KEYWORD 3]
+researchSources:
+  - title: [SOURCE TITLE]
+    url: [SOURCE URL]
+    supports: [WHAT THIS SOURCE SUPPORTS]
+sourceNotes:
+  sharedVerifiedPoints:
+    - [POINT SUPPORTED BY MULTIPLE SOURCES]
+  variants:
+    - [KNOWN VARIANT OR REGIONAL DIFFERENCE]
+  unsupportedClaimsToAvoid:
+    - [CLAIM THAT SHOULD NOT BE PRESENTED AS FACT]
 topicScore: [0-100]
 topicStatus: [priority / approved / hold / reject]
 scoreBreakdown:
@@ -121,6 +133,22 @@ contentDNA:
 Editorial scoring fields are internal production fields. They may live in draft notes, admin metadata, or article data, but they should not be printed as visible reader-facing content.
 
 `contentDNA` is internal production metadata. It is used to keep articles unique, avoid duplicate search intent, vary the H2 structure, and force topic-specific vocabulary into the body. It should not be printed as a reader-facing block.
+
+## Generation Mode Selection
+
+Use `original-archive` for newly imagined Kyunolab archive stories. This is the existing default mode and its behavior should not be changed.
+
+Use `canonical-archive` only when the article is about an existing well-known legend, myth, folklore subject, urban legend, internet legend, supernatural tradition, or historically known mystery.
+
+Canonical Archive Mode requires source review before drafting:
+
+- consult at least 3 reliable sources
+- do not invent a new legend or merge variants into one false canon
+- describe only commonly supported facts as factual
+- explain variant traditions without pretending they are one confirmed record
+- avoid using unsourced internet rumor as the basis for the article
+
+Canonical Mode articles should include an introduction, core story, historical background or tradition, why the subject is remembered, record/fact distinction, Kyunolab viewpoint, and Story & Source Note.
 
 ## SEO Fields
 
@@ -454,6 +482,10 @@ Rules:
 
 Content:
 
+- [ ] Generation mode is set to `original-archive` or `canonical-archive`.
+- [ ] If `canonical-archive` is used, at least 3 reliable sources were reviewed before drafting.
+- [ ] If `canonical-archive` is used, `researchSources` and `sourceNotes` are filled in.
+- [ ] If `canonical-archive` is used, the article does not invent a new legend or force variants into one false canon.
 - [ ] Topic score is 70 or higher, or the topic was held/reworked.
 - [ ] Score breakdown is filled in before drafting.
 - [ ] Search intent is clear.

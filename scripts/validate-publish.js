@@ -130,6 +130,7 @@ function validateStoryRecord(story) {
   }
 
   validateStoryContentDNA(story);
+  validateGenerationMode(story);
 
   if (!categoryBySlug.has(story.categorySlug)) {
     errors.push(`${story.slug}: categorySlug "${story.categorySlug}" is not defined in data/categories.json`);
@@ -178,6 +179,42 @@ function validateStoryContentDNA(story) {
 
   if (Array.isArray(story.relatedKeywords) && story.relatedKeywords.some((keyword) => /\/|\.html|https?:/i.test(String(keyword)))) {
     errors.push(`${story.slug}: relatedKeywords must not be URL/page-generation targets`);
+  }
+}
+
+function validateGenerationMode(story) {
+  const mode = story.generationMode || 'original-archive';
+  const allowedModes = new Set(['original-archive', 'canonical-archive']);
+
+  if (!allowedModes.has(mode)) {
+    errors.push(`${story.slug}: generationMode must be "original-archive" or "canonical-archive"`);
+    return;
+  }
+
+  if (mode !== 'canonical-archive') return;
+
+  if (!Array.isArray(story.researchSources) || story.researchSources.length < 3) {
+    errors.push(`${story.slug}: canonical-archive mode requires at least 3 researchSources`);
+  }
+
+  const invalidSource = (story.researchSources || []).find((source) => {
+    if (!source || typeof source !== 'object') return true;
+    return !String(source.title || '').trim() || !String(source.supports || '').trim();
+  });
+
+  if (invalidSource) {
+    errors.push(`${story.slug}: canonical-archive researchSources require title and supports fields`);
+  }
+
+  const notes = story.sourceNotes || {};
+  if (!Array.isArray(notes.sharedVerifiedPoints) || notes.sharedVerifiedPoints.length === 0) {
+    errors.push(`${story.slug}: canonical-archive mode requires sourceNotes.sharedVerifiedPoints`);
+  }
+  if (!Array.isArray(notes.variants)) {
+    errors.push(`${story.slug}: canonical-archive mode requires sourceNotes.variants array`);
+  }
+  if (!Array.isArray(notes.unsupportedClaimsToAvoid)) {
+    errors.push(`${story.slug}: canonical-archive mode requires sourceNotes.unsupportedClaimsToAvoid array`);
   }
 }
 

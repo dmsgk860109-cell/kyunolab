@@ -32,6 +32,7 @@ If the article becomes too broad, recommend splitting it into a series or separa
 
 ## Article Brief
 
+- Generation mode: [original-archive / canonical-archive]
 - Working title: [TITLE]
 - Slug: [SLUG]
 - Category: [CATEGORY]
@@ -41,6 +42,22 @@ If the article becomes too broad, recommend splitting it into a series or separa
 - Target length: [SHORT / STANDARD / LONG]
 - Read time: [READ TIME]
 - Updated date: [MONTH DAY, YEAR]
+
+### Generation Mode Notes
+
+Use `original-archive` for newly imagined Kyunolab archive stories.
+
+Use `canonical-archive` for existing well-known legends, folklore, myths, mysteries, internet legends, and historically known strange records.
+
+If `canonical-archive` is selected:
+
+- do source review before drafting
+- consult at least 3 reliable sources
+- do not invent a new legend
+- describe only commonly supported facts, documented tradition, variants, and cautious interpretation
+- make uncertain material clear instead of presenting it as verified fact
+
+Original Archive Mode remains unchanged.
 
 ## Topic Selection / SEO Fit
 
@@ -107,6 +124,17 @@ Rules:
 - Search intent: [WHAT THE READER WANTS TO UNDERSTAND]
 - Related keywords: [RELATED KEYWORD 1], [RELATED KEYWORD 2], [RELATED KEYWORD 3]
 - Cluster: [TOPIC CLUSTER]
+
+## Source Research Notes
+
+Use this section for Canonical Archive Mode. For Original Archive Mode, keep only the source-status notes that apply.
+
+- Source 1: [TITLE / URL / WHAT IT SUPPORTS]
+- Source 2: [TITLE / URL / WHAT IT SUPPORTS]
+- Source 3: [TITLE / URL / WHAT IT SUPPORTS]
+- Shared verified points: [WHAT MULTIPLE SOURCES SUPPORT]
+- Known variants: [DIFFERENT VERSIONS WITHOUT FORCING ONE CANON]
+- Unverified claims to avoid treating as fact: [CLAIMS / RUMORS / UNSOURCED DETAILS]
 
 ## SEO Fields
 
@@ -344,6 +372,9 @@ Show at least 3 related articles when available. Use 4 to 6 when the cluster is 
 
 ## Final QA
 
+- [ ] Generation mode is set to `original-archive` or `canonical-archive`.
+- [ ] If Canonical Archive Mode is used, at least 3 reliable sources were reviewed before drafting.
+- [ ] If Canonical Archive Mode is used, the article does not invent a new legend or force variants into one false canon.
 - [ ] Topic score is 70 or higher, or the topic was intentionally held/reworked.
 - [ ] Score breakdown was considered before drafting.
 - [ ] Search intent is clear.
