@@ -796,12 +796,26 @@ h1 {
 .rail-card-network a.button,
 .script-creator-panel .rail-card-network a.button {
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: auto;
-  padding: 9px 11px;
+  min-height: 38px;
+  margin-top: 2px;
+  padding: 11px 15px;
   border-top: 0;
+  background: var(--structure);
   color: #fff;
-  font-size: 12px;
-  line-height: 1.15;
+  font-size: 13px;
+  line-height: 1.2;
+  letter-spacing: .01em;
+  box-shadow: 0 1px 0 rgba(16, 42, 86, .16);
+}
+.rail-card-network a.button:hover,
+.rail-card-network a.button:focus-visible,
+.script-creator-panel .rail-card-network a.button:hover,
+.script-creator-panel .rail-card-network a.button:focus-visible {
+  background: #17376d;
+  color: #fff;
 }
 .rail-card-subtle {
   background: var(--panel);
