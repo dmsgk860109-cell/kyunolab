@@ -71,6 +71,7 @@ ${rows}
       </div>
     </div>
     <aside class="article-rail article-rail-right" aria-label="Recommended archive paths">
+      ${renderKyunolabNetworkCard()}
       <div class="rail-card rail-feature">
         <p class="rail-label">Start here</p>
         <a href="${escapeAttr(primary.url || `/mystery-board/${primary.slug}`)}"><span>${escapeHtml(primary.tag || primary.category)}</span><strong>${escapeHtml(primary.shortTitle || primary.title)}</strong></a>
@@ -149,6 +150,7 @@ ${sections}
     </article>
 
     <aside class="article-rail article-rail-right" aria-label="Related guides">
+      ${renderKyunolabNetworkCard()}
       <div class="rail-card rail-feature">
         <p class="rail-label">Read next</p>
         <a href="${escapeAttr(nextGuide.url || `/mystery-board/${nextGuide.slug}`)}"><span>${escapeHtml(nextGuide.tag || nextGuide.category)}</span><strong>${escapeHtml(nextGuide.shortTitle || nextGuide.title)}</strong></a>
@@ -202,7 +204,6 @@ function renderPage({ canonicalPath, title, description, ogTitle, ogDescription,
 </head>
 <body>
   ${renderHeader()}
-  ${renderKyunolabNetworkBar()}
 ${content}
   ${renderFooter()}
   <script src="/engagement.js?v=20260706-kit-ui" defer></script>
@@ -221,13 +222,13 @@ function renderHeader() {
   </header>`;
 }
 
-function renderKyunolabNetworkBar() {
-  return `<aside class="kyunolab-network-bar" aria-label="Kyunolab Network">
-    <div class="network-bar-inner">
-      <div class="network-bar-copy"><p class="rail-label">Kyunolab Network</p><strong>Creator Library</strong><span>Free mystery YouTube scripts, Shorts scripts, image prompts, and thumbnail ideas for video creators.</span></div>
-      <a class="button" href="/scripts/">Open Creator Library</a>
-    </div>
-  </aside>`;
+function renderKyunolabNetworkCard() {
+  return `<div class="rail-card rail-card-network">
+        <p class="rail-label">Kyunolab Network</p>
+        <strong>Creator Library</strong>
+        <p>Free mystery YouTube scripts, Shorts scripts, image prompts, and thumbnail ideas for video creators.</p>
+        <a class="button" href="/scripts/">Open Creator Library</a>
+      </div>`;
 }
 
 function renderFooter() {

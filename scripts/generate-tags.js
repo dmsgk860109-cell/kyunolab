@@ -198,7 +198,6 @@ ${generatedMarker}
 </head>
 <body>
   ${renderHeader()}
-  ${renderKyunolabNetworkBar()}
 
   <main class="article-shell article-layout">
     <aside class="article-rail article-rail-left" aria-label="Tag archive paths">
@@ -230,6 +229,7 @@ ${storyRows}
     </div>
 
     <aside class="article-rail article-rail-right" aria-label="Recommended archive paths">
+      ${renderKyunolabNetworkCard()}
       <div class="rail-card rail-feature">
         <p class="rail-label">Start here</p>
         <a href="${escapeAttr(firstArticle.url)}"><strong>${escapeHtml(firstArticle.title)}</strong><span>${escapeHtml(firstArticle.category)}</span></a>
@@ -263,13 +263,13 @@ function renderHeader() {
   </header>`;
 }
 
-function renderKyunolabNetworkBar() {
-  return `<aside class="kyunolab-network-bar" aria-label="Kyunolab Network">
-    <div class="network-bar-inner">
-      <div class="network-bar-copy"><p class="rail-label">Kyunolab Network</p><strong>Creator Library</strong><span>Free mystery YouTube scripts, Shorts scripts, image prompts, and thumbnail ideas for video creators.</span></div>
-      <a class="button" href="/scripts/">Open Creator Library</a>
-    </div>
-  </aside>`;
+function renderKyunolabNetworkCard() {
+  return `<div class="rail-card rail-card-network">
+        <p class="rail-label">Kyunolab Network</p>
+        <strong>Creator Library</strong>
+        <p>Free mystery YouTube scripts, Shorts scripts, image prompts, and thumbnail ideas for video creators.</p>
+        <a class="button" href="/scripts/">Open Creator Library</a>
+      </div>`;
 }
 
 function renderFooter() {

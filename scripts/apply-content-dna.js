@@ -255,7 +255,6 @@ function renderStoryPage(story, previousStory, nextStory) {
 </head>
 <body>
   ${renderHeader()}
-  ${renderKyunolabNetworkBar()}
   <main class="article-shell article-layout">
       ${renderLeftRail(story, sections)}
       <article>
@@ -524,18 +523,19 @@ function renderPrevNext(previousStory, nextStory) {
 
 function renderRightRail(story, relatedStories, nextStory) {
   return `<aside class="article-rail article-rail-right" aria-label="Recommended reading">
+      ${renderKyunolabNetworkCard()}
       <div class="rail-card rail-feature"><p class="rail-label">Read next</p><a href="/stories/${escapeAttr(nextStory.slug)}"><strong>${escapeHtml(nextStory.title)}</strong><span>${escapeHtml(nextStory.category)}</span></a></div>
       <div class="rail-card"><p class="rail-label">Related records</p>${relatedStories.slice(0, 4).map((item) => `<a href="/stories/${escapeAttr(item.slug)}">${escapeHtml(item.title)}</a>`).join('')}</div>
     </aside>`;
 }
 
-function renderKyunolabNetworkBar() {
-  return `<aside class="kyunolab-network-bar" aria-label="Kyunolab Network">
-    <div class="network-bar-inner">
-      <div class="network-bar-copy"><p class="rail-label">Kyunolab Network</p><strong>Creator Library</strong><span>Free mystery YouTube scripts, Shorts scripts, image prompts, and thumbnail ideas for video creators.</span></div>
-      <a class="button" href="/scripts/">Open Creator Library</a>
-    </div>
-  </aside>`;
+function renderKyunolabNetworkCard() {
+  return `<div class="rail-card rail-card-network">
+        <p class="rail-label">Kyunolab Network</p>
+        <strong>Creator Library</strong>
+        <p>Free mystery YouTube scripts, Shorts scripts, image prompts, and thumbnail ideas for video creators.</p>
+        <a class="button" href="/scripts/">Open Creator Library</a>
+      </div>`;
 }
 
 function getRelatedStories(story) {

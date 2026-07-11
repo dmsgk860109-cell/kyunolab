@@ -107,7 +107,6 @@ function renderHomePage({ featuredStory, latestStories, popularStories, essentia
 </head>
 <body>
   ${renderHeader()}
-  ${renderKyunolabNetworkBar('archive')}
   <main class="home-shell">
     <div class="home-layout">
       ${renderHomeLeftRail()}
@@ -248,6 +247,7 @@ function renderScriptsHomePage(scripts) {
         <p class="deck">A creator-focused library for longform YouTube scripts, Shorts scripts, image prompts, thumbnail ideas, subtitle lines, and mystery video planning.</p>
       </div>
       <aside class="script-creator-panel">
+        ${renderKyunolabNetworkCard('scripts')}
         <p class="rail-label">Creator Resources</p>
         <a href="#featured-scripts">Featured Scripts</a>
         <a href="#latest-scripts">Latest Scripts</a>
@@ -307,6 +307,7 @@ function renderScriptCategoriesPage(scripts) {
         <p class="deck">Move through creator-ready script packages by genre, video length, visual planning needs, and story format.</p>
       </div>
       <aside class="script-creator-panel">
+        ${renderKyunolabNetworkCard('scripts')}
         <p class="rail-label">Creator Library</p>
         <a href="/scripts/">Scripts Home</a>
         <a href="/scripts/board/">Script Board</a>
@@ -337,6 +338,7 @@ function renderScriptBoardPage(scripts) {
         <p class="deck">A compact board for choosing script packages by format, hook, visual style, and production need.</p>
       </div>
       <aside class="script-creator-panel">
+        ${renderKyunolabNetworkCard('scripts')}
         <p class="rail-label">Creator Library</p>
         <a href="/scripts/">Scripts Home</a>
         <a href="/scripts/categories/">Script Categories</a>
@@ -378,6 +380,7 @@ function renderScriptResourcesPage() {
         <p class="deck">These resources keep original archive stories separate from creator-facing scripts, prompts, thumbnail ideas, and short-form adaptations.</p>
       </div>
       <aside class="script-creator-panel">
+        ${renderKyunolabNetworkCard('scripts')}
         <p class="rail-label">Creator Library</p>
         <a href="/scripts/">Scripts Home</a>
         <a href="/scripts/categories/">Script Categories</a>
@@ -465,6 +468,7 @@ function renderScriptDetailPage(script) {
       </section>
     </article>
     <aside class="article-rail article-rail-right">
+      ${renderKyunolabNetworkCard('scripts')}
       <div class="rail-card rail-feature"><p class="rail-label">Scripts Home</p><a href="/scripts/"><strong>Free Mystery YouTube Scripts</strong><span>Longform, Shorts, prompts, thumbnails</span></a></div>
       <div class="rail-card"><p class="rail-label">More scripts</p>${relatedScripts.map((item) => `<a href="/scripts/${escapeAttr(item.slug)}">${escapeHtml(item.title)}</a>`).join('')}</div>
     </aside>
@@ -597,6 +601,7 @@ function renderHomeRail({ featuredStory, popularStories, essentialStories }) {
   const popular = popularStories.slice(0, 3);
   const essentials = essentialStories.slice(0, 3);
   return `<aside class="home-rail" aria-label="Homepage reader paths">
+      ${renderKyunolabNetworkCard('archive')}
       <div class="rail-card rail-feature"><p class="rail-label">Start here</p><a href="/stories/${escapeAttr(featuredStory.slug)}"><span>${escapeHtml(featuredStory.category)}</span><strong>${escapeHtml(featuredStory.title)}</strong></a></div>
       <div class="rail-card"><p class="rail-label">Popular records</p>${popular.map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}</div>
       <div class="rail-card"><p class="rail-label">Essential reads</p>${essentials.map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}</div>
@@ -784,7 +789,6 @@ ${robotsMeta}  <meta property="og:title" content="${escapeAttr(pageTitle)}">
 </head>
 <body>
   ${renderHeader(canonicalPath)}
-${networkSection ? `  ${renderKyunolabNetworkBar(networkSection)}\n` : ''}
 ${content}
   ${renderFooter()}
 </body>
@@ -846,7 +850,7 @@ function isScriptsPath(currentPath) {
   return currentPath === '/scripts' || currentPath.startsWith('/scripts/');
 }
 
-function renderKyunolabNetworkBar(section) {
+function renderKyunolabNetworkCard(section) {
   const isScripts = section === 'scripts';
   const itemTitle = isScripts ? 'Mystery Archive' : 'Creator Library';
   const description = isScripts
@@ -854,12 +858,12 @@ function renderKyunolabNetworkBar(section) {
     : 'Free mystery YouTube scripts, Shorts scripts, image prompts, and thumbnail ideas for video creators.';
   const buttonText = isScripts ? 'Open Mystery Archive' : 'Open Creator Library';
   const href = isScripts ? '/' : '/scripts/';
-  return `<aside class="kyunolab-network-bar" aria-label="Kyunolab Network">
-    <div class="network-bar-inner">
-      <div class="network-bar-copy"><p class="rail-label">Kyunolab Network</p><strong>${escapeHtml(itemTitle)}</strong><span>${escapeHtml(description)}</span></div>
-      <a class="button" href="${href}">${escapeHtml(buttonText)}</a>
-    </div>
-  </aside>`;
+  return `<div class="rail-card rail-card-network">
+        <p class="rail-label">Kyunolab Network</p>
+        <strong>${escapeHtml(itemTitle)}</strong>
+        <p>${escapeHtml(description)}</p>
+        <a class="button" href="${href}">${escapeHtml(buttonText)}</a>
+      </div>`;
 }
 
 function renderFooter() {
@@ -881,7 +885,7 @@ function renderRightRail(items, label) {
   const safeItems = items.length ? items : stories.slice(0, 4);
   const feature = safeItems[0];
   const related = safeItems.slice(1, 4);
-  return `<aside class="article-rail article-rail-right" aria-label="${escapeAttr(label)}"><div class="rail-card rail-feature"><p class="rail-label">Start here</p><a href="/stories/${escapeAttr(feature.slug)}"><span>${escapeHtml(feature.category)}</span><strong>${escapeHtml(feature.title)}</strong></a></div><div class="rail-card"><p class="rail-label">Related records</p>${related.map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}</div></aside>`;
+  return `<aside class="article-rail article-rail-right" aria-label="${escapeAttr(label)}">${renderKyunolabNetworkCard('archive')}<div class="rail-card rail-feature"><p class="rail-label">Start here</p><a href="/stories/${escapeAttr(feature.slug)}"><span>${escapeHtml(feature.category)}</span><strong>${escapeHtml(feature.title)}</strong></a></div><div class="rail-card"><p class="rail-label">Related records</p>${related.map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}</div></aside>`;
 }
 
 function renderCategoryRightRail() {
@@ -889,6 +893,7 @@ function renderCategoryRightRail() {
   const popular = stories.slice(1, 4);
   const essentials = stories.slice(4, 7);
   return `<aside class="article-rail article-rail-right" aria-label="Category page reading paths">
+      ${renderKyunolabNetworkCard('archive')}
       <div class="rail-card rail-feature"><p class="rail-label">Start here</p><a href="/stories/${escapeAttr(start.slug)}"><span>${escapeHtml(start.category)}</span><strong>${escapeHtml(start.title)}</strong></a></div>
       <div class="rail-card"><p class="rail-label">Popular records</p>${popular.map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}</div>
       <div class="rail-card"><p class="rail-label">Essential reads</p>${essentials.map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}</div>

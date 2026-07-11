@@ -120,44 +120,6 @@ main.home-shell {
   gap: 16px;
   font-family: Arial, sans-serif;
 }
-.kyunolab-network-bar {
-  border-bottom: 1px solid var(--line);
-  background: linear-gradient(180deg, var(--surface), var(--panel));
-  font-family: Arial, sans-serif;
-}
-.network-bar-inner {
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 12px 20px;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 18px;
-  align-items: center;
-}
-.network-bar-copy strong,
-.network-bar-copy span {
-  display: block;
-}
-.network-bar-copy .rail-label {
-  margin-bottom: 3px;
-}
-.network-bar-copy strong {
-  font-size: 16px;
-  line-height: 1.15;
-}
-.network-bar-copy span {
-  margin-top: 4px;
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.45;
-}
-.network-bar-inner .button {
-  display: inline-block;
-  padding: 9px 12px;
-  color: #fff;
-  font-size: 13px;
-  line-height: 1.2;
-}
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(300px, .85fr);
@@ -812,6 +774,34 @@ h1 {
   border-radius: 4px;
   background: var(--surface);
   padding: 18px;
+}
+.rail-card-network {
+  background: var(--panel);
+}
+.rail-card-network strong,
+.rail-card-network p:not(.rail-label) {
+  display: block;
+}
+.rail-card-network strong {
+  margin: 0 0 8px;
+  font-size: 16px;
+  line-height: 1.2;
+}
+.rail-card-network p:not(.rail-label) {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+.rail-card-network a.button,
+.script-creator-panel .rail-card-network a.button {
+  display: inline-flex;
+  width: auto;
+  padding: 9px 11px;
+  border-top: 0;
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.15;
 }
 .rail-card-subtle {
   background: var(--panel);
@@ -1641,14 +1631,6 @@ textarea {
   .header-inner {
     align-items: flex-start;
     flex-direction: column;
-  }
-  .network-bar-inner {
-    grid-template-columns: 1fr;
-    gap: 10px;
-    align-items: start;
-  }
-  .network-bar-inner .button {
-    justify-self: start;
   }
   .nav { width: 100%; }
   .category-grid, .category-hub, .compact-grid, .board-items, .script-card-grid, .script-category-grid, .script-resource-links { grid-template-columns: 1fr 1fr; }
