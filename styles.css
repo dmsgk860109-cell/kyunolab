@@ -527,6 +527,20 @@ h1 {
   margin: 0 auto;
   padding: 40px 20px 60px;
 }
+.scripts-page.scripts-home-page {
+  max-width: 1480px;
+  padding-top: 28px;
+}
+.scripts-home-page .scripts-section {
+  margin-top: 34px;
+}
+.scripts-home-hero .feature-card h2 {
+  font-size: 32px;
+}
+.scripts-home-hero .feature-card .meta {
+  margin-top: 12px;
+  line-height: 1.35;
+}
 .scripts-hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 320px;

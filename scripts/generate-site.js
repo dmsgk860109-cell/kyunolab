@@ -233,60 +233,57 @@ function renderScriptsHomePage(scripts) {
   const featuredScripts = scripts.slice(0, 3);
   const latestScripts = scripts.slice(0, 8);
   const genres = groupScriptsByGenre(scripts);
+  const featuredScript = featuredScripts[0] || scripts[0];
   return renderPage({
     canonicalPath: '/scripts/',
     title: 'Free Mystery YouTube Scripts | Kyunolab',
     description: 'Free mystery YouTube scripts for creators, including longform YouTube scripts, Shorts scripts, image prompts, thumbnail ideas, and subtitle lines.',
     metaDescription: 'Free mystery, horror, urban legend, and strange history YouTube scripts for creators. Includes longform narration, Shorts scripts, image prompts, thumbnail ideas, and subtitle lines.',
     networkSection: 'scripts',
-    content: `  <main class="scripts-page">
-    <section class="scripts-hero">
-      <div>
-        <p class="label">Creator Script Library</p>
-        <h1 class="article-title">Free Mystery YouTube Scripts</h1>
-        <p class="deck">A creator-focused library for longform YouTube scripts, Shorts scripts, image prompts, thumbnail ideas, subtitle lines, and mystery video planning.</p>
+    content: `  <main class="home-shell scripts-page scripts-home-page">
+    <div class="home-layout scripts-home-layout">
+      ${renderScriptsLeftRail()}
+      <div class="home-main-column">
+        <section class="hero scripts-home-hero">
+          <div class="hero-copy"><p class="label">Creator Script Library</p><h1>Free Mystery YouTube Scripts</h1><p>A creator-focused library for longform YouTube scripts, Shorts scripts, image prompts, thumbnail ideas, subtitle lines, and mystery video planning.</p></div>
+          ${renderFeaturedScript(featuredScript)}
+        </section>
+        <section class="notice"><strong>Creator Note:</strong> Script packages are creator materials. Original archive stories stay separate from narration drafts, Shorts hooks, image prompts, thumbnail ideas, and subtitle lines.</section>
+        <section id="featured-scripts" class="scripts-section">
+          <div class="section-head"><h2>Featured Scripts</h2><span>Ready for video planning</span></div>
+          <div class="script-card-grid">${featuredScripts.map(renderScriptCard).join('')}</div>
+        </section>
+        <section id="latest-scripts" class="scripts-section">
+          <div class="section-head"><h2>Latest Scripts</h2><span>New creator materials</span></div>
+          <div class="script-list">${latestScripts.map(renderScriptRow).join('')}</div>
+        </section>
+        <section id="script-board" class="scripts-section script-board">
+          <div>
+            <p class="label">Mystery Script Board</p>
+            <h2>Choose a format before you write the voiceover.</h2>
+            <p>Each script package separates the original archive story from creator-facing assets: longform narration, Shorts structure, visual prompts, thumbnail angles, and subtitle lines.</p>
+          </div>
+          <div class="script-board-grid">
+            <article><strong>Longform YouTube</strong><span>8-13 minute narration structures for mystery, folklore, and legend videos.</span></article>
+            <article><strong>Shorts</strong><span>Compressed hooks and ending beats for vertical video.</span></article>
+            <article><strong>Visual Planning</strong><span>Image prompts, thumbnail ideas, and subtitle lines kept separate from the archive article.</span></article>
+          </div>
+        </section>
+        <section id="script-categories" class="scripts-section">
+          <div class="section-head"><h2>Script Categories</h2><span>Browse by creator use</span></div>
+          <div class="script-category-grid">${genres.map(renderScriptGenreCard).join('')}</div>
+        </section>
+        <section id="creator-resources" class="scripts-section creator-resources">
+          <div class="section-head"><h2>Creator Resources</h2><a href="/archive.html">Browse original archive stories</a></div>
+          <div class="script-resource-links">
+            <a href="/scripts/">Free Mystery YouTube Scripts</a>
+            <a href="/mystery-board.html">Mystery Board</a>
+            <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a>
+          </div>
+        </section>
       </div>
-      <aside class="script-creator-panel">
-        ${renderKyunolabNetworkCard('scripts')}
-        <p class="rail-label">Creator Resources</p>
-        <a href="#featured-scripts">Featured Scripts</a>
-        <a href="#latest-scripts">Latest Scripts</a>
-        <a href="#script-board">Mystery Script Board</a>
-        <a href="#script-categories">Script Categories</a>
-      </aside>
-    </section>
-    <section id="featured-scripts" class="scripts-section">
-      <div class="section-head"><h2>Featured Scripts</h2><span>Ready for video planning</span></div>
-      <div class="script-card-grid">${featuredScripts.map(renderScriptCard).join('')}</div>
-    </section>
-    <section id="latest-scripts" class="scripts-section">
-      <div class="section-head"><h2>Latest Scripts</h2><span>New creator materials</span></div>
-      <div class="script-list">${latestScripts.map(renderScriptRow).join('')}</div>
-    </section>
-    <section id="script-board" class="scripts-section script-board">
-      <div>
-        <p class="label">Mystery Script Board</p>
-        <h2>Choose a format before you write the voiceover.</h2>
-        <p>Each script package separates the original archive story from creator-facing assets: longform narration, Shorts structure, visual prompts, thumbnail angles, and subtitle lines.</p>
-      </div>
-      <div class="script-board-grid">
-        <article><strong>Longform YouTube</strong><span>8-13 minute narration structures for mystery, folklore, and legend videos.</span></article>
-        <article><strong>Shorts</strong><span>Compressed hooks and ending beats for vertical video.</span></article>
-        <article><strong>Visual Planning</strong><span>Image prompts, thumbnail ideas, and subtitle lines kept separate from the archive article.</span></article>
-      </div>
-    </section>
-    <section id="script-categories" class="scripts-section">
-      <div class="section-head"><h2>Script Categories</h2><span>Browse by creator use</span></div>
-      <div class="script-category-grid">${genres.map(renderScriptGenreCard).join('')}</div>
-    </section>
-    <section id="creator-resources" class="scripts-section creator-resources">
-      <div class="section-head"><h2>Creator Resources</h2><a href="/archive.html">Browse original archive stories</a></div>
-      <div class="script-resource-links">
-        <a href="/scripts/">Free Mystery YouTube Scripts</a>
-        <a href="/mystery-board.html">Mystery Board</a>
-        <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a>
-      </div>
-    </section>
+      ${renderScriptsHomeRail({ featuredScript, latestScripts, genres })}
+    </div>
   </main>`
   });
 }
@@ -509,6 +506,13 @@ function renderScriptCard(script) {
       </article>`;
 }
 
+function renderFeaturedScript(script) {
+  if (!script) {
+    return `<article class="feature-card"><span class="pill">Featured Script</span><h2>Creator-ready mystery scripts</h2><p>Longform narration, Shorts hooks, image prompts, thumbnail ideas, and subtitle lines for mystery video planning.</p><div class="meta">Creator Library</div></article>`;
+  }
+  return `<article class="feature-card"><span class="pill">Featured Script</span><h2><a href="/scripts/${escapeAttr(script.slug)}">${escapeHtml(script.title)}</a></h2><p>${escapeHtml(script.deck || '')}</p><div class="meta">${escapeHtml([script.genre, script.estimatedVideoLength, scriptFeatureSummary(script)].filter(Boolean).join(' - '))}</div></article>`;
+}
+
 function renderScriptRow(script) {
   return `<article class="script-row">
         <div><span class="tag">${escapeHtml(script.genre)}</span><h3><a href="/scripts/${escapeAttr(script.slug)}">${escapeHtml(script.title)}</a></h3></div>
@@ -613,6 +617,25 @@ function renderHomeLeftRail() {
       <div class="rail-card"><p class="rail-label">Reader Paths</p><a href="/newest.html">Newest Records</a><a href="/popular.html">Popular Records</a><a href="/categories.html">Browse Categories</a><a href="/mystery-board.html">Mystery Board</a></div>
       <div class="rail-card rail-card-subtle"><p class="rail-label">Archive Shelves</p><a href="/categories/urban-legends.html">Urban Legends</a><a href="/categories/internet-folklore.html">Internet Folklore</a><a href="/categories/myths.html">Myths</a><a href="/categories/strange-places.html">Strange Places</a></div>
       <div class="rail-card"><p class="rail-label">Source Guide</p><a href="/fiction-disclaimer.html">Story &amp; Source Notice</a><a href="/about.html">About Kyunolab</a></div>
+    </aside>`;
+}
+
+function renderScriptsLeftRail() {
+  return `<aside class="home-left-rail article-rail article-rail-left" aria-label="Creator Library navigation">
+      <div class="rail-card"><p class="rail-label">Creator Paths</p><a href="/scripts/">Creator Home</a><a href="/scripts/categories/">Script Categories</a><a href="/scripts/board/">Script Board</a><a href="/scripts/resources/">Creator Resources</a></div>
+      <div class="rail-card rail-card-subtle"><p class="rail-label">Script Shelves</p><a href="#featured-scripts">Featured Scripts</a><a href="#latest-scripts">Latest Scripts</a><a href="#script-categories">Browse by Script Type</a></div>
+      <div class="rail-card"><p class="rail-label">Usage Guide</p><a href="#script-board">Video Planning Board</a><a href="#creator-resources">Creator Resources</a></div>
+    </aside>`;
+}
+
+function renderScriptsHomeRail({ featuredScript, latestScripts, genres }) {
+  const latest = latestScripts.slice(0, 3);
+  const genreLinks = genres.slice(0, 3).map((group) => `<a href="/scripts/categories/">${escapeHtml(group.genre)}</a>`).join('');
+  return `<aside class="home-rail" aria-label="Creator Library recommendations">
+      ${renderKyunolabNetworkCard('scripts')}
+      ${featuredScript ? `<div class="rail-card rail-feature"><p class="rail-label">Start here</p><a href="/scripts/${escapeAttr(featuredScript.slug)}"><span>${escapeHtml(featuredScript.genre)}</span><strong>${escapeHtml(featuredScript.title)}</strong></a></div>` : ''}
+      <div class="rail-card"><p class="rail-label">Latest scripts</p>${latest.map((script) => `<a href="/scripts/${escapeAttr(script.slug)}">${escapeHtml(script.title)}</a>`).join('')}</div>
+      <div class="rail-card"><p class="rail-label">Creator shelves</p>${genreLinks}<a href="/scripts/resources/">Creator Resources</a></div>
     </aside>`;
 }
 
