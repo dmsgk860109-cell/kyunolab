@@ -849,10 +849,11 @@ function renderScriptsHeader(currentPath) {
     <div class="header-inner">
       <a class="brand" href="/scripts/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Creator Library</strong><em>Free mystery YouTube scripts for creators.</em></span></a>
       <nav class="nav">${[
-        navLink('/scripts/', 'Creator Home', currentPath === '/scripts' || (currentPath.startsWith('/scripts/') && !currentPath.startsWith('/scripts/categories') && !currentPath.startsWith('/scripts/board') && !currentPath.startsWith('/scripts/resources'))),
-        navLink('/scripts/categories/', 'Script Categories', currentPath.startsWith('/scripts/categories')),
+        navLink('/scripts/#latest-scripts', 'Latest', currentPath === '/scripts'),
+        navLink('/scripts/#featured-scripts', 'Featured', false),
+        navLink('/scripts/categories/', 'Categories', currentPath.startsWith('/scripts/categories')),
         navLink('/scripts/board/', 'Script Board', currentPath.startsWith('/scripts/board')),
-        navLink('/scripts/resources/', 'Creator Resources', currentPath.startsWith('/scripts/resources'))
+        navLink('/scripts/resources/', 'Resources', currentPath.startsWith('/scripts/resources'))
       ].join('')}</nav>
     </div>
   </header>`;
