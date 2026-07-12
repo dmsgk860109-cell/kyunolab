@@ -304,7 +304,12 @@
     if (articleUrl) fields.push(`원문 주소:\n${articleUrl}`);
     if (articleBody) fields.push(`원문:\n\n${articleBody}`);
 
-    return `${naverPromptInstructions()}\n\nKyunolab 글 정보:\n\n${fields.join('\n\n')}`.trim();
+    const instructions = [
+      naverPromptInstructions(),
+      naverCopySpacingInstructions()
+    ].join('\n\n');
+
+    return `${instructions}\n\nKyunolab 글 정보:\n\n${fields.join('\n\n')}`.trim();
   }
 
   function naverPromptInstructions() {
@@ -394,6 +399,21 @@
 - 사용자가 한 번에 전체를 복사할 수 있도록 제작한다.
 - 결과물 전체를 하나의 연속된 완성 원고로 출력한다.
 - 중간에 AI의 설명이나 부가 안내를 삽입하지 않는다.`;
+  }
+
+  function naverCopySpacingInstructions() {
+    return `네이버 블로그 붙여넣기용 출력 간격 규칙:
+
+- 기존 글 작성 방식, 문체, 구조, SEO, 제목 생성 방식은 변경하지 않는다.
+- 이번 규칙은 최종 출력 형식만 보완한다.
+- 제목 아래에는 실제 빈 줄을 출력한다.
+- 모든 문단 사이에는 반드시 실제 빈 줄, 즉 빈 줄 하나가 보이는 개행을 출력한다.
+- 소제목 위와 아래에도 실제 빈 줄을 출력한다.
+- Kyunolab 원문 안내 및 링크와 해시태그 사이에도 실제 빈 줄을 출력한다.
+- Markdown에서만 보이는 줄바꿈이 아니라 실제 개행 문자로 문단 간격을 만든다.
+- Ctrl+A 또는 복사 버튼으로 결과물을 복사해 네이버 블로그에 붙여넣어도 문단 간격이 유지되도록 작성한다.
+- 문단을 한 줄씩 붙여 쓰지 않는다.
+- 제목, 본문, Kyunolab 원문 안내 및 링크, 해시태그는 서로 실제 빈 줄로 분리한다.`;
   }
 
   function extractArticleBodyText() {
