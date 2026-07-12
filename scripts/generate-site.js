@@ -321,43 +321,57 @@ function renderScriptCategoriesPage(scripts) {
 
 function renderScriptBoardPage(scripts) {
   const latestScripts = sortNewest(scripts).slice(0, 9);
+  const primary = latestScripts[0] || scripts[0];
+  const rows = latestScripts.map((script) => `<article class="story-row">
+          <span class="tag">${escapeHtml(script.genre || 'Creator Script')}</span>
+          <h3><a href="/scripts/${escapeAttr(script.slug)}">${escapeHtml(script.title)}</a></h3>
+          <p>${escapeHtml(script.deck || script.metaDescription || '')}</p>
+          <div class="meta">${escapeHtml([script.genre, script.estimatedVideoLength, 'creator-ready package'].filter(Boolean).join(' - '))}</div>
+        </article>`).join('\n');
   return renderPage({
     canonicalPath: '/scripts/board/',
     title: 'Mystery Script Board | Kyunolab Video Scripts',
     description: 'A planning board for mystery YouTube scripts, longform narration ideas, Shorts hooks, image prompts, thumbnail concepts, and creator workflow notes.',
     metaDescription: 'Use the Mystery Script Board to plan YouTube mystery videos with longform scripts, Shorts hooks, image prompts, thumbnail concepts, and creator workflow notes.',
     networkSection: 'scripts',
-    content: `  <main class="scripts-page">
-    <section class="scripts-hero scripts-subpage-hero">
-      <div>
-        <p class="label">Mystery Script Board</p>
-        <h1 class="article-title">Plan the video before the voiceover begins.</h1>
-        <p class="deck">A compact board for choosing script packages by format, hook, visual style, and production need.</p>
+    content: `  <main class="article-shell article-layout scripts-board-page">
+    ${renderScriptsBoardLeftRail()}
+
+    <div class="archive-page-main">
+      <p class="label">Mystery Script Board</p>
+      <h1 class="article-title">Plan the video before the voiceover begins.</h1>
+      <p class="deck">A compact board for choosing script packages by format, hook, visual style, and production need.</p>
+
+      <section class="notice">
+        <strong>What this page is for:</strong> These packages help creators choose a narration format, Shorts angle, image prompt direction, thumbnail concept, and subtitle line before editing begins.
+      </section>
+
+      <section class="scripts-section script-board">
+        <div>
+          <p class="label">Creator workflow</p>
+          <h2>Choose the package that matches the video you want to make.</h2>
+          <p>Each entry separates narration, Shorts structure, visual prompts, thumbnail ideas, and subtitle lines so creators can move from idea to production without mixing it with the original archive article.</p>
+        </div>
+        <div class="script-board-grid">
+          <article><strong>Longform YouTube</strong><span>Use when the video needs atmosphere, pacing, and a complete narration arc.</span></article>
+          <article><strong>Shorts Hooks</strong><span>Use when the concept needs a fast opening, one clear mystery, and a tight ending beat.</span></article>
+          <article><strong>Visual Planning</strong><span>Use for image prompts, thumbnail angles, and subtitle lines before editing begins.</span></article>
+        </div>
+      </section>
+
+      <div class="story-list">
+${rows}
       </div>
-      <aside class="script-creator-panel">
-        ${renderKyunolabNetworkCard('scripts')}
-        <p class="rail-label">Creator Library</p>
-        <a href="/scripts/">Scripts Home</a>
-        <a href="/scripts/categories/">Script Categories</a>
-        <a href="/scripts/resources/">Creator Resources</a>
-      </aside>
-    </section>
-    <section class="scripts-section script-board">
-      <div>
-        <p class="label">Creator workflow</p>
-        <h2>Choose the package that matches the video you want to make.</h2>
-        <p>Each entry separates narration, Shorts structure, visual prompts, thumbnail ideas, and subtitle lines so creators can move from idea to production without mixing it with the original archive article.</p>
+    </div>
+
+    <aside class="article-rail article-rail-right" aria-label="Recommended creator resources">
+      ${renderKyunolabNetworkCard('scripts')}
+      ${primary ? `<div class="rail-card rail-feature"><p class="rail-label">Start here</p><a href="/scripts/${escapeAttr(primary.slug)}"><span>${escapeHtml(primary.genre || 'Creator Script')}</span><strong>${escapeHtml(primary.title)}</strong></a></div>` : ''}
+      <div class="rail-card">
+        <p class="rail-label">Latest scripts</p>
+        ${latestScripts.slice(0, 3).map((script) => `<a href="/scripts/${escapeAttr(script.slug)}">${escapeHtml(script.title)}</a>`).join('')}
       </div>
-      <div class="script-board-grid">
-        <article><strong>Longform YouTube</strong><span>Use when the video needs atmosphere, pacing, and a complete narration arc.</span></article>
-        <article><strong>Shorts Hooks</strong><span>Use when the concept needs a fast opening, one clear mystery, and a tight ending beat.</span></article>
-        <article><strong>Visual Planning</strong><span>Use for image prompts, thumbnail angles, and subtitle lines before editing begins.</span></article>
-      </div>
-    </section>
-    <section class="scripts-section">
-      <div class="section-head"><h2>Latest Script Packages</h2><span>Creator-ready materials</span></div>
-      <div class="script-card-grid">${latestScripts.map(renderScriptCard).join('')}</div>
-    </section>
+    </aside>
   </main>`
   });
 }
@@ -625,6 +639,14 @@ function renderScriptsLeftRail() {
       <div class="rail-card"><p class="rail-label">Creator Paths</p><a href="/scripts/">Creator Home</a><a href="/scripts/categories/">Script Categories</a><a href="/scripts/board/">Script Board</a><a href="/scripts/resources/">Creator Resources</a></div>
       <div class="rail-card rail-card-subtle"><p class="rail-label">Script Shelves</p><a href="#featured-scripts">Featured Scripts</a><a href="#latest-scripts">Latest Scripts</a><a href="#script-categories">Browse by Script Type</a></div>
       <div class="rail-card"><p class="rail-label">Usage Guide</p><a href="#script-board">Video Planning Board</a><a href="#creator-resources">Creator Resources</a></div>
+    </aside>`;
+}
+
+function renderScriptsBoardLeftRail() {
+  return `<aside class="article-rail article-rail-left" aria-label="Script Board navigation">
+      <div class="rail-card"><p class="rail-label">Creator Paths</p><a href="/scripts/">Creator Home</a><a href="/scripts/categories/">Script Categories</a><a href="/scripts/board/">Script Board</a><a href="/scripts/resources/">Creator Resources</a></div>
+      <div class="rail-card rail-card-subtle"><p class="rail-label">Script Shelves</p><a href="/scripts/#featured-scripts">Featured Scripts</a><a href="/scripts/#latest-scripts">Latest Scripts</a><a href="/scripts/categories/">Browse by Script Type</a></div>
+      <div class="rail-card"><p class="rail-label">Usage Guide</p><a href="/scripts/resources/">Creator Resources</a><a href="/scripts/">Free Mystery YouTube Scripts</a></div>
     </aside>`;
 }
 
