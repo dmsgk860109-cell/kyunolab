@@ -343,6 +343,7 @@ ${body}
 function renderScriptCategoryPage({ category, scripts }) {
   const categoryStories = sortNewest(stories.filter((story) => story.categorySlug === category.slug));
   const relatedScripts = scriptsForCreatorCategory(category, scripts);
+  const archiveCategoryUrl = `/categories/${escapeAttr(category.slug)}.html`;
   const pageDescription = `${category.title} creator resources for mystery YouTube scripts, Shorts hooks, image prompts, thumbnail ideas, and video planning based on Kyunolab archive records.`;
   return renderPage({
     canonicalPath: `/scripts/categories/${category.slug}/`,
@@ -361,12 +362,8 @@ function renderScriptCategoryPage({ category, scripts }) {
         <strong>Creator use:</strong> Use this shelf to plan videos around ${escapeHtml(category.title.toLowerCase())}: longform narration, Shorts hooks, visual prompts, thumbnail angles, and source-aware archive references.
       </section>
       <section class="scripts-section">
-        <div class="section-head"><h2>Archive records for video planning</h2><span>${categoryStories.length} source record${categoryStories.length === 1 ? '' : 's'}</span></div>
-        <div class="story-list">${categoryStories.slice(0, 12).map(renderCreatorSourceStoryRow).join('\n')}</div>
-      </section>
-      <section class="scripts-section">
-        <div class="section-head"><h2>Available script packages</h2><span>${relatedScripts.length ? 'Creator-ready materials' : 'Use the board to plan this shelf'}</span></div>
-        ${relatedScripts.length ? `<div class="script-list">${relatedScripts.map(renderScriptRow).join('\n')}</div>` : `<div class="notice"><strong>No dedicated package yet:</strong> Use the archive records above as source paths, then open Creator Board to plan this category into a new script package.</div>`}
+        <div class="section-head"><h2>Script packages in this shelf</h2><span>${relatedScripts.length ? 'Creator-ready materials' : 'Ready for future packages'}</span></div>
+        ${relatedScripts.length ? `<div class="script-list">${relatedScripts.map(renderScriptRow).join('\n')}</div>` : `<div class="notice"><strong>No dedicated script package yet:</strong> This creator shelf is ready for future ${escapeHtml(category.title.toLowerCase())} scripts. Use the workflow below to plan the first package without sending readers into the archive by accident.</div>`}
       </section>
       <section class="scripts-section script-board">
         <div>
@@ -378,6 +375,16 @@ function renderScriptCategoryPage({ category, scripts }) {
           <article><strong>Longform angle</strong><span>Turn one archive record into an 8-13 minute narration with context, versions, and meaning.</span></article>
           <article><strong>Shorts hook</strong><span>Compress the strongest image or question into a vertical-video opening.</span></article>
           <article><strong>Visual plan</strong><span>List mood, setting, object, and thumbnail ideas without changing the source record.</span></article>
+        </div>
+      </section>
+      <section class="scripts-section">
+        <div class="section-head"><h2>Original archive references</h2><span>Reference only</span></div>
+        <section class="notice">
+          <strong>Archive source shelf:</strong> Kyunolab Mystery Archive currently has ${categoryStories.length} ${escapeHtml(category.title.toLowerCase())} source record${categoryStories.length === 1 ? '' : 's'}. These are original archive references, not Creator Library script packages.
+        </section>
+        <div class="script-resource-links">
+          <a href="${archiveCategoryUrl}">Browse ${escapeHtml(category.title)} in Mystery Archive</a>
+          <a href="/scripts/board/">Open Creator Board for ${escapeHtml(category.title)}</a>
         </div>
       </section>
     </div>
@@ -605,16 +612,33 @@ function renderScriptGenreCard(group) {
 }
 
 function renderCreatorCategoryCard(category) {
-  const categoryStories = stories.filter((story) => story.categorySlug === category.slug).slice(0, 3);
-  const sourceLinks = categoryStories.map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('');
   const categoryPath = `/scripts/categories/${escapeAttr(category.slug)}/`;
+  const planningLinks = creatorCategoryPlanningLinks(category).map((label) => `<a href="${categoryPath}">${escapeHtml(label)}</a>`).join('');
   return `      <article>
         <p class="category-group-label">${escapeHtml(category.group)}</p>
         <h3><a href="${categoryPath}">${escapeHtml(category.title)}</a></h3>
         <p>${escapeHtml(creatorCategoryDescription(category))}</p>
-        <div class="category-links">${sourceLinks}</div>
+        <div class="category-links">${planningLinks}</div>
         <a class="text-link" href="${categoryPath}">Open ${escapeHtml(category.title)} creator page</a>
       </article>`;
+}
+
+function creatorCategoryPlanningLinks(category) {
+  const labels = {
+    'urban-legends': ['Longform legend scripts', 'Shorts warning hooks', 'Roadside thumbnail ideas'],
+    'internet-folklore': ['Creepypasta explainers', 'Forum myth Shorts', 'Digital unease prompts'],
+    'strange-places': ['Location scripts', 'Map mystery hooks', 'Atmosphere prompts'],
+    'unexplained-mysteries': ['Evidence-limited scripts', 'Careful claim framing', 'Question-led hooks'],
+    'classic-folklore': ['Folklore explainers', 'Tradition notes', 'Retelling prompts'],
+    'modern-legends': ['Modern rumor scripts', 'Social memory hooks', 'Contemporary legend angles'],
+    myths: ['Myth explainers', 'Symbolic story arcs', 'Respectful narration plans'],
+    'mythic-creatures': ['Creature profiles', 'Origin comparison scripts', 'Visual creature prompts'],
+    'lost-worlds': ['Lost realm scripts', 'Hidden city hooks', 'Worldbuilding prompts'],
+    'strange-nature': ['Nature mystery scripts', 'Landscape hooks', 'Atmospheric visual prompts'],
+    'legendary-places': ['Place-based scripts', 'Sacred location notes', 'Travel-mystery hooks'],
+    'mythic-objects': ['Object legend scripts', 'Relic hooks', 'Symbolic thumbnail ideas']
+  };
+  return labels[category.slug] || ['Longform scripts', 'Shorts hooks', 'Image prompts'];
 }
 
 function creatorCategoryDescription(category) {
@@ -684,14 +708,6 @@ function scriptsForCreatorCategory(category, scripts) {
     ].filter(Boolean).join(' ').toLowerCase();
     return storySlugs.has(script.originalStorySlug) || Array.from(categoryTerms).some((term) => haystack.includes(term));
   });
-}
-
-function renderCreatorSourceStoryRow(story) {
-  return `<article class="script-row">
-        <div><span class="tag">${escapeHtml(story.category)}</span><h3><a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a></h3></div>
-        <p>${escapeHtml(story.excerpt || story.metaDescription || '')}</p>
-        <div class="meta">${escapeHtml([story.tag, story.readTime, `Updated ${formatDate(story.updatedAt || story.publishedAt)}`].filter(Boolean).join(' - '))}</div>
-      </article>`;
 }
 
 function scriptFeatureSummary(script) {
