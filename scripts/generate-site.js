@@ -222,10 +222,29 @@ function generateScriptsPages() {
   const scripts = sortNewest(creatorScripts);
   writeFile('scripts/index.html', renderScriptsHomePage(scripts));
   writeFile('scripts/categories/index.html', renderScriptCategoriesPage(scripts));
+  generateScriptCategoryPages(scripts);
   writeFile('scripts/board/index.html', renderScriptBoardPage(scripts));
   writeFile('scripts/resources/index.html', renderScriptResourcesPage(scripts));
   for (const script of scripts) {
     writeFile(`scripts/${script.slug}.html`, renderScriptDetailPage(script));
+  }
+}
+
+function generateScriptCategoryPages(scripts) {
+  const activeCategories = categories.filter((category) => !category.legacy);
+  cleanupScriptCategoryPages(activeCategories);
+  for (const category of activeCategories) {
+    writeFile(`scripts/categories/${category.slug}/index.html`, renderScriptCategoryPage({ category, scripts }));
+  }
+}
+
+function cleanupScriptCategoryPages(activeCategories) {
+  const categoriesDir = path.join(root, 'scripts', 'categories');
+  if (!fs.existsSync(categoriesDir)) return;
+  const allowed = new Set(activeCategories.map((category) => category.slug));
+  for (const entry of fs.readdirSync(categoriesDir, { withFileTypes: true })) {
+    if (!entry.isDirectory() || allowed.has(entry.name)) continue;
+    fs.rmSync(path.join(categoriesDir, entry.name), { recursive: true, force: true });
   }
 }
 
@@ -315,6 +334,52 @@ ${cards}
       <h1 class="article-title">Browse creator scripts by archive category</h1>
       <p class="deck">Move through the same twelve Kyunolab archive shelves from a video creator angle: longform scripts, Shorts hooks, image prompts, thumbnail ideas, and production planning.</p>
 ${body}
+    </div>
+    ${renderScriptCategoryRightRail(scripts)}
+  </main>`
+  });
+}
+
+function renderScriptCategoryPage({ category, scripts }) {
+  const categoryStories = sortNewest(stories.filter((story) => story.categorySlug === category.slug));
+  const relatedScripts = scriptsForCreatorCategory(category, scripts);
+  const pageDescription = `${category.title} creator resources for mystery YouTube scripts, Shorts hooks, image prompts, thumbnail ideas, and video planning based on Kyunolab archive records.`;
+  return renderPage({
+    canonicalPath: `/scripts/categories/${category.slug}/`,
+    title: `${category.title} Creator Scripts | Kyunolab Video Scripts`,
+    description: pageDescription,
+    metaDescription: pageDescription,
+    networkSection: 'scripts',
+    content: `  <main class="article-shell article-layout scripts-category-page">
+    ${renderScriptsBoardLeftRail()}
+    <div class="archive-page-main">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/scripts/">Creator Library</a><span aria-hidden="true">/</span><a href="/scripts/categories/">Categories</a><span aria-hidden="true">/</span><span aria-current="page">${escapeHtml(category.title)}</span></nav>
+      <p class="label">${escapeHtml(category.group)}</p>
+      <h1 class="article-title">${escapeHtml(category.title)} creator scripts</h1>
+      <p class="deck">${escapeHtml(creatorCategoryDescription(category))}</p>
+      <section class="notice">
+        <strong>Creator use:</strong> Use this shelf to plan videos around ${escapeHtml(category.title.toLowerCase())}: longform narration, Shorts hooks, visual prompts, thumbnail angles, and source-aware archive references.
+      </section>
+      <section class="scripts-section">
+        <div class="section-head"><h2>Archive records for video planning</h2><span>${categoryStories.length} source record${categoryStories.length === 1 ? '' : 's'}</span></div>
+        <div class="story-list">${categoryStories.slice(0, 12).map(renderCreatorSourceStoryRow).join('\n')}</div>
+      </section>
+      <section class="scripts-section">
+        <div class="section-head"><h2>Available script packages</h2><span>${relatedScripts.length ? 'Creator-ready materials' : 'Use the board to plan this shelf'}</span></div>
+        ${relatedScripts.length ? `<div class="script-list">${relatedScripts.map(renderScriptRow).join('\n')}</div>` : `<div class="notice"><strong>No dedicated package yet:</strong> Use the archive records above as source paths, then open Creator Board to plan this category into a new script package.</div>`}
+      </section>
+      <section class="scripts-section script-board">
+        <div>
+          <p class="label">Creator workflow</p>
+          <h2>Plan this shelf as a repeatable video format.</h2>
+          <p>Keep the original archive record separate from production assets. Build the script from source-aware summary, then add Shorts hooks, visual prompts, thumbnail ideas, and subtitle lines only after the story angle is clear.</p>
+        </div>
+        <div class="script-board-grid">
+          <article><strong>Longform angle</strong><span>Turn one archive record into an 8-13 minute narration with context, versions, and meaning.</span></article>
+          <article><strong>Shorts hook</strong><span>Compress the strongest image or question into a vertical-video opening.</span></article>
+          <article><strong>Visual plan</strong><span>List mood, setting, object, and thumbnail ideas without changing the source record.</span></article>
+        </div>
+      </section>
     </div>
     ${renderScriptCategoryRightRail(scripts)}
   </main>`
@@ -542,12 +607,13 @@ function renderScriptGenreCard(group) {
 function renderCreatorCategoryCard(category) {
   const categoryStories = stories.filter((story) => story.categorySlug === category.slug).slice(0, 3);
   const sourceLinks = categoryStories.map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('');
+  const categoryPath = `/scripts/categories/${escapeAttr(category.slug)}/`;
   return `      <article>
         <p class="category-group-label">${escapeHtml(category.group)}</p>
-        <h3>${escapeHtml(category.title)}</h3>
+        <h3><a href="${categoryPath}">${escapeHtml(category.title)}</a></h3>
         <p>${escapeHtml(creatorCategoryDescription(category))}</p>
         <div class="category-links">${sourceLinks}</div>
-        <a class="text-link" href="/scripts/board/">Plan ${escapeHtml(category.title)} scripts</a>
+        <a class="text-link" href="${categoryPath}">Open ${escapeHtml(category.title)} creator page</a>
       </article>`;
 }
 
@@ -599,6 +665,33 @@ function groupScriptsByGenre(scripts) {
     groups.get(genre).push(script);
   }
   return Array.from(groups, ([genre, items]) => ({ genre, items }));
+}
+
+function scriptsForCreatorCategory(category, scripts) {
+  const categoryTerms = new Set([
+    category.slug,
+    category.title.toLowerCase(),
+    category.title.toLowerCase().replace(/\s+/g, '-')
+  ]);
+  const categoryStories = stories.filter((story) => story.categorySlug === category.slug);
+  const storySlugs = new Set(categoryStories.map((story) => story.slug));
+  return sortNewest(scripts).filter((script) => {
+    const haystack = [
+      script.genre,
+      script.title,
+      script.deck,
+      ...(script.tags || [])
+    ].filter(Boolean).join(' ').toLowerCase();
+    return storySlugs.has(script.originalStorySlug) || Array.from(categoryTerms).some((term) => haystack.includes(term));
+  });
+}
+
+function renderCreatorSourceStoryRow(story) {
+  return `<article class="script-row">
+        <div><span class="tag">${escapeHtml(story.category)}</span><h3><a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a></h3></div>
+        <p>${escapeHtml(story.excerpt || story.metaDescription || '')}</p>
+        <div class="meta">${escapeHtml([story.tag, story.readTime, `Updated ${formatDate(story.updatedAt || story.publishedAt)}`].filter(Boolean).join(' - '))}</div>
+      </article>`;
 }
 
 function scriptFeatureSummary(script) {
@@ -765,6 +858,12 @@ function generateSitemap() {
     const categoryStories = stories.filter((story) => story.categorySlug === category.slug);
     const categoryDate = newestDate(categoryStories) || latest;
     urls.push({ loc: `${siteUrl}/categories/${category.slug}.html`, lastmod: categoryDate });
+  }
+
+  for (const category of categories.filter((item) => !item.legacy)) {
+    const categoryStories = stories.filter((story) => story.categorySlug === category.slug);
+    const categoryDate = newestDate(categoryStories) || latest;
+    urls.push({ loc: `${siteUrl}/scripts/categories/${category.slug}/`, lastmod: categoryDate });
   }
 
   for (const story of stories) {
