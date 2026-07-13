@@ -563,7 +563,8 @@ function renderScriptDetailPage(script) {
   const relatedScripts = sortNewest(creatorScripts).filter((item) => item.slug !== script.slug).slice(0, 4);
   const canonicalPath = `/scripts/${script.slug}`;
   const usageNote = script.usageNote || 'This script is provided as a reference for video creators. You may adapt and edit it for your own video format. Credit to Kyunolab is appreciated when used as a source or inspiration. Please present the story as a mystery, legend, or fictional-style narration rather than a confirmed real event.';
-  const content = `  <main class="script-detail-page article-shell">
+  const content = `  <main class="script-detail-page article-shell article-layout">
+    ${renderScriptsBoardLeftRail()}
     <article>
       <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/scripts/">Scripts Home</a><span aria-hidden="true">/</span><span aria-current="page">${escapeHtml(script.title)}</span></nav>
       <header class="archive-article-header">
