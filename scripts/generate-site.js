@@ -221,6 +221,8 @@ function generateCategoryPages() {
 function generateScriptsPages() {
   const scripts = sortNewest(creatorScripts);
   writeFile('scripts/index.html', renderScriptsHomePage(scripts));
+  writeFile('scripts/latest/index.html', renderScriptsLatestPage(scripts));
+  writeFile('scripts/featured/index.html', renderScriptsFeaturedPage(scripts));
   writeFile('scripts/categories/index.html', renderScriptCategoriesPage(scripts));
   generateScriptCategoryPages(scripts);
   writeFile('scripts/board/index.html', renderScriptBoardPage(scripts));
@@ -303,6 +305,62 @@ function renderScriptsHomePage(scripts) {
       </div>
       ${renderScriptsHomeRail({ featuredScript, latestScripts, genres })}
     </div>
+  </main>`
+  });
+}
+
+function renderScriptsLatestPage(scripts) {
+  return renderScriptsListingPage({
+    canonicalPath: '/scripts/latest/',
+    label: 'Latest Scripts',
+    title: 'Latest mystery YouTube scripts',
+    deck: 'The newest creator-ready script packages from Kyunolab Creator Library, arranged for longform narration, Shorts planning, image prompts, thumbnails, and production notes.',
+    sectionTitle: 'Newest creator materials',
+    sectionMeta: `${scripts.length} script package${scripts.length === 1 ? '' : 's'}`,
+    scripts,
+    pageTitle: 'Latest Mystery YouTube Scripts | Kyunolab Creator Library',
+    description: 'Browse the newest Kyunolab mystery YouTube scripts for creators, including longform narration, Shorts hooks, image prompts, thumbnail ideas, and subtitle lines.'
+  });
+}
+
+function renderScriptsFeaturedPage(scripts) {
+  const featuredScripts = scripts.slice(0, 6);
+  return renderScriptsListingPage({
+    canonicalPath: '/scripts/featured/',
+    label: 'Featured Scripts',
+    title: 'Featured mystery video script packages',
+    deck: 'Start with the strongest creator-ready script packages: reliable entry points for mystery videos, urban legend explainers, folklore narration, Shorts hooks, and visual planning.',
+    sectionTitle: 'Featured creator packages',
+    sectionMeta: 'Recommended starting points',
+    scripts: featuredScripts,
+    pageTitle: 'Featured Mystery YouTube Scripts | Kyunolab Creator Library',
+    description: 'Browse featured Kyunolab mystery YouTube script packages with longform narration, Shorts scripts, image prompts, thumbnail ideas, and creator planning notes.'
+  });
+}
+
+function renderScriptsListingPage({ canonicalPath, label, title, deck, sectionTitle, sectionMeta, scripts, pageTitle, description }) {
+  return renderPage({
+    canonicalPath,
+    title: pageTitle,
+    description,
+    metaDescription: description,
+    networkSection: 'scripts',
+    content: `  <main class="article-shell article-layout scripts-listing-page">
+    ${renderScriptsBoardLeftRail()}
+    <div class="archive-page-main">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/scripts/">Creator Library</a><span aria-hidden="true">/</span><span aria-current="page">${escapeHtml(label)}</span></nav>
+      <p class="label">${escapeHtml(label)}</p>
+      <h1 class="article-title">${escapeHtml(title)}</h1>
+      <p class="deck">${escapeHtml(deck)}</p>
+      <section class="notice">
+        <strong>Creator Library:</strong> These pages list script packages only. Original archive records remain in Kyunolab Mystery Archive and are linked only when a script package needs a source reference.
+      </section>
+      <section class="scripts-section">
+        <div class="section-head"><h2>${escapeHtml(sectionTitle)}</h2><span>${escapeHtml(sectionMeta)}</span></div>
+        ${scripts.length ? `<div class="script-list">${scripts.map(renderScriptRow).join('\n')}</div>` : `<div class="notice"><strong>No script packages yet:</strong> This page is ready for future creator materials.</div>`}
+      </section>
+    </div>
+    ${renderScriptCategoryRightRail(sortNewest(creatorScripts))}
   </main>`
   });
 }
@@ -772,7 +830,7 @@ function renderHomeLeftRail() {
 function renderScriptsLeftRail() {
   return `<aside class="home-left-rail article-rail article-rail-left" aria-label="Creator Library navigation">
       <div class="rail-card"><p class="rail-label">Creator Paths</p><a href="/scripts/">Creator Home</a><a href="/scripts/categories/">Script Categories</a><a href="/scripts/board/">Creator Board</a><a href="/scripts/resources/">Creator Resources</a></div>
-      <div class="rail-card rail-card-subtle"><p class="rail-label">Script Shelves</p><a href="#featured-scripts">Featured Scripts</a><a href="#latest-scripts">Latest Scripts</a><a href="#script-categories">Browse by Script Type</a></div>
+      <div class="rail-card rail-card-subtle"><p class="rail-label">Script Shelves</p><a href="/scripts/featured/">Featured Scripts</a><a href="/scripts/latest/">Latest Scripts</a><a href="/scripts/categories/">Browse by Script Type</a></div>
       <div class="rail-card"><p class="rail-label">Usage Guide</p><a href="#script-board">Creator Board</a><a href="#creator-resources">Creator Resources</a></div>
     </aside>`;
 }
@@ -780,7 +838,7 @@ function renderScriptsLeftRail() {
 function renderScriptsBoardLeftRail() {
   return `<aside class="article-rail article-rail-left" aria-label="Creator Board navigation">
       <div class="rail-card"><p class="rail-label">Creator Paths</p><a href="/scripts/">Creator Home</a><a href="/scripts/categories/">Script Categories</a><a href="/scripts/board/">Creator Board</a><a href="/scripts/resources/">Creator Resources</a></div>
-      <div class="rail-card rail-card-subtle"><p class="rail-label">Script Shelves</p><a href="/scripts/#featured-scripts">Featured Scripts</a><a href="/scripts/#latest-scripts">Latest Scripts</a><a href="/scripts/categories/">Browse by Script Type</a></div>
+      <div class="rail-card rail-card-subtle"><p class="rail-label">Script Shelves</p><a href="/scripts/featured/">Featured Scripts</a><a href="/scripts/latest/">Latest Scripts</a><a href="/scripts/categories/">Browse by Script Type</a></div>
       <div class="rail-card"><p class="rail-label">Usage Guide</p><a href="/scripts/resources/">Creator Resources</a><a href="/scripts/">Free Mystery YouTube Scripts</a></div>
     </aside>`;
 }
@@ -859,6 +917,8 @@ function generateSitemap() {
     '/categories.html',
     '/archive.html',
     '/scripts/',
+    '/scripts/latest/',
+    '/scripts/featured/',
     '/scripts/categories/',
     '/scripts/board/',
     '/scripts/resources/',
@@ -1033,8 +1093,8 @@ function renderScriptsHeader(currentPath) {
     <div class="header-inner">
       <a class="brand" href="/scripts/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Creator Library</strong><em>Free mystery YouTube scripts for creators.</em></span></a>
       <nav class="nav">${[
-        navLink('/scripts/#latest-scripts', 'Latest', currentPath === '/scripts'),
-        navLink('/scripts/#featured-scripts', 'Featured', false),
+        navLink('/scripts/latest/', 'Latest', currentPath.startsWith('/scripts/latest')),
+        navLink('/scripts/featured/', 'Featured', currentPath.startsWith('/scripts/featured')),
         navLink('/scripts/categories/', 'Categories', currentPath.startsWith('/scripts/categories')),
         navLink('/scripts/board/', 'Creator Board', currentPath.startsWith('/scripts/board')),
         navLink('/scripts/resources/', 'Resources', currentPath.startsWith('/scripts/resources'))
