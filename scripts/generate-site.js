@@ -505,16 +505,16 @@ function renderScriptBoardPage(scripts) {
 function renderScriptResourcesPage() {
   return renderPage({
     canonicalPath: '/scripts/resources/',
-    title: 'Creator Resources | Kyunolab Video Scripts',
-    description: 'Creator resources for adapting Kyunolab mystery archive stories into YouTube scripts, Shorts, image prompts, thumbnails, and subtitle lines.',
-    metaDescription: 'Creator resources for turning mystery archive stories into YouTube scripts, Shorts scripts, image prompts, thumbnails, and subtitle lines.',
+    title: 'Creator Guide for Mystery YouTube Scripts | Kyunolab',
+    description: 'A practical creator guide for using Kyunolab scripts, categories, source notes, Shorts hooks, image prompts, thumbnails, and video planning resources.',
+    metaDescription: 'Creator guide for using Kyunolab mystery YouTube scripts, source notes, Shorts hooks, image prompts, thumbnails, and video planning resources.',
     networkSection: 'scripts',
     content: `  <main class="scripts-page">
     <section class="scripts-hero scripts-subpage-hero">
       <div>
         <p class="label">Creator Resources</p>
-        <h1 class="article-title">Use the archive without confusing story and script.</h1>
-        <p class="deck">These resources keep original archive stories separate from creator-facing scripts, prompts, thumbnail ideas, and short-form adaptations.</p>
+        <h1 class="article-title">A guide for turning mystery ideas into video plans.</h1>
+        <p class="deck">Use this page to find script packages, choose a video format, check source notes, and move from archive story to longform narration, Shorts hooks, image prompts, and thumbnail ideas.</p>
       </div>
       <aside class="script-creator-panel">
         ${renderKyunolabNetworkCard('scripts')}
@@ -525,7 +525,15 @@ function renderScriptResourcesPage() {
       </aside>
     </section>
     <section class="scripts-section">
-      <div class="section-head"><h2>Creator Resources</h2><span>Useful paths</span></div>
+      <div class="section-head"><h2>What this page helps you do</h2><span>Creator workflow</span></div>
+      <div class="script-board-grid">
+        <article><strong>Find a script package</strong><span>Start from ready-made mystery video scripts with longform narration, Shorts angles, visual prompts, and thumbnail ideas.</span></article>
+        <article><strong>Choose the right format</strong><span>Use categories and the Creator Board to decide whether a topic works best as a long video, a short hook, or a visual planning note.</span></article>
+        <article><strong>Keep sources clear</strong><span>Separate original archive records from creator-facing adaptations so legends, folklore, and mysteries are not presented as proven claims.</span></article>
+      </div>
+    </section>
+    <section class="scripts-section">
+      <div class="section-head"><h2>Useful creator paths</h2><span>Quick links</span></div>
       <div class="script-resource-links">
         <a href="/scripts/">Free Mystery YouTube Scripts</a>
         <a href="/scripts/categories/">Browse Script Categories</a>
@@ -537,13 +545,13 @@ function renderScriptResourcesPage() {
     <section class="scripts-section script-board">
       <div>
         <p class="label">Adaptation note</p>
-        <h2>Scripts are creator materials, not replacement archive articles.</h2>
-        <p>Original stories remain under the mystery archive. Script pages are production aids for narration, visual planning, Shorts, and thumbnail development.</p>
+        <h2>Stories, scripts, and prompts have different jobs.</h2>
+        <p>The Mystery Archive keeps the original reading record. The Creator Library turns selected material into production aids for narration, pacing, Shorts, image prompts, subtitles, and thumbnail planning.</p>
       </div>
       <div class="script-board-grid">
-        <article><strong>Start with the archive</strong><span>Read the original story first so the video script keeps the right source-aware tone.</span></article>
-        <article><strong>Use scripts as drafts</strong><span>Edit narration, pacing, and visual prompts to match your own channel format.</span></article>
-        <article><strong>Keep claims careful</strong><span>Present legends, folklore, and mysteries without implying unverified events are proven facts.</span></article>
+        <article><strong>Start with the source note</strong><span>Check whether a topic is folklore, modern retelling, internet legend, original work, or evidence-limited mystery before scripting it.</span></article>
+        <article><strong>Adapt for your channel</strong><span>Treat each script as a structured draft. Adjust voice, pacing, scene order, and visual direction to match your format.</span></article>
+        <article><strong>Avoid false certainty</strong><span>Frame legends and mysteries carefully, especially when a story has uncertain origins, disputed versions, or symbolic interpretation.</span></article>
       </div>
     </section>
   </main>`
