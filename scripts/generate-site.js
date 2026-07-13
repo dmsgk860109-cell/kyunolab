@@ -289,32 +289,34 @@ function renderScriptsHomePage(scripts) {
 }
 
 function renderScriptCategoriesPage(scripts) {
-  const genres = groupScriptsByGenre(scripts);
+  const grouped = groupCreatorCategories();
+  const body = Object.entries(grouped).map(([groupName, groupCategories]) => {
+    const groupDescription = groupName === 'Modern Strange Records'
+      ? 'Creator-ready paths for modern legends, internet folklore, strange places, and evidence-limited mysteries'
+      : 'Creator-ready paths for myths, creatures, lost worlds, legendary places, strange nature, and symbolic objects';
+    const cards = groupCategories.map(renderCreatorCategoryCard).join('\n');
+    return `      <section class="category-group">
+        <div class="section-head category-group-head"><h2>${escapeHtml(groupName)}</h2><span>${escapeHtml(groupDescription)}</span></div>
+        <div class="category-grid category-hub">
+${cards}
+        </div>
+      </section>`;
+  }).join('\n');
   return renderPage({
     canonicalPath: '/scripts/categories/',
-    title: 'Script Categories | Kyunolab Video Scripts',
-    description: 'Browse mystery YouTube script categories for longform narration, Shorts planning, image prompts, thumbnail ideas, and creator-ready video materials.',
-    metaDescription: 'Browse mystery YouTube script categories for creators, including urban legend scripts, folklore scripts, Shorts scripts, image prompts, and thumbnail ideas.',
+    title: 'Creator Script Categories | Kyunolab Video Scripts',
+    description: 'Browse twelve Kyunolab creator category paths for mystery YouTube scripts, Shorts planning, image prompts, thumbnails, and video research.',
+    metaDescription: 'Browse twelve creator script categories for mystery videos, including urban legends, internet folklore, myths, strange places, creatures, and lost worlds.',
     networkSection: 'scripts',
-    content: `  <main class="scripts-page">
-    <section class="scripts-hero scripts-subpage-hero">
-      <div>
-        <p class="label">Script Categories</p>
-        <h1 class="article-title">Browse mystery scripts by creator use.</h1>
-        <p class="deck">Move through creator-ready script packages by genre, video length, visual planning needs, and story format.</p>
-      </div>
-      <aside class="script-creator-panel">
-        ${renderKyunolabNetworkCard('scripts')}
-        <p class="rail-label">Creator Library</p>
-        <a href="/scripts/">Scripts Home</a>
-        <a href="/scripts/board/">Creator Board</a>
-        <a href="/scripts/resources/">Creator Resources</a>
-      </aside>
-    </section>
-    <section class="scripts-section">
-      <div class="section-head"><h2>Script Categories</h2><span>${genres.length} active category path${genres.length === 1 ? '' : 's'}</span></div>
-      <div class="script-category-grid">${genres.map(renderScriptGenreCard).join('')}</div>
-    </section>
+    content: `  <main class="article-shell article-layout scripts-categories-page">
+    ${renderScriptsBoardLeftRail()}
+    <div class="archive-page-main">
+      <p class="label">Creator Script Categories</p>
+      <h1 class="article-title">Browse creator scripts by archive category</h1>
+      <p class="deck">Move through the same twelve Kyunolab archive shelves from a video creator angle: longform scripts, Shorts hooks, image prompts, thumbnail ideas, and production planning.</p>
+${body}
+    </div>
+    ${renderScriptCategoryRightRail(scripts)}
   </main>`
   });
 }
@@ -537,6 +539,36 @@ function renderScriptGenreCard(group) {
       </article>`;
 }
 
+function renderCreatorCategoryCard(category) {
+  const categoryStories = stories.filter((story) => story.categorySlug === category.slug).slice(0, 3);
+  const sourceLinks = categoryStories.map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('');
+  return `      <article>
+        <p class="category-group-label">${escapeHtml(category.group)}</p>
+        <h3>${escapeHtml(category.title)}</h3>
+        <p>${escapeHtml(creatorCategoryDescription(category))}</p>
+        <div class="category-links">${sourceLinks}</div>
+        <a class="text-link" href="/scripts/board/">Plan ${escapeHtml(category.title)} scripts</a>
+      </article>`;
+}
+
+function creatorCategoryDescription(category) {
+  const descriptions = {
+    'urban-legends': 'Roadside legends, warning stories, neighborhood rumors, and modern folklore shaped into video-ready hooks and narration arcs.',
+    'internet-folklore': 'Digital legends, liminal spaces, cursed images, forum myths, and online unease prepared for explainers, Shorts, and visual prompts.',
+    'strange-places': 'Haunted roads, impossible rooms, vanished locations, and map-based mysteries organized for atmosphere, pacing, and scene planning.',
+    'unexplained-mysteries': 'Evidence-limited mysteries and unresolved questions framed carefully for search-friendly videos without overstating the record.',
+    'classic-folklore': 'Older motifs, oral traditions, folk beliefs, and inherited warnings adapted into clear creator research paths.',
+    'modern-legends': 'Recent rumor cycles, sightings, social memory, and contemporary legend patterns shaped for documentary-style narration.',
+    'myths': 'Mythic stories, sacred narratives, heroes, gods, and symbolic traditions planned for respectful longform explanation.',
+    'mythic-creatures': 'Dragons, giants, sea beings, spirits, forest figures, and legendary creatures organized by origin, meaning, and visual direction.',
+    'lost-worlds': 'Hidden cities, vanished islands, impossible geography, and lost realms prepared for mystery videos and worldbuilding explainers.',
+    'strange-nature': 'Sky omens, unusual forests, sea phenomena, strange plants, and landscape folklore arranged for atmospheric creator use.',
+    'legendary-places': 'Named mountains, lakes, ruins, temples, and sacred places shaped into location-focused mystery scripts.',
+    'mythic-objects': 'Swords, bells, mirrors, books, charms, relics, and symbolic objects prepared as compact video concepts.'
+  };
+  return descriptions[category.slug] || `${category.title} creator materials for mystery scripts, Shorts hooks, image prompts, thumbnail ideas, and video planning.`;
+}
+
 function renderScriptMetaGrid(script) {
   return `<dl class="article-meta-grid script-meta-grid">
           <div><dt>Genre</dt><dd>${escapeHtml(script.genre)}</dd></div>
@@ -655,6 +687,17 @@ function renderScriptsHomeRail({ featuredScript, latestScripts, genres }) {
     </aside>`;
 }
 
+function renderScriptCategoryRightRail(scripts) {
+  const featuredScript = scripts[0];
+  const latest = sortNewest(scripts).slice(0, 3);
+  return `<aside class="article-rail article-rail-right" aria-label="Creator category recommendations">
+      ${renderKyunolabNetworkCard('scripts')}
+      ${featuredScript ? `<div class="rail-card rail-feature"><p class="rail-label">Start here</p><a href="/scripts/${escapeAttr(featuredScript.slug)}"><span>${escapeHtml(featuredScript.genre)}</span><strong>${escapeHtml(featuredScript.title)}</strong></a></div>` : ''}
+      <div class="rail-card"><p class="rail-label">Latest scripts</p>${latest.map((script) => `<a href="/scripts/${escapeAttr(script.slug)}">${escapeHtml(script.title)}</a>`).join('')}</div>
+      <div class="rail-card"><p class="rail-label">Creator paths</p><a href="/scripts/board/">Creator Board</a><a href="/scripts/resources/">Creator Resources</a><a href="/scripts/">Free Mystery YouTube Scripts</a></div>
+    </aside>`;
+}
+
 function getHomeCategoryGroups() {
   const configuredGroups = Array.isArray(siteConfig.homeCategoryGroups) ? siteConfig.homeCategoryGroups : [];
   if (configuredGroups.length) {
@@ -669,6 +712,16 @@ function getHomeCategoryGroups() {
     label,
     categories: groupCategories.slice(0, 3)
   }));
+}
+
+function groupCreatorCategories() {
+  return categories
+    .filter((category) => !category.legacy)
+    .reduce((groups, category) => {
+      groups[category.group] = groups[category.group] || [];
+      groups[category.group].push(category);
+      return groups;
+    }, {});
 }
 
 function generateRss() {
