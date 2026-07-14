@@ -834,7 +834,7 @@ function renderAdvancedProductionPanel(id, advanced) {
   if (!items.length) return '';
 
   return `<div class="scene-advanced">
-            <button class="scene-advanced-toggle" type="button" aria-expanded="false" aria-controls="${id}" onclick="const panel = document.getElementById(this.getAttribute('aria-controls')); if (panel) { const isExpanded = this.getAttribute('aria-expanded') === 'true'; this.setAttribute('aria-expanded', String(!isExpanded)); panel.hidden = isExpanded; this.textContent = isExpanded ? 'Show Advanced Production Info' : 'Hide Advanced Production Info'; }">Show Advanced Production Info</button>
+            <button class="scene-advanced-toggle" type="button" aria-expanded="false" aria-controls="${id}">Show Advanced Production Info</button>
             <div class="scene-advanced-panel" id="${id}" hidden>
               ${items.map(([label, value]) => `<p><strong>${escapeHtml(label)}:</strong> ${escapeHtml(value)}</p>`).join('')}
             </div>
@@ -1484,57 +1484,7 @@ ${content}
 }
 
 function renderCreatorLibraryScript() {
-  return `  <script>
-    function showCreatorToast(message) {
-      let toast = document.querySelector('.creator-copy-toast');
-      if (!toast) {
-        toast = document.createElement('div');
-        toast.className = 'creator-copy-toast';
-        toast.setAttribute('role', 'status');
-        toast.setAttribute('aria-live', 'polite');
-        document.body.appendChild(toast);
-      }
-      toast.textContent = message;
-      toast.classList.add('is-visible');
-      window.clearTimeout(showCreatorToast.timer);
-      showCreatorToast.timer = window.setTimeout(() => toast.classList.remove('is-visible'), 1800);
-    }
-
-    async function copyPlainText(text) {
-      if (navigator.clipboard && window.isSecureContext) {
-        await navigator.clipboard.writeText(text);
-        return;
-      }
-      const textarea = document.createElement('textarea');
-      textarea.value = text;
-      textarea.setAttribute('readonly', '');
-      textarea.style.position = 'fixed';
-      textarea.style.left = '-9999px';
-      document.body.appendChild(textarea);
-      textarea.select();
-      document.execCommand('copy');
-      textarea.remove();
-    }
-
-    document.querySelectorAll('.narration-copy-button'.forEach((button) => {
-      button.addEventListener('click', async () => {
-        const format = button.getAttribute('data-narration-target');
-        const list = document.querySelector('.script-prompt-list[data-narration-format="' + format + '"]');
-        if (!list) return;
-        const narration = Array.from(list.querySelectorAll('.scene-narration'))
-          .map((item) => item.textContent.replace(/^\\s*Narration:\\s*/i, '').trim())
-          .filter(Boolean)
-          .join('\\n\\n');
-        if (!narration) return;
-        try {
-          await copyPlainText(narration);
-          showCreatorToast(format === 'long' ? 'Long-form narration copied.' : 'Short-form narration copied.');
-        } catch (error) {
-          showCreatorToast('Copy failed. Please select the narration manually.');
-        }
-      });
-    });
-  </script>`;
+  return `  <script defer src="/scripts/creator-library.js?v=20260715-csp-controls"></script>`;
 }
 
 function renderHeader(currentPath = '/') {
