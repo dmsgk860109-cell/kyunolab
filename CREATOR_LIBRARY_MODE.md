@@ -120,7 +120,11 @@ Every Scene should use this default order:
 5. Recommended Background Music
 6. Editing Guide
 
-Narration should be a finished voiceover script that can be used directly in the video. Keep sentences natural, easy to read aloud, and not too long.
+Narration should be a finished spoken voiceover script that can be used directly in the video. It should feel like a calm documentary or mystery-channel narration, not like an article, report, or academic explanation.
+
+Write Narration as speech. Prefer short sentences, active phrasing, and natural transitions. Avoid overloaded clauses, stiff report language, exaggerated acting, forced horror, clickbait phrasing, and repeated GPT-like connectors.
+
+Use short paragraph breaks as breathing points when useful. Long-form Narration should unfold step by step and make the next Scene feel natural. Short-form Narration should be concise, rhythmic, and immediately understandable.
 
 Image Prompt should be a complete general-purpose image generation prompt. Prioritize story mood, scene emotion, background, lighting, composition, and visible action over rigid subject matching.
 
@@ -136,7 +140,7 @@ Each Scene may include a collapsed optional advanced production area below the b
 
 The page must show only the basic beginner-friendly production information when it first loads.
 
-Advanced production information should be hidden by default behind a keyboard-accessible button labeled "고급 제작 정보 펼치기".
+Advanced production information should be hidden by default behind a keyboard-accessible button labeled "Show Advanced Production Info".
 
 Each Scene should control its own advanced information independently. Opening one Scene must not open or close another Scene.
 
@@ -155,7 +159,7 @@ Sound Effect should provide effect types and search keywords only. Do not recomm
 
 Voice Direction should explain how to read the narration, including tone, speed, emotional intensity, pauses, emphasis, and pronunciation only when useful. Do not use service-specific TTS settings.
 
-Camera and Motion Notes should give simple camera movement guidance with short Korean explanations for terms such as slow push-in, subtle handheld movement, gentle pan, static frame with slight zoom, or focus shift.
+Camera and Motion Notes should give simple camera movement guidance with short plain-English explanations for terms such as slow push-in, subtle handheld movement, gentle pan, static frame with slight zoom, or focus shift.
 
 Transition and Color Notes should give simple transition and color mood guidance without technical color grading values.
 

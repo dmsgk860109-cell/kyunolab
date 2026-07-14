@@ -880,6 +880,10 @@ h1 {
   border: 0;
   background: transparent;
 }
+
+.scene-narration {
+  white-space: pre-line;
+}
 .script-prompt-list p,
 .script-subtitle-lines span {
   border: 1px solid var(--line);

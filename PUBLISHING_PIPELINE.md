@@ -149,11 +149,11 @@ When producing Creator Library materials, follow `CREATOR_LIBRARY_MODE.md`.
 
 The current Creator Library UI, data structure, copy tools, URLs, canonical paths, and sitemap policy remain unchanged unless a separate task explicitly changes them.
 
-The current Creator Library output structure is Scene-based. Each Scene should include Scene number, estimated playback time, finished narration, image prompt, recommended background music keywords, and a simple editing guide.
+The current Creator Library output structure is Scene-based. Each Scene should include Scene number, estimated playback time, finished spoken narration, image prompt, recommended background music keywords, and a simple editing guide.
 
-Optional advanced production information may be included inside each Scene, but it must stay collapsed by default behind a "고급 제작 정보 펼치기" button. It is enhancement material, not part of the required beginner production flow.
+Optional advanced production information may be included inside each Scene, but it must stay collapsed by default behind a "Show Advanced Production Info" button. It is enhancement material, not part of the required beginner production flow.
 
-Narration Guide appears once after Story Information. It provides story-aware voice direction, general narration tool search terms, and a phone recording alternative without recommending a specific service. Long-form and Short-form sections may include copy buttons that assemble full narration from Scene Narration fields dynamically.
+Narration Guide appears once after Story Information. It provides story-aware voice direction, general narration tool search terms, and a phone recording alternative without recommending a specific service. Scene Narration itself must be written as natural spoken voiceover, with short readable sentences, breathing breaks where useful, and no report-like or academic phrasing. Long-form and Short-form sections may include copy buttons that assemble full narration from Scene Narration fields dynamically.
 
 Production Workflow appears once after Narration Guide and before Long-form Creator. It should explain the beginner production order in a short vertical sequence without adding checklist state, login, external links, ads, or progress tracking.
 

@@ -647,6 +647,10 @@ function renderStoryInformationSection(script, originalStory) {
 
 function renderNarrationGuideSection(script) {
   const guide = narrationGuideData(script);
+  const pronunciationBlock = guide.pronunciation.length
+    ? `
+            <div class="pronunciation-guide"><h4>Pronunciation Guide</h4><ul>${guide.pronunciation.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul></div>`
+    : '';
   return `<section class="script-material narration-guide" aria-label="Narration guide">
         <h2>Narration Guide</h2>
         <div class="narration-guide-grid">
@@ -658,7 +662,7 @@ function renderNarrationGuideSection(script) {
               <div><dt>Emotion</dt><dd>${escapeHtml(guide.emotion)}</dd></div>
               <div><dt>Pauses</dt><dd>${escapeHtml(guide.pauses)}</dd></div>
             </dl>
-            ${guide.pronunciation.length ? `<div class="pronunciation-guide"><h4>Pronunciation Guide</h4><ul>${guide.pronunciation.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul></div>` : ''}
+${pronunciationBlock}
           </article>
           <article>
             <h3>How to Find a Narration Tool</h3>
@@ -758,7 +762,7 @@ function renderLongFormCreator(script) {
   const narrationScenes = distributeByScene(script.longformScript || [], sceneCount);
   const sceneCards = Array.from({ length: sceneCount }, (_, index) => {
     const item = prompts[index] || {};
-    const narration = narrationScenes[index].join(' ');
+    const narration = narrationScenes[index].join('\n\n');
     return renderProductionSceneCard({
       number: index + 1,
       duration: sceneEstimatedDuration(script, sceneCount, index, 'long'),
