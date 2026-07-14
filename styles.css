@@ -884,6 +884,40 @@ h1 {
 .scene-narration {
   white-space: pre-line;
 }
+.scene-recording-blocks {
+  display: grid;
+  gap: 8px;
+  margin-top: 10px;
+}
+.recording-block {
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--surface);
+}
+.recording-block h4 {
+  margin: 0 0 8px;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted-strong);
+}
+.script-prompt-list .recording-block p {
+  margin: 8px 0 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+.script-prompt-list .recording-block p:first-of-type {
+  margin-top: 0;
+}
+.reading-tip {
+  color: var(--muted-strong);
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.55;
+}
 .script-prompt-list p,
 .script-subtitle-lines span {
   border: 1px solid var(--line);
