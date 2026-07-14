@@ -834,7 +834,7 @@ function renderAdvancedProductionPanel(id, advanced) {
   if (!items.length) return '';
 
   return `<div class="scene-advanced">
-            <button class="scene-advanced-toggle" type="button" aria-expanded="false" aria-controls="${id}">Show Advanced Production Info</button>
+            <button class="scene-advanced-toggle" type="button" aria-expanded="false" aria-controls="${id}" onclick="const panel = document.getElementById(this.getAttribute('aria-controls')); if (panel) { const isExpanded = this.getAttribute('aria-expanded') === 'true'; this.setAttribute('aria-expanded', String(!isExpanded)); panel.hidden = isExpanded; this.textContent = isExpanded ? 'Show Advanced Production Info' : 'Hide Advanced Production Info'; }">Show Advanced Production Info</button>
             <div class="scene-advanced-panel" id="${id}" hidden>
               ${items.map(([label, value]) => `<p><strong>${escapeHtml(label)}:</strong> ${escapeHtml(value)}</p>`).join('')}
             </div>
@@ -1516,18 +1516,7 @@ function renderCreatorLibraryScript() {
       textarea.remove();
     }
 
-    document.querySelectorAll('.scene-advanced-toggle').forEach((button) => {
-      button.addEventListener('click', () => {
-        const panel = document.getElementById(button.getAttribute('aria-controls'));
-        if (!panel) return;
-        const isExpanded = button.getAttribute('aria-expanded') === 'true';
-        button.setAttribute('aria-expanded', String(!isExpanded));
-        panel.hidden = isExpanded;
-        button.textContent = isExpanded ? 'Show Advanced Production Info' : 'Hide Advanced Production Info';
-      });
-    });
-
-    document.querySelectorAll('.narration-copy-button').forEach((button) => {
+    document.querySelectorAll('.narration-copy-button'.forEach((button) => {
       button.addEventListener('click', async () => {
         const format = button.getAttribute('data-narration-target');
         const list = document.querySelector('.script-prompt-list[data-narration-format="' + format + '"]');
