@@ -573,35 +573,17 @@ function renderScriptDetailPage(script) {
         <p class="deck">${escapeHtml(script.deck)}</p>
         ${renderScriptMetaGrid(script)}
       </header>
-      <section class="search-summary script-summary" aria-label="Script package summary">
-        <h2>Script Info</h2>
-        <dl>
-          <div><dt>Genre</dt><dd>${escapeHtml(script.genre)}</dd></div>
-          <div><dt>Estimated video length</dt><dd>${escapeHtml(script.estimatedVideoLength)}</dd></div>
-          <div><dt>Recommended format</dt><dd>${escapeHtml(script.recommendedFormat || 'Longform narration with Shorts cutdowns')}</dd></div>
-          <div><dt>Mood</dt><dd>${escapeHtml(script.mood || 'Quiet, mysterious, source-aware')}</dd></div>
-          <div><dt>Best for</dt><dd>${escapeHtml(script.bestFor || 'YouTube narration, Shorts planning, and visual prompt development')}</dd></div>
-        </dl>
+      ${renderStorySummarySection(script, originalStory)}
+      ${renderStoryInformationSection(script, originalStory)}
+      ${renderNarrationGuideSection(script)}
+      ${renderProductionWorkflowSection()}
+      <section class="script-material">
+        <h2>Long-form Creator</h2>
+        ${renderLongFormCreator(script)}
       </section>
       <section class="script-material">
-        <h2>Longform YouTube Script</h2>
-        ${script.longformScript.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join('\n')}
-      </section>
-      <section class="script-material">
-        <h2>Shorts Script</h2>
-        <ol>${script.shortsScript.map((line) => `<li>${escapeHtml(line)}</li>`).join('')}</ol>
-      </section>
-      <section class="script-material">
-        <h2>Scene-by-Scene Visual Guide</h2>
-        ${renderSceneVisualGuide(script)}
-      </section>
-      <section class="script-material">
-        <h2>Thumbnail Ideas</h2>
-        <ul>${script.thumbnailIdeas.map((idea) => `<li>${escapeHtml(idea)}</li>`).join('')}</ul>
-      </section>
-      <section class="script-material">
-        <h2>Subtitle Lines</h2>
-        <div class="script-subtitle-lines">${script.subtitleLines.map((line) => `<span>${escapeHtml(line)}</span>`).join('')}</div>
+        <h2>Short-form Creator</h2>
+        ${renderShortFormCreator(script)}
       </section>
       <section class="script-material">
         <h2>Usage Note</h2>
@@ -629,17 +611,443 @@ function renderScriptDetailPage(script) {
   });
 }
 
-function renderSceneVisualGuide(script) {
+function renderStorySummarySection(script, originalStory) {
+  const subject = scriptMainSubject(script, originalStory);
+  const motif = scriptCoreMotif(script);
+  const setting = scriptSetting(script, originalStory);
+  const mood = script.mood || 'Quiet, mysterious, source-aware';
+  const sourceFrame = originalStory
+    ? `Use the original archive record as the source reference, but keep factual claims, legendary motifs, and interpretive atmosphere clearly separated.`
+    : `Treat the material as a source-aware mystery package, keeping factual claims, legendary motifs, and interpretive atmosphere clearly separated.`;
+
+  return `<section class="script-material">
+        <h2>Story Summary</h2>
+        <p>${escapeHtml(script.logline || script.deck || `${subject} is prepared as a creator-ready mystery video topic.`)}</p>
+        <p>${escapeHtml(`${subject} works as a video because it gives the creator a clear subject, a recognizable setting, and a central motif around ${motif}. The production should help viewers understand the main event, the background, and the emotional shape of the story before moving into platform-specific execution.`)}</p>
+        <p>${escapeHtml(`${setting} should be presented with a ${mood.toLowerCase()} tone. ${sourceFrame}`)}</p>
+      </section>`;
+}
+
+function renderStoryInformationSection(script, originalStory) {
+  const info = [
+    ['Genre', script.genre],
+    ['Core Motif', scriptCoreMotif(script)],
+    ['Main Subject', scriptMainSubject(script, originalStory)],
+    ['Setting', scriptSetting(script, originalStory)],
+    ['Mood', script.mood || 'Quiet, mysterious, source-aware'],
+    ['Recommended Video Length', script.estimatedVideoLength],
+    ['Difficulty', script.difficulty || 'Beginner-friendly production package']
+  ];
+
+  return `<section class="search-summary script-summary" aria-label="Story information">
+        <h2>Story Information</h2>
+        <dl>${info.map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value || 'Creator-ready mystery production')}</dd></div>`).join('')}</dl>
+      </section>`;
+}
+
+function renderNarrationGuideSection(script) {
+  const guide = narrationGuideData(script);
+  return `<section class="script-material narration-guide" aria-label="Narration guide">
+        <h2>Narration Guide</h2>
+        <div class="narration-guide-grid">
+          <article>
+            <h3>Recommended Voice Direction</h3>
+            <dl>
+              <div><dt>Voice mood</dt><dd>${escapeHtml(guide.voiceMood)}</dd></div>
+              <div><dt>Reading speed</dt><dd>${escapeHtml(guide.readingSpeed)}</dd></div>
+              <div><dt>Emotion</dt><dd>${escapeHtml(guide.emotion)}</dd></div>
+              <div><dt>Pauses</dt><dd>${escapeHtml(guide.pauses)}</dd></div>
+            </dl>
+            ${guide.pronunciation.length ? `<div class="pronunciation-guide"><h4>Pronunciation Guide</h4><ul>${guide.pronunciation.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul></div>` : ''}
+          </article>
+          <article>
+            <h3>How to Find a Narration Tool</h3>
+            <p>Use search terms like these, then check the free usage range, download option, commercial-use rules, text or time limits, and whether signup or payment is required.</p>
+            <div class="narration-search-terms">${guide.searchTerms.map((term) => `<code>${escapeHtml(term)}</code>`).join('')}</div>
+          </article>
+        </div>
+        <aside class="phone-recording-tip">
+          <h3>Phone Recording Alternative</h3>
+          <p>휴대전화 기본 녹음만으로도 첫 영상을 완성할 수 있습니다. AI 음성을 찾는 과정에서 막힌다면 직접 녹음해도 됩니다. 완벽한 목소리보다 첫 영상을 끝까지 완성하는 경험이 더 중요합니다.</p>
+          <ul>
+            <li>Record in the quietest room you can use.</li>
+            <li>Keep the phone about 20-30 cm from your mouth.</li>
+            <li>Read a little slower than normal.</li>
+            <li>If the full script feels long, record one Scene at a time.</li>
+            <li>Re-record only the mistaken part and replace it in CapCut.</li>
+            <li>Keep background music low enough that the voice stays clear.</li>
+          </ul>
+        </aside>
+      </section>`;
+}
+
+function narrationGuideData(script) {
+  const haystack = `${script.genre || ''} ${script.title || ''} ${script.deck || ''} ${(script.tags || []).join(' ')}`.toLowerCase();
+  const baseTerms = ['free AI voice generator', 'free text to speech', 'AI narration voice', 'natural TTS voice', '무료 AI 음성', '무료 TTS', '무료 나레이션 만들기', '자연스러운 AI 목소리'];
+
+  if (/backrooms|liminal|digital|internet/.test(haystack)) {
+    return {
+      voiceMood: 'Low, dry, and controlled',
+      readingSpeed: 'Slightly slower than normal, with clean pauses',
+      emotion: 'Do not perform panic. Let the empty setting create the unease.',
+      pauses: 'Pause briefly after visual phrases such as empty halls, fluorescent lights, and no exit.',
+      searchTerms: baseTerms,
+      pronunciation: ['Backrooms: BACK-roomz']
+    };
+  }
+  if (/dragon|myth|mythology|creature/.test(haystack)) {
+    return {
+      voiceMood: 'Calm documentary tone with a mythic feeling',
+      readingSpeed: 'Steady and clear, not rushed',
+      emotion: 'Keep the delivery curious and respectful instead of dramatic.',
+      pauses: 'Pause between regions, traditions, and symbolic comparisons.',
+      searchTerms: baseTerms,
+      pronunciation: []
+    };
+  }
+  if (/road|roadside|ghost|woman in white|urban legend/.test(haystack)) {
+    return {
+      voiceMood: 'Quiet, restrained, and suspenseful',
+      readingSpeed: 'Slightly slower than normal',
+      emotion: 'Do not exaggerate fear. Keep the delivery quiet and controlled.',
+      pauses: 'Leave a short pause after key images such as the road, the white figure, and the empty seat.',
+      searchTerms: baseTerms,
+      pronunciation: []
+    };
+  }
+  return {
+    voiceMood: 'Calm and restrained',
+    readingSpeed: 'Slightly slower than normal',
+    emotion: 'Keep the delivery clear and controlled.',
+    pauses: 'Leave a short pause between important sentences.',
+    searchTerms: baseTerms,
+    pronunciation: []
+  };
+}
+
+function renderProductionWorkflowSection() {
+  const steps = [
+    ['①', 'Story', 'Read the Story Summary first.'],
+    ['②', 'Format', 'Choose either Long-form or Short-form.'],
+    ['③', 'Narration', 'Read the Scene Narration.'],
+    ['④', 'Image', 'Copy the Image Prompt and create the image.'],
+    ['⑤', 'Music', 'Use the background music keywords to choose music.'],
+    ['⑥', 'Voice', 'Use the Narration Guide to prepare AI voice or phone recording.'],
+    ['⑦', 'Edit', 'Place each Scene in order in CapCut or another basic editor.'],
+    ['⑧', 'Finish', 'Complete the video.']
+  ];
+
+  return `<section class="script-material production-workflow" aria-label="Production workflow">
+        <h2>Production Workflow</h2>
+        <ol>
+          ${steps.map(([number, label, text]) => `<li><span class="workflow-step-number" aria-hidden="true">${escapeHtml(number)}</span><div><strong>${escapeHtml(label)}</strong><p>${escapeHtml(text)}</p></div></li>`).join('')}
+        </ol>
+        <aside class="workflow-tip">
+          <strong>Small production note</strong>
+          <p>You do not need to make the first version perfect. Finishing the first video from beginning to end matters most.</p>
+        </aside>
+      </section>`;
+}
+
+function renderLongFormCreator(script) {
   const prompts = script.visualGuide || (script.imagePrompts || []).map((prompt, index) => ({
-    suggestedImageDescription: `Scene ${index + 1} visual`,
     aiImagePrompt: prompt,
     directionTip: index === 0 ? 'Open with atmosphere before revealing the central mystery.' : 'Keep the image quiet, readable, and useful for narration pacing.'
   }));
-  return `<div class="script-prompt-list">${prompts.map((item) => `<article>
-          <h3>${escapeHtml(item.suggestedImageDescription || 'Suggested Image Description')}</h3>
-          <p><strong>AI Image Prompt:</strong> ${escapeHtml(item.aiImagePrompt || item.prompt || '')}</p>
-          <p><strong>Direction Tip:</strong> ${escapeHtml(item.directionTip || 'Use this visual as a calm supporting scene, not as a jump-scare image.')}</p>
-        </article>`).join('')}</div>`;
+  const sceneCount = Math.max(prompts.length, 1);
+  const narrationScenes = distributeByScene(script.longformScript || [], sceneCount);
+  const sceneCards = Array.from({ length: sceneCount }, (_, index) => {
+    const item = prompts[index] || {};
+    const narration = narrationScenes[index].join(' ');
+    return renderProductionSceneCard({
+      number: index + 1,
+      duration: sceneEstimatedDuration(script, sceneCount, index, 'long'),
+      narration,
+      imagePrompt: item.aiImagePrompt || item.prompt || '',
+      music: recommendedBackgroundMusic(script, 'long'),
+      editing: editingGuide(index, 'long'),
+      advanced: advancedProductionInfo({
+        script,
+        number: index + 1,
+        format: 'long',
+        narration,
+        imagePrompt: item.aiImagePrompt || item.prompt || ''
+      })
+    });
+  }).join('');
+
+  return `${renderNarrationCopyAction('long', 'Copy Full Long-form Narration')}<div class="script-prompt-list" data-narration-format="long">${sceneCards}</div>`;
+}
+
+function renderShortFormCreator(script) {
+  const sceneCount = Math.max((script.shortsScript || []).length, 1);
+  const promptScenes = distributeByScene(script.imagePrompts || [], sceneCount);
+  const sceneCards = Array.from({ length: sceneCount }, (_, index) => {
+    const narration = (script.shortsScript || [])[index] || '';
+    return renderProductionSceneCard({
+      number: index + 1,
+      duration: sceneEstimatedDuration(script, sceneCount, index, 'short'),
+      narration,
+      imagePrompt: promptScenes[index].join(' '),
+      music: recommendedBackgroundMusic(script, 'short'),
+      editing: editingGuide(index, 'short'),
+      advanced: advancedProductionInfo({
+        script,
+        number: index + 1,
+        format: 'short',
+        narration,
+        imagePrompt: promptScenes[index].join(' ')
+      })
+    });
+  }).join('');
+
+  return `${renderNarrationCopyAction('short', 'Copy Full Short-form Narration')}<div class="script-prompt-list" data-narration-format="short">${sceneCards}</div>`;
+}
+
+function renderNarrationCopyAction(format, label) {
+  return `<div class="narration-copy-action"><button class="narration-copy-button" type="button" data-narration-target="${escapeAttr(format)}">${escapeHtml(label)}</button></div>`;
+}
+
+function renderProductionSceneCard({ number, duration, narration, imagePrompt, music, editing, advanced }) {
+  const advancedId = sceneAdvancedId(number, duration, narration, imagePrompt);
+  return `<article>
+          <h3>Scene ${number}</h3>
+          <p><strong>Estimated Playback Time:</strong> ${escapeHtml(duration)}</p>
+          <p class="scene-narration"><strong>Narration:</strong> ${escapeHtml(narration || 'Use a short, complete narration line that can be read directly in the video.')}</p>
+          <p><strong>Image Prompt:</strong> ${escapeHtml(imagePrompt || 'Cinematic mystery scene, quiet atmosphere, clear subject, readable composition, soft low-key lighting, no gore')}</p>
+          <p><strong>Recommended Background Music:</strong> ${escapeHtml(music)}</p>
+          <p><strong>Editing Guide:</strong> ${escapeHtml(editing)}</p>
+          ${renderAdvancedProductionPanel(advancedId, advanced)}
+        </article>`;
+}
+
+function renderAdvancedProductionPanel(id, advanced) {
+  const items = [
+    ['Motion Prompt', advanced.motionPrompt],
+    ['Sound Effect', advanced.soundEffect],
+    ['Voice Direction', advanced.voiceDirection],
+    ['Camera and Motion Notes', advanced.cameraNotes],
+    ['Transition and Color Notes', advanced.transitionNotes],
+    ['Negative Prompt', advanced.negativePrompt]
+  ].filter(([, value]) => Boolean(value));
+
+  if (!items.length) return '';
+
+  return `<div class="scene-advanced">
+            <button class="scene-advanced-toggle" type="button" aria-expanded="false" aria-controls="${id}">고급 제작 정보 펼치기</button>
+            <div class="scene-advanced-panel" id="${id}" hidden>
+              ${items.map(([label, value]) => `<p><strong>${escapeHtml(label)}:</strong> ${escapeHtml(value)}</p>`).join('')}
+            </div>
+          </div>`;
+}
+
+function sceneAdvancedId(number, duration, narration, imagePrompt) {
+  const raw = `${duration}-${narration}-${imagePrompt}`.toLowerCase();
+  const slug = raw.replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 36) || 'production';
+  return `advanced-scene-${number}-${slug}`;
+}
+
+function sceneEstimatedDuration(script, sceneCount, index, format) {
+  if (format === 'short') {
+    const shortDurations = ['5-7 seconds', '6-8 seconds', '7-9 seconds', '6-8 seconds', '5-7 seconds'];
+    return shortDurations[index] || '5-8 seconds';
+  }
+
+  const match = String(script.estimatedVideoLength || '').match(/(\d+)\s*-\s*(\d+)\s*minutes?/i);
+  if (match) {
+    const min = Math.max(1, Math.floor(Number(match[1]) / sceneCount));
+    const max = Math.max(min + 1, Math.ceil(Number(match[2]) / sceneCount));
+    return `${min}-${max} minutes`;
+  }
+  return '2-4 minutes';
+}
+
+function recommendedBackgroundMusic(script, format) {
+  const haystack = `${script.genre || ''} ${script.title || ''} ${script.deck || ''} ${(script.tags || []).join(' ')}`.toLowerCase();
+  if (/backrooms|internet|liminal|digital/.test(haystack)) {
+    return format === 'short'
+      ? 'Low Drone, Digital Hum, Mystery Atmosphere'
+      : 'Dark Ambient, Low Drone, Liminal Space Atmosphere';
+  }
+  if (/dragon|myth|mythology|creature/.test(haystack)) {
+    return format === 'short'
+      ? 'Epic Mystery Pulse, Low Drums, Ancient Atmosphere'
+      : 'Mythic Ambient, Low Drums, Cinematic Mystery';
+  }
+  if (/road|roadside|ghost|woman in white|urban legend/.test(haystack)) {
+    return format === 'short'
+      ? 'Suspense Piano, Low Drone, Dark Ambient'
+      : 'Dark Ambient, Suspense Piano, Mystery Atmosphere';
+  }
+  return format === 'short'
+    ? 'Low Drone, Suspense Pulse, Mystery Atmosphere'
+    : 'Dark Ambient, Suspense Piano, Low Drone, Mystery Atmosphere';
+}
+
+function editingGuide(index, format) {
+  if (format === 'short') {
+    const shortGuides = [
+      'Start with the image already on screen. Hold for 1 second, then slowly zoom in until the narration ends.',
+      'Use a quick fade from the previous scene. Keep the image steady and add a slow push-in.',
+      'Hold the shot for the full line. Add a slight pan from left to right.',
+      'Fade in from black. Keep the scene still, then cut cleanly on the last word.',
+      'End with a slow zoom and a short fade to black.'
+    ];
+    return shortGuides[index] || 'Hold the image steady for the narration, then use a simple fade transition.';
+  }
+
+  const longGuides = [
+    'Hold the image for 8-10 seconds at a time. Use a slow zoom in and fade to the next scene.',
+    'Use slow panning across the image. Keep cuts gentle and let the narration lead the timing.',
+    'Keep the final image on screen slightly longer. End with a slow zoom and fade out.'
+  ];
+  return longGuides[index] || 'Use a slow zoom, hold the shot, and transition with a simple fade.';
+}
+
+function advancedProductionInfo({ script, number, format, narration, imagePrompt }) {
+  const context = `${script.title || ''} ${script.genre || ''} ${script.deck || ''} ${(script.tags || []).join(' ')} ${narration || ''} ${imagePrompt || ''}`.toLowerCase();
+  const prompt = imagePrompt || 'cinematic mystery scene with a clear subject, quiet atmosphere, and low-key lighting';
+  return {
+    motionPrompt: motionPromptForScene(prompt, context, format),
+    soundEffect: soundEffectForScene(context),
+    voiceDirection: voiceDirectionForScene(context, number, format),
+    cameraNotes: cameraNotesForScene(context, number, format),
+    transitionNotes: transitionNotesForScene(context, number, format),
+    negativePrompt: negativePromptForScene(context)
+  };
+}
+
+function motionPromptForScene(imagePrompt, context, format) {
+  const cameraMove = format === 'short' ? 'a slow push-in with steady vertical framing' : 'a slow cinematic push-in with gentle atmospheric movement';
+  if (/\broad\b|roadside|\bcar\b|driver|headlight|traffic|woman in white|ghost/.test(context)) {
+    return `${imagePrompt}. Add subtle drifting fog, faint headlight movement, and ${cameraMove}. Keep the motion quiet, realistic, and suspenseful.`;
+  }
+  if (/backrooms|liminal|hallway|corridor|fluorescent|room/.test(context)) {
+    return `${imagePrompt}. Let the fluorescent lights flicker softly, add a barely noticeable handheld drift, and move the camera slowly forward through the empty space.`;
+  }
+  if (/dragon|myth|mythology|serpent|storm|cloud|mountain/.test(context)) {
+    return `${imagePrompt}. Add slow cloud movement, gentle scale or silhouette motion, and a smooth camera drift that makes the scene feel ancient and cinematic.`;
+  }
+  return `${imagePrompt}. Add restrained environmental movement and ${cameraMove}. Keep the subject readable and the atmosphere mysterious.`;
+}
+
+function soundEffectForScene(context) {
+  if (/\broad\b|roadside|\bcar\b|driver|headlight|traffic|woman in white|ghost/.test(context)) {
+    return 'distant wind, traffic ambience at night, soft tire noise on wet pavement';
+  }
+  if (/backrooms|liminal|hallway|corridor|fluorescent|room/.test(context)) {
+    return 'low mechanical hum, fluorescent light buzz, distant room tone';
+  }
+  if (/dragon|myth|mythology|serpent|storm|cloud|mountain/.test(context)) {
+    return 'low wind over mountains, distant thunder, deep cinematic rumble';
+  }
+  if (/door|house|room|empty|silence/.test(context)) {
+    return 'room tone, distant wind, subtle floor creak';
+  }
+  return '';
+}
+
+function voiceDirectionForScene(context, number, format) {
+  const pace = format === 'short' ? '짧고 또렷하게 읽는다' : '천천히, 문장 사이를 충분히 띄워 읽는다';
+  if (/woman in white|ghost|road|roadside/.test(context)) {
+    return `속삭이듯 낮은 긴장감으로 ${pace}. "white", "empty", "road" 같은 이미지 단어 뒤에 짧은 여백을 둔다.`;
+  }
+  if (/backrooms|liminal|empty|silence/.test(context)) {
+    return `낮고 건조한 목소리로 ${pace}. "empty", "forever", "ordinary" 같은 단어 앞뒤에 짧게 멈춘다.`;
+  }
+  if (/dragon|myth|mythology|ancient/.test(context)) {
+    return `차분한 다큐멘터리 톤으로 ${pace}. 문화권이나 상징을 말할 때 과장하지 말고, 핵심 단어만 살짝 강조한다.`;
+  }
+  return `${number === 1 ? '처음에는 차분하게 시작한다' : '이전 장면보다 조금 더 집중된 톤으로 읽는다'}. ${pace}. 중요한 명사 뒤에 짧게 멈춘다.`;
+}
+
+function cameraNotesForScene(context, number, format) {
+  if (/backrooms|hallway|corridor/.test(context)) {
+    return 'slow push-in: 화면 안쪽으로 아주 천천히 들어간다. subtle handheld movement: 손으로 든 듯한 약한 흔들림만 준다.';
+  }
+  if (/dragon|myth|cloud|mountain|serpent/.test(context)) {
+    return 'gentle pan from left to right: 장면을 천천히 가로로 보여준다. slow push-in: 상징적인 대상 쪽으로 조금씩 다가간다.';
+  }
+  if (/\broad\b|roadside|\bcar\b|headlight/.test(context)) {
+    return 'static frame with slight zoom: 고정된 화면에서 아주 조금 확대한다. 필요하면 gentle pan from left to right: 왼쪽에서 오른쪽으로 천천히 훑는다.';
+  }
+  return format === 'short'
+    ? 'static frame with slight zoom: 화면을 안정적으로 두고 아주 조금만 확대한다.'
+    : 'slow push-in: 장면의 중심으로 천천히 다가가며 분위기를 유지한다.';
+}
+
+function transitionNotesForScene(context, number, format) {
+  const color = /backrooms|liminal|digital/.test(context)
+    ? '노란빛은 남기되 채도를 낮추고 차갑게 보이게 한다.'
+    : /dragon|myth|mythology/.test(context)
+      ? '어두운 금색, 흐린 청색, 낮은 채도의 고대적 색감을 유지한다.'
+      : '차가운 청색 계열과 낮은 채도로 밤 분위기를 유지한다.';
+  if (format === 'short') {
+    return `짧은 페이드 전환을 사용한다. ${color}`;
+  }
+  return number === 1
+    ? `천천히 페이드 인으로 시작한다. ${color}`
+    : `이전 Scene에서 짧은 페이드로 넘어온다. ${color}`;
+}
+
+function negativePromptForScene(context) {
+  const negatives = new Set();
+  if (/person|woman|figure|driver|passenger|body|face/.test(context)) {
+    ['distorted anatomy', 'extra limbs', 'deformed face'].forEach((item) => negatives.add(item));
+  }
+  if (/dragon|creature|serpent/.test(context)) {
+    ['cartoon style', 'toy-like creature', 'distorted anatomy'].forEach((item) => negatives.add(item));
+  }
+  if (/text|sign|subtitle|document|panel/.test(context)) {
+    ['unreadable text', 'random letters', 'duplicated objects'].forEach((item) => negatives.add(item));
+  }
+  if (/night|low-key|dark|shadow|fluorescent|lighting/.test(context)) {
+    ['oversaturated colors', 'inconsistent lighting'].forEach((item) => negatives.add(item));
+  }
+  return Array.from(negatives).join(', ');
+}
+
+function scriptCoreMotif(script) {
+  const genericTags = new Set(['youtube script', 'shorts script', 'image prompt', 'mystery script']);
+  const tags = (script.tags || [])
+    .filter((tag) => !genericTags.has(String(tag).toLowerCase()))
+    .map((tag) => String(tag).replace(/\s+script$/i, '').trim())
+    .filter(Boolean)
+    .slice(0, 2);
+  if (tags.length) {
+    return tags.join(', ');
+  }
+  return script.logline || script.deck || 'A mystery motif adapted for video production';
+}
+
+function scriptMainSubject(script, originalStory) {
+  if (originalStory && originalStory.title) {
+    return originalStory.title;
+  }
+  return (script.title || 'Creator Library topic')
+    .replace(/\s+YouTube Script$/i, '')
+    .replace(/^The\s+/, 'The ');
+}
+
+function scriptSetting(script, originalStory) {
+  const haystack = `${script.title || ''} ${script.deck || ''} ${(script.tags || []).join(' ')}`.toLowerCase();
+  if (/road|roadside|driver|car/.test(haystack)) return 'Roadside legend setting';
+  if (/backrooms|liminal|room|hallway|digital|internet/.test(haystack)) return 'Digital folklore and liminal-space setting';
+  if (/dragon|myth|mythology|creature/.test(haystack)) return 'Mythology and comparative folklore setting';
+  if (originalStory && originalStory.category) return originalStory.category;
+  return 'Mystery archive setting';
+}
+
+function distributeByScene(items, sceneCount) {
+  const scenes = Array.from({ length: sceneCount }, () => []);
+  if (!Array.isArray(items) || !items.length) {
+    return scenes;
+  }
+  items.forEach((item, index) => {
+    const sceneIndex = Math.min(Math.floor(index * sceneCount / items.length), sceneCount - 1);
+    scenes[sceneIndex].push(item);
+  });
+  return scenes;
 }
 
 function renderRelatedScriptLink(script) {
@@ -1038,6 +1446,9 @@ function renderPage({ canonicalPath, title, description, metaDescription, conten
   const pageTitle = title.includes('|') ? title : `${title} | Kyunolab Mystery Archive`;
   const socialImage = `${siteUrl}/icon-512.png`;
   const robotsMeta = robots ? `  <meta name="robots" content="${escapeAttr(robots)}">\n` : '';
+  const needsCreatorScript = content.includes('scene-advanced-toggle') || content.includes('narration-copy-button');
+  const creatorScript = needsCreatorScript ? `\n${renderCreatorLibraryScript()}` : '';
+  const pageStyleVersion = needsCreatorScript ? '20260714-creator-workflow' : styleVersion;
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -1061,15 +1472,80 @@ ${robotsMeta}  <meta property="og:title" content="${escapeAttr(pageTitle)}">
   <link rel="icon" href="/favicon-48x48.png" type="image/png" sizes="48x48">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="/styles.css?v=${styleVersion}">
+  <link rel="stylesheet" href="/styles.css?v=${pageStyleVersion}">
 </head>
 <body>
   ${renderHeader(canonicalPath)}
 ${content}
-  ${renderFooter()}
+  ${renderFooter()}${creatorScript}
 </body>
 </html>
 `;
+}
+
+function renderCreatorLibraryScript() {
+  return `  <script>
+    function showCreatorToast(message) {
+      let toast = document.querySelector('.creator-copy-toast');
+      if (!toast) {
+        toast = document.createElement('div');
+        toast.className = 'creator-copy-toast';
+        toast.setAttribute('role', 'status');
+        toast.setAttribute('aria-live', 'polite');
+        document.body.appendChild(toast);
+      }
+      toast.textContent = message;
+      toast.classList.add('is-visible');
+      window.clearTimeout(showCreatorToast.timer);
+      showCreatorToast.timer = window.setTimeout(() => toast.classList.remove('is-visible'), 1800);
+    }
+
+    async function copyPlainText(text) {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(text);
+        return;
+      }
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.setAttribute('readonly', '');
+      textarea.style.position = 'fixed';
+      textarea.style.left = '-9999px';
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      textarea.remove();
+    }
+
+    document.querySelectorAll('.scene-advanced-toggle').forEach((button) => {
+      button.addEventListener('click', () => {
+        const panel = document.getElementById(button.getAttribute('aria-controls'));
+        if (!panel) return;
+        const isExpanded = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', String(!isExpanded));
+        panel.hidden = isExpanded;
+        button.textContent = isExpanded ? '고급 제작 정보 펼치기' : '고급 제작 정보 접기';
+      });
+    });
+
+    document.querySelectorAll('.narration-copy-button').forEach((button) => {
+      button.addEventListener('click', async () => {
+        const format = button.getAttribute('data-narration-target');
+        const list = document.querySelector('.script-prompt-list[data-narration-format="' + format + '"]');
+        if (!list) return;
+        const narration = Array.from(list.querySelectorAll('.scene-narration'))
+          .map((item) => item.textContent.replace(/^\\s*Narration:\\s*/i, '').trim())
+          .filter(Boolean)
+          .join('\\n\\n');
+        if (!narration) return;
+        try {
+          await copyPlainText(narration);
+          showCreatorToast(format === 'long' ? 'Long-form narration copied.' : 'Short-form narration copied.');
+        } catch (error) {
+          showCreatorToast('Copy failed. Please select the narration manually.');
+        }
+      });
+    });
+  </script>`;
 }
 
 function renderHeader(currentPath = '/') {

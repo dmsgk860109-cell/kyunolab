@@ -147,14 +147,27 @@ Stories are for reading. Creator Library pages are for making.
 
 When producing Creator Library materials, follow `CREATOR_LIBRARY_MODE.md`.
 
-The current Creator Library UI, data structure, scene format, copy tools, and output format remain unchanged unless a separate task explicitly changes them.
+The current Creator Library UI, data structure, copy tools, URLs, canonical paths, and sitemap policy remain unchanged unless a separate task explicitly changes them.
+
+The current Creator Library output structure is Scene-based. Each Scene should include Scene number, estimated playback time, finished narration, image prompt, recommended background music keywords, and a simple editing guide.
+
+Optional advanced production information may be included inside each Scene, but it must stay collapsed by default behind a "고급 제작 정보 펼치기" button. It is enhancement material, not part of the required beginner production flow.
+
+Narration Guide appears once after Story Information. It provides story-aware voice direction, general narration tool search terms, and a phone recording alternative without recommending a specific service. Long-form and Short-form sections may include copy buttons that assemble full narration from Scene Narration fields dynamically.
+
+Production Workflow appears once after Narration Guide and before Long-form Creator. It should explain the beginner production order in a short vertical sequence without adding checklist state, login, external links, ads, or progress tracking.
+
+Creator Library detail pages use one page per archive story. Keep long-form and short-form creator materials on the same page under shared Story Summary and Story Information sections.
 
 Creator Library generation should prioritize:
 
 - beginner-friendly production flow
-- practical video assets over explanation
+- copy-ready production assets over explanation
+- image, video, sound effect, and music prompts that can be generated from or searched with directly
+- a shared Story Summary and Story Information area before platform-specific production sections
 - a top-to-bottom path for making one complete video
-- connected longform script, Shorts script, image prompts, thumbnail ideas, subtitle lines, and production notes
+- Scene-by-Scene production flow that keeps narration, image prompt, background music keywords, and simple editing guidance together
+- optional Scene-level advanced production details for motion prompts, sound effect search terms, voice direction, camera notes, transition notes, and negative prompts
 - clear separation between original archive stories and creator-facing production packages
 
 ## Common Commands
