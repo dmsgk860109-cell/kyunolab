@@ -668,7 +668,7 @@ function renderNarrationGuideSection(script) {
         </div>
         <aside class="phone-recording-tip">
           <h3>Phone Recording Alternative</h3>
-          <p>휴대전화 기본 녹음만으로도 첫 영상을 완성할 수 있습니다. AI 음성을 찾는 과정에서 막힌다면 직접 녹음해도 됩니다. 완벽한 목소리보다 첫 영상을 끝까지 완성하는 경험이 더 중요합니다.</p>
+          <p>You can finish a first video with a basic phone recording. If choosing an AI voice slows you down, record the narration yourself. Finishing the first video matters more than having a perfect voice.</p>
           <ul>
             <li>Record in the quietest room you can use.</li>
             <li>Keep the phone about 20-30 cm from your mouth.</li>
@@ -683,7 +683,7 @@ function renderNarrationGuideSection(script) {
 
 function narrationGuideData(script) {
   const haystack = `${script.genre || ''} ${script.title || ''} ${script.deck || ''} ${(script.tags || []).join(' ')}`.toLowerCase();
-  const baseTerms = ['free AI voice generator', 'free text to speech', 'AI narration voice', 'natural TTS voice', '무료 AI 음성', '무료 TTS', '무료 나레이션 만들기', '자연스러운 AI 목소리'];
+  const baseTerms = ['free AI voice generator', 'free text to speech', 'AI narration voice', 'natural TTS voice', 'free narration generator', 'voice over generator', 'realistic AI voice', 'text to speech for YouTube'];
 
   if (/backrooms|liminal|digital|internet/.test(haystack)) {
     return {
@@ -834,7 +834,7 @@ function renderAdvancedProductionPanel(id, advanced) {
   if (!items.length) return '';
 
   return `<div class="scene-advanced">
-            <button class="scene-advanced-toggle" type="button" aria-expanded="false" aria-controls="${id}">고급 제작 정보 펼치기</button>
+            <button class="scene-advanced-toggle" type="button" aria-expanded="false" aria-controls="${id}">Show Advanced Production Info</button>
             <div class="scene-advanced-panel" id="${id}" hidden>
               ${items.map(([label, value]) => `<p><strong>${escapeHtml(label)}:</strong> ${escapeHtml(value)}</p>`).join('')}
             </div>
@@ -948,46 +948,46 @@ function soundEffectForScene(context) {
 }
 
 function voiceDirectionForScene(context, number, format) {
-  const pace = format === 'short' ? '짧고 또렷하게 읽는다' : '천천히, 문장 사이를 충분히 띄워 읽는다';
+  const pace = format === 'short' ? 'short, clear, and direct' : 'slowly, with enough space between sentences';
   if (/woman in white|ghost|road|roadside/.test(context)) {
-    return `속삭이듯 낮은 긴장감으로 ${pace}. "white", "empty", "road" 같은 이미지 단어 뒤에 짧은 여백을 둔다.`;
+    return `Read in a quiet, restrained, suspenseful voice, ${pace}. Leave a short pause after visual words such as "white", "empty", and "road".`;
   }
   if (/backrooms|liminal|empty|silence/.test(context)) {
-    return `낮고 건조한 목소리로 ${pace}. "empty", "forever", "ordinary" 같은 단어 앞뒤에 짧게 멈춘다.`;
+    return `Read in a low, dry, controlled voice, ${pace}. Pause briefly around words such as "empty", "forever", and "ordinary".`;
   }
   if (/dragon|myth|mythology|ancient/.test(context)) {
-    return `차분한 다큐멘터리 톤으로 ${pace}. 문화권이나 상징을 말할 때 과장하지 말고, 핵심 단어만 살짝 강조한다.`;
+    return `Use a calm documentary tone, ${pace}. Avoid exaggerating cultures or symbols, and only lightly emphasize the key words.`;
   }
-  return `${number === 1 ? '처음에는 차분하게 시작한다' : '이전 장면보다 조금 더 집중된 톤으로 읽는다'}. ${pace}. 중요한 명사 뒤에 짧게 멈춘다.`;
+  return `${number === 1 ? 'Start calmly' : 'Read with a slightly more focused tone than the previous scene'}. Keep the delivery ${pace}. Pause briefly after important nouns.`;
 }
 
 function cameraNotesForScene(context, number, format) {
   if (/backrooms|hallway|corridor/.test(context)) {
-    return 'slow push-in: 화면 안쪽으로 아주 천천히 들어간다. subtle handheld movement: 손으로 든 듯한 약한 흔들림만 준다.';
+    return 'slow push-in: move very slowly into the scene. subtle handheld movement: add only a small natural camera drift.';
   }
   if (/dragon|myth|cloud|mountain|serpent/.test(context)) {
-    return 'gentle pan from left to right: 장면을 천천히 가로로 보여준다. slow push-in: 상징적인 대상 쪽으로 조금씩 다가간다.';
+    return 'gentle pan from left to right: reveal the scene slowly across the frame. slow push-in: move gradually toward the symbolic subject.';
   }
   if (/\broad\b|roadside|\bcar\b|headlight/.test(context)) {
-    return 'static frame with slight zoom: 고정된 화면에서 아주 조금 확대한다. 필요하면 gentle pan from left to right: 왼쪽에서 오른쪽으로 천천히 훑는다.';
+    return 'static frame with slight zoom: keep the frame steady and zoom in very slightly. If needed, use a gentle pan from left to right.';
   }
   return format === 'short'
-    ? 'static frame with slight zoom: 화면을 안정적으로 두고 아주 조금만 확대한다.'
-    : 'slow push-in: 장면의 중심으로 천천히 다가가며 분위기를 유지한다.';
+    ? 'static frame with slight zoom: keep the frame stable and zoom in only a little.'
+    : 'slow push-in: move slowly toward the center of the scene while keeping the mood restrained.';
 }
 
 function transitionNotesForScene(context, number, format) {
   const color = /backrooms|liminal|digital/.test(context)
-    ? '노란빛은 남기되 채도를 낮추고 차갑게 보이게 한다.'
+    ? 'Keep the yellow light, but lower the saturation and make the image feel colder.'
     : /dragon|myth|mythology/.test(context)
-      ? '어두운 금색, 흐린 청색, 낮은 채도의 고대적 색감을 유지한다.'
-      : '차가운 청색 계열과 낮은 채도로 밤 분위기를 유지한다.';
+      ? 'Use dark gold, muted blue, and low-saturation ancient tones.'
+      : 'Use cool blue tones and low saturation to keep the night atmosphere.';
   if (format === 'short') {
-    return `짧은 페이드 전환을 사용한다. ${color}`;
+    return `Use a short fade transition. ${color}`;
   }
   return number === 1
-    ? `천천히 페이드 인으로 시작한다. ${color}`
-    : `이전 Scene에서 짧은 페이드로 넘어온다. ${color}`;
+    ? `Start with a slow fade in. ${color}`
+    : `Use a short fade from the previous Scene. ${color}`;
 }
 
 function negativePromptForScene(context) {
@@ -1523,7 +1523,7 @@ function renderCreatorLibraryScript() {
         const isExpanded = button.getAttribute('aria-expanded') === 'true';
         button.setAttribute('aria-expanded', String(!isExpanded));
         panel.hidden = isExpanded;
-        button.textContent = isExpanded ? '고급 제작 정보 펼치기' : '고급 제작 정보 접기';
+        button.textContent = isExpanded ? 'Show Advanced Production Info' : 'Hide Advanced Production Info';
       });
     });
 
