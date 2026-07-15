@@ -128,13 +128,14 @@ A creator should be able to read one Scene from top to bottom and make that exac
 Every Scene should use this default order:
 
 1. Scene number
-2. Estimated playback time
+2. Scene Role
 3. Narration
 4. Voice Direction
-5. Scene Focus
-6. Image Prompt
-7. Recommended Background Music
-8. Editing Guide
+5. Estimated Reading Time
+6. Scene Focus
+7. Image Prompt
+8. Recommended Background Music
+9. Editing Guide
 
 Narration should be a finished spoken voiceover script that can be used directly in the video. It should feel like a calm documentary or mystery-channel narration, not like an article, report, or academic explanation.
 
@@ -150,9 +151,11 @@ Short-form Narration should cut background details quickly. The first line shoul
 
 Avoid blog style, academic style, GPT-like repeated connectors, exaggerated acting, forced horror, clickbait phrasing, and emotional pressure. Narration should work for both AI voice generation and a human reader without being tailored to a specific service or recording method.
 
+Scene Role should replace Purpose. It should describe the role the full Scene plays in the video, such as Hook, Introduce the Story, Build Suspense, Present Evidence, Increase Tension, Reveal the Mystery, Closing Reflection, or Leave a Final Question.
+
 Long-form Narration should be displayed as small Narration Parts inside each Scene. A Narration Part is a production script unit, not a new Scene. Each Part should contain one natural meaning unit, usually about 2-4 short sentences or 8-15 seconds of spoken audio.
 
-Each Narration Part should include a one-line Purpose above the narration, plus Voice Direction and Estimated Reading Time below the narration. Purpose explains the role of the part for the creator, not a line for viewers. Voice Direction should help both AI voice generation and human reading without mentioning services or recording methods.
+Each Narration Part should include Narration, Voice Direction, and Estimated Reading Time. Voice Direction should use short keyword-style guidance such as Calm, Natural, Documentary, Quiet, Slow Pace, Soft Ending, Slight Tension, or Emphasize Final Sentence. Do not write long reading instructions inside the Scene.
 
 Short-form Narration should not use Narration Parts unless a Short-form Scene becomes unusually long, roughly 20 seconds or more.
 
@@ -162,7 +165,9 @@ Image Prompt should be a complete general-purpose image generation prompt. Prior
 
 Recommended Background Music should provide mood, genre, and search keywords rather than recommending a specific track. Useful examples include Dark Ambient, Suspense Piano, Low Drone, and Mystery Atmosphere.
 
-Editing Guide should describe how the Scene should appear on screen. Prefer simple camera and screen-flow instructions such as start with a wide shot, slowly zoom toward the subject, hold for two seconds, fade to black, or cut cleanly on the final word. Avoid specialist editing language when a simple instruction is enough.
+Editing Guide should describe the actual screen flow. Prefer simple camera and screen-flow instructions such as Start with a wide shot, Hold briefly, Slow zoom, Fade to black, or Cut cleanly on the final word. Avoid specialist editing language when a simple instruction is enough.
+
+Scenes should feel like production workspaces. Keep production elements visually distinct so creators can quickly find Narration, Image Prompt, Background Music, Editing Guide, and Advanced Production without searching through explanatory text.
 
 Do not expose Motion Prompt, sound effects, or advanced production information in the basic Scene guide.
 

@@ -874,13 +874,19 @@ h1 {
 }
 .script-prompt-list {
   display: grid;
-  gap: 10px;
+  gap: 14px;
 }
 .script-prompt-list article {
   padding: 14px;
   border: 1px solid var(--line);
   border-radius: 4px;
   background: var(--surface);
+}
+.creator-format {
+  border-top: 2px solid var(--ink);
+}
+.creator-format h2 {
+  margin-bottom: 14px;
 }
 .script-prompt-list h3 {
   margin: 0 0 8px;
@@ -896,16 +902,38 @@ h1 {
 .scene-narration {
   white-space: pre-line;
 }
+.scene-workspace {
+  display: grid;
+  gap: 12px;
+}
+.scene-workspace-meta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 8px;
+}
+.script-prompt-list .scene-workspace-meta p,
+.script-prompt-list .scene-narration-single p,
+.script-prompt-list .scene-production-fields p {
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--paper);
+}
+.scene-narration-single,
+.scene-production-fields {
+  display: grid;
+  gap: 8px;
+}
 .scene-narration-parts {
   display: grid;
   gap: 8px;
-  margin-top: 10px;
 }
 .narration-part {
   padding: 10px 12px;
   border: 1px solid var(--line);
   border-radius: 4px;
-  background: var(--surface);
+  background: var(--paper);
 }
 .narration-part h4 {
   margin: 0 0 8px;
@@ -920,6 +948,9 @@ h1 {
   padding: 0;
   border: 0;
   background: transparent;
+}
+.narration-part-script {
+  white-space: pre-line;
 }
 .script-prompt-list .narration-part p:first-of-type {
   margin-top: 0;
@@ -943,7 +974,6 @@ h1 {
   padding: 12px;
 }
 .scene-advanced {
-  margin-top: 12px;
   padding-top: 10px;
   border-top: 1px solid var(--line);
 }
@@ -1956,6 +1986,7 @@ textarea {
 }
 @media (max-width: 560px) {
   .category-grid, .category-hub, .compact-grid, .board-items, .script-card-grid, .script-category-grid, .script-resource-links, .creator-toolkit-grid, .narration-guide-grid { grid-template-columns: 1fr; }
+  .scene-workspace-meta { grid-template-columns: 1fr; }
   .hero,
   .hero-copy,
   .feature-card,

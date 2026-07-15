@@ -567,11 +567,11 @@ function renderScriptDetailPage(script) {
       ${renderStoryInformationSection(script, originalStory)}`;
   const prepareArea = `${renderCreatorToolkitSection(script)}
       ${renderProductionWorkflowSection()}`;
-  const createArea = `<section class="script-material">
+  const createArea = `<section class="script-material creator-format creator-format-long">
         <h2>Long-form Creator</h2>
         ${renderLongFormCreator(script)}
       </section>
-      <section class="script-material">
+      <section class="script-material creator-format creator-format-short">
         <h2>Short-form Creator</h2>
         ${renderShortFormCreator(script)}
       </section>`;
@@ -737,6 +737,7 @@ function renderLongFormCreator(script) {
       duration: sceneEstimatedDuration(script, sceneCount, index, 'long'),
       narration,
       narrationParts: narrationPartsForScene(narrationParts, index, 'long'),
+      format: 'long',
       imagePrompt: item.aiImagePrompt || item.prompt || '',
       sceneFocus: sceneFocusForScene({
         script,
@@ -770,6 +771,7 @@ function renderShortFormCreator(script) {
       duration: sceneEstimatedDuration(script, sceneCount, index, 'short'),
       narration,
       narrationParts: shouldUseNarrationParts(narration, 'short') ? narrationPartsForScene([narration], index, 'short') : [],
+      format: 'short',
       imagePrompt: promptScenes[index].join(' '),
       sceneFocus: sceneFocusForScene({
         script,
@@ -797,21 +799,36 @@ function renderNarrationCopyAction(format, label) {
   return `<div class="narration-copy-action"><button class="narration-copy-button" type="button" data-narration-target="${escapeAttr(format)}">${escapeHtml(label)}</button></div>`;
 }
 
-function renderProductionSceneCard({ number, duration, narration, narrationParts = [], sceneFocus, imagePrompt, music, visualDirection: direction, advanced }) {
+function renderProductionSceneCard({ number, duration, narration, narrationParts = [], format, sceneFocus, imagePrompt, music, visualDirection: direction, advanced }) {
   const advancedId = sceneAdvancedId(number, duration, narration, imagePrompt);
+  const sceneRole = sceneRoleForScene(number - 1, narration, sceneFocus);
   const narrationHtml = narrationParts.length
     ? renderNarrationParts(narration, narrationParts)
-    : `<p class="scene-narration"><strong>Narration:</strong> ${escapeHtml(narration || 'Use a short, complete narration line that can be read directly in the video.')}</p>`;
-  return `<article>
+    : renderPlainNarration(narration, number - 1, format);
+  return `<article class="scene-workspace">
           <h3>Scene ${number}</h3>
-          <p><strong>Estimated Playback Time:</strong> ${escapeHtml(duration)}</p>
+          <div class="scene-workspace-meta">
+            <p><strong>Scene Role:</strong> ${escapeHtml(sceneRole)}</p>
+            <p><strong>Estimated Playback Time:</strong> ${escapeHtml(duration)}</p>
+          </div>
           ${narrationHtml}
-          <p><strong>Scene Focus:</strong> ${escapeHtml(sceneFocus || 'A clear, readable moment from the story.')}</p>
-          <p><strong>Image Prompt:</strong> ${escapeHtml(imagePrompt || 'Cinematic mystery scene, quiet atmosphere, clear subject, readable composition, soft low-key lighting, no gore')}</p>
-          <p><strong>Recommended Background Music:</strong> ${escapeHtml(music)}</p>
-          <p><strong>Editing Guide:</strong> ${escapeHtml(direction)}</p>
+          <div class="scene-production-fields">
+            <p class="scene-field scene-focus"><strong>Scene Focus:</strong> ${escapeHtml(sceneFocus || 'A clear, readable moment from the story.')}</p>
+            <p class="scene-field scene-image-prompt"><strong>Image Prompt:</strong> ${escapeHtml(imagePrompt || 'Cinematic mystery scene, quiet atmosphere, clear subject, readable composition, soft low-key lighting, no gore')}</p>
+            <p class="scene-field scene-music"><strong>Recommended Background Music:</strong> ${escapeHtml(music)}</p>
+            <p class="scene-field scene-editing-guide"><strong>Editing Guide:</strong> ${escapeHtml(direction)}</p>
+          </div>
           ${renderAdvancedProductionPanel(advancedId, advanced)}
         </article>`;
+}
+
+function renderPlainNarration(narration, sceneIndex, format) {
+  const text = narration || 'Use a short, complete narration line that can be read directly in the video.';
+  return `<div class="scene-narration-single">
+            <p class="scene-narration"><strong>Narration:</strong> ${escapeHtml(text)}</p>
+            <p class="narration-part-voice"><strong>Voice Direction:</strong> ${escapeHtml(voiceDirectionForNarrationPart(sceneIndex, 0, format, text))}</p>
+            <p class="narration-part-time"><strong>Estimated Reading Time:</strong> ${escapeHtml(estimatedReadingTime(text))}</p>
+          </div>`;
 }
 
 function renderNarrationParts(narration, parts) {
@@ -820,7 +837,6 @@ function renderNarrationParts(narration, parts) {
             <p class="scene-narration scene-narration-copy-source" hidden><strong>Narration:</strong> ${escapeHtml(copyText)}</p>
             ${parts.map((part, index) => `<section class="narration-part">
               <h4>Narration Part ${index + 1}</h4>
-              <p class="narration-part-purpose"><strong>Purpose:</strong> ${escapeHtml(part.purpose)}</p>
               <p class="narration-part-script"><strong>Narration:</strong> ${escapeHtml(part.narration)}</p>
               <p class="narration-part-voice"><strong>Voice Direction:</strong> ${escapeHtml(part.voiceDirection)}</p>
               <p class="narration-part-time"><strong>Estimated Reading Time:</strong> ${escapeHtml(part.readingTime)}</p>
@@ -834,7 +850,6 @@ function narrationPartsForScene(parts, sceneIndex, format) {
     .filter(Boolean)
     .map((narration, partIndex) => ({
       narration,
-      purpose: purposeForNarrationPart(sceneIndex, partIndex, narration),
       readingTime: estimatedReadingTime(narration),
       voiceDirection: voiceDirectionForNarrationPart(sceneIndex, partIndex, format, narration)
     }));
@@ -905,17 +920,18 @@ function shouldUseNarrationParts(narration, format) {
   return wordCount >= 55;
 }
 
-function purposeForNarrationPart(sceneIndex, partIndex, narration) {
-  const text = String(narration || '').toLowerCase();
-  if (sceneIndex === 0 && partIndex === 0) return 'Hook';
-  if (/imagine|at first|quiet road|room that should feel|four dragons/.test(text)) return 'Set the Scene';
-  if (/why|question|doubt|does not|not always|wrong enough/.test(text)) return 'Create Doubt';
-  if (/legend|folklore|tradition|versions|online|people shared/.test(text)) return 'Introduce the Legend';
-  if (/look|image|photo|body|lights|seat|road|hallway/.test(text)) return 'Present Visual Detail';
-  if (/ending|in the end|final|keeps going|nothing moves|quiet again/.test(text)) return 'Closing Reflection';
+function sceneRoleForScene(sceneIndex, narration, sceneFocus) {
+  const text = `${narration || ''} ${sceneFocus || ''}`.toLowerCase();
+  if (sceneIndex === 0) return 'Hook';
+  if (/origin|legend|folklore|tradition|version|people shared|online/.test(text)) return 'Introduce the Story';
+  if (/why|question|doubt|uncertain|does not|not always|wrong enough/.test(text)) return 'Build Suspense';
+  if (/evidence|record|photo|image|body|lights|ticket|road|hallway|visible/.test(text)) return 'Present Evidence';
+  if (/fear|tension|danger|closer|empty|lost|vanish|impossible/.test(text)) return 'Increase Tension';
+  if (/reveal|mystery|truth|answer|meaning|symbol|final/.test(text)) return 'Reveal the Mystery';
+  if (/ending|in the end|keeps going|nothing moves|quiet again/.test(text)) return 'Closing Reflection';
 
-  const fallback = ['Build Suspense', 'Develop the Idea', 'Add Context', 'Deepen the Mystery'];
-  return fallback[(sceneIndex + partIndex) % fallback.length];
+  const fallback = ['Build Suspense', 'Present Evidence', 'Increase Tension', 'Leave a Final Question'];
+  return fallback[sceneIndex % fallback.length];
 }
 
 function estimatedReadingTime(narration) {
@@ -926,20 +942,20 @@ function estimatedReadingTime(narration) {
 
 function voiceDirectionForNarrationPart(sceneIndex, partIndex, format, narration) {
   const directions = format === 'short'
-    ? ['Clear, natural, steady pace', 'Quiet emphasis, direct delivery', 'Calm, concise, soft ending']
+    ? ['Clear, Natural, Steady Pace', 'Quiet, Direct, Slight Tension', 'Calm, Concise, Soft Ending']
     : [
-        'Calm, documentary, slow pace',
-        'Quiet, natural, short pauses',
-        'Low tension, steady delivery',
-        'Calm with slight emphasis on the final sentence',
-        'Natural pace, reflective ending',
-        'Documentary tone, soft ending'
+        'Calm, Documentary, Slow Pace',
+        'Quiet, Natural, Short Pauses',
+        'Slight Tension, Steady Delivery',
+        'Calm, Emphasize Final Sentence',
+        'Natural, Reflective, Soft Ending',
+        'Documentary, Quiet, Soft Ending'
       ];
   const offset = sceneIndex % 2;
   const direction = directions[(partIndex + offset) % directions.length];
 
   if (/ending|nothing moves|keeps going/i.test(narration)) {
-    return 'Quiet, reflective, soft ending';
+    return 'Quiet, Reflective, Soft Ending';
   }
   return direction;
 }
@@ -1056,21 +1072,21 @@ function sceneFocusForScene({ script, index, format, narration, imagePrompt }) {
 function visualDirection(index, format) {
   if (format === 'short') {
     const shortDirections = [
-      'Start with the image already on screen. Hold for 1 second, then slowly zoom in until the narration ends.',
-      'Use a quick fade from the previous scene. Keep the image steady and add a slow push-in.',
-      'Hold the shot for the full line. Add a slight pan from left to right.',
-      'Fade in from black. Keep the scene still, then cut cleanly on the last word.',
-      'End with a slow zoom and a short fade to black.'
+      'Start on the image. Hold for 1 second. Slow zoom until the narration ends.',
+      'Quick fade in. Keep the image steady. Add a slow push-in.',
+      'Hold the shot for the full line. Pan slightly from left to right.',
+      'Fade in from black. Keep the frame still. Cut cleanly on the last word.',
+      'Slow zoom. Hold briefly. Fade to black.'
     ];
     return shortDirections[index] || 'Hold the image steady for the narration, then use a simple fade transition.';
   }
 
   const longDirections = [
-    'Hold the image for 8-10 seconds at a time. Use a slow zoom in and fade to the next scene.',
-    'Use slow panning across the image. Keep cuts gentle and let the narration lead the timing.',
-    'Keep the final image on screen slightly longer. End with a slow zoom and fade out.'
+    'Start with a wide shot. Hold for 2 seconds. Slow zoom in. Fade to the next scene.',
+    'Pan slowly across the image. Hold on the main subject. Cut gently after the narration beat.',
+    'Hold the final image slightly longer. Slow zoom. Fade out.'
   ];
-  return longDirections[index] || 'Use a slow zoom, hold the shot, and transition with a simple fade.';
+  return longDirections[index] || 'Start steady. Slow zoom. Hold the shot. Fade to the next scene.';
 }
 
 function advancedProductionInfo({ script, number, format, narration, imagePrompt }) {
