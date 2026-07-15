@@ -165,6 +165,8 @@ Long-form Creator and Short-form Creator should remain visually distinct product
 
 Keep page-level guidance outside Scenes. Scenes should contain production outputs only, not AI usage instructions, direct recording instructions, platform explanations, service recommendations, cost notes, installation guidance, workflow explanation, or production philosophy.
 
+Before publishing or regenerating Creator Library pages, compare the output against the Gold Standard representative set: Cursed Images, Backrooms, Woman in White, and Dragons. These pages cover internet folklore, place-centered folklore, person-centered classic legend, and mythology/creature comparison. New pages should match their section order, Scene Workspace structure, copy behavior, collapsed Advanced Production behavior, and Finish-area reference order.
+
 Creator Library generation should prioritize:
 
 - beginner-friendly production flow

@@ -121,6 +121,31 @@ The intended reading and production flow is:
 3. produce Scene 3
 4. finish the video
 
+## Gold Standard Representative Pages
+
+Use the current Creator Library detail pages as the Gold Standard set for structure and production experience:
+
+1. Cursed Images Internet Folklore YouTube Script - internet legend and object/image-centered folklore
+2. The Backrooms Explained YouTube Script - place-centered digital folklore and liminal-space production
+3. Woman in White Urban Legend YouTube Script - person-centered classic roadside legend
+4. Dragon Mythology Around the World YouTube Script - classic mythology and creature comparison
+
+Every new Creator Library page should match this set in order, section titles, Scene Workspace structure, copy behavior, collapsed Advanced Production behavior, and Finish-area reference order.
+
+Gold Standard validation should confirm:
+
+1. Story Summary gives fast story context without becoming a production tutorial.
+2. Creator Toolkit prepares Images, Narration, Background Music, Editing, and optional Motion without requiring a specific service.
+3. Production Workflow explains the work order without adding checklist state or extra features.
+4. Long-form Creator can support a complete 8-10 minute production path.
+5. Short-form Creator works as an independent short video, not only a shortened long-form excerpt.
+6. Scene Workspace provides production outputs in the same order across every page.
+7. Narration reads naturally for both AI voice and human reading.
+8. Scene Focus and Image Prompt describe the same visual moment.
+9. Background Music and Editing Guide support the mood and actual screen flow.
+10. Advanced Production stays collapsed by default and never blocks basic production.
+11. Original Story appears before Reference notes in the Finish area.
+
 ## Basic Scene Production Guide
 
 Each Scene should be a practical production unit, not an explanatory block.
