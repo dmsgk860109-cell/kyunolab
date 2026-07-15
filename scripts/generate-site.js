@@ -845,7 +845,7 @@ function renderProductionSceneCard({ number, duration, narration, narrationParts
           <p><strong>Scene Focus:</strong> ${escapeHtml(sceneFocus || 'A clear, readable moment from the story.')}</p>
           <p><strong>Image Prompt:</strong> ${escapeHtml(imagePrompt || 'Cinematic mystery scene, quiet atmosphere, clear subject, readable composition, soft low-key lighting, no gore')}</p>
           <p><strong>Recommended Background Music:</strong> ${escapeHtml(music)}</p>
-          <p><strong>Visual Direction:</strong> ${escapeHtml(direction)}</p>
+          <p><strong>Editing Guide:</strong> ${escapeHtml(direction)}</p>
           ${renderAdvancedProductionPanel(advancedId, advanced)}
         </article>`;
 }
@@ -858,8 +858,8 @@ function renderNarrationParts(narration, parts) {
               <h4>Narration Part ${index + 1}</h4>
               <p class="narration-part-purpose"><strong>Purpose:</strong> ${escapeHtml(part.purpose)}</p>
               <p class="narration-part-script"><strong>Narration:</strong> ${escapeHtml(part.narration)}</p>
-              <p class="narration-part-time"><strong>Estimated Reading Time:</strong> ${escapeHtml(part.readingTime)}</p>
               <p class="narration-part-voice"><strong>Voice Direction:</strong> ${escapeHtml(part.voiceDirection)}</p>
+              <p class="narration-part-time"><strong>Estimated Reading Time:</strong> ${escapeHtml(part.readingTime)}</p>
             </section>`).join('')}
           </div>`;
 }

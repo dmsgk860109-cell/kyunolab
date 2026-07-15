@@ -151,7 +151,7 @@ The current Creator Library UI, data structure, copy tools, URLs, canonical path
 
 Creator Library detail pages follow an internal Story, Prepare, Create, Finish structure. Story contains shared story context, Prepare contains page-level guidance, Create contains Long-form and Short-form Scene production materials, and Finish contains post-production reference material.
 
-The current Creator Library output structure is Scene-based inside Create. Each Scene should include Scene number, estimated playback time, finished spoken narration, Scene Focus, image prompt, recommended background music keywords, and simple Visual Direction.
+The current Creator Library output structure is Scene-based inside Create. Each Scene should include Scene number, estimated playback time, finished spoken narration, Voice Direction, Scene Focus, image prompt, recommended background music keywords, and a simple Editing Guide.
 
 Optional advanced production information may be included inside each Scene, but it must stay collapsed by default behind a "Show Advanced Production Info" button. It is enhancement material, not part of the required beginner production flow.
 
