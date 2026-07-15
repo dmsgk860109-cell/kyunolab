@@ -86,7 +86,7 @@ These area names are internal structure rules, not required visible headings.
 
 Story contains Story Summary and Story Information. This area helps the creator understand the story quickly before making a video. Do not include production instructions in Story.
 
-Prepare contains Narration Guide and Production Workflow. Put production flow, narration guidance, and beginner preparation notes here rather than inside individual Scenes.
+Prepare contains Creator Toolkit and Production Workflow. Put production flow, creator preparation notes, and tool search direction here rather than inside individual Scenes.
 
 Create contains Long-form Creator and Short-form Creator. All Scenes belong to Create. This area should provide production-ready outputs rather than explaining how the page works.
 
@@ -197,15 +197,33 @@ Transition and Color Notes should give simple transition and color mood guidance
 
 Negative Prompt should appear only when there are clear generation risks to avoid. Do not create an empty or forced Negative Prompt for every Scene.
 
-## Narration Guide
+## Creator Toolkit
 
-Creator Library detail pages should include one shared Narration Guide after Story Information and before Long-form Creator.
+Creator Library detail pages should include one shared Creator Toolkit after Story Information and before Production Workflow.
 
-The guide helps beginners finish the narration step without requiring a specific TTS service, paid tool, voice API, upload workflow, or microphone recording feature.
+Creator Toolkit is a short Prepare-area overview of the main things a creator may need before making the video.
 
-It should include story-aware voice direction, general search terms for finding narration tools, and a practical phone recording alternative.
+Creator Toolkit should cover five balanced areas:
 
-Do not recommend a specific TTS site, affiliate link, paid service, or internal voice generation feature.
+1. Images
+2. Narration
+3. Background Music
+4. Editing
+5. Motion (Optional)
+
+Each area should be brief, easy to scan, and phrased as optional direction. Use phrases such as "You can use" or "Examples include" rather than commands.
+
+Images should point creators back to the Scene Image Prompt and may list example image tools such as GPT, Midjourney, Flux, or SDXL without making any tool required.
+
+Narration should mention that AI voice or direct recording can both work. Provide general search terms such as AI narration, text to speech, natural AI voice, or voice over without recommending a specific service.
+
+Background Music should suggest mood search terms such as Dark Ambient, Cinematic Drone, Mystery Atmosphere, or Low Drone. It may mention common source examples without comparing prices or requiring a service.
+
+Editing should mention that any editor can be used and may list examples such as CapCut, DaVinci Resolve, or Premiere Pro without explaining tool-specific usage.
+
+Motion should be optional. It should only explain that creators can use the Scene Motion Prompt when motion generation is available.
+
+Do not include pricing, signup advice, installation steps, tutorials, affiliate links, or a single required service in Creator Toolkit.
 
 Long-form Creator and Short-form Creator should each include a button that copies only that format's Scene Narration text.
 
@@ -215,13 +233,13 @@ The copied text must contain only the script to read, with blank lines between S
 
 ## Production Workflow
 
-Creator Library detail pages should include one shared Production Workflow after Narration Guide and before Long-form Creator.
+Creator Library detail pages should include one shared Production Workflow after Creator Toolkit and before Long-form Creator.
 
 The workflow is a simple beginner-facing sequence that explains what to do first, what to do next, and how to finish one video.
 
 Keep it short and vertical. Prefer one readable line per step over long explanations or a grid of separate cards.
 
-The workflow should guide the creator through reading the Story Summary, choosing Long-form or Short-form, reading Scene Narration, creating images from Image Prompt, choosing music from search keywords, preparing voice with the Narration Guide, editing Scenes in order, and finishing the video.
+The workflow should guide the creator through reading the Story Summary, reviewing the Creator Toolkit, choosing Long-form or Short-form, reading Scene Narration, creating images from Image Prompt, choosing music from search keywords, editing Scenes in order, and finishing the video.
 
 The workflow may include one small tip that reminds the creator that the first video does not need to be perfect. Do not make it sound like an advertisement or a motivational banner.
 

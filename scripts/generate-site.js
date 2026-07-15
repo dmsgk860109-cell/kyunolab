@@ -565,7 +565,7 @@ function renderScriptDetailPage(script) {
   const usageNote = script.usageNote || 'This script is provided as a reference for video creators. You may adapt and edit it for your own video format. Credit to Kyunolab is appreciated when used as a source or inspiration. Please present the story as a mystery, legend, or fictional-style narration rather than a confirmed real event.';
   const storyArea = `${renderStorySummarySection(script, originalStory)}
       ${renderStoryInformationSection(script, originalStory)}`;
-  const prepareArea = `${renderNarrationGuideSection(script)}
+  const prepareArea = `${renderCreatorToolkitSection(script)}
       ${renderProductionWorkflowSection()}`;
   const createArea = `<section class="script-material">
         <h2>Long-form Creator</h2>
@@ -649,88 +649,52 @@ function renderStoryInformationSection(script, originalStory) {
       </section>`;
 }
 
-function renderNarrationGuideSection(script) {
-  const guide = narrationGuideData(script);
-  const pronunciationBlock = guide.pronunciation.length
-    ? `
-            <div class="pronunciation-guide"><h4>Pronunciation Guide</h4><ul>${guide.pronunciation.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul></div>`
-    : '';
-  return `<section class="script-material narration-guide" aria-label="Narration guide">
-        <h2>Narration Guide</h2>
-        <div class="narration-guide-grid">
-          <article>
-            <h3>Recommended Voice Direction</h3>
-            <dl>
-              <div><dt>Voice mood</dt><dd>${escapeHtml(guide.voiceMood)}</dd></div>
-              <div><dt>Reading speed</dt><dd>${escapeHtml(guide.readingSpeed)}</dd></div>
-              <div><dt>Emotion</dt><dd>${escapeHtml(guide.emotion)}</dd></div>
-              <div><dt>Pauses</dt><dd>${escapeHtml(guide.pauses)}</dd></div>
-            </dl>
-${pronunciationBlock}
-          </article>
-          <article>
-            <h3>How to Find a Narration Tool</h3>
-            <p>Use search terms like these, then check the free usage range, download option, commercial-use rules, text or time limits, and whether signup or payment is required.</p>
-            <div class="narration-search-terms">${guide.searchTerms.map((term) => `<code>${escapeHtml(term)}</code>`).join('')}</div>
-          </article>
+function renderCreatorToolkitSection(script) {
+  const toolkit = creatorToolkitData(script);
+  return `<section class="script-material creator-toolkit" aria-label="Creator toolkit">
+        <h2>Creator Toolkit</h2>
+        <div class="creator-toolkit-grid">
+          ${toolkit.map((item) => `<article>
+            <h3>${escapeHtml(item.title)}</h3>
+            <p>${escapeHtml(item.text)}</p>
+            <div class="toolkit-terms">${item.terms.map((term) => `<code>${escapeHtml(term)}</code>`).join('')}</div>
+          </article>`).join('')}
         </div>
-        <aside class="phone-recording-tip">
-          <h3>Phone Recording Alternative</h3>
-          <p>You can finish a first video with a basic phone recording. If choosing an AI voice slows you down, record the narration yourself. Finishing the first video matters more than having a perfect voice.</p>
-          <ul>
-            <li>Record in the quietest room you can use.</li>
-            <li>Keep the phone about 20-30 cm from your mouth.</li>
-            <li>Read a little slower than normal.</li>
-            <li>If the full script feels long, record one Scene at a time.</li>
-            <li>Re-record only the mistaken part and replace it in CapCut.</li>
-            <li>Keep background music low enough that the voice stays clear.</li>
-          </ul>
-        </aside>
       </section>`;
 }
 
-function narrationGuideData(script) {
-  const haystack = `${script.genre || ''} ${script.title || ''} ${script.deck || ''} ${(script.tags || []).join(' ')}`.toLowerCase();
-  const baseTerms = ['free AI voice generator', 'free text to speech', 'AI narration voice', 'natural TTS voice', 'free narration generator', 'voice over generator', 'realistic AI voice', 'text to speech for YouTube'];
+function creatorToolkitData(script) {
+  const motionText = (script.motionPrompts || []).length
+    ? 'Optional. If you want moving shots, you can use the Motion Prompt inside each Scene as a starting point.'
+    : 'Optional. If motion is available, keep movement subtle and let the Scene image stay readable.';
 
-  if (/backrooms|liminal|digital|internet/.test(haystack)) {
-    return {
-      voiceMood: 'Low, dry, and controlled',
-      readingSpeed: 'Slightly slower than normal, with clean pauses',
-      emotion: 'Do not perform panic. Let the empty setting create the unease.',
-      pauses: 'Pause briefly after visual phrases such as empty halls, fluorescent lights, and no exit.',
-      searchTerms: baseTerms,
-      pronunciation: ['Backrooms: BACK-roomz']
-    };
-  }
-  if (/dragon|myth|mythology|creature/.test(haystack)) {
-    return {
-      voiceMood: 'Calm documentary tone with a mythic feeling',
-      readingSpeed: 'Steady and clear, not rushed',
-      emotion: 'Keep the delivery curious and respectful instead of dramatic.',
-      pauses: 'Pause between regions, traditions, and symbolic comparisons.',
-      searchTerms: baseTerms,
-      pronunciation: []
-    };
-  }
-  if (/road|roadside|ghost|woman in white|urban legend/.test(haystack)) {
-    return {
-      voiceMood: 'Quiet, restrained, and suspenseful',
-      readingSpeed: 'Slightly slower than normal',
-      emotion: 'Do not exaggerate fear. Keep the delivery quiet and controlled.',
-      pauses: 'Leave a short pause after key images such as the road, the white figure, and the empty seat.',
-      searchTerms: baseTerms,
-      pronunciation: []
-    };
-  }
-  return {
-    voiceMood: 'Calm and restrained',
-    readingSpeed: 'Slightly slower than normal',
-    emotion: 'Keep the delivery clear and controlled.',
-    pauses: 'Leave a short pause between important sentences.',
-    searchTerms: baseTerms,
-    pronunciation: []
-  };
+  return [
+    {
+      title: 'Images',
+      text: 'You can use image generation tools to create the Scene visuals. Use the Image Prompt provided inside each Scene.',
+      terms: ['GPT', 'Midjourney', 'Flux', 'SDXL']
+    },
+    {
+      title: 'Narration',
+      text: 'You can use AI voice or record the narration yourself. Search for a natural voice that stays clear and calm.',
+      terms: ['AI narration', 'text to speech', 'natural AI voice', 'voice over']
+    },
+      {
+        title: 'Background Music',
+        text: 'You can choose mood-based music from any audio library. Keep it low enough to stay behind the narration.',
+        terms: ['Dark Ambient', 'Cinematic Drone', 'Mystery Atmosphere', 'Low Drone', 'YouTube Audio Library']
+      },
+    {
+      title: 'Editing',
+      text: 'You can assemble the video in any editor. Follow the Scene order and use each Editing Guide for the screen flow.',
+      terms: ['CapCut', 'DaVinci Resolve', 'Premiere Pro', 'video editor']
+    },
+    {
+      title: 'Motion (Optional)',
+      text: motionText,
+      terms: ['Motion Prompt', 'image to video', 'slow push-in', 'subtle camera motion']
+    }
+  ];
 }
 
 function renderProductionWorkflowSection() {
@@ -740,7 +704,7 @@ function renderProductionWorkflowSection() {
     ['③', 'Narration', 'Read the Scene Narration.'],
     ['④', 'Image', 'Copy the Image Prompt and create the image.'],
     ['⑤', 'Music', 'Use the background music keywords to choose music.'],
-    ['⑥', 'Voice', 'Use the Narration Guide to prepare AI voice or phone recording.'],
+    ['⑥', 'Voice', 'Use the Creator Toolkit to prepare AI voice or optional recording.'],
     ['⑦', 'Edit', 'Place each Scene in order in CapCut or another basic editor.'],
     ['⑧', 'Finish', 'Complete the video.']
   ];
