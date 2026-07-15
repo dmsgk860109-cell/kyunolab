@@ -136,9 +136,17 @@ Every Scene should use this default order:
 
 Narration should be a finished spoken voiceover script that can be used directly in the video. It should feel like a calm documentary or mystery-channel narration, not like an article, report, or academic explanation.
 
-Write Narration as speech. Prefer short sentences, active phrasing, and natural transitions. Avoid overloaded clauses, stiff report language, exaggerated acting, forced horror, clickbait phrasing, and repeated GPT-like connectors.
+Write Narration as speech. Prefer short sentences, active phrasing, and natural transitions. Aim for a tone between documentary and storytelling: clear, calm, and human, without becoming too casual or too formal.
 
-Use short paragraph breaks as breathing points when useful. Long-form Narration should unfold step by step and make the next Scene feel natural. Short-form Narration should be concise, rhythmic, and immediately understandable.
+Keep one idea in one sentence whenever possible. Favor natural sentences of about 8-15 words, avoid overloaded clauses, and do not rely on long relative clauses or stiff passive phrasing.
+
+Use short paragraph breaks as breathing points when useful. Line breaks are part of the spoken script structure, not decoration.
+
+Long-form Narration should unfold like a video: hook, situation, strange detail, question, and a natural bridge toward the next Scene. It should not increase length by repeating the same explanation.
+
+Short-form Narration should cut background details quickly. The first line should create immediate interest, and each line should move toward the core idea.
+
+Avoid blog style, academic style, GPT-like repeated connectors, exaggerated acting, forced horror, clickbait phrasing, and emotional pressure. Narration should work for both AI voice generation and a human reader without being tailored to a specific service or recording method.
 
 Long-form Narration should be displayed as small Narration Parts inside each Scene. A Narration Part is a production script unit, not a new Scene. Each Part should contain one natural meaning unit, usually about 2-4 short sentences or 8-15 seconds of spoken audio.
 
