@@ -768,7 +768,7 @@ function renderLongFormCreator(script) {
       number: index + 1,
       duration: sceneEstimatedDuration(script, sceneCount, index, 'long'),
       narration,
-      recordingBlocks: recordingBlocksForNarration(narrationParts, index, 'long'),
+      narrationParts: narrationPartsForScene(narrationParts, index, 'long'),
       imagePrompt: item.aiImagePrompt || item.prompt || '',
       music: recommendedBackgroundMusic(script, 'long'),
       editing: editingGuide(index, 'long'),
@@ -794,7 +794,7 @@ function renderShortFormCreator(script) {
       number: index + 1,
       duration: sceneEstimatedDuration(script, sceneCount, index, 'short'),
       narration,
-      recordingBlocks: shouldUseRecordingBlocks(narration, 'short') ? recordingBlocksForNarration([narration], index, 'short') : [],
+      narrationParts: shouldUseNarrationParts(narration, 'short') ? narrationPartsForScene([narration], index, 'short') : [],
       imagePrompt: promptScenes[index].join(' '),
       music: recommendedBackgroundMusic(script, 'short'),
       editing: editingGuide(index, 'short'),
@@ -815,10 +815,10 @@ function renderNarrationCopyAction(format, label) {
   return `<div class="narration-copy-action"><button class="narration-copy-button" type="button" data-narration-target="${escapeAttr(format)}">${escapeHtml(label)}</button></div>`;
 }
 
-function renderProductionSceneCard({ number, duration, narration, recordingBlocks = [], imagePrompt, music, editing, advanced }) {
+function renderProductionSceneCard({ number, duration, narration, narrationParts = [], imagePrompt, music, editing, advanced }) {
   const advancedId = sceneAdvancedId(number, duration, narration, imagePrompt);
-  const narrationHtml = recordingBlocks.length
-    ? renderRecordingBlocks(narration, recordingBlocks)
+  const narrationHtml = narrationParts.length
+    ? renderNarrationParts(narration, narrationParts)
     : `<p class="scene-narration"><strong>Narration:</strong> ${escapeHtml(narration || 'Use a short, complete narration line that can be read directly in the video.')}</p>`;
   return `<article>
           <h3>Scene ${number}</h3>
@@ -831,25 +831,29 @@ function renderProductionSceneCard({ number, duration, narration, recordingBlock
         </article>`;
 }
 
-function renderRecordingBlocks(narration, blocks) {
-  const copyText = narration || blocks.map((block) => block.narration).join('\n\n');
-  return `<div class="scene-recording-blocks">
+function renderNarrationParts(narration, parts) {
+  const copyText = narration || parts.map((part) => part.narration).join('\n\n');
+  return `<div class="scene-narration-parts">
             <p class="scene-narration scene-narration-copy-source" hidden><strong>Narration:</strong> ${escapeHtml(copyText)}</p>
-            ${blocks.map((block, index) => `<section class="recording-block">
-              <h4>Recording Block ${index + 1}</h4>
-              <p class="recording-block-narration"><strong>Narration:</strong> ${escapeHtml(block.narration)}</p>
-              <p class="reading-tip"><strong>Reading Tip:</strong> ${escapeHtml(block.readingTip)}</p>
+            ${parts.map((part, index) => `<section class="narration-part">
+              <h4>Narration Part ${index + 1}</h4>
+              <p class="narration-part-purpose"><strong>Purpose:</strong> ${escapeHtml(part.purpose)}</p>
+              <p class="narration-part-script"><strong>Narration:</strong> ${escapeHtml(part.narration)}</p>
+              <p class="narration-part-time"><strong>Estimated Reading Time:</strong> ${escapeHtml(part.readingTime)}</p>
+              <p class="narration-part-voice"><strong>Voice Direction:</strong> ${escapeHtml(part.voiceDirection)}</p>
             </section>`).join('')}
           </div>`;
 }
 
-function recordingBlocksForNarration(parts, sceneIndex, format) {
+function narrationPartsForScene(parts, sceneIndex, format) {
   return parts
     .flatMap((part) => splitNarrationPart(part))
     .filter(Boolean)
-    .map((narration, blockIndex) => ({
+    .map((narration, partIndex) => ({
       narration,
-      readingTip: readingTipForBlock(sceneIndex, blockIndex, format, narration)
+      purpose: purposeForNarrationPart(sceneIndex, partIndex, narration),
+      readingTime: estimatedReadingTime(narration),
+      voiceDirection: voiceDirectionForNarrationPart(sceneIndex, partIndex, format, narration)
     }));
 }
 
@@ -912,34 +916,49 @@ function countSentences(text) {
     .filter(Boolean).length || 0;
 }
 
-function shouldUseRecordingBlocks(narration, format) {
+function shouldUseNarrationParts(narration, format) {
   if (format !== 'short') return true;
   const wordCount = String(narration || '').trim().split(/\s+/).filter(Boolean).length;
   return wordCount >= 55;
 }
 
-function readingTipForBlock(sceneIndex, blockIndex, format, narration) {
-  const tips = format === 'short'
-    ? [
-        'Keep the pace clear and direct.',
-        'Pause briefly before the final sentence.',
-        'Stress the last image without sounding dramatic.'
-      ]
+function purposeForNarrationPart(sceneIndex, partIndex, narration) {
+  const text = String(narration || '').toLowerCase();
+  if (sceneIndex === 0 && partIndex === 0) return 'Hook';
+  if (/imagine|at first|quiet road|room that should feel|four dragons/.test(text)) return 'Set the Scene';
+  if (/why|question|doubt|does not|not always|wrong enough/.test(text)) return 'Create Doubt';
+  if (/legend|folklore|tradition|versions|online|people shared/.test(text)) return 'Introduce the Legend';
+  if (/look|image|photo|body|lights|seat|road|hallway/.test(text)) return 'Present Visual Detail';
+  if (/ending|in the end|final|keeps going|nothing moves|quiet again/.test(text)) return 'Closing Reflection';
+
+  const fallback = ['Build Suspense', 'Develop the Idea', 'Add Context', 'Deepen the Mystery'];
+  return fallback[(sceneIndex + partIndex) % fallback.length];
+}
+
+function estimatedReadingTime(narration) {
+  const wordCount = String(narration || '').trim().split(/\s+/).filter(Boolean).length;
+  const seconds = Math.max(8, Math.round(wordCount / 2.35));
+  return `≈ ${seconds} sec`;
+}
+
+function voiceDirectionForNarrationPart(sceneIndex, partIndex, format, narration) {
+  const directions = format === 'short'
+    ? ['Clear, natural, steady pace', 'Quiet emphasis, direct delivery', 'Calm, concise, soft ending']
     : [
-        'Start slowly and let the first image settle.',
-        'Keep a calm tone, with a short pause between ideas.',
-        'Lower your voice slightly as the mystery becomes clearer.',
-        'Stress the final sentence, then leave a brief pause.',
-        'Read steadily and avoid rushing the transition.',
-        'Pause before the final line so the ending lands naturally.'
+        'Calm, documentary, slow pace',
+        'Quiet, natural, short pauses',
+        'Low tension, steady delivery',
+        'Calm with slight emphasis on the final sentence',
+        'Natural pace, reflective ending',
+        'Documentary tone, soft ending'
       ];
   const offset = sceneIndex % 2;
-  const tip = tips[(blockIndex + offset) % tips.length];
+  const direction = directions[(partIndex + offset) % directions.length];
 
   if (/ending|nothing moves|keeps going/i.test(narration)) {
-    return 'Pause before the final line so the ending lands naturally.';
+    return 'Quiet, reflective, soft ending';
   }
-  return tip;
+  return direction;
 }
 
 function renderAdvancedProductionPanel(id, advanced) {

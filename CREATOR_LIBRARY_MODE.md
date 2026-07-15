@@ -126,11 +126,11 @@ Write Narration as speech. Prefer short sentences, active phrasing, and natural 
 
 Use short paragraph breaks as breathing points when useful. Long-form Narration should unfold step by step and make the next Scene feel natural. Short-form Narration should be concise, rhythmic, and immediately understandable.
 
-Long-form Narration should be displayed as small Recording Blocks inside each Scene. A Recording Block is a recording unit, not a new Scene. Each Block should contain one natural meaning unit, usually about 2-4 short sentences or 8-15 seconds of spoken audio.
+Long-form Narration should be displayed as small Narration Parts inside each Scene. A Narration Part is a production script unit, not a new Scene. Each Part should contain one natural meaning unit, usually about 2-4 short sentences or 8-15 seconds of spoken audio.
 
-Each Recording Block should include a short Reading Tip below the block. Reading Tips should be practical suggestions for beginners, no more than two lines, and should vary with the moment of the story. Do not repeat the same tip for every block.
+Each Narration Part should include a one-line Purpose above the narration, plus Estimated Reading Time and Voice Direction below the narration. Purpose explains the role of the part for the creator, not a line for viewers. Voice Direction should help both AI voice generation and human reading without mentioning services or recording methods.
 
-Short-form Narration should not use Recording Blocks unless a Short-form Scene becomes unusually long, roughly 20 seconds or more.
+Short-form Narration should not use Narration Parts unless a Short-form Scene becomes unusually long, roughly 20 seconds or more.
 
 Image Prompt should be a complete general-purpose image generation prompt. Prioritize story mood, scene emotion, background, lighting, composition, and visible action over rigid subject matching.
 

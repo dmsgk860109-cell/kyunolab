@@ -884,18 +884,18 @@ h1 {
 .scene-narration {
   white-space: pre-line;
 }
-.scene-recording-blocks {
+.scene-narration-parts {
   display: grid;
   gap: 8px;
   margin-top: 10px;
 }
-.recording-block {
+.narration-part {
   padding: 10px 12px;
   border: 1px solid var(--line);
   border-radius: 4px;
   background: var(--surface);
 }
-.recording-block h4 {
+.narration-part h4 {
   margin: 0 0 8px;
   font-family: Arial, sans-serif;
   font-size: 12px;
@@ -903,16 +903,18 @@ h1 {
   text-transform: uppercase;
   color: var(--muted-strong);
 }
-.script-prompt-list .recording-block p {
+.script-prompt-list .narration-part p {
   margin: 8px 0 0;
   padding: 0;
   border: 0;
   background: transparent;
 }
-.script-prompt-list .recording-block p:first-of-type {
+.script-prompt-list .narration-part p:first-of-type {
   margin-top: 0;
 }
-.reading-tip {
+.narration-part-purpose,
+.narration-part-time,
+.narration-part-voice {
   color: var(--muted-strong);
   font-family: Arial, sans-serif;
   font-size: 13px;
