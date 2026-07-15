@@ -75,12 +75,22 @@ One archive story should have one Creator Library page.
 
 Each page should contain all information needed to make the video from beginning to end.
 
-The default Creator Library page order is:
+The default Creator Library page structure follows four internal areas:
 
-1. Story Summary
-2. Story Information
-3. Long-form Creator
-4. Short-form Creator
+1. Story
+2. Prepare
+3. Create
+4. Finish
+
+These area names are internal structure rules, not required visible headings.
+
+Story contains Story Summary and Story Information. This area helps the creator understand the story quickly before making a video. Do not include production instructions in Story.
+
+Prepare contains Narration Guide and Production Workflow. Put production flow, narration guidance, and beginner preparation notes here rather than inside individual Scenes.
+
+Create contains Long-form Creator and Short-form Creator. All Scenes belong to Create. This area should provide production-ready outputs rather than explaining how the page works.
+
+Finish contains post-production reference material such as Usage Note, Original Story, related script references, or source/reference links already supported by the current page.
 
 Story Summary and Story Information are shared context for both long-form and short-form production. Do not repeat the same story context separately inside both creator sections.
 
@@ -93,6 +103,10 @@ Do not treat the short-form version as a simple shortened copy of the long-form 
 Creator Library output is organized by Scene.
 
 Scene is the smallest production unit for a video.
+
+Page-level sections may explain workflow, narration preparation, and how to use the creator materials. Scenes should not explain workflow, tools, platforms, services, costs, installation, direct recording methods, or production philosophy.
+
+Scenes should contain only production information needed to make that video moment, such as Narration, Image Prompt, Recommended Background Music, Editing Guide, and optional Advanced Production information.
 
 Do not output Hook, Narration, Scene, Image Prompt, Motion Prompt, Sound, Music, or similar production materials as isolated top-level sections when they belong to the same moment in the video.
 

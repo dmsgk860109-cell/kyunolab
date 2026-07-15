@@ -149,7 +149,9 @@ When producing Creator Library materials, follow `CREATOR_LIBRARY_MODE.md`.
 
 The current Creator Library UI, data structure, copy tools, URLs, canonical paths, and sitemap policy remain unchanged unless a separate task explicitly changes them.
 
-The current Creator Library output structure is Scene-based. Each Scene should include Scene number, estimated playback time, finished spoken narration, image prompt, recommended background music keywords, and a simple editing guide.
+Creator Library detail pages follow an internal Story, Prepare, Create, Finish structure. Story contains shared story context, Prepare contains page-level guidance, Create contains Long-form and Short-form Scene production materials, and Finish contains post-production reference material.
+
+The current Creator Library output structure is Scene-based inside Create. Each Scene should include Scene number, estimated playback time, finished spoken narration, image prompt, recommended background music keywords, and a simple editing guide.
 
 Optional advanced production information may be included inside each Scene, but it must stay collapsed by default behind a "Show Advanced Production Info" button. It is enhancement material, not part of the required beginner production flow.
 
@@ -158,6 +160,8 @@ Narration Guide appears once after Story Information. It provides story-aware vo
 Production Workflow appears once after Narration Guide and before Long-form Creator. It should explain the beginner production order in a short vertical sequence without adding checklist state, login, external links, ads, or progress tracking.
 
 Creator Library detail pages use one page per archive story. Keep long-form and short-form creator materials on the same page under shared Story Summary and Story Information sections.
+
+Keep page-level guidance outside Scenes. Scenes should contain production outputs only, not AI usage instructions, direct recording instructions, platform explanations, service recommendations, cost notes, installation guidance, workflow explanation, or production philosophy.
 
 Creator Library generation should prioritize:
 

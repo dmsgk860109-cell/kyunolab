@@ -563,6 +563,27 @@ function renderScriptDetailPage(script) {
   const relatedScripts = sortNewest(creatorScripts).filter((item) => item.slug !== script.slug).slice(0, 4);
   const canonicalPath = `/scripts/${script.slug}`;
   const usageNote = script.usageNote || 'This script is provided as a reference for video creators. You may adapt and edit it for your own video format. Credit to Kyunolab is appreciated when used as a source or inspiration. Please present the story as a mystery, legend, or fictional-style narration rather than a confirmed real event.';
+  const storyArea = `${renderStorySummarySection(script, originalStory)}
+      ${renderStoryInformationSection(script, originalStory)}`;
+  const prepareArea = `${renderNarrationGuideSection(script)}
+      ${renderProductionWorkflowSection()}`;
+  const createArea = `<section class="script-material">
+        <h2>Long-form Creator</h2>
+        ${renderLongFormCreator(script)}
+      </section>
+      <section class="script-material">
+        <h2>Short-form Creator</h2>
+        ${renderShortFormCreator(script)}
+      </section>`;
+  const finishArea = `<section class="script-material">
+        <h2>Usage Note</h2>
+        <p>${escapeHtml(usageNote)}</p>
+      </section>
+      ${originalStory ? `<aside class="script-version-cta"><p class="rail-label">Original archive story</p><p>Read the original archive story.</p><a class="button" href="/stories/${escapeAttr(originalStory.slug)}">${escapeHtml(originalStory.title)}</a></aside>` : ''}
+      <section class="related-articles" aria-label="Related scripts">
+        <div class="section-head"><h2>Related Scripts</h2></div>
+        <div class="related-grid">${relatedScripts.map(renderRelatedScriptLink).join('')}</div>
+      </section>`;
   const content = `  <main class="script-detail-page article-shell article-layout">
     ${renderScriptsBoardLeftRail()}
     <article>
@@ -573,27 +594,10 @@ function renderScriptDetailPage(script) {
         <p class="deck">${escapeHtml(script.deck)}</p>
         ${renderScriptMetaGrid(script)}
       </header>
-      ${renderStorySummarySection(script, originalStory)}
-      ${renderStoryInformationSection(script, originalStory)}
-      ${renderNarrationGuideSection(script)}
-      ${renderProductionWorkflowSection()}
-      <section class="script-material">
-        <h2>Long-form Creator</h2>
-        ${renderLongFormCreator(script)}
-      </section>
-      <section class="script-material">
-        <h2>Short-form Creator</h2>
-        ${renderShortFormCreator(script)}
-      </section>
-      <section class="script-material">
-        <h2>Usage Note</h2>
-        <p>${escapeHtml(usageNote)}</p>
-      </section>
-      ${originalStory ? `<aside class="script-version-cta"><p class="rail-label">Original archive story</p><p>Read the original archive story.</p><a class="button" href="/stories/${escapeAttr(originalStory.slug)}">${escapeHtml(originalStory.title)}</a></aside>` : ''}
-      <section class="related-articles" aria-label="Related scripts">
-        <div class="section-head"><h2>Related Scripts</h2></div>
-        <div class="related-grid">${relatedScripts.map(renderRelatedScriptLink).join('')}</div>
-      </section>
+      ${storyArea}
+      ${prepareArea}
+      ${createArea}
+      ${finishArea}
     </article>
     <aside class="article-rail article-rail-right">
       ${renderKyunolabNetworkCard('scripts')}
