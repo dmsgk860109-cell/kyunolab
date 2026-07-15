@@ -106,7 +106,7 @@ Scene is the smallest production unit for a video.
 
 Page-level sections may explain workflow, narration preparation, and how to use the creator materials. Scenes should not explain workflow, tools, platforms, services, costs, installation, direct recording methods, or production philosophy.
 
-Scenes should contain only production information needed to make that video moment, such as Narration, Image Prompt, Recommended Background Music, Editing Guide, and optional Advanced Production information.
+Scenes should contain only production information needed to make that video moment, such as Narration, Scene Focus, Image Prompt, Recommended Background Music, Visual Direction, and optional Advanced Production information.
 
 Do not output Hook, Narration, Scene, Image Prompt, Motion Prompt, Sound, Music, or similar production materials as isolated top-level sections when they belong to the same moment in the video.
 
@@ -130,9 +130,10 @@ Every Scene should use this default order:
 1. Scene number
 2. Estimated playback time
 3. Narration
-4. Image Prompt
-5. Recommended Background Music
-6. Editing Guide
+4. Scene Focus
+5. Image Prompt
+6. Recommended Background Music
+7. Visual Direction
 
 Narration should be a finished spoken voiceover script that can be used directly in the video. It should feel like a calm documentary or mystery-channel narration, not like an article, report, or academic explanation.
 
@@ -154,11 +155,13 @@ Each Narration Part should include a one-line Purpose above the narration, plus 
 
 Short-form Narration should not use Narration Parts unless a Short-form Scene becomes unusually long, roughly 20 seconds or more.
 
+Scene Focus should be a one-line production summary of what the Scene needs to show. It is not an image generation prompt. It helps the creator understand the visual moment quickly.
+
 Image Prompt should be a complete general-purpose image generation prompt. Prioritize story mood, scene emotion, background, lighting, composition, and visible action over rigid subject matching.
 
 Recommended Background Music should provide mood, genre, and search keywords rather than recommending a specific track. Useful examples include Dark Ambient, Suspense Piano, Low Drone, and Mystery Atmosphere.
 
-Editing Guide should be simple enough for basic editing tools. Prefer clear instructions such as slow zoom, hold for 8 seconds, fade transition, and slow panning. Avoid specialist editing language when a simple instruction is enough.
+Visual Direction should describe how the Scene should appear on screen. Prefer simple camera and screen-flow instructions such as start with a wide shot, slowly zoom toward the subject, hold for two seconds, fade to black, or cut cleanly on the final word. Avoid specialist editing language when a simple instruction is enough.
 
 Do not expose Motion Prompt, sound effects, or advanced production information in the basic Scene guide.
 

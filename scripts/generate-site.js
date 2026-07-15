@@ -774,8 +774,15 @@ function renderLongFormCreator(script) {
       narration,
       narrationParts: narrationPartsForScene(narrationParts, index, 'long'),
       imagePrompt: item.aiImagePrompt || item.prompt || '',
+      sceneFocus: sceneFocusForScene({
+        script,
+        index,
+        format: 'long',
+        narration,
+        imagePrompt: item.aiImagePrompt || item.prompt || ''
+      }),
       music: recommendedBackgroundMusic(script, 'long'),
-      editing: editingGuide(index, 'long'),
+      visualDirection: visualDirection(index, 'long'),
       advanced: advancedProductionInfo({
         script,
         number: index + 1,
@@ -800,8 +807,15 @@ function renderShortFormCreator(script) {
       narration,
       narrationParts: shouldUseNarrationParts(narration, 'short') ? narrationPartsForScene([narration], index, 'short') : [],
       imagePrompt: promptScenes[index].join(' '),
+      sceneFocus: sceneFocusForScene({
+        script,
+        index,
+        format: 'short',
+        narration,
+        imagePrompt: promptScenes[index].join(' ')
+      }),
       music: recommendedBackgroundMusic(script, 'short'),
-      editing: editingGuide(index, 'short'),
+      visualDirection: visualDirection(index, 'short'),
       advanced: advancedProductionInfo({
         script,
         number: index + 1,
@@ -819,7 +833,7 @@ function renderNarrationCopyAction(format, label) {
   return `<div class="narration-copy-action"><button class="narration-copy-button" type="button" data-narration-target="${escapeAttr(format)}">${escapeHtml(label)}</button></div>`;
 }
 
-function renderProductionSceneCard({ number, duration, narration, narrationParts = [], imagePrompt, music, editing, advanced }) {
+function renderProductionSceneCard({ number, duration, narration, narrationParts = [], sceneFocus, imagePrompt, music, visualDirection: direction, advanced }) {
   const advancedId = sceneAdvancedId(number, duration, narration, imagePrompt);
   const narrationHtml = narrationParts.length
     ? renderNarrationParts(narration, narrationParts)
@@ -828,9 +842,10 @@ function renderProductionSceneCard({ number, duration, narration, narrationParts
           <h3>Scene ${number}</h3>
           <p><strong>Estimated Playback Time:</strong> ${escapeHtml(duration)}</p>
           ${narrationHtml}
+          <p><strong>Scene Focus:</strong> ${escapeHtml(sceneFocus || 'A clear, readable moment from the story.')}</p>
           <p><strong>Image Prompt:</strong> ${escapeHtml(imagePrompt || 'Cinematic mystery scene, quiet atmosphere, clear subject, readable composition, soft low-key lighting, no gore')}</p>
           <p><strong>Recommended Background Music:</strong> ${escapeHtml(music)}</p>
-          <p><strong>Editing Guide:</strong> ${escapeHtml(editing)}</p>
+          <p><strong>Visual Direction:</strong> ${escapeHtml(direction)}</p>
           ${renderAdvancedProductionPanel(advancedId, advanced)}
         </article>`;
 }
@@ -1028,24 +1043,70 @@ function recommendedBackgroundMusic(script, format) {
     : 'Dark Ambient, Suspense Piano, Low Drone, Mystery Atmosphere';
 }
 
-function editingGuide(index, format) {
+function sceneFocusForScene({ script, index, format, narration, imagePrompt }) {
+  const context = `${script.title || ''} ${script.genre || ''} ${script.deck || ''} ${(script.tags || []).join(' ')} ${narration || ''} ${imagePrompt || ''}`.toLowerCase();
+  const isShort = format === 'short';
+
+  if (/woman in white|roadside|dark road|driver|passenger|headlight/.test(context)) {
+    const focuses = [
+      'A quiet road at night with a pale figure near the shoulder.',
+      'A silent passenger inside a dark car.',
+      'An empty passenger seat after an impossible disappearance.',
+      'A lonely bend in the road after the encounter.'
+    ];
+    return focuses[index] || 'A quiet roadside moment with a missing passenger.';
+  }
+  if (/cursed image|cursed images|blurry|strange object/.test(context)) {
+    const focuses = [
+      'An ordinary photo with one detail that feels wrong.',
+      'A strange image that refuses to explain itself.',
+      'A visual gap that makes the viewer imagine a story.',
+      'A quiet internet image that lingers after it ends.'
+    ];
+    return focuses[index] || 'A mundane image with an unsettling missing context.';
+  }
+  if (/backrooms|liminal|yellow walls|fluorescent|hallway|corridor/.test(context)) {
+    const focuses = [
+      'A plain yellow room that feels too empty.',
+      'An endless hallway under fluorescent lights.',
+      'A familiar interior with no clear way out.',
+      'A silent corridor where nothing moves.'
+    ];
+    return focuses[index] || 'An empty liminal hallway with no visible exit.';
+  }
+  if (/dragon|myth|mythology|serpent|cloud|river|temple/.test(context)) {
+    const focuses = [
+      'Different dragon figures seen as symbols of power.',
+      'A dragon shaped by the culture that imagined it.',
+      'A mythic creature tied to danger, water, or authority.',
+      'A symbolic dragon carrying a different kind of meaning.'
+    ];
+    return focuses[index] || 'A mythic dragon shown as a cultural symbol.';
+  }
+
+  return isShort
+    ? 'One clear visual moment that supports the short narration.'
+    : 'A quiet visual moment that carries the Scene mood.';
+}
+
+function visualDirection(index, format) {
   if (format === 'short') {
-    const shortGuides = [
+    const shortDirections = [
       'Start with the image already on screen. Hold for 1 second, then slowly zoom in until the narration ends.',
       'Use a quick fade from the previous scene. Keep the image steady and add a slow push-in.',
       'Hold the shot for the full line. Add a slight pan from left to right.',
       'Fade in from black. Keep the scene still, then cut cleanly on the last word.',
       'End with a slow zoom and a short fade to black.'
     ];
-    return shortGuides[index] || 'Hold the image steady for the narration, then use a simple fade transition.';
+    return shortDirections[index] || 'Hold the image steady for the narration, then use a simple fade transition.';
   }
 
-  const longGuides = [
+  const longDirections = [
     'Hold the image for 8-10 seconds at a time. Use a slow zoom in and fade to the next scene.',
     'Use slow panning across the image. Keep cuts gentle and let the narration lead the timing.',
     'Keep the final image on screen slightly longer. End with a slow zoom and fade out.'
   ];
-  return longGuides[index] || 'Use a slow zoom, hold the shot, and transition with a simple fade.';
+  return longDirections[index] || 'Use a slow zoom, hold the shot, and transition with a simple fade.';
 }
 
 function advancedProductionInfo({ script, number, format, narration, imagePrompt }) {
