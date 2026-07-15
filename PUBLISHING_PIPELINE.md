@@ -149,7 +149,7 @@ When producing Creator Library materials, follow `CREATOR_LIBRARY_MODE.md`.
 
 The current Creator Library UI, data structure, copy tools, URLs, canonical paths, and sitemap policy remain unchanged unless a separate task explicitly changes them.
 
-Creator Library detail pages follow an internal Story, Prepare, Create, Finish structure. Story contains shared story context, Prepare contains page-level guidance, Create contains Long-form and Short-form Scene production materials, and Finish contains post-production reference material.
+Creator Library detail pages follow an internal Story, Prepare, Create, Finish structure. Story contains shared story context, Prepare contains page-level guidance, Create contains Long-form and Short-form Scene production materials, and Finish contains post-production reference material. Finish should place Original Story before Reference notes and related script references.
 
 The current Creator Library output structure is Scene-based inside Create. Each Scene should work as a production workspace and include Scene number, Scene Role, finished spoken narration, concise Voice Direction, Estimated Reading Time, Scene Focus, image prompt, recommended background music keywords, and a simple Editing Guide.
 
@@ -160,6 +160,8 @@ Creator Toolkit appears once after Story Information and before Production Workf
 Production Workflow appears once after Creator Toolkit and before Long-form Creator. It should explain the beginner production order in a short vertical sequence without adding checklist state, login, external links, ads, or progress tracking.
 
 Creator Library detail pages use one page per archive story. Keep long-form and short-form creator materials on the same page under shared Story Summary and Story Information sections.
+
+Long-form Creator and Short-form Creator should remain visually distinct production areas on the same page. Do not let the Short-form workspace read as a continuation of the Long-form workspace.
 
 Keep page-level guidance outside Scenes. Scenes should contain production outputs only, not AI usage instructions, direct recording instructions, platform explanations, service recommendations, cost notes, installation guidance, workflow explanation, or production philosophy.
 

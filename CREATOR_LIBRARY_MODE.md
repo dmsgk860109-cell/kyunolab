@@ -90,13 +90,15 @@ Prepare contains Creator Toolkit and Production Workflow. Put production flow, c
 
 Create contains Long-form Creator and Short-form Creator. All Scenes belong to Create. This area should provide production-ready outputs rather than explaining how the page works.
 
-Finish contains post-production reference material such as Usage Note, Original Story, related script references, or source/reference links already supported by the current page.
+Finish contains post-production reference material. Put Original Story first when it exists, then Reference notes and related script references.
 
 Story Summary and Story Information are shared context for both long-form and short-form production. Do not repeat the same story context separately inside both creator sections.
 
 Long-form Creator and Short-form Creator should be independent production guides on the same page. They use the same original story, but each should follow the needs of its platform.
 
 Do not treat the short-form version as a simple shortened copy of the long-form version. Short-form material should be usable as a complete content piece.
+
+Long-form Creator and Short-form Creator should have clear visual boundaries. A creator should not feel that Short-form is a continuation of the Long-form workspace.
 
 ## Output Structure
 
@@ -168,6 +170,8 @@ Recommended Background Music should provide mood, genre, and search keywords rat
 Editing Guide should describe the actual screen flow. Prefer simple camera and screen-flow instructions such as Start with a wide shot, Hold briefly, Slow zoom, Fade to black, or Cut cleanly on the final word. Avoid specialist editing language when a simple instruction is enough.
 
 Scenes should feel like production workspaces. Keep production elements visually distinct so creators can quickly find Narration, Image Prompt, Background Music, Editing Guide, and Advanced Production without searching through explanatory text.
+
+The page should guide creators in production order without mixing roles: Creator Toolkit prepares, Production Workflow orders the work, Scenes produce the video, Original Story and Reference support review after production.
 
 Do not expose Motion Prompt, sound effects, or advanced production information in the basic Scene guide.
 

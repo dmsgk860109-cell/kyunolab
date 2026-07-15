@@ -883,10 +883,25 @@ h1 {
   background: var(--surface);
 }
 .creator-format {
+  padding: 18px 0 22px;
   border-top: 2px solid var(--ink);
+  border-bottom: 1px solid var(--line);
 }
 .creator-format h2 {
   margin-bottom: 14px;
+}
+.creator-format-short {
+  margin-top: 44px;
+}
+.creator-format-short h2 {
+  padding-top: 2px;
+}
+.creator-original-story {
+  margin-top: 44px;
+}
+.creator-reference,
+.creator-reference-list {
+  margin-top: 24px;
 }
 .script-prompt-list h3 {
   margin: 0 0 8px;
@@ -904,7 +919,7 @@ h1 {
 }
 .scene-workspace {
   display: grid;
-  gap: 12px;
+  gap: 14px;
 }
 .scene-workspace-meta {
   display: grid;
@@ -924,6 +939,22 @@ h1 {
 .scene-production-fields {
   display: grid;
   gap: 8px;
+}
+.scene-production-fields {
+  padding-top: 2px;
+}
+.scene-field strong,
+.scene-workspace-meta strong,
+.scene-narration strong,
+.narration-part-script strong {
+  color: var(--ink);
+}
+.scene-focus {
+  border-left: 3px solid var(--accent) !important;
+}
+.scene-image-prompt,
+.scene-editing-guide {
+  background: var(--surface) !important;
 }
 .scene-narration-parts {
   display: grid;
@@ -976,6 +1007,7 @@ h1 {
 .scene-advanced {
   padding-top: 10px;
   border-top: 1px solid var(--line);
+  background: transparent;
 }
 .scene-advanced-toggle {
   display: inline-flex;

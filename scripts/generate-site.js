@@ -575,12 +575,12 @@ function renderScriptDetailPage(script) {
         <h2>Short-form Creator</h2>
         ${renderShortFormCreator(script)}
       </section>`;
-  const finishArea = `<section class="script-material">
-        <h2>Usage Note</h2>
+  const finishArea = `${originalStory ? `<aside class="script-version-cta creator-original-story"><p class="rail-label">Original archive story</p><p>Read the original archive story.</p><a class="button" href="/stories/${escapeAttr(originalStory.slug)}">${escapeHtml(originalStory.title)}</a></aside>` : ''}
+      <section class="script-material creator-reference">
+        <h2>Reference</h2>
         <p>${escapeHtml(usageNote)}</p>
       </section>
-      ${originalStory ? `<aside class="script-version-cta"><p class="rail-label">Original archive story</p><p>Read the original archive story.</p><a class="button" href="/stories/${escapeAttr(originalStory.slug)}">${escapeHtml(originalStory.title)}</a></aside>` : ''}
-      <section class="related-articles" aria-label="Related scripts">
+      <section class="related-articles creator-reference-list" aria-label="Related scripts">
         <div class="section-head"><h2>Related Scripts</h2></div>
         <div class="related-grid">${relatedScripts.map(renderRelatedScriptLink).join('')}</div>
       </section>`;
