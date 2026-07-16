@@ -21,11 +21,15 @@
     textarea.value = text;
     textarea.setAttribute('readonly', '');
     textarea.style.position = 'fixed';
-    textarea.style.left = '-9999px';
+    textarea.style.left = '0';
     textarea.style.top = '0';
+    textarea.style.width = '1px';
+    textarea.style.height = '1px';
+    textarea.style.opacity = '0';
     document.body.appendChild(textarea);
     textarea.focus();
     textarea.select();
+    textarea.setSelectionRange(0, textarea.value.length);
 
     var copied = document.execCommand('copy');
     textarea.remove();
@@ -98,23 +102,7 @@
 
     if (shareButton) {
       event.preventDefault();
-      var title = shareButton.getAttribute('data-title') || '';
       var url = shareButton.getAttribute('data-url') || '';
-      var shareData = { title: title, url: url };
-
-      if (navigator.share) {
-        navigator.share(shareData).then(function () {
-          flash(shareButton, 'Shared');
-        }).catch(function () {
-          copyPlainText(url).then(function () {
-            flash(shareButton, 'Copied');
-          }).catch(function () {
-            flash(shareButton, 'Failed');
-          });
-        });
-        return;
-      }
-
       copyPlainText(url).then(function () {
         flash(shareButton, 'Copied');
       }).catch(function () {

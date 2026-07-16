@@ -3,7 +3,7 @@ const path = require('path');
 
 const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://kyunolab.com';
-const styleVersion = '20260717-publishing-center-js';
+const styleVersion = '20260717-publishing-center-copy';
 const pageSize = 12;
 const publishingCenterPageSize = 24;
 const rssLimit = 20;
