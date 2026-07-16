@@ -37,427 +37,290 @@
       <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/publishing-center/">Publishing Center</a><span aria-hidden="true">/</span><span aria-current="page">Strange Nature</span></nav>
       <p class="label">Internal Tool</p>
       <h1 class="article-title">Strange Nature</h1>
-      <p class="deck">Records are ordered by the current archive publishing order. Mark Naver publication status in this browser only.</p>
+      <style>
+        .publishing-category-list,
+        .publishing-record-list {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+
+        .publishing-category-list li {
+          margin: 0 0 0.35rem;
+        }
+
+        .publishing-record {
+          align-items: center;
+          border-bottom: 1px solid var(--border-color, #d9d2c4);
+          display: grid;
+          gap: 0.5rem 1rem;
+          grid-template-columns: minmax(0, 1fr) auto;
+          padding: 0.45rem 0;
+        }
+
+        .publishing-record-title {
+          overflow-wrap: anywhere;
+        }
+
+        .publishing-record-actions {
+          align-items: center;
+          display: flex;
+          gap: 0.4rem;
+          white-space: nowrap;
+        }
+
+        .publishing-record .button {
+          font-size: 0.85rem;
+          line-height: 1.1;
+          padding: 0.35rem 0.55rem;
+        }
+
+        .publishing-published-label {
+          align-items: center;
+          display: inline-flex;
+          gap: 0.25rem;
+          margin: 0;
+        }
+
+        .publishing-pagination {
+          align-items: center;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.35rem;
+          margin-top: 1rem;
+        }
+
+        .publishing-pagination a,
+        .publishing-pagination span {
+          border: 1px solid var(--border-color, #d9d2c4);
+          border-radius: 4px;
+          display: inline-flex;
+          line-height: 1;
+          padding: 0.45rem 0.6rem;
+        }
+
+        .publishing-pagination span[aria-current="page"] {
+          background: var(--ink, #171717);
+          border-color: var(--ink, #171717);
+          color: var(--paper, #fffaf1);
+        }
+
+        .publishing-pagination span[aria-disabled="true"] {
+          opacity: 0.55;
+        }
+
+        @media (max-width: 720px) {
+          .publishing-record {
+            grid-template-columns: 1fr;
+          }
+
+          .publishing-record-actions {
+            flex-wrap: wrap;
+            white-space: normal;
+          }
+        }
+      </style>
       <section class="script-material" aria-label="Strange Nature records">
         <h2>Archive Records</h2>
-        <ul>
+        <ul class="publishing-record-list">
         <li class="publishing-record">
-          <a href="/stories/hessdalen-lights">Hessdalen Lights: Strange Nature, Observations, and the Valley Light Mystery</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/hessdalen-lights">Hessdalen Lights: Strange Nature, Observations, and the Valley Light Mystery</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="Hessdalen Lights: Strange Nature, Observations, and the Valley Light Mystery" data-url="https://kyunolab.com/stories/hessdalen-lights">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="Hessdalen Lights: Strange Nature, Observations, and the Valley Light Mystery" data-url="https://kyunolab.com/stories/hessdalen-lights" data-description="Hessdalen Lights explains the image of the recurring Norwegian light phenomenon documented through observation, instruments, and unresolved explanation." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:hessdalen-lights:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:hessdalen-lights:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/blood-rain-folklore">Blood Rain: Natural Explanation, Omen Folklore, and the Red Rain Mystery</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/blood-rain-folklore">Blood Rain: Natural Explanation, Omen Folklore, and the Red Rain Mystery</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="Blood Rain: Natural Explanation, Omen Folklore, and the Red Rain Mystery" data-url="https://kyunolab.com/stories/blood-rain-folklore">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="Blood Rain: Natural Explanation, Omen Folklore, and the Red Rain Mystery" data-url="https://kyunolab.com/stories/blood-rain-folklore" data-description="Blood Rain explains red rain events that have been read as omens while also having dust, algae, or other natural explanations through strange nature." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:blood-rain-folklore:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:blood-rain-folklore:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/ball-lightning-folklore">Ball Lightning: Strange Weather, Witness Reports, and the Mystery of Moving Light</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/ball-lightning-folklore">Ball Lightning: Strange Weather, Witness Reports, and the Mystery of Moving Light</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="Ball Lightning: Strange Weather, Witness Reports, and the Mystery of Moving Light" data-url="https://kyunolab.com/stories/ball-lightning-folklore">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="Ball Lightning: Strange Weather, Witness Reports, and the Mystery of Moving Light" data-url="https://kyunolab.com/stories/ball-lightning-folklore" data-description="Ball Lightning explores the origin, meaning, and folklore behind the image of the reported luminous weather phenomenon that remains difficult to study and." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:ball-lightning-folklore:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:ball-lightning-folklore:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/sailing-stones-racetrack-playa">Sailing Stones of Racetrack Playa: Strange Nature, Tracks, and Explanation</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/sailing-stones-racetrack-playa">Sailing Stones of Racetrack Playa: Strange Nature, Tracks, and Explanation</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="Sailing Stones of Racetrack Playa: Strange Nature, Tracks, and Explanation" data-url="https://kyunolab.com/stories/sailing-stones-racetrack-playa">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="Sailing Stones of Racetrack Playa: Strange Nature, Tracks, and Explanation" data-url="https://kyunolab.com/stories/sailing-stones-racetrack-playa" data-description="Sailing Stones of Racetrack Playa explores the origin, meaning, and folklore behind the image of the moving desert stones whose long tracks once looked." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:sailing-stones-racetrack-playa:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:sailing-stones-racetrack-playa:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/bermuda-triangle-mystery">Bermuda Triangle: Mystery, Weather, and Why the Sea Legend Persists</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/bermuda-triangle-mystery">Bermuda Triangle: Mystery, Weather, and Why the Sea Legend Persists</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="Bermuda Triangle: Mystery, Weather, and Why the Sea Legend Persists" data-url="https://kyunolab.com/stories/bermuda-triangle-mystery">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="Bermuda Triangle: Mystery, Weather, and Why the Sea Legend Persists" data-url="https://kyunolab.com/stories/bermuda-triangle-mystery" data-description="Bermuda Triangle explores the origin, meaning, and folklore behind the image of the Atlantic region whose disappearances, media retellings, and natural." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:bermuda-triangle-mystery:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:bermuda-triangle-mystery:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-thunder-heard-only-inside-the-valley-folklore-observation-and-possible-explanations">The Thunder Heard Only Inside the Valley: Folklore, Observation, and Possible Explanations</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-thunder-heard-only-inside-the-valley-folklore-observation-and-possible-explanations">The Thunder Heard Only Inside the Valley: Folklore, Observation, and Possible Explanations</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Thunder Heard Only Inside the Valley: Folklore, Observation, and Possible Explanations" data-url="https://kyunolab.com/stories/the-thunder-heard-only-inside-the-valley-folklore-observation-and-possible-explanations">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Thunder Heard Only Inside the Valley: Folklore, Observation, and Possible Explanations" data-url="https://kyunolab.com/stories/the-thunder-heard-only-inside-the-valley-folklore-observation-and-possible-explanations" data-description="The Thunder Heard Only Inside the Valley explores the origin, meaning, and folklore behind thunder is reported within a valley while nearby stations record." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-thunder-heard-only-inside-the-valley-folklore-observation-and-possible-explanations:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-thunder-heard-only-inside-the-valley-folklore-observation-and-possible-explanations:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-field-where-frost-forms-in-straight-lines-why-this-landscape-story-endures">The Field Where Frost Forms in Straight Lines: Why This Landscape Story Endures</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-field-where-frost-forms-in-straight-lines-why-this-landscape-story-endures">The Field Where Frost Forms in Straight Lines: Why This Landscape Story Endures</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Field Where Frost Forms in Straight Lines: Why This Landscape Story Endures" data-url="https://kyunolab.com/stories/the-field-where-frost-forms-in-straight-lines-why-this-landscape-story-endures">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Field Where Frost Forms in Straight Lines: Why This Landscape Story Endures" data-url="https://kyunolab.com/stories/the-field-where-frost-forms-in-straight-lines-why-this-landscape-story-endures" data-description="A calm guide to The Field Where Frost Forms in Straight Lines, its common versions, source limits, and the sound boundary motif that makes frost appears in." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-field-where-frost-forms-in-straight-lines-why-this-landscape-story-endures:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-field-where-frost-forms-in-straight-lines-why-this-landscape-story-endures:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-hill-shadow-that-arrives-before-sunset-a-natural-mystery-explained">The Hill Shadow That Arrives Before Sunset: A Natural Mystery Explained</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-hill-shadow-that-arrives-before-sunset-a-natural-mystery-explained">The Hill Shadow That Arrives Before Sunset: A Natural Mystery Explained</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Hill Shadow That Arrives Before Sunset: A Natural Mystery Explained" data-url="https://kyunolab.com/stories/the-hill-shadow-that-arrives-before-sunset-a-natural-mystery-explained">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Hill Shadow That Arrives Before Sunset: A Natural Mystery Explained" data-url="https://kyunolab.com/stories/the-hill-shadow-that-arrives-before-sunset-a-natural-mystery-explained" data-description="A calm guide to The Hill Shadow That Arrives Before Sunset, its common versions, source limits, and the water phenomenon motif that makes one hill casts a." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-hill-shadow-that-arrives-before-sunset-a-natural-mystery-explained:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-hill-shadow-that-arrives-before-sunset-a-natural-mystery-explained:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-stream-that-runs-clear-after-every-storm-folklore-observation-and-possible-explanations">The Stream That Runs Clear After Every Storm: Folklore, Observation, and Possible Explanations</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-stream-that-runs-clear-after-every-storm-folklore-observation-and-possible-explanations">The Stream That Runs Clear After Every Storm: Folklore, Observation, and Possible Explanations</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Stream That Runs Clear After Every Storm: Folklore, Observation, and Possible Explanations" data-url="https://kyunolab.com/stories/the-stream-that-runs-clear-after-every-storm-folklore-observation-and-possible-explanations">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Stream That Runs Clear After Every Storm: Folklore, Observation, and Possible Explanations" data-url="https://kyunolab.com/stories/the-stream-that-runs-clear-after-every-storm-folklore-observation-and-possible-explanations" data-description="The Stream That Runs Clear After Every Storm explains the scene where a small stream remains clear when neighboring water turns muddy through strange nature." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-stream-that-runs-clear-after-every-storm-folklore-observation-and-possible-explanations:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-stream-that-runs-clear-after-every-storm-folklore-observation-and-possible-explanations:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-cliff-flowers-that-open-only-during-fog-why-this-landscape-story-endures">The Cliff Flowers That Open Only During Fog: Why This Landscape Story Endures</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-cliff-flowers-that-open-only-during-fog-why-this-landscape-story-endures">The Cliff Flowers That Open Only During Fog: Why This Landscape Story Endures</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Cliff Flowers That Open Only During Fog: Why This Landscape Story Endures" data-url="https://kyunolab.com/stories/the-cliff-flowers-that-open-only-during-fog-why-this-landscape-story-endures">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Cliff Flowers That Open Only During Fog: Why This Landscape Story Endures" data-url="https://kyunolab.com/stories/the-cliff-flowers-that-open-only-during-fog-why-this-landscape-story-endures" data-description="A calm guide to The Cliff Flowers That Open Only During Fog, its common versions, source limits, and the weather folklore motif that makes the scene where a." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-cliff-flowers-that-open-only-during-fog-why-this-landscape-story-endures:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-cliff-flowers-that-open-only-during-fog-why-this-landscape-story-endures:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-forest-wind-heard-beneath-still-leaves-a-natural-mystery-explained">The Forest Wind Heard Beneath Still Leaves: A Natural Mystery Explained</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-forest-wind-heard-beneath-still-leaves-a-natural-mystery-explained">The Forest Wind Heard Beneath Still Leaves: A Natural Mystery Explained</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Forest Wind Heard Beneath Still Leaves: A Natural Mystery Explained" data-url="https://kyunolab.com/stories/the-forest-wind-heard-beneath-still-leaves-a-natural-mystery-explained">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Forest Wind Heard Beneath Still Leaves: A Natural Mystery Explained" data-url="https://kyunolab.com/stories/the-forest-wind-heard-beneath-still-leaves-a-natural-mystery-explained" data-description="The Forest Wind Heard Beneath Still Leaves explains the image of a strong wind is heard at ground level while the canopy remains still through strange nature." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-forest-wind-heard-beneath-still-leaves-a-natural-mystery-explained:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-forest-wind-heard-beneath-still-leaves-a-natural-mystery-explained:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-snow-circle-that-melts-from-the-outside-in-folklore-observation-and-possible-explanations">The Snow Circle That Melts From the Outside In: Folklore, Observation, and Possible Explanations</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-snow-circle-that-melts-from-the-outside-in-folklore-observation-and-possible-explanations">The Snow Circle That Melts From the Outside In: Folklore, Observation, and Possible Explanations</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Snow Circle That Melts From the Outside In: Folklore, Observation, and Possible Explanations" data-url="https://kyunolab.com/stories/the-snow-circle-that-melts-from-the-outside-in-folklore-observation-and-possible-explanations">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Snow Circle That Melts From the Outside In: Folklore, Observation, and Possible Explanations" data-url="https://kyunolab.com/stories/the-snow-circle-that-melts-from-the-outside-in-folklore-observation-and-possible-explanations" data-description="The Snow Circle That Melts From the Outside In explains the image of a circular patch of snow melts toward its cold center through strange nature, separating." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-snow-circle-that-melts-from-the-outside-in-folklore-observation-and-possible-explanations:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-snow-circle-that-melts-from-the-outside-in-folklore-observation-and-possible-explanations:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-pond-that-echoes-before-a-sound-is-made-why-this-landscape-story-endures">The Pond That Echoes Before a Sound Is Made: Why This Landscape Story Endures</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-pond-that-echoes-before-a-sound-is-made-why-this-landscape-story-endures">The Pond That Echoes Before a Sound Is Made: Why This Landscape Story Endures</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Pond That Echoes Before a Sound Is Made: Why This Landscape Story Endures" data-url="https://kyunolab.com/stories/the-pond-that-echoes-before-a-sound-is-made-why-this-landscape-story-endures">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Pond That Echoes Before a Sound Is Made: Why This Landscape Story Endures" data-url="https://kyunolab.com/stories/the-pond-that-echoes-before-a-sound-is-made-why-this-landscape-story-endures" data-description="A calm guide to The Pond That Echoes Before a Sound Is Made, its common versions, source limits, and the water phenomenon motif that makes the scene where a." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-pond-that-echoes-before-a-sound-is-made-why-this-landscape-story-endures:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-pond-that-echoes-before-a-sound-is-made-why-this-landscape-story-endures:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-rain-that-leaves-one-roof-completely-dry-a-natural-mystery-explained">The Rain That Leaves One Roof Completely Dry: A Natural Mystery Explained</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-rain-that-leaves-one-roof-completely-dry-a-natural-mystery-explained">The Rain That Leaves One Roof Completely Dry: A Natural Mystery Explained</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Rain That Leaves One Roof Completely Dry: A Natural Mystery Explained" data-url="https://kyunolab.com/stories/the-rain-that-leaves-one-roof-completely-dry-a-natural-mystery-explained">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Rain That Leaves One Roof Completely Dry: A Natural Mystery Explained" data-url="https://kyunolab.com/stories/the-rain-that-leaves-one-roof-completely-dry-a-natural-mystery-explained" data-description="The Rain That Leaves One Roof Completely Dry explains rain falls across a street while one roof remains sharply dry through strange nature, separating." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-rain-that-leaves-one-roof-completely-dry-a-natural-mystery-explained:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-rain-that-leaves-one-roof-completely-dry-a-natural-mystery-explained:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-fog-bank-that-stops-at-one-garden-gate-folklore-observation-and-possible-explanations">The Fog Bank That Stops at One Garden Gate: Folklore, Observation, and Possible Explanations</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-fog-bank-that-stops-at-one-garden-gate-folklore-observation-and-possible-explanations">The Fog Bank That Stops at One Garden Gate: Folklore, Observation, and Possible Explanations</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Fog Bank That Stops at One Garden Gate: Folklore, Observation, and Possible Explanations" data-url="https://kyunolab.com/stories/the-fog-bank-that-stops-at-one-garden-gate-folklore-observation-and-possible-explanations">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Fog Bank That Stops at One Garden Gate: Folklore, Observation, and Possible Explanations" data-url="https://kyunolab.com/stories/the-fog-bank-that-stops-at-one-garden-gate-folklore-observation-and-possible-explanations" data-description="The Fog Bank That Stops at One Garden Gate explains the scene where a dense fog repeatedly ends along the line of one garden gate through strange nature." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-fog-bank-that-stops-at-one-garden-gate-folklore-observation-and-possible-explanations:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-fog-bank-that-stops-at-one-garden-gate-folklore-observation-and-possible-explanations:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-stone-that-gathers-frost-in-summer-a-natural-folklore-mystery">The Stone That Gathers Frost in Summer: A Natural Folklore Mystery</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-stone-that-gathers-frost-in-summer-a-natural-folklore-mystery">The Stone That Gathers Frost in Summer: A Natural Folklore Mystery</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Stone That Gathers Frost in Summer: A Natural Folklore Mystery" data-url="https://kyunolab.com/stories/the-stone-that-gathers-frost-in-summer-a-natural-folklore-mystery">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Stone That Gathers Frost in Summer: A Natural Folklore Mystery" data-url="https://kyunolab.com/stories/the-stone-that-gathers-frost-in-summer-a-natural-folklore-mystery" data-description="The Stone That Gathers Frost in Summer explores the origin, meaning, and folklore behind one stone gathers frost in summer mornings while every nearby rock." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-stone-that-gathers-frost-in-summer-a-natural-folklore-mystery:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-stone-that-gathers-frost-in-summer-a-natural-folklore-mystery:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-meadow-where-crickets-count-out-of-order-a-sound-folklore-record">The Meadow Where Crickets Count Out of Order: A Sound Folklore Record</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-meadow-where-crickets-count-out-of-order-a-sound-folklore-record">The Meadow Where Crickets Count Out of Order: A Sound Folklore Record</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Meadow Where Crickets Count Out of Order: A Sound Folklore Record" data-url="https://kyunolab.com/stories/the-meadow-where-crickets-count-out-of-order-a-sound-folklore-record">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Meadow Where Crickets Count Out of Order: A Sound Folklore Record" data-url="https://kyunolab.com/stories/the-meadow-where-crickets-count-out-of-order-a-sound-folklore-record" data-description="The Meadow Where Crickets Count Out of Order explores the origin, meaning, and folklore behind crickets in one meadow seem to chirp in uneven counts people." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-meadow-where-crickets-count-out-of-order-a-sound-folklore-record:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-meadow-where-crickets-count-out-of-order-a-sound-folklore-record:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-pond-reflecting-clouds-from-yesterday-a-strange-nature-legend">The Pond Reflecting Clouds From Yesterday: A Strange Nature Legend</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-pond-reflecting-clouds-from-yesterday-a-strange-nature-legend">The Pond Reflecting Clouds From Yesterday: A Strange Nature Legend</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Pond Reflecting Clouds From Yesterday: A Strange Nature Legend" data-url="https://kyunolab.com/stories/the-pond-reflecting-clouds-from-yesterday-a-strange-nature-legend">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Pond Reflecting Clouds From Yesterday: A Strange Nature Legend" data-url="https://kyunolab.com/stories/the-pond-reflecting-clouds-from-yesterday-a-strange-nature-legend" data-description="The Pond Reflecting Clouds From Yesterday explains the image of a pond is said to reflect clouds remembered from the previous afternoon through strange." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-pond-reflecting-clouds-from-yesterday-a-strange-nature-legend:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-pond-reflecting-clouds-from-yesterday-a-strange-nature-legend:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-fog-bank-that-keeps-the-shape-of-a-door-a-landscape-mystery-explained">The Fog Bank That Keeps the Shape of a Door: A Landscape Mystery Explained</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-fog-bank-that-keeps-the-shape-of-a-door-a-landscape-mystery-explained">The Fog Bank That Keeps the Shape of a Door: A Landscape Mystery Explained</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Fog Bank That Keeps the Shape of a Door: A Landscape Mystery Explained" data-url="https://kyunolab.com/stories/the-fog-bank-that-keeps-the-shape-of-a-door-a-landscape-mystery-explained">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Fog Bank That Keeps the Shape of a Door: A Landscape Mystery Explained" data-url="https://kyunolab.com/stories/the-fog-bank-that-keeps-the-shape-of-a-door-a-landscape-mystery-explained" data-description="The Fog Bank That Keeps the Shape of a Door explains the scene where a fog bank keeps the shape of a door across a field until sunrise through strange nature." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-fog-bank-that-keeps-the-shape-of-a-door-a-landscape-mystery-explained:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-fog-bank-that-keeps-the-shape-of-a-door-a-landscape-mystery-explained:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-orchard-where-fruit-falls-upward-in-stories-a-strange-nature-folklore-note">The Orchard Where Fruit Falls Upward in Stories: A Strange Nature Folklore Note</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-orchard-where-fruit-falls-upward-in-stories-a-strange-nature-folklore-note">The Orchard Where Fruit Falls Upward in Stories: A Strange Nature Folklore Note</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Orchard Where Fruit Falls Upward in Stories: A Strange Nature Folklore Note" data-url="https://kyunolab.com/stories/the-orchard-where-fruit-falls-upward-in-stories-a-strange-nature-folklore-note">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Orchard Where Fruit Falls Upward in Stories: A Strange Nature Folklore Note" data-url="https://kyunolab.com/stories/the-orchard-where-fruit-falls-upward-in-stories-a-strange-nature-folklore-note" data-description="The Orchard Where Fruit Falls Upward in Stories explains old orchard stories claim fruit once fell upward before a storm broke the harvest through strange." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-orchard-where-fruit-falls-upward-in-stories-a-strange-nature-folklore-note:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-orchard-where-fruit-falls-upward-in-stories-a-strange-nature-folklore-note:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-hill-where-wind-stops-at-the-fence-a-local-nature-legend-explained">The Hill Where Wind Stops at the Fence: A Local Nature Legend Explained</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-hill-where-wind-stops-at-the-fence-a-local-nature-legend-explained">The Hill Where Wind Stops at the Fence: A Local Nature Legend Explained</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Hill Where Wind Stops at the Fence: A Local Nature Legend Explained" data-url="https://kyunolab.com/stories/the-hill-where-wind-stops-at-the-fence-a-local-nature-legend-explained">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Hill Where Wind Stops at the Fence: A Local Nature Legend Explained" data-url="https://kyunolab.com/stories/the-hill-where-wind-stops-at-the-fence-a-local-nature-legend-explained" data-description="The Hill Where Wind Stops at the Fence explores the origin, meaning, and folklore behind wind stops at a fence line halfway up a hill even when grass moves on." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-hill-where-wind-stops-at-the-fence-a-local-nature-legend-explained:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-hill-where-wind-stops-at-the-fence-a-local-nature-legend-explained:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-creek-that-runs-warm-during-snow-a-strange-nature-record">The Creek That Runs Warm During Snow: A Strange Nature Record</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-creek-that-runs-warm-during-snow-a-strange-nature-record">The Creek That Runs Warm During Snow: A Strange Nature Record</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Creek That Runs Warm During Snow: A Strange Nature Record" data-url="https://kyunolab.com/stories/the-creek-that-runs-warm-during-snow-a-strange-nature-record">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Creek That Runs Warm During Snow: A Strange Nature Record" data-url="https://kyunolab.com/stories/the-creek-that-runs-warm-during-snow-a-strange-nature-record" data-description="A calm guide to The Creek That Runs Warm During Snow, its common versions, source limits, and the sound boundary motif that makes the image of a creek runs." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-creek-that-runs-warm-during-snow-a-strange-nature-record:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-creek-that-runs-warm-during-snow-a-strange-nature-record:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-field-where-dandelions-bloom-in-a-circle-a-nature-folklore-reading">The Field Where Dandelions Bloom in a Circle: A Nature Folklore Reading</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-field-where-dandelions-bloom-in-a-circle-a-nature-folklore-reading">The Field Where Dandelions Bloom in a Circle: A Nature Folklore Reading</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Field Where Dandelions Bloom in a Circle: A Nature Folklore Reading" data-url="https://kyunolab.com/stories/the-field-where-dandelions-bloom-in-a-circle-a-nature-folklore-reading">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Field Where Dandelions Bloom in a Circle: A Nature Folklore Reading" data-url="https://kyunolab.com/stories/the-field-where-dandelions-bloom-in-a-circle-a-nature-folklore-reading" data-description="The Field Where Dandelions Bloom in a Circle explains dandelions bloom in a clean circle where no marker or old path is known through strange nature." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-field-where-dandelions-bloom-in-a-circle-a-nature-folklore-reading:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-field-where-dandelions-bloom-in-a-circle-a-nature-folklore-reading:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-lake-that-freezes-around-one-footprint-a-winter-mystery-record">The Lake That Freezes Around One Footprint: A Winter Mystery Record</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-lake-that-freezes-around-one-footprint-a-winter-mystery-record">The Lake That Freezes Around One Footprint: A Winter Mystery Record</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Lake That Freezes Around One Footprint: A Winter Mystery Record" data-url="https://kyunolab.com/stories/the-lake-that-freezes-around-one-footprint-a-winter-mystery-record">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Lake That Freezes Around One Footprint: A Winter Mystery Record" data-url="https://kyunolab.com/stories/the-lake-that-freezes-around-one-footprint-a-winter-mystery-record" data-description="The Lake That Freezes Around One Footprint explores the origin, meaning, and folklore behind the scene where a lake freezes around one footprint that appears." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-lake-that-freezes-around-one-footprint-a-winter-mystery-record:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-tree-line-where-rain-turns-sideways-a-strange-nature-legend-explained">The Tree Line Where Rain Turns Sideways: A Strange Nature Legend Explained</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Tree Line Where Rain Turns Sideways: A Strange Nature Legend Explained" data-url="https://kyunolab.com/stories/the-tree-line-where-rain-turns-sideways-a-strange-nature-legend-explained">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Tree Line Where Rain Turns Sideways: A Strange Nature Legend Explained" data-url="https://kyunolab.com/stories/the-tree-line-where-rain-turns-sideways-a-strange-nature-legend-explained" data-description="A calm guide to The Tree Line Where Rain Turns Sideways, its common versions, source limits, and the weather folklore motif that makes rain turns sideways at." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-tree-line-where-rain-turns-sideways-a-strange-nature-legend-explained:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-pine-grove-where-needles-fall-upward">The Pine Grove Where Needles Fall Upward</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Pine Grove Where Needles Fall Upward" data-url="https://kyunolab.com/stories/the-pine-grove-where-needles-fall-upward">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Pine Grove Where Needles Fall Upward" data-url="https://kyunolab.com/stories/the-pine-grove-where-needles-fall-upward" data-description="A calm guide to The Pine Grove Where Needles Fall Upward, its common versions, source limits, and the forest anomaly motif that makes the image of a pine." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-pine-grove-where-needles-fall-upward:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-pond-that-freezes-only-around-footprints">The Pond That Freezes Only Around Footprints</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Pond That Freezes Only Around Footprints" data-url="https://kyunolab.com/stories/the-pond-that-freezes-only-around-footprints">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Pond That Freezes Only Around Footprints" data-url="https://kyunolab.com/stories/the-pond-that-freezes-only-around-footprints" data-description="The Pond That Freezes Only Around Footprints explores the origin, meaning, and folklore behind the image of a pond that freezes around footprints while the." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-pond-that-freezes-only-around-footprints:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-field-where-rain-avoids-one-stone">The Field Where Rain Avoids One Stone</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Field Where Rain Avoids One Stone" data-url="https://kyunolab.com/stories/the-field-where-rain-avoids-one-stone">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Field Where Rain Avoids One Stone" data-url="https://kyunolab.com/stories/the-field-where-rain-avoids-one-stone" data-description="The Field Where Rain Avoids One Stone explores the origin, meaning, and folklore behind the image of a field where rain seems to avoid one stone in repeated." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-field-where-rain-avoids-one-stone:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-tree-line-that-bends-away-from-noon">The Tree Line That Bends Away From Noon</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Tree Line That Bends Away From Noon" data-url="https://kyunolab.com/stories/the-tree-line-that-bends-away-from-noon">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Tree Line That Bends Away From Noon" data-url="https://kyunolab.com/stories/the-tree-line-that-bends-away-from-noon" data-description="The Tree Line That Bends Away From Noon explores the origin, meaning, and folklore behind the scene where a tree line that bends away from noon sun as if." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-tree-line-that-bends-away-from-noon:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-beach-where-shells-ring-like-glass">The Beach Where Shells Ring Like Glass</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Beach Where Shells Ring Like Glass" data-url="https://kyunolab.com/stories/the-beach-where-shells-ring-like-glass">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Beach Where Shells Ring Like Glass" data-url="https://kyunolab.com/stories/the-beach-where-shells-ring-like-glass" data-description="The Beach Where Shells Ring Like Glass explores the origin, meaning, and folklore behind the image of a beach where shells ring like glass underfoot only." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-beach-where-shells-ring-like-glass:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-creek-that-runs-silent-under-one-bridge">The Creek That Runs Silent Under One Bridge</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Creek That Runs Silent Under One Bridge" data-url="https://kyunolab.com/stories/the-creek-that-runs-silent-under-one-bridge">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Creek That Runs Silent Under One Bridge" data-url="https://kyunolab.com/stories/the-creek-that-runs-silent-under-one-bridge" data-description="The Creek That Runs Silent Under One Bridge explains the image of a creek that runs silent beneath one bridge and loud on either side through strange nature." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-creek-that-runs-silent-under-one-bridge:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-meadow-where-shadows-point-toward-the-fence">The Meadow Where Shadows Point Toward the Fence</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Meadow Where Shadows Point Toward the Fence" data-url="https://kyunolab.com/stories/the-meadow-where-shadows-point-toward-the-fence">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Meadow Where Shadows Point Toward the Fence" data-url="https://kyunolab.com/stories/the-meadow-where-shadows-point-toward-the-fence" data-description="The Meadow Where Shadows Point Toward the Fence explores the origin, meaning, and folklore behind the image of a meadow where afternoon shadows point toward a." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-meadow-where-shadows-point-toward-the-fence:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-hill-where-frost-forms-in-perfect-circles">The Hill Where Frost Forms in Perfect Circles</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Hill Where Frost Forms in Perfect Circles" data-url="https://kyunolab.com/stories/the-hill-where-frost-forms-in-perfect-circles">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Hill Where Frost Forms in Perfect Circles" data-url="https://kyunolab.com/stories/the-hill-where-frost-forms-in-perfect-circles" data-description="The Hill Where Frost Forms in Perfect Circles explains the image of a hill where frost forms in circles that locals notice before clear mornings through." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-hill-where-frost-forms-in-perfect-circles:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-orchard-where-no-bees-cross-the-center-row">The Orchard Where No Bees Cross the Center Row</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Orchard Where No Bees Cross the Center Row" data-url="https://kyunolab.com/stories/the-orchard-where-no-bees-cross-the-center-row">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Orchard Where No Bees Cross the Center Row" data-url="https://kyunolab.com/stories/the-orchard-where-no-bees-cross-the-center-row" data-description="The Orchard Where No Bees Cross the Center Row explains the image of an orchard where bees avoid the center row despite blossoms on both sides through strange." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-orchard-where-no-bees-cross-the-center-row:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-lake-wind-that-carries-the-wrong-season">The Lake Wind That Carries the Wrong Season</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Lake Wind That Carries the Wrong Season" data-url="https://kyunolab.com/stories/the-lake-wind-that-carries-the-wrong-season">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Lake Wind That Carries the Wrong Season" data-url="https://kyunolab.com/stories/the-lake-wind-that-carries-the-wrong-season" data-description="The Lake Wind That Carries the Wrong Season explores the origin, meaning, and folklore behind the scene where a lake wind that smells like another season and." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-lake-wind-that-carries-the-wrong-season:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-pine-that-sings-only-after-frost">The Pine That Sings Only After Frost</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Pine That Sings Only After Frost" data-url="https://kyunolab.com/stories/the-pine-that-sings-only-after-frost">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Pine That Sings Only After Frost" data-url="https://kyunolab.com/stories/the-pine-that-sings-only-after-frost" data-description="A calm guide to The Pine That Sings Only After Frost, its common versions, source limits, and the seasonal omen motif that makes the scene where a pine is." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-pine-that-sings-only-after-frost:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-meadow-where-no-shadow-crosses-at-noon">The Meadow Where No Shadow Crosses at Noon</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Meadow Where No Shadow Crosses at Noon" data-url="https://kyunolab.com/stories/the-meadow-where-no-shadow-crosses-at-noon">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Meadow Where No Shadow Crosses at Noon" data-url="https://kyunolab.com/stories/the-meadow-where-no-shadow-crosses-at-noon" data-description="The Meadow Where No Shadow Crosses at Noon explores the origin, meaning, and folklore behind the scene where a meadow is said to swallow shadows at noon when." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-meadow-where-no-shadow-crosses-at-noon:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-river-bend-where-leaves-float-upstream">The River Bend Where Leaves Float Upstream</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The River Bend Where Leaves Float Upstream" data-url="https://kyunolab.com/stories/the-river-bend-where-leaves-float-upstream">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The River Bend Where Leaves Float Upstream" data-url="https://kyunolab.com/stories/the-river-bend-where-leaves-float-upstream" data-description="The River Bend Where Leaves Float Upstream explains leaves seem to float upstream around one bend before joining the current again through strange nature." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-river-bend-where-leaves-float-upstream:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-orchard-where-apples-fall-toward-the-wall">The Orchard Where Apples Fall Toward the Wall</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Orchard Where Apples Fall Toward the Wall" data-url="https://kyunolab.com/stories/the-orchard-where-apples-fall-toward-the-wall">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Orchard Where Apples Fall Toward the Wall" data-url="https://kyunolab.com/stories/the-orchard-where-apples-fall-toward-the-wall" data-description="The Orchard Where Apples Fall Toward the Wall explores the origin, meaning, and folklore behind apples in one orchard fall toward the same wall no matter." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-orchard-where-apples-fall-toward-the-wall:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-rain-that-leaves-one-dry-stone">The Rain That Leaves One Dry Stone</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Rain That Leaves One Dry Stone" data-url="https://kyunolab.com/stories/the-rain-that-leaves-one-dry-stone">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Rain That Leaves One Dry Stone" data-url="https://kyunolab.com/stories/the-rain-that-leaves-one-dry-stone" data-description="The Rain That Leaves One Dry Stone explores the origin, meaning, and folklore behind rain darkens every stone in a ring except one that remains dry through." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-rain-that-leaves-one-dry-stone:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-beach-where-footprints-fill-with-blue-light">The Beach Where Footprints Fill With Blue Light</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Beach Where Footprints Fill With Blue Light" data-url="https://kyunolab.com/stories/the-beach-where-footprints-fill-with-blue-light">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Beach Where Footprints Fill With Blue Light" data-url="https://kyunolab.com/stories/the-beach-where-footprints-fill-with-blue-light" data-description="The Beach Where Footprints Fill With Blue Light explores the origin, meaning, and folklore behind footprints on a night beach fill with pale blue light before." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-beach-where-footprints-fill-with-blue-light:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-hill-where-crickets-stop-halfway-up">The Hill Where Crickets Stop Halfway Up</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Hill Where Crickets Stop Halfway Up" data-url="https://kyunolab.com/stories/the-hill-where-crickets-stop-halfway-up">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Hill Where Crickets Stop Halfway Up" data-url="https://kyunolab.com/stories/the-hill-where-crickets-stop-halfway-up" data-description="The Hill Where Crickets Stop Halfway Up explores the origin, meaning, and folklore behind crickets grow silent halfway up a hill along a boundary no fence." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-hill-where-crickets-stop-halfway-up:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-pond-that-reflects-stars-at-noon">The Pond That Reflects Stars at Noon</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Pond That Reflects Stars at Noon" data-url="https://kyunolab.com/stories/the-pond-that-reflects-stars-at-noon">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Pond That Reflects Stars at Noon" data-url="https://kyunolab.com/stories/the-pond-that-reflects-stars-at-noon" data-description="The Pond That Reflects Stars at Noon explores the origin, meaning, and folklore behind the image of a pond reflects a pattern like stars at noon even when the." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-pond-that-reflects-stars-at-noon:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-tree-line-that-moves-after-fog">The Tree Line That Moves After Fog</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Tree Line That Moves After Fog" data-url="https://kyunolab.com/stories/the-tree-line-that-moves-after-fog">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Tree Line That Moves After Fog" data-url="https://kyunolab.com/stories/the-tree-line-that-moves-after-fog" data-description="A calm guide to The Tree Line That Moves After Fog, its common versions, source limits, and the landscape anomaly motif that makes the scene where a tree line." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-tree-line-that-moves-after-fog:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-field-where-snow-falls-in-a-circle">The Field Where Snow Falls in a Circle</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Field Where Snow Falls in a Circle" data-url="https://kyunolab.com/stories/the-field-where-snow-falls-in-a-circle">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Field Where Snow Falls in a Circle" data-url="https://kyunolab.com/stories/the-field-where-snow-falls-in-a-circle" data-description="A calm guide to The Field Where Snow Falls in a Circle, its common versions, source limits, and the weather folklore motif that makes snow falls in a clean." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-field-where-snow-falls-in-a-circle:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/field-where-compasses-point-to-the-fence">The Field Where Compasses Point to the Fence: A Strange Nature Record About Direction and Doubt</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Field Where Compasses Point to the Fence: A Strange Nature Record About Direction and Doubt" data-url="https://kyunolab.com/stories/field-where-compasses-point-to-the-fence">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Field Where Compasses Point to the Fence: A Strange Nature Record About Direction and Doubt" data-url="https://kyunolab.com/stories/field-where-compasses-point-to-the-fence" data-description="A calm guide to The Field Where Compasses Point to the Fence, its common versions, source limits, and the compass field motif that makes compasses and phone." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:field-where-compasses-point-to-the-fence:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/tree-that-flowers-during-first-snow">The Tree That Flowers During First Snow: Why Strange Nature Stories Feel Like Warnings</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Tree That Flowers During First Snow: Why Strange Nature Stories Feel Like Warnings" data-url="https://kyunolab.com/stories/tree-that-flowers-during-first-snow">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Tree That Flowers During First Snow: Why Strange Nature Stories Feel Like Warnings" data-url="https://kyunolab.com/stories/tree-that-flowers-during-first-snow" data-description="A calm guide to The Tree That Flowers During First Snow, its common versions, source limits, and the winter bloom legend motif that makes the scene where a." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:tree-that-flowers-during-first-snow:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/lake-that-keeps-one-side-frozen">The Lake That Keeps One Side Frozen: A Strange Nature Record About Uneven Winter</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Lake That Keeps One Side Frozen: A Strange Nature Record About Uneven Winter" data-url="https://kyunolab.com/stories/lake-that-keeps-one-side-frozen">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Lake That Keeps One Side Frozen: A Strange Nature Record About Uneven Winter" data-url="https://kyunolab.com/stories/lake-that-keeps-one-side-frozen" data-description="The Lake That Keeps One Side Frozen explains the image of the shore divides the lake as if winter has chosen one side and refused the other through strange." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:lake-that-keeps-one-side-frozen:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/field-where-crickets-stop-at-the-fence">The Field Where Crickets Stop at the Fence: A Strange Nature Record About Sudden Silence</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Field Where Crickets Stop at the Fence: A Strange Nature Record About Sudden Silence" data-url="https://kyunolab.com/stories/field-where-crickets-stop-at-the-fence">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Field Where Crickets Stop at the Fence: A Strange Nature Record About Sudden Silence" data-url="https://kyunolab.com/stories/field-where-crickets-stop-at-the-fence" data-description="The Field Where Crickets Stop at the Fence explores the origin, meaning, and folklore behind the image of the boundary is heard before it is seen, tracing why." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:field-where-crickets-stop-at-the-fence:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/forest-that-goes-silent-at-noon">The Forest That Goes Silent at Noon: A Strange Nature Record</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Forest That Goes Silent at Noon: A Strange Nature Record" data-url="https://kyunolab.com/stories/forest-that-goes-silent-at-noon">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Forest That Goes Silent at Noon: A Strange Nature Record" data-url="https://kyunolab.com/stories/forest-that-goes-silent-at-noon" data-description="The Forest That Goes Silent at Noon explores the origin, meaning, and folklore behind the image of a bright noon hour, a full forest, and every ordinary sound." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:forest-that-goes-silent-at-noon:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/red-rain-over-the-fields">Red Rain Over the Fields: Why Unusual Weather Becomes Folklore</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="Red Rain Over the Fields: Why Unusual Weather Becomes Folklore" data-url="https://kyunolab.com/stories/red-rain-over-the-fields">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="Red Rain Over the Fields: Why Unusual Weather Becomes Folklore" data-url="https://kyunolab.com/stories/red-rain-over-the-fields" data-description="Red Rain Over the Fields explains Rain staining fields red and people looking for meaning before explanation through strange nature, separating folklore." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:red-rain-over-the-fields:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/tree-that-bends-away-from-the-road">The Tree That Bends Away From the Road: A Local Nature Legend</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Tree That Bends Away From the Road: A Local Nature Legend" data-url="https://kyunolab.com/stories/tree-that-bends-away-from-the-road">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Tree That Bends Away From the Road: A Local Nature Legend" data-url="https://kyunolab.com/stories/tree-that-bends-away-from-the-road" data-description="A calm guide to The Tree That Bends Away From the Road, its common versions, source limits, and the marked tree motif that makes One tree leaning away from." data-category="Strange Nature">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:tree-that-bends-away-from-the-road:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-lake-that-freezes-around-one-footprint-a-winter-mystery-record:naver"> Published</label>
           </div>
         </li>
         </ul>
+        <nav class="publishing-pagination" aria-label="Strange Nature pagination">
+          <span aria-disabled="true">Previous</span>
+          <span aria-current="page">1</span><a href="/publishing-center/strange-nature/page-2/">2</a><a href="/publishing-center/strange-nature/page-3/">3</a>
+          <a href="/publishing-center/strange-nature/page-2/">Next</a>
+        </nav>
       </section>
     </div>
   </main>

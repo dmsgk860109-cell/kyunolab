@@ -37,427 +37,290 @@
       <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/publishing-center/">Publishing Center</a><span aria-hidden="true">/</span><span aria-current="page">Legendary Places</span></nav>
       <p class="label">Internal Tool</p>
       <h1 class="article-title">Legendary Places</h1>
-      <p class="deck">Records are ordered by the current archive publishing order. Mark Naver publication status in this browser only.</p>
+      <style>
+        .publishing-category-list,
+        .publishing-record-list {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+
+        .publishing-category-list li {
+          margin: 0 0 0.35rem;
+        }
+
+        .publishing-record {
+          align-items: center;
+          border-bottom: 1px solid var(--border-color, #d9d2c4);
+          display: grid;
+          gap: 0.5rem 1rem;
+          grid-template-columns: minmax(0, 1fr) auto;
+          padding: 0.45rem 0;
+        }
+
+        .publishing-record-title {
+          overflow-wrap: anywhere;
+        }
+
+        .publishing-record-actions {
+          align-items: center;
+          display: flex;
+          gap: 0.4rem;
+          white-space: nowrap;
+        }
+
+        .publishing-record .button {
+          font-size: 0.85rem;
+          line-height: 1.1;
+          padding: 0.35rem 0.55rem;
+        }
+
+        .publishing-published-label {
+          align-items: center;
+          display: inline-flex;
+          gap: 0.25rem;
+          margin: 0;
+        }
+
+        .publishing-pagination {
+          align-items: center;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.35rem;
+          margin-top: 1rem;
+        }
+
+        .publishing-pagination a,
+        .publishing-pagination span {
+          border: 1px solid var(--border-color, #d9d2c4);
+          border-radius: 4px;
+          display: inline-flex;
+          line-height: 1;
+          padding: 0.45rem 0.6rem;
+        }
+
+        .publishing-pagination span[aria-current="page"] {
+          background: var(--ink, #171717);
+          border-color: var(--ink, #171717);
+          color: var(--paper, #fffaf1);
+        }
+
+        .publishing-pagination span[aria-disabled="true"] {
+          opacity: 0.55;
+        }
+
+        @media (max-width: 720px) {
+          .publishing-record {
+            grid-template-columns: 1fr;
+          }
+
+          .publishing-record-actions {
+            flex-wrap: wrap;
+            white-space: normal;
+          }
+        }
+      </style>
       <section class="script-material" aria-label="Legendary Places records">
         <h2>Archive Records</h2>
-        <ul>
+        <ul class="publishing-record-list">
         <li class="publishing-record">
-          <a href="/stories/oak-island-mystery">Oak Island Mystery: Treasure Pit, Searches, and the Legendary Place That Keeps Returning</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/oak-island-mystery">Oak Island Mystery: Treasure Pit, Searches, and the Legendary Place That Keeps Returning</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="Oak Island Mystery: Treasure Pit, Searches, and the Legendary Place That Keeps Returning" data-url="https://kyunolab.com/stories/oak-island-mystery">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="Oak Island Mystery: Treasure Pit, Searches, and the Legendary Place That Keeps Returning" data-url="https://kyunolab.com/stories/oak-island-mystery" data-description="Oak Island Mystery explains the image of the island treasure story built from excavations, theories, collapse reports, and a long search tradition through." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:oak-island-mystery:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:oak-island-mystery:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/mount-shasta-legends">Mount Shasta Legends: Sacred Mountain, Hidden Cities, and Modern Place Folklore</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/mount-shasta-legends">Mount Shasta Legends: Sacred Mountain, Hidden Cities, and Modern Place Folklore</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="Mount Shasta Legends: Sacred Mountain, Hidden Cities, and Modern Place Folklore" data-url="https://kyunolab.com/stories/mount-shasta-legends">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="Mount Shasta Legends: Sacred Mountain, Hidden Cities, and Modern Place Folklore" data-url="https://kyunolab.com/stories/mount-shasta-legends" data-description="A calm guide to Mount Shasta Legends, its common versions, source limits, and the sacred mountain motif that makes the image of the California mountain." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:mount-shasta-legends:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:mount-shasta-legends:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/glastonbury-tor-legends">Glastonbury Tor Legends: Avalon, Holy Ground, and the Hill of Many Stories</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/glastonbury-tor-legends">Glastonbury Tor Legends: Avalon, Holy Ground, and the Hill of Many Stories</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="Glastonbury Tor Legends: Avalon, Holy Ground, and the Hill of Many Stories" data-url="https://kyunolab.com/stories/glastonbury-tor-legends">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="Glastonbury Tor Legends: Avalon, Holy Ground, and the Hill of Many Stories" data-url="https://kyunolab.com/stories/glastonbury-tor-legends" data-description="Glastonbury Tor Legends explains the image of the English hill layered with Christian, Arthurian, and local traditions that keep changing its meaning through." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:glastonbury-tor-legends:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:glastonbury-tor-legends:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/stonehenge-legends">Stonehenge Legends: History, Folklore, and Why the Monument Keeps Its Mystery</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/stonehenge-legends">Stonehenge Legends: History, Folklore, and Why the Monument Keeps Its Mystery</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="Stonehenge Legends: History, Folklore, and Why the Monument Keeps Its Mystery" data-url="https://kyunolab.com/stories/stonehenge-legends">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="Stonehenge Legends: History, Folklore, and Why the Monument Keeps Its Mystery" data-url="https://kyunolab.com/stories/stonehenge-legends" data-description="A calm guide to Stonehenge Legends, its common versions, source limits, and the ancient monument motif that makes the image of the prehistoric monument whose." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:stonehenge-legends:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:stonehenge-legends:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/area-51-legend">Area 51: Secrecy, UFO Folklore, and the Making of a Modern Legendary Place</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/area-51-legend">Area 51: Secrecy, UFO Folklore, and the Making of a Modern Legendary Place</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="Area 51: Secrecy, UFO Folklore, and the Making of a Modern Legendary Place" data-url="https://kyunolab.com/stories/area-51-legend">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="Area 51: Secrecy, UFO Folklore, and the Making of a Modern Legendary Place" data-url="https://kyunolab.com/stories/area-51-legend" data-description="A calm guide to Area 51, its common versions, source limits, and the secret site motif that makes the image of the Nevada military site whose secrecy." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:area-51-legend:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:area-51-legend:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-crossroads-shrine-moved-by-every-new-map-history-folklore-and-local-memory">The Crossroads Shrine Moved by Every New Map: History, Folklore, and Local Memory</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-crossroads-shrine-moved-by-every-new-map-history-folklore-and-local-memory">The Crossroads Shrine Moved by Every New Map: History, Folklore, and Local Memory</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Crossroads Shrine Moved by Every New Map: History, Folklore, and Local Memory" data-url="https://kyunolab.com/stories/the-crossroads-shrine-moved-by-every-new-map-history-folklore-and-local-memory">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Crossroads Shrine Moved by Every New Map: History, Folklore, and Local Memory" data-url="https://kyunolab.com/stories/the-crossroads-shrine-moved-by-every-new-map-history-folklore-and-local-memory" data-description="The Crossroads Shrine Moved by Every New Map explains maps place the same roadside shrine at slightly different crossroads through legendary places." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-crossroads-shrine-moved-by-every-new-map-history-folklore-and-local-memory:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-crossroads-shrine-moved-by-every-new-map-history-folklore-and-local-memory:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-mountain-door-painted-in-every-generation-why-the-site-became-part-of-local-tradition">The Mountain Door Painted in Every Generation: Why the Site Became Part of Local Tradition</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-mountain-door-painted-in-every-generation-why-the-site-became-part-of-local-tradition">The Mountain Door Painted in Every Generation: Why the Site Became Part of Local Tradition</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Mountain Door Painted in Every Generation: Why the Site Became Part of Local Tradition" data-url="https://kyunolab.com/stories/the-mountain-door-painted-in-every-generation-why-the-site-became-part-of-local-tradition">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Mountain Door Painted in Every Generation: Why the Site Became Part of Local Tradition" data-url="https://kyunolab.com/stories/the-mountain-door-painted-in-every-generation-why-the-site-became-part-of-local-tradition" data-description="A calm guide to The Mountain Door Painted in Every Generation, its common versions, source limits, and the ruined landmark motif that makes each generation." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-mountain-door-painted-in-every-generation-why-the-site-became-part-of-local-tradition:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-mountain-door-painted-in-every-generation-why-the-site-became-part-of-local-tradition:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-harbor-steps-dedicated-to-a-missing-ship-a-legendary-place-explained">The Harbor Steps Dedicated to a Missing Ship: A Legendary Place Explained</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-harbor-steps-dedicated-to-a-missing-ship-a-legendary-place-explained">The Harbor Steps Dedicated to a Missing Ship: A Legendary Place Explained</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Harbor Steps Dedicated to a Missing Ship: A Legendary Place Explained" data-url="https://kyunolab.com/stories/the-harbor-steps-dedicated-to-a-missing-ship-a-legendary-place-explained">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Harbor Steps Dedicated to a Missing Ship: A Legendary Place Explained" data-url="https://kyunolab.com/stories/the-harbor-steps-dedicated-to-a-missing-ship-a-legendary-place-explained" data-description="The Harbor Steps Dedicated to a Missing Ship explains harbor steps bear a dedication to a ship absent from port records through legendary places, separating." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-harbor-steps-dedicated-to-a-missing-ship-a-legendary-place-explained:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-harbor-steps-dedicated-to-a-missing-ship-a-legendary-place-explained:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-cedar-grove-where-bells-are-never-rung-history-folklore-and-local-memory">The Cedar Grove Where Bells Are Never Rung: History, Folklore, and Local Memory</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-cedar-grove-where-bells-are-never-rung-history-folklore-and-local-memory">The Cedar Grove Where Bells Are Never Rung: History, Folklore, and Local Memory</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Cedar Grove Where Bells Are Never Rung: History, Folklore, and Local Memory" data-url="https://kyunolab.com/stories/the-cedar-grove-where-bells-are-never-rung-history-folklore-and-local-memory">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Cedar Grove Where Bells Are Never Rung: History, Folklore, and Local Memory" data-url="https://kyunolab.com/stories/the-cedar-grove-where-bells-are-never-rung-history-folklore-and-local-memory" data-description="A calm guide to The Cedar Grove Where Bells Are Never Rung, its common versions, source limits, and the local memory motif that makes the scene where a sacred." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-cedar-grove-where-bells-are-never-rung-history-folklore-and-local-memory:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-cedar-grove-where-bells-are-never-rung-history-folklore-and-local-memory:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-stone-road-remembered-beneath-the-marsh-why-the-site-became-part-of-local-tradition">The Stone Road Remembered Beneath the Marsh: Why the Site Became Part of Local Tradition</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-stone-road-remembered-beneath-the-marsh-why-the-site-became-part-of-local-tradition">The Stone Road Remembered Beneath the Marsh: Why the Site Became Part of Local Tradition</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Stone Road Remembered Beneath the Marsh: Why the Site Became Part of Local Tradition" data-url="https://kyunolab.com/stories/the-stone-road-remembered-beneath-the-marsh-why-the-site-became-part-of-local-tradition">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Stone Road Remembered Beneath the Marsh: Why the Site Became Part of Local Tradition" data-url="https://kyunolab.com/stories/the-stone-road-remembered-beneath-the-marsh-why-the-site-became-part-of-local-tradition" data-description="The Stone Road Remembered Beneath the Marsh explores the origin, meaning, and folklore behind local stories describe a paved road beneath marshland with no." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-stone-road-remembered-beneath-the-marsh-why-the-site-became-part-of-local-tradition:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-stone-road-remembered-beneath-the-marsh-why-the-site-became-part-of-local-tradition:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-cave-chapel-with-a-tide-calendar-a-legendary-place-explained">The Cave Chapel With a Tide Calendar: A Legendary Place Explained</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-cave-chapel-with-a-tide-calendar-a-legendary-place-explained">The Cave Chapel With a Tide Calendar: A Legendary Place Explained</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Cave Chapel With a Tide Calendar: A Legendary Place Explained" data-url="https://kyunolab.com/stories/the-cave-chapel-with-a-tide-calendar-a-legendary-place-explained">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Cave Chapel With a Tide Calendar: A Legendary Place Explained" data-url="https://kyunolab.com/stories/the-cave-chapel-with-a-tide-calendar-a-legendary-place-explained" data-description="A calm guide to The Cave Chapel With a Tide Calendar, its common versions, source limits, and the map memory motif that makes the image of an inland cave." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-cave-chapel-with-a-tide-calendar-a-legendary-place-explained:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-cave-chapel-with-a-tide-calendar-a-legendary-place-explained:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-ruined-tower-that-marks-no-former-border-history-folklore-and-local-memory">The Ruined Tower That Marks No Former Border: History, Folklore, and Local Memory</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-ruined-tower-that-marks-no-former-border-history-folklore-and-local-memory">The Ruined Tower That Marks No Former Border: History, Folklore, and Local Memory</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Ruined Tower That Marks No Former Border: History, Folklore, and Local Memory" data-url="https://kyunolab.com/stories/the-ruined-tower-that-marks-no-former-border-history-folklore-and-local-memory">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Ruined Tower That Marks No Former Border: History, Folklore, and Local Memory" data-url="https://kyunolab.com/stories/the-ruined-tower-that-marks-no-former-border-history-folklore-and-local-memory" data-description="A calm guide to The Ruined Tower That Marks No Former Border, its common versions, source limits, and the ruined landmark motif that makes the image of a." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-ruined-tower-that-marks-no-former-border-history-folklore-and-local-memory:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-ruined-tower-that-marks-no-former-border-history-folklore-and-local-memory:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-hill-shrine-that-faces-away-from-sunrise-why-the-site-became-part-of-local-tradition">The Hill Shrine That Faces Away From Sunrise: Why the Site Became Part of Local Tradition</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-hill-shrine-that-faces-away-from-sunrise-why-the-site-became-part-of-local-tradition">The Hill Shrine That Faces Away From Sunrise: Why the Site Became Part of Local Tradition</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Hill Shrine That Faces Away From Sunrise: Why the Site Became Part of Local Tradition" data-url="https://kyunolab.com/stories/the-hill-shrine-that-faces-away-from-sunrise-why-the-site-became-part-of-local-tradition">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Hill Shrine That Faces Away From Sunrise: Why the Site Became Part of Local Tradition" data-url="https://kyunolab.com/stories/the-hill-shrine-that-faces-away-from-sunrise-why-the-site-became-part-of-local-tradition" data-description="The Hill Shrine That Faces Away From Sunrise explores the origin, meaning, and folklore behind the scene where an old hill shrine faces west despite a." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-hill-shrine-that-faces-away-from-sunrise-why-the-site-became-part-of-local-tradition:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-hill-shrine-that-faces-away-from-sunrise-why-the-site-became-part-of-local-tradition:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-bridge-where-pilgrims-leave-unwritten-letters-a-legendary-place-explained">The Bridge Where Pilgrims Leave Unwritten Letters: A Legendary Place Explained</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-bridge-where-pilgrims-leave-unwritten-letters-a-legendary-place-explained">The Bridge Where Pilgrims Leave Unwritten Letters: A Legendary Place Explained</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Bridge Where Pilgrims Leave Unwritten Letters: A Legendary Place Explained" data-url="https://kyunolab.com/stories/the-bridge-where-pilgrims-leave-unwritten-letters-a-legendary-place-explained">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Bridge Where Pilgrims Leave Unwritten Letters: A Legendary Place Explained" data-url="https://kyunolab.com/stories/the-bridge-where-pilgrims-leave-unwritten-letters-a-legendary-place-explained" data-description="A calm guide to The Bridge Where Pilgrims Leave Unwritten Letters, its common versions, source limits, and the local memory motif that makes pilgrims leave." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-bridge-where-pilgrims-leave-unwritten-letters-a-legendary-place-explained:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-bridge-where-pilgrims-leave-unwritten-letters-a-legendary-place-explained:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-well-of-returning-names-history-folklore-and-local-memory">The Well of Returning Names: History, Folklore, and Local Memory</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-well-of-returning-names-history-folklore-and-local-memory">The Well of Returning Names: History, Folklore, and Local Memory</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Well of Returning Names: History, Folklore, and Local Memory" data-url="https://kyunolab.com/stories/the-well-of-returning-names-history-folklore-and-local-memory">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Well of Returning Names: History, Folklore, and Local Memory" data-url="https://kyunolab.com/stories/the-well-of-returning-names-history-folklore-and-local-memory" data-description="A calm guide to The Well of Returning Names, its common versions, source limits, and the sacred place motif that makes the scene where a village well is said." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-well-of-returning-names-history-folklore-and-local-memory:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-well-of-returning-names-history-folklore-and-local-memory:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-house-marked-only-by-smoke-in-winter-a-legendary-place-record">The House Marked Only by Smoke in Winter: A Legendary Place Record</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-house-marked-only-by-smoke-in-winter-a-legendary-place-record">The House Marked Only by Smoke in Winter: A Legendary Place Record</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The House Marked Only by Smoke in Winter: A Legendary Place Record" data-url="https://kyunolab.com/stories/the-house-marked-only-by-smoke-in-winter-a-legendary-place-record">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The House Marked Only by Smoke in Winter: A Legendary Place Record" data-url="https://kyunolab.com/stories/the-house-marked-only-by-smoke-in-winter-a-legendary-place-record" data-description="A calm guide to The House Marked Only by Smoke in Winter, its common versions, source limits, and the local memory motif that makes the image of a house is." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-house-marked-only-by-smoke-in-winter-a-legendary-place-record:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-house-marked-only-by-smoke-in-winter-a-legendary-place-record:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-meadow-drawn-on-maps-before-it-existed-a-legendary-place-mystery">The Meadow Drawn on Maps Before It Existed: A Legendary Place Mystery</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-meadow-drawn-on-maps-before-it-existed-a-legendary-place-mystery">The Meadow Drawn on Maps Before It Existed: A Legendary Place Mystery</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Meadow Drawn on Maps Before It Existed: A Legendary Place Mystery" data-url="https://kyunolab.com/stories/the-meadow-drawn-on-maps-before-it-existed-a-legendary-place-mystery">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Meadow Drawn on Maps Before It Existed: A Legendary Place Mystery" data-url="https://kyunolab.com/stories/the-meadow-drawn-on-maps-before-it-existed-a-legendary-place-mystery" data-description="The Meadow Drawn on Maps Before It Existed explains the scene where a meadow appears on maps before the land was cleared enough to hold one through legendary." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-meadow-drawn-on-maps-before-it-existed-a-legendary-place-mystery:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-meadow-drawn-on-maps-before-it-existed-a-legendary-place-mystery:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-watchtower-facing-a-disappeared-road-a-landmark-legend-explained">The Watchtower Facing a Disappeared Road: A Landmark Legend Explained</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-watchtower-facing-a-disappeared-road-a-landmark-legend-explained">The Watchtower Facing a Disappeared Road: A Landmark Legend Explained</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Watchtower Facing a Disappeared Road: A Landmark Legend Explained" data-url="https://kyunolab.com/stories/the-watchtower-facing-a-disappeared-road-a-landmark-legend-explained">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Watchtower Facing a Disappeared Road: A Landmark Legend Explained" data-url="https://kyunolab.com/stories/the-watchtower-facing-a-disappeared-road-a-landmark-legend-explained" data-description="The Watchtower Facing a Disappeared Road explains the scene where a watchtower faces a road that disappeared from maps before the tower was built through." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-watchtower-facing-a-disappeared-road-a-landmark-legend-explained:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-watchtower-facing-a-disappeared-road-a-landmark-legend-explained:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-lost-garden-behind-the-railway-wall-a-legendary-place-record">The Lost Garden Behind the Railway Wall: A Legendary Place Record</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-lost-garden-behind-the-railway-wall-a-legendary-place-record">The Lost Garden Behind the Railway Wall: A Legendary Place Record</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Lost Garden Behind the Railway Wall: A Legendary Place Record" data-url="https://kyunolab.com/stories/the-lost-garden-behind-the-railway-wall-a-legendary-place-record">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Lost Garden Behind the Railway Wall: A Legendary Place Record" data-url="https://kyunolab.com/stories/the-lost-garden-behind-the-railway-wall-a-legendary-place-record" data-description="A calm guide to The Lost Garden Behind the Railway Wall, its common versions, source limits, and the map memory motif that makes the image of a garden is." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-lost-garden-behind-the-railway-wall-a-legendary-place-record:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-lost-garden-behind-the-railway-wall-a-legendary-place-record:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-coast-road-leading-to-a-paper-harbor-a-legendary-place-explained">The Coast Road Leading to a Paper Harbor: A Legendary Place Explained</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-coast-road-leading-to-a-paper-harbor-a-legendary-place-explained">The Coast Road Leading to a Paper Harbor: A Legendary Place Explained</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Coast Road Leading to a Paper Harbor: A Legendary Place Explained" data-url="https://kyunolab.com/stories/the-coast-road-leading-to-a-paper-harbor-a-legendary-place-explained">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Coast Road Leading to a Paper Harbor: A Legendary Place Explained" data-url="https://kyunolab.com/stories/the-coast-road-leading-to-a-paper-harbor-a-legendary-place-explained" data-description="The Coast Road Leading to a Paper Harbor explores the origin, meaning, and folklore behind the image of a coast road is said to lead to a harbor shown only in." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-coast-road-leading-to-a-paper-harbor-a-legendary-place-explained:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-coast-road-leading-to-a-paper-harbor-a-legendary-place-explained:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-valley-where-names-return-as-echoes-a-legendary-place-record">The Valley Where Names Return as Echoes: A Legendary Place Record</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-valley-where-names-return-as-echoes-a-legendary-place-record">The Valley Where Names Return as Echoes: A Legendary Place Record</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Valley Where Names Return as Echoes: A Legendary Place Record" data-url="https://kyunolab.com/stories/the-valley-where-names-return-as-echoes-a-legendary-place-record">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Valley Where Names Return as Echoes: A Legendary Place Record" data-url="https://kyunolab.com/stories/the-valley-where-names-return-as-echoes-a-legendary-place-record" data-description="A calm guide to The Valley Where Names Return as Echoes, its common versions, source limits, and the local memory motif that makes the scene where a valley." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-valley-where-names-return-as-echoes-a-legendary-place-record:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-valley-where-names-return-as-echoes-a-legendary-place-record:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-village-gate-in-old-postcards-a-legendary-place-explained">The Village Gate in Old Postcards: A Legendary Place Explained</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-village-gate-in-old-postcards-a-legendary-place-explained">The Village Gate in Old Postcards: A Legendary Place Explained</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Village Gate in Old Postcards: A Legendary Place Explained" data-url="https://kyunolab.com/stories/the-village-gate-in-old-postcards-a-legendary-place-explained">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Village Gate in Old Postcards: A Legendary Place Explained" data-url="https://kyunolab.com/stories/the-village-gate-in-old-postcards-a-legendary-place-explained" data-description="The Village Gate in Old Postcards explains old postcards show a village gate that no current street plan can place through legendary places, separating." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-village-gate-in-old-postcards-a-legendary-place-explained:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-village-gate-in-old-postcards-a-legendary-place-explained:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-chapel-under-the-dry-reservoir-a-place-legend-and-meaning">The Chapel Under the Dry Reservoir: A Place Legend and Meaning</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-chapel-under-the-dry-reservoir-a-place-legend-and-meaning">The Chapel Under the Dry Reservoir: A Place Legend and Meaning</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Chapel Under the Dry Reservoir: A Place Legend and Meaning" data-url="https://kyunolab.com/stories/the-chapel-under-the-dry-reservoir-a-place-legend-and-meaning">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Chapel Under the Dry Reservoir: A Place Legend and Meaning" data-url="https://kyunolab.com/stories/the-chapel-under-the-dry-reservoir-a-place-legend-and-meaning" data-description="The Chapel Under the Dry Reservoir explains the image of a chapel is said to stand under a reservoir that has been dry for decades through legendary places." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-chapel-under-the-dry-reservoir-a-place-legend-and-meaning:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-chapel-under-the-dry-reservoir-a-place-legend-and-meaning:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-orchard-island-seen-from-the-wrong-shore-a-legendary-place-record">The Orchard Island Seen From the Wrong Shore: A Legendary Place Record</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-orchard-island-seen-from-the-wrong-shore-a-legendary-place-record">The Orchard Island Seen From the Wrong Shore: A Legendary Place Record</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Orchard Island Seen From the Wrong Shore: A Legendary Place Record" data-url="https://kyunolab.com/stories/the-orchard-island-seen-from-the-wrong-shore-a-legendary-place-record">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Orchard Island Seen From the Wrong Shore: A Legendary Place Record" data-url="https://kyunolab.com/stories/the-orchard-island-seen-from-the-wrong-shore-a-legendary-place-record" data-description="A calm guide to The Orchard Island Seen From the Wrong Shore, its common versions, source limits, and the map memory motif that makes the image of an orchard." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-orchard-island-seen-from-the-wrong-shore-a-legendary-place-record:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-hill-of-bells-no-map-names-twice-a-legendary-place-explained">The Hill of Bells No Map Names Twice: A Legendary Place Explained</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Hill of Bells No Map Names Twice: A Legendary Place Explained" data-url="https://kyunolab.com/stories/the-hill-of-bells-no-map-names-twice-a-legendary-place-explained">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Hill of Bells No Map Names Twice: A Legendary Place Explained" data-url="https://kyunolab.com/stories/the-hill-of-bells-no-map-names-twice-a-legendary-place-explained" data-description="The Hill of Bells No Map Names Twice explores the origin, meaning, and folklore behind the scene where a hill of bells appears in old directions under." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-hill-of-bells-no-map-names-twice-a-legendary-place-explained:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-chapel-built-around-a-stone-no-one-moves">The Chapel Built Around a Stone No One Moves</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Chapel Built Around a Stone No One Moves" data-url="https://kyunolab.com/stories/the-chapel-built-around-a-stone-no-one-moves">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Chapel Built Around a Stone No One Moves" data-url="https://kyunolab.com/stories/the-chapel-built-around-a-stone-no-one-moves" data-description="The Chapel Built Around a Stone No One Moves explains the image of a chapel built around a stone that workers, priests, and visitors all insist should have." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-chapel-built-around-a-stone-no-one-moves:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-pilgrim-road-with-a-missing-ninth-marker">The Pilgrim Road With a Missing Ninth Marker</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Pilgrim Road With a Missing Ninth Marker" data-url="https://kyunolab.com/stories/the-pilgrim-road-with-a-missing-ninth-marker">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Pilgrim Road With a Missing Ninth Marker" data-url="https://kyunolab.com/stories/the-pilgrim-road-with-a-missing-ninth-marker" data-description="The Pilgrim Road With a Missing Ninth Marker explains the image of a pilgrim road whose ninth marker is absent from maps but present in stories of tired." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-pilgrim-road-with-a-missing-ninth-marker:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-hill-shrine-that-faces-away-from-sunrise">The Hill Shrine That Faces Away From Sunrise</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Hill Shrine That Faces Away From Sunrise" data-url="https://kyunolab.com/stories/the-hill-shrine-that-faces-away-from-sunrise">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Hill Shrine That Faces Away From Sunrise" data-url="https://kyunolab.com/stories/the-hill-shrine-that-faces-away-from-sunrise" data-description="Explore a hill shrine said to face away from sunrise, the practical reasons sacred buildings change orientation, and the folklore local memory creates." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-hill-shrine-that-faces-away-from-sunrise:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-bridge-where-names-are-spoken-only-once">The Bridge Where Names Are Spoken Only Once</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Bridge Where Names Are Spoken Only Once" data-url="https://kyunolab.com/stories/the-bridge-where-names-are-spoken-only-once">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Bridge Where Names Are Spoken Only Once" data-url="https://kyunolab.com/stories/the-bridge-where-names-are-spoken-only-once" data-description="The Bridge Where Names Are Spoken Only Once explores the origin, meaning, and folklore behind the scene where a bridge where names are spoken only once in." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-bridge-where-names-are-spoken-only-once:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-well-beneath-the-locked-parish-floor">The Well Beneath the Locked Parish Floor</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Well Beneath the Locked Parish Floor" data-url="https://kyunolab.com/stories/the-well-beneath-the-locked-parish-floor">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Well Beneath the Locked Parish Floor" data-url="https://kyunolab.com/stories/the-well-beneath-the-locked-parish-floor" data-description="A calm guide to The Well Beneath the Locked Parish Floor, its common versions, source limits, and the well legend motif that makes the scene where a well." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-well-beneath-the-locked-parish-floor:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-roadside-oak-with-nails-no-one-claims">The Roadside Oak With Nails No One Claims</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Roadside Oak With Nails No One Claims" data-url="https://kyunolab.com/stories/the-roadside-oak-with-nails-no-one-claims">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Roadside Oak With Nails No One Claims" data-url="https://kyunolab.com/stories/the-roadside-oak-with-nails-no-one-claims" data-description="A calm guide to The Roadside Oak With Nails No One Claims, its common versions, source limits, and the tree legend motif that makes the image of a roadside." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-roadside-oak-with-nails-no-one-claims:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-ruin-that-casts-a-shadow-toward-the-sea">The Ruin That Casts a Shadow Toward the Sea</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Ruin That Casts a Shadow Toward the Sea" data-url="https://kyunolab.com/stories/the-ruin-that-casts-a-shadow-toward-the-sea">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Ruin That Casts a Shadow Toward the Sea" data-url="https://kyunolab.com/stories/the-ruin-that-casts-a-shadow-toward-the-sea" data-description="The Ruin That Casts a Shadow Toward the Sea explores the origin, meaning, and folklore behind the image of a ruin said to cast a shadow toward the sea even." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-ruin-that-casts-a-shadow-toward-the-sea:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-temple-gate-that-opens-only-for-returning-feet">The Temple Gate That Opens Only for Returning Feet</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Temple Gate That Opens Only for Returning Feet" data-url="https://kyunolab.com/stories/the-temple-gate-that-opens-only-for-returning-feet">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Temple Gate That Opens Only for Returning Feet" data-url="https://kyunolab.com/stories/the-temple-gate-that-opens-only-for-returning-feet" data-description="The Temple Gate That Opens Only for Returning Feet explores the origin, meaning, and folklore behind the scene where a temple gate that opens only for." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-temple-gate-that-opens-only-for-returning-feet:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-bell-tower-heard-from-the-dry-riverbed">The Bell Tower Heard From the Dry Riverbed</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Bell Tower Heard From the Dry Riverbed" data-url="https://kyunolab.com/stories/the-bell-tower-heard-from-the-dry-riverbed">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Bell Tower Heard From the Dry Riverbed" data-url="https://kyunolab.com/stories/the-bell-tower-heard-from-the-dry-riverbed" data-description="A calm guide to The Bell Tower Heard From the Dry Riverbed, its common versions, source limits, and the bell tower legend motif that makes the image of a bell." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-bell-tower-heard-from-the-dry-riverbed:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-mountain-step-counted-differently-going-down">The Mountain Step Counted Differently Going Down</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Mountain Step Counted Differently Going Down" data-url="https://kyunolab.com/stories/the-mountain-step-counted-differently-going-down">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Mountain Step Counted Differently Going Down" data-url="https://kyunolab.com/stories/the-mountain-step-counted-differently-going-down" data-description="The Mountain Step Counted Differently Going Down explains the image of a mountain stair that has one number of steps going up and another going down through." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-mountain-step-counted-differently-going-down:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-roadside-stone-that-turns-toward-home">The Roadside Stone That Turns Toward Home</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Roadside Stone That Turns Toward Home" data-url="https://kyunolab.com/stories/the-roadside-stone-that-turns-toward-home">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Roadside Stone That Turns Toward Home" data-url="https://kyunolab.com/stories/the-roadside-stone-that-turns-toward-home" data-description="A calm guide to The Roadside Stone That Turns Toward Home, its common versions, source limits, and the oath stone motif that makes the image of a roadside." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-roadside-stone-that-turns-toward-home:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-old-well-that-shows-a-different-sky">The Old Well That Shows a Different Sky</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Old Well That Shows a Different Sky" data-url="https://kyunolab.com/stories/the-old-well-that-shows-a-different-sky">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Old Well That Shows a Different Sky" data-url="https://kyunolab.com/stories/the-old-well-that-shows-a-different-sky" data-description="The Old Well That Shows a Different Sky explains the image of an old well reflects a sky with stars visible during daylight in village retellings through." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-old-well-that-shows-a-different-sky:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-hill-fort-heard-beneath-the-grass">The Hill Fort Heard Beneath the Grass</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Hill Fort Heard Beneath the Grass" data-url="https://kyunolab.com/stories/the-hill-fort-heard-beneath-the-grass">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Hill Fort Heard Beneath the Grass" data-url="https://kyunolab.com/stories/the-hill-fort-heard-beneath-the-grass" data-description="The Hill Fort Heard Beneath the Grass explains the image of a hill fort is said to hum beneath the grass when people walk the old boundary after dusk through." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-hill-fort-heard-beneath-the-grass:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-temple-courtyard-where-rain-falls-sideways">The Temple Courtyard Where Rain Falls Sideways</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Temple Courtyard Where Rain Falls Sideways" data-url="https://kyunolab.com/stories/the-temple-courtyard-where-rain-falls-sideways">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Temple Courtyard Where Rain Falls Sideways" data-url="https://kyunolab.com/stories/the-temple-courtyard-where-rain-falls-sideways" data-description="A calm guide to The Temple Courtyard Where Rain Falls Sideways, its common versions, source limits, and the pilgrim route motif that makes rain falls sideways." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-temple-courtyard-where-rain-falls-sideways:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-bridge-of-names-no-one-reads-aloud">The Bridge of Names No One Reads Aloud</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Bridge of Names No One Reads Aloud" data-url="https://kyunolab.com/stories/the-bridge-of-names-no-one-reads-aloud">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Bridge of Names No One Reads Aloud" data-url="https://kyunolab.com/stories/the-bridge-of-names-no-one-reads-aloud" data-description="A calm guide to The Bridge of Names No One Reads Aloud, its common versions, source limits, and the sacred place motif that makes the scene where a legendary." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-bridge-of-names-no-one-reads-aloud:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-cave-door-that-opens-only-to-returning-travelers">The Cave Door That Opens Only to Returning Travelers</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Cave Door That Opens Only to Returning Travelers" data-url="https://kyunolab.com/stories/the-cave-door-that-opens-only-to-returning-travelers">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Cave Door That Opens Only to Returning Travelers" data-url="https://kyunolab.com/stories/the-cave-door-that-opens-only-to-returning-travelers" data-description="The Cave Door That Opens Only to Returning Travelers explores the origin, meaning, and folklore behind the image of a cave door is said to open only for." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-cave-door-that-opens-only-to-returning-travelers:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-pilgrim-road-that-skips-one-milestone">The Pilgrim Road That Skips One Milestone</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Pilgrim Road That Skips One Milestone" data-url="https://kyunolab.com/stories/the-pilgrim-road-that-skips-one-milestone">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Pilgrim Road That Skips One Milestone" data-url="https://kyunolab.com/stories/the-pilgrim-road-that-skips-one-milestone" data-description="The Pilgrim Road That Skips One Milestone explores the origin, meaning, and folklore behind the image of a pilgrim road skips one milestone and counts it." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-pilgrim-road-that-skips-one-milestone:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-ruined-tower-that-points-away-from-north">The Ruined Tower That Points Away From North</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Ruined Tower That Points Away From North" data-url="https://kyunolab.com/stories/the-ruined-tower-that-points-away-from-north">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Ruined Tower That Points Away From North" data-url="https://kyunolab.com/stories/the-ruined-tower-that-points-away-from-north" data-description="A calm guide to The Ruined Tower That Points Away From North, its common versions, source limits, and the forbidden lake motif that makes the image of a." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-ruined-tower-that-points-away-from-north:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-forbidden-lake-with-a-shore-that-changes-shape">The Forbidden Lake With a Shore That Changes Shape</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Forbidden Lake With a Shore That Changes Shape" data-url="https://kyunolab.com/stories/the-forbidden-lake-with-a-shore-that-changes-shape">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Forbidden Lake With a Shore That Changes Shape" data-url="https://kyunolab.com/stories/the-forbidden-lake-with-a-shore-that-changes-shape" data-description="The Forbidden Lake With a Shore That Changes Shape explains the image of a forbidden lake is said to change its shoreline whenever someone tries to measure it." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-forbidden-lake-with-a-shore-that-changes-shape:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-mountain-shrine-that-refuses-a-second-photograph">The Mountain Shrine That Refuses a Second Photograph</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Mountain Shrine That Refuses a Second Photograph" data-url="https://kyunolab.com/stories/the-mountain-shrine-that-refuses-a-second-photograph">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Mountain Shrine That Refuses a Second Photograph" data-url="https://kyunolab.com/stories/the-mountain-shrine-that-refuses-a-second-photograph" data-description="The Mountain Shrine That Refuses a Second Photograph explores the origin, meaning, and folklore behind the scene where a mountain shrine appears clearly in." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-mountain-shrine-that-refuses-a-second-photograph:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/library-basement-that-has-no-catalog-number">The Library Basement With No Catalog Number: A Legendary Place Story About Shelves and Silence</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Library Basement With No Catalog Number: A Legendary Place Story About Shelves and Silence" data-url="https://kyunolab.com/stories/library-basement-that-has-no-catalog-number">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Library Basement With No Catalog Number: A Legendary Place Story About Shelves and Silence" data-url="https://kyunolab.com/stories/library-basement-that-has-no-catalog-number" data-description="A calm guide to The Library Basement With No Catalog Number, its common versions, source limits, and the hidden library room motif that makes the scene where." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:library-basement-that-has-no-catalog-number:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/chapel-that-rings-underwater">The Chapel That Rings Underwater: A Legendary Place Story About Bells, Floods, and Memory</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Chapel That Rings Underwater: A Legendary Place Story About Bells, Floods, and Memory" data-url="https://kyunolab.com/stories/chapel-that-rings-underwater">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Chapel That Rings Underwater: A Legendary Place Story About Bells, Floods, and Memory" data-url="https://kyunolab.com/stories/chapel-that-rings-underwater" data-description="The Chapel That Rings Underwater explores the origin, meaning, and folklore behind the scene where a bell sounds from beneath a lake where a chapel was said." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:chapel-that-rings-underwater:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/bridge-that-refuses-the-last-step">The Bridge That Refuses the Last Step: A Legendary Place Record About Crossing and Return</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Bridge That Refuses the Last Step: A Legendary Place Record About Crossing and Return" data-url="https://kyunolab.com/stories/bridge-that-refuses-the-last-step">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Bridge That Refuses the Last Step: A Legendary Place Record About Crossing and Return" data-url="https://kyunolab.com/stories/bridge-that-refuses-the-last-step" data-description="The Bridge That Refuses the Last Step explores the origin, meaning, and folklore behind the image of the walker reaches the far rail, sees the destination." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:bridge-that-refuses-the-last-step:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/chapel-door-that-opens-only-in-fog">The Chapel Door That Opens Only in Fog: A Legendary Place Record About Weather and Access</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Chapel Door That Opens Only in Fog: A Legendary Place Record About Weather and Access" data-url="https://kyunolab.com/stories/chapel-door-that-opens-only-in-fog">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Chapel Door That Opens Only in Fog: A Legendary Place Record About Weather and Access" data-url="https://kyunolab.com/stories/chapel-door-that-opens-only-in-fog" data-description="The Chapel Door That Opens Only in Fog explores the origin, meaning, and folklore behind weather becomes part of the lock, tracing why this fog chapel story." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:chapel-door-that-opens-only-in-fog:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/mountain-that-answers-only-at-dawn">The Mountain That Answers Only at Dawn: A Legendary Place Record</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Mountain That Answers Only at Dawn: A Legendary Place Record" data-url="https://kyunolab.com/stories/mountain-that-answers-only-at-dawn">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Mountain That Answers Only at Dawn: A Legendary Place Record" data-url="https://kyunolab.com/stories/mountain-that-answers-only-at-dawn" data-description="The Mountain That Answers Only at Dawn explores the origin, meaning, and folklore behind the scene where a mountain echo that people say answers only before." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:mountain-that-answers-only-at-dawn:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/forbidden-lake-with-no-reflection">The Forbidden Lake With No Reflection: Why Still Water Becomes Sacred</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Forbidden Lake With No Reflection: Why Still Water Becomes Sacred" data-url="https://kyunolab.com/stories/forbidden-lake-with-no-reflection">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Forbidden Lake With No Reflection: Why Still Water Becomes Sacred" data-url="https://kyunolab.com/stories/forbidden-lake-with-no-reflection" data-description="The Forbidden Lake With No Reflection explains the scene where a lake so still that people say it refuses to give back a face through legendary places." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:forbidden-lake-with-no-reflection:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/ruins-that-move-after-fog">The Ruins That Move After Fog: A Place Legend About Unstable Memory</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Ruins That Move After Fog: A Place Legend About Unstable Memory" data-url="https://kyunolab.com/stories/ruins-that-move-after-fog">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Ruins That Move After Fog: A Place Legend About Unstable Memory" data-url="https://kyunolab.com/stories/ruins-that-move-after-fog" data-description="A calm guide to The Ruins That Move After Fog, its common versions, source limits, and the moving ruins motif that makes Old stones appearing closer after." data-category="Legendary Places">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:ruins-that-move-after-fog:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-orchard-island-seen-from-the-wrong-shore-a-legendary-place-record:naver"> Published</label>
           </div>
         </li>
         </ul>
+        <nav class="publishing-pagination" aria-label="Legendary Places pagination">
+          <span aria-disabled="true">Previous</span>
+          <span aria-current="page">1</span><a href="/publishing-center/legendary-places/page-2/">2</a><a href="/publishing-center/legendary-places/page-3/">3</a>
+          <a href="/publishing-center/legendary-places/page-2/">Next</a>
+        </nav>
       </section>
     </div>
   </main>

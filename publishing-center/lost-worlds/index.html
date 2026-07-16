@@ -37,427 +37,290 @@
       <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/publishing-center/">Publishing Center</a><span aria-hidden="true">/</span><span aria-current="page">Lost Worlds</span></nav>
       <p class="label">Internal Tool</p>
       <h1 class="article-title">Lost Worlds</h1>
-      <p class="deck">Records are ordered by the current archive publishing order. Mark Naver publication status in this browser only.</p>
+      <style>
+        .publishing-category-list,
+        .publishing-record-list {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+
+        .publishing-category-list li {
+          margin: 0 0 0.35rem;
+        }
+
+        .publishing-record {
+          align-items: center;
+          border-bottom: 1px solid var(--border-color, #d9d2c4);
+          display: grid;
+          gap: 0.5rem 1rem;
+          grid-template-columns: minmax(0, 1fr) auto;
+          padding: 0.45rem 0;
+        }
+
+        .publishing-record-title {
+          overflow-wrap: anywhere;
+        }
+
+        .publishing-record-actions {
+          align-items: center;
+          display: flex;
+          gap: 0.4rem;
+          white-space: nowrap;
+        }
+
+        .publishing-record .button {
+          font-size: 0.85rem;
+          line-height: 1.1;
+          padding: 0.35rem 0.55rem;
+        }
+
+        .publishing-published-label {
+          align-items: center;
+          display: inline-flex;
+          gap: 0.25rem;
+          margin: 0;
+        }
+
+        .publishing-pagination {
+          align-items: center;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.35rem;
+          margin-top: 1rem;
+        }
+
+        .publishing-pagination a,
+        .publishing-pagination span {
+          border: 1px solid var(--border-color, #d9d2c4);
+          border-radius: 4px;
+          display: inline-flex;
+          line-height: 1;
+          padding: 0.45rem 0.6rem;
+        }
+
+        .publishing-pagination span[aria-current="page"] {
+          background: var(--ink, #171717);
+          border-color: var(--ink, #171717);
+          color: var(--paper, #fffaf1);
+        }
+
+        .publishing-pagination span[aria-disabled="true"] {
+          opacity: 0.55;
+        }
+
+        @media (max-width: 720px) {
+          .publishing-record {
+            grid-template-columns: 1fr;
+          }
+
+          .publishing-record-actions {
+            flex-wrap: wrap;
+            white-space: normal;
+          }
+        }
+      </style>
       <section class="script-material" aria-label="Lost Worlds records">
         <h2>Archive Records</h2>
-        <ul>
+        <ul class="publishing-record-list">
         <li class="publishing-record">
-          <a href="/stories/avalon-legend">Avalon: Arthurian Island, Healing, and the Legend of the Place Beyond Reach</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/avalon-legend">Avalon: Arthurian Island, Healing, and the Legend of the Place Beyond Reach</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="Avalon: Arthurian Island, Healing, and the Legend of the Place Beyond Reach" data-url="https://kyunolab.com/stories/avalon-legend">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="Avalon: Arthurian Island, Healing, and the Legend of the Place Beyond Reach" data-url="https://kyunolab.com/stories/avalon-legend" data-description="Avalon explains the image of the Arthurian island associated with healing, departure, and the suspended return of a king through lost worlds, separating." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:avalon-legend:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:avalon-legend:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/shangri-la-legend">Shangri-La: Lost Valley, Utopia, and the Myth of a Hidden Paradise</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/shangri-la-legend">Shangri-La: Lost Valley, Utopia, and the Myth of a Hidden Paradise</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="Shangri-La: Lost Valley, Utopia, and the Myth of a Hidden Paradise" data-url="https://kyunolab.com/stories/shangri-la-legend">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="Shangri-La: Lost Valley, Utopia, and the Myth of a Hidden Paradise" data-url="https://kyunolab.com/stories/shangri-la-legend" data-description="A calm guide to Shangri-La, its common versions, source limits, and the hidden valley motif that makes the image of the fictional hidden valley that became a." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:shangri-la-legend:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:shangri-la-legend:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/lemuria-lost-continent">Lemuria: Science, Theosophy, and the Lost Continent That Became Myth</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/lemuria-lost-continent">Lemuria: Science, Theosophy, and the Lost Continent That Became Myth</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="Lemuria: Science, Theosophy, and the Lost Continent That Became Myth" data-url="https://kyunolab.com/stories/lemuria-lost-continent">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="Lemuria: Science, Theosophy, and the Lost Continent That Became Myth" data-url="https://kyunolab.com/stories/lemuria-lost-continent" data-description="Lemuria explores the origin, meaning, and folklore behind the image of the proposed lost land bridge that moved from scientific hypothesis into esoteric and." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:lemuria-lost-continent:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:lemuria-lost-continent:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/el-dorado-legend">El Dorado: Origin, Gold, and the Lost City Legend That Changed Maps</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/el-dorado-legend">El Dorado: Origin, Gold, and the Lost City Legend That Changed Maps</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="El Dorado: Origin, Gold, and the Lost City Legend That Changed Maps" data-url="https://kyunolab.com/stories/el-dorado-legend">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="El Dorado: Origin, Gold, and the Lost City Legend That Changed Maps" data-url="https://kyunolab.com/stories/el-dorado-legend" data-description="A calm guide to El Dorado, its common versions, source limits, and the golden city motif that makes the image of the gold-laden legend that moved from ritual." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:el-dorado-legend:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:el-dorado-legend:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/atlantis-lost-world">Atlantis: Origin, Meaning, and the Lost Island Myth That Endures</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/atlantis-lost-world">Atlantis: Origin, Meaning, and the Lost Island Myth That Endures</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="Atlantis: Origin, Meaning, and the Lost Island Myth That Endures" data-url="https://kyunolab.com/stories/atlantis-lost-world">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="Atlantis: Origin, Meaning, and the Lost Island Myth That Endures" data-url="https://kyunolab.com/stories/atlantis-lost-world" data-description="A calm guide to Atlantis, its common versions, source limits, and the lost island motif that makes the image of the famous lost-island account that began in." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:atlantis-lost-world:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:atlantis-lost-world:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-orchard-realm-where-no-fruit-falls-the-maps-and-myths-behind-a-hidden-realm">The Orchard Realm Where No Fruit Falls: The Maps and Myths Behind a Hidden Realm</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-orchard-realm-where-no-fruit-falls-the-maps-and-myths-behind-a-hidden-realm">The Orchard Realm Where No Fruit Falls: The Maps and Myths Behind a Hidden Realm</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Orchard Realm Where No Fruit Falls: The Maps and Myths Behind a Hidden Realm" data-url="https://kyunolab.com/stories/the-orchard-realm-where-no-fruit-falls-the-maps-and-myths-behind-a-hidden-realm">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Orchard Realm Where No Fruit Falls: The Maps and Myths Behind a Hidden Realm" data-url="https://kyunolab.com/stories/the-orchard-realm-where-no-fruit-falls-the-maps-and-myths-behind-a-hidden-realm" data-description="A calm guide to The Orchard Realm Where No Fruit Falls, its common versions, source limits, and the map mystery motif that makes the scene where a secluded." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-orchard-realm-where-no-fruit-falls-the-maps-and-myths-behind-a-hidden-realm:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-orchard-realm-where-no-fruit-falls-the-maps-and-myths-behind-a-hidden-realm:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-railway-atlas-with-a-missing-capital-why-imagined-geography-feels-almost-real">The Railway Atlas With a Missing Capital: Why Imagined Geography Feels Almost Real</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-railway-atlas-with-a-missing-capital-why-imagined-geography-feels-almost-real">The Railway Atlas With a Missing Capital: Why Imagined Geography Feels Almost Real</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Railway Atlas With a Missing Capital: Why Imagined Geography Feels Almost Real" data-url="https://kyunolab.com/stories/the-railway-atlas-with-a-missing-capital-why-imagined-geography-feels-almost-real">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Railway Atlas With a Missing Capital: Why Imagined Geography Feels Almost Real" data-url="https://kyunolab.com/stories/the-railway-atlas-with-a-missing-capital-why-imagined-geography-feels-almost-real" data-description="The Railway Atlas With a Missing Capital explores the origin, meaning, and folklore behind the image of a railway atlas marks a capital city absent from." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-railway-atlas-with-a-missing-capital-why-imagined-geography-feels-almost-real:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-railway-atlas-with-a-missing-capital-why-imagined-geography-feels-almost-real:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-monastery-beyond-the-repeating-mountain-a-lost-world-tradition-explained">The Monastery Beyond the Repeating Mountain: A Lost World Tradition Explained</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-monastery-beyond-the-repeating-mountain-a-lost-world-tradition-explained">The Monastery Beyond the Repeating Mountain: A Lost World Tradition Explained</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Monastery Beyond the Repeating Mountain: A Lost World Tradition Explained" data-url="https://kyunolab.com/stories/the-monastery-beyond-the-repeating-mountain-a-lost-world-tradition-explained">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Monastery Beyond the Repeating Mountain: A Lost World Tradition Explained" data-url="https://kyunolab.com/stories/the-monastery-beyond-the-repeating-mountain-a-lost-world-tradition-explained" data-description="The Monastery Beyond the Repeating Mountain explores the origin, meaning, and folklore behind the image of a monastery is said to stand beyond a mountain." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-monastery-beyond-the-repeating-mountain-a-lost-world-tradition-explained:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-monastery-beyond-the-repeating-mountain-a-lost-world-tradition-explained:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-northern-road-to-a-country-with-no-winter-the-maps-and-myths-behind-a-hidden-realm">The Northern Road to a Country With No Winter: The Maps and Myths Behind a Hidden Realm</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-northern-road-to-a-country-with-no-winter-the-maps-and-myths-behind-a-hidden-realm">The Northern Road to a Country With No Winter: The Maps and Myths Behind a Hidden Realm</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Northern Road to a Country With No Winter: The Maps and Myths Behind a Hidden Realm" data-url="https://kyunolab.com/stories/the-northern-road-to-a-country-with-no-winter-the-maps-and-myths-behind-a-hidden-realm">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Northern Road to a Country With No Winter: The Maps and Myths Behind a Hidden Realm" data-url="https://kyunolab.com/stories/the-northern-road-to-a-country-with-no-winter-the-maps-and-myths-behind-a-hidden-realm" data-description="The Northern Road to a Country With No Winter explains the image of an old northern route promises a country untouched by winter through lost worlds." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-northern-road-to-a-country-with-no-winter-the-maps-and-myths-behind-a-hidden-realm:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-northern-road-to-a-country-with-no-winter-the-maps-and-myths-behind-a-hidden-realm:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-desert-port-where-ships-arrive-without-water-why-imagined-geography-feels-almost-real">The Desert Port Where Ships Arrive Without Water: Why Imagined Geography Feels Almost Real</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-desert-port-where-ships-arrive-without-water-why-imagined-geography-feels-almost-real">The Desert Port Where Ships Arrive Without Water: Why Imagined Geography Feels Almost Real</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Desert Port Where Ships Arrive Without Water: Why Imagined Geography Feels Almost Real" data-url="https://kyunolab.com/stories/the-desert-port-where-ships-arrive-without-water-why-imagined-geography-feels-almost-real">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Desert Port Where Ships Arrive Without Water: Why Imagined Geography Feels Almost Real" data-url="https://kyunolab.com/stories/the-desert-port-where-ships-arrive-without-water-why-imagined-geography-feels-almost-real" data-description="The Desert Port Where Ships Arrive Without Water explores the origin, meaning, and folklore behind the scene where a desert trading city remembers ships." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-desert-port-where-ships-arrive-without-water-why-imagined-geography-feels-almost-real:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-desert-port-where-ships-arrive-without-water-why-imagined-geography-feels-almost-real:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-forest-province-missing-from-the-census-a-lost-world-tradition-explained">The Forest Province Missing From the Census: A Lost World Tradition Explained</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-forest-province-missing-from-the-census-a-lost-world-tradition-explained">The Forest Province Missing From the Census: A Lost World Tradition Explained</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Forest Province Missing From the Census: A Lost World Tradition Explained" data-url="https://kyunolab.com/stories/the-forest-province-missing-from-the-census-a-lost-world-tradition-explained">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Forest Province Missing From the Census: A Lost World Tradition Explained" data-url="https://kyunolab.com/stories/the-forest-province-missing-from-the-census-a-lost-world-tradition-explained" data-description="The Forest Province Missing From the Census explores the origin, meaning, and folklore behind the scene where a forest province appears in tax records but not." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-forest-province-missing-from-the-census-a-lost-world-tradition-explained:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-forest-province-missing-from-the-census-a-lost-world-tradition-explained:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-underground-city-lit-by-reflected-noon-the-maps-and-myths-behind-a-hidden-realm">The Underground City Lit by Reflected Noon: The Maps and Myths Behind a Hidden Realm</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-underground-city-lit-by-reflected-noon-the-maps-and-myths-behind-a-hidden-realm">The Underground City Lit by Reflected Noon: The Maps and Myths Behind a Hidden Realm</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Underground City Lit by Reflected Noon: The Maps and Myths Behind a Hidden Realm" data-url="https://kyunolab.com/stories/the-underground-city-lit-by-reflected-noon-the-maps-and-myths-behind-a-hidden-realm">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Underground City Lit by Reflected Noon: The Maps and Myths Behind a Hidden Realm" data-url="https://kyunolab.com/stories/the-underground-city-lit-by-reflected-noon-the-maps-and-myths-behind-a-hidden-realm" data-description="The Underground City Lit by Reflected Noon explains the image of an underground city receives daylight through mirrors no visitor can locate through lost." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-underground-city-lit-by-reflected-noon-the-maps-and-myths-behind-a-hidden-realm:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-underground-city-lit-by-reflected-noon-the-maps-and-myths-behind-a-hidden-realm:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-island-named-in-three-captains-dreams-why-imagined-geography-feels-almost-real">The Island Named in Three Captains’ Dreams: Why Imagined Geography Feels Almost Real</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-island-named-in-three-captains-dreams-why-imagined-geography-feels-almost-real">The Island Named in Three Captains’ Dreams: Why Imagined Geography Feels Almost Real</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Island Named in Three Captains’ Dreams: Why Imagined Geography Feels Almost Real" data-url="https://kyunolab.com/stories/the-island-named-in-three-captains-dreams-why-imagined-geography-feels-almost-real">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Island Named in Three Captains’ Dreams: Why Imagined Geography Feels Almost Real" data-url="https://kyunolab.com/stories/the-island-named-in-three-captains-dreams-why-imagined-geography-feels-almost-real" data-description="The Island Named in Three Captains’ Dreams explains three captains record the same unknown island after dreaming of its harbor through lost worlds, separating." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-island-named-in-three-captains-dreams-why-imagined-geography-feels-almost-real:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-island-named-in-three-captains-dreams-why-imagined-geography-feels-almost-real:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-valley-where-every-road-points-outward-a-lost-world-tradition-explained">The Valley Where Every Road Points Outward: A Lost World Tradition Explained</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-valley-where-every-road-points-outward-a-lost-world-tradition-explained">The Valley Where Every Road Points Outward: A Lost World Tradition Explained</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Valley Where Every Road Points Outward: A Lost World Tradition Explained" data-url="https://kyunolab.com/stories/the-valley-where-every-road-points-outward-a-lost-world-tradition-explained">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Valley Where Every Road Points Outward: A Lost World Tradition Explained" data-url="https://kyunolab.com/stories/the-valley-where-every-road-points-outward-a-lost-world-tradition-explained" data-description="The Valley Where Every Road Points Outward explores the origin, meaning, and folklore behind the image of a hidden valley is described as having roads that." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-valley-where-every-road-points-outward-a-lost-world-tradition-explained:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-valley-where-every-road-points-outward-a-lost-world-tradition-explained:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-kingdom-drawn-beneath-a-lake-on-old-maps-the-maps-and-myths-behind-a-hidden-realm">The Kingdom Drawn Beneath a Lake on Old Maps: The Maps and Myths Behind a Hidden Realm</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-kingdom-drawn-beneath-a-lake-on-old-maps-the-maps-and-myths-behind-a-hidden-realm">The Kingdom Drawn Beneath a Lake on Old Maps: The Maps and Myths Behind a Hidden Realm</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Kingdom Drawn Beneath a Lake on Old Maps: The Maps and Myths Behind a Hidden Realm" data-url="https://kyunolab.com/stories/the-kingdom-drawn-beneath-a-lake-on-old-maps-the-maps-and-myths-behind-a-hidden-realm">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Kingdom Drawn Beneath a Lake on Old Maps: The Maps and Myths Behind a Hidden Realm" data-url="https://kyunolab.com/stories/the-kingdom-drawn-beneath-a-lake-on-old-maps-the-maps-and-myths-behind-a-hidden-realm" data-description="The Kingdom Drawn Beneath a Lake on Old Maps explores the origin, meaning, and folklore behind the image of an old map places a complete kingdom beneath a." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-kingdom-drawn-beneath-a-lake-on-old-maps-the-maps-and-myths-behind-a-hidden-realm:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-kingdom-drawn-beneath-a-lake-on-old-maps-the-maps-and-myths-behind-a-hidden-realm:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-moonlit-country-in-old-school-maps-a-lost-world-record">The Moonlit Country in Old School Maps: A Lost World Record</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-moonlit-country-in-old-school-maps-a-lost-world-record">The Moonlit Country in Old School Maps: A Lost World Record</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Moonlit Country in Old School Maps: A Lost World Record" data-url="https://kyunolab.com/stories/the-moonlit-country-in-old-school-maps-a-lost-world-record">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Moonlit Country in Old School Maps: A Lost World Record" data-url="https://kyunolab.com/stories/the-moonlit-country-in-old-school-maps-a-lost-world-record" data-description="A calm guide to The Moonlit Country in Old School Maps, its common versions, source limits, and the imagined geography motif that makes old school maps show a." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-moonlit-country-in-old-school-maps-a-lost-world-record:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-moonlit-country-in-old-school-maps-a-lost-world-record:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-palace-under-the-orchard-roots-a-hidden-world-myth-explained">The Palace Under the Orchard Roots: A Hidden World Myth Explained</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-palace-under-the-orchard-roots-a-hidden-world-myth-explained">The Palace Under the Orchard Roots: A Hidden World Myth Explained</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Palace Under the Orchard Roots: A Hidden World Myth Explained" data-url="https://kyunolab.com/stories/the-palace-under-the-orchard-roots-a-hidden-world-myth-explained">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Palace Under the Orchard Roots: A Hidden World Myth Explained" data-url="https://kyunolab.com/stories/the-palace-under-the-orchard-roots-a-hidden-world-myth-explained" data-description="The Palace Under the Orchard Roots explores the origin, meaning, and folklore behind the image of a palace is said to lie under orchard roots where trees lean." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-palace-under-the-orchard-roots-a-hidden-world-myth-explained:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-palace-under-the-orchard-roots-a-hidden-world-myth-explained:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-road-atlas-village-with-no-roads-a-lost-place-legend-explained">The Road Atlas Village With No Roads: A Lost Place Legend Explained</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-road-atlas-village-with-no-roads-a-lost-place-legend-explained">The Road Atlas Village With No Roads: A Lost Place Legend Explained</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Road Atlas Village With No Roads: A Lost Place Legend Explained" data-url="https://kyunolab.com/stories/the-road-atlas-village-with-no-roads-a-lost-place-legend-explained">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Road Atlas Village With No Roads: A Lost Place Legend Explained" data-url="https://kyunolab.com/stories/the-road-atlas-village-with-no-roads-a-lost-place-legend-explained" data-description="The Road Atlas Village With No Roads explains the scene where a village appears in a road atlas though no road connects to it through lost worlds, separating." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-road-atlas-village-with-no-roads-a-lost-place-legend-explained:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-road-atlas-village-with-no-roads-a-lost-place-legend-explained:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-island-listed-only-in-ferry-warnings-a-lost-island-legend-explained">The Island Listed Only in Ferry Warnings: A Lost Island Legend Explained</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-island-listed-only-in-ferry-warnings-a-lost-island-legend-explained">The Island Listed Only in Ferry Warnings: A Lost Island Legend Explained</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Island Listed Only in Ferry Warnings: A Lost Island Legend Explained" data-url="https://kyunolab.com/stories/the-island-listed-only-in-ferry-warnings-a-lost-island-legend-explained">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Island Listed Only in Ferry Warnings: A Lost Island Legend Explained" data-url="https://kyunolab.com/stories/the-island-listed-only-in-ferry-warnings-a-lost-island-legend-explained" data-description="A calm guide to The Island Listed Only in Ferry Warnings, its common versions, source limits, and the map mystery motif that makes the image of an island is." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-island-listed-only-in-ferry-warnings-a-lost-island-legend-explained:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-island-listed-only-in-ferry-warnings-a-lost-island-legend-explained:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-valley-between-two-page-numbers-a-lost-world-folklore-record">The Valley Between Two Page Numbers: A Lost World Folklore Record</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-valley-between-two-page-numbers-a-lost-world-folklore-record">The Valley Between Two Page Numbers: A Lost World Folklore Record</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Valley Between Two Page Numbers: A Lost World Folklore Record" data-url="https://kyunolab.com/stories/the-valley-between-two-page-numbers-a-lost-world-folklore-record">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Valley Between Two Page Numbers: A Lost World Folklore Record" data-url="https://kyunolab.com/stories/the-valley-between-two-page-numbers-a-lost-world-folklore-record" data-description="A calm guide to The Valley Between Two Page Numbers, its common versions, source limits, and the lost place motif that makes the scene where a valley appears." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-valley-between-two-page-numbers-a-lost-world-folklore-record:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-valley-between-two-page-numbers-a-lost-world-folklore-record:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-station-for-a-town-removed-from-timetables-a-lost-place-record">The Station for a Town Removed From Timetables: A Lost Place Record</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-station-for-a-town-removed-from-timetables-a-lost-place-record">The Station for a Town Removed From Timetables: A Lost Place Record</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Station for a Town Removed From Timetables: A Lost Place Record" data-url="https://kyunolab.com/stories/the-station-for-a-town-removed-from-timetables-a-lost-place-record">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Station for a Town Removed From Timetables: A Lost Place Record" data-url="https://kyunolab.com/stories/the-station-for-a-town-removed-from-timetables-a-lost-place-record" data-description="The Station for a Town Removed From Timetables explains the scene where a station timetable keeps one platform for a town removed from the route through lost." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-station-for-a-town-removed-from-timetables-a-lost-place-record:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-station-for-a-town-removed-from-timetables-a-lost-place-record:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-inland-sea-written-into-weather-logs-a-lost-world-mystery">The Inland Sea Written Into Weather Logs: A Lost World Mystery</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-inland-sea-written-into-weather-logs-a-lost-world-mystery">The Inland Sea Written Into Weather Logs: A Lost World Mystery</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Inland Sea Written Into Weather Logs: A Lost World Mystery" data-url="https://kyunolab.com/stories/the-inland-sea-written-into-weather-logs-a-lost-world-mystery">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Inland Sea Written Into Weather Logs: A Lost World Mystery" data-url="https://kyunolab.com/stories/the-inland-sea-written-into-weather-logs-a-lost-world-mystery" data-description="The Inland Sea Written Into Weather Logs explores the origin, meaning, and folklore behind weather logs refer to an inland sea that no current map accepts." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-inland-sea-written-into-weather-logs-a-lost-world-mystery:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-inland-sea-written-into-weather-logs-a-lost-world-mystery:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-harbor-found-in-a-child-s-atlas-why-lost-places-stay-memorable">The Harbor Found in a Child’s Atlas: Why Lost Places Stay Memorable</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-harbor-found-in-a-child-s-atlas-why-lost-places-stay-memorable">The Harbor Found in a Child’s Atlas: Why Lost Places Stay Memorable</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Harbor Found in a Child’s Atlas: Why Lost Places Stay Memorable" data-url="https://kyunolab.com/stories/the-harbor-found-in-a-child-s-atlas-why-lost-places-stay-memorable">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Harbor Found in a Child’s Atlas: Why Lost Places Stay Memorable" data-url="https://kyunolab.com/stories/the-harbor-found-in-a-child-s-atlas-why-lost-places-stay-memorable" data-description="A calm guide to The Harbor Found in a Child’s Atlas, its common versions, source limits, and the vanished island motif that makes the scene where a harbor." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-harbor-found-in-a-child-s-atlas-why-lost-places-stay-memorable:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-harbor-found-in-a-child-s-atlas-why-lost-places-stay-memorable:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-country-whose-border-follows-a-shadow-a-lost-world-myth-explained">The Country Whose Border Follows a Shadow: A Lost World Myth Explained</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-country-whose-border-follows-a-shadow-a-lost-world-myth-explained">The Country Whose Border Follows a Shadow: A Lost World Myth Explained</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Country Whose Border Follows a Shadow: A Lost World Myth Explained" data-url="https://kyunolab.com/stories/the-country-whose-border-follows-a-shadow-a-lost-world-myth-explained">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Country Whose Border Follows a Shadow: A Lost World Myth Explained" data-url="https://kyunolab.com/stories/the-country-whose-border-follows-a-shadow-a-lost-world-myth-explained" data-description="The Country Whose Border Follows a Shadow explains the image of a country is described only by a border that follows the afternoon shadow of a mountain." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-country-whose-border-follows-a-shadow-a-lost-world-myth-explained:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-city-printed-on-the-back-of-a-ticket-a-lost-world-legend-explained">The City Printed on the Back of a Ticket: A Lost World Legend Explained</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The City Printed on the Back of a Ticket: A Lost World Legend Explained" data-url="https://kyunolab.com/stories/the-city-printed-on-the-back-of-a-ticket-a-lost-world-legend-explained">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The City Printed on the Back of a Ticket: A Lost World Legend Explained" data-url="https://kyunolab.com/stories/the-city-printed-on-the-back-of-a-ticket-a-lost-world-legend-explained" data-description="The City Printed on the Back of a Ticket explains the scene where a city is printed on the back of a train ticket, but no railway map names it through lost." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-city-printed-on-the-back-of-a-ticket-a-lost-world-legend-explained:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-city-printed-on-the-back-of-old-tickets">The City Printed on the Back of Old Tickets</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The City Printed on the Back of Old Tickets" data-url="https://kyunolab.com/stories/the-city-printed-on-the-back-of-old-tickets">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The City Printed on the Back of Old Tickets" data-url="https://kyunolab.com/stories/the-city-printed-on-the-back-of-old-tickets" data-description="The City Printed on the Back of Old Tickets explains the scene where a city printed faintly on the back of old tickets, with station names no timetable keeps." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-city-printed-on-the-back-of-old-tickets:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-island-that-appears-only-in-storm-warnings">The Island That Appears Only in Storm Warnings</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Island That Appears Only in Storm Warnings" data-url="https://kyunolab.com/stories/the-island-that-appears-only-in-storm-warnings">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Island That Appears Only in Storm Warnings" data-url="https://kyunolab.com/stories/the-island-that-appears-only-in-storm-warnings" data-description="A calm guide to The Island That Appears Only in Storm Warnings, its common versions, source limits, and the lost island motif that makes the scene where an." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-island-that-appears-only-in-storm-warnings:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-valley-listed-between-two-train-stops">The Valley Listed Between Two Train Stops</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Valley Listed Between Two Train Stops" data-url="https://kyunolab.com/stories/the-valley-listed-between-two-train-stops">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Valley Listed Between Two Train Stops" data-url="https://kyunolab.com/stories/the-valley-listed-between-two-train-stops" data-description="The Valley Listed Between Two Train Stops explains the scene where a valley listed between two train stops in old schedules but missing from modern route maps." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-valley-listed-between-two-train-stops:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-country-with-a-border-drawn-around-fog">The Country With a Border Drawn Around Fog</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Country With a Border Drawn Around Fog" data-url="https://kyunolab.com/stories/the-country-with-a-border-drawn-around-fog">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Country With a Border Drawn Around Fog" data-url="https://kyunolab.com/stories/the-country-with-a-border-drawn-around-fog" data-description="The Country With a Border Drawn Around Fog explains the image of a country whose border is drawn around fog on maps that travelers treat as half joke and half." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-country-with-a-border-drawn-around-fog:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-harbor-that-receives-mail-from-no-ships">The Harbor That Receives Mail From No Ships</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Harbor That Receives Mail From No Ships" data-url="https://kyunolab.com/stories/the-harbor-that-receives-mail-from-no-ships">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Harbor That Receives Mail From No Ships" data-url="https://kyunolab.com/stories/the-harbor-that-receives-mail-from-no-ships" data-description="A calm guide to The Harbor That Receives Mail From No Ships, its common versions, source limits, and the lost harbor motif that makes the image of a harbor." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-harbor-that-receives-mail-from-no-ships:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-orchard-beneath-the-abandoned-platform">The Orchard Beneath the Abandoned Platform</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Orchard Beneath the Abandoned Platform" data-url="https://kyunolab.com/stories/the-orchard-beneath-the-abandoned-platform">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Orchard Beneath the Abandoned Platform" data-url="https://kyunolab.com/stories/the-orchard-beneath-the-abandoned-platform" data-description="The Orchard Beneath the Abandoned Platform explains the image of an orchard beneath an abandoned platform in stories told by railway workers and map." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-orchard-beneath-the-abandoned-platform:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-village-that-moves-one-hill-each-census">The Village That Moves One Hill Each Census</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Village That Moves One Hill Each Census" data-url="https://kyunolab.com/stories/the-village-that-moves-one-hill-each-census">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Village That Moves One Hill Each Census" data-url="https://kyunolab.com/stories/the-village-that-moves-one-hill-each-census" data-description="The Village That Moves One Hill Each Census explores the origin, meaning, and folklore behind the image of a village said to move one hill each census so its." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-village-that-moves-one-hill-each-census:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-desert-road-that-ends-at-a-green-toll-gate">The Desert Road That Ends at a Green Toll Gate</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Desert Road That Ends at a Green Toll Gate" data-url="https://kyunolab.com/stories/the-desert-road-that-ends-at-a-green-toll-gate">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Desert Road That Ends at a Green Toll Gate" data-url="https://kyunolab.com/stories/the-desert-road-that-ends-at-a-green-toll-gate" data-description="A calm guide to The Desert Road That Ends at a Green Toll Gate, its common versions, source limits, and the desert road motif that makes the scene where a." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-desert-road-that-ends-at-a-green-toll-gate:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-lake-town-seen-only-from-the-opposite-shore">The Lake Town Seen Only From the Opposite Shore</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Lake Town Seen Only From the Opposite Shore" data-url="https://kyunolab.com/stories/the-lake-town-seen-only-from-the-opposite-shore">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Lake Town Seen Only From the Opposite Shore" data-url="https://kyunolab.com/stories/the-lake-town-seen-only-from-the-opposite-shore" data-description="A calm guide to The Lake Town Seen Only From the Opposite Shore, its common versions, source limits, and the lake town motif that makes the image of a lake." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-lake-town-seen-only-from-the-opposite-shore:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-map-room-that-contains-one-extra-continent">The Map Room That Contains One Extra Continent</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Map Room That Contains One Extra Continent" data-url="https://kyunolab.com/stories/the-map-room-that-contains-one-extra-continent">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Map Room That Contains One Extra Continent" data-url="https://kyunolab.com/stories/the-map-room-that-contains-one-extra-continent" data-description="A calm guide to The Map Room That Contains One Extra Continent, its common versions, source limits, and the map world motif that makes the image of a map room." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-map-room-that-contains-one-extra-continent:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-desert-gate-that-opens-onto-a-green-road">The Desert Gate That Opens Onto a Green Road</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Desert Gate That Opens Onto a Green Road" data-url="https://kyunolab.com/stories/the-desert-gate-that-opens-onto-a-green-road">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Desert Gate That Opens Onto a Green Road" data-url="https://kyunolab.com/stories/the-desert-gate-that-opens-onto-a-green-road" data-description="The Desert Gate That Opens Onto a Green Road explores the origin, meaning, and folklore behind the scene where a stone gate in desert stories opens onto a." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-desert-gate-that-opens-onto-a-green-road:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-canal-that-flows-toward-a-missing-sea">The Canal That Flows Toward a Missing Sea</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Canal That Flows Toward a Missing Sea" data-url="https://kyunolab.com/stories/the-canal-that-flows-toward-a-missing-sea">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Canal That Flows Toward a Missing Sea" data-url="https://kyunolab.com/stories/the-canal-that-flows-toward-a-missing-sea" data-description="A calm guide to The Canal That Flows Toward a Missing Sea, its common versions, source limits, and the unmapped road motif that makes the image of a canal is." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-canal-that-flows-toward-a-missing-sea:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-schoolhouse-printed-on-one-town-plan">The Schoolhouse Printed on One Town Plan</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Schoolhouse Printed on One Town Plan" data-url="https://kyunolab.com/stories/the-schoolhouse-printed-on-one-town-plan">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Schoolhouse Printed on One Town Plan" data-url="https://kyunolab.com/stories/the-schoolhouse-printed-on-one-town-plan" data-description="A calm guide to The Schoolhouse Printed on One Town Plan, its common versions, source limits, and the vanished island motif that makes the scene where a." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-schoolhouse-printed-on-one-town-plan:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-market-that-opens-on-the-wrong-calendar-day">The Market That Opens on the Wrong Calendar Day</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Market That Opens on the Wrong Calendar Day" data-url="https://kyunolab.com/stories/the-market-that-opens-on-the-wrong-calendar-day">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Market That Opens on the Wrong Calendar Day" data-url="https://kyunolab.com/stories/the-market-that-opens-on-the-wrong-calendar-day" data-description="The Market That Opens on the Wrong Calendar Day explains the scene where a market opens on a date missing from local calendars and closes before sunrise." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-market-that-opens-on-the-wrong-calendar-day:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-valley-heard-only-through-radio-static">The Valley Heard Only Through Radio Static</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Valley Heard Only Through Radio Static" data-url="https://kyunolab.com/stories/the-valley-heard-only-through-radio-static">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Valley Heard Only Through Radio Static" data-url="https://kyunolab.com/stories/the-valley-heard-only-through-radio-static" data-description="The Valley Heard Only Through Radio Static explains the moment when travelers claim a valley can be heard through radio static but never reached by road." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-valley-heard-only-through-radio-static:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-village-that-sends-postcards-but-has-no-road">The Village That Sends Postcards but Has No Road</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Village That Sends Postcards but Has No Road" data-url="https://kyunolab.com/stories/the-village-that-sends-postcards-but-has-no-road">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Village That Sends Postcards but Has No Road" data-url="https://kyunolab.com/stories/the-village-that-sends-postcards-but-has-no-road" data-description="A calm guide to The Village That Sends Postcards but Has No Road, its common versions, source limits, and the hidden world motif that makes postcards arrive." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-village-that-sends-postcards-but-has-no-road:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-country-marked-by-a-border-without-land">The Country Marked by a Border Without Land</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Country Marked by a Border Without Land" data-url="https://kyunolab.com/stories/the-country-marked-by-a-border-without-land">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Country Marked by a Border Without Land" data-url="https://kyunolab.com/stories/the-country-marked-by-a-border-without-land" data-description="A calm guide to The Country Marked by a Border Without Land, its common versions, source limits, and the unmapped road motif that makes old maps mark a border." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-country-marked-by-a-border-without-land:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-underground-orchard-beneath-the-old-station">The Underground Orchard Beneath the Old Station</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Underground Orchard Beneath the Old Station" data-url="https://kyunolab.com/stories/the-underground-orchard-beneath-the-old-station">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Underground Orchard Beneath the Old Station" data-url="https://kyunolab.com/stories/the-underground-orchard-beneath-the-old-station" data-description="The Underground Orchard Beneath the Old Station explains the image of an underground orchard is said to grow beneath a closed station where roots follow the." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-underground-orchard-beneath-the-old-station:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-island-listed-only-in-weather-warnings">The Island Listed Only in Weather Warnings</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Island Listed Only in Weather Warnings" data-url="https://kyunolab.com/stories/the-island-listed-only-in-weather-warnings">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Island Listed Only in Weather Warnings" data-url="https://kyunolab.com/stories/the-island-listed-only-in-weather-warnings" data-description="The Island Listed Only in Weather Warnings explores the origin, meaning, and folklore behind the scene where an island appears only in old weather warnings." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-island-listed-only-in-weather-warnings:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-city-that-appears-in-the-harbor-reflection">The City That Appears in the Harbor Reflection</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The City That Appears in the Harbor Reflection" data-url="https://kyunolab.com/stories/the-city-that-appears-in-the-harbor-reflection">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The City That Appears in the Harbor Reflection" data-url="https://kyunolab.com/stories/the-city-that-appears-in-the-harbor-reflection" data-description="A calm guide to The City That Appears in the Harbor Reflection, its common versions, source limits, and the lost place motif that makes the scene where a city." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-city-that-appears-in-the-harbor-reflection:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/platform-announced-for-a-town-not-on-the-line">The Platform Announced for a Town Not on the Line: A Lost World Record About Transit Maps</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Platform Announced for a Town Not on the Line: A Lost World Record About Transit Maps" data-url="https://kyunolab.com/stories/platform-announced-for-a-town-not-on-the-line">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Platform Announced for a Town Not on the Line: A Lost World Record About Transit Maps" data-url="https://kyunolab.com/stories/platform-announced-for-a-town-not-on-the-line" data-description="The Platform Announced for a Town Not on the Line explores the origin, meaning, and folklore behind the scene where a train announcement names a town no." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:platform-announced-for-a-town-not-on-the-line:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/city-visible-only-from-the-ferry">The City Visible Only From the Ferry: A Lost World Story About Water, Distance, and Almost-Maps</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The City Visible Only From the Ferry: A Lost World Story About Water, Distance, and Almost-Maps" data-url="https://kyunolab.com/stories/city-visible-only-from-the-ferry">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The City Visible Only From the Ferry: A Lost World Story About Water, Distance, and Almost-Maps" data-url="https://kyunolab.com/stories/city-visible-only-from-the-ferry" data-description="The City Visible Only From the Ferry explains the scene where a city appears from the ferry deck between two known ports, but no coastline map includes the." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:city-visible-only-from-the-ferry:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/village-named-on-a-ticket-stub">The Village Named on a Ticket Stub: A Lost World Story About Proof That Points Nowhere</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Village Named on a Ticket Stub: A Lost World Story About Proof That Points Nowhere" data-url="https://kyunolab.com/stories/village-named-on-a-ticket-stub">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Village Named on a Ticket Stub: A Lost World Story About Proof That Points Nowhere" data-url="https://kyunolab.com/stories/village-named-on-a-ticket-stub" data-description="The Village Named on a Ticket Stub explains the image of the ticket has a printed station name, a fare, and a date, but no map admits the village ever existed." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:village-named-on-a-ticket-stub:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/town-printed-on-one-map-and-nowhere-else">The Town Printed on One Map and Nowhere Else: A Lost World Built From Cartographic Doubt</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Town Printed on One Map and Nowhere Else: A Lost World Built From Cartographic Doubt" data-url="https://kyunolab.com/stories/town-printed-on-one-map-and-nowhere-else">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Town Printed on One Map and Nowhere Else: A Lost World Built From Cartographic Doubt" data-url="https://kyunolab.com/stories/town-printed-on-one-map-and-nowhere-else" data-description="The Town Printed on One Map and Nowhere Else explains the image of the printed name outlives the evidence that should have supported it through lost worlds." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:town-printed-on-one-map-and-nowhere-else:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/hy-brasil-island-on-the-map">Hy-Brasil: The Island That Stayed on the Map After It Vanished</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="Hy-Brasil: The Island That Stayed on the Map After It Vanished" data-url="https://kyunolab.com/stories/hy-brasil-island-on-the-map">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="Hy-Brasil: The Island That Stayed on the Map After It Vanished" data-url="https://kyunolab.com/stories/hy-brasil-island-on-the-map" data-description="A calm guide to Hy-Brasil, its common versions, source limits, and the vanishing island motif that makes the image of a legendary island west of Ireland." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:hy-brasil-island-on-the-map:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/city-under-the-sand">The City Under the Sand: Why Buried Places Become Lost Worlds</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The City Under the Sand: Why Buried Places Become Lost Worlds" data-url="https://kyunolab.com/stories/city-under-the-sand">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The City Under the Sand: Why Buried Places Become Lost Worlds" data-url="https://kyunolab.com/stories/city-under-the-sand" data-description="A calm guide to The City Under the Sand, its common versions, source limits, and the buried city motif that makes the image of a dune shifting after wind, a." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:city-under-the-sand:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/valley-that-cannot-be-found-twice">The Valley That Cannot Be Found Twice: A Lost World in Miniature</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Valley That Cannot Be Found Twice: A Lost World in Miniature" data-url="https://kyunolab.com/stories/valley-that-cannot-be-found-twice">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Valley That Cannot Be Found Twice: A Lost World in Miniature" data-url="https://kyunolab.com/stories/valley-that-cannot-be-found-twice" data-description="A calm guide to The Valley That Cannot Be Found Twice, its common versions, source limits, and the hidden valley motif that makes the image of a green valley." data-category="Lost Worlds">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:valley-that-cannot-be-found-twice:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-country-whose-border-follows-a-shadow-a-lost-world-myth-explained:naver"> Published</label>
           </div>
         </li>
         </ul>
+        <nav class="publishing-pagination" aria-label="Lost Worlds pagination">
+          <span aria-disabled="true">Previous</span>
+          <span aria-current="page">1</span><a href="/publishing-center/lost-worlds/page-2/">2</a><a href="/publishing-center/lost-worlds/page-3/">3</a>
+          <a href="/publishing-center/lost-worlds/page-2/">Next</a>
+        </nav>
       </section>
     </div>
   </main>

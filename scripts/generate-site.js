@@ -5,6 +5,7 @@ const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://kyunolab.com';
 const styleVersion = '20260709-seo-structure';
 const pageSize = 12;
+const publishingCenterPageSize = 24;
 const rssLimit = 20;
 
 const stories = readJson(path.join(root, 'data', 'stories.json'));
@@ -224,14 +225,26 @@ function generatePublishingCenter() {
   writeFile('publishing-center/index.html', renderPublishingCenterHome(activeCategories));
   for (const category of activeCategories) {
     const categoryStories = sortNewest(stories.filter((story) => story.categorySlug === category.slug));
-    writeFile(`publishing-center/${category.slug}/index.html`, renderPublishingCategoryPage({ category, stories: categoryStories }));
+    const pageCount = Math.max(1, Math.ceil(categoryStories.length / publishingCenterPageSize));
+    for (let pageNumber = 1; pageNumber <= pageCount; pageNumber += 1) {
+      const pageStories = categoryStories.slice((pageNumber - 1) * publishingCenterPageSize, pageNumber * publishingCenterPageSize);
+      const filePath = pageNumber === 1
+        ? `publishing-center/${category.slug}/index.html`
+        : `publishing-center/${category.slug}/page-${pageNumber}/index.html`;
+      writeFile(filePath, renderPublishingCategoryPage({
+        category,
+        stories: pageStories,
+        pageNumber,
+        totalPages: pageCount
+      }));
+    }
   }
 }
 
 function renderPublishingCenterHome(activeCategories) {
   const categoryLinks = activeCategories.map((category) => {
     const count = stories.filter((story) => story.categorySlug === category.slug).length;
-    return `        <li><a href="/publishing-center/${escapeAttr(category.slug)}/">${escapeHtml(category.title)}</a> <span class="meta">${count} records</span></li>`;
+    return `          <li><a href="/publishing-center/${escapeAttr(category.slug)}/">${escapeHtml(category.title)} (${count})</a></li>`;
   }).join('\n');
 
   return renderPage({
@@ -245,10 +258,10 @@ function renderPublishingCenterHome(activeCategories) {
       <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Publishing Center</span></nav>
       <p class="label">Internal Tool</p>
       <h1 class="article-title">Publishing Center</h1>
-      <p class="deck">Archive category management for publication work.</p>
+      ${renderPublishingCenterStyles()}
       <section class="script-material" aria-label="Archive categories">
         <h2>Archive Categories</h2>
-        <ul>
+        <ul class="publishing-category-list">
 ${categoryLinks}
         </ul>
       </section>
@@ -257,23 +270,25 @@ ${categoryLinks}
   });
 }
 
-function renderPublishingCategoryPage({ category, stories }) {
+function renderPublishingCategoryPage({ category, stories, pageNumber, totalPages }) {
   const rows = stories.map((story) => {
     const storyUrl = `${siteUrl}/stories/${story.slug}`;
     const localKey = `kyunolab:publishing:${story.slug}:naver`;
     return `        <li class="publishing-record">
-          <a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="${escapeAttr(story.title)}" data-url="${escapeAttr(storyUrl)}">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="${escapeAttr(story.title)}" data-url="${escapeAttr(storyUrl)}" data-description="${escapeAttr(story.metaDescription || story.excerpt || story.summaryAnswer || '')}" data-category="${escapeAttr(story.category || category.title)}">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="${escapeAttr(localKey)}"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="${escapeAttr(localKey)}"> Published</label>
           </div>
         </li>`;
   }).join('\n');
+  const pagination = renderPublishingPagination({ category, pageNumber, totalPages });
+  const pageSuffix = pageNumber > 1 ? ` - Page ${pageNumber}` : '';
 
   return renderPage({
-    canonicalPath: `/publishing-center/${category.slug}/`,
-    title: `${category.title} Publishing Center`,
+    canonicalPath: publishingCategoryPagePath(category.slug, pageNumber),
+    title: `${category.title} Publishing Center${pageSuffix}`,
     description: `Internal publishing management page for ${category.title} archive records.`,
     robots: 'noindex, nofollow',
     networkSection: 'publishing',
@@ -282,16 +297,132 @@ function renderPublishingCategoryPage({ category, stories }) {
       <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/publishing-center/">Publishing Center</a><span aria-hidden="true">/</span><span aria-current="page">${escapeHtml(category.title)}</span></nav>
       <p class="label">Internal Tool</p>
       <h1 class="article-title">${escapeHtml(category.title)}</h1>
-      <p class="deck">Records are ordered by the current archive publishing order. Mark Naver publication status in this browser only.</p>
+      ${renderPublishingCenterStyles()}
       <section class="script-material" aria-label="${escapeAttr(category.title)} records">
         <h2>Archive Records</h2>
-        <ul>
+        <ul class="publishing-record-list">
 ${rows}
         </ul>
+${pagination}
       </section>
     </div>
   </main>`
   });
+}
+
+function publishingCategoryPagePath(categorySlug, pageNumber) {
+  return pageNumber === 1
+    ? `/publishing-center/${categorySlug}/`
+    : `/publishing-center/${categorySlug}/page-${pageNumber}/`;
+}
+
+function renderPublishingPagination({ category, pageNumber, totalPages }) {
+  if (totalPages <= 1) return '';
+  const previous = pageNumber > 1
+    ? `<a href="${publishingCategoryPagePath(category.slug, pageNumber - 1)}">Previous</a>`
+    : '<span aria-disabled="true">Previous</span>';
+  const pageLinks = Array.from({ length: totalPages }, (_, index) => {
+    const number = index + 1;
+    if (number === pageNumber) {
+      return `<span aria-current="page">${number}</span>`;
+    }
+    return `<a href="${publishingCategoryPagePath(category.slug, number)}">${number}</a>`;
+  }).join('');
+  const next = pageNumber < totalPages
+    ? `<a href="${publishingCategoryPagePath(category.slug, pageNumber + 1)}">Next</a>`
+    : '<span aria-disabled="true">Next</span>';
+
+  return `        <nav class="publishing-pagination" aria-label="${escapeAttr(category.title)} pagination">
+          ${previous}
+          ${pageLinks}
+          ${next}
+        </nav>`;
+}
+
+function renderPublishingCenterStyles() {
+  return `<style>
+        .publishing-category-list,
+        .publishing-record-list {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+
+        .publishing-category-list li {
+          margin: 0 0 0.35rem;
+        }
+
+        .publishing-record {
+          align-items: center;
+          border-bottom: 1px solid var(--border-color, #d9d2c4);
+          display: grid;
+          gap: 0.5rem 1rem;
+          grid-template-columns: minmax(0, 1fr) auto;
+          padding: 0.45rem 0;
+        }
+
+        .publishing-record-title {
+          overflow-wrap: anywhere;
+        }
+
+        .publishing-record-actions {
+          align-items: center;
+          display: flex;
+          gap: 0.4rem;
+          white-space: nowrap;
+        }
+
+        .publishing-record .button {
+          font-size: 0.85rem;
+          line-height: 1.1;
+          padding: 0.35rem 0.55rem;
+        }
+
+        .publishing-published-label {
+          align-items: center;
+          display: inline-flex;
+          gap: 0.25rem;
+          margin: 0;
+        }
+
+        .publishing-pagination {
+          align-items: center;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.35rem;
+          margin-top: 1rem;
+        }
+
+        .publishing-pagination a,
+        .publishing-pagination span {
+          border: 1px solid var(--border-color, #d9d2c4);
+          border-radius: 4px;
+          display: inline-flex;
+          line-height: 1;
+          padding: 0.45rem 0.6rem;
+        }
+
+        .publishing-pagination span[aria-current="page"] {
+          background: var(--ink, #171717);
+          border-color: var(--ink, #171717);
+          color: var(--paper, #fffaf1);
+        }
+
+        .publishing-pagination span[aria-disabled="true"] {
+          opacity: 0.55;
+        }
+
+        @media (max-width: 720px) {
+          .publishing-record {
+            grid-template-columns: 1fr;
+          }
+
+          .publishing-record-actions {
+            flex-wrap: wrap;
+            white-space: normal;
+          }
+        }
+      </style>`;
 }
 
 function generateScriptsPages() {

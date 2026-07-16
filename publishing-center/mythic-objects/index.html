@@ -37,427 +37,290 @@
       <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/publishing-center/">Publishing Center</a><span aria-hidden="true">/</span><span aria-current="page">Mythic Objects</span></nav>
       <p class="label">Internal Tool</p>
       <h1 class="article-title">Mythic Objects</h1>
-      <p class="deck">Records are ordered by the current archive publishing order. Mark Naver publication status in this browser only.</p>
+      <style>
+        .publishing-category-list,
+        .publishing-record-list {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+
+        .publishing-category-list li {
+          margin: 0 0 0.35rem;
+        }
+
+        .publishing-record {
+          align-items: center;
+          border-bottom: 1px solid var(--border-color, #d9d2c4);
+          display: grid;
+          gap: 0.5rem 1rem;
+          grid-template-columns: minmax(0, 1fr) auto;
+          padding: 0.45rem 0;
+        }
+
+        .publishing-record-title {
+          overflow-wrap: anywhere;
+        }
+
+        .publishing-record-actions {
+          align-items: center;
+          display: flex;
+          gap: 0.4rem;
+          white-space: nowrap;
+        }
+
+        .publishing-record .button {
+          font-size: 0.85rem;
+          line-height: 1.1;
+          padding: 0.35rem 0.55rem;
+        }
+
+        .publishing-published-label {
+          align-items: center;
+          display: inline-flex;
+          gap: 0.25rem;
+          margin: 0;
+        }
+
+        .publishing-pagination {
+          align-items: center;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.35rem;
+          margin-top: 1rem;
+        }
+
+        .publishing-pagination a,
+        .publishing-pagination span {
+          border: 1px solid var(--border-color, #d9d2c4);
+          border-radius: 4px;
+          display: inline-flex;
+          line-height: 1;
+          padding: 0.45rem 0.6rem;
+        }
+
+        .publishing-pagination span[aria-current="page"] {
+          background: var(--ink, #171717);
+          border-color: var(--ink, #171717);
+          color: var(--paper, #fffaf1);
+        }
+
+        .publishing-pagination span[aria-disabled="true"] {
+          opacity: 0.55;
+        }
+
+        @media (max-width: 720px) {
+          .publishing-record {
+            grid-template-columns: 1fr;
+          }
+
+          .publishing-record-actions {
+            flex-wrap: wrap;
+            white-space: normal;
+          }
+        }
+      </style>
       <section class="script-material" aria-label="Mythic Objects records">
         <h2>Archive Records</h2>
-        <ul>
+        <ul class="publishing-record-list">
         <li class="publishing-record">
-          <a href="/stories/aegis-mythic-shield">Aegis: Mythic Shield, Divine Protection, and the Object of Authority</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/aegis-mythic-shield">Aegis: Mythic Shield, Divine Protection, and the Object of Authority</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="Aegis: Mythic Shield, Divine Protection, and the Object of Authority" data-url="https://kyunolab.com/stories/aegis-mythic-shield">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="Aegis: Mythic Shield, Divine Protection, and the Object of Authority" data-url="https://kyunolab.com/stories/aegis-mythic-shield" data-description="Aegis explains the image of the divine protective object linked with Zeus, Athena, terror, protection, and visible authority through mythic objects." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:aegis-mythic-shield:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:aegis-mythic-shield:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/pandoras-box-myth">Pandora&#39;s Box: Myth, Meaning, and the Object That Releases Trouble</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/pandoras-box-myth">Pandora&#39;s Box: Myth, Meaning, and the Object That Releases Trouble</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="Pandora&#39;s Box: Myth, Meaning, and the Object That Releases Trouble" data-url="https://kyunolab.com/stories/pandoras-box-myth">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="Pandora&#39;s Box: Myth, Meaning, and the Object That Releases Trouble" data-url="https://kyunolab.com/stories/pandoras-box-myth" data-description="Pandora&#39;s Box explores the origin, meaning, and folklore behind the image of the container in Greek myth that holds release, consequence, hope, and the." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:pandoras-box-myth:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:pandoras-box-myth:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/philosophers-stone-legend">Philosopher&#39;s Stone: Alchemy, Immortality, and the Mythic Object of Transformation</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/philosophers-stone-legend">Philosopher&#39;s Stone: Alchemy, Immortality, and the Mythic Object of Transformation</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="Philosopher&#39;s Stone: Alchemy, Immortality, and the Mythic Object of Transformation" data-url="https://kyunolab.com/stories/philosophers-stone-legend">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="Philosopher&#39;s Stone: Alchemy, Immortality, and the Mythic Object of Transformation" data-url="https://kyunolab.com/stories/philosophers-stone-legend" data-description="Philosopher&#39;s Stone explains the image of the alchemical object associated with transmutation, perfection, immortality, and the dream of impossible change." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:philosophers-stone-legend:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:philosophers-stone-legend:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/holy-grail-legend">Holy Grail: Origin, Meaning, and the Quest Object in Medieval Legend</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/holy-grail-legend">Holy Grail: Origin, Meaning, and the Quest Object in Medieval Legend</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="Holy Grail: Origin, Meaning, and the Quest Object in Medieval Legend" data-url="https://kyunolab.com/stories/holy-grail-legend">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="Holy Grail: Origin, Meaning, and the Quest Object in Medieval Legend" data-url="https://kyunolab.com/stories/holy-grail-legend" data-description="Holy Grail explains the image of the sacred quest object whose meanings shift through romance, Christian symbolism, and later mystery traditions through." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:holy-grail-legend:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:holy-grail-legend:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/excalibur-sword-legend">Excalibur: Arthurian Sword, Symbolism, and the Mythic Object That Chooses a King</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/excalibur-sword-legend">Excalibur: Arthurian Sword, Symbolism, and the Mythic Object That Chooses a King</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="Excalibur: Arthurian Sword, Symbolism, and the Mythic Object That Chooses a King" data-url="https://kyunolab.com/stories/excalibur-sword-legend">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="Excalibur: Arthurian Sword, Symbolism, and the Mythic Object That Chooses a King" data-url="https://kyunolab.com/stories/excalibur-sword-legend" data-description="A calm guide to Excalibur, its common versions, source limits, and the arthurian object motif that makes the image of the sword tradition that joins kingship." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:excalibur-sword-legend:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:excalibur-sword-legend:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-wooden-mask-that-remembers-every-voice-meaning-symbolism-and-folklore">The Wooden Mask That Remembers Every Voice: Meaning, Symbolism, and Folklore</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-wooden-mask-that-remembers-every-voice-meaning-symbolism-and-folklore">The Wooden Mask That Remembers Every Voice: Meaning, Symbolism, and Folklore</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Wooden Mask That Remembers Every Voice: Meaning, Symbolism, and Folklore" data-url="https://kyunolab.com/stories/the-wooden-mask-that-remembers-every-voice-meaning-symbolism-and-folklore">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Wooden Mask That Remembers Every Voice: Meaning, Symbolism, and Folklore" data-url="https://kyunolab.com/stories/the-wooden-mask-that-remembers-every-voice-meaning-symbolism-and-folklore" data-description="A calm guide to The Wooden Mask That Remembers Every Voice, its common versions, source limits, and the symbolic object motif that makes the image of a ritual." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-wooden-mask-that-remembers-every-voice-meaning-symbolism-and-folklore:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-wooden-mask-that-remembers-every-voice-meaning-symbolism-and-folklore:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-ring-that-must-be-returned-through-water-what-the-object-gives-takes-or-remembers">The Ring That Must Be Returned Through Water: What the Object Gives, Takes, or Remembers</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-ring-that-must-be-returned-through-water-what-the-object-gives-takes-or-remembers">The Ring That Must Be Returned Through Water: What the Object Gives, Takes, or Remembers</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Ring That Must Be Returned Through Water: What the Object Gives, Takes, or Remembers" data-url="https://kyunolab.com/stories/the-ring-that-must-be-returned-through-water-what-the-object-gives-takes-or-remembers">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Ring That Must Be Returned Through Water: What the Object Gives, Takes, or Remembers" data-url="https://kyunolab.com/stories/the-ring-that-must-be-returned-through-water-what-the-object-gives-takes-or-remembers" data-description="The Ring That Must Be Returned Through Water explains the image of a ring may only be returned to its owner by passing through running water through mythic." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-ring-that-must-be-returned-through-water-what-the-object-gives-takes-or-remembers:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-ring-that-must-be-returned-through-water-what-the-object-gives-takes-or-remembers:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-stone-book-no-one-reads-from-the-beginning-a-mythic-object-tradition-explained">The Stone Book No One Reads From the Beginning: A Mythic Object Tradition Explained</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-stone-book-no-one-reads-from-the-beginning-a-mythic-object-tradition-explained">The Stone Book No One Reads From the Beginning: A Mythic Object Tradition Explained</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Stone Book No One Reads From the Beginning: A Mythic Object Tradition Explained" data-url="https://kyunolab.com/stories/the-stone-book-no-one-reads-from-the-beginning-a-mythic-object-tradition-explained">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Stone Book No One Reads From the Beginning: A Mythic Object Tradition Explained" data-url="https://kyunolab.com/stories/the-stone-book-no-one-reads-from-the-beginning-a-mythic-object-tradition-explained" data-description="A calm guide to The Stone Book No One Reads From the Beginning, its common versions, source limits, and the ritual tool motif that makes the image of a stone." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-stone-book-no-one-reads-from-the-beginning-a-mythic-object-tradition-explained:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-stone-book-no-one-reads-from-the-beginning-a-mythic-object-tradition-explained:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-lantern-that-burns-with-borrowed-moonlight-meaning-symbolism-and-folklore">The Lantern That Burns With Borrowed Moonlight: Meaning, Symbolism, and Folklore</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-lantern-that-burns-with-borrowed-moonlight-meaning-symbolism-and-folklore">The Lantern That Burns With Borrowed Moonlight: Meaning, Symbolism, and Folklore</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Lantern That Burns With Borrowed Moonlight: Meaning, Symbolism, and Folklore" data-url="https://kyunolab.com/stories/the-lantern-that-burns-with-borrowed-moonlight-meaning-symbolism-and-folklore">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Lantern That Burns With Borrowed Moonlight: Meaning, Symbolism, and Folklore" data-url="https://kyunolab.com/stories/the-lantern-that-burns-with-borrowed-moonlight-meaning-symbolism-and-folklore" data-description="The Lantern That Burns With Borrowed Moonlight explores the origin, meaning, and folklore behind the image of a lantern is filled with moonlight rather than." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-lantern-that-burns-with-borrowed-moonlight-meaning-symbolism-and-folklore:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-lantern-that-burns-with-borrowed-moonlight-meaning-symbolism-and-folklore:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-needle-said-to-stitch-broken-dreams-what-the-object-gives-takes-or-remembers">The Needle Said to Stitch Broken Dreams: What the Object Gives, Takes, or Remembers</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-needle-said-to-stitch-broken-dreams-what-the-object-gives-takes-or-remembers">The Needle Said to Stitch Broken Dreams: What the Object Gives, Takes, or Remembers</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Needle Said to Stitch Broken Dreams: What the Object Gives, Takes, or Remembers" data-url="https://kyunolab.com/stories/the-needle-said-to-stitch-broken-dreams-what-the-object-gives-takes-or-remembers">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Needle Said to Stitch Broken Dreams: What the Object Gives, Takes, or Remembers" data-url="https://kyunolab.com/stories/the-needle-said-to-stitch-broken-dreams-what-the-object-gives-takes-or-remembers" data-description="A calm guide to The Needle Said to Stitch Broken Dreams, its common versions, source limits, and the mythic object motif that makes the image of a silver." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-needle-said-to-stitch-broken-dreams-what-the-object-gives-takes-or-remembers:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-needle-said-to-stitch-broken-dreams-what-the-object-gives-takes-or-remembers:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-bell-that-rings-only-for-returning-travelers-a-mythic-object-tradition-explained">The Bell That Rings Only for Returning Travelers: A Mythic Object Tradition Explained</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-bell-that-rings-only-for-returning-travelers-a-mythic-object-tradition-explained">The Bell That Rings Only for Returning Travelers: A Mythic Object Tradition Explained</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Bell That Rings Only for Returning Travelers: A Mythic Object Tradition Explained" data-url="https://kyunolab.com/stories/the-bell-that-rings-only-for-returning-travelers-a-mythic-object-tradition-explained">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Bell That Rings Only for Returning Travelers: A Mythic Object Tradition Explained" data-url="https://kyunolab.com/stories/the-bell-that-rings-only-for-returning-travelers-a-mythic-object-tradition-explained" data-description="A calm guide to The Bell That Rings Only for Returning Travelers, its common versions, source limits, and the symbolic object motif that makes the scene where." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-bell-that-rings-only-for-returning-travelers-a-mythic-object-tradition-explained:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-bell-that-rings-only-for-returning-travelers-a-mythic-object-tradition-explained:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-mirror-that-shows-a-room-before-it-is-entered-meaning-symbolism-and-folklore">The Mirror That Shows a Room Before It Is Entered: Meaning, Symbolism, and Folklore</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-mirror-that-shows-a-room-before-it-is-entered-meaning-symbolism-and-folklore">The Mirror That Shows a Room Before It Is Entered: Meaning, Symbolism, and Folklore</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Mirror That Shows a Room Before It Is Entered: Meaning, Symbolism, and Folklore" data-url="https://kyunolab.com/stories/the-mirror-that-shows-a-room-before-it-is-entered-meaning-symbolism-and-folklore">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Mirror That Shows a Room Before It Is Entered: Meaning, Symbolism, and Folklore" data-url="https://kyunolab.com/stories/the-mirror-that-shows-a-room-before-it-is-entered-meaning-symbolism-and-folklore" data-description="The Mirror That Shows a Room Before It Is Entered explores the origin, meaning, and folklore behind the image of a small mirror reveals a room as it looked." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-mirror-that-shows-a-room-before-it-is-entered-meaning-symbolism-and-folklore:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-mirror-that-shows-a-room-before-it-is-entered-meaning-symbolism-and-folklore:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-key-forged-for-a-door-not-yet-built-what-the-object-gives-takes-or-remembers">The Key Forged for a Door Not Yet Built: What the Object Gives, Takes, or Remembers</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-key-forged-for-a-door-not-yet-built-what-the-object-gives-takes-or-remembers">The Key Forged for a Door Not Yet Built: What the Object Gives, Takes, or Remembers</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Key Forged for a Door Not Yet Built: What the Object Gives, Takes, or Remembers" data-url="https://kyunolab.com/stories/the-key-forged-for-a-door-not-yet-built-what-the-object-gives-takes-or-remembers">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Key Forged for a Door Not Yet Built: What the Object Gives, Takes, or Remembers" data-url="https://kyunolab.com/stories/the-key-forged-for-a-door-not-yet-built-what-the-object-gives-takes-or-remembers" data-description="The Key Forged for a Door Not Yet Built explains the image of a key is passed down for a doorway each generation expects to build through mythic objects." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-key-forged-for-a-door-not-yet-built-what-the-object-gives-takes-or-remembers:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-key-forged-for-a-door-not-yet-built-what-the-object-gives-takes-or-remembers:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-cup-that-keeps-the-taste-of-rain-a-mythic-object-tradition-explained">The Cup That Keeps the Taste of Rain: A Mythic Object Tradition Explained</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-cup-that-keeps-the-taste-of-rain-a-mythic-object-tradition-explained">The Cup That Keeps the Taste of Rain: A Mythic Object Tradition Explained</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Cup That Keeps the Taste of Rain: A Mythic Object Tradition Explained" data-url="https://kyunolab.com/stories/the-cup-that-keeps-the-taste-of-rain-a-mythic-object-tradition-explained">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Cup That Keeps the Taste of Rain: A Mythic Object Tradition Explained" data-url="https://kyunolab.com/stories/the-cup-that-keeps-the-taste-of-rain-a-mythic-object-tradition-explained" data-description="The Cup That Keeps the Taste of Rain explores the origin, meaning, and folklore behind the image of a ceremonial cup is believed to preserve the taste of the." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-cup-that-keeps-the-taste-of-rain-a-mythic-object-tradition-explained:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-cup-that-keeps-the-taste-of-rain-a-mythic-object-tradition-explained:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-compass-that-points-toward-the-last-promise-meaning-symbolism-and-folklore">The Compass That Points Toward the Last Promise: Meaning, Symbolism, and Folklore</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-compass-that-points-toward-the-last-promise-meaning-symbolism-and-folklore">The Compass That Points Toward the Last Promise: Meaning, Symbolism, and Folklore</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Compass That Points Toward the Last Promise: Meaning, Symbolism, and Folklore" data-url="https://kyunolab.com/stories/the-compass-that-points-toward-the-last-promise-meaning-symbolism-and-folklore">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Compass That Points Toward the Last Promise: Meaning, Symbolism, and Folklore" data-url="https://kyunolab.com/stories/the-compass-that-points-toward-the-last-promise-meaning-symbolism-and-folklore" data-description="A calm guide to The Compass That Points Toward the Last Promise, its common versions, source limits, and the mythic object motif that makes the image of a." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-compass-that-points-toward-the-last-promise-meaning-symbolism-and-folklore:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-compass-that-points-toward-the-last-promise-meaning-symbolism-and-folklore:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-clock-hand-buried-under-the-hearth-a-mythic-object-meaning">The Clock Hand Buried Under the Hearth: A Mythic Object Meaning</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-clock-hand-buried-under-the-hearth-a-mythic-object-meaning">The Clock Hand Buried Under the Hearth: A Mythic Object Meaning</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Clock Hand Buried Under the Hearth: A Mythic Object Meaning" data-url="https://kyunolab.com/stories/the-clock-hand-buried-under-the-hearth-a-mythic-object-meaning">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Clock Hand Buried Under the Hearth: A Mythic Object Meaning" data-url="https://kyunolab.com/stories/the-clock-hand-buried-under-the-hearth-a-mythic-object-meaning" data-description="The Clock Hand Buried Under the Hearth explores the origin, meaning, and folklore behind the image of a clock hand buried under the hearth is said to slow." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-clock-hand-buried-under-the-hearth-a-mythic-object-meaning:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-clock-hand-buried-under-the-hearth-a-mythic-object-meaning:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-mirror-nail-in-the-doorframe-a-household-object-folklore-record">The Mirror Nail in the Doorframe: A Household Object Folklore Record</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-mirror-nail-in-the-doorframe-a-household-object-folklore-record">The Mirror Nail in the Doorframe: A Household Object Folklore Record</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Mirror Nail in the Doorframe: A Household Object Folklore Record" data-url="https://kyunolab.com/stories/the-mirror-nail-in-the-doorframe-a-household-object-folklore-record">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Mirror Nail in the Doorframe: A Household Object Folklore Record" data-url="https://kyunolab.com/stories/the-mirror-nail-in-the-doorframe-a-household-object-folklore-record" data-description="The Mirror Nail in the Doorframe explores the origin, meaning, and folklore behind the image of a mirror nail in a doorframe is said to keep reflections from." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-mirror-nail-in-the-doorframe-a-household-object-folklore-record:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-mirror-nail-in-the-doorframe-a-household-object-folklore-record:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-black-key-wrapped-in-blue-cloth-a-mythic-object-record">The Black Key Wrapped in Blue Cloth: A Mythic Object Record</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-black-key-wrapped-in-blue-cloth-a-mythic-object-record">The Black Key Wrapped in Blue Cloth: A Mythic Object Record</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Black Key Wrapped in Blue Cloth: A Mythic Object Record" data-url="https://kyunolab.com/stories/the-black-key-wrapped-in-blue-cloth-a-mythic-object-record">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Black Key Wrapped in Blue Cloth: A Mythic Object Record" data-url="https://kyunolab.com/stories/the-black-key-wrapped-in-blue-cloth-a-mythic-object-record" data-description="A calm guide to The Black Key Wrapped in Blue Cloth, its common versions, source limits, and the ritual tool motif that makes the image of a black key wrapped." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-black-key-wrapped-in-blue-cloth-a-mythic-object-record:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-black-key-wrapped-in-blue-cloth-a-mythic-object-record:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-ring-that-tightens-near-false-doors-a-mythic-object-explained">The Ring That Tightens Near False Doors: A Mythic Object Explained</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-ring-that-tightens-near-false-doors-a-mythic-object-explained">The Ring That Tightens Near False Doors: A Mythic Object Explained</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Ring That Tightens Near False Doors: A Mythic Object Explained" data-url="https://kyunolab.com/stories/the-ring-that-tightens-near-false-doors-a-mythic-object-explained">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Ring That Tightens Near False Doors: A Mythic Object Explained" data-url="https://kyunolab.com/stories/the-ring-that-tightens-near-false-doors-a-mythic-object-explained" data-description="The Ring That Tightens Near False Doors explains the scene where a ring tightens near false doors and loosens only when the traveler turns back through mythic." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-ring-that-tightens-near-false-doors-a-mythic-object-explained:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-ring-that-tightens-near-false-doors-a-mythic-object-explained:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-stone-comb-found-under-the-bridge-a-mythic-object-meaning">The Stone Comb Found Under the Bridge: A Mythic Object Meaning</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-stone-comb-found-under-the-bridge-a-mythic-object-meaning">The Stone Comb Found Under the Bridge: A Mythic Object Meaning</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Stone Comb Found Under the Bridge: A Mythic Object Meaning" data-url="https://kyunolab.com/stories/the-stone-comb-found-under-the-bridge-a-mythic-object-meaning">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Stone Comb Found Under the Bridge: A Mythic Object Meaning" data-url="https://kyunolab.com/stories/the-stone-comb-found-under-the-bridge-a-mythic-object-meaning" data-description="The Stone Comb Found Under the Bridge explains the image of a stone comb is found under bridges in stories about rivers that refuse to be crossed through." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-stone-comb-found-under-the-bridge-a-mythic-object-meaning:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-stone-comb-found-under-the-bridge-a-mythic-object-meaning:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-wooden-cup-that-remembers-a-guest-a-household-object-legend">The Wooden Cup That Remembers a Guest: A Household Object Legend</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-wooden-cup-that-remembers-a-guest-a-household-object-legend">The Wooden Cup That Remembers a Guest: A Household Object Legend</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Wooden Cup That Remembers a Guest: A Household Object Legend" data-url="https://kyunolab.com/stories/the-wooden-cup-that-remembers-a-guest-a-household-object-legend">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Wooden Cup That Remembers a Guest: A Household Object Legend" data-url="https://kyunolab.com/stories/the-wooden-cup-that-remembers-a-guest-a-household-object-legend" data-description="The Wooden Cup That Remembers a Guest explains the image of a wooden cup is said to remember a guest by warming only in one pair of hands through mythic." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-wooden-cup-that-remembers-a-guest-a-household-object-legend:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-wooden-cup-that-remembers-a-guest-a-household-object-legend:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-lantern-wick-that-burns-backward-a-mythic-object-folklore-note">The Lantern Wick That Burns Backward: A Mythic Object Folklore Note</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-lantern-wick-that-burns-backward-a-mythic-object-folklore-note">The Lantern Wick That Burns Backward: A Mythic Object Folklore Note</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Lantern Wick That Burns Backward: A Mythic Object Folklore Note" data-url="https://kyunolab.com/stories/the-lantern-wick-that-burns-backward-a-mythic-object-folklore-note">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Lantern Wick That Burns Backward: A Mythic Object Folklore Note" data-url="https://kyunolab.com/stories/the-lantern-wick-that-burns-backward-a-mythic-object-folklore-note" data-description="The Lantern Wick That Burns Backward explores the origin, meaning, and folklore behind the image of a lantern wick burns backward when travelers take the." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-lantern-wick-that-burns-backward-a-mythic-object-folklore-note:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-lantern-wick-that-burns-backward-a-mythic-object-folklore-note:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-red-thread-that-measures-a-promise-a-mythic-object-explained">The Red Thread That Measures a Promise: A Mythic Object Explained</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-red-thread-that-measures-a-promise-a-mythic-object-explained">The Red Thread That Measures a Promise: A Mythic Object Explained</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Red Thread That Measures a Promise: A Mythic Object Explained" data-url="https://kyunolab.com/stories/the-red-thread-that-measures-a-promise-a-mythic-object-explained">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Red Thread That Measures a Promise: A Mythic Object Explained" data-url="https://kyunolab.com/stories/the-red-thread-that-measures-a-promise-a-mythic-object-explained" data-description="The Red Thread That Measures a Promise explores the origin, meaning, and folklore behind the image of a red thread measures a promise by shortening whenever." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-red-thread-that-measures-a-promise-a-mythic-object-explained:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-red-thread-that-measures-a-promise-a-mythic-object-explained:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-needle-kept-inside-a-locked-bell-a-mythic-object-record">The Needle Kept Inside a Locked Bell: A Mythic Object Record</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-needle-kept-inside-a-locked-bell-a-mythic-object-record">The Needle Kept Inside a Locked Bell: A Mythic Object Record</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Needle Kept Inside a Locked Bell: A Mythic Object Record" data-url="https://kyunolab.com/stories/the-needle-kept-inside-a-locked-bell-a-mythic-object-record">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Needle Kept Inside a Locked Bell: A Mythic Object Record" data-url="https://kyunolab.com/stories/the-needle-kept-inside-a-locked-bell-a-mythic-object-record" data-description="The Needle Kept Inside a Locked Bell explains the image of a needle kept inside a locked bell is said to point toward the next broken promise through mythic." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-needle-kept-inside-a-locked-bell-a-mythic-object-record:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-bronze-bowl-that-cools-boiling-water-a-mythic-object-meaning">The Bronze Bowl That Cools Boiling Water: A Mythic Object Meaning</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Bronze Bowl That Cools Boiling Water: A Mythic Object Meaning" data-url="https://kyunolab.com/stories/the-bronze-bowl-that-cools-boiling-water-a-mythic-object-meaning">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Bronze Bowl That Cools Boiling Water: A Mythic Object Meaning" data-url="https://kyunolab.com/stories/the-bronze-bowl-that-cools-boiling-water-a-mythic-object-meaning" data-description="A calm guide to The Bronze Bowl That Cools Boiling Water, its common versions, source limits, and the mythic object motif that makes the image of a bronze." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-bronze-bowl-that-cools-boiling-water-a-mythic-object-meaning:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-needle-that-stitches-torn-shadows">The Needle That Stitches Torn Shadows</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Needle That Stitches Torn Shadows" data-url="https://kyunolab.com/stories/the-needle-that-stitches-torn-shadows">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Needle That Stitches Torn Shadows" data-url="https://kyunolab.com/stories/the-needle-that-stitches-torn-shadows" data-description="The Needle That Stitches Torn Shadows explains the image of a needle said to stitch torn shadows in tales about repair, guilt, and hidden damage through." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-needle-that-stitches-torn-shadows:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-cup-that-refuses-the-second-drink">The Cup That Refuses the Second Drink</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Cup That Refuses the Second Drink" data-url="https://kyunolab.com/stories/the-cup-that-refuses-the-second-drink">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Cup That Refuses the Second Drink" data-url="https://kyunolab.com/stories/the-cup-that-refuses-the-second-drink" data-description="The Cup That Refuses the Second Drink explores the origin, meaning, and folklore behind the scene where a cup that refuses the second drink when a guest has." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-cup-that-refuses-the-second-drink:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-bell-that-rings-only-when-carried-away">The Bell That Rings Only When Carried Away</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Bell That Rings Only When Carried Away" data-url="https://kyunolab.com/stories/the-bell-that-rings-only-when-carried-away">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Bell That Rings Only When Carried Away" data-url="https://kyunolab.com/stories/the-bell-that-rings-only-when-carried-away" data-description="The Bell That Rings Only When Carried Away explains the scene where a bell that rings only when carried away from its proper place through mythic objects." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-bell-that-rings-only-when-carried-away:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-book-with-margins-written-by-rain">The Book With Margins Written by Rain</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Book With Margins Written by Rain" data-url="https://kyunolab.com/stories/the-book-with-margins-written-by-rain">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Book With Margins Written by Rain" data-url="https://kyunolab.com/stories/the-book-with-margins-written-by-rain" data-description="A calm guide to The Book With Margins Written by Rain, its common versions, source limits, and the book object motif that makes the scene where a book whose." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-book-with-margins-written-by-rain:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-key-that-locks-every-door-except-home">The Key That Locks Every Door Except Home</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Key That Locks Every Door Except Home" data-url="https://kyunolab.com/stories/the-key-that-locks-every-door-except-home">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Key That Locks Every Door Except Home" data-url="https://kyunolab.com/stories/the-key-that-locks-every-door-except-home" data-description="The Key That Locks Every Door Except Home explains the image of a key that locks every door except home in tales about exile and return through mythic." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-key-that-locks-every-door-except-home:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-mirror-that-shows-the-room-before-it-is-built">The Mirror That Shows the Room Before It Is Built</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Mirror That Shows the Room Before It Is Built" data-url="https://kyunolab.com/stories/the-mirror-that-shows-the-room-before-it-is-built">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Mirror That Shows the Room Before It Is Built" data-url="https://kyunolab.com/stories/the-mirror-that-shows-the-room-before-it-is-built" data-description="The Mirror That Shows the Room Before It Is Built explores the origin, meaning, and folklore behind the scene where a mirror that shows a room before it is." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-mirror-that-shows-the-room-before-it-is-built:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-lantern-that-burns-blue-near-false-roads">The Lantern That Burns Blue Near False Roads</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Lantern That Burns Blue Near False Roads" data-url="https://kyunolab.com/stories/the-lantern-that-burns-blue-near-false-roads">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Lantern That Burns Blue Near False Roads" data-url="https://kyunolab.com/stories/the-lantern-that-burns-blue-near-false-roads" data-description="The Lantern That Burns Blue Near False Roads explains the scene where a lantern that burns blue near false roads and turns ordinary travel into a test through." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-lantern-that-burns-blue-near-false-roads:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-bowl-that-holds-the-sound-of-bells">The Bowl That Holds the Sound of Bells</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Bowl That Holds the Sound of Bells" data-url="https://kyunolab.com/stories/the-bowl-that-holds-the-sound-of-bells">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Bowl That Holds the Sound of Bells" data-url="https://kyunolab.com/stories/the-bowl-that-holds-the-sound-of-bells" data-description="A calm guide to The Bowl That Holds the Sound of Bells, its common versions, source limits, and the bowl object motif that makes the image of a bowl that." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-bowl-that-holds-the-sound-of-bells:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-comb-that-untangles-names-from-hair">The Comb That Untangles Names From Hair</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Comb That Untangles Names From Hair" data-url="https://kyunolab.com/stories/the-comb-that-untangles-names-from-hair">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Comb That Untangles Names From Hair" data-url="https://kyunolab.com/stories/the-comb-that-untangles-names-from-hair" data-description="A calm guide to The Comb That Untangles Names From Hair, its common versions, source limits, and the comb object motif that makes the scene where a comb that." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-comb-that-untangles-names-from-hair:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-knife-that-cannot-cut-shared-bread">The Knife That Cannot Cut Shared Bread</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Knife That Cannot Cut Shared Bread" data-url="https://kyunolab.com/stories/the-knife-that-cannot-cut-shared-bread">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Knife That Cannot Cut Shared Bread" data-url="https://kyunolab.com/stories/the-knife-that-cannot-cut-shared-bread" data-description="The Knife That Cannot Cut Shared Bread explains the image of a knife that cannot cut shared bread in tales about broken trust and household rules through." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-knife-that-cannot-cut-shared-bread:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-door-knocker-that-answers-before-it-is-touched">The Door Knocker That Answers Before It Is Touched</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Door Knocker That Answers Before It Is Touched" data-url="https://kyunolab.com/stories/the-door-knocker-that-answers-before-it-is-touched">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Door Knocker That Answers Before It Is Touched" data-url="https://kyunolab.com/stories/the-door-knocker-that-answers-before-it-is-touched" data-description="A calm guide to The Door Knocker That Answers Before It Is Touched, its common versions, source limits, and the ritual tool motif that makes the scene where a." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-door-knocker-that-answers-before-it-is-touched:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-sword-that-grows-heavy-near-false-names">The Sword That Grows Heavy Near False Names</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Sword That Grows Heavy Near False Names" data-url="https://kyunolab.com/stories/the-sword-that-grows-heavy-near-false-names">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Sword That Grows Heavy Near False Names" data-url="https://kyunolab.com/stories/the-sword-that-grows-heavy-near-false-names" data-description="The Sword That Grows Heavy Near False Names explores the origin, meaning, and folklore behind the image of a sword grows too heavy to lift when a false name." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-sword-that-grows-heavy-near-false-names:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-bowl-that-never-holds-the-same-reflection">The Bowl That Never Holds the Same Reflection</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Bowl That Never Holds the Same Reflection" data-url="https://kyunolab.com/stories/the-bowl-that-never-holds-the-same-reflection">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Bowl That Never Holds the Same Reflection" data-url="https://kyunolab.com/stories/the-bowl-that-never-holds-the-same-reflection" data-description="A calm guide to The Bowl That Never Holds the Same Reflection, its common versions, source limits, and the mirror folklore motif that makes the image of a." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-bowl-that-never-holds-the-same-reflection:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-needle-that-points-toward-forgotten-roads">The Needle That Points Toward Forgotten Roads</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Needle That Points Toward Forgotten Roads" data-url="https://kyunolab.com/stories/the-needle-that-points-toward-forgotten-roads">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Needle That Points Toward Forgotten Roads" data-url="https://kyunolab.com/stories/the-needle-that-points-toward-forgotten-roads" data-description="A calm guide to The Needle That Points Toward Forgotten Roads, its common versions, source limits, and the threshold object motif that makes the scene where a." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-needle-that-points-toward-forgotten-roads:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-book-that-opens-to-the-readers-last-question">The Book That Opens to the Reader’s Last Question</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Book That Opens to the Reader’s Last Question" data-url="https://kyunolab.com/stories/the-book-that-opens-to-the-readers-last-question">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Book That Opens to the Reader’s Last Question" data-url="https://kyunolab.com/stories/the-book-that-opens-to-the-readers-last-question" data-description="The Book That Opens to the Reader’s Last Question explains the scene where a book opens to the question a reader avoided asking before entering the room." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-book-that-opens-to-the-readers-last-question:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-lantern-that-burns-underwater">The Lantern That Burns Underwater</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Lantern That Burns Underwater" data-url="https://kyunolab.com/stories/the-lantern-that-burns-underwater">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Lantern That Burns Underwater" data-url="https://kyunolab.com/stories/the-lantern-that-burns-underwater" data-description="The Lantern That Burns Underwater explains the scene where a lantern burns underwater in stories told by fishers who follow lights beneath the pier through." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-lantern-that-burns-underwater:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-comb-that-straightens-a-river">The Comb That Straightens a River</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Comb That Straightens a River" data-url="https://kyunolab.com/stories/the-comb-that-straightens-a-river">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Comb That Straightens a River" data-url="https://kyunolab.com/stories/the-comb-that-straightens-a-river" data-description="A calm guide to The Comb That Straightens a River, its common versions, source limits, and the bell legend motif that makes the image of a comb from an old." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-comb-that-straightens-a-river:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-bell-that-rings-when-a-promise-is-kept">The Bell That Rings When a Promise Is Kept</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Bell That Rings When a Promise Is Kept" data-url="https://kyunolab.com/stories/the-bell-that-rings-when-a-promise-is-kept">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Bell That Rings When a Promise Is Kept" data-url="https://kyunolab.com/stories/the-bell-that-rings-when-a-promise-is-kept" data-description="The Bell That Rings When a Promise Is Kept explores the origin, meaning, and folklore behind the scene where a small bell rings only when a promise has been." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-bell-that-rings-when-a-promise-is-kept:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-mirror-with-a-back-made-of-moonlight">The Mirror With a Back Made of Moonlight</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Mirror With a Back Made of Moonlight" data-url="https://kyunolab.com/stories/the-mirror-with-a-back-made-of-moonlight">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Mirror With a Back Made of Moonlight" data-url="https://kyunolab.com/stories/the-mirror-with-a-back-made-of-moonlight" data-description="The Mirror With a Back Made of Moonlight explores the origin, meaning, and folklore behind the scene where a mirror is said to have a back made of moonlight." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-mirror-with-a-back-made-of-moonlight:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-brass-key-that-opens-only-empty-rooms">The Brass Key That Opens Only Empty Rooms</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Brass Key That Opens Only Empty Rooms" data-url="https://kyunolab.com/stories/the-brass-key-that-opens-only-empty-rooms">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Brass Key That Opens Only Empty Rooms" data-url="https://kyunolab.com/stories/the-brass-key-that-opens-only-empty-rooms" data-description="A calm guide to The Brass Key That Opens Only Empty Rooms, its common versions, source limits, and the mythic object motif that makes the scene where a brass." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-brass-key-that-opens-only-empty-rooms:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/key-that-opens-only-after-sunset">The Key That Opens Only After Sunset: Why Object Legends Depend on Timing</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Key That Opens Only After Sunset: Why Object Legends Depend on Timing" data-url="https://kyunolab.com/stories/key-that-opens-only-after-sunset">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Key That Opens Only After Sunset: Why Object Legends Depend on Timing" data-url="https://kyunolab.com/stories/key-that-opens-only-after-sunset" data-description="The Key That Opens Only After Sunset explores the origin, meaning, and folklore behind the scene where a key fails in every lock until sunset, then opens a." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:key-that-opens-only-after-sunset:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/mirror-that-keeps-the-last-face">The Mirror That Keeps the Last Face: Why Object Legends Turn Reflection Into Memory</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Mirror That Keeps the Last Face: Why Object Legends Turn Reflection Into Memory" data-url="https://kyunolab.com/stories/mirror-that-keeps-the-last-face">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Mirror That Keeps the Last Face: Why Object Legends Turn Reflection Into Memory" data-url="https://kyunolab.com/stories/mirror-that-keeps-the-last-face" data-description="A calm guide to The Mirror That Keeps the Last Face, its common versions, source limits, and the mirror legend motif that makes the scene where a mirror shows." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:mirror-that-keeps-the-last-face:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/lantern-that-burns-without-oil">The Lantern That Burns Without Oil: Why Impossible Lights Return in Object Legends</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Lantern That Burns Without Oil: Why Impossible Lights Return in Object Legends" data-url="https://kyunolab.com/stories/lantern-that-burns-without-oil">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Lantern That Burns Without Oil: Why Impossible Lights Return in Object Legends" data-url="https://kyunolab.com/stories/lantern-that-burns-without-oil" data-description="The Lantern That Burns Without Oil explores the origin, meaning, and folklore behind the scene where the wick is dry, the glass is cold, and still the room." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:lantern-that-burns-without-oil:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/key-that-fits-every-door-except-its-own">The Key That Fits Every Door Except Its Own: A Mythic Object Record About Refusal</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Key That Fits Every Door Except Its Own: A Mythic Object Record About Refusal" data-url="https://kyunolab.com/stories/key-that-fits-every-door-except-its-own">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Key That Fits Every Door Except Its Own: A Mythic Object Record About Refusal" data-url="https://kyunolab.com/stories/key-that-fits-every-door-except-its-own" data-description="A calm guide to The Key That Fits Every Door Except Its Own, its common versions, source limits, and the impossible key motif that makes the image of the." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:key-that-fits-every-door-except-its-own:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/bell-under-the-lake-folklore">The Bell Under the Lake: Why Sunken Bells Keep Ringing in Folklore</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Bell Under the Lake: Why Sunken Bells Keep Ringing in Folklore" data-url="https://kyunolab.com/stories/bell-under-the-lake-folklore">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Bell Under the Lake: Why Sunken Bells Keep Ringing in Folklore" data-url="https://kyunolab.com/stories/bell-under-the-lake-folklore" data-description="The Bell Under the Lake explains the image of a still lake, an impossible note, and a bell that seems to ring from below through mythic objects, separating." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:bell-under-the-lake-folklore:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/mirror-that-shows-the-house-empty">The Mirror That Shows the House Empty: A Mythic Object Record</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Mirror That Shows the House Empty: A Mythic Object Record" data-url="https://kyunolab.com/stories/mirror-that-shows-the-house-empty">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Mirror That Shows the House Empty: A Mythic Object Record" data-url="https://kyunolab.com/stories/mirror-that-shows-the-house-empty" data-description="The Mirror That Shows the House Empty explores the origin, meaning, and folklore behind the image of a mirror reflecting an empty room even while people stand." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:mirror-that-shows-the-house-empty:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/sword-that-cannot-be-drawn">The Sword That Cannot Be Drawn: Why Refusal Matters in Object Legends</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Sword That Cannot Be Drawn: Why Refusal Matters in Object Legends" data-url="https://kyunolab.com/stories/sword-that-cannot-be-drawn">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Sword That Cannot Be Drawn: Why Refusal Matters in Object Legends" data-url="https://kyunolab.com/stories/sword-that-cannot-be-drawn" data-description="The Sword That Cannot Be Drawn explores the origin, meaning, and folklore behind the image of a sword in a sheath, many hands trying, and an object that." data-category="Mythic Objects">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:sword-that-cannot-be-drawn:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-needle-kept-inside-a-locked-bell-a-mythic-object-record:naver"> Published</label>
           </div>
         </li>
         </ul>
+        <nav class="publishing-pagination" aria-label="Mythic Objects pagination">
+          <span aria-disabled="true">Previous</span>
+          <span aria-current="page">1</span><a href="/publishing-center/mythic-objects/page-2/">2</a><a href="/publishing-center/mythic-objects/page-3/">3</a>
+          <a href="/publishing-center/mythic-objects/page-2/">Next</a>
+        </nav>
       </section>
     </div>
   </main>

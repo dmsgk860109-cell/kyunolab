@@ -37,427 +37,290 @@
       <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/publishing-center/">Publishing Center</a><span aria-hidden="true">/</span><span aria-current="page">Internet Folklore</span></nav>
       <p class="label">Internal Tool</p>
       <h1 class="article-title">Internet Folklore</h1>
-      <p class="deck">Records are ordered by the current archive publishing order. Mark Naver publication status in this browser only.</p>
+      <style>
+        .publishing-category-list,
+        .publishing-record-list {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+
+        .publishing-category-list li {
+          margin: 0 0 0.35rem;
+        }
+
+        .publishing-record {
+          align-items: center;
+          border-bottom: 1px solid var(--border-color, #d9d2c4);
+          display: grid;
+          gap: 0.5rem 1rem;
+          grid-template-columns: minmax(0, 1fr) auto;
+          padding: 0.45rem 0;
+        }
+
+        .publishing-record-title {
+          overflow-wrap: anywhere;
+        }
+
+        .publishing-record-actions {
+          align-items: center;
+          display: flex;
+          gap: 0.4rem;
+          white-space: nowrap;
+        }
+
+        .publishing-record .button {
+          font-size: 0.85rem;
+          line-height: 1.1;
+          padding: 0.35rem 0.55rem;
+        }
+
+        .publishing-published-label {
+          align-items: center;
+          display: inline-flex;
+          gap: 0.25rem;
+          margin: 0;
+        }
+
+        .publishing-pagination {
+          align-items: center;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.35rem;
+          margin-top: 1rem;
+        }
+
+        .publishing-pagination a,
+        .publishing-pagination span {
+          border: 1px solid var(--border-color, #d9d2c4);
+          border-radius: 4px;
+          display: inline-flex;
+          line-height: 1;
+          padding: 0.45rem 0.6rem;
+        }
+
+        .publishing-pagination span[aria-current="page"] {
+          background: var(--ink, #171717);
+          border-color: var(--ink, #171717);
+          color: var(--paper, #fffaf1);
+        }
+
+        .publishing-pagination span[aria-disabled="true"] {
+          opacity: 0.55;
+        }
+
+        @media (max-width: 720px) {
+          .publishing-record {
+            grid-template-columns: 1fr;
+          }
+
+          .publishing-record-actions {
+            flex-wrap: wrap;
+            white-space: normal;
+          }
+        }
+      </style>
       <section class="script-material" aria-label="Internet Folklore records">
         <h2>Archive Records</h2>
-        <ul>
+        <ul class="publishing-record-list">
         <li class="publishing-record">
-          <a href="/stories/candle-cove-creepypasta-origin">Candle Cove Creepypasta: Origin, Meaning, and Shared-Memory Internet Folklore</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/candle-cove-creepypasta-origin">Candle Cove Creepypasta: Origin, Meaning, and Shared-Memory Internet Folklore</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="Candle Cove Creepypasta: Origin, Meaning, and Shared-Memory Internet Folklore" data-url="https://kyunolab.com/stories/candle-cove-creepypasta-origin">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="Candle Cove Creepypasta: Origin, Meaning, and Shared-Memory Internet Folklore" data-url="https://kyunolab.com/stories/candle-cove-creepypasta-origin" data-description="Candle Cove Creepypasta explains the image of the fictional lost television discussion that became a model for how online communities build false shared." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:candle-cove-creepypasta-origin:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:candle-cove-creepypasta-origin:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/momo-challenge-internet-rumor">Momo Challenge Rumor: How a Viral Warning Became Internet Folklore</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/momo-challenge-internet-rumor">Momo Challenge Rumor: How a Viral Warning Became Internet Folklore</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="Momo Challenge Rumor: How a Viral Warning Became Internet Folklore" data-url="https://kyunolab.com/stories/momo-challenge-internet-rumor">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="Momo Challenge Rumor: How a Viral Warning Became Internet Folklore" data-url="https://kyunolab.com/stories/momo-challenge-internet-rumor" data-description="Momo Challenge Rumor explores the origin, meaning, and folklore behind the image of the online panic in which a disturbing image, child-safety fears, and." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:momo-challenge-internet-rumor:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:momo-challenge-internet-rumor:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/herobrine-minecraft-legend">Herobrine Minecraft Legend: Origin, Meaning, and Gaming Folklore</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/herobrine-minecraft-legend">Herobrine Minecraft Legend: Origin, Meaning, and Gaming Folklore</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="Herobrine Minecraft Legend: Origin, Meaning, and Gaming Folklore" data-url="https://kyunolab.com/stories/herobrine-minecraft-legend">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="Herobrine Minecraft Legend: Origin, Meaning, and Gaming Folklore" data-url="https://kyunolab.com/stories/herobrine-minecraft-legend" data-description="Herobrine Minecraft Legend explores the origin, meaning, and folklore behind the image of the impossible player figure said to appear inside a familiar block." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:herobrine-minecraft-legend:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:herobrine-minecraft-legend:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/polybius-arcade-legend">Polybius Arcade Legend: Origin, Meaning, and Lost Game Folklore</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/polybius-arcade-legend">Polybius Arcade Legend: Origin, Meaning, and Lost Game Folklore</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="Polybius Arcade Legend: Origin, Meaning, and Lost Game Folklore" data-url="https://kyunolab.com/stories/polybius-arcade-legend">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="Polybius Arcade Legend: Origin, Meaning, and Lost Game Folklore" data-url="https://kyunolab.com/stories/polybius-arcade-legend" data-description="Polybius Arcade Legend explores the origin, meaning, and folklore behind the image of the rumored arcade cabinet that became a story about missing games." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:polybius-arcade-legend:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:polybius-arcade-legend:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/slender-man-internet-folklore">Slender Man Explained: Internet Folklore, Imageboard Origins, and Modern Myth</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/slender-man-internet-folklore">Slender Man Explained: Internet Folklore, Imageboard Origins, and Modern Myth</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="Slender Man Explained: Internet Folklore, Imageboard Origins, and Modern Myth" data-url="https://kyunolab.com/stories/slender-man-internet-folklore">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="Slender Man Explained: Internet Folklore, Imageboard Origins, and Modern Myth" data-url="https://kyunolab.com/stories/slender-man-internet-folklore" data-description="Slender Man Explained explains the image of the tall faceless figure that moved from online image manipulation into one of the most recognizable internet." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:slender-man-internet-folklore:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:slender-man-internet-folklore:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-profile-picture-reflected-in-an-unrelated-photograph-how-a-small-glitch-became-internet-folklore">The Profile Picture Reflected in an Unrelated Photograph: How a Small Glitch Became Internet Folklore</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-profile-picture-reflected-in-an-unrelated-photograph-how-a-small-glitch-became-internet-folklore">The Profile Picture Reflected in an Unrelated Photograph: How a Small Glitch Became Internet Folklore</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Profile Picture Reflected in an Unrelated Photograph: How a Small Glitch Became Internet Folklore" data-url="https://kyunolab.com/stories/the-profile-picture-reflected-in-an-unrelated-photograph-how-a-small-glitch-became-internet-folklore">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Profile Picture Reflected in an Unrelated Photograph: How a Small Glitch Became Internet Folklore" data-url="https://kyunolab.com/stories/the-profile-picture-reflected-in-an-unrelated-photograph-how-a-small-glitch-became-internet-folklore" data-description="The Profile Picture Reflected in an Unrelated Photograph explores the origin, meaning, and folklore behind the scene where a familiar profile image appears as." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-profile-picture-reflected-in-an-unrelated-photograph-how-a-small-glitch-became-internet-folklore:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-profile-picture-reflected-in-an-unrelated-photograph-how-a-small-glitch-became-internet-folklore:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-podcast-episode-hidden-between-two-file-numbers-why-this-online-story-keeps-spreading">The Podcast Episode Hidden Between Two File Numbers: Why This Online Story Keeps Spreading</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-podcast-episode-hidden-between-two-file-numbers-why-this-online-story-keeps-spreading">The Podcast Episode Hidden Between Two File Numbers: Why This Online Story Keeps Spreading</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Podcast Episode Hidden Between Two File Numbers: Why This Online Story Keeps Spreading" data-url="https://kyunolab.com/stories/the-podcast-episode-hidden-between-two-file-numbers-why-this-online-story-keeps-spreading">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Podcast Episode Hidden Between Two File Numbers: Why This Online Story Keeps Spreading" data-url="https://kyunolab.com/stories/the-podcast-episode-hidden-between-two-file-numbers-why-this-online-story-keeps-spreading" data-description="A calm guide to The Podcast Episode Hidden Between Two File Numbers, its common versions, source limits, and the online rumor motif that makes the image of a." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-podcast-episode-hidden-between-two-file-numbers-why-this-online-story-keeps-spreading:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-podcast-episode-hidden-between-two-file-numbers-why-this-online-story-keeps-spreading:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-shared-document-cursor-with-no-account-name-origin-and-meaning-of-a-digital-legend">The Shared Document Cursor With No Account Name: Origin and Meaning of a Digital Legend</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-shared-document-cursor-with-no-account-name-origin-and-meaning-of-a-digital-legend">The Shared Document Cursor With No Account Name: Origin and Meaning of a Digital Legend</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Shared Document Cursor With No Account Name: Origin and Meaning of a Digital Legend" data-url="https://kyunolab.com/stories/the-shared-document-cursor-with-no-account-name-origin-and-meaning-of-a-digital-legend">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Shared Document Cursor With No Account Name: Origin and Meaning of a Digital Legend" data-url="https://kyunolab.com/stories/the-shared-document-cursor-with-no-account-name-origin-and-meaning-of-a-digital-legend" data-description="The Shared Document Cursor With No Account Name explores the origin, meaning, and folklore behind the scene where an unnamed cursor returns to the same." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-shared-document-cursor-with-no-account-name-origin-and-meaning-of-a-digital-legend:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-shared-document-cursor-with-no-account-name-origin-and-meaning-of-a-digital-legend:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-livestream-viewer-count-that-refused-to-reach-zero-how-a-small-glitch-became-internet-folklore">The Livestream Viewer Count That Refused to Reach Zero: How a Small Glitch Became Internet Folklore</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-livestream-viewer-count-that-refused-to-reach-zero-how-a-small-glitch-became-internet-folklore">The Livestream Viewer Count That Refused to Reach Zero: How a Small Glitch Became Internet Folklore</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Livestream Viewer Count That Refused to Reach Zero: How a Small Glitch Became Internet Folklore" data-url="https://kyunolab.com/stories/the-livestream-viewer-count-that-refused-to-reach-zero-how-a-small-glitch-became-internet-folklore">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Livestream Viewer Count That Refused to Reach Zero: How a Small Glitch Became Internet Folklore" data-url="https://kyunolab.com/stories/the-livestream-viewer-count-that-refused-to-reach-zero-how-a-small-glitch-became-internet-folklore" data-description="The Livestream Viewer Count That Refused to Reach Zero explains the scene where an ended private livestream keeps exactly one viewer after every device." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-livestream-viewer-count-that-refused-to-reach-zero-how-a-small-glitch-became-internet-folklore:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-livestream-viewer-count-that-refused-to-reach-zero-how-a-small-glitch-became-internet-folklore:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-deleted-forum-account-that-still-wins-weekly-badges-why-this-online-story-keeps-spreading">The Deleted Forum Account That Still Wins Weekly Badges: Why This Online Story Keeps Spreading</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-deleted-forum-account-that-still-wins-weekly-badges-why-this-online-story-keeps-spreading">The Deleted Forum Account That Still Wins Weekly Badges: Why This Online Story Keeps Spreading</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Deleted Forum Account That Still Wins Weekly Badges: Why This Online Story Keeps Spreading" data-url="https://kyunolab.com/stories/the-deleted-forum-account-that-still-wins-weekly-badges-why-this-online-story-keeps-spreading">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Deleted Forum Account That Still Wins Weekly Badges: Why This Online Story Keeps Spreading" data-url="https://kyunolab.com/stories/the-deleted-forum-account-that-still-wins-weekly-badges-why-this-online-story-keeps-spreading" data-description="A calm guide to The Deleted Forum Account That Still Wins Weekly Badges, its common versions, source limits, and the digital folklore motif that makes the." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-deleted-forum-account-that-still-wins-weekly-badges-why-this-online-story-keeps-spreading:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-deleted-forum-account-that-still-wins-weekly-badges-why-this-online-story-keeps-spreading:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-search-suggestion-written-as-a-private-question-origin-and-meaning-of-a-digital-legend">The Search Suggestion Written as a Private Question: Origin and Meaning of a Digital Legend</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-search-suggestion-written-as-a-private-question-origin-and-meaning-of-a-digital-legend">The Search Suggestion Written as a Private Question: Origin and Meaning of a Digital Legend</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Search Suggestion Written as a Private Question: Origin and Meaning of a Digital Legend" data-url="https://kyunolab.com/stories/the-search-suggestion-written-as-a-private-question-origin-and-meaning-of-a-digital-legend">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Search Suggestion Written as a Private Question: Origin and Meaning of a Digital Legend" data-url="https://kyunolab.com/stories/the-search-suggestion-written-as-a-private-question-origin-and-meaning-of-a-digital-legend" data-description="The Search Suggestion Written as a Private Question explains the image of a search box completes a question the user has never typed aloud or online through." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-search-suggestion-written-as-a-private-question-origin-and-meaning-of-a-digital-legend:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-search-suggestion-written-as-a-private-question-origin-and-meaning-of-a-digital-legend:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-voice-note-that-became-shorter-with-every-download-how-a-small-glitch-became-internet-folklore">The Voice Note That Became Shorter With Every Download: How a Small Glitch Became Internet Folklore</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-voice-note-that-became-shorter-with-every-download-how-a-small-glitch-became-internet-folklore">The Voice Note That Became Shorter With Every Download: How a Small Glitch Became Internet Folklore</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Voice Note That Became Shorter With Every Download: How a Small Glitch Became Internet Folklore" data-url="https://kyunolab.com/stories/the-voice-note-that-became-shorter-with-every-download-how-a-small-glitch-became-internet-folklore">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Voice Note That Became Shorter With Every Download: How a Small Glitch Became Internet Folklore" data-url="https://kyunolab.com/stories/the-voice-note-that-became-shorter-with-every-download-how-a-small-glitch-became-internet-folklore" data-description="A calm guide to The Voice Note That Became Shorter With Every Download, its common versions, source limits, and the online rumor motif that makes the image of." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-voice-note-that-became-shorter-with-every-download-how-a-small-glitch-became-internet-folklore:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-voice-note-that-became-shorter-with-every-download-how-a-small-glitch-became-internet-folklore:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-archived-webpage-that-updates-only-its-weather-why-this-online-story-keeps-spreading">The Archived Webpage That Updates Only Its Weather: Why This Online Story Keeps Spreading</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-archived-webpage-that-updates-only-its-weather-why-this-online-story-keeps-spreading">The Archived Webpage That Updates Only Its Weather: Why This Online Story Keeps Spreading</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Archived Webpage That Updates Only Its Weather: Why This Online Story Keeps Spreading" data-url="https://kyunolab.com/stories/the-archived-webpage-that-updates-only-its-weather-why-this-online-story-keeps-spreading">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Archived Webpage That Updates Only Its Weather: Why This Online Story Keeps Spreading" data-url="https://kyunolab.com/stories/the-archived-webpage-that-updates-only-its-weather-why-this-online-story-keeps-spreading" data-description="The Archived Webpage That Updates Only Its Weather explains the scene where a preserved webpage keeps changing one tiny weather icon through internet." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-archived-webpage-that-updates-only-its-weather-why-this-online-story-keeps-spreading:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-archived-webpage-that-updates-only-its-weather-why-this-online-story-keeps-spreading:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-game-lobby-with-a-player-from-an-older-version-origin-and-meaning-of-a-digital-legend">The Game Lobby With a Player From an Older Version: Origin and Meaning of a Digital Legend</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-game-lobby-with-a-player-from-an-older-version-origin-and-meaning-of-a-digital-legend">The Game Lobby With a Player From an Older Version: Origin and Meaning of a Digital Legend</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Game Lobby With a Player From an Older Version: Origin and Meaning of a Digital Legend" data-url="https://kyunolab.com/stories/the-game-lobby-with-a-player-from-an-older-version-origin-and-meaning-of-a-digital-legend">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Game Lobby With a Player From an Older Version: Origin and Meaning of a Digital Legend" data-url="https://kyunolab.com/stories/the-game-lobby-with-a-player-from-an-older-version-origin-and-meaning-of-a-digital-legend" data-description="The Game Lobby With a Player From an Older Version explains the image of an online game lobby lists a player using a version retired years earlier through." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-game-lobby-with-a-player-from-an-older-version-origin-and-meaning-of-a-digital-legend:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-game-lobby-with-a-player-from-an-older-version-origin-and-meaning-of-a-digital-legend:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-draft-email-that-collected-replies-before-it-was-sent-how-a-small-glitch-became-internet-folklore">The Draft Email That Collected Replies Before It Was Sent: How a Small Glitch Became Internet Folklore</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-draft-email-that-collected-replies-before-it-was-sent-how-a-small-glitch-became-internet-folklore">The Draft Email That Collected Replies Before It Was Sent: How a Small Glitch Became Internet Folklore</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Draft Email That Collected Replies Before It Was Sent: How a Small Glitch Became Internet Folklore" data-url="https://kyunolab.com/stories/the-draft-email-that-collected-replies-before-it-was-sent-how-a-small-glitch-became-internet-folklore">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Draft Email That Collected Replies Before It Was Sent: How a Small Glitch Became Internet Folklore" data-url="https://kyunolab.com/stories/the-draft-email-that-collected-replies-before-it-was-sent-how-a-small-glitch-became-internet-folklore" data-description="The Draft Email That Collected Replies Before It Was Sent explores the origin, meaning, and folklore behind the image of an unsent email draft displays." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-draft-email-that-collected-replies-before-it-was-sent-how-a-small-glitch-became-internet-folklore:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-draft-email-that-collected-replies-before-it-was-sent-how-a-small-glitch-became-internet-folklore:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-group-photo-with-one-face-turned-away-how-reposts-create-digital-legends">The Group Photo With One Face Turned Away: How Reposts Create Digital Legends</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-group-photo-with-one-face-turned-away-how-reposts-create-digital-legends">The Group Photo With One Face Turned Away: How Reposts Create Digital Legends</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Group Photo With One Face Turned Away: How Reposts Create Digital Legends" data-url="https://kyunolab.com/stories/the-group-photo-with-one-face-turned-away-how-reposts-create-digital-legends">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Group Photo With One Face Turned Away: How Reposts Create Digital Legends" data-url="https://kyunolab.com/stories/the-group-photo-with-one-face-turned-away-how-reposts-create-digital-legends" data-description="A calm guide to The Group Photo With One Face Turned Away, its common versions, source limits, and the online rumor motif that makes the image of a group." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-group-photo-with-one-face-turned-away-how-reposts-create-digital-legends:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-group-photo-with-one-face-turned-away-how-reposts-create-digital-legends:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-captcha-that-asked-for-a-place-you-know-a-strange-internet-folklore-pattern">The Captcha That Asked for a Place You Know: A Strange Internet Folklore Pattern</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-captcha-that-asked-for-a-place-you-know-a-strange-internet-folklore-pattern">The Captcha That Asked for a Place You Know: A Strange Internet Folklore Pattern</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Captcha That Asked for a Place You Know: A Strange Internet Folklore Pattern" data-url="https://kyunolab.com/stories/the-captcha-that-asked-for-a-place-you-know-a-strange-internet-folklore-pattern">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Captcha That Asked for a Place You Know: A Strange Internet Folklore Pattern" data-url="https://kyunolab.com/stories/the-captcha-that-asked-for-a-place-you-know-a-strange-internet-folklore-pattern" data-description="The Captcha That Asked for a Place You Know explores the origin, meaning, and folklore behind the image of a captcha asks the user to select images of a place." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-captcha-that-asked-for-a-place-you-know-a-strange-internet-folklore-pattern:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-captcha-that-asked-for-a-place-you-know-a-strange-internet-folklore-pattern:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-video-call-background-with-a-door-that-opens-internet-folklore-explained">The Video Call Background With a Door That Opens: Internet Folklore Explained</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-video-call-background-with-a-door-that-opens-internet-folklore-explained">The Video Call Background With a Door That Opens: Internet Folklore Explained</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Video Call Background With a Door That Opens: Internet Folklore Explained" data-url="https://kyunolab.com/stories/the-video-call-background-with-a-door-that-opens-internet-folklore-explained">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Video Call Background With a Door That Opens: Internet Folklore Explained" data-url="https://kyunolab.com/stories/the-video-call-background-with-a-door-that-opens-internet-folklore-explained" data-description="The Video Call Background With a Door That Opens explores the origin, meaning, and folklore behind the scene where a video-call background shows a door." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-video-call-background-with-a-door-that-opens-internet-folklore-explained:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-video-call-background-with-a-door-that-opens-internet-folklore-explained:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-cloud-backup-that-restores-one-extra-file-a-digital-folklore-record">The Cloud Backup That Restores One Extra File: A Digital Folklore Record</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-cloud-backup-that-restores-one-extra-file-a-digital-folklore-record">The Cloud Backup That Restores One Extra File: A Digital Folklore Record</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Cloud Backup That Restores One Extra File: A Digital Folklore Record" data-url="https://kyunolab.com/stories/the-cloud-backup-that-restores-one-extra-file-a-digital-folklore-record">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Cloud Backup That Restores One Extra File: A Digital Folklore Record" data-url="https://kyunolab.com/stories/the-cloud-backup-that-restores-one-extra-file-a-digital-folklore-record" data-description="The Cloud Backup That Restores One Extra File explains the scene where a cloud backup restores one file that never appears in the original folder history." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-cloud-backup-that-restores-one-extra-file-a-digital-folklore-record:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-cloud-backup-that-restores-one-extra-file-a-digital-folklore-record:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-old-profile-page-that-still-shows-typing-why-this-internet-legend-feels-personal">The Old Profile Page That Still Shows Typing: Why This Internet Legend Feels Personal</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-old-profile-page-that-still-shows-typing-why-this-internet-legend-feels-personal">The Old Profile Page That Still Shows Typing: Why This Internet Legend Feels Personal</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Old Profile Page That Still Shows Typing: Why This Internet Legend Feels Personal" data-url="https://kyunolab.com/stories/the-old-profile-page-that-still-shows-typing-why-this-internet-legend-feels-personal">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Old Profile Page That Still Shows Typing: Why This Internet Legend Feels Personal" data-url="https://kyunolab.com/stories/the-old-profile-page-that-still-shows-typing-why-this-internet-legend-feels-personal" data-description="The Old Profile Page That Still Shows Typing explores the origin, meaning, and folklore behind the scene where an abandoned profile shows a typing indicator." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-old-profile-page-that-still-shows-typing-why-this-internet-legend-feels-personal:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-old-profile-page-that-still-shows-typing-why-this-internet-legend-feels-personal:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-shared-playlist-with-a-song-no-one-uploaded-internet-folklore-and-memory">The Shared Playlist With a Song No One Uploaded: Internet Folklore and Memory</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-shared-playlist-with-a-song-no-one-uploaded-internet-folklore-and-memory">The Shared Playlist With a Song No One Uploaded: Internet Folklore and Memory</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Shared Playlist With a Song No One Uploaded: Internet Folklore and Memory" data-url="https://kyunolab.com/stories/the-shared-playlist-with-a-song-no-one-uploaded-internet-folklore-and-memory">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Shared Playlist With a Song No One Uploaded: Internet Folklore and Memory" data-url="https://kyunolab.com/stories/the-shared-playlist-with-a-song-no-one-uploaded-internet-folklore-and-memory" data-description="A calm guide to The Shared Playlist With a Song No One Uploaded, its common versions, source limits, and the online rumor motif that makes the image of a." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-shared-playlist-with-a-song-no-one-uploaded-internet-folklore-and-memory:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-shared-playlist-with-a-song-no-one-uploaded-internet-folklore-and-memory:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-map-app-voice-that-said-a-name-instead-of-a-street-a-modern-digital-legend">The Map App Voice That Said a Name Instead of a Street: A Modern Digital Legend</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-map-app-voice-that-said-a-name-instead-of-a-street-a-modern-digital-legend">The Map App Voice That Said a Name Instead of a Street: A Modern Digital Legend</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Map App Voice That Said a Name Instead of a Street: A Modern Digital Legend" data-url="https://kyunolab.com/stories/the-map-app-voice-that-said-a-name-instead-of-a-street-a-modern-digital-legend">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Map App Voice That Said a Name Instead of a Street: A Modern Digital Legend" data-url="https://kyunolab.com/stories/the-map-app-voice-that-said-a-name-instead-of-a-street-a-modern-digital-legend" data-description="The Map App Voice That Said a Name Instead of a Street explains the image of a navigation app speaks a personal name where it should announce a street through." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-map-app-voice-that-said-a-name-instead-of-a-street-a-modern-digital-legend:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-map-app-voice-that-said-a-name-instead-of-a-street-a-modern-digital-legend:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-forum-poll-option-nobody-added-how-a-small-glitch-became-internet-folklore">The Forum Poll Option Nobody Added: How a Small Glitch Became Internet Folklore</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-forum-poll-option-nobody-added-how-a-small-glitch-became-internet-folklore">The Forum Poll Option Nobody Added: How a Small Glitch Became Internet Folklore</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Forum Poll Option Nobody Added: How a Small Glitch Became Internet Folklore" data-url="https://kyunolab.com/stories/the-forum-poll-option-nobody-added-how-a-small-glitch-became-internet-folklore">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Forum Poll Option Nobody Added: How a Small Glitch Became Internet Folklore" data-url="https://kyunolab.com/stories/the-forum-poll-option-nobody-added-how-a-small-glitch-became-internet-folklore" data-description="The Forum Poll Option Nobody Added explores the origin, meaning, and folklore behind the image of a forum poll gains an extra option that no moderator can." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-forum-poll-option-nobody-added-how-a-small-glitch-became-internet-folklore:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-forum-poll-option-nobody-added-how-a-small-glitch-became-internet-folklore:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-livestream-thumbnail-that-changed-after-midnight-a-digital-legend-explained">The Livestream Thumbnail That Changed After Midnight: A Digital Legend Explained</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-livestream-thumbnail-that-changed-after-midnight-a-digital-legend-explained">The Livestream Thumbnail That Changed After Midnight: A Digital Legend Explained</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Livestream Thumbnail That Changed After Midnight: A Digital Legend Explained" data-url="https://kyunolab.com/stories/the-livestream-thumbnail-that-changed-after-midnight-a-digital-legend-explained">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Livestream Thumbnail That Changed After Midnight: A Digital Legend Explained" data-url="https://kyunolab.com/stories/the-livestream-thumbnail-that-changed-after-midnight-a-digital-legend-explained" data-description="A calm guide to The Livestream Thumbnail That Changed After Midnight, its common versions, source limits, and the screenshot culture motif that makes the." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-livestream-thumbnail-that-changed-after-midnight-a-digital-legend-explained:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-screenshot-folder-that-keeps-one-deleted-image-internet-folklore-explained">The Screenshot Folder That Keeps One Deleted Image: Internet Folklore Explained</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Screenshot Folder That Keeps One Deleted Image: Internet Folklore Explained" data-url="https://kyunolab.com/stories/the-screenshot-folder-that-keeps-one-deleted-image-internet-folklore-explained">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Screenshot Folder That Keeps One Deleted Image: Internet Folklore Explained" data-url="https://kyunolab.com/stories/the-screenshot-folder-that-keeps-one-deleted-image-internet-folklore-explained" data-description="A calm guide to The Screenshot Folder That Keeps One Deleted Image, its common versions, source limits, and the digital folklore motif that makes the image of." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-screenshot-folder-that-keeps-one-deleted-image-internet-folklore-explained:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-screenshot-folder-that-creates-one-empty-file-every-night">The Screenshot Folder That Creates One Empty File Every Night</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Screenshot Folder That Creates One Empty File Every Night" data-url="https://kyunolab.com/stories/the-screenshot-folder-that-creates-one-empty-file-every-night">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Screenshot Folder That Creates One Empty File Every Night" data-url="https://kyunolab.com/stories/the-screenshot-folder-that-creates-one-empty-file-every-night" data-description="The Screenshot Folder That Creates One Empty File Every Night explores the origin, meaning, and folklore behind the scene where a shared screenshot folder." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-screenshot-folder-that-creates-one-empty-file-every-night:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-forum-avatar-that-turns-around-only-in-archived-copies">The Forum Avatar That Turns Around Only in Archived Copies</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Forum Avatar That Turns Around Only in Archived Copies" data-url="https://kyunolab.com/stories/the-forum-avatar-that-turns-around-only-in-archived-copies">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Forum Avatar That Turns Around Only in Archived Copies" data-url="https://kyunolab.com/stories/the-forum-avatar-that-turns-around-only-in-archived-copies" data-description="The Forum Avatar That Turns Around Only in Archived Copies explores the origin, meaning, and folklore behind the scene where an old forum avatar that seems." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-forum-avatar-that-turns-around-only-in-archived-copies:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-playlist-track-that-has-no-audio-but-keeps-getting-shared">The Playlist Track That Has No Audio but Keeps Getting Shared</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Playlist Track That Has No Audio but Keeps Getting Shared" data-url="https://kyunolab.com/stories/the-playlist-track-that-has-no-audio-but-keeps-getting-shared">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Playlist Track That Has No Audio but Keeps Getting Shared" data-url="https://kyunolab.com/stories/the-playlist-track-that-has-no-audio-but-keeps-getting-shared" data-description="The Playlist Track That Has No Audio but Keeps Getting Shared explains the scene where a silent playlist track that spreads because listeners insist the pause." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-playlist-track-that-has-no-audio-but-keeps-getting-shared:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-captcha-image-with-the-same-empty-street">The Captcha Image With the Same Empty Street</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Captcha Image With the Same Empty Street" data-url="https://kyunolab.com/stories/the-captcha-image-with-the-same-empty-street">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Captcha Image With the Same Empty Street" data-url="https://kyunolab.com/stories/the-captcha-image-with-the-same-empty-street" data-description="A calm guide to The Captcha Image With the Same Empty Street, its common versions, source limits, and the captcha legend motif that makes the scene where a." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-captcha-image-with-the-same-empty-street:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-livestream-delay-that-answers-questions-first">The Livestream Delay That Answers Questions First</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Livestream Delay That Answers Questions First" data-url="https://kyunolab.com/stories/the-livestream-delay-that-answers-questions-first">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Livestream Delay That Answers Questions First" data-url="https://kyunolab.com/stories/the-livestream-delay-that-answers-questions-first" data-description="A calm guide to The Livestream Delay That Answers Questions First, its common versions, source limits, and the livestream legend motif that makes the scene." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-livestream-delay-that-answers-questions-first:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-deleted-account-that-still-likes-old-posts">The Deleted Account That Still Likes Old Posts</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Deleted Account That Still Likes Old Posts" data-url="https://kyunolab.com/stories/the-deleted-account-that-still-likes-old-posts">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Deleted Account That Still Likes Old Posts" data-url="https://kyunolab.com/stories/the-deleted-account-that-still-likes-old-posts" data-description="A calm guide to The Deleted Account That Still Likes Old Posts, its common versions, source limits, and the account folklore motif that makes the image of a." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-deleted-account-that-still-likes-old-posts:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-map-review-written-from-a-closed-location">The Map Review Written From a Closed Location</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Map Review Written From a Closed Location" data-url="https://kyunolab.com/stories/the-map-review-written-from-a-closed-location">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Map Review Written From a Closed Location" data-url="https://kyunolab.com/stories/the-map-review-written-from-a-closed-location" data-description="The Map Review Written From a Closed Location explains the image of a review posted from a location marked closed years earlier, copied until it becomes a." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-map-review-written-from-a-closed-location:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-comment-timestamp-that-counts-backward">The Comment Timestamp That Counts Backward</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Comment Timestamp That Counts Backward" data-url="https://kyunolab.com/stories/the-comment-timestamp-that-counts-backward">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Comment Timestamp That Counts Backward" data-url="https://kyunolab.com/stories/the-comment-timestamp-that-counts-backward" data-description="A calm guide to The Comment Timestamp That Counts Backward, its common versions, source limits, and the timestamp folklore motif that makes the image of a." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-comment-timestamp-that-counts-backward:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-shared-image-that-loses-one-window-each-repost">The Shared Image That Loses One Window Each Repost</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Shared Image That Loses One Window Each Repost" data-url="https://kyunolab.com/stories/the-shared-image-that-loses-one-window-each-repost">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Shared Image That Loses One Window Each Repost" data-url="https://kyunolab.com/stories/the-shared-image-that-loses-one-window-each-repost" data-description="A calm guide to The Shared Image That Loses One Window Each Repost, its common versions, source limits, and the image folklore motif that makes the scene." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-shared-image-that-loses-one-window-each-repost:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-search-suggestion-that-names-a-page-before-it-exists">The Search Suggestion That Names a Page Before It Exists</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Search Suggestion That Names a Page Before It Exists" data-url="https://kyunolab.com/stories/the-search-suggestion-that-names-a-page-before-it-exists">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Search Suggestion That Names a Page Before It Exists" data-url="https://kyunolab.com/stories/the-search-suggestion-that-names-a-page-before-it-exists" data-description="The Search Suggestion That Names a Page Before It Exists explains the scene where a search suggestion that appears before anyone can find the page it seems to." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-search-suggestion-that-names-a-page-before-it-exists:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-download-bar-that-finished-twice">The Download Bar That Finished Twice</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Download Bar That Finished Twice" data-url="https://kyunolab.com/stories/the-download-bar-that-finished-twice">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Download Bar That Finished Twice" data-url="https://kyunolab.com/stories/the-download-bar-that-finished-twice" data-description="A calm guide to The Download Bar That Finished Twice, its common versions, source limits, and the online rumor motif that makes the scene where a download." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-download-bar-that-finished-twice:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-group-icon-that-changed-for-only-one-member">The Group Icon That Changed for Only One Member</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Group Icon That Changed for Only One Member" data-url="https://kyunolab.com/stories/the-group-icon-that-changed-for-only-one-member">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Group Icon That Changed for Only One Member" data-url="https://kyunolab.com/stories/the-group-icon-that-changed-for-only-one-member" data-description="The Group Icon That Changed for Only One Member explains one member sees a group icon replaced by a hallway photo while everyone else sees the original image." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-group-icon-that-changed-for-only-one-member:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-caption-that-translates-into-a-different-warning">The Caption That Translates Into a Different Warning</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Caption That Translates Into a Different Warning" data-url="https://kyunolab.com/stories/the-caption-that-translates-into-a-different-warning">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Caption That Translates Into a Different Warning" data-url="https://kyunolab.com/stories/the-caption-that-translates-into-a-different-warning" data-description="A calm guide to The Caption That Translates Into a Different Warning, its common versions, source limits, and the platform glitch motif that makes the image." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-caption-that-translates-into-a-different-warning:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-deleted-playlist-that-still-adds-songs">The Deleted Playlist That Still Adds Songs</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Deleted Playlist That Still Adds Songs" data-url="https://kyunolab.com/stories/the-deleted-playlist-that-still-adds-songs">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Deleted Playlist That Still Adds Songs" data-url="https://kyunolab.com/stories/the-deleted-playlist-that-still-adds-songs" data-description="A calm guide to The Deleted Playlist That Still Adds Songs, its common versions, source limits, and the screenshot culture motif that makes the scene where a." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-deleted-playlist-that-still-adds-songs:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-map-pin-that-moved-after-every-refresh">The Map Pin That Moved After Every Refresh</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Map Pin That Moved After Every Refresh" data-url="https://kyunolab.com/stories/the-map-pin-that-moved-after-every-refresh">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Map Pin That Moved After Every Refresh" data-url="https://kyunolab.com/stories/the-map-pin-that-moved-after-every-refresh" data-description="The Map Pin That Moved After Every Refresh explains the image of a public map pin drifts a few meters after every refresh until users start saving." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-map-pin-that-moved-after-every-refresh:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-screenshot-where-the-clock-is-always-wrong">The Screenshot Where the Clock Is Always Wrong</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Screenshot Where the Clock Is Always Wrong" data-url="https://kyunolab.com/stories/the-screenshot-where-the-clock-is-always-wrong">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Screenshot Where the Clock Is Always Wrong" data-url="https://kyunolab.com/stories/the-screenshot-where-the-clock-is-always-wrong" data-description="A calm guide to The Screenshot Where the Clock Is Always Wrong, its common versions, source limits, and the online rumor motif that makes the scene where a." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-screenshot-where-the-clock-is-always-wrong:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-forum-thread-with-one-missing-reply-number">The Forum Thread With One Missing Reply Number</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Forum Thread With One Missing Reply Number" data-url="https://kyunolab.com/stories/the-forum-thread-with-one-missing-reply-number">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Forum Thread With One Missing Reply Number" data-url="https://kyunolab.com/stories/the-forum-thread-with-one-missing-reply-number" data-description="The Forum Thread With One Missing Reply Number explores the origin, meaning, and folklore behind the image of a forum thread jumps from reply 88 to 90 while." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-forum-thread-with-one-missing-reply-number:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-file-name-that-keeps-renaming-itself">The File Name That Keeps Renaming Itself</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The File Name That Keeps Renaming Itself" data-url="https://kyunolab.com/stories/the-file-name-that-keeps-renaming-itself">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The File Name That Keeps Renaming Itself" data-url="https://kyunolab.com/stories/the-file-name-that-keeps-renaming-itself" data-description="A calm guide to The File Name That Keeps Renaming Itself, its common versions, source limits, and the platform glitch motif that makes the image of a shared." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-file-name-that-keeps-renaming-itself:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-livestream-comment-that-appeared-before-the-stream-began">The Livestream Comment That Appeared Before the Stream Began</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Livestream Comment That Appeared Before the Stream Began" data-url="https://kyunolab.com/stories/the-livestream-comment-that-appeared-before-the-stream-began">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Livestream Comment That Appeared Before the Stream Began" data-url="https://kyunolab.com/stories/the-livestream-comment-that-appeared-before-the-stream-began" data-description="A calm guide to The Livestream Comment That Appeared Before the Stream Began, its common versions, source limits, and the screenshot culture motif that makes." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-livestream-comment-that-appeared-before-the-stream-began:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-profile-bio-that-changed-only-in-archived-copies">The Profile Bio That Changed Only in Archived Copies</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Profile Bio That Changed Only in Archived Copies" data-url="https://kyunolab.com/stories/the-profile-bio-that-changed-only-in-archived-copies">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Profile Bio That Changed Only in Archived Copies" data-url="https://kyunolab.com/stories/the-profile-bio-that-changed-only-in-archived-copies" data-description="A calm guide to The Profile Bio That Changed Only in Archived Copies, its common versions, source limits, and the digital folklore motif that makes archived." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-profile-bio-that-changed-only-in-archived-copies:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/draft-email-that-sent-itself">The Draft Email That Sent Itself: How Workplace Glitches Become Internet Folklore</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Draft Email That Sent Itself: How Workplace Glitches Become Internet Folklore" data-url="https://kyunolab.com/stories/draft-email-that-sent-itself">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Draft Email That Sent Itself: How Workplace Glitches Become Internet Folklore" data-url="https://kyunolab.com/stories/draft-email-that-sent-itself" data-description="The Draft Email That Sent Itself explains the scene where a draft email appears as sent even though the employee says they never pressed send and the log." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:draft-email-that-sent-itself:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/profile-picture-that-changed-after-deletion">The Profile Picture That Changed After Deletion: How Account Ghost Stories Become Internet Folklore</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Profile Picture That Changed After Deletion: How Account Ghost Stories Become Internet Folklore" data-url="https://kyunolab.com/stories/profile-picture-that-changed-after-deletion">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Profile Picture That Changed After Deletion: How Account Ghost Stories Become Internet Folklore" data-url="https://kyunolab.com/stories/profile-picture-that-changed-after-deletion" data-description="The Profile Picture That Changed After Deletion explains the scene where a deleted profile shows a different image in cached previews, making viewers argue." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:profile-picture-that-changed-after-deletion:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/comment-that-appeared-before-the-post">The Comment That Appeared Before the Post: How Tiny Timeline Errors Become Internet Folklore</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Comment That Appeared Before the Post: How Tiny Timeline Errors Become Internet Folklore" data-url="https://kyunolab.com/stories/comment-that-appeared-before-the-post">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Comment That Appeared Before the Post: How Tiny Timeline Errors Become Internet Folklore" data-url="https://kyunolab.com/stories/comment-that-appeared-before-the-post" data-description="The Comment That Appeared Before the Post explains the image of the timestamp makes the reply look older than the post, even though every practical." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:comment-that-appeared-before-the-post:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/screenshot-that-was-always-one-pixel-wrong">The Screenshot That Was Always One Pixel Wrong: How Tiny Digital Errors Become Internet Folklore</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Screenshot That Was Always One Pixel Wrong: How Tiny Digital Errors Become Internet Folklore" data-url="https://kyunolab.com/stories/screenshot-that-was-always-one-pixel-wrong">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Screenshot That Was Always One Pixel Wrong: How Tiny Digital Errors Become Internet Folklore" data-url="https://kyunolab.com/stories/screenshot-that-was-always-one-pixel-wrong" data-description="A calm guide to The Screenshot That Was Always One Pixel Wrong, its common versions, source limits, and the digital glitch motif that makes the scene where." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:screenshot-that-was-always-one-pixel-wrong:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/backrooms-digital-labyrinth">The Backrooms and the Birth of a Digital Labyrinth</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Backrooms and the Birth of a Digital Labyrinth" data-url="https://kyunolab.com/stories/backrooms-digital-labyrinth">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Backrooms and the Birth of a Digital Labyrinth" data-url="https://kyunolab.com/stories/backrooms-digital-labyrinth" data-description="Learn how the Backrooms began, why endless yellow rooms became internet folklore, and what liminal spaces, isolation, and digital collaboration mean." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:backrooms-digital-labyrinth:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/cursed-image-that-kept-being-shared">The Cursed Image That Kept Being Shared: How Online Unease Becomes Folklore</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Cursed Image That Kept Being Shared: How Online Unease Becomes Folklore" data-url="https://kyunolab.com/stories/cursed-image-that-kept-being-shared">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Cursed Image That Kept Being Shared: How Online Unease Becomes Folklore" data-url="https://kyunolab.com/stories/cursed-image-that-kept-being-shared" data-description="The Cursed Image That Kept Being Shared explains the image of a blurry image, a missing caption, and the sense that explanation would make it less powerful." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:cursed-image-that-kept-being-shared:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/empty-server-room-online-myth">The Empty Server Room: Why This Digital Ghost Story Feels So Modern</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Empty Server Room: Why This Digital Ghost Story Feels So Modern" data-url="https://kyunolab.com/stories/empty-server-room-online-myth">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Empty Server Room: Why This Digital Ghost Story Feels So Modern" data-url="https://kyunolab.com/stories/empty-server-room-online-myth" data-description="A calm guide to The Empty Server Room, its common versions, source limits, and the digital haunting motif that makes the image of a locked server room, a." data-category="Internet Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:empty-server-room-online-myth:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-livestream-thumbnail-that-changed-after-midnight-a-digital-legend-explained:naver"> Published</label>
           </div>
         </li>
         </ul>
+        <nav class="publishing-pagination" aria-label="Internet Folklore pagination">
+          <span aria-disabled="true">Previous</span>
+          <span aria-current="page">1</span><a href="/publishing-center/internet-folklore/page-2/">2</a><a href="/publishing-center/internet-folklore/page-3/">3</a>
+          <a href="/publishing-center/internet-folklore/page-2/">Next</a>
+        </nav>
       </section>
     </div>
   </main>

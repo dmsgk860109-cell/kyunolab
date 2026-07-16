@@ -37,23 +37,105 @@
       <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Publishing Center</span></nav>
       <p class="label">Internal Tool</p>
       <h1 class="article-title">Publishing Center</h1>
-      <p class="deck">Archive category management for publication work.</p>
+      <style>
+        .publishing-category-list,
+        .publishing-record-list {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+
+        .publishing-category-list li {
+          margin: 0 0 0.35rem;
+        }
+
+        .publishing-record {
+          align-items: center;
+          border-bottom: 1px solid var(--border-color, #d9d2c4);
+          display: grid;
+          gap: 0.5rem 1rem;
+          grid-template-columns: minmax(0, 1fr) auto;
+          padding: 0.45rem 0;
+        }
+
+        .publishing-record-title {
+          overflow-wrap: anywhere;
+        }
+
+        .publishing-record-actions {
+          align-items: center;
+          display: flex;
+          gap: 0.4rem;
+          white-space: nowrap;
+        }
+
+        .publishing-record .button {
+          font-size: 0.85rem;
+          line-height: 1.1;
+          padding: 0.35rem 0.55rem;
+        }
+
+        .publishing-published-label {
+          align-items: center;
+          display: inline-flex;
+          gap: 0.25rem;
+          margin: 0;
+        }
+
+        .publishing-pagination {
+          align-items: center;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.35rem;
+          margin-top: 1rem;
+        }
+
+        .publishing-pagination a,
+        .publishing-pagination span {
+          border: 1px solid var(--border-color, #d9d2c4);
+          border-radius: 4px;
+          display: inline-flex;
+          line-height: 1;
+          padding: 0.45rem 0.6rem;
+        }
+
+        .publishing-pagination span[aria-current="page"] {
+          background: var(--ink, #171717);
+          border-color: var(--ink, #171717);
+          color: var(--paper, #fffaf1);
+        }
+
+        .publishing-pagination span[aria-disabled="true"] {
+          opacity: 0.55;
+        }
+
+        @media (max-width: 720px) {
+          .publishing-record {
+            grid-template-columns: 1fr;
+          }
+
+          .publishing-record-actions {
+            flex-wrap: wrap;
+            white-space: normal;
+          }
+        }
+      </style>
       <section class="script-material" aria-label="Archive categories">
         <h2>Archive Categories</h2>
-        <ul>
-        <li><a href="/publishing-center/urban-legends/">Urban Legends</a> <span class="meta">52 records</span></li>
-        <li><a href="/publishing-center/internet-folklore/">Internet Folklore</a> <span class="meta">52 records</span></li>
-        <li><a href="/publishing-center/strange-places/">Strange Places</a> <span class="meta">52 records</span></li>
-        <li><a href="/publishing-center/unexplained-mysteries/">Unexplained Mysteries</a> <span class="meta">52 records</span></li>
-        <li><a href="/publishing-center/classic-folklore/">Classic Folklore</a> <span class="meta">52 records</span></li>
-        <li><a href="/publishing-center/modern-legends/">Modern Legends</a> <span class="meta">52 records</span></li>
-        <li><a href="/publishing-center/myths/">Myths</a> <span class="meta">57 records</span></li>
-        <li><a href="/publishing-center/mythic-creatures/">Mythic Creatures</a> <span class="meta">52 records</span></li>
-        <li><a href="/publishing-center/lost-worlds/">Lost Worlds</a> <span class="meta">52 records</span></li>
-        <li><a href="/publishing-center/strange-nature/">Strange Nature</a> <span class="meta">52 records</span></li>
-        <li><a href="/publishing-center/legendary-places/">Legendary Places</a> <span class="meta">52 records</span></li>
-        <li><a href="/publishing-center/mythic-objects/">Mythic Objects</a> <span class="meta">52 records</span></li>
-        <li><a href="/publishing-center/legend-origins/">Legend Origins</a> <span class="meta">49 records</span></li>
+        <ul class="publishing-category-list">
+          <li><a href="/publishing-center/urban-legends/">Urban Legends (52)</a></li>
+          <li><a href="/publishing-center/internet-folklore/">Internet Folklore (52)</a></li>
+          <li><a href="/publishing-center/strange-places/">Strange Places (52)</a></li>
+          <li><a href="/publishing-center/unexplained-mysteries/">Unexplained Mysteries (52)</a></li>
+          <li><a href="/publishing-center/classic-folklore/">Classic Folklore (52)</a></li>
+          <li><a href="/publishing-center/modern-legends/">Modern Legends (52)</a></li>
+          <li><a href="/publishing-center/myths/">Myths (57)</a></li>
+          <li><a href="/publishing-center/mythic-creatures/">Mythic Creatures (52)</a></li>
+          <li><a href="/publishing-center/lost-worlds/">Lost Worlds (52)</a></li>
+          <li><a href="/publishing-center/strange-nature/">Strange Nature (52)</a></li>
+          <li><a href="/publishing-center/legendary-places/">Legendary Places (52)</a></li>
+          <li><a href="/publishing-center/mythic-objects/">Mythic Objects (52)</a></li>
+          <li><a href="/publishing-center/legend-origins/">Legend Origins (49)</a></li>
         </ul>
       </section>
     </div>

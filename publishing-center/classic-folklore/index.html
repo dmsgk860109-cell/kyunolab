@@ -37,427 +37,290 @@
       <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/publishing-center/">Publishing Center</a><span aria-hidden="true">/</span><span aria-current="page">Classic Folklore</span></nav>
       <p class="label">Internal Tool</p>
       <h1 class="article-title">Classic Folklore</h1>
-      <p class="deck">Records are ordered by the current archive publishing order. Mark Naver publication status in this browser only.</p>
+      <style>
+        .publishing-category-list,
+        .publishing-record-list {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+
+        .publishing-category-list li {
+          margin: 0 0 0.35rem;
+        }
+
+        .publishing-record {
+          align-items: center;
+          border-bottom: 1px solid var(--border-color, #d9d2c4);
+          display: grid;
+          gap: 0.5rem 1rem;
+          grid-template-columns: minmax(0, 1fr) auto;
+          padding: 0.45rem 0;
+        }
+
+        .publishing-record-title {
+          overflow-wrap: anywhere;
+        }
+
+        .publishing-record-actions {
+          align-items: center;
+          display: flex;
+          gap: 0.4rem;
+          white-space: nowrap;
+        }
+
+        .publishing-record .button {
+          font-size: 0.85rem;
+          line-height: 1.1;
+          padding: 0.35rem 0.55rem;
+        }
+
+        .publishing-published-label {
+          align-items: center;
+          display: inline-flex;
+          gap: 0.25rem;
+          margin: 0;
+        }
+
+        .publishing-pagination {
+          align-items: center;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.35rem;
+          margin-top: 1rem;
+        }
+
+        .publishing-pagination a,
+        .publishing-pagination span {
+          border: 1px solid var(--border-color, #d9d2c4);
+          border-radius: 4px;
+          display: inline-flex;
+          line-height: 1;
+          padding: 0.45rem 0.6rem;
+        }
+
+        .publishing-pagination span[aria-current="page"] {
+          background: var(--ink, #171717);
+          border-color: var(--ink, #171717);
+          color: var(--paper, #fffaf1);
+        }
+
+        .publishing-pagination span[aria-disabled="true"] {
+          opacity: 0.55;
+        }
+
+        @media (max-width: 720px) {
+          .publishing-record {
+            grid-template-columns: 1fr;
+          }
+
+          .publishing-record-actions {
+            flex-wrap: wrap;
+            white-space: normal;
+          }
+        }
+      </style>
       <section class="script-material" aria-label="Classic Folklore records">
         <h2>Archive Records</h2>
-        <ul>
+        <ul class="publishing-record-list">
         <li class="publishing-record">
-          <a href="/stories/changeling-folklore">Changeling Folklore: Origin, Meaning, and the Fear of the Replaced Child</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/changeling-folklore">Changeling Folklore: Origin, Meaning, and the Fear of the Replaced Child</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="Changeling Folklore: Origin, Meaning, and the Fear of the Replaced Child" data-url="https://kyunolab.com/stories/changeling-folklore">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="Changeling Folklore: Origin, Meaning, and the Fear of the Replaced Child" data-url="https://kyunolab.com/stories/changeling-folklore" data-description="Changeling Folklore explains the image of the child-substitution belief that reflects household anxiety, illness interpretation, and supernatural explanation." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:changeling-folklore:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:changeling-folklore:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/will-o-the-wisp-folklore">Will-o-the-Wisp Folklore: Marsh Lights, Meaning, and Wandering Fire Legends</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/will-o-the-wisp-folklore">Will-o-the-Wisp Folklore: Marsh Lights, Meaning, and Wandering Fire Legends</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="Will-o-the-Wisp Folklore: Marsh Lights, Meaning, and Wandering Fire Legends" data-url="https://kyunolab.com/stories/will-o-the-wisp-folklore">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="Will-o-the-Wisp Folklore: Marsh Lights, Meaning, and Wandering Fire Legends" data-url="https://kyunolab.com/stories/will-o-the-wisp-folklore" data-description="A calm guide to Will-o-the-Wisp Folklore, its common versions, source limits, and the wandering light motif that makes the image of the wandering light." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:will-o-the-wisp-folklore:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:will-o-the-wisp-folklore:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/banshee-irish-folklore">Banshee Folklore: Irish Death Omen, Meaning, and Common Versions</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/banshee-irish-folklore">Banshee Folklore: Irish Death Omen, Meaning, and Common Versions</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="Banshee Folklore: Irish Death Omen, Meaning, and Common Versions" data-url="https://kyunolab.com/stories/banshee-irish-folklore">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="Banshee Folklore: Irish Death Omen, Meaning, and Common Versions" data-url="https://kyunolab.com/stories/banshee-irish-folklore" data-description="Banshee Folklore explores the origin, meaning, and folklore behind the image of the Irish warning figure whose cry marks family memory, mourning, and the." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:banshee-irish-folklore:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:banshee-irish-folklore:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/la-llorona-folklore">La Llorona: Origin, Meaning, and the Weeping Woman in Folklore</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/la-llorona-folklore">La Llorona: Origin, Meaning, and the Weeping Woman in Folklore</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="La Llorona: Origin, Meaning, and the Weeping Woman in Folklore" data-url="https://kyunolab.com/stories/la-llorona-folklore">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="La Llorona: Origin, Meaning, and the Weeping Woman in Folklore" data-url="https://kyunolab.com/stories/la-llorona-folklore" data-description="La Llorona explains the image of the weeping woman tradition that carries grief, warning, water, motherhood, and regional retellings through classic folklore." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:la-llorona-folklore:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:la-llorona-folklore:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/baba-yaga-folklore">Baba Yaga Folklore: Origins, Meanings, and the Witch in the Forest Hut</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/baba-yaga-folklore">Baba Yaga Folklore: Origins, Meanings, and the Witch in the Forest Hut</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="Baba Yaga Folklore: Origins, Meanings, and the Witch in the Forest Hut" data-url="https://kyunolab.com/stories/baba-yaga-folklore">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="Baba Yaga Folklore: Origins, Meanings, and the Witch in the Forest Hut" data-url="https://kyunolab.com/stories/baba-yaga-folklore" data-description="A calm guide to Baba Yaga Folklore, its common versions, source limits, and the slavic folklore motif that makes the image of the Slavic forest figure whose." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:baba-yaga-folklore:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:baba-yaga-folklore:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-bell-rung-once-for-an-empty-house-meaning-and-history-of-a-household-custom">The Bell Rung Once for an Empty House: Meaning and History of a Household Custom</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-bell-rung-once-for-an-empty-house-meaning-and-history-of-a-household-custom">The Bell Rung Once for an Empty House: Meaning and History of a Household Custom</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Bell Rung Once for an Empty House: Meaning and History of a Household Custom" data-url="https://kyunolab.com/stories/the-bell-rung-once-for-an-empty-house-meaning-and-history-of-a-household-custom">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Bell Rung Once for an Empty House: Meaning and History of a Household Custom" data-url="https://kyunolab.com/stories/the-bell-rung-once-for-an-empty-house-meaning-and-history-of-a-household-custom" data-description="The Bell Rung Once for an Empty House explores the origin, meaning, and folklore behind the image of a small bell is rung once before a family leaves an empty." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-bell-rung-once-for-an-empty-house-meaning-and-history-of-a-household-custom:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-bell-rung-once-for-an-empty-house-meaning-and-history-of-a-household-custom:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/why-salt-was-counted-after-a-family-argument-what-this-old-custom-was-meant-to-protect">Why Salt Was Counted After a Family Argument: What This Old Custom Was Meant to Protect</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/why-salt-was-counted-after-a-family-argument-what-this-old-custom-was-meant-to-protect">Why Salt Was Counted After a Family Argument: What This Old Custom Was Meant to Protect</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="Why Salt Was Counted After a Family Argument: What This Old Custom Was Meant to Protect" data-url="https://kyunolab.com/stories/why-salt-was-counted-after-a-family-argument-what-this-old-custom-was-meant-to-protect">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="Why Salt Was Counted After a Family Argument: What This Old Custom Was Meant to Protect" data-url="https://kyunolab.com/stories/why-salt-was-counted-after-a-family-argument-what-this-old-custom-was-meant-to-protect" data-description="Why Salt Was Counted After a Family Argument explores the origin, meaning, and folklore behind spilled salt is counted after an argument to measure how long." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:why-salt-was-counted-after-a-family-argument-what-this-old-custom-was-meant-to-protect:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:why-salt-was-counted-after-a-family-argument-what-this-old-custom-was-meant-to-protect:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-needle-kept-above-the-kitchen-door-a-traditional-belief-explained">The Needle Kept Above the Kitchen Door: A Traditional Belief Explained</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-needle-kept-above-the-kitchen-door-a-traditional-belief-explained">The Needle Kept Above the Kitchen Door: A Traditional Belief Explained</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Needle Kept Above the Kitchen Door: A Traditional Belief Explained" data-url="https://kyunolab.com/stories/the-needle-kept-above-the-kitchen-door-a-traditional-belief-explained">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Needle Kept Above the Kitchen Door: A Traditional Belief Explained" data-url="https://kyunolab.com/stories/the-needle-kept-above-the-kitchen-door-a-traditional-belief-explained" data-description="A calm guide to The Needle Kept Above the Kitchen Door, its common versions, source limits, and the protective custom motif that makes the image of a needle." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-needle-kept-above-the-kitchen-door-a-traditional-belief-explained:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-needle-kept-above-the-kitchen-door-a-traditional-belief-explained:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/why-the-garden-gate-was-never-closed-at-noon-meaning-and-history-of-a-household-custom">Why the Garden Gate Was Never Closed at Noon: Meaning and History of a Household Custom</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/why-the-garden-gate-was-never-closed-at-noon-meaning-and-history-of-a-household-custom">Why the Garden Gate Was Never Closed at Noon: Meaning and History of a Household Custom</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="Why the Garden Gate Was Never Closed at Noon: Meaning and History of a Household Custom" data-url="https://kyunolab.com/stories/why-the-garden-gate-was-never-closed-at-noon-meaning-and-history-of-a-household-custom">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="Why the Garden Gate Was Never Closed at Noon: Meaning and History of a Household Custom" data-url="https://kyunolab.com/stories/why-the-garden-gate-was-never-closed-at-noon-meaning-and-history-of-a-household-custom" data-description="A calm guide to Why the Garden Gate Was Never Closed at Noon, its common versions, source limits, and the threshold custom motif that makes the image of a." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:why-the-garden-gate-was-never-closed-at-noon-meaning-and-history-of-a-household-custom:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:why-the-garden-gate-was-never-closed-at-noon-meaning-and-history-of-a-household-custom:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-name-whispered-into-an-empty-cup-what-this-old-custom-was-meant-to-protect">The Name Whispered Into an Empty Cup: What This Old Custom Was Meant to Protect</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-name-whispered-into-an-empty-cup-what-this-old-custom-was-meant-to-protect">The Name Whispered Into an Empty Cup: What This Old Custom Was Meant to Protect</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Name Whispered Into an Empty Cup: What This Old Custom Was Meant to Protect" data-url="https://kyunolab.com/stories/the-name-whispered-into-an-empty-cup-what-this-old-custom-was-meant-to-protect">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Name Whispered Into an Empty Cup: What This Old Custom Was Meant to Protect" data-url="https://kyunolab.com/stories/the-name-whispered-into-an-empty-cup-what-this-old-custom-was-meant-to-protect" data-description="The Name Whispered Into an Empty Cup explores the origin, meaning, and folklore behind the image of a name is whispered into an empty cup before a long." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-name-whispered-into-an-empty-cup-what-this-old-custom-was-meant-to-protect:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-name-whispered-into-an-empty-cup-what-this-old-custom-was-meant-to-protect:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/why-the-first-loaf-was-cooled-near-a-window-a-traditional-belief-explained">Why the First Loaf Was Cooled Near a Window: A Traditional Belief Explained</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/why-the-first-loaf-was-cooled-near-a-window-a-traditional-belief-explained">Why the First Loaf Was Cooled Near a Window: A Traditional Belief Explained</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="Why the First Loaf Was Cooled Near a Window: A Traditional Belief Explained" data-url="https://kyunolab.com/stories/why-the-first-loaf-was-cooled-near-a-window-a-traditional-belief-explained">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="Why the First Loaf Was Cooled Near a Window: A Traditional Belief Explained" data-url="https://kyunolab.com/stories/why-the-first-loaf-was-cooled-near-a-window-a-traditional-belief-explained" data-description="Why the First Loaf Was Cooled Near a Window explains the image of the first loaf is cooled near an open window before anyone may eat it through classic." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:why-the-first-loaf-was-cooled-near-a-window-a-traditional-belief-explained:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:why-the-first-loaf-was-cooled-near-a-window-a-traditional-belief-explained:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-red-thread-sewn-into-a-winter-coat-meaning-and-history-of-a-household-custom">The Red Thread Sewn Into a Winter Coat: Meaning and History of a Household Custom</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-red-thread-sewn-into-a-winter-coat-meaning-and-history-of-a-household-custom">The Red Thread Sewn Into a Winter Coat: Meaning and History of a Household Custom</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Red Thread Sewn Into a Winter Coat: Meaning and History of a Household Custom" data-url="https://kyunolab.com/stories/the-red-thread-sewn-into-a-winter-coat-meaning-and-history-of-a-household-custom">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Red Thread Sewn Into a Winter Coat: Meaning and History of a Household Custom" data-url="https://kyunolab.com/stories/the-red-thread-sewn-into-a-winter-coat-meaning-and-history-of-a-household-custom" data-description="The Red Thread Sewn Into a Winter Coat explains the image of a red thread is hidden in a coat lining as protection against losing one’s way through classic." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-red-thread-sewn-into-a-winter-coat-meaning-and-history-of-a-household-custom:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-red-thread-sewn-into-a-winter-coat-meaning-and-history-of-a-household-custom:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/why-travelers-turned-a-coin-before-crossing-a-bridge-what-this-old-custom-was-meant-to-protect">Why Travelers Turned a Coin Before Crossing a Bridge: What This Old Custom Was Meant to Protect</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/why-travelers-turned-a-coin-before-crossing-a-bridge-what-this-old-custom-was-meant-to-protect">Why Travelers Turned a Coin Before Crossing a Bridge: What This Old Custom Was Meant to Protect</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="Why Travelers Turned a Coin Before Crossing a Bridge: What This Old Custom Was Meant to Protect" data-url="https://kyunolab.com/stories/why-travelers-turned-a-coin-before-crossing-a-bridge-what-this-old-custom-was-meant-to-protect">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="Why Travelers Turned a Coin Before Crossing a Bridge: What This Old Custom Was Meant to Protect" data-url="https://kyunolab.com/stories/why-travelers-turned-a-coin-before-crossing-a-bridge-what-this-old-custom-was-meant-to-protect" data-description="Why Travelers Turned a Coin Before Crossing a Bridge explains the moment when travelers turn a coin at a bridge so the return road will remember them through." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:why-travelers-turned-a-coin-before-crossing-a-bridge-what-this-old-custom-was-meant-to-protect:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:why-travelers-turned-a-coin-before-crossing-a-bridge-what-this-old-custom-was-meant-to-protect:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-bowl-of-water-left-beneath-a-new-cradle-a-traditional-belief-explained">The Bowl of Water Left Beneath a New Cradle: A Traditional Belief Explained</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-bowl-of-water-left-beneath-a-new-cradle-a-traditional-belief-explained">The Bowl of Water Left Beneath a New Cradle: A Traditional Belief Explained</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Bowl of Water Left Beneath a New Cradle: A Traditional Belief Explained" data-url="https://kyunolab.com/stories/the-bowl-of-water-left-beneath-a-new-cradle-a-traditional-belief-explained">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Bowl of Water Left Beneath a New Cradle: A Traditional Belief Explained" data-url="https://kyunolab.com/stories/the-bowl-of-water-left-beneath-a-new-cradle-a-traditional-belief-explained" data-description="The Bowl of Water Left Beneath a New Cradle explores the origin, meaning, and folklore behind water is left beneath a cradle to carry away restless dreams." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-bowl-of-water-left-beneath-a-new-cradle-a-traditional-belief-explained:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-bowl-of-water-left-beneath-a-new-cradle-a-traditional-belief-explained:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/why-a-broom-was-laid-across-the-door-at-night-meaning-and-history-of-a-household-custom">Why a Broom Was Laid Across the Door at Night: Meaning and History of a Household Custom</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/why-a-broom-was-laid-across-the-door-at-night-meaning-and-history-of-a-household-custom">Why a Broom Was Laid Across the Door at Night: Meaning and History of a Household Custom</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="Why a Broom Was Laid Across the Door at Night: Meaning and History of a Household Custom" data-url="https://kyunolab.com/stories/why-a-broom-was-laid-across-the-door-at-night-meaning-and-history-of-a-household-custom">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="Why a Broom Was Laid Across the Door at Night: Meaning and History of a Household Custom" data-url="https://kyunolab.com/stories/why-a-broom-was-laid-across-the-door-at-night-meaning-and-history-of-a-household-custom" data-description="Why a Broom Was Laid Across the Door at Night explains the image of a broom is placed across a doorway to stop unwanted footsteps from entering through." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:why-a-broom-was-laid-across-the-door-at-night-meaning-and-history-of-a-household-custom:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:why-a-broom-was-laid-across-the-door-at-night-meaning-and-history-of-a-household-custom:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-window-cloth-turned-during-thunder-weather-folklore-explained">The Window Cloth Turned During Thunder: Weather Folklore Explained</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-window-cloth-turned-during-thunder-weather-folklore-explained">The Window Cloth Turned During Thunder: Weather Folklore Explained</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Window Cloth Turned During Thunder: Weather Folklore Explained" data-url="https://kyunolab.com/stories/the-window-cloth-turned-during-thunder-weather-folklore-explained">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Window Cloth Turned During Thunder: Weather Folklore Explained" data-url="https://kyunolab.com/stories/the-window-cloth-turned-during-thunder-weather-folklore-explained" data-description="A calm guide to The Window Cloth Turned During Thunder, its common versions, source limits, and the oral tradition motif that makes the scene where a window." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-window-cloth-turned-during-thunder-weather-folklore-explained:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-window-cloth-turned-during-thunder-weather-folklore-explained:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-doorstep-stone-washed-before-dawn-threshold-folklore-and-meaning">The Doorstep Stone Washed Before Dawn: Threshold Folklore and Meaning</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-doorstep-stone-washed-before-dawn-threshold-folklore-and-meaning">The Doorstep Stone Washed Before Dawn: Threshold Folklore and Meaning</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Doorstep Stone Washed Before Dawn: Threshold Folklore and Meaning" data-url="https://kyunolab.com/stories/the-doorstep-stone-washed-before-dawn-threshold-folklore-and-meaning">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Doorstep Stone Washed Before Dawn: Threshold Folklore and Meaning" data-url="https://kyunolab.com/stories/the-doorstep-stone-washed-before-dawn-threshold-folklore-and-meaning" data-description="A calm guide to The Doorstep Stone Washed Before Dawn, its common versions, source limits, and the domestic ritual motif that makes the image of a doorstep." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-doorstep-stone-washed-before-dawn-threshold-folklore-and-meaning:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-doorstep-stone-washed-before-dawn-threshold-folklore-and-meaning:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-orchard-ribbon-hung-for-returning-feet-harvest-folklore-explained">The Orchard Ribbon Hung for Returning Feet: Harvest Folklore Explained</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-orchard-ribbon-hung-for-returning-feet-harvest-folklore-explained">The Orchard Ribbon Hung for Returning Feet: Harvest Folklore Explained</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Orchard Ribbon Hung for Returning Feet: Harvest Folklore Explained" data-url="https://kyunolab.com/stories/the-orchard-ribbon-hung-for-returning-feet-harvest-folklore-explained">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Orchard Ribbon Hung for Returning Feet: Harvest Folklore Explained" data-url="https://kyunolab.com/stories/the-orchard-ribbon-hung-for-returning-feet-harvest-folklore-explained" data-description="The Orchard Ribbon Hung for Returning Feet explores the origin, meaning, and folklore behind the image of a ribbon is hung in the orchard so absent family." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-orchard-ribbon-hung-for-returning-feet-harvest-folklore-explained:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-orchard-ribbon-hung-for-returning-feet-harvest-folklore-explained:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-old-spoon-that-must-not-touch-salt-kitchen-folklore-and-meaning">The Old Spoon That Must Not Touch Salt: Kitchen Folklore and Meaning</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-old-spoon-that-must-not-touch-salt-kitchen-folklore-and-meaning">The Old Spoon That Must Not Touch Salt: Kitchen Folklore and Meaning</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Old Spoon That Must Not Touch Salt: Kitchen Folklore and Meaning" data-url="https://kyunolab.com/stories/the-old-spoon-that-must-not-touch-salt-kitchen-folklore-and-meaning">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Old Spoon That Must Not Touch Salt: Kitchen Folklore and Meaning" data-url="https://kyunolab.com/stories/the-old-spoon-that-must-not-touch-salt-kitchen-folklore-and-meaning" data-description="The Old Spoon That Must Not Touch Salt explores the origin, meaning, and folklore behind the image of an old spoon is kept away from salt because it is said." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-old-spoon-that-must-not-touch-salt-kitchen-folklore-and-meaning:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-old-spoon-that-must-not-touch-salt-kitchen-folklore-and-meaning:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-candle-mark-that-warns-of-a-visitor-a-household-omen-explained">The Candle Mark That Warns of a Visitor: A Household Omen Explained</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-candle-mark-that-warns-of-a-visitor-a-household-omen-explained">The Candle Mark That Warns of a Visitor: A Household Omen Explained</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Candle Mark That Warns of a Visitor: A Household Omen Explained" data-url="https://kyunolab.com/stories/the-candle-mark-that-warns-of-a-visitor-a-household-omen-explained">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Candle Mark That Warns of a Visitor: A Household Omen Explained" data-url="https://kyunolab.com/stories/the-candle-mark-that-warns-of-a-visitor-a-household-omen-explained" data-description="The Candle Mark That Warns of a Visitor explores the origin, meaning, and folklore behind the image of a candle mark left in cooling wax is read as a sign." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-candle-mark-that-warns-of-a-visitor-a-household-omen-explained:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-candle-mark-that-warns-of-a-visitor-a-household-omen-explained:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-empty-plate-set-for-the-weather-guest-a-classic-folklore-reading">The Empty Plate Set for the Weather Guest: A Classic Folklore Reading</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-empty-plate-set-for-the-weather-guest-a-classic-folklore-reading">The Empty Plate Set for the Weather Guest: A Classic Folklore Reading</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Empty Plate Set for the Weather Guest: A Classic Folklore Reading" data-url="https://kyunolab.com/stories/the-empty-plate-set-for-the-weather-guest-a-classic-folklore-reading">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Empty Plate Set for the Weather Guest: A Classic Folklore Reading" data-url="https://kyunolab.com/stories/the-empty-plate-set-for-the-weather-guest-a-classic-folklore-reading" data-description="The Empty Plate Set for the Weather Guest explains the image of an empty plate is set during storms for a guest who is never named aloud through classic." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-empty-plate-set-for-the-weather-guest-a-classic-folklore-reading:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-empty-plate-set-for-the-weather-guest-a-classic-folklore-reading:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-knife-laid-flat-before-a-journey-a-travel-folklore-rule-explained">The Knife Laid Flat Before a Journey: A Travel Folklore Rule Explained</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-knife-laid-flat-before-a-journey-a-travel-folklore-rule-explained">The Knife Laid Flat Before a Journey: A Travel Folklore Rule Explained</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Knife Laid Flat Before a Journey: A Travel Folklore Rule Explained" data-url="https://kyunolab.com/stories/the-knife-laid-flat-before-a-journey-a-travel-folklore-rule-explained">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Knife Laid Flat Before a Journey: A Travel Folklore Rule Explained" data-url="https://kyunolab.com/stories/the-knife-laid-flat-before-a-journey-a-travel-folklore-rule-explained" data-description="The Knife Laid Flat Before a Journey explores the origin, meaning, and folklore behind the image of a knife is laid flat before a journey so sharp words do." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-knife-laid-flat-before-a-journey-a-travel-folklore-rule-explained:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-knife-laid-flat-before-a-journey-a-travel-folklore-rule-explained:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-thread-tied-around-the-quiet-well-a-water-folklore-motif-explained">The Thread Tied Around the Quiet Well: A Water Folklore Motif Explained</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-thread-tied-around-the-quiet-well-a-water-folklore-motif-explained">The Thread Tied Around the Quiet Well: A Water Folklore Motif Explained</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Thread Tied Around the Quiet Well: A Water Folklore Motif Explained" data-url="https://kyunolab.com/stories/the-thread-tied-around-the-quiet-well-a-water-folklore-motif-explained">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Thread Tied Around the Quiet Well: A Water Folklore Motif Explained" data-url="https://kyunolab.com/stories/the-thread-tied-around-the-quiet-well-a-water-folklore-motif-explained" data-description="A calm guide to The Thread Tied Around the Quiet Well, its common versions, source limits, and the weather omen motif that makes the image of a thread tied." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-thread-tied-around-the-quiet-well-a-water-folklore-motif-explained:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-thread-tied-around-the-quiet-well-a-water-folklore-motif-explained:naver"> Published</label>
           </div>
         </li>
         <li class="publishing-record">
-          <a href="/stories/the-shoes-left-backward-at-the-threshold-a-classic-folklore-rule-explained">The Shoes Left Backward at the Threshold: A Classic Folklore Rule Explained</a>
-          <div>
+          <a class="publishing-record-title" href="/stories/the-shoes-left-backward-at-the-threshold-a-classic-folklore-rule-explained">The Shoes Left Backward at the Threshold: A Classic Folklore Rule Explained</a>
+          <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Shoes Left Backward at the Threshold: A Classic Folklore Rule Explained" data-url="https://kyunolab.com/stories/the-shoes-left-backward-at-the-threshold-a-classic-folklore-rule-explained">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="The Shoes Left Backward at the Threshold: A Classic Folklore Rule Explained" data-url="https://kyunolab.com/stories/the-shoes-left-backward-at-the-threshold-a-classic-folklore-rule-explained" data-description="A calm guide to The Shoes Left Backward at the Threshold, its common versions, source limits, and the threshold custom motif that makes shoes are left." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-shoes-left-backward-at-the-threshold-a-classic-folklore-rule-explained:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-hearth-coal-saved-under-the-winter-bowl-a-household-folklore-meaning">The Hearth Coal Saved Under the Winter Bowl: A Household Folklore Meaning</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Hearth Coal Saved Under the Winter Bowl: A Household Folklore Meaning" data-url="https://kyunolab.com/stories/the-hearth-coal-saved-under-the-winter-bowl-a-household-folklore-meaning">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Hearth Coal Saved Under the Winter Bowl: A Household Folklore Meaning" data-url="https://kyunolab.com/stories/the-hearth-coal-saved-under-the-winter-bowl-a-household-folklore-meaning" data-description="A calm guide to The Hearth Coal Saved Under the Winter Bowl, its common versions, source limits, and the household folklore motif that makes the scene where a." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-hearth-coal-saved-under-the-winter-bowl-a-household-folklore-meaning:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-red-thread-left-across-the-morning-gate">The Red Thread Left Across the Morning Gate</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Red Thread Left Across the Morning Gate" data-url="https://kyunolab.com/stories/the-red-thread-left-across-the-morning-gate">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Red Thread Left Across the Morning Gate" data-url="https://kyunolab.com/stories/the-red-thread-left-across-the-morning-gate" data-description="A calm guide to The Red Thread Left Across the Morning Gate, its common versions, source limits, and the household folklore motif that makes the image of a." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-red-thread-left-across-the-morning-gate:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-bowl-turned-upside-down-during-thunder">The Bowl Turned Upside Down During Thunder</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Bowl Turned Upside Down During Thunder" data-url="https://kyunolab.com/stories/the-bowl-turned-upside-down-during-thunder">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Bowl Turned Upside Down During Thunder" data-url="https://kyunolab.com/stories/the-bowl-turned-upside-down-during-thunder" data-description="The Bowl Turned Upside Down During Thunder explains the image of an old household practice of turning a bowl upside down during thunder so a visitor will find." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-bowl-turned-upside-down-during-thunder:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-chair-pulled-back-for-the-guest-no-one-names">The Chair Pulled Back for the Guest No One Names</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Chair Pulled Back for the Guest No One Names" data-url="https://kyunolab.com/stories/the-chair-pulled-back-for-the-guest-no-one-names">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Chair Pulled Back for the Guest No One Names" data-url="https://kyunolab.com/stories/the-chair-pulled-back-for-the-guest-no-one-names" data-description="A calm guide to The Chair Pulled Back for the Guest No One Names, its common versions, source limits, and the table folklore motif that makes the image of a." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-chair-pulled-back-for-the-guest-no-one-names:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-salt-line-swept-only-toward-the-door">The Salt Line Swept Only Toward the Door</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Salt Line Swept Only Toward the Door" data-url="https://kyunolab.com/stories/the-salt-line-swept-only-toward-the-door">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Salt Line Swept Only Toward the Door" data-url="https://kyunolab.com/stories/the-salt-line-swept-only-toward-the-door" data-description="The Salt Line Swept Only Toward the Door explores the origin, meaning, and folklore behind the image of a salt line swept toward the door in customs about." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-salt-line-swept-only-toward-the-door:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-first-apple-placed-on-the-quiet-step">The First Apple Placed on the Quiet Step</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The First Apple Placed on the Quiet Step" data-url="https://kyunolab.com/stories/the-first-apple-placed-on-the-quiet-step">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The First Apple Placed on the Quiet Step" data-url="https://kyunolab.com/stories/the-first-apple-placed-on-the-quiet-step" data-description="The First Apple Placed on the Quiet Step explores the origin, meaning, and folklore behind the image of an apple placed on a quiet step before harvest in." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-first-apple-placed-on-the-quiet-step:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-spoon-hidden-beneath-the-new-cradle">The Spoon Hidden Beneath the New Cradle</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Spoon Hidden Beneath the New Cradle" data-url="https://kyunolab.com/stories/the-spoon-hidden-beneath-the-new-cradle">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Spoon Hidden Beneath the New Cradle" data-url="https://kyunolab.com/stories/the-spoon-hidden-beneath-the-new-cradle" data-description="The Spoon Hidden Beneath the New Cradle explains the image of a spoon hidden beneath a cradle in retellings about protection, hunger, and household blessing." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-spoon-hidden-beneath-the-new-cradle:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-window-opened-once-for-returning-footsteps">The Window Opened Once for Returning Footsteps</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Window Opened Once for Returning Footsteps" data-url="https://kyunolab.com/stories/the-window-opened-once-for-returning-footsteps">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Window Opened Once for Returning Footsteps" data-url="https://kyunolab.com/stories/the-window-opened-once-for-returning-footsteps" data-description="A calm guide to The Window Opened Once for Returning Footsteps, its common versions, source limits, and the return folklore motif that makes the image of a." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-window-opened-once-for-returning-footsteps:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-blue-cloth-folded-over-the-well-rope">The Blue Cloth Folded Over the Well Rope</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Blue Cloth Folded Over the Well Rope" data-url="https://kyunolab.com/stories/the-blue-cloth-folded-over-the-well-rope">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Blue Cloth Folded Over the Well Rope" data-url="https://kyunolab.com/stories/the-blue-cloth-folded-over-the-well-rope" data-description="The Blue Cloth Folded Over the Well Rope explores the origin, meaning, and folklore behind the image of a blue cloth folded over a well rope in customs that." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-blue-cloth-folded-over-the-well-rope:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-last-candle-saved-from-the-winter-table">The Last Candle Saved From the Winter Table</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Last Candle Saved From the Winter Table" data-url="https://kyunolab.com/stories/the-last-candle-saved-from-the-winter-table">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Last Candle Saved From the Winter Table" data-url="https://kyunolab.com/stories/the-last-candle-saved-from-the-winter-table" data-description="The Last Candle Saved From the Winter Table explains the image of a final winter candle kept unlit for a guest who might arrive after the door is barred." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-last-candle-saved-from-the-winter-table:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-door-latch-touched-three-times-before-travel">The Door Latch Touched Three Times Before Travel</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Door Latch Touched Three Times Before Travel" data-url="https://kyunolab.com/stories/the-door-latch-touched-three-times-before-travel">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Door Latch Touched Three Times Before Travel" data-url="https://kyunolab.com/stories/the-door-latch-touched-three-times-before-travel" data-description="The Door Latch Touched Three Times Before Travel explores the origin, meaning, and folklore behind the image of a door latch touched three times before a." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-door-latch-touched-three-times-before-travel:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-guest-cup-turned-toward-the-door">The Guest Cup Turned Toward the Door</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Guest Cup Turned Toward the Door" data-url="https://kyunolab.com/stories/the-guest-cup-turned-toward-the-door">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Guest Cup Turned Toward the Door" data-url="https://kyunolab.com/stories/the-guest-cup-turned-toward-the-door" data-description="The Guest Cup Turned Toward the Door explores the origin, meaning, and folklore behind the image of a guest cup is turned toward the door when a visitor." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-guest-cup-turned-toward-the-door:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-candle-that-must-not-be-blown-out-twice">The Candle That Must Not Be Blown Out Twice</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Candle That Must Not Be Blown Out Twice" data-url="https://kyunolab.com/stories/the-candle-that-must-not-be-blown-out-twice">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Candle That Must Not Be Blown Out Twice" data-url="https://kyunolab.com/stories/the-candle-that-must-not-be-blown-out-twice" data-description="The Candle That Must Not Be Blown Out Twice explains the image of a candle may be blown out once, but a second breath is said to invite the room to remember." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-candle-that-must-not-be-blown-out-twice:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-bell-rung-once-before-entering-the-house">The Bell Rung Once Before Entering the House</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Bell Rung Once Before Entering the House" data-url="https://kyunolab.com/stories/the-bell-rung-once-before-entering-the-house">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Bell Rung Once Before Entering the House" data-url="https://kyunolab.com/stories/the-bell-rung-once-before-entering-the-house" data-description="A calm guide to The Bell Rung Once Before Entering the House, its common versions, source limits, and the weather omen motif that makes the image of a small." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-bell-rung-once-before-entering-the-house:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-first-apple-left-on-the-orchard-wall">The First Apple Left on the Orchard Wall</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The First Apple Left on the Orchard Wall" data-url="https://kyunolab.com/stories/the-first-apple-left-on-the-orchard-wall">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The First Apple Left on the Orchard Wall" data-url="https://kyunolab.com/stories/the-first-apple-left-on-the-orchard-wall" data-description="The First Apple Left on the Orchard Wall explains the scene where the first apple of the season is left on the orchard wall for the figure who keeps count of." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-first-apple-left-on-the-orchard-wall:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-blue-cloth-over-the-empty-cradle">The Blue Cloth Over the Empty Cradle</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Blue Cloth Over the Empty Cradle" data-url="https://kyunolab.com/stories/the-blue-cloth-over-the-empty-cradle">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Blue Cloth Over the Empty Cradle" data-url="https://kyunolab.com/stories/the-blue-cloth-over-the-empty-cradle" data-description="The Blue Cloth Over the Empty Cradle explains the image of a blue cloth is placed over an empty cradle so the room will not call for a child who is away." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-blue-cloth-over-the-empty-cradle:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-shoes-placed-toe-to-toe-at-midnight">The Shoes Placed Toe to Toe at Midnight</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Shoes Placed Toe to Toe at Midnight" data-url="https://kyunolab.com/stories/the-shoes-placed-toe-to-toe-at-midnight">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Shoes Placed Toe to Toe at Midnight" data-url="https://kyunolab.com/stories/the-shoes-placed-toe-to-toe-at-midnight" data-description="The Shoes Placed Toe to Toe at Midnight explains shoes are placed toe to toe at midnight to stop a traveler spirit from walking through the house through." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-shoes-placed-toe-to-toe-at-midnight:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-window-left-unlatched-for-the-wandering-name">The Window Left Unlatched for the Wandering Name</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Window Left Unlatched for the Wandering Name" data-url="https://kyunolab.com/stories/the-window-left-unlatched-for-the-wandering-name">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Window Left Unlatched for the Wandering Name" data-url="https://kyunolab.com/stories/the-window-left-unlatched-for-the-wandering-name" data-description="The Window Left Unlatched for the Wandering Name explores the origin, meaning, and folklore behind one window is left unlatched so a forgotten name can leave." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-window-left-unlatched-for-the-wandering-name:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-spoon-turned-upside-down-before-a-storm">The Spoon Turned Upside Down Before a Storm</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Spoon Turned Upside Down Before a Storm" data-url="https://kyunolab.com/stories/the-spoon-turned-upside-down-before-a-storm">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Spoon Turned Upside Down Before a Storm" data-url="https://kyunolab.com/stories/the-spoon-turned-upside-down-before-a-storm" data-description="The Spoon Turned Upside Down Before a Storm explores the origin, meaning, and folklore behind the image of a spoon is turned upside down before a storm so the." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-spoon-turned-upside-down-before-a-storm:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-red-thread-tied-around-the-guest-chair">The Red Thread Tied Around the Guest Chair</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Red Thread Tied Around the Guest Chair" data-url="https://kyunolab.com/stories/the-red-thread-tied-around-the-guest-chair">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Red Thread Tied Around the Guest Chair" data-url="https://kyunolab.com/stories/the-red-thread-tied-around-the-guest-chair" data-description="A calm guide to The Red Thread Tied Around the Guest Chair, its common versions, source limits, and the threshold custom motif that makes the image of a red." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-red-thread-tied-around-the-guest-chair:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/the-bowl-of-salt-left-beneath-the-threshold">The Bowl of Salt Left Beneath the Threshold</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Bowl of Salt Left Beneath the Threshold" data-url="https://kyunolab.com/stories/the-bowl-of-salt-left-beneath-the-threshold">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Bowl of Salt Left Beneath the Threshold" data-url="https://kyunolab.com/stories/the-bowl-of-salt-left-beneath-the-threshold" data-description="The Bowl of Salt Left Beneath the Threshold explains families leave a bowl of salt beneath the threshold to keep an unnamed visitor from crossing after dusk." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-bowl-of-salt-left-beneath-the-threshold:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/chair-left-facing-the-window">The Chair Left Facing the Window: A Folklore Warning About Waiting, Guests, and Empty Rooms</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Chair Left Facing the Window: A Folklore Warning About Waiting, Guests, and Empty Rooms" data-url="https://kyunolab.com/stories/chair-left-facing-the-window">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Chair Left Facing the Window: A Folklore Warning About Waiting, Guests, and Empty Rooms" data-url="https://kyunolab.com/stories/chair-left-facing-the-window" data-description="The Chair Left Facing the Window explains the image of a chair left facing the window is said to invite a waiting presence into the room before morning." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:chair-left-facing-the-window:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/thread-tied-around-the-door-latch">The Thread Tied Around the Door Latch: A Folklore Warning About Homes, Guests, and Quiet Rules</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Thread Tied Around the Door Latch: A Folklore Warning About Homes, Guests, and Quiet Rules" data-url="https://kyunolab.com/stories/thread-tied-around-the-door-latch">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Thread Tied Around the Door Latch: A Folklore Warning About Homes, Guests, and Quiet Rules" data-url="https://kyunolab.com/stories/thread-tied-around-the-door-latch" data-description="The Thread Tied Around the Door Latch explores the origin, meaning, and folklore behind the image of a thin thread tied to a door latch is said to show." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:thread-tied-around-the-door-latch:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/bowl-of-milk-left-by-the-door">The Bowl of Milk Left by the Door: Why Small Offerings Keep Returning in Folklore</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Bowl of Milk Left by the Door: Why Small Offerings Keep Returning in Folklore" data-url="https://kyunolab.com/stories/bowl-of-milk-left-by-the-door">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Bowl of Milk Left by the Door: Why Small Offerings Keep Returning in Folklore" data-url="https://kyunolab.com/stories/bowl-of-milk-left-by-the-door" data-description="A calm guide to The Bowl of Milk Left by the Door, its common versions, source limits, and the household offering motif that makes the image of the bowl is." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:bowl-of-milk-left-by-the-door:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/chair-kept-empty-for-the-night-visitor">The Chair Kept Empty for the Night Visitor: Why Hospitality Folklore Leaves a Place at the Table</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Chair Kept Empty for the Night Visitor: Why Hospitality Folklore Leaves a Place at the Table" data-url="https://kyunolab.com/stories/chair-kept-empty-for-the-night-visitor">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Chair Kept Empty for the Night Visitor: Why Hospitality Folklore Leaves a Place at the Table" data-url="https://kyunolab.com/stories/chair-kept-empty-for-the-night-visitor" data-description="A calm guide to The Chair Kept Empty for the Night Visitor, its common versions, source limits, and the hospitality folklore motif that makes the image of the." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:chair-kept-empty-for-the-night-visitor:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/forest-that-appears-in-too-many-old-stories">The Forest That Appears in Too Many Old Stories</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Forest That Appears in Too Many Old Stories" data-url="https://kyunolab.com/stories/forest-that-appears-in-too-many-old-stories">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Forest That Appears in Too Many Old Stories" data-url="https://kyunolab.com/stories/forest-that-appears-in-too-many-old-stories" data-description="The Forest That Appears in Too Many Old Stories explores the origin, meaning, and folklore behind the image of a tree line at dusk, a path that narrows, and a." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:forest-that-appears-in-too-many-old-stories:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/bread-left-for-the-house-spirit">The Bread Left for the House Spirit: Why Small Offerings Matter in Folklore</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="The Bread Left for the House Spirit: Why Small Offerings Matter in Folklore" data-url="https://kyunolab.com/stories/bread-left-for-the-house-spirit">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Bread Left for the House Spirit: Why Small Offerings Matter in Folklore" data-url="https://kyunolab.com/stories/bread-left-for-the-house-spirit" data-description="The Bread Left for the House Spirit explores the origin, meaning, and folklore behind the image of a crust of bread on a sill, a quiet kitchen, and the belief." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:bread-left-for-the-house-spirit:naver"> Published</label>
-          </div>
-        </li>
-        <li class="publishing-record">
-          <a href="/stories/three-knocks-before-a-journey">Three Knocks Before a Journey: The Folklore of Warnings at the Door</a>
-          <div>
-            <button class="button publishing-share" type="button" data-title="Three Knocks Before a Journey: The Folklore of Warnings at the Door" data-url="https://kyunolab.com/stories/three-knocks-before-a-journey">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="Three Knocks Before a Journey: The Folklore of Warnings at the Door" data-url="https://kyunolab.com/stories/three-knocks-before-a-journey" data-description="Three Knocks Before a Journey explains Three knocks at night, no one outside, and a journey suddenly delayed through classic folklore, separating folklore." data-category="Classic Folklore">Naver Copy</button>
-            <label><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:three-knocks-before-a-journey:naver"> Published</label>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-shoes-left-backward-at-the-threshold-a-classic-folklore-rule-explained:naver"> Published</label>
           </div>
         </li>
         </ul>
+        <nav class="publishing-pagination" aria-label="Classic Folklore pagination">
+          <span aria-disabled="true">Previous</span>
+          <span aria-current="page">1</span><a href="/publishing-center/classic-folklore/page-2/">2</a><a href="/publishing-center/classic-folklore/page-3/">3</a>
+          <a href="/publishing-center/classic-folklore/page-2/">Next</a>
+        </nav>
       </section>
     </div>
   </main>
