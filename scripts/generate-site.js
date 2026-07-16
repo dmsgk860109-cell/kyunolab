@@ -3,7 +3,7 @@ const path = require('path');
 
 const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://kyunolab.com';
-const styleVersion = '20260717-search';
+const styleVersion = '20260717-search-ui';
 const pageSize = 12;
 const publishingCenterPageSize = 24;
 const rssLimit = 20;
@@ -893,8 +893,8 @@ function generateSearchPage() {
           <option value="library">Creator Library</option>
         </select>
         <label class="sr-only" for="search-page-query">Search query</label>
-        <input id="search-page-query" name="q" class="site-search-input" type="search" placeholder="Search the Archive..." autocomplete="off" data-search-input>
-        <button class="site-search-button" type="submit">Search</button>
+        <input id="search-page-query" name="q" class="site-search-input" type="search" placeholder="Search stories, legends, and mysteries..." autocomplete="off" data-search-input>
+        <button class="site-search-button" type="submit">SEARCH</button>
       </form>
       <section class="search-results-panel" aria-live="polite">
         <div class="section-head"><h2 data-search-heading>Search results</h2><span data-search-count></span></div>
@@ -1966,11 +1966,11 @@ function renderCreatorLibraryScript() {
 }
 
 function renderGlobalSearchScript() {
-  return `  <script defer src="/assets/global-search.js?v=20260717-search"></script>`;
+  return `  <script defer src="/assets/global-search.js?v=${styleVersion}"></script>`;
 }
 
 function renderSearchResultsScript() {
-  return `  <script defer src="/assets/search-results.js?v=20260717-search"></script>`;
+  return `  <script defer src="/assets/search-results.js?v=${styleVersion}"></script>`;
 }
 
 function renderPublishingCenterScript() {
@@ -2119,8 +2119,8 @@ function renderSiteSearchForm(defaultType = 'archive') {
           <option value="library"${selectedType === 'library' ? ' selected' : ''}>Creator Library</option>
         </select>
         <label class="sr-only" for="global-search-query">Search query</label>
-        <input id="global-search-query" name="q" class="site-search-input" type="search" placeholder="${selectedType === 'library' ? 'Search Creator Library...' : 'Search the Archive...'}" autocomplete="off" data-search-input>
-        <button class="site-search-button" type="submit">Search</button>
+        <input id="global-search-query" name="q" class="site-search-input" type="search" placeholder="${selectedType === 'library' ? 'Search Creator Library...' : 'Search stories, legends, and mysteries...'}" autocomplete="off" data-search-input>
+        <button class="site-search-button" type="submit">SEARCH</button>
       </form>`;
 }
 

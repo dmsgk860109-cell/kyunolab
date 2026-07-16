@@ -1,6 +1,6 @@
 (function () {
   var placeholders = {
-    archive: 'Search the Archive...',
+    archive: 'Search stories, legends, and mysteries...',
     library: 'Search Creator Library...'
   };
 

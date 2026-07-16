@@ -3,7 +3,7 @@ const path = require('path');
 
 const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://kyunolab.com';
-const styleVersion = '20260717-search';
+const styleVersion = '20260717-search-ui';
 const guides = readJson(path.join(root, 'data', 'guides.json'));
 const stories = readJson(path.join(root, 'data', 'stories.json'));
 const storyById = new Map(stories.map((story) => [story.id || story.slug, story]));
@@ -206,7 +206,7 @@ function renderPage({ canonicalPath, title, description, ogTitle, ogDescription,
   ${renderHeader()}
 ${content}
   ${renderFooter()}
-  <script defer src="/assets/global-search.js?v=20260717-search"></script>
+  <script defer src="/assets/global-search.js?v=${styleVersion}"></script>
   <script src="/engagement.js?v=20260706-kit-ui" defer></script>
 </body>
 </html>
@@ -232,8 +232,8 @@ function renderSiteSearchForm() {
           <option value="library">Creator Library</option>
         </select>
         <label class="sr-only" for="global-search-query">Search query</label>
-        <input id="global-search-query" name="q" class="site-search-input" type="search" placeholder="Search the Archive..." autocomplete="off" data-search-input>
-        <button class="site-search-button" type="submit">Search</button>
+        <input id="global-search-query" name="q" class="site-search-input" type="search" placeholder="Search stories, legends, and mysteries..." autocomplete="off" data-search-input>
+        <button class="site-search-button" type="submit">SEARCH</button>
       </form>`;
 }
 
