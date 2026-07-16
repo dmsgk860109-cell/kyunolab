@@ -22,14 +22,15 @@
   <link rel="icon" href="/favicon-48x48.png" type="image/png" sizes="48x48">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="/styles.css?v=20260716-home-polish">
+  <link rel="stylesheet" href="/styles.css?v=20260717-search-ui">
 </head>
 <body>
   <header class="site-header">
     <div class="topline">A Kyuno Lab publication</div>
     <div class="header-inner">
       <a class="brand" href="/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
-      <nav class="nav"><a href="/newest">Newest</a><a href="/popular">Popular</a><a href="/categories">Categories</a><a href="/mystery-board">Mystery Board</a><a href="/about">About</a></nav>
+
+      <nav class="nav"><a href="/newest.html">Newest</a><a href="/popular.html">Popular</a><a href="/categories.html">Categories</a><a href="/mystery-board.html">Mystery Board</a><a href="/about.html">About</a></nav>
     </div>
   </header>
   <main class="article-shell">
@@ -53,9 +54,10 @@
           align-items: center;
           border-bottom: 1px solid var(--border-color, #d9d2c4);
           display: grid;
-          gap: 0.5rem 1rem;
-          grid-template-columns: minmax(0, 1fr) auto;
-          padding: 0.45rem 0;
+          gap: 0.65rem 1.25rem;
+          grid-template-columns: minmax(18rem, 1fr) max-content;
+          min-height: 3.25rem;
+          padding: 0.45rem 0.35rem;
         }
 
         .publishing-record-title {
@@ -65,21 +67,44 @@
         .publishing-record-actions {
           align-items: center;
           display: flex;
-          gap: 0.4rem;
+          gap: 0.5rem;
+          justify-content: flex-end;
           white-space: nowrap;
         }
 
         .publishing-record .button {
           font-size: 0.85rem;
           line-height: 1.1;
-          padding: 0.35rem 0.55rem;
+          min-height: 2.35rem;
+          min-width: 4.1rem;
+          padding: 0.48rem 0.7rem;
+          position: relative;
+          z-index: 1;
         }
 
         .publishing-published-label {
           align-items: center;
+          cursor: pointer;
           display: inline-flex;
           gap: 0.25rem;
           margin: 0;
+          min-height: 2.35rem;
+          padding: 0.25rem 0.25rem;
+          position: relative;
+          z-index: 1;
+        }
+
+        .publishing-published {
+          cursor: pointer;
+          height: 1.05rem;
+          width: 1.05rem;
+        }
+
+        .publishing-status {
+          color: var(--muted, #6b6258);
+          font-size: 0.9rem;
+          margin: -0.25rem 0 0.65rem;
+          min-height: 1.2rem;
         }
 
         .publishing-pagination {
@@ -116,18 +141,20 @@
 
           .publishing-record-actions {
             flex-wrap: wrap;
+            justify-content: flex-start;
             white-space: normal;
           }
         }
       </style>
       <section class="script-material" aria-label="Lost Worlds records">
         <h2>Archive Records</h2>
+        <p class="publishing-status" role="status" aria-live="polite"></p>
         <ul class="publishing-record-list">
         <li class="publishing-record">
           <a class="publishing-record-title" href="/stories/the-orchard-realm-listed-in-a-monastery-inventory">The Orchard Realm Listed in a Monastery Inventory</a>
           <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Orchard Realm Listed in a Monastery Inventory" data-url="https://kyunolab.com/stories/the-orchard-realm-listed-in-a-monastery-inventory">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Orchard Realm Listed in a Monastery Inventory" data-url="https://kyunolab.com/stories/the-orchard-realm-listed-in-a-monastery-inventory" data-description="The Orchard Realm Listed in a Monastery Inventory explains a monastery inventory includes an orchard realm among tools, books, and grain stores, with source." data-category="Lost Worlds">Naver Copy</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Orchard Realm Listed in a Monastery Inventory" data-url="https://kyunolab.com/stories/the-orchard-realm-listed-in-a-monastery-inventory" data-description="The Orchard Realm Listed in a Monastery Inventory explains the image of a monastery inventory includes an orchard realm among tools, books, and grain stores." data-category="Lost Worlds">Naver Copy</button>
             <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-orchard-realm-listed-in-a-monastery-inventory:naver"> Published</label>
           </div>
         </li>
@@ -135,7 +162,7 @@
           <a class="publishing-record-title" href="/stories/the-explorer-notebook-with-two-final-pages">The Explorer Notebook With Two Final Pages</a>
           <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Explorer Notebook With Two Final Pages" data-url="https://kyunolab.com/stories/the-explorer-notebook-with-two-final-pages">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Explorer Notebook With Two Final Pages" data-url="https://kyunolab.com/stories/the-explorer-notebook-with-two-final-pages" data-description="The Explorer Notebook With Two Final Pages explains an explorer notebook ends with two different final pages naming two different hidden lands, with source." data-category="Lost Worlds">Naver Copy</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Explorer Notebook With Two Final Pages" data-url="https://kyunolab.com/stories/the-explorer-notebook-with-two-final-pages" data-description="The Explorer Notebook With Two Final Pages explains the scene where an explorer notebook ends with two different final pages naming two different hidden lands." data-category="Lost Worlds">Naver Copy</button>
             <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-explorer-notebook-with-two-final-pages:naver"> Published</label>
           </div>
         </li>
@@ -143,7 +170,7 @@
           <a class="publishing-record-title" href="/stories/the-tax-records-of-the-village-that-moved-at-night">The Tax Records of the Village That Moved at Night</a>
           <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Tax Records of the Village That Moved at Night" data-url="https://kyunolab.com/stories/the-tax-records-of-the-village-that-moved-at-night">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Tax Records of the Village That Moved at Night" data-url="https://kyunolab.com/stories/the-tax-records-of-the-village-that-moved-at-night" data-description="The Tax Records of the Village That Moved at Night explains tax records follow a village whose location changes across yearly ledgers, with source limits,." data-category="Lost Worlds">Naver Copy</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Tax Records of the Village That Moved at Night" data-url="https://kyunolab.com/stories/the-tax-records-of-the-village-that-moved-at-night" data-description="The Tax Records of the Village That Moved at Night explores the origin, meaning, and folklore behind tax records follow a village whose location changes." data-category="Lost Worlds">Naver Copy</button>
             <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-tax-records-of-the-village-that-moved-at-night:naver"> Published</label>
           </div>
         </li>
@@ -151,7 +178,7 @@
           <a class="publishing-record-title" href="/stories/the-map-room-catalog-with-one-extra-continent">The Map Room Catalog With One Extra Continent</a>
           <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Map Room Catalog With One Extra Continent" data-url="https://kyunolab.com/stories/the-map-room-catalog-with-one-extra-continent">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Map Room Catalog With One Extra Continent" data-url="https://kyunolab.com/stories/the-map-room-catalog-with-one-extra-continent" data-description="The Map Room Catalog With One Extra Continent explains a map room catalog lists one extra continent without preserving the map itself, with source limits,." data-category="Lost Worlds">Naver Copy</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Map Room Catalog With One Extra Continent" data-url="https://kyunolab.com/stories/the-map-room-catalog-with-one-extra-continent" data-description="A calm guide to The Map Room Catalog With One Extra Continent, its common versions, source limits, and the map catalog legend motif that makes the image of a." data-category="Lost Worlds">Naver Copy</button>
             <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-map-room-catalog-with-one-extra-continent:naver"> Published</label>
           </div>
         </li>
@@ -159,7 +186,7 @@
           <a class="publishing-record-title" href="/stories/the-pilgrim-roll-of-the-valley-that-cannot-be-entered">The Pilgrim Roll of the Valley That Cannot Be Entered</a>
           <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Pilgrim Roll of the Valley That Cannot Be Entered" data-url="https://kyunolab.com/stories/the-pilgrim-roll-of-the-valley-that-cannot-be-entered">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Pilgrim Roll of the Valley That Cannot Be Entered" data-url="https://kyunolab.com/stories/the-pilgrim-roll-of-the-valley-that-cannot-be-entered" data-description="The Pilgrim Roll of the Valley That Cannot Be Entered explains a pilgrim roll records visitors to a valley later described as unreachable, with source." data-category="Lost Worlds">Naver Copy</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Pilgrim Roll of the Valley That Cannot Be Entered" data-url="https://kyunolab.com/stories/the-pilgrim-roll-of-the-valley-that-cannot-be-entered" data-description="A calm guide to The Pilgrim Roll of the Valley That Cannot Be Entered, its common versions, source limits, and the pilgrim roll legend motif that makes the." data-category="Lost Worlds">Naver Copy</button>
             <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-pilgrim-roll-of-the-valley-that-cannot-be-entered:naver"> Published</label>
           </div>
         </li>
@@ -167,7 +194,7 @@
           <a class="publishing-record-title" href="/stories/the-railway-timetable-to-the-unlisted-capital">The Railway Timetable to the Unlisted Capital</a>
           <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Railway Timetable to the Unlisted Capital" data-url="https://kyunolab.com/stories/the-railway-timetable-to-the-unlisted-capital">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Railway Timetable to the Unlisted Capital" data-url="https://kyunolab.com/stories/the-railway-timetable-to-the-unlisted-capital" data-description="The Railway Timetable to the Unlisted Capital explains a railway timetable names a capital city absent from official atlases, with source limits, record." data-category="Lost Worlds">Naver Copy</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Railway Timetable to the Unlisted Capital" data-url="https://kyunolab.com/stories/the-railway-timetable-to-the-unlisted-capital" data-description="The Railway Timetable to the Unlisted Capital explains the scene where a railway timetable names a capital city absent from official atlases through lost." data-category="Lost Worlds">Naver Copy</button>
             <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-railway-timetable-to-the-unlisted-capital:naver"> Published</label>
           </div>
         </li>
@@ -175,7 +202,7 @@
           <a class="publishing-record-title" href="/stories/the-census-of-the-city-beneath-the-reservoir">The Census of the City Beneath the Reservoir</a>
           <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Census of the City Beneath the Reservoir" data-url="https://kyunolab.com/stories/the-census-of-the-city-beneath-the-reservoir">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Census of the City Beneath the Reservoir" data-url="https://kyunolab.com/stories/the-census-of-the-city-beneath-the-reservoir" data-description="The Census of the City Beneath the Reservoir explains a census describes a city now said to lie beneath a reservoir surface, with source limits, record." data-category="Lost Worlds">Naver Copy</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Census of the City Beneath the Reservoir" data-url="https://kyunolab.com/stories/the-census-of-the-city-beneath-the-reservoir" data-description="The Census of the City Beneath the Reservoir explains the image of a census describes a city now said to lie beneath a reservoir surface through lost worlds." data-category="Lost Worlds">Naver Copy</button>
             <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-census-of-the-city-beneath-the-reservoir:naver"> Published</label>
           </div>
         </li>
@@ -183,7 +210,7 @@
           <a class="publishing-record-title" href="/stories/the-border-ledger-of-a-country-with-no-border">The Border Ledger of a Country With No Border</a>
           <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Border Ledger of a Country With No Border" data-url="https://kyunolab.com/stories/the-border-ledger-of-a-country-with-no-border">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Border Ledger of a Country With No Border" data-url="https://kyunolab.com/stories/the-border-ledger-of-a-country-with-no-border" data-description="The Border Ledger of a Country With No Border explains a border ledger records crossings into a country missing from political maps, with source limits,." data-category="Lost Worlds">Naver Copy</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Border Ledger of a Country With No Border" data-url="https://kyunolab.com/stories/the-border-ledger-of-a-country-with-no-border" data-description="A calm guide to The Border Ledger of a Country With No Border, its common versions, source limits, and the border ledger legend motif that makes the image of." data-category="Lost Worlds">Naver Copy</button>
             <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-border-ledger-of-a-country-with-no-border:naver"> Published</label>
           </div>
         </li>
@@ -191,7 +218,7 @@
           <a class="publishing-record-title" href="/stories/the-ship-register-of-the-harbor-under-the-desert">The Ship Register of the Harbor Under the Desert</a>
           <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Ship Register of the Harbor Under the Desert" data-url="https://kyunolab.com/stories/the-ship-register-of-the-harbor-under-the-desert">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Ship Register of the Harbor Under the Desert" data-url="https://kyunolab.com/stories/the-ship-register-of-the-harbor-under-the-desert" data-description="The Ship Register of the Harbor Under the Desert explains a ship register lists arrivals at a harbor now buried beneath inland sand, with source limits,." data-category="Lost Worlds">Naver Copy</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Ship Register of the Harbor Under the Desert" data-url="https://kyunolab.com/stories/the-ship-register-of-the-harbor-under-the-desert" data-description="The Ship Register of the Harbor Under the Desert explores the origin, meaning, and folklore behind the image of a ship register lists arrivals at a harbor now." data-category="Lost Worlds">Naver Copy</button>
             <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-ship-register-of-the-harbor-under-the-desert:naver"> Published</label>
           </div>
         </li>
@@ -199,7 +226,7 @@
           <a class="publishing-record-title" href="/stories/the-atlas-index-for-a-kingdom-that-erased-itself">The Atlas Index for a Kingdom That Erased Itself</a>
           <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="The Atlas Index for a Kingdom That Erased Itself" data-url="https://kyunolab.com/stories/the-atlas-index-for-a-kingdom-that-erased-itself">Share</button>
-            <button class="button publishing-naver-copy" type="button" data-title="The Atlas Index for a Kingdom That Erased Itself" data-url="https://kyunolab.com/stories/the-atlas-index-for-a-kingdom-that-erased-itself" data-description="The Atlas Index for a Kingdom That Erased Itself explains an atlas index keeps one kingdom name after every map page removes the place, with source limits,." data-category="Lost Worlds">Naver Copy</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Atlas Index for a Kingdom That Erased Itself" data-url="https://kyunolab.com/stories/the-atlas-index-for-a-kingdom-that-erased-itself" data-description="The Atlas Index for a Kingdom That Erased Itself explains the scene where an atlas index keeps one kingdom name after every map page removes the place through." data-category="Lost Worlds">Naver Copy</button>
             <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-atlas-index-for-a-kingdom-that-erased-itself:naver"> Published</label>
           </div>
         </li>
@@ -326,10 +353,14 @@
   </main>
   <footer class="site-footer">
     <p><strong>Kyunolab Mystery Archive</strong> collects legends, folklore, mysteries, and strange tales with calm source-aware notes.</p>
-    <p><a href="/archive">Archive Index</a> - <a href="/newest">Newest</a> - <a href="/popular">Popular</a> - <a href="/categories">Categories</a> - <a href="/scripts/">Scripts</a> - <a href="/about">About</a> - <a href="/fiction-disclaimer">Story &amp; Source Notice</a> - <a href="/privacy">Privacy</a> - <a href="/rss.xml">RSS</a> - <a href="/publishing-center/">Publishing Center</a></p>
+    <p><a href="/archive.html">Archive Index</a> - <a href="/newest.html">Newest</a> - <a href="/popular.html">Popular</a> - <a href="/categories.html">Categories</a> - <a href="/scripts/">Scripts</a> - <a href="/about.html">About</a> - <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a> - <a href="/privacy.html">Privacy</a> - <a href="/rss.xml">RSS</a> - <a href="/publishing-center/">Publishing Center</a></p>
   </footer>
   <script>
 (function () {
+  var root = document.querySelector('[data-publishing-center]');
+  if (!root) return;
+  var status = root.querySelector('.publishing-status');
+
   function copyPlainText(text) {
     if (navigator.clipboard && window.isSecureContext) {
       return navigator.clipboard.writeText(text);
@@ -351,9 +382,16 @@
   function flash(button, message) {
     var original = button.textContent;
     button.textContent = message;
+    setStatus(message);
     window.setTimeout(function () {
       button.textContent = original;
     }, 1200);
+  }
+
+  function setStatus(message) {
+    if (status) {
+      status.textContent = message || '';
+    }
   }
 
   function buildNaverText(button) {
@@ -378,42 +416,56 @@
     ].join('\n').trim();
   }
 
-  document.querySelectorAll('.publishing-share').forEach(function (button) {
-    button.addEventListener('click', function () {
-      var title = button.getAttribute('data-title') || '';
-      var url = button.getAttribute('data-url') || '';
+  root.addEventListener('click', function (event) {
+    var shareButton = event.target.closest('.publishing-share');
+    var naverButton = event.target.closest('.publishing-naver-copy');
+
+    if (shareButton) {
+      event.preventDefault();
+      var title = shareButton.getAttribute('data-title') || '';
+      var url = shareButton.getAttribute('data-url') || '';
       var shareData = { title: title, url: url };
       if (navigator.share) {
-        navigator.share(shareData).catch(function () {});
+        navigator.share(shareData).then(function () {
+          flash(shareButton, 'Shared');
+        }).catch(function () {
+          copyPlainText(url).then(function () {
+            flash(shareButton, 'Copied');
+          }).catch(function () {
+            flash(shareButton, 'Failed');
+          });
+        });
         return;
       }
       copyPlainText(url).then(function () {
-        flash(button, 'Copied');
+        flash(shareButton, 'Copied');
       }).catch(function () {
-        flash(button, 'Failed');
+        flash(shareButton, 'Failed');
       });
-    });
+      return;
+    }
+
+    if (naverButton) {
+      event.preventDefault();
+      copyPlainText(buildNaverText(naverButton)).then(function () {
+        flash(naverButton, 'Copied Naver text');
+      }).catch(function () {
+        flash(naverButton, 'Failed');
+      });
+    }
   });
 
-  document.querySelectorAll('.publishing-naver-copy').forEach(function (button) {
-    button.addEventListener('click', function () {
-      copyPlainText(buildNaverText(button)).then(function () {
-        flash(button, 'Copied');
-      }).catch(function () {
-        flash(button, 'Failed');
-      });
-    });
-  });
-
-  document.querySelectorAll('.publishing-published').forEach(function (input) {
+  root.querySelectorAll('.publishing-published').forEach(function (input) {
     var key = input.getAttribute('data-storage-key');
     if (!key) return;
     input.checked = window.localStorage.getItem(key) === 'true';
     input.addEventListener('change', function () {
       if (input.checked) {
         window.localStorage.setItem(key, 'true');
+        setStatus('Marked as published');
       } else {
         window.localStorage.removeItem(key);
+        setStatus('Marked as unpublished');
       }
     });
   });

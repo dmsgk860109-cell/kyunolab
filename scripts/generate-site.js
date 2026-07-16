@@ -302,6 +302,7 @@ function renderPublishingCategoryPage({ category, stories, pageNumber, totalPage
       ${renderPublishingCenterStyles()}
       <section class="script-material" aria-label="${escapeAttr(category.title)} records">
         <h2>Archive Records</h2>
+        <p class="publishing-status" role="status" aria-live="polite"></p>
         <ul class="publishing-record-list">
 ${rows}
         </ul>
@@ -358,9 +359,10 @@ function renderPublishingCenterStyles() {
           align-items: center;
           border-bottom: 1px solid var(--border-color, #d9d2c4);
           display: grid;
-          gap: 0.5rem 1rem;
-          grid-template-columns: minmax(0, 1fr) auto;
-          padding: 0.45rem 0;
+          gap: 0.65rem 1.25rem;
+          grid-template-columns: minmax(18rem, 1fr) max-content;
+          min-height: 3.25rem;
+          padding: 0.45rem 0.35rem;
         }
 
         .publishing-record-title {
@@ -370,21 +372,44 @@ function renderPublishingCenterStyles() {
         .publishing-record-actions {
           align-items: center;
           display: flex;
-          gap: 0.4rem;
+          gap: 0.5rem;
+          justify-content: flex-end;
           white-space: nowrap;
         }
 
         .publishing-record .button {
           font-size: 0.85rem;
           line-height: 1.1;
-          padding: 0.35rem 0.55rem;
+          min-height: 2.35rem;
+          min-width: 4.1rem;
+          padding: 0.48rem 0.7rem;
+          position: relative;
+          z-index: 1;
         }
 
         .publishing-published-label {
           align-items: center;
+          cursor: pointer;
           display: inline-flex;
           gap: 0.25rem;
           margin: 0;
+          min-height: 2.35rem;
+          padding: 0.25rem 0.25rem;
+          position: relative;
+          z-index: 1;
+        }
+
+        .publishing-published {
+          cursor: pointer;
+          height: 1.05rem;
+          width: 1.05rem;
+        }
+
+        .publishing-status {
+          color: var(--muted, #6b6258);
+          font-size: 0.9rem;
+          margin: -0.25rem 0 0.65rem;
+          min-height: 1.2rem;
         }
 
         .publishing-pagination {
@@ -421,6 +446,7 @@ function renderPublishingCenterStyles() {
 
           .publishing-record-actions {
             flex-wrap: wrap;
+            justify-content: flex-start;
             white-space: normal;
           }
         }
@@ -1976,6 +2002,10 @@ function renderSearchResultsScript() {
 function renderPublishingCenterScript() {
   return `  <script>
 (function () {
+  var root = document.querySelector('[data-publishing-center]');
+  if (!root) return;
+  var status = root.querySelector('.publishing-status');
+
   function copyPlainText(text) {
     if (navigator.clipboard && window.isSecureContext) {
       return navigator.clipboard.writeText(text);
@@ -1997,9 +2027,16 @@ function renderPublishingCenterScript() {
   function flash(button, message) {
     var original = button.textContent;
     button.textContent = message;
+    setStatus(message);
     window.setTimeout(function () {
       button.textContent = original;
     }, 1200);
+  }
+
+  function setStatus(message) {
+    if (status) {
+      status.textContent = message || '';
+    }
   }
 
   function buildNaverText(button) {
@@ -2024,42 +2061,56 @@ function renderPublishingCenterScript() {
     ].join('\\n').trim();
   }
 
-  document.querySelectorAll('.publishing-share').forEach(function (button) {
-    button.addEventListener('click', function () {
-      var title = button.getAttribute('data-title') || '';
-      var url = button.getAttribute('data-url') || '';
+  root.addEventListener('click', function (event) {
+    var shareButton = event.target.closest('.publishing-share');
+    var naverButton = event.target.closest('.publishing-naver-copy');
+
+    if (shareButton) {
+      event.preventDefault();
+      var title = shareButton.getAttribute('data-title') || '';
+      var url = shareButton.getAttribute('data-url') || '';
       var shareData = { title: title, url: url };
       if (navigator.share) {
-        navigator.share(shareData).catch(function () {});
+        navigator.share(shareData).then(function () {
+          flash(shareButton, 'Shared');
+        }).catch(function () {
+          copyPlainText(url).then(function () {
+            flash(shareButton, 'Copied');
+          }).catch(function () {
+            flash(shareButton, 'Failed');
+          });
+        });
         return;
       }
       copyPlainText(url).then(function () {
-        flash(button, 'Copied');
+        flash(shareButton, 'Copied');
       }).catch(function () {
-        flash(button, 'Failed');
+        flash(shareButton, 'Failed');
       });
-    });
+      return;
+    }
+
+    if (naverButton) {
+      event.preventDefault();
+      copyPlainText(buildNaverText(naverButton)).then(function () {
+        flash(naverButton, 'Copied Naver text');
+      }).catch(function () {
+        flash(naverButton, 'Failed');
+      });
+    }
   });
 
-  document.querySelectorAll('.publishing-naver-copy').forEach(function (button) {
-    button.addEventListener('click', function () {
-      copyPlainText(buildNaverText(button)).then(function () {
-        flash(button, 'Copied');
-      }).catch(function () {
-        flash(button, 'Failed');
-      });
-    });
-  });
-
-  document.querySelectorAll('.publishing-published').forEach(function (input) {
+  root.querySelectorAll('.publishing-published').forEach(function (input) {
     var key = input.getAttribute('data-storage-key');
     if (!key) return;
     input.checked = window.localStorage.getItem(key) === 'true';
     input.addEventListener('change', function () {
       if (input.checked) {
         window.localStorage.setItem(key, 'true');
+        setStatus('Marked as published');
       } else {
         window.localStorage.removeItem(key);
+        setStatus('Marked as unpublished');
       }
     });
   });
@@ -2077,11 +2128,12 @@ function renderHeader(currentPath = '/', options = {}) {
 }
 
 function renderMainHeader(currentPath, includeSearch = true) {
+  const searchForm = includeSearch ? `\n      ${renderSiteSearchForm('archive')}` : '';
   return `<header class="site-header">
     <div class="topline">A Kyuno Lab publication</div>
     <div class="header-inner">
       <a class="brand" href="/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
-      ${includeSearch ? renderSiteSearchForm('archive') : ''}
+${searchForm}
       <nav class="nav">${[
         navLink('/newest.html', 'Newest', currentPath === '/newest'),
         navLink('/popular.html', 'Popular', currentPath === '/popular'),
@@ -2094,11 +2146,12 @@ function renderMainHeader(currentPath, includeSearch = true) {
 }
 
 function renderScriptsHeader(currentPath, includeSearch = true) {
+  const searchForm = includeSearch ? `\n      ${renderSiteSearchForm('archive')}` : '';
   return `<header class="site-header site-header-scripts">
     <div class="topline">A Kyuno Lab creator resource</div>
     <div class="header-inner">
       <a class="brand" href="/scripts/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Creator Library</strong><em>Free mystery YouTube scripts for creators.</em></span></a>
-      ${includeSearch ? renderSiteSearchForm('archive') : ''}
+${searchForm}
       <nav class="nav">${[
         navLink('/scripts/latest/', 'Latest', currentPath.startsWith('/scripts/latest')),
         navLink('/scripts/featured/', 'Featured', currentPath.startsWith('/scripts/featured')),
