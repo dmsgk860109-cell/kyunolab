@@ -3,7 +3,7 @@ const path = require('path');
 
 const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://kyunolab.com';
-const styleVersion = '20260709-seo-structure';
+const styleVersion = '20260716-home-polish';
 const pageSize = 12;
 const publishingCenterPageSize = 24;
 const rssLimit = 20;
@@ -1613,7 +1613,7 @@ function renderHomeCategoryCard(category) {
         <h3><a href="/categories/${escapeAttr(category.slug)}.html">${escapeHtml(category.title)}</a></h3>
         <p>${escapeHtml(category.description)}</p>
         <div class="category-links">${categoryStories.map(renderCategoryStoryLink).join('')}</div>
-        <a class="text-link" href="/categories/${escapeAttr(category.slug)}.html">View ${escapeHtml(category.title)}</a>
+        <a class="text-link" href="/categories/${escapeAttr(category.slug)}.html">Open ${escapeHtml(category.title)} Category</a>
       </article>`;
 }
 
@@ -1622,7 +1622,7 @@ function renderHomeRail({ featuredStory, popularStories, essentialStories }) {
   const essentials = essentialStories.slice(0, 3);
   return `<aside class="home-rail" aria-label="Homepage reader paths">
       ${renderKyunolabNetworkCard('archive')}
-      <div class="rail-card rail-feature"><p class="rail-label">Start here</p><a href="/stories/${escapeAttr(featuredStory.slug)}"><span>${escapeHtml(featuredStory.category)}</span><strong>${escapeHtml(featuredStory.title)}</strong></a></div>
+      <div class="rail-card rail-feature"><p class="rail-label">Start here</p><a href="#essential-reads"><span>First visit</span><strong>Begin with essential reads, then follow the archive path that fits your question.</strong></a></div>
       <div class="rail-card"><p class="rail-label">Popular records</p>${popular.map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}</div>
       <div class="rail-card"><p class="rail-label">Essential reads</p>${essentials.map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}</div>
     </aside>`;
@@ -2048,7 +2048,7 @@ function renderKyunolabNetworkCard(section) {
 
 function renderFooter() {
   return `<footer class="site-footer">
-    <p><strong>Kyunolab Mystery Archive</strong> is a quiet story publication by Kyuno Lab, dedicated to legends, folklore, mysteries, and strange tales from the edges of memory.</p>
+    <p><strong>Kyunolab Mystery Archive</strong> collects legends, folklore, mysteries, and strange tales with calm source-aware notes.</p>
     <p><a href="/archive.html">Archive Index</a> - <a href="/newest.html">Newest</a> - <a href="/popular.html">Popular</a> - <a href="/categories.html">Categories</a> - <a href="/scripts/">Scripts</a> - <a href="/about.html">About</a> - <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a> - <a href="/privacy.html">Privacy</a> - <a href="/rss.xml">RSS</a> - <a href="/publishing-center/">Publishing Center</a></p>
   </footer>`;
 }
@@ -2151,7 +2151,7 @@ function renderHomeStoryRow(story) {
   return `<article class="home-story-row">
           <div><span class="tag">${escapeHtml(story.category)}</span><h3><a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a></h3></div>
           <p>${escapeHtml(story.excerpt || story.metaDescription || '')}</p>
-          <div class="meta">${escapeHtml([story.tag, story.readTime].filter(Boolean).join(' - '))}</div>
+          <div class="meta">${escapeHtml([story.category, story.tag, story.readTime].filter(Boolean).join(' - '))}</div>
         </article>`;
 }
 
