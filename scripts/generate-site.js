@@ -3,7 +3,7 @@ const path = require('path');
 
 const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://kyunolab.com';
-const styleVersion = '20260717-publishing-center-copy';
+const styleVersion = '20260717-publishing-center-manual-copy';
 const pageSize = 12;
 const publishingCenterPageSize = 24;
 const rssLimit = 20;
@@ -410,6 +410,16 @@ function renderPublishingCenterStyles() {
           font-size: 0.9rem;
           margin: -0.25rem 0 0.65rem;
           min-height: 1.2rem;
+        }
+
+        .publishing-manual-copy {
+          border: 1px solid var(--border-color, #d9d2c4);
+          box-sizing: border-box;
+          font: inherit;
+          margin: 0 0 0.9rem;
+          min-height: 6rem;
+          padding: 0.65rem;
+          width: 100%;
         }
 
         .publishing-pagination {

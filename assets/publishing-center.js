@@ -45,6 +45,26 @@
     }, 1200);
   }
 
+  function showManualCopy(text, message) {
+    var textarea = root.querySelector('.publishing-manual-copy');
+    if (!textarea) {
+      textarea = document.createElement('textarea');
+      textarea.className = 'publishing-manual-copy';
+      textarea.setAttribute('readonly', '');
+      if (status && status.parentNode) {
+        status.parentNode.insertBefore(textarea, status.nextSibling);
+      } else {
+        root.insertBefore(textarea, root.firstChild);
+      }
+    }
+
+    textarea.value = text;
+    textarea.focus();
+    textarea.select();
+    textarea.setSelectionRange(0, textarea.value.length);
+    setStatus(message);
+  }
+
   function buildNaverText(button) {
     var title = button.getAttribute('data-title') || '';
     var url = button.getAttribute('data-url') || '';
@@ -106,7 +126,8 @@
       copyPlainText(url).then(function () {
         flash(shareButton, 'Copied');
       }).catch(function () {
-        flash(shareButton, 'Failed');
+        flash(shareButton, 'Copy manually');
+        showManualCopy(url, 'Copy is blocked. Press Ctrl+C to copy the selected URL.');
       });
       return;
     }
@@ -116,7 +137,8 @@
       copyPlainText(buildNaverText(naverButton)).then(function () {
         flash(naverButton, 'Copied Naver text');
       }).catch(function () {
-        flash(naverButton, 'Failed');
+        flash(naverButton, 'Copy manually');
+        showManualCopy(buildNaverText(naverButton), 'Copy is blocked. Press Ctrl+C to copy the selected Naver text.');
       });
     }
   });
