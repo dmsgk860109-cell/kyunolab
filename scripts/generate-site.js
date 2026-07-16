@@ -40,6 +40,7 @@ generateArchivePageSet({
 
 generateCategoryHub();
 generateCategoryPages();
+generatePublishingCenter();
 generateScriptsPages();
 generateRss();
 generateSitemap();
@@ -216,6 +217,81 @@ function generateCategoryPages() {
       writeFile(fileName, renderCategoryPage({ category, pageItems, pageNumber, totalPages: pages.length, pageTitle, canonicalPath }));
     });
   }
+}
+
+function generatePublishingCenter() {
+  const activeCategories = categories.filter((category) => stories.some((story) => story.categorySlug === category.slug));
+  writeFile('publishing-center/index.html', renderPublishingCenterHome(activeCategories));
+  for (const category of activeCategories) {
+    const categoryStories = sortNewest(stories.filter((story) => story.categorySlug === category.slug));
+    writeFile(`publishing-center/${category.slug}/index.html`, renderPublishingCategoryPage({ category, stories: categoryStories }));
+  }
+}
+
+function renderPublishingCenterHome(activeCategories) {
+  const categoryLinks = activeCategories.map((category) => {
+    const count = stories.filter((story) => story.categorySlug === category.slug).length;
+    return `        <li><a href="/publishing-center/${escapeAttr(category.slug)}/">${escapeHtml(category.title)}</a> <span class="meta">${count} records</span></li>`;
+  }).join('\n');
+
+  return renderPage({
+    canonicalPath: '/publishing-center/',
+    title: 'Publishing Center',
+    description: 'Internal publishing management page for Kyunolab archive records.',
+    robots: 'noindex, nofollow',
+    networkSection: 'publishing',
+    content: `  <main class="article-shell">
+    <div class="archive-page-main">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Publishing Center</span></nav>
+      <p class="label">Internal Tool</p>
+      <h1 class="article-title">Publishing Center</h1>
+      <p class="deck">Archive category management for publication work.</p>
+      <section class="script-material" aria-label="Archive categories">
+        <h2>Archive Categories</h2>
+        <ul>
+${categoryLinks}
+        </ul>
+      </section>
+    </div>
+  </main>`
+  });
+}
+
+function renderPublishingCategoryPage({ category, stories }) {
+  const rows = stories.map((story) => {
+    const storyUrl = `${siteUrl}/stories/${story.slug}`;
+    const localKey = `kyunolab:publishing:${story.slug}:naver`;
+    return `        <li class="publishing-record">
+          <a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>
+          <div>
+            <button class="button publishing-share" type="button" data-title="${escapeAttr(story.title)}" data-url="${escapeAttr(storyUrl)}">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="${escapeAttr(story.title)}" data-url="${escapeAttr(storyUrl)}" data-description="${escapeAttr(story.metaDescription || story.excerpt || story.summaryAnswer || '')}" data-category="${escapeAttr(story.category || category.title)}">Naver Copy</button>
+            <label><input class="publishing-published" type="checkbox" data-storage-key="${escapeAttr(localKey)}"> Published</label>
+          </div>
+        </li>`;
+  }).join('\n');
+
+  return renderPage({
+    canonicalPath: `/publishing-center/${category.slug}/`,
+    title: `${category.title} Publishing Center`,
+    description: `Internal publishing management page for ${category.title} archive records.`,
+    robots: 'noindex, nofollow',
+    networkSection: 'publishing',
+    content: `  <main class="article-shell">
+    <div class="archive-page-main publishing-center" data-publishing-center>
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/publishing-center/">Publishing Center</a><span aria-hidden="true">/</span><span aria-current="page">${escapeHtml(category.title)}</span></nav>
+      <p class="label">Internal Tool</p>
+      <h1 class="article-title">${escapeHtml(category.title)}</h1>
+      <p class="deck">Records are ordered by the current archive publishing order. Mark Naver publication status in this browser only.</p>
+      <section class="script-material" aria-label="${escapeAttr(category.title)} records">
+        <h2>Archive Records</h2>
+        <ul>
+${rows}
+        </ul>
+      </section>
+    </div>
+  </main>`
+  });
 }
 
 function generateScriptsPages() {
@@ -1632,7 +1708,9 @@ function renderPage({ canonicalPath, title, description, metaDescription, conten
   const socialImage = `${siteUrl}/icon-512.png`;
   const robotsMeta = robots ? `  <meta name="robots" content="${escapeAttr(robots)}">\n` : '';
   const needsCreatorScript = content.includes('scene-advanced-toggle') || content.includes('narration-copy-button');
+  const needsPublishingScript = content.includes('data-publishing-center');
   const creatorScript = needsCreatorScript ? `\n${renderCreatorLibraryScript()}` : '';
+  const publishingScript = needsPublishingScript ? `\n${renderPublishingCenterScript()}` : '';
   const pageStyleVersion = needsCreatorScript ? '20260714-creator-workflow' : styleVersion;
   return `<!doctype html>
 <html lang="en">
@@ -1662,7 +1740,7 @@ ${robotsMeta}  <meta property="og:title" content="${escapeAttr(pageTitle)}">
 <body>
   ${renderHeader(canonicalPath)}
 ${content}
-  ${renderFooter()}${creatorScript}
+  ${renderFooter()}${creatorScript}${publishingScript}
 </body>
 </html>
 `;
@@ -1670,6 +1748,100 @@ ${content}
 
 function renderCreatorLibraryScript() {
   return `  <script defer src="/scripts/creator-library.js?v=20260715-csp-controls"></script>`;
+}
+
+function renderPublishingCenterScript() {
+  return `  <script>
+(function () {
+  function copyPlainText(text) {
+    if (navigator.clipboard && window.isSecureContext) {
+      return navigator.clipboard.writeText(text);
+    }
+    var textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.setAttribute('readonly', '');
+    textarea.style.position = 'fixed';
+    textarea.style.left = '-9999px';
+    textarea.style.top = '0';
+    document.body.appendChild(textarea);
+    textarea.focus();
+    textarea.select();
+    var copied = document.execCommand('copy');
+    textarea.remove();
+    return copied ? Promise.resolve() : Promise.reject(new Error('copy failed'));
+  }
+
+  function flash(button, message) {
+    var original = button.textContent;
+    button.textContent = message;
+    window.setTimeout(function () {
+      button.textContent = original;
+    }, 1200);
+  }
+
+  function buildNaverText(button) {
+    var title = button.getAttribute('data-title') || '';
+    var url = button.getAttribute('data-url') || '';
+    var description = button.getAttribute('data-description') || '';
+    var category = button.getAttribute('data-category') || '';
+    return [
+      'Naver Blog Conversion Source',
+      '',
+      'Title:',
+      title,
+      '',
+      'Category:',
+      category,
+      '',
+      'Description:',
+      description,
+      '',
+      'Kyunolab original article:',
+      url
+    ].join('\\n').trim();
+  }
+
+  document.querySelectorAll('.publishing-share').forEach(function (button) {
+    button.addEventListener('click', function () {
+      var title = button.getAttribute('data-title') || '';
+      var url = button.getAttribute('data-url') || '';
+      var shareData = { title: title, url: url };
+      if (navigator.share) {
+        navigator.share(shareData).catch(function () {});
+        return;
+      }
+      copyPlainText(url).then(function () {
+        flash(button, 'Copied');
+      }).catch(function () {
+        flash(button, 'Failed');
+      });
+    });
+  });
+
+  document.querySelectorAll('.publishing-naver-copy').forEach(function (button) {
+    button.addEventListener('click', function () {
+      copyPlainText(buildNaverText(button)).then(function () {
+        flash(button, 'Copied');
+      }).catch(function () {
+        flash(button, 'Failed');
+      });
+    });
+  });
+
+  document.querySelectorAll('.publishing-published').forEach(function (input) {
+    var key = input.getAttribute('data-storage-key');
+    if (!key) return;
+    input.checked = window.localStorage.getItem(key) === 'true';
+    input.addEventListener('change', function () {
+      if (input.checked) {
+        window.localStorage.setItem(key, 'true');
+      } else {
+        window.localStorage.removeItem(key);
+      }
+    });
+  });
+})();
+  </script>`;
 }
 
 function renderHeader(currentPath = '/') {
@@ -1746,7 +1918,7 @@ function renderKyunolabNetworkCard(section) {
 function renderFooter() {
   return `<footer class="site-footer">
     <p><strong>Kyunolab Mystery Archive</strong> is a quiet story publication by Kyuno Lab, dedicated to legends, folklore, mysteries, and strange tales from the edges of memory.</p>
-    <p><a href="/archive.html">Archive Index</a> - <a href="/newest.html">Newest</a> - <a href="/popular.html">Popular</a> - <a href="/categories.html">Categories</a> - <a href="/scripts/">Scripts</a> - <a href="/about.html">About</a> - <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a> - <a href="/privacy.html">Privacy</a> - <a href="/rss.xml">RSS</a></p>
+    <p><a href="/archive.html">Archive Index</a> - <a href="/newest.html">Newest</a> - <a href="/popular.html">Popular</a> - <a href="/categories.html">Categories</a> - <a href="/scripts/">Scripts</a> - <a href="/about.html">About</a> - <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a> - <a href="/privacy.html">Privacy</a> - <a href="/rss.xml">RSS</a> - <a href="/publishing-center/">Publishing Center</a></p>
   </footer>`;
 }
 
