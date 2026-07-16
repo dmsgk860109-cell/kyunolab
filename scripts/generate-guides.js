@@ -29,10 +29,10 @@ function renderBoardPage() {
 
   return renderPage({
     canonicalPath: '/mystery-board.html',
-    title: 'Mystery Board | Urban Legends, Folklore, Myths, and Strange Story Guides',
-    description: "Mystery Board is Kyunolab's editorial guide hub for urban legends, folklore, myths, internet folklore, strange places, source status, and how mysterious stories spread.",
+    title: 'Mystery Board | Guides to the Kyunolab Mystery Archive',
+    description: 'Editorial guides to the Kyunolab Mystery Archive, including its categories, source approach, recurring themes, reading paths, and essential records.',
     ogTitle: 'Mystery Board',
-    ogDescription: 'Editorial notes and SEO-friendly guides for understanding urban legends, folklore, myths, internet folklore, and strange stories.',
+    ogDescription: 'Editorial guides to the Kyunolab Mystery Archive, including its categories, source approach, recurring themes, reading paths, and essential records.',
     type: 'website',
     content: `  <main class="article-shell article-layout">
     <aside class="article-rail article-rail-left" aria-label="Mystery Board topics">
@@ -58,12 +58,12 @@ function renderBoardPage() {
     </aside>
 
     <div class="archive-page-main">
-      <p class="label">Mystery Board</p>
-      <h1 class="article-title">Guides for reading legends, folklore, myths, and strange records.</h1>
-      <p class="deck">Mystery Board is the editorial side of Kyunolab Mystery Archive: practical reading guides, source notes, and search-friendly explainers for understanding why mysterious stories spread.</p>
+      <p class="label">Editorial Guides to the Mystery Archive</p>
+      <h1 class="article-title">Mystery Board</h1>
+      <p class="deck">Explore editorial guides that explain the identity, structure, categories, source boundaries, and recurring themes of the Kyunolab Mystery Archive. These pages help readers understand the archive, discover essential records, and continue into related stories, categories, and collections.</p>
 
       <section class="notice">
-        <strong>What this page is for:</strong> These articles explain the patterns behind the archive. They help readers understand source status, folklore categories, recurring motifs, and the difference between a strange story and a confirmed claim.
+        <strong>Archive guide:</strong> The Mystery Board introduces how Kyunolab organizes legends, folklore, myths, internet mysteries, and unexplained stories while highlighting the records and reading paths that best represent the archive.
       </section>
 
       <div class="story-list">

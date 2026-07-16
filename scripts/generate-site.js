@@ -489,7 +489,7 @@ function renderScriptsHomePage(scripts) {
         </section>
         <section id="script-board" class="scripts-section script-board">
           <div>
-            <p class="label">Creator Board</p>
+            <p class="label">Library Board</p>
             <h2>Choose a format before you write the voiceover.</h2>
             <p>Each script package separates the original archive story from creator-facing assets: longform narration, Shorts structure, visual prompts, thumbnail angles, and subtitle lines.</p>
           </div>
@@ -651,7 +651,7 @@ function renderScriptCategoryPage({ category, scripts }) {
         </section>
         <div class="script-resource-links">
           <a href="${archiveCategoryUrl}">Browse ${escapeHtml(category.title)} in Mystery Archive</a>
-          <a href="/scripts/board/">Open Creator Board for ${escapeHtml(category.title)}</a>
+          <a href="/scripts/board/">Open Library Board for ${escapeHtml(category.title)}</a>
         </div>
       </section>
     </div>
@@ -663,37 +663,37 @@ function renderScriptCategoryPage({ category, scripts }) {
 function renderScriptBoardPage(scripts) {
   return renderPage({
     canonicalPath: '/scripts/board/',
-    title: 'Creator Board | Kyunolab Video Scripts',
-    description: 'A creator board for planning SEO guide articles, YouTube script strategy, Shorts hooks, image prompts, thumbnail concepts, and production workflow notes.',
-    metaDescription: 'Use the Creator Board to plan SEO-friendly creator guides for mystery YouTube scripts, Shorts hooks, image prompts, thumbnails, and production workflow.',
+    title: 'Library Board | Guides to the Kyunolab Creator Library',
+    description: 'Editorial guides to the Kyunolab Creator Library, including its script formats, categories, resource structure, featured packages, and connections to the Mystery Archive.',
+    metaDescription: 'Editorial guides to the Kyunolab Creator Library, including its script formats, categories, resource structure, featured packages, and connections to the Mystery Archive.',
     networkSection: 'scripts',
     content: `  <main class="article-shell article-layout scripts-board-page">
     ${renderScriptsBoardLeftRail()}
 
     <div class="archive-page-main">
-      <p class="label">Creator Board</p>
-      <h1 class="article-title">Plan the video before the voiceover begins.</h1>
-      <p class="deck">A creator-focused board for planning SEO guide articles, production notes, script formats, and video workflow ideas before they become full resources.</p>
+      <p class="label">Editorial Guides to the Creator Library</p>
+      <h1 class="article-title">Library Board</h1>
+      <p class="deck">Explore editorial guides that explain the purpose, structure, formats, categories, and archive relationships of the Kyunolab Creator Library. These pages help visitors understand what the library offers, find the right script packages and resources, and continue into featured collections.</p>
 
       <section class="notice">
-        <strong>What this page is for:</strong> Creator Board is separate from individual script packages. It will hold SEO-friendly guide articles about planning, adapting, organizing, and publishing mystery video resources.
+        <strong>Creator Library guide:</strong> The Library Board introduces how scripts, prompts, source notes, and supporting resources are organized while showing how each package connects back to the Kyunolab Mystery Archive.
       </section>
 
       <section class="scripts-section script-board">
         <div>
-          <p class="label">Creator workflow</p>
-          <h2>Keep script packages and creator guides separate.</h2>
-          <p>Script detail pages contain finished creator materials. Creator Board is reserved for broader SEO guide articles: workflow, planning, topic selection, visual direction, and publishing strategy.</p>
+          <p class="label">Library structure</p>
+          <h2>Understand how Creator Library resources connect.</h2>
+          <p>Script detail pages contain finished creator materials. Library Board pages explain formats, categories, resource types, featured packages, and how each package relates to the original archive record.</p>
         </div>
         <div class="script-board-grid">
-          <article><strong>SEO Creator Guides</strong><span>Planning articles for search intent, video structure, and creator workflow.</span></article>
-          <article><strong>Production Notes</strong><span>Reusable guidance for narration pacing, Shorts angles, visual prompts, and thumbnails.</span></article>
-          <article><strong>Publishing Strategy</strong><span>Board-level resources for organizing creator content without mixing it with script pages.</span></article>
+          <article><strong>Script Formats</strong><span>Guides to long-form scripts, short-form scripts, prompts, source notes, and supporting resources.</span></article>
+          <article><strong>Library Categories</strong><span>Guides for how script packages are grouped by topic, story type, and archive relationship.</span></article>
+          <article><strong>Archive Connections</strong><span>Resources that show how Creator Library packages connect back to original Mystery Archive records.</span></article>
         </div>
       </section>
 
       <section class="notice">
-        <strong>Board status:</strong> Individual YouTube script pages are not listed here. Future Creator Board posts will be published as separate SEO guide resources and managed independently from script package pages.
+        <strong>Board status:</strong> Individual script packages remain in the Creator Library. Library Board pages explain the library structure and point visitors toward featured scripts, latest scripts, categories, resources, and original archive records.
       </section>
     </div>
 
@@ -730,14 +730,14 @@ function renderScriptResourcesPage() {
         <p class="rail-label">Creator Library</p>
         <a href="/scripts/">Scripts Home</a>
         <a href="/scripts/categories/">Script Categories</a>
-        <a href="/scripts/board/">Creator Board</a>
+        <a href="/scripts/board/">Library Board</a>
       </aside>
     </section>
     <section class="scripts-section">
       <div class="section-head"><h2>What this page helps you do</h2><span>Creator workflow</span></div>
       <div class="script-board-grid">
         <article><strong>Find a script package</strong><span>Start from ready-made mystery video scripts with longform narration, Shorts angles, visual prompts, and thumbnail ideas.</span></article>
-        <article><strong>Choose the right format</strong><span>Use categories and the Creator Board to decide whether a topic works best as a long video, a short hook, or a visual planning note.</span></article>
+        <article><strong>Choose the right format</strong><span>Use categories and the Library Board to understand long-form scripts, short-form scripts, visual prompts, and archive-connected resources.</span></article>
         <article><strong>Keep sources clear</strong><span>Separate original archive records from creator-facing adaptations so legends, folklore, and mysteries are not presented as proven claims.</span></article>
       </div>
     </section>
@@ -746,7 +746,7 @@ function renderScriptResourcesPage() {
       <div class="script-resource-links">
         <a href="/scripts/">Free Mystery YouTube Scripts</a>
         <a href="/scripts/categories/">Browse Script Categories</a>
-        <a href="/scripts/board/">Open the Creator Board</a>
+        <a href="/scripts/board/">Open the Library Board</a>
         <a href="/archive.html">Browse Original Archive Stories</a>
         <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a>
       </div>
@@ -1719,15 +1719,15 @@ function renderHomeLeftRail() {
 
 function renderScriptsLeftRail() {
   return `<aside class="home-left-rail article-rail article-rail-left" aria-label="Creator Library navigation">
-      <div class="rail-card"><p class="rail-label">Creator Paths</p><a href="/scripts/">Creator Home</a><a href="/scripts/categories/">Script Categories</a><a href="/scripts/board/">Creator Board</a><a href="/scripts/resources/">Creator Resources</a></div>
+      <div class="rail-card"><p class="rail-label">Creator Paths</p><a href="/scripts/">Creator Home</a><a href="/scripts/categories/">Script Categories</a><a href="/scripts/board/">Library Board</a><a href="/scripts/resources/">Creator Resources</a></div>
       <div class="rail-card rail-card-subtle"><p class="rail-label">Script Shelves</p><a href="/scripts/featured/">Featured Scripts</a><a href="/scripts/latest/">Latest Scripts</a><a href="/scripts/categories/">Browse by Script Type</a></div>
-      <div class="rail-card"><p class="rail-label">Usage Guide</p><a href="#script-board">Creator Board</a><a href="#creator-resources">Creator Resources</a></div>
+      <div class="rail-card"><p class="rail-label">Usage Guide</p><a href="#script-board">Library Board</a><a href="#creator-resources">Creator Resources</a></div>
     </aside>`;
 }
 
 function renderScriptsBoardLeftRail() {
-  return `<aside class="article-rail article-rail-left" aria-label="Creator Board navigation">
-      <div class="rail-card"><p class="rail-label">Creator Paths</p><a href="/scripts/">Creator Home</a><a href="/scripts/categories/">Script Categories</a><a href="/scripts/board/">Creator Board</a><a href="/scripts/resources/">Creator Resources</a></div>
+  return `<aside class="article-rail article-rail-left" aria-label="Library Board navigation">
+      <div class="rail-card"><p class="rail-label">Creator Paths</p><a href="/scripts/">Creator Home</a><a href="/scripts/categories/">Script Categories</a><a href="/scripts/board/">Library Board</a><a href="/scripts/resources/">Creator Resources</a></div>
       <div class="rail-card rail-card-subtle"><p class="rail-label">Script Shelves</p><a href="/scripts/featured/">Featured Scripts</a><a href="/scripts/latest/">Latest Scripts</a><a href="/scripts/categories/">Browse by Script Type</a></div>
       <div class="rail-card"><p class="rail-label">Usage Guide</p><a href="/scripts/resources/">Creator Resources</a><a href="/scripts/">Free Mystery YouTube Scripts</a></div>
     </aside>`;
@@ -1751,7 +1751,7 @@ function renderScriptCategoryRightRail(scripts) {
       ${renderKyunolabNetworkCard('scripts')}
       ${featuredScript ? `<div class="rail-card rail-feature"><p class="rail-label">Start here</p><a href="/scripts/${escapeAttr(featuredScript.slug)}"><span>${escapeHtml(featuredScript.genre)}</span><strong>${escapeHtml(featuredScript.title)}</strong></a></div>` : ''}
       <div class="rail-card"><p class="rail-label">Latest scripts</p>${latest.map((script) => `<a href="/scripts/${escapeAttr(script.slug)}">${escapeHtml(script.title)}</a>`).join('')}</div>
-      <div class="rail-card"><p class="rail-label">Creator paths</p><a href="/scripts/board/">Creator Board</a><a href="/scripts/resources/">Creator Resources</a><a href="/scripts/">Free Mystery YouTube Scripts</a></div>
+      <div class="rail-card"><p class="rail-label">Creator paths</p><a href="/scripts/board/">Library Board</a><a href="/scripts/resources/">Creator Resources</a><a href="/scripts/">Free Mystery YouTube Scripts</a></div>
     </aside>`;
 }
 
@@ -2103,7 +2103,7 @@ function renderScriptsHeader(currentPath, includeSearch = true) {
         navLink('/scripts/latest/', 'Latest', currentPath.startsWith('/scripts/latest')),
         navLink('/scripts/featured/', 'Featured', currentPath.startsWith('/scripts/featured')),
         navLink('/scripts/categories/', 'Categories', currentPath.startsWith('/scripts/categories')),
-        navLink('/scripts/board/', 'Creator Board', currentPath.startsWith('/scripts/board')),
+        navLink('/scripts/board/', 'Library Board', currentPath.startsWith('/scripts/board')),
         navLink('/scripts/resources/', 'Resources', currentPath.startsWith('/scripts/resources'))
       ].join('')}</nav>
     </div>
