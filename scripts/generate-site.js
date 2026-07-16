@@ -665,34 +665,34 @@ function renderCreatorToolkitSection(script) {
 
 function creatorToolkitData(script) {
   const motionText = (script.motionPrompts || []).length
-    ? 'Optional. Prepare subtle movement only when the Scene needs it. Use the Motion Prompt inside each Scene.'
-    : 'Optional. If motion is available, keep it subtle and keep the Scene image readable.';
+    ? 'Optional motion can add gentle movement after the main Scene image is ready.'
+    : 'Optional motion works best when it stays subtle and keeps the Scene image readable.';
 
   return [
     {
       title: 'Images',
-      text: 'Prepare Scene images with your preferred image generator. Use the Image Prompt inside each Scene.',
-      terms: ['GPT', 'Midjourney', 'Flux', 'SDXL']
+      text: 'Create one clear visual for each Scene with any image tool you prefer.',
+      terms: ['Example: GPT', 'Example: Midjourney', 'Example: Flux', 'Example: SDXL']
     },
     {
       title: 'Narration',
-      text: 'Prepare the Scene narration with AI voice or your own recording. Keep the voice clear and natural.',
-      terms: ['AI narration', 'text to speech', 'natural AI voice', 'voice over']
+      text: 'Turn the Scene narration into a clear voice track using AI voice or a natural recording.',
+      terms: ['Example: AI narration', 'Example: text to speech', 'Example: natural AI voice', 'Example: voice over']
     },
       {
         title: 'Background Music',
-        text: 'Prepare quiet background music that supports the mood. Keep it behind the narration.',
-        terms: ['Dark Ambient', 'Cinematic Drone', 'Mystery Atmosphere', 'Low Drone', 'YouTube Audio Library']
+        text: 'Choose quiet music that supports the mood without covering the narration.',
+        terms: ['Example: Dark Ambient', 'Example: Cinematic Drone', 'Example: Mystery Atmosphere', 'Example: Low Drone']
       },
     {
       title: 'Editing',
-      text: 'Assemble the video in your preferred editor. Follow the Scene order and each Editing Guide.',
-      terms: ['CapCut', 'DaVinci Resolve', 'Premiere Pro', 'video editor']
+      text: 'Assemble the visuals, voice, and music in Scene order with your preferred editor.',
+      terms: ['Example: CapCut', 'Example: DaVinci Resolve', 'Example: Premiere Pro', 'Example: video editor']
     },
     {
       title: 'Motion (Optional)',
       text: motionText,
-      terms: ['Motion Prompt', 'image to video', 'slow push-in', 'subtle camera motion']
+      terms: ['Example: Motion Prompt', 'Example: image to video', 'Example: slow push-in', 'Example: subtle camera motion']
     }
   ];
 }

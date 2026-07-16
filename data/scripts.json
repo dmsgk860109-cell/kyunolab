@@ -26,18 +26,18 @@
     "deck": "A creator-ready production page about how ordinary online photos become unsettling when context disappears and viewers start building meaning around the image.",
     "logline": "Cursed images feel disturbing because they look almost normal, but the missing context makes the viewer imagine the story that the photo refuses to explain.",
     "longformScript": [
-      "At first, a cursed image may not look frightening.\n\nIt might show a blurry room. Or a strange object on a table. Or a person standing slightly out of place.",
-      "Nothing in the frame explains itself.\n\nSo your mind begins to work. Who took this photo? Why does it feel planned and accidental at the same time?",
+      "At first, a cursed image may not look frightening.\n\nIt might be a blurry room. A strange object on a table. A person standing where they almost belong.",
+      "Nothing in the frame explains itself.\n\nSo your mind starts filling in the missing pieces. Who took this photo? Why does it feel both planned and accidental?",
       "That missing context gives the image its power.\n\nThe photo does not tell a full story. It leaves a space where the story should be.",
       "Online, people shared these images because they felt wrong.\n\nNot always scary. Not always supernatural. Just strange enough to make someone stop and look again.",
-      "The strongest cursed images avoid obvious horror.\n\nThey use bad lighting. Awkward framing. Empty rooms. Strange props. One detail that does not fit.",
+      "The strongest cursed images avoid obvious horror.\n\nThey rely on bad lighting. Awkward framing. Empty rooms. Strange props. One detail that does not fit.",
       "In the end, the image is not cursed because it proves anything.\n\nIt feels cursed because it leaves a question behind. The photo stops. The story keeps moving in your head."
     ],
     "shortsScript": [
       "A cursed image does not need a monster.",
-      "It needs one detail that feels wrong.",
+      "It only needs one detail that feels wrong.",
       "A blurry room. A strange object. Someone out of place.",
-      "The internet turns that missing context into folklore.",
+      "The internet turns that gap into folklore.",
       "The photo ends. Your mind keeps going."
     ],
     "imagePrompts": [
@@ -86,7 +86,7 @@
       "Imagine a quiet road at night.\n\nNo ruined house. No storm. No warning sign. Just headlights, a bend in the road, and a pale figure near the shoulder.",
       "In one version, she asks for a ride.\n\nIn another, she only makes the driver slow down. Sometimes she gives an address. Sometimes she barely speaks.",
       "At first, the moment feels ordinary.\n\nA driver sees someone alone in the dark. Stopping feels like the decent thing to do.",
-      "Then the car becomes too quiet.\n\nThe road slips away behind them. The passenger seat is close. But the woman feels farther away with every second.",
+      "Then the car becomes too quiet.\n\nThe road moves behind them. The passenger seat is close. But the woman feels farther away with every second.",
       "Different versions change the details.\n\nThe address may lead to a grieving family. The bend may mark an old accident. The woman may return on the same night each year.",
       "But the ending returns to one small image.\n\nThe driver looks toward the passenger seat. It is empty. Outside the window, the road is quiet again."
     ],
@@ -94,8 +94,8 @@
       "A driver sees a woman in white by the road.",
       "She gets in and gives an address.",
       "For a while, she says almost nothing.",
-      "Then the driver looks over. The seat is empty.",
-      "Kindness becomes an impossible absence."
+      "Then the driver looks over.",
+      "The seat is empty."
     ],
     "imagePrompts": [
       "A quiet road curves through the night, with car headlights reaching a sharp bend and dark roadside trees fading into cold blue shadows. The scene should feel realistic and restrained, like a mystery documentary frame before anything impossible happens.",
@@ -141,9 +141,9 @@
     "logline": "A plain room becomes unsettling because it looks familiar, artificial, endless, and impossible to leave.",
     "longformScript": [
       "Imagine a room that should feel boring.\n\nYellow walls. Damp carpet. Fluorescent lights. A hallway like an office no one remembers entering.",
-      "That ordinary look is the trap.\n\nThe room seems made for people. But there are no people. It seems to have a purpose. But the purpose is gone.",
-      "Then you realize you do not know how you arrived.\n\nThere is no clear door behind you. No sign ahead. Every hallway looks almost like the last one.",
-      "That feeling became internet folklore.\n\nPeople shared screenshots, games, and stories. Each version added rooms, rules, and dangers.",
+      "That ordinary look is the trap.\n\nThe room seems made for people. But no one is there. It seems to have a purpose. But that purpose is gone.",
+      "Then you realize you do not know how you arrived.\n\nThere is no clear door behind you. There is no sign ahead. Every hallway looks almost like the last one.",
+      "That feeling became internet folklore.\n\nPeople shared screenshots, games, and stories. Each version added new rooms, new rules, and new dangers.",
       "But the first fear stayed simple.\n\nThe Backrooms feel familiar enough to recognize. They feel wrong enough to make you doubt where you are.",
       "The final image is quiet.\n\nYou stand still. The lights hum above you. The hall ahead matches the hall behind you. For a moment, nothing moves."
     ],
@@ -151,7 +151,7 @@
       "The Backrooms are scary because they look boring.",
       "Yellow walls. Buzzing lights. Empty halls.",
       "Nothing attacks you.",
-      "Then you realize it may not end.",
+      "Then you realize there may be no exit.",
       "One plain room becomes a legend."
     ],
     "imagePrompts": [
@@ -199,9 +199,9 @@
     "longformScript": [
       "Imagine four dragons.\n\nOne waits in a cave. One moves through clouds. One coils through a river. One is carved into a temple wall.",
       "They may share one name in modern English.\n\nBut they do not mean the same thing. Each dragon belongs to a different kind of story.",
-      "In many European legends, dragons appear near danger.\n\nThey guard treasure. They threaten kingdoms. They wait for saints, heroes, or rulers to face them.",
+      "In many European legends, dragons often appear near danger.\n\nThey guard treasure. They threaten kingdoms. They wait for saints, heroes, or rulers to face them.",
       "In many East Asian traditions, dragon figures point somewhere else.\n\nWater. Weather. Imperial power. Balance. A force that can protect, bless, or overwhelm.",
-      "Look at the body of the dragon.\n\nWings suggest the sky. Scales suggest armor. Fire suggests destruction. Water suggests depth and hidden power.",
+      "Look at the dragon's body.\n\nWings suggest the sky. Scales suggest armor. Fire suggests destruction. Water suggests depth and hidden power.",
       "So the question is not only why dragons appear around the world.\n\nThe better question is this. What kind of power did each culture need the dragon to carry?"
     ],
     "shortsScript": [
@@ -209,7 +209,7 @@
       "Some guard treasure.",
       "Some bring rain.",
       "Some test heroes and rulers.",
-      "Each one carries a different power."
+      "Each dragon carries a different power."
     ],
     "imagePrompts": [
       "A cinematic triptych shows three different dragon traditions in separate panels: one dragon waits near a cave, one moves through clouds, and one coils through a river. The lighting should feel ancient and dramatic, with a respectful documentary tone and no cartoon style.",
