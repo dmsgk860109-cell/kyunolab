@@ -4,7 +4,7 @@ const { buildContentDNA } = require('./article-dna-utils');
 
 const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://kyunolab.com';
-const styleVersion = '20260709-seo-structure';
+const styleVersion = '20260716-archive-polish';
 const storiesPath = path.join(root, 'data', 'stories.json');
 const stories = readJson(storiesPath);
 const categories = readJson(path.join(root, 'data', 'categories.json'));
@@ -272,7 +272,7 @@ ${renderHeroImage(story)}
         ${renderReadingBridge(story, relatedStories)}
         <div class="story-body archive-entry">
           ${renderOpening(story)}
-          ${sections.map((section) => renderSection(section)).join('\n')}
+          ${sections.map((section, index) => `${renderSection(section)}${renderArchiveInsightBox(story, index, sections.length)}`).join('\n')}
           ${renderFaq(story)}
           ${renderSourceNote(story)}
         </div>
@@ -396,6 +396,76 @@ function renderSection(section) {
 ${section.paragraphs.map((text) => `        <p>${escapeHtml(text)}</p>`).join('\n')}`;
 }
 
+function renderArchiveInsightBox(story, sectionIndex, sectionCount) {
+  const slots = sectionCount >= 5 ? new Set([1, 3]) : new Set([1]);
+  if (!slots.has(sectionIndex)) return '';
+  const insight = archiveInsightFor(story, sectionIndex);
+  return `
+        <aside class="archive-insight" aria-label="${escapeAttr(insight.title)}">
+          <strong>${escapeHtml(insight.title)}</strong>
+          <p>${escapeHtml(insight.text)}</p>
+        </aside>`;
+}
+
+function archiveInsightFor(story, sectionIndex) {
+  const category = String(story.categorySlug || '').toLowerCase();
+  const subject = shortSubject(story);
+  const tag = story.primaryTag || story.tag || story.category;
+  const scene = scenePhrase(story.detail || story.excerpt || story.contentDNA?.sceneAnchor || subject);
+  const profile = getQualityProfile(story);
+  const secondSlot = sectionIndex >= 3;
+
+  if (category === 'internet-folklore') {
+    return secondSlot
+      ? { title: 'Digital Spread', text: `Read this record through circulation first: screenshots, reposts, comments, and missing context often matter more than a single fixed origin.` }
+      : { title: 'Internet Folklore Pattern', text: `${subject} works because ${scene} is easy to share, reinterpret, and detach from its original setting.` };
+  }
+  if (category === 'urban-legends' || category === 'modern-legends') {
+    return secondSlot
+      ? { title: 'Urban Legend Pattern', text: `The useful detail is not shock value. It is how ${tag} turns an ordinary setting into a repeatable warning.` }
+      : { title: 'Reading Tip', text: `Watch how the ordinary scene carries the story. The strongest urban legends usually feel close enough to everyday life to retell.` };
+  }
+  if (category === 'myths') {
+    return secondSlot
+      ? { title: 'Symbolic Role', text: `A mythic reading asks what the story explains, protects, warns against, or remembers before treating it like a literal report.` }
+      : { title: 'Mythic Context', text: `${subject} is most useful when read through role, symbol, and tradition rather than through a single modern version.` };
+  }
+  if (category === 'mythic-creatures') {
+    return secondSlot
+      ? { title: 'Folklore Pattern', text: `Creature stories often preserve boundaries: water, forests, roads, thresholds, and places where ordinary rules feel less stable.` }
+      : { title: 'Creature Note', text: `Focus on what the creature does in the story. Its role often matters more than a fixed description.` };
+  }
+  if (category === 'mythic-objects') {
+    return secondSlot
+      ? { title: 'Object Pattern', text: `Objects in folklore often carry memory, warning, authority, or exchange. Their meaning comes from what they do to the people around them.` }
+      : { title: 'Archive Note', text: `${subject} is easiest to read as an object with a role, not just an item with a name.` };
+  }
+  if (category.includes('place') || category === 'lost-worlds') {
+    return secondSlot
+      ? { title: 'Place Memory', text: `Place legends usually survive because the location gives the story a visible anchor, even when the evidence remains limited.` }
+      : { title: 'Map Note', text: `Keep the setting in view. A place-based record depends on how the location shapes what readers believe could happen there.` };
+  }
+  if (category === 'strange-nature') {
+    return secondSlot
+      ? { title: 'Folklore Pattern', text: `Nature folklore often begins with observation, then becomes meaning when people repeat the same sign as warning, omen, or memory.` }
+      : { title: 'Historical Context', text: `The record is strongest when natural detail and inherited interpretation stay separate enough to compare.` };
+  }
+  if (category === 'unexplained-mysteries') {
+    return secondSlot
+      ? { title: 'Evidence Limit', text: `The open question matters, but the archive should still show what the available record can and cannot support.` }
+      : { title: 'Archive Note', text: `Treat the unresolved detail as a reading path, not as proof. The strongest mystery pages name the limit clearly.` };
+  }
+  if (category === 'legend-origins') {
+    return secondSlot
+      ? { title: 'Folklore Pattern', text: `The motif becomes useful when it explains why different stories keep choosing the same shape.` }
+      : { title: 'Pattern Note', text: `${subject} is best read as a recurring structure: a way stories organize fear, curiosity, memory, or warning.` };
+  }
+
+  return secondSlot
+    ? { title: 'Source Limit', text: profile.evidenceLimit }
+    : { title: 'Archive Note', text: `${subject} is easier to read when motif, setting, and source status stay visible together.` };
+}
+
 function renderFaq(story) {
   const subject = shortSubject(story);
   const tag = story.primaryTag || story.tag || story.category;
@@ -481,21 +551,41 @@ function renderSearchSummary(story) {
   const what = summary.whatItIs || story.introSummary || story.summaryAnswer;
   const where = summary.whereItAppears || `This record belongs to ${story.category} and connects with ${(story.tags || []).slice(0, 3).join(', ')}.`;
   const why = summary.whyItMatters || story.contentDNA?.uniqueAngle || story.summaryAnswer;
+  const labels = quickAnswerLabels(story);
   return `<aside class="search-summary" aria-labelledby="quick-answer-title">
       <h2 id="quick-answer-title">Quick Answer</h2>
       <dl>
-        <div><dt>What it is</dt><dd>${escapeHtml(what)}</dd></div>
-        <div><dt>Where it appears</dt><dd>${escapeHtml(where)}</dd></div>
-        <div><dt>Why it matters</dt><dd>${escapeHtml(why)}</dd></div>
+        <div><dt>${escapeHtml(labels[0])}</dt><dd>${escapeHtml(what)}</dd></div>
+        <div><dt>${escapeHtml(labels[1])}</dt><dd>${escapeHtml(where)}</dd></div>
+        <div><dt>${escapeHtml(labels[2])}</dt><dd>${escapeHtml(why)}</dd></div>
       </dl>
     </aside>`;
+}
+
+function quickAnswerLabels(story) {
+  const labels = {
+    'urban-legends': ['Overview', 'Origin', 'Meaning'],
+    'internet-folklore': ['Overview', 'Origin', 'Digital Spread'],
+    'strange-places': ['Overview', 'Location', 'Legend'],
+    'unexplained-mysteries': ['Record', 'Evidence', 'Open Question'],
+    'classic-folklore': ['Tradition', 'Setting', 'Meaning'],
+    'modern-legends': ['Overview', 'Context', 'Meaning'],
+    myths: ['Identity', 'Role', 'Importance'],
+    'mythic-creatures': ['Description', 'Habitat', 'Folklore'],
+    'lost-worlds': ['Overview', 'Geography', 'Meaning'],
+    'strange-nature': ['Observation', 'Setting', 'Folklore'],
+    'legendary-places': ['Location', 'Legend', 'Importance'],
+    'mythic-objects': ['Identity', 'Role', 'Importance'],
+    'legend-origins': ['Motif', 'Origin', 'Meaning']
+  };
+  return labels[story.categorySlug] || ['Overview', 'Context', 'Meaning'];
 }
 
 function renderLeftRail(story, sections) {
   return `<aside class="article-rail article-rail-left" aria-label="Article navigation">
       <div class="rail-card">
         <p class="rail-label">In this record</p>
-        ${sections.slice(0, 6).map((section) => `<a href="#${escapeAttr(section.id)}">${escapeHtml(section.title)}</a>`).join('')}
+        ${sections.slice(0, 6).map((section, index) => `<a${index === 0 ? ' class="is-current"' : ''} href="#${escapeAttr(section.id)}">${escapeHtml(section.title)}</a>`).join('')}
         <a href="#faq">FAQ</a>
       </div>
       <div class="rail-card rail-card-subtle">
