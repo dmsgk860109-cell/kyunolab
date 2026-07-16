@@ -3,7 +3,7 @@ const path = require('path');
 
 const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://kyunolab.com';
-const styleVersion = '20260717-search-ui';
+const styleVersion = '20260717-publishing-center-js';
 const pageSize = 12;
 const publishingCenterPageSize = 24;
 const rssLimit = 20;
@@ -277,7 +277,7 @@ function renderPublishingCategoryPage({ category, stories, pageNumber, totalPage
     const storyUrl = `${siteUrl}/stories/${story.slug}`;
     const localKey = `kyunolab:publishing:${story.slug}:naver`;
     return `        <li class="publishing-record">
-          <a class="publishing-record-title" href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>
+          <span class="publishing-record-title">${escapeHtml(story.title)}</span>
           <div class="publishing-record-actions">
             <button class="button publishing-share" type="button" data-title="${escapeAttr(story.title)}" data-url="${escapeAttr(storyUrl)}">Share</button>
             <button class="button publishing-naver-copy" type="button" data-title="${escapeAttr(story.title)}" data-url="${escapeAttr(storyUrl)}" data-description="${escapeAttr(story.metaDescription || story.excerpt || story.summaryAnswer || '')}" data-category="${escapeAttr(story.category || category.title)}">Naver Copy</button>
@@ -2000,122 +2000,7 @@ function renderSearchResultsScript() {
 }
 
 function renderPublishingCenterScript() {
-  return `  <script>
-(function () {
-  var root = document.querySelector('[data-publishing-center]');
-  if (!root) return;
-  var status = root.querySelector('.publishing-status');
-
-  function copyPlainText(text) {
-    if (navigator.clipboard && window.isSecureContext) {
-      return navigator.clipboard.writeText(text);
-    }
-    var textarea = document.createElement('textarea');
-    textarea.value = text;
-    textarea.setAttribute('readonly', '');
-    textarea.style.position = 'fixed';
-    textarea.style.left = '-9999px';
-    textarea.style.top = '0';
-    document.body.appendChild(textarea);
-    textarea.focus();
-    textarea.select();
-    var copied = document.execCommand('copy');
-    textarea.remove();
-    return copied ? Promise.resolve() : Promise.reject(new Error('copy failed'));
-  }
-
-  function flash(button, message) {
-    var original = button.textContent;
-    button.textContent = message;
-    setStatus(message);
-    window.setTimeout(function () {
-      button.textContent = original;
-    }, 1200);
-  }
-
-  function setStatus(message) {
-    if (status) {
-      status.textContent = message || '';
-    }
-  }
-
-  function buildNaverText(button) {
-    var title = button.getAttribute('data-title') || '';
-    var url = button.getAttribute('data-url') || '';
-    var description = button.getAttribute('data-description') || '';
-    var category = button.getAttribute('data-category') || '';
-    return [
-      'Naver Blog Conversion Source',
-      '',
-      'Title:',
-      title,
-      '',
-      'Category:',
-      category,
-      '',
-      'Description:',
-      description,
-      '',
-      'Kyunolab original article:',
-      url
-    ].join('\\n').trim();
-  }
-
-  root.addEventListener('click', function (event) {
-    var shareButton = event.target.closest('.publishing-share');
-    var naverButton = event.target.closest('.publishing-naver-copy');
-
-    if (shareButton) {
-      event.preventDefault();
-      var title = shareButton.getAttribute('data-title') || '';
-      var url = shareButton.getAttribute('data-url') || '';
-      var shareData = { title: title, url: url };
-      if (navigator.share) {
-        navigator.share(shareData).then(function () {
-          flash(shareButton, 'Shared');
-        }).catch(function () {
-          copyPlainText(url).then(function () {
-            flash(shareButton, 'Copied');
-          }).catch(function () {
-            flash(shareButton, 'Failed');
-          });
-        });
-        return;
-      }
-      copyPlainText(url).then(function () {
-        flash(shareButton, 'Copied');
-      }).catch(function () {
-        flash(shareButton, 'Failed');
-      });
-      return;
-    }
-
-    if (naverButton) {
-      event.preventDefault();
-      copyPlainText(buildNaverText(naverButton)).then(function () {
-        flash(naverButton, 'Copied Naver text');
-      }).catch(function () {
-        flash(naverButton, 'Failed');
-      });
-    }
-  });
-
-  root.querySelectorAll('.publishing-published').forEach(function (input) {
-    var key = input.getAttribute('data-storage-key');
-    if (!key) return;
-    input.checked = window.localStorage.getItem(key) === 'true';
-    input.addEventListener('change', function () {
-      if (input.checked) {
-        window.localStorage.setItem(key, 'true');
-        setStatus('Marked as published');
-      } else {
-        window.localStorage.removeItem(key);
-        setStatus('Marked as unpublished');
-      }
-    });
-  });
-})();
-  </script>`;
+  return `  <script defer src="/assets/publishing-center.js?v=${styleVersion}"></script>`;
 }
 
 function renderHeader(currentPath = '/', options = {}) {
