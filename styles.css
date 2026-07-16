@@ -95,6 +95,68 @@ a:hover { color: var(--accent); }
 .nav a[aria-current="page"] {
   border-bottom-color: var(--accent);
 }
+.site-search {
+  flex: 1 1 360px;
+  max-width: 460px;
+  display: grid;
+  grid-template-columns: minmax(112px, 142px) minmax(150px, 1fr) auto;
+  gap: 8px;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+.site-search-select,
+.site-search-input,
+.site-search-button {
+  min-width: 0;
+  min-height: 36px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--surface);
+  color: var(--ink);
+  font: 700 13px/1.2 Arial, sans-serif;
+}
+.site-search-select {
+  padding: 0 28px 0 10px;
+}
+.site-search-input {
+  width: 100%;
+  padding: 0 11px;
+  font-weight: 500;
+}
+.site-search-input::placeholder {
+  color: var(--muted);
+}
+.site-search-button {
+  padding: 0 12px;
+  cursor: pointer;
+}
+.site-search-button:hover,
+.site-search-button:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.search-page-form {
+  display: grid;
+  grid-template-columns: minmax(130px, 180px) minmax(220px, 1fr) auto;
+  gap: 10px;
+  max-width: 760px;
+  margin: 20px 0 26px;
+  font-family: Arial, sans-serif;
+}
+.search-results-panel {
+  margin-top: 10px;
+}
+.search-result-row .meta {
+  color: var(--muted);
+}
+.empty-state {
+  margin: 0 0 8px;
+  color: var(--muted-strong);
+  font-family: Arial, sans-serif;
+}
+.empty-state.muted {
+  color: var(--muted);
+}
 main {
   max-width: 1180px;
   margin: 0 auto;
@@ -2098,6 +2160,11 @@ textarea {
     align-items: flex-start;
     flex-direction: column;
   }
+  .site-search {
+    width: 100%;
+    max-width: 100%;
+    grid-template-columns: minmax(120px, 160px) minmax(180px, 1fr) auto;
+  }
   .nav { width: 100%; }
   .category-grid, .category-hub, .compact-grid, .board-items, .script-card-grid, .script-category-grid, .script-resource-links, .creator-toolkit-grid, .narration-guide-grid { grid-template-columns: 1fr 1fr; }
   .feature-card { min-height: 260px; }
@@ -2267,6 +2334,18 @@ textarea {
     font-size: 11px;
   }
   .brand strong { font-size: 21px; }
+  .site-search {
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
+  .search-page-form {
+    grid-template-columns: 1fr;
+  }
+  .site-search-select,
+  .site-search-input,
+  .site-search-button {
+    width: 100%;
+  }
   .nav {
     gap: 10px;
     font-size: 13px;

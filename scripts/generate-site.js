@@ -3,7 +3,7 @@ const path = require('path');
 
 const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://kyunolab.com';
-const styleVersion = '20260716-home-polish';
+const styleVersion = '20260717-search';
 const pageSize = 12;
 const publishingCenterPageSize = 24;
 const rssLimit = 20;
@@ -43,6 +43,8 @@ generateCategoryHub();
 generateCategoryPages();
 generatePublishingCenter();
 generateScriptsPages();
+generateSearchPage();
+generateSearchIndexes();
 generateRss();
 generateSitemap();
 generateRoutingFiles();
@@ -129,7 +131,7 @@ function renderHomePage({ featuredStory, latestStories, popularStories, essentia
       ${renderHomeRail({ featuredStory, popularStories, essentialStories })}
     </div>
   </main>
-  ${renderFooter()}
+  ${renderFooter()}${renderGlobalSearchScript()}
 </body>
 </html>
 `;
@@ -868,6 +870,85 @@ function renderCreatorToolkitSection(script) {
           </article>`).join('')}
         </div>
       </section>`;
+}
+
+function generateSearchPage() {
+  writeFile('search/index.html', renderPage({
+    canonicalPath: '/search/',
+    title: 'Search',
+    description: 'Search Kyunolab Mystery Archive records or Creator Library pages.',
+    metaDescription: 'Search Kyunolab Mystery Archive records or Creator Library pages.',
+    robots: 'noindex, follow',
+    networkSection: 'search',
+    content: `  <main class="article-shell">
+    <div class="archive-page-main search-page" data-search-page>
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Search</span></nav>
+      <p class="label">Site Search</p>
+      <h1 class="article-title">Search Kyunolab</h1>
+      <p class="deck" data-search-summary>Choose Archive or Creator Library, then enter a title, legend, category, motif, or keyword.</p>
+      <form class="search-page-form" action="/search/" method="get" role="search" aria-label="Search Kyunolab">
+        <label class="sr-only" for="search-page-type">Search target</label>
+        <select id="search-page-type" name="type" class="site-search-select" data-search-type>
+          <option value="archive">Archive</option>
+          <option value="library">Creator Library</option>
+        </select>
+        <label class="sr-only" for="search-page-query">Search query</label>
+        <input id="search-page-query" name="q" class="site-search-input" type="search" placeholder="Search the Archive..." autocomplete="off" data-search-input>
+        <button class="site-search-button" type="submit">Search</button>
+      </form>
+      <section class="search-results-panel" aria-live="polite">
+        <div class="section-head"><h2 data-search-heading>Search results</h2><span data-search-count></span></div>
+        <div class="story-list" data-search-results></div>
+      </section>
+    </div>
+  </main>`
+  }));
+}
+
+function generateSearchIndexes() {
+  const archiveIndex = stories.map((story) => ({
+    id: story.id || story.slug,
+    slug: story.slug,
+    title: story.title,
+    url: `/stories/${story.slug}`,
+    category: story.category,
+    summary: story.excerpt || story.introSummary || story.metaDescription || story.summaryAnswer || '',
+    description: story.metaDescription || story.excerpt || '',
+    tags: story.tags || [story.primaryTag || story.tag].filter(Boolean),
+    motif: story.primaryTag || story.tag || '',
+    topics: [
+      story.storyType,
+      story.sourceStatus,
+      story.contentDNA?.canonicalQuery,
+      story.contentDNA?.uniqueAngle,
+      ...(story.contentDNA?.subjectSpecificVocabulary || [])
+    ].filter(Boolean)
+  }));
+
+  const creatorIndex = creatorScripts.map((script) => ({
+    id: script.id || script.slug,
+    slug: script.slug,
+    title: script.title,
+    url: `/scripts/${script.slug}`,
+    category: script.genre || script.contentType || 'Creator Library',
+    scriptType: script.genre || script.contentType || 'Creator Library',
+    summary: script.deck || script.logline || script.metaDescription || '',
+    description: script.metaDescription || script.deck || '',
+    tags: script.tags || [],
+    motif: script.coreMotif || script.logline || '',
+    topics: [
+      script.genre,
+      script.estimatedVideoLength,
+      script.originalStorySlug,
+      script.longformIncluded ? 'Long-form Creator' : '',
+      script.shortsIncluded ? 'Short-form Creator' : '',
+      script.imagePromptsIncluded ? 'Image Prompt' : '',
+      script.thumbnailIdeasIncluded ? 'Thumbnail Ideas' : ''
+    ].filter(Boolean)
+  }));
+
+  writeFile('data/archive-search-index.json', `${JSON.stringify(archiveIndex, null, 2)}\n`);
+  writeFile('data/creator-library-search-index.json', `${JSON.stringify(creatorIndex, null, 2)}\n`);
 }
 
 function creatorToolkitData(script) {
@@ -1840,9 +1921,12 @@ function renderPage({ canonicalPath, title, description, metaDescription, conten
   const robotsMeta = robots ? `  <meta name="robots" content="${escapeAttr(robots)}">\n` : '';
   const needsCreatorScript = content.includes('scene-advanced-toggle') || content.includes('narration-copy-button');
   const needsPublishingScript = content.includes('data-publishing-center');
+  const needsSearchScript = content.includes('data-search-page');
   const creatorScript = needsCreatorScript ? `\n${renderCreatorLibraryScript()}` : '';
   const publishingScript = needsPublishingScript ? `\n${renderPublishingCenterScript()}` : '';
-  const pageStyleVersion = needsCreatorScript ? '20260714-creator-workflow' : styleVersion;
+  const searchScript = needsSearchScript ? `\n${renderSearchResultsScript()}` : '';
+  const globalSearchScript = networkSection !== 'publishing' ? renderGlobalSearchScript() : '';
+  const pageStyleVersion = styleVersion;
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -1869,9 +1953,9 @@ ${robotsMeta}  <meta property="og:title" content="${escapeAttr(pageTitle)}">
   <link rel="stylesheet" href="/styles.css?v=${pageStyleVersion}">
 </head>
 <body>
-  ${renderHeader(canonicalPath)}
+  ${renderHeader(canonicalPath, { includeSearch: networkSection !== 'publishing' })}
 ${content}
-  ${renderFooter()}${creatorScript}${publishingScript}
+  ${renderFooter()}${globalSearchScript}${creatorScript}${publishingScript}${searchScript}
 </body>
 </html>
 `;
@@ -1879,6 +1963,14 @@ ${content}
 
 function renderCreatorLibraryScript() {
   return `  <script defer src="/scripts/creator-library.js?v=20260715-csp-controls"></script>`;
+}
+
+function renderGlobalSearchScript() {
+  return `  <script defer src="/assets/global-search.js?v=20260717-search"></script>`;
+}
+
+function renderSearchResultsScript() {
+  return `  <script defer src="/assets/search-results.js?v=20260717-search"></script>`;
 }
 
 function renderPublishingCenterScript() {
@@ -1975,19 +2067,21 @@ function renderPublishingCenterScript() {
   </script>`;
 }
 
-function renderHeader(currentPath = '/') {
+function renderHeader(currentPath = '/', options = {}) {
   const pathForNav = normalizeNavPath(currentPath);
+  const includeSearch = options.includeSearch !== false;
   if (isScriptsPath(pathForNav)) {
-    return renderScriptsHeader(pathForNav);
+    return renderScriptsHeader(pathForNav, includeSearch);
   }
-  return renderMainHeader(pathForNav);
+  return renderMainHeader(pathForNav, includeSearch);
 }
 
-function renderMainHeader(currentPath) {
+function renderMainHeader(currentPath, includeSearch = true) {
   return `<header class="site-header">
     <div class="topline">A Kyuno Lab publication</div>
     <div class="header-inner">
       <a class="brand" href="/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
+      ${includeSearch ? renderSiteSearchForm('archive') : ''}
       <nav class="nav">${[
         navLink('/newest.html', 'Newest', currentPath === '/newest'),
         navLink('/popular.html', 'Popular', currentPath === '/popular'),
@@ -1999,11 +2093,12 @@ function renderMainHeader(currentPath) {
   </header>`;
 }
 
-function renderScriptsHeader(currentPath) {
+function renderScriptsHeader(currentPath, includeSearch = true) {
   return `<header class="site-header site-header-scripts">
     <div class="topline">A Kyuno Lab creator resource</div>
     <div class="header-inner">
       <a class="brand" href="/scripts/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Creator Library</strong><em>Free mystery YouTube scripts for creators.</em></span></a>
+      ${includeSearch ? renderSiteSearchForm('archive') : ''}
       <nav class="nav">${[
         navLink('/scripts/latest/', 'Latest', currentPath.startsWith('/scripts/latest')),
         navLink('/scripts/featured/', 'Featured', currentPath.startsWith('/scripts/featured')),
@@ -2013,6 +2108,20 @@ function renderScriptsHeader(currentPath) {
       ].join('')}</nav>
     </div>
   </header>`;
+}
+
+function renderSiteSearchForm(defaultType = 'archive') {
+  const selectedType = defaultType === 'library' ? 'library' : 'archive';
+  return `<form class="site-search" action="/search/" method="get" role="search" aria-label="Search Archive or Creator Library">
+        <label class="sr-only" for="global-search-type">Search target</label>
+        <select id="global-search-type" name="type" class="site-search-select" data-search-type>
+          <option value="archive"${selectedType === 'archive' ? ' selected' : ''}>Archive</option>
+          <option value="library"${selectedType === 'library' ? ' selected' : ''}>Creator Library</option>
+        </select>
+        <label class="sr-only" for="global-search-query">Search query</label>
+        <input id="global-search-query" name="q" class="site-search-input" type="search" placeholder="${selectedType === 'library' ? 'Search Creator Library...' : 'Search the Archive...'}" autocomplete="off" data-search-input>
+        <button class="site-search-button" type="submit">Search</button>
+      </form>`;
 }
 
 function navLink(href, label, isActive) {

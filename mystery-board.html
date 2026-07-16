@@ -17,13 +17,23 @@
   <link rel="icon" href="/favicon-48x48.png" type="image/png" sizes="48x48">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="/styles.css?v=20260706-kit-ui">
+  <link rel="stylesheet" href="/styles.css?v=20260717-search">
 </head>
 <body>
   <header class="site-header">
     <div class="topline">A Kyuno Lab publication</div>
     <div class="header-inner">
       <a class="brand" href="/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
+      <form class="site-search" action="/search/" method="get" role="search" aria-label="Search Archive or Creator Library">
+        <label class="sr-only" for="global-search-type">Search target</label>
+        <select id="global-search-type" name="type" class="site-search-select" data-search-type>
+          <option value="archive" selected>Archive</option>
+          <option value="library">Creator Library</option>
+        </select>
+        <label class="sr-only" for="global-search-query">Search query</label>
+        <input id="global-search-query" name="q" class="site-search-input" type="search" placeholder="Search the Archive..." autocomplete="off" data-search-input>
+        <button class="site-search-button" type="submit">Search</button>
+      </form>
       <nav class="nav"><a href="/newest">Newest</a><a href="/popular">Popular</a><a href="/categories">Categories</a><a href="/mystery-board">Mystery Board</a><a href="/about">About</a></nav>
     </div>
   </header>
@@ -399,14 +409,15 @@
       </div>
       <div class="rail-card">
         <p class="rail-label">Related archive records</p>
-        <a href="/stories/how-weather-omens-survive-in-modern-storytelling-history-and-folklore-development">How Weather Omens Survive in Modern Storytelling: History and Folklore Development</a><a href="/stories/why-anonymous-photographs-generate-modern-legends-origins-variants-and-modern-meaning">Why Anonymous Photographs Generate Modern Legends: Origins, Variants, and Modern Meaning</a><a href="/stories/how-the-unknown-floor-entered-building-legends-how-the-motif-changed-across-retellings">How the Unknown Floor Entered Building Legends: How the Motif Changed Across Retellings</a>
+        <a href="/stories/how-checklists-became-part-of-digital-folklore">How Checklists Became Part of Digital Folklore</a><a href="/stories/why-signatures-act-like-proof-in-uncertain-stories">Why Signatures Act Like Proof in Uncertain Stories</a><a href="/stories/how-archive-boxes-became-modern-mystery-symbols">How Archive Boxes Became Modern Mystery Symbols</a>
       </div>
     </aside>
   </main>
   <footer class="site-footer">
     <p><strong>Kyunolab Mystery Archive</strong> is a quiet story publication by Kyuno Lab, dedicated to legends, folklore, mysteries, and strange tales from the edges of memory.</p>
-    <p><a href="/archive">Archive Index</a> - <a href="/newest">Newest</a> - <a href="/popular">Popular</a> - <a href="/categories">Categories</a> - <a href="/about">About</a> - <a href="/fiction-disclaimer">Story &amp; Source Notice</a> - <a href="/privacy">Privacy</a> - <a href="/rss.xml">RSS</a> - <a href="/publishing-center/">Publishing Center</a></p>
+    <p><a href="/archive">Archive Index</a> - <a href="/newest">Newest</a> - <a href="/popular">Popular</a> - <a href="/categories">Categories</a> - <a href="/about">About</a> - <a href="/fiction-disclaimer">Story &amp; Source Notice</a> - <a href="/privacy">Privacy</a> - <a href="/rss.xml">RSS</a></p>
   </footer>
+  <script defer src="/assets/global-search.js?v=20260717-search"></script>
   <script src="/engagement.js?v=20260706-kit-ui" defer></script>
 </body>
 </html>

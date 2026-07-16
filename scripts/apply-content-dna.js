@@ -4,7 +4,7 @@ const { buildContentDNA } = require('./article-dna-utils');
 
 const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://kyunolab.com';
-const styleVersion = '20260716-archive-polish';
+const styleVersion = '20260717-search';
 const storiesPath = path.join(root, 'data', 'stories.json');
 const stories = readJson(storiesPath);
 const categories = readJson(path.join(root, 'data', 'categories.json'));
@@ -283,6 +283,7 @@ ${scriptCta ? `        ${scriptCta}
       ${renderRightRail(story, relatedStories, nextStory)}
   </main>
   ${renderFooter()}
+  <script defer src="/assets/global-search.js?v=20260717-search"></script>
   <script src="/engagement.js?v=20260706-kit-ui" defer></script>
 </body>
 </html>
@@ -993,7 +994,20 @@ function absoluteImageUrl(value) {
 }
 
 function renderHeader() {
-  return `<header class="site-header"><div class="topline">A Kyuno Lab publication</div><div class="header-inner"><a class="brand" href="/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a><nav class="nav"><a href="/newest.html">Newest</a><a href="/popular.html">Popular</a><a href="/categories.html">Categories</a><a href="/mystery-board.html">Mystery Board</a><a href="/about.html">About</a></nav></div></header>`;
+  return `<header class="site-header"><div class="topline">A Kyuno Lab publication</div><div class="header-inner"><a class="brand" href="/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>${renderSiteSearchForm()}<nav class="nav"><a href="/newest.html">Newest</a><a href="/popular.html">Popular</a><a href="/categories.html">Categories</a><a href="/mystery-board.html">Mystery Board</a><a href="/about.html">About</a></nav></div></header>`;
+}
+
+function renderSiteSearchForm() {
+  return `<form class="site-search" action="/search/" method="get" role="search" aria-label="Search Archive or Creator Library">
+        <label class="sr-only" for="global-search-type">Search target</label>
+        <select id="global-search-type" name="type" class="site-search-select" data-search-type>
+          <option value="archive" selected>Archive</option>
+          <option value="library">Creator Library</option>
+        </select>
+        <label class="sr-only" for="global-search-query">Search query</label>
+        <input id="global-search-query" name="q" class="site-search-input" type="search" placeholder="Search the Archive..." autocomplete="off" data-search-input>
+        <button class="site-search-button" type="submit">Search</button>
+      </form>`;
 }
 
 function renderFooter() {
