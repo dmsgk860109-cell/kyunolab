@@ -665,28 +665,28 @@ function renderCreatorToolkitSection(script) {
 
 function creatorToolkitData(script) {
   const motionText = (script.motionPrompts || []).length
-    ? 'Optional. If you want moving shots, you can use the Motion Prompt inside each Scene as a starting point.'
-    : 'Optional. If motion is available, keep movement subtle and let the Scene image stay readable.';
+    ? 'Optional. Prepare subtle movement only when the Scene needs it. Use the Motion Prompt inside each Scene.'
+    : 'Optional. If motion is available, keep it subtle and keep the Scene image readable.';
 
   return [
     {
       title: 'Images',
-      text: 'You can use image generation tools to create the Scene visuals. Use the Image Prompt provided inside each Scene.',
+      text: 'Prepare Scene images with your preferred image generator. Use the Image Prompt inside each Scene.',
       terms: ['GPT', 'Midjourney', 'Flux', 'SDXL']
     },
     {
       title: 'Narration',
-      text: 'You can use AI voice or record the narration yourself. Search for a natural voice that stays clear and calm.',
+      text: 'Prepare the Scene narration with AI voice or your own recording. Keep the voice clear and natural.',
       terms: ['AI narration', 'text to speech', 'natural AI voice', 'voice over']
     },
       {
         title: 'Background Music',
-        text: 'You can choose mood-based music from any audio library. Keep it low enough to stay behind the narration.',
+        text: 'Prepare quiet background music that supports the mood. Keep it behind the narration.',
         terms: ['Dark Ambient', 'Cinematic Drone', 'Mystery Atmosphere', 'Low Drone', 'YouTube Audio Library']
       },
     {
       title: 'Editing',
-      text: 'You can assemble the video in any editor. Follow the Scene order and use each Editing Guide for the screen flow.',
+      text: 'Assemble the video in your preferred editor. Follow the Scene order and each Editing Guide.',
       terms: ['CapCut', 'DaVinci Resolve', 'Premiere Pro', 'video editor']
     },
     {
@@ -699,14 +699,14 @@ function creatorToolkitData(script) {
 
 function renderProductionWorkflowSection() {
   const steps = [
-    ['①', 'Story', 'Read the Story Summary first.'],
-    ['②', 'Format', 'Choose either Long-form or Short-form.'],
-    ['③', 'Narration', 'Read the Scene Narration.'],
-    ['④', 'Image', 'Copy the Image Prompt and create the image.'],
-    ['⑤', 'Music', 'Use the background music keywords to choose music.'],
-    ['⑥', 'Voice', 'Use the Creator Toolkit to prepare AI voice or optional recording.'],
-    ['⑦', 'Edit', 'Place each Scene in order in CapCut or another basic editor.'],
-    ['⑧', 'Finish', 'Complete the video.']
+    ['①', 'Story', 'Read the Story Summary.'],
+    ['②', 'Format', 'Choose Long-form or Short-form.'],
+    ['③', 'Narration', 'Prepare the Scene narration.'],
+    ['④', 'Image', 'Create images from the Image Prompts.'],
+    ['⑤', 'Music', 'Choose music from the mood keywords.'],
+    ['⑥', 'Voice', 'Prepare the voice track.'],
+    ['⑦', 'Edit', 'Place the Scenes in order.'],
+    ['⑧', 'Finish', 'Export the video.']
   ];
 
   return `<section class="script-material production-workflow" aria-label="Production workflow">
@@ -814,7 +814,7 @@ function renderProductionSceneCard({ number, duration, narration, narrationParts
           ${narrationHtml}
           <div class="scene-production-fields">
             <p class="scene-field scene-focus"><strong>Scene Focus:</strong> ${escapeHtml(sceneFocus || 'A clear, readable moment from the story.')}</p>
-            <p class="scene-field scene-image-prompt"><strong>Image Prompt:</strong> ${escapeHtml(imagePrompt || 'Cinematic mystery scene, quiet atmosphere, clear subject, readable composition, soft low-key lighting, no gore')}</p>
+            <p class="scene-field scene-image-prompt"><strong>Image Prompt:</strong> ${escapeHtml(imagePrompt || 'A quiet mystery scene shows one clear subject in a readable space, with soft low-key lighting and a restrained documentary feeling. The image should feel realistic, calm, and slightly unsettling without gore or exaggerated horror.')}</p>
             <p class="scene-field scene-music"><strong>Recommended Background Music:</strong> ${escapeHtml(music)}</p>
             <p class="scene-field scene-editing-guide"><strong>Editing Guide:</strong> ${escapeHtml(direction)}</p>
           </div>
@@ -1029,69 +1029,69 @@ function sceneFocusForScene({ script, index, format, narration, imagePrompt }) {
 
   if (/woman in white|roadside|dark road|driver|passenger|headlight/.test(context)) {
     const focuses = [
-      'A quiet road at night with a pale figure near the shoulder.',
-      'A silent passenger inside a dark car.',
-      'An empty passenger seat after an impossible disappearance.',
-      'A lonely bend in the road after the encounter.'
+      'The viewer should notice the lonely figure before the legend feels supernatural.',
+      'The audience should feel the car becoming too quiet.',
+      'The empty seat should turn a simple ride into an impossible absence.',
+      'The road should feel ordinary again, which makes the disappearance harder to explain.'
     ];
-    return focuses[index] || 'A quiet roadside moment with a missing passenger.';
+    return focuses[index] || 'The viewer should feel that the roadside encounter has left something missing.';
   }
   if (/cursed image|cursed images|blurry|strange object/.test(context)) {
     const focuses = [
-      'An ordinary photo with one detail that feels wrong.',
-      'A strange image that refuses to explain itself.',
-      'A visual gap that makes the viewer imagine a story.',
-      'A quiet internet image that lingers after it ends.'
+      'The viewer should notice one ordinary detail that feels wrong.',
+      'The image should make the audience search for missing context.',
+      'The Scene should leave enough visual space for the viewer to invent the story.',
+      'The final image should linger because it refuses to explain itself.'
     ];
-    return focuses[index] || 'A mundane image with an unsettling missing context.';
+    return focuses[index] || 'The audience should feel that a normal image is hiding an unfinished story.';
   }
   if (/backrooms|liminal|yellow walls|fluorescent|hallway|corridor/.test(context)) {
     const focuses = [
-      'A plain yellow room that feels too empty.',
-      'An endless hallway under fluorescent lights.',
-      'A familiar interior with no clear way out.',
-      'A silent corridor where nothing moves.'
+      'The viewer should recognize the room before feeling trapped by it.',
+      'The hallway should make the audience question where the exit went.',
+      'The Scene should make a familiar interior feel impossible to leave.',
+      'The stillness should make the space feel larger than the frame.'
     ];
-    return focuses[index] || 'An empty liminal hallway with no visible exit.';
+    return focuses[index] || 'The audience should feel that the empty space continues beyond what they can see.';
   }
   if (/dragon|myth|mythology|serpent|cloud|river|temple/.test(context)) {
     const focuses = [
-      'Different dragon figures seen as symbols of power.',
-      'A dragon shaped by the culture that imagined it.',
-      'A mythic creature tied to danger, water, or authority.',
-      'A symbolic dragon carrying a different kind of meaning.'
+      'The viewer should understand that different dragons carry different meanings.',
+      'The Scene should connect the dragon image to stone, storm, or sacred power.',
+      'The audience should read the dragon as a symbol of weather, water, danger, or order.',
+      'The creature should feel like a cultural symbol, not just a monster.'
     ];
-    return focuses[index] || 'A mythic dragon shown as a cultural symbol.';
+    return focuses[index] || 'The viewer should see the dragon as a sign of power shaped by culture.';
   }
 
   return isShort
-    ? 'One clear visual moment that supports the short narration.'
-    : 'A quiet visual moment that carries the Scene mood.';
+    ? 'The viewer should understand the short-form beat immediately.'
+    : 'The Scene should give the audience one clear emotional idea to follow.';
 }
 
 function visualDirection(index, format) {
   if (format === 'short') {
     const shortDirections = [
-      'Start on the image. Hold for 1 second. Slow zoom until the narration ends.',
-      'Quick fade in. Keep the image steady. Add a slow push-in.',
-      'Hold the shot for the full line. Pan slightly from left to right.',
-      'Fade in from black. Keep the frame still. Cut cleanly on the last word.',
-      'Slow zoom. Hold briefly. Fade to black.'
+      'Hold the opening frame for one second. Begin a slow zoom. Cut when the narration ends.',
+      'Fade in quickly. Keep the image steady. Push in slowly through the final words.',
+      'Hold the shot while the line plays. Add a gentle side pan. Cut after the last word.',
+      'Fade in from black. Keep the frame still. Cut immediately on the final word.',
+      'Start with a slow zoom. Hold briefly after the narration. Fade to black.'
     ];
-    return shortDirections[index] || 'Hold the image steady for the narration, then use a simple fade transition.';
+    return shortDirections[index] || 'Hold the image steady during the narration. Fade out after the final word.';
   }
 
   const longDirections = [
-    'Start with a wide shot. Hold for 2 seconds. Slow zoom in. Fade to the next scene.',
-    'Pan slowly across the image. Hold on the main subject. Cut gently after the narration beat.',
-    'Hold the final image slightly longer. Slow zoom. Fade out.'
+    'Hold the opening frame for two seconds. Begin a slow zoom. Fade before the final narration beat.',
+    'Start with a steady frame. Pan slowly toward the main subject. Cut gently after the narration settles.',
+    'Hold the final image slightly longer. Begin a slow zoom. Fade out after the last line.'
   ];
-  return longDirections[index] || 'Start steady. Slow zoom. Hold the shot. Fade to the next scene.';
+  return longDirections[index] || 'Start with a steady frame. Slow zoom through the narration. Fade to the next Scene.';
 }
 
 function advancedProductionInfo({ script, number, format, narration, imagePrompt }) {
   const context = `${script.title || ''} ${script.genre || ''} ${script.deck || ''} ${(script.tags || []).join(' ')} ${narration || ''} ${imagePrompt || ''}`.toLowerCase();
-  const prompt = imagePrompt || 'cinematic mystery scene with a clear subject, quiet atmosphere, and low-key lighting';
+  const prompt = imagePrompt || 'A quiet mystery scene shows one clear subject in a readable space, with soft low-key lighting and a restrained documentary feeling.';
   return {
     motionPrompt: motionPromptForScene(prompt, context, format),
     soundEffect: soundEffectForScene(context),
