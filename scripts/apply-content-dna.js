@@ -4,7 +4,7 @@ const { buildContentDNA } = require('./article-dna-utils');
 
 const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://kyunolab.com';
-const styleVersion = '20260717-search-ui';
+const styleVersion = '20260717-publishing-center-naver-copy';
 const storiesPath = path.join(root, 'data', 'stories.json');
 const stories = readJson(storiesPath);
 const categories = readJson(path.join(root, 'data', 'categories.json'));
@@ -284,7 +284,7 @@ ${scriptCta ? `        ${scriptCta}
   </main>
   ${renderFooter()}
   <script defer src="/assets/global-search.js?v=${styleVersion}"></script>
-  <script src="/engagement.js?v=20260706-kit-ui" defer></script>
+  <script src="/engagement.js?v=${styleVersion}" defer></script>
 </body>
 </html>
 `;

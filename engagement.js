@@ -1,4 +1,8 @@
 (function () {
+  window.KyunolabNaverCopy = {
+    buildPrompt: buildSharedNaverBlogPrompt
+  };
+
   const articleType = document.querySelector('meta[property="og:type"][content="article"]');
   const article = document.querySelector('.article-layout > article');
   if (!articleType || !article) return;
@@ -291,11 +295,16 @@
   }
 
   function buildNaverBlogPrompt(articleData) {
-    const articleTitle = articleData.title || '';
-    const articleCategory = getArticleCategory();
-    const articleDescription = articleData.description || '';
-    const articleUrl = articleData.canonical || getCanonicalShareUrl();
-    const articleBody = extractArticleBodyText();
+    return buildSharedNaverBlogPrompt(articleData, article, document);
+  }
+
+  function buildSharedNaverBlogPrompt(articleData = {}, articleElement, sourceDocument = document) {
+    const doc = sourceDocument || document;
+    const articleTitle = articleData.title || doc.querySelector('.article-title')?.textContent.trim() || doc.title.replace(/\s*\|.*$/, '');
+    const articleCategory = getArticleCategoryFromElement(articleElement);
+    const articleDescription = articleData.description || doc.querySelector('meta[name="description"]')?.getAttribute('content') || '';
+    const articleUrl = articleData.canonical || doc.querySelector('link[rel="canonical"]')?.href || '';
+    const articleBody = extractArticleBodyTextFromElement(articleElement);
 
     const fields = [];
     if (articleTitle) fields.push(`제목:\n${articleTitle}`);
@@ -433,7 +442,21 @@
   }
 
   function extractArticleBodyText() {
-    const source = article.querySelector('.story-body');
+    return extractArticleBodyTextFromElement(article);
+  }
+
+  function getArticleCategoryFromElement(articleElement) {
+    if (!articleElement) return '';
+    const labels = Array.from(articleElement.querySelectorAll('.article-meta-grid dt'));
+    const picked = labels
+      .find((dt) => /^category$/i.test(dt.textContent.trim()))
+      ?.nextElementSibling?.textContent.trim();
+    return picked || articleElement.querySelector('.archive-article-header .label')?.textContent.trim() || '';
+  }
+
+  function extractArticleBodyTextFromElement(articleElement) {
+    if (!articleElement) return '';
+    const source = articleElement.querySelector('.story-body');
     if (!source) return '';
     const clone = source.cloneNode(true);
     clone.querySelectorAll('script, style, iframe, noscript, button, input, select, textarea, [hidden], [aria-hidden="true"]').forEach((node) => node.remove());

@@ -3,7 +3,7 @@ const path = require('path');
 
 const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://kyunolab.com';
-const styleVersion = '20260717-publishing-center-manual-copy';
+const styleVersion = '20260717-publishing-center-naver-copy';
 const pageSize = 12;
 const publishingCenterPageSize = 24;
 const rssLimit = 20;
@@ -2010,7 +2010,8 @@ function renderSearchResultsScript() {
 }
 
 function renderPublishingCenterScript() {
-  return `  <script defer src="/assets/publishing-center.js?v=${styleVersion}"></script>`;
+  return `  <script defer src="/engagement.js?v=${styleVersion}"></script>
+  <script defer src="/assets/publishing-center.js?v=${styleVersion}"></script>`;
 }
 
 function renderHeader(currentPath = '/', options = {}) {
