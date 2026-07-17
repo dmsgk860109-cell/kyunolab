@@ -614,8 +614,8 @@ function renderScriptCategoriesPage(scripts) {
   const grouped = groupCreatorCategories();
   const body = Object.entries(grouped).map(([groupName, groupCategories]) => {
     const groupDescription = groupName === 'Modern Strange Records'
-      ? 'Creator-ready paths for modern legends, internet folklore, strange places, and evidence-limited mysteries'
-      : groupName === 'Mythic & Folklore Records'
+      ? 'Creator-ready paths for urban legends, internet folklore, strange places, unexplained mysteries, classic folklore, and modern legends'
+      : groupName === 'Mythic & Imagined Realms'
         ? 'Creator-ready paths for myths, creatures, lost worlds, legendary places, strange nature, and symbolic objects'
         : 'Creator-ready origin and motif paths for script packages that explain how legends take shape';
     const cards = groupCategories.map(renderCreatorCategoryCard).join('\n');
@@ -1675,7 +1675,7 @@ function creatorLibraryCategoryDefinitions() {
     {
       title: 'Classic Folklore',
       slug: 'classic-folklore',
-      group: 'Mythic & Folklore Records',
+      group: 'Modern Strange Records',
       description: 'Older motifs, oral traditions, folk beliefs, and inherited warnings adapted into clear creator research paths.'
     },
     {
@@ -1687,43 +1687,43 @@ function creatorLibraryCategoryDefinitions() {
     {
       title: 'Myths',
       slug: 'myths',
-      group: 'Mythic & Folklore Records',
+      group: 'Mythic & Imagined Realms',
       description: 'Mythic stories, sacred narratives, heroes, gods, and symbolic traditions planned for respectful longform explanation.'
     },
     {
       title: 'Mythic Creatures',
       slug: 'mythic-creatures',
-      group: 'Mythic & Folklore Records',
+      group: 'Mythic & Imagined Realms',
       description: 'Dragons, giants, sea beings, spirits, forest figures, and legendary creatures organized by origin, meaning, and visual direction.'
     },
     {
       title: 'Lost Worlds',
       slug: 'lost-worlds',
-      group: 'Mythic & Folklore Records',
+      group: 'Mythic & Imagined Realms',
       description: 'Hidden cities, vanished islands, impossible geography, and lost realms prepared for mystery videos and worldbuilding explainers.'
     },
     {
       title: 'Strange Nature',
       slug: 'strange-nature',
-      group: 'Mythic & Folklore Records',
+      group: 'Mythic & Imagined Realms',
       description: 'Sky omens, unusual forests, sea phenomena, strange plants, and landscape folklore arranged for atmospheric creator use.'
     },
     {
       title: 'Legendary Places',
       slug: 'legendary-places',
-      group: 'Mythic & Folklore Records',
+      group: 'Mythic & Imagined Realms',
       description: 'Named mountains, lakes, ruins, temples, and sacred places shaped into location-focused mystery scripts.'
     },
     {
       title: 'Mythic Objects',
       slug: 'mythic-objects',
-      group: 'Mythic & Folklore Records',
+      group: 'Mythic & Imagined Realms',
       description: 'Swords, bells, mirrors, books, charms, relics, and symbolic objects prepared as compact video concepts.'
     },
     {
       title: 'Legend Origins',
       slug: 'legend-origins',
-      group: 'Supplemental Creator Paths',
+      group: 'Supplemental Archive',
       description: 'Origin paths, recurring motifs, and legend-building patterns prepared for clear creator explanation.'
     }
   ];
