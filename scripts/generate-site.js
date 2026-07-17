@@ -5,6 +5,7 @@ const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://kyunolab.com';
 const styleVersion = '20260717-publishing-center-naver-copy';
 const pageSize = 12;
+const libraryPageSize = 10;
 const publishingCenterPageSize = 24;
 const rssLimit = 20;
 
@@ -467,8 +468,16 @@ function renderPublishingCenterStyles() {
 function generateScriptsPages() {
   const scripts = sortNewest(creatorScripts);
   writeFile('scripts/index.html', renderScriptsHomePage(scripts));
-  writeFile('scripts/latest/index.html', renderScriptsLatestPage(scripts));
-  writeFile('scripts/featured/index.html', renderScriptsFeaturedPage(scripts));
+  generateScriptListingPages({
+    basePath: 'scripts/latest',
+    scripts,
+    renderPageForScripts: renderScriptsLatestPage
+  });
+  generateScriptListingPages({
+    basePath: 'scripts/featured',
+    scripts: getFeaturedScripts(scripts),
+    renderPageForScripts: renderScriptsFeaturedPage
+  });
   writeFile('scripts/categories/index.html', renderScriptCategoriesPage(scripts));
   generateScriptCategoryPages(scripts);
   writeFile('scripts/board/index.html', renderScriptBoardPage(scripts));
@@ -478,11 +487,43 @@ function generateScriptsPages() {
   }
 }
 
+function generateScriptListingPages({ basePath, scripts, renderPageForScripts }) {
+  const pages = chunk(scripts, libraryPageSize);
+  cleanupLibraryPageDirs(basePath, pages.length);
+  for (let index = 0; index < pages.length; index += 1) {
+    const pageNumber = index + 1;
+    const fileName = pageNumber === 1 ? `${basePath}/index.html` : `${basePath}/page/${pageNumber}/index.html`;
+    writeFile(fileName, renderPageForScripts({
+      allScripts: scripts,
+      scripts: pages[index],
+      pageNumber,
+      totalPages: pages.length,
+      basePath
+    }));
+  }
+}
+
 function generateScriptCategoryPages(scripts) {
   const activeCategories = creatorLibraryCategories;
   cleanupScriptCategoryPages(activeCategories);
   for (const category of activeCategories) {
-    writeFile(`scripts/categories/${category.slug}/index.html`, renderScriptCategoryPage({ category, scripts }));
+    const relatedScripts = scriptsForCreatorCategory(category, scripts);
+    const pages = chunk(relatedScripts, libraryPageSize);
+    const basePath = `scripts/categories/${category.slug}`;
+    cleanupLibraryPageDirs(basePath, pages.length);
+    for (let index = 0; index < pages.length; index += 1) {
+      const pageNumber = index + 1;
+      const fileName = pageNumber === 1 ? `${basePath}/index.html` : `${basePath}/page/${pageNumber}/index.html`;
+      writeFile(fileName, renderScriptCategoryPage({
+        category,
+        scripts,
+        relatedScripts,
+        pageScripts: pages[index],
+        pageNumber,
+        totalPages: pages.length,
+        basePath
+      }));
+    }
   }
 }
 
@@ -493,6 +534,22 @@ function cleanupScriptCategoryPages(activeCategories) {
   for (const entry of fs.readdirSync(categoriesDir, { withFileTypes: true })) {
     if (!entry.isDirectory() || allowed.has(entry.name)) continue;
     fs.rmSync(path.join(categoriesDir, entry.name), { recursive: true, force: true });
+  }
+}
+
+function cleanupLibraryPageDirs(basePath, totalPages) {
+  const pageDir = path.join(root, basePath, 'page');
+  if (!fs.existsSync(pageDir)) return;
+  if (totalPages <= 1) {
+    fs.rmSync(pageDir, { recursive: true, force: true });
+    return;
+  }
+  for (const entry of fs.readdirSync(pageDir, { withFileTypes: true })) {
+    if (!entry.isDirectory()) continue;
+    const pageNumber = Number(entry.name);
+    if (!Number.isInteger(pageNumber) || pageNumber < 2 || pageNumber > totalPages) {
+      fs.rmSync(path.join(pageDir, entry.name), { recursive: true, force: true });
+    }
   }
 }
 
@@ -554,36 +611,47 @@ function renderScriptsHomePage(scripts) {
   });
 }
 
-function renderScriptsLatestPage(scripts) {
+function renderScriptsLatestPage({ allScripts, scripts, pageNumber, totalPages, basePath }) {
   return renderScriptsListingPage({
-    canonicalPath: '/scripts/latest/',
+    canonicalPath: libraryPageCanonical(basePath, pageNumber),
     label: 'Latest Scripts',
     title: 'Latest mystery YouTube scripts',
     deck: 'The newest creator-ready script packages from Kyunolab Creator Library, arranged for longform narration, Shorts planning, image prompts, thumbnails, and production notes.',
     sectionTitle: 'Newest creator materials',
-    sectionMeta: `${scripts.length} script package${scripts.length === 1 ? '' : 's'}`,
+    sectionMeta: `${allScripts.length} script package${allScripts.length === 1 ? '' : 's'}`,
     scripts,
-    pageTitle: 'Latest Mystery YouTube Scripts | Kyunolab Creator Library',
-    description: 'Browse the newest Kyunolab mystery YouTube scripts for creators, including longform narration, Shorts hooks, image prompts, thumbnail ideas, and subtitle lines.'
+    pageTitle: pageNumber === 1 ? 'Latest Mystery YouTube Scripts | Kyunolab Creator Library' : `Latest Mystery YouTube Scripts - Page ${pageNumber} | Kyunolab Creator Library`,
+    description: 'Browse the newest Kyunolab mystery YouTube scripts for creators, including longform narration, Shorts hooks, image prompts, thumbnail ideas, and subtitle lines.',
+    pageNumber,
+    totalPages,
+    basePath
   });
 }
 
-function renderScriptsFeaturedPage(scripts) {
-  const featuredScripts = scripts.slice(0, 6);
+function renderScriptsFeaturedPage({ allScripts, scripts, pageNumber, totalPages, basePath }) {
   return renderScriptsListingPage({
-    canonicalPath: '/scripts/featured/',
+    canonicalPath: libraryPageCanonical(basePath, pageNumber),
     label: 'Featured Scripts',
     title: 'Featured mystery video script packages',
     deck: 'Start with the strongest creator-ready script packages: reliable entry points for mystery videos, urban legend explainers, folklore narration, Shorts hooks, and visual planning.',
     sectionTitle: 'Featured creator packages',
-    sectionMeta: 'Recommended starting points',
-    scripts: featuredScripts,
-    pageTitle: 'Featured Mystery YouTube Scripts | Kyunolab Creator Library',
-    description: 'Browse featured Kyunolab mystery YouTube script packages with longform narration, Shorts scripts, image prompts, thumbnail ideas, and creator planning notes.'
+    sectionMeta: `${allScripts.length} featured script package${allScripts.length === 1 ? '' : 's'}`,
+    scripts,
+    pageTitle: pageNumber === 1 ? 'Featured Mystery YouTube Scripts | Kyunolab Creator Library' : `Featured Mystery YouTube Scripts - Page ${pageNumber} | Kyunolab Creator Library`,
+    description: 'Browse featured Kyunolab mystery YouTube script packages with longform narration, Shorts scripts, image prompts, thumbnail ideas, and creator planning notes.',
+    pageNumber,
+    totalPages,
+    basePath
   });
 }
 
-function renderScriptsListingPage({ canonicalPath, label, title, deck, sectionTitle, sectionMeta, scripts, pageTitle, description }) {
+function getFeaturedScripts(scripts) {
+  return scripts.slice(0, 6);
+}
+
+function renderScriptsListingPage({ canonicalPath, label, title, deck, sectionTitle, sectionMeta, scripts, pageTitle, description, pageNumber, totalPages, basePath }) {
+  const pageStatus = totalPages > 1 ? `<p class="meta library-page-status">Page ${pageNumber} of ${totalPages}</p>` : '';
+  const pagination = renderLibraryPagination({ basePath, pageNumber, totalPages, label });
   return renderPage({
     canonicalPath,
     title: pageTitle,
@@ -596,6 +664,7 @@ function renderScriptsListingPage({ canonicalPath, label, title, deck, sectionTi
       <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/scripts/">Creator Library</a><span aria-hidden="true">/</span><span aria-current="page">${escapeHtml(label)}</span></nav>
       <p class="label">${escapeHtml(label)}</p>
       <h1 class="article-title">${escapeHtml(title)}</h1>
+      ${pageStatus}
       <p class="deck">${escapeHtml(deck)}</p>
       <section class="notice">
         <strong>Creator Library:</strong> These pages list script packages only. Original archive records remain in Kyunolab Mystery Archive and are linked only when a script package needs a source reference.
@@ -603,6 +672,7 @@ function renderScriptsListingPage({ canonicalPath, label, title, deck, sectionTi
       <section class="scripts-section">
         <div class="section-head"><h2>${escapeHtml(sectionTitle)}</h2><span>${escapeHtml(sectionMeta)}</span></div>
         ${scripts.length ? `<div class="script-list">${scripts.map(renderScriptRow).join('\n')}</div>` : `<div class="notice"><strong>No script packages yet:</strong> This page is ready for future creator materials.</div>`}
+        ${pagination}
       </section>
     </div>
     ${renderScriptCategoryRightRail(sortNewest(creatorScripts))}
@@ -645,13 +715,16 @@ ${body}
   });
 }
 
-function renderScriptCategoryPage({ category, scripts }) {
-  const relatedScripts = scriptsForCreatorCategory(category, scripts);
-  const packageCount = `${relatedScripts.length} script package${relatedScripts.length === 1 ? '' : 's'}`;
+function renderScriptCategoryPage({ category, scripts, relatedScripts, pageScripts, pageNumber, totalPages, basePath }) {
+  const categoryScripts = relatedScripts || scriptsForCreatorCategory(category, scripts);
+  const currentScripts = pageScripts || categoryScripts;
+  const packageCount = `${categoryScripts.length} script package${categoryScripts.length === 1 ? '' : 's'}`;
   const pageDescription = `${category.title} Creator Library script packages for mystery YouTube videos, Shorts hooks, image prompts, thumbnail ideas, and video planning.`;
+  const pageStatus = totalPages > 1 ? `<p class="meta library-page-status">Page ${pageNumber} of ${totalPages}</p>` : '';
+  const pagination = renderLibraryPagination({ basePath, pageNumber, totalPages, label: `${category.title} creator scripts` });
   return renderPage({
-    canonicalPath: `/scripts/categories/${category.slug}/`,
-    title: `${category.title} Creator Scripts | Kyunolab Video Scripts`,
+    canonicalPath: libraryPageCanonical(basePath, pageNumber),
+    title: pageNumber === 1 ? `${category.title} Creator Scripts | Kyunolab Video Scripts` : `${category.title} Creator Scripts - Page ${pageNumber} | Kyunolab Video Scripts`,
     description: pageDescription,
     metaDescription: pageDescription,
     networkSection: 'scripts',
@@ -661,13 +734,15 @@ function renderScriptCategoryPage({ category, scripts }) {
       <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/scripts/">Creator Library</a><span aria-hidden="true">/</span><a href="/scripts/categories/">Categories</a><span aria-hidden="true">/</span><span aria-current="page">${escapeHtml(category.title)}</span></nav>
       <p class="label">${escapeHtml(category.group)}</p>
       <h1 class="article-title">${escapeHtml(category.title)} creator scripts</h1>
+      ${pageStatus}
       <p class="deck">${escapeHtml(creatorCategoryDescription(category))}</p>
       <section class="notice">
         <strong>Creator Library shelf:</strong> Use this page to find ${escapeHtml(category.title.toLowerCase())} script packages for longform narration, Shorts hooks, visual prompts, thumbnail angles, and video planning.
       </section>
       <section class="scripts-section">
         <div class="section-head"><h2>Script packages in this shelf</h2><span>${escapeHtml(packageCount)}</span></div>
-        ${relatedScripts.length ? `<div class="script-list">${relatedScripts.map(renderScriptRow).join('\n')}</div>` : `<div class="notice"><strong>No dedicated script package yet:</strong> This Creator Library shelf is ready for future ${escapeHtml(category.title.toLowerCase())} scripts.</div>`}
+        ${currentScripts.length ? `<div class="script-list">${currentScripts.map(renderScriptRow).join('\n')}</div>` : `<div class="notice"><strong>No dedicated script package yet:</strong> This Creator Library shelf is ready for future ${escapeHtml(category.title.toLowerCase())} scripts.</div>`}
+        ${pagination}
       </section>
       <section class="scripts-section script-board">
         <div>
@@ -1938,7 +2013,12 @@ function generateSitemap() {
     const categoryScripts = scriptsForCreatorCategory(category, creatorScripts);
     const categoryDate = newestDate(categoryScripts) || latest;
     urls.push({ loc: `${siteUrl}/scripts/categories/${category.slug}/`, lastmod: categoryDate });
+    addLibraryPagedUrls(urls, `scripts/categories/${category.slug}`, categoryScripts.length, categoryDate);
   }
+
+  addLibraryPagedUrls(urls, 'scripts/latest', creatorScripts.length, newestDate(creatorScripts) || latest);
+  const featuredScripts = getFeaturedScripts(sortNewest(creatorScripts));
+  addLibraryPagedUrls(urls, 'scripts/featured', featuredScripts.length, newestDate(featuredScripts) || latest);
 
   for (const story of stories) {
     urls.push({ loc: `${siteUrl}/stories/${story.slug}`, lastmod: story.updatedAt || story.publishedAt || latest });
@@ -1959,7 +2039,7 @@ ${rows}
 </urlset>
 `);
 
-  console.log(`Sitemap base indexable URLs: ${urls.length} (pagination URLs excluded).`);
+  console.log(`Sitemap indexable URLs: ${urls.length}.`);
 }
 
 function generateRoutingFiles() {
@@ -2301,8 +2381,69 @@ function renderPagination(baseName, pageNumber, totalPages) {
   return `<nav class="pagination" aria-label="Archive pagination"><div class="pagination-status">Page ${pageNumber} of ${totalPages}</div><div class="pagination-links">${links.join('')}</div></nav>`;
 }
 
+function renderLibraryPagination({ basePath, pageNumber, totalPages, label }) {
+  if (totalPages <= 1) return '';
+  const links = [];
+  const prev = pageNumber - 1;
+  const next = pageNumber + 1;
+  links.push(prev >= 1
+    ? `<a class="page-link page-step" href="${libraryPageHref(basePath, prev)}" aria-label="Previous page">Previous</a>`
+    : '<span class="page-link page-step is-disabled" aria-disabled="true">Previous</span>');
+
+  for (const item of libraryPaginationItems(pageNumber, totalPages)) {
+    if (item === 'ellipsis') {
+      links.push('<span class="page-link is-disabled" aria-hidden="true">...</span>');
+    } else if (item === pageNumber) {
+      links.push(`<span class="page-link is-current" aria-current="page">${item}</span>`);
+    } else {
+      links.push(`<a class="page-link" href="${libraryPageHref(basePath, item)}" aria-label="Page ${item}">${item}</a>`);
+    }
+  }
+
+  links.push(next <= totalPages
+    ? `<a class="page-link page-step" href="${libraryPageHref(basePath, next)}" aria-label="Next page">Next</a>`
+    : '<span class="page-link page-step is-disabled" aria-disabled="true">Next</span>');
+
+  return `<nav class="pagination library-pagination" aria-label="${escapeAttr(label || 'Creator Library')} pagination"><div class="pagination-status">Page ${pageNumber} of ${totalPages}</div><div class="pagination-links">${links.join('')}</div></nav>`;
+}
+
+function libraryPaginationItems(pageNumber, totalPages) {
+  if (totalPages <= 7) {
+    return Array.from({ length: totalPages }, (_, index) => index + 1);
+  }
+  const pages = new Set([1, totalPages, pageNumber - 1, pageNumber, pageNumber + 1]);
+  if (pageNumber <= 4) {
+    [2, 3, 4, 5].forEach((page) => pages.add(page));
+  }
+  if (pageNumber >= totalPages - 3) {
+    [totalPages - 4, totalPages - 3, totalPages - 2, totalPages - 1].forEach((page) => pages.add(page));
+  }
+  const sorted = Array.from(pages).filter((page) => page >= 1 && page <= totalPages).sort((a, b) => a - b);
+  const items = [];
+  for (const page of sorted) {
+    if (items.length && page - items[items.length - 1] > 1) items.push('ellipsis');
+    items.push(page);
+  }
+  return items;
+}
+
+function libraryPageHref(basePath, pageNumber) {
+  return pageNumber === 1 ? `/${basePath}/` : `/${basePath}/page/${pageNumber}/`;
+}
+
+function libraryPageCanonical(basePath, pageNumber) {
+  return libraryPageHref(basePath, pageNumber);
+}
+
 function pageHref(baseName, pageNumber) {
   return pageNumber === 1 ? `/${baseName}.html` : `/${baseName}-${pageNumber}.html`;
+}
+
+function addLibraryPagedUrls(urls, basePath, count, lastmod) {
+  const totalPages = Math.max(1, Math.ceil(count / libraryPageSize));
+  for (let page = 2; page <= totalPages; page += 1) {
+    urls.push({ loc: `${siteUrl}${libraryPageHref(basePath, page)}`, lastmod });
+  }
 }
 
 function addPagedUrls(urls, baseName, count, lastmod) {
