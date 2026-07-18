@@ -926,6 +926,7 @@ function renderScriptResourcesPage() {
     description: 'A practical creator guide for using Kyunolab scripts, categories, source notes, Shorts hooks, image prompts, thumbnails, and video planning resources.',
     metaDescription: 'Creator guide for using Kyunolab mystery YouTube scripts, source notes, Shorts hooks, image prompts, thumbnails, and video planning resources.',
     networkSection: 'scripts',
+    footerSection: 'scripts',
     content: `  <main class="scripts-page">
     <section class="scripts-hero scripts-subpage-hero">
       <div>
@@ -2217,7 +2218,7 @@ function renderCategoryPage({ category, pageItems, pageNumber, totalPages, pageT
   });
 }
 
-function renderPage({ canonicalPath, title, description, metaDescription, content, robots, networkSection }) {
+function renderPage({ canonicalPath, title, description, metaDescription, content, robots, networkSection, footerSection }) {
   const pageDescription = metaDescription || description;
   const pageTitle = title.includes('|') ? title : `${title} | Kyunolab Mystery Archive`;
   const socialImage = `${siteUrl}/icon-512.png`;
@@ -2258,7 +2259,7 @@ ${robotsMeta}  <meta property="og:title" content="${escapeAttr(pageTitle)}">
 <body>
   ${renderHeader(canonicalPath, { includeSearch: networkSection !== 'publishing' })}
 ${content}
-  ${renderFooter()}${globalSearchScript}${creatorScript}${publishingScript}${searchScript}
+  ${renderFooter(footerSection)}${globalSearchScript}${creatorScript}${publishingScript}${searchScript}
 </body>
 </html>
 `;
@@ -2309,7 +2310,7 @@ ${searchForm}
 }
 
 function renderScriptsHeader(currentPath, includeSearch = true) {
-  const searchForm = includeSearch ? `\n      ${renderSiteSearchForm('archive')}` : '';
+  const searchForm = includeSearch ? `\n      ${renderSiteSearchForm('library')}` : '';
   return `<header class="site-header site-header-scripts">
     <div class="topline">A Kyuno Lab creator resource</div>
     <div class="header-inner">
@@ -2371,7 +2372,13 @@ function renderKyunolabNetworkCard(section) {
       </div>`;
 }
 
-function renderFooter() {
+function renderFooter(section = 'archive') {
+  if (section === 'scripts') {
+    return `<footer class="site-footer">
+    <p><strong>Kyunolab Creator Library</strong> provides creator-ready scripts, Shorts hooks, image prompts, thumbnail ideas, and planning resources connected to the Kyunolab Mystery Archive.</p>
+    <p><a href="/scripts/">Scripts Home</a> - <a href="/scripts/latest/">Latest</a> - <a href="/scripts/featured/">Featured</a> - <a href="/scripts/categories/">Script Categories</a> - <a href="/scripts/board/">Library Board</a> - <a href="/scripts/resources/">Creator Resources</a> - <a href="/">Mystery Archive</a> - <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a> - <a href="/privacy.html">Privacy</a> - <a href="/rss.xml">RSS</a></p>
+  </footer>`;
+  }
   return `<footer class="site-footer">
     <p><strong>Kyunolab Mystery Archive</strong> collects legends, folklore, mysteries, and strange tales with calm source-aware notes.</p>
     <p><a href="/archive.html">Archive Index</a> - <a href="/newest.html">Newest</a> - <a href="/popular.html">Popular</a> - <a href="/categories.html">Categories</a> - <a href="/scripts/">Scripts</a> - <a href="/about.html">About</a> - <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a> - <a href="/privacy.html">Privacy</a> - <a href="/rss.xml">RSS</a> - <a href="/publishing-center/">Publishing Center</a></p>
