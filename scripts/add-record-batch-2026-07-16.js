@@ -253,7 +253,6 @@ function makeStory(category, plan, index, relatedPool) {
     tags,
     detail: plan.detail,
     evidence: plan.evidence,
-    generationMode: 'canonical-archive',
     researchSources: researchSourcesFor(plan, category),
     sourceNotes: sourceNotesFor(plan, category),
     contentType: 'story'

@@ -6,6 +6,10 @@ const {
   findGenericFaqQuestions,
   countVocabularyHits
 } = require('./article-dna-utils');
+const {
+  policyAppliesToStory,
+  validateUnifiedArticle
+} = require('./content-policy');
 
 const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://kyunolab.com';
@@ -130,7 +134,6 @@ function validateStoryRecord(story) {
   }
 
   validateStoryContentDNA(story);
-  validateGenerationMode(story);
 
   if (!categoryBySlug.has(story.categorySlug)) {
     errors.push(`${story.slug}: categorySlug "${story.categorySlug}" is not defined in data/categories.json`);
@@ -182,63 +185,6 @@ function validateStoryContentDNA(story) {
   }
 }
 
-function validateGenerationMode(story) {
-  const hasExplicitMode = Object.prototype.hasOwnProperty.call(story, 'generationMode');
-  const mode = story.generationMode || 'original-archive';
-  const allowedModes = new Set(['original-archive', 'canonical-archive']);
-
-  if (!allowedModes.has(mode)) {
-    errors.push(`${story.slug}: generationMode must be "original-archive" or "canonical-archive"`);
-    return;
-  }
-
-  if (hasExplicitMode && mode === 'original-archive') {
-    validateOriginalArchiveResearch(story);
-  }
-
-  if (mode !== 'canonical-archive') return;
-
-  if (!Array.isArray(story.researchSources) || story.researchSources.length < 3) {
-    errors.push(`${story.slug}: canonical-archive mode requires at least 3 researchSources`);
-  }
-
-  const invalidSource = (story.researchSources || []).find((source) => {
-    if (!source || typeof source !== 'object') return true;
-    return !String(source.title || '').trim() || !String(source.supports || '').trim();
-  });
-
-  if (invalidSource) {
-    errors.push(`${story.slug}: canonical-archive researchSources require title and supports fields`);
-  }
-
-  const notes = story.sourceNotes || {};
-  if (!Array.isArray(notes.sharedVerifiedPoints) || notes.sharedVerifiedPoints.length === 0) {
-    errors.push(`${story.slug}: canonical-archive mode requires sourceNotes.sharedVerifiedPoints`);
-  }
-  if (!Array.isArray(notes.variants)) {
-    errors.push(`${story.slug}: canonical-archive mode requires sourceNotes.variants array`);
-  }
-  if (!Array.isArray(notes.unsupportedClaimsToAvoid)) {
-    errors.push(`${story.slug}: canonical-archive mode requires sourceNotes.unsupportedClaimsToAvoid array`);
-  }
-}
-
-function validateOriginalArchiveResearch(story) {
-  const notes = story.originalResearchNotes || {};
-  const requiredArrays = [
-    'relatedMotifsReviewed',
-    'repeatedScenesObserved',
-    'similarityRisks',
-    'originalityChanges'
-  ];
-
-  for (const key of requiredArrays) {
-    if (!Array.isArray(notes[key]) || notes[key].length === 0) {
-      errors.push(`${story.slug}: original-archive mode requires originalResearchNotes.${key}`);
-    }
-  }
-}
-
 function validateStoryPage(story) {
   const filePath = path.join(root, 'stories', `${story.slug}.html`);
   if (!fs.existsSync(filePath)) {
@@ -248,6 +194,12 @@ function validateStoryPage(story) {
 
   const html = fs.readFileSync(filePath, 'utf8');
   const bodyText = stripHtml(html);
+  if (policyAppliesToStory(story)) {
+    for (const error of validateUnifiedArticle(story, bodyText)) {
+      errors.push(`${story.slug}: ${error}`);
+    }
+  }
+
   const cleanUrl = `${siteUrl}/stories/${story.slug}`;
   mustInclude(html, `<link rel="canonical" href="${cleanUrl}">`, story.slug, 'clean canonical URL');
   mustInclude(html, `<meta property="og:url" content="${cleanUrl}">`, story.slug, 'clean og:url');

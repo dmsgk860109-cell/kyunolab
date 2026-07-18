@@ -60,67 +60,39 @@ Avoid:
 - articles under 700 words unless they are intentionally short archive notes
 - articles over 2,500 words unless the topic truly deserves it
 
-## 2A. Generation Modes
+## 2A. Unified Content Generation Policy
 
-Kyunolab supports two independent generation modes.
+Kyunolab no longer uses separate creative or record generation modes for new archive articles.
 
-Mode selection commands are optional. If a user requests a new article without specifying a mode, use the existing normal generation rules.
+Every new article must begin from a story, legend, myth, rumor, sighting tradition, local report, internet legend, historical mystery, regional variant, or cultural belief that existed outside Kyunolab before drafting.
 
-If the user uses a mode alias, keep that selected mode fixed. Do not switch Original to Canonical, or Canonical to Original, based on assistant preference or search results.
+Historical truth and global fame are not required. Existence as an external tradition is required.
 
-### Original Archive Mode
+Before drafting, perform an external existence check and create a Story Brief. If no external trace can be confirmed, do not generate the article.
 
-Original Archive Mode is the existing default mode for newly imagined Kyunolab-style archive stories. Keep its current article style, Story & Source Note, SEO structure, category system, and output behavior unchanged.
+The Story Brief must identify:
 
-Use Original Archive Mode when creating a new fictional legend, invented archive record, or original Kyunolab story pattern.
+- the subject
+- content type
+- existence status
+- circulation level
+- known names
+- core story elements
+- reported variants
+- uncertain details
+- external evidence reviewed
+- prohibited inventions
+- editorial interpretation options
 
-Before drafting an Original Archive article, perform a research stage. Review related urban legends, ghost stories, folklore, myths, mysteries, internet legends, local legends, modern folklore, motifs, and similar story structures.
+The article body must clearly separate:
 
-The research stage is not for rewriting or translating existing legends. It is for understanding repeated scenes, familiar structures, common motifs, known settings, and famous patterns so the new article can avoid accidental duplication.
+- Existing Story: what the outside tradition says
+- Reported Variant: how versions differ
+- Editorial Interpretation: Kyunolab's cautious reading
 
-After research, create a new independent Kyunolab record with a new situation, place, central scene, development, or structure.
+Do not invent new characters, events, locations, objects, rules, rituals, witnesses, documents, causes, endings, or evidence to make a topic feel more mysterious.
 
-If the planned article is too similar to a known legend in core setup, plot movement, motif, ending, or symbolic meaning, change the direction or use Canonical Archive Mode instead.
-
-Full Original Mode rules live in `ORIGINAL_ARCHIVE_MODE.md`.
-
-Original Archive Mode aliases:
-
-- 창작
-- 창작글
-- 오리지널
-- Original
-
-### Canonical Archive Mode
-
-Canonical Archive Mode is an additional mode for existing well-known legends, folklore, myths, mysteries, urban legends, internet legends, and historically known strange records.
-
-Use Canonical Archive Mode for subjects such as Atlantis, Excalibur, Bigfoot, Yeti, Bloody Mary, Slender Man, Mothman, Area 51, the Bermuda Triangle, Dyatlov Pass, or Roanoke Colony.
-
-Canonical Archive Mode must not invent a new legend. It must research the existing subject first, consult at least 3 reliable sources, and write only from commonly supported facts, documented tradition, known variants, and cautious interpretation.
-
-Canonical Mode articles must include:
-
-- introduction
-- core story or best-known version
-- historical background or tradition
-- why the story is still remembered
-- what is record, folklore, rumor, or interpretation
-- Kyunolab viewpoint
-- Story & Source Note
-
-Full Canonical Mode rules live in `CANONICAL_ARCHIVE_MODE.md`.
-
-Canonical Archive Mode aliases:
-
-- 기록
-- 기록글
-- 유명
-- 유명글
-- Canonical
-
-Full mode alias rules live in `MODE_SELECTION_COMMANDS.md`.
-
+Full policy rules live in `CONTENT_GENERATION_POLICY.md`.
 ## 3. Common Article Structure
 
 Every standard article should include:

@@ -213,7 +213,6 @@ function buildStory(plan, index) {
     tags: plan.tags.slice(0, 5),
     detail: plan.detail,
     evidence: plan.evidence,
-    generationMode: 'canonical-archive',
     researchSources: [
       {
         title: `${shortSeoTitle(plan.title)} mythology reference summaries`,

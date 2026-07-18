@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { buildContentDNA } = require('./article-dna-utils');
+const { policyAppliesToStory } = require('./content-policy');
 
 const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://kyunolab.com';
@@ -23,6 +24,7 @@ for (const story of stories) {
   if (seoOverrides[story.slug]) Object.assign(story, seoOverrides[story.slug]);
   const generatedDNA = buildContentDNA(story, existingQueries);
   const existingDNA = story.contentDNA || {};
+  const preservePolicyDNA = policyAppliesToStory(story) && story.storyBrief;
   story.contentDNA = {
     ...generatedDNA,
     ...existingDNA,
@@ -30,8 +32,12 @@ for (const story of stories) {
     searchQuestion: refineSearchQuestion(story, generatedDNA.searchQuestion),
     uniqueAngle: refineUniqueAngle(story, generatedDNA.uniqueAngle),
     sceneAnchor: generatedDNA.sceneAnchor,
-    subjectSpecificVocabulary: generatedDNA.subjectSpecificVocabulary,
-    requiredSpecificDetails: generatedDNA.requiredSpecificDetails,
+    subjectSpecificVocabulary: preservePolicyDNA && Array.isArray(existingDNA.subjectSpecificVocabulary)
+      ? existingDNA.subjectSpecificVocabulary
+      : generatedDNA.subjectSpecificVocabulary,
+    requiredSpecificDetails: preservePolicyDNA && Array.isArray(existingDNA.requiredSpecificDetails)
+      ? existingDNA.requiredSpecificDetails
+      : generatedDNA.requiredSpecificDetails,
     sectionBlueprint: Array.isArray(story.seoHeadings) && story.seoHeadings.length
       ? story.seoHeadings.map((title) => ({ title, nav: title }))
       : generatedDNA.sectionBlueprint
@@ -291,6 +297,14 @@ ${scriptCta ? `        ${scriptCta}
 }
 
 function buildBodySections(story) {
+  if (Array.isArray(story.storyBrief?.articleSections) && story.storyBrief.articleSections.length) {
+    return story.storyBrief.articleSections.slice(0, 6).map((section) => ({
+      id: slugify(section.id || section.title),
+      title: section.title,
+      paragraphs: (section.paragraphs || []).filter(Boolean)
+    }));
+  }
+
   const dna = story.contentDNA;
   const blueprint = Array.isArray(dna.sectionBlueprint) ? dna.sectionBlueprint : [];
   const headings = blueprint.map((item) => typeof item === 'string' ? item : item.title).filter(Boolean);
@@ -383,6 +397,12 @@ function sectionParagraphs(story, heading, index, vocabulary, details) {
 }
 
 function renderOpening(story) {
+  if (policyAppliesToStory(story) && story.storyBrief?.opening) {
+    return story.storyBrief.opening
+      .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
+      .join('\n        ');
+  }
+
   const dna = story.contentDNA;
   const subject = shortSubject(story);
   const summary = story.summaryAnswer || `${subject} is best read as a source-aware ${String(story.category || 'archive').toLowerCase()} record.`;
@@ -502,6 +522,21 @@ ${questions.map((item) => `        <h3>${escapeHtml(item.q || item.question)}</h
 }
 
 function renderSourceNote(story) {
+  if (policyAppliesToStory(story) && story.storyBrief) {
+    const brief = story.storyBrief;
+    const evidence = (brief.existenceEvidence || [])
+      .slice(0, 3)
+      .map((source) => `${source.title} (${source.sourceType})`)
+      .join('; ');
+    const uncertain = Array.isArray(brief.uncertainDetails) && brief.uncertainDetails.length
+      ? ` Uncertain details remain: ${brief.uncertainDetails.join('; ')}.`
+      : '';
+    return `<h2 id="source-note">Story &amp; Source Note</h2>
+        <p>This article follows the unified Kyunolab standard: the subject is included because it existed outside Kyunolab before this page was written. The article separates existing story material, reported variants, and Kyunolab interpretation.</p>
+        <p>Story Brief status: ${escapeHtml(brief.existenceStatus)}. Circulation level: ${escapeHtml(brief.circulationLevel)}. External trace reviewed: ${escapeHtml(evidence)}.${escapeHtml(uncertain)}</p>
+        <p>See the <a href="/fiction-disclaimer.html#source-status">Story &amp; Source Notice</a> for how Kyunolab Mystery Archive separates documented sources, modern retellings, speculative interpretation, and original work.</p>`;
+  }
+
   const profile = getQualityProfile(story);
   return `<h2 id="source-note">Story &amp; Source Note</h2>
         <p>This article discusses ${escapeHtml(story.sourceStatus || story.category)} with a source-aware approach. The record is useful for reading motif, setting, circulation, and evidence limits; it is not presented as confirmed fact.</p>

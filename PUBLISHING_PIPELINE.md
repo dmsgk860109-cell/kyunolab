@@ -2,10 +2,11 @@
 
 This file defines the scalable publishing workflow for Kyunolab.
 
-## Source of Truth
+## Source Of Truth
 
 - Article metadata lives in `data/stories.json`.
 - Article uniqueness rules live in each record's `contentDNA` object.
+- Unified content generation rules live in `CONTENT_GENERATION_POLICY.md`.
 - Full article drafting should follow `ARTICLE_PAGE_TEMPLATE.md`.
 - Guide and Mystery Board metadata lives in `data/guides.json`.
 - Creator Library production philosophy lives in `CREATOR_LIBRARY_MODE.md`.
@@ -49,96 +50,30 @@ Each candidate should have:
 - `topicScore`
 - `topicStatus`
 
-Score each topic out of 100:
-
-- Search demand: 30
-- Click curiosity: 25
-- Kyunolab fit: 20
-- Expansion potential: 15
-- Differentiation: 10
-
-Status:
-
-- `priority`: 85-100
-- `approved`: 70-84
-- `hold`: 60-69
-- `reject`: 0-59
-
 Normal search-focused publishing should use `priority` or `approved` topics. If a topic is `hold`, improve the angle, title, keyword, or cluster before writing. If it is `reject`, do not publish it unless the concept changes.
 
 The score and breakdown are production metadata. They should not appear as visible reader-facing article content.
 
-## Generation Mode Rule
+## Unified Content Generation Rule
 
-Choose a generation mode before drafting.
+Kyunolab no longer uses separate Creative or Record generation modes.
 
-Mode selection commands are optional. If no mode is specified, keep the existing generation flow.
+Every new Archive article must follow the unified external-story policy in `CONTENT_GENERATION_POLICY.md`.
 
-Supported Original Archive Mode aliases:
+Before drafting a new article:
 
-- 창작
-- 창작글
-- 오리지널
-- Original
+1. Search outside Kyunolab for an external trace of the story, claim, legend, rumor, sighting, myth, variation, or interpretation.
+2. Confirm the subject existed before the Kyunolab article was generated.
+3. Record names, the basic story, known variants, uncertain details, prohibited inventions, and evidence links in `storyBrief`.
+4. Draft only from the Story Brief.
+5. Separate Existing Story, Reported Variant, and Editorial Interpretation.
+6. Stop if web search cannot be performed, if no external trace is found, or if `storyBrief.existenceStatus` is not `confirmed`.
 
-Supported Canonical Archive Mode aliases:
+Historical truth, academic proof, and global fame are not eligibility requirements. A narrow community story, one preserved online account, or a regional rumor may qualify if it existed outside Kyunolab.
 
-- 기록
-- 기록글
-- 유명
-- 유명글
-- Canonical
+Do not create a new story by inventing concrete characters, events, places, objects, technologies, powers, rules, rituals, dialogue, documents, sightings, causes, or endings.
 
-If a user explicitly selects a mode, that choice is binding. Do not switch modes because of search results, assistant preference, or topic familiarity.
-
-Full alias rules live in `MODE_SELECTION_COMMANDS.md`.
-
-### Original Archive Mode
-
-Use `original-archive` for newly imagined Kyunolab archive stories, fictional legends, and original story patterns.
-
-This is the existing mode. Keep its current article style, Story & Source Note, SEO structure, category system, and output format unchanged.
-
-Original Archive Mode now requires a pre-writing research stage.
-
-Before drafting an Original Mode article:
-
-1. Review related urban legends, ghost stories, folklore, myths, mysteries, internet legends, local legends, modern folklore, motifs, and similar story structures.
-2. Identify repeated scenes, common structures, familiar motifs, known settings, and famous endings.
-3. Use the research to understand patterns, not to copy sentences, translate existing material, or rewrite a famous legend.
-4. Create a new independent Kyunolab record with a new situation, place, central scene, development, or structure.
-5. If the planned story is too close to a known legend, change the setting, central scene, structure, motif, or emotional question.
-6. If the article should stay close to the known legend, switch to Canonical Archive Mode instead.
-
-Search is for research, not copying.
-
-Full rules live in `ORIGINAL_ARCHIVE_MODE.md`.
-
-### Canonical Archive Mode
-
-Use `canonical-archive` for well-known existing subjects such as famous urban legends, ghost stories, myths, folklore, unexplained mysteries, supernatural traditions, internet legends, and historically known mysteries.
-
-Canonical Archive Mode must not create a new legend. It starts with source review, then rewrites the known subject in Kyunolab's calm, source-aware archive style.
-
-Before drafting a Canonical Mode article:
-
-1. Consult at least 3 reliable sources.
-2. Record the sources in `researchSources` or production notes.
-3. List the facts or details that multiple sources support.
-4. List known variants without forcing them into one invented version.
-5. Mark unsupported claims that should not be presented as fact.
-
-Canonical Mode articles must include:
-
-- introduction
-- core story or best-known version
-- historical background or tradition
-- why the subject is still remembered
-- what is documented, folkloric, rumored, or interpretive
-- Kyunolab viewpoint
-- Story & Source Note
-
-Full rules live in `CANONICAL_ARCHIVE_MODE.md`.
+Older Kyunolab original archive records remain published and keep their URLs, but they are not valid evidence for new-topic existence.
 
 ## Creator Library Rule
 
@@ -156,28 +91,9 @@ The current Creator Library output structure is Scene-based inside Create. Each 
 
 Optional advanced production information may be included inside each Scene, but it must stay collapsed by default behind a "Show Advanced Production Info" button. It is enhancement material, not part of the required beginner production flow.
 
-Creator Toolkit appears once after Story Information and before Production Workflow. It gives a short balanced Prepare-area overview for Images, Narration, Background Music, Editing, and optional Motion without requiring a specific service, price tier, signup, install step, or tutorial. Scene Narration itself must be written as natural spoken video script, not blog text, report text, or academic explanation. Use short readable sentences, one idea per sentence, breathing breaks where useful, and natural transitions between Scenes. Long-form Scene Narration should build a story flow rather than repeat explanation, and Short-form Narration should start fast and stay concise. Long-form Scene Narration should be displayed as Narration Parts with concise Voice Direction and Estimated Reading Time. Scene Role should describe the full Scene's production role instead of using per-part Purpose labels. Preserve the Scene structure and full narration copy behavior. Long-form and Short-form sections may include copy buttons that assemble full narration from Scene Narration fields dynamically.
-
-Production Workflow appears once after Creator Toolkit and before Long-form Creator. It should explain the beginner production order in a short vertical sequence without adding checklist state, login, external links, ads, or progress tracking.
+Creator Toolkit appears once after Story Information and before Production Workflow. It gives a short balanced Prepare-area overview for Images, Narration, Background Music, Editing, and optional Motion without requiring a specific service, price tier, signup, install step, or tutorial.
 
 Creator Library detail pages use one page per archive story. Keep long-form and short-form creator materials on the same page under shared Story Summary and Story Information sections.
-
-Long-form Creator and Short-form Creator should remain visually distinct production areas on the same page. Do not let the Short-form workspace read as a continuation of the Long-form workspace.
-
-Keep page-level guidance outside Scenes. Scenes should contain production outputs only, not AI usage instructions, direct recording instructions, platform explanations, service recommendations, cost notes, installation guidance, workflow explanation, or production philosophy.
-
-Before publishing or regenerating Creator Library pages, compare the output against the Gold Standard representative set: Cursed Images, Backrooms, Woman in White, and Dragons. These pages cover internet folklore, place-centered folklore, person-centered classic legend, and mythology/creature comparison. New pages should match their section order, Scene Workspace structure, copy behavior, collapsed Advanced Production behavior, and Finish-area reference order.
-
-Creator Library generation should prioritize:
-
-- beginner-friendly production flow
-- copy-ready production assets over explanation
-- image, video, sound effect, and music prompts that can be generated from or searched with directly
-- a shared Story Summary and Story Information area before platform-specific production sections
-- a top-to-bottom path for making one complete video
-- Scene-by-Scene production flow that keeps narration, image prompt, background music keywords, and simple editing guidance together
-- optional Scene-level advanced production details for motion prompts, sound effect search terms, voice direction, camera notes, transition notes, and negative prompts
-- clear separation between original archive stories and creator-facing production packages
 
 ## Common Commands
 
@@ -223,13 +139,14 @@ For 1, 10, or 100 new articles:
 
 1. Qualify each topic with the topic score rules.
 2. Keep only `priority` or `approved` topics for normal publishing.
-3. Add records to `data/stories.json`.
-4. Add the matching `stories/[slug].html` files.
-5. Run `npm run apply:content-dna`.
-6. Run `npm run generate:site`.
-7. Run `npm run generate:tags`.
-8. Run `npm run validate:publish -- --slugs=[changed-slugs]`.
-9. Run `npm run validate:tags`.
+3. Search for external existence before drafting.
+4. Create `storyBrief` with `existenceStatus: confirmed`.
+5. Add records to `data/stories.json`.
+6. Run `npm run apply:content-dna`.
+7. Run `npm run generate:site`.
+8. Run `npm run generate:tags`.
+9. Run `npm run validate:publish -- --slugs=[changed-slugs]`.
+10. Run `npm run validate:tags`.
 
 The changed slug list is the release boundary. It prevents a 100-article release from becoming a full manual review of every old article.
 
@@ -258,7 +175,7 @@ Every article should have a `contentDNA` object with:
 
 ## Repetition Guard
 
-`scripts/validate-publish.js` fails publication when a story page contains known repeated generic phrases, overly generic FAQ questions, missing Content DNA, duplicate canonical intent, or weak subject-specific vocabulary usage.
+`scripts/validate-publish.js` fails publication when a story page contains known repeated generic phrases, overly generic FAQ questions, missing Content DNA, duplicate canonical intent, weak subject-specific vocabulary usage, missing Story Brief for new unified-policy articles, missing external existence evidence, or article text that does not reflect the Story Brief.
 
 Do not publish new article bodies that use stock lines such as:
 
@@ -284,22 +201,6 @@ Run full QA when changing:
 - sitemap or RSS generation
 - global CSS affecting cards, sidebars, or article pages
 
-## Scale Notes
-
-At 1,000+ articles:
-
-- keep metadata as the source of truth
-- generate index, category, tag, sitemap, and RSS files from data
-- split sitemap files if URL count approaches search-engine limits
-- keep article validation slug-based
-
-At 10,000+ articles:
-
-- avoid rewriting every static page for small releases
-- split generated archives into stable chunks
-- consider moving to a dedicated static generator or build pipeline
-- keep manual review focused on changed articles and templates
-
 ## Release Checklist
 
 - Changed story slugs are known.
@@ -310,6 +211,8 @@ At 10,000+ articles:
 - RSS contains only the appropriate newest stories.
 - No `.html` story public URL is introduced.
 - Content DNA is present and specific.
+- Story Brief is present for every new unified-policy article.
+- External existence evidence is recorded in Story Brief.
 - `canonicalQuery` does not duplicate an existing article.
 - Subject-specific vocabulary appears naturally in the article body.
 - Generic repeated phrases and generic FAQ questions are absent.

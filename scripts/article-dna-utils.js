@@ -69,7 +69,7 @@ const categoryDefaults = {
     subjectClass: 'lost-world',
     narrativeLens: 'map-and-memory-lens',
     culturalFrame: 'maps, tickets, routes, and almost-places',
-    evidencePosture: 'fictional-archive'
+    evidencePosture: 'legendary-geography'
   },
   'strange-nature': {
     subjectClass: 'landscape-anomaly',

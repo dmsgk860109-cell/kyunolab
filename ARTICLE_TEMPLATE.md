@@ -32,7 +32,7 @@ If the article becomes too broad, recommend splitting it into a series or separa
 
 ## Article Brief
 
-- Generation mode: [original-archive / canonical-archive]
+- Story Brief status: [confirmed / blocked]
 - Working title: [TITLE]
 - Slug: [SLUG]
 - Category: [CATEGORY]
@@ -43,37 +43,24 @@ If the article becomes too broad, recommend splitting it into a series or separa
 - Read time: [READ TIME]
 - Updated date: [MONTH DAY, YEAR]
 
-### Generation Mode Notes
+### Story Brief
 
-Use `original-archive` for newly imagined Kyunolab archive stories.
+Complete this before drafting. If external existence cannot be confirmed, stop and do not generate the article.
 
-Use `canonical-archive` for existing well-known legends, folklore, myths, mysteries, internet legends, and historically known strange records.
-
-Mode aliases are optional:
-
-- `창작`, `창작글`, `오리지널`, or `Original` means `original-archive`.
-- `기록`, `기록글`, `유명`, `유명글`, or `Canonical` means `canonical-archive`.
-
-If the user gives a mode alias, keep that mode fixed. Do not switch modes during research.
-
-If `original-archive` is selected:
-
-- do motif research before drafting
-- review related legends, folklore, myths, mysteries, internet legends, and similar story structures
-- identify repeated scenes, common motifs, familiar settings, and famous endings
-- do not rewrite, translate, or lightly alter an existing famous legend
-- create a new independent situation, place, scene, development, or structure
-
-If `canonical-archive` is selected:
-
-- do source review before drafting
-- consult at least 3 reliable sources
-- do not invent a new legend
-- describe only commonly supported facts, documented tradition, variants, and cautious interpretation
-- make uncertain material clear instead of presenting it as verified fact
-
-Original Archive Mode remains unchanged.
-
+- Topic: [EXISTING STORY / LEGEND / MYTH / RUMOR / RECORD]
+- Content type: [myth / urban legend / folklore / internet legend / historical mystery / sighting tradition / regional variant]
+- Existence status: [confirmed]
+- Circulation level: [global / regional / local / small-community / internet-community]
+- Known names: [NAME 1], [NAME 2], [OPTIONAL NAME 3]
+- Core story elements: [ELEMENT 1], [ELEMENT 2], [ELEMENT 3]
+- Reported variants: [VARIANT 1], [VARIANT 2]
+- Uncertain details: [DETAILS THAT SHOULD NOT BE TREATED AS FACT]
+- Prohibited inventions: [CHARACTERS / EVENTS / OBJECTS / CAUSES / ENDINGS NOT TO INVENT]
+- External evidence reviewed:
+  - [SOURCE TITLE / URL / WHAT IT SUPPORTS]
+  - [SOURCE TITLE / URL / WHAT IT SUPPORTS]
+  - [SOURCE TITLE / URL / WHAT IT SUPPORTS]
+- Editorial interpretation options: [CAUTIOUS READING 1], [CAUTIOUS READING 2]
 ## Topic Selection / SEO Fit
 
 Use this section before drafting. These fields are for production and editorial judgment; do not display the score or scoring notes to readers.
@@ -142,26 +129,24 @@ Rules:
 
 ## Source Research Notes
 
-Use this section for Canonical Archive Mode. For Original Archive Mode, keep only the source-status notes that apply.
+Use this section to document the external existence check before drafting.
 
 - Source 1: [TITLE / URL / WHAT IT SUPPORTS]
 - Source 2: [TITLE / URL / WHAT IT SUPPORTS]
 - Source 3: [TITLE / URL / WHAT IT SUPPORTS]
-- Shared verified points: [WHAT MULTIPLE SOURCES SUPPORT]
+- Shared story elements: [WHAT MULTIPLE SOURCES OR TRADITIONS SUPPORT]
 - Known variants: [DIFFERENT VERSIONS WITHOUT FORCING ONE CANON]
 - Unverified claims to avoid treating as fact: [CLAIMS / RUMORS / UNSOURCED DETAILS]
 
-## Original Research Notes
+## Story Boundary Notes
 
-Use this section for Original Archive Mode. These are production notes, not reader-facing content.
+These are production notes, not reader-facing content.
 
-- Related legends or motifs reviewed: [MOTIF / LEGEND / STRUCTURE 1], [MOTIF / LEGEND / STRUCTURE 2], [MOTIF / LEGEND / STRUCTURE 3]
-- Repeated scenes observed: [WHAT OFTEN REPEATS]
-- Familiar settings to avoid copying: [KNOWN SETTING / SCENE]
-- Similarity risk: [LOW / MEDIUM / HIGH]
-- Originality changes made: [NEW PLACE / NEW SCENE / NEW STRUCTURE / NEW MOTIF]
-- Canonical Mode fallback needed? [NO / YES, IF TOO CLOSE TO A KNOWN LEGEND]
-
+- Existing story layer: [WHAT THE OUTSIDE STORY ALREADY SAYS]
+- Reported variant layer: [HOW VERSIONS DIFFER]
+- Editorial interpretation layer: [WHAT KYUNOLAB MAY CAUTIOUSLY INTERPRET]
+- Invention risks: [DETAILS THAT WOULD CREATE A NEW STORY]
+- Publishable? [YES / NO]
 ## SEO Fields
 
 - Meta title: [SEO TITLE]
@@ -398,12 +383,12 @@ Show at least 3 related articles when available. Use 4 to 6 when the cluster is 
 
 ## Final QA
 
-- [ ] Generation mode is set to `original-archive` or `canonical-archive`.
-- [ ] If Original Archive Mode is used, related legends and motifs were researched before drafting.
-- [ ] If Original Archive Mode is used, the article does not rewrite, translate, or lightly alter an existing famous legend.
-- [ ] If Original Archive Mode is used, the final concept has a new situation, place, scene, development, or structure.
-- [ ] If Canonical Archive Mode is used, at least 3 reliable sources were reviewed before drafting.
-- [ ] If Canonical Archive Mode is used, the article does not invent a new legend or force variants into one false canon.
+- [ ] Story Brief confirms the subject existed outside Kyunolab before drafting.
+- [ ] External evidence was checked before drafting.
+- [ ] If no external trace exists, the article was not generated.
+- [ ] Existing Story, Reported Variant, and Editorial Interpretation are separated.
+- [ ] The article does not invent new characters, events, places, objects, rituals, witnesses, causes, endings, or evidence.
+- [ ] Uncertain details are marked as uncertain.
 - [ ] Topic score is 70 or higher, or the topic was intentionally held/reworked.
 - [ ] Score breakdown was considered before drafting.
 - [ ] Search intent is clear.

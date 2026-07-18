@@ -353,7 +353,6 @@ function buildStory(plan, category, index) {
     tags: unique([...plan.tags.filter((tag) => tag !== category.title), 'Archive Pattern']).slice(0, 5),
     detail: plan.detail,
     evidence: plan.evidence,
-    generationMode: 'canonical-archive',
     researchSources: [
       {
         title: `${subject} record motif overview`,

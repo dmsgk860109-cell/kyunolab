@@ -44,7 +44,7 @@ Every article page should include these blocks unless there is a strong editoria
 ## Article Metadata
 
 ```yaml
-generationMode: [original-archive / canonical-archive]
+storyBriefStatus: [confirmed / blocked]
 title: [TITLE]
 displayTitle: [PUBLIC ARTICLE TITLE]
 seoTitle: [SEARCH-FOCUSED TITLE]
@@ -68,19 +68,31 @@ relatedKeywords:
   - [RELATED KEYWORD 1]
   - [RELATED KEYWORD 2]
   - [RELATED KEYWORD 3]
-originalResearchNotes:
-  relatedMotifsReviewed:
-    - [RELATED LEGEND / MOTIF / STORY STRUCTURE]
-  repeatedScenesObserved:
-    - [REPEATED SCENE OR STRUCTURE]
-  similarityRisks:
-    - [KNOWN LEGEND OR MOTIF THAT IS TOO CLOSE]
-  originalityChanges:
-    - [NEW PLACE / NEW SCENE / NEW DEVELOPMENT / NEW STRUCTURE]
-researchSources:
-  - title: [SOURCE TITLE]
-    url: [SOURCE URL]
-    supports: [WHAT THIS SOURCE SUPPORTS]
+storyBrief:
+  topic: [EXISTING STORY / LEGEND / MYTH / RUMOR / RECORD]
+  contentType: [myth / urban legend / folklore / internet legend / historical mystery / sighting tradition / regional variant]
+  existenceStatus: confirmed
+  circulationLevel: [global / regional / local / small-community / internet-community]
+  knownNames:
+    - [NAME 1]
+    - [NAME 2]
+  coreStoryElements:
+    - [ELEMENT 1]
+    - [ELEMENT 2]
+    - [ELEMENT 3]
+  reportedVariants:
+    - [VARIANT 1]
+  uncertainDetails:
+    - [UNCERTAIN DETAIL]
+  prohibitedInventions:
+    - [CHARACTERS / EVENTS / OBJECTS / CAUSES / ENDINGS NOT TO INVENT]
+  existenceEvidence:
+    - title: [SOURCE TITLE]
+      url: [SOURCE URL]
+      sourceType: [encyclopedia / museum / scholarly / primary text / reputable archive]
+      supports: [WHAT THIS SOURCE SUPPORTS]
+  editorialInterpretationOptions:
+    - [CAUTIOUS READING]
 sourceNotes:
   sharedVerifiedPoints:
     - [POINT SUPPORTED BY MULTIPLE SOURCES]
@@ -143,39 +155,28 @@ Editorial scoring fields are internal production fields. They may live in draft 
 
 `contentDNA` is internal production metadata. It is used to keep articles unique, avoid duplicate search intent, vary the H2 structure, and force topic-specific vocabulary into the body. It should not be printed as a reader-facing block.
 
-## Generation Mode Selection
+## Unified Content Generation Policy
 
-Use `original-archive` for newly imagined Kyunolab archive stories. This is the existing default mode and its behavior should not be changed.
+Kyunolab no longer uses separate creative or record generation modes for new archive articles.
 
-Mode aliases are optional:
+Every new article must start from an externally existing story, legend, myth, rumor, sighting tradition, local report, internet legend, historical mystery, regional variant, or cultural belief.
 
-- `창작`, `창작글`, `오리지널`, or `Original` means `original-archive`.
-- `기록`, `기록글`, `유명`, `유명글`, or `Canonical` means `canonical-archive`.
+Before drafting:
 
-If no mode alias is provided, keep the existing normal generation flow.
+- run an external existence check
+- create a Story Brief
+- confirm the topic existed outside Kyunolab
+- stop if no external trace can be found
 
-If a mode alias is provided, do not switch modes during research or drafting.
+The article body must keep these layers distinct:
 
-Original Archive Mode requires motif research before drafting:
+- Existing Story: what the outside tradition says
+- Reported Variant: how versions differ
+- Editorial Interpretation: Kyunolab's cautious reading
 
-- review related urban legends, ghost stories, folklore, myths, mysteries, internet legends, local legends, modern folklore, and similar story structures
-- identify repeated scenes, common motifs, familiar settings, and famous endings
-- do not rewrite, translate, or lightly alter an existing famous legend
-- create a new independent situation, place, central scene, development, or structure
-- if the idea is too close to a famous existing legend, change direction or use Canonical Archive Mode
+Do not invent new characters, events, locations, objects, rules, rituals, witnesses, documents, causes, endings, or evidence.
 
-Use `canonical-archive` only when the article is about an existing well-known legend, myth, folklore subject, urban legend, internet legend, supernatural tradition, or historically known mystery.
-
-Canonical Archive Mode requires source review before drafting:
-
-- consult at least 3 reliable sources
-- do not invent a new legend or merge variants into one false canon
-- describe only commonly supported facts as factual
-- explain variant traditions without pretending they are one confirmed record
-- avoid using unsourced internet rumor as the basis for the article
-
-Canonical Mode articles should include an introduction, core story, historical background or tradition, why the subject is remembered, record/fact distinction, Kyunolab viewpoint, and Story & Source Note.
-
+Full policy rules live in `CONTENT_GENERATION_POLICY.md`.
 ## SEO Fields
 
 ```yaml
