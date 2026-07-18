@@ -4,7 +4,7 @@ const path = require('path');
 const root = path.resolve(__dirname, '..');
 const storiesPath = path.join(root, 'data', 'stories.json');
 const scriptsPath = path.join(root, 'data', 'scripts.json');
-const publishedAt = '2026-07-17';
+const publishedAt = process.env.RECORD_CREATOR_LIBRARY_PUBLISHED_AT || '2026-07-17';
 
 const stories = readJson(storiesPath);
 const scripts = readJson(scriptsPath);
