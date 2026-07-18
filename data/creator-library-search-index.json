@@ -3750,5 +3750,255 @@
       "Image Prompt",
       "Thumbnail Ideas"
     ]
+  },
+  {
+    "id": "how-to-choose-between-long-form-and-short-form-scripts",
+    "slug": "how-to-choose-between-long-form-and-short-form-scripts",
+    "title": "How to Choose Between Long-form and Short-form Scripts",
+    "url": "/scripts/board/how-to-choose-between-long-form-and-short-form-scripts/",
+    "category": "Library Board",
+    "scriptType": "Library Board",
+    "summary": "A practical guide to deciding whether a Creator Library topic should become a long-form video, a short-form video, or both as separate productions.",
+    "description": "A Library Board guide to choosing long-form or short-form Creator Library materials without treating one format as a shortened version of the other.",
+    "tags": [
+      "Creator Library",
+      "Long-form",
+      "Short-form",
+      "Script Formats"
+    ],
+    "motif": "Script Formats",
+    "topics": [
+      "Library Board",
+      "Script Formats",
+      "Start with the viewing context",
+      "Choose long-form when the story needs room",
+      "Choose short-form when the core image is clear",
+      "Use both with different intentions"
+    ]
+  },
+  {
+    "id": "how-to-use-scene-workspaces-without-losing-the-story",
+    "slug": "how-to-use-scene-workspaces-without-losing-the-story",
+    "title": "How to Use Scene Workspaces Without Losing the Story",
+    "url": "/scripts/board/how-to-use-scene-workspaces-without-losing-the-story/",
+    "category": "Library Board",
+    "scriptType": "Library Board",
+    "summary": "A guide to reading each Scene as a complete production unit without losing the larger narrative thread.",
+    "description": "A Library Board guide to using Scene workspaces as production units while keeping the original mystery clear and coherent.",
+    "tags": [
+      "Creator Library",
+      "Scene Workspace",
+      "Video Production",
+      "Narrative Flow"
+    ],
+    "motif": "Scene Workflow",
+    "topics": [
+      "Library Board",
+      "Scene Workflow",
+      "Treat each Scene as a work unit",
+      "Keep the Scene Role visible",
+      "Move through the fields in order",
+      "Check the transition before moving on"
+    ]
+  },
+  {
+    "id": "how-creator-toolkit-fits-into-the-production-flow",
+    "slug": "how-creator-toolkit-fits-into-the-production-flow",
+    "title": "How Creator Toolkit Fits Into the Production Flow",
+    "url": "/scripts/board/how-creator-toolkit-fits-into-the-production-flow/",
+    "category": "Library Board",
+    "scriptType": "Library Board",
+    "summary": "A guide to understanding Creator Toolkit as the preparation area before building video Scenes.",
+    "description": "A Library Board guide to using Creator Toolkit as preparation before working through Long-form or Short-form Scenes.",
+    "tags": [
+      "Creator Toolkit",
+      "Production Flow",
+      "Prepare",
+      "Creator Library"
+    ],
+    "motif": "Creator Toolkit",
+    "topics": [
+      "Library Board",
+      "Creator Toolkit",
+      "Prepare before you create",
+      "Examples are not requirements",
+      "The Scenes provide the real material",
+      "Use Toolkit as a final readiness check"
+    ]
+  },
+  {
+    "id": "why-story-summary-comes-before-production-assets",
+    "slug": "why-story-summary-comes-before-production-assets",
+    "title": "Why Story Summary Comes Before Production Assets",
+    "url": "/scripts/board/why-story-summary-comes-before-production-assets/",
+    "category": "Library Board",
+    "scriptType": "Library Board",
+    "summary": "A guide to the Story area and why production should begin with understanding the record.",
+    "description": "A Library Board guide explaining why every Creator Library page begins with the story before moving into production materials.",
+    "tags": [
+      "Story Summary",
+      "Story Information",
+      "Production Assets",
+      "Creator Library"
+    ],
+    "motif": "Story Area",
+    "topics": [
+      "Library Board",
+      "Story Area",
+      "Production starts with understanding",
+      "Story Information sets the production frame",
+      "Shared context prevents repetition",
+      "Assets come after the record is clear"
+    ]
+  },
+  {
+    "id": "how-to-read-scene-focus-before-writing-visual-prompts",
+    "slug": "how-to-read-scene-focus-before-writing-visual-prompts",
+    "title": "How to Read Scene Focus Before Writing Visual Prompts",
+    "url": "/scripts/board/how-to-read-scene-focus-before-writing-visual-prompts/",
+    "category": "Library Board",
+    "scriptType": "Library Board",
+    "summary": "A guide to understanding Scene Focus as the production intention behind the Image Prompt.",
+    "description": "A Library Board guide to using Scene Focus as the director's intent before copying or adapting an Image Prompt.",
+    "tags": [
+      "Scene Focus",
+      "Image Prompt",
+      "Visual Direction",
+      "Creator Library"
+    ],
+    "motif": "Visual Planning",
+    "topics": [
+      "Library Board",
+      "Visual Planning",
+      "Scene Focus is the intention",
+      "Image Prompts translate that intention",
+      "Use Focus to reject the wrong image",
+      "Keep the visual choice specific"
+    ]
+  },
+  {
+    "id": "how-background-music-keywords-shape-a-mystery-video",
+    "slug": "how-background-music-keywords-shape-a-mystery-video",
+    "title": "How Background Music Keywords Shape a Mystery Video",
+    "url": "/scripts/board/how-background-music-keywords-shape-a-mystery-video/",
+    "category": "Library Board",
+    "scriptType": "Library Board",
+    "summary": "A guide to using background music keywords to support narration without overwhelming the story.",
+    "description": "A Library Board guide to reading background music keywords as mood direction rather than track recommendations.",
+    "tags": [
+      "Background Music",
+      "Music Keywords",
+      "Mood",
+      "Creator Library"
+    ],
+    "motif": "Background Music",
+    "topics": [
+      "Library Board",
+      "Background Music",
+      "Music should support the voice",
+      "Keywords describe the mood",
+      "Match the Scene, not the whole video",
+      "Avoid overstating the mystery"
+    ]
+  },
+  {
+    "id": "how-advanced-production-notes-should-stay-optional",
+    "slug": "how-advanced-production-notes-should-stay-optional",
+    "title": "How Advanced Production Notes Should Stay Optional",
+    "url": "/scripts/board/how-advanced-production-notes-should-stay-optional/",
+    "category": "Library Board",
+    "scriptType": "Library Board",
+    "summary": "A guide to treating advanced production information as optional support after the basic Scene is complete.",
+    "description": "A Library Board guide to using Advanced Production notes without letting them interrupt the basic Scene workflow.",
+    "tags": [
+      "Advanced Production",
+      "Motion Prompt",
+      "Sound Effects",
+      "Creator Library"
+    ],
+    "motif": "Advanced Production",
+    "topics": [
+      "Library Board",
+      "Advanced Production",
+      "Basic production must work first",
+      "Folded notes protect the workflow",
+      "Motion and sound are not always needed",
+      "Advanced does not mean complicated"
+    ]
+  },
+  {
+    "id": "how-creator-library-categories-organize-script-packages",
+    "slug": "how-creator-library-categories-organize-script-packages",
+    "title": "How Creator Library Categories Organize Script Packages",
+    "url": "/scripts/board/how-creator-library-categories-organize-script-packages/",
+    "category": "Library Board",
+    "scriptType": "Library Board",
+    "summary": "A guide to reading Creator Library categories as script-package shelves for video production.",
+    "description": "A Library Board guide to understanding Creator Library categories as production shelves rather than archive categories.",
+    "tags": [
+      "Creator Library",
+      "Categories",
+      "Script Packages",
+      "Library Board"
+    ],
+    "motif": "Library Categories",
+    "topics": [
+      "Library Board",
+      "Library Categories",
+      "Categories act like production shelves",
+      "Category does not change the template",
+      "The category sets expectations",
+      "Archive and Library stay separate"
+    ]
+  },
+  {
+    "id": "how-original-archive-records-and-creator-scripts-stay-separate",
+    "slug": "how-original-archive-records-and-creator-scripts-stay-separate",
+    "title": "How Original Archive Records and Creator Scripts Stay Separate",
+    "url": "/scripts/board/how-original-archive-records-and-creator-scripts-stay-separate/",
+    "category": "Library Board",
+    "scriptType": "Library Board",
+    "summary": "A guide to the boundary between reading records and creator-facing production materials.",
+    "description": "A Library Board guide explaining the boundary between Kyunolab Archive records and Creator Library production pages.",
+    "tags": [
+      "Archive Records",
+      "Creator Scripts",
+      "Source Boundaries",
+      "Creator Library"
+    ],
+    "motif": "Archive Connection",
+    "topics": [
+      "Library Board",
+      "Archive Connection",
+      "Archive is for reading",
+      "Creator Library is for making",
+      "Connections should be clear, not blended",
+      "The boundary protects trust"
+    ]
+  },
+  {
+    "id": "how-to-build-a-complete-video-from-one-script-page",
+    "slug": "how-to-build-a-complete-video-from-one-script-page",
+    "title": "How to Build a Complete Video From One Script Page",
+    "url": "/scripts/board/how-to-build-a-complete-video-from-one-script-page/",
+    "category": "Library Board",
+    "scriptType": "Library Board",
+    "summary": "A guide to using one Creator Library script page as a complete path from story understanding to finished video.",
+    "description": "A Library Board guide to following one Creator Library page from Story through Finish to complete a mystery video.",
+    "tags": [
+      "Production Workflow",
+      "Video Creation",
+      "Creator Library",
+      "Script Page"
+    ],
+    "motif": "Production Flow",
+    "topics": [
+      "Library Board",
+      "Production Flow",
+      "Begin with Story",
+      "Prepare the basic assets",
+      "Create Scene by Scene",
+      "Finish with the reference area"
+    ]
   }
 ]

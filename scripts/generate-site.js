@@ -13,6 +13,7 @@ const stories = readJson(path.join(root, 'data', 'stories.json'));
 const categories = readJson(path.join(root, 'data', 'categories.json'));
 const guides = readOptionalJson(path.join(root, 'data', 'guides.json'));
 const creatorScripts = readOptionalJson(path.join(root, 'data', 'scripts.json'));
+const libraryBoardPosts = readOptionalJson(path.join(root, 'data', 'library-board.json'));
 const siteConfig = readOptionalJson(path.join(root, 'data', 'site.json'), {});
 const creatorLibraryCategories = buildCreatorLibraryCategories(creatorScripts);
 
@@ -51,7 +52,7 @@ generateRss();
 generateSitemap();
 generateRoutingFiles();
 
-console.log(`Generated site index pages for ${stories.length} stories, ${categories.length} categories, ${guides.length} guides, and ${creatorScripts.length} scripts.`);
+console.log(`Generated site index pages for ${stories.length} stories, ${categories.length} categories, ${guides.length} guides, ${creatorScripts.length} scripts, and ${libraryBoardPosts.length} library board posts.`);
 
 function generateHomePage() {
   const featuredStory = getConfiguredStory(siteConfig.featuredStoryId) || stories[0];
@@ -467,6 +468,7 @@ function renderPublishingCenterStyles() {
 
 function generateScriptsPages() {
   const scripts = sortNewest(creatorScripts);
+  const boardPosts = sortNewest(libraryBoardPosts);
   writeFile('scripts/index.html', renderScriptsHomePage(scripts));
   generateScriptListingPages({
     basePath: 'scripts/latest',
@@ -480,8 +482,11 @@ function generateScriptsPages() {
   });
   writeFile('scripts/categories/index.html', renderScriptCategoriesPage(scripts));
   generateScriptCategoryPages(scripts);
-  writeFile('scripts/board/index.html', renderScriptBoardPage(scripts));
+  writeFile('scripts/board/index.html', renderScriptBoardPage(scripts, boardPosts));
   writeFile('scripts/resources/index.html', renderScriptResourcesPage(scripts));
+  for (const post of boardPosts) {
+    writeFile(`scripts/board/${post.slug}/index.html`, renderLibraryBoardPostPage(post, boardPosts));
+  }
   for (const script of scripts) {
     writeFile(`scripts/${script.slug}.html`, renderScriptDetailPage(script));
   }
@@ -773,7 +778,7 @@ function renderScriptCategoryPage({ category, scripts, relatedScripts, pageScrip
   });
 }
 
-function renderScriptBoardPage(scripts) {
+function renderScriptBoardPage(scripts, boardPosts = []) {
   return renderPage({
     canonicalPath: '/scripts/board/',
     title: 'Library Board | Guides to the Kyunolab Creator Library',
@@ -808,6 +813,11 @@ function renderScriptBoardPage(scripts) {
       <section class="notice">
         <strong>Board status:</strong> Individual script packages remain in the Creator Library. Library Board pages explain the library structure and point visitors toward featured scripts, latest scripts, categories, resources, and original archive records.
       </section>
+
+      <section class="scripts-section">
+        <div class="section-head"><h2>Latest Library Board Guides</h2><span>${escapeHtml(`${boardPosts.length} guide${boardPosts.length === 1 ? '' : 's'}`)}</span></div>
+        ${boardPosts.length ? `<div class="script-list">${boardPosts.map(renderLibraryBoardPostRow).join('\n')}</div>` : `<div class="notice"><strong>No Library Board guides yet:</strong> This board is ready for future Creator Library guidance.</div>`}
+      </section>
     </div>
 
     <aside class="article-rail article-rail-right" aria-label="Recommended creator resources">
@@ -816,6 +826,91 @@ function renderScriptBoardPage(scripts) {
       <div class="rail-card">
         <p class="rail-label">Creator paths</p>
         <a href="/scripts/">Free Mystery YouTube Scripts</a>
+        <a href="/scripts/categories/">Script Categories</a>
+        <a href="/scripts/resources/">Creator Resources</a>
+      </div>
+    </aside>
+  </main>`
+  });
+}
+
+function renderLibraryBoardPostRow(post) {
+  const url = `/scripts/board/${escapeAttr(post.slug)}/`;
+  return `<article class="script-row">
+        <div><span class="tag">${escapeHtml(post.tag || post.category || 'Library Board')}</span><h3><a href="${url}">${escapeHtml(post.title)}</a></h3></div>
+        <p>${escapeHtml(post.excerpt || post.deck || '')}</p>
+        <div class="meta">${escapeHtml([post.readTime, `Updated ${formatDate(post.updatedAt || post.publishedAt)}`].filter(Boolean).join(' - '))}</div>
+      </article>`;
+}
+
+function renderLibraryBoardPostPage(post, boardPosts = []) {
+  const canonicalPath = `/scripts/board/${post.slug}/`;
+  const sections = post.sections || [];
+  const nextPost = boardPosts.find((item) => item.slug !== post.slug) || post;
+  const mapItems = sections.map((section) => `<li><a href="#${escapeAttr(section.id)}">${escapeHtml(section.title)}</a></li>`).join('');
+  const body = sections.map((section) => `<h2 id="${escapeAttr(section.id)}">${escapeHtml(section.title)}</h2>
+${(section.paragraphs || []).map((text) => `<p>${escapeHtml(text)}</p>`).join('\n')}`).join('\n\n');
+
+  return renderPage({
+    canonicalPath,
+    title: post.metaTitle || post.title,
+    description: post.metaDescription || post.excerpt || post.deck,
+    metaDescription: post.metaDescription || post.excerpt || post.deck,
+    networkSection: 'scripts',
+    content: `  <main class="article-shell article-layout">
+    <aside class="article-rail article-rail-left" aria-label="Library Board navigation">
+      <div class="rail-card">
+        <p class="rail-label">In this guide</p>
+        ${sections.map((section) => `<a href="#${escapeAttr(section.id)}">${escapeHtml(section.nav || section.title)}</a>`).join('')}
+      </div>
+      <div class="rail-card rail-card-subtle">
+        <p class="rail-label">Creator paths</p>
+        <a href="/scripts/">Creator Library</a>
+        <a href="/scripts/categories/">Script Categories</a>
+        <a href="/scripts/resources/">Creator Resources</a>
+      </div>
+    </aside>
+
+    <article>
+      <header class="archive-article-header">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/scripts/">Creator Library</a><span aria-hidden="true">/</span><a href="/scripts/board/">Library Board</a><span aria-hidden="true">/</span><span aria-current="page">${escapeHtml(post.title)}</span></nav>
+        <p class="label">Library Board</p>
+        <h1 class="article-title">${escapeHtml(post.title)}</h1>
+        <p class="deck">${escapeHtml(post.deck || post.excerpt || '')}</p>
+        <dl class="article-meta-grid">
+          <div><dt>Topic</dt><dd>${escapeHtml(post.tag || 'Creator Library')}</dd></div>
+          <div><dt>Best for</dt><dd>Creators using Kyunolab script packages</dd></div>
+          <div><dt>Read time</dt><dd>${escapeHtml(post.readTime || '3 min read')}</dd></div>
+          <div><dt>Updated</dt><dd>${formatDate(post.updatedAt || post.publishedAt)}</dd></div>
+        </dl>
+      </header>
+
+      <section class="story-map" aria-label="Guide map">
+        <h2>Guide Map</h2>
+        <ol>${mapItems}</ol>
+      </section>
+
+      <div class="story-body archive-entry">
+${body}
+
+        <h2>Library Board Note</h2>
+        <p>Library Board guides explain how the Creator Library works. Individual production materials remain inside Creator Library script pages.</p>
+      </div>
+    </article>
+
+    <aside class="article-rail article-rail-right" aria-label="Related creator resources">
+      ${renderKyunolabNetworkCard('scripts')}
+      <div class="rail-card rail-feature">
+        <p class="rail-label">Read next</p>
+        <a href="/scripts/board/${escapeAttr(nextPost.slug)}/"><span>${escapeHtml(nextPost.tag || nextPost.category || 'Library Board')}</span><strong>${escapeHtml(nextPost.title)}</strong></a>
+      </div>
+      <div class="rail-card">
+        <p class="rail-label">Library Board</p>
+        ${boardPosts.slice(0, 4).map((item) => `<a href="/scripts/board/${escapeAttr(item.slug)}/">${escapeHtml(item.title)}</a>`).join('')}
+      </div>
+      <div class="rail-card rail-card-subtle">
+        <p class="rail-label">Creator paths</p>
+        <a href="/scripts/latest/">Latest Scripts</a>
         <a href="/scripts/categories/">Script Categories</a>
         <a href="/scripts/resources/">Creator Resources</a>
       </div>
@@ -1058,7 +1153,23 @@ function generateSearchIndexes() {
       script.imagePromptsIncluded ? 'Image Prompt' : '',
       script.thumbnailIdeasIncluded ? 'Thumbnail Ideas' : ''
     ].filter(Boolean)
-  }));
+  })).concat(libraryBoardPosts.map((post) => ({
+    id: post.id || post.slug,
+    slug: post.slug,
+    title: post.title,
+    url: `/scripts/board/${post.slug}/`,
+    category: post.category || 'Library Board',
+    scriptType: 'Library Board',
+    summary: post.excerpt || post.deck || post.metaDescription || '',
+    description: post.metaDescription || post.excerpt || post.deck || '',
+    tags: post.tags || [post.tag].filter(Boolean),
+    motif: post.tag || 'Creator Library guide',
+    topics: [
+      post.category,
+      post.tag,
+      ...(post.sections || []).map((section) => section.title)
+    ].filter(Boolean)
+  })));
 
   writeFile('data/archive-search-index.json', `${JSON.stringify(archiveIndex, null, 2)}\n`);
   writeFile('data/creator-library-search-index.json', `${JSON.stringify(creatorIndex, null, 2)}\n`);
@@ -2026,6 +2137,10 @@ function generateSitemap() {
 
   for (const guide of guides) {
     urls.push({ loc: `${siteUrl}${guide.url || `/mystery-board/${guide.slug}`}`, lastmod: guide.updatedAt || guide.publishedAt || latest });
+  }
+
+  for (const post of libraryBoardPosts) {
+    urls.push({ loc: `${siteUrl}/scripts/board/${post.slug}/`, lastmod: post.updatedAt || post.publishedAt || latest });
   }
 
   for (const script of creatorScripts) {
