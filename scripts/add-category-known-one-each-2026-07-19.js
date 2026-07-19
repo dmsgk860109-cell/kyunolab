@@ -1241,6 +1241,617 @@ const topics = [
     ],
     related: ['black-cat-superstition-origin', 'friday-the-13th-origin', 'jack-o-lantern-stingy-jack-origin'],
     sourceNote: 'This article follows horseshoe luck as a layered superstition origin. Regional hanging customs and origin stories are treated as variants rather than one fixed rule.'
+  }),
+  topic({
+    categorySlug: 'urban-legends',
+    slug: 'resurrection-mary-legend',
+    title: 'Resurrection Mary Legend: The Chicago Hitchhiker Who Keeps Returning to the Road',
+    subject: 'Resurrection Mary',
+    tag: 'Vanishing Hitchhiker',
+    tags: ['Vanishing Hitchhiker', 'Chicago Ghost Story', 'Roadside Legend', 'Cemetery Folklore'],
+    keyword: 'Resurrection Mary legend',
+    detail: 'the Chicago-area vanishing hitchhiker story tied to Archer Avenue, a dance hall, and Resurrection Cemetery',
+    sourceBasis: 'urban legend scholarship, local ghost lore, Chicago-area retellings, cemetery tradition, and vanishing-hitchhiker motifs',
+    evidence: 'folklore summaries, local history discussions, recurring witness-style retellings, and motif comparisons',
+    vocabulary: ['Resurrection Mary', 'Archer Avenue', 'Resurrection Cemetery', 'vanishing hitchhiker', 'Chicago'],
+    sources: [
+      source('Chicago Reader - Resurrection Mary', 'https://chicagoreader.com/', 'Supports public discussion of the Chicago legend and its local setting.'),
+      source('Snopes - Resurrection Mary', 'https://www.snopes.com/fact-check/resurrection-mary/', 'Supports the legend summary and common vanishing-hitchhiker pattern.')
+    ],
+    quickAnswer: [
+      'Resurrection Mary is a Chicago-area ghost legend about a young woman who appears near Archer Avenue, accepts or requests a ride, and vanishes near Resurrection Cemetery.',
+      'The story matters because it gives the widespread vanishing-hitchhiker motif a specific local identity. A familiar legend becomes memorable through road names, a cemetery, and repeated retellings.'
+    ],
+    intro: [
+      'Some ghost stories travel with no address.',
+      'Resurrection Mary has one.'
+    ],
+    core: [
+      'The usual story places a young woman on or near Archer Avenue after a dance. She appears ordinary enough to be offered a ride.',
+      'Then the ride ends near Resurrection Cemetery, and the passenger disappears.'
+    ],
+    context: [
+      'The legend belongs to the wider vanishing-hitchhiker family, but its Chicago setting gives it a stronger local shape.',
+      'The cemetery, the road, and the image of a girl returning from a dance make the story feel less abstract than many ghost legends.'
+    ],
+    variants: [
+      'Some versions focus on a driver who meets her at a ballroom. Others begin with a figure walking alone along the roadside.',
+      'Details about her clothing, the exact route, and the moment of disappearance change across retellings.'
+    ],
+    record: [
+      'The record can support Resurrection Mary as a well-known Chicago urban legend. It cannot verify a single original encounter as historical fact.',
+      'A careful account keeps the local place tradition separate from later claims that try to name one final witness or one fixed origin.'
+    ],
+    meaning: [
+      'Resurrection Mary works because the road feels unfinished. A person is picked up, but the story never reaches a normal destination.',
+      'That unfinished movement is why she keeps returning to the same route in memory.'
+    ],
+    related: ['vanishing-hitchhiker-urban-legend', 'woman-in-white-legend', 'bloody-mary-urban-legend'],
+    sourceNote: 'This article treats Resurrection Mary as a Chicago urban legend and a localized vanishing-hitchhiker variant. Place names are presented as part of the tradition, not proof of a verified haunting.'
+  }),
+  topic({
+    categorySlug: 'internet-folklore',
+    slug: 'the-rake-creepypasta',
+    title: 'The Rake Creepypasta: How a Pale Figure Became Internet Folklore',
+    subject: 'The Rake',
+    tag: 'Creepypasta Creature',
+    tags: ['Creepypasta Creature', 'Internet Horror', 'Forum Folklore', 'Digital Legend'],
+    keyword: 'The Rake creepypasta',
+    detail: 'the internet horror figure described as a pale humanoid creature that appears in bedrooms, woods, and fragmented online accounts',
+    sourceBasis: 'creepypasta history, forum-era horror writing, meme documentation, digital folklore, and repeated online retellings',
+    evidence: 'internet folklore references, archive-style summaries, reposted stories, image culture, and motif analysis',
+    vocabulary: ['The Rake', 'creepypasta', 'humanoid creature', 'forum horror', 'digital folklore'],
+    sources: [
+      source('Know Your Meme - The Rake', 'https://knowyourmeme.com/memes/the-rake', 'Supports the digital spread and meme-history summary of The Rake.'),
+      source('Creepypasta Wiki - The Rake', 'https://creepypasta.fandom.com/wiki/The_Rake', 'Supports the common story form and later internet-horror framing.')
+    ],
+    quickAnswer: [
+      'The Rake is an internet horror figure usually described as a pale, unnatural humanoid creature. It spread through creepypasta-style posts, retellings, images, and fragmented witness-like accounts.',
+      'The figure matters because it shows how online communities can build folklore from uncertainty. The story feels archived, but the archive itself is part of the fiction.'
+    ],
+    intro: [
+      'The Rake does not begin with one clean legend.',
+      'It begins with fragments.'
+    ],
+    core: [
+      'The creature is usually described as thin, pale, and disturbingly human without being fully human. It appears in homes, dark rooms, or wooded spaces.',
+      'The effect depends on vagueness. The less complete the description feels, the easier it is for readers to imagine the missing parts.'
+    ],
+    context: [
+      'Creepypasta often imitates found records, recovered documents, and scattered testimony. The Rake uses that style to make fiction feel like something assembled from damaged evidence.',
+      'That makes the creature less like a monster from a single tale and more like a file that keeps being copied.'
+    ],
+    variants: [
+      'Some versions make The Rake a bedroom intruder. Others connect it to older reports, forest sightings, or hidden documents.',
+      'Images and fan versions also changed the creature, giving it a more fixed visual identity than the early text alone required.'
+    ],
+    record: [
+      'The record can support The Rake as an internet-born horror legend. It cannot support the creature as a documented real-world being.',
+      'A source-aware account treats the fake-document style as part of the folklore rather than a historical source trail.'
+    ],
+    meaning: [
+      'The Rake is powerful because it turns the internet itself into a haunted archive. A reader does not simply hear the story; they encounter traces of it.',
+      'That is why the legend survived. It made a creature feel searchable.'
+    ],
+    related: ['backrooms-internet-folklore', 'smile-dog-creepypasta', 'cicada-3301-internet-puzzle'],
+    sourceNote: 'This article treats The Rake as internet folklore and creepypasta. Archive-like claims inside the story are read as narrative devices unless independently documented.'
+  }),
+  topic({
+    categorySlug: 'strange-places',
+    slug: 'eastern-state-penitentiary-haunting',
+    title: 'Eastern State Penitentiary Haunting: Why an Abandoned Prison Became a Strange Place',
+    subject: 'Eastern State Penitentiary',
+    tag: 'Haunted Prison',
+    tags: ['Haunted Prison', 'Philadelphia', 'Abandoned Place', 'Strange Place'],
+    keyword: 'Eastern State Penitentiary haunting',
+    detail: 'the haunting reputation around the former Philadelphia prison known for solitary confinement, radial architecture, and later ghost stories',
+    sourceBasis: 'site history, prison architecture, public haunting reputation, preservation context, and visitor folklore',
+    evidence: 'historic-site materials, public history summaries, haunting retellings, architecture descriptions, and tourism-era reputation',
+    vocabulary: ['Eastern State Penitentiary', 'Philadelphia', 'solitary confinement', 'radial prison', 'haunting'],
+    sources: [
+      source('Eastern State Penitentiary Historic Site', 'https://www.easternstate.org/', 'Supports the site history, architecture, and preservation context.'),
+      source('Smithsonian Magazine - Eastern State Penitentiary', 'https://www.smithsonianmag.com/', 'Supports public history discussion of the prison and its cultural reputation.')
+    ],
+    quickAnswer: [
+      'Eastern State Penitentiary is a former prison in Philadelphia whose architecture, solitary-confinement history, and abandoned appearance helped create a strong haunting reputation.',
+      'The place matters because its strangeness begins before any ghost story is added. The building itself teaches visitors to expect silence, isolation, and memory.'
+    ],
+    intro: [
+      'Some haunted places need a legend before they feel strange.',
+      'Eastern State Penitentiary does not.'
+    ],
+    core: [
+      'The prison was designed around separation, surveillance, and controlled movement. Long corridors radiate from a central point, turning architecture into discipline.',
+      'When the prison later decayed, those same features became part of its haunted image.'
+    ],
+    context: [
+      'Stories of shadows, footsteps, and figures in cells fit naturally into a place already associated with confinement.',
+      'The haunting reputation is inseparable from the physical setting: empty blocks, peeling walls, barred doors, and long sightlines.'
+    ],
+    variants: [
+      'Some accounts focus on individual cellblocks. Others describe general sensations of being watched or hearing unexplained movement.',
+      'Public versions often blend documented prison history with visitor experience and Halloween-era ghost storytelling.'
+    ],
+    record: [
+      'The record can support the prison as a real historic site with a major haunted reputation. It cannot verify every ghost report as an event.',
+      'A careful article keeps the architecture, institutional history, and supernatural claims in distinct layers.'
+    ],
+    meaning: [
+      'Eastern State Penitentiary became legendary because the building already carries emotional weight.',
+      'The ghost stories give that weight a voice, but the walls provide the silence first.'
+    ],
+    related: ['island-of-the-dolls-xochimilco', 'winchester-mystery-house', 'hoia-baciu-forest-legend'],
+    sourceNote: 'This article follows Eastern State Penitentiary as a real historic place with a later haunting reputation. Ghost reports are presented as folklore and visitor tradition.'
+  }),
+  topic({
+    categorySlug: 'unexplained-mysteries',
+    slug: 'amber-room-mystery',
+    title: 'Amber Room Mystery: The Lost Treasure That Still Refuses a Final Ending',
+    subject: 'The Amber Room',
+    tag: 'Lost Treasure Mystery',
+    tags: ['Lost Treasure Mystery', 'World War II', 'Missing Artwork', 'Unresolved Case'],
+    keyword: 'Amber Room mystery',
+    detail: 'the disappearance of the Amber Room during World War II and the search theories that followed',
+    sourceBasis: 'art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation',
+    evidence: 'museum history, historical summaries, wartime-looting accounts, reconstruction records, and disputed discovery claims',
+    vocabulary: ['Amber Room', 'World War II', 'Königsberg', 'Tsarskoye Selo', 'lost treasure'],
+    sources: [
+      source('Smithsonian Magazine - Amber Room', 'https://www.smithsonianmag.com/history/a-brief-history-of-the-amber-room-160940121/', 'Supports the history, disappearance, and modern reconstruction context.'),
+      source('Encyclopaedia Britannica - Amber Room', 'https://www.britannica.com/topic/Amber-Room', 'Supports the basic description and historical background of the Amber Room.')
+    ],
+    quickAnswer: [
+      'The Amber Room was an ornate chamber of amber panels and gold decoration that disappeared during World War II. A reconstruction exists, but the fate of the original remains disputed.',
+      'The mystery matters because it joins real art history with the emotional shape of a lost treasure hunt. The missing room is both a stolen object and an unfinished story.'
+    ],
+    intro: [
+      'The Amber Room was not a small object that slipped from a record.',
+      'It was an entire room.'
+    ],
+    core: [
+      'The chamber was famous for amber panels, mirrors, and rich decoration. During the war, it was removed and later vanished from clear documentation.',
+      'That disappearance created one of the best-known lost-art mysteries of the twentieth century.'
+    ],
+    context: [
+      'The story sits inside the larger history of wartime looting and cultural loss. It also sits inside a very human hope that something beautiful might still be hidden somewhere.',
+      'The reconstructed Amber Room gives visitors an image of what was lost, but it does not solve the fate of the original.'
+    ],
+    variants: [
+      'Theories have placed the missing panels in mines, tunnels, ships, bunkers, and private hands.',
+      'Some searches produced intriguing claims, but none have become a settled recovery of the original room.'
+    ],
+    record: [
+      'The record can support the Amber Room as a real lost artwork with a documented wartime disappearance. It cannot confirm most treasure-hunt claims without strong evidence.',
+      'A careful account separates the known movement of the room from later speculation.'
+    ],
+    meaning: [
+      'The Amber Room mystery lasts because loss has a shape here. People can picture the room, but they cannot enter the original.',
+      'That makes the mystery feel visible and absent at the same time.'
+    ],
+    related: ['db-cooper-hijacking-mystery', 'mary-celeste-mystery', 'voynich-manuscript-mystery'],
+    sourceNote: 'This article follows the Amber Room as a documented lost-art mystery. Search claims and recovery theories are treated as disputed unless supported by strong evidence.'
+  }),
+  topic({
+    categorySlug: 'classic-folklore',
+    slug: 'tomte-nisse-folklore',
+    title: 'Tomte and Nisse Folklore: The Small Household Guardian With a Sharp Temper',
+    subject: 'Tomte and Nisse',
+    tag: 'Household Spirit',
+    tags: ['Household Spirit', 'Nordic Folklore', 'Farm Guardian', 'Winter Tradition'],
+    keyword: 'tomte nisse folklore',
+    detail: 'the Nordic household or farm spirit known as a tomte or nisse, often helpful when respected and troublesome when offended',
+    sourceBasis: 'Nordic folklore summaries, household-spirit tradition, farm customs, winter imagery, and later Christmas associations',
+    evidence: 'folklore references, regional tradition summaries, seasonal retellings, and motif comparisons',
+    vocabulary: ['tomte', 'nisse', 'household spirit', 'farm guardian', 'Nordic folklore'],
+    sources: [
+      source('Encyclopaedia Britannica - Tomte', 'https://www.britannica.com/topic/tomte', 'Supports the basic definition and Nordic folklore context.'),
+      source('The Swedish Institute - Swedish Christmas Traditions', 'https://sweden.se/culture/celebrations/christmas', 'Supports the later cultural association with Swedish winter and Christmas tradition.')
+    ],
+    quickAnswer: [
+      'The tomte or nisse is a Nordic household spirit often linked with farms, barns, and family protection. It may help when treated well, but punish disrespect or neglect.',
+      'The figure matters because it makes household order feel personal. Luck around the farm depends on a small unseen presence that notices how people behave.'
+    ],
+    intro: [
+      'The tomte is easy to make cute in modern images.',
+      'Older folklore is less simple.'
+    ],
+    core: [
+      'In many Nordic traditions, the tomte or nisse watches over a household or farm. The spirit may guard animals, buildings, and family fortune.',
+      'But respect matters. A neglected or insulted tomte can turn from helper to troublemaker.'
+    ],
+    context: [
+      'Household spirits often explain why daily routines feel charged with luck. A clean stable, a bowl of food, or a respectful habit becomes part of a relationship with the unseen.',
+      'That makes the tomte a figure of both comfort and warning.'
+    ],
+    variants: [
+      'Regional versions differ in name, appearance, and behavior. Some are closer to farm guardians, while later seasonal versions move toward Christmas imagery.',
+      'Modern portrayals often soften the figure, but older stories keep its temper and authority.'
+    ],
+    record: [
+      'The record can support tomte and nisse folklore as Nordic household-spirit tradition. It cannot reduce the figure to one fixed modern Christmas character.',
+      'A source-aware article keeps farm folklore, household custom, and later holiday imagery separate.'
+    ],
+    meaning: [
+      'The tomte matters because it turns ordinary care into folklore. The house is not just maintained; it is watched.',
+      'That idea gives small daily actions a supernatural consequence.'
+    ],
+    related: ['brownie-house-spirit-folklore', 'baba-yaga-folklore', 'selkie-folklore'],
+    sourceNote: 'This article follows tomte and nisse traditions as Nordic household folklore. Later Christmas imagery is treated as a development rather than the whole tradition.'
+  }),
+  topic({
+    categorySlug: 'modern-legends',
+    slug: 'dover-demon-legend',
+    title: 'Dover Demon Legend: The Brief Massachusetts Sightings That Became a Modern Monster',
+    subject: 'The Dover Demon',
+    tag: 'Modern Monster Legend',
+    tags: ['Modern Monster Legend', 'Massachusetts Folklore', 'Cryptid Report', 'Local Legend'],
+    keyword: 'Dover Demon legend',
+    detail: 'the 1977 Massachusetts reports of a strange small humanoid figure later known as the Dover Demon',
+    sourceBasis: 'local sighting history, modern monster folklore, cryptid reporting, witness summaries, and later retellings',
+    evidence: 'reported sighting summaries, local legend accounts, cryptid folklore references, and recurring visual descriptions',
+    vocabulary: ['Dover Demon', 'Dover Massachusetts', '1977 sightings', 'cryptid', 'modern legend'],
+    sources: [
+      source('New England Historical Society - Dover Demon', 'https://www.newenglandhistoricalsociety.com/', 'Supports regional retelling and local folklore context.'),
+      source('Cryptid Wiki - Dover Demon', 'https://cryptidz.fandom.com/wiki/Dover_Demon', 'Supports common descriptions and later cryptid-culture reception.')
+    ],
+    quickAnswer: [
+      'The Dover Demon is a modern monster legend based on reports from Dover, Massachusetts, in 1977. Witnesses described a small, strange humanoid figure with an unusual head and glowing eyes.',
+      'The legend matters because it is brief but visually strong. A few reports created a creature that still feels unfinished, which helps the mystery survive.'
+    ],
+    intro: [
+      'Some monster legends grow through many sightings.',
+      'The Dover Demon grew from very few.'
+    ],
+    core: [
+      'The basic story begins with several young witnesses who reported seeing a strange figure near Dover, Massachusetts. The descriptions were unusual enough to stand apart from common animal explanations.',
+      'The creature was later named the Dover Demon.'
+    ],
+    context: [
+      'Modern monster legends often depend on a sharp image. The Dover Demon has one: a small body, an oversized head, long limbs, and eyes that seem too bright for the dark.',
+      'That image gives the case its staying power.'
+    ],
+    variants: [
+      'Retellings differ in how they explain the figure. Some treat it as a cryptid, others as misidentification, and others as a local mystery without a final answer.',
+      'The short time span of the sightings makes the legend feel concentrated rather than sprawling.'
+    ],
+    record: [
+      'The record can support the Dover Demon as a modern legend based on reported 1977 sightings. It cannot confirm the creature as a biological unknown.',
+      'A careful article preserves the witness-report frame while separating it from later monster-culture embellishment.'
+    ],
+    meaning: [
+      'The Dover Demon endures because it leaves almost everything unresolved.',
+      'The story gives people just enough shape to remember, and not enough certainty to close the case.'
+    ],
+    related: ['mothman-point-pleasant-legend', 'flatwoods-monster-legend', 'jersey-devil-legend'],
+    sourceNote: 'This article treats the Dover Demon as a modern local legend and cryptid report tradition. Creature explanations remain disputed.'
+  }),
+  topic({
+    categorySlug: 'myths',
+    slug: 'persephone-underworld-myth',
+    title: 'Persephone and the Underworld: The Greek Myth Behind Loss, Return, and the Seasons',
+    subject: 'Persephone and the Underworld',
+    tag: 'Greek Myth',
+    tags: ['Greek Myth', 'Underworld', 'Seasonal Myth', 'Demeter'],
+    keyword: 'Persephone underworld myth',
+    detail: 'the Greek myth in which Persephone is taken to the underworld, Demeter grieves, and the cycle of return becomes tied to the seasons',
+    sourceBasis: 'Greek myth summaries, classical tradition, Demeter and Persephone cult context, seasonal interpretation, and underworld motifs',
+    evidence: 'classical reference summaries, mythological dictionaries, ancient-source discussions, and recurring narrative motifs',
+    vocabulary: ['Persephone', 'Demeter', 'Hades', 'underworld', 'seasons'],
+    sources: [
+      source('Theoi - Persephone', 'https://www.theoi.com/Khthonios/Persephone.html', 'Supports classical-source summaries and mythological context.'),
+      source('Encyclopaedia Britannica - Persephone', 'https://www.britannica.com/topic/Persephone-Greek-goddess', 'Supports the basic myth and seasonal interpretation.')
+    ],
+    quickAnswer: [
+      'The Persephone myth tells how Persephone is taken to the underworld, how Demeter grieves, and how Persephone returns for part of the year. The cycle is often connected with seasonal change.',
+      'The myth matters because it turns loss and return into cosmic rhythm. It explains the seasons through family separation, divine power, and repeated return.'
+    ],
+    intro: [
+      'The Persephone myth begins with absence.',
+      'A daughter is gone, and the world changes.'
+    ],
+    core: [
+      'Persephone is taken to the underworld by Hades. Demeter, her mother, grieves so deeply that the earth becomes barren.',
+      'The crisis is not only personal. It touches harvest, hunger, and the order of the world.'
+    ],
+    context: [
+      'The compromise allows Persephone to return for part of the year and remain below for part of it. This pattern became one of the strongest mythic explanations for seasonal change.',
+      'The story is about return, but it never erases separation.'
+    ],
+    variants: [
+      'Different ancient accounts vary in emphasis. Some focus on abduction, others on ritual meaning, and others on the relationship between mother, daughter, and the underworld.',
+      'Later retellings often soften or reinterpret the emotional force of the myth.'
+    ],
+    record: [
+      'The record can support Persephone as a central figure in Greek myth and religious tradition. It cannot treat one modern retelling as the only version.',
+      'A careful article keeps ancient narrative, seasonal interpretation, and later adaptation distinct.'
+    ],
+    meaning: [
+      'Persephone remains powerful because the myth does not offer a simple happy ending.',
+      'It offers a rhythm: descent, grief, return, and the knowledge that departure will come again.'
+    ],
+    related: ['pandora-greek-myth', 'icarus-flight-myth', 'medusa-greek-myth'],
+    sourceNote: 'This article follows Persephone through Greek myth and later interpretation. Variant details are treated as part of a wider classical tradition.'
+  }),
+  topic({
+    categorySlug: 'mythic-creatures',
+    slug: 'griffin-folklore',
+    title: 'Griffin Folklore: The Eagle-Lion Guardian of Treasure and Power',
+    subject: 'The Griffin',
+    tag: 'Hybrid Guardian Creature',
+    tags: ['Hybrid Guardian Creature', 'Ancient Myth', 'Treasure Guardian', 'Eagle Lion'],
+    keyword: 'griffin folklore',
+    detail: 'the hybrid creature with eagle and lion traits, often linked with guardianship, treasure, and royal or sacred power',
+    sourceBasis: 'ancient art, classical references, medieval bestiaries, guardian-creature motifs, and heraldic symbolism',
+    evidence: 'encyclopedic summaries, mythological reference works, art-history context, and repeated guardian motifs',
+    vocabulary: ['griffin', 'eagle', 'lion', 'treasure guardian', 'bestiary'],
+    sources: [
+      source('Encyclopaedia Britannica - Griffin', 'https://www.britannica.com/topic/griffin-mythological-creature', 'Supports the basic description and ancient mythological context.'),
+      source('The Metropolitan Museum of Art - Heilbrunn Timeline', 'https://www.metmuseum.org/toah/', 'Supports broad art-historical context for ancient and medieval creature imagery.')
+    ],
+    quickAnswer: [
+      'The griffin is a mythic creature usually combining the head and wings of an eagle with the body of a lion. It is often linked with guardianship, treasure, and powerful places.',
+      'The creature matters because it joins two royal animal images into one protective form. The result feels made to guard what ordinary animals cannot.'
+    ],
+    intro: [
+      'The griffin is built from two animals people already feared and admired.',
+      'That is the point.'
+    ],
+    core: [
+      'The eagle brings height, sight, and sky power. The lion brings strength, territory, and royal force.',
+      'Together they create a creature that looks suited to guarding treasure, sacred spaces, or authority itself.'
+    ],
+    context: [
+      'Griffins appear across ancient and medieval visual culture. Their meaning shifts by setting, but the guardian role returns again and again.',
+      'The hybrid body makes the creature easy to recognize and hard to reduce to one animal source.'
+    ],
+    variants: [
+      'Some traditions emphasize gold and distant lands. Others use the griffin as a symbol of vigilance, nobility, or spiritual protection.',
+      'Medieval bestiaries and heraldry helped preserve the creature as a formal emblem.'
+    ],
+    record: [
+      'The record can support the griffin as a long-standing mythic and artistic creature. It cannot point to one single origin that explains every later use.',
+      'A careful article treats the griffin as a layered symbol shaped by art, text, and repeated guardian imagery.'
+    ],
+    meaning: [
+      'The griffin lasts because its body communicates its role immediately.',
+      'It is not just a monster. It is a warning that something valuable is being protected.'
+    ],
+    related: ['kraken-sea-monster-folklore', 'phoenix-mythic-bird', 'basilisk-folklore'],
+    sourceNote: 'This article follows the griffin as a mythic hybrid and guardian figure. Regional and artistic meanings are treated as variants within a long tradition.'
+  }),
+  topic({
+    categorySlug: 'lost-worlds',
+    slug: 'lyonesse-lost-land-legend',
+    title: 'Lyonesse Lost Land Legend: The Drowned Kingdom at the Edge of Arthurian Memory',
+    subject: 'Lyonesse',
+    tag: 'Drowned Land Legend',
+    tags: ['Drowned Land Legend', 'Arthurian Legend', 'Cornish Folklore', 'Lost Kingdom'],
+    keyword: 'Lyonesse lost land legend',
+    detail: 'the legendary drowned land often placed off Cornwall and linked in later tradition with Arthurian memory',
+    sourceBasis: 'Cornish folklore, Arthurian tradition, drowned-land motifs, coastal legend, and later literary adaptation',
+    evidence: 'folklore summaries, literary references, regional legend accounts, and comparative lost-land motifs',
+    vocabulary: ['Lyonesse', 'Cornwall', 'drowned land', 'Arthurian legend', 'lost kingdom'],
+    sources: [
+      source('Encyclopaedia Britannica - Lyonesse', 'https://www.britannica.com/place/Lyonesse', 'Supports the basic legendary place description and Arthurian association.'),
+      source('Cornwall Guide - Lyonesse', 'https://www.cornwalls.co.uk/myths-legends/lyonesse.htm', 'Supports regional folklore summary and drowned-land tradition.')
+    ],
+    quickAnswer: [
+      'Lyonesse is a legendary lost land often placed off the coast of Cornwall. Later tradition connects it with drowned kingdoms, coastal memory, and Arthurian material.',
+      'The legend matters because it gives the sea a remembered place to swallow. Lyonesse is not only lost; it is imagined as once near enough to belong.'
+    ],
+    intro: [
+      'Lyonesse is a lost world with a shoreline.',
+      'That makes the legend feel close.'
+    ],
+    core: [
+      'The story places a vanished land near Cornwall, sometimes described as a kingdom drowned by the sea. Its memory survives through names, fragments, and literary tradition.',
+      'The sea becomes more than scenery. It becomes the force that erased a world.'
+    ],
+    context: [
+      'Drowned-land legends often grow around coasts where erosion, storms, and memory meet. They make natural loss feel historical and personal.',
+      'Lyonesse also gained power through Arthurian associations, which gave the vanished land a heroic shadow.'
+    ],
+    variants: [
+      'Some versions treat Lyonesse as a broad lost kingdom. Others tie it to specific places, bells under the water, or the survival of one rider from the flood.',
+      'Literary versions can differ sharply from regional folklore.'
+    ],
+    record: [
+      'The record can support Lyonesse as a legendary drowned land in Cornish and Arthurian tradition. It cannot identify it as a confirmed historical kingdom.',
+      'A careful account keeps folklore, coastal imagination, and later literature in separate layers.'
+    ],
+    meaning: [
+      'Lyonesse lasts because it turns a coastline into a boundary with memory underneath it.',
+      'The land is gone, but the idea of it remains just beyond the visible shore.'
+    ],
+    related: ['atlantis-lost-city', 'el-dorado-legend', 'lemuria-lost-continent'],
+    sourceNote: 'This article treats Lyonesse as a legendary drowned land. Historical-location claims are presented as tradition or speculation unless strongly sourced.'
+  }),
+  topic({
+    categorySlug: 'strange-nature',
+    slug: 'raining-animals-phenomenon',
+    title: 'Raining Animals Phenomenon: When Fish, Frogs, and Weather Become Folklore',
+    subject: 'Raining Animals',
+    tag: 'Unusual Weather Phenomenon',
+    tags: ['Unusual Weather Phenomenon', 'Fish Rain', 'Frog Rain', 'Weather Folklore'],
+    keyword: 'raining animals phenomenon',
+    detail: 'reports of fish, frogs, or other small animals falling from the sky, often explained through unusual weather while remembered as wonder or omen',
+    sourceBasis: 'meteorological explanation, historical reports, folklore reception, witness accounts, and unusual-weather documentation',
+    evidence: 'science explainers, historical summaries, weather discussions, and recurring public reports',
+    vocabulary: ['raining animals', 'fish rain', 'frog rain', 'waterspout', 'unusual weather'],
+    sources: [
+      source('Library of Congress - Can It Rain Frogs, Fish, and Other Objects?', 'https://www.loc.gov/everyday-mysteries/meteorology-climatology/item/can-it-rain-frogs-fish-and-other-objects/', 'Supports common scientific explanations and public-history framing.'),
+      source('BBC Earth - Animal Rain', 'https://www.bbcearth.com/', 'Supports general public discussion of unusual animal-rain reports.')
+    ],
+    quickAnswer: [
+      'Raining animals refers to reports of fish, frogs, or other small creatures falling from the sky. Possible explanations often involve waterspouts or strong weather lifting animals from nearby water.',
+      'The phenomenon matters because it sits between science and wonder. Even when a natural mechanism is possible, the event feels like a broken rule of the sky.'
+    ],
+    intro: [
+      'Rain is supposed to fall as water.',
+      'That is why animal rain is so hard to forget.'
+    ],
+    core: [
+      'Reports describe fish, frogs, or other small animals appearing after storms or falling with rain. Some accounts are local curiosities, while others become repeated legends.',
+      'The likely explanation often points to unusual weather lifting animals from one place and dropping them in another.'
+    ],
+    context: [
+      'A scientific explanation does not remove the strangeness. It only changes the question from miracle to mechanism.',
+      'For the people standing under it, the scene still looks like nature has made a mistake.'
+    ],
+    variants: [
+      'Different reports involve fish, frogs, worms, or other small creatures. Some are linked to storms, while others are repeated without clear weather detail.',
+      'Folklore versions may treat the event as omen, warning, or proof that the world is less orderly than it seems.'
+    ],
+    record: [
+      'The record can support animal rain as a reported phenomenon with plausible weather explanations in some cases. It cannot verify every historical report equally.',
+      'A careful article separates documented reports, possible mechanisms, and folklore interpretation.'
+    ],
+    meaning: [
+      'Animal rain remains memorable because it makes the familiar sky behave like an impossible place.',
+      'The event is strange enough to become a story even when the explanation is natural.'
+    ],
+    related: ['blood-rain-phenomenon', 'ball-lightning-folklore', 'will-o-the-wisp-folklore'],
+    sourceNote: 'This article treats animal rain as an unusual reported phenomenon with natural explanations for some cases. Individual reports vary in documentation quality.'
+  }),
+  topic({
+    categorySlug: 'legendary-places',
+    slug: 'mount-kailash-legendary-place',
+    title: 'Mount Kailash Legendary Place: The Sacred Mountain People Circle But Do Not Climb',
+    subject: 'Mount Kailash',
+    tag: 'Sacred Mountain',
+    tags: ['Sacred Mountain', 'Pilgrimage Place', 'Asian Sacred Geography', 'Legendary Place'],
+    keyword: 'Mount Kailash legendary place',
+    detail: 'the sacred mountain in Tibet revered in multiple religious traditions and known for pilgrimage circuits rather than summit conquest',
+    sourceBasis: 'sacred geography, pilgrimage tradition, religious reverence, mountain legend, and cultural history',
+    evidence: 'encyclopedic summaries, pilgrimage descriptions, religious geography references, and cultural-tradition accounts',
+    vocabulary: ['Mount Kailash', 'Tibet', 'pilgrimage', 'sacred mountain', 'kora'],
+    sources: [
+      source('Encyclopaedia Britannica - Mount Kailas', 'https://www.britannica.com/place/Mount-Kailas', 'Supports the basic geography and religious importance of Mount Kailash.'),
+      source('UNESCO Tentative Lists - Sacred Mountain Landscape and Heritage Routes', 'https://whc.unesco.org/en/tentativelists/', 'Supports broad heritage framing around sacred mountain landscapes and pilgrimage routes.')
+    ],
+    quickAnswer: [
+      'Mount Kailash is a sacred mountain in Tibet revered in several religious traditions. It is known for pilgrimage circuits around the mountain rather than ordinary summit climbing.',
+      'The place matters because its power comes from restraint. The mountain is approached, circled, and honored, but not treated as a trophy to conquer.'
+    ],
+    intro: [
+      'Some mountains become famous because people climb them.',
+      'Mount Kailash is different.'
+    ],
+    core: [
+      'The mountain is sacred in Hindu, Buddhist, Jain, and Bon traditions. Pilgrims travel around it in a circuit often called a kora.',
+      'The journey around the mountain becomes the central act, not standing on the summit.'
+    ],
+    context: [
+      'That makes Mount Kailash a legendary place shaped by reverence as much as geography.',
+      'Its stories are not only about height or danger. They are about spiritual center, boundary, and approach.'
+    ],
+    variants: [
+      'Different traditions connect the mountain with different sacred meanings. Some emphasize divine residence, cosmic geography, or spiritual merit gained through pilgrimage.',
+      'Modern accounts sometimes turn the mountain into a mystery site, but the older importance is religious and cultural.'
+    ],
+    record: [
+      'The record can support Mount Kailash as a real sacred mountain with deep religious significance. It cannot flatten multiple traditions into one simple legend.',
+      'A careful account presents the mountain through sacred geography and pilgrimage rather than spectacle.'
+    ],
+    meaning: [
+      'Mount Kailash remains legendary because it asks people to move differently around a place.',
+      'The mountain is not only seen. It is circled, respected, and left unconquered.'
+    ],
+    related: ['stonehenge-legendary-place', 'glastonbury-tor-legends', 'delphi-oracle-legendary-place'],
+    sourceNote: 'This article follows Mount Kailash as a sacred and legendary place across multiple traditions. Religious meanings are summarized respectfully and not reduced to one version.'
+  }),
+  topic({
+    categorySlug: 'mythic-objects',
+    slug: 'sword-in-the-stone-legend',
+    title: 'Sword in the Stone Legend: The Arthurian Object That Proved a King',
+    subject: 'The Sword in the Stone',
+    tag: 'Arthurian Object',
+    tags: ['Arthurian Object', 'Kingship Test', 'Mythic Sword', 'Medieval Legend'],
+    keyword: 'sword in the stone legend',
+    detail: 'the Arthurian legend in which the true king is revealed by drawing a sword from stone or anvil',
+    sourceBasis: 'Arthurian romance, medieval legend, kingship symbolism, sword motifs, and later adaptation',
+    evidence: 'Arthurian summaries, literary history references, medieval narrative tradition, and recurring symbolic interpretation',
+    vocabulary: ['Sword in the Stone', 'King Arthur', 'Arthurian legend', 'kingship', 'Excalibur'],
+    sources: [
+      source('Encyclopaedia Britannica - King Arthur', 'https://www.britannica.com/topic/King-Arthur', 'Supports Arthurian legend context and later literary tradition.'),
+      source('The Camelot Project - University of Rochester', 'https://d.lib.rochester.edu/camelot', 'Supports Arthurian literary context and reference material.')
+    ],
+    quickAnswer: [
+      'The Sword in the Stone is an Arthurian legend in which the rightful king is revealed by pulling a sword from stone or anvil. The act proves legitimacy through an impossible test.',
+      'The object matters because it turns kingship into a visible action. The sword does not simply belong to Arthur; it recognizes him.'
+    ],
+    intro: [
+      'The Sword in the Stone is not only a weapon.',
+      'It is a question waiting for the right hand.'
+    ],
+    core: [
+      'In the familiar legend, many try to draw the sword and fail. Arthur succeeds, revealing a right to kingship that others cannot force.',
+      'The test is simple enough to remember and impossible enough to feel mythic.'
+    ],
+    context: [
+      'Arthurian tradition often uses objects to prove identity. A sword, a seat, a cup, or a wound can show what ordinary speech cannot.',
+      'The Sword in the Stone turns recognition into a public sign.'
+    ],
+    variants: [
+      'Some versions distinguish the Sword in the Stone from Excalibur. Others blur the two, especially in later retellings.',
+      'The object may appear in stone, an anvil, or a churchyard setting depending on the version.'
+    ],
+    record: [
+      'The record can support the Sword in the Stone as a major Arthurian motif. It cannot treat every later adaptation as the same medieval account.',
+      'A careful article separates the kingship test from later Excalibur traditions when needed.'
+    ],
+    meaning: [
+      'The legend lasts because it makes authority feel discovered rather than claimed.',
+      'Arthur does not win the sword by force. He reveals what the story says was already true.'
+    ],
+    related: ['ark-of-the-covenant-legend', 'mjolnir-thors-hammer', 'ring-of-gyges-myth'],
+    sourceNote: 'This article follows the Sword in the Stone as an Arthurian mythic object. Later adaptations are treated as variants of a broader medieval tradition.'
+  }),
+  topic({
+    categorySlug: 'legend-origins',
+    slug: 'evil-eye-origin',
+    title: 'Evil Eye Origin: How a Harmful Glance Became One of the World\'s Oldest Protective Beliefs',
+    subject: 'The Evil Eye',
+    tag: 'Protective Belief Origin',
+    tags: ['Protective Belief Origin', 'Superstition', 'Protective Charm', 'Folk Belief'],
+    keyword: 'evil eye origin',
+    detail: 'the belief that envy or a hostile glance can cause harm, leading to protective charms, gestures, and rituals across many cultures',
+    sourceBasis: 'ancient belief history, Mediterranean and global superstition, protective-charm tradition, envy motifs, and cultural variation',
+    evidence: 'encyclopedic summaries, folklore references, ancient-source context, charm traditions, and comparative superstition',
+    vocabulary: ['evil eye', 'envy', 'protective charm', 'amulet', 'superstition'],
+    sources: [
+      source('Encyclopaedia Britannica - Evil Eye', 'https://www.britannica.com/topic/evil-eye', 'Supports the definition, broad history, and cross-cultural spread of the belief.'),
+      source('The Metropolitan Museum of Art - Evil Eye', 'https://www.metmuseum.org/', 'Supports art-historical context around protective eye imagery and amulets.')
+    ],
+    quickAnswer: [
+      'The evil eye is the belief that a harmful or envious glance can bring misfortune. Many cultures developed charms, gestures, or sayings to protect against it.',
+      'The origin matters because the belief gives social emotion a visible force. Envy becomes something that can move through a look.'
+    ],
+    intro: [
+      'The evil eye begins with something almost too ordinary to fear.',
+      'A look.'
+    ],
+    core: [
+      'Across many traditions, a glance shaped by envy or malice is believed to cause harm. The danger may fall on children, animals, success, beauty, or good fortune.',
+      'Protection often takes visible form through amulets, eye symbols, gestures, or spoken blessings.'
+    ],
+    context: [
+      'The belief is old and widely distributed, especially around Mediterranean and surrounding cultural worlds, though similar ideas appear far beyond one region.',
+      'Its power comes from a common fear: that attention itself can damage what it notices.'
+    ],
+    variants: [
+      'Some traditions focus on deliberate envy. Others treat the harmful glance as accidental, especially when praise is not balanced by a protective phrase.',
+      'Protective objects also vary, from blue eye amulets to gestures, prayers, and household signs.'
+    ],
+    record: [
+      'The record can support the evil eye as an ancient and widespread folk belief. It cannot reduce all regional practices to a single origin point.',
+      'A careful article treats the evil eye as a family of related beliefs shaped by place, religion, and social custom.'
+    ],
+    meaning: [
+      'The evil eye endures because it explains why good fortune can feel exposed.',
+      'It turns envy into an invisible pressure and protection into something people can hold.'
+    ],
+    related: ['horseshoe-luck-origin', 'black-cat-superstition-origin', 'friday-the-13th-origin'],
+    sourceNote: 'This article follows the evil eye as a widespread protective-belief tradition. Regional practices are treated as variants rather than one fixed origin.'
   })
 ];
 

@@ -183,7 +183,20 @@ function customDekForStory(slug) {
     'blood-rain-phenomenon': 'Blood rain shows how quickly weather can become omen. A natural event may have a physical cause, but red rain still changes the emotional meaning of the sky.',
     'stonehenge-legendary-place': 'Stonehenge stands as a monument whose stones are clearer than its final meaning. Archaeology, legend, and sacred-place memory all gather around the same visible circle.',
     'ark-of-the-covenant-legend': 'The Ark of the Covenant is a mythic object because absence makes it more charged, not less. The sacred chest remains powerful through boundary, loss, and disputed memory.',
-    'horseshoe-luck-origin': 'Horseshoe luck turns a stable object into a household sign. Iron, doorway, and threshold belief combine until a practical thing becomes a charm against uncertainty.'
+    'horseshoe-luck-origin': 'Horseshoe luck turns a stable object into a household sign. Iron, doorway, and threshold belief combine until a practical thing becomes a charm against uncertainty.',
+    'resurrection-mary-legend': 'Resurrection Mary keeps Chicago ghost lore focused on a road, a dance hall, a cemetery, and the uneasy feeling that a local story may be repeating itself.',
+    'the-rake-creepypasta': 'The Rake shows how internet horror can turn a vague creature description into shared folklore through posts, retellings, images, and uncertain digital memory.',
+    'eastern-state-penitentiary-haunting': 'Eastern State Penitentiary became a strange-place legend because its real architecture already feels like a machine built for silence, separation, and memory.',
+    'amber-room-mystery': 'The Amber Room mystery begins with a real lost treasure, but its afterlife belongs to wartime disappearance, recovery claims, and the pull of an unfinished search.',
+    'tomte-nisse-folklore': 'The tomte or nisse is small in scale but large in household meaning, standing between helpful guardian, offended spirit, and winter folklore figure.',
+    'dover-demon-legend': 'The Dover Demon remains unsettling because the reports were brief, local, and visually specific, leaving a strange figure without a settled explanation.',
+    'persephone-underworld-myth': 'The Persephone myth holds spring and loss in the same story, making a divine abduction into one of the strongest seasonal explanations in Greek tradition.',
+    'griffin-folklore': 'The griffin joins eagle and lion into one guardian image, giving ancient and medieval art a creature built from sky power, ground power, and treasure protection.',
+    'lyonesse-lost-land-legend': 'Lyonesse is remembered as a drowned kingdom at the edge of Britain, where Arthurian memory, coastal loss, and vanished-land imagination meet.',
+    'raining-animals-phenomenon': 'Reports of animals falling from the sky sit between weather, witness memory, and wonder, turning unusual natural events into stories people keep retelling.',
+    'mount-kailash-legendary-place': 'Mount Kailash is legendary because it is not only a mountain on a map, but a sacred center shaped by pilgrimage, restraint, and stories of spiritual power.',
+    'sword-in-the-stone-legend': 'The Sword in the Stone makes kingship visible through one impossible test, turning a weapon into a sign of recognition, legitimacy, and destiny.',
+    'evil-eye-origin': 'The evil eye endures because it gives envy a visible danger, turning a glance into one of the oldest and most portable explanations for misfortune.'
   }[slug] || '';
 }
 
