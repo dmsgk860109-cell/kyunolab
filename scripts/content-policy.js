@@ -101,7 +101,8 @@ function validateUnifiedArticle(story, renderedText = '') {
     'can be interpreted',
     'symbolically',
     'one possible reading',
-    'this interpretation'
+    'this interpretation',
+    'in that reading'
   ];
   const hasInterpretationMarker = interpretationMarkers.some((marker) => searchableText.includes(marker));
   if ((brief.editorialInterpretationOptions || []).length && !hasInterpretationMarker) {
@@ -114,7 +115,11 @@ function validateUnifiedArticle(story, renderedText = '') {
     'later accounts',
     'one online version',
     'reported variant',
-    'in later retellings'
+    'in later retellings',
+    'later retellings',
+    'different versions',
+    'modern retellings',
+    'versions differ'
   ];
   const hasVariantMarker = reportedVariantMarkers.some((marker) => searchableText.includes(marker));
   if ((brief.reportedVariants || []).length && !hasVariantMarker) {

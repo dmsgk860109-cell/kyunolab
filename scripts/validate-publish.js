@@ -10,6 +10,10 @@ const {
   policyAppliesToStory,
   validateUnifiedArticle
 } = require('./content-policy');
+const {
+  validatePublicArticleOutput,
+  publicStoryWordStats
+} = require('./public-article-plan');
 
 const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://kyunolab.com';
@@ -197,6 +201,13 @@ function validateStoryPage(story) {
   if (policyAppliesToStory(story)) {
     for (const error of validateUnifiedArticle(story, bodyText)) {
       errors.push(`${story.slug}: ${error}`);
+    }
+    for (const error of validatePublicArticleOutput(story, html)) {
+      errors.push(`${story.slug}: ${error}`);
+    }
+    const publicStats = publicStoryWordStats(story, html);
+    if (publicStats.totalWords >= 400 && publicStats.estimatedStoryRatio < 0.5) {
+      errors.push(`${story.slug}: public article body is not story-focused enough (${publicStats.estimatedStoryRatio})`);
     }
   }
 

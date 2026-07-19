@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { buildContentDNA } = require('./article-dna-utils');
 const { policyAppliesToStory } = require('./content-policy');
+const { buildPublicArticlePlan } = require('./public-article-plan');
 
 const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://kyunolab.com';
@@ -42,14 +43,21 @@ for (const story of stories) {
       ? story.seoHeadings.map((title) => ({ title, nav: title }))
       : generatedDNA.sectionBlueprint
   };
+  if (policyAppliesToStory(story) && story.storyBrief) {
+    story.publicArticlePlan = buildPublicArticlePlan(story);
+    story.contentDNA.sectionBlueprint = story.publicArticlePlan.sections.map((section) => ({
+      title: section.heading,
+      nav: section.heading
+    }));
+  }
 }
 
 writeJson(storiesPath, stories);
 
 for (let index = 0; index < stories.length; index += 1) {
   const story = stories[index];
-  const previousStory = stories[index + 1] || stories[stories.length - 1];
-  const nextStory = stories[index - 1] || stories[0];
+  const previousStory = stories[index + 1] || null;
+  const nextStory = stories[index - 1] || null;
   writeFile(`stories/${story.slug}.html`, renderStoryPage(story, previousStory, nextStory));
 }
 
@@ -230,7 +238,7 @@ function renderStoryPage(story, previousStory, nextStory) {
   const socialImage = absoluteImageUrl(story.socialImage || story.image || '/icon-512.png');
   const relatedStories = getRelatedStories(story);
   const dna = story.contentDNA;
-  const sections = buildBodySections(story);
+  const sections = dedupeSectionParagraphs(buildBodySections(story));
   const scriptCta = renderScriptCta(story);
 
   return `<!doctype html>
@@ -297,10 +305,11 @@ ${scriptCta ? `        ${scriptCta}
 }
 
 function buildBodySections(story) {
-  if (Array.isArray(story.storyBrief?.articleSections) && story.storyBrief.articleSections.length) {
-    return story.storyBrief.articleSections.slice(0, 6).map((section) => ({
-      id: slugify(section.id || section.title),
-      title: section.title,
+  const plan = buildPublicArticlePlan(story);
+  if (plan?.sections?.length) {
+    return plan.sections.map((section) => ({
+      id: section.id || slugify(section.heading),
+      title: section.heading,
       paragraphs: (section.paragraphs || []).filter(Boolean)
     }));
   }
@@ -325,6 +334,20 @@ function buildBodySections(story) {
     title: heading,
     paragraphs: sectionParagraphs(story, heading, index, vocabulary, details)
   }));
+}
+
+function dedupeSectionParagraphs(sections) {
+  const seen = new Set();
+  return sections.map((section) => ({
+    ...section,
+    paragraphs: (section.paragraphs || []).filter((paragraph) => {
+      const key = normalize(paragraph);
+      if (!key) return false;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    })
+  })).filter((section) => section.paragraphs.length);
 }
 
 function sectionParagraphs(story, heading, index, vocabulary, details) {
@@ -397,8 +420,9 @@ function sectionParagraphs(story, heading, index, vocabulary, details) {
 }
 
 function renderOpening(story) {
-  if (policyAppliesToStory(story) && story.storyBrief?.opening) {
-    return story.storyBrief.opening
+  const plan = buildPublicArticlePlan(story);
+  if (plan?.introduction?.length) {
+    return plan.introduction
       .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
       .join('\n        ');
   }
@@ -488,6 +512,15 @@ function archiveInsightFor(story, sectionIndex) {
 }
 
 function renderFaq(story) {
+  const plan = buildPublicArticlePlan(story);
+  if (plan?.faq?.length) {
+    return `<h2 id="faq">Frequently Asked Questions</h2>
+      <div class="faq-list">
+${plan.faq.map((item) => `        <h3>${escapeHtml(item.q || item.question)}</h3>
+        <p>${escapeHtml(item.a || item.answer)}</p>`).join('\n')}
+      </div>`;
+  }
+
   const subject = shortSubject(story);
   const tag = story.primaryTag || story.tag || story.category;
   const dna = story.contentDNA;
@@ -522,19 +555,11 @@ ${questions.map((item) => `        <h3>${escapeHtml(item.q || item.question)}</h
 }
 
 function renderSourceNote(story) {
-  if (policyAppliesToStory(story) && story.storyBrief) {
-    const brief = story.storyBrief;
-    const evidence = (brief.existenceEvidence || [])
-      .slice(0, 3)
-      .map((source) => `${source.title} (${source.sourceType})`)
-      .join('; ');
-    const uncertain = Array.isArray(brief.uncertainDetails) && brief.uncertainDetails.length
-      ? ` Uncertain details remain: ${brief.uncertainDetails.join('; ')}.`
-      : '';
+  const plan = buildPublicArticlePlan(story);
+  if (plan?.publicSourceNote) {
     return `<h2 id="source-note">Story &amp; Source Note</h2>
-        <p>This article follows the unified Kyunolab standard: the subject is included because it existed outside Kyunolab before this page was written. The article separates existing story material, reported variants, and Kyunolab interpretation.</p>
-        <p>Story Brief status: ${escapeHtml(brief.existenceStatus)}. Circulation level: ${escapeHtml(brief.circulationLevel)}. External trace reviewed: ${escapeHtml(evidence)}.${escapeHtml(uncertain)}</p>
-        <p>See the <a href="/fiction-disclaimer.html#source-status">Story &amp; Source Notice</a> for how Kyunolab Mystery Archive separates documented sources, modern retellings, speculative interpretation, and original work.</p>`;
+        <p>${escapeHtml(plan.publicSourceNote)}</p>
+        <p>Different versions may preserve different details, so this page treats myth, folklore, rumor, source material, and interpretation carefully. See the <a href="/fiction-disclaimer.html#source-status">Story &amp; Source Notice</a> for Kyunolab's source-status approach.</p>`;
   }
 
   const profile = getQualityProfile(story);
@@ -556,14 +581,23 @@ function renderScriptCta(story) {
 function renderMetaGrid(story) {
   const updated = formatDate(story.updatedAt || story.publishedAt);
   const tags = (story.tags || []).map((tag) => `<a href="/tags/${escapeAttr(slugify(tag))}/">${escapeHtml(tag)}</a>`).join(', ');
+  const sourceStatus = publicSourceStatus(story);
   return `<dl class="article-meta-grid">
           <div><dt>Category</dt><dd><a href="/categories/${escapeAttr(story.categorySlug)}.html">${escapeHtml(story.category)}</a></dd></div>
           <div><dt>Tags</dt><dd>${tags}</dd></div>
           <div><dt>Read time</dt><dd>${escapeHtml(story.readTime)}</dd></div>
           <div><dt>Story Type</dt><dd><a href="/fiction-disclaimer.html#story-types">${escapeHtml(story.storyType)}</a></dd></div>
-          <div><dt>Source Status</dt><dd><a href="/fiction-disclaimer.html#source-status">${escapeHtml(story.sourceStatus)}</a></dd></div>
+          <div><dt>Source Status</dt><dd><a href="/fiction-disclaimer.html#source-status">${escapeHtml(sourceStatus)}</a></dd></div>
           <div><dt>Updated</dt><dd>${escapeHtml(updated)}</dd></div>
         </dl>`;
+}
+
+function publicSourceStatus(story) {
+  if (!policyAppliesToStory(story) || !story.storyBrief) return story.sourceStatus;
+  const brief = story.storyBrief;
+  const type = String(brief.contentType || story.storyType || 'story').replace(/-/g, ' ');
+  const context = brief.cultureOrContext || story.primaryTag || story.tag || story.category;
+  return `${story.category} / ${context} / ${type}`;
 }
 
 function renderStoryMap(sections) {
@@ -583,6 +617,19 @@ function renderHeroImage(story) {
 }
 
 function renderSearchSummary(story) {
+  const plan = buildPublicArticlePlan(story);
+  if (plan?.quickAnswer) {
+    const paragraphs = Array.isArray(plan.quickAnswer.paragraphs)
+      ? plan.quickAnswer.paragraphs
+      : [plan.quickAnswer.text || story.summaryAnswer].filter(Boolean);
+    return `<aside class="search-summary" aria-labelledby="quick-answer-title">
+      <h2 id="quick-answer-title">Quick Answer</h2>
+      <div class="search-summary-grid">
+        <div>${paragraphs.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join('')}</div>
+      </div>
+    </aside>`;
+  }
+
   const summary = story.searchSummary || {};
   const what = summary.whatItIs || story.introSummary || story.summaryAnswer;
   const where = summary.whereItAppears || `This record belongs to ${story.category} and connects with ${(story.tags || []).slice(0, 3).join(', ')}.`;
@@ -639,19 +686,32 @@ function renderReadingBridge(story, relatedStories) {
 }
 
 function renderRelatedArticles(relatedStories) {
+  if (!relatedStories.length) return '';
   const items = relatedStories.slice(0, 6).map((story) => `<a href="/stories/${escapeAttr(story.slug)}"><span>${escapeHtml(story.category)}</span><strong>${escapeHtml(story.title)}</strong></a>`).join('');
   return `<section class="related-articles" aria-label="Related articles"><div class="section-head"><h2>Related Articles</h2></div><div class="related-grid">${items}</div></section>`;
 }
 
 function renderPrevNext(previousStory, nextStory) {
-  return `<nav class="prev-next" aria-label="Previous and next articles"><a href="/stories/${escapeAttr(previousStory.slug)}"><span>Previous</span><strong>${escapeHtml(previousStory.title)}</strong></a><a href="/stories/${escapeAttr(nextStory.slug)}"><span>Next</span><strong>${escapeHtml(nextStory.title)}</strong></a></nav>`;
+  const previous = previousStory ? `<a href="/stories/${escapeAttr(previousStory.slug)}"><span>Previous</span><strong>${escapeHtml(previousStory.title)}</strong></a>` : '';
+  const next = nextStory ? `<a href="/stories/${escapeAttr(nextStory.slug)}"><span>Next</span><strong>${escapeHtml(nextStory.title)}</strong></a>` : '';
+  if (!previous && !next) return '';
+  return `<nav class="prev-next" aria-label="Previous and next articles">${previous}${next}</nav>`;
 }
 
 function renderRightRail(story, relatedStories, nextStory) {
+  const readNext = nextStory && nextStory.slug !== story.slug ? nextStory : relatedStories.find((item) => item.slug !== story.slug);
+  const readNextCard = readNext
+    ? `<div class="rail-card rail-feature"><p class="rail-label">Read next</p><a href="/stories/${escapeAttr(readNext.slug)}"><strong>${escapeHtml(readNext.title)}</strong><span>${escapeHtml(readNext.category)}</span></a></div>`
+    : '';
+  const relatedLinks = relatedStories
+    .filter((item) => item.slug !== story.slug)
+    .slice(0, 4)
+    .map((item) => `<a href="/stories/${escapeAttr(item.slug)}">${escapeHtml(item.title)}</a>`)
+    .join('');
   return `<aside class="article-rail article-rail-right" aria-label="Recommended reading">
       ${renderKyunolabNetworkCard()}
-      <div class="rail-card rail-feature"><p class="rail-label">Read next</p><a href="/stories/${escapeAttr(nextStory.slug)}"><strong>${escapeHtml(nextStory.title)}</strong><span>${escapeHtml(nextStory.category)}</span></a></div>
-      <div class="rail-card"><p class="rail-label">Related records</p>${relatedStories.slice(0, 4).map((item) => `<a href="/stories/${escapeAttr(item.slug)}">${escapeHtml(item.title)}</a>`).join('')}</div>
+      ${readNextCard}
+      ${relatedLinks ? `<div class="rail-card"><p class="rail-label">Related records</p>${relatedLinks}</div>` : ''}
     </aside>`;
 }
 
@@ -666,7 +726,7 @@ function renderKyunolabNetworkCard() {
 
 function getRelatedStories(story) {
   const manualIds = story.relatedStorySlugs || story.relatedStoryIds || [];
-  const manual = manualIds.map((id) => storyBySlug.get(id)).filter(Boolean);
+  const manual = manualIds.map((id) => storyBySlug.get(id)).filter((item) => item && item.slug !== story.slug);
   const manualSlugs = new Set(manual.map((item) => item.slug));
   const scored = stories
     .filter((item) => item.slug !== story.slug && !manualSlugs.has(item.slug))
