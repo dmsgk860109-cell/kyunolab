@@ -8,6 +8,15 @@ const bannedGenericPhrases = [
   'What makes this story unsettling is',
   'Like many modern legends',
   'Whether true or not'
+  ,'This record separates the familiar story'
+  ,'keeps the subject active in folklore memory'
+  ,'may be read through the pattern preserved in its common versions'
+  ,'later versions should remain separate from the core account'
+  ,'A careful article should'
+  ,'The article should'
+  ,'This page should'
+  ,'A source-aware reading should'
+  ,'The record should'
 ];
 
 const bannedFaqQuestions = [

@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { buildContentDNA } = require('./article-dna-utils');
+const { buildPublicArticlePlan } = require('./public-article-plan');
 
 const root = path.resolve(__dirname, '..');
 const storiesPath = path.join(root, 'data', 'stories.json');
@@ -386,7 +387,7 @@ const topics = [
     ],
     record: [
       'The record can support the basilisk as a long-lived mythic and bestiary creature. It cannot support the creature as a confirmed animal.',
-      'A careful article should keep the creature dangerous as folklore while separating symbolic bestiary tradition from biological claim.'
+      'The creature remains dangerous as folklore while symbolic bestiary tradition stays separate from biological claim.'
     ],
     meaning: [
       'The basilisk may be read as a monster of knowledge and danger. To know it directly is to risk harm.',
@@ -639,6 +640,11 @@ for (const plan of topics) {
   const category = categoryBySlug.get(plan.categorySlug);
   if (!category) throw new Error(`Missing category: ${plan.categorySlug}`);
   const story = buildStory(plan, category);
+  story.publicArticlePlan = buildPublicArticlePlan(story);
+  if (!story.publicArticlePlan || !Array.isArray(story.publicArticlePlan.sections) || story.publicArticlePlan.sections.length < 3) {
+    throw new Error(`Article generation stopped. A valid Public Article Plan could not be created for ${story.slug}. No legacy or fixed-section fallback was used.`);
+  }
+  story.introSummary = story.publicArticlePlan.dek;
   story.contentDNA = buildContentDNA(story, existingQueries);
   story.contentDNA.subjectSpecificVocabulary = plan.vocabulary;
   story.contentDNA.requiredSpecificDetails = plan.vocabulary;
@@ -666,7 +672,7 @@ for (const story of added) console.log(`added ${story.categorySlug}: ${story.slu
 for (const slug of updated) console.log(`updated: ${slug}`);
 
 function buildStory(plan, category) {
-  const sections = sectionsFor(plan);
+  const fragments = fragmentsFor(plan);
   const relatedKeywords = unique([
     `${plan.keyword} origin`,
     `${plan.keyword} meaning`,
@@ -709,6 +715,11 @@ function buildStory(plan, category) {
     storyType: storyTypeFor(category.slug),
     generationBatch: 'known-one-each-20260719',
     contentStandard: 'unified',
+    generatorVersion: 'unified-public-article-v2',
+    templateVersion: 'variable-sections-v2',
+    articlePlanVersion: 'public-plan-v2',
+    validationVersion: 'public-validation-v2',
+    generatedAt: `${publishedAt}T00:00:00.000Z`,
     editorialStatus: 'approved',
     legacyContent: false,
     substantiveRevisionAt: publishedAt,
@@ -728,7 +739,7 @@ function buildStory(plan, category) {
     sourceNotes: {
       sharedVerifiedPoints: [
         `${plan.subject} is a pre-existing subject in folklore, myth, legend, mystery, or public cultural memory.`,
-        `The article can responsibly describe ${plan.detail}.`,
+        `${plan.subject} can be described through ${plan.detail}.`,
         `The strongest reading stays within ${plan.evidence}.`
       ],
       variants: [
@@ -762,16 +773,18 @@ function buildStory(plan, category) {
       coreStoryElements: [
         plan.quickAnswer[0],
         plan.quickAnswer[1],
-        sections[0].paragraphs[0],
-        sections[1].paragraphs[0]
+        fragments.core[0],
+        fragments.context[0],
+        fragments.core[1],
+        fragments.context[1]
       ],
       reportedVariants: [
-        { claim: sections[2].paragraphs[0], scope: 'variant tradition' },
-        { claim: sections[2].paragraphs[1], scope: 'later versions and source limits' }
+        { claim: fragments.variants[0], scope: 'variant tradition' },
+        { claim: fragments.variants[1], scope: 'later versions and source comparison' }
       ],
       editorialInterpretationOptions: [
-        sections[4].paragraphs[0],
-        sections[4].paragraphs[1]
+        fragments.meaning[0],
+        fragments.meaning[1]
       ],
       uncertainDetails: [
         'The exact earliest form may be disputed, incomplete, or preserved through later retellings.',
@@ -784,68 +797,219 @@ function buildStory(plan, category) {
       ],
       existenceEvidence: plan.sources
     },
-    seoHeadings: sections.map((section) => section.heading),
-    publicArticlePlan: {
-      title,
-      dek: deckFor(plan),
-      quickAnswer: {
-        paragraphs: plan.quickAnswer,
-        targetWords: { min: 90, max: 180 }
-      },
-      introduction: plan.intro,
-      sections: sections.map((section, index) => ({
-        heading: section.heading,
-        purpose: section.purpose,
-        contentLayer: index < 2 ? 'existing-story' : index === 2 ? 'reported-variant' : 'interpretation-and-source-limit',
-        targetWords: { min: 190, max: 360 },
-        paragraphs: section.paragraphs
-      })),
-      conclusion: {
-        paragraphs: [
-          `${plan.subject} may be read as more than a strange image or famous name. It gives a lasting shape to a fear, hope, warning, or question that people still recognize.`,
-          `Different versions should stay visible without being treated as equal proof. The story works best when its strongest details remain clear and uncertain claims stay in their proper place.`
-        ],
-        targetWords: { min: 80, max: 150 }
-      },
-      faq: faqFor(plan),
-      publicSourceNote: `${plan.sourceNote} ${plan.subject} may be read through the pattern preserved in its common versions, while later versions should remain separate from the core account.`
-    }
+    seoHeadings: seoHeadingsFor(plan),
+    faqQuestions: faqQuestionsFor(plan),
+    publicSourceNoteSeed: plan.sourceNote
   };
-}
-
-function sectionsFor(plan) {
-  return [
-    section(plan.coreHeading || `The Core ${kindName(plan)} Story`, 'Explain the familiar subject first.', plan.core),
-    section(plan.contextHeading || `Where ${plan.subject} Belongs`, 'Place the story in its cultural or source context.', plan.context),
-    section(plan.variantHeading || 'Common Versions and Later Retellings', 'Separate variants from the core account.', plan.variants),
-    section(plan.recordHeading || 'What the Record Can Support', 'Clarify source limits without flattening the story.', plan.record),
-    section(plan.meaningHeading || `Why ${shortSubject(plan.subject)} Still Works`, 'Explain the lasting motif or meaning.', plan.meaning)
-  ];
 }
 
 function source(title, url, supports) {
   return { title, url, sourceType: 'reference', supports };
 }
 
-function section(heading, purpose, paragraphs) {
-  return { heading, purpose, paragraphs };
+function topic(value) {
+  return value;
 }
 
-function faqFor(plan) {
-  return [
-    qa(`What is ${plan.subject}?`, `${plan.subject} is connected with ${plan.detail}.`),
-    qa(`Is ${plan.subject} based on a confirmed fact?`, `The article treats ${plan.subject} through available sources and source limits, without turning folklore, myth, or speculation into settled fact.`),
-    qa(`Why does ${plan.subject} matter?`, `${plan.subject} matters because ${compactDetail(plan.detail)} has remained active through ${plan.sourceBasis}. The lasting interest comes from how the story changes while keeping its central question intact.`),
-    qa(`Are all versions of ${plan.subject} the same?`, 'No. Later versions differ by source, region, medium, and interpretation.')
+function fragmentsFor(plan) {
+  return {
+    core: plan.core,
+    context: plan.context,
+    variants: plan.variants,
+    record: plan.record,
+    meaning: plan.meaning
+  };
+}
+
+function seoHeadingsFor(plan) {
+  const bySlug = {
+    'clown-statue-urban-legend': [
+      'The Babysitter and the Figure in the Room',
+      'Why the Clown Statue Changes the House',
+      'How the Phone Call Turns Decoration Into Threat',
+      'Versions With Dolls, Mannequins, and Intruders',
+      'What the Legend Says About Misrecognition'
+    ],
+    'this-man-dream-hoax': [
+      'The Face That Asked a Question',
+      'How the Dream Claim Spread Online',
+      'When the Hoax Frame Became Part of the Story',
+      'Why Reposts Removed the Original Context',
+      'What This Man Says About Shared Private Fear'
+    ],
+    'bhangarh-fort-legend': [
+      'The Ruined Fort Behind the Warning',
+      'How the Curse Story Gives Silence a Cause',
+      'Why Bhangarh Became a Haunted Place',
+      'Versions With Magicians, Princesses, and Nightfall',
+      'What the Fort Means as a Travel Legend'
+    ],
+    'taos-hum-mystery': [
+      'The Low Sound Some People Hear',
+      'Why the Witness Pattern Matters',
+      'Possible Sources Behind the Hum',
+      'Where Measurement and Experience Do Not Fully Meet',
+      'What the Taos Hum Reveals About Place and Perception'
+    ],
+    'green-children-woolpit-folklore': [
+      'The Children Who Appeared Near Woolpit',
+      'Why Their Color, Speech, and Food Matter',
+      'St Martin\'s Land and the Otherworld Question',
+      'Historical Theories and Folklore Versions',
+      'What the Green Children Still Ask'
+    ],
+    'beast-of-bray-road-legend': [
+      'The Road Where the Creature Appears',
+      'How Witnesses Describe the Beast',
+      'Why the Shape Became Werewolf-Like',
+      'Versions Between Cryptid Report and Local Legend',
+      'What Bray Road Adds to Modern Monster Folklore'
+    ],
+    'phaethon-sun-chariot-myth': [
+      'The Son Who Wanted the Sun Chariot',
+      'Why the Promise Becomes Dangerous',
+      'The Ride That Threatens the Earth',
+      'Zeus, the Fall, and the Aftermath',
+      'What Phaethon Means as a Myth of Limits'
+    ],
+    'basilisk-folklore': [
+      'The Creature Whose Gaze Is Dangerous',
+      'Why the Basilisk Is Called a Serpent King',
+      'How Bestiaries Changed the Monster',
+      'Where Basilisk and Cockatrice Traditions Overlap',
+      'What the Basilisk Makes Sight Mean'
+    ],
+    'agartha-hollow-earth-legend': [
+      'The Hidden Realm Beneath the Map',
+      'How Hollow Earth Ideas Shaped Agartha',
+      'Secret Cities, Entrances, and Inner-World Versions',
+      'Why Esoteric Geography Made the Legend Expand',
+      'What Agartha Promises Under the Surface'
+    ],
+    'green-flash-sunset-phenomenon': [
+      'The Green Light at the Edge of Sunset',
+      'How Atmospheric Refraction Creates the Moment',
+      'Why the Horizon Matters',
+      'Reports, Photographs, and Lucky-Sign Folklore',
+      'What the Green Flash Adds to Nature Lore'
+    ],
+    'oracle-of-delphi-legend': [
+      'The Sacred Place Where Questions Arrived',
+      'Apollo, the Pythia, and Oracular Speech',
+      'Why Ambiguous Answers Became Powerful',
+      'Later Explanations for the Prophetic State',
+      'What Delphi Means as a Legendary Place'
+    ],
+    'ring-of-gyges-myth': [
+      'The Ring That Removes Witnesses',
+      'Why Invisibility Tests Justice',
+      'How Plato Uses the Story',
+      'Later Invisibility Objects and Moral Symbols',
+      'What the Ring Reveals About Character'
+    ],
+    'black-cat-superstition-origin': [
+      'The Animal That Became an Omen',
+      'Why Black Cats Can Mean Luck or Misfortune',
+      'Witchcraft, Night, and Household Belief',
+      'Regional Versions of the Crossing Cat',
+      'What the Superstition Shows About Signs'
+    ]
+  };
+  return bySlug[plan.slug] || [
+    `The Detail That Defines ${plan.subject}`,
+    `How ${plan.subject} Is Usually Remembered`,
+    `Where Later Versions Differ`,
+    `What the Available Sources Show`,
+    `What ${shortSubject(plan.subject)} Means`
   ];
 }
 
-function qa(q, a) {
-  return { q, a };
-}
-
-function topic(value) {
-  return value;
+function faqQuestionsFor(plan) {
+  const bySlug = {
+    'clown-statue-urban-legend': [
+      'Who is usually alone with the clown statue?',
+      'Why does the phone call change the story?',
+      'Is the clown statue tied to one verified incident?',
+      'What objects replace the statue in later versions?'
+    ],
+    'this-man-dream-hoax': [
+      'Where did the This Man image spread?',
+      'Did thousands of people independently confirm the dream?',
+      'Why did the face feel familiar to viewers?',
+      'How did the hoax frame affect the legend?'
+    ],
+    'bhangarh-fort-legend': [
+      'Where is Bhangarh Fort?',
+      'Why is Bhangarh linked with night warnings?',
+      'Which curse details change in retellings?',
+      'Why do ruins attract haunted-place stories?'
+    ],
+    'taos-hum-mystery': [
+      'What do witnesses call the Taos Hum?',
+      'Why can some people hear it while others cannot?',
+      'Which explanations have been proposed?',
+      'Why has the Taos Hum remained unresolved?'
+    ],
+    'green-children-woolpit-folklore': [
+      'Where did the Green Children appear?',
+      'What is St Martin\'s Land?',
+      'Which explanations are usually suggested?',
+      'Why does the Woolpit story still feel mysterious?'
+    ],
+    'beast-of-bray-road-legend': [
+      'Where is Bray Road?',
+      'How is the Beast usually described?',
+      'Is the Beast treated as a werewolf or a cryptid?',
+      'Why did the Wisconsin legend spread?'
+    ],
+    'phaethon-sun-chariot-myth': [
+      'Who was Phaethon\'s father?',
+      'Why did Phaethon drive the sun chariot?',
+      'Why did Zeus strike Phaethon?',
+      'What does the myth warn about?'
+    ],
+    'basilisk-folklore': [
+      'What makes the basilisk dangerous?',
+      'Why is it called a serpent king?',
+      'How does the basilisk differ from the cockatrice?',
+      'Why does the deadly gaze matter?'
+    ],
+    'agartha-hollow-earth-legend': [
+      'What is Agartha?',
+      'How is Agartha connected to Hollow Earth ideas?',
+      'Is Agartha treated as confirmed geography?',
+      'Why do hidden-world legends keep returning?'
+    ],
+    'green-flash-sunset-phenomenon': [
+      'What causes the green flash?',
+      'Where is it easiest to see?',
+      'How long does the green flash last?',
+      'Why did the phenomenon become folklore?'
+    ],
+    'oracle-of-delphi-legend': [
+      'Who was the Pythia?',
+      'Why did people travel to Delphi?',
+      'Why were Delphic answers often difficult to interpret?',
+      'How should later explanations of Delphi be handled?'
+    ],
+    'ring-of-gyges-myth': [
+      'What power does the Ring of Gyges give?',
+      'Why does Plato use the ring story?',
+      'What does invisibility remove from moral choice?',
+      'Why is the ring not treated as a relic?'
+    ],
+    'black-cat-superstition-origin': [
+      'Do black cats always mean bad luck?',
+      'How did witchcraft affect black cat beliefs?',
+      'Why do crossing-cat omens differ by region?',
+      'What makes the black cat a flexible sign?'
+    ]
+  };
+  return bySlug[plan.slug] || [
+    `Which detail defines ${plan.subject}?`,
+    `How do later versions of ${plan.subject} differ?`,
+    `What can ${plan.subject} suggest?`
+  ];
 }
 
 function relatedSlugsFor(plan) {
@@ -855,7 +1019,22 @@ function relatedSlugsFor(plan) {
 }
 
 function deckFor(plan) {
-  return `${plan.subject} belongs to ${plan.sourceBasis}. This record separates the familiar story from later versions, source limits, and the meaning that keeps the subject active in folklore memory.`;
+  const bySlug = {
+    'clown-statue-urban-legend': 'A decorated room becomes frightening when one object no longer belongs there. The clown statue legend works through a sudden change in recognition, not through a long chain of events.',
+    'this-man-dream-hoax': 'This Man is the internet legend of a plain, unsettling face that strangers were said to recognize from dreams. Its power comes from the gap between a viral hoax frame and the private feeling of recognition.',
+    'bhangarh-fort-legend': 'Bhangarh Fort carries the atmosphere of a place where history, ruin, and warning signs meet. Its haunted reputation grows from the way silence makes a visible location feel unfinished.',
+    'taos-hum-mystery': 'The Taos Hum is a low sound reported by some people around Taos, New Mexico, while others hear nothing. The mystery sits between place, perception, machinery, and the difficulty of proving a sound after it is heard.',
+    'green-children-woolpit-folklore': 'Two green-skinned children appear near Woolpit, speak an unknown language, and seem to come from a place called St Martin\'s Land. The medieval tale remains strange because the children are human and unreachable at the same time.',
+    'beast-of-bray-road-legend': 'A rural Wisconsin road became the stage for a modern monster image that people could picture immediately. The Beast of Bray Road survives because its outline stays unstable while the location stays specific.',
+    'phaethon-sun-chariot-myth': 'Phaethon asks to drive the sun chariot and loses control of the sky. The myth turns a son\'s proof of identity into a disaster of heat, pride, and limits.',
+    'basilisk-folklore': 'Few creatures make the simple act of looking feel unsafe. Basilisk folklore turns a monster encounter into a warning about sight, distance, and knowledge.',
+    'agartha-hollow-earth-legend': 'Agartha is the hidden inner realm imagined beneath ordinary geography. The legend turns the unknown world from a distant island into something under the map.',
+    'green-flash-sunset-phenomenon': 'A sunset can end with a tiny green edge of light that appears and vanishes almost at once. The green flash sits between atmospheric optics and the old habit of treating rare sky moments as signs.',
+    'oracle-of-delphi-legend': 'The Oracle of Delphi was a sacred Greek site where the Pythia gave responses associated with Apollo. Its legend survives because an answer could guide a city and still remain difficult to understand.',
+    'ring-of-gyges-myth': 'The Ring of Gyges grants invisibility and asks what a person would do without witnesses. Plato uses the object to turn justice into a story anyone can imagine.',
+    'black-cat-superstition-origin': 'Black cat superstition changes across cultures, where the same animal can signal luck, danger, witchcraft, protection, or omen. The belief shows how an ordinary encounter becomes a sign.'
+  };
+  return bySlug[plan.slug] || `${plan.quickAnswer[0]} ${plan.quickAnswer[1]}`.replace(/\s+/g, ' ').trim();
 }
 
 function knownNamesFor(plan) {
@@ -897,13 +1076,6 @@ function searchIntentFor(categorySlug) {
   if (categorySlug === 'legend-origins') return 'origin';
   if (categorySlug === 'unexplained-mysteries' || categorySlug === 'strange-nature') return 'facts-and-theories';
   return 'story-and-meaning';
-}
-
-function kindName(plan) {
-  if (/myth/i.test(plan.tag)) return 'Myth';
-  if (/place|fort|site/i.test(plan.tag)) return 'Place';
-  if (/object|ring|phenomenon/i.test(plan.tag)) return 'Subject';
-  return 'Legend';
 }
 
 function shortSubject(subject) {
