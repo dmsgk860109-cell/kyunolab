@@ -160,7 +160,20 @@ function customDekForStory(slug) {
   return {
     'db-cooper-hijacking-mystery': 'A passenger using the name Dan Cooper left an aircraft by parachute and disappeared into one of America\'s most studied unsolved cases.',
     'island-of-the-dolls-xochimilco': 'In the canals of Xochimilco, old dolls hanging from trees turned a real island into one of Mexico City\'s most recognizable strange-place legends.',
-    'spear-of-destiny-holy-lance': 'The legend asks how one weapon-shaped relic could gather authority, fear, imperial imagination, and arguments over sacred power across centuries.'
+    'spear-of-destiny-holy-lance': 'The legend asks how one weapon-shaped relic could gather authority, fear, imperial imagination, and arguments over sacred power across centuries.',
+    'sewer-alligator-urban-legend': 'A city sewer is ordinary infrastructure until rumor turns it into a habitat. The sewer alligator legend gives the hidden city a body, a mouth, and a reason to look twice at every drain.',
+    'backrooms-internet-folklore': 'The Backrooms made modern emptiness feel haunted without needing a traditional ghost. Its yellow rooms and humming lights turn familiar architecture into a place that cannot lead home.',
+    'nazca-lines-mystery': 'The Nazca Lines make the desert feel marked for a viewer who is not standing on the ground. Their power comes from scale, survival, and the unfinished question of purpose.',
+    'rendlesham-forest-incident': 'Rendlesham remains memorable because it joins a night forest, military witnesses, official paperwork, and unresolved lights. The case keeps uncertainty inside a visible record trail.',
+    'selkie-folklore': 'Selkie folklore turns the shoreline into a boundary between two lives. The seal skin is not only magic; it is the fragile proof of where the selkie truly belongs.',
+    'mothman-point-pleasant-legend': 'Mothman endures because the figure is never only a creature. Around Point Pleasant, red eyes and wings became a warning shape tied to place, memory, and disaster.',
+    'icarus-flight-myth': 'Icarus is remembered at the instant freedom becomes danger. The myth keeps its force because the wish to rise and the risk of falling appear in the same image.',
+    'kraken-sea-monster-folklore': 'The Kraken gives the ocean a hidden scale larger than the ship above it. Its folklore works because the surface of the sea never shows everything beneath.',
+    'atlantis-lost-city': 'Atlantis began as a story of a powerful island and became the model for lost-world imagination. The legend asks why vanished places feel recoverable even when the map cannot hold them.',
+    'blood-rain-phenomenon': 'Blood rain shows how quickly weather can become omen. A natural event may have a physical cause, but red rain still changes the emotional meaning of the sky.',
+    'stonehenge-legendary-place': 'Stonehenge stands as a monument whose stones are clearer than its final meaning. Archaeology, legend, and sacred-place memory all gather around the same visible circle.',
+    'ark-of-the-covenant-legend': 'The Ark of the Covenant is a mythic object because absence makes it more charged, not less. The sacred chest remains powerful through boundary, loss, and disputed memory.',
+    'horseshoe-luck-origin': 'Horseshoe luck turns a stable object into a household sign. Iron, doorway, and threshold belief combine until a practical thing becomes a charm against uncertainty.'
   }[slug] || '';
 }
 

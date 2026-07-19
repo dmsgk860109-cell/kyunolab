@@ -630,6 +630,617 @@ const topics = [
     ],
     related: ['friday-the-13th-origin', 'why-mirrors-become-haunted-objects', 'how-a-warning-becomes-a-legend'],
     sourceNote: 'This article follows black cat superstition as a layered folklore origin, not a single fixed beginning. Later versions should be treated as regional variants.'
+  }),
+  topic({
+    categorySlug: 'urban-legends',
+    slug: 'sewer-alligator-urban-legend',
+    title: 'Sewer Alligator Urban Legend: City Drains, Escaped Pets, and the Monster Below the Street',
+    subject: 'Sewer Alligator',
+    tag: 'Urban Animal Legend',
+    tags: ['Urban Animal Legend', 'Sewer Alligator', 'City Folklore', 'Urban Legend'],
+    keyword: 'sewer alligator urban legend',
+    detail: 'the modern city legend that alligators live beneath streets after being abandoned as exotic pets',
+    sourceBasis: 'urban legend scholarship, newspaper reports, city folklore, and animal-in-the-sewer retellings',
+    evidence: 'folklore references, public reporting, city rumor history, and source-limited accounts of unusual urban animals',
+    vocabulary: ['sewer alligator', 'city drains', 'escaped pets', 'New York', 'urban animal'],
+    sources: [
+      source('Snopes - Sewer Alligators', 'https://www.snopes.com/fact-check/alligators-sewers/', 'Supports the sewer alligator as a circulating urban legend with scattered reports and strong folklore reception.'),
+      source('New York Public Library - Sewer Alligator', 'https://www.nypl.org/blog/2015/02/10/sewer-alligator', 'Supports the New York legend context and the way the story entered city memory.')
+    ],
+    quickAnswer: [
+      'The sewer alligator is a famous urban legend about reptiles living in city sewer systems after being abandoned, flushed, or lost. The story is especially linked with New York, where the hidden city below the street becomes part of the fear.',
+      'Occasional reports of unusual animals do not prove a stable underground alligator population. The legend may be read as a story about what a modern city hides under ordinary pavement.'
+    ],
+    intro: [
+      'The sewer alligator begins with a simple image: a city street, a drain, and something alive underneath.',
+      'That image works because the city already has a hidden layer. The legend only gives that hidden layer teeth.'
+    ],
+    core: [
+      'In common versions, baby alligators are bought as pets and later discarded when they become too large or dangerous. Instead of dying, they survive in the sewer and grow in darkness.',
+      'The details change, but the shape stays clear. A private mistake becomes a public monster beneath everyone’s feet.'
+    ],
+    context: [
+      'Sewer systems are perfect urban legend spaces because they are real, necessary, and mostly unseen. People know they exist, but few people know exactly what happens inside them.',
+      'The alligator also connects domestic novelty with urban consequence. A creature brought home for amusement becomes a rumor about the whole city.'
+    ],
+    variants: [
+      'Some versions describe pale alligators adapted to darkness. Others focus on workers who see eyes in tunnels or find evidence near drains.',
+      'Later retellings move the legend between cities, but New York remains the best-known setting because the city already carries a strong underground mythology.'
+    ],
+    record: [
+      'The record can support sewer alligators as a durable urban legend with occasional animal reports in unusual places. It cannot support the claim that a hidden breeding population lives below the city.',
+      'The strongest article keeps the scattered reports separate from the larger legend that grew around them.'
+    ],
+    meaning: [
+      'The sewer alligator may be read as a fear of hidden consequences. What people throw away does not vanish. It waits somewhere below the surface.',
+      'That is why the story remains easy to retell. Every drain becomes a possible opening.'
+    ],
+    related: ['killer-in-the-backseat-legend', 'kidney-theft-urban-legend', 'vanishing-hitchhiker-urban-legend'],
+    sourceNote: 'This article follows the sewer alligator as an urban animal legend. Scattered animal reports are kept separate from claims of a lasting underground population.'
+  }),
+  topic({
+    categorySlug: 'internet-folklore',
+    slug: 'backrooms-internet-folklore',
+    title: 'The Backrooms Internet Folklore: Yellow Rooms, Empty Halls, and the Fear of Falling Out of Reality',
+    subject: 'The Backrooms',
+    tag: 'Liminal Space Legend',
+    tags: ['Liminal Space Legend', 'Backrooms', 'Online Horror', 'Creepypasta'],
+    keyword: 'Backrooms internet folklore',
+    detail: 'the internet-born legend of an endless yellow office-like space reached by slipping out of normal reality',
+    sourceBasis: 'internet folklore documentation, creepypasta history, liminal-space culture, and collaborative online retellings',
+    evidence: 'meme documentation, archived posts, community retellings, and source-limited internet folklore summaries',
+    vocabulary: ['Backrooms', 'yellow rooms', 'humming lights', 'no-clip', 'liminal space'],
+    sources: [
+      source('Know Your Meme - The Backrooms', 'https://knowyourmeme.com/memes/the-backrooms', 'Supports the online origin, image spread, and meme history of the Backrooms.'),
+      source('The Backrooms Wiki', 'https://backrooms.fandom.com/wiki/Backrooms_Wiki', 'Supports later collaborative expansion and community-created levels as reception history.')
+    ],
+    quickAnswer: [
+      'The Backrooms is an internet folklore setting built around the idea of slipping out of reality into endless yellow rooms and fluorescent-lit halls. It began as a short online horror concept and expanded through memes, wikis, videos, and collaborative stories.',
+      'The story is not a claimed real place in the ordinary sense. It may be read as a digital legend about empty office spaces, broken reality, and the unease of places that look familiar but offer no way home.'
+    ],
+    intro: [
+      'The Backrooms does not begin with a monster. It begins with a room that feels wrong.',
+      'The carpet is damp. The lights hum. The walls repeat until direction stops feeling useful.'
+    ],
+    core: [
+      'The familiar premise says that a person can “no-clip” out of reality and fall into the Backrooms. The space looks like an old office maze, but it has no ordinary exit.',
+      'The horror comes from repetition before danger. The viewer understands the place before anything happens, and that is enough.'
+    ],
+    context: [
+      'The Backrooms belongs to internet folklore because it grew through shared images and collaborative retelling. A single concept became a setting that many people could add to.',
+      'It also connects with liminal-space photography. Empty halls, offices, pools, and schools feel strange because they look public but abandoned by purpose.'
+    ],
+    variants: [
+      'Later versions add levels, entities, rules, found footage, and survival systems. These expansions make the world larger, but the earliest fear remains the same.',
+      'Some retellings treat the Backrooms like a game map. Others keep it quiet, minimal, and almost believable.'
+    ],
+    record: [
+      'The record can support the Backrooms as a modern internet legend with a visible online development. It cannot support it as a verified hidden dimension.',
+      'The useful distinction is between origin, community expansion, and fictional in-world lore.'
+    ],
+    meaning: [
+      'The Backrooms may be read as a fear of places built without comfort. The space is artificial, endless, and nearly human, but never welcoming.',
+      'That is why it spread so well. It turns the ordinary background of modern life into a maze.'
+    ],
+    related: ['cicada-3301-internet-puzzle', 'this-man-dream-hoax', 'polybius-arcade-game-legend'],
+    sourceNote: 'This article follows the Backrooms as internet folklore and collaborative horror. In-world lore is treated as later creative expansion, not as external evidence.'
+  }),
+  topic({
+    categorySlug: 'strange-places',
+    slug: 'nazca-lines-mystery',
+    title: 'Nazca Lines Mystery: Desert Geoglyphs, Giant Figures, and the Place Seen From Above',
+    subject: 'Nazca Lines',
+    tag: 'Ancient Place Mystery',
+    tags: ['Ancient Place Mystery', 'Nazca Lines', 'Geoglyphs', 'Peru'],
+    keyword: 'Nazca Lines mystery',
+    detail: 'the giant desert geoglyphs of southern Peru and the long-running questions about their purpose and meaning',
+    sourceBasis: 'archaeological summaries, UNESCO heritage context, public history writing, and source-aware mystery discussion',
+    evidence: 'archaeological descriptions, heritage records, aerial surveys, and interpretation-limited discussions of purpose',
+    vocabulary: ['Nazca Lines', 'geoglyphs', 'southern Peru', 'desert', 'from above'],
+    sources: [
+      source('UNESCO - Lines and Geoglyphs of Nasca and Palpa', 'https://whc.unesco.org/en/list/700/', 'Supports the heritage status, location, and archaeological importance of the Nazca and Palpa geoglyphs.'),
+      source('Encyclopaedia Britannica - Nazca Lines', 'https://www.britannica.com/place/Nazca-Lines', 'Supports the general description and major interpretation limits around the geoglyphs.')
+    ],
+    quickAnswer: [
+      'The Nazca Lines are large geoglyphs in the desert of southern Peru, including straight lines, geometric forms, animals, and plant-like figures. They are real archaeological features, but their full purpose remains debated.',
+      'The mystery comes from scale and viewpoint. The lines can be seen most clearly from above, which has encouraged ritual, astronomical, water-related, and speculative interpretations.'
+    ],
+    intro: [
+      'The Nazca Lines make the desert feel like a page too large to read from the ground.',
+      'From above, figures appear. A monkey, a bird, a spider, and long straight paths begin to make the landscape look intentional.'
+    ],
+    core: [
+      'The lines were made by removing darker surface stones and exposing lighter ground beneath. That simple method created images and paths that lasted in the dry desert climate.',
+      'Their survival is part of the mystery. The figures are fragile, but the environment helped preserve them for centuries.'
+    ],
+    context: [
+      'The strongest discussions place the geoglyphs within ancient Andean culture rather than treating them as impossible objects. Ritual movement, water, astronomy, and landscape meaning are all part of the conversation.',
+      'The aerial view made the site famous, but that does not mean the makers needed modern flight. Large ground designs can be planned, walked, and understood in more than one way.'
+    ],
+    variants: [
+      'Popular versions often exaggerate the mystery into claims about aliens or lost technology. Those claims are part of modern reception, not the baseline archaeological record.',
+      'More careful interpretations differ over function. Some emphasize ritual pathways, some celestial alignment, and some water or fertility symbolism.'
+    ],
+    record: [
+      'The record can support the Nazca Lines as real geoglyphs with strong archaeological importance. It cannot settle one final meaning for every figure and line.',
+      'A source-aware article keeps wonder without needing an impossible explanation.'
+    ],
+    meaning: [
+      'The Nazca Lines may be read as a mystery of scale. Human marks become strange when the viewer has to rise above the ground to see them clearly.',
+      'That distance gives the place its power. It makes the desert feel addressed to more than one kind of observer.'
+    ],
+    related: ['bhangarh-fort-legend', 'bennington-triangle-legend', 'island-of-the-dolls-xochimilco'],
+    sourceNote: 'This article follows the Nazca Lines as archaeological geoglyphs with debated interpretations. Speculative claims are kept separate from the source-supported record.'
+  }),
+  topic({
+    categorySlug: 'unexplained-mysteries',
+    slug: 'rendlesham-forest-incident',
+    title: 'Rendlesham Forest Incident: Lights, Military Witnesses, and Britain’s Famous UFO Case',
+    subject: 'Rendlesham Forest Incident',
+    tag: 'UFO Case',
+    tags: ['UFO Case', 'Rendlesham Forest', 'Witness Reports', 'Unexplained Mystery'],
+    keyword: 'Rendlesham Forest incident',
+    detail: 'the reported lights and strange encounters near RAF Woodbridge and Rendlesham Forest in December 1980',
+    sourceBasis: 'public records, witness statements, UFO case summaries, and evidence-limited historical reporting',
+    evidence: 'released documents, witness accounts, media reporting, skeptical explanations, and unresolved-case summaries',
+    vocabulary: ['Rendlesham Forest', 'RAF Woodbridge', 'UFO', 'lights', 'military witnesses'],
+    sources: [
+      source('The National Archives - UFO files', 'https://www.nationalarchives.gov.uk/ufos/', 'Supports the public-record context for released UK UFO files.'),
+      source('BBC - Rendlesham Forest UFO sighting', 'https://www.bbc.com/news/uk-england-suffolk-51565054', 'Supports the public summary and continuing local memory of the case.')
+    ],
+    quickAnswer: [
+      'The Rendlesham Forest Incident refers to reports of strange lights and encounters near RAF Woodbridge in Suffolk in December 1980. It is often called one of Britain’s best-known UFO cases because military personnel were among the witnesses.',
+      'The case has official records, witness testimony, and proposed explanations, but it remains disputed. It may be read as an evidence-limited mystery where documents and memories do not resolve every detail.'
+    ],
+    intro: [
+      'Rendlesham Forest became famous because the story did not come from a distant rumor alone.',
+      'It involved lights, military witnesses, official paperwork, and a place people could still visit.'
+    ],
+    core: [
+      'The central reports describe unusual lights seen near the forest and nearby air bases. Some witnesses later described moving lights, marks, radiation readings, and a close encounter with an object.',
+      'The case became stronger in public memory because it had names, dates, and documents. Those details gave the story a record trail.'
+    ],
+    context: [
+      'Rendlesham belongs to UFO folklore, but it also belongs to Cold War atmosphere. Military sites, night watches, and unexplained lights already create a setting where uncertainty feels charged.',
+      'The case is often compared with Roswell, though the source trail and cultural setting are different.'
+    ],
+    variants: [
+      'Later versions differ over what witnesses saw, how close the encounter was, and which explanations matter most. Some emphasize a lighthouse, some military confusion, and some a genuine unknown object.',
+      'The most responsible versions keep testimony, documents, and later interpretation separate.'
+    ],
+    record: [
+      'The record can support that reports were made and preserved in public discussion. It cannot force all details into one settled explanation.',
+      'That is why the case remains useful for mystery readers. It shows how evidence can exist without ending disagreement.'
+    ],
+    meaning: [
+      'Rendlesham may be read as a mystery about authority and uncertainty. A military setting makes the unknown feel more serious, but it does not automatically make every claim proven.',
+      'The forest remains memorable because the story stands between report, explanation, and belief.'
+    ],
+    related: ['wow-signal-mystery', 'taos-hum-mystery', 'db-cooper-hijacking-mystery'],
+    sourceNote: 'This article follows the Rendlesham Forest Incident through public records, witness accounts, and later explanations. It does not treat every UFO interpretation as equally verified.'
+  }),
+  topic({
+    categorySlug: 'classic-folklore',
+    slug: 'selkie-folklore',
+    title: 'Selkie Folklore: Seal Skins, Human Shores, and the Shape-Shifting Bride Story',
+    subject: 'Selkie',
+    tag: 'Shape-Shifter Folklore',
+    tags: ['Shape-Shifter Folklore', 'Selkie', 'Scottish Folklore', 'Sea Legend'],
+    keyword: 'selkie folklore',
+    detail: 'the North Atlantic folklore of seal people who can remove their skins and live briefly as humans on shore',
+    sourceBasis: 'Scottish and Orcadian folklore, North Atlantic oral tradition, ballads, and later literary retellings',
+    evidence: 'folklore collections, regional summaries, ballad traditions, and comparative sea-spirit motifs',
+    vocabulary: ['selkie', 'seal skin', 'shore', 'sea', 'shape'],
+    sources: [
+      source('Orkneyjar - Selkies', 'http://www.orkneyjar.com/folklore/selkiefolk/', 'Supports regional Orkney selkie folklore and common story patterns.'),
+      source('University of Pittsburgh - Selkie Tales', 'https://sites.pitt.edu/~dash/folktexts.html', 'Supports comparative folklore access to related tale texts and motifs.')
+    ],
+    quickAnswer: [
+      'Selkies are seal people in Scottish, Orcadian, and North Atlantic folklore. They can remove their seal skins, appear in human form, and sometimes become trapped on land when the skin is hidden.',
+      'The best-known stories often involve marriage, longing, and return to the sea. The selkie may be read as a figure of divided belonging rather than a simple monster.'
+    ],
+    intro: [
+      'A selkie story usually begins at the edge of land and water.',
+      'Something from the sea steps onto the shore, and for a while it looks human.'
+    ],
+    core: [
+      'In many versions, a human finds or steals a selkie’s seal skin. Without the skin, the selkie cannot return to the sea and may live as a spouse on land.',
+      'The story turns on the hidden skin. When it is found again, the selkie returns to the water, even if love and children remain behind.'
+    ],
+    context: [
+      'Selkie folklore belongs to coastal communities where the sea is both home and danger. The seal is familiar, but the story gives it another life beneath the surface.',
+      'The tales often carry sadness rather than simple fear. They ask what happens when one world tries to keep someone who belongs to another.'
+    ],
+    variants: [
+      'Some versions focus on selkie wives. Others describe male selkies who visit human women. The emotional center changes, but the skin remains the key object.',
+      'Later literary retellings often soften or romanticize the stories, while older versions can feel sharper and more unsettling.'
+    ],
+    record: [
+      'The record can support selkies as a recurring folklore figure in North Atlantic tradition. It cannot reduce every selkie story to one single plot.',
+      'Regional versions matter because the shoreline, family role, and tone can change from one telling to another.'
+    ],
+    meaning: [
+      'Selkie folklore may be read as a story about captivity, longing, and return. The human home can be loving and still not be the selkie’s home.',
+      'That tension is why the tales last. They make the sea feel like a lost identity.'
+    ],
+    related: ['green-children-woolpit-folklore', 'wild-hunt-folklore', 'pied-piper-of-hamelin-folklore'],
+    sourceNote: 'This article follows selkie folklore as a regional and comparative tradition. Later romantic retellings are treated as reception, not as the only form of the tale.'
+  }),
+  topic({
+    categorySlug: 'modern-legends',
+    slug: 'mothman-point-pleasant-legend',
+    title: 'Mothman Legend: Point Pleasant Sightings, Red Eyes, and the Modern Monster That Became an Omen',
+    subject: 'Mothman',
+    tag: 'Modern Monster Legend',
+    tags: ['Modern Monster Legend', 'Mothman', 'Point Pleasant', 'West Virginia'],
+    keyword: 'Mothman Point Pleasant legend',
+    detail: 'the modern legend of a winged red-eyed figure reported around Point Pleasant, West Virginia, in the 1960s',
+    sourceBasis: 'local reports, modern legend summaries, cryptid folklore, and later cultural reception',
+    evidence: 'newspaper-era accounts, witness summaries, local history, festival reception, and source-limited monster folklore',
+    vocabulary: ['Mothman', 'Point Pleasant', 'red eyes', 'winged figure', 'Silver Bridge'],
+    sources: [
+      source('West Virginia Encyclopedia - Mothman', 'https://www.wvencyclopedia.org/articles/1418', 'Supports the regional history and public memory of the Mothman legend.'),
+      source('Atlas Obscura - Mothman Museum', 'https://www.atlasobscura.com/places/mothman-museum', 'Supports the later cultural reception and local identity around Mothman.')
+    ],
+    quickAnswer: [
+      'Mothman is a modern legend centered on reports of a large winged figure with glowing red eyes around Point Pleasant, West Virginia, in the 1960s. The story became linked in public memory with strange warnings and the Silver Bridge collapse.',
+      'The legend combines witness reports, local fear, media attention, and later cryptid culture. It may be read as a modern omen figure rather than a confirmed biological creature.'
+    ],
+    intro: [
+      'Mothman is remembered less like an animal and more like a warning shape.',
+      'Red eyes, wings, a dark road, and a town waiting for disaster became enough to build a legend.'
+    ],
+    core: [
+      'The familiar accounts describe a tall winged figure seen near Point Pleasant. Witnesses often mention red eyes, speed, and a body that does not fit ordinary birds or people.',
+      'After the Silver Bridge collapse, later retellings connected the figure with omen and disaster. That link changed Mothman from a sighting story into a warning story.'
+    ],
+    context: [
+      'Mothman belongs to modern legend because the setting is recent, local, and media-shaped. The story spread through reports, books, documentaries, festivals, and cryptid culture.',
+      'Point Pleasant remains central. The place gives the legend a geography that fans and skeptics can both visit.'
+    ],
+    variants: [
+      'Some versions treat Mothman as a cryptid. Others treat it as an omen, a misidentified bird, a supernatural figure, or a symbol of local tragedy.',
+      'Later appearances outside West Virginia often borrow the image while changing the meaning.'
+    ],
+    record: [
+      'The record can support that Mothman became a major modern legend with reported sightings and strong local reception. It cannot verify every sighting as one creature.',
+      'The important distinction is between witness narrative, later omen interpretation, and cultural afterlife.'
+    ],
+    meaning: [
+      'Mothman may be read as a story about how disaster changes memory. A strange figure seen before tragedy becomes easier to remember as a sign.',
+      'That is why the legend still feels alive. It gives fear a silhouette.'
+    ],
+    related: ['men-in-black-legend', 'flatwoods-monster-legend', 'beast-of-bray-road-legend'],
+    sourceNote: 'This article follows Mothman as a modern Point Pleasant legend. The article separates reported sightings, later omen readings, and cryptid reception.'
+  }),
+  topic({
+    categorySlug: 'myths',
+    slug: 'icarus-flight-myth',
+    title: 'Icarus Flight Myth: Wax Wings, the Sun, and the Warning About Flying Too High',
+    subject: 'Icarus',
+    tag: 'Greek Myth',
+    tags: ['Greek Myth', 'Icarus', 'Daedalus', 'Flight Myth'],
+    keyword: 'Icarus flight myth',
+    detail: 'the Greek myth of Icarus flying with wax wings and falling after ignoring Daedalus’s warning',
+    sourceBasis: 'Greek myth tradition, classical retellings, Ovidian reception, and symbolic interpretations of flight',
+    evidence: 'classical myth summaries, literary retellings, iconography, and later moral interpretation',
+    vocabulary: ['Icarus', 'Daedalus', 'wax wings', 'sun', 'fall'],
+    sources: [
+      source('Theoi - Ikaros', 'https://www.theoi.com/Heros/Ikaros.html', 'Supports classical references and the main Icarus myth pattern.'),
+      source('Encyclopaedia Britannica - Icarus', 'https://www.britannica.com/topic/Icarus-Greek-mythology', 'Supports the general myth summary and symbolic reception.')
+    ],
+    quickAnswer: [
+      'Icarus is the Greek mythic figure who escapes Crete with wings made by Daedalus, but flies too close to the sun. The wax melts, the wings fail, and Icarus falls into the sea.',
+      'The myth is often read as a warning about pride, disobedience, or dangerous ambition. It also remains powerful because the dream of flight and the danger of falling arrive in the same image.'
+    ],
+    intro: [
+      'Icarus begins with escape.',
+      'A father builds wings, a son follows him into the sky, and freedom suddenly has rules.'
+    ],
+    core: [
+      'Daedalus warns Icarus not to fly too low or too high. The middle path is the safe path, but the sky makes that warning difficult to obey.',
+      'Icarus rises toward the sun. The wax softens, the feathers loosen, and the flight becomes a fall.'
+    ],
+    context: [
+      'The myth is tied to Daedalus, Crete, the Labyrinth, and the larger story of invention under danger. Flight is both brilliant and fragile.',
+      'That balance matters because Icarus is not only punished for ambition. He is also remembered because he reached for something human beings keep imagining.'
+    ],
+    variants: [
+      'Later versions emphasize different lessons. Some focus on disobedience, some on pride, and some on the cost of invention.',
+      'Art and poetry often hold the moment before the fall, where beauty and danger are impossible to separate.'
+    ],
+    record: [
+      'The record can support Icarus as a famous Greek mythic figure preserved through classical and later tradition. It does not require treating the flight as historical event.',
+      'The strongest reading keeps the narrative image and symbolic meaning together.'
+    ],
+    meaning: [
+      'Icarus may be read as a myth about limits. The warning is simple, but desire makes the sky feel larger than the rule.',
+      'That is why the story endures. Everyone understands the wish to rise, and everyone understands the risk of going too far.'
+    ],
+    related: ['phaethon-sun-chariot-myth', 'prometheus-fire-myth', 'narcissus-and-echo-myth'],
+    sourceNote: 'This article follows Icarus through Greek myth and later symbolic reception. Moral readings are presented as interpretation, not as one fixed ancient lesson.'
+  }),
+  topic({
+    categorySlug: 'mythic-creatures',
+    slug: 'kraken-sea-monster-folklore',
+    title: 'Kraken Folklore: Sea Monster, Giant Arms, and the Creature Beneath the Ship',
+    subject: 'Kraken',
+    tag: 'Sea Monster Folklore',
+    tags: ['Sea Monster Folklore', 'Kraken', 'Nordic Folklore', 'Ocean Legend'],
+    keyword: 'Kraken sea monster folklore',
+    detail: 'the northern sea-monster tradition of a vast creature large enough to threaten ships from below',
+    sourceBasis: 'Nordic sea folklore, natural history reception, sailor legend, and later giant-squid comparisons',
+    evidence: 'folklore summaries, historical descriptions, maritime legend, and later zoological comparisons',
+    vocabulary: ['Kraken', 'sea monster', 'giant squid', 'ship', 'Nordic folklore'],
+    sources: [
+      source('Encyclopaedia Britannica - Kraken', 'https://www.britannica.com/topic/kraken', 'Supports the general folklore description and later sea-monster reception.'),
+      source('Smithsonian Ocean - Giant Squid', 'https://ocean.si.edu/ocean-life/invertebrates/giant-squid', 'Supports the natural-history context often compared with giant sea-monster traditions.')
+    ],
+    quickAnswer: [
+      'The Kraken is a northern sea-monster figure often imagined as an enormous creature beneath the surface, large enough to endanger ships. Later retellings frequently connect it with giant squid or octopus imagery.',
+      'The folklore matters because the ocean hides scale. A sailor can see the surface and still imagine something vast moving below it.'
+    ],
+    intro: [
+      'The Kraken is frightening because it does not need to stand in front of anyone.',
+      'It waits under the ship, where the sea has already hidden most of the world.'
+    ],
+    core: [
+      'Older descriptions present the Kraken as a huge sea creature that can disturb water, create danger for vessels, or be mistaken for an island-like mass.',
+      'Modern images often give it tentacles, pulling arms, and the shape of a giant squid. That image made the legend easy to picture.'
+    ],
+    context: [
+      'Sea-monster folklore grows from real ocean uncertainty. Deep water, strange carcasses, large animals, and sailor reports can all become part of the same imaginative field.',
+      'The Kraken survives because it joins folklore with possible nature. It feels impossible and plausible at the same time.'
+    ],
+    variants: [
+      'Some versions make the Kraken island-sized. Others make it a squid-like predator attacking ships directly.',
+      'Later fantasy and film versions intensify the creature, while older folklore often leaves it more mysterious and environmental.'
+    ],
+    record: [
+      'The record can support the Kraken as a major sea-monster tradition with later links to giant squid imagery. It cannot prove the exact creature of every old report.',
+      'A source-aware article keeps folklore, natural history, and modern monster design in separate layers.'
+    ],
+    meaning: [
+      'The Kraken may be read as a creature of hidden scale. It gives shape to the fear that the sea is deeper than human control.',
+      'That is why the monster still works. A ship can be large and still look small above the unknown.'
+    ],
+    related: ['basilisk-folklore', 'phoenix-mythic-bird', 'cockatrice-folklore'],
+    sourceNote: 'This article follows the Kraken through sea folklore and later giant-squid reception. Modern monster imagery is treated as later development.'
+  }),
+  topic({
+    categorySlug: 'lost-worlds',
+    slug: 'atlantis-lost-city',
+    title: 'Atlantis Lost City: Plato’s Island, Sunken Power, and the World That Vanished Beneath the Sea',
+    subject: 'Atlantis',
+    tag: 'Lost City Legend',
+    tags: ['Lost City Legend', 'Atlantis', 'Plato', 'Sunken Island'],
+    keyword: 'Atlantis lost city',
+    detail: 'the legendary island power described by Plato and later reimagined as a sunken lost civilization',
+    sourceBasis: 'Platonic texts, classical reception, lost-world speculation, and later cultural retellings',
+    evidence: 'classical references, historical interpretation, reception history, and source-limited lost-world claims',
+    vocabulary: ['Atlantis', 'Plato', 'sunken island', 'lost city', 'lost civilization'],
+    sources: [
+      source('Perseus Digital Library - Plato Critias', 'https://www.perseus.tufts.edu/', 'Supports the classical-text context for Plato’s Atlantis account.'),
+      source('Encyclopaedia Britannica - Atlantis', 'https://www.britannica.com/place/Atlantis-legendary-island', 'Supports the general summary and later reception of Atlantis.')
+    ],
+    quickAnswer: [
+      'Atlantis is the legendary island power described by Plato and later imagined as a lost civilization that sank beneath the sea. The original account appears in philosophical dialogue, not as a modern archaeological report.',
+      'The legend became larger because a vanished advanced world is easy to relocate, reinterpret, and search for. Atlantis may be read as a lost-world story about power, punishment, and impossible recovery.'
+    ],
+    intro: [
+      'Atlantis begins as a story about a powerful island that falls.',
+      'Then the story leaves Plato and becomes one of the most durable lost worlds in cultural memory.'
+    ],
+    core: [
+      'In Plato’s account, Atlantis is a great power beyond the pillars of Heracles. It becomes morally dangerous and is eventually destroyed.',
+      'Later readers turned that story into a search. The island became a possible place, a sunken memory, and a symbol of vanished civilization.'
+    ],
+    context: [
+      'Atlantis belongs to lost-world legend because it combines ancient authority with missing geography. A named island that cannot be found invites endless placement on maps.',
+      'The original philosophical use matters. Plato’s Atlantis is not the same thing as every later claim about ruins, colonies, or hidden technology.'
+    ],
+    variants: [
+      'Later versions move Atlantis to many locations and connect it with advanced science, esoteric history, or prehistoric catastrophe.',
+      'Those versions show the legend’s afterlife, but they should not be treated as equal to the earliest textual frame.'
+    ],
+    record: [
+      'The record can support Atlantis as a powerful literary and legendary subject. It cannot confirm one lost city beneath the sea.',
+      'A careful archive entry keeps Plato, later speculation, and modern searches visible as different layers.'
+    ],
+    meaning: [
+      'Atlantis may be read as a story about civilizations that believe they cannot fall. The sea becomes the final answer to that confidence.',
+      'That is why Atlantis keeps returning. It is both a warning and a promise that something magnificent may still be hidden.'
+    ],
+    related: ['agartha-hollow-earth-legend', 'mu-lost-continent-legend', 'shambhala-hidden-kingdom'],
+    sourceNote: 'This article follows Atlantis from Plato’s account into later lost-world reception. Speculative locations are treated as later interpretations rather than confirmed discoveries.'
+  }),
+  topic({
+    categorySlug: 'strange-nature',
+    slug: 'blood-rain-phenomenon',
+    title: 'Blood Rain Phenomenon: Red Rain, Omen Stories, and the Sky That Falls in the Wrong Color',
+    subject: 'Blood Rain',
+    tag: 'Strange Weather',
+    tags: ['Strange Weather', 'Blood Rain', 'Red Rain', 'Nature Folklore'],
+    keyword: 'blood rain phenomenon',
+    detail: 'red-colored rain events that have been explained through dust, algae, spores, or other natural material while also becoming omen folklore',
+    sourceBasis: 'weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore',
+    evidence: 'meteorological explanation, historical accounts, public reporting, and source-limited interpretations of red rain events',
+    vocabulary: ['blood rain', 'red rain', 'dust', 'weather', 'omen'],
+    sources: [
+      source('Met Office - Blood rain', 'https://www.metoffice.gov.uk/weather/learn-about/weather/types-of-weather/rain/blood-rain', 'Supports the weather explanation for red rain and dust-related events.'),
+      source('NASA Earth Observatory - Dust', 'https://earthobservatory.nasa.gov/features/Dust', 'Supports the broader atmospheric dust context that can color skies and precipitation.')
+    ],
+    quickAnswer: [
+      'Blood rain refers to rain that appears red or reddish because particles such as dust, sand, spores, or other material color the water. In many periods, red rain also became an omen story because the sky seemed to be raining blood.',
+      'The phenomenon is often explainable, but the reaction to it belongs to folklore. It may be read as a strange-nature story where weather becomes a sign.'
+    ],
+    intro: [
+      'Rain is expected to be clear.',
+      'When it falls red, even a natural explanation does not erase the first shock.'
+    ],
+    core: [
+      'Many blood rain events are linked to colored dust or other particles carried by wind and mixed with rain. The result can stain surfaces and make ordinary weather look alarming.',
+      'The name itself changes the event. Once people call it blood rain, the weather enters the language of omen.'
+    ],
+    context: [
+      'Historical communities often read unusual sky events as warnings. Red rain, darkened suns, comets, and strange lights could all become signs before they became scientific subjects.',
+      'Modern explanations do not remove that history. They show how one event can belong to both weather and folklore.'
+    ],
+    variants: [
+      'Different cases involve different causes. Dust storms, algae, spores, and local material have all been discussed in relation to red rain events.',
+      'Some retellings exaggerate the color or treat every case as the same phenomenon, even when the evidence differs.'
+    ],
+    record: [
+      'The record can support blood rain as a real visual phenomenon with natural explanations in many cases. It cannot support every omen interpretation as factual prediction.',
+      'A strong article separates the physical cause from the cultural meaning attached afterward.'
+    ],
+    meaning: [
+      'Blood rain may be read as a story about broken expectation. The sky does something familiar in a color that feels wrong.',
+      'That is why the phenomenon keeps its folkloric force. Explanation answers the cause, but the image remains.'
+    ],
+    related: ['green-flash-sunset-phenomenon', 'marfa-lights-mystery', 'tunguska-event'],
+    sourceNote: 'This article follows blood rain as a strange natural phenomenon with folklore reception. Natural explanations and omen interpretations are kept distinct.'
+  }),
+  topic({
+    categorySlug: 'legendary-places',
+    slug: 'stonehenge-legendary-place',
+    title: 'Stonehenge Legend: Ancient Stones, Merlin Stories, and the Monument That Still Refuses One Meaning',
+    subject: 'Stonehenge',
+    tag: 'Legendary Monument',
+    tags: ['Legendary Monument', 'Stonehenge', 'Merlin', 'Sacred Place'],
+    keyword: 'Stonehenge legend',
+    detail: 'the prehistoric stone monument in Wiltshire and the later legends, meanings, and interpretations attached to it',
+    sourceBasis: 'heritage records, archaeology summaries, medieval legend, and sacred-place reception',
+    evidence: 'heritage documentation, archaeological summaries, medieval retellings, and source-limited legendary interpretations',
+    vocabulary: ['Stonehenge', 'stones', 'Merlin', 'monument', 'archaeology'],
+    sources: [
+      source('English Heritage - Stonehenge', 'https://www.english-heritage.org.uk/visit/places/stonehenge/', 'Supports the monument context and public heritage information.'),
+      source('UNESCO - Stonehenge, Avebury and Associated Sites', 'https://whc.unesco.org/en/list/373/', 'Supports the world heritage context and archaeological importance.')
+    ],
+    quickAnswer: [
+      'Stonehenge is a prehistoric stone monument in Wiltshire that has gathered archaeological interpretation, medieval legend, and modern sacred-place meanings. It is real, but no single explanation contains its full cultural afterlife.',
+      'Later stories connect the stones with Merlin, giants, healing stones, astronomy, ritual, and ancient power. Stonehenge may be read as a place where monument, mystery, and legend remain layered.'
+    ],
+    intro: [
+      'Stonehenge stands in the open, but it does not feel fully explained.',
+      'The stones are visible. The meaning behind them is harder to hold.'
+    ],
+    core: [
+      'The monument consists of arranged stones built and altered across long periods of prehistory. Archaeology can describe phases, materials, alignments, and human labor.',
+      'Legend adds another layer. Medieval stories gave the stones magical origins and connected them with Merlin or giants.'
+    ],
+    context: [
+      'Stonehenge became legendary because it is both massive and silent. A visitor can see that great effort was required, but the builders did not leave a simple explanation.',
+      'That silence invited many meanings: ritual site, burial landscape, astronomical marker, healing place, national symbol, and sacred monument.'
+    ],
+    variants: [
+      'Medieval and later versions differ over who moved the stones and why. Some tell of giants, some of magic, and some of ancient wisdom.',
+      'Modern fringe theories also attach to the site, but they should remain separate from archaeology and historical legend.'
+    ],
+    record: [
+      'The record can support Stonehenge as a major prehistoric monument with strong archaeological documentation and later legendary reception. It cannot reduce the site to one simple story.',
+      'The archive value comes from keeping the monument and its later meanings visible at the same time.'
+    ],
+    meaning: [
+      'Stonehenge may be read as a place where human effort outlives human explanation. The stones remain, but intention must be reconstructed.',
+      'That is why the monument still works as legend. It gives mystery a physical shape.'
+    ],
+    related: ['oracle-of-delphi-legend', 'mount-olympus-greek-myth', 'fountain-of-youth-legend'],
+    sourceNote: 'This article follows Stonehenge as a real prehistoric monument with later legend attached. Archaeological context and mythic reception are kept in separate layers.'
+  }),
+  topic({
+    categorySlug: 'mythic-objects',
+    slug: 'ark-of-the-covenant-legend',
+    title: 'Ark of the Covenant Legend: Sacred Chest, Lost Relic, and the Object No One Can Treat as Ordinary',
+    subject: 'Ark of the Covenant',
+    tag: 'Sacred Object Legend',
+    tags: ['Sacred Object Legend', 'Ark of the Covenant', 'Lost Relic', 'Biblical Legend'],
+    keyword: 'Ark of the Covenant legend',
+    detail: 'the sacred chest from biblical tradition and the later legends about its power, disappearance, and possible location',
+    sourceBasis: 'biblical tradition, religious history summaries, relic legends, and later cultural reception',
+    evidence: 'textual tradition, historical discussion, relic-location claims, and source-limited reception history',
+    vocabulary: ['Ark of the Covenant', 'sacred chest', 'lost object', 'biblical tradition', 'location'],
+    sources: [
+      source('Encyclopaedia Britannica - Ark of the Covenant', 'https://www.britannica.com/topic/Ark-of-the-Covenant', 'Supports the general description and religious tradition around the Ark.'),
+      source('Bible Odyssey - Ark of the Covenant', 'https://www.bibleodyssey.org/', 'Supports scholarly discussion of biblical objects and tradition context.')
+    ],
+    quickAnswer: [
+      'The Ark of the Covenant is the sacred chest described in biblical tradition as connected with the tablets of the covenant and divine presence. Later legend focuses on its power, disappearance, and possible hidden location.',
+      'The Ark functions as a mythic object because it is both container and boundary. It holds sacred meaning, but stories about it also warn that not every object can be handled like ordinary property.'
+    ],
+    intro: [
+      'The Ark of the Covenant is remembered as a chest, but the story never treats it as simple storage.',
+      'It is an object that changes the space around it.'
+    ],
+    core: [
+      'In biblical tradition, the Ark is associated with the covenant, sacred presence, ritual authority, and danger when approached improperly.',
+      'Its later disappearance made the object even more powerful in imagination. A sacred object became a lost object.'
+    ],
+    context: [
+      'Lost relic legends often grow stronger when the object is both named and absent. The Ark has a clear identity, but its final location remains disputed in public imagination.',
+      'That gap allows religious tradition, historical inquiry, and adventure mythology to overlap.'
+    ],
+    variants: [
+      'Later versions place the Ark in different hidden locations or connect it with secret guardianship. Some claims are religious traditions, while others are speculative modern searches.',
+      'Popular culture often emphasizes danger and discovery, but the older tradition centers sacred presence and ritual boundary.'
+    ],
+    record: [
+      'The record can support the Ark as a central object in biblical tradition and later relic legend. It cannot verify every proposed location or discovery claim.',
+      'A source-aware article keeps textual tradition, faith claims, and modern speculation distinct.'
+    ],
+    meaning: [
+      'The Ark may be read as a mythic object about nearness to the sacred. It is powerful because it is not open to casual possession.',
+      'That is why the legend lasts. The missing chest still feels guarded by the rules around it.'
+    ],
+    related: ['ring-of-gyges-myth', 'spear-of-destiny-holy-lance', 'mjolnir-thors-hammer'],
+    sourceNote: 'This article follows the Ark of the Covenant as a sacred object in textual tradition and later legend. Location claims are treated as disputed unless strongly sourced.'
+  }),
+  topic({
+    categorySlug: 'legend-origins',
+    slug: 'horseshoe-luck-origin',
+    title: 'Horseshoe Luck Origin: Iron, Doorways, and How a Stable Object Became a Protective Sign',
+    subject: 'Horseshoe Luck',
+    tag: 'Luck Symbol Origin',
+    tags: ['Luck Symbol Origin', 'Horseshoe', 'Protective Custom', 'Superstition'],
+    keyword: 'horseshoe luck origin',
+    detail: 'the superstition that a horseshoe brings luck or protection when kept near a doorway or hung in a particular direction',
+    sourceBasis: 'superstition history, protective folklore, iron beliefs, doorway customs, and later household tradition',
+    evidence: 'folklore summaries, superstition references, regional custom descriptions, and source-limited origin explanations',
+    vocabulary: ['horseshoe', 'luck', 'iron', 'doorway', 'threshold'],
+    sources: [
+      source('Encyclopaedia Britannica - Superstition', 'https://www.britannica.com/topic/superstition', 'Supports the broader superstition framework used for protective signs.'),
+      source('Historic UK - Lucky Horseshoes', 'https://www.historic-uk.com/CultureUK/Lucky-Horseshoes/', 'Supports public folklore summaries around horseshoes, luck, iron, and doorway customs.')
+    ],
+    quickAnswer: [
+      'Horseshoe luck is a superstition that treats the horseshoe as a protective or lucky object, often placed above a doorway. Explanations usually involve iron, horses, blacksmithing, shape, and the boundary of the home.',
+      'The origin is layered rather than single. The horseshoe may be read as a practical object that became a sign of protection because it joined strong material, animal power, and household threshold belief.'
+    ],
+    intro: [
+      'A horseshoe is ordinary until it is placed above a door.',
+      'Then it stops being a used object and becomes a sign.'
+    ],
+    core: [
+      'Common belief says a horseshoe can bring luck or guard a house. Some hang it with the open end upward to hold luck, while others hang it downward so luck pours out.',
+      'That disagreement is part of the tradition. The object matters, but the way people read it changes by place and custom.'
+    ],
+    context: [
+      'Iron has long carried protective associations in European folklore. Doorways also matter because they mark the boundary between inside and outside.',
+      'A horseshoe combines both ideas. It is iron shaped by fire, connected with a valuable animal, and placed where protection feels useful.'
+    ],
+    variants: [
+      'Some origin stories connect horseshoes with saints, blacksmiths, or protection from harmful spirits. Others focus on the crescent shape or the number of nail holes.',
+      'Later household versions often keep the custom even when the old explanation is forgotten.'
+    ],
+    record: [
+      'The record can support horseshoe luck as a widespread protective superstition with several origin explanations. It cannot reduce every regional custom to one beginning.',
+      'The best account treats the superstition as layered folklore around material, doorway, and luck.'
+    ],
+    meaning: [
+      'Horseshoe luck may be read as a story about making the threshold safer. The doorway is where the home meets the unknown.',
+      'That is why the symbol remains simple and durable. It gives protection a visible shape.'
+    ],
+    related: ['black-cat-superstition-origin', 'friday-the-13th-origin', 'jack-o-lantern-stingy-jack-origin'],
+    sourceNote: 'This article follows horseshoe luck as a layered superstition origin. Regional hanging customs and origin stories are treated as variants rather than one fixed rule.'
   })
 ];
 
