@@ -1,5 +1,6 @@
 const internalPublicPhrases = [
   'story brief confirmed',
+  'confirmed external trace',
   'confirmed external traces',
   'existence confirmed',
   'circulation level',
@@ -11,10 +12,23 @@ const internalPublicPhrases = [
   'the story brief classifies',
   'publishable status',
   'validation passed',
+  'in this record',
+  'if this record interests you',
+  'related records',
+  'source status',
+  'myth narrative',
+  'folklore legend',
+  'urban modern legend',
+  'internal content type',
+  'circulation level',
+  'existence status',
   'existing story',
   'reported variant',
   'editorial interpretation',
   'what the sources can support',
+  'versions and interpretations can differ',
+  'is discussed here as myths',
+  'is discussed here as archive',
   'internal content type'
 ];
 
@@ -27,6 +41,9 @@ const forbiddenPublicHeadings = [
   'what the sources can support',
   'meaning and interpretation',
   'background and context',
+  'mythic context',
+  'symbolic role',
+  'source status',
   'final thoughts'
 ];
 
@@ -52,7 +69,7 @@ function buildPublicArticlePlan(story) {
     dek: story.introSummary || story.excerpt || story.summaryAnswer,
     quickAnswer: {
       paragraphs: [
-        `${topic} is a ${String(brief.contentType || story.storyType || 'myth').replace(/-/g, ' ')} connected with ${brief.cultureOrContext || story.category}. ${firstCore} ${secondCore}`,
+        `${topic} is a ${publicStoryKind(story, brief)} connected with ${brief.cultureOrContext || story.category}. ${firstCore} ${secondCore}`,
         `${thirdCore} ${variant} The article follows the story, its variations, and its possible meaning without turning myth or legend into a single settled historical claim.`
       ],
       targetWords: { min: 100, max: 180 }
@@ -70,7 +87,7 @@ function buildPublicArticlePlan(story) {
       targetWords: { min: 100, max: 180 }
     },
     faq: defaultFaqFor(story, brief, topic),
-    publicSourceNote: `${topic} is discussed here as ${String(story.sourceStatus || story.category).replace(/\s*\/\s*Existing external tradition\s*\/\s*Story Brief confirmed/gi, '')}. Versions and interpretations can differ by source, translation, region, or later retelling.`
+    publicSourceNote: buildBriefSourceNote(story, brief, topic)
   }, story);
 }
 
@@ -186,43 +203,152 @@ function normalizePlan(plan, story) {
     contentLayer: section.contentLayer || '',
     storyBriefInputs: section.storyBriefInputs || [],
     targetWords: section.targetWords || { min: 180, max: 380 },
-    paragraphs: (section.paragraphs || []).filter(Boolean)
+    paragraphs: (section.paragraphs || []).filter(Boolean).map((paragraph) => cleanPublicText(paragraph, story))
   })).filter((section) => section.heading && section.paragraphs.length);
 
   return {
     title: plan.title || story.h1 || story.displayTitle || story.title,
     dek: cleanPublicDeck(plan.dek || story.introSummary || story.excerpt || story.summaryAnswer, story),
-    quickAnswer: plan.quickAnswer || null,
-    introduction: (plan.introduction || []).filter(Boolean),
+    quickAnswer: cleanQuickAnswer(plan.quickAnswer || null, story),
+    introduction: (plan.introduction || []).filter(Boolean).map((paragraph) => cleanPublicText(paragraph, story)),
     sections,
-    conclusion: plan.conclusion || null,
-    faq: Array.isArray(plan.faq) ? plan.faq : Array.isArray(plan.faqTopics) ? plan.faqTopics : [],
+    conclusion: cleanConclusion(plan.conclusion || null, story),
+    faq: cleanFaq(Array.isArray(plan.faq) ? plan.faq : Array.isArray(plan.faqTopics) ? plan.faqTopics : [], story),
     publicSourceNote: cleanPublicSourceNote(plan.publicSourceNote || '', story)
   };
 }
 
 function cleanPublicDeck(value, story) {
-  const text = String(value || '').trim();
+  const text = cleanPublicText(value, story);
   const normalized = normalizeText(text);
   const hasInternalPhrase = internalPublicPhrases.some((phrase) => normalized.includes(phrase));
   if (text && !hasInternalPhrase) return text;
 
-  const title = story.displayTitle || story.title || story.slug || 'This archive record';
+  const title = story.displayTitle || story.title || story.slug || 'This archive story';
   const brief = story.storyBrief || {};
   const context = brief.cultureOrContext || story.primaryTag || story.category || 'its tradition';
-  return `${title} is presented as a reader-facing archive story connected with ${context}, with the core tale separated from later retellings and possible meanings.`;
+  return `${title} is presented as an archive story connected with ${context}, with the core tale separated from later retellings and possible meanings.`;
 }
 
 function cleanPublicSourceNote(value, story) {
-  const text = String(value || '').trim();
+  const text = cleanPublicText(value, story);
   const normalized = normalizeText(text);
   const hasInternalPhrase = internalPublicPhrases.some((phrase) => normalized.includes(phrase));
   if (text && !hasInternalPhrase) return text;
 
-  const title = story.displayTitle || story.title || story.slug || 'This story';
   const brief = story.storyBrief || {};
-  const context = brief.cultureOrContext || story.category || 'its tradition';
-  return `${title} is discussed through ${context}. Details can vary across translations, summaries, regions, and later retellings.`;
+  return buildBriefSourceNote(story, brief, story.displayTitle || story.title || story.slug || 'This story');
+}
+
+function cleanQuickAnswer(quickAnswer, story) {
+  if (!quickAnswer) return null;
+  if (Array.isArray(quickAnswer.paragraphs)) {
+    return {
+      ...quickAnswer,
+      paragraphs: quickAnswer.paragraphs.map((paragraph) => cleanPublicText(paragraph, story))
+    };
+  }
+  if (quickAnswer.text) {
+    return { ...quickAnswer, text: cleanPublicText(quickAnswer.text, story) };
+  }
+  return quickAnswer;
+}
+
+function cleanFaq(faq, story) {
+  return (faq || []).map((item) => ({
+    ...item,
+    q: item.q || item.question,
+    a: cleanPublicText(item.a || item.answer, story)
+  }));
+}
+
+function cleanConclusion(conclusion, story) {
+  if (!conclusion) return null;
+  return {
+    ...conclusion,
+    paragraphs: (conclusion.paragraphs || []).filter(Boolean).map((paragraph) => cleanPublicText(paragraph, story))
+  };
+}
+
+function cleanPublicText(value, story = {}) {
+  const kind = publicStoryKind(story, story.storyBrief || {});
+  return String(value || '')
+    .replace(/\ba myth narrative connected with\b/gi, `${articleFor(kind)} ${kind} connected with`)
+    .replace(/\bmyth narrative\b/gi, kind || 'mythological story')
+    .replace(/\bfolklore legend\b/gi, 'folklore story')
+    .replace(/\burban modern legend\b/gi, 'modern urban legend')
+    .replace(/\bplace event mystery\b/gi, 'place-based mystery')
+    .replace(/\borigin comparison\b/gi, 'origin-focused story')
+    .replace(/\binternal content type\b/gi, 'story type')
+    .replace(/\bSource Status\b/g, 'Source Basis')
+    .replace(/\bsource status\b/g, 'source basis')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function buildBriefSourceNote(story, brief, topic) {
+  const evidenceTitles = [
+    ...(story.researchSources || []).map((item) => item.title),
+    ...(brief.existenceEvidence || []).map((item) => item.title)
+  ].filter(Boolean);
+  const basis = story.publicSourceBasis || sourceBasisFromTitles(evidenceTitles, story, brief);
+  const variants = Array.isArray(brief.reportedVariants)
+    ? brief.reportedVariants.map((item) => item.claim || item).filter(Boolean).slice(0, 2)
+    : [];
+  const uncertainties = Array.isArray(brief.uncertainDetails) ? brief.uncertainDetails.slice(0, 1) : [];
+  const variantText = variants.length ? ` Later retellings differ around ${lowerFirst(listForSentence(variants, 2))}.` : '';
+  const uncertaintyText = uncertainties.length ? ` ${sentenceFrom(uncertainties[0])}` : '';
+  return `${topic} is read here through ${basis}.${variantText}${uncertaintyText}`.replace(/\s+/g, ' ').trim();
+}
+
+function publicStoryKind(story, brief) {
+  const category = String(story.categorySlug || story.category || '').toLowerCase();
+  const type = String(brief.contentType || story.storyType || '').toLowerCase();
+  if (category.includes('myth') || type.includes('myth')) return 'mythological story';
+  if (category.includes('internet') || type.includes('internet')) return 'internet folklore story';
+  if (category.includes('place') || type.includes('place')) return 'place-based legend';
+  if (category.includes('nature')) return 'nature folklore story';
+  if (category.includes('origin')) return 'folklore origin story';
+  if (category.includes('mysteries') || type.includes('mystery')) return 'mystery story';
+  if (category.includes('legend') || type.includes('legend')) return 'legend';
+  return 'story';
+}
+
+function sourceBasisFromTitles(titles, story, brief) {
+  const joined = titles.join(' ');
+  if (/ovid/i.test(joined)) return "Ovid's Metamorphoses and later mythological retellings";
+  if (/hesiod/i.test(joined)) return 'the Hesiodic tradition and later mythological retellings';
+  if (/egyptian|ra|solar boat|funerary/i.test(joined) || /egyptian/i.test(story.primaryTag || story.tag || '')) {
+    return 'Egyptian mythology references, funerary tradition summaries, and later retellings';
+  }
+  const first = cleanSourceTitle(titles[0]);
+  if (first) return first;
+  return brief.cultureOrContext || story.primaryTag || story.category || 'its source tradition';
+}
+
+function cleanSourceTitle(value) {
+  return String(value || '')
+    .replace(/\s+-\s+.*$/, '')
+    .replace(/\s*\|\s*.*$/, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function listForSentence(values) {
+  const clean = (values || [])
+    .map((value) => String(value || '').replace(/[.?!]+$/, '').trim())
+    .filter(Boolean);
+  if (!clean.length) return 'the main details';
+  if (clean.length === 1) return clean[0];
+  return `${clean.slice(0, -1).join(', ')} and ${clean[clean.length - 1]}`;
+}
+
+function lowerFirst(value) {
+  return String(value || '').replace(/^([A-Z])/, (letter) => letter.toLowerCase());
+}
+
+function articleFor(value) {
+  return /^[aeiou]/i.test(String(value || '').trim()) ? 'an' : 'a';
 }
 
 function validatePublicArticleOutput(story, html) {

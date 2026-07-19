@@ -58,6 +58,7 @@ const story = {
   readTime: '9 min read',
   storyType: 'Myth',
   sourceStatus: 'Myths / Greek and Roman myth tradition / Ovid and later mythology references',
+  publicSourceBasis: "Ovid's Metamorphoses, Book 6, with later mythological retellings",
   excerpt: 'A source-aware Kyunolab record tracing Arachne, Athena, the weaving contest, and the spider transformation.',
   introSummary: "Arachne is remembered as the weaver whose talent became a challenge to Athena, turning skill, pride, and punishment into one of mythology's most enduring transformation stories.",
   publishedAt,
@@ -256,7 +257,7 @@ function buildArachnePublicArticlePlan() {
         targetWords: { min: 260, max: 420 },
         paragraphs: [
           "The most unsettling part of the Arachne myth is that her weaving is not simply ugly, foolish, or crude. In Ovid's version, even Envy could not find a flaw in it. That detail matters. Arachne loses the contest in power, not necessarily in skill.",
-          'Her woven scenes expose the gods in forms that are uncomfortable to honor. The fabric becomes a record of divine behavior that official praise would rather hide. Athena can judge the work, but she cannot easily dismiss its craft.',
+          "Her woven scenes expose the gods in forms that are uncomfortable to honor. Ovid's version names scenes such as Europa carried away by the bull, Asteria seized by the eagle, Leda beneath the swan's wings, and Danae reached through a shower of gold. The fabric becomes a record of divine behavior that official praise would rather hide. Athena can judge the work, but she cannot easily dismiss its craft.",
           'This is why Arachne remains more complicated than a simple warning against pride. Pride is part of the story, but so is talent. So is the danger of making art that tells a truth powerful figures do not want to see.'
         ]
       },
@@ -330,7 +331,7 @@ function buildArachnePublicArticlePlan() {
         a: 'Arachne may symbolize pride before divine power, but she can also symbolize dangerous artistic truth and skill that survives punishment.'
       }
     ],
-    publicSourceNote: 'Arachne is discussed here through Greek and Roman myth tradition, especially the Ovidian version and later mythology references. Names, emphasis, and interpretation can differ across translations and retellings.'
+    publicSourceNote: "The best-known surviving literary version of Arachne's story appears in Book 6 of Ovid's Metamorphoses. Later retellings often reduce the myth to a warning against pride, while modern interpretations give greater attention to Arachne's skill, the subjects she chose to weave, and Athena's response to the finished work."
   };
 }
 

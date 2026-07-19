@@ -36,9 +36,10 @@ function collectTagGroups(items) {
     for (const label of getTags(item)) {
       const normalized = normalizeTagLabel(label);
       const slug = slugify(normalized);
+      const publicLabel = publicTagLabel(normalized);
       if (!slug) continue;
       if (!groups.has(slug)) {
-        groups.set(slug, { label: normalized, slug, articles: [] });
+        groups.set(slug, { label: publicLabel, slug, articles: [] });
       }
       groups.get(slug).articles.push(toArchiveArticle(item));
     }
@@ -82,12 +83,18 @@ function normalizeTagLabel(label) {
   return aliasMap.get(key) || value;
 }
 
+function publicTagLabel(label) {
+  const value = String(label || '').trim();
+  if (/^source status$/i.test(value)) return 'Source Basis';
+  return value;
+}
+
 function getTagDescription(group) {
   const count = group.articles.length;
   const categorySet = new Set(group.articles.map((article) => article.category).filter(Boolean));
   if (count < 3) return '';
   if (categorySet.size < 1) return '';
-  return `A focused archive path for ${group.label}, collecting ${count} related Kyunolab records across ${categorySet.size} shelf${categorySet.size === 1 ? '' : 'ves'}.`;
+  return `A focused archive path for ${group.label}, collecting ${count} related Kyunolab stories across ${categorySet.size} shelf${categorySet.size === 1 ? '' : 'ves'}.`;
 }
 
 function isIndexableTagGroup(group) {
@@ -168,7 +175,7 @@ function writeTagPage(tagGroup) {
 function renderTagPage(tagGroup) {
   const canonicalPath = `/tags/${tagGroup.slug}/`;
   const title = `Stories Tagged "${tagGroup.label}"`;
-  const description = tagGroup.description || `A small internal archive path for Kyunolab records connected to ${tagGroup.label}.`;
+  const description = tagGroup.description || `A small internal archive path for Kyunolab stories connected to ${tagGroup.label}.`;
   const firstArticle = tagGroup.articles[0];
   const storyRows = tagGroup.articles.map(renderStoryRow).join('\n');
   const robots = tagGroup.indexable ? 'index, follow' : 'noindex, follow';

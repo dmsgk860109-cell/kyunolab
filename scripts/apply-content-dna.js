@@ -6,7 +6,7 @@ const { buildPublicArticlePlan } = require('./public-article-plan');
 
 const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://kyunolab.com';
-const styleVersion = '20260717-publishing-center-naver-copy';
+const styleVersion = '20260719-public-article-cleanup';
 const storiesPath = path.join(root, 'data', 'stories.json');
 const stories = readJson(storiesPath);
 const categories = readJson(path.join(root, 'data', 'categories.json'));
@@ -45,6 +45,7 @@ for (const story of stories) {
   };
   if (policyAppliesToStory(story) && story.storyBrief) {
     story.publicArticlePlan = buildPublicArticlePlan(story);
+    if (story.publicArticlePlan?.dek) story.introSummary = story.publicArticlePlan.dek;
     story.contentDNA.sectionBlueprint = story.publicArticlePlan.sections.map((section) => ({
       title: section.heading,
       nav: section.heading
@@ -67,7 +68,7 @@ function backfillStoryMetadata(story) {
   const title = story.title || story.displayTitle || titleFromSlug(story.slug);
   const subject = title.replace(/:.*$/, '').trim();
   const tag = story.primaryTag || story.tag || (story.tags || [])[0] || story.category;
-  const excerpt = story.excerpt || story.metaDescription || `${subject} is a source-aware Kyunolab record connected to ${story.category || 'strange stories'}.`;
+  const excerpt = story.excerpt || story.metaDescription || `${subject} is a source-aware Kyunolab article connected to ${story.category || 'strange stories'}.`;
   const query = story.seedKeyword || story.targetQuery || subject.toLowerCase().replace(/^the\s+/i, '');
 
   story.title = title;
@@ -129,7 +130,7 @@ function buildRelatedKeywords(story, subject, tag) {
     `${subject} meaning`,
     `${subject} legend`,
     `${tag} story`,
-    `${story.category || 'folklore'} record`
+    `${story.category || 'folklore'} story`
   ];
   return Array.from(new Set(base.map((item) => item.toLowerCase().replace(/\s+/g, ' ').trim()))).slice(0, 4);
 }
@@ -140,9 +141,9 @@ function buildSummaryAnswer(story, subject) {
   const scene = scenePhrase(detail);
   const variants = [
     `${subject} is best read as ${articleFor(category)} ${category} entry built around ${scene}. The article keeps the source limits visible while explaining why the image keeps returning.`,
-    `${subject} follows ${scene}, then asks why that detail became memorable enough to retell. It treats the material as folklore or source-aware record, not as confirmed fact.`,
+    `${subject} follows ${scene}, then asks why that detail became memorable enough to retell. It treats the material as folklore or source-aware storytelling, not as confirmed fact.`,
     `At the center of ${subject} is ${scene}. The useful question is not whether every version is literal, but why this detail gives the story such a durable shape.`,
-    `${subject} works because ${scene} is specific enough to picture and uncertain enough to keep moving through retellings. The article preserves that tension without overstating the record.`
+    `${subject} works because ${scene} is specific enough to picture and uncertain enough to keep moving through retellings. The article preserves that tension without overstating what the sources can support.`
   ];
   return variants[stableIndex(story.slug, variants.length)];
 }
@@ -169,8 +170,8 @@ function refineUniqueAngle(story, fallback) {
   const variants = [
     `${subject} is approached through ${profile.lens}, using ${scene} as the concrete anchor rather than making the article depend on atmosphere alone.`,
     `The article reads ${subject} through ${profile.lens}; its strength is the specific pressure of ${scene}, not a forced claim of certainty.`,
-    `${subject} stays useful because ${scene} gives the record a narrow image to test against source status, motif, and reader memory.`,
-    `The angle is intentionally narrow: ${subject} follows ${scene} through ${profile.lens}, then stops where the source record stops.`
+    `${subject} stays useful because ${scene} gives the article a narrow image to test against source material, motif, and reader memory.`,
+    `The angle is intentionally narrow: ${subject} follows ${scene} through ${profile.lens}, then stops where the available source trail stops.`
   ];
   return story.uniqueAngle || variants[stableIndex(`${story.slug}-angle`, variants.length)];
 }
@@ -183,27 +184,7 @@ function shouldRefreshMetaDescription(value) {
 }
 
 function buildSeoArticleTitle(story, subject) {
-  const category = String(story.categorySlug || '').toLowerCase();
-  const cleanSubject = String(subject || story.title || '').trim();
-  if (cleanSubject.length > 62) return cleanSubject;
-  const shortSuffix = cleanSubject.length > 48;
-  if (shortSuffix) {
-    if (category.includes('internet')) return `${cleanSubject}: Internet Folklore`;
-    if (category.includes('myth')) return `${cleanSubject}: Myth and Meaning`;
-    if (category.includes('place') || category.includes('world')) return `${cleanSubject}: Place Legend`;
-    if (category.includes('nature')) return `${cleanSubject}: Nature Folklore`;
-    return `${cleanSubject}: Folklore Meaning`;
-  }
-  if (category.includes('internet')) return `${cleanSubject} Explained: Internet Folklore, Meaning, and Why It Spreads`;
-  if (category.includes('mythic-creatures')) return `${cleanSubject}: Mythic Creature Folklore, Meaning, and Versions`;
-  if (category.includes('mythic-objects')) return `${cleanSubject}: Mythic Object Meaning, Folklore, and Versions`;
-  if (category.includes('myths')) return `${cleanSubject}: Myth, Meaning, and Folklore`;
-  if (category.includes('folklore')) return `${cleanSubject}: Folklore Meaning, Origin, and Versions`;
-  if (category.includes('place') || category.includes('world')) return `${cleanSubject}: Place Legend, Meaning, and Folklore`;
-  if (category.includes('nature')) return `${cleanSubject}: Nature Folklore, Meaning, and Local Omen`;
-  if (category.includes('origin')) return `${cleanSubject}: Origin, Meaning, and Folklore Pattern`;
-  if (category.includes('mysteries')) return `${cleanSubject}: Mystery, Meaning, and What the Record Can Support`;
-  return `${cleanSubject}: Origin, Meaning, and Why the Legend Lasts`;
+  return String(story.h1 || story.displayTitle || story.title || subject || '').trim();
 }
 
 function buildConciseMetaDescription(story, subject, tag, excerpt) {
@@ -213,7 +194,7 @@ function buildConciseMetaDescription(story, subject, tag, excerpt) {
   const variants = [
     `${subject} explores the origin, meaning, and folklore behind ${scene}, tracing why this ${tagText} story keeps circulating.`,
     `A calm guide to ${subject}, its common versions, source limits, and the ${tagText} motif that makes ${scene} memorable.`,
-    `${subject} explains ${scene} through ${category}, separating folklore meaning from what the available record can support.`
+    `${subject} explains ${scene} through ${category}, separating folklore meaning from what the available sources can support.`
   ];
   let description = variants[stableIndex(`${story.slug}-meta`, variants.length)];
   if (description.length < 130) {
@@ -311,7 +292,7 @@ function buildBodySections(story) {
       id: section.id || slugify(section.heading),
       title: section.heading,
       paragraphs: (section.paragraphs || []).filter(Boolean)
-    }));
+    })).filter((section) => !isDeprecatedPublicSection(section.title));
   }
 
   const dna = story.contentDNA;
@@ -354,20 +335,22 @@ function sectionParagraphs(story, heading, index, vocabulary, details) {
   const dna = story.contentDNA;
   const subject = shortSubject(story);
   const detail = story.detail || story.excerpt || dna.sceneAnchor;
-  const evidence = story.evidence || `${story.sourceStatus}, ${story.primaryTag || story.tag}, repeated retellings`;
+  const evidence = story.evidence || `${publicTagLabel(story.sourceStatus)}, ${publicTagLabel(story.primaryTag || story.tag)}, repeated retellings`;
   const profile = getQualityProfile(story);
-  const tag = story.primaryTag || story.tag || story.category;
-  const specificTerms = meaningfulTerms([...vocabulary, ...details]);
-  const vocabSentence = sentenceFromTerms(vocabulary.slice(index, index + 3), subject);
+  const tag = publicTagLabel(story.primaryTag || story.tag || story.category);
+  const publicVocabulary = vocabulary.map(publicTagLabel);
+  const publicDetails = details.map(publicTagLabel);
+  const specificTerms = meaningfulTerms([...publicVocabulary, ...publicDetails]);
+  const vocabSentence = sentenceFromTerms(publicVocabulary.slice(index, index + 3), subject);
   const detailSentence = `${heading} works because the article can name specific carriers: ${listForSentence(specificTerms.slice(0, 4))}.`;
-  const concreteTerms = listForSentence(meaningfulTerms(vocabulary).slice(0, 4));
+  const concreteTerms = listForSentence(meaningfulTerms(publicVocabulary).slice(0, 4));
   const scene = scenePhrase(detail);
 
   if (index === 0) {
-    const definingTerms = listForSentence(meaningfulTerms(vocabulary), 5);
+    const definingTerms = listForSentence(meaningfulTerms(publicVocabulary), 5);
     const followups = [
       `${vocabSentence} The defining vocabulary also includes ${definingTerms}. Together, these details keep the article attached to the actual ${tag.toLowerCase()} pattern instead of drifting into a loose mood piece.`,
-      `${vocabSentence} The defining vocabulary also includes ${definingTerms}. Each term gives the reader a practical handle on the specific shape of the record.`,
+      `${vocabSentence} The defining vocabulary also includes ${definingTerms}. Each term gives the reader a practical handle on the specific shape of the story.`,
       `${vocabSentence} The defining vocabulary also includes ${definingTerms}. These terms keep the article close to what can be pictured, repeated, or checked.`
     ];
     return [
@@ -380,7 +363,7 @@ function sectionParagraphs(story, heading, index, vocabulary, details) {
     const carriers = listForSentence(specificTerms.slice(0, 3));
     const secondParagraphs = [
       `The important move is scale: the story does not need a whole mythology to work. It needs ${scene}, then supporting carriers such as ${carriers}. That is why ${tag} works as a smaller internal path while ${story.category} keeps the article on the right archive shelf.`,
-      `The scale stays deliberately small. Once ${scene} is in place, carriers such as ${carriers} are enough to show how the record travels without pretending the article has solved the whole tradition.`,
+      `The scale stays deliberately small. Once ${scene} is in place, carriers such as ${carriers} are enough to show how the story travels without pretending the article has solved the whole tradition.`,
       `This is where tags help. ${tag} names the smaller pattern, while ${story.category} keeps the article inside the larger archive shelf built around ${carriers}.`
     ];
     return [
@@ -399,7 +382,7 @@ function sectionParagraphs(story, heading, index, vocabulary, details) {
   if (index === 3) {
     const evidenceOpeners = [
       `The evidence posture is deliberately narrow. The available material can support a source-aware reading through ${evidence}; it can show how the motif circulates, which details survive, and which version of the story readers are actually repeating.`,
-      `The record can do useful work without proving everything inside it. At this stage, ${evidence} helps identify circulation, recurring detail, and source limits rather than a final answer.`,
+      `The story can do useful work without proving everything inside it. At this stage, ${evidence} helps identify circulation, recurring detail, and source limits rather than a final answer.`,
       `A careful archive reading starts by asking what the material can actually bear. Here, ${evidence} can support pattern, setting, and repetition before it can support any stronger claim.`
     ];
     return [
@@ -409,8 +392,8 @@ function sectionParagraphs(story, heading, index, vocabulary, details) {
   }
 
   const closers = [
-    `For Kyunolab, the value is in preserving the precise shape of the record. The article should leave the reader with ${profile.finalImage}, plus a clear boundary between folklore value, searchable context, and verified fact.`,
-    `The ending should leave the record usable rather than inflated. A reader should come away with ${profile.finalImage}, while still knowing which parts are tradition, interpretation, or documented context.`,
+    `For Kyunolab, the value is in preserving the precise shape of the story. The article should leave the reader with ${profile.finalImage}, plus a clear boundary between folklore value, searchable context, and verified fact.`,
+    `The ending should leave the story usable rather than inflated. A reader should come away with ${profile.finalImage}, while still knowing which parts are tradition, interpretation, or documented context.`,
     `That balance is the archive's purpose: keep ${profile.finalImage} vivid, but keep the boundary between a memorable story and a verified claim intact.`
   ];
   return [
@@ -429,11 +412,11 @@ function renderOpening(story) {
 
   const dna = story.contentDNA;
   const subject = shortSubject(story);
-  const summary = story.summaryAnswer || `${subject} is best read as a source-aware ${String(story.category || 'archive').toLowerCase()} record.`;
+  const summary = story.summaryAnswer || `${subject} is best read as a source-aware ${String(story.category || 'archive').toLowerCase()} story.`;
   const profile = getQualityProfile(story);
   const scene = scenePhrase(story.detail || story.excerpt || dna.sceneAnchor || subject);
   return `<p>${escapeHtml(summary)} In practical terms, ${escapeHtml(dna.targetQuery)} leads to one useful question: ${escapeHtml(dna.searchQuestion)}</p>
-        <p>The article keeps returning to ${escapeHtml(scene)}. The point is not to inflate the mystery, but to read it through ${escapeHtml(profile.lens)} while keeping the boundary between memorable folklore and confirmed record visible.</p>`;
+        <p>The article keeps returning to ${escapeHtml(scene)}. The point is not to inflate the mystery, but to read it through ${escapeHtml(profile.lens)} while keeping the boundary between memorable folklore and confirmed source material visible.</p>`;
 }
 
 function renderSection(section) {
@@ -445,6 +428,7 @@ function renderArchiveInsightBox(story, sectionIndex, sectionCount) {
   const slots = sectionCount >= 5 ? new Set([1, 3]) : new Set([1]);
   if (!slots.has(sectionIndex)) return '';
   const insight = archiveInsightFor(story, sectionIndex);
+  if (!insight || !insight.title || !insight.text) return '';
   return `
         <aside class="archive-insight" aria-label="${escapeAttr(insight.title)}">
           <strong>${escapeHtml(insight.title)}</strong>
@@ -462,7 +446,7 @@ function archiveInsightFor(story, sectionIndex) {
 
   if (category === 'internet-folklore') {
     return secondSlot
-      ? { title: 'Digital Spread', text: `Read this record through circulation first: screenshots, reposts, comments, and missing context often matter more than a single fixed origin.` }
+      ? { title: 'Digital Spread', text: `Read this story through circulation first: screenshots, reposts, comments, and missing context often matter more than a single fixed origin.` }
       : { title: 'Internet Folklore Pattern', text: `${subject} works because ${scene} is easy to share, reinterpret, and detach from its original setting.` };
   }
   if (category === 'urban-legends' || category === 'modern-legends') {
@@ -471,9 +455,7 @@ function archiveInsightFor(story, sectionIndex) {
       : { title: 'Reading Tip', text: `Watch how the ordinary scene carries the story. The strongest urban legends usually feel close enough to everyday life to retell.` };
   }
   if (category === 'myths') {
-    return secondSlot
-      ? { title: 'Symbolic Role', text: `A mythic reading asks what the story explains, protects, warns against, or remembers before treating it like a literal report.` }
-      : { title: 'Mythic Context', text: `${subject} is most useful when read through role, symbol, and tradition rather than through a single modern version.` };
+    return null;
   }
   if (category === 'mythic-creatures') {
     return secondSlot
@@ -488,16 +470,16 @@ function archiveInsightFor(story, sectionIndex) {
   if (category.includes('place') || category === 'lost-worlds') {
     return secondSlot
       ? { title: 'Place Memory', text: `Place legends usually survive because the location gives the story a visible anchor, even when the evidence remains limited.` }
-      : { title: 'Map Note', text: `Keep the setting in view. A place-based record depends on how the location shapes what readers believe could happen there.` };
+      : { title: 'Map Note', text: `Keep the setting in view. A place-based story depends on how the location shapes what readers believe could happen there.` };
   }
   if (category === 'strange-nature') {
     return secondSlot
       ? { title: 'Folklore Pattern', text: `Nature folklore often begins with observation, then becomes meaning when people repeat the same sign as warning, omen, or memory.` }
-      : { title: 'Historical Context', text: `The record is strongest when natural detail and inherited interpretation stay separate enough to compare.` };
+      : { title: 'Historical Context', text: `The story is strongest when natural detail and inherited interpretation stay separate enough to compare.` };
   }
   if (category === 'unexplained-mysteries') {
     return secondSlot
-      ? { title: 'Evidence Limit', text: `The open question matters, but the archive should still show what the available record can and cannot support.` }
+      ? { title: 'Evidence Limit', text: `The open question matters, but the article should still show what the available sources can and cannot support.` }
       : { title: 'Archive Note', text: `Treat the unresolved detail as a reading path, not as proof. The strongest mystery pages name the limit clearly.` };
   }
   if (category === 'legend-origins') {
@@ -508,7 +490,15 @@ function archiveInsightFor(story, sectionIndex) {
 
   return secondSlot
     ? { title: 'Source Limit', text: profile.evidenceLimit }
-    : { title: 'Archive Note', text: `${subject} is easier to read when motif, setting, and source status stay visible together.` };
+    : { title: 'Archive Note', text: `${subject} is easier to read when motif, setting, and source material stay visible together.` };
+}
+
+function isDeprecatedPublicSection(title) {
+  return [
+    'mythic context',
+    'symbolic role',
+    'source status'
+  ].includes(normalize(title));
 }
 
 function renderFaq(story) {
@@ -534,15 +524,15 @@ ${plan.faq.map((item) => `        <h3>${escapeHtml(item.q || item.question)}</h3
     },
     {
       q: `Why does this ${String(story.category || 'archive').toLowerCase()} entry still attract searches?`,
-      a: `It combines a recognizable setting with a small unresolved pressure point. Readers can picture the scene quickly, then return to the question of what the record can and cannot support.`
+      a: `It combines a recognizable setting with a small unresolved pressure point. Readers can picture the scene quickly, then return to the question of what the sources can and cannot support.`
     },
     {
       q: `What evidence would make ${subject.toLowerCase()} more credible?`,
       a: `Useful evidence would include ${profile.strongEvidence}. A repeated rumor can prove circulation, but it does not automatically prove the event or claim inside the rumor.`
     },
     {
-      q: `How is this record different from a simple retelling?`,
-      a: `The article keeps the source status visible, identifies the story pattern, and explains why details such as ${listForSentence(meaningfulTerms(dna.subjectSpecificVocabulary || []).slice(0, 3))} matter. That makes it an archive reading, not just a repeated version of the tale.`
+      q: `How is this article different from a simple retelling?`,
+      a: `The article keeps the source basis visible, identifies the story pattern, and explains why details such as ${listForSentence(meaningfulTerms((dna.subjectSpecificVocabulary || []).map(publicTagLabel)).slice(0, 3))} matter. That makes it an archive reading, not just a repeated version of the tale.`
     }
   ];
 
@@ -558,14 +548,12 @@ function renderSourceNote(story) {
   const plan = buildPublicArticlePlan(story);
   if (plan?.publicSourceNote) {
     return `<h2 id="source-note">Story &amp; Source Note</h2>
-        <p>${escapeHtml(plan.publicSourceNote)}</p>
-        <p>Different versions may preserve different details, so this page treats myth, folklore, rumor, source material, and interpretation carefully. See the <a href="/fiction-disclaimer.html#source-status">Story &amp; Source Notice</a> for Kyunolab's source-status approach.</p>`;
+        <p>${escapeHtml(plan.publicSourceNote)}</p>`;
   }
 
-  const profile = getQualityProfile(story);
+  const note = buildStorySourceNote(story);
   return `<h2 id="source-note">Story &amp; Source Note</h2>
-        <p>This article discusses ${escapeHtml(story.sourceStatus || story.category)} with a source-aware approach. The record is useful for reading motif, setting, circulation, and evidence limits; it is not presented as confirmed fact.</p>
-        <p>For this subject, the strongest responsible reading is ${escapeHtml(profile.sourceReading)}. Claims beyond that would need clearer, dated, and independently checkable material. See the <a href="/fiction-disclaimer.html#source-status">Story &amp; Source Notice</a> for how Kyunolab Mystery Archive separates documented sources, modern retellings, speculative interpretation, and original work.</p>`;
+        <p>${escapeHtml(note)}</p>`;
 }
 
 function renderScriptCta(story) {
@@ -580,24 +568,82 @@ function renderScriptCta(story) {
 
 function renderMetaGrid(story) {
   const updated = formatDate(story.updatedAt || story.publishedAt);
-  const tags = (story.tags || []).map((tag) => `<a href="/tags/${escapeAttr(slugify(tag))}/">${escapeHtml(tag)}</a>`).join(', ');
-  const sourceStatus = publicSourceStatus(story);
+  const tags = (story.tags || []).map((tag) => `<a href="/tags/${escapeAttr(slugify(tag))}/">${escapeHtml(publicTagLabel(tag))}</a>`).join(', ');
+  const sourceBasis = publicSourceBasis(story);
   return `<dl class="article-meta-grid">
           <div><dt>Category</dt><dd><a href="/categories/${escapeAttr(story.categorySlug)}.html">${escapeHtml(story.category)}</a></dd></div>
           <div><dt>Tags</dt><dd>${tags}</dd></div>
           <div><dt>Read time</dt><dd>${escapeHtml(story.readTime)}</dd></div>
           <div><dt>Story Type</dt><dd><a href="/fiction-disclaimer.html#story-types">${escapeHtml(story.storyType)}</a></dd></div>
-          <div><dt>Source Status</dt><dd><a href="/fiction-disclaimer.html#source-status">${escapeHtml(sourceStatus)}</a></dd></div>
+          ${sourceBasis ? `<div><dt>Source Basis</dt><dd><a href="/fiction-disclaimer.html#source-status">${escapeHtml(sourceBasis)}</a></dd></div>` : ''}
           <div><dt>Updated</dt><dd>${escapeHtml(updated)}</dd></div>
         </dl>`;
 }
 
-function publicSourceStatus(story) {
-  if (!policyAppliesToStory(story) || !story.storyBrief) return story.sourceStatus;
+function publicSourceBasis(story) {
+  if (story.publicSourceBasis) return story.publicSourceBasis;
+  if (!policyAppliesToStory(story) || !story.storyBrief) return sanitizeSourceBasis(story.sourceStatus);
   const brief = story.storyBrief;
-  const type = String(brief.contentType || story.storyType || 'story').replace(/-/g, ' ');
-  const context = brief.cultureOrContext || story.primaryTag || story.tag || story.category;
-  return `${story.category} / ${context} / ${type}`;
+  const evidenceTitles = [
+    ...(story.researchSources || []).map((item) => item.title),
+    ...(brief.existenceEvidence || []).map((item) => item.title)
+  ].filter(Boolean);
+  const joined = evidenceTitles.join(' ');
+  if (/ovid/i.test(joined)) return "Ovid's Metamorphoses, Book 6, with later mythological retellings";
+  if (/hesiod/i.test(joined)) return "Hesiodic tradition, with later mythological retellings";
+  if (/egyptian|ra|solar boat|funerary/i.test(joined) || /egyptian/i.test(story.primaryTag || story.tag || '')) {
+    return 'Egyptian mythology references, funerary tradition summaries, and later retellings';
+  }
+  const firstEvidence = evidenceTitles[0] ? cleanSourceTitle(evidenceTitles[0]) : '';
+  if (firstEvidence) return firstEvidence;
+  return sanitizeSourceBasis(brief.cultureOrContext || story.sourceStatus);
+}
+
+function buildStorySourceNote(story) {
+  const brief = story.storyBrief || {};
+  const basis = publicSourceBasis(story) || cleanSourceTitle(story.sourceStatus || story.category);
+  const variants = Array.isArray(brief.reportedVariants)
+    ? brief.reportedVariants.map((item) => item.claim || item).filter(Boolean).slice(0, 2)
+    : [];
+  const limits = Array.isArray(story.sourceNotes?.sourceLimits)
+    ? story.sourceNotes.sourceLimits.slice(0, 1)
+    : [];
+  const subject = shortSubject(story);
+  const variantSentence = variants.length
+    ? `Later versions differ around ${lowerFirst(listForSentence(variants, 2))}.`
+    : '';
+  const limitSentence = limits.length
+    ? limits[0]
+    : 'Details can shift across translations, summaries, local versions, and later retellings.';
+  return `${subject} is presented through ${basis}. ${variantSentence} ${limitSentence}`.replace(/\s+/g, ' ').trim();
+}
+
+function sanitizeSourceBasis(value) {
+  const source = String(value || '')
+    .split('/')
+    .map((part) => part.trim())
+    .filter(Boolean)
+    .filter((part) => !/^(myth narrative|folklore legend|urban modern legend|internet folklore|place event mystery|origin comparison|internal content type|circulation level|existence status|story brief status)$/i.test(part))
+    .filter((part) => !/^Myths$|^Archive$|^Urban Legends$|^Internet Folklore$|^Strange Places$|^Unexplained Mysteries$|^Classic Folklore$|^Modern Legends$|^Mythic Creatures$|^Lost Worlds$|^Strange Nature$|^Legendary Places$|^Mythic Objects$|^Legend Origins$/i.test(part));
+  return cleanSourceTitle(source[0] || '');
+}
+
+function publicTagList(story) {
+  return (story.tags || []).map(publicTagLabel).filter(Boolean);
+}
+
+function publicTagLabel(value) {
+  const label = String(value || '').trim();
+  if (/^source status$/i.test(label)) return 'Source Basis';
+  return label;
+}
+
+function cleanSourceTitle(value) {
+  return String(value || '')
+    .replace(/\s+-\s+.*$/, '')
+    .replace(/\s*\|\s*.*$/, '')
+    .replace(/\s+/g, ' ')
+    .trim();
 }
 
 function renderStoryMap(sections) {
@@ -632,7 +678,7 @@ function renderSearchSummary(story) {
 
   const summary = story.searchSummary || {};
   const what = summary.whatItIs || story.introSummary || story.summaryAnswer;
-  const where = summary.whereItAppears || `This record belongs to ${story.category} and connects with ${(story.tags || []).slice(0, 3).join(', ')}.`;
+  const where = summary.whereItAppears || `This article belongs to ${story.category} and connects with ${publicTagList(story).slice(0, 3).join(', ')}.`;
   const why = summary.whyItMatters || story.contentDNA?.uniqueAngle || story.summaryAnswer;
   const labels = quickAnswerLabels(story);
   return `<aside class="search-summary" aria-labelledby="quick-answer-title">
@@ -667,7 +713,7 @@ function quickAnswerLabels(story) {
 function renderLeftRail(story, sections) {
   return `<aside class="article-rail article-rail-left" aria-label="Article navigation">
       <div class="rail-card">
-        <p class="rail-label">In this record</p>
+        <p class="rail-label">In this article</p>
         ${sections.slice(0, 6).map((section, index) => `<a${index === 0 ? ' class="is-current"' : ''} href="#${escapeAttr(section.id)}">${escapeHtml(section.title)}</a>`).join('')}
         <a href="#faq">FAQ</a>
       </div>
@@ -682,7 +728,7 @@ function renderLeftRail(story, sections) {
 
 function renderReadingBridge(story, relatedStories) {
   const links = relatedStories.slice(0, 3).map((item) => `<a href="/stories/${escapeAttr(item.slug)}"><span>${escapeHtml(item.category)}</span><strong>${escapeHtml(item.title)}</strong></a>`).join('');
-  return `<section class="reading-bridge" aria-label="Recommended reading paths"><p class="rail-label">If this record interests you</p><div>${links}<a href="/categories/${escapeAttr(story.categorySlug)}.html"><span>Archive shelf</span><strong>More ${escapeHtml(story.category)}</strong></a></div></section>`;
+  return `<section class="reading-bridge" aria-label="Recommended reading paths"><p class="rail-label">If this story interests you</p><div>${links}<a href="/categories/${escapeAttr(story.categorySlug)}.html"><span>Archive shelf</span><strong>More ${escapeHtml(story.category)}</strong></a></div></section>`;
 }
 
 function renderRelatedArticles(relatedStories) {
@@ -711,7 +757,7 @@ function renderRightRail(story, relatedStories, nextStory) {
   return `<aside class="article-rail article-rail-right" aria-label="Recommended reading">
       ${renderKyunolabNetworkCard()}
       ${readNextCard}
-      ${relatedLinks ? `<div class="rail-card"><p class="rail-label">Related records</p>${relatedLinks}</div>` : ''}
+      ${relatedLinks ? `<div class="rail-card"><p class="rail-label">Related stories</p>${relatedLinks}</div>` : ''}
     </aside>`;
 }
 
@@ -833,10 +879,10 @@ function firstAnalysisParagraph(story, subject, scene, profile) {
   const tag = story.primaryTag || story.tag || story.category;
   const patterns = [
     `${subject} works best when it is read from the scene outward. The important detail is ${scene}; from there, the ${tag.toLowerCase()} motif becomes a way to understand how ${profile.memoryTrigger} can make an uncertain story feel organized.`,
-    `The durable part of ${subject} is not the loudest claim, but the small pressure it puts on an ordinary setting. Once the reader notices ${scene}, the record becomes ${articleFor(story.category)} ${category} entry about how familiar routines collect uneasy meanings.`,
+    `The durable part of ${subject} is not the loudest claim, but the small pressure it puts on an ordinary setting. Once the reader notices ${scene}, the article becomes ${articleFor(story.category)} ${category} entry about how familiar routines collect uneasy meanings.`,
     `A useful reading of ${subject} starts with what can be pictured. Here, that picture is ${scene}. The article uses that image to separate the story's emotional force from any stronger claim the sources cannot yet support.`,
     `${subject} should not be flattened into a generic strange tale. Its value comes from ${scene}, a detail precise enough to hold the reader's attention while the source status stays visible.`,
-    `The first thing to preserve in ${subject} is the shape of the encounter. The record depends on ${scene}, then asks why that detail keeps returning in a form readers recognize as ${tag.toLowerCase()}.`
+    `The first thing to preserve in ${subject} is the shape of the encounter. The story depends on ${scene}, then asks why that detail keeps returning in a form readers recognize as ${tag.toLowerCase()}.`
   ];
   return patterns[stableIndex(story.slug, patterns.length)];
 }
@@ -860,14 +906,14 @@ function evidenceHeading(story) {
   ]);
   return pickStable(story.slug, [
     'Where the Evidence Becomes Thin',
-    'What the Record Can Support',
+    'What the Sources Can Support',
     'Where the Source Trail Starts to Fade'
   ]);
 }
 
 function sentenceFromTerms(terms, subject) {
   const clean = (terms || []).map((term) => String(term || '').trim()).filter(Boolean).slice(0, 3);
-  if (!clean.length) return `${subject} depends on details that keep the record specific.`;
+  if (!clean.length) return `${subject} depends on details that keep the story specific.`;
   return `${subject} depends on details such as ${clean.join(', ')}.`;
 }
 
@@ -884,7 +930,7 @@ function listForSentence(values, limit = 3) {
 
 function scenePhrase(value) {
   const text = String(value || '').replace(/[.?!]+$/, '').trim();
-  if (!text) return 'a concrete detail the record keeps returning to';
+  if (!text) return 'a concrete detail the story keeps returning to';
   if (/^(a|an|the)\s/i.test(text)) {
     const lowered = lowerFirst(text);
     if (/\b(crosses|appears|refuses|opens|stops|rings|sounds|waits|glides|shows|turns|prints|lights|names|remembers|ends|leads|returns|arrives|sends|changes|moves|bends|flowers|answers|plays|fits|points|faces|goes|keeps|rolls)\b/i.test(text)) {
@@ -944,15 +990,15 @@ function shortSubject(story) {
 }
 
 function buildMetaPageTitle(metaTitle, fallbackTitle) {
-  const brand = 'Kyunolab Mystery Archive';
-  const source = String(metaTitle || fallbackTitle || '').trim();
+  const brand = 'Kyunolab';
+  const source = String(fallbackTitle || metaTitle || '').trim();
   return `${source} | ${brand}`;
 }
 
 function buildStoryMetaDescription(story) {
   const subject = shortSubject(story) || titleFromSlug(story.slug);
-  const category = String(story.category || 'mystery record').trim();
-  const tag = String(story.primaryTag || story.tag || (story.tags || [])[0] || '').trim();
+  const category = String(story.category || 'mystery story').trim();
+  const tag = publicTagLabel(String(story.primaryTag || story.tag || (story.tags || [])[0] || '').trim());
   const scene = scenePhrase(story.detail || story.excerpt || story.summaryAnswer || subject);
   const description = sanitizeStoryMetaDescription(story.metaDescription || story.excerpt || story.summaryAnswer || '');
   let source = description;
@@ -1005,7 +1051,7 @@ function fitMetaDescription(description, story, subject, category, tag) {
 
   if (source.length >= 125) return ensureTerminalPunctuation(source);
 
-  const fallback = `${subject} follows ${scenePhrase(story.detail || story.excerpt || subject)} as ${articleFor(category)} ${category.toLowerCase()} record, connecting ${tag || category} to source limits and the mystery that keeps it circulating.`;
+  const fallback = `${subject} follows ${scenePhrase(story.detail || story.excerpt || subject)} as ${articleFor(category)} ${category.toLowerCase()} story, connecting ${tag || category} to source limits and the mystery that keeps it circulating.`;
   return ensureTerminalPunctuation(trimMetaDescription(fallback, 158));
 }
 
@@ -1043,7 +1089,7 @@ function renderJsonLd(story, cleanUrl, description) {
       {
         '@type': 'Article',
         '@id': `${cleanUrl}#article`,
-        headline: story.seoTitle || story.title,
+        headline: story.h1 || story.displayTitle || story.title,
         description,
         datePublished: story.publishedAt,
         dateModified: story.updatedAt,
@@ -1052,7 +1098,7 @@ function renderJsonLd(story, cleanUrl, description) {
         mainEntityOfPage: cleanUrl,
         url: cleanUrl,
         image: absoluteImageUrl(image),
-        keywords: [...(story.tags || []), ...(story.relatedKeywords || [])].join(', ')
+        keywords: [...publicTagList(story), ...(story.relatedKeywords || [])].join(', ')
       },
       {
         '@type': 'BreadcrumbList',
