@@ -328,7 +328,7 @@ const topics = [
       section('What Cannot Be Confirmed', 'Avoid turning witness lore into proof.', [
         'A fireball was part of the reported context, but the identity of the figure remains unresolved in folklore terms.',
         'Possible explanations have ranged from misidentification to atmospheric fear, but none has replaced the legend in public memory.',
-        'The article should keep the witnesses and their reported experience separate from any claim that the creature itself has been proven.'
+        'The strongest account keeps the witnesses and their reported experience separate from any claim that the creature itself has been proven.'
       ]),
       section('Why the Image Lasts', 'Explain the modern legend pattern.', [
         'The Flatwoods Monster is memorable because it is oddly specific. The head shape, height, color, light, and odor make it feel like a scene rather than a vague rumor.',
@@ -803,14 +803,19 @@ function buildStory(topic, category) {
     summaryAnswer: topic.quickAnswer.join(' '),
     readTime: '9 min read',
     storyType: storyTypeFor(category.slug),
+    contentStandard: 'unified',
+    editorialStatus: 'approved',
+    legacyContent: false,
+    substantiveRevisionAt: publishedAt,
+    internalLinkEligible: true,
     sourceStatus: sourceStatusFor(category, topic.tag),
     publicSourceBasis: topic.sourceBasis,
-    excerpt: `A source-aware Kyunolab record tracing ${topic.detail}.`,
-    introSummary: `A source-aware Kyunolab record tracing ${topic.detail}.`,
+    excerpt: topic.quickAnswer[0],
+    introSummary: deckForTopic(topic),
     publishedAt,
     updatedAt: publishedAt,
-    relatedStoryIds: relatedSlugs,
-    relatedStorySlugs: relatedSlugs,
+    relatedStoryIds: [],
+    relatedStorySlugs: [],
     tags: topic.tags,
     detail: compactDetail(topic.detail),
     evidence: topic.evidence,
@@ -877,7 +882,7 @@ function buildStory(topic, category) {
     seoHeadings: topic.sections.map((item) => item.heading),
     publicArticlePlan: {
       title: topic.title,
-      dek: `A source-aware Kyunolab record tracing ${topic.detail}.`,
+      dek: deckForTopic(topic),
       quickAnswer: {
         paragraphs: topic.quickAnswer,
         targetWords: { min: 90, max: 180 }
@@ -898,7 +903,7 @@ function buildStory(topic, category) {
         targetWords: { min: 80, max: 150 }
       },
       faq: topic.faq,
-      publicSourceNote: `${topic.subject} is presented through ${topic.sourceBasis}. The article follows common versions, documented context, and source limits without treating speculative or supernatural claims as verified fact.`
+      publicSourceNote: sourceNoteForTopic(topic)
     }
   };
 }
@@ -914,12 +919,84 @@ function section(heading, purpose, paragraphs, contentLayer = 'existing-story') 
 function sectionParagraphsForPublicArticle(topic, item, index) {
   const paragraphs = [...item.paragraphs];
   if (index === 2) {
-    paragraphs.push(`Different versions of ${topic.subject} should be treated as part of the record, not as proof that every detail belongs to the earliest or strongest source.`);
+    paragraphs.push(variantBridgeForTopic(topic));
   }
   if (index === 3) {
-    paragraphs.unshift(`One possible reading is that ${topic.subject} turns a specific story into a larger pattern people can recognize and retell.`);
+    paragraphs.unshift(interpretationBridgeForTopic(topic));
   }
   return paragraphs;
+}
+
+function deckForTopic(topic) {
+  return {
+    'pied-piper-of-hamelin-folklore': 'The Hamelin legend begins with missing children, then later gathers the famous rat-catcher episode, the unpaid piper, and the town memory that keeps the story alive.',
+    'cicada-3301-internet-puzzle': 'Cicada 3301 began as an anonymous online puzzle in 2012, using cryptography, hidden messages, real-world clues, and an identity that remains unknown.',
+    'friday-the-13th-origin': 'Friday the 13th combines two separate unlucky ideas: suspicion around Fridays and the number thirteen, joined into a modern superstition that later searched for older origins.',
+    'fountain-of-youth-legend': 'The Fountain of Youth is a legend of restorative water, later tied to Ponce de Leon, Bimini, Florida, and the older human wish to delay age and loss.',
+    'mu-lost-continent-legend': 'Mu is the lost-continent theory popularized by James Churchward, who described a vanished Pacific motherland through claims that archaeology has not confirmed.',
+    'flatwoods-monster-legend': 'The Flatwoods Monster story centers on a 1952 West Virginia sighting after a reported fireball, with witnesses describing a towering figure, strange odor, and lasting local folklore.',
+    'cockatrice-folklore': 'The cockatrice is a medieval rooster-serpent creature whose deadly look, touch, or breath made it one of the most dangerous figures in European bestiary tradition.',
+    'spear-of-destiny-holy-lance': 'The Spear of Destiny legend grows around the Holy Lance tradition, where a relic associated with Christ’s crucifixion later gained stories of power, conquest, and fate.',
+    'narcissus-and-echo-myth': 'Narcissus and Echo is a Greek myth about reflection, voice, desire, and loss, joining a youth who loves his own image with a nymph who can only answer back.',
+    'tunguska-event': 'The Tunguska Event was a massive 1908 Siberian airburst that flattened forest across a remote region and left behind one of the most famous natural mysteries of the modern era.',
+    'island-of-the-dolls-xochimilco': 'The Island of the Dolls in Xochimilco is a real canal island covered with weathered dolls and tied to the story of Don Julian Santana and a drowned girl.',
+    'db-cooper-hijacking-mystery': 'D.B. Cooper is the unknown hijacker who parachuted from Northwest Orient Flight 305 in 1971 with ransom money and was never identified.',
+    'kidney-theft-urban-legend': 'The kidney theft legend imagines a traveler waking in a bathtub of ice after a stolen organ, turning medical fear and travel anxiety into a lasting urban legend.'
+  }[topic.slug] || topic.quickAnswer[0];
+}
+
+function variantBridgeForTopic(topic) {
+  return {
+    'pied-piper-of-hamelin-folklore': 'Later retellings often make the rat-catcher episode feel inseparable from the missing children, but the older Hamelin memory does not preserve every familiar detail in the same way.',
+    'cicada-3301-internet-puzzle': 'Later accounts also include imitations and claims of continuation, so the public puzzle releases beginning in 2012 need to be kept separate from unofficial echoes.',
+    'friday-the-13th-origin': 'Different versions explain the superstition through Christianity, numerology, popular clubs, or the Templars, but those explanations do not all carry the same historical weight.',
+    'fountain-of-youth-legend': 'Some versions attach the fountain closely to Ponce de Leon, while others treat the search for youth as a wider European and Caribbean legend that grew around him later.',
+    'mu-lost-continent-legend': 'Later accounts of Mu borrow from archaeology, Theosophy, Pacific travel writing, and Atlantis-like speculation, so the legend’s growth matters more than any single proof claim.',
+    'flatwoods-monster-legend': 'Later retellings shift the creature’s height, shape, and meaning, while the core 1952 witness story remains the anchor for the West Virginia legend.',
+    'cockatrice-folklore': 'Some versions blur the cockatrice with the basilisk, changing whether the danger comes from sight, breath, touch, venom, or the creature’s strange birth.',
+    'spear-of-destiny-holy-lance': 'Different versions connect the lance to Longinus, Antioch, Vienna, and later power legends, but relic tradition and destiny folklore are not the same kind of claim.',
+    'narcissus-and-echo-myth': 'Later retellings may emphasize Narcissus, Echo, Nemesis, or the flower, but the story keeps returning to reflection and unanswered voice.',
+    'tunguska-event': 'Later accounts range from scientific airburst explanations to much stranger speculation, but the strongest account begins with the 1908 blast, eyewitness reports, and the flattened forest.',
+    'island-of-the-dolls-xochimilco': 'Some versions change the drowned girl, the dolls, and Don Julian Santana’s motives, while the island itself remains the visible center of the modern legend.',
+    'db-cooper-hijacking-mystery': 'Later accounts propose suspects and survival theories, but the confirmed case still turns on the hijacking, the jump, the missing man, and the recovered money.',
+    'kidney-theft-urban-legend': 'Different versions move the setting between hotels, bars, parties, and travel warnings, but the bathtub of ice remains the image that carries the rumor.'
+  }[topic.slug] || `Some versions of ${topic.subject} preserve different details, so the strongest account begins with the best-attested parts of the story.`;
+}
+
+function interpretationBridgeForTopic(topic) {
+  return {
+    'pied-piper-of-hamelin-folklore': 'The Piper may be read as a figure of charm and social debt: music solves the town’s problem, then exposes the cost of a broken promise.',
+    'cicada-3301-internet-puzzle': 'Cicada 3301 may be read as internet folklore because the puzzle was not only solved; it was watched, archived, copied, and retold as a test of hidden knowledge.',
+    'friday-the-13th-origin': 'Friday the 13th may be read as a modern merger of older anxieties, where calendar, number, and rumor make an ordinary date feel charged.',
+    'fountain-of-youth-legend': 'The fountain may be read as a water legend about renewal, but its force comes from the human fear that age cannot be negotiated with forever.',
+    'mu-lost-continent-legend': 'Mu may be read as a lost-world fantasy shaped by the desire for a single vanished source behind many civilizations.',
+    'flatwoods-monster-legend': 'The Flatwoods Monster may be read through the tension between a documented witness episode and the Cold War-era habit of turning lights in the sky into visitors.',
+    'cockatrice-folklore': 'The cockatrice may be read as a warning creature whose body combines barnyard familiarity with poison, sight, and impossible birth.',
+    'spear-of-destiny-holy-lance': 'The spear may be read through the way relics gather authority: a sacred object becomes a place where faith, empire, and legend compete.',
+    'narcissus-and-echo-myth': 'Narcissus and Echo may be read as a paired myth of failed relation: one figure cannot look away from himself, and the other cannot speak freely.',
+    'tunguska-event': 'Tunguska may be read as a mystery because the evidence is enormous but incomplete: the forest was changed, while the object itself left no ordinary crater.',
+    'island-of-the-dolls-xochimilco': 'The island may be read through accumulation: each doll makes the place feel less like a single story and more like a visible ritual of memory.',
+    'db-cooper-hijacking-mystery': 'D.B. Cooper may be read as an unsolved identity story because the escape is specific, the evidence is partial, and the missing person remains unnamed.',
+    'kidney-theft-urban-legend': 'Kidney theft may be read as a body-anxiety legend where travel, strangers, medicine, and the black market collapse into one memorable scene.'
+  }[topic.slug] || `${topic.subject} may be read through the specific details that make the story memorable rather than through a generic mystery formula.`;
+}
+
+function sourceNoteForTopic(topic) {
+  return {
+    'pied-piper-of-hamelin-folklore': 'The earliest surviving references to Hamelin’s missing children are older than the familiar rat-catching episode. Later retellings joined the unpaid rat-catcher and the vanished children into the version now most widely known, while the historical cause of the loss remains unsettled.',
+    'cicada-3301-internet-puzzle': 'This article follows the verified public puzzle releases beginning in 2012 and the material preserved by participants and journalists. The identity and final purpose of the group remain unconfirmed, while later imitations should not automatically be treated as official Cicada 3301 puzzles.',
+    'friday-the-13th-origin': 'The article follows folklore scholarship around Friday, the number thirteen, and the later habit of joining the two into one unlucky date. Claims about Templars, the Last Supper, or ancient origins are treated as later explanations unless the source trail supports them directly.',
+    'fountain-of-youth-legend': 'The fountain tradition is older and wider than the simplified story of Ponce de Leon searching Florida for magical water. Later accounts tied Ponce, Bimini, St. Augustine, and restorative springs together, while historians continue to separate the voyage record from the legend.',
+    'mu-lost-continent-legend': 'Mu is followed here through James Churchward’s lost-continent claims and later summaries of the idea. The Naacal tablets, Pacific motherland theory, and civilization claims belong to the legend’s history, but they are not treated as confirmed archaeology.',
+    'flatwoods-monster-legend': 'The basic account follows the 1952 Braxton County sighting after a reported fireball. Witness descriptions, later West Virginia folklore, and UFO-era interpretation are connected, but the article does not treat the creature’s identity as proven.',
+    'cockatrice-folklore': 'The cockatrice appears in medieval and early modern bestiary tradition, often overlapping with the basilisk. Sources differ on birth, appearance, and method of killing, so the article treats the creature as a shifting folklore figure rather than a fixed zoological description.',
+    'spear-of-destiny-holy-lance': 'The Holy Lance tradition includes religious relic claims and several competing objects. Later Spear of Destiny stories added ideas of conquest and world power, which are part of the legend’s afterlife rather than proof of the relic’s identity.',
+    'narcissus-and-echo-myth': 'The article follows classical myth summaries for Narcissus and Echo, especially the joined tradition of reflection and repeated voice. Later retellings may emphasize beauty, punishment, love, or the flower, but the core myth remains centered on self-regard and unanswered speech.',
+    'tunguska-event': 'The Tunguska account follows the 1908 Siberian explosion, later scientific expeditions, eyewitness reports, and the accepted airburst explanation. The lack of a typical crater left room for speculation, but the physical forest damage remains the strongest anchor.',
+    'island-of-the-dolls-xochimilco': 'The island is a real Xochimilco location associated with Don Julian Santana and the dolls he placed there. Versions differ about the drowned girl and the reason the dolls were collected, so the article keeps the place, the caretaker story, and haunting claims separate.',
+    'db-cooper-hijacking-mystery': 'The basic account follows the 1971 hijacking and the evidence released by investigators. Cooper’s identity, whether he survived the jump, and the meaning of the recovered money remain unresolved.',
+    'kidney-theft-urban-legend': 'The bathtub-of-ice version spread widely through late twentieth-century rumor, media discussion, email, and warning stories. Real organ trafficking is a separate issue; the random traveler kidney-theft scenario is treated here as urban legend.'
+  }[topic.slug] || `${topic.subject} is followed through the strongest available source trail, with later variants separated from the basic story.`;
 }
 
 function qa(q, a) {
@@ -939,14 +1016,20 @@ function compactDetail(detail) {
 }
 
 function storyTypeFor(slug) {
-  if (slug === 'unexplained-mysteries') return 'Mystery Record';
+  if (slug === 'unexplained-mysteries') return 'Unsolved Mystery';
   if (slug === 'myths') return 'Myth';
   if (slug === 'mythic-creatures') return 'Mythic Creature';
   if (slug === 'mythic-objects') return 'Mythic Object';
-  if (slug === 'legend-origins') return 'Legend Origin Guide';
-  if (slug === 'lost-worlds' || slug === 'legendary-places' || slug === 'strange-places') return 'Place Legend';
-  if (slug === 'classic-folklore') return 'Folklore Record';
-  return 'Canonical Archive Record';
+  if (slug === 'legend-origins') return 'Legend Origin';
+  if (slug === 'lost-worlds') return 'Lost World';
+  if (slug === 'legendary-places') return 'Legendary Place';
+  if (slug === 'strange-places') return 'Strange Place';
+  if (slug === 'classic-folklore') return 'Folklore';
+  if (slug === 'internet-folklore') return 'Internet Folklore';
+  if (slug === 'modern-legends') return 'Modern Legend';
+  if (slug === 'strange-nature') return 'Natural Mystery';
+  if (slug === 'urban-legends') return 'Urban Legend';
+  return 'Archive Story';
 }
 
 function sourceStatusFor(category, tag) {

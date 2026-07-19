@@ -6,7 +6,7 @@ const { buildPublicArticlePlan } = require('./public-article-plan');
 
 const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://kyunolab.com';
-const styleVersion = '20260719-public-article-cleanup';
+const styleVersion = '20260719-unified-link-priority';
 const storiesPath = path.join(root, 'data', 'stories.json');
 const stories = readJson(storiesPath);
 const categories = readJson(path.join(root, 'data', 'categories.json'));
@@ -141,7 +141,7 @@ function buildSummaryAnswer(story, subject) {
   const scene = scenePhrase(detail);
   const variants = [
     `${subject} is best read as ${articleFor(category)} ${category} entry built around ${scene}. The article keeps the source limits visible while explaining why the image keeps returning.`,
-    `${subject} follows ${scene}, then asks why that detail became memorable enough to retell. It treats the material as folklore or source-aware storytelling, not as confirmed fact.`,
+    `${subject} follows ${scene}, then asks why that detail became memorable enough to retell. It treats the material as folklore, legend, or documented retelling rather than confirmed fact.`,
     `At the center of ${subject} is ${scene}. The useful question is not whether every version is literal, but why this detail gives the story such a durable shape.`,
     `${subject} works because ${scene} is specific enough to picture and uncertain enough to keep moving through retellings. The article preserves that tension without overstating what the sources can support.`
   ];
@@ -218,6 +218,8 @@ function renderStoryPage(story, previousStory, nextStory) {
   const description = buildStoryMetaDescription(story);
   const socialImage = absoluteImageUrl(story.socialImage || story.image || '/icon-512.png');
   const relatedStories = getRelatedStories(story);
+  const navigationStories = getNavigationStories(story, previousStory, nextStory);
+  const recommendationSlots = allocateRecommendationSlots(relatedStories, navigationStories);
   const dna = story.contentDNA;
   const sections = dedupeSectionParagraphs(buildBodySections(story));
   const scriptCta = renderScriptCta(story);
@@ -264,7 +266,7 @@ ${renderHeroImage(story)}
         </header>
         ${renderSearchSummary(story)}
         ${renderStoryMap(sections)}
-        ${renderReadingBridge(story, relatedStories)}
+        ${renderReadingBridge(story, recommendationSlots.bridge)}
         <div class="story-body archive-entry">
           ${renderOpening(story)}
           ${sections.map((section, index) => `${renderSection(section)}${renderArchiveInsightBox(story, index, sections.length)}`).join('\n')}
@@ -272,10 +274,10 @@ ${renderHeroImage(story)}
           ${renderSourceNote(story)}
         </div>
 ${scriptCta ? `        ${scriptCta}
-` : ''}        ${renderRelatedArticles(relatedStories)}
-        ${renderPrevNext(previousStory, nextStory)}
+` : ''}        ${renderRelatedArticles(recommendationSlots.related)}
+        ${renderPrevNext(navigationStories.previous, navigationStories.next)}
       </article>
-      ${renderRightRail(story, relatedStories, nextStory)}
+      ${renderRightRail(story, recommendationSlots.rail, recommendationSlots.readNext)}
   </main>
   ${renderFooter()}
   <script defer src="/assets/global-search.js?v=${styleVersion}"></script>
@@ -307,7 +309,7 @@ function buildBodySections(story) {
     `${tag} Details That Carry the Record`,
     'How the Retelling Changes the Meaning',
     evidenceHeading(story),
-    `Why This ${story.storyType || 'Record'} Stays Readable`
+    `Why ${shortSubject(story)} Still Matters`
   ];
 
   return (headings.length ? headings : fallback).slice(0, 6).map((heading, index) => ({
@@ -392,8 +394,8 @@ function sectionParagraphs(story, heading, index, vocabulary, details) {
   }
 
   const closers = [
-    `For Kyunolab, the value is in preserving the precise shape of the story. The article should leave the reader with ${profile.finalImage}, plus a clear boundary between folklore value, searchable context, and verified fact.`,
-    `The ending should leave the story usable rather than inflated. A reader should come away with ${profile.finalImage}, while still knowing which parts are tradition, interpretation, or documented context.`,
+    `For Kyunolab, the value is in preserving the precise shape of the story: ${profile.finalImage}, plus a clear boundary between folklore value, searchable context, and verified fact.`,
+    `The ending keeps the story usable rather than inflated. A reader comes away with ${profile.finalImage}, while still knowing which parts are tradition, interpretation, or documented context.`,
     `That balance is the archive's purpose: keep ${profile.finalImage} vivid, but keep the boundary between a memorable story and a verified claim intact.`
   ];
   return [
@@ -412,7 +414,7 @@ function renderOpening(story) {
 
   const dna = story.contentDNA;
   const subject = shortSubject(story);
-  const summary = story.summaryAnswer || `${subject} is best read as a source-aware ${String(story.category || 'archive').toLowerCase()} story.`;
+  const summary = story.summaryAnswer || `${subject} is best read as ${articleFor(story.category)} ${String(story.category || 'archive').toLowerCase()} story.`;
   const profile = getQualityProfile(story);
   const scene = scenePhrase(story.detail || story.excerpt || dna.sceneAnchor || subject);
   return `<p>${escapeHtml(summary)} In practical terms, ${escapeHtml(dna.targetQuery)} leads to one useful question: ${escapeHtml(dna.searchQuestion)}</p>
@@ -425,15 +427,7 @@ ${section.paragraphs.map((text) => `        <p>${escapeHtml(text)}</p>`).join('\
 }
 
 function renderArchiveInsightBox(story, sectionIndex, sectionCount) {
-  const slots = sectionCount >= 5 ? new Set([1, 3]) : new Set([1]);
-  if (!slots.has(sectionIndex)) return '';
-  const insight = archiveInsightFor(story, sectionIndex);
-  if (!insight || !insight.title || !insight.text) return '';
-  return `
-        <aside class="archive-insight" aria-label="${escapeAttr(insight.title)}">
-          <strong>${escapeHtml(insight.title)}</strong>
-          <p>${escapeHtml(insight.text)}</p>
-        </aside>`;
+  return '';
 }
 
 function archiveInsightFor(story, sectionIndex) {
@@ -570,14 +564,34 @@ function renderMetaGrid(story) {
   const updated = formatDate(story.updatedAt || story.publishedAt);
   const tags = (story.tags || []).map((tag) => `<a href="/tags/${escapeAttr(slugify(tag))}/">${escapeHtml(publicTagLabel(tag))}</a>`).join(', ');
   const sourceBasis = publicSourceBasis(story);
+  const storyType = publicStoryType(story);
   return `<dl class="article-meta-grid">
           <div><dt>Category</dt><dd><a href="/categories/${escapeAttr(story.categorySlug)}.html">${escapeHtml(story.category)}</a></dd></div>
           <div><dt>Tags</dt><dd>${tags}</dd></div>
           <div><dt>Read time</dt><dd>${escapeHtml(story.readTime)}</dd></div>
-          <div><dt>Story Type</dt><dd><a href="/fiction-disclaimer.html#story-types">${escapeHtml(story.storyType)}</a></dd></div>
+          ${storyType ? `<div><dt>Story Type</dt><dd><a href="/fiction-disclaimer.html#story-types">${escapeHtml(storyType)}</a></dd></div>` : ''}
           ${sourceBasis ? `<div><dt>Source Basis</dt><dd><a href="/fiction-disclaimer.html#source-status">${escapeHtml(sourceBasis)}</a></dd></div>` : ''}
           <div><dt>Updated</dt><dd>${escapeHtml(updated)}</dd></div>
         </dl>`;
+}
+
+function publicStoryType(story) {
+  const labels = {
+    'classic-folklore': 'Folklore',
+    'internet-folklore': 'Internet Folklore',
+    'legend-origins': 'Legend Origin',
+    'legendary-places': 'Legendary Place',
+    'lost-worlds': 'Lost World',
+    'modern-legends': 'Modern Legend',
+    'mythic-creatures': 'Mythic Creature',
+    'mythic-objects': 'Mythic Object',
+    myths: 'Myth',
+    'strange-nature': 'Natural Mystery',
+    'strange-places': 'Strange Place',
+    'unexplained-mysteries': 'Unsolved Mystery',
+    'urban-legends': 'Urban Legend'
+  };
+  return labels[story.categorySlug] || '';
 }
 
 function publicSourceBasis(story) {
@@ -744,10 +758,44 @@ function renderPrevNext(previousStory, nextStory) {
   return `<nav class="prev-next" aria-label="Previous and next articles">${previous}${next}</nav>`;
 }
 
-function renderRightRail(story, relatedStories, nextStory) {
-  const readNext = nextStory && nextStory.slug !== story.slug ? nextStory : relatedStories.find((item) => item.slug !== story.slug);
-  const readNextCard = readNext
-    ? `<div class="rail-card rail-feature"><p class="rail-label">Read next</p><a href="/stories/${escapeAttr(readNext.slug)}"><strong>${escapeHtml(readNext.title)}</strong><span>${escapeHtml(readNext.category)}</span></a></div>`
+function allocateRecommendationSlots(relatedStories, navigationStories) {
+  const reserved = new Set([
+    navigationStories.previous?.slug,
+    navigationStories.next?.slug
+  ].filter(Boolean));
+  const pool = [];
+  const seen = new Set(reserved);
+  for (const story of relatedStories) {
+    if (!story || seen.has(story.slug)) continue;
+    seen.add(story.slug);
+    pool.push(story);
+  }
+  return {
+    readNext: pool[0] || null,
+    bridge: pool.slice(1, 4),
+    related: pool.slice(4, 10),
+    rail: pool.slice(10, 14)
+  };
+}
+
+function getNavigationStories(story, previousStory, nextStory) {
+  if (!isUnifiedRecommendationCandidate(story)) {
+    return {
+      previous: previousStory && previousStory.slug !== story.slug ? previousStory : null,
+      next: nextStory && nextStory.slug !== story.slug ? nextStory : null
+    };
+  }
+  const unified = stories.filter((item) => isUnifiedRecommendationCandidate(item));
+  const index = unified.findIndex((item) => item.slug === story.slug);
+  return {
+    previous: index >= 0 ? unified[index + 1] || null : null,
+    next: index >= 0 ? unified[index - 1] || null : null
+  };
+}
+
+function renderRightRail(story, relatedStories, readNextStory) {
+  const readNextCard = readNextStory
+    ? `<div class="rail-card rail-feature"><p class="rail-label">Read next</p><a href="/stories/${escapeAttr(readNextStory.slug)}"><strong>${escapeHtml(readNextStory.title)}</strong><span>${escapeHtml(readNextStory.category)}</span></a></div>`
     : '';
   const relatedLinks = relatedStories
     .filter((item) => item.slug !== story.slug)
@@ -756,8 +804,8 @@ function renderRightRail(story, relatedStories, nextStory) {
     .join('');
   return `<aside class="article-rail article-rail-right" aria-label="Recommended reading">
       ${renderKyunolabNetworkCard()}
-      ${readNextCard}
-      ${relatedLinks ? `<div class="rail-card"><p class="rail-label">Related stories</p>${relatedLinks}</div>` : ''}
+      ${readNextCard}${relatedLinks ? `
+      <div class="rail-card"><p class="rail-label">Related stories</p>${relatedLinks}</div>` : ''}
     </aside>`;
 }
 
@@ -772,14 +820,24 @@ function renderKyunolabNetworkCard() {
 
 function getRelatedStories(story) {
   const manualIds = story.relatedStorySlugs || story.relatedStoryIds || [];
-  const manual = manualIds.map((id) => storyBySlug.get(id)).filter((item) => item && item.slug !== story.slug);
+  const storyIsUnified = isUnifiedRecommendationCandidate(story);
+  const manual = manualIds
+    .map((id) => storyBySlug.get(id))
+    .filter((item) => item && item.slug !== story.slug)
+    .filter((item) => !storyIsUnified || isUnifiedRecommendationCandidate(item));
   const manualSlugs = new Set(manual.map((item) => item.slug));
-  const scored = stories
+  const candidates = stories
     .filter((item) => item.slug !== story.slug && !manualSlugs.has(item.slug))
+    .filter((item) => isPublicRecommendationCandidate(item));
+  const primary = candidates.filter((item) => isUnifiedRecommendationCandidate(item));
+  const secondary = storyIsUnified
+    ? []
+    : candidates.filter((item) => !isUnifiedRecommendationCandidate(item) && !isLegacyRecommendationCandidate(item));
+  const scored = [...primary, ...secondary]
     .map((item) => ({ item, score: relatedScore(story, item) }))
     .sort((a, b) => b.score - a.score)
     .map((entry) => entry.item);
-  return [...manual, ...scored].slice(0, 6);
+  return [...manual, ...scored].slice(0, 18);
 }
 
 function relatedScore(a, b) {
@@ -792,7 +850,34 @@ function relatedScore(a, b) {
   for (const tag of b.tags || []) if (aTags.has(normalize(tag))) score += 2;
   const aKeywords = new Set((a.relatedKeywords || []).map(normalize));
   for (const keyword of b.relatedKeywords || []) if (aKeywords.has(normalize(keyword))) score += 1;
+  if (isUnifiedRecommendationCandidate(b)) score += 12;
+  if (b.editorialStatus === 'approved') score += 3;
+  if (b.substantiveRevisionAt || b.publishedAt >= '2026-07-19') score += 2;
+  if (isLegacyRecommendationCandidate(b)) score -= 100;
   return score;
+}
+
+function isPublicRecommendationCandidate(story) {
+  if (!story || !story.slug) return false;
+  if (story.draft || story.private || story.redirectTo) return false;
+  if (!story.h1 && !story.title && !story.displayTitle) return false;
+  if (story.contentDNA?.canonicalQuery === false) return false;
+  return true;
+}
+
+function isUnifiedRecommendationCandidate(story) {
+  return isPublicRecommendationCandidate(story)
+    && story.contentStandard === 'unified'
+    && story.editorialStatus === 'approved'
+    && story.internalLinkEligible === true
+    && story.legacyContent !== true;
+}
+
+function isLegacyRecommendationCandidate(story) {
+  return story.legacyContent === true
+    || story.contentStandard === 'legacy'
+    || /record$/i.test(String(story.storyType || ''))
+    || /record-batch/i.test(String(story.generationBatch || ''));
 }
 
 function getQualityProfile(story) {
@@ -906,7 +991,7 @@ function evidenceHeading(story) {
   ]);
   return pickStable(story.slug, [
     'Where the Evidence Becomes Thin',
-    'What the Sources Can Support',
+    'What the Evidence Can and Cannot Show',
     'Where the Source Trail Starts to Fade'
   ]);
 }
@@ -1013,7 +1098,7 @@ function buildStoryMetaDescription(story) {
 
   if (source.length < 130) {
     const tagPhrase = tag ? `${tag.toLowerCase()} motif` : `${category.toLowerCase()} pattern`;
-    source = `${source.replace(/[.\s]+$/, '')}, with source-aware notes on the ${tagPhrase}, setting, and unresolved details.`;
+    source = `${source.replace(/[.\s]+$/, '')}, with context on the ${tagPhrase}, setting, and unresolved details.`;
   }
 
   if (source.length < 130) {
