@@ -49,6 +49,14 @@ const internalPublicPhrases = [
   'later versions should remain separate from the core account',
   'a careful article should',
   'a source-aware reading should',
+  'the heading keeps the focus on',
+  'this section should',
+  'the writer should',
+  'what the available sources show is where',
+  'what the available sources show keeps one difference visible',
+  'the exact earliest form may be disputed',
+  'later versions may simplify, relocate, intensify, or reinterpret the story',
+  'does not need a new frame to feel strange',
   'versions and interpretations can differ',
   'is discussed here as myths',
   'is discussed here as archive',
@@ -73,15 +81,16 @@ const forbiddenPublicHeadings = [
 ];
 
 function buildPublicArticlePlan(story) {
-  if (
-    story.publicArticlePlan
-    && Array.isArray(story.publicArticlePlan.sections)
-    && !legacyPublicPlanDetected(story.publicArticlePlan)
-  ) {
-    return normalizePlan(story.publicArticlePlan, story);
+  if (!story.storyBrief) {
+    if (
+      story.publicArticlePlan
+      && Array.isArray(story.publicArticlePlan.sections)
+      && !legacyPublicPlanDetected(story.publicArticlePlan)
+    ) {
+      return normalizePlan(story.publicArticlePlan, story);
+    }
+    return null;
   }
-
-  if (!story.storyBrief) return null;
 
   const brief = story.storyBrief;
   const topic = brief.topic || story.displayTitle || story.title;
@@ -101,8 +110,8 @@ function buildPublicArticlePlan(story) {
     sections: variableSectionsFor(story, brief, { topic, firstCore, secondCore, thirdCore, variant, interpretation, uncertainty }),
     conclusion: {
       paragraphs: [
-        `${topic} remains memorable because its strongest image stays clear even when later versions change names, motives, places, or explanations.`,
-        `${topic} may be read through the familiar story, the important variants, and the possible meaning at the same time.`
+        `${topic} remains memorable because ${lowerFirst(story.sceneAnchor || story.detail || firstCore)} gives the subject a concrete shape readers can follow.`,
+        `${sentenceFrom(brief.editorialInterpretationOptions?.[0], interpretation)} ${variantSentence(brief.reportedVariants?.[0])}`.replace(/\s+/g, ' ').trim()
       ],
       targetWords: { min: 100, max: 180 }
     },
@@ -161,6 +170,7 @@ function customDekForStory(slug) {
     'db-cooper-hijacking-mystery': 'A passenger using the name Dan Cooper left an aircraft by parachute and disappeared into one of America\'s most studied unsolved cases.',
     'island-of-the-dolls-xochimilco': 'In the canals of Xochimilco, old dolls hanging from trees turned a real island into one of Mexico City\'s most recognizable strange-place legends.',
     'spear-of-destiny-holy-lance': 'The legend asks how one weapon-shaped relic could gather authority, fear, imperial imagination, and arguments over sacred power across centuries.',
+    'flatwoods-monster-legend': 'A hilltop encounter in Braxton County became one of West Virginia\'s most recognizable monster images, where a reported fireball, a strange figure, and local memory fused into UFO folklore.',
     'sewer-alligator-urban-legend': 'A city sewer is ordinary infrastructure until rumor turns it into a habitat. The sewer alligator legend gives the hidden city a body, a mouth, and a reason to look twice at every drain.',
     'backrooms-internet-folklore': 'The Backrooms made modern emptiness feel haunted without needing a traditional ghost. Its yellow rooms and humming lights turn familiar architecture into a place that cannot lead home.',
     'nazca-lines-mystery': 'The Nazca Lines make the desert feel marked for a viewer who is not standing on the ground. Their power comes from scale, survival, and the unfinished question of purpose.',
@@ -207,15 +217,27 @@ function variableQuickAnswerFor(story, brief, parts) {
 
 function variableIntroductionFor(story, brief, parts) {
   const known = parts.names ? ` It also appears through names such as ${parts.names}.` : '';
-  const uncertainty = sentenceFrom(brief.uncertainDetails?.[0], '');
+  const uncertainty = usableUncertainties(brief)[0] || '';
+  const anchor = story.sceneAnchor || story.detail || parts.firstCore;
+  const queryIntro = targetQueryIntro(story, parts.topic);
   const paragraphs = [
-    `${parts.topic} does not need a new frame to feel strange. Its strongest details already carry the question readers come looking for.${known}`.replace(/\s+/g, ' ').trim(),
+    `${queryIntro || parts.topic} is anchored by ${lowerFirst(anchor)}.${known}`.replace(/\s+/g, ' ').trim(),
     `${parts.firstCore} ${uncertainty}`.replace(/\s+/g, ' ').trim()
   ].filter(Boolean);
   if (story.slug === 'cicada-3301-internet-puzzle') {
     paragraphs.push('QR codes were part of the puzzle trail, linking online clues to physical locations and making the hunt feel larger than a normal web riddle.');
   }
   return paragraphs;
+}
+
+function targetQueryIntro(story, topic) {
+  const query = String(story.contentDNA?.targetQuery || story.targetQuery || '').trim();
+  const normalizedTopic = normalizeText(topic);
+  const normalizedQuery = normalizeText(query);
+  if (!query || !normalizedQuery || normalizedTopic.includes(normalizedQuery)) return '';
+  const words = query.split(/\s+/).filter(Boolean);
+  if (words.length < 2 || words.length > 6) return '';
+  return words.map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 }
 
 function variableSectionsFor(story, brief, parts) {
@@ -230,46 +252,16 @@ function variableSectionsFor(story, brief, parts) {
 }
 
 function variableHeadingsFor(story, brief, topic) {
-  const fromStory = Array.isArray(story.seoHeadings)
-    ? story.seoHeadings.map((heading) => String(heading || '').trim()).filter(Boolean)
-    : [];
-  const clean = fromStory.filter((heading) => !legacyPublicHeadingDetected(heading)).slice(0, 9);
-  if (clean.length >= 3) return clean;
+  return fixedArchiveHeadingsFor(topic);
+}
 
-  const category = String(story.categorySlug || '').toLowerCase();
-  if (category.includes('myth')) {
-    return [
-      `The First Image in ${topic}`,
-      `The Choice That Moves the Myth`,
-      `The Moment the Story Turns`,
-      `How Later Versions Changed ${topic}`,
-      `What ${topic} Can Mean`
-    ];
-  }
-  if (category.includes('nature')) {
-    return [
-      `The Phenomenon People Watch For`,
-      `The Conditions Behind the Sight`,
-      `How Observation Became Lore`,
-      `Why Reports Do Not Always Match`,
-      `What the Moment Means`
-    ];
-  }
-  if (category.includes('internet')) {
-    return [
-      `The Image That Started the Spread`,
-      `How the Claim Moved Online`,
-      `What Later Reposts Changed`,
-      `Where the Hoax Frame Matters`,
-      `Why the Face Remained Familiar`
-    ];
-  }
+function fixedArchiveHeadingsFor(topic) {
   return [
     `The Detail That Defines ${topic}`,
-    `How the Story Is Usually Told`,
-    `Where Later Versions Differ`,
-    `What the Available Sources Show`,
-    `Why ${topic} Remains Memorable`
+    `How ${topic} Is Usually Remembered`,
+    'Where Later Versions Differ',
+    'What the Available Sources Show',
+    `What ${topic} Means`
   ];
 }
 
@@ -293,52 +285,101 @@ function contentLayerForHeading(heading, index) {
 }
 
 function paragraphsForHeading(heading, index, story, brief, parts) {
-  const normalized = normalizeText(heading);
   const core = (brief.coreStoryElements || []).map(sentenceFrom).filter(Boolean);
   const variants = (brief.reportedVariants || []).map(variantSentence).filter(Boolean);
   const meanings = (brief.editorialInterpretationOptions || []).map(sentenceFrom).filter(Boolean);
-  const uncertainties = (brief.uncertainDetails || []).map(sentenceFrom).filter(Boolean);
-  const isFinalSection = index >= Math.max(0, variableHeadingsFor(story, brief, parts.topic).length - 1);
+  const uncertainties = usableUncertainties(brief);
 
-  if (/version|retelling|changed|differ|variant/.test(normalized)) {
-    return [
+  if (index === 0) {
+    return uniqueParagraphs([
+      `${core[2] || parts.thirdCore} ${core[3] || parts.secondCore}`.replace(/\s+/g, ' ').trim(),
+      `${parts.topic} is defined by ${lowerFirst(story.sceneAnchor || story.detail || core[0] || 'its central image')}. That detail separates the subject from nearby stories because it gives readers one concrete image to follow.`
+    ], story);
+  }
+
+  if (index === 1) {
+    return uniqueParagraphs([
+      `${core[4] || core[0] || parts.firstCore} ${core[5] || core[1] || parts.secondCore}`.replace(/\s+/g, ' ').trim(),
+      `${(core.slice(2, 6).join(' ') || `${parts.firstCore} ${parts.secondCore} ${parts.thirdCore}`)}`.replace(/\s+/g, ' ').trim()
+    ], story);
+  }
+
+  if (index === 2) {
+    return uniqueParagraphs([
       `${variants[0] || parts.variant} ${variants[1] || ''}`.replace(/\s+/g, ' ').trim(),
-      `${uncertainties[0] || 'Later versions do not always preserve the same emphasis.'} These differences may be read as clues to which details stay attached to the story and which details shift with each retelling.`
-    ].filter(Boolean);
-  }
-  if (index <= 1) {
-    const start = Math.min(index * 2, Math.max(0, core.length - 2));
-    const selected = core.slice(start, start + 3);
-    if (selected.length) {
-      return [
-        `${selected.slice(0, 2).join(' ')} The heading keeps the focus on ${lowerFirst(heading)}.`,
-        `${selected[2] || parts.thirdCore} ${index === 0 ? parts.secondCore : ''}`.replace(/\s+/g, ' ').trim()
-      ].filter(Boolean);
-    }
-  }
-  if (/source|evidence|report|document|available|hoax|frame|repost|context|measurement|photograph|explanation/.test(normalized)) {
-    const basis = story.publicSourceBasis || brief.cultureOrContext || story.category || 'the available tradition';
-    return [
-      `${heading} is where ${parts.topic} needs ${basis}. ${uncertainties[0] || ''}`.replace(/\s+/g, ' ').trim(),
-      `${heading} keeps one difference visible: ${variants[0] || 'later retellings add emphasis, remove context, or simplify the older material.'} That difference may be read as part of the subject's reception history.`
-    ].filter(Boolean);
-  }
-  if (isFinalSection || /mean|meaning|symbol|remain|memory|question|reveals|warn/.test(normalized)) {
-    return [
-      `${heading} points to the larger reading: ${meanings[0] || parts.interpretation} ${meanings[1] || ''}`.replace(/\s+/g, ' ').trim(),
-      `${parts.topic} may be read through the detail that keeps returning in ${lowerFirst(heading)}: ${lowerFirst(story.sceneAnchor || story.detail || core[0] || 'the central image')}.`
-    ].filter(Boolean);
+      `${uncertainties[0] || variantContextSentence(parts.topic, variants)} ${uncertainties[1] || ''}`.replace(/\s+/g, ' ').trim()
+    ], story);
   }
 
-  const start = Math.min(index * 2, Math.max(0, core.length - 2));
-  const selected = core.slice(start, start + 3);
-  if (selected.length) {
-    return [
-      `${selected.slice(0, 2).join(' ')} The heading keeps the focus on ${lowerFirst(heading)}.`,
-      `${selected[2] || parts.thirdCore} ${index === 0 ? parts.secondCore : ''}`.replace(/\s+/g, ' ').trim()
+  if (index === 3) {
+    const sourceTitles = [
+      ...(story.researchSources || []).map((item) => cleanSourceTitle(item.title)),
+      ...(brief.existenceEvidence || []).map((item) => cleanSourceTitle(item.title))
     ].filter(Boolean);
+    const namedSources = sourceTitles.length
+      ? `Useful public references include ${listForSentence(uniqueList(sourceTitles).slice(0, 3))}.`
+      : '';
+    const basis = story.publicSourceBasis || brief.cultureOrContext || story.category || 'the available tradition';
+    const vocabulary = vocabularyContextSentence(story);
+    return uniqueParagraphs([
+      `${parts.topic} is supported here through ${basis}. ${namedSources}`.replace(/\s+/g, ' ').trim(),
+      `${story.evidence || `The available record supports the subject as ${articleFor(story.category || 'archive story')} ${String(story.category || 'archive story').toLowerCase()}.`} ${vocabulary} ${sourceLimitSentence(parts.topic, story, variants)}`.replace(/\s+/g, ' ').trim()
+    ], story);
   }
-  return [`${parts.firstCore} ${parts.secondCore}`.replace(/\s+/g, ' ').trim()];
+
+  return uniqueParagraphs([
+    `${parts.topic} may be read through this interpretation: ${meanings[0] || parts.interpretation} ${meanings[1] || ''}`.replace(/\s+/g, ' ').trim(),
+    `${parts.topic} remains useful because ${lowerFirst(story.sceneAnchor || story.detail || core[0] || 'its central image')} can carry cultural meaning without requiring every later version to agree.`
+  ], story);
+}
+
+function vocabularyContextSentence(story) {
+  const terms = (story.contentDNA?.subjectSpecificVocabulary || story.subjectSpecificVocabulary || [])
+    .map((term) => String(term || '').trim())
+    .filter((term) => term.length >= 4)
+    .slice(0, 6);
+  if (terms.length < 5) return '';
+  return `Important names and terms in the source trail include ${listForSentence(terms)}.`;
+}
+
+function usableUncertainties(brief) {
+  return (brief.uncertainDetails || [])
+    .map(sentenceFrom)
+    .filter(Boolean)
+    .filter((sentence) => !genericUncertaintySentenceDetected(sentence));
+}
+
+function genericUncertaintySentenceDetected(sentence) {
+  const text = normalizeText(sentence);
+  return text.includes('the exact earliest form may be disputed')
+    || text.includes('later versions may simplify, relocate, intensify, or reinterpret the story')
+    || text.includes('preserved through later retellings');
+}
+
+function variantContextSentence(topic, variants) {
+  const first = variants[0] || '';
+  if (first) return `${topic} changes most clearly where retellings adjust ${lowerFirst(first.replace(/[.?!]+$/, ''))}.`;
+  return `${topic} changes when retellings move the same recognizable detail into a different setting, explanation, or moral emphasis.`;
+}
+
+function sourceLimitSentence(topic, story, variants) {
+  const variant = variants[0] ? ` The source record can show that variant, but it should not be treated as the only form of ${topic}.` : '';
+  const category = String(story.category || 'archive story').toLowerCase();
+  return `${topic} is best handled as ${articleFor(category)} ${category} subject with visible source limits.${variant}`;
+}
+
+function uniqueParagraphs(paragraphs, story) {
+  const clean = paragraphs
+    .map((paragraph) => cleanPublicText(paragraph, story))
+    .map((paragraph) => paragraph.replace(/\s+/g, ' ').trim())
+    .filter(Boolean);
+  const seen = new Set();
+  return clean.filter((paragraph) => {
+    const key = normalizeText(paragraph);
+    if (!key || seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
 }
 
 function variableFaqFor(story, brief, topic) {
@@ -352,19 +393,19 @@ function variableFaqFor(story, brief, topic) {
   return [
     {
       q: `Who or what is ${topic}?`,
-      a: `${sentenceFrom(brief.coreStoryElements?.[0], `${topic} is connected with ${brief.cultureOrContext || story.category}.`)}`
+      a: faqAnswerForIndex(story, brief, topic, 0)
     },
     {
       q: `Which detail is most important in ${topic}?`,
-      a: `${sentenceFrom(brief.coreStoryElements?.[1], 'The memorable detail gives the subject its clearest image.')}`
+      a: faqAnswerForIndex(story, brief, topic, 1)
     },
     {
       q: `How do later versions of ${topic} differ?`,
-      a: `${variantSentence(brief.reportedVariants?.[0])}`
+      a: faqAnswerForIndex(story, brief, topic, 2)
     },
     {
       q: `What can ${topic} suggest?`,
-      a: `${sentenceFrom(brief.editorialInterpretationOptions?.[0], `${topic} may be read as a symbolic story rather than a literal report.`)}`
+      a: faqAnswerForIndex(story, brief, topic, 4)
     }
   ];
 }
@@ -373,120 +414,21 @@ function faqAnswerForIndex(story, brief, topic, index) {
   const core = (brief.coreStoryElements || []).map(sentenceFrom).filter(Boolean);
   const variants = (brief.reportedVariants || []).map(variantSentence).filter(Boolean);
   const meanings = (brief.editorialInterpretationOptions || []).map(sentenceFrom).filter(Boolean);
-  const uncertainties = (brief.uncertainDetails || []).map(sentenceFrom).filter(Boolean);
+  const uncertainties = usableUncertainties(brief);
+  const sourceTitles = [
+    ...(story.researchSources || []).map((item) => cleanSourceTitle(item.title)),
+    ...(brief.existenceEvidence || []).map((item) => cleanSourceTitle(item.title))
+  ].filter(Boolean);
+  const detail = story.detail || story.sceneAnchor || story.primaryTag || brief.cultureOrContext || topic;
   const answers = [
-    core[0],
-    core[1] || core[0],
-    variants[0] || core[2],
-    meanings[0],
-    uncertainties[0] || variants[1],
-    meanings[1] || core[3]
+    `${topic} refers to ${lowerFirst(String(detail).replace(/[.?!]+$/, ''))}, rather than to every later retelling attached to the name.`,
+    `${core[2] || core[1] || core[0]} ${story.sceneAnchor ? `The key image is ${lowerFirst(story.sceneAnchor)}.` : ''}`.replace(/\s+/g, ' ').trim(),
+    `${topic} has variant details rather than one completely fixed form: ${variants[0] || core[3]} ${variants[1] ? `Another recurring difference is ${lowerFirst(variants[1].replace(/[.?!]+$/, ''))}.` : ''}`.replace(/\s+/g, ' ').trim(),
+    sourceTitles.length ? `${topic} is usually checked against ${listForSentence(uniqueList(sourceTitles).slice(0, 2))}.` : (story.evidence || uncertainties[0]),
+    meanings[0] || uncertainties[0],
+    meanings[1] || variants[1] || core[4]
   ].filter(Boolean);
   return answers[index] || answers[0] || `${topic} is read through ${brief.cultureOrContext || story.category}.`;
-}
-
-function defaultSectionsFor(story, brief, parts) {
-  const category = String(story.categorySlug || '').toLowerCase();
-  if (category === 'myths' || String(brief.contentType || '').includes('myth')) {
-    return [
-      {
-        heading: `Where ${parts.topic} Begins`,
-        purpose: 'Introduce the mythic background and main figures.',
-        contentLayer: 'existing-story',
-        targetWords: { min: 220, max: 380 },
-        paragraphs: [
-          `${parts.firstCore} ${parts.secondCore}`,
-          `${parts.topic} should be read through ${brief.cultureOrContext || 'its mythic tradition'}. The important background is the relationship between the figures, the problem the myth tries to explain, and the image that makes the story memorable.`
-        ]
-      },
-      {
-        heading: `The Central Event in ${parts.topic}`,
-        purpose: 'Tell the remembered event as a connected sequence.',
-        contentLayer: 'existing-story',
-        targetWords: { min: 300, max: 500 },
-        paragraphs: [
-          `${parts.thirdCore} ${(brief.coreStoryElements || []).slice(3).map(sentenceFrom).join(' ')}`,
-          `The story works because the event does not sit alone. It follows from the earlier conflict or condition, changes the world of the story, and leaves a result that later listeners can recognize.`
-        ]
-      },
-      {
-        heading: `How Later Versions Changed the Emphasis`,
-        purpose: 'Explain important variants without forcing one final canon.',
-        contentLayer: 'reported-variant',
-        targetWords: { min: 180, max: 320 },
-        paragraphs: [
-          `${parts.variant} ${brief.reportedVariants?.[1] ? variantSentence(brief.reportedVariants[1]) : ''}`.trim(),
-          `Those differences matter because mythology often survives through retelling. A version can preserve the same core image while changing a name, object, order, emphasis, or moral question.`
-        ]
-      },
-      {
-        heading: `What ${parts.topic} May Mean`,
-        purpose: 'Present symbolic readings as possible readings.',
-        contentLayer: 'variant-and-interpretation',
-        targetWords: { min: 250, max: 450 },
-        paragraphs: [
-          `${parts.interpretation} ${brief.editorialInterpretationOptions?.[1] ? sentenceFrom(brief.editorialInterpretationOptions[1]) : ''}`.trim(),
-          `${parts.uncertainty} That uncertainty is part of the reason the myth remains readable. It lets the story carry more than one question without pretending that one modern explanation closes the subject.`
-        ]
-      }
-    ];
-  }
-
-  return [
-    {
-      heading: `What People Mean by ${parts.topic}`,
-      purpose: 'Explain the basic story or claim.',
-      contentLayer: 'existing-story',
-      targetWords: { min: 220, max: 360 },
-      paragraphs: [`${parts.firstCore} ${parts.secondCore}`, `${parts.thirdCore}`]
-    },
-    {
-      heading: `How the Story Is Usually Told`,
-      purpose: 'Describe the familiar sequence.',
-      contentLayer: 'existing-story',
-      targetWords: { min: 260, max: 420 },
-      paragraphs: [
-        `${(brief.coreStoryElements || []).map(sentenceFrom).join(' ')}`,
-        `The story remains understandable because its parts are easy to picture and easy to repeat.`
-      ]
-    },
-    {
-      heading: `How Versions Differ`,
-      purpose: 'Explain variants.',
-      contentLayer: 'reported-variant',
-      targetWords: { min: 180, max: 320 },
-      paragraphs: [`${(brief.reportedVariants || []).map(variantSentence).join(' ')}`]
-    },
-    {
-      heading: `Why the Story Still Works`,
-      purpose: 'Explain meaning and survival.',
-      contentLayer: 'variant-and-interpretation',
-      targetWords: { min: 220, max: 360 },
-      paragraphs: [`${(brief.editorialInterpretationOptions || []).map(sentenceFrom).join(' ')}`, `${parts.uncertainty}`]
-    }
-  ];
-}
-
-function defaultFaqFor(story, brief, topic) {
-  const subject = topic.replace(/\s+Myth$/i, '');
-  return [
-    {
-      q: `What is ${subject}?`,
-      a: `${subject} is connected with ${brief.cultureOrContext || story.category}. ${sentenceFrom(brief.coreStoryElements?.[0], 'It is remembered through a repeated story pattern and later retellings.')}`
-    },
-    {
-      q: `Why is ${subject} remembered?`,
-      a: `${sentenceFrom(brief.coreStoryElements?.[1], 'The story gives readers a clear image and a question that can be retold in different ways.')}`
-    },
-    {
-      q: `Do all versions of ${subject} agree?`,
-      a: `${variantSentence(brief.reportedVariants?.[0])} Different versions can keep the same core story while changing emphasis.`
-    },
-    {
-      q: `What can ${subject} symbolize?`,
-      a: `${sentenceFrom(brief.editorialInterpretationOptions?.[0], 'It may be read as a symbolic story rather than a literal report.')}`
-    }
-  ];
 }
 
 function normalizePlan(plan, story) {
@@ -589,7 +531,7 @@ function buildBriefSourceNote(story, brief, topic) {
   const variants = Array.isArray(brief.reportedVariants)
     ? brief.reportedVariants.map((item) => item.claim || item).filter(Boolean).slice(0, 2)
     : [];
-  const uncertainties = Array.isArray(brief.uncertainDetails) ? brief.uncertainDetails.slice(0, 1) : [];
+  const uncertainties = usableUncertainties(brief).slice(0, 1);
   const variantText = variants.length ? ` Later retellings differ around ${lowerFirst(listForSentence(variants, 2))}.` : '';
   const uncertaintyText = uncertainties.length ? ` ${sentenceFrom(uncertainties[0])}` : '';
   return `${topic} is read here through ${basis}.${variantText}${uncertaintyText}`.replace(/\s+/g, ' ').trim();
@@ -635,6 +577,10 @@ function listForSentence(values) {
   if (!clean.length) return 'the main details';
   if (clean.length === 1) return clean[0];
   return `${clean.slice(0, -1).join(', ')} and ${clean[clean.length - 1]}`;
+}
+
+function uniqueList(values) {
+  return Array.from(new Set((values || []).filter(Boolean)));
 }
 
 function lowerFirst(value) {
@@ -721,13 +667,16 @@ function legacySectionPatternDetected(headings) {
 
 function genericFaqPatternDetected(faq) {
   const questions = (faq || []).map((item) => normalizeText(item.q || item.question || ''));
-  const generic = questions.filter((question) => (
-    /^what is /.test(question)
-    || /^is .* based on a confirmed fact\?$/.test(question)
-    || /^why does .* matter\?$/.test(question)
-    || /^are all versions of .* the same\?$/.test(question)
+  const answers = (faq || []).map((item) => normalizeText(item.a || item.answer || '')).filter(Boolean);
+  const hasPlaceholder = questions.some((question) => question.includes('[topic]') || question.includes('topic?'));
+  const repeatedAnswerCount = answers.length - new Set(answers).size;
+  const vagueAnswers = answers.filter((answer) => (
+    answer.includes('larger pattern people can recognize')
+    || answer.includes('this page explains')
+    || answer.includes('the article should')
+    || answer.includes('a careful article should')
   ));
-  return generic.length >= 3;
+  return hasPlaceholder || repeatedAnswerCount >= 2 || vagueAnswers.length >= 2;
 }
 
 function genericSourceNoteDetected(sourceNote) {

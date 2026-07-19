@@ -17,7 +17,7 @@
     "topics": [
       "LegendOriginRecord",
       "Legend Origins / Luck Symbol Origin / Folklore origin and motif record",
-      "horseshoe luck origin horseshoe-luck-origin",
+      "horseshoe luck origin",
       "Horseshoe Luck is treated through one concrete anchor: the superstition that a horseshoe brings luck or protection when kept near a doorway or hung in a particular direction.",
       "horseshoe",
       "luck",
@@ -44,7 +44,7 @@
     "topics": [
       "MythicObjectRecord",
       "Mythic Objects / Sacred Object Legend / Mythic tradition and symbolic reading",
-      "ark of the covenant legend ark-of-the-covenant-legend",
+      "ark of the covenant legend",
       "Ark of the Covenant is treated through one concrete anchor: the sacred chest from biblical tradition and the later legends about its power, disappearance, and possible location.",
       "Ark of the Covenant",
       "sacred chest",
@@ -71,7 +71,7 @@
     "topics": [
       "LegendaryPlaceRecord",
       "Legendary Places / Legendary Monument / Mythic tradition and symbolic reading",
-      "stonehenge legend stonehenge-legendary-place",
+      "stonehenge legend",
       "Stonehenge is treated through one concrete anchor: the prehistoric stone monument in Wiltshire and the later legends, meanings, and interpretations attached to it.",
       "Stonehenge",
       "stones",
@@ -98,7 +98,7 @@
     "topics": [
       "StrangeNatureRecord",
       "Strange Nature / Strange Weather / Evidence-limited public record",
-      "blood rain phenomenon blood-rain-phenomenon",
+      "blood rain phenomenon",
       "Blood Rain is treated through one concrete anchor: red-colored rain events that have been explained through dust, algae, spores, or other natural material while also becoming omen folklore.",
       "blood rain",
       "red rain",
@@ -125,7 +125,7 @@
     "topics": [
       "LostWorldRecord",
       "Lost Worlds / Lost City Legend / Mythic tradition and symbolic reading",
-      "atlantis lost city atlantis-lost-city",
+      "atlantis lost city",
       "Atlantis is treated through one concrete anchor: the legendary island power described by Plato and later reimagined as a sunken lost civilization.",
       "Atlantis",
       "Plato",
@@ -152,7 +152,7 @@
     "topics": [
       "MythicCreatureRecord",
       "Mythic Creatures / Sea Monster Folklore / Mythic tradition and symbolic reading",
-      "kraken sea monster folklore kraken-sea-monster-folklore",
+      "kraken sea monster folklore",
       "Kraken is treated through one concrete anchor: the northern sea-monster tradition of a vast creature large enough to threaten ships from below.",
       "Kraken",
       "sea monster",
@@ -179,7 +179,7 @@
     "topics": [
       "MythRecord",
       "Myths / Greek Myth / Mythic tradition and symbolic reading",
-      "icarus flight myth icarus-flight-myth",
+      "icarus flight myth",
       "Icarus is treated through one concrete anchor: the Greek myth of Icarus flying with wax wings and falling after ignoring Daedalus’s warning.",
       "Icarus",
       "Daedalus",
@@ -206,7 +206,7 @@
     "topics": [
       "ModernLegendRecord",
       "Modern Legends / Modern Monster Legend / Source-aware folklore record",
-      "mothman point pleasant legend mothman-point-pleasant-legend",
+      "mothman point pleasant legend",
       "Mothman is treated through one concrete anchor: the modern legend of a winged red-eyed figure reported around Point Pleasant, West Virginia, in the 1960s.",
       "Mothman",
       "Point Pleasant",
@@ -233,7 +233,7 @@
     "topics": [
       "ClassicFolkloreRecord",
       "Classic Folklore / Shape-Shifter Folklore / Source-aware folklore record",
-      "selkie folklore selkie-folklore",
+      "selkie folklore",
       "Selkie is treated through one concrete anchor: the North Atlantic folklore of seal people who can remove their skins and live briefly as humans on shore.",
       "selkie",
       "seal skin",
@@ -260,7 +260,7 @@
     "topics": [
       "UnexplainedMysteryRecord",
       "Unexplained Mysteries / UFO Case / Evidence-limited public record",
-      "rendlesham forest incident rendlesham-forest-incident",
+      "rendlesham forest incident",
       "Rendlesham Forest Incident is treated through one concrete anchor: the reported lights and strange encounters near RAF Woodbridge and Rendlesham Forest in December 1980.",
       "Rendlesham Forest",
       "RAF Woodbridge",
@@ -287,13 +287,13 @@
     "topics": [
       "StrangePlaceRecord",
       "Strange Places / Ancient Place Mystery / Source-aware folklore record",
-      "nazca lines mystery nazca-lines-mystery",
+      "nazca lines mystery",
       "Nazca Lines is treated through one concrete anchor: the giant desert geoglyphs of southern Peru and the long-running questions about their purpose and meaning.",
       "Nazca Lines",
       "geoglyphs",
       "southern Peru",
       "desert",
-      "aerial view"
+      "from above"
     ]
   },
   {
@@ -314,13 +314,13 @@
     "topics": [
       "InternetFolkloreRecord",
       "Internet Folklore / Liminal Space Legend / Source-aware folklore record",
-      "backrooms internet folklore backrooms-internet-folklore",
+      "backrooms internet folklore",
       "The Backrooms is treated through one concrete anchor: the internet-born legend of an endless yellow office-like space reached by slipping out of normal reality.",
       "Backrooms",
       "yellow rooms",
-      "lights hum",
+      "humming lights",
       "no-clip",
-      "liminal-space photography"
+      "liminal space"
     ]
   },
   {
@@ -341,7 +341,7 @@
     "topics": [
       "UrbanLegendRecord",
       "Urban Legends / Urban Animal Legend / Source-aware folklore record",
-      "sewer alligator urban legend sewer-alligator-urban-legend",
+      "sewer alligator urban legend",
       "Sewer Alligator is treated through one concrete anchor: the modern city legend that alligators live beneath streets after being abandoned as exotic pets.",
       "sewer alligator",
       "city drains",
@@ -368,7 +368,7 @@
     "topics": [
       "LegendOriginRecord",
       "Legend Origins / Superstition Origin / Folklore origin and motif record",
-      "black cat superstition origin",
+      "black cat superstition origin black-cat-superstition-origin",
       "Black Cat Superstition is treated through one concrete anchor: the changing folklore around black cats as signs of luck, bad luck, witchcraft, protection, or omen.",
       "black cat",
       "superstition",
@@ -395,7 +395,7 @@
     "topics": [
       "MythicObjectRecord",
       "Mythic Objects / Invisibility Object / Mythic tradition and symbolic reading",
-      "ring of gyges myth",
+      "ring of gyges myth ring-of-gyges-myth",
       "Ring of Gyges is treated through one concrete anchor: the philosophical myth of a ring that makes its wearer invisible and tests whether justice survives without witnesses.",
       "Ring of Gyges",
       "Plato",
@@ -422,7 +422,7 @@
     "topics": [
       "LegendaryPlaceRecord",
       "Legendary Places / Sacred Site / Mythic tradition and symbolic reading",
-      "oracle of delphi legend",
+      "oracle of delphi legend oracle-of-delphi-legend",
       "Oracle of Delphi is treated through one concrete anchor: the ancient Greek sacred site where the Pythia delivered oracular responses associated with Apollo.",
       "Delphi",
       "Pythia",
@@ -449,7 +449,7 @@
     "topics": [
       "StrangeNatureRecord",
       "Strange Nature / Optical Phenomenon / Evidence-limited public record",
-      "green flash sunset phenomenon",
+      "green flash sunset phenomenon green-flash-sunset-phenomenon",
       "Green Flash is treated through one concrete anchor: the brief green light sometimes seen near the sun at sunrise or sunset under specific atmospheric conditions.",
       "green flash",
       "sunset",
@@ -476,7 +476,7 @@
     "topics": [
       "LostWorldRecord",
       "Lost Worlds / Hidden World / Mythic tradition and symbolic reading",
-      "agartha hollow earth legend",
+      "agartha hollow earth legend agartha-hollow-earth-legend",
       "Agartha is treated through one concrete anchor: the esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath the earth.",
       "Agartha",
       "Agharta",
@@ -503,7 +503,7 @@
     "topics": [
       "MythicCreatureRecord",
       "Mythic Creatures / Mythic Reptile / Mythic tradition and symbolic reading",
-      "basilisk folklore",
+      "basilisk folklore basilisk-folklore",
       "Basilisk is treated through one concrete anchor: the basilisk tradition of a deadly serpent or serpent-like king whose gaze, breath, or presence can kill.",
       "basilisk",
       "deadly gaze",
@@ -530,7 +530,7 @@
     "topics": [
       "MythRecord",
       "Myths / Greek Myth / Mythic tradition and symbolic reading",
-      "phaethon sun chariot myth",
+      "phaethon sun chariot myth phaethon-sun-chariot-myth",
       "Phaethon is treated through one concrete anchor: the Greek myth of Phaethon driving the chariot of the sun and losing control of its fire.",
       "Phaethon",
       "Apollo",
@@ -557,7 +557,7 @@
     "topics": [
       "ModernLegendRecord",
       "Modern Legends / Modern Cryptid / Source-aware folklore record",
-      "beast of bray road",
+      "beast of bray road beast-of-bray-road-legend",
       "Beast of Bray Road is treated through one concrete anchor: the Wisconsin modern legend of a wolf-like or werewolf-like creature reported near Bray Road.",
       "Beast of Bray Road",
       "Wisconsin",
@@ -584,7 +584,7 @@
     "topics": [
       "ClassicFolkloreRecord",
       "Classic Folklore / Medieval Wonder / Source-aware folklore record",
-      "green children of woolpit",
+      "green children of woolpit green-children-woolpit-folklore",
       "Green Children of Woolpit is treated through one concrete anchor: the medieval English story of two green-skinned children who appeared near Woolpit and spoke an unknown language.",
       "Green Children",
       "Woolpit",
@@ -611,7 +611,7 @@
     "topics": [
       "UnexplainedMysteryRecord",
       "Unexplained Mysteries / Unexplained Sound / Evidence-limited public record",
-      "taos hum mystery",
+      "taos hum mystery taos-hum-mystery",
       "Taos Hum is treated through one concrete anchor: the low-frequency hum reported by some residents and visitors around Taos, New Mexico.",
       "Taos Hum",
       "low sound",
@@ -638,7 +638,7 @@
     "topics": [
       "StrangePlaceRecord",
       "Strange Places / Haunted Fort / Source-aware folklore record",
-      "bhangarh fort legend",
+      "bhangarh fort legend bhangarh-fort-legend",
       "Bhangarh Fort is treated through one concrete anchor: the haunted-place legend surrounding the ruined Bhangarh Fort in Rajasthan.",
       "Bhangarh Fort",
       "Rajasthan",
@@ -665,7 +665,7 @@
     "topics": [
       "InternetFolkloreRecord",
       "Internet Folklore / Internet Hoax / Source-aware folklore record",
-      "this man dream hoax",
+      "this man dream hoax this-man-dream-hoax",
       "This Man is treated through one concrete anchor: the viral internet legend claiming that thousands of people saw the same unknown face in dreams.",
       "This Man",
       "dreams",
@@ -692,7 +692,7 @@
     "topics": [
       "UrbanLegendRecord",
       "Urban Legends / Babysitter Legend / Source-aware folklore record",
-      "clown statue urban legend",
+      "clown statue urban legend clown-statue-urban-legend",
       "Clown Statue is treated through one concrete anchor: the babysitter legend in which a clown statue in the house turns out not to be a statue at all.",
       "clown statue",
       "babysitter",
