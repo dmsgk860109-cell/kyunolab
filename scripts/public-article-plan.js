@@ -40,6 +40,9 @@ const internalPublicPhrases = [
   'reported variant',
   'editorial interpretation',
   'what the sources can support',
+  'is presented through the familiar story, its major variants, the source limits',
+  'continues to work in cultural memory',
+  'the familiar story, its major variants, the source limits',
   'versions and interpretations can differ',
   'is discussed here as myths',
   'is discussed here as archive',
@@ -370,6 +373,7 @@ function validatePublicArticleOutput(story, html) {
   const normalized = normalizeText(stripHtml(html));
   const headings = extractHeadings(html).map(normalizeText);
   const slug = String(story.slug || '');
+  const isExistingCategoryBatch = story.generationBatch === 'existing-one-each-20260719';
 
   for (const phrase of internalPublicPhrases) {
     if (normalized.includes(phrase)) errors.push(`public article exposes internal phrase "${phrase}"`);
@@ -380,6 +384,23 @@ function validatePublicArticleOutput(story, html) {
 
   if (story.storyBrief && !story.publicArticlePlan) {
     errors.push('missing publicArticlePlan for unified-policy story');
+  }
+
+  if (isExistingCategoryBatch) {
+    const plan = story.publicArticlePlan || {};
+    const dek = normalizeText(plan.dek || story.introSummary || '');
+    const quickAnswer = normalizeText((plan.quickAnswer?.paragraphs || []).join(' '));
+    const contentHeadings = publicContentHeadings(html).map(normalizeText);
+
+    if (genericDekDetected(dek)) errors.push('genericDekDetected');
+    if (textSimilarity(dek, quickAnswer) > 0.72) errors.push('dekQuickAnswerDuplicationDetected');
+    if (contentHeadings.length === 4) errors.push('fixedFourSectionPatternDetected');
+    if (contentHeadings.length < 5) errors.push('insufficientSectionVariationDetected');
+    if (contentHeadings.some((heading) => unnecessaryEvidenceHeadingDetected(slug, heading))) {
+      errors.push('unnecessaryEvidenceSectionDetected');
+    }
+    if (abstractPaddingDetected(normalized)) errors.push('abstractPaddingDetected');
+    if (possessiveGrammarErrorDetected(normalized)) errors.push('possessiveGrammarErrorDetected');
   }
 
   if (slug) {
@@ -397,6 +418,78 @@ function validatePublicArticleOutput(story, html) {
   }
 
   return errors;
+}
+
+function genericDekDetected(dek) {
+  return [
+    'is presented through',
+    'major variants',
+    'source limits',
+    'continues to work in cultural memory',
+    'this page explains'
+  ].some((phrase) => dek.includes(phrase));
+}
+
+function publicContentHeadings(html) {
+  const utilityHeadings = new Set([
+    'quick answer',
+    'story map',
+    'frequently asked questions',
+    'related articles',
+    'story & source note',
+    'creator script version',
+    'share this record',
+    'tags'
+  ]);
+  return extractHeadings(html)
+    .filter((heading) => !utilityHeadings.has(normalizeText(heading)));
+}
+
+function unnecessaryEvidenceHeadingDetected(slug, heading) {
+  const evidenceSlugs = new Set([
+    'polybius-arcade-game-legend',
+    'bennington-triangle-legend',
+    'oak-island-money-pit',
+    'marfa-lights-mystery'
+  ]);
+  if (evidenceSlugs.has(slug)) return false;
+  return /\b(evidence|proof|source trail|historical record|can and cannot)\b/.test(heading);
+}
+
+function abstractPaddingDetected(text) {
+  const phrases = [
+    'larger pattern people can recognize',
+    'broader cultural memory',
+    'the story still works because',
+    'readers can understand how the story functions'
+  ];
+  return phrases.some((phrase) => text.includes(phrase));
+}
+
+function possessiveGrammarErrorDetected(text) {
+  return /\b(thor hammer|thor hand|thor power|thor use|mjolnir image|prometheus release|zeus judgment|paula welden disappearance)\b/.test(text);
+}
+
+function textSimilarity(a, b) {
+  const aTokens = meaningfulTokens(a);
+  const bTokens = meaningfulTokens(b);
+  if (aTokens.size < 8 || bTokens.size < 8) return 0;
+  let shared = 0;
+  for (const token of aTokens) if (bTokens.has(token)) shared += 1;
+  return shared / Math.min(aTokens.size, bTokens.size);
+}
+
+function meaningfulTokens(value) {
+  const stop = new Set([
+    'the', 'and', 'for', 'with', 'that', 'this', 'from', 'into', 'about', 'story',
+    'legend', 'myth', 'mystery', 'folklore', 'later', 'versions', 'version',
+    'through', 'around', 'where', 'while', 'because', 'their', 'there'
+  ]);
+  return new Set(String(value || '')
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, ' ')
+    .split(/[\s-]+/)
+    .filter((token) => token.length > 2 && !stop.has(token)));
 }
 
 function publicStoryWordStats(story, html) {

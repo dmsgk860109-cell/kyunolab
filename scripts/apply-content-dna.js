@@ -772,8 +772,8 @@ function allocateRecommendationSlots(relatedStories, navigationStories) {
   }
   return {
     readNext: pool[0] || null,
-    bridge: pool.slice(1, 4),
-    related: pool.slice(4, 10),
+    related: pool.slice(1, 7),
+    bridge: pool.slice(7, 10),
     rail: pool.slice(10, 14)
   };
 }
@@ -824,7 +824,7 @@ function getRelatedStories(story) {
   const manual = manualIds
     .map((id) => storyBySlug.get(id))
     .filter((item) => item && item.slug !== story.slug)
-    .filter((item) => !storyIsUnified || isUnifiedRecommendationCandidate(item));
+    .filter((item) => !storyIsUnified || isUnifiedRecommendationCandidate(item) || !isLegacyRecommendationCandidate(item));
   const manualSlugs = new Set(manual.map((item) => item.slug));
   const candidates = stories
     .filter((item) => item.slug !== story.slug && !manualSlugs.has(item.slug))
@@ -835,26 +835,89 @@ function getRelatedStories(story) {
     : candidates.filter((item) => !isUnifiedRecommendationCandidate(item) && !isLegacyRecommendationCandidate(item));
   const scored = [...primary, ...secondary]
     .map((item) => ({ item, score: relatedScore(story, item) }))
-    .sort((a, b) => b.score - a.score)
+    .filter((entry) => entry.score.semantic >= minimumRelatedScore(story, entry.item))
+    .sort((a, b) => b.score.total - a.score.total)
     .map((entry) => entry.item);
   return [...manual, ...scored].slice(0, 18);
 }
 
 function relatedScore(a, b) {
-  let score = 0;
-  if (a.primaryTag && a.primaryTag === b.primaryTag) score += 8;
-  if (a.categorySlug === b.categorySlug) score += 6;
-  if (a.contentDNA?.subjectClass && a.contentDNA.subjectClass === b.contentDNA?.subjectClass) score += 4;
-  if (a.contentDNA?.narrativeLens && a.contentDNA.narrativeLens === b.contentDNA?.narrativeLens) score += 3;
+  let semantic = 0;
+  if (a.primaryTag && a.primaryTag === b.primaryTag) semantic += 18;
+  if (a.categorySlug === b.categorySlug) semantic += 12;
+  if (a.contentDNA?.subjectClass && a.contentDNA.subjectClass === b.contentDNA?.subjectClass) semantic += 6;
+  if (a.contentDNA?.narrativeLens && a.contentDNA.narrativeLens === b.contentDNA?.narrativeLens) semantic += 4;
   const aTags = new Set((a.tags || []).map(normalize));
-  for (const tag of b.tags || []) if (aTags.has(normalize(tag))) score += 2;
+  for (const tag of b.tags || []) if (aTags.has(normalize(tag))) semantic += 4;
   const aKeywords = new Set((a.relatedKeywords || []).map(normalize));
-  for (const keyword of b.relatedKeywords || []) if (aKeywords.has(normalize(keyword))) score += 1;
-  if (isUnifiedRecommendationCandidate(b)) score += 12;
-  if (b.editorialStatus === 'approved') score += 3;
-  if (b.substantiveRevisionAt || b.publishedAt >= '2026-07-19') score += 2;
-  if (isLegacyRecommendationCandidate(b)) score -= 100;
-  return score;
+  for (const keyword of b.relatedKeywords || []) if (aKeywords.has(normalize(keyword))) semantic += 3;
+  semantic += sharedStoryTermScore(a, b);
+
+  let total = semantic;
+  if (isUnifiedRecommendationCandidate(b)) total += 2;
+  if (b.editorialStatus === 'approved') total += 1;
+  if (b.substantiveRevisionAt || b.publishedAt >= '2026-07-19') total += 0.25;
+  if (isLegacyRecommendationCandidate(b)) total -= 100;
+  return { semantic, total };
+}
+
+function minimumRelatedScore(a, b) {
+  if (a.primaryTag && a.primaryTag === b.primaryTag) return 8;
+  if (a.categorySlug === b.categorySlug) return 10;
+  return 12;
+}
+
+function sharedStoryTermScore(a, b) {
+  const aTerms = relatedSignalTerms(a);
+  const bTerms = relatedSignalTerms(b);
+  let shared = 0;
+  for (const term of bTerms) {
+    if (aTerms.has(term)) shared += relatedSignalWeight(term);
+  }
+  return Math.min(shared, 24);
+}
+
+function relatedSignalTerms(story) {
+  const values = [
+    story.title,
+    story.displayTitle,
+    story.h1,
+    story.primaryTag,
+    story.category,
+    story.categorySlug,
+    story.storyBrief?.topic,
+    story.storyBrief?.cultureOrContext,
+    ...(story.storyBrief?.knownNames || []),
+    ...(story.tags || []),
+    ...(story.relatedKeywords || []),
+    ...(story.contentDNA?.subjectSpecificVocabulary || []),
+    ...(story.contentDNA?.requiredSpecificDetails || [])
+  ];
+  const terms = new Set();
+  for (const value of values) {
+    for (const token of relatedTokens(value)) terms.add(token);
+  }
+  return terms;
+}
+
+function relatedTokens(value) {
+  const stop = new Set([
+    'the', 'and', 'for', 'with', 'from', 'into', 'that', 'this', 'story', 'legend',
+    'mystery', 'myth', 'folklore', 'record', 'origin', 'version', 'versions',
+    'archive', 'what', 'where', 'why', 'how'
+  ]);
+  return String(value || '')
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, ' ')
+    .split(/[\s-]+/)
+    .map((token) => token.trim())
+    .filter((token) => token.length > 2 && !stop.has(token));
+}
+
+function relatedSignalWeight(term) {
+  if (/^(greek|norse|celtic|irish|european|buddhist|ufo|arcade|internet|texas|vermont|nova|scotia|halloween)$/.test(term)) return 5;
+  if (/^(thor|zeus|prometheus|olympus|mjolnir|phoenix|shambhala|polybius|marfa|bennington|oak)$/.test(term)) return 6;
+  return 2;
 }
 
 function isPublicRecommendationCandidate(story) {

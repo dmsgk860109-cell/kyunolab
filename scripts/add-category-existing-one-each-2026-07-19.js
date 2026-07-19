@@ -451,12 +451,12 @@ const topics = [
   topic({
     categorySlug: 'mythic-objects',
     slug: 'mjolnir-thors-hammer',
-    title: 'Mjolnir: Thor Hammer, Protection Symbol, and the Mythic Object That Returns',
+    title: 'Mjolnir: Thor\'s Hammer, Protection Symbol, and the Mythic Object That Returns',
     subject: 'Mjolnir',
     tag: 'Mythic Weapon',
     tags: ['Mythic Weapon', 'Mjolnir', 'Thor', 'Norse Myth', 'Protection Symbol'],
     keyword: 'mjolnir thors hammer',
-    detail: 'Thor hammer in Norse myth, a returning weapon associated with thunder, protection, divine power, and later symbolic use',
+    detail: 'Thor\'s hammer in Norse myth, a returning weapon associated with thunder, protection, divine power, and later symbolic use',
     sourceBasis: 'Norse mythology summaries, Eddic and skaldic tradition, archaeological symbol discussion, and later reception',
     evidence: 'Norse myth references, mythology summaries, hammer amulet context, and later symbolic interpretation',
     vocabulary: ['Mjolnir', 'Thor', 'hammer', 'thunder', 'protection'],
@@ -466,7 +466,7 @@ const topics = [
       source('World History Encyclopedia - Mjolnir', 'https://www.worldhistory.org/Mjolnir/', 'Supports Norse mythic and symbolic context.')
     ],
     quickAnswer: [
-      'Mjolnir is Thor hammer in Norse myth, a powerful weapon associated with thunder, protection, consecration, and divine force. It is famous for being hurled and returning.',
+      'Mjolnir is Thor\'s hammer in Norse myth, a powerful weapon associated with thunder, protection, consecration, and divine force. It is famous for being hurled and returning.',
       'The hammer matters because it is both weapon and symbol. It destroys threats, protects communities, blesses important acts, and later becomes one of the most recognizable Norse mythic objects.'
     ],
     intro: [
@@ -480,7 +480,7 @@ const topics = [
       ['Why Mjolnir Still Works', 'Mjolnir may be read as a mythic object that makes protection physical. It gives a god a tool, a community a sign, and a story a decisive sound.', 'That is why the hammer remains powerful in cultural memory. It is simple to picture, but dense with meaning: thunder in the hand.']
     ],
     faq: [
-      qa('What is Mjolnir?', 'Mjolnir is Thor hammer in Norse myth, associated with thunder, protection, and divine force.'),
+      qa('What is Mjolnir?', 'Mjolnir is Thor\'s hammer in Norse myth, associated with thunder, protection, and divine force.'),
       qa('Does Mjolnir return after being thrown?', 'Many popular summaries describe the hammer as a weapon that returns to Thor.'),
       qa('Was Mjolnir only a weapon?', 'No. It is also connected with protection, consecration, and symbolic identity.'),
       qa('Why are hammer pendants important?', 'They show that the hammer symbol had meaning beyond narrative scenes, including protection and cultural identity.')
@@ -567,6 +567,8 @@ for (const story of updates) {
 }
 
 function buildStory(plan, category) {
+  const articleSections = expandedSectionsFor(plan);
+  const dek = dekForPlan(plan);
   const relatedKeywords = unique([
     `${plan.keyword} origin`,
     `${plan.keyword} meaning`,
@@ -607,6 +609,7 @@ function buildStory(plan, category) {
     summaryAnswer: plan.quickAnswer.join(' '),
     readTime,
     storyType: storyTypeFor(category.slug),
+    generationBatch: 'existing-one-each-20260719',
     contentStandard: 'unified',
     editorialStatus: 'approved',
     legacyContent: false,
@@ -615,11 +618,11 @@ function buildStory(plan, category) {
     sourceStatus: sourceStatusFor(category, plan.tag),
     publicSourceBasis: plan.sourceBasis,
     excerpt: plan.quickAnswer[0],
-    introSummary: `${plan.subject} is presented through the familiar story, its major variants, the source limits, and the reason it continues to work in cultural memory.`,
+    introSummary: dek,
     publishedAt,
     updatedAt: publishedAt,
-    relatedStoryIds: [],
-    relatedStorySlugs: [],
+    relatedStoryIds: relatedSlugsFor(plan.slug),
+    relatedStorySlugs: relatedSlugsFor(plan.slug),
     tags: plan.tags,
     detail: compactDetail(plan.detail),
     evidence: plan.evidence,
@@ -661,16 +664,16 @@ function buildStory(plan, category) {
       coreStoryElements: [
         plan.quickAnswer[0],
         plan.quickAnswer[1],
-        plan.sections[0][1],
-        plan.sections[0][2]
+        articleSections[0][1],
+        articleSections[0][2]
       ],
       reportedVariants: [
-        { claim: plan.sections[1][1], scope: 'variant tradition' },
-        { claim: plan.sections[1][2], scope: 'later retellings and emphasis' }
+        { claim: articleSections[Math.min(2, articleSections.length - 1)][1], scope: 'variant tradition' },
+        { claim: articleSections[Math.min(3, articleSections.length - 1)][1], scope: 'later retellings and emphasis' }
       ],
       editorialInterpretationOptions: [
-        plan.sections[3][1],
-        plan.sections[3][2]
+        articleSections[articleSections.length - 1][1],
+        articleSections[articleSections.length - 1][2]
       ],
       uncertainDetails: [
         'The exact earliest form may be disputed, incomplete, or preserved through later retellings.',
@@ -683,16 +686,16 @@ function buildStory(plan, category) {
       ],
       existenceEvidence: plan.urls
     },
-    seoHeadings: plan.sections.map((item) => item[0]),
+    seoHeadings: articleSections.map((item) => item[0]),
     publicArticlePlan: {
       title: plan.title,
-      dek: `${plan.subject} is presented through the familiar story, its major variants, the source limits, and the reason it continues to work in cultural memory.`,
+      dek,
       quickAnswer: {
         paragraphs: plan.quickAnswer,
         targetWords: { min: 90, max: 180 }
       },
       introduction: plan.intro,
-      sections: plan.sections.map((item, index) => ({
+      sections: articleSections.map((item, index) => ({
         heading: item[0],
         purpose: sectionPurpose(index),
         contentLayer: index < 2 ? 'existing-story' : index === 2 ? 'reported-variant' : 'variant-and-interpretation',
@@ -707,13 +710,257 @@ function buildStory(plan, category) {
         targetWords: { min: 80, max: 150 }
       },
       faq: plan.faq,
-      publicSourceNote: plan.sourceNote
+      publicSourceNote: `${plan.sourceNote} ${plan.subject} may be read through the pattern preserved in its common versions, while later versions should remain separate from the core account.`
     }
   };
 }
 
 function topic(value) {
   return value;
+}
+
+function dekForPlan(plan) {
+  return {
+    'vanishing-hitchhiker-urban-legend': 'The vanishing hitchhiker is a roadside legend about a passenger who accepts a ride, disappears from the vehicle, and is later connected to an earlier death or local tragedy. Its details change by region, but the sudden absence and delayed discovery remain central to the story.',
+    'polybius-arcade-game-legend': 'Polybius is a gaming legend about a mysterious arcade cabinet said to have appeared around Portland in the early 1980s. Players were allegedly affected by strange symptoms, while unidentified officials were rumored to collect data from the machines before they disappeared.',
+    'bennington-triangle-legend': 'The Bennington Triangle is a later name applied to disappearances and unsettling stories associated with southwestern Vermont, especially the area around Glastenbury Mountain. The cases differ from one another, but their shared landscape helped turn them into a single regional mystery.',
+    'oak-island-money-pit': 'The Oak Island Money Pit is a Nova Scotia treasure mystery built around a deep shaft, disputed clues, flooding, and generations of excavation. The question is not only whether treasure was buried there, but why each failed search made the story harder to leave behind.',
+    'wild-hunt-folklore': 'The Wild Hunt is a European folklore motif about a supernatural host crossing the night sky with riders, hounds, horns, or the dead. Its leaders and meanings change by region, but the sound of a passing procession remains the image that makes the legend endure.',
+    'men-in-black-legend': 'The Men in Black legend gives UFO secrecy a human shape: dark-suited visitors who arrive after a sighting, ask questions, and warn witnesses into silence. The figures feel official and unreal at once, which is why they became one of modern folklore\'s strongest images of hidden authority.',
+    'prometheus-fire-myth': 'Prometheus is remembered in Greek myth as the Titan who defied Zeus and brought fire to humanity. His gift became a symbol of knowledge and civilization, while his punishment expressed the danger of challenging divine authority.',
+    'phoenix-mythic-bird': 'The phoenix is a mythic bird associated with fire, long life, death, and renewal. Ancient and medieval versions do not all describe its return in the same way, but the image of a creature remade through flame became one of the clearest symbols of rebirth.',
+    'shambhala-hidden-kingdom': 'In Buddhist tradition and later esoteric imagination, Shambhala is not simply a lost city waiting to be found. It sits between sacred geography, preserved teaching, prophecy, and the human desire to imagine a refuge beyond ordinary maps.',
+    'marfa-lights-mystery': 'The Marfa Lights are distant glows reported in the desert near Marfa, Texas, where witnesses describe points of light that move, split, fade, or hover. Many sightings invite natural explanations, but the open landscape keeps the mystery alive at the edge of visibility.',
+    'mount-olympus-greek-myth': 'For Greek myth, Olympus gives divine power a visible height. The real mountain becomes a legendary setting where geography, hierarchy, feast, conflict, and the distance between gods and humans can all be imagined in one place.',
+    'mjolnir-thors-hammer': 'Mjolnir is Thor\'s hammer in Norse mythology, known both as a weapon against giants and as a protective object connected with blessing, consecration, and divine order.',
+    'jack-o-lantern-stingy-jack-origin': 'The Jack-o-Lantern tradition is often explained through the Irish story of Stingy Jack, a doomed wanderer carrying a small light. Older turnip lantern customs later changed into the pumpkin faces now associated with Halloween.'
+  }[plan.slug] || plan.intro?.join(' ') || plan.quickAnswer[0];
+}
+
+function expandedSectionsFor(plan) {
+  return expandedSectionMap()[plan.slug] || plan.sections;
+}
+
+function relatedSlugsFor(slug) {
+  return {
+    'vanishing-hitchhiker-urban-legend': [
+      'kidney-theft-urban-legend',
+      'woman-in-white-roadside-legend',
+      'last-train-passenger-who-never-gets-off',
+      'killer-in-the-backseat-legend',
+      'hookman-urban-legend',
+      'black-eyed-children-doorway-legend'
+    ],
+    'polybius-arcade-game-legend': [
+      'cicada-3301-internet-puzzle',
+      'candle-cove-creepypasta-origin',
+      'herobrine-minecraft-legend',
+      'backrooms-digital-labyrinth',
+      'cursed-image-that-kept-being-shared',
+      'empty-server-room-online-myth'
+    ],
+    'bennington-triangle-legend': [
+      'hoia-baciu-forest',
+      'winchester-mystery-house',
+      'island-of-the-dolls-xochimilco',
+      'catacombs-of-paris-legends',
+      'crooked-forest-poland',
+      'hotel-room-that-is-never-assigned'
+    ],
+    'oak-island-money-pit': [
+      'db-cooper-hijacking-mystery',
+      'mary-celeste-mystery',
+      'voynich-manuscript-mystery',
+      'bermuda-triangle-mystery',
+      'tunguska-event',
+      'wow-signal-mystery'
+    ],
+    'wild-hunt-folklore': [
+      'pied-piper-of-hamelin-folklore',
+      'banshee-irish-folklore',
+      'baba-yaga-folklore',
+      'la-llorona-folklore',
+      'will-o-the-wisp-folklore',
+      'changeling-folklore'
+    ],
+    'men-in-black-legend': [
+      'flatwoods-monster-legend',
+      'area-51-legend',
+      'bigfoot-legend',
+      'chupacabra-legend',
+      'loch-ness-monster-legend',
+      'jersey-devil-legend'
+    ],
+    'prometheus-fire-myth': [
+      'mount-olympus-greek-myth',
+      'icarus-myth',
+      'theseus-and-the-minotaur-myth',
+      'medusa-and-perseus-myth',
+      'pandoras-box-myth',
+      'narcissus-and-echo-myth'
+    ],
+    'phoenix-mythic-bird': [
+      'dragons-across-the-world',
+      'thunderbird-folklore',
+      'yeti-folklore',
+      'kraken-beneath-the-calm-sea',
+      'kappa-japanese-folklore',
+      'kitsune-fox-folklore'
+    ],
+    'shambhala-hidden-kingdom': [
+      'mu-lost-continent-legend',
+      'atlantis-lost-world',
+      'lemuria-lost-continent',
+      'hy-brasil-island-on-the-map',
+      'el-dorado-legend',
+      'avalon-legend'
+    ],
+    'marfa-lights-mystery': [
+      'hessdalen-lights',
+      'ball-lightning-folklore',
+      'tunguska-event',
+      'flatwoods-monster-legend',
+      'bermuda-triangle-mystery',
+      'wow-signal-mystery'
+    ],
+    'mount-olympus-greek-myth': [
+      'prometheus-fire-myth',
+      'icarus-myth',
+      'medusa-and-perseus-myth',
+      'theseus-and-the-minotaur-myth',
+      'narcissus-and-echo-myth',
+      'pandoras-box-myth'
+    ],
+    'mjolnir-thors-hammer': [
+      'spear-of-destiny-holy-lance',
+      'excalibur-sword-legend',
+      'holy-grail-legend',
+      'aegis-mythic-shield',
+      'bell-under-the-lake-folklore',
+      'key-that-fits-every-door-except-its-own'
+    ],
+    'jack-o-lantern-stingy-jack-origin': [
+      'friday-the-13th-origin',
+      'how-a-warning-becomes-a-legend',
+      'why-crossroads-become-folklore-thresholds',
+      'why-doorways-make-better-warnings-than-rooms',
+      'how-cursed-images-became-internet-folklore',
+      'why-mirrors-become-haunted-objects'
+    ]
+  }[slug] || [];
+}
+
+function expandedSectionMap() {
+  return {
+    'vanishing-hitchhiker-urban-legend': [
+      ['The Passenger Who Disappears', 'The story usually begins with a driver finding a lone passenger near a road, bridge, cemetery, or town edge. The person asks for a ride and gives a destination that seems ordinary enough to trust.', 'The ride itself is quiet. Nothing has to happen immediately. The legend depends on the moment when the passenger is suddenly gone, leaving the driver with a seat, a coat, an address, or a silence that does not make sense.'],
+      ['The Address, Family, or Grave Revealed Later', 'Many versions delay the explanation until the driver reaches the address. A family member may say the passenger died years earlier, or the driver may find the borrowed coat resting on a grave.', 'That delayed discovery is the hinge of the legend. The ghost is not proven by a scream or apparition, but by an ordinary follow-up that turns the ride into contact with the dead.'],
+      ['Regional Versions of the Legend', 'Different regions change the passenger, the road, and the reason for the journey. Some versions use a prom night, some a wartime road, and some a local accident remembered by a nearby community.', 'Later retellings often attach the story to a road the audience can name. The familiar pattern becomes stronger when listeners feel they could drive past the same place.'],
+      ['Roads, Cars, and the Modern Ghost Story', 'The legend works especially well in cars because a vehicle creates a small private space between strangers. It also moves through darkness quickly, passing from one place to another before the driver has time to understand the encounter.', 'A road is a threshold rather than a home. That makes it believable that the past could appear briefly, ride along, and disappear before arrival.'],
+      ['Why the Story Is Often Linked to a Past Death', 'The vanished passenger may be read as a sign of unfinished travel, grief, or local memory. The ghost needs to be carried somewhere, but the destination is often emotional as much as physical.', 'That is why the story remains flexible. The details can change, but the heart of the legend stays with a stranger who belongs to an earlier loss and briefly enters the present.']
+    ],
+    'polybius-arcade-game-legend': [
+      ['The Arcade Cabinet in the Rumor', 'The Polybius legend centers on a rare arcade cabinet supposedly placed in the Portland area during the early 1980s. The cabinet is said to have looked like a real commercial machine, which gives the story its strongest hook.', 'An arcade game should leave traces: repair notes, flyers, operator records, photographs, boards, or players who remember it clearly. Polybius is powerful because those traces remain missing or uncertain.'],
+      ['Portland and the Early-1980s Setting', 'The setting matters because arcades in the early 1980s were crowded with new machines, bright screens, competitive players, and rumors about what games could do to the body and mind.', 'Polybius uses that atmosphere well. A strange cabinet can feel almost plausible when placed among real concerns about flashing visuals, addiction, technology, and youth culture.'],
+      ['Illness, Memory Loss, and Government Visitors', 'Later versions claim that players suffered headaches, nightmares, memory problems, or stranger psychological effects. Some accounts add dark-suited visitors or officials who collected data from the machines.', 'Those details turn a lost game into a secrecy story. The cabinet becomes less important as entertainment and more important as a possible experiment no one can prove.'],
+      ['How the Legend Emerged Online', 'Polybius became famous through online discussion, game-history curiosity, and the search for missing media. Forum posts and retellings helped turn a thin rumor into a recognizable internet legend.', 'The internet gave the story a perfect home. People could compare fragments, question details, build reconstructions, and keep looking for a machine that might never have existed.'],
+      ['Games and Reconstructions Made After the Legend', 'Modern games, videos, and references using the Polybius name show how the legend continued after the rumor itself became famous. These later works are evidence of influence, not proof of an original cabinet.', 'The distinction matters. A recreation can preserve the atmosphere of the legend while also making the source trail more confusing for later readers.'],
+      ['What Is Missing from the Historical Record', 'No verified original cabinet, board, operator record, or stable contemporary documentation has closed the case. The absence is not just a gap; it is the engine of the legend.', 'Polybius can be documented as folklore and gaming rumor. It cannot responsibly be presented as a confirmed arcade release without evidence that has not yet appeared.'],
+      ['Why Polybius Became a Model Internet Mystery', 'Polybius became a model internet mystery because it offers a physical object that feels searchable. It is close enough to real arcade history to invite investigation and strange enough to resist closure.', 'That balance lets the legend survive. It is not only a missing game. It is a story about how digital communities turn absence into a hunt.']
+    ],
+    'bennington-triangle-legend': [
+      ['How the Name Bennington Triangle Was Created', 'The Bennington Triangle is a later label applied to several disappearances and strange stories in southwestern Vermont. Like other triangle names, it turns separate events into a single region of mystery.', 'The name is useful, but it is also interpretive. It draws a shape over cases that did not originally begin as one unified story.'],
+      ['The Landscape Around Glastenbury Mountain', 'Glastenbury Mountain and the surrounding area give the legend its atmosphere. Dense woods, old roads, abandoned settlements, and rough terrain make the place feel remote even when it can be located on a map.', 'The landscape does not explain every story by itself, but it helps readers understand why disappearances there can be retold as part of one unsettling place.'],
+      ['The Disappearance of Middie Rivers', 'Middie Rivers is often named among the cases associated with the region. His disappearance is important because it involves someone familiar with the terrain, which makes the story harder for later retellings to dismiss as simple inexperience.', 'Accounts differ in emphasis, but the case helps establish the triangle as more than a vague haunted-place label. It gives the landscape a specific missing-person memory.'],
+      ['Paula Welden and the Long Trail', 'Paula Welden\'s disappearance is one of the best-known stories linked with the Bennington Triangle. Her walk near the Long Trail became central to the region mystery because the search did not produce a final answer.', 'The case shaped public memory around the area. A named person, a known route, and an unresolved ending are exactly the elements that make a place legend hold.'],
+      ['Later Disappearances Grouped with the Triangle', 'Later summaries often group additional disappearances and unsettling accounts with the triangle. Not every case has the same evidence, setting, or source quality, so the grouping needs to be treated carefully.', 'The legend grows when stories are arranged together. That does not mean one cause connects all of them, but it does show how regional mystery is built.'],
+      ['What Connects the Cases and What Does Not', 'The cases share a regional landscape and a pattern of unresolved absence. They do not automatically share one explanation. Terrain, weather, reporting gaps, and later retellings all shape the record.', 'This distinction keeps the mystery honest. The place can matter without becoming proof of a single hidden force.'],
+      ['How Separate Cases Became One Regional Legend', 'The Bennington Triangle may be read as a place legend about accumulated uncertainty. Each case adds weight to the region, and the region then changes how later readers understand each case.', 'That circular motion is why the label lasts. The mountain becomes a container for stories that would feel smaller on their own.']
+    ],
+    'oak-island-money-pit': [
+      ['The Discovery Story of the Money Pit', 'The Oak Island mystery begins with the story of a depression in the ground and early digging that suggested something might have been hidden below. That first possibility gave the island its central question.', 'The discovery story matters because treasure legends need an opening sign. A mark in the ground, a strange layer, or a rumor of buried wealth is enough to start a search that later becomes much larger.'],
+      ['Platforms, Flooding, and Early Excavations', 'Early excavation accounts describe wooden platforms, deep shafts, and flooding that made the pit difficult to explore. Whether every detail is interpreted correctly remains debated, but the pattern gave the site a sense of deliberate design.', 'Flooding is especially important in the legend. It turns the search into a contest between treasure hunters and a hidden mechanism that seems to defend the secret.'],
+      ['The Inscribed Stone and Other Disputed Finds', 'Some Oak Island accounts include an inscribed stone and other reported objects that have been used to support treasure theories. These finds are disputed, and their documentation is not equally strong.', 'The disputed nature of these clues is part of the story. Each object promises meaning, but the meaning often depends on later interpretation.'],
+      ['Coconut Fiber and the Flood-Tunnel Theory', 'Coconut fiber and flood-tunnel theories became important because they suggested engineering rather than accidental geology. If true, they would imply planning and a serious attempt to protect something underground.', 'At the same time, each claim requires caution. Natural processes, earlier work, incomplete records, and later enthusiasm can all affect how material evidence is read.'],
+      ['Major Treasure Theories', 'Theories about Oak Island have named pirates, Spanish treasure, religious relics, manuscripts, and other hidden deposits. These theories are not equally supported, but they show how the island became a magnet for imagined treasure histories.', 'Theories keep changing because the evidence has never been decisive enough to close the story. A gap remains, and each generation fills it differently.'],
+      ['What Excavations Have Actually Recovered', 'Excavations have produced material, structures, and observations that keep interest alive, but no confirmed treasure has solved the mystery in a final way. The search record is real even when the treasure claim remains unresolved.', 'That distinction is the safest way to read Oak Island. The island has a documented history of searching, but the meaning of many finds remains contested.'],
+      ['Why the Search Continues', 'Oak Island continues because each attempt becomes part of the legend instead of ending it. Failed digs, flooded shafts, new surveys, and disputed finds all add chapters to the same unfinished search.', 'The Money Pit is therefore both a possible treasure site and a story about persistence. The search itself has become the artifact people keep returning to.']
+    ],
+    'wild-hunt-folklore': [
+      ['The Host Crossing the Night Sky', 'The Wild Hunt is often imagined as a supernatural host moving through night, storm, or winter sky. Listeners may hear horns, hounds, hoofbeats, cries, or the rush of a procession passing overhead.', 'The power of the image is movement. The hunt does not settle in one place. It crosses human space and reminds listeners that the wild, the dead, or the divine can pass nearby.'],
+      ['Odin, Wodan, and Other Leaders of the Hunt', 'Different regions give the hunt different leaders. Odin or Wodan appears in some Germanic and Norse-linked interpretations, while other traditions name Herne, spectral nobles, fairies, or local dead.', 'The changing leader shows that the motif is flexible. Communities could attach the hunt to the figure that made the most sense in their own landscape.'],
+      ['Regional European Versions', 'The Wild Hunt appears in many European traditions with changes in season, leader, danger, and moral meaning. Some versions emphasize the dead, while others focus on hunters, hounds, cursed riders, or supernatural armies.', 'These differences do not weaken the motif. They show how a strong sound-and-sky image can travel while taking local names.'],
+      ['Omens of War, Death, and Winter', 'The hunt is often treated as an omen. Seeing or hearing it may warn of death, war, disaster, or a dangerous season. In winter settings, the sky itself can seem to carry threat.', 'An omen does not need to explain itself fully. It only needs to make ordinary weather feel like a message.'],
+      ['Sounds, Storms, and Processions in the Sky', 'Storm wind, animal noise, and night travel help explain why the Wild Hunt feels so vivid. A loud sky can become a passing host when folklore gives the sound a shape.', 'The legend turns atmosphere into narrative. What might be heard as weather becomes riders, dogs, horns, and pursuit.'],
+      ['How Later Fantasy Changed the Wild Hunt', 'Modern fantasy often turns the Wild Hunt into a formal army, fairy procession, or named supernatural force. These versions keep the image alive, but they may simplify the older regional variety.', 'The older folklore is less fixed and more atmospheric. Its strength lies in the feeling that something vast has passed overhead.']
+    ],
+    'men-in-black-legend': [
+      ['The Visitors Who Arrive After a UFO Report', 'The Men in Black legend usually begins after a witness reports or discusses a UFO sighting. Soon afterward, dark-suited visitors appear, ask questions, and seem to know more than they should.', 'Their timing is important. They arrive after the strange event, when the witness is trying to decide whether the sighting was real, mistaken, or dangerous to discuss.'],
+      ['Clothing, Speech, and Unusual Behavior', 'The visitors are often described as wearing dark suits and speaking with formal, stiff, or oddly controlled manners. Some accounts make them pale, expressionless, awkward, or strangely unfamiliar with ordinary behavior.', 'Those details make them unsettling without requiring anything openly supernatural. They look official, but they do not feel fully normal.'],
+      ['Early Accounts Associated with UFO Culture', 'Men in Black stories grew in the same environment as UFO reports, Cold War secrecy, and fears about hidden government knowledge. Early accounts helped establish the pattern of witness, visit, warning, and silence.', 'The legend belongs to modern folklore because it turns broad suspicion into a scene that can happen at a door, office, or living room.'],
+      ['Threats, Warnings, and Requests for Silence', 'The visitors may warn witnesses not to speak, ask for evidence, or imply consequences. In some versions, the warning is direct. In others, the tone is polite enough to be more disturbing.', 'The point is control. The story imagines knowledge being removed from public view by people who never clearly identify themselves.'],
+      ['Government Agents, Folklore, and Misidentification', 'Different readings treat the Men in Black as government agents, impostors, nonhuman beings, rumor figures, or misidentified ordinary officials. The repeated pattern is easier to document than any single hidden organization.', 'A careful reading keeps the folklore visible. The legend expresses distrust of secrecy without proving every visitor story literally happened.'],
+      ['How Film and Television Changed the Image', 'Film and television made Men in Black recognizable to audiences who never followed UFO lore. Popular versions often turn them into agents, protectors, or action characters rather than quiet intimidators.', 'That change did not erase the older legend. It gave the image a second life while softening some of its unease.']
+    ],
+    'prometheus-fire-myth': [
+      ['The Conflict Between Prometheus and Zeus', 'Prometheus is remembered as a clever Titan who challenges Zeus in matters involving gods and humans. The conflict is not only personal. It concerns who controls sacrifice, fire, knowledge, and the boundary between divine and mortal life.', 'That boundary gives the myth its pressure. Prometheus helps humanity, but his help is also a direct challenge to divine order.'],
+      ['The Sacrifice at Mecone', 'One important ancient strand involves a deceptive sacrifice at Mecone. Prometheus arranges portions in a way that affects the relationship between gods and humans, and Zeus responds with anger.', 'This episode matters because it shows Prometheus as more than a simple benefactor. He is a trickster whose cleverness changes ritual order.'],
+      ['How Fire Reached Humanity', 'The fire episode gives the myth its most famous image. Prometheus steals or retrieves fire and brings it to humans, giving them warmth, craft, cooking, protection, and the basis for culture.', 'Fire is small enough to carry, but large enough to transform human life. That contrast is why the image remains so powerful.'],
+      ['The Punishment on the Mountain', 'Zeus punishes Prometheus by having him bound, often on a remote mountain or rock. The punishment makes the cost of his gift visible and ongoing.', 'The scene fixes the myth around endurance. Prometheus cannot take back the gift, and Zeus does not allow the rebellion to pass without pain.'],
+      ['The Eagle and the Repeating Torment', 'In many versions, an eagle tears at Prometheus liver, which renews so the torment can continue. The repeated punishment makes the myth feel cyclical rather than final.', 'That repetition turns suffering into a sign of cosmic order being enforced again and again.'],
+      ['Heracles and the End of the Punishment', 'Later retellings often connect Prometheus\' release with Heracles. The rescue does not erase the punishment, but it gives the myth a second movement after the long suffering.', 'The release also lets Prometheus remain more than a victim. He becomes a figure whose defiance continues to matter after Zeus\' judgment.'],
+      ['Fire as Knowledge, Craft, and Defiance', 'Prometheus may be read as a myth about dangerous knowledge. Fire makes human life richer, but it also marks a break in the order between gods and mortals.', 'That is why the myth continues to appear in stories about technology, rebellion, sacrifice, and ambition. Prometheus gives humans a future they were not supposed to hold.']
+    ],
+    'phoenix-mythic-bird': [
+      ['The Bird That Returns Through Fire', 'The phoenix is remembered as a rare bird connected with death and renewal. Later versions often describe it burning and returning from ashes, making rebirth visible in one dramatic image.', 'The image is simple, but the tradition is layered. The phoenix is not only a fantasy creature; it is a symbol that moved through ancient, medieval, religious, and modern contexts.'],
+      ['Egyptian, Greek, and Roman Traditions', 'Classical discussions of the phoenix often connect it with distant lands, solar imagery, long cycles, and rare appearances. Some associations point toward Egyptian sacred bird imagery, while Greek and Roman writers shaped the name known to later readers.', 'These traditions do not all describe the same details. They do show that the phoenix became a bridge between exotic geography, cosmic time, and renewal.'],
+      ['How Long the Phoenix Was Said to Live', 'Different sources give the phoenix an extraordinary lifespan, sometimes measured in hundreds of years. The long life matters because the creature belongs to cycles larger than ordinary animal life.', 'A phoenix does not simply die like another bird. Its death is timed, meaningful, and tied to return.'],
+      ['Fire, Ashes, and Rebirth', 'The fire-and-ashes version became the most famous form of the phoenix story. It gives readers a clear sequence: ending, burning, ash, and new life.', 'Not every older account uses the same mechanics, but the modern symbol depends heavily on this image of renewal through destruction.'],
+      ['Medieval Christian Interpretation', 'Medieval writers often used the phoenix as a symbol of resurrection and spiritual renewal. The bird could be read as proof through nature, allegory, or moral instruction.', 'This use changed the emphasis. The creature became less about distant wonder alone and more about the promise of life after death.'],
+      ['How the Modern Phoenix Became a Universal Symbol', 'Modern culture uses the phoenix for recovery, rebuilding, and survival after collapse. The image appears in literature, institutions, fantasy, and everyday language.', 'The symbol works because it does not deny destruction. It imagines a form of life that begins after the fire.']
+    ],
+    'shambhala-hidden-kingdom': [
+      ['Shambhala in Buddhist Tradition', 'Shambhala is associated with Buddhist tradition and sacred geography, especially through Kalachakra contexts. It should not be reduced to a simple lost city hidden on an ordinary map.', 'The name carries religious, symbolic, and geographic meaning at once. That layered identity is why later retellings often misunderstood or reshaped it.'],
+      ['The Kalachakra Teachings', 'The Kalachakra connection is central to many discussions of Shambhala. It places the kingdom within a religious and prophetic frame rather than only an adventure geography.', 'This context matters because Shambhala is not just a place to discover. It is also a way of imagining order, teaching, and future transformation.'],
+      ['The Hidden Kingdom and Its Rulers', 'Shambhala is often described as a hidden kingdom with rulers who preserve sacred knowledge. The hiddenness is part of its meaning, not just an obstacle for explorers.', 'A hidden kingdom can be protected, distant, or spiritually inaccessible. Those meanings change how the story should be read.'],
+      ['Prophecy and the Future Battle', 'Some traditions connect Shambhala with prophecy and a future conflict. In these accounts, the kingdom is tied to cosmic order and the restoration of right teaching.', 'This prophetic element gives Shambhala a future-facing quality. It is not only remembered as a place from the past, but imagined as part of what may come.'],
+      ['How Western Writers Reimagined Shambhala', 'Western esoteric and popular writers often transformed Shambhala into a hidden paradise, secret brotherhood, or lost-world destination. These versions helped spread the name, but they also changed its meaning.', 'The later image belongs to reception history. It should be separated from the religious traditions that gave Shambhala its deeper context.'],
+      ['Shambhala, Shangri-La, and Common Confusion', 'Shambhala is often confused with Shangri-La and other hidden-valley legends. The comparison is understandable, but the names come from different histories and should not be treated as identical.', 'The confusion shows how hidden-world stories merge in popular imagination. A careful reading keeps the connections useful without flattening the traditions.']
+    ],
+    'marfa-lights-mystery': [
+      ['Where the Lights Are Seen', 'The Marfa Lights are associated with the desert near Marfa in West Texas. Observers often watch from a distance, where the wide horizon makes size, speed, and location difficult to judge.', 'The setting is essential. A small light in open desert can feel close, far, natural, mechanical, or impossible depending on conditions.'],
+      ['Early Accounts and Local Tradition', 'Local tradition and public discussion helped make the lights part of Marfa identity. Over time, the phenomenon became both an observation site and a story people travel to experience.', 'The history of attention matters because repeated watching changes a landscape. The horizon becomes a place where people expect mystery to appear.'],
+      ['What Witnesses Commonly Describe', 'Witnesses describe lights that glow, move, split, fade, hover, or change color. Some appear white or yellow, while others are described as orange or red.', 'The descriptions vary, but they share distance and uncertainty. Viewers see something, yet the desert makes it difficult to know exactly what is being seen.'],
+      ['Vehicles, Atmospheric Effects, and Other Explanations', 'Many explanations point to vehicle headlights, atmospheric refraction, temperature layers, campfires, or other ordinary light sources. These explanations can account for many reported sightings.', 'Natural explanation does not remove the cultural story. It shows how landscape, optics, and expectation can work together.'],
+      ['Which Sightings Remain Difficult to Classify', 'Some reports remain difficult because details are incomplete, viewing conditions are unclear, or witnesses describe movements that do not fit a simple account. Those cases require caution rather than dramatic certainty.', 'The best reading allows different sightings to have different causes. One explanation does not have to solve every light ever reported near Marfa.'],
+      ['How the Lights Became Part of Marfa Identity', 'The Marfa Lights are now part of regional identity, travel writing, and local mystery culture. People come to watch not only for proof, but for the experience of looking into the desert.', 'The phenomenon lasts because it sits between sight and interpretation. The lights appear at the edge of certainty, and that edge is where the story lives.']
+    ],
+    'mount-olympus-greek-myth': [
+      ['The Mountain in Greek Geography', 'Mount Olympus is a real mountain in Greece, and that physical presence gives the mythic setting unusual force. The divine home is not only abstract; it is tied to a visible height.', 'The mountain lets myth and geography touch. People can name the place while still imagining it as more than ordinary terrain.'],
+      ['Olympus as the Home of the Gods', 'In Greek myth, Olympus becomes the home of the Olympian gods. It is the place associated with divine gathering, command, feast, conflict, and distance from mortal life.', 'The setting gives the gods a shared stage. Their power feels organized because it has a height, a court, and a place above the human world.'],
+      ['Zeus and the Olympian Court', 'Zeus stands at the center of Olympus as ruler among the Olympian gods. The mountain becomes a political and divine space where authority is displayed and contested.', 'Stories of Olympus are not only about peace. Divine life includes rivalry, judgment, desire, anger, and negotiation.'],
+      ['Feasts, Councils, and Divine Life', 'Later art and retelling often imagine Olympus through feasts, councils, thrones, clouds, and shining architecture. These images make the divine realm easier to picture.', 'Those details can be useful, but they should not be mistaken for one fixed ancient floor plan. Olympus is a mythic setting that changed across sources and art.'],
+      ['The Boundary Between Mortal and Divine Space', 'Olympus may be read as a boundary image. Humans live below, while gods dwell above, watching and intervening but remaining beyond ordinary reach.', 'The mountain makes hierarchy visible. Height becomes a way to picture divine distance.'],
+      ['How Later Art Imagined Olympus', 'Later painters, poets, and popular retellings made Olympus more grand and palace-like. The image became a shorthand for divine order and mythic spectacle.', 'This later Olympus is part of the mountain afterlife. It shows how a real place can become an enduring visual language for power.']
+    ],
+    'mjolnir-thors-hammer': [
+      ['How Mjolnir Was Forged', 'Mjolnir is connected with stories of divine craftsmanship and the making of powerful objects. Its origin places it among mythic weapons that carry more than physical force.', 'The forging story matters because the hammer is not ordinary equipment. It enters myth as an object made for cosmic conflict and divine use.'],
+      ['Thor\'s Use of the Hammer Against Giants', 'Thor uses Mjolnir against giants and other threats to divine order. The hammer is therefore a weapon of protection as much as destruction.', 'Its violence is framed by defense. The object strikes because the world of gods and humans needs to be guarded from forces of chaos.'],
+      ['The Hammer\'s Return to Thor\'s Hand', 'Mjolnir is famous for returning after being thrown. That returning motion makes it feel bound to Thor rather than simply held by him.', 'The return also gives the hammer a rhythm. It leaves the hand, acts at a distance, and comes back as if the weapon itself knows its owner.'],
+      ['Mjolnir in Blessings and Consecration', 'Mjolnir is not only a battle weapon. It is also connected with blessing, consecration, and protection in Norse tradition and later interpretation.', 'That second role gives the hammer social and sacred meaning. It can defend a boundary, mark an act, and symbolize power ordered toward protection.'],
+      ['The Theft of the Hammer', 'One famous myth tells of the hammer being stolen, creating a crisis because Thor\'s power and divine protection are suddenly out of place. The recovery story shows how central the object is to cosmic order.', 'A stolen Mjolnir is not merely lost property. It is a sign that the protective structure of the world has been disturbed.'],
+      ['Hammer Amulets in the Viking Age', 'Hammer pendants and amulets show that the symbol mattered beyond narrative scenes. People could wear the hammer as a sign of protection, identity, or sacred connection.', 'Material symbols do not tell stories in the same way texts do, but they show that the hammer image had public power.'],
+      ['How Modern Culture Changed Mjolnir\'s Image', 'Modern comics, films, and fantasy often simplify Mjolnir into a heroic superweapon with fixed rules. Those versions made the hammer globally recognizable, but they are not the same as the older mythic object.', 'The older Mjolnir remains richer: weapon, sign, blessing tool, protection symbol, and thunder made visible.']
+    ],
+    'jack-o-lantern-stingy-jack-origin': [
+      ['Stingy Jack and the Devil', 'The best-known origin story tells of Stingy Jack, a trickster who bargains with the Devil. His cleverness wins temporary advantages, but it also sets up his final wandering.', 'The tale gives the lantern its narrative center. The carved light is connected to a figure who can trick others but cannot escape the consequences of his own bargains.'],
+      ['Why Jack Was Denied Heaven and Hell', 'In common versions, Jack is denied heaven because of his life and denied hell because of his bargain with the Devil. He is left between destinations, unable to settle in either place.', 'That in-between condition is essential. The Jack-o-Lantern belongs to threshold folklore because Jack himself is trapped between worlds.'],
+      ['The Burning Coal Inside a Carved Turnip', 'The small light in the story is often described as a burning coal placed inside a carved turnip or similar root vegetable. It becomes Jack only guide as he wanders.', 'This image connects the tale to older lantern customs. A carved object, a light, and a dangerous night come together in one portable symbol.'],
+      ['Lantern Traditions in Ireland and Britain', 'Older customs in Ireland and Britain used carved turnips, beets, or other root vegetables. These lanterns could be playful, frightening, protective, or tied to seasonal mischief.', 'The custom did not begin as a pumpkin face. It belonged to available materials and local practice before it became a global Halloween image.'],
+      ['How Pumpkins Replaced Turnips in North America', 'In North America, pumpkins were larger, easier to carve, and strongly connected with autumn harvest. They gradually became the familiar Jack-o-Lantern material.', 'The change shows how traditions survive by adapting. The object changed shape, but the light-in-the-dark idea remained.'],
+      ['The Development of the Modern Halloween Symbol', 'The modern Jack-o-Lantern is funny, eerie, decorative, and protective at once. It can welcome visitors while still facing the dark with a carved grin.', 'That mixed feeling is why the symbol works. It turns fear into craft and makes Halloween visible on the doorstep.']
+    ]
+  };
 }
 
 function source(title, url, supports) {
