@@ -13,13 +13,19 @@ if (stories.some((story) => story.slug === slug)) {
   const existing = stories.find((story) => story.slug === slug);
   const publicArticlePlan = buildPandoraPublicArticlePlan();
   const publicHeadings = publicArticlePlan.sections.map((section) => section.heading);
+  existing.title = publicArticlePlan.title;
+  existing.displayTitle = publicArticlePlan.title;
+  existing.h1 = publicArticlePlan.title;
+  existing.seoTitle = "Pandora's Jar Myth: Greek Myth, Hope, and Pandora's Box";
+  existing.metaTitle = existing.seoTitle;
+  existing.metaDescription = "Pandora's Jar Myth retold through Greek mythology, Hesiodic tradition, Prometheus, Zeus, Epimetheus, the later box image, and the mystery of hope.";
   existing.seoHeadings = [
     ...publicHeadings
   ];
   existing.publicArticlePlan = publicArticlePlan;
   existing.sourceStatus = 'Myths / Greek mythology and Hesiodic tradition / myth narrative';
-  existing.excerpt = "A source-aware reading of Pandora's jar, the later box tradition, and the unresolved place of hope in Greek myth.";
-  existing.introSummary = "Pandora's jar belongs to the Greek mythic world around Zeus, Prometheus, and Epimetheus. This archive reading follows the known story while keeping later retellings and symbolic meanings separate from the core myth.";
+  existing.excerpt = "A remade archive reading of Pandora's jar, the later box tradition, and the question of why hope was left inside.";
+  existing.introSummary = "Pandora's jar is a Greek myth about a gift that arrives as punishment, a container that changes human life, and hope left in the one place no one can fully reach.";
   if (existing.contentDNA) {
     existing.contentDNA.sectionBlueprint = existing.seoHeadings.map((title) => ({ title, nav: title }));
     existing.contentDNA.subjectSpecificVocabulary = [
@@ -42,12 +48,12 @@ if (stories.some((story) => story.slug === slug)) {
 const story = {
   id: slug,
   slug,
-  title: "Pandora's Jar Myth: Hope, Trouble, and the Story Behind Pandora's Box",
-  displayTitle: "Pandora's Jar Myth: Hope, Trouble, and the Story Behind Pandora's Box",
-  h1: "Pandora's Jar Myth: Hope, Trouble, and the Story Behind Pandora's Box",
-  seoTitle: "Pandora's Jar Myth: Hope, Trouble, and Greek Myth Meaning",
-  metaTitle: "Pandora's Jar Myth: Hope, Trouble, and Greek Myth Meaning",
-  metaDescription: "Pandora's Jar Myth explained through Hesiod, Greek myth, the later box tradition, hope, trouble, and the meaning of Pandora's container.",
+  title: "Pandora's Jar: The Greek Myth Behind Pandora's Box",
+  displayTitle: "Pandora's Jar: The Greek Myth Behind Pandora's Box",
+  h1: "Pandora's Jar: The Greek Myth Behind Pandora's Box",
+  seoTitle: "Pandora's Jar Myth: Greek Myth, Hope, and Pandora's Box",
+  metaTitle: "Pandora's Jar Myth: Greek Myth, Hope, and Pandora's Box",
+  metaDescription: "Pandora's Jar Myth retold through Greek mythology, Hesiodic tradition, Prometheus, Zeus, Epimetheus, the later box image, and the mystery of hope.",
   category: 'Myths',
   categorySlug: 'myths',
   categoryGroup: 'Mythic & Imagined Realms',
@@ -91,8 +97,8 @@ const story = {
     ...buildPandoraPublicArticlePlan().sections.map((section) => section.heading)
   ],
   sourceStatus: 'Myths / Greek mythology and Hesiodic tradition / myth narrative',
-  excerpt: "A source-aware reading of Pandora's jar, the later box tradition, and the unresolved place of hope in Greek myth.",
-  introSummary: "Pandora's jar belongs to the Greek mythic world around Zeus, Prometheus, and Epimetheus. This archive reading follows the known story while keeping later retellings and symbolic meanings separate from the core myth.",
+  excerpt: "A remade archive reading of Pandora's jar, the later box tradition, and the question of why hope was left inside.",
+  introSummary: "Pandora's jar is a Greek myth about a gift that arrives as punishment, a container that changes human life, and hope left in the one place no one can fully reach.",
   publishedAt,
   updatedAt: publishedAt,
   relatedStoryIds: ['prometheus-myth', 'icarus-myth', 'theseus-and-the-minotaur-myth', 'persephone-myth'],
@@ -319,42 +325,42 @@ console.log(`Added ${slug}.`);
 function buildPandoraPublicArticlePlan() {
   return {
     title: "Pandora's Jar: The Greek Myth Behind Pandora's Box",
-    dek: "A Greek myth about divine punishment, human trouble, and the difficult question of why hope was left behind.",
+    dek: "A Greek myth about a beautiful gift, an opened jar, and the strange comfort of hope remaining just out of reach.",
     quickAnswer: {
       purpose: 'Give readers the usable answer before the full story.',
       targetWords: { min: 110, max: 180 },
       paragraphs: [
-        "Pandora's jar is a Greek mythic story best known today as Pandora's box. In the older tradition around Hesiod, Pandora is connected to Zeus's punishment after Prometheus steals fire for humanity. She is sent to Epimetheus with a container that should not be opened.",
-        "When the container is opened, the troubles of human life escape into the world. Hope remains inside. That final detail is why the myth still feels unsettled. It is not only a story about curiosity or punishment. It is also a story about why suffering seems to spread freely, while hope stays hidden, delayed, or difficult to understand."
+        "Pandora's jar myth is the Greek story most people now know as Pandora's box. In the older story, Pandora is sent into the human world after Prometheus steals fire. She comes as a gift from the gods, but the gift is part of Zeus's punishment.",
+        "When the jar is opened, the troubles of human life escape. Pain, illness, labor, and sorrow enter the world of mortals. Only hope remains inside. That is why the myth still feels uneasy. It does not simply say that curiosity caused suffering. It asks why suffering spreads so easily, while hope stays hidden in the container that was closed too late."
       ]
     },
     introduction: [
-      "The story most people call Pandora's box did not begin with a box. In many source-conscious retellings, the container is described as a jar, often linked with the Greek word pithos.",
-      "That difference matters because the image changes the feeling of the myth. A box sounds small and private. A jar feels older, heavier, and closer to the household world of ancient story. But the central question stays the same: why does one opened container explain so much human trouble?"
+      "The story usually begins in modern speech with a box. Someone opens Pandora's box, and problems rush out. But the older image is heavier than that. It is a jar, a pithos, something large enough to belong to storage, household life, and the deep ordinary world of ancient myth.",
+      "That older image changes the feeling of the story. Pandora is not standing over a small decorative box. She is near a sealed vessel that seems to hold more than any person can understand. When it opens, the myth turns one impossible question into one visible scene: how did trouble become part of human life?"
     ],
     sections: [
       {
-        heading: 'Why Zeus Sent Pandora to Humanity',
-        purpose: 'Set up the mythic conflict behind Pandora.',
+        heading: 'The Theft of Fire Before Pandora',
+        purpose: 'Set up the conflict that makes Pandora possible.',
         storyBriefInputs: ['Zeus', 'Prometheus', 'fire', 'punishment'],
         contentLayer: 'core story',
         targetWords: { min: 220, max: 360 },
         paragraphs: [
-          "Pandora's story begins before Pandora appears. It begins with Prometheus, the Titan who stands close to humanity in Greek myth. Prometheus steals fire and gives it to human beings. Fire is more than warmth. It is cooking, craft, metalwork, light, and the first hint that mortals might live with powers meant for the gods.",
-          "Zeus does not treat this as a small theft. In the mythic order, fire is a boundary. When Prometheus crosses it, Zeus answers by changing the condition of human life. His punishment is not a single blow. It is a new pattern placed into the world.",
-          "That pattern arrives through Pandora. She is not sent as a simple monster or open enemy. She comes as a gift, which makes the punishment more dangerous. The trouble is hidden inside beauty, welcome, and ceremony. The first movement of the story is already a warning: not every gift from the gods is meant to bless the receiver."
+          "Pandora's story does not really begin with Pandora. It begins with Prometheus and fire. In Greek myth, Prometheus gives fire to human beings, and fire changes everything. It is warmth, cooking, metalwork, craft, light, and the first sign that mortals can take part in powers that once belonged above them.",
+          "Zeus reads that gift as a breach in the order of the world. Prometheus has not only stolen a useful thing. He has moved a boundary. Mortals now hold something that brings them closer to the gods, and Zeus answers by changing what human life will feel like from then on.",
+          "That answer is Pandora. She does not arrive like a storm or a monster. She arrives as a gift. That is the first quiet cruelty of the myth. The punishment does not look like punishment when it comes through the door."
         ]
       },
       {
-        heading: 'How Pandora Was Created',
+        heading: 'How the Gods Made Pandora',
         purpose: 'Explain Pandora as a crafted mythic figure.',
         storyBriefInputs: ['Pandora', 'Hephaestus', 'Athena', 'Aphrodite', 'Hermes'],
         contentLayer: 'core story',
         targetWords: { min: 220, max: 360 },
         paragraphs: [
-          "Pandora is made, not born in the ordinary way. In the Hesiodic tradition, the gods shape her as part of Zeus's answer to Prometheus. Hephaestus gives form to the first woman from earth and water. Athena teaches her skill. Aphrodite gives grace and desire. Hermes adds a more dangerous quality: persuasive speech and a mind that can deceive.",
-          "This makes Pandora one of the most carefully assembled figures in Greek myth. She carries gifts from several gods, but those gifts are not neutral. Her very name is often understood through the idea of being all-gifted or given by all. The phrase sounds generous. The story makes it uneasy.",
-          "Pandora's creation gives the myth its quiet tension. She is beautiful, gifted, and astonishing. Yet every part of her arrival belongs to a punishment planned by Zeus. The story does not ask the listener to fear her at once. It asks the listener to notice how danger can arrive in a form that everyone has been taught to admire."
+          "Pandora is made with care. In the Hesiodic tradition, Hephaestus shapes her from earth and water. Athena gives her skill. Aphrodite gives charm and desire. Hermes gives speech and a more troubling cleverness. She is not a random figure placed into the story. She is assembled.",
+          "That detail gives the myth its strange power. Pandora carries gifts from the gods, but the gifts are not innocent. Her beauty, grace, and voice all belong to a design. The story lets the listener feel the trap before anyone inside the myth understands it.",
+          "Even her name carries tension. Pandora can be understood as all-gifted, or as one to whom all have given. It sounds generous at first. But in this story, a gift can also be a weapon. The gods give Pandora to the world, and the world does not yet know what has been delivered."
         ]
       },
       {
@@ -364,33 +370,33 @@ function buildPandoraPublicArticlePlan() {
         contentLayer: 'core story',
         targetWords: { min: 200, max: 330 },
         paragraphs: [
-          "Pandora is sent to Epimetheus, the brother of Prometheus. The names already create a contrast. Prometheus is often associated with forethought. Epimetheus is associated with afterthought. One looks ahead. The other understands too late.",
-          "Prometheus warns Epimetheus not to accept gifts from Zeus. That warning is simple enough. But the myth depends on the fact that simple warnings are not always strong enough to stop desire, wonder, or pride. Epimetheus sees Pandora and accepts her.",
-          "This is not just a mistake in the plot. It is the human part of the story. The danger does not force its way in. It is welcomed. The punishment works because it passes through ordinary weakness: the wish to receive what looks beautiful, rare, and honored by the gods."
+          "Pandora is sent to Epimetheus, the brother of Prometheus. Their names already tell part of the story. Prometheus is linked with forethought. Epimetheus is linked with afterthought. One sees ahead. The other understands after the damage is done.",
+          "Prometheus warns his brother not to accept gifts from Zeus. The warning is clear. But clear warnings do not always win against beauty, surprise, or the desire to receive what looks honored by the gods. Epimetheus accepts Pandora.",
+          "That choice makes the myth feel painfully human. The danger is not dragged into the house. It is welcomed. Pandora's arrival works because it passes through ordinary trust, ordinary desire, and the oldest mistake in many stories: believing that a beautiful gift must also be safe."
         ]
       },
       {
-        heading: 'What Happened When the Jar Was Opened',
+        heading: 'What Escaped From the Jar',
         purpose: 'Tell the central image of the myth clearly.',
         storyBriefInputs: ['container', 'troubles', 'hope'],
         contentLayer: 'core story',
         targetWords: { min: 240, max: 380 },
         paragraphs: [
-          "At the center of the myth is the container. It is opened, and the world changes. The story does not need a long list of named spirits to make the image work. What escapes is the broad weight of human suffering: troubles, evils, pains, illnesses, and the hard conditions that make life fragile.",
-          "Before the jar opens, suffering is imagined as contained. After it opens, it is everywhere. That is why the scene has lasted for so long. It turns an abstract question into a physical action. Why do people suffer? Because something once held back was released.",
-          "Then the lid closes again. Hope remains inside. The myth leaves that detail in a strange place. If hope is good, why is it trapped? If hope is dangerous, why is it preserved? The jar does not simply explain suffering. It leaves the listener with a second question, and that question is harder to close."
+          "The jar is the center of the myth because it makes suffering visible. Before it opens, trouble is imagined as contained. It has a place. It has a boundary. It has not yet entered the ordinary air that mortals breathe.",
+          "Then the container opens. The story does not need to name every force that escapes. What matters is the whole shape of human suffering: illness, pain, labor, sorrow, fear, and the hard conditions that make life uncertain. The world after the jar is not the world before it.",
+          "The scene works because it turns an impossible question into an action. Why do people suffer? The myth answers with an image: something sealed was opened, and what came out could not be gathered back. The lid can close again, but the world has already changed."
         ]
       },
       {
-        heading: 'Why It Was a Jar, Not a Box',
+        heading: 'Why Pandora Had a Jar, Not a Box',
         purpose: 'Clarify the container without turning the article into a translation note.',
         storyBriefInputs: ['jar', 'pithos', 'box', 'translation'],
         contentLayer: 'later retellings',
         targetWords: { min: 220, max: 360 },
         paragraphs: [
-          "The phrase Pandora's box is now so familiar that it feels original. But many discussions of the older myth point to a jar or pithos instead. A pithos was a large storage jar, the kind of object that belongs to food, wine, oil, burial, and household life. It is a heavier and more ancient image than a small box with a lid.",
-          "The box became powerful in later language because it is easy to picture and easy to turn into a proverb. To open Pandora's box now means to begin something that releases many unexpected problems. The phrase survives because it is useful, even when it does not preserve the older container exactly.",
-          "This does not create a separate myth. It shows how myths change as they travel. The container shifts from jar to box, but the structure remains: something closed is opened, trouble escapes, and the person who opened it can never return the world to its earlier state."
+          "The phrase Pandora's box is now so common that it feels like the original form of the myth. But older discussion usually points to a jar, often described as a pithos. That was not a tiny object. It was a large vessel tied to storage, household use, and sometimes even burial.",
+          "A jar changes the scene. It feels heavier, older, and closer to the ground. It suggests something stored away from daily sight, not a little box waiting on a table. When that kind of vessel opens, the action feels less like a small mistake and more like a seal breaking.",
+          "The later box image became powerful because it is easy to remember. It gave English a phrase for any action that releases consequences no one can easily stop. Still, the older jar matters. It reminds us that the myth was never only about a forbidden object. It was about a sealed world becoming unsealed."
         ]
       },
       {
@@ -400,33 +406,33 @@ function buildPandoraPublicArticlePlan() {
         contentLayer: 'interpretation',
         targetWords: { min: 240, max: 390 },
         paragraphs: [
-          "Hope is the most difficult part of Pandora's story. Many modern readers treat it as a mercy. The world receives suffering, but hope is kept safe for human beings. In that reading, the myth ends with a small kindness inside a harsh punishment.",
-          "There is another way to hear it. If hope remains in the jar, perhaps people do not fully possess it. Perhaps hope is delayed, hidden, or trapped just out of reach. The story then becomes darker. It says not only that trouble entered human life, but that relief became uncertain.",
-          "Both readings explain why the myth has survived. Hope is comforting because it points forward. But hope can also be painful because it asks people to wait. Pandora's jar holds that ambiguity in one image. The worst things have escaped. The one thing that might help has not escaped in the same way."
+          "Hope is the detail that keeps the story from closing neatly. After the troubles escape, hope remains in the jar. At first, this can sound merciful. Everything painful has entered the world, but something good has been preserved.",
+          "Yet the image is not simple. If hope remains inside, do human beings possess it, or only reach toward it? Is hope protected for mortals, or withheld from them? The myth does not answer with a clean explanation. It leaves hope in the dark space of the container.",
+          "That ambiguity may be why the story lasts. Hope comforts because it points beyond present suffering. But hope can also hurt because it delays relief. Pandora's jar holds both meanings at once. The worst things have escaped. The one thing that might help has stayed behind."
         ]
       },
       {
-        heading: "How Later Retellings Changed Pandora's Story",
+        heading: "How Pandora's Box Became the Famous Version",
         purpose: 'Show how the myth became a proverb and popular image.',
         storyBriefInputs: ['retellings', 'box', 'curiosity', 'popular meaning'],
         contentLayer: 'later retellings',
         targetWords: { min: 220, max: 360 },
         paragraphs: [
-          "Later retellings often make Pandora's story simpler. Pandora becomes the person who could not resist opening the box. The myth becomes a warning about curiosity. That version is memorable, but it can flatten the older pattern around Zeus, Prometheus, Epimetheus, and punishment.",
-          "In the larger mythic frame, Pandora is not only a curious figure. She is part of a divine response to Prometheus and to humanity's new possession of fire. The container matters, but so does the reason she arrives. Without that reason, the story becomes a moral lesson about one person's weakness instead of a myth about how human life was changed.",
-          "The popular version is still powerful. It gives modern language a phrase for actions that cannot be undone. But the older shape of the myth is wider. It is about gifts, warnings, punishment, desire, suffering, and the uneasy survival of hope."
+          "Later retellings often make the story easier to repeat. Pandora becomes the woman who could not resist opening the box. The myth becomes a warning about curiosity. That version is memorable because it is simple, but it leaves out much of the older pressure around Prometheus and Zeus.",
+          "In the wider myth, Pandora is not only curious. She is part of a divine answer to the theft of fire. The container matters, but so does the reason she arrives. Without that reason, the story becomes a small moral lesson instead of a myth about the condition of human life.",
+          "The phrase Pandora's box survived because it names a familiar fear. Some actions release more than anyone expects. Some choices cannot be reversed. But the older story is wider than the phrase. It is about punishment disguised as a gift, and about hope staying behind after the damage is already loose."
         ]
       },
       {
-        heading: "What Pandora's Story May Mean",
+        heading: "What Pandora's Jar Still Means",
         purpose: 'Close with a careful symbolic reading.',
         storyBriefInputs: ['meaning', 'interpretation', 'human condition'],
         contentLayer: 'interpretation',
         targetWords: { min: 220, max: 360 },
         paragraphs: [
-          "Pandora's jar may be read as a myth about the human condition. It does not explain suffering through history or science. It explains it through story. The world is difficult because a boundary was broken, a gift was accepted, and a sealed container was opened.",
-          "It may also be read as a story about knowledge arriving with cost. Fire helps humanity, but it also draws punishment. Pandora arrives as a gift, but the gift carries loss. Hope remains, but not in a simple form. Every comfort in the myth has a shadow beside it.",
-          "That is why Pandora still matters. The myth gives a clear image to something people still feel: some choices release consequences that cannot be gathered back. Yet the story does not end with empty ruin. It leaves hope behind, silent and unresolved, waiting inside the jar."
+          "Pandora's jar may be read as a myth about consequences. Fire gives humanity power, but that power brings punishment. Pandora is a gift, but the gift carries loss. The jar is sealed, but the seal does not last. Every comfort in the story has a shadow beside it.",
+          "It may also be read as a myth about explanation itself. Human suffering is too large for one answer, so the story gives it a shape. A vessel opens. Trouble escapes. Hope remains. The myth does not solve suffering. It gives listeners a way to imagine why suffering feels so old and so difficult to contain.",
+          "That is why Pandora still matters. The story gives a clear image to something people still know: some choices release consequences that cannot be put back. Yet the myth does not end with empty ruin. It leaves hope behind, quiet and unresolved, waiting where the lid came down."
         ]
       }
     ],
@@ -434,8 +440,8 @@ function buildPandoraPublicArticlePlan() {
       purpose: 'End with the lasting image of the jar.',
       targetWords: { min: 100, max: 180 },
       paragraphs: [
-        "Pandora's jar is remembered because it makes the beginning of trouble feel visible. A lid rises. The sealed world breaks open. What was contained becomes part of ordinary life.",
-        "But the myth lasts because it does not explain everything too neatly. Hope remains inside, and that detail keeps the story alive. It turns Pandora's container from a simple warning into one of Greek myth's most enduring questions."
+        "Pandora's jar is remembered because it gives trouble a beginning. The lid rises, the sealed world breaks open, and what was once contained becomes part of ordinary life.",
+        "But the story lasts because it refuses to end as a simple warning. Hope remains inside. That one detail turns Pandora's container into one of Greek myth's most enduring questions."
       ]
     },
     faq: [
@@ -461,14 +467,14 @@ function buildPandoraPublicArticlePlan() {
       },
       {
         q: "Is curiosity the main point of Pandora's myth?",
-        a: "Curiosity is important in many later retellings, but the older myth is also about Zeus, Prometheus, divine punishment, gifts, warnings, and the origin of human suffering."
+        a: "Curiosity matters in many later retellings, but the older frame is wider. It is also about Zeus, Prometheus, divine punishment, a dangerous gift, and the origin of human suffering."
       },
       {
         q: "How did the phrase open Pandora's box develop?",
         a: "The phrase became a way to describe an action that releases many unexpected problems. It survives because the myth's central image is easy to apply to ordinary choices and their consequences."
       }
     ],
-    publicSourceNote: "Pandora's jar is discussed here through Greek myth, especially the Hesiodic tradition and later retellings. The container, the place of hope, and the later box wording can vary by translation and summary."
+    publicSourceNote: "Pandora's jar is discussed here through Greek myth, especially the Hesiodic tradition and later retellings. The container, the role of hope, and the later box wording can vary by translation and summary."
   };
 }
 
