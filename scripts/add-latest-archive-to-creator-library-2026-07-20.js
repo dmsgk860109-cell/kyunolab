@@ -266,7 +266,7 @@ function visualBeatSeeds(subject, story, setting, mood, sceneFocus, narration, s
 }
 
 function shortPromptFragment(text) {
-  return sentence(text).split(/\s+/).slice(0, 26).join(' ');
+  return sentence(text).split(/\s+/).slice(0, 26).join(' ').replace(/[.!?]+$/g, '');
 }
 
 function estimatedNarrationSecondsFromText(narration) {
