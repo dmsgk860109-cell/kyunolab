@@ -51,6 +51,7 @@ function buildCreatorLibraryEntry(story, category) {
   const sceneFocuses = buildSceneFocuses(subject, story, facts);
   const imagePrompts = buildImagePrompts(subject, story, setting, mood, sceneFocuses);
   const longformScript = buildLongformScript(subject, story, facts, motif);
+  const estimatedVideoLength = estimateLongformVideoLength(story, longformScript);
 
   return {
     id: slug,
@@ -62,7 +63,7 @@ function buildCreatorLibraryEntry(story, category) {
     metaDescription: `A creator-ready production workspace for ${subject}, with long-form scenes, Shorts narration, image prompts, music keywords, and editing notes.`,
     genre: `${category.title} Creator Library`,
     creatorCategorySlug: category.slug,
-    estimatedVideoLength: '8-10 minutes',
+    estimatedVideoLength,
     longformIncluded: true,
     shortsIncluded: true,
     imagePromptsIncluded: true,
@@ -90,8 +91,11 @@ function buildCreatorLibraryEntry(story, category) {
     imagePrompts,
     visualGuide: imagePrompts.map((prompt, index) => ({
       aiImagePrompt: prompt,
-      directionTip: sceneFocuses[index] || sceneFocuses[sceneFocuses.length - 1]
+      sceneFocus: sceneFocuses[index] || sceneFocuses[sceneFocuses.length - 1],
+      directionTip: sceneFocuses[index] || sceneFocuses[sceneFocuses.length - 1],
+      visualDirection: visualDirectionForScene(subject, story, index)
     })),
+    runtimePlan: buildRuntimePlan(longformScript, estimatedVideoLength),
     thumbnailIdeas: buildThumbnailIdeas(subject, story),
     subtitleLines: buildSubtitleLines(subject, facts)
   };
@@ -104,14 +108,21 @@ function buildLongformScript(subject, story, facts, motif) {
   const thirdFact = facts[2] || 'The strongest version keeps the mystery grounded in what the record can support.';
   const meaning = story.storyBrief?.editorialInterpretationOptions?.[0] || story.uniqueAngle || `${subject} works because it turns a familiar idea into a question the viewer can hold.`;
   const limit = story.sourceNotes?.sourceLimits?.[0] || 'The source trail should be treated with care, especially where later versions simplify older material.';
+  const variant = story.storyBrief?.reportedVariants?.[0]?.claim || 'Later versions often shift the details, but they keep the same unresolved center.';
+  const sourceNote = story.publicSourceNoteSeed || story.publicArticlePlan?.publicSourceNote || limit;
+  const detail = story.detail || story.sceneAnchor || firstFact;
 
   return [
-    `At first, ${subject} can sound like a story everyone already knows.\n\nBut the familiar version is only the doorway. Once you slow down, the details begin to matter.`,
-    `${firstFact}\n\nThat image gives the video its first shape. It is simple enough to picture, but it leaves room for doubt.`,
-    `${secondFact}\n\nSome versions change the setting. Others change the reason the story is remembered. What stays important is the pressure created by the central motif: ${String(motif).toLowerCase()}.`,
-    `${origin} gives the story a wider frame.\n\nThis is where the video should stay careful. The goal is not to flatten every version into one answer. The goal is to show why the story kept moving.`,
-    `${thirdFact}\n\nThe best way to present it is to let the viewer notice the pattern first. Then let the question arrive naturally.`,
-    `${sentence(meaning)}\n\n${sentence(limit)}\n\nBy the end, ${subject} should feel less like a solved entry and more like a story that still has one quiet question left inside it.`
+    `At first, ${subject} may sound familiar.\n\nThat is part of its power. The story does not begin by asking us to believe everything at once. It begins with one image, one place, or one strange detail that is easy to hold in the mind.`,
+    `${sentence(firstFact)}\n\nThat first detail gives the story its shape. It tells us what to notice before we start asking whether the account is history, folklore, memory, or a mixture of all three.`,
+    `${sentence(detail)}\n\nThe strongest version stays close to that central image. It does not need a long list of shocks. It needs a clear situation, a small turn, and the feeling that something ordinary has slipped out of place.`,
+    `${sentence(secondFact)}\n\nThis is where the story becomes more than a single event. Retellings may change names, locations, or motives, but they often keep the same pressure at the center: ${String(motif).toLowerCase()}.`,
+    `${sentence(variant)}\n\nA variant like this matters because it shows how the story travels. One version may make the setting more local. Another may make the warning sharper. Another may leave more space for doubt.`,
+    `${sentence(origin)}\n\nThat wider frame helps separate the stable part of the tradition from the details that later storytellers may have added. It also keeps the story from becoming flatter than it really is.`,
+    `${sentence(sourceNote)}\n\nThat uncertainty does not weaken the story. It gives the account its archive quality. We can follow the pattern, but we still have to admit where the record stops speaking clearly.`,
+    `${sentence(limit)}\n\nFor a mystery channel, that limit is important. The story works best when it stays honest about what can be traced, what is repeated, and what remains part of the legend's atmosphere.`,
+    `${sentence(thirdFact)}\n\nBy this point, the pattern is usually clearer than any single answer. A familiar detail, a repeated image, and one unresolved question hold the story together.`,
+    `${sentence(meaning)}\n\nIn the end, ${subject} remains interesting because it does not close itself neatly. Something recognizable has passed through the story, but it has not fully explained itself. That is why the final question stays with us.`
   ];
 }
 
@@ -128,10 +139,15 @@ function buildShortsScript(subject, story, facts) {
 }
 
 function buildSceneFocuses(subject, story, facts) {
+  const topic = story.storyBrief?.topic || subject;
+  const variants = story.storyBrief?.reportedVariants || [];
+  const location = story.subjectSpecificVocabulary?.find((term) => /road|avenue|cemetery|lake|mount|tower|forest|island|city|stone|room|hall/i.test(term));
   return [
-    `The viewer recognizes ${subject} as a familiar story, but not as a solved one.`,
-    'The central image becomes clear enough for the audience to understand the mystery.',
-    'The viewer senses that different versions preserve the same unresolved tension.'
+    `Introduce ${topic}${location ? ` through ${location}` : ''} as a specific story, not a generic mystery.`,
+    `Explain the central event: ${sentence(facts[0] || story.detail || subject).replace(/\.$/, '')}.`,
+    variants[0]?.claim ? `Show how one known variant changes the emphasis: ${variants[0].claim}` : `Separate the stable core of ${topic} from later retellings.`,
+    `Clarify what the source trail can support without treating every later claim as certain.`,
+    `End on the unresolved meaning that keeps ${topic} circulating.`
   ];
 }
 
@@ -140,9 +156,79 @@ function buildImagePrompts(subject, story, setting, mood, focuses) {
   const vocabulary = (story.subjectSpecificVocabulary || []).slice(0, 4).join(', ');
   return [
     `A quiet ${setting} opens the scene around ${subject}, showing the subject as part of a believable world rather than a staged illustration. The lighting is restrained, the colors are muted, and the atmosphere feels ${mood}, with a realistic documentary texture and no exaggerated horror.`,
-    `The camera moves closer to the story's central image: ${anchor}. The scene should make the important detail easy to notice without turning it into a fantasy poster, using natural shadows, grounded composition, and a calm mystery archive feeling.`,
-    `A final reflective image shows ${subject} through the ideas of ${vocabulary || story.category}. The scene should feel unresolved but readable, with soft contrast, subdued color, realistic surfaces, and enough empty space for narration or title text.`
+    `A grounded close view of the story's central image: ${anchor}. The important detail is visible inside a believable space, with natural shadows, restrained composition, and a calm mystery archive feeling.`,
+    `A secondary scene presents a known variation or surrounding context for ${subject}, using ${vocabulary || story.category} as quiet visual anchors. The image feels grounded, source-aware, and distinct from the opening image.`,
+    `An archive-style source scene shows notes, maps, clippings, or reference material connected to ${subject}. The frame should separate remembered tradition from uncertain later claims, with realistic paper texture and soft desk light.`,
+    `A final reflective image shows ${subject} through the ideas of ${vocabulary || story.category}. The composition feels unresolved but readable, with soft contrast, subdued color, realistic surfaces, and enough empty space for narration or title text.`
   ];
+}
+
+function visualDirectionForScene(subject, story, index) {
+  const directions = [
+    `Hold the establishing image briefly, then begin a slow push toward the main detail of ${subject}.`,
+    'Cut to the central event image. Keep the frame steady while the narration explains the core story.',
+    'Use a gentle pan across the variant or context image, then pause before the final sentence of the scene.',
+    'Show the archive material long enough to read the visual idea, then fade softly into the next scene.',
+    'Slowly zoom out from the final image. Hold for two seconds after the last narration line, then fade to black.'
+  ];
+  return directions[index] || 'Keep the frame steady during the narration, then use a short fade into the next scene.';
+}
+
+function estimateLongformVideoLength(story, longformScript) {
+  const score = informationDepthScore(story);
+  const runtime = buildRuntimePlan(longformScript);
+  if (score >= 14 && runtime.estimatedFinalSeconds >= 450) return '8-10 minutes';
+  if (score >= 10 && runtime.estimatedFinalSeconds >= 390) return '7-8 minutes';
+  if (runtime.estimatedFinalSeconds >= 360 || score >= 7) return '6-7 minutes';
+  return '5-6 minutes';
+}
+
+function informationDepthScore(story) {
+  return [
+    story.storyBrief?.coreStoryElements?.length || 0,
+    story.storyBrief?.reportedVariants?.length || 0,
+    story.storyBrief?.editorialInterpretationOptions?.length || 0,
+    story.researchSources?.length || 0,
+    story.publicArticlePlan?.sections?.length || 0
+  ].reduce((sum, value) => sum + value, 0);
+}
+
+function buildRuntimePlan(longformScript, estimatedVideoLength = '') {
+  const wordCount = longformScript.join(' ').trim().split(/\s+/).filter(Boolean).length;
+  const narrationReadSeconds = Math.round(wordCount / 2.35);
+  const sceneCount = Math.max(1, Math.min(5, longformScript.length));
+  const plannedVisualSeconds = sceneCount * 10;
+  const breathSeconds = Math.max(20, sceneCount * 7);
+  const naturalFinalSeconds = narrationReadSeconds + plannedVisualSeconds + breathSeconds;
+  const runtime = parseRuntimeRange(estimatedVideoLength);
+  const estimatedFinalSeconds = Math.max(300, runtime?.minSeconds || 0, naturalFinalSeconds);
+  return {
+    narrationReadTime: secondsToLabel(narrationReadSeconds),
+    plannedTransitionAndVisualTime: secondsToLabel(Math.max(0, estimatedFinalSeconds - narrationReadSeconds)),
+    estimatedFinalRuntime: estimatedVideoLength || secondsToMinutesRange(estimatedFinalSeconds),
+    estimatedFinalSeconds
+  };
+}
+
+function parseRuntimeRange(value) {
+  const match = String(value || '').match(/^(\d+)\s*-\s*(\d+)\s*minutes$/i);
+  if (!match) return null;
+  return {
+    minSeconds: Number(match[1]) * 60,
+    maxSeconds: Number(match[2]) * 60
+  };
+}
+
+function secondsToMinutesRange(seconds) {
+  const minutes = Math.max(5, Math.min(10, Math.round(seconds / 60)));
+  return `${minutes}-${Math.min(10, minutes + 1)} minutes`;
+}
+
+function secondsToLabel(seconds) {
+  const minutes = Math.floor(seconds / 60);
+  const remainder = seconds % 60;
+  if (!minutes) return `${remainder} sec`;
+  return `${minutes} min ${String(remainder).padStart(2, '0')} sec`;
 }
 
 function buildThumbnailIdeas(subject, story) {

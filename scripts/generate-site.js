@@ -1252,7 +1252,7 @@ function renderLongFormCreator(script) {
       narrationParts: narrationPartsForScene(narrationParts, index, 'long'),
       format: 'long',
       imagePrompt: item.aiImagePrompt || item.prompt || '',
-      sceneFocus: sceneFocusForScene({
+      sceneFocus: item.sceneFocus || sceneFocusForScene({
         script,
         index,
         format: 'long',
@@ -1260,7 +1260,7 @@ function renderLongFormCreator(script) {
         imagePrompt: item.aiImagePrompt || item.prompt || ''
       }),
       music: recommendedBackgroundMusic(script, 'long'),
-      visualDirection: visualDirection(index, 'long'),
+      visualDirection: item.visualDirection || visualDirection(index, 'long'),
       advanced: advancedProductionInfo({
         script,
         number: index + 1,
