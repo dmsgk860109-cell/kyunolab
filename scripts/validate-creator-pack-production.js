@@ -13,10 +13,17 @@ const bannedNarrationPatterns = [
   /\badd ambient sound\b/i,
   /\bthe video should\b/i,
   /\bthe scene should\b/i,
+  /\bthe viewer should\b/i,
+  /\bit also gives the viewer\b/i,
   /\bthe best way to present\b/i,
+  /\bfor a mystery channel\b/i,
   /\bthe goal of this scene\b/i,
   /\bby the end\b/i,
   /\bthe article explains\b/i,
+  /\bthe archive record explains\b/i,
+  /\bthe archive record traces\b/i,
+  /\bthis article separates\b/i,
+  /\bthe unknown should feel earned\b/i,
   /\bthis section should\b/i
 ];
 
@@ -55,6 +62,10 @@ function validateScript(script, failures) {
     }
   }
 
+  validateTextAssembly(script, failures);
+  validateTopicVocabulary(script, failures);
+  validateShortPlayback(script, failures);
+
   if (script.runtimePlan) {
     const finalSeconds = Number(script.runtimePlan.estimatedFinalSeconds || 0);
     const readSeconds = estimatedNarrationSeconds(script.longformScript || []);
@@ -80,6 +91,72 @@ function validateScript(script, failures) {
   if (prompts.length >= 2 && new Set(prompts).size !== prompts.length) {
     failures.push(`${script.slug}: Image Prompt values repeat`);
   }
+}
+
+function validateTextAssembly(script, failures) {
+  const fields = [
+    ...(script.longformScript || []),
+    ...(script.shortsScript || []),
+    ...(script.imagePrompts || []),
+    ...((script.visualGuide || []).flatMap((item) => [
+      item.sceneFocus,
+      item.aiImagePrompt,
+      item.visualDirection,
+      item.directionTip
+    ]).filter(Boolean))
+  ].join('\n');
+
+  const brokenPatterns = [
+    /\bquiet quiet\b/i,
+    /\.\./,
+    /^roadside legend\b/im,
+    /^european folklore motif\b/im,
+    /^hidden kingdom associated\b/im,
+    /^urban legend collections\b/im,
+    /^buddhist tradition summaries\b/im
+  ];
+
+  for (const pattern of brokenPatterns) {
+    if (pattern.test(fields)) {
+      failures.push(`${script.slug}: field text contains broken assembly matching ${pattern}`);
+    }
+  }
+}
+
+function validateTopicVocabulary(script, failures) {
+  const fields = [
+    ...(script.imagePrompts || []),
+    ...((script.visualGuide || []).flatMap((item) => [
+      item.sceneFocus,
+      item.aiImagePrompt,
+      item.visualDirection,
+      item.directionTip
+    ]).filter(Boolean))
+  ].join('\n').toLowerCase();
+
+  if (/wild-hunt/.test(script.slug)) {
+    const forbidden = /\b(car headlights|wet road tires|empty passenger seat|roadside traffic|cemetery gate|driver|passenger)\b/;
+    if (forbidden.test(fields)) {
+      failures.push(`${script.slug}: Wild Hunt fields contain road/vehicle vocabulary`);
+    }
+  }
+
+  if (/shambhala/.test(script.slug)) {
+    const forbidden = /\b(car headlights|wet road tires|empty passenger seat|roadside traffic|cemetery gate|driver|passenger|hounds|hoofbeats|hunting horns)\b/;
+    if (forbidden.test(fields)) {
+      failures.push(`${script.slug}: Shambhala fields contain vocabulary from another topic`);
+    }
+  }
+}
+
+function validateShortPlayback(script, failures) {
+  (script.shortsScript || []).forEach((line, index) => {
+    const readSeconds = Math.max(8, Math.round(String(line || '').trim().split(/\s+/).filter(Boolean).length / 2.35));
+    const generatedMin = Math.max(5, readSeconds);
+    if (generatedMin < readSeconds) {
+      failures.push(`${script.slug}: Short-form Scene ${index + 1} playback time is shorter than narration read time`);
+    }
+  });
 }
 
 function parseRuntime(value) {

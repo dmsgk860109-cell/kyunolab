@@ -1247,10 +1247,11 @@ function renderLongFormCreator(script) {
     const narration = narrationParts.join('\n\n');
     return renderProductionSceneCard({
       number: index + 1,
-      duration: sceneEstimatedDuration(script, sceneCount, index, 'long'),
+      duration: sceneEstimatedDuration(script, sceneCount, index, 'long', narration),
       narration,
       narrationParts: narrationPartsForScene(narrationParts, index, 'long'),
       format: 'long',
+      sceneRole: item.sceneRole,
       imagePrompt: item.aiImagePrompt || item.prompt || '',
       sceneFocus: item.sceneFocus || sceneFocusForScene({
         script,
@@ -1281,7 +1282,7 @@ function renderShortFormCreator(script) {
     const narration = (script.shortsScript || [])[index] || '';
     return renderProductionSceneCard({
       number: index + 1,
-      duration: sceneEstimatedDuration(script, sceneCount, index, 'short'),
+      duration: sceneEstimatedDuration(script, sceneCount, index, 'short', narration),
       narration,
       narrationParts: shouldUseNarrationParts(narration, 'short') ? narrationPartsForScene([narration], index, 'short') : [],
       format: 'short',
@@ -1312,9 +1313,9 @@ function renderNarrationCopyAction(format, label) {
   return `<div class="narration-copy-action"><button class="narration-copy-button" type="button" data-narration-target="${escapeAttr(format)}">${escapeHtml(label)}</button></div>`;
 }
 
-function renderProductionSceneCard({ number, duration, narration, narrationParts = [], format, sceneFocus, imagePrompt, music, visualDirection: direction, advanced }) {
+function renderProductionSceneCard({ number, duration, narration, narrationParts = [], format, sceneRole: explicitSceneRole, sceneFocus, imagePrompt, music, visualDirection: direction, advanced }) {
   const advancedId = sceneAdvancedId(number, duration, narration, imagePrompt);
-  const sceneRole = sceneRoleForScene(number - 1, narration, sceneFocus);
+  const sceneRole = explicitSceneRole || sceneRoleForScene(number - 1, narration, sceneFocus);
   const narrationHtml = narrationParts.length
     ? renderNarrationParts(narration, narrationParts)
     : renderPlainNarration(narration, number - 1, format);
@@ -1448,9 +1449,13 @@ function sceneRoleForScene(sceneIndex, narration, sceneFocus) {
 }
 
 function estimatedReadingTime(narration) {
-  const wordCount = String(narration || '').trim().split(/\s+/).filter(Boolean).length;
-  const seconds = Math.max(8, Math.round(wordCount / 2.35));
+  const seconds = estimatedNarrationSecondsFromText(narration);
   return `≈ ${seconds} sec`;
+}
+
+function estimatedNarrationSecondsFromText(narration) {
+  const wordCount = String(narration || '').trim().split(/\s+/).filter(Boolean).length;
+  return Math.max(8, Math.round(wordCount / 2.35));
 }
 
 function voiceDirectionForNarrationPart(sceneIndex, partIndex, format, narration) {
@@ -1499,10 +1504,12 @@ function sceneAdvancedId(number, duration, narration, imagePrompt) {
   return `advanced-scene-${number}-${slug}`;
 }
 
-function sceneEstimatedDuration(script, sceneCount, index, format) {
+function sceneEstimatedDuration(script, sceneCount, index, format, narration = '') {
   if (format === 'short') {
-    const shortDurations = ['5-7 seconds', '6-8 seconds', '7-9 seconds', '6-8 seconds', '5-7 seconds'];
-    return shortDurations[index] || '5-8 seconds';
+    const readSeconds = estimatedNarrationSecondsFromText(narration);
+    const min = Math.max(5, readSeconds);
+    const max = Math.min(60, min + 2);
+    return `${min}-${max} seconds`;
   }
 
   const match = String(script.estimatedVideoLength || '').match(/(\d+)\s*-\s*(\d+)\s*minutes?/i);
@@ -1516,6 +1523,16 @@ function sceneEstimatedDuration(script, sceneCount, index, format) {
 
 function recommendedBackgroundMusic(script, format) {
   const haystack = `${script.genre || ''} ${script.title || ''} ${script.deck || ''} ${(script.tags || []).join(' ')}`.toLowerCase();
+  if (/wild hunt|ghostly riders|hounds|hoofbeats|hunting horns/.test(haystack)) {
+    return format === 'short'
+      ? 'Winter Wind, Low Drone, Distant Horns'
+      : 'Dark Folk Ambient, Winter Wind, Distant Horns, Low Drone';
+  }
+  if (/shambhala|kalachakra|hidden kingdom|buddhist|sacred geography/.test(haystack)) {
+    return format === 'short'
+      ? 'Meditative Drone, Cold Wind, Distant Bells'
+      : 'Contemplative Ambient, Cold Mountain Wind, Distant Monastery Bells';
+  }
   if (/backrooms|internet|liminal|digital/.test(haystack)) {
     return format === 'short'
       ? 'Low Drone, Digital Hum, Mystery Atmosphere'
@@ -1542,44 +1559,44 @@ function sceneFocusForScene({ script, index, format, narration, imagePrompt }) {
 
   if (/woman in white|roadside|dark road|driver|passenger|headlight/.test(context)) {
     const focuses = [
-      'The viewer should notice the lonely figure before the legend feels supernatural.',
-      'The audience should feel the car becoming too quiet.',
-      'The empty seat should turn a simple ride into an impossible absence.',
-      'The road should feel ordinary again, which makes the disappearance harder to explain.'
+      'A lonely figure appears before the legend turns supernatural.',
+      'The ride becomes too quiet before anything impossible happens.',
+      'The empty seat turns a simple ride into an impossible absence.',
+      'The road feels ordinary again after the disappearance.'
     ];
-    return focuses[index] || 'The viewer should feel that the roadside encounter has left something missing.';
+    return focuses[index] || 'The roadside encounter leaves one missing detail behind.';
   }
   if (/cursed image|cursed images|blurry|strange object/.test(context)) {
     const focuses = [
-      'The viewer should notice one ordinary detail that feels wrong.',
+      'One ordinary detail feels wrong before the image explains nothing.',
       'The image should make the audience search for missing context.',
-      'The Scene should leave enough visual space for the viewer to invent the story.',
+      'The frame leaves enough visual space for an unfinished story.',
       'The final image should linger because it refuses to explain itself.'
     ];
     return focuses[index] || 'The audience should feel that a normal image is hiding an unfinished story.';
   }
   if (/backrooms|liminal|yellow walls|fluorescent|hallway|corridor/.test(context)) {
     const focuses = [
-      'The viewer should recognize the room before feeling trapped by it.',
+      'The room looks familiar before it begins to feel inescapable.',
       'The hallway should make the audience question where the exit went.',
-      'The Scene should make a familiar interior feel impossible to leave.',
+      'A familiar interior becomes impossible to leave.',
       'The stillness should make the space feel larger than the frame.'
     ];
     return focuses[index] || 'The audience should feel that the empty space continues beyond what they can see.';
   }
   if (/dragon|myth|mythology|serpent|cloud|river|temple/.test(context)) {
     const focuses = [
-      'The viewer should understand that different dragons carry different meanings.',
-      'The Scene should connect the dragon image to stone, storm, or sacred power.',
+      'Different dragons carry different cultural meanings.',
+      'The dragon image connects to stone, storm, or sacred power.',
       'The audience should read the dragon as a symbol of weather, water, danger, or order.',
       'The creature should feel like a cultural symbol, not just a monster.'
     ];
-    return focuses[index] || 'The viewer should see the dragon as a sign of power shaped by culture.';
+    return focuses[index] || 'The dragon becomes a sign of power shaped by culture.';
   }
 
   return isShort
-    ? 'The viewer should understand the short-form beat immediately.'
-    : 'The Scene should give the audience one clear emotional idea to follow.';
+    ? 'The short-form beat is clear immediately.'
+    : 'The scene carries one clear emotional idea.';
 }
 
 function visualDirection(index, format) {
@@ -1617,19 +1634,32 @@ function advancedProductionInfo({ script, number, format, narration, imagePrompt
 
 function motionPromptForScene(imagePrompt, context, format) {
   const cameraMove = format === 'short' ? 'a slow push-in with steady vertical framing' : 'a slow cinematic push-in with gentle atmospheric movement';
+  const basePrompt = String(imagePrompt || '').replace(/[.]+$/g, '');
+  if (isWildHuntContext(context)) {
+    return `${basePrompt}. Add storm clouds moving across the night sky, ghostly riders crossing the frame, faint hounds below them, and ${cameraMove}. Keep the motion restrained, cold, and folkloric.`;
+  }
+  if (isShambhalaContext(context)) {
+    return `${basePrompt}. Add slow cloud movement around mountain passes, a subtle reveal of hidden valleys, gentle movement in prayer flags or manuscript pages, and ${cameraMove}. Keep the motion calm, respectful, and contemplative.`;
+  }
   if (/\broad\b|roadside|\bcar\b|driver|headlight|traffic|woman in white|ghost/.test(context)) {
-    return `${imagePrompt}. Add subtle drifting fog, faint headlight movement, and ${cameraMove}. Keep the motion quiet, realistic, and suspenseful.`;
+    return `${basePrompt}. Add subtle drifting fog, faint headlight movement, and ${cameraMove}. Keep the motion quiet, realistic, and suspenseful.`;
   }
   if (/backrooms|liminal|hallway|corridor|fluorescent|room/.test(context)) {
-    return `${imagePrompt}. Let the fluorescent lights flicker softly, add a barely noticeable handheld drift, and move the camera slowly forward through the empty space.`;
+    return `${basePrompt}. Let the fluorescent lights flicker softly, add a barely noticeable handheld drift, and move the camera slowly forward through the empty space.`;
   }
   if (/dragon|myth|mythology|serpent|storm|cloud|mountain/.test(context)) {
-    return `${imagePrompt}. Add slow cloud movement, gentle scale or silhouette motion, and a smooth camera drift that makes the scene feel ancient and cinematic.`;
+    return `${basePrompt}. Add slow cloud movement, gentle scale or silhouette motion, and a smooth camera drift that makes the scene feel ancient and cinematic.`;
   }
-  return `${imagePrompt}. Add restrained environmental movement and ${cameraMove}. Keep the subject readable and the atmosphere mysterious.`;
+  return `${basePrompt}. Add restrained environmental movement and ${cameraMove}. Keep the subject readable and the atmosphere mysterious.`;
 }
 
 function soundEffectForScene(context) {
+  if (isWildHuntContext(context)) {
+    return 'distant hoofbeats, hunting horns, winter wind, hounds far away';
+  }
+  if (isShambhalaContext(context)) {
+    return 'cold mountain wind, distant monastery bells, soft manuscript pages';
+  }
   if (/\broad\b|roadside|\bcar\b|driver|headlight|traffic|woman in white|ghost/.test(context)) {
     return 'distant wind, traffic ambience at night, soft tire noise on wet pavement';
   }
@@ -1647,6 +1677,12 @@ function soundEffectForScene(context) {
 
 function voiceDirectionForScene(context, number, format) {
   const pace = format === 'short' ? 'short, clear, and direct' : 'slowly, with enough space between sentences';
+  if (isWildHuntContext(context)) {
+    return `Read in a calm, folkloric, restrained voice, ${pace}. Give slight weight to words such as "horns", "hounds", "winter", and "sky".`;
+  }
+  if (isShambhalaContext(context)) {
+    return `Read in a calm, respectful, contemplative voice, ${pace}. Keep names and Buddhist terms clear without dramatizing them.`;
+  }
   if (/woman in white|ghost|road|roadside/.test(context)) {
     return `Read in a quiet, restrained, suspenseful voice, ${pace}. Leave a short pause after visual words such as "white", "empty", and "road".`;
   }
@@ -1660,6 +1696,12 @@ function voiceDirectionForScene(context, number, format) {
 }
 
 function cameraNotesForScene(context, number, format) {
+  if (isWildHuntContext(context)) {
+    return 'wide night-sky frame: show the storm first. slow pan: let the riders cross the sky gradually. slight push-in: move toward the ghostly procession.';
+  }
+  if (isShambhalaContext(context)) {
+    return 'slow reveal: begin with the mountain pass, then open toward the hidden valley. gentle push-in: move toward the monastery or manuscript detail.';
+  }
   if (/backrooms|hallway|corridor/.test(context)) {
     return 'slow push-in: move very slowly into the scene. subtle handheld movement: add only a small natural camera drift.';
   }
@@ -1675,11 +1717,15 @@ function cameraNotesForScene(context, number, format) {
 }
 
 function transitionNotesForScene(context, number, format) {
-  const color = /backrooms|liminal|digital/.test(context)
-    ? 'Keep the yellow light, but lower the saturation and make the image feel colder.'
-    : /dragon|myth|mythology/.test(context)
-      ? 'Use dark gold, muted blue, and low-saturation ancient tones.'
-      : 'Use cool blue tones and low saturation to keep the night atmosphere.';
+  const color = isWildHuntContext(context)
+    ? 'Use cold blue, storm gray, and low-saturation night tones.'
+    : isShambhalaContext(context)
+      ? 'Use cold mountain blue, muted gold, and soft low-saturation light.'
+      : /backrooms|liminal|digital/.test(context)
+        ? 'Keep the yellow light, but lower the saturation and make the image feel colder.'
+        : /dragon|myth|mythology/.test(context)
+          ? 'Use dark gold, muted blue, and low-saturation ancient tones.'
+          : 'Use cool blue tones and low saturation to keep the night atmosphere.';
   if (format === 'short') {
     return `Use a short fade transition. ${color}`;
   }
@@ -1703,6 +1749,14 @@ function negativePromptForScene(context) {
     ['oversaturated colors', 'inconsistent lighting'].forEach((item) => negatives.add(item));
   }
   return Array.from(negatives).join(', ');
+}
+
+function isWildHuntContext(context) {
+  return /wild hunt|ghostly riders|hunting horns|hoofbeats|hounds|supernatural host/.test(context);
+}
+
+function isShambhalaContext(context) {
+  return /shambhala|kalachakra|hidden kingdom|buddhist|sacred geography|monastery/.test(context);
 }
 
 function scriptCoreMotif(script) {

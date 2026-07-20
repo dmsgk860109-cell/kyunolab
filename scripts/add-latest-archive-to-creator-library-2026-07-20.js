@@ -114,14 +114,14 @@ function buildLongformScript(subject, story, facts, motif) {
 
   return [
     `At first, ${subject} may sound familiar.\n\nThat is part of its power. The story does not begin by asking us to believe everything at once. It begins with one image, one place, or one strange detail that is easy to hold in the mind.`,
-    `${firstFact}\n\nThat first detail gives the story its shape. It tells us what to notice before we start asking whether the account is history, folklore, memory, or a mixture of all three. It also gives the viewer a clear point of entry.`,
+    `${firstFact}\n\nThat first detail gives the story its shape. It tells us what to notice before we start asking whether the account is history, folklore, memory, or a mixture of all three. It gives the story a clear point of entry.`,
     `${detail}\n\nThe strongest version stays close to that central image. It does not need a long list of shocks. It needs a clear situation, a small turn, and the feeling that something ordinary has slipped out of place. That small turn is often what makes the story easy to repeat.`,
     `${secondFact}\n\nThis is where the story becomes more than a single event. Retellings may change names, locations, or motives, but they often keep the same pressure at the center: ${String(motif).toLowerCase()}. The repeated motif becomes the thread that holds the versions together.`,
     `${variant}\n\nA variant like this matters because it shows how the story travels. One version may make the setting more local. Another may make the warning sharper. Another may leave more space for doubt. The changes are part of the record, not a problem to erase.`,
     `${origin}\n\nThat wider frame helps separate the stable part of the tradition from the details that later storytellers may have added. It also keeps the story from becoming flatter than it really is. The older frame gives the video a stronger sense of context.`,
     `${sourceNote}\n\nThat uncertainty does not weaken the story. It gives the account its archive quality. We can follow the pattern, but we still have to admit where the record stops speaking clearly. That honesty keeps the mystery grounded.`,
-    `${limit}\n\nFor a mystery channel, that limit is important. The story works best when it stays honest about what can be traced, what is repeated, and what remains part of the legend's atmosphere. The unknown should feel earned, not forced.`,
-    `${thirdFact}\n\nBy this point, the pattern is usually clearer than any single answer. A familiar detail, a repeated image, and one unresolved question hold the story together. The viewer should feel the shape of the legend before the final reflection arrives.`,
+    `${limit}\n\nThat limit matters. The story works best when it stays honest about what can be traced, what is repeated, and what remains part of the legend's atmosphere. The uncertainty comes from the tradition itself, not from added drama.`,
+    `${thirdFact}\n\nBy this point, the pattern is usually clearer than any single answer. A familiar detail, a repeated image, and one unresolved question hold the story together. The shape of the legend is clear before the final reflection arrives.`,
     `${meaning}\n\nIn the end, ${subject} remains interesting because it does not close itself neatly. Something recognizable has passed through the story, but it has not fully explained itself. That is why the final question stays with us, and why the story can keep returning without needing a new ending.`
   ];
 }
@@ -130,11 +130,11 @@ function buildShortsScript(subject, story, facts) {
   const firstFact = facts[0] || `${subject} is built around one image people do not forget.`;
   const detail = story.detail || story.sceneAnchor || firstFact;
   return [
-    `${subject} sounds familiar, but one detail keeps it alive.`,
-    `${sentence(firstFact)}`,
-    `${sentence(detail)}`,
-    `The story changes as people retell it.`,
-    `But the question at the center does not go away.`
+    `${subject} begins with one image people remember.`,
+    `${shortNarrationLine(firstFact, subject)}`,
+    `${shortNarrationLine(detail, subject)}`,
+    `Each retelling changes the edges.`,
+    `The central question still remains.`
   ];
 }
 
@@ -143,11 +143,11 @@ function buildSceneFocuses(subject, story, facts) {
   const variants = story.storyBrief?.reportedVariants || [];
   const location = story.subjectSpecificVocabulary?.find((term) => /road|avenue|cemetery|lake|mount|tower|forest|island|city|stone|room|hall/i.test(term));
   return [
-    `Introduce ${topic}${location ? ` through ${location}` : ''} as a specific story, not a generic mystery.`,
-    `Explain the central event: ${sentence(facts[0] || story.detail || subject).replace(/\.$/, '')}.`,
-    variants[0]?.claim ? `Show how one known variant changes the emphasis: ${variants[0].claim}` : `Separate the stable core of ${topic} from later retellings.`,
-    `Clarify what the source trail can support without treating every later claim as certain.`,
-    `End on the unresolved meaning that keeps ${topic} circulating.`
+    `The opening image makes ${topic}${location ? ` feel tied to ${location}` : ' feel specific'}.`,
+    `The central event is visible before the explanation begins.`,
+    variants[0]?.claim ? `A known variant shifts the emphasis without changing the core story.` : `The stable core of ${topic} stays separate from later retellings.`,
+    `The source trail feels careful without turning into a lesson.`,
+    `The ending leaves ${topic} with one unresolved meaning.`
   ];
 }
 
@@ -155,7 +155,7 @@ function buildImagePrompts(subject, story, setting, mood, focuses) {
   const anchor = story.sceneAnchor || story.detail || story.excerpt || subject;
   const vocabulary = (story.subjectSpecificVocabulary || []).slice(0, 4).join(', ');
   return [
-    `A quiet ${setting} opens the scene around ${subject}, showing the subject as part of a believable world rather than a staged illustration. The lighting is restrained, the colors are muted, and the atmosphere feels ${mood}, with a realistic documentary texture and no exaggerated horror.`,
+    `A ${cleanSetting(setting)} opens the scene around ${subject}, showing the subject as part of a believable world rather than a staged illustration. The lighting is restrained, the colors are muted, and the atmosphere feels ${mood}, with a realistic documentary texture and no exaggerated horror.`,
     `A grounded close view of the story's central image: ${anchor}. The important detail is visible inside a believable space, with natural shadows, restrained composition, and a calm mystery archive feeling.`,
     `A secondary scene presents a known variation or surrounding context for ${subject}, using ${vocabulary || story.category} as quiet visual anchors. The image feels grounded, source-aware, and distinct from the opening image.`,
     `An archive-style source scene shows notes, maps, clippings, or reference material connected to ${subject}. The frame should separate remembered tradition from uncertain later claims, with realistic paper texture and soft desk light.`,
@@ -301,12 +301,25 @@ function sentence(text) {
 
 function narrationSentence(text) {
   return sentence(text)
-    .replace(/\bThe article explains\b/gi, 'The archive record traces')
-    .replace(/\bThis article explains\b/gi, 'This archive record traces')
+    .replace(/\bThe article explains\b/gi, 'The story is often presented through')
+    .replace(/\bThis article explains\b/gi, 'This story is often presented through')
     .replace(/\bThe video should\b/gi, 'The story can')
     .replace(/\bThe scene should\b/gi, 'The moment can')
     .replace(/\bBy the end, the viewer should\b/gi, 'The final impression is that')
     .replace(/\bBy the end\b/gi, 'At the end');
+}
+
+function shortNarrationLine(text, subject) {
+  const clean = sentence(text)
+    .replace(/^(roadside legend|european folklore motif|hidden kingdom associated)\b/i, `${subject} is remembered as a story`)
+    .replace(/\s+/g, ' ')
+    .trim();
+  const parts = clean.match(/[^.!?]+[.!?]+/g)?.map((part) => part.trim()).filter(Boolean) || [clean];
+  return parts[0] || `${subject} keeps one clear detail at its center.`;
+}
+
+function cleanSetting(setting) {
+  return String(setting || 'quiet archival setting').replace(/^quiet\s+quiet\b/i, 'quiet');
 }
 
 function unique(values) {
