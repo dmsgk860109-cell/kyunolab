@@ -102,27 +102,27 @@ function buildCreatorLibraryEntry(story, category) {
 }
 
 function buildLongformScript(subject, story, facts, motif) {
-  const origin = story.publicSourceBasis || story.storyBrief?.cultureOrContext || story.evidence || 'the surviving tradition and later retellings';
-  const firstFact = facts[0] || `${subject} is remembered because one clear image carries the whole story.`;
-  const secondFact = facts[1] || 'The details change across retellings, but the central idea remains easy to recognize.';
-  const thirdFact = facts[2] || 'The strongest version keeps the mystery grounded in what the record can support.';
-  const meaning = story.storyBrief?.editorialInterpretationOptions?.[0] || story.uniqueAngle || `${subject} works because it turns a familiar idea into a question the viewer can hold.`;
-  const limit = story.sourceNotes?.sourceLimits?.[0] || 'The source trail should be treated with care, especially where later versions simplify older material.';
-  const variant = story.storyBrief?.reportedVariants?.[0]?.claim || 'Later versions often shift the details, but they keep the same unresolved center.';
-  const sourceNote = story.publicSourceNoteSeed || story.publicArticlePlan?.publicSourceNote || limit;
-  const detail = story.detail || story.sceneAnchor || firstFact;
+  const origin = narrationSentence(story.publicSourceBasis || story.storyBrief?.cultureOrContext || story.evidence || 'the surviving tradition and later retellings');
+  const firstFact = narrationSentence(facts[0] || `${subject} is remembered because one clear image carries the whole story.`);
+  const secondFact = narrationSentence(facts[1] || 'The details change across retellings, but the central idea remains easy to recognize.');
+  const thirdFact = narrationSentence(facts[2] || 'The strongest version keeps the mystery grounded in what the record can support.');
+  const meaning = narrationSentence(story.storyBrief?.editorialInterpretationOptions?.[0] || story.uniqueAngle || `${subject} works because it turns a familiar idea into a question the viewer can hold.`);
+  const limit = narrationSentence(story.sourceNotes?.sourceLimits?.[0] || 'The source trail should be treated with care, especially where later versions simplify older material.');
+  const variant = narrationSentence(story.storyBrief?.reportedVariants?.[0]?.claim || 'Later versions often shift the details, but they keep the same unresolved center.');
+  const sourceNote = narrationSentence(story.publicSourceNoteSeed || story.publicArticlePlan?.publicSourceNote || limit);
+  const detail = narrationSentence(story.detail || story.sceneAnchor || firstFact);
 
   return [
     `At first, ${subject} may sound familiar.\n\nThat is part of its power. The story does not begin by asking us to believe everything at once. It begins with one image, one place, or one strange detail that is easy to hold in the mind.`,
-    `${sentence(firstFact)}\n\nThat first detail gives the story its shape. It tells us what to notice before we start asking whether the account is history, folklore, memory, or a mixture of all three.`,
-    `${sentence(detail)}\n\nThe strongest version stays close to that central image. It does not need a long list of shocks. It needs a clear situation, a small turn, and the feeling that something ordinary has slipped out of place.`,
-    `${sentence(secondFact)}\n\nThis is where the story becomes more than a single event. Retellings may change names, locations, or motives, but they often keep the same pressure at the center: ${String(motif).toLowerCase()}.`,
-    `${sentence(variant)}\n\nA variant like this matters because it shows how the story travels. One version may make the setting more local. Another may make the warning sharper. Another may leave more space for doubt.`,
-    `${sentence(origin)}\n\nThat wider frame helps separate the stable part of the tradition from the details that later storytellers may have added. It also keeps the story from becoming flatter than it really is.`,
-    `${sentence(sourceNote)}\n\nThat uncertainty does not weaken the story. It gives the account its archive quality. We can follow the pattern, but we still have to admit where the record stops speaking clearly.`,
-    `${sentence(limit)}\n\nFor a mystery channel, that limit is important. The story works best when it stays honest about what can be traced, what is repeated, and what remains part of the legend's atmosphere.`,
-    `${sentence(thirdFact)}\n\nBy this point, the pattern is usually clearer than any single answer. A familiar detail, a repeated image, and one unresolved question hold the story together.`,
-    `${sentence(meaning)}\n\nIn the end, ${subject} remains interesting because it does not close itself neatly. Something recognizable has passed through the story, but it has not fully explained itself. That is why the final question stays with us.`
+    `${firstFact}\n\nThat first detail gives the story its shape. It tells us what to notice before we start asking whether the account is history, folklore, memory, or a mixture of all three. It also gives the viewer a clear point of entry.`,
+    `${detail}\n\nThe strongest version stays close to that central image. It does not need a long list of shocks. It needs a clear situation, a small turn, and the feeling that something ordinary has slipped out of place. That small turn is often what makes the story easy to repeat.`,
+    `${secondFact}\n\nThis is where the story becomes more than a single event. Retellings may change names, locations, or motives, but they often keep the same pressure at the center: ${String(motif).toLowerCase()}. The repeated motif becomes the thread that holds the versions together.`,
+    `${variant}\n\nA variant like this matters because it shows how the story travels. One version may make the setting more local. Another may make the warning sharper. Another may leave more space for doubt. The changes are part of the record, not a problem to erase.`,
+    `${origin}\n\nThat wider frame helps separate the stable part of the tradition from the details that later storytellers may have added. It also keeps the story from becoming flatter than it really is. The older frame gives the video a stronger sense of context.`,
+    `${sourceNote}\n\nThat uncertainty does not weaken the story. It gives the account its archive quality. We can follow the pattern, but we still have to admit where the record stops speaking clearly. That honesty keeps the mystery grounded.`,
+    `${limit}\n\nFor a mystery channel, that limit is important. The story works best when it stays honest about what can be traced, what is repeated, and what remains part of the legend's atmosphere. The unknown should feel earned, not forced.`,
+    `${thirdFact}\n\nBy this point, the pattern is usually clearer than any single answer. A familiar detail, a repeated image, and one unresolved question hold the story together. The viewer should feel the shape of the legend before the final reflection arrives.`,
+    `${meaning}\n\nIn the end, ${subject} remains interesting because it does not close itself neatly. Something recognizable has passed through the story, but it has not fully explained itself. That is why the final question stays with us, and why the story can keep returning without needing a new ending.`
   ];
 }
 
@@ -177,9 +177,9 @@ function visualDirectionForScene(subject, story, index) {
 function estimateLongformVideoLength(story, longformScript) {
   const score = informationDepthScore(story);
   const runtime = buildRuntimePlan(longformScript);
-  if (score >= 14 && runtime.estimatedFinalSeconds >= 450) return '8-10 minutes';
-  if (score >= 10 && runtime.estimatedFinalSeconds >= 390) return '7-8 minutes';
-  if (runtime.estimatedFinalSeconds >= 360 || score >= 7) return '6-7 minutes';
+  if (score >= 14 && runtime.estimatedFinalSeconds >= 480) return '8-10 minutes';
+  if (score >= 10 && runtime.estimatedFinalSeconds >= 420) return '7-8 minutes';
+  if (runtime.estimatedFinalSeconds >= 360) return '6-7 minutes';
   return '5-6 minutes';
 }
 
@@ -297,6 +297,16 @@ function sentence(text) {
   const value = String(text || '').replace(/\s+/g, ' ').trim();
   if (!value) return '';
   return value.endsWith('.') || value.endsWith('?') || value.endsWith('!') ? value : `${value}.`;
+}
+
+function narrationSentence(text) {
+  return sentence(text)
+    .replace(/\bThe article explains\b/gi, 'The archive record traces')
+    .replace(/\bThis article explains\b/gi, 'This archive record traces')
+    .replace(/\bThe video should\b/gi, 'The story can')
+    .replace(/\bThe scene should\b/gi, 'The moment can')
+    .replace(/\bBy the end, the viewer should\b/gi, 'The final impression is that')
+    .replace(/\bBy the end\b/gi, 'At the end');
 }
 
 function unique(values) {
