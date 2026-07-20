@@ -3,7 +3,7 @@ const path = require('path');
 
 const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://kyunolab.com';
-const styleVersion = '20260717-publishing-center-naver-copy';
+const styleVersion = '20260720-creator-part-visual-beats';
 const pageSize = 12;
 const libraryPageSize = 10;
 const publishingCenterPageSize = 24;
@@ -1239,27 +1239,34 @@ function renderLongFormCreator(script) {
     aiImagePrompt: prompt,
     directionTip: index === 0 ? 'Open with atmosphere before revealing the central mystery.' : 'Keep the image quiet, readable, and useful for narration pacing.'
   }));
+  const hasPartProductionDetails = prompts.some((item) => Array.isArray(item.narrationParts) && item.narrationParts.some((part) => part?.creatorNote || (Array.isArray(part?.visualBeats) && part.visualBeats.length)));
   const sceneCount = Math.max(prompts.length, 1);
   const narrationScenes = distributeByScene(script.longformScript || [], sceneCount);
   const sceneCards = Array.from({ length: sceneCount }, (_, index) => {
     const item = prompts[index] || {};
-    const narrationParts = narrationScenes[index].filter(Boolean);
-    const narration = narrationParts.join('\n\n');
+    const itemImagePrompt = primaryImagePromptForGuideItem(item);
+    const sourceParts = Array.isArray(item.narrationParts) && item.narrationParts.length
+      ? item.narrationParts
+      : narrationScenes[index].filter(Boolean);
+    const narration = sourceParts.map((part) => typeof part === 'string' ? part : part.narration).filter(Boolean).join('\n\n');
+    const narrationParts = narrationPartsForScene(sourceParts, index, 'long');
     return renderProductionSceneCard({
       number: index + 1,
       duration: sceneEstimatedDuration(script, sceneCount, index, 'long', narration),
       narration,
-      narrationParts: narrationPartsForScene(narrationParts, index, 'long'),
+      narrationParts,
       format: 'long',
       sceneRole: item.sceneRole,
-      imagePrompt: item.aiImagePrompt || item.prompt || '',
+      imagePrompt: itemImagePrompt,
       sceneFocus: item.sceneFocus || sceneFocusForScene({
         script,
         index,
         format: 'long',
         narration,
-        imagePrompt: item.aiImagePrompt || item.prompt || ''
+        imagePrompt: itemImagePrompt
       }),
+      voiceDirection: item.voiceDirection || voiceDirectionForScene(`${script.title || ''} ${narration}`, index + 1, 'long'),
+      soundEffect: item.soundEffect || '',
       music: recommendedBackgroundMusic(script, 'long'),
       visualDirection: item.visualDirection || visualDirection(index, 'long'),
       advanced: advancedProductionInfo({
@@ -1267,12 +1274,12 @@ function renderLongFormCreator(script) {
         number: index + 1,
         format: 'long',
         narration,
-        imagePrompt: item.aiImagePrompt || item.prompt || ''
+        imagePrompt: itemImagePrompt
       })
     });
   }).join('');
 
-  return `${renderNarrationCopyAction('long', 'Copy Full Long-form Narration')}<div class="script-prompt-list" data-narration-format="long">${sceneCards}</div>`;
+  return `${renderNarrationCopyAction('long', 'Copy Full Long-form Narration', hasPartProductionDetails)}<div class="script-prompt-list" data-narration-format="long">${sceneCards}</div>`;
 }
 
 function renderShortFormCreator(script) {
@@ -1294,6 +1301,8 @@ function renderShortFormCreator(script) {
         narration,
         imagePrompt: promptScenes[index].join(' ')
       }),
+      voiceDirection: voiceDirectionForScene(`${script.title || ''} ${narration}`, index + 1, 'short'),
+      soundEffect: '',
       music: recommendedBackgroundMusic(script, 'short'),
       visualDirection: visualDirection(index, 'short'),
       advanced: advancedProductionInfo({
@@ -1309,13 +1318,42 @@ function renderShortFormCreator(script) {
   return `${renderNarrationCopyAction('short', 'Copy Full Short-form Narration')}<div class="script-prompt-list" data-narration-format="short">${sceneCards}</div>`;
 }
 
-function renderNarrationCopyAction(format, label) {
-  return `<div class="narration-copy-action"><button class="narration-copy-button" type="button" data-narration-target="${escapeAttr(format)}">${escapeHtml(label)}</button></div>`;
+function renderNarrationCopyAction(format, label, includeProductionCopies = false) {
+  const buttons = [
+    `<button class="narration-copy-button" type="button" data-copy-kind="narration" data-narration-target="${escapeAttr(format)}">${escapeHtml(label)}</button>`
+  ];
+  if (includeProductionCopies) {
+    buttons.push(
+      `<button class="narration-copy-button" type="button" data-copy-kind="creator-notes" data-narration-target="${escapeAttr(format)}">Copy Creator Notes</button>`,
+      `<button class="narration-copy-button" type="button" data-copy-kind="image-prompts" data-narration-target="${escapeAttr(format)}">Copy All Image Prompts</button>`
+    );
+  }
+  return `<div class="narration-copy-action">${buttons.join('')}</div>`;
 }
 
-function renderProductionSceneCard({ number, duration, narration, narrationParts = [], format, sceneRole: explicitSceneRole, sceneFocus, imagePrompt, music, visualDirection: direction, advanced }) {
+function primaryImagePromptForGuideItem(item = {}) {
+  if (item.aiImagePrompt || item.prompt) return item.aiImagePrompt || item.prompt;
+  const parts = Array.isArray(item.narrationParts) ? item.narrationParts : [];
+  for (const part of parts) {
+    const beats = Array.isArray(part?.visualBeats) ? part.visualBeats : [];
+    const beat = beats.find((entry) => entry?.imagePrompt || entry?.aiImagePrompt || entry?.prompt);
+    if (beat) return beat.imagePrompt || beat.aiImagePrompt || beat.prompt;
+  }
+  return '';
+}
+
+function renderProductionSceneCard({ number, duration, narration, narrationParts = [], format, sceneRole: explicitSceneRole, sceneFocus, imagePrompt, voiceDirection, soundEffect, music, visualDirection: direction, advanced }) {
   const advancedId = sceneAdvancedId(number, duration, narration, imagePrompt);
   const sceneRole = explicitSceneRole || sceneRoleForScene(number - 1, narration, sceneFocus);
+  const hasPartVisuals = narrationParts.some((part) => Array.isArray(part.visualBeats) && part.visualBeats.length);
+  const productionFields = [
+    `<p class="scene-field scene-focus"><strong>Scene Focus:</strong> ${escapeHtml(sceneFocus || 'A clear, readable moment from the story.')}</p>`,
+    hasPartVisuals ? '' : `<p class="scene-field scene-image-prompt"><strong>Image Prompt:</strong> ${escapeHtml(imagePrompt || 'A quiet mystery scene shows one clear subject in a readable space, with soft low-key lighting and a restrained documentary feeling. The image should feel realistic, calm, and slightly unsettling without gore or exaggerated horror.')}</p>`,
+    `<p class="scene-field scene-voice-direction"><strong>Voice Direction:</strong> ${escapeHtml(voiceDirection || voiceDirectionForScene(narration, number, format))}</p>`,
+    `<p class="scene-field scene-music"><strong>Recommended Background Music:</strong> ${escapeHtml(music)}</p>`,
+    soundEffect ? `<p class="scene-field scene-sound-effect"><strong>Sound Effect:</strong> ${escapeHtml(soundEffect)}</p>` : '',
+    `<p class="scene-field scene-editing-guide"><strong>Editing Guide:</strong> ${escapeHtml(direction)}</p>`
+  ].filter(Boolean).join('\n');
   const narrationHtml = narrationParts.length
     ? renderNarrationParts(narration, narrationParts)
     : renderPlainNarration(narration, number - 1, format);
@@ -1327,10 +1365,7 @@ function renderProductionSceneCard({ number, duration, narration, narrationParts
           </div>
           ${narrationHtml}
           <div class="scene-production-fields">
-            <p class="scene-field scene-focus"><strong>Scene Focus:</strong> ${escapeHtml(sceneFocus || 'A clear, readable moment from the story.')}</p>
-            <p class="scene-field scene-image-prompt"><strong>Image Prompt:</strong> ${escapeHtml(imagePrompt || 'A quiet mystery scene shows one clear subject in a readable space, with soft low-key lighting and a restrained documentary feeling. The image should feel realistic, calm, and slightly unsettling without gore or exaggerated horror.')}</p>
-            <p class="scene-field scene-music"><strong>Recommended Background Music:</strong> ${escapeHtml(music)}</p>
-            <p class="scene-field scene-editing-guide"><strong>Editing Guide:</strong> ${escapeHtml(direction)}</p>
+            ${productionFields}
           </div>
           ${renderAdvancedProductionPanel(advancedId, advanced)}
         </article>`;
@@ -1349,24 +1384,81 @@ function renderNarrationParts(narration, parts) {
   const copyText = narration || parts.map((part) => part.narration).join('\n\n');
   return `<div class="scene-narration-parts">
             <p class="scene-narration scene-narration-copy-source" hidden><strong>Narration:</strong> ${escapeHtml(copyText)}</p>
-            ${parts.map((part, index) => `<section class="narration-part">
-              <h4>Narration Part ${index + 1}</h4>
-              <p class="narration-part-script"><strong>Narration:</strong> ${escapeHtml(part.narration)}</p>
-              <p class="narration-part-voice"><strong>Voice Direction:</strong> ${escapeHtml(part.voiceDirection)}</p>
-              <p class="narration-part-time"><strong>Estimated Reading Time:</strong> ${escapeHtml(part.readingTime)}</p>
-            </section>`).join('')}
+            ${parts.map(renderNarrationPart).join('')}
           </div>`;
+}
+
+function renderNarrationPart(part, index) {
+  const fields = [
+    `<h4>Narration Part ${index + 1}</h4>`,
+    `<p class="narration-part-script"><strong>Narration:</strong> ${escapeHtml(part.narration)}</p>`,
+    `<p class="narration-part-time"><strong>Estimated Reading Time:</strong> ${escapeHtml(part.readingTime)}</p>`,
+    part.creatorNote ? `<p class="narration-part-note"><strong>Creator Note:</strong> ${escapeHtml(part.creatorNote)}</p>` : '',
+    renderVisualBeats(part.visualBeats),
+    `<button class="narration-part-copy-button" type="button">Copy This Part</button>`
+  ].filter(Boolean).join('\n');
+  return `<section class="narration-part">${fields}</section>`;
 }
 
 function narrationPartsForScene(parts, sceneIndex, format) {
   return parts
-    .flatMap((part) => splitNarrationPart(part))
+    .flatMap((part) => normalizeNarrationPartInput(part))
     .filter(Boolean)
-    .map((narration, partIndex) => ({
-      narration,
-      readingTime: estimatedReadingTime(narration),
-      voiceDirection: voiceDirectionForNarrationPart(sceneIndex, partIndex, format, narration)
+    .map((part, partIndex) => ({
+      ...part,
+      narration: part.narration,
+      readingTime: part.readingTime || part.estimatedReadingTime || estimatedReadingTime(part.narration),
+      visualBeats: normalizeVisualBeats(part.visualBeats),
+      creatorNote: part.creatorNote || '',
+      voiceDirection: part.voiceDirection || voiceDirectionForNarrationPart(sceneIndex, partIndex, format, part.narration)
     }));
+}
+
+function normalizeNarrationPartInput(part) {
+  if (typeof part === 'string') {
+    return splitNarrationPart(part).map((narration) => ({ narration }));
+  }
+  if (!part || typeof part !== 'object') return [];
+  const narration = String(part.narration || '').trim();
+  if (!narration) return [];
+  return [{
+    narration,
+    estimatedReadingTime: part.estimatedReadingTime,
+    readingTime: part.readingTime,
+    creatorNote: part.creatorNote,
+    visualBeats: part.visualBeats,
+    voiceDirection: part.voiceDirection
+  }];
+}
+
+function normalizeVisualBeats(beats) {
+  if (!Array.isArray(beats)) return [];
+  return beats
+    .map((beat) => {
+      if (typeof beat === 'string') return { imagePrompt: beat };
+      if (!beat || typeof beat !== 'object') return null;
+      return {
+        label: beat.label || beat.title || '',
+        imagePrompt: beat.imagePrompt || beat.aiImagePrompt || beat.prompt || '',
+        motionPrompt: beat.motionPrompt || beat.beatMotion || ''
+      };
+    })
+    .filter((beat) => beat && beat.imagePrompt);
+}
+
+function renderVisualBeats(beats = []) {
+  if (!beats.length) return '';
+  const beatHtml = beats.map((beat, index) => {
+    const fields = [
+      `<p><span>${escapeHtml(beat.label || `Image Prompt ${index + 1}`)}:</span> ${escapeHtml(beat.imagePrompt)}</p>`,
+      beat.motionPrompt ? `<p><span>Beat Motion:</span> ${escapeHtml(beat.motionPrompt)}</p>` : ''
+    ].filter(Boolean).join('\n');
+    return `<div class="visual-beat">${fields}</div>`;
+  }).join('');
+  return `<div class="visual-beats">
+              <strong>Visual Beats:</strong>
+              ${beatHtml}
+            </div>`;
 }
 
 function splitNarrationPart(part) {
@@ -2320,7 +2412,7 @@ ${content}
 }
 
 function renderCreatorLibraryScript() {
-  return `  <script defer src="/scripts/creator-library.js?v=20260715-csp-controls"></script>`;
+  return `  <script defer src="/scripts/creator-library.js?v=${styleVersion}"></script>`;
 }
 
 function renderGlobalSearchScript() {

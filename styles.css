@@ -935,6 +935,9 @@ h1 {
   background: var(--panel);
 }
 .narration-copy-action {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
   margin: 0 0 10px;
 }
 .narration-copy-button {
@@ -1071,6 +1074,8 @@ h1 {
   gap: 8px;
 }
 .narration-part {
+  display: grid;
+  gap: 8px;
   padding: 10px 12px;
   border: 1px solid var(--line);
   border-radius: 4px;
@@ -1085,7 +1090,7 @@ h1 {
   color: var(--muted-strong);
 }
 .script-prompt-list .narration-part p {
-  margin: 8px 0 0;
+  margin: 0;
   padding: 0;
   border: 0;
   background: transparent;
@@ -1093,16 +1098,51 @@ h1 {
 .narration-part-script {
   white-space: pre-line;
 }
-.script-prompt-list .narration-part p:first-of-type {
-  margin-top: 0;
-}
 .narration-part-purpose,
 .narration-part-time,
-.narration-part-voice {
+.narration-part-voice,
+.narration-part-note,
+.visual-beats {
   color: var(--muted-strong);
   font-family: Arial, sans-serif;
   font-size: 13px;
   line-height: 1.55;
+}
+.narration-part-note {
+  padding-top: 8px !important;
+  border-top: 1px solid var(--line) !important;
+}
+.visual-beats {
+  display: grid;
+  gap: 8px;
+  padding: 9px 10px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--surface);
+}
+.visual-beat {
+  display: grid;
+  gap: 4px;
+}
+.visual-beat span {
+  color: var(--ink);
+  font-weight: 800;
+}
+.narration-part-copy-button {
+  justify-self: start;
+  min-height: 34px;
+  padding: 7px 10px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+}
+.narration-part-copy-button:hover {
+  border-color: var(--structure);
 }
 .script-prompt-list p,
 .script-subtitle-lines span {

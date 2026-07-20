@@ -48,9 +48,13 @@ function buildCreatorLibraryEntry(story, category) {
   const mood = moodForCategory(story.categorySlug);
   const facts = storyFacts(story);
   const angle = story.uniqueAngle || story.summaryAnswer || story.excerpt || `${subject} remains a memorable ${category.title} story.`;
-  const sceneFocuses = buildSceneFocuses(subject, story, facts);
-  const imagePrompts = buildImagePrompts(subject, story, setting, mood, sceneFocuses);
   const longformScript = buildLongformScript(subject, story, facts, motif);
+  const sceneFocuses = buildSceneFocuses(subject, story, facts);
+  const visualGuide = buildVisualGuide(subject, story, setting, mood, sceneFocuses, longformScript);
+  const imagePrompts = visualGuide.flatMap((scene) => scene.narrationParts || [])
+    .flatMap((part) => part.visualBeats || [])
+    .map((beat) => beat.imagePrompt)
+    .filter(Boolean);
   const estimatedVideoLength = estimateLongformVideoLength(story, longformScript);
 
   return {
@@ -89,12 +93,7 @@ function buildCreatorLibraryEntry(story, category) {
     longformScript,
     shortsScript: buildShortsScript(subject, story, facts),
     imagePrompts,
-    visualGuide: imagePrompts.map((prompt, index) => ({
-      aiImagePrompt: prompt,
-      sceneFocus: sceneFocuses[index] || sceneFocuses[sceneFocuses.length - 1],
-      directionTip: sceneFocuses[index] || sceneFocuses[sceneFocuses.length - 1],
-      visualDirection: visualDirectionForScene(subject, story, index)
-    })),
+    visualGuide,
     runtimePlan: buildRuntimePlan(longformScript, estimatedVideoLength),
     thumbnailIdeas: buildThumbnailIdeas(subject, story),
     subtitleLines: buildSubtitleLines(subject, facts)
@@ -161,6 +160,131 @@ function buildImagePrompts(subject, story, setting, mood, focuses) {
     `An archive-style source scene shows notes, maps, clippings, or reference material connected to ${subject}. The frame should separate remembered tradition from uncertain later claims, with realistic paper texture and soft desk light.`,
     `A final reflective image shows ${subject} through the ideas of ${vocabulary || story.category}. The composition feels unresolved but readable, with soft contrast, subdued color, realistic surfaces, and enough empty space for narration or title text.`
   ];
+}
+
+function buildVisualGuide(subject, story, setting, mood, sceneFocuses, longformScript) {
+  const sceneCount = Math.max(sceneFocuses.length, 1);
+  const narrationScenes = distributeByScene(longformScript, sceneCount);
+  return Array.from({ length: sceneCount }, (_, index) => {
+    const sceneFocus = sceneFocuses[index] || sceneFocuses[sceneFocuses.length - 1];
+    const sceneParts = narrationScenes[index].filter(Boolean);
+    return {
+      sceneRole: sceneRoleForGeneratedScene(index),
+      sceneFocus,
+      directionTip: sceneFocus,
+      voiceDirection: voiceDirectionForGeneratedScene(index),
+      soundEffect: soundEffectForGeneratedScene(story, index),
+      visualDirection: visualDirectionForScene(subject, story, index),
+      narrationParts: sceneParts.map((narration, partIndex) => ({
+        narration,
+        estimatedReadingTime: secondsToApproxLabel(estimatedNarrationSecondsFromText(narration)),
+        creatorNote: creatorNoteForNarrationPart(subject, story, sceneFocus, narration, index, partIndex),
+        visualBeats: visualBeatsForNarrationPart(subject, story, setting, mood, sceneFocus, narration, index, partIndex)
+      }))
+    };
+  });
+}
+
+function distributeByScene(items, sceneCount) {
+  if (!items.length) return Array.from({ length: sceneCount }, () => []);
+  const scenes = Array.from({ length: sceneCount }, () => []);
+  items.forEach((item, index) => {
+    scenes[Math.min(sceneCount - 1, Math.floor(index * sceneCount / items.length))].push(item);
+  });
+  return scenes;
+}
+
+function sceneRoleForGeneratedScene(index) {
+  return ['Hook', 'Core Story', 'Variant', 'Source Context', 'Closing Reflection'][index] || 'Production Beat';
+}
+
+function voiceDirectionForGeneratedScene(index) {
+  return [
+    'Calm documentary delivery, slow opening pace.',
+    'Natural delivery with slight tension on the turn.',
+    'Clear and balanced, keeping variants separate.',
+    'Quiet, source-aware, without sounding academic.',
+    'Reflective, soft ending, emphasize the final question.'
+  ][index] || 'Calm, natural documentary delivery.';
+}
+
+function soundEffectForGeneratedScene(story, index) {
+  const context = `${story.title || ''} ${story.categorySlug || ''} ${(story.subjectSpecificVocabulary || []).join(' ')}`.toLowerCase();
+  if (index === 0 && /road|avenue|hitchhiker|car|driver/.test(context)) return 'distant road ambience, soft night wind';
+  if (/storm|hunt|wind|forest|sky/.test(context)) return index <= 1 ? 'distant wind, low thunder, faint horn-like ambience' : 'cold wind, distant movement';
+  if (/mount|kingdom|temple|monastery|shambhala|olympus/.test(context)) return 'high mountain wind, distant bell ambience';
+  if (/water|lake|river|sea|island/.test(context)) return 'low water ambience, distant wind';
+  if (index === 3) return 'quiet paper movement, soft room tone';
+  return '';
+}
+
+function creatorNoteForNarrationPart(subject, story, sceneFocus, narration, sceneIndex, partIndex) {
+  const topic = story.storyBrief?.topic || subject;
+  const firstNoun = (story.subjectSpecificVocabulary || []).find(Boolean) || topic;
+  const notes = [
+    `Anchor ${topic} in one concrete opening image before the wider explanation begins.`,
+    `Keep the focus on ${firstNoun} so this part moves from familiar detail to the first question.`,
+    `Show the central turn in ${topic} without adding events beyond the archive record.`,
+    `Separate the stable story from the variant details while keeping the same emotional thread.`,
+    `Use source-like visuals to signal uncertainty without turning the part into a lesson.`,
+    `End this part on the unresolved meaning that keeps ${topic} useful for the final scene.`
+  ];
+  const note = notes[Math.min(notes.length - 1, sceneIndex + partIndex)];
+  if (/variant|version|retelling|later/i.test(narration)) {
+    return `Clarify how this retelling changes ${topic} while keeping the core story recognizable.`;
+  }
+  if (/source|record|uncertain|evidence|trace|support/i.test(narration)) {
+    return `Show what the archive trail can support, and leave unsupported claims visually restrained.`;
+  }
+  if (/in the end|final|question|remains/i.test(narration)) {
+    return `Let the final image hold the unanswered question instead of resolving ${topic} too neatly.`;
+  }
+  return note || `Keep this part specific to ${sceneFocus}`;
+}
+
+function visualBeatsForNarrationPart(subject, story, setting, mood, sceneFocus, narration, sceneIndex, partIndex) {
+  const seconds = estimatedNarrationSecondsFromText(narration);
+  const count = seconds >= 23 ? 3 : seconds >= 13 ? 2 : 1;
+  const base = visualBeatSeeds(subject, story, setting, mood, sceneFocus, narration, sceneIndex, partIndex);
+  return base.slice(0, count).map((seed, index) => ({
+    label: `Image Prompt ${index + 1}`,
+    imagePrompt: seed,
+    motionPrompt: motionPromptForVisualBeat(seed, index)
+  }));
+}
+
+function visualBeatSeeds(subject, story, setting, mood, sceneFocus, narration, sceneIndex, partIndex) {
+  const anchor = story.sceneAnchor || story.detail || story.excerpt || subject;
+  const vocabulary = (story.subjectSpecificVocabulary || []).slice(0, 3).join(', ');
+  const cleanPlace = cleanSetting(setting);
+  const sceneContext = `${sceneFocus} ${narration}`.replace(/\s+/g, ' ').trim();
+  return [
+    `A grounded establishing view of ${cleanPlace} connected to ${subject}, with the main visual idea from this narration part clearly visible: ${shortPromptFragment(sceneContext)}. Use realistic documentary texture, muted colors, restrained ${mood} atmosphere, and a composition that leaves room for narration.`,
+    `A closer production still focused on ${anchor}, placed inside a believable space related to ${subject}. The important detail should be visible without exaggerated horror, with natural shadows, source-aware realism, and no unrelated characters or locations.`,
+    `A quiet transition image using ${vocabulary || story.category || subject} as visual anchors for this part of ${subject}. The frame should feel distinct from the previous beat, with subdued color, readable subject placement, and no invented incident beyond the archive story.`
+  ];
+}
+
+function shortPromptFragment(text) {
+  return sentence(text).split(/\s+/).slice(0, 26).join(' ');
+}
+
+function estimatedNarrationSecondsFromText(narration) {
+  const wordCount = String(narration || '').trim().split(/\s+/).filter(Boolean).length;
+  return Math.max(8, Math.round(wordCount / 2.35));
+}
+
+function secondsToApproxLabel(seconds) {
+  return `≈ ${seconds} sec`;
+}
+
+function motionPromptForVisualBeat(prompt, index) {
+  const motions = [
+    'Use a slow controlled push-in that keeps the subject readable.',
+    'Use a gentle lateral move across the frame, avoiding sudden motion.',
+    'Hold briefly on the key detail, then fade with restrained movement.'
+  ];
+  return motions[index] || 'Keep camera motion subtle and steady.';
 }
 
 function visualDirectionForScene(subject, story, index) {
