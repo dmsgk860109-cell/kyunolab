@@ -199,8 +199,9 @@ function buildVisualGuide(subject, story, setting, mood, sceneFocuses, longformS
   return Array.from({ length: sceneCount }, (_, index) => {
     const sceneFocus = sceneFocuses[index] || sceneFocuses[sceneFocuses.length - 1];
     const sceneParts = narrationScenes[index].filter(Boolean);
+    const sceneRole = sceneRoleForGeneratedScene(index);
     return {
-      sceneRole: sceneRoleForGeneratedScene(index),
+      sceneRole,
       sceneFocus,
       directionTip: sceneFocus,
       voiceDirection: voiceDirectionForGeneratedScene(index),
@@ -209,7 +210,7 @@ function buildVisualGuide(subject, story, setting, mood, sceneFocuses, longformS
       narrationParts: sceneParts.map((narration, partIndex) => ({
         narration,
         estimatedReadingTime: secondsToApproxLabel(estimatedNarrationSecondsFromText(narration)),
-        creatorNote: creatorNoteForNarrationPart(subject, story, sceneFocus, narration, index, partIndex),
+        creatorNote: creatorNoteForNarrationPart(subject, story, sceneFocus, narration, index, partIndex, sceneRole),
         visualBeats: visualBeatsForNarrationPart(subject, story, setting, mood, sceneFocus, narration, index, partIndex)
       }))
     };
@@ -421,42 +422,95 @@ function soundEffectForGeneratedScene(story, index) {
   return '';
 }
 
-function creatorNoteForNarrationPart(subject, story, sceneFocus, narration, sceneIndex, partIndex) {
+function creatorNoteForNarrationPart(subject, story, sceneFocus, narration, sceneIndex, partIndex, sceneRole = sceneRoleForGeneratedScene(sceneIndex)) {
   const topic = story.storyBrief?.topic || subject;
-  const profile = storyProductionProfile(subject, story);
-  const anchor = profile.objects[partIndex % profile.objects.length] || profile.mainSubject;
-  const place = profile.places[sceneIndex % profile.places.length] || profile.setting;
-  if (/variant|version|retelling|later/i.test(narration)) {
-    const variantNotes = [
-      `Frame ${anchor} as the visible sign of how this version shifts around ${topic}.`,
-      `${place} can hold the variant layer while the central story stays recognizable.`,
-      `${anchor} marks the difference between the repeated motif and the added detail.`,
-      `Keep this beat tied to ${topic}, with the variation shown as context rather than proof.`
-    ];
-    return variantNotes[(sceneIndex + partIndex) % variantNotes.length];
+  const noteContext = creatorNoteContext(subject, story, sceneFocus, narration, sceneRole);
+  const demeterNote = demeterCreatorNoteForNarrationPart(noteContext);
+  if (demeterNote) return demeterNote;
+
+  if (noteContext.hasVariantLanguage) {
+    return `${noteContext.subjectLabel} uses this part to separate variant material from the stable core of the story. Keep the note focused on the version, source limit, or disputed claim actually named in the narration.`;
   }
-  if (/source|record|uncertain|evidence|trace|support/i.test(narration)) {
-    const sourceNotes = [
-      `${place} should make the source layer feel specific and limited.`,
-      `Place ${anchor} near the reference material to separate the story from later interpretation.`,
-      `Keep the archive material useful but incomplete, with no invented confirmation.`,
-      `Let the source layer slow the pace before ${topic} returns to its unresolved question.`
-    ];
-    return sourceNotes[(sceneIndex + partIndex) % sourceNotes.length];
+  if (noteContext.hasSourceLanguage) {
+    return `${noteContext.subjectLabel} needs a clear source boundary here. Treat the named record, source, or uncertainty as context for the story, not as proof beyond what the narration states.`;
   }
-  if (/in the end|final|question|remains/i.test(narration)) {
-    return `End with ${anchor} carrying the unresolved question around ${topic}.`;
+  if (noteContext.hasClosingLanguage) {
+    return `${noteContext.subjectLabel} should close on the unresolved meaning already present in this part. Do not add a new answer, motive, or explanation that the narration does not support.`;
   }
-  if (sceneIndex === 0 && partIndex === 0) {
-    return `${anchor} in ${place} gives the opening a concrete production anchor.`;
+  if (noteContext.sceneRole === 'Hook') {
+    return `${noteContext.subjectLabel} needs one concrete opening fact before the story expands. Keep the relationship, event, or object named in this part distinct from later interpretation.`;
   }
-  if (/begin|first|shape|point of entry|notice/i.test(narration)) {
-    return `${anchor} works as the first visual entry point for ${topic}.`;
+  return `${noteContext.subjectLabel} should keep this part tied to its stated event or relationship. Avoid adding outside incidents, extra motives, or claims not present in the current narration.`;
+}
+
+function creatorNoteContext(subject, story, sceneFocus, narration, sceneRole) {
+  const brief = story.storyBrief || {};
+  const topic = brief.topic || subject;
+  const vocabulary = [
+    ...(brief.knownNames || []),
+    ...(brief.coreStoryElements || []),
+    ...(story.subjectSpecificVocabulary || []),
+    ...(story.contentDNA?.subjectSpecificVocabulary || [])
+  ].filter(Boolean);
+  const text = String(narration || '').toLowerCase();
+  return {
+    topic,
+    subjectLabel: cleanSubjectLabel(topic || subject || story.title || 'This subject'),
+    sceneRole,
+    sceneFocus,
+    narration,
+    text,
+    knownNames: brief.knownNames || [],
+    coreStoryElements: brief.coreStoryElements || [],
+    subjectSpecificVocabulary: story.subjectSpecificVocabulary || [],
+    contentType: brief.contentType || story.categorySlug || story.contentType || '',
+    vocabulary,
+    hasVariantLanguage: /variant|version|retelling|later|different|differs|differ|readings|accounts/.test(text),
+    hasSourceLanguage: /source|record|uncertain|evidence|trace|support|surviving|hymn|account/.test(text),
+    hasClosingLanguage: /in the end|ending|final|returns?|descends?|cycle|meaning|remains/.test(text)
+  };
+}
+
+function demeterCreatorNoteForNarrationPart(context) {
+  const topicText = `${context.topic} ${context.knownNames.join(' ')} ${context.subjectSpecificVocabulary.join(' ')} ${context.contentType}`.toLowerCase();
+  if (!/demeter/.test(topicText) || !/persephone/.test(topicText)) return '';
+  const text = context.text;
+
+  if (/mother and a daughter|grain and growing fields|gathering flowers/.test(text)) {
+    return 'Use this Part to establish the family relationship before the abduction. Demeter should be understood as mother and grain goddess, while Persephone begins above ground among flowers and companions.';
   }
-  if (/central|event|turn|detail|image/i.test(narration)) {
-    return `${anchor} should carry the key turn without adding incidents outside the archive story.`;
+  if (/hades|ground opens|underworld|carries persephone away/.test(text) && /center of the myth|rupture|break/.test(text)) {
+    return 'Treat Hades taking Persephone below as the central rupture. Do not add dialogue, chase details, or extra divine actions beyond the abduction and the shift from meadow to underworld.';
   }
-  return `${sceneFocus || topic} stays readable when ${anchor} remains the production anchor.`;
+  if (/searches the earth|daughter has vanished|demeter soon realizes/.test(text)) {
+    return "This Part is about Demeter discovering the loss and searching. Keep the emotional center on a mother's grief becoming divine withdrawal, not on solving the disappearance quickly.";
+  }
+  if (/persephone's choice|abduction|queen of the underworld|taken and transformed/.test(text)) {
+    return "Present Persephone's agency as a point that changes across versions and later readings. Do not make one interpretation override the older abduction pattern or her underworld transformation.";
+  }
+  if (/pomegranate seeds|seeds in the underworld|number of seeds|versions differ/.test(text)) {
+    return 'Keep the pomegranate seeds as the binding detail with variable counts and meanings. Avoid treating one number of seeds as a universal rule across all versions.';
+  }
+  if (/homeric hymn to demeter|fullest surviving ancient account|later greek and roman/.test(text)) {
+    return 'Use this Part to name the Homeric Hymn to Demeter as the main surviving ancient account. Separate that source layer from later Greek and Roman simplifications.';
+  }
+  if (/zeus becomes involved|compromise is reached|return to her mother|must also return below/.test(text)) {
+    return "Clarify that Zeus intervenes because Demeter's refusal threatens the world. Present the compromise and partial return without turning divine negotiation into modern legal judgment.";
+  }
+  if (/earth can bloom again|descends|seasons|agriculture|cycle of growth and absence/.test(text)) {
+    return "Tie Persephone's return and descent to agriculture, seasons, and repeated absence. The point is the cycle of reunion and loss, not a simple explanation of spring.";
+  }
+  if (/fields begin to fail|grain no longer grows|human beings face hunger/.test(text)) {
+    return "Connect Demeter's grief and anger to failing grain and human hunger. The crisis is agricultural and sacred, not merely bad weather or a seasonal background detail.";
+  }
+  if (/not a simple rescue|separation remains|death|renewal|cycle itself/.test(text)) {
+    return 'Close on the unresolved structure of the myth: mother and daughter, surface and underworld, death and renewal. Avoid reducing the ending to one final symbolic answer.';
+  }
+  return '';
+}
+
+function cleanSubjectLabel(value) {
+  return String(value || '').replace(/\s+YouTube Script$/i, '').trim() || 'This subject';
 }
 
 function visualBeatsForNarrationPart(subject, story, setting, mood, sceneFocus, narration, sceneIndex, partIndex) {
