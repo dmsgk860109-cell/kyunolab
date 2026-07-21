@@ -1,0 +1,42 @@
+{
+  "version": "2026-07-22",
+  "policy": "Existing entries are baseline legacy exceptions only. New subject-specific production functions, direct slug branches returning finished content, or topic-specific finished-content arrays must not be added.",
+  "allowedSubjectFunctions": [
+    {
+      "name": "demeterCreatorNoteForNarrationPart",
+      "file": "scripts/add-latest-archive-to-creator-library-2026-07-20.js",
+      "reason": "Legacy exception predating the generation standard. Do not copy, expand, or use as a model for new subjects.",
+      "newUseAllowed": false
+    },
+    {
+      "name": "isPrometheusProfileContext",
+      "file": "scripts/add-latest-archive-to-creator-library-2026-07-20.js",
+      "reason": "Legacy profile detector predating the generation standard. It may remain as a baseline exception, but new subject-specific detectors are not allowed.",
+      "newUseAllowed": false
+    },
+    {
+      "name": "isPrometheusContext",
+      "file": "scripts/generate-site.js",
+      "reason": "Legacy renderer/profile detector predating the generation standard. It may remain as a baseline exception, but new subject-specific detectors are not allowed.",
+      "newUseAllowed": false
+    }
+  ],
+  "allowedSlugBranches": [
+    {
+      "slug": "osiris-isis-resurrection-myth",
+      "operator": "===",
+      "file": "scripts/add-latest-archive-to-creator-library-2026-07-20.js",
+      "function": "longformNarrationFromKnownStory",
+      "reason": "Legacy known-story long-form branch. Do not add new slug branches.",
+      "newUseAllowed": false
+    },
+    {
+      "slug": "demeter-and-persephone-myth",
+      "operator": "!==",
+      "file": "scripts/add-latest-archive-to-creator-library-2026-07-20.js",
+      "function": "longformNarrationFromKnownStory",
+      "reason": "Legacy known-story long-form branch. Do not add new slug branches.",
+      "newUseAllowed": false
+    }
+  ]
+}
