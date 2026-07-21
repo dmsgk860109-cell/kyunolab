@@ -428,6 +428,9 @@ function creatorNoteForNarrationPart(subject, story, sceneFocus, narration, scen
   const demeterNote = demeterCreatorNoteForNarrationPart(noteContext);
   if (demeterNote) return demeterNote;
 
+  const topicAwareNote = topicAwareCreatorNoteForNarrationPart(noteContext);
+  if (topicAwareNote) return topicAwareNote;
+
   if (noteContext.hasVariantLanguage) {
     return `${noteContext.subjectLabel} uses this part to separate variant material from the stable core of the story. Keep the note focused on the version, source limit, or disputed claim actually named in the narration.`;
   }
@@ -465,10 +468,67 @@ function creatorNoteContext(subject, story, sceneFocus, narration, sceneRole) {
     subjectSpecificVocabulary: story.subjectSpecificVocabulary || [],
     contentType: brief.contentType || story.categorySlug || story.contentType || '',
     vocabulary,
+    matchedNames: matchedContextTerms(text, brief.knownNames || []),
+    matchedCoreElements: matchedContextTerms(text, brief.coreStoryElements || []),
+    matchedSubjectVocabulary: matchedContextTerms(text, [
+      ...(story.subjectSpecificVocabulary || []),
+      ...(story.contentDNA?.subjectSpecificVocabulary || [])
+    ]),
     hasVariantLanguage: /variant|version|retelling|later|different|differs|differ|readings|accounts/.test(text),
     hasSourceLanguage: /source|record|uncertain|evidence|trace|support|surviving|hymn|account/.test(text),
     hasClosingLanguage: /in the end|ending|final|returns?|descends?|cycle|meaning|remains/.test(text)
   };
+}
+
+function topicAwareCreatorNoteForNarrationPart(context) {
+  const text = context.text;
+  const matchedNames = context.matchedNames.filter((name) => !/\s+and\s+/i.test(name));
+  const primaryNames = matchedNames.length
+    ? matchedNames.join(', ')
+    : context.subjectLabel;
+  const coreElement = context.matchedCoreElements[0] || context.matchedSubjectVocabulary[0] || '';
+
+  if (/ancient .* material|ritual texts|temple traditions|later summaries|greek and roman|single fixed version|details can shift|main shape remains/.test(text)) {
+    return `Mark the source boundary clearly. Treat older ritual material, temple tradition, and later retelling as related layers, not as one fixed source with identical details.`;
+  }
+  if (/culture imagined order surviving violence|breaks the body.*continues the line|rules below.*lasting memory|ritual and kingship across/.test(text)) {
+    return `Close by connecting the actual chain named here: violence, search, restoration, succession, rule below, and lasting ritual memory. Avoid turning the ending into a simple happy return.`;
+  }
+  if (/both lost and made powerful|transforms mourning into action|links grief with ritual care|restoration does not erase|wound meaning/.test(text)) {
+    return `Keep the reflection tied to the Part's stated ideas: loss, mourning, ritual care, power after death, and meaning after damage. Do not add a new moral explanation.`;
+  }
+  if (/gathers what remains|nephthys|divine helpers|protect the dead|ritual care|sacred order/.test(text)) {
+    return `Separate the stable restoration pattern from helper details that change by account. The Part should center ritual care, mourning, and reassembly without flattening variant traditions.`;
+  }
+  if (/not the same as a simple resurrection|simple resurrection|underworld|lord of the dead|no longer return as an ordinary living king|life above|power continues below/.test(text)) {
+    return `Clarify that restoration changes the figure's role. The Part should distinguish renewed sacred power from a return to ordinary life or the same earthly kingship.`;
+  }
+  if (/birth of|child|royal line|succession|inheritance|living king|rules the dead|answer .* violence/.test(text)) {
+    return `Use this Part to connect succession with the earlier loss. Keep child, rival, royal line, living rule, and rule over the dead in their correct relationships.`;
+  }
+  if (/family of gods|sister and wife|ruler|giver of order|kingship|stands against/.test(text)) {
+    return `Establish the relationship map around ${primaryNames}. Keep ruler, consort, opponent, order, jealousy, and restoration clear before later events complicate the myth.`;
+  }
+  if (/murders?|killed|slays?|chest|coffin|sealed|sent away|trapped|hidden|removed/.test(text)) {
+    return `Treat the murder and containment detail as the central rupture in this Part. If a chest, coffin, or hidden body is named, present it as a versioned tradition rather than a universal detail.`;
+  }
+  if (/search|searches|looking for|following the trace|what has been taken|grief becomes movement/.test(text)) {
+    return `Focus on the search as an active response to loss. The important point is movement, mourning, and persistence, not a quick discovery or added rescue episode.`;
+  }
+  if (/cutting it apart|cut apart|dismember|dismembered|scattering|scattered|pieces|piece by piece|broken body/.test(text)) {
+    return `Keep the damaged body and scattered pieces within the retelling limits named here. Show restoration as a difficult process, not an instant reversal of the murder.`;
+  }
+  if (coreElement && context.hasVariantLanguage) {
+    return `Keep ${coreElement} tied to the version described in this Part. Do not treat shifting details as a single fixed account unless the narration states that clearly.`;
+  }
+  return '';
+}
+
+function matchedContextTerms(text, terms) {
+  return unique((terms || [])
+    .map((term) => cleanSubjectLabel(term))
+    .filter((term) => term && hasExactContextTerm(text, term))
+  );
 }
 
 function demeterCreatorNoteForNarrationPart(context) {
