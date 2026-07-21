@@ -1274,7 +1274,9 @@ function renderLongFormCreator(script) {
         number: index + 1,
         format: 'long',
         narration,
-        imagePrompt: itemImagePrompt
+        imagePrompt: itemImagePrompt,
+        storedSoundEffect: item.soundEffect,
+        storedVoiceDirection: item.voiceDirection
       })
     });
   }).join('');
@@ -1704,7 +1706,7 @@ function sceneFocusForScene({ script, index, format, narration, imagePrompt }) {
     ];
     return focuses[index] || 'The audience should feel that the empty space continues beyond what they can see.';
   }
-  if (/dragon|myth|mythology|serpent|cloud|river|temple/.test(context)) {
+  if (isDragonContext(context)) {
     const focuses = [
       'Different dragons carry different cultural meanings.',
       'The dragon image connects to stone, storm, or sacred power.',
@@ -1739,13 +1741,13 @@ function visualDirection(index, format) {
   return longDirections[index] || 'Start with a steady frame. Slow zoom through the narration. Fade to the next Scene.';
 }
 
-function advancedProductionInfo({ script, number, format, narration, imagePrompt }) {
+function advancedProductionInfo({ script, number, format, narration, imagePrompt, storedSoundEffect, storedVoiceDirection }) {
   const context = `${script.title || ''} ${script.genre || ''} ${script.deck || ''} ${(script.tags || []).join(' ')} ${narration || ''} ${imagePrompt || ''}`.toLowerCase();
   const prompt = imagePrompt || 'A quiet mystery scene shows one clear subject in a readable space, with soft low-key lighting and a restrained documentary feeling.';
   return {
     motionPrompt: motionPromptForScene(prompt, context, format),
-    soundEffect: soundEffectForScene(context),
-    voiceDirection: voiceDirectionForScene(context, number, format),
+    soundEffect: hasStoredProductionValue(storedSoundEffect) ? storedSoundEffect : soundEffectForScene(context),
+    voiceDirection: hasStoredProductionValue(storedVoiceDirection) ? storedVoiceDirection : voiceDirectionForScene(context, number, format),
     cameraNotes: cameraNotesForScene(context, number, format),
     transitionNotes: transitionNotesForScene(context, number, format),
     negativePrompt: negativePromptForScene(context)
@@ -1776,7 +1778,7 @@ function motionPromptForScene(imagePrompt, context, format) {
   if (/backrooms|liminal|yellow walls|endless hallway|fluorescent/.test(context)) {
     return `${basePrompt}. Let the fluorescent lights flicker softly, add a barely noticeable handheld drift, and move the camera slowly forward through the empty space.`;
   }
-  if (/dragon|serpent|storm|cloud|mountain/.test(context)) {
+  if (isDragonContext(context)) {
     return `${basePrompt}. Add slow cloud movement, gentle scale or silhouette motion, and a smooth camera drift that makes the scene feel ancient and cinematic.`;
   }
   return `${basePrompt}. Add restrained environmental movement and ${cameraMove}. Keep the subject readable and the atmosphere mysterious.`;
@@ -1804,7 +1806,7 @@ function soundEffectForScene(context) {
   if (/backrooms|liminal|yellow walls|endless hallway|fluorescent/.test(context)) {
     return 'low mechanical hum, fluorescent light buzz, distant room tone';
   }
-  if (/dragon|serpent|storm|cloud|mountain/.test(context)) {
+  if (isDragonContext(context)) {
     return 'low wind over mountains, distant thunder, deep cinematic rumble';
   }
   if (/door|house|room|empty|silence/.test(context)) {
@@ -1836,7 +1838,7 @@ function voiceDirectionForScene(context, number, format) {
   if (/backrooms|liminal|empty|silence/.test(context)) {
     return `Read in a low, dry, controlled voice, ${pace}. Pause briefly around words such as "empty", "forever", and "ordinary".`;
   }
-  if (/dragon|myth|mythology|ancient/.test(context)) {
+  if (/\b(myth|mythology|ancient)\b/.test(context)) {
     return `Use a calm documentary tone, ${pace}. Avoid exaggerating cultures or symbols, and only lightly emphasize the key words.`;
   }
   return `${number === 1 ? 'Start calmly' : 'Read with a slightly more focused tone than the previous scene'}. Keep the delivery ${pace}. Pause briefly after important nouns.`;
@@ -1861,7 +1863,7 @@ function cameraNotesForScene(context, number, format) {
   if (/backrooms|hallway|corridor/.test(context)) {
     return 'slow push-in: move very slowly into the scene. subtle handheld movement: add only a small natural camera drift.';
   }
-  if (/dragon|myth|cloud|mountain|serpent/.test(context)) {
+  if (isDragonContext(context)) {
     return 'gentle pan from left to right: reveal the scene slowly across the frame. slow push-in: move gradually toward the symbolic subject.';
   }
   if (/\broad\b|roadside|\bcar\b|headlight/.test(context)) {
@@ -1885,7 +1887,7 @@ function transitionNotesForScene(context, number, format) {
             ? 'Use cold mountain blue, muted gold, and soft low-saturation light.'
             : /backrooms|liminal|digital/.test(context)
               ? 'Keep the yellow light, but lower the saturation and make the image feel colder.'
-              : /dragon|myth|mythology/.test(context)
+              : isDragonContext(context) || /\b(myth|mythology)\b/.test(context)
                 ? 'Use dark gold, muted blue, and low-saturation ancient tones.'
                 : 'Use cool blue tones and low saturation to keep the night atmosphere.';
   if (format === 'short') {
@@ -1901,7 +1903,7 @@ function negativePromptForScene(context) {
   if (/person|woman|figure|driver|passenger|body|face/.test(context)) {
     ['distorted anatomy', 'extra limbs', 'deformed face'].forEach((item) => negatives.add(item));
   }
-  if (/dragon|creature|serpent/.test(context)) {
+  if (isDragonContext(context) || /\bcreature\b/.test(context)) {
     ['cartoon style', 'toy-like creature', 'distorted anatomy'].forEach((item) => negatives.add(item));
   }
   if (/text|sign|subtitle|document|panel/.test(context)) {
@@ -1922,7 +1924,8 @@ function isShambhalaContext(context) {
 }
 
 function isPrometheusContext(context) {
-  return /prometheus|stealing fire|gift of fire|zeus|titan/.test(context);
+  return /\bprometheus\b|stealing fire|gift of fire/.test(context)
+    || (/\bfire\b/.test(context) && /\b(zeus|titan|eagle)\b/.test(context));
 }
 
 function isVideoWatchHistoryContext(context) {
@@ -1931,6 +1934,16 @@ function isVideoWatchHistoryContext(context) {
 
 function isSubwayMaintenanceContext(context) {
   return /subway maintenance|sealed staircase|maintenance file|station diagram|underground place/.test(context);
+}
+
+function isDragonContext(context) {
+  return /\bdragons?\b|\bbasilisk\b|\bcockatrice\b/.test(context);
+}
+
+function hasStoredProductionValue(value) {
+  if (value === undefined || value === null) return false;
+  if (Array.isArray(value)) return value.length > 0;
+  return String(value).trim().length > 0;
 }
 
 function scriptCoreMotif(script) {
@@ -1959,7 +1972,7 @@ function scriptSetting(script, originalStory) {
   const haystack = `${script.title || ''} ${script.deck || ''} ${(script.tags || []).join(' ')}`.toLowerCase();
   if (/road|roadside|driver|car/.test(haystack)) return 'Roadside legend setting';
   if (/backrooms|liminal|room|hallway|digital|internet/.test(haystack)) return 'Digital folklore and liminal-space setting';
-  if (/dragon|myth|mythology|creature/.test(haystack)) return 'Mythology and comparative folklore setting';
+  if (/\b(myth|mythology|creature)\b/.test(haystack) || isDragonContext(haystack)) return 'Mythology and comparative folklore setting';
   if (originalStory && originalStory.category) return originalStory.category;
   return 'Mystery archive setting';
 }

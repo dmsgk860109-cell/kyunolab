@@ -242,7 +242,7 @@ function voiceDirectionForGeneratedScene(index) {
 function soundEffectForGeneratedScene(story, index) {
   const topic = story.storyBrief?.topic || cleanSubject(story.title);
   const context = storyEntityText(story, topic);
-  if (/prometheus|stealing fire|zeus|eagle|titan/.test(context)) {
+  if (isPrometheusProfileContext(context)) {
     return [
       'fire crackle, high mountain wind, distant thunder',
       'small flame movement, low storm ambience',
@@ -296,7 +296,7 @@ function soundEffectForGeneratedScene(story, index) {
       'notification tone fading into silence'
     ][index] || 'quiet device ambience';
   }
-  if (/cicada|cryptography|steganography|tor|\bqr\b/.test(context)) {
+  if (isDigitalPuzzleProfileContext(context)) {
     return [
       'keyboard clicks, quiet modem-like digital texture',
       'printer noise, soft paper handling, low computer fan',
@@ -305,7 +305,7 @@ function soundEffectForGeneratedScene(story, index) {
       'low digital ambience fading into silence'
     ][index] || 'subtle digital ambience';
   }
-  if (/\bra(?:'s|s)?\b|solar boat|sun god|underworld|apep/.test(context)) {
+  if (/\bra(?:'s|s)?\b|solar boat|sun god|apep/.test(context)) {
     return [
       'desert wind, slow river movement, low ceremonial percussion',
       'warm wind, distant ritual ambience, soft water movement',
@@ -359,7 +359,7 @@ function soundEffectForGeneratedScene(story, index) {
       'soft village evening ambience'
     ][index] || 'quiet village ambience';
   }
-  if (/bray road|beast|werewolf|road/.test(context)) {
+  if (/bray road|beast|werewolf|\broad\b/.test(context)) {
     return [
       'rural road night ambience, distant wind',
       'grass movement, low animal-like rustle',
@@ -413,10 +413,10 @@ function soundEffectForGeneratedScene(story, index) {
       'soft night street ambience fading'
     ][index] || 'quiet street ambience';
   }
-  if (index === 0 && /road|avenue|hitchhiker|car|driver/.test(context)) return 'distant road ambience, soft night wind';
+  if (index === 0 && /\broad\b|avenue|hitchhiker|\bcar\b|driver/.test(context)) return 'distant road ambience, soft night wind';
   if (/storm|hunt|wind|forest|sky/.test(context)) return index <= 1 ? 'distant wind, low thunder, faint horn-like ambience' : 'cold wind, distant movement';
   if (/mount|kingdom|temple|monastery|shambhala|olympus/.test(context)) return 'high mountain wind, distant bell ambience';
-  if (/water|lake|river|sea|island/.test(context)) return 'low water ambience, distant wind';
+  if (/\b(water|lake|river|sea|island)\b/.test(context)) return 'low water ambience, distant wind';
   if (index === 3) return 'quiet paper movement, soft room tone';
   return '';
 }
@@ -563,7 +563,7 @@ function storyProductionProfile(subject, story) {
       }
     },
     {
-      match: /cicada|cryptography|steganography|tor|\bqr\b/,
+      match: /\bcicada\b|\bcicada\s+3301\b|\bcryptography\b|\bsteganography\b|\btor\b|\bqr\b|\bqr\s+codes?\b/,
       data: {
         places: ['a dark desk with a laptop and printed cipher sheets', 'an anonymous online forum screen in a dim room', 'a city street corner where a physical clue could be found'],
         objects: ['a coded image on a computer screen', 'printed cipher pages and QR-like geometric marks', 'a book beside coordinates and handwritten solution notes'],
@@ -751,9 +751,10 @@ function storyProductionProfile(subject, story) {
 function buildContextualProductionProfile(defaultProfile, story, topic, context) {
   const entities = extractStoryProductionEntities(story, topic);
   const setting = cleanSetting(settingForStory(story));
-  const isPrometheus = hasAllowedEntity(context, entities, ['prometheus', 'fire', 'zeus', 'eagle', 'mountain', 'rock', 'titan', 'humanity']);
-  const isVideoHistory = hasAllowedEntity(context, entities, ['video', 'watch', 'history', 'second', 'clip', 'platform', 'dashboard', 'metadata', 'upload']);
-  const isSubway = hasAllowedEntity(context, entities, ['subway', 'maintenance', 'staircase', 'sealed', 'station', 'diagram', 'worker', 'underground']);
+  const isPrometheus = isPrometheusProfileContext(context);
+  const isVideoHistory = /video watch history|watch history|extra second|uploaded clip|platform record|platform dashboard|upload metadata|platform metadata|playback bar/.test(context);
+  const isSubway = /subway maintenance|sealed staircase|maintenance file|station diagrams?|worker accounts?|underground place/.test(context);
+  const isDigitalPuzzle = isDigitalPuzzleProfileContext(context);
 
   let specific = {};
   if (isPrometheus) {
@@ -791,6 +792,18 @@ function buildContextualProductionProfile(defaultProfile, story, topic, context)
       timeOfDay: 'muted underground station light',
       atmosphere: 'quiet strange-place tension with public-space realism',
       exclusions: 'unrelated creature imagery, horror props, unrelated screen interfaces, readable fake text'
+    };
+  } else if (isDigitalPuzzle) {
+    specific = {
+      places: ['a dark desk with a laptop and printed cipher sheets', 'an anonymous online forum screen in a dim room', 'a city street corner where a physical clue could be found'],
+      objects: ['a coded image on a computer screen', 'printed cipher pages and QR-like geometric marks', 'a book beside coordinates and handwritten solution notes'],
+      sourceObjects: ['cipher printouts', 'solver notes', 'technology reporting clippings'],
+      actions: ['displayed as an unsolved puzzle rather than a threat', 'arranged like a careful trail of clues', 'shown between online code and real-world coordinates'],
+      camera: ['over-the-shoulder view toward the screen', 'close shot across paper ciphers', 'low-angle street detail near a posted clue'],
+      motions: ['Pan across the coded symbols from left to right.', 'Rack focus from the computer screen to the printed clue.', 'Track slowly from the desk toward the map coordinates.'],
+      timeOfDay: 'cool screen light and low desk light',
+      atmosphere: 'restrained digital mystery atmosphere',
+      exclusions: 'monsters, office horror hallway, invented masked group, readable fake text'
     };
   } else {
     const topicTerms = entities.visualMotifs.slice(0, 4);
@@ -841,7 +854,27 @@ function extractStoryProductionEntities(story, topic) {
 }
 
 function hasAllowedEntity(context, entities, terms) {
-  return terms.some((term) => context.includes(term) || entities.words.includes(term));
+  return terms.some((term) => hasExactContextTerm(context, term) || entities.words.includes(term));
+}
+
+function hasExactContextTerm(context, term) {
+  const value = String(term || '').toLowerCase().trim();
+  if (!value) return false;
+  if (value.includes(' ')) return context.includes(value);
+  return new RegExp(`\\b${escapeRegExp(value)}\\b`).test(context);
+}
+
+function isDigitalPuzzleProfileContext(context) {
+  return /\bcicada\b|\bcicada\s+3301\b|\bcryptography\b|\bsteganography\b|\btor\b|\bqr\b|\bqr\s+codes?\b/.test(context);
+}
+
+function isPrometheusProfileContext(context) {
+  return /\bprometheus\b|stealing fire|gift of fire/.test(context)
+    || (/\bfire\b/.test(context) && /\b(zeus|titan|eagle)\b/.test(context));
+}
+
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
 function enforceProfileEntitySafety(profile, story, topic) {
@@ -1046,7 +1079,7 @@ function settingForStory(story) {
   if (/timestamp|digital record|modern omen|time records/.test(text)) return 'quiet digital archive';
   if (/internet|creepypasta|online|digital|backrooms|jeff/.test(text)) return 'dim online archive space';
   if (/tower|castle|prison|penitentiary|hallway|building|apartment|hotel|cinema/.test(text)) return 'old interior space';
-  if (/lake|island|sea|ocean|ship|kraken|selkie|hy-brasil|lyonesse|titicaca/.test(text)) return 'misty waterside landscape';
+  if (/\b(lake|island|sea|ocean|ship|kraken|selkie|hy-brasil|lyonesse|titicaca)\b/.test(text)) return 'misty waterside landscape';
   if (/forest|road|mount|stonehenge|nazca|field|rain|fire|fog/.test(text)) return 'open landscape under unsettled weather';
   if (/underworld|myth|sisyphus|icarus|persephone|cerberus|griffin|pandora|ark|sword/.test(text)) return 'mythic symbolic landscape';
   return 'quiet archival setting';
