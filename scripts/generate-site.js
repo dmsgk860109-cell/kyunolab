@@ -1381,7 +1381,7 @@ function renderPlainNarration(narration, sceneIndex, format) {
 }
 
 function renderNarrationParts(narration, parts) {
-  const copyText = narration || parts.map((part) => part.narration).join('\n\n');
+  const copyText = parts.map((part) => part.narration).filter(Boolean).join('\n\n');
   return `<div class="scene-narration-parts">
             <p class="scene-narration scene-narration-copy-source" hidden><strong>Narration:</strong> ${escapeHtml(copyText)}</p>
             ${parts.map(renderNarrationPart).join('')}
