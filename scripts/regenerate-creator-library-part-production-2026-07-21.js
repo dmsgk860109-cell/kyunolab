@@ -9,6 +9,19 @@ const scriptsPath = path.join(root, 'data', 'scripts.json');
 const categoriesPath = path.join(root, 'data', 'categories.json');
 
 const targetSlugs = [
+  'the-town-meeting-minutes-that-mention-tomorrow-youtube-script',
+  'the-video-watch-history-with-one-impossible-second-youtube-script',
+  'the-subway-maintenance-file-for-a-sealed-staircase-youtube-script',
+  'the-shipping-ledger-for-a-crate-with-no-weight-youtube-script',
+  'the-wedding-register-with-a-blank-witness-line-youtube-script',
+  'the-smart-lock-access-log-from-a-removed-code-youtube-script',
+  'prometheus-fire-myth-youtube-script',
+  'the-salt-eyed-goat-of-the-market-books-youtube-script',
+  'the-ship-register-of-the-harbor-under-the-desert-youtube-script',
+  'the-tide-table-that-added-a-thirteenth-turn-youtube-script',
+  'the-temple-inventory-of-a-door-that-opens-once-youtube-script',
+  'the-thread-spool-that-keeps-a-family-register-youtube-script',
+  'why-signatures-act-like-proof-in-uncertain-stories-youtube-script',
   'the-train-delay-log-that-predicted-the-fog-youtube-script',
   'the-wiki-edit-history-with-a-user-who-never-existed-youtube-script',
   'the-town-archive-box-marked-for-a-street-that-is-not-there-youtube-script',
