@@ -586,21 +586,423 @@ function visualBeatsForNarrationPart(subject, story, setting, mood, sceneFocus, 
 
 function visualBeatSeeds(subject, story, setting, mood, sceneFocus, narration, sceneIndex, partIndex) {
   const profile = storyProductionProfile(subject, story);
-  const place = profile.places[(sceneIndex + partIndex) % profile.places.length] || cleanSetting(setting);
-  const mainObject = profile.objects[(sceneIndex + partIndex) % profile.objects.length] || profile.mainSubject;
-  const secondaryObject = profile.objects[(sceneIndex + partIndex + 1) % profile.objects.length] || mainObject;
-  const action = profile.actions[(sceneIndex + partIndex) % profile.actions.length] || 'presented clearly in the frame';
-  const camera = profile.camera[(sceneIndex + partIndex) % profile.camera.length] || 'medium documentary composition';
-  const atmosphere = profile.atmosphere || `restrained ${mood} atmosphere`;
-  const time = profile.timeOfDay || 'low natural light';
-  const exclusions = profile.exclusions || 'no gore, no exaggerated horror, no unrelated characters, no readable fake text';
-  const sourceObject = profile.sourceObjects[(sceneIndex + partIndex) % profile.sourceObjects.length] || 'archival notes';
+  const plan = imagePromptPlanForNarrationPart(subject, story, setting, mood, sceneFocus, narration, sceneIndex, partIndex, profile);
+  return structuredImagePrompts(plan);
+}
 
-  return [
-    `${capitalizeSentence(place)} holds the scene around ${mainObject}. ${capitalizeSentence(action)}. Use ${camera}, ${time}, muted colors, and ${atmosphere}. Keep the image realistic, readable, and limited to ${profile.mainSubject}; avoid ${exclusions}.`,
-    `A closer documentary still centers ${secondaryObject} as the important visual detail of ${subject}. The surrounding space stays connected to ${place}, with natural shadows, restrained composition, and no unrelated symbols or locations.`,
-    `A source-context image sets ${sourceObject} beside visual references to ${profile.mainSubject}. Use soft desk light, realistic material texture, and enough quiet space for narration, while keeping uncertain later claims visually separate from the core story.`
+function imagePromptPlanForNarrationPart(subject, story, setting, mood, sceneFocus, narration, sceneIndex, partIndex, profile) {
+  const topic = story.storyBrief?.topic || subject || profile.mainSubject || cleanSubject(story.title);
+  const text = String(narration || '').toLowerCase();
+  const candidates = promptCandidatesForNarration(story, topic, narration);
+  const culture = imagePromptCultureContext(story, text);
+  const fallbackSetting = cleanSetting(setting || profile.setting || settingForStory(story));
+  const base = {
+    topic,
+    subject: candidates[0] || topic,
+    supportingSubject: candidates[1] || '',
+    object: candidates[2] || '',
+    actionOrState: `the central event from this narration part is visible without adding extra characters or incidents`,
+    setting: safePromptPhrase(fallbackSetting),
+    detail: safePromptPhrase(sceneFocus || story.sceneAnchor || story.detail || topic),
+    sourceObject: sourceObjectForImagePrompt(story, text),
+    composition: imagePromptComposition(sceneIndex, partIndex, 0),
+    lighting: imagePromptLighting(story, text, profile, mood),
+    atmosphere: imagePromptAtmosphere(story, text, profile, mood),
+    culturalContext: culture,
+    exclusions: imagePromptExclusions(story, text),
+    sceneIndex,
+    partIndex
+  };
+
+  return refineImagePromptPlan(base, text);
+}
+
+function refineImagePromptPlan(plan, text) {
+  const next = { ...plan };
+  const hasGreekContext = /\b(demeter|persephone|hades|zeus|homeric|pomegranate|greek)\b/.test(text);
+  const hasEgyptianContext = /\b(osiris|isis|set|horus|nephthys|egyptian|papyrus)\b/.test(text);
+
+  if (hasEgyptianContext && /family of gods|giver of order|sister and wife|\bset\b stands/.test(text)) {
+    next.subject = validPromptSubject('Osiris, Isis, and Set', plan.subject);
+    next.actionOrState = 'The divine family relationship is arranged around rule, loyalty, opposition, and fragile order';
+    next.setting = 'an ancient Egyptian palace or temple space under warm stone light';
+    next.detail = 'Osiris as ruler, Isis as loyal consort, and Set as the opposing force';
+  } else if (hasEgyptianContext && /\bset\b murders osiris|murders osiris|chest|coffin|sealed and sent away|trapped|hidden|removed/.test(text)) {
+    next.subject = validPromptSubject('Osiris and Set', plan.subject);
+    next.actionOrState = 'A sealed chest or coffin becomes the central sign of Osiris being trapped and removed';
+    next.setting = 'an ancient Egyptian chamber with restrained royal and funerary detail';
+    next.detail = 'the murder and containment tradition without graphic violence';
+  } else if (hasEgyptianContext && /isis begins looking|search gives|following the trace|finding a body|grief becomes movement/.test(text)) {
+    next.subject = validPromptSubject('Isis', plan.subject);
+    next.actionOrState = 'Isis searches through signs and places for the lost body of Osiris';
+    next.setting = 'a Nile-side Egyptian landscape with temple fragments and desert light';
+    next.detail = 'mourning turned into movement, intelligence, and sacred persistence';
+  } else if (hasEgyptianContext && /cutting it apart|scattering the pieces|piece by piece|broken body|damage and recovery/.test(text)) {
+    next.subject = validPromptSubject('Osiris', plan.subject);
+    next.actionOrState = 'Fragmented funerary wrappings and symbolic body pieces suggest the difficult restoration of Osiris';
+    next.setting = 'a solemn Egyptian funerary space with ritual cloth and stone';
+    next.detail = 'reassembly after damage, shown symbolically rather than graphically';
+  } else if (hasEgyptianContext && /gathers what remains|nephthys|divine helpers|protect the dead god|ritual care|sacred order/.test(text)) {
+    next.subject = validPromptSubject('Isis and Nephthys', plan.subject);
+    next.actionOrState = 'Isis and a possible helper figure mourn and protect what remains of Osiris';
+    next.setting = 'an ancient Egyptian ritual space with linen, stone, and dim sacred light';
+    next.detail = 'restoration through mourning, protection, and ritual care';
+  } else if (hasEgyptianContext && /not the same as a simple resurrection|simple resurrection|underworld|lord of the dead|ritually answered|power continues below/.test(text)) {
+    next.subject = validPromptSubject('Osiris', plan.subject);
+    next.actionOrState = 'Osiris is shown as a transformed ruler of the dead rather than an ordinary living king';
+    next.setting = 'a symbolic Egyptian underworld space with subdued gold and deep shadow';
+    next.detail = 'death answered by ritual power, not erased';
+  } else if (hasEgyptianContext && /birth of horus|horus becomes|royal line|succession|living king|osiris rules the dead/.test(text)) {
+    next.subject = validPromptSubject('Horus and Osiris', plan.subject);
+    next.actionOrState = 'Horus carries the royal line forward while Osiris remains connected to rule over the dead';
+    next.setting = 'an ancient Egyptian royal-symbolic scene with temple stone and horizon light';
+    next.detail = 'succession linking the living king, the dead king, and divine order';
+  } else if (hasEgyptianContext && /ancient egyptian material|ritual texts|temple traditions|later summaries|greek and roman writers|details can shift/.test(text)) {
+    next.subject = validPromptSubject('Osiris and Isis', plan.subject);
+    next.actionOrState = 'Papyrus fragments, temple relief details, and later reference notes sit beside each other without merging into one fixed version';
+    next.setting = 'a museum-style Egyptian reference table with papyrus-like fragments and carved relief details';
+    next.detail = 'source layers around murder, search, restoration, and succession';
+  } else if (hasEgyptianContext && /both lost and made powerful|transforms mourning into action|lord of the dead|ritual care|wound meaning/.test(text)) {
+    next.subject = validPromptSubject('Osiris and Isis', plan.subject);
+    next.actionOrState = 'Osiris appears powerful through loss while Isis turns mourning into sacred action';
+    next.setting = 'a symbolic Egyptian funerary landscape between warm gold and deep shadow';
+    next.detail = 'grief, ritual care, kingship, and hope beyond death';
+  } else if (hasEgyptianContext && /culture imagined order surviving violence|\bset\b breaks the body|isis searches and restores|horus continues|rules below|lasting memory/.test(text)) {
+    next.subject = validPromptSubject('Osiris, Isis, Horus, and Set', plan.subject);
+    next.actionOrState = 'The mythic chain of violence, search, restoration, succession, and rule below is shown through separated symbolic figures';
+    next.setting = 'an ancient Egyptian symbolic composition with temple stone, desert light, and underworld shadow';
+    next.detail = 'order surviving violence through ritual, kingship, and memory';
+  } else if (hasGreekContext && /mother and a daughter|goddess of grain|growing fields|youth|flowers|gathering flowers|meadow/.test(text)) {
+    next.subject = validPromptSubject('Demeter and Persephone', plan.subject);
+    next.actionOrState = 'Persephone gathers flowers in an open meadow while Demeter is suggested through grain, field light, and maternal presence';
+    next.setting = 'a sunlit ancient Greek meadow bordered by grain fields';
+    next.detail = 'a peaceful surface world before the loss begins';
+  } else if (hasGreekContext && /ground opens|\bhades\b|carries persephone away|taken beneath/.test(text)) {
+    next.subject = validPromptSubject('Persephone and Hades', plan.subject);
+    next.actionOrState = 'The earth opens at the edge of a flowered field, turning the bright landscape into a threshold toward the underworld';
+    next.setting = 'an ancient Greek field split by a dark underworld entrance';
+    next.detail = 'the sudden rupture between the living landscape and the world below';
+  } else if (hasGreekContext && /searches the earth|daughter has vanished|demeter soon realizes|any sign of persephone|withdraws/.test(text)) {
+    next.subject = validPromptSubject('Demeter', plan.subject);
+    next.actionOrState = 'Demeter searches across the human and divine world for any sign of her missing daughter';
+    next.setting = 'a wide ancient Greek landscape with roads, fields, and distant shrines';
+    next.detail = 'grief turning into a visible search';
+  } else if (hasGreekContext && /fields begin to fail|grain no longer grows|human beings face hunger|refuses the harvest|hunger/.test(text)) {
+    next.subject = validPromptSubject('Demeter', plan.subject);
+    next.actionOrState = 'Grain fields wither as Demeter withdraws her power from the harvest';
+    next.setting = 'a dry ancient agricultural field under a pale sky';
+    next.detail = 'failing grain and human scarcity caused by divine grief';
+  } else if (hasGreekContext && /persephone's choice|queen of the underworld|taken and transformed|place below/.test(text)) {
+    next.subject = validPromptSubject('Persephone', plan.subject);
+    next.actionOrState = 'Persephone stands in the underworld with both loss and authority present in the same image';
+    next.setting = 'a shadowed Greek underworld hall with restrained sacred detail';
+    next.detail = 'the tension between abduction, transformation, and later interpretation';
+  } else if (hasGreekContext && /pomegranate seeds|seeds in the underworld|number of seeds|small act creates a lasting condition|food becomes a bond/.test(text)) {
+    next.subject = validPromptSubject('Persephone', plan.subject);
+    next.actionOrState = 'Pomegranate seeds rest near Persephone as a quiet binding detail between two worlds';
+    next.setting = 'a dim underworld threshold with Greek ritual symbolism';
+    next.detail = 'the small act that creates a lasting return condition';
+  } else if (hasGreekContext && /homeric hymn to demeter|surviving ancient account|later greek and roman|ritual shape|sacred power/.test(text)) {
+    next.subject = validPromptSubject('Homeric Hymn to Demeter', plan.subject);
+    next.actionOrState = 'Greek manuscript fragments and ritual objects suggest the ancient source layer without legible wording';
+    next.setting = 'a museum-style table with aged Greek manuscript fragments and agricultural votive objects';
+    next.detail = 'source context around Demeter, Persephone, grief, and ritual settlement';
+  } else if (hasGreekContext && /zeus becomes involved|compromise is reached|return to her mother|must divide her time|world cannot continue/.test(text)) {
+    next.subject = validPromptSubject('Demeter and Persephone', plan.subject);
+    next.actionOrState = 'A divine compromise is suggested through Demeter above, Persephone at the threshold, and Zeus represented by distant storm light';
+    next.setting = 'a symbolic Greek boundary between harvest fields and the underworld';
+    next.detail = 'partial return rather than a complete rescue';
+  } else if (hasGreekContext && /earth can bloom again|descends|seasons|agriculture|cycle of growth and absence|spring and barrenness/.test(text)) {
+    next.subject = validPromptSubject('Demeter and Persephone', plan.subject);
+    next.actionOrState = 'Blooming grain and shadowed earth show the cycle of return and descent';
+    next.setting = 'an ancient Greek field divided between spring growth and underworld shadow';
+    next.detail = 'seasonal renewal tied to reunion and absence';
+  } else if (hasGreekContext && /not a simple rescue|separation remains|death|renewal|fragile hope|cycle itself/.test(text)) {
+    next.subject = validPromptSubject('Demeter and Persephone', plan.subject);
+    next.actionOrState = 'Mother and daughter are reunited while the underworld remains present at the edge of the frame';
+    next.setting = 'a symbolic Greek landscape split between bright harvest and dark descent';
+    next.detail = 'return, loss, death, renewal, and the unresolved cycle';
+  }
+
+  return normalizeImagePromptPlan(next);
+}
+
+function structuredImagePrompts(plan) {
+  const variants = [
+    {
+      subject: plan.subject,
+      actionOrState: plan.actionOrState,
+      setting: plan.setting,
+      composition: plan.composition,
+      detail: plan.detail
+    },
+    {
+      subject: plan.supportingSubject || plan.subject,
+      actionOrState: plan.detail,
+      setting: plan.setting,
+      composition: imagePromptComposition(plan.sceneIndex, plan.partIndex, 1),
+      detail: plan.actionOrState
+    },
+    {
+      subject: plan.sourceObject,
+      actionOrState: `source-aware visual context for ${plan.topic}, keeping variants and interpretation separate`,
+      setting: sourceSettingForImagePrompt(plan),
+      composition: imagePromptComposition(plan.sceneIndex, plan.partIndex, 2),
+      detail: plan.detail
+    }
   ];
+
+  return variants.map((variant) => assembleStructuredImagePrompt({ ...plan, ...variant }));
+}
+
+function assembleStructuredImagePrompt(plan) {
+  const sentences = [];
+  const subject = validPromptSubject(plan.subject, plan.topic);
+  const setting = safePromptPhrase(plan.setting);
+  const action = safePromptPhrase(plan.actionOrState);
+  const detail = safePromptPhrase(plan.detail);
+  const composition = safePromptPhrase(plan.composition);
+  const lighting = safePromptPhrase(plan.lighting);
+  const atmosphere = safePromptPhrase(plan.atmosphere);
+  const culture = safePromptPhrase(plan.culturalContext);
+
+  sentences.push(`${capitalizeSentence(setting)} presents ${subject}.`);
+  sentences.push(`${promptActionSentence(action)}.`);
+  sentences.push(`${capitalizeSentence(composition)} uses ${lighting}, ${atmosphere}, and ${culture}.`);
+  if (detail && detail !== action) {
+    sentences.push(`The image should emphasize ${emphasisPhrase(detail)}.`);
+  }
+  if (plan.exclusions) {
+    sentences.push(plan.exclusions);
+  }
+  return cleanImagePrompt(sentences.join(' '));
+}
+
+function promptCandidatesForNarration(story, topic, narration) {
+  const text = String(narration || '');
+  const lower = text.toLowerCase();
+  const brief = story.storyBrief || {};
+  const configured = [
+    ...(brief.knownNames || []),
+    ...(story.subjectSpecificVocabulary || []),
+    ...(story.contentDNA?.subjectSpecificVocabulary || [])
+  ];
+  const properNames = text.match(/\b[A-Z][a-z]+(?:\s+(?:and|of|to|the|[A-Z][a-z]+))*\b/g) || [];
+  return unique([...configured, ...properNames, topic])
+    .map((candidate) => cleanPromptCandidate(candidate))
+    .filter((candidate) => isValidPromptCandidate(candidate) && hasCandidateInTextOrTopic(lower, candidate, topic))
+    .slice(0, 6);
+}
+
+function promptActionSentence(value) {
+  const phrase = safePromptPhrase(value);
+  if (!phrase) return 'Show the central visual idea from this narration part.';
+  if (/\b(is|are|becomes|become|shows?|suggests?|searches|gathers|stands|opens|rests?|carries|appears|turns|uses|presents|links|sits|continues|rules|withers?|mourns?|protects?)\b/i.test(phrase)) {
+    return capitalizeSentence(phrase);
+  }
+  return `Show ${phrase.replace(/^\bshow\b\s*/i, '')}`;
+}
+
+function emphasisPhrase(value) {
+  return safePromptPhrase(value)
+    .replace(/^The\b/, 'the')
+    .replace(/^A\b/, 'a')
+    .replace(/^An\b/, 'an');
+}
+
+function hasCandidateInTextOrTopic(text, candidate, topic) {
+  const value = String(candidate || '').toLowerCase();
+  const topicText = String(topic || '').toLowerCase();
+  return hasExactContextTerm(text, value) || value === topicText;
+}
+
+function cleanPromptCandidate(candidate) {
+  return String(candidate || '')
+    .replace(/\s+/g, ' ')
+    .replace(/[,:;]+$/g, '')
+    .trim();
+}
+
+function isValidPromptCandidate(candidate) {
+  const value = String(candidate || '').trim();
+  if (!value) return false;
+  const lower = value.toLowerCase();
+  const stopwords = new Set([
+    'and',
+    'or',
+    'but',
+    'with',
+    'without',
+    'of',
+    'to',
+    'from',
+    'this',
+    'that',
+    'story',
+    'part',
+    'scene',
+    'subject',
+    'version',
+    'meaning',
+    'article',
+    'record',
+    'versions',
+    'later',
+    'some',
+    'the',
+    'a',
+    'an',
+    'in',
+    'on',
+    'by',
+    'for',
+    'restoration',
+    'seasons',
+    'egyptian myth',
+    'greek myth',
+    'myth',
+    'context',
+    'source'
+  ]);
+  if (stopwords.has(lower)) return false;
+  if (/^(and|or|but|with|without|of|to|from)\b|\b(and|or|but|with|without|of|to|from)$/.test(lower)) return false;
+  if (/^(the|a|an)\s*$/.test(lower)) return false;
+  if (/^(at first|from the start|in the|the story|later traditions|ancient egyptian material)$/i.test(value)) return false;
+  return /[a-zA-Z]{3,}/.test(value);
+}
+
+function validPromptSubject(value, fallback) {
+  const candidate = cleanPromptCandidate(value);
+  if (isValidPromptCandidate(candidate)) return candidate;
+  const backup = cleanPromptCandidate(fallback);
+  if (isValidPromptCandidate(backup)) return backup;
+  return 'the central mythic subject';
+}
+
+function normalizeImagePromptPlan(plan) {
+  const topic = validPromptSubject(plan.topic, 'the story subject');
+  return {
+    ...plan,
+    topic,
+    subject: validPromptSubject(plan.subject, topic),
+    supportingSubject: isValidPromptCandidate(plan.supportingSubject) ? cleanPromptCandidate(plan.supportingSubject) : '',
+    sourceObject: safePromptPhrase(plan.sourceObject || sourceObjectForImagePrompt({}, '')),
+    actionOrState: safePromptPhrase(plan.actionOrState || 'appears through the event named in this narration part'),
+    setting: safePromptPhrase(plan.setting || 'a source-aware mythic setting'),
+    detail: safePromptPhrase(plan.detail || topic),
+    composition: safePromptPhrase(plan.composition || 'balanced documentary composition'),
+    lighting: safePromptPhrase(plan.lighting || 'soft natural light'),
+    atmosphere: safePromptPhrase(plan.atmosphere || 'restrained mythic atmosphere'),
+    culturalContext: safePromptPhrase(plan.culturalContext || 'source-aware cultural context'),
+    exclusions: imagePromptExclusions({}, `${plan.actionOrState || ''} ${plan.setting || ''}`)
+  };
+}
+
+function safePromptPhrase(value) {
+  return String(value || '')
+    .replace(/\bappears clearly in the frame\b/gi, 'is presented as a clear visual detail')
+    .replace(/\brestrained restrained\b/gi, 'restrained')
+    .replace(/\baround and\b/gi, 'around the central subject')
+    .replace(/\bcenters and\b/gi, 'centers the central subject')
+    .replace(/\bsome a\b/gi, 'a')
+    .replace(/\bThe story does\b/gi, 'The scene holds')
+    .replace(/\s+/g, ' ')
+    .replace(/\s+[,.;]/g, (match) => match.trim())
+    .replace(/\b(and|or|but|with|without|of|to|from)\s*$/i, '')
+    .trim();
+}
+
+function cleanImagePrompt(prompt) {
+  let value = String(prompt || '')
+    .replace(/\bavoid no\b/gi, 'No')
+    .replace(/\bexclude no\b/gi, 'No')
+    .replace(/\bwithout no\b/gi, 'No')
+    .replace(/\brestrained restrained\b/gi, 'restrained')
+    .replace(/\baround and\b/gi, 'around the central subject')
+    .replace(/\bscene around and\b/gi, 'scene around the central subject')
+    .replace(/\bcenters and\b/gi, 'centers the central subject')
+    .replace(/\bsome a\b/gi, 'a')
+    .replace(/\s+/g, ' ')
+    .trim();
+  value = value
+    .split(/(?<=\.)\s+/)
+    .map((sentence) => sentence.replace(/\b(and|or|but|with|without|of|to|from)\s*\.$/i, '.').trim())
+    .filter(Boolean)
+    .join(' ');
+  return value.endsWith('.') ? value : `${value}.`;
+}
+
+function imagePromptCultureContext(story, text) {
+  if (/\b(egypt|egyptian|osiris|isis|set|horus|nephthys|nile|pharaoh|papyrus)\b/.test(text)) {
+    return 'ancient Egyptian mythic context';
+  }
+  if (/\b(greek|demeter|persephone|hades|zeus|homeric|olympus|pomegranate)\b/.test(text)) {
+    return 'ancient Greek mythic context';
+  }
+  if (/myth|god|goddess|underworld|temple|ritual/.test(text)) {
+    return 'ancient mythic context';
+  }
+  return `${story.categorySlug || 'folklore'} context`;
+}
+
+function imagePromptLighting(story, text, profile, mood) {
+  if (/underworld|dead|death|coffin|funerary|shadow|below/.test(text)) return 'low sacred light and deep controlled shadow';
+  if (/meadow|flowers|bloom|spring|return|harvest|grain/.test(text)) return 'soft natural daylight with warm grain tones';
+  if (/source|hymn|texts|temple traditions|greek and roman|material|fragments/.test(text)) return 'soft museum light with muted material texture';
+  return safePromptPhrase(profile.timeOfDay || `low natural light for a ${mood || 'mysterious'} mood`);
+}
+
+function imagePromptAtmosphere(story, text, profile, mood) {
+  if (/source|hymn|texts|temple traditions|greek and roman|material|fragments/.test(text)) return 'quiet source-aware atmosphere';
+  if (/death|underworld|coffin|murder|grief|vanished|loss/.test(text)) return 'restrained solemn myth atmosphere';
+  if (/return|bloom|renewal|harvest|spring/.test(text)) return 'restrained atmosphere of return and renewal';
+  return safePromptPhrase(profile.atmosphere || `restrained ${mood || 'mythic'} atmosphere`);
+}
+
+function imagePromptComposition(sceneIndex, partIndex, beatIndex) {
+  const options = [
+    'wide composition with a clear central figure and readable surrounding space',
+    'medium composition focused on the main symbolic detail',
+    'balanced source-context composition with objects separated clearly'
+  ];
+  return options[(sceneIndex + partIndex + beatIndex) % options.length];
+}
+
+function sourceObjectForImagePrompt(story, text) {
+  if (/homeric hymn|greek and roman|\b(demeter|persephone|zeus)\b/.test(text)) {
+    return 'unreadable Greek manuscript fragments and agricultural votive objects';
+  }
+  if (/ancient egyptian|\b(osiris|isis|set|horus|nephthys|papyrus)\b|temple/.test(text)) {
+    return 'papyrus-like fragments and Egyptian temple relief details';
+  }
+  if (/source|record|text|material|variant|retelling/.test(text)) {
+    return 'source fragments and reference objects';
+  }
+  return 'symbolic reference objects connected to the narration part';
+}
+
+function sourceSettingForImagePrompt(plan) {
+  if (/Egyptian/i.test(plan.culturalContext)) return 'a museum-style Egyptian reference table under soft light';
+  if (/Greek/i.test(plan.culturalContext)) return 'a museum-style Greek reference table under soft light';
+  return 'a neutral source-reference table under soft light';
+}
+
+function imagePromptExclusions(story, text) {
+  const lower = String(text || '').toLowerCase();
+  const items = ['readable text', 'logos', 'watermarks', 'modern objects', 'cartoon style'];
+  if (/death|dead|murder|body|coffin|underworld|violence|dismember|cutting|pieces/.test(lower)) {
+    items.unshift('graphic gore');
+  }
+  if (/source|text|hymn|papyrus|manuscript|fragments|reference/.test(lower)) {
+    items.push('legible fake writing');
+  }
+  return `No ${joinPromptList(unique(items))}.`;
+}
+
+function joinPromptList(items) {
+  const values = (items || []).filter(Boolean);
+  if (values.length <= 1) return values[0] || 'unrelated elements';
+  return `${values.slice(0, -1).join(', ')}, or ${values[values.length - 1]}`;
 }
 
 function storyProductionProfile(subject, story) {
