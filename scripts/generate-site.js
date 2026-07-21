@@ -1237,7 +1237,7 @@ function renderProductionWorkflowSection() {
 function renderLongFormCreator(script) {
   const prompts = script.visualGuide || (script.imagePrompts || []).map((prompt, index) => ({
     aiImagePrompt: prompt,
-    directionTip: index === 0 ? 'Open with atmosphere before revealing the central mystery.' : 'Keep the image quiet, readable, and useful for narration pacing.'
+    directionTip: index === 0 ? 'Begin with atmosphere before revealing the central mystery.' : 'Keep the image quiet, readable, and useful for narration pacing.'
   }));
   const hasPartProductionDetails = prompts.some((item) => Array.isArray(item.narrationParts) && item.narrationParts.some((part) => part?.creatorNote || (Array.isArray(part?.visualBeats) && part.visualBeats.length)));
   const sceneCount = Math.max(prompts.length, 1);
@@ -1649,6 +1649,34 @@ function sceneFocusForScene({ script, index, format, narration, imagePrompt }) {
   const context = `${script.title || ''} ${script.genre || ''} ${script.deck || ''} ${(script.tags || []).join(' ')} ${narration || ''} ${imagePrompt || ''}`.toLowerCase();
   const isShort = format === 'short';
 
+  if (isPrometheusContext(context)) {
+    const focuses = [
+      'Prometheus is defined by the gift of fire and the boundary it crosses.',
+      'Fire becomes a symbol of human craft, survival, and forbidden knowledge.',
+      'Zeus and the punishment make the cost of the gift visible.',
+      'The myth remains powerful because the gift and the penalty stay linked.'
+    ];
+    return focuses[index] || 'Prometheus leaves the question of knowledge, rebellion, and cost unresolved.';
+  }
+  if (isVideoWatchHistoryContext(context)) {
+    const focuses = [
+      'A normal watch history entry contains one impossible second.',
+      'The platform record turns a tiny timing mismatch into a folklore object.',
+      'Screenshots and metadata carry the mystery without adding a monster.',
+      'The anomaly stays unsettling because it remains small and specific.'
+    ];
+    return focuses[index] || 'The digital trace keeps the question alive.';
+  }
+  if (isSubwayMaintenanceContext(context)) {
+    const focuses = [
+      'A sealed staircase becomes real through a maintenance file.',
+      'The station diagram makes the contradiction easy to see.',
+      'The underground passage feels strange because the record treats it as routine.',
+      'The location remains unresolved after the file and staircase are compared.'
+    ];
+    return focuses[index] || 'The sealed public space becomes the center of the mystery.';
+  }
+
   if (/woman in white|roadside|dark road|driver|passenger|headlight/.test(context)) {
     const focuses = [
       'A lonely figure appears before the legend turns supernatural.',
@@ -1727,6 +1755,15 @@ function advancedProductionInfo({ script, number, format, narration, imagePrompt
 function motionPromptForScene(imagePrompt, context, format) {
   const cameraMove = format === 'short' ? 'a slow push-in with steady vertical framing' : 'a slow cinematic push-in with gentle atmospheric movement';
   const basePrompt = String(imagePrompt || '').replace(/[.]+$/g, '');
+  if (isPrometheusContext(context)) {
+    return `${basePrompt}. Let the flame move gently, add distant storm light over the mountain stone, and use a restrained slow push-in. Keep the motion ancient, grounded, and focused on fire, punishment, and divine boundary.`;
+  }
+  if (isVideoWatchHistoryContext(context)) {
+    return `${basePrompt}. Push in slowly toward the mismatched timestamp, keep the screen interface steady, and let the playback bar or metadata become the only moving focus. Keep it subtle and realistic.`;
+  }
+  if (isSubwayMaintenanceContext(context)) {
+    return `${basePrompt}. Move slowly toward the sealed staircase, add a faint shift in platform light, and let the camera hold on the maintenance file or station diagram before fading. Keep the motion grounded in transit infrastructure.`;
+  }
   if (isWildHuntContext(context)) {
     return `${basePrompt}. Add storm clouds moving across the night sky, ghostly riders crossing the frame, faint hounds below them, and ${cameraMove}. Keep the motion restrained, cold, and folkloric.`;
   }
@@ -1736,16 +1773,25 @@ function motionPromptForScene(imagePrompt, context, format) {
   if (/\broad\b|roadside|\bcar\b|driver|headlight|traffic|woman in white|ghost/.test(context)) {
     return `${basePrompt}. Add subtle drifting fog, faint headlight movement, and ${cameraMove}. Keep the motion quiet, realistic, and suspenseful.`;
   }
-  if (/backrooms|liminal|hallway|corridor|fluorescent|room/.test(context)) {
+  if (/backrooms|liminal|yellow walls|endless hallway|fluorescent/.test(context)) {
     return `${basePrompt}. Let the fluorescent lights flicker softly, add a barely noticeable handheld drift, and move the camera slowly forward through the empty space.`;
   }
-  if (/dragon|myth|mythology|serpent|storm|cloud|mountain/.test(context)) {
+  if (/dragon|serpent|storm|cloud|mountain/.test(context)) {
     return `${basePrompt}. Add slow cloud movement, gentle scale or silhouette motion, and a smooth camera drift that makes the scene feel ancient and cinematic.`;
   }
   return `${basePrompt}. Add restrained environmental movement and ${cameraMove}. Keep the subject readable and the atmosphere mysterious.`;
 }
 
 function soundEffectForScene(context) {
+  if (isPrometheusContext(context)) {
+    return 'fire crackle, high mountain wind, distant thunder, faint chain movement';
+  }
+  if (isVideoWatchHistoryContext(context)) {
+    return 'soft interface click, playback scrub, low screen-room tone';
+  }
+  if (isSubwayMaintenanceContext(context)) {
+    return 'distant train vibration, station ventilation, metal gate movement, underground corridor ambience';
+  }
   if (isWildHuntContext(context)) {
     return 'distant hoofbeats, hunting horns, winter wind, hounds far away';
   }
@@ -1755,10 +1801,10 @@ function soundEffectForScene(context) {
   if (/\broad\b|roadside|\bcar\b|driver|headlight|traffic|woman in white|ghost/.test(context)) {
     return 'distant wind, traffic ambience at night, soft tire noise on wet pavement';
   }
-  if (/backrooms|liminal|hallway|corridor|fluorescent|room/.test(context)) {
+  if (/backrooms|liminal|yellow walls|endless hallway|fluorescent/.test(context)) {
     return 'low mechanical hum, fluorescent light buzz, distant room tone';
   }
-  if (/dragon|myth|mythology|serpent|storm|cloud|mountain/.test(context)) {
+  if (/dragon|serpent|storm|cloud|mountain/.test(context)) {
     return 'low wind over mountains, distant thunder, deep cinematic rumble';
   }
   if (/door|house|room|empty|silence/.test(context)) {
@@ -1769,6 +1815,15 @@ function soundEffectForScene(context) {
 
 function voiceDirectionForScene(context, number, format) {
   const pace = format === 'short' ? 'short, clear, and direct' : 'slowly, with enough space between sentences';
+  if (isPrometheusContext(context)) {
+    return `Read with calm mythic weight, ${pace}. Give light emphasis to "fire", "Zeus", "humanity", and "punishment" without sounding theatrical.`;
+  }
+  if (isVideoWatchHistoryContext(context)) {
+    return `Read in a quiet digital-documentary tone, ${pace}. Keep the anomaly precise and avoid making it sound like a jump scare.`;
+  }
+  if (isSubwayMaintenanceContext(context)) {
+    return `Read in a restrained place-mystery tone, ${pace}. Let "sealed staircase", "maintenance file", and "station" land clearly.`;
+  }
   if (isWildHuntContext(context)) {
     return `Read in a calm, folkloric, restrained voice, ${pace}. Give slight weight to words such as "horns", "hounds", "winter", and "sky".`;
   }
@@ -1788,6 +1843,15 @@ function voiceDirectionForScene(context, number, format) {
 }
 
 function cameraNotesForScene(context, number, format) {
+  if (isPrometheusContext(context)) {
+    return 'wide mountain frame: show stone and sky first. slow push-in: move toward the flame. hold briefly: let the punishment detail settle before fading.';
+  }
+  if (isVideoWatchHistoryContext(context)) {
+    return 'tight screen frame: show the watch history first. slow push-in: move toward the extra second. static hold: keep the metadata readable.';
+  }
+  if (isSubwayMaintenanceContext(context)) {
+    return 'wide corridor frame: show the sealed staircase first. slow pan: move from the maintenance file to the station diagram. hold on the barrier before the transition.';
+  }
   if (isWildHuntContext(context)) {
     return 'wide night-sky frame: show the storm first. slow pan: let the riders cross the sky gradually. slight push-in: move toward the ghostly procession.';
   }
@@ -1809,15 +1873,21 @@ function cameraNotesForScene(context, number, format) {
 }
 
 function transitionNotesForScene(context, number, format) {
-  const color = isWildHuntContext(context)
-    ? 'Use cold blue, storm gray, and low-saturation night tones.'
-    : isShambhalaContext(context)
-      ? 'Use cold mountain blue, muted gold, and soft low-saturation light.'
-      : /backrooms|liminal|digital/.test(context)
-        ? 'Keep the yellow light, but lower the saturation and make the image feel colder.'
-        : /dragon|myth|mythology/.test(context)
-          ? 'Use dark gold, muted blue, and low-saturation ancient tones.'
-          : 'Use cool blue tones and low saturation to keep the night atmosphere.';
+  const color = isPrometheusContext(context)
+    ? 'Use warm fire gold, cold stone gray, and low-saturation storm tones.'
+    : isVideoWatchHistoryContext(context)
+      ? 'Use low screen light, muted blue-gray shadows, and restrained contrast.'
+      : isSubwayMaintenanceContext(context)
+        ? 'Use muted transit green, concrete gray, and low underground light.'
+        : isWildHuntContext(context)
+          ? 'Use cold blue, storm gray, and low-saturation night tones.'
+          : isShambhalaContext(context)
+            ? 'Use cold mountain blue, muted gold, and soft low-saturation light.'
+            : /backrooms|liminal|digital/.test(context)
+              ? 'Keep the yellow light, but lower the saturation and make the image feel colder.'
+              : /dragon|myth|mythology/.test(context)
+                ? 'Use dark gold, muted blue, and low-saturation ancient tones.'
+                : 'Use cool blue tones and low saturation to keep the night atmosphere.';
   if (format === 'short') {
     return `Use a short fade transition. ${color}`;
   }
@@ -1849,6 +1919,18 @@ function isWildHuntContext(context) {
 
 function isShambhalaContext(context) {
   return /shambhala|kalachakra|hidden kingdom|buddhist|sacred geography|monastery/.test(context);
+}
+
+function isPrometheusContext(context) {
+  return /prometheus|stealing fire|gift of fire|zeus|titan/.test(context);
+}
+
+function isVideoWatchHistoryContext(context) {
+  return /video watch history|watch history|impossible second|uploaded clip|platform metadata|playback bar/.test(context);
+}
+
+function isSubwayMaintenanceContext(context) {
+  return /subway maintenance|sealed staircase|maintenance file|station diagram|underground place/.test(context);
 }
 
 function scriptCoreMotif(script) {

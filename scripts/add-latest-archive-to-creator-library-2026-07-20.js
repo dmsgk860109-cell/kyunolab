@@ -113,16 +113,16 @@ function buildLongformScript(subject, story, facts, motif) {
   const detail = narrationSentence(story.detail || story.sceneAnchor || firstFact);
 
   return [
-    `${topic} begins with a specific image.\n\n${detail}\n\nHold that image first. It gives the viewer a clear way into the story before any explanation begins.`,
-    `${firstFact}\n\nThis is the part that needs to feel simple. One subject, one setting, and one memorable detail should carry the opening scene.`,
-    `${secondFact}\n\nNow the story can widen. The details may shift across retellings, but the viewer should still feel the same pressure around ${String(motif).toLowerCase()}.`,
-    `${variant}\n\nKeep this as a variant, not a replacement. The scene should show how the story changes shape while the main thread stays visible.`,
-    `${origin}\n\nThis background gives the story its older frame. It helps the viewer understand where the image belongs before later interpretations enter.`,
-    `${sourceNote}\n\nSay this plainly. The story can be compelling without pretending every later detail has the same weight.`,
-    `${limit}\n\nThat limit belongs inside the story. It marks the difference between what is supported, what is repeated, and what remains uncertain.`,
-    `${thirdFact}\n\nBy now, the viewer should recognize the pattern. The story is no longer just a subject; it has become a shape that can be followed.`,
-    `${meaning}\n\nEnd by returning to ${topic}. The final feeling should come from the subject itself, not from a new twist or an invented answer.`,
-    `${topic} remains because one image keeps asking to be interpreted.\n\nLet the last scene stay quiet. The story has given the viewer enough to carry forward.`
+    spokenNarration(`${topic} begins with a detail that is easy to picture. ${detail} Before the story explains itself, that image gives us a way in.`),
+    spokenNarration(`${firstFact} The opening works best when it stays close to that one idea. We see the subject, the setting, and the detail that makes the story worth following.`),
+    spokenNarration(`${secondFact} The story can widen from there. What matters is not a pile of details. It is the pressure around ${String(motif).toLowerCase()}.`),
+    spokenNarration(`${variant} This version changes the edge of the story. But it still points back to the same central thread.`),
+    spokenNarration(`${origin} That older frame matters. It tells us where the image belongs before later readings begin to gather around it.`),
+    spokenNarration(`${sourceNote} The story does not need every detail to carry the same weight. It becomes stronger when the limits are clear.`),
+    spokenNarration(`${limit} That uncertainty is part of the record. It separates what is supported from what later retellings may have added.`),
+    spokenNarration(`${thirdFact} By this point, the pattern is visible. The subject is no longer just a name. It has become a story shape we can follow.`),
+    spokenNarration(`${meaning} So the ending returns to ${topic}. The power of the story comes from the question it leaves open.`),
+    spokenNarration(`${topic} lasts because one image still asks to be interpreted. The final moment stays quiet, because the story has already given us enough to carry forward.`)
   ];
 }
 
@@ -131,11 +131,11 @@ function buildShortsScript(subject, story, facts) {
   const detail = story.detail || story.sceneAnchor || firstFact;
   const variant = story.storyBrief?.reportedVariants?.[0]?.claim;
   return [
-    `${subject} starts with one image that is hard to ignore.`,
-    `${shortNarrationLine(firstFact, subject)}`,
-    `${shortNarrationLine(detail, subject)}`,
-    variant ? `${shortNarrationLine(variant, subject)}` : `${subject} changes slightly as people repeat it.`,
-    `That is why ${subject} still feels unfinished.`
+    spokenNarration(`${subject} starts with one image you can picture quickly.`),
+    spokenNarration(`${shortNarrationLine(firstFact, subject)}`),
+    spokenNarration(`${shortNarrationLine(detail, subject)}`),
+    spokenNarration(variant ? `${shortNarrationLine(variant, subject)}` : `${subject} changes slightly as people repeat it.`),
+    spokenNarration(`And that is why ${subject} still feels unfinished.`)
   ];
 }
 
@@ -145,11 +145,11 @@ function buildSceneFocuses(subject, story, facts) {
   const location = story.subjectSpecificVocabulary?.find((term) => /road|avenue|cemetery|lake|mount|tower|forest|island|city|stone|room|hall/i.test(term));
   const anchor = story.detail || story.sceneAnchor || facts[0] || topic;
   return [
-    `Show ${anchor} as the first concrete image of ${topic}${location ? `, tied to ${location}` : ''}.`,
-    `Make the main event or motif of ${topic} visible before the explanation expands.`,
-    variants[0]?.claim ? `Show the variant around ${topic} without replacing the main story.` : `Keep the stable core of ${topic} separate from later retellings.`,
-    `Use source material only to clarify what can and cannot be supported about ${topic}.`,
-    `End on the strongest unresolved meaning of ${topic}.`
+    `Give the audience one concrete way to enter ${topic}: ${anchor}${location ? `, connected to ${location}` : ''}.`,
+    `Make the main event or motif of ${topic} easy to understand before the story widens.`,
+    variants[0]?.claim ? `Show how a known variant shifts ${topic} while the main story remains recognizable.` : `Keep the stable core of ${topic} clear before later retellings enter.`,
+    `Clarify the boundary between supported source material and uncertain interpretation around ${topic}.`,
+    `Leave ${topic} with its strongest unresolved meaning rather than adding a new answer.`
   ];
 }
 
@@ -212,7 +212,35 @@ function voiceDirectionForGeneratedScene(index) {
 }
 
 function soundEffectForGeneratedScene(story, index) {
-  const context = `${story.title || ''} ${story.categorySlug || ''} ${(story.subjectSpecificVocabulary || []).join(' ')}`.toLowerCase();
+  const topic = story.storyBrief?.topic || cleanSubject(story.title);
+  const context = storyEntityText(story, topic);
+  if (/prometheus|stealing fire|zeus|eagle|titan/.test(context)) {
+    return [
+      'fire crackle, high mountain wind, distant thunder',
+      'small flame movement, low storm ambience',
+      'eagle wings far above stone, restrained wind',
+      'classical myth notes, soft page movement',
+      'fire fading into mountain wind'
+    ][index] || 'fire crackle and high mountain wind';
+  }
+  if (/video watch history|watch history|extra second|uploaded clip|platform record|platform dashboard|upload metadata/.test(context)) {
+    return [
+      'soft interface click, playback scrub, low screen-room tone',
+      'quiet keyboard tap, muted notification tone',
+      'screen ambience, subtle timeline scrub',
+      'screenshot handling, soft desk room tone',
+      'playback click fading into silence'
+    ][index] || 'soft interface click and low screen-room tone';
+  }
+  if (/subway maintenance|sealed staircase|maintenance file|station diagrams?|worker accounts?|underground place/.test(context)) {
+    return [
+      'distant train vibration, station ventilation',
+      'metal gate movement, low underground corridor ambience',
+      'paper file movement, faint platform tone',
+      'station diagram paper, muted transit room tone',
+      'ventilation fading under distant train noise'
+    ][index] || 'distant train vibration and station ventilation';
+  }
   if (/quetzalcoatl|feathered serpent|ehecatl|mesoamerican/.test(context)) {
     return [
       'temple wind, soft ceremonial percussion, feather movement',
@@ -372,35 +400,35 @@ function creatorNoteForNarrationPart(subject, story, sceneFocus, narration, scen
   const place = profile.places[sceneIndex % profile.places.length] || profile.setting;
   if (/variant|version|retelling|later/i.test(narration)) {
     const variantNotes = [
-      `Show the version change through ${anchor}, while keeping ${topic}'s stable core visually separate from later claims.`,
-      `Let ${place} show how this version shifts the setting without making the variant look like proof.`,
-      `Use ${anchor} to mark the difference between the repeated motif and the detail added by later tellers.`,
-      `Keep the variant readable as a separate layer, then return the viewer to the main thread of ${topic}.`
+      `Frame ${anchor} as the visible sign of how this version shifts around ${topic}.`,
+      `${place} can hold the variant layer while the central story stays recognizable.`,
+      `${anchor} marks the difference between the repeated motif and the added detail.`,
+      `Keep this beat tied to ${topic}, with the variation shown as context rather than proof.`
     ];
     return variantNotes[(sceneIndex + partIndex) % variantNotes.length];
   }
   if (/source|record|uncertain|evidence|trace|support/i.test(narration)) {
     const sourceNotes = [
-      `Use ${place} and source-like objects to mark what can be traced, then leave uncertain details understated.`,
-      `Place ${anchor} beside the source material so the viewer sees the gap between record and interpretation.`,
-      `Make the archive material feel useful but incomplete; the image should not pretend the record proves more than it does.`,
-      `Let the source layer slow the scene down before the story moves back into its unresolved question.`
+      `${place} should make the source layer feel specific and limited.`,
+      `Place ${anchor} near the reference material to separate the story from later interpretation.`,
+      `Keep the archive material useful but incomplete, with no invented confirmation.`,
+      `Let the source layer slow the pace before ${topic} returns to its unresolved question.`
     ];
     return sourceNotes[(sceneIndex + partIndex) % sourceNotes.length];
   }
   if (/in the end|final|question|remains/i.test(narration)) {
-    return `Let the final image hold the unresolved question around ${topic}; do not add a new reveal.`;
+    return `End with ${anchor} carrying the unresolved question around ${topic}.`;
   }
   if (sceneIndex === 0 && partIndex === 0) {
-    return `Open with ${anchor} in ${place} so viewers can recognize the story before the explanation begins.`;
+    return `${anchor} in ${place} gives the opening a concrete production anchor.`;
   }
   if (/begin|first|shape|point of entry|notice/i.test(narration)) {
-    return `Turn ${anchor} into the visual entry point, then let the narration move toward the first question.`;
+    return `${anchor} works as the first visual entry point for ${topic}.`;
   }
   if (/central|event|turn|detail|image/i.test(narration)) {
-    return `Make the key turn visible through ${anchor}, without inventing extra incidents outside the archive story.`;
+    return `${anchor} should carry the key turn without adding incidents outside the archive story.`;
   }
-  return `Keep this part focused on ${sceneFocus || topic}, using ${anchor} as the production anchor.`;
+  return `${sceneFocus || topic} stays readable when ${anchor} remains the production anchor.`;
 }
 
 function visualBeatsForNarrationPart(subject, story, setting, mood, sceneFocus, narration, sceneIndex, partIndex) {
@@ -427,9 +455,9 @@ function visualBeatSeeds(subject, story, setting, mood, sceneFocus, narration, s
   const sourceObject = profile.sourceObjects[(sceneIndex + partIndex) % profile.sourceObjects.length] || 'archival notes';
 
   return [
-    `In ${place}, ${mainObject} appears clearly in the frame, ${action}. Frame the image with ${camera}, ${time}, muted colors, and ${atmosphere}. Keep it realistic and readable, with ${exclusions}.`,
-    `A closer production still shows ${secondaryObject} as the important detail of ${subject}. The background remains tied to ${place}, the lighting stays natural and restrained, and the frame avoids unrelated symbols or locations.`,
-    `An archive-aware transition image places ${sourceObject} beside visual references to ${profile.mainSubject}. Use soft desk light, realistic material texture, and enough empty space for narration while keeping later claims visually separate from the core story.`
+    `${capitalizeSentence(place)} holds the scene around ${mainObject}. ${capitalizeSentence(action)}. Use ${camera}, ${time}, muted colors, and ${atmosphere}. Keep the image realistic, readable, and limited to ${profile.mainSubject}; avoid ${exclusions}.`,
+    `A closer documentary still centers ${secondaryObject} as the important visual detail of ${subject}. The surrounding space stays connected to ${place}, with natural shadows, restrained composition, and no unrelated symbols or locations.`,
+    `A source-context image sets ${sourceObject} beside visual references to ${profile.mainSubject}. Use soft desk light, realistic material texture, and enough quiet space for narration, while keeping uncertain later claims visually separate from the core story.`
   ];
 }
 
@@ -460,6 +488,8 @@ function storyProductionProfile(subject, story) {
     atmosphere: 'restrained documentary mystery atmosphere',
     exclusions: 'no gore, no exaggerated horror, no unrelated characters, no readable fake text'
   };
+
+  return buildContextualProductionProfile(defaultProfile, story, topic, context);
 
   const profiles = [
     {
@@ -690,6 +720,130 @@ function storyProductionProfile(subject, story) {
   return merged;
 }
 
+function buildContextualProductionProfile(defaultProfile, story, topic, context) {
+  const entities = extractStoryProductionEntities(story, topic);
+  const setting = cleanSetting(settingForStory(story));
+  const isPrometheus = hasAllowedEntity(context, entities, ['prometheus', 'fire', 'zeus', 'eagle', 'mountain', 'rock', 'titan', 'humanity']);
+  const isVideoHistory = hasAllowedEntity(context, entities, ['video', 'watch', 'history', 'second', 'clip', 'platform', 'dashboard', 'metadata', 'upload']);
+  const isSubway = hasAllowedEntity(context, entities, ['subway', 'maintenance', 'staircase', 'sealed', 'station', 'diagram', 'worker', 'underground']);
+
+  let specific = {};
+  if (isPrometheus) {
+    specific = {
+      places: ['a Greek mythic mountainside under cold dawn light', 'a stone ledge near the divine boundary of Olympus', 'an archive table with Greek myth references and fire imagery'],
+      objects: ['Prometheus carrying stolen fire for humanity', 'a small flame guarded from the gods', 'Zeus represented through distant storm light', 'an eagle shadow above a bound figure'],
+      sourceObjects: ['Greek myth reference cards', 'classical myth notes', 'fire-symbol sketches'],
+      actions: ['connecting fire to craft, survival, rebellion, and punishment', 'showing the gift of fire without turning it into modern technology', 'making the divine boundary visible through stone, storm, and flame'],
+      camera: ['wide mythic documentary composition', 'close restrained view of fire in human hands', 'low angle against mountain stone and storm light'],
+      motions: ['Let the fire move gently while the camera pushes in slowly.', 'Track from the flame toward the distant storm light.', 'Hold on the mountain stone, then fade toward the archive material.'],
+      timeOfDay: 'cold dawn light mixed with warm fire glow',
+      atmosphere: 'ancient Greek myth atmosphere with restrained dramatic tension',
+      exclusions: 'modern machinery, unrelated creatures, cartoon style, readable fake text'
+    };
+  } else if (isVideoHistory) {
+    specific = {
+      places: ['a dim modern desk lit by a video platform dashboard', 'a close view of a watch history page on a screen', 'a quiet digital archive workspace with timestamps and upload metadata'],
+      objects: ['a watch history entry showing one impossible extra second', 'a playback bar beside an uploaded clip length', 'platform metadata arranged beside a screenshot record'],
+      sourceObjects: ['watch history screenshots', 'upload metadata cards', 'platform dashboard records'],
+      actions: ['making the extra second visible without adding a supernatural figure', 'turning a routine platform record into an impossible trace', 'keeping the anomaly inside the screen interface and metadata'],
+      camera: ['tight close-up on the timestamp mismatch', 'over-the-shoulder view toward the dashboard', 'overhead desk composition with screenshots and notes'],
+      motions: ['Push in slowly toward the mismatched timestamp.', 'Hold the screen steady as the playback bar becomes the focus.', 'Pan across the screenshot records from left to right.'],
+      timeOfDay: 'low screen light in a dark room',
+      atmosphere: 'restrained digital folklore atmosphere',
+      exclusions: 'unrelated puzzle props, creature imagery, period costumes, readable fake text'
+    };
+  } else if (isSubway) {
+    specific = {
+      places: ['an underground subway corridor beside a sealed staircase', 'a maintenance office table with station diagrams', 'a platform service passage under muted transit lighting'],
+      objects: ['a sealed staircase behind a metal barrier', 'a maintenance file scheduled for a stairway that should not be in use', 'station diagrams marked around a closed route'],
+      sourceObjects: ['maintenance files', 'station diagrams', 'worker account notes'],
+      actions: ['showing the sealed staircase as a physical place rather than a monster reveal', 'placing the file beside the station diagram that makes the contradiction visible', 'keeping the location grounded in transit infrastructure and records'],
+      camera: ['wide corridor composition', 'close documentary still of the maintenance file', 'low angle toward the sealed stairs'],
+      motions: ['Push slowly toward the sealed staircase.', 'Pan from the maintenance file to the station diagram.', 'Hold on the metal barrier, then fade into the corridor light.'],
+      timeOfDay: 'muted underground station light',
+      atmosphere: 'quiet strange-place tension with public-space realism',
+      exclusions: 'unrelated creature imagery, horror props, unrelated screen interfaces, readable fake text'
+    };
+  } else {
+    const topicTerms = entities.visualMotifs.slice(0, 4);
+    specific = {
+      places: unique([setting, `${setting} connected to ${topic}`, 'a quiet archive desk connected to the story']),
+      objects: unique([topic, story.sceneAnchor, story.detail, ...topicTerms]).filter(Boolean).slice(0, 5),
+      sourceObjects: unique([...entities.sourceObjects, 'archive reference notes']).slice(0, 4),
+      actions: [
+        `showing the central motif of ${topic} without adding outside entities`,
+        `keeping the visual evidence tied to ${topic}`,
+        `turning the story's strongest detail into a clear production image`
+      ],
+      camera: defaultProfile.camera,
+      motions: [
+        'Use a slow controlled push-in toward the current subject.',
+        'Pan gently across the current scene detail.',
+        'Hold the frame steady, then fade softly to the next beat.'
+      ]
+    };
+  }
+
+  const merged = { ...defaultProfile, ...specific };
+  merged.mainSubject = topic;
+  merged.places = ensureArray(merged.places, defaultProfile.places);
+  merged.objects = ensureArray(merged.objects, defaultProfile.objects);
+  merged.sourceObjects = ensureArray(merged.sourceObjects, defaultProfile.sourceObjects);
+  merged.actions = ensureArray(merged.actions, defaultProfile.actions);
+  merged.camera = ensureArray(merged.camera, defaultProfile.camera);
+  merged.motions = ensureArray(merged.motions, defaultProfile.motions);
+  return enforceProfileEntitySafety(merged, story, topic);
+}
+
+function extractStoryProductionEntities(story, topic) {
+  const text = storyEntityText(story, topic);
+  const words = unique((text.match(/[a-z][a-z'-]{2,}/g) || [])
+    .map((word) => word.replace(/^the$/, '').trim())
+    .filter(Boolean));
+  const sourceObjects = [];
+  if (/maintenance|file/.test(text)) sourceObjects.push('maintenance files');
+  if (/station|diagram|route/.test(text)) sourceObjects.push('station diagrams');
+  if (/watch|video|platform|metadata|screenshot/.test(text)) sourceObjects.push('screenshots and metadata');
+  if (/myth|greek|prometheus|zeus|fire/.test(text)) sourceObjects.push('classical myth notes');
+  return {
+    words,
+    visualMotifs: words.filter((word) => !/origin|meaning|record|source|archive|folklore|legend|story|category|retelling/.test(word)),
+    sourceObjects: sourceObjects.length ? sourceObjects : ['archive reference notes']
+  };
+}
+
+function hasAllowedEntity(context, entities, terms) {
+  return terms.some((term) => context.includes(term) || entities.words.includes(term));
+}
+
+function enforceProfileEntitySafety(profile, story, topic) {
+  const allowed = storyEntityText(story, topic);
+  const forbiddenGroups = [
+    ['dragon', 'basilisk', 'cockatrice'],
+    ['black cat', 'street crossing'],
+    ['cipher sheets', 'qr-like', 'coded image'],
+    ['fluorescent lights', 'mechanical hum'],
+    ['solar boat', 'duat', 'apep'],
+    ['clown statue', 'babysitter']
+  ];
+  const sanitized = { ...profile };
+  for (const key of ['places', 'objects', 'sourceObjects', 'actions', 'motions']) {
+    sanitized[key] = ensureArray(sanitized[key], [])
+      .filter((value) => !containsUnallowedStrongEntity(value, allowed, forbiddenGroups));
+  }
+  sanitized.places = ensureArray(sanitized.places, [cleanSetting(settingForStory(story))]);
+  sanitized.objects = ensureArray(sanitized.objects, [topic]);
+  sanitized.sourceObjects = ensureArray(sanitized.sourceObjects, ['archive reference notes']);
+  sanitized.actions = ensureArray(sanitized.actions, [`showing the central motif of ${topic}`]);
+  sanitized.motions = ensureArray(sanitized.motions, ['Use a slow controlled push-in toward the current subject.']);
+  return sanitized;
+}
+
+function containsUnallowedStrongEntity(value, allowed, forbiddenGroups) {
+  const text = String(value || '').toLowerCase();
+  return forbiddenGroups.some((group) => group.some((term) => text.includes(term) && !allowed.includes(term)));
+}
+
 function profileFitsStory(profile, story, topic) {
   const allowedText = storyEntityText(story, topic);
   const strongTerms = extractStrongProfileTerms(profile);
@@ -897,7 +1051,11 @@ function cleanSubject(title) {
 }
 
 function sentence(text) {
-  const value = String(text || '').replace(/\s+/g, ' ').trim();
+  const value = String(text || '')
+    .replace(/\bA source-aware Kyunolab record tracing\b/gi, 'A record describes')
+    .replace(/\bsource-aware Kyunolab record\b/gi, 'archive record')
+    .replace(/\s+/g, ' ')
+    .trim();
   if (!value) return '';
   return value.endsWith('.') || value.endsWith('?') || value.endsWith('!') ? value : `${value}.`;
 }
@@ -912,6 +1070,16 @@ function narrationSentence(text) {
     .replace(/\bBy the end\b/gi, 'At the end');
 }
 
+function spokenNarration(text) {
+  return sentence(text)
+    .replace(/\s+/g, ' ')
+    .replace(/\bviewer should\b/gi, 'the story can')
+    .replace(/\bviewers should\b/gi, 'the story can')
+    .replace(/\bthe viewer\b/gi, 'we')
+    .replace(/\bthe audience\b/gi, 'we')
+    .trim();
+}
+
 function shortNarrationLine(text, subject) {
   const clean = sentence(text)
     .replace(/^(roadside legend|european folklore motif|hidden kingdom associated)\b/i, `${subject} is remembered as a story`)
@@ -923,6 +1091,12 @@ function shortNarrationLine(text, subject) {
 
 function cleanSetting(setting) {
   return String(setting || 'quiet archival setting').replace(/^quiet\s+quiet\b/i, 'quiet');
+}
+
+function capitalizeSentence(text) {
+  const value = String(text || '').trim();
+  if (!value) return '';
+  return `${value.charAt(0).toUpperCase()}${value.slice(1)}`;
 }
 
 function unique(values) {

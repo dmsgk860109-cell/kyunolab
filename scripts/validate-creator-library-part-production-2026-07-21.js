@@ -44,20 +44,25 @@ const targetSlugs = [
   'mjolnir-thors-hammer-youtube-script',
   'black-cat-superstition-origin-youtube-script'
 ];
+const requestedSlugs = process.argv.slice(2);
+const activeTargetSlugs = requestedSlugs.length ? requestedSlugs : targetSlugs;
 
-const blockedPattern = /The story does\.|some a\.|\bThe\.\b|That wider frame\.|restrained restrained|\.\.|Clarify how this retelling changes|fluorescent lights|low mechanical hum|distant room vibration|flickering office lights|Each retelling changes the edges|The central question still remains|viewer should feel|mystery channel/i;
+const blockedPattern = /The story does\.|some a\.|\bThe\.\b|That wider frame\.|restrained restrained|\.\.|Clarify how this retelling changes|fluorescent lights|low mechanical hum|distant room vibration|flickering office lights|Each retelling changes the edges|The central question still remains|viewer should feel|source-aware Kyunolab record|Hold that image|This is the part that needs to feel simple|Keep this as a variant|By now, the viewer should recognize the pattern|appears clearly in the frame|Open with|mystery channel/i;
 const crossTopicChecks = {
   'quetzalcoatl-feathered-serpent-myth-youtube-script': /basilisk|cracked mirror|medieval chamber|bestiary|dragon focus|European imagery/i,
   'the-wax-winged-owl-of-sealed-letters-youtube-script': /laptop|cipher|Cicada|QR codes?|online forum|computer screen/i,
   'why-timestamps-feel-like-modern-omens-youtube-script': /black cat|road crossing|street crossing|superstition notes|folklore desk/i,
   'green-flash-sunset-phenomenon-youtube-script': /\bRa(?:'s|s)?\b|solar boat|Duat|Apep|desert river/i,
   'ra-solar-boat-myth-youtube-script': /coastal|seabirds|green rim|refraction/i,
-  'cicada-3301-internet-puzzle-youtube-script': /solar boat|Duat|Apep|green rim|ocean horizon/i
+  'cicada-3301-internet-puzzle-youtube-script': /solar boat|Duat|Apep|green rim|ocean horizon/i,
+  'prometheus-fire-myth-youtube-script': /dragon|basilisk|black cat|cipher sheets|coded image|fluorescent lights|mechanical hum|empty room/i,
+  'the-video-watch-history-with-one-impossible-second-youtube-script': /dragon|basilisk|black cat|solar boat|eagle tears|sealed staircase|subway corridor|mechanical hum|empty room/i,
+  'the-subway-maintenance-file-for-a-sealed-staircase-youtube-script': /dragon|basilisk|black cat|solar boat|cipher sheets|coded image|Prometheus carrying|Zeus|eagle shadow|empty room/i
 };
 
 let failures = 0;
 
-for (const slug of targetSlugs) {
+for (const slug of activeTargetSlugs) {
   const script = scripts.find((item) => item.slug === slug);
   if (!script) {
     fail(`${slug}: missing script data`);

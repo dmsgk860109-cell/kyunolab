@@ -49,6 +49,8 @@ const targetSlugs = [
   'mjolnir-thors-hammer-youtube-script',
   'black-cat-superstition-origin-youtube-script'
 ];
+const requestedSlugs = process.argv.slice(2);
+const activeTargetSlugs = requestedSlugs.length ? requestedSlugs : targetSlugs;
 
 const source = fs.readFileSync(sourceScriptPath, 'utf8');
 const helperSource = source.slice(source.indexOf('function buildCreatorLibraryEntry'));
@@ -70,7 +72,7 @@ const scripts = readJson(scriptsPath);
 const categories = readJson(categoriesPath);
 const storiesBySlug = new Map(stories.map((story) => [story.slug, story]));
 const categoriesBySlug = new Map(categories.map((category) => [category.slug, category]));
-const targets = new Set(targetSlugs);
+const targets = new Set(activeTargetSlugs);
 let updated = 0;
 
 const nextScripts = scripts.map((script) => {
