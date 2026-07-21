@@ -49,6 +49,8 @@ function buildCreatorLibraryEntry(story, category) {
   const facts = storyFacts(story);
   const angle = story.uniqueAngle || story.summaryAnswer || story.excerpt || `${subject} remains a memorable ${category.title} story.`;
   const longformScript = buildLongformScript(subject, story, facts, motif);
+  const shortsScript = buildShortsScript(subject, story, facts);
+  const shortSceneFocuses = buildShortSceneFocuses(subject, story, shortsScript);
   const sceneFocuses = buildSceneFocuses(subject, story, facts);
   const visualGuide = buildVisualGuide(subject, story, setting, mood, sceneFocuses, longformScript);
   const imagePrompts = visualGuide.flatMap((scene) => scene.narrationParts || [])
@@ -91,7 +93,8 @@ function buildCreatorLibraryEntry(story, category) {
     difficulty: 'Beginner-friendly production package',
     usageNote: `Use this page as a production workspace for a video based on the archive entry for ${subject}. Keep source limits clear and avoid presenting later interpretations as verified facts.`,
     longformScript,
-    shortsScript: buildShortsScript(subject, story, facts),
+    shortsScript,
+    shortSceneFocuses,
     imagePrompts,
     visualGuide,
     runtimePlan: buildRuntimePlan(longformScript, estimatedVideoLength),
@@ -155,6 +158,9 @@ function longformNarrationFromKnownStory(story, topic) {
 }
 
 function buildShortsScript(subject, story, facts) {
+  const planned = shortFormProductionPlan(subject, story, facts).narration;
+  if (planned.length) return planned.map(spokenNarration);
+
   const firstFact = facts[0] || `${subject} is built around one image people do not forget.`;
   const detail = story.detail || story.sceneAnchor || firstFact;
   const variant = story.storyBrief?.reportedVariants?.[0]?.claim;
@@ -165,6 +171,87 @@ function buildShortsScript(subject, story, facts) {
     spokenNarration(variant ? `${shortNarrationLine(variant, subject)}` : `${subject} changes slightly as people repeat it.`),
     spokenNarration(`And that is why ${subject} still feels unfinished.`)
   ];
+}
+
+function buildShortSceneFocuses(subject, story, shortsScript) {
+  const planned = shortFormProductionPlan(subject, story, []).focuses;
+  if (planned.length) return planned;
+  return (shortsScript || []).map((line, index) => shortSceneFocusFromLine(subject, story, line, index));
+}
+
+function shortFormProductionPlan(subject, story, facts) {
+  const topic = story.storyBrief?.topic || subject;
+  const context = storyEntityText(story, topic);
+
+  if (/demeter|persephone|hades|pomegranate|greek seasonal|seasons|underworld/.test(context)) {
+    return {
+      narration: [
+        'Persephone is gathering flowers when the myth turns toward the underworld. The bright field becomes the place where loss begins.',
+        'Hades takes her below, and Demeter searches the earth for any trace of her daughter. Her grief is not private for long.',
+        'As Demeter withdraws, fields fail, grain withers, and human hunger forces the gods to respond. The family wound becomes a crisis for the world above.',
+        'Persephone returns, but the pomegranate changes the ending. Because she has eaten below, reunion comes with a condition.',
+        'The myth leaves one lasting image: mother and daughter meeting, separating, and meeting again. That rhythm becomes the shape of the seasons.'
+      ],
+      focuses: [
+        'A flowered field turns into the threshold of the underworld.',
+        'Demeter searches empty paths and fields for Persephone.',
+        'Withered grain shows grief spreading into the human world.',
+        "Pomegranate seeds make Persephone's return conditional between two worlds.",
+        'Reunion and separation become the visual rhythm of the seasons.'
+      ]
+    };
+  }
+
+  if (/osiris|isis|set|horus|egyptian myth|restoration|afterlife|kingship/.test(context)) {
+    return {
+      narration: [
+        'Osiris begins as a ruler whose order is broken by Set. The myth starts with kingship, jealousy, and a body removed from the world above.',
+        'Isis searches for him through signs, places, and fragments of memory. Her mourning becomes action instead of silence.',
+        'The body is restored, but the story does not become a simple return to life. Repair changes Osiris into something different.',
+        'Osiris becomes connected with the underworld, while Horus carries the royal line forward. Death, restoration, and succession now belong to one pattern.',
+        'The myth lasts because it does not erase the wound. It turns loss into ritual power, and rule continues below the living world.'
+      ],
+      focuses: [
+        'Royal Egyptian order breaks around Osiris, Isis, and Set.',
+        'Isis searches through Nile-side places for the lost Osiris.',
+        'Linen, stone, and ritual care suggest symbolic restoration.',
+        'Osiris below and Horus above divide rule and succession.',
+        'Loss becomes underworld authority and lasting Egyptian ritual memory.'
+      ]
+    };
+  }
+
+  if (isDigitalPuzzleProfileContext(context)) {
+    return {
+      narration: [
+        `${topic} begins with an anonymous puzzle appearing online, not with a monster or a legend from the distant past.`,
+        'The clues move through cryptography, hidden messages, coded images, books, music, and Tor links.',
+        'Then the puzzle crosses into the physical world, sending solvers toward coordinates and posted signs.',
+        'The strongest evidence is the trail itself, while the group behind it remains uncertain.',
+        'That is why the puzzle still works as digital folklore: the clues are visible, but the purpose stays hidden.'
+      ],
+      focuses: [
+        'An anonymous online puzzle becomes the opening image.',
+        'Coded images and hidden messages define the challenge.',
+        'Physical clues connect online solving with real-world locations.',
+        'The puzzle trail is clearer than the unknown group behind it.',
+        'Visible clues and hidden purpose keep the digital mystery alive.'
+      ]
+    };
+  }
+
+  return { narration: [], focuses: [] };
+}
+
+function shortSceneFocusFromLine(subject, story, line, index) {
+  const topic = story.storyBrief?.topic || subject;
+  const anchor = story.sceneAnchor || story.detail || story.subjectSpecificVocabulary?.[0] || topic;
+  const text = String(line || '').toLowerCase();
+  if (index === 0) return `${topic} enters through one concrete opening image.`;
+  if (/search|looking|missing|lost|trace/.test(text)) return `The search for ${topic} becomes the main visual action.`;
+  if (/return|ending|final|lasts|still/.test(text)) return `${topic} closes on the detail that remains unresolved.`;
+  if (/version|differ|variant|retelling/.test(text)) return `A variant detail changes how ${topic} is remembered.`;
+  return `${anchor} becomes the central short-form image.`;
 }
 
 function buildSceneFocuses(subject, story, facts) {

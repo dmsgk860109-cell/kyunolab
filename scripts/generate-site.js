@@ -1287,6 +1287,7 @@ function renderLongFormCreator(script) {
 function renderShortFormCreator(script) {
   const sceneCount = Math.max((script.shortsScript || []).length, 1);
   const promptScenes = distributeByScene(script.imagePrompts || [], sceneCount);
+  const storedSceneFocuses = Array.isArray(script.shortSceneFocuses) ? script.shortSceneFocuses : [];
   const sceneCards = Array.from({ length: sceneCount }, (_, index) => {
     const narration = (script.shortsScript || [])[index] || '';
     return renderProductionSceneCard({
@@ -1296,7 +1297,7 @@ function renderShortFormCreator(script) {
       narrationParts: shouldUseNarrationParts(narration, 'short') ? narrationPartsForScene([narration], index, 'short') : [],
       format: 'short',
       imagePrompt: promptScenes[index].join(' '),
-      sceneFocus: sceneFocusForScene({
+      sceneFocus: storedSceneFocuses[index] || sceneFocusForScene({
         script,
         index,
         format: 'short',
