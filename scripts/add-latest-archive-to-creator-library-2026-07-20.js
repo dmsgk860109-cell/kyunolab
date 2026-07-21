@@ -204,8 +204,9 @@ function buildVisualGuide(subject, story, setting, mood, sceneFocuses, longformS
       sceneRole,
       sceneFocus,
       directionTip: sceneFocus,
-      voiceDirection: voiceDirectionForGeneratedScene(index),
-      soundEffect: soundEffectForGeneratedScene(story, index),
+      voiceDirection: voiceDirectionForGeneratedScene(index, story, sceneFocus, sceneParts.join(' '), sceneRole),
+      backgroundMusic: backgroundMusicForGeneratedScene(story, index, sceneFocus, sceneParts.join(' '), sceneRole),
+      soundEffect: soundEffectForGeneratedScene(story, index, sceneFocus, sceneParts.join(' ')),
       visualDirection: visualDirectionForScene(subject, story, index),
       narrationParts: sceneParts.map((narration, partIndex) => ({
         narration,
@@ -230,19 +231,67 @@ function sceneRoleForGeneratedScene(index) {
   return ['Hook', 'Core Story', 'Variant', 'Source Context', 'Closing Reflection'][index] || 'Production Beat';
 }
 
-function voiceDirectionForGeneratedScene(index) {
-  return [
-    'Calm documentary delivery, slow opening pace.',
-    'Natural delivery with slight tension on the turn.',
-    'Clear and balanced, keeping variants separate.',
-    'Quiet, source-aware, without sounding academic.',
-    'Reflective, soft ending, emphasize the final question.'
-  ][index] || 'Calm, natural documentary delivery.';
-}
-
-function soundEffectForGeneratedScene(story, index) {
+function voiceDirectionForGeneratedScene(index, story = {}, sceneFocus = '', narration = '', sceneRole = sceneRoleForGeneratedScene(index)) {
   const topic = story.storyBrief?.topic || cleanSubject(story.title);
   const context = storyEntityText(story, topic);
+  const text = `${sceneRole} ${sceneFocus} ${narration}`.toLowerCase();
+  const pace = index === 0 ? 'Start slowly, then settle into a measured pace.' :
+    index >= 4 ? 'Keep the pace gentle and leave a short pause before the final line.' :
+      'Keep the pace steady, with clean pauses between ideas.';
+  const emphasis = voiceEmphasisForScene(text, context);
+  const tone = isDigitalPuzzleProfileContext(context)
+    ? 'Use a quiet investigative tone with controlled curiosity.'
+    : /myth|mythology|ancient|greek|egyptian|hymn|ritual/.test(context)
+      ? 'Use a calm mythic documentary tone without sounding theatrical.'
+      : 'Use a natural documentary tone with restrained tension.';
+  return `${tone} ${pace} ${emphasis}`;
+}
+
+function voiceEmphasisForScene(text, context) {
+  if (/source|record|hymn|variant|later|tradition|account|evidence/.test(text)) {
+    return 'Emphasize source boundaries lightly, and do not turn uncertainty into drama.';
+  }
+  if (/closing|cycle|meaning|remains|final|ending|question/.test(text)) {
+    return 'Let the final sentence land softly, with a reflective ending.';
+  }
+  if (/search|grief|mourning|lost|loss|taken|missing/.test(text)) {
+    return 'Give the search or loss a little weight while staying composed.';
+  }
+  if (/rupture|murder|chest|coffin|underworld|descent|hades|death/.test(text)) {
+    return 'Pause briefly before the turning point, then lower the voice slightly.';
+  }
+  if (isDigitalPuzzleProfileContext(context)) {
+    return 'Give numbers, names, and clue terms clear emphasis without making them ominous.';
+  }
+  return 'Emphasize the main subject once, then return to an even delivery.';
+}
+
+function backgroundMusicForGeneratedScene(story, index, sceneFocus = '', narration = '', sceneRole = sceneRoleForGeneratedScene(index)) {
+  const topic = story.storyBrief?.topic || cleanSubject(story.title);
+  const context = storyEntityText(story, topic);
+  const text = `${sceneRole} ${sceneFocus} ${narration}`.toLowerCase();
+  const roleText = String(sceneRole || '').toLowerCase();
+  const palette = isDigitalPuzzleProfileContext(context)
+    ? ['Restrained Electronic Pulse', 'Low Digital Drone', 'Quiet Mystery Texture']
+    : /egypt|osiris|isis|set|horus|duat|papyrus/.test(context)
+      ? ['Ancient Ritual Ambient', 'Low Hand Drum Texture', 'Desert Night Drone']
+      : /greek|demeter|persephone|hades|pomegranate|homeric/.test(context)
+        ? ['Ancient Acoustic Ambient', 'Low Lyre Drone', 'Mediterranean Mystery Atmosphere']
+        : /myth|mythology|ancient/.test(context)
+          ? ['Mythic Ambient', 'Low Drums', 'Ancient Atmosphere']
+          : ['Dark Ambient', 'Low Drone', 'Mystery Atmosphere'];
+  const roleLead = /hook|opening/.test(roleText) ? 'Quiet Suspense Intro' :
+    /source|record|variant|account/.test(text) ? 'Sparse Documentary Bed' :
+      /closing|reflection/.test(roleText) ? 'Soft Reflective Drone' :
+        /murder|underworld|loss|descent|rupture|missing/.test(text) ? 'Low Tension Underscore' :
+          'Steady Storytelling Underscore';
+  return unique([roleLead, ...palette]).slice(0, 4).join(', ');
+}
+
+function soundEffectForGeneratedScene(story, index, sceneFocus = '', narration = '') {
+  const topic = story.storyBrief?.topic || cleanSubject(story.title);
+  const context = storyEntityText(story, topic);
+  const sceneText = `${sceneFocus} ${narration}`.toLowerCase();
   if (isPrometheusProfileContext(context)) {
     return [
       'fire crackle, high mountain wind, distant thunder',
@@ -305,6 +354,21 @@ function soundEffectForGeneratedScene(story, index) {
       'quiet archive room, page movement, faint keyboard taps',
       'low digital ambience fading into silence'
     ][index] || 'subtle digital ambience';
+  }
+  if (/demeter|persephone|hades|pomegranate|homeric|greek/.test(context)) {
+    if (/source|hymn|variant|tradition|account/.test(sceneText)) return 'soft parchment movement, quiet ancient study ambience';
+    if (/pomegranate|underworld|hades|descent|return/.test(sceneText)) return 'low underworld air, soft stone room tone';
+    if (/search|grief|mourning|lost|taken|wanders/.test(sceneText)) return 'distant footsteps through dry grass, open field wind';
+    if (/grain|crops|field|hunger|earth|famine/.test(sceneText)) return 'dry grain movement, low ground vibration, field wind';
+    return ['gentle field wind, grass movement', 'open meadow wind, distant footsteps', 'low earth rumble, dry field air', 'soft parchment movement, temple room tone', 'warm field wind fading into stillness'][index] || 'minimal ancient outdoor ambience';
+  }
+  if (/osiris|isis|set|horus|nephthys|egyptian|papyrus|duat/.test(context)) {
+    if (/source|papyrus|variant|tradition|account|ritual text/.test(sceneText)) return 'soft papyrus movement, quiet temple room tone';
+    if (/river|nile|search|looking|seeks|finds/.test(sceneText)) return 'slow river water, desert wind, distant footsteps';
+    if (/linen|restore|body|pieces|gathers|ritual|mourning/.test(sceneText)) return 'linen movement, low ritual-space ambience';
+    if (/underworld|dead|duat|below|afterlife/.test(sceneText)) return 'deep underworld ambience, faint stone echo';
+    if (/chest|coffin|sealed|murder|trapped|hidden/.test(sceneText)) return 'wooden chest creak, low stone chamber air';
+    return ['desert wind, quiet temple ambience', 'sealed wood creak, low room tone', 'slow river water, linen movement', 'soft papyrus movement, temple room tone', 'desert wind fading under low ambience'][index] || 'minimal ancient ritual ambience';
   }
   if (/\bra(?:'s|s)?\b|solar boat|sun god|apep/.test(context)) {
     return [
@@ -1481,17 +1545,151 @@ function secondsToApproxLabel(seconds) {
 }
 
 function motionPromptForVisualBeat(prompt, index, story, narration, sceneIndex, partIndex) {
-  const profile = storyProductionProfile('', story);
-  const motions = profile.motions || [
-    'Use a slow controlled push-in that keeps the subject readable.',
-    'Use a gentle lateral move across the frame as the narration advances.',
-    'Hold on the important detail, then fade softly to the next beat.'
-  ];
-  const motion = motions[(sceneIndex + partIndex + index) % motions.length];
-  if (/still|archive|document|record|source/i.test(prompt) && index > 1) {
-    return 'Hold the frame steady, then use a soft fade before the next scene.';
+  const topic = story.storyBrief?.topic || cleanSubject(story.title);
+  const context = storyEntityText(story, topic);
+  const promptText = String(prompt || '').toLowerCase();
+  const narrationText = String(narration || '').toLowerCase();
+  const profileMotion = storyProductionProfile('', story).motions || [];
+
+  if (isDigitalPuzzleProfileContext(context)) {
+    return [
+      'Pan slowly across the coded symbols while the screen glow stays low and steady.',
+      'Rack focus from the computer screen to the printed clue on the desk.',
+      'Track gently from the cipher papers toward the map coordinates in the background.'
+    ][(sceneIndex + partIndex + index) % 3];
   }
-  return motion;
+
+  const contextualMotion = motionPromptFromSceneText(promptText, narrationText, context, sceneIndex, partIndex, index);
+  if (contextualMotion) return contextualMotion;
+
+  const motion = profileMotion[(sceneIndex + partIndex + index) % Math.max(profileMotion.length, 1)];
+  if (motion && !/keep the subject readable|hold that image|viewer should|appears clearly in the frame/i.test(motion)) {
+    return normalizeBeatMotionSentence(motion);
+  }
+  return 'Move slowly across the main visual detail, using only subtle foreground and background parallax.';
+}
+
+function motionPromptFromSceneText(promptText, narrationText, context, sceneIndex, partIndex, index) {
+  const seed = sceneIndex * 17 + partIndex * 3 + index;
+  const text = `${promptText} ${narrationText}`;
+  if (/demeter|persephone|hades|pomegranate|homeric|greek/.test(context)) {
+    if (/museum|reference table|manuscript|source-aware|fragments|votive|ritual objects/.test(promptText)) return chooseMotion(seed, [
+      'Tilt slowly across manuscript fragments and simple ritual objects under soft desk light.',
+      'Pan from one manuscript edge to another while the source objects remain still.',
+      'Push gently toward the aged text fragments without making the writing readable.',
+      'Use minimal parallax between parchment texture and a small ritual object nearby.',
+      'Pull back from the manuscript detail to show the quiet source arrangement.'
+    ]);
+    if (/grain|crops|field|hunger|famine|earth fails|agricultural|harvest|dry ancient/.test(promptText)) return chooseMotion(seed, [
+      'Pull back from dry grain to the wider barren field with restrained movement.',
+      'Pan across damaged crops, then slow near the empty field edge.',
+      'Tilt from cracked earth toward pale grain under muted daylight.',
+      'Use slight foreground movement in the grain while the wider field stays still.',
+      'Push slowly across the failing crops without adding weather or extra figures.'
+    ]);
+    if (/pomegranate|seed|underworld|threshold|hades/.test(promptText)) return chooseMotion(seed, [
+      'Hold near the pomegranate detail, then shift gently toward Persephone at the underworld threshold.',
+      'Push slowly from Persephone toward the pomegranate seeds while the underworld edge stays still.',
+      'Tilt from the shadowed threshold down to the pomegranate detail with restrained movement.',
+      'Use slight parallax between the pomegranate foreground and Persephone in the background.',
+      'Pull back from the pomegranate detail to show the divided surface and underworld space.'
+    ]);
+    if (/ground opens|opening ground|abduction|taken|flowers|meadow/.test(promptText)) return chooseMotion(seed, [
+      'Begin with foreground flowers, then reveal the opening ground through a slow downward tilt.',
+      'Pan gently across the meadow until the broken ground becomes the central detail.',
+      'Push through the flowered foreground toward the dark opening without adding new action.',
+      'Use minimal parallax between meadow flowers and the underworld opening behind them.',
+      'Tilt from bright flowers toward the shadowed gap with a calm, controlled pace.'
+    ]);
+    if (/search|grief|wanders|looking|lost/.test(text)) return chooseMotion(seed, [
+      "Pan slowly across the path and fields, following Demeter's search through empty space.",
+      'Track along the empty field path, letting distance carry the feeling of searching.',
+      'Pull back from Demeter into the open landscape to emphasize absence and movement.',
+      'Move laterally past dry grass while the searching figure remains restrained and quiet.',
+      'Tilt from the empty path toward the horizon, keeping the search unresolved.'
+    ]);
+    return [
+      'Use a gentle lateral pan across the field while the figures remain still.',
+      'Push slowly toward the central figure as the surrounding landscape stays quiet.',
+      'Add minimal parallax between foreground grass and the distant ancient landscape.'
+    ][seed % 3];
+  }
+
+  if (/osiris|isis|set|horus|nephthys|egyptian|papyrus|duat/.test(context)) {
+    if (/museum|reference table|papyrus|source-aware|fragments|relief details/.test(promptText)) return chooseMotion(seed, [
+      'Tilt slowly across papyrus fragments and relief details without making text readable.',
+      'Pan from papyrus texture to carved relief under quiet temple light.',
+      'Push gently toward the source fragments while keeping the composition still.',
+      'Use slight parallax between the papyrus edge and a stone relief in the background.',
+      'Pull back from the fragment detail to show the restrained source arrangement.',
+      'Track along the edge of the papyrus before settling on the nearby relief detail.',
+      'Move from the relief shadow toward the papyrus surface with a slow, even pace.'
+    ]);
+    if (/chest|coffin|sealed|murder|trapped|hidden/.test(promptText)) return chooseMotion(seed, [
+      'Push slowly toward the sealed chest while the stone chamber remains motionless.',
+      'Tilt from the chest lid to the surrounding chamber with restrained tension.',
+      'Track along the coffin edge while the warm temple light stays steady.',
+      'Use slight parallax between the sealed wood and the dark stone background.',
+      'Pull back from the chest to show its isolation inside the chamber.'
+    ]);
+    if (/river|nile|search|looking|seeks|riverbank/.test(promptText)) return chooseMotion(seed, [
+      'Pan from the riverbank toward Isis, letting water and desert space guide the movement.',
+      'Track slowly along the Nile-side path while Isis remains the searching figure.',
+      'Tilt from slow water to the distant shore, keeping the search quiet.',
+      'Use minimal parallax between river reeds and the far temple edge.',
+      'Pull back from Isis toward the open river landscape to emphasize distance.'
+    ]);
+    if (/linen|pieces|body|restore|ritual|mourning|gathers|funerary|wrappings/.test(promptText)) return chooseMotion(seed, [
+      'Tilt carefully across linen and stone details, avoiding graphic movement or new action.',
+      'Push slowly across the wrapped ritual objects while the chamber stays still.',
+      'Pan from folded linen to a carved stone surface with restrained movement.',
+      'Use slight parallax between linen in the foreground and temple wall reliefs behind it.',
+      'Pull back from the restoration detail to show the quiet ritual space.'
+    ]);
+    if (/underworld|dead|duat|below|afterlife/.test(promptText)) return chooseMotion(seed, [
+      'Pull back slowly from Osiris to reveal the surrounding underworld space.',
+      'Push gently toward Osiris while deep shadows remain steady around him.',
+      'Tilt from the underworld floor toward the seated figure with restrained movement.',
+      'Use slight parallax between foreground stone and the distant underworld chamber.',
+      'Pan across the dark space before settling on Osiris in stillness.'
+    ]);
+    if (/horus|succession|inheritance|royal line|living king|royal-symbolic/.test(promptText)) return chooseMotion(seed, [
+      'Shift focus gently from Horus to Osiris while the royal symbols remain static.',
+      'Pan from the young heir toward Osiris, keeping the succession symbols still.',
+      'Push slowly toward the royal line detail without adding ceremonial action.',
+      'Tilt from falcon imagery to the seated figure with calm, restrained movement.',
+      'Use minimal parallax between foreground royal symbols and the figures behind them.'
+    ]);
+    if (/family|ruler|sister|wife|set stands|order/.test(text)) return chooseMotion(seed, [
+      'Move laterally across the separated figures, keeping the royal chamber still and balanced.',
+      'Push slowly toward Osiris while Isis and Set remain arranged within the same royal space.',
+      'Tilt from royal symbols toward the divine figures with restrained temple light.',
+      'Use slight parallax between foreground stone columns and the separated figures.',
+      'Pull back from the central ruler to reveal the opposing figures around him.'
+    ]);
+    return [
+      'Use a restrained push-in across warm temple stone toward the main figure.',
+      'Pan gently from carved symbols to the central mythic subject.',
+      'Create minimal parallax between foreground stone and the distant ritual space.'
+    ][seed % 3];
+  }
+
+  if (/document|record|source|archive|paper|map|clipping|reference/.test(text)) {
+    return 'Tilt slowly across the source objects, keeping the movement small and documentary.';
+  }
+  return '';
+}
+
+function chooseMotion(seed, options) {
+  return options[Math.abs(seed) % options.length];
+}
+
+function normalizeBeatMotionSentence(value) {
+  return String(value || '')
+    .replace(/keeps? the subject readable/gi, 'keeps the movement restrained')
+    .replace(/Hold the frame steady, then/gi, 'Keep the frame steady, then')
+    .replace(/\s+/g, ' ')
+    .trim();
 }
 
 function visualDirectionForScene(subject, story, index) {

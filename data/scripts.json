@@ -84,8 +84,8 @@
         "sceneRole": "Hook",
         "sceneFocus": "Give the audience one concrete way to enter Osiris and Isis: Egyptian myth cycle in which Isis searches for Osiris after his murder and restoration becomes part of kingship and afterlife meaning.",
         "directionTip": "Give the audience one concrete way to enter Osiris and Isis: Egyptian myth cycle in which Isis searches for Osiris after his murder and restoration becomes part of kingship and afterlife meaning.",
-        "voiceDirection": "Calm documentary delivery, slow opening pace.",
-        "soundEffect": "",
+        "voiceDirection": "Use a calm mythic documentary tone without sounding theatrical. Start slowly, then settle into a measured pace. Emphasize source boundaries lightly, and do not turn uncertainty into drama.",
+        "soundEffect": "soft papyrus movement, quiet temple room tone",
         "visualDirection": "Hold the establishing image briefly, then begin a slow push toward the main detail of Osiris and Isis.",
         "narrationParts": [
           {
@@ -96,17 +96,17 @@
               {
                 "label": "Image Prompt 1",
                 "imagePrompt": "An ancient Egyptian palace or temple space under warm stone light presents Osiris, Isis, and Set. The divine family relationship is arranged around rule, loyalty, opposition, and fragile order. Wide composition with a clear central figure and readable surrounding space uses low sacred light and deep controlled shadow, restrained solemn myth atmosphere, and ancient Egyptian mythic context. The image should emphasize Osiris as ruler, Isis as loyal consort, and Set as the opposing force. No readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Use a slow controlled push-in toward the current subject."
+                "motionPrompt": "Move laterally across the separated figures, keeping the royal chamber still and balanced."
               },
               {
                 "label": "Image Prompt 2",
                 "imagePrompt": "An ancient Egyptian palace or temple space under warm stone light presents Osiris. Show Osiris as ruler, Isis as loyal consort, and Set as the opposing force. Medium composition focused on the main symbolic detail uses low sacred light and deep controlled shadow, restrained solemn myth atmosphere, and ancient Egyptian mythic context. The image should emphasize the divine family relationship is arranged around rule, loyalty, opposition, and fragile order. No readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Pan gently across the current scene detail."
+                "motionPrompt": "Push slowly toward Osiris while Isis and Set remain arranged within the same royal space."
               },
               {
                 "label": "Image Prompt 3",
                 "imagePrompt": "A museum-style Egyptian reference table under soft light presents papyrus-like fragments and Egyptian temple relief details. Show source-aware visual context for Osiris and Isis, keeping variants and interpretation separate. Balanced source-context composition with objects separated clearly uses low sacred light and deep controlled shadow, restrained solemn myth atmosphere, and ancient Egyptian mythic context. The image should emphasize Osiris as ruler, Isis as loyal consort, and Set as the opposing force. No readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Hold the frame steady, then use a soft fade before the next scene."
+                "motionPrompt": "Push gently toward the source fragments while keeping the composition still."
               }
             ]
           },
@@ -118,28 +118,29 @@
               {
                 "label": "Image Prompt 1",
                 "imagePrompt": "An ancient Egyptian chamber with restrained royal and funerary detail presents Osiris and Set. A sealed chest or coffin becomes the central sign of Osiris being trapped and removed. Medium composition focused on the main symbolic detail uses low sacred light and deep controlled shadow, restrained solemn myth atmosphere, and ancient Egyptian mythic context. The image should emphasize the murder and containment tradition without graphic violence. No graphic gore, readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Pan gently across the current scene detail."
+                "motionPrompt": "Use slight parallax between the sealed wood and the dark stone background."
               },
               {
                 "label": "Image Prompt 2",
                 "imagePrompt": "An ancient Egyptian chamber with restrained royal and funerary detail presents Osiris. Show the murder and containment tradition without graphic violence. Balanced source-context composition with objects separated clearly uses low sacred light and deep controlled shadow, restrained solemn myth atmosphere, and ancient Egyptian mythic context. The image should emphasize a sealed chest or coffin becomes the central sign of Osiris being trapped and removed. No graphic gore, readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Hold the frame steady, then fade softly to the next beat."
+                "motionPrompt": "Pull back from the chest to show its isolation inside the chamber."
               },
               {
                 "label": "Image Prompt 3",
                 "imagePrompt": "A museum-style Egyptian reference table under soft light presents papyrus-like fragments and Egyptian temple relief details. Show source-aware visual context for Osiris and Isis, keeping variants and interpretation separate. Wide composition with a clear central figure and readable surrounding space uses low sacred light and deep controlled shadow, restrained solemn myth atmosphere, and ancient Egyptian mythic context. The image should emphasize the murder and containment tradition without graphic violence. No graphic gore, readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Hold the frame steady, then use a soft fade before the next scene."
+                "motionPrompt": "Track along the edge of the papyrus before settling on the nearby relief detail."
               }
             ]
           }
-        ]
+        ],
+        "backgroundMusic": "Quiet Suspense Intro, Ancient Ritual Ambient, Low Hand Drum Texture, Desert Night Drone"
       },
       {
         "sceneRole": "Core Story",
         "sceneFocus": "Make the main event or motif of Osiris and Isis easy to understand before the story widens.",
         "directionTip": "Make the main event or motif of Osiris and Isis easy to understand before the story widens.",
-        "voiceDirection": "Natural delivery with slight tension on the turn.",
-        "soundEffect": "",
+        "voiceDirection": "Use a calm mythic documentary tone without sounding theatrical. Keep the pace steady, with clean pauses between ideas. Let the final sentence land softly, with a reflective ending.",
+        "soundEffect": "slow river water, desert wind, distant footsteps",
         "visualDirection": "Cut to the central event image. Keep the frame steady while the narration explains the core story.",
         "narrationParts": [
           {
@@ -150,12 +151,12 @@
               {
                 "label": "Image Prompt 1",
                 "imagePrompt": "A Nile-side Egyptian landscape with temple fragments and desert light presents Isis. Isis searches through signs and places for the lost body of Osiris. Medium composition focused on the main symbolic detail uses low sacred light and deep controlled shadow, restrained solemn myth atmosphere, and ancient Egyptian mythic context. The image should emphasize mourning turned into movement, intelligence, and sacred persistence. No graphic gore, readable text, logos, watermarks, modern objects, cartoon style, or legible fake writing.",
-                "motionPrompt": "Pan gently across the current scene detail."
+                "motionPrompt": "Use slight parallax between the papyrus edge and a stone relief in the background."
               },
               {
                 "label": "Image Prompt 2",
                 "imagePrompt": "A Nile-side Egyptian landscape with temple fragments and desert light presents Osiris. Show mourning turned into movement, intelligence, and sacred persistence. Balanced source-context composition with objects separated clearly uses low sacred light and deep controlled shadow, restrained solemn myth atmosphere, and ancient Egyptian mythic context. The image should emphasize Isis searches through signs and places for the lost body of Osiris. No graphic gore, readable text, logos, watermarks, modern objects, cartoon style, or legible fake writing.",
-                "motionPrompt": "Hold the frame steady, then fade softly to the next beat."
+                "motionPrompt": "Pull back from the fragment detail to show the restrained source arrangement."
               }
             ]
           },
@@ -167,28 +168,29 @@
               {
                 "label": "Image Prompt 1",
                 "imagePrompt": "A solemn Egyptian funerary space with ritual cloth and stone presents Osiris. Fragmented funerary wrappings and symbolic body pieces suggest the difficult restoration of Osiris. Balanced source-context composition with objects separated clearly uses low natural light, restrained solemn myth atmosphere, and ancient Egyptian mythic context. The image should emphasize reassembly after damage, shown symbolically rather than graphically. No graphic gore, readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Hold the frame steady, then fade softly to the next beat."
+                "motionPrompt": "Tilt carefully across linen and stone details, avoiding graphic movement or new action."
               },
               {
                 "label": "Image Prompt 2",
                 "imagePrompt": "A solemn Egyptian funerary space with ritual cloth and stone presents Osiris. Show reassembly after damage, shown symbolically rather than graphically. Wide composition with a clear central figure and readable surrounding space uses low natural light, restrained solemn myth atmosphere, and ancient Egyptian mythic context. The image should emphasize Fragmented funerary wrappings and symbolic body pieces suggest the difficult restoration of Osiris. No graphic gore, readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Use a slow controlled push-in toward the current subject."
+                "motionPrompt": "Push slowly across the wrapped ritual objects while the chamber stays still."
               },
               {
                 "label": "Image Prompt 3",
                 "imagePrompt": "A museum-style Egyptian reference table under soft light presents papyrus-like fragments and Egyptian temple relief details. Show source-aware visual context for Osiris and Isis, keeping variants and interpretation separate. Medium composition focused on the main symbolic detail uses low natural light, restrained solemn myth atmosphere, and ancient Egyptian mythic context. The image should emphasize reassembly after damage, shown symbolically rather than graphically. No graphic gore, readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Hold the frame steady, then use a soft fade before the next scene."
+                "motionPrompt": "Pan from papyrus texture to carved relief under quiet temple light."
               }
             ]
           }
-        ]
+        ],
+        "backgroundMusic": "Low Tension Underscore, Ancient Ritual Ambient, Low Hand Drum Texture, Desert Night Drone"
       },
       {
         "sceneRole": "Variant",
         "sceneFocus": "Show how a known variant shifts Osiris and Isis while the main story remains recognizable.",
         "directionTip": "Show how a known variant shifts Osiris and Isis while the main story remains recognizable.",
-        "voiceDirection": "Clear and balanced, keeping variants separate.",
-        "soundEffect": "",
+        "voiceDirection": "Use a calm mythic documentary tone without sounding theatrical. Keep the pace steady, with clean pauses between ideas. Emphasize source boundaries lightly, and do not turn uncertainty into drama.",
+        "soundEffect": "soft papyrus movement, quiet temple room tone",
         "visualDirection": "Use a gentle pan across the variant or context image, then pause before the final sentence of the scene.",
         "narrationParts": [
           {
@@ -199,12 +201,12 @@
               {
                 "label": "Image Prompt 1",
                 "imagePrompt": "An ancient Egyptian ritual space with linen, stone, and dim sacred light presents Isis and Nephthys. Isis and a possible helper figure mourn and protect what remains of Osiris. Balanced source-context composition with objects separated clearly uses low sacred light and deep controlled shadow, restrained atmosphere of return and renewal, and ancient Egyptian mythic context. The image should emphasize restoration through mourning, protection, and ritual care. No readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Hold the frame steady, then fade softly to the next beat."
+                "motionPrompt": "Pull back from the restoration detail to show the quiet ritual space."
               },
               {
                 "label": "Image Prompt 2",
                 "imagePrompt": "An ancient Egyptian ritual space with linen, stone, and dim sacred light presents Osiris. Show restoration through mourning, protection, and ritual care. Wide composition with a clear central figure and readable surrounding space uses low sacred light and deep controlled shadow, restrained atmosphere of return and renewal, and ancient Egyptian mythic context. The image should emphasize Isis and a possible helper figure mourn and protect what remains of Osiris. No readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Use a slow controlled push-in toward the current subject."
+                "motionPrompt": "Tilt carefully across linen and stone details, avoiding graphic movement or new action."
               }
             ]
           },
@@ -216,23 +218,24 @@
               {
                 "label": "Image Prompt 1",
                 "imagePrompt": "A symbolic Egyptian underworld space with subdued gold and deep shadow presents Osiris. Osiris is shown as a transformed ruler of the dead rather than an ordinary living king. Wide composition with a clear central figure and readable surrounding space uses low sacred light and deep controlled shadow, restrained solemn myth atmosphere, and ancient Egyptian mythic context. The image should emphasize death answered by ritual power, not erased. No graphic gore, readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Use a slow controlled push-in toward the current subject."
+                "motionPrompt": "Pan from folded linen to a carved stone surface with restrained movement."
               },
               {
                 "label": "Image Prompt 2",
                 "imagePrompt": "A symbolic Egyptian underworld space with subdued gold and deep shadow presents Osiris. Show death answered by ritual power, not erased. Medium composition focused on the main symbolic detail uses low sacred light and deep controlled shadow, restrained solemn myth atmosphere, and ancient Egyptian mythic context. The image should emphasize Osiris is shown as a transformed ruler of the dead rather than an ordinary living king. No graphic gore, readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Pan gently across the current scene detail."
+                "motionPrompt": "Use slight parallax between linen in the foreground and temple wall reliefs behind it."
               }
             ]
           }
-        ]
+        ],
+        "backgroundMusic": "Sparse Documentary Bed, Ancient Ritual Ambient, Low Hand Drum Texture, Desert Night Drone"
       },
       {
         "sceneRole": "Source Context",
         "sceneFocus": "Clarify the boundary between supported source material and uncertain interpretation around Osiris and Isis.",
         "directionTip": "Clarify the boundary between supported source material and uncertain interpretation around Osiris and Isis.",
-        "voiceDirection": "Quiet, source-aware, without sounding academic.",
-        "soundEffect": "quiet paper movement, soft room tone",
+        "voiceDirection": "Use a calm mythic documentary tone without sounding theatrical. Keep the pace steady, with clean pauses between ideas. Emphasize source boundaries lightly, and do not turn uncertainty into drama.",
+        "soundEffect": "soft papyrus movement, quiet temple room tone",
         "visualDirection": "Show the archive material long enough to read the visual idea, then fade softly into the next scene.",
         "narrationParts": [
           {
@@ -243,17 +246,17 @@
               {
                 "label": "Image Prompt 1",
                 "imagePrompt": "An ancient Egyptian royal-symbolic scene with temple stone and horizon light presents Horus and Osiris. Horus carries the royal line forward while Osiris remains connected to rule over the dead. Wide composition with a clear central figure and readable surrounding space uses low sacred light and deep controlled shadow, restrained solemn myth atmosphere, and ancient Egyptian mythic context. The image should emphasize succession linking the living king, the dead king, and divine order. No graphic gore, readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Use a slow controlled push-in toward the current subject."
+                "motionPrompt": "Push gently toward Osiris while deep shadows remain steady around him."
               },
               {
                 "label": "Image Prompt 2",
                 "imagePrompt": "An ancient Egyptian royal-symbolic scene with temple stone and horizon light presents Osiris. Show succession linking the living king, the dead king, and divine order. Medium composition focused on the main symbolic detail uses low sacred light and deep controlled shadow, restrained solemn myth atmosphere, and ancient Egyptian mythic context. The image should emphasize Horus carries the royal line forward while Osiris remains connected to rule over the dead. No graphic gore, readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Pan gently across the current scene detail."
+                "motionPrompt": "Tilt from the underworld floor toward the seated figure with restrained movement."
               },
               {
                 "label": "Image Prompt 3",
                 "imagePrompt": "A museum-style Egyptian reference table under soft light presents papyrus-like fragments and Egyptian temple relief details. Show source-aware visual context for Osiris and Isis, keeping variants and interpretation separate. Balanced source-context composition with objects separated clearly uses low sacred light and deep controlled shadow, restrained solemn myth atmosphere, and ancient Egyptian mythic context. The image should emphasize succession linking the living king, the dead king, and divine order. No graphic gore, readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Hold the frame steady, then use a soft fade before the next scene."
+                "motionPrompt": "Pull back from the fragment detail to show the restrained source arrangement."
               }
             ]
           },
@@ -265,23 +268,24 @@
               {
                 "label": "Image Prompt 1",
                 "imagePrompt": "An ancient Egyptian royal-symbolic scene with temple stone and horizon light presents Horus and Osiris. Horus carries the royal line forward while Osiris remains connected to rule over the dead. Medium composition focused on the main symbolic detail uses soft museum light with muted material texture, quiet source-aware atmosphere, and ancient Egyptian mythic context. The image should emphasize succession linking the living king, the dead king, and divine order. No graphic gore, readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Pan gently across the current scene detail."
+                "motionPrompt": "Track along the edge of the papyrus before settling on the nearby relief detail."
               },
               {
                 "label": "Image Prompt 2",
                 "imagePrompt": "An ancient Egyptian royal-symbolic scene with temple stone and horizon light presents Ancient Egyptian. Show succession linking the living king, the dead king, and divine order. Balanced source-context composition with objects separated clearly uses soft museum light with muted material texture, quiet source-aware atmosphere, and ancient Egyptian mythic context. The image should emphasize Horus carries the royal line forward while Osiris remains connected to rule over the dead. No graphic gore, readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Hold the frame steady, then fade softly to the next beat."
+                "motionPrompt": "Move from the relief shadow toward the papyrus surface with a slow, even pace."
               }
             ]
           }
-        ]
+        ],
+        "backgroundMusic": "Sparse Documentary Bed, Ancient Ritual Ambient, Low Hand Drum Texture, Desert Night Drone"
       },
       {
         "sceneRole": "Closing Reflection",
         "sceneFocus": "Leave Osiris and Isis with its strongest unresolved meaning rather than adding a new answer.",
         "directionTip": "Leave Osiris and Isis with its strongest unresolved meaning rather than adding a new answer.",
-        "voiceDirection": "Reflective, soft ending, emphasize the final question.",
-        "soundEffect": "",
+        "voiceDirection": "Use a calm mythic documentary tone without sounding theatrical. Keep the pace gentle and leave a short pause before the final line. Let the final sentence land softly, with a reflective ending.",
+        "soundEffect": "slow river water, desert wind, distant footsteps",
         "visualDirection": "Slowly zoom out from the final image. Hold for two seconds after the last narration line, then fade to black.",
         "narrationParts": [
           {
@@ -292,17 +296,17 @@
               {
                 "label": "Image Prompt 1",
                 "imagePrompt": "An ancient Egyptian ritual space with linen, stone, and dim sacred light presents Isis and Nephthys. Isis and a possible helper figure mourn and protect what remains of Osiris. Medium composition focused on the main symbolic detail uses low sacred light and deep controlled shadow, restrained solemn myth atmosphere, and ancient Egyptian mythic context. The image should emphasize restoration through mourning, protection, and ritual care. No readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Pan gently across the current scene detail."
+                "motionPrompt": "Use slight parallax between linen in the foreground and temple wall reliefs behind it."
               },
               {
                 "label": "Image Prompt 2",
                 "imagePrompt": "An ancient Egyptian ritual space with linen, stone, and dim sacred light presents Osiris. Show restoration through mourning, protection, and ritual care. Balanced source-context composition with objects separated clearly uses low sacred light and deep controlled shadow, restrained solemn myth atmosphere, and ancient Egyptian mythic context. The image should emphasize Isis and a possible helper figure mourn and protect what remains of Osiris. No readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Hold the frame steady, then fade softly to the next beat."
+                "motionPrompt": "Pull back from the restoration detail to show the quiet ritual space."
               },
               {
                 "label": "Image Prompt 3",
                 "imagePrompt": "A museum-style Egyptian reference table under soft light presents papyrus-like fragments and Egyptian temple relief details. Show source-aware visual context for Osiris and Isis, keeping variants and interpretation separate. Wide composition with a clear central figure and readable surrounding space uses low sacred light and deep controlled shadow, restrained solemn myth atmosphere, and ancient Egyptian mythic context. The image should emphasize restoration through mourning, protection, and ritual care. No readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Hold the frame steady, then use a soft fade before the next scene."
+                "motionPrompt": "Tilt slowly across papyrus fragments and relief details without making text readable."
               }
             ]
           },
@@ -314,21 +318,22 @@
               {
                 "label": "Image Prompt 1",
                 "imagePrompt": "An ancient Egyptian symbolic composition with temple stone, desert light, and underworld shadow presents Osiris, Isis, Horus, and Set. The mythic chain of violence, search, restoration, succession, and rule below is shown through separated symbolic figures. Balanced source-context composition with objects separated clearly uses low sacred light and deep controlled shadow, restrained solemn myth atmosphere, and ancient Egyptian mythic context. The image should emphasize order surviving violence through ritual, kingship, and memory. No graphic gore, readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Hold the frame steady, then fade softly to the next beat."
+                "motionPrompt": "Track slowly along the Nile-side path while Isis remains the searching figure."
               },
               {
                 "label": "Image Prompt 2",
                 "imagePrompt": "An ancient Egyptian symbolic composition with temple stone, desert light, and underworld shadow presents Osiris. Show order surviving violence through ritual, kingship, and memory. Wide composition with a clear central figure and readable surrounding space uses low sacred light and deep controlled shadow, restrained solemn myth atmosphere, and ancient Egyptian mythic context. The image should emphasize the mythic chain of violence, search, restoration, succession, and rule below is shown through separated symbolic figures. No graphic gore, readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Use a slow controlled push-in toward the current subject."
+                "motionPrompt": "Tilt from slow water to the distant shore, keeping the search quiet."
               },
               {
                 "label": "Image Prompt 3",
                 "imagePrompt": "A museum-style Egyptian reference table under soft light presents papyrus-like fragments and Egyptian temple relief details. Show source-aware visual context for Osiris and Isis, keeping variants and interpretation separate. Medium composition focused on the main symbolic detail uses low sacred light and deep controlled shadow, restrained solemn myth atmosphere, and ancient Egyptian mythic context. The image should emphasize order surviving violence through ritual, kingship, and memory. No graphic gore, readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Hold the frame steady, then use a soft fade before the next scene."
+                "motionPrompt": "Use slight parallax between the papyrus edge and a stone relief in the background."
               }
             ]
           }
-        ]
+        ],
+        "backgroundMusic": "Soft Reflective Drone, Ancient Ritual Ambient, Low Hand Drum Texture, Desert Night Drone"
       }
     ],
     "runtimePlan": {
@@ -426,8 +431,8 @@
         "sceneRole": "Hook",
         "sceneFocus": "Give the audience one concrete way to enter Demeter and Persephone: Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return.",
         "directionTip": "Give the audience one concrete way to enter Demeter and Persephone: Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return.",
-        "voiceDirection": "Calm documentary delivery, slow opening pace.",
-        "soundEffect": "",
+        "voiceDirection": "Use a calm mythic documentary tone without sounding theatrical. Start slowly, then settle into a measured pace. Give the search or loss a little weight while staying composed.",
+        "soundEffect": "low underworld air, soft stone room tone",
         "visualDirection": "Hold the establishing image briefly, then begin a slow push toward the main detail of Demeter and Persephone.",
         "narrationParts": [
           {
@@ -438,12 +443,12 @@
               {
                 "label": "Image Prompt 1",
                 "imagePrompt": "A sunlit ancient Greek meadow bordered by grain fields presents Demeter and Persephone. Persephone gathers flowers in an open meadow while Demeter is suggested through grain, field light, and maternal presence. Wide composition with a clear central figure and readable surrounding space uses soft natural daylight with warm grain tones, restrained documentary mystery atmosphere, and ancient Greek mythic context. The image should emphasize a peaceful surface world before the loss begins. No readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Use a slow controlled push-in toward the current subject."
+                "motionPrompt": "Pull back from dry grain to the wider barren field with restrained movement."
               },
               {
                 "label": "Image Prompt 2",
                 "imagePrompt": "A sunlit ancient Greek meadow bordered by grain fields presents Demeter. Show a peaceful surface world before the loss begins. Medium composition focused on the main symbolic detail uses soft natural daylight with warm grain tones, restrained documentary mystery atmosphere, and ancient Greek mythic context. The image should emphasize Persephone gathers flowers in an open meadow while Demeter is suggested through grain, field light, and maternal presence. No readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Pan gently across the current scene detail."
+                "motionPrompt": "Pan across damaged crops, then slow near the empty field edge."
               }
             ]
           },
@@ -455,28 +460,29 @@
               {
                 "label": "Image Prompt 1",
                 "imagePrompt": "An ancient Greek field split by a dark underworld entrance presents Persephone and Hades. The earth opens at the edge of a flowered field, turning the bright landscape into a threshold toward the underworld. Medium composition focused on the main symbolic detail uses low sacred light and deep controlled shadow, restrained solemn myth atmosphere, and ancient Greek mythic context. The image should emphasize the sudden rupture between the living landscape and the world below. No graphic gore, readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Pan gently across the current scene detail."
+                "motionPrompt": "Use slight foreground movement in the grain while the wider field stays still."
               },
               {
                 "label": "Image Prompt 2",
                 "imagePrompt": "An ancient Greek field split by a dark underworld entrance presents Demeter. Show the sudden rupture between the living landscape and the world below. Balanced source-context composition with objects separated clearly uses low sacred light and deep controlled shadow, restrained solemn myth atmosphere, and ancient Greek mythic context. The image should emphasize the earth opens at the edge of a flowered field, turning the bright landscape into a threshold toward the underworld. No graphic gore, readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Hold the frame steady, then fade softly to the next beat."
+                "motionPrompt": "Push slowly across the failing crops without adding weather or extra figures."
               },
               {
                 "label": "Image Prompt 3",
                 "imagePrompt": "A museum-style Greek reference table under soft light presents unreadable Greek manuscript fragments and agricultural votive objects. Show source-aware visual context for Demeter and Persephone, keeping variants and interpretation separate. Wide composition with a clear central figure and readable surrounding space uses low sacred light and deep controlled shadow, restrained solemn myth atmosphere, and ancient Greek mythic context. The image should emphasize the sudden rupture between the living landscape and the world below. No graphic gore, readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Hold the frame steady, then use a soft fade before the next scene."
+                "motionPrompt": "Tilt slowly across manuscript fragments and simple ritual objects under soft desk light."
               }
             ]
           }
-        ]
+        ],
+        "backgroundMusic": "Quiet Suspense Intro, Ancient Acoustic Ambient, Low Lyre Drone, Mediterranean Mystery Atmosphere"
       },
       {
         "sceneRole": "Core Story",
         "sceneFocus": "Make the main event or motif of Demeter and Persephone easy to understand before the story widens.",
         "directionTip": "Make the main event or motif of Demeter and Persephone easy to understand before the story widens.",
-        "voiceDirection": "Natural delivery with slight tension on the turn.",
-        "soundEffect": "",
+        "voiceDirection": "Use a calm mythic documentary tone without sounding theatrical. Keep the pace steady, with clean pauses between ideas. Give the search or loss a little weight while staying composed.",
+        "soundEffect": "distant footsteps through dry grass, open field wind",
         "visualDirection": "Cut to the central event image. Keep the frame steady while the narration explains the core story.",
         "narrationParts": [
           {
@@ -487,12 +493,12 @@
               {
                 "label": "Image Prompt 1",
                 "imagePrompt": "A wide ancient Greek landscape with roads, fields, and distant shrines presents Demeter. Demeter searches across the human and divine world for any sign of her missing daughter. Medium composition focused on the main symbolic detail uses low natural light, restrained solemn myth atmosphere, and ancient Greek mythic context. The image should emphasize grief turning into a visible search. No readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Pan gently across the current scene detail."
+                "motionPrompt": "Tilt from cracked earth toward pale grain under muted daylight."
               },
               {
                 "label": "Image Prompt 2",
                 "imagePrompt": "A wide ancient Greek landscape with roads, fields, and distant shrines presents Demeter. Show grief turning into a visible search. Balanced source-context composition with objects separated clearly uses low natural light, restrained solemn myth atmosphere, and ancient Greek mythic context. The image should emphasize Demeter searches across the human and divine world for any sign of her missing daughter. No readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Hold the frame steady, then fade softly to the next beat."
+                "motionPrompt": "Use slight foreground movement in the grain while the wider field stays still."
               }
             ]
           },
@@ -504,23 +510,24 @@
               {
                 "label": "Image Prompt 1",
                 "imagePrompt": "A wide ancient Greek landscape with roads, fields, and distant shrines presents Demeter. Demeter searches across the human and divine world for any sign of her missing daughter. Balanced source-context composition with objects separated clearly uses soft natural daylight with warm grain tones, restrained solemn myth atmosphere, and ancient Greek mythic context. The image should emphasize grief turning into a visible search. No readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Hold the frame steady, then fade softly to the next beat."
+                "motionPrompt": "Pull back from dry grain to the wider barren field with restrained movement."
               },
               {
                 "label": "Image Prompt 2",
                 "imagePrompt": "A wide ancient Greek landscape with roads, fields, and distant shrines presents Demeter. Show grief turning into a visible search. Wide composition with a clear central figure and readable surrounding space uses soft natural daylight with warm grain tones, restrained solemn myth atmosphere, and ancient Greek mythic context. The image should emphasize Demeter searches across the human and divine world for any sign of her missing daughter. No readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Use a slow controlled push-in toward the current subject."
+                "motionPrompt": "Pan across damaged crops, then slow near the empty field edge."
               }
             ]
           }
-        ]
+        ],
+        "backgroundMusic": "Low Tension Underscore, Ancient Acoustic Ambient, Low Lyre Drone, Mediterranean Mystery Atmosphere"
       },
       {
         "sceneRole": "Variant",
         "sceneFocus": "Show how a known variant shifts Demeter and Persephone while the main story remains recognizable.",
         "directionTip": "Show how a known variant shifts Demeter and Persephone while the main story remains recognizable.",
-        "voiceDirection": "Clear and balanced, keeping variants separate.",
-        "soundEffect": "",
+        "voiceDirection": "Use a calm mythic documentary tone without sounding theatrical. Keep the pace steady, with clean pauses between ideas. Emphasize source boundaries lightly, and do not turn uncertainty into drama.",
+        "soundEffect": "soft parchment movement, quiet ancient study ambience",
         "visualDirection": "Use a gentle pan across the variant or context image, then pause before the final sentence of the scene.",
         "narrationParts": [
           {
@@ -531,7 +538,7 @@
               {
                 "label": "Image Prompt 1",
                 "imagePrompt": "A shadowed Greek underworld hall with restrained sacred detail presents Persephone. Persephone stands in the underworld with both loss and authority present in the same image. Balanced source-context composition with objects separated clearly uses low sacred light and deep controlled shadow, restrained solemn myth atmosphere, and ancient Greek mythic context. The image should emphasize the tension between abduction, transformation, and later interpretation. No graphic gore, readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Hold the frame steady, then fade softly to the next beat."
+                "motionPrompt": "Pull back from the pomegranate detail to show the divided surface and underworld space."
               }
             ]
           },
@@ -543,23 +550,24 @@
               {
                 "label": "Image Prompt 1",
                 "imagePrompt": "A dim underworld threshold with Greek ritual symbolism presents Persephone. Pomegranate seeds rest near Persephone as a quiet binding detail between two worlds. Wide composition with a clear central figure and readable surrounding space uses low sacred light and deep controlled shadow, restrained solemn myth atmosphere, and ancient Greek mythic context. The image should emphasize the small act that creates a lasting return condition. No graphic gore, readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Use a slow controlled push-in toward the current subject."
+                "motionPrompt": "Tilt from the shadowed threshold down to the pomegranate detail with restrained movement."
               },
               {
                 "label": "Image Prompt 2",
                 "imagePrompt": "A dim underworld threshold with Greek ritual symbolism presents Persephone. Show the small act that creates a lasting return condition. Medium composition focused on the main symbolic detail uses low sacred light and deep controlled shadow, restrained solemn myth atmosphere, and ancient Greek mythic context. The image should emphasize Pomegranate seeds rest near Persephone as a quiet binding detail between two worlds. No graphic gore, readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Pan gently across the current scene detail."
+                "motionPrompt": "Use slight parallax between the pomegranate foreground and Persephone in the background."
               }
             ]
           }
-        ]
+        ],
+        "backgroundMusic": "Sparse Documentary Bed, Ancient Acoustic Ambient, Low Lyre Drone, Mediterranean Mystery Atmosphere"
       },
       {
         "sceneRole": "Source Context",
         "sceneFocus": "Clarify the boundary between supported source material and uncertain interpretation around Demeter and Persephone.",
         "directionTip": "Clarify the boundary between supported source material and uncertain interpretation around Demeter and Persephone.",
-        "voiceDirection": "Quiet, source-aware, without sounding academic.",
-        "soundEffect": "quiet paper movement, soft room tone",
+        "voiceDirection": "Use a calm mythic documentary tone without sounding theatrical. Keep the pace steady, with clean pauses between ideas. Emphasize source boundaries lightly, and do not turn uncertainty into drama.",
+        "soundEffect": "soft parchment movement, quiet ancient study ambience",
         "visualDirection": "Show the archive material long enough to read the visual idea, then fade softly into the next scene.",
         "narrationParts": [
           {
@@ -570,12 +578,12 @@
               {
                 "label": "Image Prompt 1",
                 "imagePrompt": "A museum-style table with aged Greek manuscript fragments and agricultural votive objects presents Homeric Hymn to Demeter. Greek manuscript fragments and ritual objects suggest the ancient source layer without legible wording. Wide composition with a clear central figure and readable surrounding space uses soft museum light with muted material texture, quiet source-aware atmosphere, and ancient Greek mythic context. The image should emphasize source context around Demeter, Persephone, grief, and ritual settlement. No readable text, logos, watermarks, modern objects, cartoon style, or legible fake writing.",
-                "motionPrompt": "Use a slow controlled push-in toward the current subject."
+                "motionPrompt": "Pan from one manuscript edge to another while the source objects remain still."
               },
               {
                 "label": "Image Prompt 2",
                 "imagePrompt": "A museum-style table with aged Greek manuscript fragments and agricultural votive objects presents Demeter. Show source context around Demeter, Persephone, grief, and ritual settlement. Medium composition focused on the main symbolic detail uses soft museum light with muted material texture, quiet source-aware atmosphere, and ancient Greek mythic context. The image should emphasize Greek manuscript fragments and ritual objects suggest the ancient source layer without legible wording. No readable text, logos, watermarks, modern objects, cartoon style, or legible fake writing.",
-                "motionPrompt": "Pan gently across the current scene detail."
+                "motionPrompt": "Push gently toward the aged text fragments without making the writing readable."
               }
             ]
           },
@@ -587,23 +595,24 @@
               {
                 "label": "Image Prompt 1",
                 "imagePrompt": "A dry ancient agricultural field under a pale sky presents Demeter. Grain fields wither as Demeter withdraws her power from the harvest. Medium composition focused on the main symbolic detail uses low sacred light and deep controlled shadow, restrained solemn myth atmosphere, and ancient Greek mythic context. The image should emphasize failing grain and human scarcity caused by divine grief. No readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Pan gently across the current scene detail."
+                "motionPrompt": "Push slowly across the failing crops without adding weather or extra figures."
               },
               {
                 "label": "Image Prompt 2",
                 "imagePrompt": "A dry ancient agricultural field under a pale sky presents Demeter. Show failing grain and human scarcity caused by divine grief. Balanced source-context composition with objects separated clearly uses low sacred light and deep controlled shadow, restrained solemn myth atmosphere, and ancient Greek mythic context. The image should emphasize Grain fields wither as Demeter withdraws her power from the harvest. No readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Hold the frame steady, then fade softly to the next beat."
+                "motionPrompt": "Pull back from dry grain to the wider barren field with restrained movement."
               }
             ]
           }
-        ]
+        ],
+        "backgroundMusic": "Sparse Documentary Bed, Ancient Acoustic Ambient, Low Lyre Drone, Mediterranean Mystery Atmosphere"
       },
       {
         "sceneRole": "Closing Reflection",
         "sceneFocus": "Leave Demeter and Persephone with its strongest unresolved meaning rather than adding a new answer.",
         "directionTip": "Leave Demeter and Persephone with its strongest unresolved meaning rather than adding a new answer.",
-        "voiceDirection": "Reflective, soft ending, emphasize the final question.",
-        "soundEffect": "",
+        "voiceDirection": "Use a calm mythic documentary tone without sounding theatrical. Keep the pace gentle and leave a short pause before the final line. Let the final sentence land softly, with a reflective ending.",
+        "soundEffect": "low underworld air, soft stone room tone",
         "visualDirection": "Slowly zoom out from the final image. Hold for two seconds after the last narration line, then fade to black.",
         "narrationParts": [
           {
@@ -614,12 +623,12 @@
               {
                 "label": "Image Prompt 1",
                 "imagePrompt": "An ancient Greek field divided between spring growth and underworld shadow presents Demeter and Persephone. Blooming grain and shadowed earth show the cycle of return and descent. Medium composition focused on the main symbolic detail uses soft natural daylight with warm grain tones, restrained solemn myth atmosphere, and ancient Greek mythic context. The image should emphasize seasonal renewal tied to reunion and absence. No graphic gore, readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Pan gently across the current scene detail."
+                "motionPrompt": "Use slight foreground movement in the grain while the wider field stays still."
               },
               {
                 "label": "Image Prompt 2",
                 "imagePrompt": "An ancient Greek field divided between spring growth and underworld shadow presents Demeter. Show seasonal renewal tied to reunion and absence. Balanced source-context composition with objects separated clearly uses soft natural daylight with warm grain tones, restrained solemn myth atmosphere, and ancient Greek mythic context. The image should emphasize Blooming grain and shadowed earth show the cycle of return and descent. No graphic gore, readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Hold the frame steady, then fade softly to the next beat."
+                "motionPrompt": "Push slowly across the failing crops without adding weather or extra figures."
               }
             ]
           },
@@ -631,11 +640,12 @@
               {
                 "label": "Image Prompt 1",
                 "imagePrompt": "A symbolic Greek landscape split between bright harvest and dark descent presents Demeter and Persephone. Mother and daughter are reunited while the underworld remains present at the edge of the frame. Balanced source-context composition with objects separated clearly uses low sacred light and deep controlled shadow, restrained solemn myth atmosphere, and ancient Greek mythic context. The image should emphasize return, loss, death, renewal, and the unresolved cycle. No graphic gore, readable text, logos, watermarks, modern objects, or cartoon style.",
-                "motionPrompt": "Hold the frame steady, then fade softly to the next beat."
+                "motionPrompt": "Pan across damaged crops, then slow near the empty field edge."
               }
             ]
           }
-        ]
+        ],
+        "backgroundMusic": "Soft Reflective Drone, Ancient Acoustic Ambient, Low Lyre Drone, Mediterranean Mystery Atmosphere"
       }
     ],
     "runtimePlan": {

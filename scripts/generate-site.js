@@ -1267,7 +1267,7 @@ function renderLongFormCreator(script) {
       }),
       voiceDirection: item.voiceDirection || voiceDirectionForScene(`${script.title || ''} ${narration}`, index + 1, 'long'),
       soundEffect: item.soundEffect || '',
-      music: recommendedBackgroundMusic(script, 'long'),
+      music: storedBackgroundMusicForScene(item) || recommendedBackgroundMusic(script, 'long'),
       visualDirection: item.visualDirection || visualDirection(index, 'long'),
       advanced: advancedProductionInfo({
         script,
@@ -1305,7 +1305,7 @@ function renderShortFormCreator(script) {
       }),
       voiceDirection: voiceDirectionForScene(`${script.title || ''} ${narration}`, index + 1, 'short'),
       soundEffect: '',
-      music: recommendedBackgroundMusic(script, 'short'),
+      music: storedBackgroundMusicForScene((script.visualGuide || [])[index]) || recommendedBackgroundMusic(script, 'short'),
       visualDirection: visualDirection(index, 'short'),
       advanced: advancedProductionInfo({
         script,
@@ -1645,6 +1645,12 @@ function recommendedBackgroundMusic(script, format) {
   return format === 'short'
     ? 'Low Drone, Suspense Pulse, Mystery Atmosphere'
     : 'Dark Ambient, Suspense Piano, Low Drone, Mystery Atmosphere';
+}
+
+function storedBackgroundMusicForScene(item) {
+  const value = item?.backgroundMusic || item?.recommendedBackgroundMusic || item?.music;
+  if (!hasStoredProductionValue(value)) return '';
+  return Array.isArray(value) ? value.filter(Boolean).join(', ') : String(value).trim();
 }
 
 function sceneFocusForScene({ script, index, format, narration, imagePrompt }) {
