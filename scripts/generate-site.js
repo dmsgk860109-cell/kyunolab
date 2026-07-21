@@ -4,6 +4,7 @@ const path = require('path');
 const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://kyunolab.com';
 const styleVersion = '20260720-creator-part-visual-beats';
+const creatorLibraryScriptVersion = '20260722-copy-fields';
 const pageSize = 12;
 const libraryPageSize = 10;
 const publishingCenterPageSize = 24;
@@ -1239,7 +1240,7 @@ function renderLongFormCreator(script) {
     aiImagePrompt: prompt,
     directionTip: index === 0 ? 'Begin with atmosphere before revealing the central mystery.' : 'Keep the image quiet, readable, and useful for narration pacing.'
   }));
-  const hasPartProductionDetails = prompts.some((item) => Array.isArray(item.narrationParts) && item.narrationParts.some((part) => part?.creatorNote || (Array.isArray(part?.visualBeats) && part.visualBeats.length)));
+  const productionCopyAvailability = getProductionCopyAvailability(prompts);
   const sceneCount = Math.max(prompts.length, 1);
   const narrationScenes = distributeByScene(script.longformScript || [], sceneCount);
   const sceneCards = Array.from({ length: sceneCount }, (_, index) => {
@@ -1281,7 +1282,7 @@ function renderLongFormCreator(script) {
     });
   }).join('');
 
-  return `${renderNarrationCopyAction('long', 'Copy Full Long-form Narration', hasPartProductionDetails)}<div class="script-prompt-list" data-narration-format="long">${sceneCards}</div>`;
+  return `${renderNarrationCopyAction('long', 'Copy Full Long-form Narration', productionCopyAvailability)}<div class="script-prompt-list" data-narration-format="long">${sceneCards}</div>`;
 }
 
 function renderShortFormCreator(script) {
@@ -1321,16 +1322,23 @@ function renderShortFormCreator(script) {
   return `${renderNarrationCopyAction('short', 'Copy Full Short-form Narration')}<div class="script-prompt-list" data-narration-format="short">${sceneCards}</div>`;
 }
 
-function renderNarrationCopyAction(format, label, includeProductionCopies = false) {
+function getProductionCopyAvailability(prompts = []) {
+  const parts = prompts.flatMap((item) => Array.isArray(item.narrationParts) ? item.narrationParts : []);
+  const beats = parts.flatMap((part) => Array.isArray(part?.visualBeats) ? part.visualBeats : []);
+  return {
+    creatorNotes: parts.some((part) => part?.creatorNote),
+    imagePrompts: beats.some((beat) => beat?.imagePrompt || beat?.aiImagePrompt || beat?.prompt),
+    motionPrompts: beats.some((beat) => beat?.motionPrompt || beat?.beatMotion)
+  };
+}
+
+function renderNarrationCopyAction(format, label, productionCopies = {}) {
   const buttons = [
     `<button class="narration-copy-button" type="button" data-copy-kind="narration" data-narration-target="${escapeAttr(format)}">${escapeHtml(label)}</button>`
   ];
-  if (includeProductionCopies) {
-    buttons.push(
-      `<button class="narration-copy-button" type="button" data-copy-kind="creator-notes" data-narration-target="${escapeAttr(format)}">Copy Creator Notes</button>`,
-      `<button class="narration-copy-button" type="button" data-copy-kind="image-prompts" data-narration-target="${escapeAttr(format)}">Copy All Image Prompts</button>`
-    );
-  }
+  if (productionCopies.creatorNotes) buttons.push(`<button class="narration-copy-button" type="button" data-copy-kind="creator-notes" data-narration-target="${escapeAttr(format)}">Copy All Creator Notes</button>`);
+  if (productionCopies.imagePrompts) buttons.push(`<button class="narration-copy-button" type="button" data-copy-kind="image-prompts" data-narration-target="${escapeAttr(format)}">Copy All Image Prompts</button>`);
+  if (productionCopies.motionPrompts) buttons.push(`<button class="narration-copy-button" type="button" data-copy-kind="motion-prompts" data-narration-target="${escapeAttr(format)}">Copy All Motion Prompts</button>`);
   return `<div class="narration-copy-action">${buttons.join('')}</div>`;
 }
 
@@ -1395,10 +1403,11 @@ function renderNarrationPart(part, index) {
   const fields = [
     `<h4>Narration Part ${index + 1}</h4>`,
     `<p class="narration-part-script"><strong>Narration:</strong> ${escapeHtml(part.narration)}</p>`,
+    `<button class="narration-part-copy-button narration-field-copy-button" type="button" data-copy-field="narration">Copy Narration</button>`,
     `<p class="narration-part-time"><strong>Estimated Reading Time:</strong> ${escapeHtml(part.readingTime)}</p>`,
     part.creatorNote ? `<p class="narration-part-note"><strong>Creator Note:</strong> ${escapeHtml(part.creatorNote)}</p>` : '',
-    renderVisualBeats(part.visualBeats),
-    `<button class="narration-part-copy-button" type="button">Copy This Part</button>`
+    part.creatorNote ? `<button class="narration-part-copy-button narration-field-copy-button" type="button" data-copy-field="creator-note">Copy Creator Note</button>` : '',
+    renderVisualBeats(part.visualBeats)
   ].filter(Boolean).join('\n');
   return `<section class="narration-part">${fields}</section>`;
 }
@@ -1453,8 +1462,10 @@ function renderVisualBeats(beats = []) {
   if (!beats.length) return '';
   const beatHtml = beats.map((beat, index) => {
     const fields = [
-      `<p><span>${escapeHtml(beat.label || `Image Prompt ${index + 1}`)}:</span> ${escapeHtml(beat.imagePrompt)}</p>`,
-      beat.motionPrompt ? `<p><span>Beat Motion:</span> ${escapeHtml(beat.motionPrompt)}</p>` : ''
+      `<p class="visual-beat-image-prompt"><span>${escapeHtml(beat.label || `Image Prompt ${index + 1}`)}:</span> ${escapeHtml(beat.imagePrompt)}</p>`,
+      `<button class="narration-part-copy-button narration-field-copy-button" type="button" data-copy-field="image-prompt">Copy Image Prompt</button>`,
+      beat.motionPrompt ? `<p class="visual-beat-motion-prompt"><span>Beat Motion:</span> ${escapeHtml(beat.motionPrompt)}</p>` : '',
+      beat.motionPrompt ? `<button class="narration-part-copy-button narration-field-copy-button" type="button" data-copy-field="motion-prompt">Copy Motion Prompt</button>` : ''
     ].filter(Boolean).join('\n');
     return `<div class="visual-beat">${fields}</div>`;
   }).join('');
@@ -2514,7 +2525,7 @@ ${content}
 }
 
 function renderCreatorLibraryScript() {
-  return `  <script defer src="/scripts/creator-library.js?v=${styleVersion}"></script>`;
+  return `  <script defer src="/scripts/creator-library.js?v=${creatorLibraryScriptVersion}"></script>`;
 }
 
 function renderGlobalSearchScript() {

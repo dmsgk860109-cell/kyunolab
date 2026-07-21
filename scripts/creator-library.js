@@ -30,8 +30,9 @@
     document.body.appendChild(textarea);
     textarea.focus();
     textarea.select();
-    document.execCommand('copy');
+    var copied = document.execCommand('copy');
     textarea.remove();
+    if (!copied) throw new Error('copy failed');
   }
 
   function bindAdvancedToggles() {
@@ -48,37 +49,46 @@
   }
 
   function bindNarrationCopy() {
-    document.querySelectorAll('.narration-copy-button').forEach(function (button) {
-      button.addEventListener('click', async function () {
-        var format = button.getAttribute('data-narration-target');
-        var copyKind = button.getAttribute('data-copy-kind') || 'narration';
-        var list = document.querySelector('.script-prompt-list[data-narration-format="' + format + '"]');
-        if (!list) return;
-        var text = collectCopyText(list, copyKind);
-        if (!text) return;
-        try {
-          await copyPlainText(text);
-          showCreatorToast(copyMessage(format, copyKind));
-        } catch (error) {
-          showCreatorToast('Copy failed. Please select the text manually.');
-        }
-      });
+    document.addEventListener('click', function (event) {
+      var button = event.target.closest('.narration-copy-button, .narration-field-copy-button');
+      if (!button) return;
+      if (button.classList.contains('narration-copy-button')) {
+        copyFullField(button);
+        return;
+      }
+      copySingleField(button);
     });
+  }
 
-    document.querySelectorAll('.narration-part-copy-button').forEach(function (button) {
-      button.addEventListener('click', async function () {
-        var part = button.closest('.narration-part');
-        if (!part) return;
-        var text = collectPartText(part);
-        if (!text) return;
-        try {
-          await copyPlainText(text);
-          showCreatorToast('Narration Part copied.');
-        } catch (error) {
-          showCreatorToast('Copy failed. Please select the part manually.');
-        }
-      });
-    });
+  async function copyFullField(button) {
+    var format = button.getAttribute('data-narration-target');
+    var copyKind = button.getAttribute('data-copy-kind') || 'narration';
+    var list = document.querySelector('.script-prompt-list[data-narration-format="' + format + '"]');
+    if (!list) return;
+    var text = collectCopyText(list, copyKind);
+    if (!text) return;
+    try {
+      await copyPlainText(text);
+      flashButton(button, 'Copied');
+      showCreatorToast(copyMessage(format, copyKind));
+    } catch (error) {
+      flashButton(button, 'Copy failed');
+      showCreatorToast('Copy failed. Please select the text manually.');
+    }
+  }
+
+  async function copySingleField(button) {
+    var copyField = button.getAttribute('data-copy-field');
+    var text = collectSingleFieldText(button, copyField);
+    if (!text) return;
+    try {
+      await copyPlainText(text);
+      flashButton(button, 'Copied');
+      showCreatorToast(singleCopyMessage(copyField));
+    } catch (error) {
+      flashButton(button, 'Copy failed');
+      showCreatorToast('Copy failed. Please select the text manually.');
+    }
   }
 
   function collectCopyText(list, copyKind) {
@@ -92,7 +102,16 @@
     }
 
     if (copyKind === 'image-prompts') {
-      return Array.from(list.querySelectorAll('.visual-beat p:first-child'))
+      return Array.from(list.querySelectorAll('.visual-beat-image-prompt'))
+        .map(function (item) {
+          return cleanBeatText(item);
+        })
+        .filter(Boolean)
+        .join('\n\n');
+    }
+
+    if (copyKind === 'motion-prompts') {
+      return Array.from(list.querySelectorAll('.visual-beat-motion-prompt'))
         .map(function (item) {
           return cleanBeatText(item);
         })
@@ -108,19 +127,34 @@
       .join('\n\n');
   }
 
-  function collectPartText(part) {
-    var chunks = [];
-    var narration = part.querySelector('.narration-part-script');
-    var note = part.querySelector('.narration-part-note');
-    var beats = Array.from(part.querySelectorAll('.visual-beat'));
-    if (narration) chunks.push('Narration:\n' + cleanFieldText(narration, 'Narration'));
-    if (note) chunks.push('Creator Note:\n' + cleanFieldText(note, 'Creator Note'));
-    if (beats.length) {
-      chunks.push('Visual Beats:\n' + beats.map(function (beat, index) {
-        return 'Image Prompt ' + (index + 1) + ':\n' + cleanBeatText(beat.querySelector('p:first-child'));
-      }).join('\n\n'));
+  function collectSingleFieldText(button, copyField) {
+    if (copyField === 'narration') {
+      return cleanClosestPartField(button, '.narration-part-script', 'Narration');
     }
-    return chunks.filter(Boolean).join('\n\n');
+    if (copyField === 'creator-note') {
+      return cleanClosestPartField(button, '.narration-part-note', 'Creator Note');
+    }
+    if (copyField === 'image-prompt') {
+      return cleanClosestBeatField(button, '.visual-beat-image-prompt');
+    }
+    if (copyField === 'motion-prompt') {
+      return cleanClosestBeatField(button, '.visual-beat-motion-prompt');
+    }
+    return '';
+  }
+
+  function cleanClosestPartField(button, selector, label) {
+    var part = button.closest('.narration-part');
+    if (!part) return '';
+    var item = part.querySelector(selector);
+    return item ? cleanFieldText(item, label) : '';
+  }
+
+  function cleanClosestBeatField(button, selector) {
+    var beat = button.closest('.visual-beat');
+    if (!beat) return '';
+    var item = beat.querySelector(selector);
+    return item ? cleanBeatText(item) : '';
   }
 
   function cleanFieldText(item, label) {
@@ -135,7 +169,25 @@
   function copyMessage(format, copyKind) {
     if (copyKind === 'creator-notes') return 'Creator Notes copied.';
     if (copyKind === 'image-prompts') return 'Image Prompts copied.';
+    if (copyKind === 'motion-prompts') return 'Motion Prompts copied.';
     return format === 'long' ? 'Long-form narration copied.' : 'Short-form narration copied.';
+  }
+
+  function singleCopyMessage(copyField) {
+    if (copyField === 'creator-note') return 'Creator Note copied.';
+    if (copyField === 'image-prompt') return 'Image Prompt copied.';
+    if (copyField === 'motion-prompt') return 'Motion Prompt copied.';
+    return 'Narration copied.';
+  }
+
+  function flashButton(button, message) {
+    var original = button.getAttribute('data-original-label') || button.textContent;
+    button.setAttribute('data-original-label', original);
+    button.textContent = message;
+    window.clearTimeout(button.copyTimer);
+    button.copyTimer = window.setTimeout(function () {
+      button.textContent = original;
+    }, 1200);
   }
 
   bindAdvancedToggles();
