@@ -102,27 +102,55 @@ function buildCreatorLibraryEntry(story, category) {
 
 function buildLongformScript(subject, story, facts, motif) {
   const topic = story.storyBrief?.topic || subject;
+  const preparedLongform = longformNarrationFromKnownStory(story, topic);
+  if (preparedLongform.length) return preparedLongform.map(spokenNarration);
+
   const origin = narrationSentence(story.publicSourceBasis || story.storyBrief?.cultureOrContext || story.evidence || 'the surviving tradition and later retellings');
-  const firstFact = narrationSentence(facts[0] || `${subject} is remembered because one clear image carries the whole story.`);
-  const secondFact = narrationSentence(facts[1] || 'The details change across retellings, but the central idea remains easy to recognize.');
-  const thirdFact = narrationSentence(facts[2] || 'The strongest version keeps the mystery grounded in what the record can support.');
-  const meaning = narrationSentence(story.storyBrief?.editorialInterpretationOptions?.[0] || story.uniqueAngle || `${subject} works because it turns a familiar idea into a question the viewer can hold.`);
-  const limit = narrationSentence(story.sourceNotes?.sourceLimits?.[0] || 'The source trail should be treated with care, especially where later versions simplify older material.');
-  const variant = narrationSentence(story.storyBrief?.reportedVariants?.[0]?.claim || 'Later versions often shift the details, but they keep the same unresolved center.');
-  const sourceNote = narrationSentence(story.publicSourceNoteSeed || story.publicArticlePlan?.publicSourceNote || limit);
+  const firstFact = narrationSentence(facts[0] || story.detail || `${subject} is remembered through one central story image.`);
+  const secondFact = narrationSentence(facts[1] || story.summaryAnswer || 'Later retellings keep the central event while changing emphasis.');
+  const thirdFact = narrationSentence(facts[2] || story.excerpt || 'The strongest version keeps the central subject clear.');
+  const meaning = narrationSentence(story.storyBrief?.editorialInterpretationOptions?.[0] || story.uniqueAngle || `${subject} remains important because the story gives a familiar fear or hope a clear shape.`);
+  const limit = narrationSentence(story.sourceNotes?.sourceLimits?.[0] || story.storyBrief?.uncertainDetails?.[0] || 'Some details change across later retellings.');
+  const variant = narrationSentence(story.storyBrief?.reportedVariants?.[0]?.claim || 'Later versions often change a detail without replacing the main event.');
+  const sourceNote = narrationSentence(story.publicSourceNoteSeed || story.publicArticlePlan?.publicSourceNote || origin);
   const detail = narrationSentence(story.detail || story.sceneAnchor || firstFact);
 
   return [
-    spokenNarration(`${topic} begins with a detail that is easy to picture. ${detail} Before the story explains itself, that image gives us a way in.`),
-    spokenNarration(`${firstFact} The opening works best when it stays close to that one idea. We see the subject, the setting, and the detail that makes the story worth following.`),
-    spokenNarration(`${secondFact} The story can widen from there. What matters is not a pile of details. It is the pressure around ${String(motif).toLowerCase()}.`),
-    spokenNarration(`${variant} This version changes the edge of the story. But it still points back to the same central thread.`),
-    spokenNarration(`${origin} That older frame matters. It tells us where the image belongs before later readings begin to gather around it.`),
-    spokenNarration(`${sourceNote} The story does not need every detail to carry the same weight. It becomes stronger when the limits are clear.`),
-    spokenNarration(`${limit} That uncertainty is part of the record. It separates what is supported from what later retellings may have added.`),
-    spokenNarration(`${thirdFact} By this point, the pattern is visible. The subject is no longer just a name. It has become a story shape we can follow.`),
-    spokenNarration(`${meaning} So the ending returns to ${topic}. The power of the story comes from the question it leaves open.`),
-    spokenNarration(`${topic} lasts because one image still asks to be interpreted. The final moment stays quiet, because the story has already given us enough to carry forward.`)
+    spokenNarration(`${topic} begins with ${detail} The first image should stay concrete, because the story depends on a moment the audience can follow.`),
+    spokenNarration(`${firstFact} ${secondFact}`),
+    spokenNarration(`${variant} ${thirdFact}`),
+    spokenNarration(`${origin} ${sourceNote}`),
+    spokenNarration(`${limit} ${meaning}`)
+  ];
+}
+
+function longformNarrationFromKnownStory(story, topic) {
+  if (story.slug === 'osiris-isis-resurrection-myth') {
+    return [
+      `${topic} begins with a broken family of gods. Osiris is remembered as a ruler, a giver of order, and a figure tied to fertile land and kingship. Isis is his sister and wife, known for loyalty, mourning, and sacred power. Set stands against them. From the start, the myth is about rule, jealousy, death, and restoration. It also asks what remains when rightful order is violently interrupted.`,
+      `In the familiar account, Set murders Osiris. Some versions describe a chest or coffin made to fit him, then sealed and sent away. The story turns on that image: a rightful king trapped, hidden, and removed from the world above. Osiris does not simply disappear. His body becomes the center of a search that changes the myth. The crime is secretive, but its effects spread outward.`,
+      `Isis begins looking for Osiris. Her search gives the myth its emotional force. She moves through places and signs, following the trace of what has been taken. The story is not only about finding a body. It is about refusing to let death and violence become the final word. Her grief becomes movement, intelligence, and sacred persistence.`,
+      `When Isis finds Osiris, the myth does not settle into peace. Set attacks the body again in many retellings, cutting it apart and scattering the pieces. The broken body makes the loss harder to repair. It also gives the myth one of its strongest images: restoration must happen piece by piece, not all at once. The body becomes a map of damage and recovery.`,
+      `Isis gathers what remains. In some accounts, Nephthys helps her mourn and protect the dead god. Later traditions may also place divine helpers near the work of restoration. The details vary, but the center remains clear. Osiris can no longer return as an ordinary living king, yet he is not erased. Ritual care gives the shattered body a new sacred order.`,
+      `The restoration of Osiris is not the same as a simple resurrection. He becomes connected with the underworld, the dead, and the promise that death can be ritually answered. The myth turns a destroyed body into a sacred pattern. Burial, mourning, protection, and renewal all gather around his name. Life above changes, but power continues below.`,
+      `The birth of Horus gives the story its next movement. Horus becomes the child who can answer Set's violence and carry the royal line forward. Through him, the loss of Osiris becomes tied to succession. Kingship is no longer only about one ruler. It becomes a chain between death, inheritance, and divine order. The living king can be understood through Horus, while Osiris rules the dead.`,
+      `Ancient Egyptian material preserves the myth across ritual texts, temple traditions, and later summaries rather than in one single fixed version. Greek and Roman writers also retold the story, sometimes smoothing out older religious layers. That is why details can shift while the main shape remains recognizable. The murder, search, restoration, and succession stay at the center.`,
+      `The myth matters because Osiris is both lost and made powerful through loss. Isis does not undo death in an ordinary way. She transforms mourning into action, and the restored Osiris becomes a lord of the dead. The story links grief with ritual care, and kingship with the hope of continuing beyond death. Restoration does not erase the wound; it gives the wound meaning.`,
+      `By the end, Osiris and Isis is not just a tale of murder and repair. It is a myth about how a culture imagined order surviving violence. Set breaks the body. Isis searches and restores. Horus continues the line. Osiris rules below, and the dead are given a model for renewal, judgment, and lasting memory. The story ends with death changed into a form of rule, remembered through ritual and kingship across many generations.`
+    ];
+  }
+  if (story.slug !== 'demeter-and-persephone-myth') return [];
+  return [
+    `${topic} begins with a mother and a daughter. Demeter is the goddess of grain and growing fields. Persephone is her child, linked with youth, flowers, and the bright surface of the world. At first, the story does not begin in darkness. It begins in a meadow, with Persephone gathering flowers among companions before anything seems wrong. The peaceful opening makes the rupture sharper.`,
+    `Then the ground opens. Hades, lord of the underworld, rises from below and carries Persephone away. The sudden break is the center of the myth. One moment she belongs to the living landscape. The next, she is taken beneath it, into a world Demeter cannot simply enter and reclaim. The bright field becomes the doorway to loss.`,
+    `Demeter soon realizes that her daughter has vanished. She searches the earth in grief, moving through the human world and the divine world for any sign of Persephone. The search is not only a mother's private sorrow. In the myth, Demeter's pain begins to change the condition of the whole earth. Her absence from the fields becomes visible, because the power that feeds them has turned away.`,
+    `As Demeter withdraws, the fields begin to fail. Grain no longer grows as it should. The land loses its abundance, and human beings face hunger. This is why the gods cannot ignore the loss forever. Persephone's disappearance has become a crisis for both the divine order and the human world. A family wound has become a cosmic problem.`,
+    `Different versions place different weight on Persephone's choice. Some tell the story as an abduction with little room for her will. Later readings sometimes give more attention to Persephone as queen of the underworld. Those versions do not erase the loss, but they change how viewers understand her place below the earth. She is both taken and transformed, and that tension is why the story keeps changing.`,
+    `The pomegranate seeds are another point where versions differ. In many accounts, Persephone eats seeds in the underworld, and that act binds her to return there for part of the year. The number of seeds is not always told the same way. What matters is that a small act creates a lasting condition. Food becomes a bond between two worlds, and the bargain cannot be ignored.`,
+    `The fullest surviving ancient account is usually associated with the Homeric Hymn to Demeter. That version gives the search, the grief, and the settlement a strong ritual shape. Later Greek and Roman retellings keep the central movement, but they may simplify the emotional and religious layers of the story. The older account keeps Demeter's anger and sacred power close together.`,
+    `Zeus becomes involved because the world cannot continue while Demeter refuses the harvest. A compromise is reached. Persephone is allowed to return to her mother, but not forever. Because she has eaten in the underworld, she must divide her time between the world above and the realm below. The return is real, but it is not complete. The settlement saves the world without undoing the wound.`,
+    `When Persephone returns, the earth can bloom again. When she descends, Demeter's loss returns with her. This is why the myth became connected with the seasons, agriculture, and the cycle of growth and absence. The story gives a human shape to changes people saw every year in the land. Spring and barrenness become part of one pattern, and harvest depends on reunion.`,
+    `The ending is not a simple rescue. Persephone comes back, but the separation remains part of the order of things. Demeter receives her daughter, then loses her again. In that rhythm, the myth holds grief, return, death, renewal, and the fragile hope that what disappears below may one day rise again. Nothing is restored exactly as it was. The cycle itself becomes the answer the myth preserves.`
   ];
 }
 
