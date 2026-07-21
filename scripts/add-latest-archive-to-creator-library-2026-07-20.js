@@ -101,6 +101,7 @@ function buildCreatorLibraryEntry(story, category) {
 }
 
 function buildLongformScript(subject, story, facts, motif) {
+  const topic = story.storyBrief?.topic || subject;
   const origin = narrationSentence(story.publicSourceBasis || story.storyBrief?.cultureOrContext || story.evidence || 'the surviving tradition and later retellings');
   const firstFact = narrationSentence(facts[0] || `${subject} is remembered because one clear image carries the whole story.`);
   const secondFact = narrationSentence(facts[1] || 'The details change across retellings, but the central idea remains easy to recognize.');
@@ -112,28 +113,29 @@ function buildLongformScript(subject, story, facts, motif) {
   const detail = narrationSentence(story.detail || story.sceneAnchor || firstFact);
 
   return [
-    `At first, ${subject} may sound familiar.\n\nThat is part of its power. The story does not begin by asking us to believe everything at once. It begins with one image, one place, or one strange detail that is easy to hold in the mind.`,
-    `${firstFact}\n\nThat first detail gives the story its shape. It tells us what to notice before we start asking whether the account is history, folklore, memory, or a mixture of all three. It gives the story a clear point of entry.`,
-    `${detail}\n\nThe strongest version stays close to that central image. It does not need a long list of shocks. It needs a clear situation, a small turn, and the feeling that something ordinary has slipped out of place. That small turn is often what makes the story easy to repeat.`,
-    `${secondFact}\n\nThis is where the story becomes more than a single event. Retellings may change names, locations, or motives, but they often keep the same pressure at the center: ${String(motif).toLowerCase()}. The repeated motif becomes the thread that holds the versions together.`,
-    `${variant}\n\nA variant like this matters because it shows how the story travels. One version may make the setting more local. Another may make the warning sharper. Another may leave more space for doubt. The changes are part of the record, not a problem to erase.`,
-    `${origin}\n\nThat wider frame helps separate the stable part of the tradition from the details that later storytellers may have added. It also keeps the story from becoming flatter than it really is. The older frame gives the video a stronger sense of context.`,
-    `${sourceNote}\n\nThat uncertainty does not weaken the story. It gives the account its archive quality. We can follow the pattern, but we still have to admit where the record stops speaking clearly. That honesty keeps the mystery grounded.`,
-    `${limit}\n\nThat limit matters. The story works best when it stays honest about what can be traced, what is repeated, and what remains part of the legend's atmosphere. The uncertainty comes from the tradition itself, not from added drama.`,
-    `${thirdFact}\n\nBy this point, the pattern is usually clearer than any single answer. A familiar detail, a repeated image, and one unresolved question hold the story together. The shape of the legend is clear before the final reflection arrives.`,
-    `${meaning}\n\nIn the end, ${subject} remains interesting because it does not close itself neatly. Something recognizable has passed through the story, but it has not fully explained itself. That is why the final question stays with us, and why the story can keep returning without needing a new ending.`
+    `${topic} begins with a specific image.\n\n${detail}\n\nHold that image first. It gives the viewer a clear way into the story before any explanation begins.`,
+    `${firstFact}\n\nThis is the part that needs to feel simple. One subject, one setting, and one memorable detail should carry the opening scene.`,
+    `${secondFact}\n\nNow the story can widen. The details may shift across retellings, but the viewer should still feel the same pressure around ${String(motif).toLowerCase()}.`,
+    `${variant}\n\nKeep this as a variant, not a replacement. The scene should show how the story changes shape while the main thread stays visible.`,
+    `${origin}\n\nThis background gives the story its older frame. It helps the viewer understand where the image belongs before later interpretations enter.`,
+    `${sourceNote}\n\nSay this plainly. The story can be compelling without pretending every later detail has the same weight.`,
+    `${limit}\n\nThat limit belongs inside the story. It marks the difference between what is supported, what is repeated, and what remains uncertain.`,
+    `${thirdFact}\n\nBy now, the viewer should recognize the pattern. The story is no longer just a subject; it has become a shape that can be followed.`,
+    `${meaning}\n\nEnd by returning to ${topic}. The final feeling should come from the subject itself, not from a new twist or an invented answer.`,
+    `${topic} remains because one image keeps asking to be interpreted.\n\nLet the last scene stay quiet. The story has given the viewer enough to carry forward.`
   ];
 }
 
 function buildShortsScript(subject, story, facts) {
   const firstFact = facts[0] || `${subject} is built around one image people do not forget.`;
   const detail = story.detail || story.sceneAnchor || firstFact;
+  const variant = story.storyBrief?.reportedVariants?.[0]?.claim;
   return [
-    `${subject} begins with one image people remember.`,
+    `${subject} starts with one image that is hard to ignore.`,
     `${shortNarrationLine(firstFact, subject)}`,
     `${shortNarrationLine(detail, subject)}`,
-    `Each retelling changes the edges.`,
-    `The central question still remains.`
+    variant ? `${shortNarrationLine(variant, subject)}` : `${subject} changes slightly as people repeat it.`,
+    `That is why ${subject} still feels unfinished.`
   ];
 }
 
@@ -141,12 +143,13 @@ function buildSceneFocuses(subject, story, facts) {
   const topic = story.storyBrief?.topic || subject;
   const variants = story.storyBrief?.reportedVariants || [];
   const location = story.subjectSpecificVocabulary?.find((term) => /road|avenue|cemetery|lake|mount|tower|forest|island|city|stone|room|hall/i.test(term));
+  const anchor = story.detail || story.sceneAnchor || facts[0] || topic;
   return [
-    `The opening image makes ${topic}${location ? ` feel tied to ${location}` : ' feel specific'}.`,
-    `The central event is visible before the explanation begins.`,
-    variants[0]?.claim ? `A known variant shifts the emphasis without changing the core story.` : `The stable core of ${topic} stays separate from later retellings.`,
-    `The source trail feels careful without turning into a lesson.`,
-    `The ending leaves ${topic} with one unresolved meaning.`
+    `Show ${anchor} as the first concrete image of ${topic}${location ? `, tied to ${location}` : ''}.`,
+    `Make the main event or motif of ${topic} visible before the explanation expands.`,
+    variants[0]?.claim ? `Show the variant around ${topic} without replacing the main story.` : `Keep the stable core of ${topic} separate from later retellings.`,
+    `Use source material only to clarify what can and cannot be supported about ${topic}.`,
+    `End on the strongest unresolved meaning of ${topic}.`
   ];
 }
 
@@ -210,7 +213,34 @@ function voiceDirectionForGeneratedScene(index) {
 
 function soundEffectForGeneratedScene(story, index) {
   const context = `${story.title || ''} ${story.categorySlug || ''} ${(story.subjectSpecificVocabulary || []).join(' ')}`.toLowerCase();
-  if (/cicada|cryptography|steganography|tor|qr/.test(context)) {
+  if (/quetzalcoatl|feathered serpent|ehecatl|mesoamerican/.test(context)) {
+    return [
+      'temple wind, soft ceremonial percussion, feather movement',
+      'warm stone courtyard ambience, distant flute-like tone',
+      'low ritual drum, wind across carved reliefs',
+      'soft manuscript handling, quiet museum room tone',
+      'dawn wind fading around a temple relief'
+    ][index] || 'temple wind and restrained ceremonial ambience';
+  }
+  if (/wax[-\s]?winged owl|sealed letter|letter creature|messenger folklore/.test(context)) {
+    return [
+      'paper rustle, soft wing movement, candlelit room ambience',
+      'wax seal press, quiet desk wood creak',
+      'feathers moving in still air, muted envelope handling',
+      'letter archive room tone, soft paper movement',
+      'distant wingbeat fading into quiet paper rustle'
+    ][index] || 'paper rustle and soft wing movement';
+  }
+  if (/timestamp|digital record|modern omen|time records/.test(context)) {
+    return [
+      'quiet device ambience, soft notification tone',
+      'digital clock tick, low room tone',
+      'cursor movement, muted phone vibration',
+      'soft keyboard tap, quiet archive room',
+      'notification tone fading into silence'
+    ][index] || 'quiet device ambience';
+  }
+  if (/cicada|cryptography|steganography|tor|\bqr\b/.test(context)) {
     return [
       'keyboard clicks, quiet modem-like digital texture',
       'printer noise, soft paper handling, low computer fan',
@@ -282,7 +312,7 @@ function soundEffectForGeneratedScene(story, index) {
       'empty roadside wind fading out'
     ][index] || 'rural night ambience';
   }
-  if (/basilisk|stone|serpent|medieval/.test(context)) {
+  if (/basilisk|bestiary|cockatrice/.test(context)) {
     return [
       'stone chamber ambience, dry wind',
       'faint reptilian movement, low medieval room tone',
@@ -318,7 +348,7 @@ function soundEffectForGeneratedScene(story, index) {
       'distant thunder fading out'
     ][index] || 'distant thunder and low metal resonance';
   }
-  if (/black cat|superstition|omen/.test(context)) {
+  if (/black cat|superstition/.test(context)) {
     return [
       'quiet street ambience, soft footsteps',
       'low night wind, faint indoor hearth tone',
@@ -433,7 +463,49 @@ function storyProductionProfile(subject, story) {
 
   const profiles = [
     {
-      match: /cicada|cryptography|steganography|tor|qr/,
+      match: /quetzalcoatl|feathered serpent|ehecatl|mesoamerican/,
+      data: {
+        places: ['a Mesoamerican temple relief under warm ceremonial light', 'a stone temple courtyard with feathered serpent carvings', 'a museum-style table with Mesoamerican reference objects'],
+        objects: ['the feathered serpent form of Quetzalcoatl', 'green and gold plumage carved into serpent imagery', 'Ehecatl-Quetzalcoatl wind-god references'],
+        sourceObjects: ['temple relief details', 'Mesoamerican art references', 'museum object notes'],
+        actions: ['shown as sacred imagery rather than a monster', 'linking feathers, serpent form, wind, and knowledge', 'kept distinct from later unsupported conquest claims'],
+        camera: ['low-angle documentary view of carved stone', 'slow close view across feathered serpent details', 'overhead museum reference composition'],
+        motions: ['Tilt slowly upward across the feathered serpent relief.', 'Let feathers and warm air move subtly while the frame stays reverent.', 'Hold on the carved form, then fade toward source objects.'],
+        timeOfDay: 'warm ceremonial light with muted stone color',
+        atmosphere: 'Mesoamerican mythic and reverent atmosphere',
+        exclusions: 'no unrelated creature folklore, no unrelated historical setting, no fantasy monster framing, no readable fake text'
+      }
+    },
+    {
+      match: /wax[-\s]?winged owl|sealed letter|letter creature|messenger folklore/,
+      data: {
+        places: ['a candlelit desk filled with sealed letters', 'a quiet correspondence archive lined with old envelopes', 'a shadowed room where wax seals catch warm light'],
+        objects: ['a wax-winged owl carrying a sealed letter', 'red wax seals on folded correspondence', 'unsent letters stacked beside a small perch'],
+        sourceObjects: ['sealed envelopes', 'wax seal impressions', 'messenger folklore note cards'],
+        actions: ['carrying a letter without revealing its message', 'keeping the seal intact as the central mystery', 'moving between written messages and silence'],
+        camera: ['close documentary still of the sealed letter', 'medium shot of the owl above the desk', 'overhead archive composition of envelopes and wax'],
+        motions: ['Track gently with the owl as it crosses the candlelit desk.', 'Hold on the wax seal before the letter is opened.', 'Pan slowly across envelopes while the wings move softly.'],
+        timeOfDay: 'warm candlelight and deep surrounding shadow',
+        atmosphere: 'quiet messenger folklore atmosphere',
+        exclusions: 'no unrelated digital puzzle imagery, no modern computer workspace, no internet forum setting, no readable fake text'
+      }
+    },
+    {
+      match: /timestamp|digital record|modern omen|time records/,
+      data: {
+        places: ['a quiet phone screen in a dark room', 'a desktop notification history with repeated times', 'a modern archive desk with clocks and digital records'],
+        objects: ['repeated timestamps glowing on a screen', 'a row of matching digital times', 'a notification log marked by recurring numbers'],
+        sourceObjects: ['notification history cards', 'digital time records', 'screenshots arranged as motif evidence'],
+        actions: ['compressing uncertainty into one visible number', 'making repetition feel like a sign without proving it', 'turning routine device records into omen-like patterns'],
+        camera: ['tight close-up on repeated time numbers', 'over-the-shoulder view toward a dim screen', 'overhead desk composition with phone and clock'],
+        motions: ['Push in slowly toward the repeated timestamp.', 'Hold the frame steady as the notification appears.', 'Track across matching time entries from left to right.'],
+        timeOfDay: 'low screen light in a quiet modern room',
+        atmosphere: 'restrained digital folklore atmosphere',
+        exclusions: 'no animal omen imagery, no street-crossing folklore, no medieval setting, no monster design, no readable fake text'
+      }
+    },
+    {
+      match: /cicada|cryptography|steganography|tor|\bqr\b/,
       data: {
         places: ['a dark desk with a laptop and printed cipher sheets', 'an anonymous online forum screen in a dim room', 'a city street corner where a physical clue could be found'],
         objects: ['a coded image on a computer screen', 'printed cipher pages and QR-like geometric marks', 'a book beside coordinates and handwritten solution notes'],
@@ -540,7 +612,7 @@ function storyProductionProfile(subject, story) {
       }
     },
     {
-      match: /basilisk|serpent|stone|medieval/,
+      match: /basilisk|bestiary|cockatrice/,
       data: {
         places: ['a candlelit medieval stone chamber', 'a bestiary manuscript desk', 'a narrow old courtyard under dry light'],
         objects: ['a basilisk suggested in shadow near stone', 'a cracked mirror used as a protective detail', 'a bestiary illustration on aged parchment'],
@@ -592,7 +664,7 @@ function storyProductionProfile(subject, story) {
       }
     },
     {
-      match: /black cat|superstition|omen/,
+      match: /black cat|superstition/,
       data: {
         places: ['a quiet old street at dusk', 'a threshold under soft household light', 'a folklore notes desk'],
         objects: ['a black cat pausing at a street crossing', 'a doorway and shadow line', 'old superstition notes beside a small illustration'],
@@ -606,7 +678,7 @@ function storyProductionProfile(subject, story) {
     }
   ];
 
-  const specific = profiles.find((profile) => profile.match.test(context))?.data || {};
+  const specific = profiles.find((profile) => profile.match.test(context) && profileFitsStory(profile.data, story, topic))?.data || {};
   const merged = { ...defaultProfile, ...specific };
   merged.mainSubject = topic;
   merged.places = ensureArray(merged.places, defaultProfile.places);
@@ -616,6 +688,52 @@ function storyProductionProfile(subject, story) {
   merged.camera = ensureArray(merged.camera, defaultProfile.camera);
   merged.motions = ensureArray(merged.motions, defaultProfile.motions);
   return merged;
+}
+
+function profileFitsStory(profile, story, topic) {
+  const allowedText = storyEntityText(story, topic);
+  const strongTerms = extractStrongProfileTerms(profile);
+  if (!strongTerms.length) return true;
+  return strongTerms.some((term) => allowedText.includes(term));
+}
+
+function storyEntityText(story, topic) {
+  const brief = story.storyBrief || {};
+  const variants = (brief.reportedVariants || []).map((item) => `${item.claim || ''} ${item.scope || ''}`);
+  const sources = (brief.existenceEvidence || []).map((item) => `${item.title || ''} ${item.sourceType || ''}`);
+  const dna = story.contentDNA || {};
+  return [
+    topic,
+    story.title,
+    story.detail,
+    story.sceneAnchor,
+    story.summaryAnswer,
+    story.excerpt,
+    story.primaryTag,
+    story.categorySlug,
+    brief.topic,
+    brief.category,
+    brief.contentType,
+    brief.cultureOrContext,
+    ...(brief.knownNames || []),
+    ...(brief.coreStoryElements || []),
+    ...variants,
+    ...(brief.editorialInterpretationOptions || []),
+    ...(brief.uncertainDetails || []),
+    ...sources,
+    ...(story.subjectSpecificVocabulary || []),
+    ...(dna.requiredSpecificDetails || []),
+    ...(dna.subjectSpecificVocabulary || [])
+  ].join(' ').toLowerCase();
+}
+
+function extractStrongProfileTerms(profile) {
+  return unique([
+    ...(profile.objects || []),
+    ...(profile.places || []),
+    ...(profile.sourceObjects || [])
+  ].flatMap((value) => String(value).toLowerCase().match(/[a-z][a-z'-]{3,}/g) || []))
+    .filter((term) => !/quiet|soft|warm|light|dark|desk|room|archive|notes|reference|objects|image|screen|stone|table|close|wide|style|scene|details|modern|old|still|small|cards/.test(term));
 }
 
 function ensureArray(value, fallback) {
@@ -741,6 +859,9 @@ function storyFacts(story) {
 
 function settingForStory(story) {
   const text = `${story.title} ${story.detail || ''} ${(story.subjectSpecificVocabulary || []).join(' ')}`.toLowerCase();
+  if (/quetzalcoatl|feathered serpent|mesoamerican/.test(text)) return 'Mesoamerican temple landscape';
+  if (/wax[-\s]?winged owl|sealed letter|letter creature/.test(text)) return 'candlelit correspondence archive';
+  if (/timestamp|digital record|modern omen|time records/.test(text)) return 'quiet digital archive';
   if (/internet|creepypasta|online|digital|backrooms|jeff/.test(text)) return 'dim online archive space';
   if (/tower|castle|prison|penitentiary|hallway|building|apartment|hotel|cinema/.test(text)) return 'old interior space';
   if (/lake|island|sea|ocean|ship|kraken|selkie|hy-brasil|lyonesse|titicaca/.test(text)) return 'misty waterside landscape';

@@ -32,8 +32,11 @@ const targetSlugs = [
   'black-cat-superstition-origin-youtube-script'
 ];
 
-const blockedPattern = /The story does\.|some a\.|\bThe\.\b|That wider frame\.|restrained restrained|\.\.|Clarify how this retelling changes|fluorescent lights|low mechanical hum|distant room vibration|flickering office lights/i;
+const blockedPattern = /The story does\.|some a\.|\bThe\.\b|That wider frame\.|restrained restrained|\.\.|Clarify how this retelling changes|fluorescent lights|low mechanical hum|distant room vibration|flickering office lights|Each retelling changes the edges|The central question still remains|viewer should feel|mystery channel/i;
 const crossTopicChecks = {
+  'quetzalcoatl-feathered-serpent-myth-youtube-script': /basilisk|cracked mirror|medieval chamber|bestiary|dragon focus|European imagery/i,
+  'the-wax-winged-owl-of-sealed-letters-youtube-script': /laptop|cipher|Cicada|QR codes?|online forum|computer screen/i,
+  'why-timestamps-feel-like-modern-omens-youtube-script': /black cat|road crossing|street crossing|superstition notes|folklore desk/i,
   'green-flash-sunset-phenomenon-youtube-script': /\bRa(?:'s|s)?\b|solar boat|Duat|Apep|desert river/i,
   'ra-solar-boat-myth-youtube-script': /coastal|seabirds|green rim|refraction/i,
   'cicada-3301-internet-puzzle-youtube-script': /solar boat|Duat|Apep|green rim|ocean horizon/i
@@ -55,7 +58,8 @@ for (const slug of targetSlugs) {
   const uniqueMotions = new Set(beats.map((beat) => beat.motionPrompt).filter(Boolean));
   const packedText = JSON.stringify({
     visualGuide: script.visualGuide,
-    imagePrompts: script.imagePrompts
+    imagePrompts: script.imagePrompts,
+    shortsScript: script.shortsScript
   });
   const blockedMatch = packedText.match(blockedPattern);
 
