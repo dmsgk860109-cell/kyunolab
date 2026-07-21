@@ -13,7 +13,7 @@ const helperSource = source.slice(source.indexOf('function buildCreatorLibraryEn
 const sandbox = {
   console,
   require,
-  publishedAt: '2026-07-20',
+  publishedAt: '2026-07-21',
   __dirname,
   __filename: sourceScriptPath,
   module: { exports: {} },

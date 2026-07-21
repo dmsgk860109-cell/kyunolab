@@ -6,7 +6,7 @@ const storiesPath = path.join(root, 'data', 'stories.json');
 const scriptsPath = path.join(root, 'data', 'scripts.json');
 const categoriesPath = path.join(root, 'data', 'categories.json');
 
-const publishedAt = '2026-07-20';
+const publishedAt = '2026-07-21';
 const perCategory = 3;
 
 const stories = readJson(storiesPath);
@@ -341,10 +341,22 @@ function creatorNoteForNarrationPart(subject, story, sceneFocus, narration, scen
   const anchor = profile.objects[partIndex % profile.objects.length] || profile.mainSubject;
   const place = profile.places[sceneIndex % profile.places.length] || profile.setting;
   if (/variant|version|retelling|later/i.test(narration)) {
-    return `Show the version change through ${anchor}, while keeping ${topic}'s stable core visually separate from later claims.`;
+    const variantNotes = [
+      `Show the version change through ${anchor}, while keeping ${topic}'s stable core visually separate from later claims.`,
+      `Let ${place} show how this version shifts the setting without making the variant look like proof.`,
+      `Use ${anchor} to mark the difference between the repeated motif and the detail added by later tellers.`,
+      `Keep the variant readable as a separate layer, then return the viewer to the main thread of ${topic}.`
+    ];
+    return variantNotes[(sceneIndex + partIndex) % variantNotes.length];
   }
   if (/source|record|uncertain|evidence|trace|support/i.test(narration)) {
-    return `Use ${place} and source-like objects to mark what can be traced, then leave uncertain details understated.`;
+    const sourceNotes = [
+      `Use ${place} and source-like objects to mark what can be traced, then leave uncertain details understated.`,
+      `Place ${anchor} beside the source material so the viewer sees the gap between record and interpretation.`,
+      `Make the archive material feel useful but incomplete; the image should not pretend the record proves more than it does.`,
+      `Let the source layer slow the scene down before the story moves back into its unresolved question.`
+    ];
+    return sourceNotes[(sceneIndex + partIndex) % sourceNotes.length];
   }
   if (/in the end|final|question|remains/i.test(narration)) {
     return `Let the final image hold the unresolved question around ${topic}; do not add a new reveal.`;
