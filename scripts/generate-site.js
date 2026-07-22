@@ -18,42 +18,44 @@ const libraryBoardPosts = readOptionalJson(path.join(root, 'data', 'library-boar
 const siteConfig = readOptionalJson(path.join(root, 'data', 'site.json'), {});
 const creatorLibraryCategories = buildCreatorLibraryCategories(creatorScripts);
 
-generateHomePage();
-generateArchivePageSet({
-  baseName: 'newest',
-  label: 'Newest Records',
-  title: 'Newest folklore, legend, and mystery stories',
-  description: 'The latest Kyunolab Mystery Archive entries, including urban legends, internet folklore, myths, strange places, and source-aware mystery notes.',
-  items: sortNewest(stories)
-});
+function main() {
+  generateHomePage();
+  generateArchivePageSet({
+    baseName: 'newest',
+    label: 'Newest Records',
+    title: 'Newest folklore, legend, and mystery stories',
+    description: 'The latest Kyunolab Mystery Archive entries, including urban legends, internet folklore, myths, strange places, and source-aware mystery notes.',
+    items: sortNewest(stories)
+  });
 
-generateArchivePageSet({
-  baseName: 'popular',
-  label: 'Popular Records',
-  title: 'Popular urban legends, folklore, and mystery stories',
-  description: 'A curated path through reader-friendly entry points for urban legends, internet folklore, classic myths, strange places, and recurring mystery motifs.',
-  items: stories
-});
+  generateArchivePageSet({
+    baseName: 'popular',
+    label: 'Popular Records',
+    title: 'Popular urban legends, folklore, and mystery stories',
+    description: 'A curated path through reader-friendly entry points for urban legends, internet folklore, classic myths, strange places, and recurring mystery motifs.',
+    items: stories
+  });
 
-generateArchivePageSet({
-  baseName: 'archive',
-  label: 'Archive Index',
-  title: 'Explore every open file in Kyunolab Mystery Archive',
-  description: 'Move through every record by category, source status, story type, folklore motif, legend origin, and recurring mystery pattern.',
-  items: sortArchive(stories)
-});
+  generateArchivePageSet({
+    baseName: 'archive',
+    label: 'Archive Index',
+    title: 'Explore every open file in Kyunolab Mystery Archive',
+    description: 'Move through every record by category, source status, story type, folklore motif, legend origin, and recurring mystery pattern.',
+    items: sortArchive(stories)
+  });
 
-generateCategoryHub();
-generateCategoryPages();
-generatePublishingCenter();
-generateScriptsPages();
-generateSearchPage();
-generateSearchIndexes();
-generateRss();
-generateSitemap();
-generateRoutingFiles();
+  generateCategoryHub();
+  generateCategoryPages();
+  generatePublishingCenter();
+  generateScriptsPages();
+  generateSearchPage();
+  generateSearchIndexes();
+  generateRss();
+  generateSitemap();
+  generateRoutingFiles();
 
-console.log(`Generated site index pages for ${stories.length} stories, ${categories.length} categories, ${guides.length} guides, ${creatorScripts.length} scripts, and ${libraryBoardPosts.length} library board posts.`);
+  console.log(`Generated site index pages for ${stories.length} stories, ${categories.length} categories, ${guides.length} guides, ${creatorScripts.length} scripts, and ${libraryBoardPosts.length} library board posts.`);
+}
 
 function generateHomePage() {
   const featuredStory = getConfiguredStory(siteConfig.featuredStoryId) || stories[0];
@@ -986,14 +988,7 @@ function renderScriptDetailPage(script) {
       ${renderStoryInformationSection(script, originalStory)}`;
   const prepareArea = `${renderCreatorToolkitSection(script)}
       ${renderProductionWorkflowSection()}`;
-  const createArea = `<section class="script-material creator-format creator-format-long">
-        <h2>Long-form Creator</h2>
-        ${renderLongFormCreator(script)}
-      </section>
-      <section class="script-material creator-format creator-format-short">
-        <h2>Short-form Creator</h2>
-        ${renderShortFormCreator(script)}
-      </section>`;
+  const createArea = renderCreatorPack(script);
   const finishArea = `${originalStory ? `<aside class="script-version-cta creator-original-story"><p class="rail-label">Original archive story</p><p>Read the original archive story.</p><a class="button" href="/stories/${escapeAttr(originalStory.slug)}">${escapeHtml(originalStory.title)}</a></aside>` : ''}
       <section class="script-material creator-reference">
         <h2>Reference</h2>
@@ -1235,6 +1230,282 @@ function renderProductionWorkflowSection() {
       </section>`;
 }
 
+function isStandardCreatorPack(entry) {
+  return entry?.creatorPipelineVersion === 'single-path-v1';
+}
+
+function renderCreatorPack(entry) {
+  if (isStandardCreatorPack(entry)) {
+    validateCreatorPackForRender(entry);
+    return renderStandardCreatorPack(entry);
+  }
+  return renderLegacyCreatorPack(entry);
+}
+
+function renderLegacyCreatorPack(script) {
+  return `<section class="script-material creator-format creator-format-long">
+        <h2>Long-form Creator</h2>
+        ${renderLongFormCreator(script)}
+      </section>
+      <section class="script-material creator-format creator-format-short">
+        <h2>Short-form Creator</h2>
+        ${renderShortFormCreator(script)}
+      </section>`;
+}
+
+function validateCreatorPackForRender(entry) {
+  if (!isStandardCreatorPack(entry)) return true;
+  const slug = entry.slug || '';
+  const longScenes = entry.visualGuide;
+  requireStoredField(entry, 'runtimePlan', { slug, section: 'longForm' });
+  for (const field of ['totalWordCount', 'narrationReadSeconds', 'finalVideoSeconds']) {
+    requireStoredField(entry.runtimePlan, field, { slug, section: 'longForm', field });
+  }
+  if (!Array.isArray(longScenes) || longScenes.length !== 5) {
+    throwCreatorRenderError({ slug, section: 'longForm', field: 'visualGuide', message: 'Standard Creator Pack requires exactly 5 long-form scenes.' });
+  }
+  longScenes.forEach((scene, sceneIndex) => {
+    for (const field of ['sceneRole', 'sceneFocus', 'backgroundMusic', 'voiceDirection', 'soundEffect', 'visualDirection']) {
+      requireStoredField(scene, field, { slug, section: 'longForm', sceneIndex: sceneIndex + 1, field });
+    }
+    const parts = scene.narrationParts;
+    if (!Array.isArray(parts) || parts.length !== 2) {
+      throwCreatorRenderError({ slug, section: 'longForm', sceneIndex: sceneIndex + 1, field: 'narrationParts', message: 'Standard long-form Scene requires exactly 2 Narration Parts.' });
+    }
+    parts.forEach((part, partIndex) => {
+      for (const field of ['narration', 'creatorNote', 'estimatedReadingTime']) {
+        requireStoredField(part, field, { slug, section: 'longForm', sceneIndex: sceneIndex + 1, partIndex: partIndex + 1, field });
+      }
+      const beats = part.visualBeats;
+      if (!Array.isArray(beats) || beats.length < 1) {
+        throwCreatorRenderError({ slug, section: 'longForm', sceneIndex: sceneIndex + 1, partIndex: partIndex + 1, field: 'visualBeats', message: 'Standard long-form Narration Part requires at least 1 Visual Beat.' });
+      }
+      beats.forEach((beat, beatIndex) => {
+        for (const field of ['imagePrompt', 'motionPrompt']) {
+          requireStoredField(beat, field, { slug, section: 'longForm', sceneIndex: sceneIndex + 1, partIndex: partIndex + 1, beatIndex: beatIndex + 1, field });
+        }
+      });
+    });
+  });
+
+  const shortForm = entry.shortForm;
+  requireStoredField(shortForm, 'scenes', { slug, section: 'shortForm', field: 'scenes' });
+  for (const field of ['totalWordCount', 'narrationReadSeconds', 'finalVideoSeconds']) {
+    requireStoredField(shortForm, field, { slug, section: 'shortForm', field });
+  }
+  if (!Array.isArray(shortForm.scenes) || shortForm.scenes.length !== 5) {
+    throwCreatorRenderError({ slug, section: 'shortForm', field: 'scenes', message: 'Standard Creator Pack requires exactly 5 short-form scenes.' });
+  }
+  shortForm.scenes.forEach((scene, sceneIndex) => {
+    for (const field of ['role', 'narration', 'sceneFocus', 'motionPrompt', 'backgroundMusic', 'voiceDirection', 'soundEffect', 'estimatedReadSeconds']) {
+      requireStoredField(scene, field, { slug, section: 'shortForm', sceneIndex: sceneIndex + 1, field });
+    }
+  });
+
+  validateCompatibleFieldsForRender(entry);
+  return true;
+}
+
+function validateCompatibleFieldsForRender(entry) {
+  const slug = entry.slug || '';
+  const longImagePrompts = entry.visualGuide
+    .flatMap((scene) => scene.narrationParts || [])
+    .flatMap((part) => part.visualBeats || [])
+    .map((beat) => beat.imagePrompt);
+  const longMotionPrompts = entry.visualGuide
+    .flatMap((scene) => scene.narrationParts || [])
+    .flatMap((part) => part.visualBeats || [])
+    .map((beat) => beat.motionPrompt);
+  const shortNarration = entry.shortForm.scenes.map((scene) => scene.narration);
+  const shortFocuses = entry.shortForm.scenes.map((scene) => scene.sceneFocus);
+  assertCompatibleArray(entry.imagePrompts, longImagePrompts, { slug, section: 'longForm', field: 'imagePrompts' });
+  assertCompatibleArray(entry.motionPrompts, longMotionPrompts, { slug, section: 'longForm', field: 'motionPrompts' });
+  assertCompatibleArray(entry.shortsScript, shortNarration, { slug, section: 'shortForm', field: 'shortsScript' });
+  assertCompatibleArray(entry.shortSceneFocuses, shortFocuses, { slug, section: 'shortForm', field: 'shortSceneFocuses' });
+}
+
+function assertCompatibleArray(actual, expected, context) {
+  if (actual === undefined) return;
+  if (JSON.stringify(actual) === JSON.stringify(expected)) return;
+  const error = new Error(`Creator render data mismatch: ${context.field}`);
+  error.code = 'CREATOR_RENDER_DATA_MISMATCH';
+  Object.assign(error, context);
+  throw error;
+}
+
+function requireStoredField(source, field, context) {
+  if (!source || !hasStoredProductionValue(source[field])) {
+    throwCreatorRenderError({ ...context, field });
+  }
+}
+
+function throwCreatorRenderError(context) {
+  const error = new Error(context.message || `Creator render data missing: ${context.field}`);
+  error.code = 'CREATOR_RENDER_DATA_MISSING';
+  Object.assign(error, context);
+  throw error;
+}
+
+function buildCreatorRenderModel(entry) {
+  validateCreatorPackForRender(entry);
+  return {
+    slug: entry.slug || '',
+    title: entry.title || '',
+    pipelineVersion: entry.creatorPipelineVersion,
+    longForm: {
+      runtime: {
+        totalWordCount: entry.runtimePlan.totalWordCount,
+        narrationReadSeconds: entry.runtimePlan.narrationReadSeconds,
+        finalVideoSeconds: entry.runtimePlan.finalVideoSeconds,
+        narrationReadTime: entry.runtimePlan.narrationReadTime,
+        estimatedFinalRuntime: entry.runtimePlan.estimatedFinalRuntime
+      },
+      scenes: entry.visualGuide.map((scene, sceneIndex) => ({
+        sceneIndex: sceneIndex + 1,
+        role: scene.sceneRole,
+        sceneFocus: scene.sceneFocus,
+        backgroundMusic: scene.backgroundMusic,
+        voiceDirection: scene.voiceDirection,
+        soundEffect: scene.soundEffect,
+        visualDirection: scene.visualDirection,
+        narrationParts: scene.narrationParts.map((part, partIndex) => ({
+          partIndex: partIndex + 1,
+          narration: part.narration,
+          readingTime: part.estimatedReadingTime,
+          creatorNote: part.creatorNote,
+          visualBeats: part.visualBeats.map((beat, beatIndex) => ({
+            beatIndex: beatIndex + 1,
+            label: beat.label || `Image Prompt ${beatIndex + 1}`,
+            imagePrompt: beat.imagePrompt,
+            motionPrompt: beat.motionPrompt
+          }))
+        }))
+      }))
+    },
+    shortForm: {
+      runtime: {
+        totalWordCount: entry.shortForm.totalWordCount,
+        narrationReadSeconds: entry.shortForm.narrationReadSeconds,
+        finalVideoSeconds: entry.shortForm.finalVideoSeconds
+      },
+      scenes: entry.shortForm.scenes.map((scene, sceneIndex) => ({
+        sceneIndex: scene.sceneIndex || sceneIndex + 1,
+        role: scene.role,
+        narration: scene.narration,
+        sceneFocus: scene.sceneFocus,
+        motionPrompt: scene.motionPrompt,
+        backgroundMusic: scene.backgroundMusic,
+        voiceDirection: scene.voiceDirection,
+        soundEffect: scene.soundEffect,
+        estimatedReadSeconds: scene.estimatedReadSeconds
+      }))
+    },
+    copySources: {
+      longNarration: entry.visualGuide.flatMap((scene) => scene.narrationParts || []).map((part) => part.narration),
+      creatorNotes: entry.visualGuide.flatMap((scene) => scene.narrationParts || []).map((part) => part.creatorNote),
+      imagePrompts: entry.visualGuide.flatMap((scene) => scene.narrationParts || []).flatMap((part) => part.visualBeats || []).map((beat) => beat.imagePrompt),
+      motionPrompts: entry.visualGuide.flatMap((scene) => scene.narrationParts || []).flatMap((part) => part.visualBeats || []).map((beat) => beat.motionPrompt),
+      shortNarration: entry.shortForm.scenes.map((scene) => scene.narration)
+    }
+  };
+}
+
+function renderStandardCreatorPack(entry) {
+  const model = buildCreatorRenderModel(entry);
+  return `<section class="script-material creator-format creator-format-long">
+        <h2>Long-form Creator</h2>
+        ${renderStandardLongFormCreator(model)}
+      </section>
+      <section class="script-material creator-format creator-format-short">
+        <h2>Short-form Creator</h2>
+        ${renderStandardShortFormCreator(model)}
+      </section>`;
+}
+
+function renderStandardLongFormCreator(model) {
+  const productionCopyAvailability = {
+    creatorNotes: model.copySources.creatorNotes.length > 0,
+    imagePrompts: model.copySources.imagePrompts.length > 0,
+    motionPrompts: model.copySources.motionPrompts.length > 0
+  };
+  const runtimeLabel = `${formatSecondsLabel(model.longForm.runtime.finalVideoSeconds)} (${model.longForm.runtime.finalVideoSeconds} sec final) / ${formatSecondsLabel(model.longForm.runtime.narrationReadSeconds)} (${model.longForm.runtime.narrationReadSeconds} sec narration)`;
+  const sceneCards = model.longForm.scenes.map((scene) => renderProductionSceneCard({
+    number: scene.sceneIndex,
+    duration: `Stored runtime: ${runtimeLabel}`,
+    narration: scene.narrationParts.map((part) => part.narration).join('\n\n'),
+    narrationParts: scene.narrationParts,
+    format: 'long',
+    strictStored: true,
+    sceneRole: scene.role,
+    imagePrompt: '',
+    sceneFocus: scene.sceneFocus,
+    voiceDirection: scene.voiceDirection,
+    soundEffect: scene.soundEffect,
+    music: scene.backgroundMusic,
+    visualDirection: scene.visualDirection,
+    advanced: standardAdvancedProductionInfo(scene)
+  })).join('');
+
+  return `${renderNarrationCopyAction('long', 'Copy Full Long-form Narration', productionCopyAvailability)}<div class="script-prompt-list" data-narration-format="long">${sceneCards}</div>`;
+}
+
+function renderStandardShortFormCreator(model) {
+  const sceneCards = model.shortForm.scenes.map((scene) => renderProductionSceneCard({
+    number: scene.sceneIndex,
+    duration: `${formatApproxSeconds(scene.estimatedReadSeconds)} read / ${formatSecondsLabel(model.shortForm.runtime.finalVideoSeconds)} final video`,
+    narration: scene.narration,
+    narrationParts: [],
+    format: 'short',
+    strictStored: true,
+    plainReadingTime: formatApproxSeconds(scene.estimatedReadSeconds),
+    sceneRole: scene.role,
+    imagePrompt: '',
+    sceneFocus: scene.sceneFocus,
+    voiceDirection: scene.voiceDirection,
+    soundEffect: scene.soundEffect,
+    music: scene.backgroundMusic,
+    visualDirection: scene.motionPrompt,
+    advanced: {
+      motionPrompt: scene.motionPrompt,
+      soundEffect: scene.soundEffect,
+      voiceDirection: scene.voiceDirection,
+      cameraNotes: '',
+      transitionNotes: '',
+      negativePrompt: ''
+    }
+  })).join('');
+
+  return `${renderNarrationCopyAction('short', 'Copy Full Short-form Narration')}<div class="script-prompt-list" data-narration-format="short">${sceneCards}</div>`;
+}
+
+function standardAdvancedProductionInfo(scene) {
+  return {
+    motionPrompt: scene.narrationParts
+      .flatMap((part) => part.visualBeats || [])
+      .map((beat) => beat.motionPrompt)
+      .filter(Boolean)
+      .join(' '),
+    soundEffect: scene.soundEffect,
+    voiceDirection: scene.voiceDirection,
+    cameraNotes: '',
+    transitionNotes: '',
+    negativePrompt: ''
+  };
+}
+
+function formatApproxSeconds(seconds) {
+  return `≈ ${Number(seconds)} sec`;
+}
+
+function formatSecondsLabel(seconds) {
+  const total = Number(seconds);
+  const minutes = Math.floor(total / 60);
+  const remainder = total % 60;
+  if (!minutes) return `${remainder} sec`;
+  if (!remainder) return `${minutes} min`;
+  return `${minutes} min ${String(remainder).padStart(2, '0')} sec`;
+}
+
 function renderLongFormCreator(script) {
   const prompts = script.visualGuide || (script.imagePrompts || []).map((prompt, index) => ({
     aiImagePrompt: prompt,
@@ -1353,21 +1624,34 @@ function primaryImagePromptForGuideItem(item = {}) {
   return '';
 }
 
-function renderProductionSceneCard({ number, duration, narration, narrationParts = [], format, sceneRole: explicitSceneRole, sceneFocus, imagePrompt, voiceDirection, soundEffect, music, visualDirection: direction, advanced }) {
+function renderProductionSceneCard({ number, duration, narration, narrationParts = [], format, sceneRole: explicitSceneRole, sceneFocus, imagePrompt, voiceDirection, soundEffect, music, visualDirection: direction, advanced, strictStored = false, plainReadingTime = '' }) {
   const advancedId = sceneAdvancedId(number, duration, narration, imagePrompt);
-  const sceneRole = explicitSceneRole || sceneRoleForScene(number - 1, narration, sceneFocus);
+  const sceneRole = strictStored ? explicitSceneRole : (explicitSceneRole || sceneRoleForScene(number - 1, narration, sceneFocus));
   const hasPartVisuals = narrationParts.some((part) => Array.isArray(part.visualBeats) && part.visualBeats.length);
+  const focusHtml = strictStored
+    ? `<p class="scene-field scene-focus"><strong>Scene Focus:</strong> ${escapeHtml(sceneFocus)}</p>`
+    : `<p class="scene-field scene-focus"><strong>Scene Focus:</strong> ${escapeHtml(sceneFocus || 'A clear, readable moment from the story.')}</p>`;
+  const imagePromptHtml = hasPartVisuals
+    ? ''
+    : strictStored
+      ? (imagePrompt ? `<p class="scene-field scene-image-prompt"><strong>Image Prompt:</strong> ${escapeHtml(imagePrompt)}</p>` : '')
+      : `<p class="scene-field scene-image-prompt"><strong>Image Prompt:</strong> ${escapeHtml(imagePrompt || 'A quiet mystery scene shows one clear subject in a readable space, with soft low-key lighting and a restrained documentary feeling. The image should feel realistic, calm, and slightly unsettling without gore or exaggerated horror.')}</p>`;
+  const voiceHtml = strictStored
+    ? `<p class="scene-field scene-voice-direction"><strong>Voice Direction:</strong> ${escapeHtml(voiceDirection)}</p>`
+    : `<p class="scene-field scene-voice-direction"><strong>Voice Direction:</strong> ${escapeHtml(voiceDirection || voiceDirectionForScene(narration, number, format))}</p>`;
   const productionFields = [
-    `<p class="scene-field scene-focus"><strong>Scene Focus:</strong> ${escapeHtml(sceneFocus || 'A clear, readable moment from the story.')}</p>`,
-    hasPartVisuals ? '' : `<p class="scene-field scene-image-prompt"><strong>Image Prompt:</strong> ${escapeHtml(imagePrompt || 'A quiet mystery scene shows one clear subject in a readable space, with soft low-key lighting and a restrained documentary feeling. The image should feel realistic, calm, and slightly unsettling without gore or exaggerated horror.')}</p>`,
-    `<p class="scene-field scene-voice-direction"><strong>Voice Direction:</strong> ${escapeHtml(voiceDirection || voiceDirectionForScene(narration, number, format))}</p>`,
+    focusHtml,
+    imagePromptHtml,
+    voiceHtml,
     `<p class="scene-field scene-music"><strong>Recommended Background Music:</strong> ${escapeHtml(music)}</p>`,
     soundEffect ? `<p class="scene-field scene-sound-effect"><strong>Sound Effect:</strong> ${escapeHtml(soundEffect)}</p>` : '',
     `<p class="scene-field scene-editing-guide"><strong>Editing Guide:</strong> ${escapeHtml(direction)}</p>`
   ].filter(Boolean).join('\n');
   const narrationHtml = narrationParts.length
     ? renderNarrationParts(narration, narrationParts)
-    : renderPlainNarration(narration, number - 1, format);
+    : strictStored
+      ? renderPlainNarration(narration, number - 1, format, { strictStored, readingTime: plainReadingTime })
+      : renderPlainNarration(narration, number - 1, format);
   return `<article class="scene-workspace">
           <h3>Scene ${number}</h3>
           <div class="scene-workspace-meta">
@@ -1382,8 +1666,14 @@ function renderProductionSceneCard({ number, duration, narration, narrationParts
         </article>`;
 }
 
-function renderPlainNarration(narration, sceneIndex, format) {
+function renderPlainNarration(narration, sceneIndex, format, options = {}) {
   const text = narration || 'Use a short, complete narration line that can be read directly in the video.';
+  if (options.strictStored) {
+    return `<div class="scene-narration-single">
+            <p class="scene-narration"><strong>Narration:</strong> ${escapeHtml(text)}</p>
+            <p class="narration-part-time"><strong>Estimated Reading Time:</strong> ${escapeHtml(options.readingTime)}</p>
+          </div>`;
+  }
   return `<div class="scene-narration-single">
             <p class="scene-narration"><strong>Narration:</strong> ${escapeHtml(text)}</p>
             <p class="narration-part-voice"><strong>Voice Direction:</strong> ${escapeHtml(voiceDirectionForNarrationPart(sceneIndex, 0, format, text))}</p>
@@ -2935,3 +3225,16 @@ function escapeXml(value) {
 function escapeRegExp(value) {
   return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
+
+if (require.main === module) {
+  main();
+}
+
+module.exports = {
+  isStandardCreatorPack,
+  validateCreatorPackForRender,
+  buildCreatorRenderModel,
+  renderStandardCreatorPack,
+  renderLegacyCreatorPack,
+  renderCreatorPack
+};

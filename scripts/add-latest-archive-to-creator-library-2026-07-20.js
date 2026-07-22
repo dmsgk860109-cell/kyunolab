@@ -116,6 +116,7 @@ function buildCreatorLibraryEntry(story, category, options = {}) {
   return {
     id: slug,
     slug,
+    creatorPipelineVersion: 'single-path-v1',
     contentType: 'script',
     originalStorySlug: story.slug,
     title: `${subject} YouTube Script`,
@@ -2001,6 +2002,9 @@ function buildRuntimePlan(longformScript, estimatedVideoLength = '', longformRes
   const runtime = parseRuntimeRange(estimatedVideoLength);
   const estimatedFinalSeconds = longformResult?.targetFinalVideoSeconds || Math.max(300, runtime?.minSeconds || 0, naturalFinalSeconds);
   return {
+    totalWordCount: wordCount,
+    narrationReadSeconds,
+    finalVideoSeconds: estimatedFinalSeconds,
     narrationReadTime: secondsToLabel(narrationReadSeconds),
     plannedTransitionAndVisualTime: secondsToLabel(Math.max(0, estimatedFinalSeconds - narrationReadSeconds)),
     estimatedFinalRuntime: estimatedVideoLength || secondsToMinutesRange(estimatedFinalSeconds),
