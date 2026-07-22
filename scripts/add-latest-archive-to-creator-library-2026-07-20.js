@@ -12,6 +12,10 @@ const {
   buildCreatorLongform,
   validateCreatorLongform
 } = require('./creator-library-longform');
+const {
+  buildCreatorProductionFields,
+  validateCreatorProductionFields
+} = require('./creator-library-production');
 
 const root = path.resolve(__dirname, '..');
 const storiesPath = path.join(root, 'data', 'stories.json');
@@ -61,6 +65,8 @@ function buildCreatorLibraryEntry(story, category, options = {}) {
   validateScenePlanOrThrow(scenePlan);
   const longformResult = options.longformResult || buildCreatorLongform(normalizedInput, scenePlan);
   validateLongformOrThrow(longformResult, scenePlan);
+  const productionResult = options.productionResult || buildCreatorProductionFields(normalizedInput, scenePlan, longformResult);
+  validateProductionOrThrow(productionResult, scenePlan, longformResult);
   if (typeof options.onNormalizedInput === 'function') {
     options.onNormalizedInput(normalizedInput);
   }
@@ -69,6 +75,9 @@ function buildCreatorLibraryEntry(story, category, options = {}) {
   }
   if (typeof options.onLongformResult === 'function') {
     options.onLongformResult(longformResult);
+  }
+  if (typeof options.onProductionResult === 'function') {
+    options.onProductionResult(productionResult);
   }
   const subject = cleanSubject(story.title);
   const slug = `${story.slug}-youtube-script`;
@@ -83,11 +92,14 @@ function buildCreatorLibraryEntry(story, category, options = {}) {
     .filter(Boolean);
   const shortsScript = buildShortsScript(subject, story, facts);
   const shortSceneFocuses = buildShortSceneFocuses(subject, story, shortsScript);
-  const sceneFocuses = scenePlan.scenes.map((scene) => scene.purpose);
-  const visualGuide = buildVisualGuide(subject, story, setting, mood, sceneFocuses, longformScript);
+  const visualGuide = mapProductionResultToVisualGuide(productionResult, longformResult);
   const imagePrompts = visualGuide.flatMap((scene) => scene.narrationParts || [])
     .flatMap((part) => part.visualBeats || [])
     .map((beat) => beat.imagePrompt)
+    .filter(Boolean);
+  const motionPrompts = visualGuide.flatMap((scene) => scene.narrationParts || [])
+    .flatMap((part) => part.visualBeats || [])
+    .map((beat) => beat.motionPrompt || beat.beatMotion)
     .filter(Boolean);
   const estimatedVideoLength = estimateLongformVideoLength(story, longformScript, longformResult);
 
@@ -128,6 +140,7 @@ function buildCreatorLibraryEntry(story, category, options = {}) {
     shortsScript,
     shortSceneFocuses,
     imagePrompts,
+    motionPrompts,
     visualGuide,
     runtimePlan: buildRuntimePlan(longformScript, estimatedVideoLength, longformResult),
     thumbnailIdeas: buildThumbnailIdeas(subject, story),
@@ -167,6 +180,65 @@ function validateLongformOrThrow(longformResult, scenePlan) {
     error.errors = validation.errors;
     throw error;
   }
+}
+
+function validateProductionOrThrow(productionResult, scenePlan, longformResult) {
+  const validation = validateCreatorProductionFields(productionResult, scenePlan, longformResult);
+  if (!validation.valid) {
+    const first = validation.errors[0] || {};
+    const error = new Error(`Creator production invalid for ${scenePlan.slug}`);
+    error.code = 'CREATOR_PRODUCTION_INVALID';
+    error.slug = scenePlan.slug;
+    error.sceneIndex = first.sceneIndex;
+    error.partIndex = first.partIndex;
+    error.beatIndex = first.beatIndex;
+    error.field = first.field;
+    error.errors = validation.errors;
+    throw error;
+  }
+}
+
+function mapProductionResultToVisualGuide(productionResult, longformResult) {
+  return (productionResult.scenes || []).map((scene, sceneIndex) => {
+    const longformScene = (longformResult.scenes || [])[sceneIndex] || {};
+    return {
+      sceneRole: scene.role,
+      sceneFocus: scene.sceneFocus,
+      directionTip: scene.sceneFocus,
+      voiceDirection: scene.voiceDirection,
+      backgroundMusic: scene.backgroundMusic,
+      soundEffect: scene.soundEffect,
+      visualDirection: visualDirectionFromProductionScene(scene),
+      narrationParts: (scene.narrationParts || []).map((part, partIndex) => {
+        const narrationPart = (longformScene.narrationParts || [])[partIndex] || {};
+        return {
+          narration: narrationPart.narration || '',
+          estimatedReadingTime: secondsToApproxLabel(narrationPart.estimatedReadSeconds || estimatedNarrationSecondsFromText(narrationPart.narration || '')),
+          creatorNote: part.creatorNote,
+          visualBeats: (part.visualBeats || []).map((beat, beatIndex) => ({
+            label: `Image Prompt ${beatIndex + 1}`,
+            imagePrompt: beat.imagePrompt,
+            motionPrompt: beat.beatMotion,
+            beatMotion: beat.beatMotion
+          }))
+        };
+      })
+    };
+  });
+}
+
+function visualDirectionFromProductionScene(scene) {
+  const role = String(scene.role || '').toLowerCase();
+  if (/source|variant|evidence|account|comparison|trace/.test(role)) {
+    return 'Hold the source-focused image long enough to read the visual idea, then fade softly into the next scene.';
+  }
+  if (/closing|meaning|legacy|unresolved|outcome/.test(role)) {
+    return 'Begin with a slow pullback, hold briefly after the final narration line, then fade to black.';
+  }
+  if (/turning|incident|problem|consequence|core/.test(role)) {
+    return 'Start steady, begin a slow push toward the main detail, and cut after the scene consequence is clear.';
+  }
+  return 'Hold the establishing image briefly, then begin a slow push toward the main detail.';
 }
 
 function buildLongformScript(subject, story, facts, motif) {
