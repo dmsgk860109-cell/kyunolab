@@ -16,6 +16,10 @@ const {
   buildCreatorProductionFields,
   validateCreatorProductionFields
 } = require('./creator-library-production');
+const {
+  buildCreatorShortform,
+  validateCreatorShortform
+} = require('./creator-library-shortform');
 
 const root = path.resolve(__dirname, '..');
 const storiesPath = path.join(root, 'data', 'stories.json');
@@ -67,6 +71,8 @@ function buildCreatorLibraryEntry(story, category, options = {}) {
   validateLongformOrThrow(longformResult, scenePlan);
   const productionResult = options.productionResult || buildCreatorProductionFields(normalizedInput, scenePlan, longformResult);
   validateProductionOrThrow(productionResult, scenePlan, longformResult);
+  const shortformResult = options.shortformResult || buildCreatorShortform(normalizedInput, scenePlan, longformResult, productionResult);
+  validateShortformOrThrow(shortformResult, normalizedInput);
   if (typeof options.onNormalizedInput === 'function') {
     options.onNormalizedInput(normalizedInput);
   }
@@ -79,6 +85,9 @@ function buildCreatorLibraryEntry(story, category, options = {}) {
   if (typeof options.onProductionResult === 'function') {
     options.onProductionResult(productionResult);
   }
+  if (typeof options.onShortformResult === 'function') {
+    options.onShortformResult(shortformResult);
+  }
   const subject = cleanSubject(story.title);
   const slug = `${story.slug}-youtube-script`;
   const motif = story.primaryTag || story.tag || story.contentDNA?.centralMotif || category.title;
@@ -90,8 +99,9 @@ function buildCreatorLibraryEntry(story, category, options = {}) {
     .flatMap((scene) => scene.narrationParts || [])
     .map((part) => part.narration)
     .filter(Boolean);
-  const shortsScript = buildShortsScript(subject, story, facts);
-  const shortSceneFocuses = buildShortSceneFocuses(subject, story, shortsScript);
+  const shortForm = mapShortformResultToStoredShortForm(shortformResult);
+  const shortsScript = shortForm.scenes.map((scene) => scene.narration);
+  const shortSceneFocuses = shortForm.scenes.map((scene) => scene.sceneFocus);
   const visualGuide = mapProductionResultToVisualGuide(productionResult, longformResult);
   const imagePrompts = visualGuide.flatMap((scene) => scene.narrationParts || [])
     .flatMap((part) => part.visualBeats || [])
@@ -139,6 +149,7 @@ function buildCreatorLibraryEntry(story, category, options = {}) {
     longformScript,
     shortsScript,
     shortSceneFocuses,
+    shortForm,
     imagePrompts,
     motionPrompts,
     visualGuide,
@@ -196,6 +207,39 @@ function validateProductionOrThrow(productionResult, scenePlan, longformResult) 
     error.errors = validation.errors;
     throw error;
   }
+}
+
+function validateShortformOrThrow(shortformResult, normalizedInput) {
+  const validation = validateCreatorShortform(shortformResult, normalizedInput);
+  if (!validation.valid) {
+    const first = validation.errors[0] || {};
+    const error = new Error(`Creator Short-form invalid for ${normalizedInput.slug}`);
+    error.code = 'CREATOR_SHORTFORM_INVALID';
+    error.slug = normalizedInput.slug;
+    error.sceneIndex = first.sceneIndex;
+    error.field = first.field;
+    error.errors = validation.errors;
+    throw error;
+  }
+}
+
+function mapShortformResultToStoredShortForm(shortformResult) {
+  return {
+    scenes: (shortformResult.scenes || []).map((scene) => ({
+      sceneIndex: scene.sceneIndex,
+      role: scene.role,
+      narration: scene.narration,
+      sceneFocus: scene.sceneFocus,
+      motionPrompt: scene.motionPrompt,
+      backgroundMusic: scene.backgroundMusic,
+      voiceDirection: scene.voiceDirection,
+      soundEffect: scene.soundEffect,
+      estimatedReadSeconds: scene.estimatedReadSeconds
+    })),
+    totalWordCount: shortformResult.totalWordCount,
+    narrationReadSeconds: shortformResult.narrationReadSeconds,
+    finalVideoSeconds: shortformResult.finalVideoSeconds
+  };
 }
 
 function mapProductionResultToVisualGuide(productionResult, longformResult) {
