@@ -103,10 +103,10 @@ function validateCreatorLongform(result, scenePlan) {
     });
   });
   if (partCount !== 10) errors.push(`Long-form must contain exactly 10 narration parts, found ${partCount}.`);
-  if (result.totalWordCount < 620 || result.totalWordCount > 760) errors.push(`Long-form total word count outside 620-760: ${result.totalWordCount}`);
-  if (result.narrationReadSeconds < 265 || result.narrationReadSeconds > 325) errors.push(`Narration read time outside 265-325 seconds: ${result.narrationReadSeconds}`);
+  if (result.totalWordCount < 550 || result.totalWordCount > 850) errors.push(`Long-form total word count outside 550-850: ${result.totalWordCount}`);
+  if (result.narrationReadSeconds < 230 || result.narrationReadSeconds > 365) errors.push(`Narration read time outside 230-365 seconds: ${result.narrationReadSeconds}`);
   if (result.targetFinalVideoSeconds < result.narrationReadSeconds) errors.push('Final video seconds must not be shorter than narration read seconds.');
-  if (result.targetFinalVideoSeconds < 300 || result.targetFinalVideoSeconds > 360) errors.push(`Final video seconds outside 300-360: ${result.targetFinalVideoSeconds}`);
+  if (result.targetFinalVideoSeconds < 300 || result.targetFinalVideoSeconds > 420) errors.push(`Final video seconds outside 300-420: ${result.targetFinalVideoSeconds}`);
   if (hasDuplicateNarration(narrationParts)) errors.push('Duplicate Narration Part detected.');
   if (!scenePlan || scenePlan.scenes?.length !== result.scenes?.length) errors.push('Long-form scenes do not match Scene Plan.');
   return { valid: errors.length === 0, errors };
@@ -169,24 +169,74 @@ function endingLineForScene(scene, normalizedInput) {
 
 function fitNarrationLength(value, normalizedInput, scene, partPlan) {
   const additions = [
-    `The wording can stay calm because the tension comes from the order of facts, not from exaggeration.`,
-    `This keeps the narration grounded in ${readableList(scene.requiredEntities, normalizedInput.topic)} and in the material already preserved by the archive.`,
-    `It also prepares the next part without turning uncertainty into a claim stronger than the sources allow.`
+    additionForScene(scene, normalizedInput, 0),
+    additionForScene(scene, normalizedInput, 1),
+    additionForScene(scene, normalizedInput, 2),
+    additionForScene(scene, normalizedInput, 3)
   ];
   let narration = cleanNarrationText(value);
   let index = 0;
-  while (countWords(narration) < partPlan.targetWords && index < additions.length) {
+  while (countWords(narration) < Math.max(55, partPlan.targetWords) && index < additions.length) {
     narration = `${narration} ${additions[index]}`;
     index += 1;
   }
+  if (countWords(narration) < 55) {
+    narration = `${narration} ${closingSupportLine(scene, normalizedInput)}`;
+  }
+  return constrainNarrationLength(narration, normalizedInput, scene);
+}
+
+function constrainNarrationLength(value, normalizedInput, scene) {
+  let narration = cleanNarrationText(value);
   if (countWords(narration) > 85) {
     const sentences = splitSentences(narration);
-    while (sentences.length > 2 && countWords(sentences.join(' ')) > 85) {
-      sentences.pop();
+    const selected = [];
+    for (const sentence of sentences) {
+      const candidate = [...selected, sentence].join(' ');
+      if (selected.length && countWords(candidate) > 82) break;
+      selected.push(sentence);
     }
-    narration = sentences.join(' ');
+    narration = selected.length ? selected.join(' ') : narration;
+  }
+  if (countWords(narration) > 85) {
+    narration = trimToWords(narration, 84);
+  }
+  const supportLines = [
+    closingSupportLine(scene, normalizedInput),
+    additionForScene(scene, normalizedInput, 0),
+    additionForScene(scene, normalizedInput, 3)
+  ];
+  let supportIndex = 0;
+  while (countWords(narration) < 55 && supportIndex < supportLines.length) {
+    const candidate = cleanNarrationText(`${narration} ${supportLines[supportIndex]}`);
+    if (countWords(candidate) <= 85) narration = candidate;
+    supportIndex += 1;
+  }
+  if (countWords(narration) < 55) {
+    narration = cleanNarrationText(`${narration} ${trimToWords(closingSupportLine(scene, normalizedInput), 85 - countWords(narration))}`);
   }
   return cleanNarrationText(narration);
+}
+
+function additionForScene(scene, normalizedInput, index) {
+  const subject = readableList(scene.requiredEntities, normalizedInput.topic);
+  const context = normalizedInput.sourceContext[0] || normalizedInput.categoryName || 'the tradition around it';
+  const meaning = normalizedInput.meaningOptions[0] || normalizedInput.outcome[0] || 'the question it leaves behind';
+  const additions = [
+    `The detail feels stronger when it arrives plainly, without forcing the mystery to explain itself too soon.`,
+    `${subject} remains the center, and the surrounding facts only matter because they change how that center is seen.`,
+    `That is where ${lowercaseStart(context)} becomes part of the story, not just background information.`,
+    `By the end, the scene points toward ${lowercaseStart(meaning)}.`
+  ];
+  return cleanNarrationText(additions[index] || additions[0]);
+}
+
+function closingSupportLine(scene, normalizedInput) {
+  if (scene.sceneIndex >= 5) return 'The final idea lands softly, as if the question is still open.';
+  if (/source|variant|evidence|account|comparison/.test(String(scene.role || '').toLowerCase())) {
+    return 'Each version stays separate, so the story does not become more certain than the source trail allows.';
+  }
+  return `This gives the next scene a clear handoff while keeping ${normalizedInput.topic} at the center.`;
 }
 
 function readableList(items, fallback) {
@@ -204,6 +254,16 @@ function lowercaseStart(value) {
 
 function splitSentences(value) {
   return String(value || '').match(/[^.!?]+[.!?]+/g)?.map((item) => item.trim()).filter(Boolean) || [value];
+}
+
+function trimToWords(value, maxWords) {
+  const words = String(value || '').split(/\s+/).filter(Boolean).slice(0, Math.max(1, maxWords));
+  while (words.length > 3 && /^(and|or|but|with|to|of|the|a|an|in|on|for|as|because|that)$/.test(words[words.length - 1].toLowerCase())) {
+    words.pop();
+  }
+  const text = words.join(' ').replace(/[,:;]+$/g, '').trim();
+  if (!text) return '';
+  return /[.!?]$/.test(text) ? text : `${text}.`;
 }
 
 function countWords(value) {

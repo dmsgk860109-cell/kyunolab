@@ -14,3 +14,6 @@ Required rules:
 - Run `node scripts/validate-creator-library-generation-standard.js` after Creator Library changes.
 - If a Creator Library contract changes, update the standard document and validation script in the same commit.
 - Do not hide validation failures by adding new allowlist entries without an explicit task.
+- The active Creator Library data version is `single-path-v1`; legacy Creator Pack rendering is no longer supported.
+- Use `scripts/creator-library-pipeline.js` for generation, `scripts/creator-library-store.js` for storage, and `scripts/generate-site.js` only for rendering stored Creator Pack fields.
+- Run `node scripts/validate-creator-library-migration.js` after bulk Creator Pack migration or existing Pack regeneration.

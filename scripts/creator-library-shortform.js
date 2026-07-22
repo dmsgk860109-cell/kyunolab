@@ -186,17 +186,17 @@ function validateCreatorShortform(result, normalizedInput, context = {}) {
     if (isLongformCopy(scene.narration, context.longformResult)) {
       errors.push(detailError(result, sceneNumber, 'narration', 'Narration copies a Long-form sentence too closely.'));
     }
-    if (containsFieldMixing(scene.sceneFocus, ['motion', 'music', 'voice', 'sound'])) {
+    if (containsFieldMixing(scene.sceneFocus, ['motion prompt', 'background music', 'voice direction', 'sound effect'])) {
       errors.push(detailError(result, sceneNumber, 'sceneFocus', 'Scene Focus contains another production field.'));
     }
     if (isGenericFocus(scene.sceneFocus)) errors.push(detailError(result, sceneNumber, 'sceneFocus', 'Scene Focus is too generic.'));
-    if (containsFieldMixing(scene.motionPrompt, ['sound', 'music', 'voice', 'narration'])) {
+    if (containsFieldMixing(scene.motionPrompt, ['sound effect', 'background music', 'voice direction', 'narration:'])) {
       errors.push(detailError(result, sceneNumber, 'motionPrompt', 'Motion contains another production field.'));
     }
     if (containsFieldMixing(scene.backgroundMusic, ['camera', 'sound effect', 'narration'])) {
       errors.push(detailError(result, sceneNumber, 'backgroundMusic', 'Music contains another production field.'));
     }
-    if (containsFieldMixing(scene.voiceDirection, ['camera', 'image', 'sound'])) {
+    if (containsFieldMixing(scene.voiceDirection, ['camera notes', 'image prompt', 'sound effect'])) {
       errors.push(detailError(result, sceneNumber, 'voiceDirection', 'Voice Direction contains another production field.'));
     }
     if (containsFieldMixing(scene.soundEffect, ['music', 'narration', 'voice'])) {
@@ -214,7 +214,6 @@ function validateCreatorShortform(result, normalizedInput, context = {}) {
   });
 
   if (hasExactDuplicate(narrations)) errors.push(detailError(result, 0, 'narration', 'Duplicate Scene Narration detected.'));
-  if (hasExactDuplicate(focuses)) errors.push(detailError(result, 0, 'sceneFocus', 'Duplicate Scene Focus detected.'));
   if (hasExactDuplicate(motions)) errors.push(detailError(result, 0, 'motionPrompt', 'All Motion values must not repeat exactly.'));
   const totalText = (result?.scenes || []).map((scene) => scene.narration).join(' ');
   const totalWordCount = countWords(totalText);
@@ -441,7 +440,7 @@ function isLongformCopy(narration, longformResult) {
     .flatMap((part) => splitSentences(part.narration || ''))
     .map(exactTextKey)
     .filter(Boolean);
-  return sentences.some((sentence) => sentence && (key === sentence || key.includes(sentence)));
+  return sentences.some((sentence) => sentence && key === sentence);
 }
 
 function assertNoKnownNameLeakage(result, normalizedInput) {

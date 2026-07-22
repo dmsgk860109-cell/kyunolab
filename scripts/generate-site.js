@@ -1235,27 +1235,20 @@ function isStandardCreatorPack(entry) {
 }
 
 function renderCreatorPack(entry) {
-  if (isStandardCreatorPack(entry)) {
-    validateCreatorPackForRender(entry);
-    return renderStandardCreatorPack(entry);
-  }
-  return renderLegacyCreatorPack(entry);
-}
-
-function renderLegacyCreatorPack(script) {
-  return `<section class="script-material creator-format creator-format-long">
-        <h2>Long-form Creator</h2>
-        ${renderLongFormCreator(script)}
-      </section>
-      <section class="script-material creator-format creator-format-short">
-        <h2>Short-form Creator</h2>
-        ${renderShortFormCreator(script)}
-      </section>`;
+  validateCreatorPackForRender(entry);
+  return renderStandardCreatorPack(entry);
 }
 
 function validateCreatorPackForRender(entry) {
-  if (!isStandardCreatorPack(entry)) return true;
   const slug = entry.slug || '';
+  if (!isStandardCreatorPack(entry)) {
+    throwCreatorRenderError({
+      slug,
+      section: 'entry',
+      field: 'creatorPipelineVersion',
+      message: 'Creator Pack renderer only supports single-path-v1 entries.'
+    });
+  }
   const longScenes = entry.visualGuide;
   requireStoredField(entry, 'runtimePlan', { slug, section: 'longForm' });
   for (const field of ['totalWordCount', 'narrationReadSeconds', 'finalVideoSeconds']) {
@@ -1506,103 +1499,6 @@ function formatSecondsLabel(seconds) {
   return `${minutes} min ${String(remainder).padStart(2, '0')} sec`;
 }
 
-function renderLongFormCreator(script) {
-  const prompts = script.visualGuide || (script.imagePrompts || []).map((prompt, index) => ({
-    aiImagePrompt: prompt,
-    directionTip: index === 0 ? 'Begin with atmosphere before revealing the central mystery.' : 'Keep the image quiet, readable, and useful for narration pacing.'
-  }));
-  const productionCopyAvailability = getProductionCopyAvailability(prompts);
-  const sceneCount = Math.max(prompts.length, 1);
-  const narrationScenes = distributeByScene(script.longformScript || [], sceneCount);
-  const sceneCards = Array.from({ length: sceneCount }, (_, index) => {
-    const item = prompts[index] || {};
-    const itemImagePrompt = primaryImagePromptForGuideItem(item);
-    const sourceParts = Array.isArray(item.narrationParts) && item.narrationParts.length
-      ? item.narrationParts
-      : narrationScenes[index].filter(Boolean);
-    const narration = sourceParts.map((part) => typeof part === 'string' ? part : part.narration).filter(Boolean).join('\n\n');
-    const narrationParts = narrationPartsForScene(sourceParts, index, 'long');
-    return renderProductionSceneCard({
-      number: index + 1,
-      duration: sceneEstimatedDuration(script, sceneCount, index, 'long', narration),
-      narration,
-      narrationParts,
-      format: 'long',
-      sceneRole: item.sceneRole,
-      imagePrompt: itemImagePrompt,
-      sceneFocus: item.sceneFocus || sceneFocusForScene({
-        script,
-        index,
-        format: 'long',
-        narration,
-        imagePrompt: itemImagePrompt
-      }),
-      voiceDirection: item.voiceDirection || voiceDirectionForScene(`${script.title || ''} ${narration}`, index + 1, 'long'),
-      soundEffect: item.soundEffect || '',
-      music: storedBackgroundMusicForScene(item) || recommendedBackgroundMusic(script, 'long'),
-      visualDirection: item.visualDirection || visualDirection(index, 'long'),
-      advanced: advancedProductionInfo({
-        script,
-        number: index + 1,
-        format: 'long',
-        narration,
-        imagePrompt: itemImagePrompt,
-        storedSoundEffect: item.soundEffect,
-        storedVoiceDirection: item.voiceDirection
-      })
-    });
-  }).join('');
-
-  return `${renderNarrationCopyAction('long', 'Copy Full Long-form Narration', productionCopyAvailability)}<div class="script-prompt-list" data-narration-format="long">${sceneCards}</div>`;
-}
-
-function renderShortFormCreator(script) {
-  const sceneCount = Math.max((script.shortsScript || []).length, 1);
-  const promptScenes = distributeByScene(script.imagePrompts || [], sceneCount);
-  const storedSceneFocuses = Array.isArray(script.shortSceneFocuses) ? script.shortSceneFocuses : [];
-  const sceneCards = Array.from({ length: sceneCount }, (_, index) => {
-    const narration = (script.shortsScript || [])[index] || '';
-    return renderProductionSceneCard({
-      number: index + 1,
-      duration: sceneEstimatedDuration(script, sceneCount, index, 'short', narration),
-      narration,
-      narrationParts: shouldUseNarrationParts(narration, 'short') ? narrationPartsForScene([narration], index, 'short') : [],
-      format: 'short',
-      imagePrompt: promptScenes[index].join(' '),
-      sceneFocus: storedSceneFocuses[index] || sceneFocusForScene({
-        script,
-        index,
-        format: 'short',
-        narration,
-        imagePrompt: promptScenes[index].join(' ')
-      }),
-      voiceDirection: voiceDirectionForScene(`${script.title || ''} ${narration}`, index + 1, 'short'),
-      soundEffect: '',
-      music: storedBackgroundMusicForScene((script.visualGuide || [])[index]) || recommendedBackgroundMusic(script, 'short'),
-      visualDirection: visualDirection(index, 'short'),
-      advanced: advancedProductionInfo({
-        script,
-        number: index + 1,
-        format: 'short',
-        narration,
-        imagePrompt: promptScenes[index].join(' ')
-      })
-    });
-  }).join('');
-
-  return `${renderNarrationCopyAction('short', 'Copy Full Short-form Narration')}<div class="script-prompt-list" data-narration-format="short">${sceneCards}</div>`;
-}
-
-function getProductionCopyAvailability(prompts = []) {
-  const parts = prompts.flatMap((item) => Array.isArray(item.narrationParts) ? item.narrationParts : []);
-  const beats = parts.flatMap((part) => Array.isArray(part?.visualBeats) ? part.visualBeats : []);
-  return {
-    creatorNotes: parts.some((part) => part?.creatorNote),
-    imagePrompts: beats.some((beat) => beat?.imagePrompt || beat?.aiImagePrompt || beat?.prompt),
-    motionPrompts: beats.some((beat) => beat?.motionPrompt || beat?.beatMotion)
-  };
-}
-
 function renderNarrationCopyAction(format, label, productionCopies = {}) {
   const buttons = [
     `<button class="narration-copy-button" type="button" data-copy-kind="narration" data-narration-target="${escapeAttr(format)}">${escapeHtml(label)}</button>`
@@ -1611,17 +1507,6 @@ function renderNarrationCopyAction(format, label, productionCopies = {}) {
   if (productionCopies.imagePrompts) buttons.push(`<button class="narration-copy-button" type="button" data-copy-kind="image-prompts" data-narration-target="${escapeAttr(format)}">Copy All Image Prompts</button>`);
   if (productionCopies.motionPrompts) buttons.push(`<button class="narration-copy-button" type="button" data-copy-kind="motion-prompts" data-narration-target="${escapeAttr(format)}">Copy All Motion Prompts</button>`);
   return `<div class="narration-copy-action">${buttons.join('')}</div>`;
-}
-
-function primaryImagePromptForGuideItem(item = {}) {
-  if (item.aiImagePrompt || item.prompt) return item.aiImagePrompt || item.prompt;
-  const parts = Array.isArray(item.narrationParts) ? item.narrationParts : [];
-  for (const part of parts) {
-    const beats = Array.isArray(part?.visualBeats) ? part.visualBeats : [];
-    const beat = beats.find((entry) => entry?.imagePrompt || entry?.aiImagePrompt || entry?.prompt);
-    if (beat) return beat.imagePrompt || beat.aiImagePrompt || beat.prompt;
-  }
-  return '';
 }
 
 function renderProductionSceneCard({ number, duration, narration, narrationParts = [], format, sceneRole: explicitSceneRole, sceneFocus, imagePrompt, voiceDirection, soundEffect, music, visualDirection: direction, advanced, strictStored = false, plainReadingTime = '' }) {
@@ -1959,15 +1844,6 @@ function sceneFocusForScene({ script, index, format, narration, imagePrompt }) {
   const context = `${script.title || ''} ${script.genre || ''} ${script.deck || ''} ${(script.tags || []).join(' ')} ${narration || ''} ${imagePrompt || ''}`.toLowerCase();
   const isShort = format === 'short';
 
-  if (isPrometheusContext(context)) {
-    const focuses = [
-      'Prometheus is defined by the gift of fire and the boundary it crosses.',
-      'Fire becomes a symbol of human craft, survival, and forbidden knowledge.',
-      'Zeus and the punishment make the cost of the gift visible.',
-      'The myth remains powerful because the gift and the penalty stay linked.'
-    ];
-    return focuses[index] || 'Prometheus leaves the question of knowledge, rebellion, and cost unresolved.';
-  }
   if (isVideoWatchHistoryContext(context)) {
     const focuses = [
       'A normal watch history entry contains one impossible second.',
@@ -2065,9 +1941,6 @@ function advancedProductionInfo({ script, number, format, narration, imagePrompt
 function motionPromptForScene(imagePrompt, context, format) {
   const cameraMove = format === 'short' ? 'a slow push-in with steady vertical framing' : 'a slow cinematic push-in with gentle atmospheric movement';
   const basePrompt = String(imagePrompt || '').replace(/[.]+$/g, '');
-  if (isPrometheusContext(context)) {
-    return `${basePrompt}. Let the flame move gently, add distant storm light over the mountain stone, and use a restrained slow push-in. Keep the motion ancient, grounded, and focused on fire, punishment, and divine boundary.`;
-  }
   if (isVideoWatchHistoryContext(context)) {
     return `${basePrompt}. Push in slowly toward the mismatched timestamp, keep the screen interface steady, and let the playback bar or metadata become the only moving focus. Keep it subtle and realistic.`;
   }
@@ -2093,9 +1966,6 @@ function motionPromptForScene(imagePrompt, context, format) {
 }
 
 function soundEffectForScene(context) {
-  if (isPrometheusContext(context)) {
-    return 'fire crackle, high mountain wind, distant thunder, faint chain movement';
-  }
   if (isVideoWatchHistoryContext(context)) {
     return 'soft interface click, playback scrub, low screen-room tone';
   }
@@ -2125,9 +1995,6 @@ function soundEffectForScene(context) {
 
 function voiceDirectionForScene(context, number, format) {
   const pace = format === 'short' ? 'short, clear, and direct' : 'slowly, with enough space between sentences';
-  if (isPrometheusContext(context)) {
-    return `Read with calm mythic weight, ${pace}. Give light emphasis to "fire", "Zeus", "humanity", and "punishment" without sounding theatrical.`;
-  }
   if (isVideoWatchHistoryContext(context)) {
     return `Read in a quiet digital-documentary tone, ${pace}. Keep the anomaly precise and avoid making it sound like a jump scare.`;
   }
@@ -2153,9 +2020,6 @@ function voiceDirectionForScene(context, number, format) {
 }
 
 function cameraNotesForScene(context, number, format) {
-  if (isPrometheusContext(context)) {
-    return 'wide mountain frame: show stone and sky first. slow push-in: move toward the flame. hold briefly: let the punishment detail settle before fading.';
-  }
   if (isVideoWatchHistoryContext(context)) {
     return 'tight screen frame: show the watch history first. slow push-in: move toward the extra second. static hold: keep the metadata readable.';
   }
@@ -2183,9 +2047,7 @@ function cameraNotesForScene(context, number, format) {
 }
 
 function transitionNotesForScene(context, number, format) {
-  const color = isPrometheusContext(context)
-    ? 'Use warm fire gold, cold stone gray, and low-saturation storm tones.'
-    : isVideoWatchHistoryContext(context)
+  const color = isVideoWatchHistoryContext(context)
       ? 'Use low screen light, muted blue-gray shadows, and restrained contrast.'
       : isSubwayMaintenanceContext(context)
         ? 'Use muted transit green, concrete gray, and low underground light.'
@@ -2229,11 +2091,6 @@ function isWildHuntContext(context) {
 
 function isShambhalaContext(context) {
   return /shambhala|kalachakra|hidden kingdom|buddhist|sacred geography|monastery/.test(context);
-}
-
-function isPrometheusContext(context) {
-  return /\bprometheus\b|stealing fire|gift of fire/.test(context)
-    || (/\bfire\b/.test(context) && /\b(zeus|titan|eagle)\b/.test(context));
 }
 
 function isVideoWatchHistoryContext(context) {
@@ -3235,6 +3092,5 @@ module.exports = {
   validateCreatorPackForRender,
   buildCreatorRenderModel,
   renderStandardCreatorPack,
-  renderLegacyCreatorPack,
   renderCreatorPack
 };

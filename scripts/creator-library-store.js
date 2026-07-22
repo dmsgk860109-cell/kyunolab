@@ -19,16 +19,23 @@ function saveCreatorLibraryEntry(entry, options = {}) {
 function saveCreatorLibraryEntries(entries, options = {}) {
   const current = options.currentEntries || loadCreatorLibraryEntries(options);
   const additions = ensureArray(entries);
-  const next = mergeCreatorLibraryEntries(current, additions);
+  const next = mergeCreatorLibraryEntries(current, additions, options);
   if (options.dryRun) return next;
   writeJsonAtomic(options.scriptsPath || scriptsPath, next);
   return next;
 }
 
-function mergeCreatorLibraryEntries(currentEntries, entries) {
+function mergeCreatorLibraryEntries(currentEntries, entries, options = {}) {
   const additions = ensureArray(entries);
   additions.forEach(assertCreatorEntryIsSaveable);
   const additionSlugs = new Set(additions.map((entry) => entry.slug));
+  if (options.preserveOrder) {
+    const additionsBySlug = new Map(additions.map((entry) => [entry.slug, entry]));
+    const replaced = ensureArray(currentEntries).map((entry) => additionsBySlug.get(entry.slug) || entry);
+    const existingSlugs = new Set(ensureArray(currentEntries).map((entry) => entry.slug));
+    const newEntries = additions.filter((entry) => !existingSlugs.has(entry.slug));
+    return [...newEntries, ...replaced];
+  }
   return [
     ...additions,
     ...ensureArray(currentEntries).filter((entry) => !additionSlugs.has(entry.slug))
@@ -106,5 +113,6 @@ module.exports = {
   saveCreatorLibraryEntry,
   saveCreatorLibraryEntries,
   assertCreatorEntryIsSaveable,
+  mergeCreatorLibraryEntries,
   mergeCreatorLibraryEntry
 };

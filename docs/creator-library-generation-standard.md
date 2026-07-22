@@ -2,13 +2,16 @@
 
 Status: Active
 
-Standard version: Creator Library Generation Standard v1.0
+Standard version: Creator Library Generation Standard v2.0
 
 Last confirmed: 2026-07-22
 
 Applies to:
 
 - `scripts/add-latest-archive-to-creator-library-2026-07-20.js`
+- `scripts/add-one-latest-unconverted-archive-to-creator-library-2026-07-20.js`
+- `scripts/creator-library-pipeline.js`
+- `scripts/creator-library-store.js`
 - `scripts/generate-site.js`
 - `scripts/creator-library.js`
 - `data/scripts.json`
@@ -16,7 +19,11 @@ Applies to:
 
 Related generation file:
 
-- `scripts/add-latest-archive-to-creator-library-2026-07-20.js`
+- `scripts/creator-library-pipeline.js`
+
+Related storage file:
+
+- `scripts/creator-library-store.js`
 
 Related renderer file:
 
@@ -64,6 +71,8 @@ The production pipeline is:
 18. `creator-library.js` copy behavior
 
 Each step must use the current Story Brief, current Scene, current Narration Part, or current Visual Beat. Do not skip to category, scene number, array index, or broad content type as the only basis for production content.
+
+The active stored pipeline version is `single-path-v1`. All Creator Packs in `data/scripts.json` must use this version.
 
 ## Field Contracts
 
@@ -132,25 +141,13 @@ Each step must use the current Story Brief, current Scene, current Narration Par
 - Full copy buttons must copy only one field type in page order.
 - Copy output must not include field labels, button text, timing metadata, Scene numbers, Part numbers, or another production field.
 
-## Renderer Priority
+## Renderer Contract
 
-The official renderer priority is:
+Renderer does not provide a legacy compatibility path.
 
-1. Current stored value in `data/scripts.json`
-2. Generated value from the current Story Brief and current Scene or Part
-3. Restricted fallback for the current content type
-4. Neutral fallback
+The official renderer accepts only stored `single-path-v1` Creator Packs. It must read production fields from `data/scripts.json` and render them. It must not generate missing Long-form, Short-form, Image Prompt, Beat Motion, Background Music, Voice Direction, Sound Effect, Creator Note, or Scene Focus content during rendering.
 
-Renderer fallback may fill missing values only. It must not replace a valid stored field.
-
-Missing values are:
-
-- `undefined`
-- `null`
-- empty string
-- empty array
-
-Valid stored values must not be overridden because of category, broad content type, `myth`, `mythology`, generic `story`, substring regex, previous production profile, or array order.
+If a required stored production field is missing, the renderer must fail with a structured Creator render error. It must not repair the Pack through category fallback, broad content type fallback, substring regex, previous production profile, or array order.
 
 ## Preset Selection
 
@@ -220,7 +217,7 @@ Forbidden examples:
 
 General functions must work from Story Brief, Narration Part, Scene Role, Image Prompt, and production profile.
 
-Existing subject-specific branches are legacy exceptions. They are recorded in `scripts/creator-library-legacy-exceptions.json`. Do not add new exceptions. Do not expand existing exceptions. Removing or generalizing legacy exceptions is a separate explicit task.
+There are no legacy exception files or allowed subject-specific renderer branches. Do not add allowlists for finished production content.
 
 ## New Creator Pack Publishing Flow
 
@@ -237,11 +234,12 @@ Existing subject-specific branches are legacy exceptions. They are recorded in `
 11. Confirm target story data diff only.
 12. Build the full site.
 13. Run permanent regression validation.
-14. Run tag validation.
-15. Run `git diff --check`.
-16. Inspect generated HTML samples.
-17. Commit.
-18. Push.
+14. Run migration validation when existing Packs are touched.
+15. Run tag validation.
+16. Run `git diff --check`.
+17. Inspect generated HTML samples.
+18. Commit.
+19. Push.
 
 Bulk Creator Pack generation is allowed only when explicitly requested.
 
@@ -267,9 +265,20 @@ Run these before completing Creator Library work:
 
 ```bash
 node --check scripts/add-latest-archive-to-creator-library-2026-07-20.js
+node --check scripts/add-one-latest-unconverted-archive-to-creator-library-2026-07-20.js
+node --check scripts/creator-library-pipeline.js
+node --check scripts/creator-library-store.js
 node --check scripts/generate-site.js
 node --check scripts/creator-library.js
 node --check scripts/validate-creator-library-generation-standard.js
+node --check scripts/validate-creator-library-migration.js
+node scripts/validate-creator-library-input.js
+node scripts/validate-creator-library-scene-plan.js
+node scripts/validate-creator-library-production.js
+node scripts/validate-creator-library-shortform.js
+node scripts/validate-creator-library-renderer.js
+node scripts/validate-creator-library-single-path.js
+node scripts/validate-creator-library-migration.js
 node scripts/validate-creator-library-generation-standard.js
 node scripts/validate-tags.js
 node scripts/generate-site.js

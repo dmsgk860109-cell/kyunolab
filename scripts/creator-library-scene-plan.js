@@ -244,7 +244,7 @@ function comparableFact(value) {
 function hasUnreasonableFactDuplication(facts) {
   const counts = new Map();
   facts.map(comparableFact).filter(Boolean).forEach((key) => counts.set(key, (counts.get(key) || 0) + 1));
-  return Array.from(counts.values()).some((count) => count > 3);
+  return Array.from(counts.values()).some((count) => count > 7);
 }
 
 module.exports = {

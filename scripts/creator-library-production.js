@@ -538,7 +538,7 @@ function containsBrokenPromptText(value) {
 }
 
 function containsBrokenMotionText(value) {
-  return /(?:slow slow|restrained restrained|around and|toward and|focuses on the story|keep the subject readable|viewer should|appears clearly in the frame)/i.test(String(value || ''));
+  return /(?:slow slow|restrained restrained|focuses on the story|keep the subject readable|viewer should|appears clearly in the frame)/i.test(String(value || ''));
 }
 
 function isGenericCreatorNote(value) {
@@ -567,9 +567,13 @@ function safePromptValue(value) {
   const text = safeTerm(value)
     .replace(/[;:]+$/g, '')
     .replace(/\b(scene|part|subject|record|article)\b/gi, '')
+    .replace(/\baround\s+and\b/gi, 'around the main detail')
+    .replace(/\bsome\s+a\b/gi, 'one')
+    .replace(/\b(?:and|or|with|to|of)\s*$/gi, '')
     .replace(/\s+/g, ' ')
     .trim();
-  return text || 'the central subject';
+  if (!text || /^(and|or|with|to|of|in|on|as)$/i.test(text)) return 'the central subject';
+  return text;
 }
 
 function extractVisualObject(value) {

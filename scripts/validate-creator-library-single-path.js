@@ -214,14 +214,21 @@ function assertDeletedLegacyFunctionsRemoved() {
 function assertLegacyRendererIsolation() {
   const pipeline = readText(path.join(root, 'scripts', 'creator-library-pipeline.js'));
   const store = readText(path.join(root, 'scripts', 'creator-library-store.js'));
+  const renderer = readText(path.join(root, 'scripts', 'generate-site.js'));
   if (pipeline.includes("require('./generate-site')") || store.includes("require('./generate-site')")) {
     fail('legacy-renderer', 'pipeline/store imports generate-site');
   }
+  for (const removed of ['renderLegacyCreatorPack', 'function renderLongFormCreator', 'function renderShortFormCreator']) {
+    if (renderer.includes(removed)) fail('legacy-renderer', `legacy renderer remains: ${removed}`);
+  }
   const standard = buildFixtureEntry('maui-slows-the-sun-myth');
   if (!isStandardCreatorPack(standard)) fail('legacy-renderer', 'standard fixture is not standard');
-  const legacy = scripts.find((entry) => entry.creatorPipelineVersion !== CREATOR_PIPELINE_VERSION);
-  if (!legacy) fail('legacy-renderer', 'missing legacy fixture');
-  if (legacy && isStandardCreatorPack(legacy)) fail('legacy-renderer', 'legacy fixture detected as standard');
+  const legacyCount = scripts.filter((entry) => entry.creatorPipelineVersion !== CREATOR_PIPELINE_VERSION).length;
+  if (legacyCount) fail('legacy-renderer', `legacy entries remain in data/scripts.json: ${legacyCount}`);
+  const legacyLike = clone(standard);
+  delete legacyLike.creatorPipelineVersion;
+  if (isStandardCreatorPack(legacyLike)) fail('legacy-renderer', 'legacy-like fixture detected as standard');
+  assertRejects('legacy renderer', () => renderCreatorPack(legacyLike), 'CREATOR_RENDER_DATA_MISSING');
 }
 
 function buildFixtureEntry(slug) {

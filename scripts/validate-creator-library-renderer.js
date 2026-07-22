@@ -61,7 +61,7 @@ function main() {
   }
 
   validateMissingFieldFailures(renderer);
-  validateLegacySample(renderer);
+  validateLegacyRejection(renderer);
   assertProtectedFilesUnchanged(beforeHashes);
   report();
 }
@@ -225,13 +225,17 @@ function validateMissingFieldFailures(renderer) {
   }
 }
 
-function validateLegacySample(renderer) {
-  const legacy = scripts.find((script) => script && script.creatorPipelineVersion !== 'single-path-v1');
-  if (!legacy) return fail('legacy', 'no legacy sample found');
-  if (renderer.isStandardCreatorPack(legacy)) fail('legacy', 'legacy sample detected as standard');
-  const html = renderer.renderCreatorPack(legacy);
-  if (!html.includes('Long-form Creator') || !html.includes('Short-form Creator')) {
-    fail('legacy', 'legacy sample did not render through compatibility path');
+function validateLegacyRejection(renderer) {
+  const legacy = clone(buildFixturePack('maui-slows-the-sun-myth'));
+  delete legacy.creatorPipelineVersion;
+  if (renderer.isStandardCreatorPack(legacy)) fail('legacy', 'legacy-like sample detected as standard');
+  try {
+    renderer.renderCreatorPack(legacy);
+    fail('legacy', 'legacy-like sample rendered through compatibility path');
+  } catch (error) {
+    if (error.code !== 'CREATOR_RENDER_DATA_MISSING' || error.field !== 'creatorPipelineVersion') {
+      fail('legacy', `legacy-like sample returned ${error.code || error.message}`);
+    }
   }
 }
 
@@ -295,8 +299,11 @@ function assertNoFixtureLeakage(slug, normalizedInput, html) {
 function assertRendererSourceIsolation() {
   const source = readText(path.join(root, 'scripts', 'generate-site.js'));
   const standardStart = source.indexOf('function renderStandardCreatorPack');
-  const legacyStart = source.indexOf('function renderLongFormCreator');
-  const standardBody = source.substring(standardStart, legacyStart);
+  const standardEnd = source.indexOf('function standardAdvancedProductionInfo');
+  const standardBody = source.substring(standardStart, standardEnd);
+  for (const removed of ['renderLegacyCreatorPack', 'function renderLongFormCreator', 'function renderShortFormCreator']) {
+    if (source.includes(removed)) fail('generate-site', `legacy renderer remains: ${removed}`);
+  }
   for (const forbidden of [
     'advancedProductionInfo(',
     'motionPromptForScene(',

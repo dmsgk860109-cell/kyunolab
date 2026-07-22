@@ -22,8 +22,7 @@ const fixtureScripts = [
     storySlug: 'cicada-3301-internet-puzzle',
     scriptSlug: 'cicada-3301-internet-puzzle-youtube-script',
     mustInclude: [/cicada/i, /puzzle|cipher|cryptography|tor|digital|online/i],
-    mustNotInclude: [/demeter/i, /persephone/i, /osiris/i, /isis/i, /pomegranate/i, /grain goddess/i, /nile-side/i],
-    legacyLongformWarnings: true
+    mustNotInclude: [/demeter/i, /persephone/i, /osiris/i, /isis/i, /pomegranate/i, /grain goddess/i, /nile-side/i]
   }
 ];
 
@@ -32,7 +31,6 @@ main();
 function main() {
   assertFile('docs/creator-library-generation-standard.md');
   assertFile('AGENTS.md');
-  assertFile('scripts/creator-library-legacy-exceptions.json');
   assertFile('scripts/creator-library-pipeline.js');
   assertFile('scripts/creator-library-store.js');
   assertFile('scripts/add-latest-archive-to-creator-library-2026-07-20.js');
@@ -40,21 +38,22 @@ function main() {
   assertFile('scripts/creator-library.js');
 
   const standard = readText('docs/creator-library-generation-standard.md');
-  requireText(standard, 'Creator Library Generation Standard v1.0', 'standard document version is missing');
-  requireText(standard, 'Renderer fallback may fill missing values only', 'renderer priority contract is missing');
+  requireText(standard, 'Creator Library Generation Standard v2.0', 'standard document version is missing');
+  requireText(standard, 'Renderer does not provide a legacy compatibility path', 'renderer final contract is missing');
   requireText(standard, 'Do not add new subject-specific production functions', 'hardcoding rule is missing');
   requireText(standard, 'node scripts/validate-creator-library-generation-standard.js', 'permanent validation command is missing');
 
   const agents = readText('AGENTS.md');
   requireText(agents, 'docs/creator-library-generation-standard.md', 'AGENTS.md must point to the Creator Library standard');
   requireText(agents, 'Do not add new slug-specific production functions', 'AGENTS.md hardcoding rule is missing');
+  requireText(agents, 'single-path-v1', 'AGENTS.md must document the active Creator Library pipeline version');
 
   const stories = readJson('data/stories.json');
   const scripts = readJson('data/scripts.json');
-  const legacy = readJson('scripts/creator-library-legacy-exceptions.json');
 
-  validateLegacyExceptionBaseline(legacy);
-  validateNoNewSubjectSpecificBranches(legacy);
+  validateNoLegacyExceptionFile();
+  validateNoLegacyEntries(scripts);
+  validateNoNewSubjectSpecificBranches();
   fixtureScripts.forEach((fixture) => validateFixture(fixture, stories, scripts));
   validateCopyClientScript();
   report();
@@ -123,10 +122,6 @@ function validateLongform(fixture, script) {
     if (!text) error(fixture.scriptSlug, `longformScript[${index}]`, 'empty Long-form Narration entry');
     forbidden.forEach((pattern) => {
       if (!pattern.test(text)) return;
-      if (fixture.legacyLongformWarnings) {
-        warn(fixture.scriptSlug, `longformScript[${index}]`, `legacy long-form phrase still present: ${pattern}`);
-        return;
-      }
       error(fixture.scriptSlug, `longformScript[${index}]`, `forbidden meta or field label found: ${pattern}`);
     });
   });
@@ -293,27 +288,22 @@ function validateCopyClientScript() {
   if (/collectPartText/.test(source)) error('scripts/creator-library.js', 'copy', 'legacy combined Part copy function still exists');
 }
 
-function validateLegacyExceptionBaseline(legacy) {
-  if (!Array.isArray(legacy.allowedSubjectFunctions)) error('creator-library-legacy-exceptions.json', 'legacy', 'allowedSubjectFunctions must be an array');
-  if (!Array.isArray(legacy.allowedSlugBranches)) error('creator-library-legacy-exceptions.json', 'legacy', 'allowedSlugBranches must be an array');
-  if (legacy.allowedSubjectFunctions.some((entry) => /demeter|osiris|cicada/i.test(entry.name))) {
-    error('creator-library-legacy-exceptions.json', 'legacy', 'removed generation exceptions must not remain');
-  }
-  if (legacy.allowedSlugBranches.length) {
-    error('creator-library-legacy-exceptions.json', 'legacy', 'slug branch exceptions must be removed');
-  }
-  if (!legacy.allowedSubjectFunctions.some((entry) => entry.name === 'isPrometheusContext' && entry.file === 'scripts/generate-site.js')) {
-    error('creator-library-legacy-exceptions.json', 'legacy', 'missing temporary legacy renderer exception');
+function validateNoLegacyExceptionFile() {
+  if (fs.existsSync(path.join(root, 'scripts/creator-library-legacy-exceptions.json'))) {
+    error('creator-library-legacy-exceptions.json', 'legacy', 'legacy exception file must be removed');
   }
 }
 
-function validateNoNewSubjectSpecificBranches(legacy) {
+function validateNoLegacyEntries(scripts) {
+  const legacy = scripts.filter((script) => script.creatorPipelineVersion !== 'single-path-v1');
+  if (legacy.length) error('data/scripts.json', 'legacy', `legacy Creator Pack entries remain: ${legacy.length}`);
+}
+
+function validateNoNewSubjectSpecificBranches() {
   const files = [
     'scripts/creator-library-pipeline.js',
     'scripts/generate-site.js'
   ];
-  const allowedFunctions = new Set((legacy.allowedSubjectFunctions || []).map((entry) => entry.name));
-  const allowedSlugBranches = new Set((legacy.allowedSlugBranches || []).map((entry) => `${entry.operator}:${entry.slug}:${entry.file}`));
   const subjectFunctionPattern = /function\s+([A-Za-z0-9_]*(?:demeter|osiris|cicada|prometheus|quetzalcoatl|persephone)[A-Za-z0-9_]*)\s*\(/gi;
   const slugBranchPattern = /story\.slug\s*(===|!==)\s*['"]([^'"]+)['"]/g;
 
@@ -321,11 +311,10 @@ function validateNoNewSubjectSpecificBranches(legacy) {
     const source = readText(file);
     for (const match of source.matchAll(subjectFunctionPattern)) {
       const name = match[1];
-      if (!allowedFunctions.has(name)) error(file, 'subject-specific function', `new subject-specific function found: ${name}`);
+      error(file, 'subject-specific function', `new subject-specific function found: ${name}`);
     }
     for (const match of source.matchAll(slugBranchPattern)) {
-      const key = `${match[1]}:${match[2]}:${file}`;
-      if (!allowedSlugBranches.has(key)) error(file, 'slug branch', `new direct story.slug branch found: ${match[1]} ${match[2]}`);
+      error(file, 'slug branch', `new direct story.slug branch found: ${match[1]} ${match[2]}`);
     }
   });
 }
