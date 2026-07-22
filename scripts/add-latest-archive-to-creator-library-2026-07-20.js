@@ -1,5 +1,8 @@
 const fs = require('fs');
 const path = require('path');
+const {
+  normalizeCreatorStoryInput
+} = require('./creator-library-input');
 
 const root = path.resolve(__dirname, '..');
 const storiesPath = path.join(root, 'data', 'stories.json');
@@ -9,38 +12,44 @@ const categoriesPath = path.join(root, 'data', 'categories.json');
 const publishedAt = '2026-07-21';
 const perCategory = 3;
 
-const stories = readJson(storiesPath);
-const scripts = readJson(scriptsPath);
-const categories = readJson(categoriesPath);
-const existingScriptSlugs = new Set(scripts.map((script) => script.slug));
-const existingOriginalSlugs = new Set(scripts.map((script) => script.originalStorySlug).filter(Boolean));
-const additions = [];
+function main() {
+  const stories = readJson(storiesPath);
+  const scripts = readJson(scriptsPath);
+  const categories = readJson(categoriesPath);
+  const existingScriptSlugs = new Set(scripts.map((script) => script.slug));
+  const existingOriginalSlugs = new Set(scripts.map((script) => script.originalStorySlug).filter(Boolean));
+  const additions = [];
 
-for (const category of categories) {
-  const latestStories = stories
-    .filter((story) => story.contentType === 'story' && story.categorySlug === category.slug)
-    .slice(0, perCategory);
+  for (const category of categories) {
+    const latestStories = stories
+      .filter((story) => story.contentType === 'story' && story.categorySlug === category.slug)
+      .slice(0, perCategory);
 
-  for (const story of latestStories) {
-    const script = buildCreatorLibraryEntry(story, category);
-    if (existingScriptSlugs.has(script.slug) || existingOriginalSlugs.has(story.slug)) {
-      continue;
+    for (const story of latestStories) {
+      const script = buildCreatorLibraryEntry(story, category);
+      if (existingScriptSlugs.has(script.slug) || existingOriginalSlugs.has(story.slug)) {
+        continue;
+      }
+      additions.push(script);
+      existingScriptSlugs.add(script.slug);
+      existingOriginalSlugs.add(story.slug);
     }
-    additions.push(script);
-    existingScriptSlugs.add(script.slug);
-    existingOriginalSlugs.add(story.slug);
+  }
+
+  scripts.unshift(...additions);
+  writeJson(scriptsPath, scripts);
+
+  console.log(`Added ${additions.length} Creator Library entries.`);
+  for (const addition of additions) {
+    console.log(`${addition.creatorCategorySlug}: ${addition.slug}`);
   }
 }
 
-scripts.unshift(...additions);
-writeJson(scriptsPath, scripts);
-
-console.log(`Added ${additions.length} Creator Library entries.`);
-for (const addition of additions) {
-  console.log(`${addition.creatorCategorySlug}: ${addition.slug}`);
-}
-
-function buildCreatorLibraryEntry(story, category) {
+function buildCreatorLibraryEntry(story, category, options = {}) {
+  const normalizedInput = options.normalizedInput || normalizeCreatorStoryInput(story, category);
+  if (typeof options.onNormalizedInput === 'function') {
+    options.onNormalizedInput(normalizedInput);
+  }
   const subject = cleanSubject(story.title);
   const slug = `${story.slug}-youtube-script`;
   const motif = story.primaryTag || story.tag || story.contentDNA?.centralMotif || category.title;
@@ -1972,3 +1981,11 @@ function readJson(filePath) {
 function writeJson(filePath, value) {
   fs.writeFileSync(filePath, `${JSON.stringify(value, null, 2)}\n`);
 }
+
+if (require.main === module) {
+  main();
+}
+
+module.exports = {
+  buildCreatorLibraryEntry
+};
