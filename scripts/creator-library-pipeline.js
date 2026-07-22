@@ -205,7 +205,7 @@ function validateShortForm(entry, errors) {
     return;
   }
   shortForm.scenes.forEach((scene, sceneIndex) => {
-    for (const field of ['sceneIndex', 'role', 'narration', 'sceneFocus', 'motionPrompt', 'backgroundMusic', 'voiceDirection', 'soundEffect', 'estimatedReadSeconds']) {
+    for (const field of ['sceneIndex', 'role', 'narration', 'sceneFocus', 'imagePrompt', 'motionPrompt', 'backgroundMusic', 'voiceDirection', 'soundEffect', 'estimatedReadSeconds']) {
       if (!hasValue(scene[field])) errors.push(errorFor('shortForm', field, sceneIndex + 1));
     }
   });
@@ -301,6 +301,7 @@ function mapShortformResultToStoredShortForm(shortformResult) {
       role: scene.role,
       narration: scene.narration,
       sceneFocus: scene.sceneFocus,
+      imagePrompt: scene.imagePrompt,
       motionPrompt: scene.motionPrompt,
       backgroundMusic: scene.backgroundMusic,
       voiceDirection: scene.voiceDirection,

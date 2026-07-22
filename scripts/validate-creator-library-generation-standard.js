@@ -40,8 +40,10 @@ function main() {
   const standard = readText('docs/creator-library-generation-standard.md');
   requireText(standard, 'Creator Library Generation Standard v2.0', 'standard document version is missing');
   requireText(standard, 'Renderer does not provide a legacy compatibility path', 'renderer final contract is missing');
+  requireText(standard, 'Short-form Image Prompt', 'Short-form Image Prompt contract is missing');
   requireText(standard, 'Do not add new subject-specific production functions', 'hardcoding rule is missing');
   requireText(standard, 'node scripts/validate-creator-library-generation-standard.js', 'permanent validation command is missing');
+  requireText(standard, 'node scripts/validate-creator-library-shortform-image-prompts.js', 'Short-form Image Prompt validation command is missing');
 
   const agents = readText('AGENTS.md');
   requireText(agents, 'docs/creator-library-generation-standard.md', 'AGENTS.md must point to the Creator Library standard');
@@ -237,6 +239,29 @@ function validateShortForm(fixture, script) {
   forbidden.forEach((pattern) => {
     if (pattern.test(packedShorts)) error(fixture.scriptSlug, 'shortsScript', `forbidden Short-form phrase found: ${pattern}`);
   });
+
+  const scenes = script.shortForm?.scenes || [];
+  if (scenes.length !== 5) error(fixture.scriptSlug, 'shortForm.scenes', 'expected exactly 5 stored Short-form scenes');
+  const imagePrompts = scenes.map((scene) => normalizeText(scene.imagePrompt));
+  const motionPrompts = scenes.map((scene) => normalizeText(scene.motionPrompt));
+  if (imagePrompts.some((value) => !value)) error(fixture.scriptSlug, 'shortForm.imagePrompt', 'stored Short-form Image Prompt is missing');
+  if (motionPrompts.some((value) => !value)) error(fixture.scriptSlug, 'shortForm.motionPrompt', 'stored Short-form Motion Prompt is missing');
+  if (hasDuplicates(imagePrompts)) error(fixture.scriptSlug, 'shortForm.imagePrompt', 'duplicate Short-form Image Prompt found');
+  if (hasDuplicates(motionPrompts)) error(fixture.scriptSlug, 'shortForm.motionPrompt', 'duplicate Short-form Motion Prompt found');
+  imagePrompts.forEach((prompt, index) => {
+    const words = countWords(prompt);
+    if (words < 30 || words > 100) error(fixture.scriptSlug, `shortForm.scenes[${index}].imagePrompt`, `word count outside 30-100: ${words}`);
+    if (/Image Prompt:|Motion Prompt:|Sound Effect:|Voice Direction:|Background Music:|Creator Note:/i.test(prompt)) {
+      error(fixture.scriptSlug, `shortForm.scenes[${index}].imagePrompt`, 'contains another production field label');
+    }
+  });
+  motionPrompts.forEach((prompt, index) => {
+    const words = countWords(prompt);
+    if (words < 10 || words > 35) error(fixture.scriptSlug, `shortForm.scenes[${index}].motionPrompt`, `word count outside 10-35: ${words}`);
+    if (/Image Prompt:|No readable text|logos|watermarks|graphic gore|cartoon styling/i.test(prompt)) {
+      error(fixture.scriptSlug, `shortForm.scenes[${index}].motionPrompt`, 'contains Image Prompt label or exclusions');
+    }
+  });
 }
 
 function validateFixtureHtml(fixture, sceneCount, partCount, beatCount) {
@@ -271,6 +296,8 @@ function validateFixtureHtml(fixture, sceneCount, partCount, beatCount) {
 
   if (count(shortHtml, /<article class="scene-workspace">/g) < Math.min(sceneCount, 3)) error(fixture.scriptSlug, 'short html', 'Short-form scenes are missing');
   if (!/Scene Focus:<\/strong>/.test(shortHtml)) error(fixture.scriptSlug, 'short html', 'Short-form Scene Focus is missing');
+  if (count(shortHtml, /<strong>Image Prompt:<\/strong>/g) !== 5) error(fixture.scriptSlug, 'short html', 'Short-form Image Prompt count is not 5');
+  if (count(shortHtml, /<strong>Motion Prompt:<\/strong>/g) !== 5) error(fixture.scriptSlug, 'short html', 'Short-form Motion Prompt count is not 5');
   if (!/Estimated Playback Time:<\/strong>/.test(shortHtml)) error(fixture.scriptSlug, 'short html', 'Short-form runtime is missing');
 }
 

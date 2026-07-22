@@ -106,7 +106,7 @@ function assertShortformSchema(slug, normalizedInput, scenePlan, shortformResult
   shortformResult.scenes.forEach((scene, index) => {
     if (scene.sceneIndex !== index + 1) fail(slug, `Scene ${index + 1} invalid index`);
     if (scene.role !== rules[index]?.role) fail(slug, `Scene ${index + 1} role mismatch`);
-    for (const field of ['narration', 'sceneFocus', 'motionPrompt', 'backgroundMusic', 'voiceDirection', 'soundEffect']) {
+    for (const field of ['narration', 'sceneFocus', 'imagePrompt', 'motionPrompt', 'backgroundMusic', 'voiceDirection', 'soundEffect']) {
       if (!scene[field]) fail(slug, `Scene ${index + 1} missing ${field}`);
     }
     if (detectShortformMetaLanguage(scene.narration).length) fail(slug, `Scene ${index + 1} contains meta language`);
@@ -142,6 +142,9 @@ function assertOfficialOutputSync(slug, shortformResult, officialShortformResult
   if (JSON.stringify(script.shortsScript) !== JSON.stringify(expectedNarration)) fail(slug, 'shortsScript is not derived from shortForm.scenes');
   if (JSON.stringify(script.shortSceneFocuses) !== JSON.stringify(expectedFocuses)) fail(slug, 'shortSceneFocuses is not derived from shortForm.scenes');
   if (!script.shortForm || script.shortForm.scenes?.length !== 5) fail(slug, 'script.shortForm storage object missing');
+  const storedImagePrompts = script.shortForm.scenes.map((scene) => scene.imagePrompt);
+  const expectedImagePrompts = shortformResult.scenes.map((scene) => scene.imagePrompt);
+  if (JSON.stringify(storedImagePrompts) !== JSON.stringify(expectedImagePrompts)) fail(slug, 'shortForm imagePrompt values are not synchronized');
   const storedMotions = script.shortForm.scenes.map((scene) => scene.motionPrompt);
   const expectedMotions = shortformResult.scenes.map((scene) => scene.motionPrompt);
   if (JSON.stringify(storedMotions) !== JSON.stringify(expectedMotions)) fail(slug, 'shortForm motion values are not synchronized');

@@ -4,7 +4,7 @@ Status: Active
 
 Standard version: Creator Library Generation Standard v2.0
 
-Last confirmed: 2026-07-22
+Last confirmed: 2026-07-23
 
 Applies to:
 
@@ -65,10 +65,12 @@ The production pipeline is:
 12. Sound Effect
 13. Short-form Narration
 14. Short-form Scene Focus
-15. Runtime Plan
-16. `data/scripts.json` storage
-17. `generate-site.js` HTML rendering
-18. `creator-library.js` copy behavior
+15. Short-form Image Prompt
+16. Short-form Motion Prompt
+17. Runtime Plan
+18. `data/scripts.json` storage
+19. `generate-site.js` HTML rendering
+20. `creator-library.js` copy behavior
 
 Each step must use the current Story Brief, current Scene, current Narration Part, or current Visual Beat. Do not skip to category, scene number, array index, or broad content type as the only basis for production content.
 
@@ -135,6 +137,23 @@ The active stored pipeline version is `single-path-v1`. All Creator Packs in `da
 - Must name the person, event, place, or visual emphasis shown in the current Short-form Scene.
 - Must not include Motion, Music, Voice, or Sound instructions.
 
+### Short-form Image Prompt
+
+- Must be stored on `shortForm.scenes[].imagePrompt`.
+- Must describe exactly one image for the current Short-form Scene.
+- Must be based on the current Short-form role, Narration, Scene Focus, normalized input, and production profile.
+- Must not join Long-form Image Prompt arrays, Long-form Visual Beat prompts, or prompts from another Short-form Scene.
+- Must be one string, not an array or object.
+- Must keep exclusions to one sentence at most.
+
+### Short-form Motion Prompt
+
+- Must be stored on `shortForm.scenes[].motionPrompt`.
+- Must animate the exact image described by the current Short-form Image Prompt.
+- Must be brief and motion-only.
+- Must not copy the full Image Prompt.
+- Must not include Image Prompt exclusions, Sound Effect, Background Music, or Voice Direction content.
+
 ### Copy Behavior
 
 - Each field copy button must copy only its own field.
@@ -145,7 +164,9 @@ The active stored pipeline version is `single-path-v1`. All Creator Packs in `da
 
 Renderer does not provide a legacy compatibility path.
 
-The official renderer accepts only stored `single-path-v1` Creator Packs. It must read production fields from `data/scripts.json` and render them. It must not generate missing Long-form, Short-form, Image Prompt, Beat Motion, Background Music, Voice Direction, Sound Effect, Creator Note, or Scene Focus content during rendering.
+The official renderer accepts only stored `single-path-v1` Creator Packs. It must read production fields from `data/scripts.json` and render them. It must not generate missing Long-form, Short-form, Image Prompt, Beat Motion, Short-form Image Prompt, Short-form Motion Prompt, Background Music, Voice Direction, Sound Effect, Creator Note, or Scene Focus content during rendering.
+
+For Short-form scenes, the renderer must read Image Prompt only from `shortForm.scenes[i].imagePrompt` and Motion Prompt only from `shortForm.scenes[i].motionPrompt`.
 
 If a required stored production field is missing, the renderer must fail with a structured Creator render error. It must not repair the Pack through category fallback, broad content type fallback, substring regex, previous production profile, or array order.
 
@@ -229,7 +250,7 @@ There are no legacy exception files or allowed subject-specific renderer branche
 6. Validate Image Prompts and Visual Beats.
 7. Validate Beat Motion.
 8. Validate Background Music, Voice Direction, and Sound Effect.
-9. Validate Short-form Narration, Scene Focus, and runtime.
+9. Validate Short-form Narration, Scene Focus, Image Prompt, Motion Prompt, and runtime.
 10. Validate copy controls.
 11. Confirm target story data diff only.
 12. Build the full site.
@@ -272,6 +293,8 @@ node --check scripts/generate-site.js
 node --check scripts/creator-library.js
 node --check scripts/validate-creator-library-generation-standard.js
 node --check scripts/validate-creator-library-migration.js
+node --check scripts/fix-creator-library-shortform-image-prompts.js
+node --check scripts/validate-creator-library-shortform-image-prompts.js
 node scripts/validate-creator-library-input.js
 node scripts/validate-creator-library-scene-plan.js
 node scripts/validate-creator-library-production.js
@@ -279,6 +302,7 @@ node scripts/validate-creator-library-shortform.js
 node scripts/validate-creator-library-renderer.js
 node scripts/validate-creator-library-single-path.js
 node scripts/validate-creator-library-migration.js
+node scripts/validate-creator-library-shortform-image-prompts.js
 node scripts/validate-creator-library-generation-standard.js
 node scripts/validate-tags.js
 node scripts/generate-site.js

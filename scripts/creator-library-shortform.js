@@ -99,14 +99,17 @@ function buildCreatorShortform(normalizedInput, scenePlan, longformResult, produ
       sceneIndex
     };
     const narration = buildShortformNarrationForScene(context);
-    const sceneContext = { ...context, narration };
+    const sceneFocus = buildShortformSceneFocus({ ...context, narration });
+    const imagePrompt = buildShortformImagePrompt({ ...context, narration, sceneFocus });
+    const sceneContext = { ...context, narration, sceneFocus, imagePrompt };
     const wordCount = countWords(narration);
     const estimatedReadSeconds = estimateShortformReadTime(narration);
     return {
       sceneIndex: shortScene.sceneIndex,
       role: shortScene.role,
       narration,
-      sceneFocus: buildShortformSceneFocus(sceneContext),
+      sceneFocus,
+      imagePrompt,
       motionPrompt: buildShortformMotion(sceneContext),
       backgroundMusic: buildShortformBackgroundMusic(sceneContext),
       voiceDirection: buildShortformVoiceDirection(sceneContext),
@@ -164,15 +167,20 @@ function validateCreatorShortform(result, normalizedInput, context = {}) {
   const seenIndexes = new Set();
   const narrations = [];
   const focuses = [];
+  const imagePrompts = [];
   const motions = [];
   (result?.scenes || []).forEach((scene, index) => {
     const sceneNumber = index + 1;
     if (seenIndexes.has(scene.sceneIndex)) errors.push(detailError(result, sceneNumber, 'sceneIndex', 'Duplicate sceneIndex.'));
     seenIndexes.add(scene.sceneIndex);
     if (scene.sceneIndex !== sceneNumber) errors.push(detailError(result, sceneNumber, 'sceneIndex', 'Scene index is invalid.'));
-    for (const field of ['role', 'narration', 'sceneFocus', 'motionPrompt', 'backgroundMusic', 'voiceDirection', 'soundEffect']) {
+    for (const field of ['role', 'narration', 'sceneFocus', 'imagePrompt', 'motionPrompt', 'backgroundMusic', 'voiceDirection', 'soundEffect']) {
       if (!sanitizeShortformText(scene[field])) errors.push(detailError(result, sceneNumber, field, `${field} is required.`));
     }
+    const imageValidation = validateShortformImagePromptValue(scene.imagePrompt, result, context, sceneNumber);
+    imageValidation.forEach((message) => errors.push(detailError(result, sceneNumber, 'imagePrompt', message)));
+    const motionValidation = validateShortformMotionPromptValue(scene.motionPrompt, scene.imagePrompt);
+    motionValidation.forEach((message) => errors.push(detailError(result, sceneNumber, 'motionPrompt', message)));
     if (!Number.isFinite(scene.wordCount) || scene.wordCount !== countWords(scene.narration)) {
       errors.push(detailError(result, sceneNumber, 'wordCount', 'Scene wordCount must match Narration.'));
     }
@@ -188,6 +196,9 @@ function validateCreatorShortform(result, normalizedInput, context = {}) {
     }
     if (containsFieldMixing(scene.sceneFocus, ['motion prompt', 'background music', 'voice direction', 'sound effect'])) {
       errors.push(detailError(result, sceneNumber, 'sceneFocus', 'Scene Focus contains another production field.'));
+    }
+    if (containsFieldMixing(scene.imagePrompt, ['motion prompt', 'background music', 'voice direction', 'sound effect', 'creator note'])) {
+      errors.push(detailError(result, sceneNumber, 'imagePrompt', 'Image Prompt contains another production field.'));
     }
     if (isGenericFocus(scene.sceneFocus)) errors.push(detailError(result, sceneNumber, 'sceneFocus', 'Scene Focus is too generic.'));
     if (containsFieldMixing(scene.motionPrompt, ['sound effect', 'background music', 'voice direction', 'narration:'])) {
@@ -210,10 +221,12 @@ function validateCreatorShortform(result, normalizedInput, context = {}) {
     }
     narrations.push(scene.narration);
     focuses.push(scene.sceneFocus);
+    imagePrompts.push(scene.imagePrompt);
     motions.push(scene.motionPrompt);
   });
 
   if (hasExactDuplicate(narrations)) errors.push(detailError(result, 0, 'narration', 'Duplicate Scene Narration detected.'));
+  if (hasExactDuplicate(imagePrompts)) errors.push(detailError(result, 0, 'imagePrompt', 'Duplicate Scene Image Prompt detected.'));
   if (hasExactDuplicate(motions)) errors.push(detailError(result, 0, 'motionPrompt', 'All Motion values must not repeat exactly.'));
   const totalText = (result?.scenes || []).map((scene) => scene.narration).join(' ');
   const totalWordCount = countWords(totalText);
@@ -283,14 +296,32 @@ function buildShortformSceneFocus(context) {
   return sanitizeShortformText(`${subject} centered on ${visual} for ${context.shortScene.role}.`);
 }
 
+function buildShortformImagePrompt(context) {
+  const subject = selectImageSubject(context);
+  const visualAnchor = selectPromptVisualAnchor(context);
+  const setting = selectPromptSetting(context);
+  const composition = compositionForShortScene(context);
+  const lighting = lightingForShortScene(context);
+  const atmosphere = atmosphereForShortScene(context);
+  const culturalContext = culturalContextForShortScene(context);
+  const actionOrState = actionForShortScene(context, visualAnchor);
+  const focus = cleanPromptVisual(visualAnchor, context.normalizedInput.topic, 7) || visualAnchor;
+  const prompt = [
+    `A ${visualStyleForContentType(context.normalizedInput.contentType)} scene shows ${subject} ${actionOrState} within ${setting}, framed ${composition}.`,
+    `Use ${lighting} and ${atmosphere} within ${culturalContext}; center the frame on ${focus}.`,
+    'No readable text, logos, watermarks, modern objects, graphic gore, or cartoon styling.'
+  ].join(' ');
+  return sanitizeImagePrompt(prompt);
+}
+
 function buildShortformMotion(context) {
-  const subject = selectEntity(context);
-  const visual = compactFact(selectVisualAnchor(context), 7, context.normalizedInput.topic);
+  const subject = selectImageSubject(context);
+  const visual = selectMotionAnchor(context);
   const moves = [
-    `Use a slow push toward ${subject}, holding ${visual} as the anchor.`,
-    `Use a controlled lateral pan across ${visual}, then settle on ${subject}.`,
-    `Start with a still frame, then pull back gently to include ${visual}.`,
-    `Reveal ${visual} from foreground to background with restrained movement.`,
+    `Use a slow controlled push toward ${subject}, keeping ${visual} as the central visual anchor.`,
+    `Use a restrained lateral pan across ${visual}, then settle quietly on ${subject}.`,
+    `Begin with a still frame, then gently pull back to reveal ${visual}.`,
+    `Reveal ${visual} from foreground to background with subtle parallax and restrained movement.`,
     `Hold briefly on ${subject}, then let the light shift softly around ${visual}.`
   ];
   return sanitizeShortformText(moves[context.sceneIndex] || moves[0]);
@@ -335,6 +366,50 @@ function buildShortformSoundEffect(context) {
   ].join(' ').toLowerCase();
   const terms = soundTermsFromText(text, context.normalizedInput.contentType, context.productionResult.productionProfile || {});
   return sanitizeShortformText(uniqueText(terms).slice(0, 3).join(', '));
+}
+
+function validateShortformImagePromptValue(value, result, context, sceneNumber) {
+  const errors = [];
+  if (Array.isArray(value) || (value && typeof value === 'object')) errors.push('Image Prompt must be one string, not an array or object.');
+  const text = sanitizeImagePrompt(value);
+  const words = countWords(text);
+  if (words < 30 || words > 100) errors.push(`Image Prompt word count outside 30-100: ${words}`);
+  if ((text.match(/No readable text/gi) || []).length > 1) errors.push('Image Prompt repeats the exclusion sentence.');
+  if ((text.match(/\bgraphic gore\b/gi) || []).length > 1) errors.push('Image Prompt repeats graphic gore exclusion.');
+  if (/Image Prompt:|Creator Note:|Motion Prompt:|Sound Effect:|Voice Direction:|Background Music:/i.test(text)) {
+    errors.push('Image Prompt includes a production field label.');
+  }
+  if (/\b(?:avoid no|exclude no|without no)\b/i.test(text)) errors.push('Image Prompt contains contradictory exclusion wording.');
+  const longPrompts = (context.productionResult?.scenes || [])
+    .flatMap((scene) => scene.narrationParts || [])
+    .flatMap((part) => part.visualBeats || [])
+    .map((beat) => sanitizeImagePrompt(beat.imagePrompt))
+    .filter(Boolean);
+  if (longPrompts.some((prompt) => exactTextKey(prompt) === exactTextKey(text))) {
+    errors.push('Image Prompt copies a Long-form prompt exactly.');
+  }
+  const samePackPrompts = (result?.scenes || [])
+    .filter((scene) => scene.sceneIndex !== sceneNumber)
+    .map((scene) => sanitizeImagePrompt(scene.imagePrompt))
+    .filter(Boolean);
+  if (samePackPrompts.some((prompt) => exactTextKey(prompt) === exactTextKey(text))) {
+    errors.push('Image Prompt duplicates another Short-form scene.');
+  }
+  return errors;
+}
+
+function validateShortformMotionPromptValue(value, imagePrompt) {
+  const errors = [];
+  const text = sanitizeShortformText(value);
+  const image = sanitizeImagePrompt(imagePrompt);
+  const words = countWords(text);
+  if (words < 10 || words > 35) errors.push(`Motion Prompt word count outside 10-35: ${words}`);
+  if (/Image Prompt:|No readable text|logos|watermarks|graphic gore|cartoon styling/i.test(text)) {
+    errors.push('Motion Prompt includes Image Prompt labels or exclusions.');
+  }
+  if (exactTextKey(text) && exactTextKey(text) === exactTextKey(image)) errors.push('Motion Prompt copies the full Image Prompt.');
+  if (longestSharedWordRun(text, image) >= 12) errors.push('Motion Prompt copies too much of the Image Prompt.');
+  return errors;
 }
 
 function estimateShortformReadTime(text) {
@@ -412,6 +487,177 @@ function selectEntity(context) {
     ...(context.normalizedInput.knownNames || []),
     ...(context.normalizedInput.keyActors || [])
   ].map(sanitizeShortformText).filter(Boolean)[0] || 'the subject';
+}
+
+function selectImageSubject(context) {
+  const candidates = [
+    ...(context.normalizedInput.keyActors || []),
+    ...(context.normalizedInput.knownNames || []),
+    ...(context.scene.requiredEntities || []),
+    context.normalizedInput.topic,
+    ...(context.shortScene.sourceFacts || [])
+  ];
+  return candidates
+    .map((value) => cleanPromptSubject(value, context.normalizedInput.topic))
+    .find((value) => value && !isGenericPromptTerm(value))
+    || cleanPromptSubject(context.normalizedInput.topic, '')
+    || 'the central subject';
+}
+
+function selectPromptVisualAnchor(context) {
+  const visualVocabulary = context.normalizedInput.visualVocabulary || [];
+  const candidates = [
+    visualVocabulary[context.sceneIndex],
+    visualVocabulary[context.sceneIndex + 1],
+    visualVocabulary[0],
+    context.sceneFocus,
+    ...visualVocabulary,
+    ...(context.shortScene.sourceFacts || []),
+    context.narration
+  ];
+  return candidates
+    .map((value) => cleanPromptVisual(value, context.normalizedInput.topic, 12))
+    .find((value) => value && !isGenericPromptTerm(value))
+    || 'one clear visual detail';
+}
+
+function selectPromptSetting(context) {
+  const text = [
+    ...(context.normalizedInput.setting || []),
+    ...(context.normalizedInput.sourceContext || []),
+    context.normalizedInput.categoryTitle,
+    context.normalizedInput.contentType
+  ].join(' ');
+  const cultural = culturalContextForShortScene(context);
+  if (context.normalizedInput.contentType === 'myth-narrative' || context.normalizedInput.contentType === 'mythical-being-object') {
+    return `${cultural} with restrained historical atmosphere`;
+  }
+  if (context.normalizedInput.contentType === 'folklore-legend') return `${cultural} shaped by oral tradition`;
+  if (/internet|digital|online|website|forum|screen|platform/i.test(text)) return 'a restrained digital or screen-based environment';
+  if (/urban|modern|street|apartment|station|office|school|hotel|hospital/i.test(text)) return 'an ordinary modern location with documentary realism';
+  if (/archive|record|source|document|ledger|map|book|library/i.test(text)) return 'a quiet archive-like workspace with physical evidence nearby';
+  if (/mountain|island|forest|lake|river|sea|desert|valley|road/i.test(text)) return 'a wide natural landscape shaped by the story setting';
+  if (/myth|ancient|temple|palace|underworld|ritual|god|goddess/i.test(text)) return `${cultural} with restrained historical atmosphere`;
+  return 'a simple readable environment tied to the source material';
+}
+
+function actionForShortScene(context, visualAnchor) {
+  const role = String(context.shortScene.role || '').toLowerCase();
+  const anchor = cleanPromptVisual(visualAnchor, context.normalizedInput.topic, 10) || 'the central detail';
+  if (/source|record|evidence|attribution|difference|variant|variation|uncertainty/.test(role)) {
+    return `positioned beside ${anchor} as the source detail becomes visible`;
+  }
+  if (/meaning|legacy|persists|unresolved|outcome|closing/.test(role)) {
+    return `held in a quiet final composition around ${anchor}`;
+  }
+  if (/turn|incident|problem|clue|core|trait|encounter|function/.test(role)) {
+    return `caught at the moment when ${anchor} becomes important`;
+  }
+  return `introduced through ${anchor}`;
+}
+
+function compositionForShortScene(context) {
+  const options = [
+    'as a vertical short-form frame with strong negative space',
+    'in a clean medium shot with the key detail near the center',
+    'as a close readable detail with the background still visible',
+    'with foreground evidence leading toward the main subject',
+    'as a restrained final frame that leaves room for narration'
+  ];
+  return options[context.sceneIndex] || options[0];
+}
+
+function lightingForShortScene(context) {
+  const role = String(context.shortScene.role || '').toLowerCase();
+  if (/meaning|legacy|outcome|closing|unresolved/.test(role)) return 'soft fading light with low contrast';
+  if (/source|record|evidence|attribution|difference|variant/.test(role)) return 'soft archival light and controlled shadows';
+  if (/turn|incident|problem|clue|core/.test(role)) return 'low directional light with a subtle point of tension';
+  return 'natural low light with restrained contrast';
+}
+
+function atmosphereForShortScene(context) {
+  const contentType = String(context.normalizedInput.contentType || '');
+  if (contentType === 'internet-folklore') return 'quiet digital unease';
+  if (contentType === 'myth-narrative' || contentType === 'mythical-being-object') return 'ancient mythic tension';
+  if (contentType === 'urban-modern-legend') return 'ordinary realism with slight unease';
+  if (contentType === 'place-event-mystery') return 'documentary mystery atmosphere';
+  return 'calm mystery atmosphere';
+}
+
+function culturalContextForShortScene(context) {
+  const text = [
+    context.normalizedInput.topic,
+    ...(context.normalizedInput.setting || []),
+    ...(context.normalizedInput.sourceContext || []),
+    ...(context.normalizedInput.visualVocabulary || [])
+  ].join(' ');
+  const match = text.match(/\b(ancient Egyptian|Egyptian|Greek|Norse|Celtic|Japanese|Chinese|Korean|Polynesian|Mesoamerican|Maya|Aztec|Inca|Buddhist|Tibetan|Indian|Roman|Slavic|Irish|Scottish|English|European|American)\b/i);
+  if (match) return `${match[1]} cultural context`;
+  if (/internet|digital|online|website|forum|screen|platform/i.test(text)) return 'modern internet folklore context';
+  if (/urban|modern/i.test(text)) return 'modern folklore context';
+  return 'the story culture and source context';
+}
+
+function visualStyleForContentType(contentType) {
+  if (contentType === 'internet-folklore') return 'realistic digital documentary';
+  if (contentType === 'urban-modern-legend') return 'realistic modern documentary';
+  if (contentType === 'myth-narrative' || contentType === 'mythical-being-object') return 'cinematic mythic documentary';
+  if (contentType === 'place-event-mystery') return 'atmospheric location documentary';
+  return 'restrained documentary';
+}
+
+function selectMotionAnchor(context) {
+  const visualVocabulary = context.normalizedInput.visualVocabulary || [];
+  const value = [
+    visualVocabulary[context.sceneIndex],
+    visualVocabulary[0],
+    context.sceneFocus,
+    context.narration,
+    ...visualVocabulary
+  ].map((item) => cleanPromptVisual(item, context.normalizedInput.topic, 5))
+    .find((item) => item && !isGenericPromptTerm(item));
+  return value || 'the central detail';
+}
+
+function sanitizeImagePrompt(value) {
+  return sanitizeShortformText(value)
+    .replace(/\bImage Prompt:\s*/gi, '')
+    .replace(/\b(?:Motion Prompt|Sound Effect|Voice Direction|Background Music|Creator Note):\s*/gi, '')
+    .replace(/\bNo readable text, logos, watermarks, modern objects, graphic gore, or cartoon styling\.\s*(?:No readable text, logos, watermarks, modern objects, graphic gore, or cartoon styling\.)+/gi, 'No readable text, logos, watermarks, modern objects, graphic gore, or cartoon styling.')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function cleanPromptNoun(value, topic = '', maxWords = 8) {
+  const text = compactFact(value, maxWords, topic)
+    .replace(/\b(?:shown through|centered on|framed through|introduced through)\b/gi, '')
+    .replace(/\b(?:as a careful source-bound visual|as the final remembered idea|as the source detail becomes visible|for [a-z\s-]+)$/gi, '')
+    .replace(/\b(?:is best read as|is preserved around|works because)\b/gi, '')
+    .replace(/\breturning motion\b/gi, 'returning movement')
+    .replace(/\s+/g, ' ')
+    .replace(/^[,:\s-]+|[,:\s-]+$/g, '')
+    .trim();
+  return text || '';
+}
+
+function cleanPromptSubject(value, topic = '') {
+  const raw = sanitizeShortformText(value);
+  const beforeColon = raw.includes(':') ? raw.split(':')[0] : raw;
+  const direct = beforeColon.replace(/\s+/g, ' ').trim();
+  if (direct && countWords(direct) <= 6 && !isGenericPromptTerm(direct)) return direct;
+  const candidate = cleanPromptNoun(beforeColon, '', 6);
+  if (candidate) return candidate;
+  return cleanPromptNoun(raw, topic, 6);
+}
+
+function cleanPromptVisual(value, topic = '', maxWords = 8) {
+  const raw = sanitizeShortformText(value).replace(/^[,:\s-]+|[,:\s-]+$/g, '');
+  if (raw && countWords(raw) <= maxWords && exactTextKey(raw) !== exactTextKey(topic) && !isGenericPromptTerm(raw)) return raw;
+  return cleanPromptNoun(raw, topic, maxWords);
+}
+
+function isGenericPromptTerm(value) {
+  return /^(?:[a-z]+\s+)?(myth|legend|folklore|story|source|record|subject|scene|article|mystery|origin|comparison|the subject|one clear visual detail)$/i.test(String(value || '').trim());
 }
 
 function compactFact(value, maxWords, topic = '') {
@@ -526,6 +772,24 @@ function hasExactDuplicate(values) {
   return false;
 }
 
+function longestSharedWordRun(left, right) {
+  const a = wordTokens(left);
+  const b = wordTokens(right);
+  let best = 0;
+  for (let i = 0; i < a.length; i += 1) {
+    for (let j = 0; j < b.length; j += 1) {
+      let length = 0;
+      while (a[i + length] && a[i + length] === b[j + length]) length += 1;
+      if (length > best) best = length;
+    }
+  }
+  return best;
+}
+
+function wordTokens(value) {
+  return String(value || '').toLowerCase().replace(/[^a-z0-9\s]/g, ' ').split(/\s+/).filter(Boolean);
+}
+
 function uniqueText(values) {
   const seen = new Set();
   const output = [];
@@ -594,6 +858,7 @@ module.exports = {
   buildShortformScenePlan,
   buildShortformNarrationForScene,
   buildShortformSceneFocus,
+  buildShortformImagePrompt,
   buildShortformMotion,
   buildShortformBackgroundMusic,
   buildShortformVoiceDirection,

@@ -1290,7 +1290,7 @@ function validateCreatorPackForRender(entry) {
     throwCreatorRenderError({ slug, section: 'shortForm', field: 'scenes', message: 'Standard Creator Pack requires exactly 5 short-form scenes.' });
   }
   shortForm.scenes.forEach((scene, sceneIndex) => {
-    for (const field of ['role', 'narration', 'sceneFocus', 'motionPrompt', 'backgroundMusic', 'voiceDirection', 'soundEffect', 'estimatedReadSeconds']) {
+    for (const field of ['role', 'narration', 'sceneFocus', 'imagePrompt', 'motionPrompt', 'backgroundMusic', 'voiceDirection', 'soundEffect', 'estimatedReadSeconds']) {
       requireStoredField(scene, field, { slug, section: 'shortForm', sceneIndex: sceneIndex + 1, field });
     }
   });
@@ -1386,6 +1386,7 @@ function buildCreatorRenderModel(entry) {
         role: scene.role,
         narration: scene.narration,
         sceneFocus: scene.sceneFocus,
+        imagePrompt: scene.imagePrompt,
         motionPrompt: scene.motionPrompt,
         backgroundMusic: scene.backgroundMusic,
         voiceDirection: scene.voiceDirection,
@@ -1452,7 +1453,7 @@ function renderStandardShortFormCreator(model) {
     strictStored: true,
     plainReadingTime: formatApproxSeconds(scene.estimatedReadSeconds),
     sceneRole: scene.role,
-    imagePrompt: '',
+    imagePrompt: scene.imagePrompt,
     sceneFocus: scene.sceneFocus,
     voiceDirection: scene.voiceDirection,
     soundEffect: scene.soundEffect,

@@ -96,6 +96,12 @@ function validateHtml(entry) {
   if (!html.includes('/scripts/creator-library.js')) fail(entry.slug, 'creator-library.js script missing');
   if (!html.includes(`/stories/${entry.originalStorySlug}`)) fail(entry.slug, 'Original archive link missing');
   if (count(html, /<article class="scene-workspace">/g) < 10) fail(entry.slug, 'expected 10 total scene workspaces');
+  if (count(html, /<section class="script-material creator-format creator-format-short">[\s\S]*?<strong>Image Prompt:<\/strong>/g) < 1) {
+    fail(entry.slug, 'Short-form Image Prompt output missing');
+  }
+  const shortHtml = html.split('<h2>Short-form Creator</h2>')[1] || '';
+  if (count(shortHtml, /<strong>Image Prompt:<\/strong>/g) !== 5) fail(entry.slug, 'Short-form Image Prompt count mismatch');
+  if (count(shortHtml, /<strong>Motion Prompt:<\/strong>/g) !== 5) fail(entry.slug, 'Short-form Motion Prompt count mismatch');
   const longParts = (entry.visualGuide || []).flatMap((scene) => scene.narrationParts || []);
   const beats = longParts.flatMap((part) => part.visualBeats || []);
   if (count(html, /data-copy-field="creator-note"/g) !== longParts.length) fail(entry.slug, 'Copy Creator Note count mismatch');
