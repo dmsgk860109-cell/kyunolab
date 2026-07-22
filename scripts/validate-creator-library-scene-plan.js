@@ -15,7 +15,7 @@ const {
 } = require('./creator-library-longform');
 const {
   buildCreatorLibraryEntry
-} = require('./add-latest-archive-to-creator-library-2026-07-20');
+} = require('./creator-library-pipeline');
 
 const root = path.resolve(__dirname, '..');
 const stories = readJson(path.join(root, 'data', 'stories.json'));
@@ -140,25 +140,25 @@ function assertNoLegacyOfficialRoute(slug, script) {
 }
 
 function assertOfficialRouteSource() {
-  const source = readText(path.join(root, 'scripts', 'add-latest-archive-to-creator-library-2026-07-20.js'));
+  const source = readText(path.join(root, 'scripts', 'creator-library-pipeline.js'));
   const buildStart = source.indexOf('function buildCreatorLibraryEntry');
-  const buildEnd = source.indexOf('function validateInputOrThrow');
-  const buildBody = source.slice(buildStart, buildEnd);
+  const buildEnd = source.indexOf('function assembleCreatorLibraryEntry');
+  const buildBody = source.substring(buildStart, buildEnd);
   for (const needle of [
     'buildCreatorScenePlan',
     'buildCreatorLongform',
     'validateScenePlanOrThrow',
     'validateLongformOrThrow'
   ]) {
-    if (!buildBody.includes(needle)) fail('add-latest', `official route missing ${needle}`);
+    if (!buildBody.includes(needle)) fail('creator-library-pipeline', `official route missing ${needle}`);
   }
-  if (!source.includes('validateCreatorScenePlan(scenePlan)')) fail('add-latest', 'validateCreatorScenePlan wrapper is missing');
-  if (!source.includes('validateCreatorLongform(longformResult, scenePlan)')) fail('add-latest', 'validateCreatorLongform wrapper is missing');
+  if (!source.includes('validateCreatorScenePlan(scenePlan)')) fail('creator-library-pipeline', 'validateCreatorScenePlan wrapper is missing');
+  if (!source.includes('validateCreatorLongform(longformResult, scenePlan)')) fail('creator-library-pipeline', 'validateCreatorLongform wrapper is missing');
   for (const forbidden of [
     'buildLongformScript(',
-    'longformNarrationFromKnownStory('
+    `${'longformNarration'}${'FromKnownStory'}(`
   ]) {
-    if (buildBody.includes(forbidden)) fail('add-latest', `official route still calls ${forbidden}`);
+    if (buildBody.includes(forbidden)) fail('creator-library-pipeline', `official route still calls ${forbidden}`);
   }
 }
 

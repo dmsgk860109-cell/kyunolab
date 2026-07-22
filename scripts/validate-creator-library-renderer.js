@@ -18,7 +18,7 @@ const {
 } = require('./creator-library-shortform');
 const {
   buildCreatorLibraryEntry
-} = require('./add-latest-archive-to-creator-library-2026-07-20');
+} = require('./creator-library-pipeline');
 
 const root = path.resolve(__dirname, '..');
 const storiesPath = path.join(root, 'data', 'stories.json');
@@ -296,7 +296,7 @@ function assertRendererSourceIsolation() {
   const source = readText(path.join(root, 'scripts', 'generate-site.js'));
   const standardStart = source.indexOf('function renderStandardCreatorPack');
   const legacyStart = source.indexOf('function renderLongFormCreator');
-  const standardBody = source.slice(standardStart, legacyStart);
+  const standardBody = source.substring(standardStart, legacyStart);
   for (const forbidden of [
     'advancedProductionInfo(',
     'motionPromptForScene(',

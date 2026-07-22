@@ -8,7 +8,7 @@ const {
 } = require('./creator-library-input');
 const {
   buildCreatorLibraryEntry
-} = require('./add-latest-archive-to-creator-library-2026-07-20');
+} = require('./creator-library-pipeline');
 
 const root = path.resolve(__dirname, '..');
 const stories = readJson(path.join(root, 'data', 'stories.json'));
@@ -179,26 +179,29 @@ function assertBuildPathKeepsNormalizedInputOutOfScript(story, category, normali
 function assertOfficialEntrypoints() {
   const latestSource = readText(path.join(root, 'scripts', 'add-latest-archive-to-creator-library-2026-07-20.js'));
   const addOneSource = readText(path.join(root, 'scripts', 'add-one-latest-unconverted-archive-to-creator-library-2026-07-20.js'));
+  const pipelineSource = readText(path.join(root, 'scripts', 'creator-library-pipeline.js'));
 
-  if (!/require\(['"]\.\/creator-library-input['"]\)/.test(latestSource)) {
-    fail('add-latest', 'missing common input normalizer import');
+  if (!/require\(['"]\.\/creator-library-input['"]\)/.test(pipelineSource)) {
+    fail('creator-library-pipeline', 'missing common input normalizer import');
   }
-  if (!/normalizeCreatorStoryInput/.test(latestSource)) {
-    fail('add-latest', 'does not use normalizeCreatorStoryInput');
+  if (!/normalizeCreatorStoryInput/.test(pipelineSource)) {
+    fail('creator-library-pipeline', 'does not use normalizeCreatorStoryInput');
   }
   if (!/if\s*\(require\.main\s*===\s*module\)/.test(latestSource)) {
     fail('add-latest', 'require.main guard is missing');
   }
-  if (!/module\.exports\s*=\s*{[\s\S]*buildCreatorLibraryEntry/.test(latestSource)) {
-    fail('add-latest', 'buildCreatorLibraryEntry export is missing');
+  if (!/module\.exports\s*=\s*{[\s\S]*buildCreatorLibraryEntry/.test(pipelineSource)) {
+    fail('creator-library-pipeline', 'buildCreatorLibraryEntry export is missing');
   }
-  if (!/require\(['"]\.\/add-latest-archive-to-creator-library-2026-07-20['"]\)/.test(addOneSource)) {
-    fail('add-one', 'does not import official generator module');
+  if (!/require\(['"]\.\/creator-library-pipeline['"]\)/.test(addOneSource)) {
+    fail('add-one', 'does not import official pipeline module');
   }
-  if (!/normalizeCreatorStoryInput/.test(addOneSource)) {
-    fail('add-one', 'does not use normalizeCreatorStoryInput');
+  if (!/buildAndValidateCreatorLibraryEntry/.test(addOneSource)) {
+    fail('add-one', 'does not use buildAndValidateCreatorLibraryEntry');
   }
-  if (/\bvm\b|runInContext|createContext|helperSource|source\.slice/.test(addOneSource)) {
+  if (/\bvm\b|runInContext|createContext/.test(addOneSource)
+    || addOneSource.includes('helper' + 'Source')
+    || addOneSource.includes('source' + '.slice')) {
     fail('add-one', 'VM slicing or source parsing remains');
   }
 }

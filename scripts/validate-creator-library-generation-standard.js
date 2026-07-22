@@ -33,6 +33,8 @@ function main() {
   assertFile('docs/creator-library-generation-standard.md');
   assertFile('AGENTS.md');
   assertFile('scripts/creator-library-legacy-exceptions.json');
+  assertFile('scripts/creator-library-pipeline.js');
+  assertFile('scripts/creator-library-store.js');
   assertFile('scripts/add-latest-archive-to-creator-library-2026-07-20.js');
   assertFile('scripts/generate-site.js');
   assertFile('scripts/creator-library.js');
@@ -294,14 +296,20 @@ function validateCopyClientScript() {
 function validateLegacyExceptionBaseline(legacy) {
   if (!Array.isArray(legacy.allowedSubjectFunctions)) error('creator-library-legacy-exceptions.json', 'legacy', 'allowedSubjectFunctions must be an array');
   if (!Array.isArray(legacy.allowedSlugBranches)) error('creator-library-legacy-exceptions.json', 'legacy', 'allowedSlugBranches must be an array');
-  if (!legacy.allowedSubjectFunctions.some((entry) => entry.name === 'demeterCreatorNoteForNarrationPart')) {
-    error('creator-library-legacy-exceptions.json', 'legacy', 'missing demeterCreatorNoteForNarrationPart baseline');
+  if (legacy.allowedSubjectFunctions.some((entry) => /demeter|osiris|cicada/i.test(entry.name))) {
+    error('creator-library-legacy-exceptions.json', 'legacy', 'removed generation exceptions must not remain');
+  }
+  if (legacy.allowedSlugBranches.length) {
+    error('creator-library-legacy-exceptions.json', 'legacy', 'slug branch exceptions must be removed');
+  }
+  if (!legacy.allowedSubjectFunctions.some((entry) => entry.name === 'isPrometheusContext' && entry.file === 'scripts/generate-site.js')) {
+    error('creator-library-legacy-exceptions.json', 'legacy', 'missing temporary legacy renderer exception');
   }
 }
 
 function validateNoNewSubjectSpecificBranches(legacy) {
   const files = [
-    'scripts/add-latest-archive-to-creator-library-2026-07-20.js',
+    'scripts/creator-library-pipeline.js',
     'scripts/generate-site.js'
   ];
   const allowedFunctions = new Set((legacy.allowedSubjectFunctions || []).map((entry) => entry.name));

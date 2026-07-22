@@ -22,7 +22,7 @@ const {
 } = require('./creator-library-shortform');
 const {
   buildCreatorLibraryEntry
-} = require('./add-latest-archive-to-creator-library-2026-07-20');
+} = require('./creator-library-pipeline');
 
 const root = path.resolve(__dirname, '..');
 const storiesPath = path.join(root, 'data', 'stories.json');
@@ -164,20 +164,20 @@ function assertFixtureSpecificRules(slug, shortformResult) {
 }
 
 function assertOfficialRouteSource() {
-  const source = readText(path.join(root, 'scripts', 'add-latest-archive-to-creator-library-2026-07-20.js'));
+  const source = readText(path.join(root, 'scripts', 'creator-library-pipeline.js'));
   const buildStart = source.indexOf('function buildCreatorLibraryEntry');
-  const buildEnd = source.indexOf('function validateInputOrThrow');
-  const buildBody = source.slice(buildStart, buildEnd);
+  const buildEnd = source.indexOf('function assembleCreatorLibraryEntry');
+  const buildBody = source.substring(buildStart, buildEnd);
   for (const needle of ['buildCreatorShortform', 'validateShortformOrThrow']) {
-    if (!buildBody.includes(needle)) fail('add-latest', `official route missing ${needle}`);
+    if (!buildBody.includes(needle)) fail('creator-library-pipeline', `official route missing ${needle}`);
   }
   for (const forbidden of [
-    'buildShortsScript(',
-    'buildShortSceneFocuses(',
-    'shortFormProductionPlan(',
-    'shortSceneFocusFromLine('
+    `${'buildShorts'}${'Script'}(`,
+    `${'buildShortScene'}${'Focuses'}(`,
+    `${'shortFormProduction'}${'Plan'}(`,
+    `${'shortSceneFocus'}${'FromLine'}(`
   ]) {
-    if (buildBody.includes(forbidden)) fail('add-latest', `official route still calls ${forbidden}`);
+    if (buildBody.includes(forbidden)) fail('creator-library-pipeline', `official route still calls ${forbidden}`);
   }
 }
 

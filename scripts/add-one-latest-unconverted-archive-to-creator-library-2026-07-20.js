@@ -1,55 +1,61 @@
 const fs = require('fs');
 const path = require('path');
 const {
-  normalizeCreatorStoryInput
-} = require('./creator-library-input');
+  buildAndValidateCreatorLibraryEntry
+} = require('./creator-library-pipeline');
 const {
-  buildCreatorLibraryEntry
-} = require('./add-latest-archive-to-creator-library-2026-07-20');
+  loadCreatorLibraryEntries,
+  saveCreatorLibraryEntry
+} = require('./creator-library-store');
 
 const root = path.resolve(__dirname, '..');
 const storiesPath = path.join(root, 'data', 'stories.json');
-const scriptsPath = path.join(root, 'data', 'scripts.json');
 const categoriesPath = path.join(root, 'data', 'categories.json');
 
 function main() {
   const stories = readJson(storiesPath);
-  const scripts = readJson(scriptsPath);
+  const scripts = loadCreatorLibraryEntries();
   const categories = readJson(categoriesPath);
   const existingScriptSlugs = new Set(scripts.map((script) => script.slug));
   const existingOriginalSlugs = new Set(scripts.map((script) => script.originalStorySlug).filter(Boolean));
-  const additions = [];
 
-  for (const category of categories) {
-    const story = sortNewest(stories)
-      .find((item) => item.contentType === 'story'
-        && item.categorySlug === category.slug
-        && !existingOriginalSlugs.has(item.slug));
+  for (const story of sortNewest(stories).filter((item) => item.contentType === 'story')) {
+    if (existingOriginalSlugs.has(story.slug)) continue;
+    const category = categories.find((item) => item.slug === story.categorySlug);
+    if (!category) continue;
 
-    if (!story) {
-      console.log(`Skipped ${category.slug}: no unconverted archive story found.`);
-      continue;
+    try {
+      const script = buildAndValidateCreatorLibraryEntry(story, category);
+      if (existingScriptSlugs.has(script.slug)) {
+        console.log(`Skipped ${story.slug}: script slug already exists (${script.slug}).`);
+        continue;
+      }
+      saveCreatorLibraryEntry(script);
+      console.log(`Added 1 Creator Library entry.`);
+      console.log(`${script.creatorCategorySlug}: ${script.slug}`);
+      return;
+    } catch (error) {
+      console.error(formatPipelineFailure(story.slug, error));
+      process.exitCode = 1;
+      return;
     }
-
-    const normalizedInput = normalizeCreatorStoryInput(story, category);
-    const script = buildCreatorLibraryEntry(story, category, { normalizedInput });
-    if (existingScriptSlugs.has(script.slug)) {
-      console.log(`Skipped ${category.slug}: script slug already exists (${script.slug}).`);
-      continue;
-    }
-
-    additions.push(script);
-    existingScriptSlugs.add(script.slug);
-    existingOriginalSlugs.add(story.slug);
   }
 
-  scripts.unshift(...additions);
-  writeJson(scriptsPath, scripts);
+  console.log('Skipped: no unconverted archive story found.');
+}
 
-  console.log(`Added ${additions.length} Creator Library entries.`);
-  for (const addition of additions) {
-    console.log(`${addition.creatorCategorySlug}: ${addition.slug}`);
-  }
+function formatPipelineFailure(slug, error) {
+  return [
+    `Skipped ${slug}: ${error.message}`,
+    `stage=${error.stage || 'unknown'}`,
+    `code=${error.code || 'UNKNOWN_ERROR'}`,
+    `field=${error.field || 'n/a'}`,
+    `scene=${error.sceneIndex || 'n/a'}`,
+    `part=${error.partIndex || 'n/a'}`,
+    `beat=${error.beatIndex || 'n/a'}`,
+    'saved=false',
+    'fallbackUsed=false'
+  ].join(' | ');
 }
 
 function sortNewest(items) {
@@ -62,10 +68,6 @@ function sortNewest(items) {
 
 function readJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, 'utf8'));
-}
-
-function writeJson(filePath, value) {
-  fs.writeFileSync(filePath, `${JSON.stringify(value, null, 2)}\n`);
 }
 
 if (require.main === module) {
