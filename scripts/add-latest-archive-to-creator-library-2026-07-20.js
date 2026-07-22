@@ -1,8 +1,17 @@
 const fs = require('fs');
 const path = require('path');
 const {
-  normalizeCreatorStoryInput
+  normalizeCreatorStoryInput,
+  validateNormalizedCreatorInput
 } = require('./creator-library-input');
+const {
+  buildCreatorScenePlan,
+  validateCreatorScenePlan
+} = require('./creator-library-scene-plan');
+const {
+  buildCreatorLongform,
+  validateCreatorLongform
+} = require('./creator-library-longform');
 
 const root = path.resolve(__dirname, '..');
 const storiesPath = path.join(root, 'data', 'stories.json');
@@ -47,8 +56,19 @@ function main() {
 
 function buildCreatorLibraryEntry(story, category, options = {}) {
   const normalizedInput = options.normalizedInput || normalizeCreatorStoryInput(story, category);
+  validateInputOrThrow(normalizedInput);
+  const scenePlan = options.scenePlan || buildCreatorScenePlan(normalizedInput);
+  validateScenePlanOrThrow(scenePlan);
+  const longformResult = options.longformResult || buildCreatorLongform(normalizedInput, scenePlan);
+  validateLongformOrThrow(longformResult, scenePlan);
   if (typeof options.onNormalizedInput === 'function') {
     options.onNormalizedInput(normalizedInput);
+  }
+  if (typeof options.onScenePlan === 'function') {
+    options.onScenePlan(scenePlan);
+  }
+  if (typeof options.onLongformResult === 'function') {
+    options.onLongformResult(longformResult);
   }
   const subject = cleanSubject(story.title);
   const slug = `${story.slug}-youtube-script`;
@@ -57,16 +77,19 @@ function buildCreatorLibraryEntry(story, category, options = {}) {
   const mood = moodForCategory(story.categorySlug);
   const facts = storyFacts(story);
   const angle = story.uniqueAngle || story.summaryAnswer || story.excerpt || `${subject} remains a memorable ${category.title} story.`;
-  const longformScript = buildLongformScript(subject, story, facts, motif);
+  const longformScript = longformResult.scenes
+    .flatMap((scene) => scene.narrationParts || [])
+    .map((part) => part.narration)
+    .filter(Boolean);
   const shortsScript = buildShortsScript(subject, story, facts);
   const shortSceneFocuses = buildShortSceneFocuses(subject, story, shortsScript);
-  const sceneFocuses = buildSceneFocuses(subject, story, facts);
+  const sceneFocuses = scenePlan.scenes.map((scene) => scene.purpose);
   const visualGuide = buildVisualGuide(subject, story, setting, mood, sceneFocuses, longformScript);
   const imagePrompts = visualGuide.flatMap((scene) => scene.narrationParts || [])
     .flatMap((part) => part.visualBeats || [])
     .map((beat) => beat.imagePrompt)
     .filter(Boolean);
-  const estimatedVideoLength = estimateLongformVideoLength(story, longformScript);
+  const estimatedVideoLength = estimateLongformVideoLength(story, longformScript, longformResult);
 
   return {
     id: slug,
@@ -106,10 +129,44 @@ function buildCreatorLibraryEntry(story, category, options = {}) {
     shortSceneFocuses,
     imagePrompts,
     visualGuide,
-    runtimePlan: buildRuntimePlan(longformScript, estimatedVideoLength),
+    runtimePlan: buildRuntimePlan(longformScript, estimatedVideoLength, longformResult),
     thumbnailIdeas: buildThumbnailIdeas(subject, story),
     subtitleLines: buildSubtitleLines(subject, facts)
   };
+}
+
+function validateInputOrThrow(normalizedInput) {
+  validateNormalizedCreatorInput(normalizedInput);
+  if (normalizedInput.missingRequiredFields?.length) {
+    const error = new Error(`Creator input invalid for ${normalizedInput.slug}`);
+    error.code = 'CREATOR_INPUT_INVALID';
+    error.slug = normalizedInput.slug;
+    error.missingRequiredFields = normalizedInput.missingRequiredFields;
+    error.errors = normalizedInput.missingRequiredFields.map((field) => `Missing required field: ${field}`);
+    throw error;
+  }
+}
+
+function validateScenePlanOrThrow(scenePlan) {
+  const validation = validateCreatorScenePlan(scenePlan);
+  if (!validation.valid) {
+    const error = new Error(`Creator Scene Plan invalid for ${scenePlan.slug}`);
+    error.code = 'CREATOR_SCENE_PLAN_INVALID';
+    error.slug = scenePlan.slug;
+    error.errors = validation.errors;
+    throw error;
+  }
+}
+
+function validateLongformOrThrow(longformResult, scenePlan) {
+  const validation = validateCreatorLongform(longformResult, scenePlan);
+  if (!validation.valid) {
+    const error = new Error(`Creator Long-form invalid for ${scenePlan.slug}`);
+    error.code = 'CREATOR_LONGFORM_INVALID';
+    error.slug = scenePlan.slug;
+    error.errors = validation.errors;
+    throw error;
+  }
 }
 
 function buildLongformScript(subject, story, facts, motif) {
@@ -1799,9 +1856,9 @@ function visualDirectionForScene(subject, story, index) {
   return directions[index] || 'Keep the frame steady during the narration, then use a short fade into the next scene.';
 }
 
-function estimateLongformVideoLength(story, longformScript) {
+function estimateLongformVideoLength(story, longformScript, longformResult) {
   const score = informationDepthScore(story);
-  const runtime = buildRuntimePlan(longformScript);
+  const runtime = buildRuntimePlan(longformScript, '', longformResult);
   if (score >= 14 && runtime.estimatedFinalSeconds >= 480) return '8-10 minutes';
   if (score >= 10 && runtime.estimatedFinalSeconds >= 420) return '7-8 minutes';
   if (runtime.estimatedFinalSeconds >= 360) return '6-7 minutes';
@@ -1818,15 +1875,15 @@ function informationDepthScore(story) {
   ].reduce((sum, value) => sum + value, 0);
 }
 
-function buildRuntimePlan(longformScript, estimatedVideoLength = '') {
-  const wordCount = longformScript.join(' ').trim().split(/\s+/).filter(Boolean).length;
-  const narrationReadSeconds = Math.round(wordCount / 2.35);
+function buildRuntimePlan(longformScript, estimatedVideoLength = '', longformResult) {
+  const wordCount = longformResult?.totalWordCount || longformScript.join(' ').trim().split(/\s+/).filter(Boolean).length;
+  const narrationReadSeconds = longformResult?.narrationReadSeconds || Math.round(wordCount / 2.35);
   const sceneCount = Math.max(1, Math.min(5, longformScript.length));
   const plannedVisualSeconds = sceneCount * 10;
   const breathSeconds = Math.max(20, sceneCount * 7);
   const naturalFinalSeconds = narrationReadSeconds + plannedVisualSeconds + breathSeconds;
   const runtime = parseRuntimeRange(estimatedVideoLength);
-  const estimatedFinalSeconds = Math.max(300, runtime?.minSeconds || 0, naturalFinalSeconds);
+  const estimatedFinalSeconds = longformResult?.targetFinalVideoSeconds || Math.max(300, runtime?.minSeconds || 0, naturalFinalSeconds);
   return {
     narrationReadTime: secondsToLabel(narrationReadSeconds),
     plannedTransitionAndVisualTime: secondsToLabel(Math.max(0, estimatedFinalSeconds - narrationReadSeconds)),

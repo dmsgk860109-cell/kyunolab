@@ -39,6 +39,8 @@ const INTERNAL_TEMPLATE_PATTERNS = [
   /^the heading keeps the focus\b.*$/i,
   /\bsource-aware kyunolab record\b/gi,
   /\ba source-aware kyunolab record tracing\b/gi,
+  /\bsource-aware retellings?\b/gi,
+  /\bsource-aware\b/gi,
   /^archive writing instructions?:?.*$/i,
   /^public article generation instructions?:?.*$/i,
   /^creator library generation instructions?:?.*$/i,
