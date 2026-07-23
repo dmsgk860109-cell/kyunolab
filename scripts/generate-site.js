@@ -1,7 +1,16 @@
 const fs = require('fs');
 const path = require('path');
+const {
+  getCreatorPackRoot,
+  getCreatorPackManifestPath,
+  iterateCreatorPacks,
+  rebuildCreatorPackManifest
+} = require('./creator-library-store');
 
 const root = path.resolve(__dirname, '..');
+const buildArgs = parseBuildArgs(process.argv.slice(2));
+const siteOutputRoot = path.resolve(buildArgs.outputRoot || root);
+const creatorPackOptions = buildArgs.creatorPackRoot ? { root: buildArgs.creatorPackRoot } : {};
 const siteUrl = 'https://kyunolab.com';
 const styleVersion = '20260720-creator-part-visual-beats';
 const creatorLibraryScriptVersion = '20260722-copy-fields';
@@ -13,7 +22,7 @@ const rssLimit = 20;
 const stories = readJson(path.join(root, 'data', 'stories.json'));
 const categories = readJson(path.join(root, 'data', 'categories.json'));
 const guides = readOptionalJson(path.join(root, 'data', 'guides.json'));
-const creatorScripts = readOptionalJson(path.join(root, 'data', 'scripts.json'));
+const creatorScripts = loadCreatorScriptsForBuild(creatorPackOptions);
 const libraryBoardPosts = readOptionalJson(path.join(root, 'data', 'library-board.json'));
 const siteConfig = readOptionalJson(path.join(root, 'data', 'site.json'), {});
 const creatorLibraryCategories = buildCreatorLibraryCategories(creatorScripts);
@@ -536,7 +545,7 @@ function generateScriptCategoryPages(scripts) {
 }
 
 function cleanupScriptCategoryPages(activeCategories) {
-  const categoriesDir = path.join(root, 'scripts', 'categories');
+  const categoriesDir = path.join(siteOutputRoot, 'scripts', 'categories');
   if (!fs.existsSync(categoriesDir)) return;
   const allowed = new Set(activeCategories.map((category) => category.slug));
   for (const entry of fs.readdirSync(categoriesDir, { withFileTypes: true })) {
@@ -546,7 +555,7 @@ function cleanupScriptCategoryPages(activeCategories) {
 }
 
 function cleanupLibraryPageDirs(basePath, totalPages) {
-  const pageDir = path.join(root, basePath, 'page');
+  const pageDir = path.join(siteOutputRoot, basePath, 'page');
   if (!fs.existsSync(pageDir)) return;
   if (totalPages <= 1) {
     fs.rmSync(pageDir, { recursive: true, force: true });
@@ -2983,7 +2992,7 @@ function addPagedUrls(urls, baseName, count, lastmod) {
 }
 
 function cleanupPagedFiles(baseName, expectedPages) {
-  const dir = baseName.includes('/') ? path.join(root, path.dirname(baseName)) : root;
+  const dir = baseName.includes('/') ? path.join(siteOutputRoot, path.dirname(baseName)) : siteOutputRoot;
   const name = path.basename(baseName);
   if (!fs.existsSync(dir)) return;
 
@@ -3050,8 +3059,8 @@ function chunk(items, size) {
 }
 
 function writeFile(fileName, content) {
-  fs.mkdirSync(path.dirname(path.join(root, fileName)), { recursive: true });
-  fs.writeFileSync(path.join(root, fileName), content, 'utf8');
+  fs.mkdirSync(path.dirname(path.join(siteOutputRoot, fileName)), { recursive: true });
+  fs.writeFileSync(path.join(siteOutputRoot, fileName), content, 'utf8');
 }
 
 function readJson(filePath) {
@@ -3061,6 +3070,47 @@ function readJson(filePath) {
 function readOptionalJson(filePath, fallback = []) {
   if (!fs.existsSync(filePath)) return fallback;
   return readJson(filePath);
+}
+
+function loadCreatorScriptsForBuild(options = {}) {
+  const packRoot = getCreatorPackRoot(options);
+  if (!fs.existsSync(packRoot)) {
+    throwCreatorPackStoreNotInitialized(packRoot, 'Creator Pack store root does not exist.');
+  }
+  const manifestPath = getCreatorPackManifestPath(options);
+  const packFiles = fs.readdirSync(packRoot, { withFileTypes: true })
+    .filter((entry) => entry.isFile() && entry.name.endsWith('.json') && entry.name !== 'manifest.json');
+  if (!packFiles.length) {
+    throwCreatorPackStoreNotInitialized(packRoot, 'Creator Pack store is empty.');
+  }
+  if (!fs.existsSync(manifestPath)) {
+    rebuildCreatorPackManifest(options);
+  }
+  const packs = iterateCreatorPacks(options);
+  if (!packs.length) {
+    throwCreatorPackStoreNotInitialized(packRoot, 'Creator Pack manifest has no entries.');
+  }
+  return packs;
+}
+
+function throwCreatorPackStoreNotInitialized(packRoot, reason) {
+  const error = new Error(`CREATOR_PACK_STORE_NOT_INITIALIZED: ${reason} Run the Creator Pack migration or pass --creator-pack-root to a prepared file store.`);
+  error.code = 'CREATOR_PACK_STORE_NOT_INITIALIZED';
+  error.packRoot = packRoot;
+  throw error;
+}
+
+function parseBuildArgs(argv) {
+  const args = {
+    creatorPackRoot: process.env.CREATOR_PACK_ROOT,
+    outputRoot: process.env.KYUNOLAB_SITE_OUTPUT_ROOT
+  };
+  for (let index = 0; index < argv.length; index += 1) {
+    const arg = argv[index];
+    if (arg === '--creator-pack-root') args.creatorPackRoot = argv[++index];
+    else if (arg === '--output-root') args.outputRoot = argv[++index];
+  }
+  return args;
 }
 
 function escapeHtml(value) {
@@ -3089,6 +3139,8 @@ if (require.main === module) {
 }
 
 module.exports = {
+  main,
+  loadCreatorScriptsForBuild,
   isStandardCreatorPack,
   validateCreatorPackForRender,
   buildCreatorRenderModel,

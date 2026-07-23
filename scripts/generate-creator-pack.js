@@ -4,10 +4,12 @@ const {
   buildAndValidateCreatorLibraryEntry
 } = require('./creator-library-pipeline');
 const {
-  loadCreatorLibraryEntries,
+  listCreatorPackEntries,
+  readCreatorPack,
   upsertCreatorPack,
   rebuildCreatorPackManifest,
   getCreatorPackRoot,
+  getCreatorPackManifestPath,
   validateCreatorPackFile
 } = require('./creator-library-store');
 
@@ -66,13 +68,13 @@ function generateCreatorPacksForSlugs(slugs, options = {}) {
 function loadGenerationContext(options = {}) {
   const stories = options.stories || readJson(storiesPath);
   const categories = options.categories || readJson(categoriesPath);
-  const legacyEntries = options.legacyEntries || (fs.existsSync(path.join(root, 'data', 'scripts.json')) ? loadCreatorLibraryEntries() : []);
-  return { stories, categories, legacyEntries };
+  const existingPacks = options.existingPacks || loadExistingCreatorPacks(options);
+  return { stories, categories, existingPacks };
 }
 
 function resolveStoryForSlug(slug, context) {
   const value = String(slug || '').trim();
-  const existingPack = context.legacyEntries.find((entry) => entry.slug === value || entry.originalStorySlug === value);
+  const existingPack = context.existingPacks.find((entry) => entry.slug === value || entry.originalStorySlug === value);
   const storySlug = existingPack?.originalStorySlug || value.replace(/-youtube-script$/, '');
   const story = context.stories.find((item) => item.slug === storySlug);
   if (!story) {
@@ -89,6 +91,13 @@ function resolveStoryForSlug(slug, context) {
     throw error;
   }
   return { story, category, existingPack };
+}
+
+function loadExistingCreatorPacks(options = {}) {
+  const packRoot = getCreatorPackRoot(options);
+  const manifestPath = getCreatorPackManifestPath(options);
+  if (!fs.existsSync(packRoot) || !fs.existsSync(manifestPath)) return [];
+  return listCreatorPackEntries(options).map((entry) => readCreatorPack(entry.slug, options));
 }
 
 function main() {

@@ -67,10 +67,6 @@ function main() {
     }
   }
 
-  if (!fs.existsSync(path.join(ROOT, 'data/scripts.json'))) {
-    failures.push('Repository source data/scripts.json is missing.');
-  }
-
   if (!fs.existsSync(path.join(ROOT, 'functions')) || fs.existsSync(path.join(DIST, 'functions'))) {
     failures.push('functions must exist at repository root only and must not be copied into dist.');
   }
