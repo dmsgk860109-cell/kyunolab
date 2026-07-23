@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Legendary Places Publishing Center | Kyunolab Mystery Archive</title>
+  <meta name="description" content="Internal publishing management page for Legendary Places archive records.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:title" content="Legendary Places Publishing Center | Kyunolab Mystery Archive">
+  <meta property="og:description" content="Internal publishing management page for Legendary Places archive records.">
+  <meta property="og:site_name" content="Kyunolab Mystery Archive">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kyunolab.com/publishing-center/legendary-places/">
+  <meta property="og:image" content="https://kyunolab.com/icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Legendary Places Publishing Center | Kyunolab Mystery Archive">
+  <meta name="twitter:description" content="Internal publishing management page for Legendary Places archive records.">
+  <meta name="twitter:image" content="https://kyunolab.com/icon-512.png">
+  <link rel="canonical" href="https://kyunolab.com/publishing-center/legendary-places/">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/favicon-48x48.png" type="image/png" sizes="48x48">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles.css?v=20260720-creator-part-visual-beats">
+</head>
+<body>
+  <header class="site-header">
+    <div class="topline">A Kyuno Lab publication</div>
+    <div class="header-inner">
+      <a class="brand" href="/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
+
+      <nav class="nav"><a href="/newest">Newest</a><a href="/popular">Popular</a><a href="/categories">Categories</a><a href="/mystery-board">Mystery Board</a><a href="/about">About</a></nav>
+    </div>
+  </header>
+  <main class="article-shell">
+    <div class="archive-page-main publishing-center" data-publishing-center>
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/publishing-center/">Publishing Center</a><span aria-hidden="true">/</span><span aria-current="page">Legendary Places</span></nav>
+      <p class="label">Internal Tool</p>
+      <h1 class="article-title">Legendary Places</h1>
+      <style>
+        .publishing-category-list,
+        .publishing-record-list {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+
+        .publishing-category-list li {
+          margin: 0 0 0.35rem;
+        }
+
+        .publishing-record {
+          align-items: center;
+          border-bottom: 1px solid var(--border-color, #d9d2c4);
+          display: grid;
+          gap: 0.65rem 1.25rem;
+          grid-template-columns: minmax(18rem, 1fr) max-content;
+          min-height: 3.25rem;
+          padding: 0.45rem 0.35rem;
+        }
+
+        .publishing-record-title {
+          overflow-wrap: anywhere;
+        }
+
+        .publishing-record-actions {
+          align-items: center;
+          display: flex;
+          gap: 0.5rem;
+          justify-content: flex-end;
+          white-space: nowrap;
+        }
+
+        .publishing-record .button {
+          font-size: 0.85rem;
+          line-height: 1.1;
+          min-height: 2.35rem;
+          min-width: 4.1rem;
+          padding: 0.48rem 0.7rem;
+          position: relative;
+          z-index: 1;
+        }
+
+        .publishing-published-label {
+          align-items: center;
+          cursor: pointer;
+          display: inline-flex;
+          gap: 0.25rem;
+          margin: 0;
+          min-height: 2.35rem;
+          padding: 0.25rem 0.25rem;
+          position: relative;
+          z-index: 1;
+        }
+
+        .publishing-published {
+          cursor: pointer;
+          height: 1.05rem;
+          width: 1.05rem;
+        }
+
+        .publishing-status {
+          color: var(--muted, #6b6258);
+          font-size: 0.9rem;
+          margin: -0.25rem 0 0.65rem;
+          min-height: 1.2rem;
+        }
+
+        .publishing-manual-copy {
+          border: 1px solid var(--border-color, #d9d2c4);
+          box-sizing: border-box;
+          font: inherit;
+          margin: 0 0 0.9rem;
+          min-height: 6rem;
+          padding: 0.65rem;
+          width: 100%;
+        }
+
+        .publishing-pagination {
+          align-items: center;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.35rem;
+          margin-top: 1rem;
+        }
+
+        .publishing-pagination a,
+        .publishing-pagination span {
+          border: 1px solid var(--border-color, #d9d2c4);
+          border-radius: 4px;
+          display: inline-flex;
+          line-height: 1;
+          padding: 0.45rem 0.6rem;
+        }
+
+        .publishing-pagination span[aria-current="page"] {
+          background: var(--ink, #171717);
+          border-color: var(--ink, #171717);
+          color: var(--paper, #fffaf1);
+        }
+
+        .publishing-pagination span[aria-disabled="true"] {
+          opacity: 0.55;
+        }
+
+        @media (max-width: 720px) {
+          .publishing-record {
+            grid-template-columns: 1fr;
+          }
+
+          .publishing-record-actions {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            white-space: normal;
+          }
+        }
+      </style>
+      <section class="script-material" aria-label="Legendary Places records">
+        <h2>Archive Records</h2>
+        <p class="publishing-status" role="status" aria-live="polite"></p>
+        <ul class="publishing-record-list">
+        <li class="publishing-record">
+          <span class="publishing-record-title">Yomi: Japanese Underworld, Forbidden Glance, and the Place Return Cannot Undo</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Yomi: Japanese Underworld, Forbidden Glance, and the Place Return Cannot Undo" data-url="https://kyunolab.com/stories/yomi-japanese-underworld">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Yomi: Japanese Underworld, Forbidden Glance, and the Place Return Cannot Undo" data-url="https://kyunolab.com/stories/yomi-japanese-underworld" data-description="A calm guide to Yomi, its common versions, source limits, and the japanese underworld motif that makes underworld in Japanese myth associated with death." data-category="Legendary Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:yomi-japanese-underworld:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Mictlan: Aztec Underworld, Nine Levels, and the Long Road After Death</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Mictlan: Aztec Underworld, Nine Levels, and the Long Road After Death" data-url="https://kyunolab.com/stories/mictlan-aztec-underworld">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Mictlan: Aztec Underworld, Nine Levels, and the Long Road After Death" data-url="https://kyunolab.com/stories/mictlan-aztec-underworld" data-description="Mictlan explores the origin, meaning, and folklore behind Aztec underworld associated with a difficult post-death journey through levels before reaching the." data-category="Legendary Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:mictlan-aztec-underworld:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Asgard: Realm of the Aesir, Bifrost Bridge, and the Mythic Place Above the Human World</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Asgard: Realm of the Aesir, Bifrost Bridge, and the Mythic Place Above the Human World" data-url="https://kyunolab.com/stories/asgard-norse-mythic-place">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Asgard: Realm of the Aesir, Bifrost Bridge, and the Mythic Place Above the Human World" data-url="https://kyunolab.com/stories/asgard-norse-mythic-place" data-description="Asgard explores the origin, meaning, and folklore behind Norse mythic realm of the Aesir gods, linked with Bifrost, divine halls, and the larger structure of." data-category="Legendary Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:asgard-norse-mythic-place:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Camelot: Arthur’s Court, Round Table Memory, and the Place That Became an Ideal</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Camelot: Arthur’s Court, Round Table Memory, and the Place That Became an Ideal" data-url="https://kyunolab.com/stories/camelot-legendary-court">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Camelot: Arthur’s Court, Round Table Memory, and the Place That Became an Ideal" data-url="https://kyunolab.com/stories/camelot-legendary-court" data-description="A calm guide to Camelot, its common versions, source limits, and the arthurian court motif that makes legendary court of King Arthur remembered as the center." data-category="Legendary Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:camelot-legendary-court:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Tir na nOg: Land of Youth, Otherworld Journey, and the Island Beyond Ordinary Time</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Tir na nOg: Land of Youth, Otherworld Journey, and the Island Beyond Ordinary Time" data-url="https://kyunolab.com/stories/tir-na-nog-legendary-place">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Tir na nOg: Land of Youth, Otherworld Journey, and the Island Beyond Ordinary Time" data-url="https://kyunolab.com/stories/tir-na-nog-legendary-place" data-description="A calm guide to Tir na nOg, its common versions, source limits, and the irish otherworld motif that makes Irish otherworld or land of youth where time moves." data-category="Legendary Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:tir-na-nog-legendary-place:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Lake Titicaca Legendary Place: Sacred Water, Origin Stories, and Andean Memory</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Lake Titicaca Legendary Place: Sacred Water, Origin Stories, and Andean Memory" data-url="https://kyunolab.com/stories/lake-titicaca-legendary-place">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Lake Titicaca Legendary Place: Sacred Water, Origin Stories, and Andean Memory" data-url="https://kyunolab.com/stories/lake-titicaca-legendary-place" data-description="Lake Titicaca Legendary Place explores the origin, meaning, and folklore behind Andean sacred lake associated with origin stories, Inca memory, and mythic." data-category="Legendary Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:lake-titicaca-legendary-place:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Mount Kailash Legendary Place: The Sacred Mountain People Circle But Do Not Climb</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Mount Kailash Legendary Place: The Sacred Mountain People Circle But Do Not Climb" data-url="https://kyunolab.com/stories/mount-kailash-legendary-place">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Mount Kailash Legendary Place: The Sacred Mountain People Circle But Do Not Climb" data-url="https://kyunolab.com/stories/mount-kailash-legendary-place" data-description="A calm guide to Mount Kailash Legendary Place, its common versions, source limits, and the sacred mountain motif that makes sacred mountain in Tibet revered." data-category="Legendary Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:mount-kailash-legendary-place:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Stonehenge Legend: Ancient Stones, Merlin Stories, and the Monument That Still Refuses One Meaning</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Stonehenge Legend: Ancient Stones, Merlin Stories, and the Monument That Still Refuses One Meaning" data-url="https://kyunolab.com/stories/stonehenge-legendary-place">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Stonehenge Legend: Ancient Stones, Merlin Stories, and the Monument That Still Refuses One Meaning" data-url="https://kyunolab.com/stories/stonehenge-legendary-place" data-description="Stonehenge Legend explores the origin, meaning, and folklore behind prehistoric stone monument in Wiltshire and the later legends, meanings, and." data-category="Legendary Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:stonehenge-legendary-place:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Oracle of Delphi: Sacred Place, Prophecy, and the Voice Beneath Apollo</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Oracle of Delphi: Sacred Place, Prophecy, and the Voice Beneath Apollo" data-url="https://kyunolab.com/stories/oracle-of-delphi-legend">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Oracle of Delphi: Sacred Place, Prophecy, and the Voice Beneath Apollo" data-url="https://kyunolab.com/stories/oracle-of-delphi-legend" data-description="Oracle of Delphi explores the origin, meaning, and folklore behind ancient Greek sacred site where the Pythia delivered oracular responses associated with." data-category="Legendary Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:oracle-of-delphi-legend:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Mount Olympus in Greek Myth: Home of the Gods and the Place Above the Human World</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Mount Olympus in Greek Myth: Home of the Gods and the Place Above the Human World" data-url="https://kyunolab.com/stories/mount-olympus-greek-myth">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Mount Olympus in Greek Myth: Home of the Gods and the Place Above the Human World" data-url="https://kyunolab.com/stories/mount-olympus-greek-myth" data-description="Mount Olympus in Greek Myth explores the origin, meaning, and folklore behind Greek mythic mountain associated with the Olympian gods, divine assembly, and." data-category="Legendary Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:mount-olympus-greek-myth:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Fountain of Youth: Legendary Water, Ponce de Leon, and the Place People Keep Seeking</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Fountain of Youth: Legendary Water, Ponce de Leon, and the Place People Keep Seeking" data-url="https://kyunolab.com/stories/fountain-of-youth-legend">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Fountain of Youth: Legendary Water, Ponce de Leon, and the Place People Keep Seeking" data-url="https://kyunolab.com/stories/fountain-of-youth-legend" data-description="Fountain of Youth explains legendary spring or water source said to restore youth, later tied to Ponce de Leon, Bimini, and Florida through legendary places." data-category="Legendary Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:fountain-of-youth-legend:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Monastery Garden Roll Catalog Page Kept Outside the Sequence</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Monastery Garden Roll Catalog Page Kept Outside the Sequence" data-url="https://kyunolab.com/stories/the-monastery-garden-roll-catalog-page-kept-outside-the-sequence">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Monastery Garden Roll Catalog Page Kept Outside the Sequence" data-url="https://kyunolab.com/stories/the-monastery-garden-roll-catalog-page-kept-outside-the-sequence" data-description="A calm guide to The Monastery Garden Roll Catalog Page Kept Outside the Sequence, its common versions, source limits, and the legendary place record motif." data-category="Legendary Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-monastery-garden-roll-catalog-page-kept-outside-the-sequence:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Crossroads Post Ledger Notebook That Adds One Entry Overnight</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Crossroads Post Ledger Notebook That Adds One Entry Overnight" data-url="https://kyunolab.com/stories/the-crossroads-post-ledger-notebook-that-adds-one-entry-overnight">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Crossroads Post Ledger Notebook That Adds One Entry Overnight" data-url="https://kyunolab.com/stories/the-crossroads-post-ledger-notebook-that-adds-one-entry-overnight" data-description="The Crossroads Post Ledger Notebook That Adds One Entry Overnight explains the image of a crossroads post ledger notebook gains one overnight entry about four." data-category="Legendary Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-crossroads-post-ledger-notebook-that-adds-one-entry-overnight:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Harbor Bell Tower Request Slip Signed by No Reader</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Harbor Bell Tower Request Slip Signed by No Reader" data-url="https://kyunolab.com/stories/the-harbor-bell-tower-request-slip-signed-by-no-reader">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Harbor Bell Tower Request Slip Signed by No Reader" data-url="https://kyunolab.com/stories/the-harbor-bell-tower-request-slip-signed-by-no-reader" data-description="The Harbor Bell Tower Request Slip Signed by No Reader explores the origin, meaning, and folklore behind the image of a request slip at harbor bell tower asks." data-category="Legendary Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-harbor-bell-tower-request-slip-signed-by-no-reader:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Sacred Grove Entry Book Map Note Pointing to a Removed Door</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Sacred Grove Entry Book Map Note Pointing to a Removed Door" data-url="https://kyunolab.com/stories/the-sacred-grove-entry-book-map-note-pointing-to-a-removed-door">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Sacred Grove Entry Book Map Note Pointing to a Removed Door" data-url="https://kyunolab.com/stories/the-sacred-grove-entry-book-map-note-pointing-to-a-removed-door" data-description="The Sacred Grove Entry Book Map Note Pointing to a Removed Door explains the scene where a map note from sacred grove entry book points toward a rule folded." data-category="Legendary Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-sacred-grove-entry-book-map-note-pointing-to-a-removed-door:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Cave Chapel Desk Inventory Tag for an Object No One Stored</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Cave Chapel Desk Inventory Tag for an Object No One Stored" data-url="https://kyunolab.com/stories/the-cave-chapel-desk-inventory-tag-for-an-object-no-one-stored">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Cave Chapel Desk Inventory Tag for an Object No One Stored" data-url="https://kyunolab.com/stories/the-cave-chapel-desk-inventory-tag-for-an-object-no-one-stored" data-description="The Cave Chapel Desk Inventory Tag for an Object No One Stored explains the scene where an inventory tag at cave chapel desk describes a pilgrim path read." data-category="Legendary Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-cave-chapel-desk-inventory-tag-for-an-object-no-one-stored:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Abbey Salt Room Plan Audit Log From a Silent Hour</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Abbey Salt Room Plan Audit Log From a Silent Hour" data-url="https://kyunolab.com/stories/the-abbey-salt-room-plan-audit-log-from-a-silent-hour">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Abbey Salt Room Plan Audit Log From a Silent Hour" data-url="https://kyunolab.com/stories/the-abbey-salt-room-plan-audit-log-from-a-silent-hour" data-description="The Abbey Salt Room Plan Audit Log From a Silent Hour explores the origin, meaning, and folklore behind the image of a abbey salt room plan audit log records." data-category="Legendary Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-abbey-salt-room-plan-audit-log-from-a-silent-hour:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Temple Gate Repair Desk Receipt Book With a Future Stamp</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Temple Gate Repair Desk Receipt Book With a Future Stamp" data-url="https://kyunolab.com/stories/the-temple-gate-repair-desk-receipt-book-with-a-future-stamp">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Temple Gate Repair Desk Receipt Book With a Future Stamp" data-url="https://kyunolab.com/stories/the-temple-gate-repair-desk-receipt-book-with-a-future-stamp" data-description="A calm guide to The Temple Gate Repair Desk Receipt Book With a Future Stamp, its common versions, source limits, and the legendary place record motif that." data-category="Legendary Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-temple-gate-repair-desk-receipt-book-with-a-future-stamp:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Mountain Pass Toll Desk Index Card for an Unlisted Shelf</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Mountain Pass Toll Desk Index Card for an Unlisted Shelf" data-url="https://kyunolab.com/stories/the-mountain-pass-toll-desk-index-card-for-an-unlisted-shelf">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Mountain Pass Toll Desk Index Card for an Unlisted Shelf" data-url="https://kyunolab.com/stories/the-mountain-pass-toll-desk-index-card-for-an-unlisted-shelf" data-description="The Mountain Pass Toll Desk Index Card for an Unlisted Shelf explains the scene where an index card from mountain pass toll desk points to a shelf where." data-category="Legendary Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-mountain-pass-toll-desk-index-card-for-an-unlisted-shelf:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Forbidden Lake Hut Ledger That Refuses the Final Number</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Forbidden Lake Hut Ledger That Refuses the Final Number" data-url="https://kyunolab.com/stories/the-forbidden-lake-hut-ledger-that-refuses-the-final-number">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Forbidden Lake Hut Ledger That Refuses the Final Number" data-url="https://kyunolab.com/stories/the-forbidden-lake-hut-ledger-that-refuses-the-final-number" data-description="The Forbidden Lake Hut Ledger That Refuses the Final Number explains the image of a forbidden lake hut ledger counts a depth line left unnamed but leaves the." data-category="Legendary Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-forbidden-lake-hut-ledger-that-refuses-the-final-number:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Shrine Road Office Register With a Line Written Too Early</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Shrine Road Office Register With a Line Written Too Early" data-url="https://kyunolab.com/stories/the-shrine-road-office-register-with-a-line-written-too-early">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Shrine Road Office Register With a Line Written Too Early" data-url="https://kyunolab.com/stories/the-shrine-road-office-register-with-a-line-written-too-early" data-description="A calm guide to The Shrine Road Office Register With a Line Written Too Early, its common versions, source limits, and the legendary place record motif that." data-category="Legendary Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-shrine-road-office-register-with-a-line-written-too-early:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Cave Pilgrim Roll Kept Beneath Clear Water</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Cave Pilgrim Roll Kept Beneath Clear Water" data-url="https://kyunolab.com/stories/the-cave-pilgrim-roll-kept-beneath-clear-water">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Cave Pilgrim Roll Kept Beneath Clear Water" data-url="https://kyunolab.com/stories/the-cave-pilgrim-roll-kept-beneath-clear-water" data-description="The Cave Pilgrim Roll Kept Beneath Clear Water explains the image of a cave pilgrim roll is kept beneath clear water as proof of a path that must be read, not." data-category="Legendary Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-cave-pilgrim-roll-kept-beneath-clear-water:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Temple Gate Repair Note Signed by No Carpenter</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Temple Gate Repair Note Signed by No Carpenter" data-url="https://kyunolab.com/stories/the-temple-gate-repair-note-signed-by-no-carpenter">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Temple Gate Repair Note Signed by No Carpenter" data-url="https://kyunolab.com/stories/the-temple-gate-repair-note-signed-by-no-carpenter" data-description="The Temple Gate Repair Note Signed by No Carpenter explores the origin, meaning, and folklore behind the image of a temple gate repair note is signed, but no." data-category="Legendary Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-temple-gate-repair-note-signed-by-no-carpenter:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Crossroads Milepost Register With Four Norths</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Crossroads Milepost Register With Four Norths" data-url="https://kyunolab.com/stories/the-crossroads-milepost-register-with-four-norths">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Crossroads Milepost Register With Four Norths" data-url="https://kyunolab.com/stories/the-crossroads-milepost-register-with-four-norths" data-description="A calm guide to The Crossroads Milepost Register With Four Norths, its common versions, source limits, and the legendary place record motif that makes the." data-category="Legendary Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-crossroads-milepost-register-with-four-norths:naver"> Published</label>
+          </div>
+        </li>
+        </ul>
+        <nav class="publishing-pagination" aria-label="Legendary Places pagination">
+          <span aria-disabled="true">Previous</span>
+          <span aria-current="page">1</span><a href="/publishing-center/legendary-places/page-2/">2</a><a href="/publishing-center/legendary-places/page-3/">3</a><a href="/publishing-center/legendary-places/page-4/">4</a>
+          <a href="/publishing-center/legendary-places/page-2/">Next</a>
+        </nav>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <p><strong>Kyunolab Mystery Archive</strong> collects legends, folklore, mysteries, and strange tales with calm source-aware notes.</p>
+    <p><a href="/archive">Archive Index</a> - <a href="/newest">Newest</a> - <a href="/popular">Popular</a> - <a href="/categories">Categories</a> - <a href="/scripts/">Scripts</a> - <a href="/about">About</a> - <a href="/fiction-disclaimer">Story &amp; Source Notice</a> - <a href="/privacy">Privacy</a> - <a href="/rss.xml">RSS</a> - <a href="/publishing-center/">Publishing Center</a></p>
+  </footer>
+  <script defer src="/engagement.js?v=20260720-creator-part-visual-beats"></script>
+  <script defer src="/assets/publishing-center.js?v=20260720-creator-part-visual-beats"></script>
+</body>
+</html>

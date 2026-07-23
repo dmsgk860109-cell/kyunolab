@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Strange Nature Publishing Center | Kyunolab Mystery Archive</title>
+  <meta name="description" content="Internal publishing management page for Strange Nature archive records.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:title" content="Strange Nature Publishing Center | Kyunolab Mystery Archive">
+  <meta property="og:description" content="Internal publishing management page for Strange Nature archive records.">
+  <meta property="og:site_name" content="Kyunolab Mystery Archive">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kyunolab.com/publishing-center/strange-nature/">
+  <meta property="og:image" content="https://kyunolab.com/icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Strange Nature Publishing Center | Kyunolab Mystery Archive">
+  <meta name="twitter:description" content="Internal publishing management page for Strange Nature archive records.">
+  <meta name="twitter:image" content="https://kyunolab.com/icon-512.png">
+  <link rel="canonical" href="https://kyunolab.com/publishing-center/strange-nature/">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/favicon-48x48.png" type="image/png" sizes="48x48">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles.css?v=20260720-creator-part-visual-beats">
+</head>
+<body>
+  <header class="site-header">
+    <div class="topline">A Kyuno Lab publication</div>
+    <div class="header-inner">
+      <a class="brand" href="/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
+
+      <nav class="nav"><a href="/newest">Newest</a><a href="/popular">Popular</a><a href="/categories">Categories</a><a href="/mystery-board">Mystery Board</a><a href="/about">About</a></nav>
+    </div>
+  </header>
+  <main class="article-shell">
+    <div class="archive-page-main publishing-center" data-publishing-center>
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/publishing-center/">Publishing Center</a><span aria-hidden="true">/</span><span aria-current="page">Strange Nature</span></nav>
+      <p class="label">Internal Tool</p>
+      <h1 class="article-title">Strange Nature</h1>
+      <style>
+        .publishing-category-list,
+        .publishing-record-list {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+
+        .publishing-category-list li {
+          margin: 0 0 0.35rem;
+        }
+
+        .publishing-record {
+          align-items: center;
+          border-bottom: 1px solid var(--border-color, #d9d2c4);
+          display: grid;
+          gap: 0.65rem 1.25rem;
+          grid-template-columns: minmax(18rem, 1fr) max-content;
+          min-height: 3.25rem;
+          padding: 0.45rem 0.35rem;
+        }
+
+        .publishing-record-title {
+          overflow-wrap: anywhere;
+        }
+
+        .publishing-record-actions {
+          align-items: center;
+          display: flex;
+          gap: 0.5rem;
+          justify-content: flex-end;
+          white-space: nowrap;
+        }
+
+        .publishing-record .button {
+          font-size: 0.85rem;
+          line-height: 1.1;
+          min-height: 2.35rem;
+          min-width: 4.1rem;
+          padding: 0.48rem 0.7rem;
+          position: relative;
+          z-index: 1;
+        }
+
+        .publishing-published-label {
+          align-items: center;
+          cursor: pointer;
+          display: inline-flex;
+          gap: 0.25rem;
+          margin: 0;
+          min-height: 2.35rem;
+          padding: 0.25rem 0.25rem;
+          position: relative;
+          z-index: 1;
+        }
+
+        .publishing-published {
+          cursor: pointer;
+          height: 1.05rem;
+          width: 1.05rem;
+        }
+
+        .publishing-status {
+          color: var(--muted, #6b6258);
+          font-size: 0.9rem;
+          margin: -0.25rem 0 0.65rem;
+          min-height: 1.2rem;
+        }
+
+        .publishing-manual-copy {
+          border: 1px solid var(--border-color, #d9d2c4);
+          box-sizing: border-box;
+          font: inherit;
+          margin: 0 0 0.9rem;
+          min-height: 6rem;
+          padding: 0.65rem;
+          width: 100%;
+        }
+
+        .publishing-pagination {
+          align-items: center;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.35rem;
+          margin-top: 1rem;
+        }
+
+        .publishing-pagination a,
+        .publishing-pagination span {
+          border: 1px solid var(--border-color, #d9d2c4);
+          border-radius: 4px;
+          display: inline-flex;
+          line-height: 1;
+          padding: 0.45rem 0.6rem;
+        }
+
+        .publishing-pagination span[aria-current="page"] {
+          background: var(--ink, #171717);
+          border-color: var(--ink, #171717);
+          color: var(--paper, #fffaf1);
+        }
+
+        .publishing-pagination span[aria-disabled="true"] {
+          opacity: 0.55;
+        }
+
+        @media (max-width: 720px) {
+          .publishing-record {
+            grid-template-columns: 1fr;
+          }
+
+          .publishing-record-actions {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            white-space: normal;
+          }
+        }
+      </style>
+      <section class="script-material" aria-label="Strange Nature records">
+        <h2>Archive Records</h2>
+        <p class="publishing-status" role="status" aria-live="polite"></p>
+        <ul class="publishing-record-list">
+        <li class="publishing-record">
+          <span class="publishing-record-title">Fairy Rings: Mushroom Circles, Grass Patterns, and the Folklore of a Natural Shape</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Fairy Rings: Mushroom Circles, Grass Patterns, and the Folklore of a Natural Shape" data-url="https://kyunolab.com/stories/fairy-rings-folklore">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Fairy Rings: Mushroom Circles, Grass Patterns, and the Folklore of a Natural Shape" data-url="https://kyunolab.com/stories/fairy-rings-folklore" data-description="A calm guide to Fairy Rings, its common versions, source limits, and the mushroom folklore motif that makes natural circles of mushrooms or grass that became." data-category="Strange Nature">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:fairy-rings-folklore:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Naga Fireballs: Mekong Lights, Festival Reports, and the River Phenomenon Between Belief and Debate</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Naga Fireballs: Mekong Lights, Festival Reports, and the River Phenomenon Between Belief and Debate" data-url="https://kyunolab.com/stories/naga-fireballs-legend">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Naga Fireballs: Mekong Lights, Festival Reports, and the River Phenomenon Between Belief and Debate" data-url="https://kyunolab.com/stories/naga-fireballs-legend" data-description="Naga Fireballs explores the origin, meaning, and folklore behind Mekong River light phenomenon reported as glowing balls rising from the water and interpreted." data-category="Strange Nature">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:naga-fireballs-legend:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Sailing Stones: Moving Rocks, Desert Tracks, and the Mystery Written Across Dry Lake Beds</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Sailing Stones: Moving Rocks, Desert Tracks, and the Mystery Written Across Dry Lake Beds" data-url="https://kyunolab.com/stories/sailing-stones-death-valley">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Sailing Stones: Moving Rocks, Desert Tracks, and the Mystery Written Across Dry Lake Beds" data-url="https://kyunolab.com/stories/sailing-stones-death-valley" data-description="Sailing Stones explains moving rocks of dry lake beds whose long tracks inspired mystery before ice, wind, and water helped explain the motion through strange." data-category="Strange Nature">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:sailing-stones-death-valley:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Morning Glory Cloud: Rolling Sky Waves, Gulf Country, and the Cloud That Looks Alive</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Morning Glory Cloud: Rolling Sky Waves, Gulf Country, and the Cloud That Looks Alive" data-url="https://kyunolab.com/stories/morning-glory-cloud">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Morning Glory Cloud: Rolling Sky Waves, Gulf Country, and the Cloud That Looks Alive" data-url="https://kyunolab.com/stories/morning-glory-cloud" data-description="A calm guide to Morning Glory Cloud, its common versions, source limits, and the cloud phenomenon motif that makes rare rolling cloud formation especially." data-category="Strange Nature">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:morning-glory-cloud:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Ball Lightning: Glowing Spheres, Storm Reports, and the Natural Mystery That Behaves Like Folklore</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Ball Lightning: Glowing Spheres, Storm Reports, and the Natural Mystery That Behaves Like Folklore" data-url="https://kyunolab.com/stories/ball-lightning-phenomenon">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Ball Lightning: Glowing Spheres, Storm Reports, and the Natural Mystery That Behaves Like Folklore" data-url="https://kyunolab.com/stories/ball-lightning-phenomenon" data-description="Ball Lightning explores the origin, meaning, and folklore behind reported atmospheric phenomenon of glowing spheres seen during storms and debated through." data-category="Strange Nature">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:ball-lightning-phenomenon:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">St. Elmo&#39;s Fire Phenomenon: Blue Light, Storms, and the Folklore of Sailors</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="St. Elmo&#39;s Fire Phenomenon: Blue Light, Storms, and the Folklore of Sailors" data-url="https://kyunolab.com/stories/st-elmos-fire-phenomenon">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="St. Elmo&#39;s Fire Phenomenon: Blue Light, Storms, and the Folklore of Sailors" data-url="https://kyunolab.com/stories/st-elmos-fire-phenomenon" data-description="St. Elmo&#39;s Fire Phenomenon explains luminous electrical weather phenomenon remembered by sailors as a blue or violet glow during storms through strange." data-category="Strange Nature">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:st-elmos-fire-phenomenon:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Raining Animals Phenomenon: When Fish, Frogs, and Weather Become Folklore</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Raining Animals Phenomenon: When Fish, Frogs, and Weather Become Folklore" data-url="https://kyunolab.com/stories/raining-animals-phenomenon">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Raining Animals Phenomenon: When Fish, Frogs, and Weather Become Folklore" data-url="https://kyunolab.com/stories/raining-animals-phenomenon" data-description="Raining Animals Phenomenon explains reports of fish, frogs, or other small animals falling from the sky, often explained through unusual weather while." data-category="Strange Nature">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:raining-animals-phenomenon:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Blood Rain Phenomenon: Red Rain, Omen Stories, and the Sky That Falls in the Wrong Color</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Blood Rain Phenomenon: Red Rain, Omen Stories, and the Sky That Falls in the Wrong Color" data-url="https://kyunolab.com/stories/blood-rain-phenomenon">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Blood Rain Phenomenon: Red Rain, Omen Stories, and the Sky That Falls in the Wrong Color" data-url="https://kyunolab.com/stories/blood-rain-phenomenon" data-description="Blood Rain Phenomenon explores the origin, meaning, and folklore behind red-colored rain events that have been explained through dust, algae, spores, or other." data-category="Strange Nature">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:blood-rain-phenomenon:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Green Flash at Sunset: Optical Phenomenon, Horizon Lore, and the Light People Wait For</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Green Flash at Sunset: Optical Phenomenon, Horizon Lore, and the Light People Wait For" data-url="https://kyunolab.com/stories/green-flash-sunset-phenomenon">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Green Flash at Sunset: Optical Phenomenon, Horizon Lore, and the Light People Wait For" data-url="https://kyunolab.com/stories/green-flash-sunset-phenomenon" data-description="Green Flash at Sunset explains brief green light sometimes seen near the sun at sunrise or sunset under specific atmospheric conditions through strange." data-category="Strange Nature">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:green-flash-sunset-phenomenon:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Marfa Lights Mystery: Desert Glow, Witness Reports, and the Strange Nature of West Texas</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Marfa Lights Mystery: Desert Glow, Witness Reports, and the Strange Nature of West Texas" data-url="https://kyunolab.com/stories/marfa-lights-mystery">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Marfa Lights Mystery: Desert Glow, Witness Reports, and the Strange Nature of West Texas" data-url="https://kyunolab.com/stories/marfa-lights-mystery" data-description="Marfa Lights Mystery explains West Texas light phenomenon reported near Marfa, where distant glows appear in the desert and invite natural, optical, and." data-category="Strange Nature">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:marfa-lights-mystery:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Tunguska Event: Siberian Explosion, Flattened Forest, and the Natural Mystery That Changed the Sky</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Tunguska Event: Siberian Explosion, Flattened Forest, and the Natural Mystery That Changed the Sky" data-url="https://kyunolab.com/stories/tunguska-event">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Tunguska Event: Siberian Explosion, Flattened Forest, and the Natural Mystery That Changed the Sky" data-url="https://kyunolab.com/stories/tunguska-event" data-description="A calm guide to Tunguska Event, its common versions, source limits, and the impact event motif that makes 1908 Siberian airburst that flattened forest across." data-category="Strange Nature">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:tunguska-event:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Bird Migration Tower Catalog Page Kept Outside the Sequence</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Bird Migration Tower Catalog Page Kept Outside the Sequence" data-url="https://kyunolab.com/stories/the-bird-migration-tower-catalog-page-kept-outside-the-sequence">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Bird Migration Tower Catalog Page Kept Outside the Sequence" data-url="https://kyunolab.com/stories/the-bird-migration-tower-catalog-page-kept-outside-the-sequence" data-description="The Bird Migration Tower Catalog Page Kept Outside the Sequence explains the scene where a catalog page from bird migration tower keeps one flock charted." data-category="Strange Nature">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-bird-migration-tower-catalog-page-kept-outside-the-sequence:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Storm Branch Yard Notebook That Adds One Entry Overnight</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Storm Branch Yard Notebook That Adds One Entry Overnight" data-url="https://kyunolab.com/stories/the-storm-branch-yard-notebook-that-adds-one-entry-overnight">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Storm Branch Yard Notebook That Adds One Entry Overnight" data-url="https://kyunolab.com/stories/the-storm-branch-yard-notebook-that-adds-one-entry-overnight" data-description="The Storm Branch Yard Notebook That Adds One Entry Overnight explains the image of a storm branch yard notebook gains one overnight entry about broken limbs." data-category="Strange Nature">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-storm-branch-yard-notebook-that-adds-one-entry-overnight:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Lake Ice Desk Request Slip Signed by No Reader</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Lake Ice Desk Request Slip Signed by No Reader" data-url="https://kyunolab.com/stories/the-lake-ice-desk-request-slip-signed-by-no-reader">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Lake Ice Desk Request Slip Signed by No Reader" data-url="https://kyunolab.com/stories/the-lake-ice-desk-request-slip-signed-by-no-reader" data-description="The Lake Ice Desk Request Slip Signed by No Reader explores the origin, meaning, and folklore behind the image of a request slip at lake ice desk asks for one." data-category="Strange Nature">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-lake-ice-desk-request-slip-signed-by-no-reader:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Mushroom Plot Notebook Map Note Pointing to a Removed Door</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Mushroom Plot Notebook Map Note Pointing to a Removed Door" data-url="https://kyunolab.com/stories/the-mushroom-plot-notebook-map-note-pointing-to-a-removed-door">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Mushroom Plot Notebook Map Note Pointing to a Removed Door" data-url="https://kyunolab.com/stories/the-mushroom-plot-notebook-map-note-pointing-to-a-removed-door" data-description="The Mushroom Plot Notebook Map Note Pointing to a Removed Door explains the scene where a map note from mushroom plot notebook points toward night spore." data-category="Strange Nature">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-mushroom-plot-notebook-map-note-pointing-to-a-removed-door:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Cloud Shadow Observatory Inventory Tag for an Object No One Stored</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Cloud Shadow Observatory Inventory Tag for an Object No One Stored" data-url="https://kyunolab.com/stories/the-cloud-shadow-observatory-inventory-tag-for-an-object-no-one-stored">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Cloud Shadow Observatory Inventory Tag for an Object No One Stored" data-url="https://kyunolab.com/stories/the-cloud-shadow-observatory-inventory-tag-for-an-object-no-one-stored" data-description="The Cloud Shadow Observatory Inventory Tag for an Object No One Stored explores the origin, meaning, and folklore behind the scene where an inventory tag at." data-category="Strange Nature">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-cloud-shadow-observatory-inventory-tag-for-an-object-no-one-stored:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Tide Card Table Audit Log From a Silent Hour</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Tide Card Table Audit Log From a Silent Hour" data-url="https://kyunolab.com/stories/the-tide-card-table-audit-log-from-a-silent-hour">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Tide Card Table Audit Log From a Silent Hour" data-url="https://kyunolab.com/stories/the-tide-card-table-audit-log-from-a-silent-hour" data-description="The Tide Card Table Audit Log From a Silent Hour explores the origin, meaning, and folklore behind the image of a tide card table audit log records a dry wave." data-category="Strange Nature">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-tide-card-table-audit-log-from-a-silent-hour:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The River Temperature Hut Receipt Book With a Future Stamp</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The River Temperature Hut Receipt Book With a Future Stamp" data-url="https://kyunolab.com/stories/the-river-temperature-hut-receipt-book-with-a-future-stamp">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The River Temperature Hut Receipt Book With a Future Stamp" data-url="https://kyunolab.com/stories/the-river-temperature-hut-receipt-book-with-a-future-stamp" data-description="The River Temperature Hut Receipt Book With a Future Stamp explains the image of a river temperature hut receipt book stamps warming water at midnight without." data-category="Strange Nature">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-river-temperature-hut-receipt-book-with-a-future-stamp:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Pine Forest Office Index Card for an Unlisted Shelf</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Pine Forest Office Index Card for an Unlisted Shelf" data-url="https://kyunolab.com/stories/the-pine-forest-office-index-card-for-an-unlisted-shelf">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Pine Forest Office Index Card for an Unlisted Shelf" data-url="https://kyunolab.com/stories/the-pine-forest-office-index-card-for-an-unlisted-shelf" data-description="The Pine Forest Office Index Card for an Unlisted Shelf explores the origin, meaning, and folklore behind the scene where an index card from pine forest." data-category="Strange Nature">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-pine-forest-office-index-card-for-an-unlisted-shelf:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Rain Gauge Shed Ledger That Refuses the Final Number</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Rain Gauge Shed Ledger That Refuses the Final Number" data-url="https://kyunolab.com/stories/the-rain-gauge-shed-ledger-that-refuses-the-final-number">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Rain Gauge Shed Ledger That Refuses the Final Number" data-url="https://kyunolab.com/stories/the-rain-gauge-shed-ledger-that-refuses-the-final-number" data-description="The Rain Gauge Shed Ledger That Refuses the Final Number explains the image of a rain gauge shed ledger counts drops recorded as moving upward but leaves the." data-category="Strange Nature">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-rain-gauge-shed-ledger-that-refuses-the-final-number:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Frost Station Journal Register With a Line Written Too Early</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Frost Station Journal Register With a Line Written Too Early" data-url="https://kyunolab.com/stories/the-frost-station-journal-register-with-a-line-written-too-early">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Frost Station Journal Register With a Line Written Too Early" data-url="https://kyunolab.com/stories/the-frost-station-journal-register-with-a-line-written-too-early" data-description="The Frost Station Journal Register With a Line Written Too Early explores the origin, meaning, and folklore behind the scene where a frost station journal." data-category="Strange Nature">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-frost-station-journal-register-with-a-line-written-too-early:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Lake Ice Register With One Wet Footpath</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Lake Ice Register With One Wet Footpath" data-url="https://kyunolab.com/stories/the-lake-ice-register-with-one-wet-footpath">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Lake Ice Register With One Wet Footpath" data-url="https://kyunolab.com/stories/the-lake-ice-register-with-one-wet-footpath" data-description="The Lake Ice Register With One Wet Footpath explores the origin, meaning, and folklore behind the image of a lake ice register records a wet footpath across." data-category="Strange Nature">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-lake-ice-register-with-one-wet-footpath:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Storm Branch Inventory After a Windless Day</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Storm Branch Inventory After a Windless Day" data-url="https://kyunolab.com/stories/the-storm-branch-inventory-after-a-windless-day">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Storm Branch Inventory After a Windless Day" data-url="https://kyunolab.com/stories/the-storm-branch-inventory-after-a-windless-day" data-description="A calm guide to The Storm Branch Inventory After a Windless Day, its common versions, source limits, and the nature record legend motif that makes the image." data-category="Strange Nature">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-storm-branch-inventory-after-a-windless-day:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The River Temperature Log That Warmed at Midnight</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The River Temperature Log That Warmed at Midnight" data-url="https://kyunolab.com/stories/the-river-temperature-log-that-warmed-at-midnight">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The River Temperature Log That Warmed at Midnight" data-url="https://kyunolab.com/stories/the-river-temperature-log-that-warmed-at-midnight" data-description="The River Temperature Log That Warmed at Midnight explains the scene where a river temperature log shows warming at midnight with no weather change nearby." data-category="Strange Nature">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-river-temperature-log-that-warmed-at-midnight:naver"> Published</label>
+          </div>
+        </li>
+        </ul>
+        <nav class="publishing-pagination" aria-label="Strange Nature pagination">
+          <span aria-disabled="true">Previous</span>
+          <span aria-current="page">1</span><a href="/publishing-center/strange-nature/page-2/">2</a><a href="/publishing-center/strange-nature/page-3/">3</a><a href="/publishing-center/strange-nature/page-4/">4</a>
+          <a href="/publishing-center/strange-nature/page-2/">Next</a>
+        </nav>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <p><strong>Kyunolab Mystery Archive</strong> collects legends, folklore, mysteries, and strange tales with calm source-aware notes.</p>
+    <p><a href="/archive">Archive Index</a> - <a href="/newest">Newest</a> - <a href="/popular">Popular</a> - <a href="/categories">Categories</a> - <a href="/scripts/">Scripts</a> - <a href="/about">About</a> - <a href="/fiction-disclaimer">Story &amp; Source Notice</a> - <a href="/privacy">Privacy</a> - <a href="/rss.xml">RSS</a> - <a href="/publishing-center/">Publishing Center</a></p>
+  </footer>
+  <script defer src="/engagement.js?v=20260720-creator-part-visual-beats"></script>
+  <script defer src="/assets/publishing-center.js?v=20260720-creator-part-visual-beats"></script>
+</body>
+</html>

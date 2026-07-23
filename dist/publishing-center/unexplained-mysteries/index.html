@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unexplained Mysteries Publishing Center | Kyunolab Mystery Archive</title>
+  <meta name="description" content="Internal publishing management page for Unexplained Mysteries archive records.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:title" content="Unexplained Mysteries Publishing Center | Kyunolab Mystery Archive">
+  <meta property="og:description" content="Internal publishing management page for Unexplained Mysteries archive records.">
+  <meta property="og:site_name" content="Kyunolab Mystery Archive">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kyunolab.com/publishing-center/unexplained-mysteries/">
+  <meta property="og:image" content="https://kyunolab.com/icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Unexplained Mysteries Publishing Center | Kyunolab Mystery Archive">
+  <meta name="twitter:description" content="Internal publishing management page for Unexplained Mysteries archive records.">
+  <meta name="twitter:image" content="https://kyunolab.com/icon-512.png">
+  <link rel="canonical" href="https://kyunolab.com/publishing-center/unexplained-mysteries/">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/favicon-48x48.png" type="image/png" sizes="48x48">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles.css?v=20260720-creator-part-visual-beats">
+</head>
+<body>
+  <header class="site-header">
+    <div class="topline">A Kyuno Lab publication</div>
+    <div class="header-inner">
+      <a class="brand" href="/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
+
+      <nav class="nav"><a href="/newest">Newest</a><a href="/popular">Popular</a><a href="/categories">Categories</a><a href="/mystery-board">Mystery Board</a><a href="/about">About</a></nav>
+    </div>
+  </header>
+  <main class="article-shell">
+    <div class="archive-page-main publishing-center" data-publishing-center>
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/publishing-center/">Publishing Center</a><span aria-hidden="true">/</span><span aria-current="page">Unexplained Mysteries</span></nav>
+      <p class="label">Internal Tool</p>
+      <h1 class="article-title">Unexplained Mysteries</h1>
+      <style>
+        .publishing-category-list,
+        .publishing-record-list {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+
+        .publishing-category-list li {
+          margin: 0 0 0.35rem;
+        }
+
+        .publishing-record {
+          align-items: center;
+          border-bottom: 1px solid var(--border-color, #d9d2c4);
+          display: grid;
+          gap: 0.65rem 1.25rem;
+          grid-template-columns: minmax(18rem, 1fr) max-content;
+          min-height: 3.25rem;
+          padding: 0.45rem 0.35rem;
+        }
+
+        .publishing-record-title {
+          overflow-wrap: anywhere;
+        }
+
+        .publishing-record-actions {
+          align-items: center;
+          display: flex;
+          gap: 0.5rem;
+          justify-content: flex-end;
+          white-space: nowrap;
+        }
+
+        .publishing-record .button {
+          font-size: 0.85rem;
+          line-height: 1.1;
+          min-height: 2.35rem;
+          min-width: 4.1rem;
+          padding: 0.48rem 0.7rem;
+          position: relative;
+          z-index: 1;
+        }
+
+        .publishing-published-label {
+          align-items: center;
+          cursor: pointer;
+          display: inline-flex;
+          gap: 0.25rem;
+          margin: 0;
+          min-height: 2.35rem;
+          padding: 0.25rem 0.25rem;
+          position: relative;
+          z-index: 1;
+        }
+
+        .publishing-published {
+          cursor: pointer;
+          height: 1.05rem;
+          width: 1.05rem;
+        }
+
+        .publishing-status {
+          color: var(--muted, #6b6258);
+          font-size: 0.9rem;
+          margin: -0.25rem 0 0.65rem;
+          min-height: 1.2rem;
+        }
+
+        .publishing-manual-copy {
+          border: 1px solid var(--border-color, #d9d2c4);
+          box-sizing: border-box;
+          font: inherit;
+          margin: 0 0 0.9rem;
+          min-height: 6rem;
+          padding: 0.65rem;
+          width: 100%;
+        }
+
+        .publishing-pagination {
+          align-items: center;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.35rem;
+          margin-top: 1rem;
+        }
+
+        .publishing-pagination a,
+        .publishing-pagination span {
+          border: 1px solid var(--border-color, #d9d2c4);
+          border-radius: 4px;
+          display: inline-flex;
+          line-height: 1;
+          padding: 0.45rem 0.6rem;
+        }
+
+        .publishing-pagination span[aria-current="page"] {
+          background: var(--ink, #171717);
+          border-color: var(--ink, #171717);
+          color: var(--paper, #fffaf1);
+        }
+
+        .publishing-pagination span[aria-disabled="true"] {
+          opacity: 0.55;
+        }
+
+        @media (max-width: 720px) {
+          .publishing-record {
+            grid-template-columns: 1fr;
+          }
+
+          .publishing-record-actions {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            white-space: normal;
+          }
+        }
+      </style>
+      <section class="script-material" aria-label="Unexplained Mysteries records">
+        <h2>Archive Records</h2>
+        <p class="publishing-status" role="status" aria-live="polite"></p>
+        <ul class="publishing-record-list">
+        <li class="publishing-record">
+          <span class="publishing-record-title">Devil’s Sea Mystery: Dragon’s Triangle, Maritime Rumor, and the Dangerous Waters of Legend</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Devil’s Sea Mystery: Dragon’s Triangle, Maritime Rumor, and the Dangerous Waters of Legend" data-url="https://kyunolab.com/stories/devils-sea-mystery">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Devil’s Sea Mystery: Dragon’s Triangle, Maritime Rumor, and the Dangerous Waters of Legend" data-url="https://kyunolab.com/stories/devils-sea-mystery" data-description="Devil’s Sea Mystery explains Pacific maritime legend sometimes called the Dragon Triangle and compared with other dangerous-sea mystery zones through." data-category="Unexplained Mysteries">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:devils-sea-mystery:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Greenbrier Ghost Case: Courtroom Memory, Apparition Claim, and a Mystery Between Law and Folklore</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Greenbrier Ghost Case: Courtroom Memory, Apparition Claim, and a Mystery Between Law and Folklore" data-url="https://kyunolab.com/stories/greenbrier-ghost-case">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Greenbrier Ghost Case: Courtroom Memory, Apparition Claim, and a Mystery Between Law and Folklore" data-url="https://kyunolab.com/stories/greenbrier-ghost-case" data-description="Greenbrier Ghost Case explains West Virginia case remembered through a death investigation, a ghostly claim, and later folklore around testimony and justice." data-category="Unexplained Mysteries">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:greenbrier-ghost-case:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Hessdalen Lights: Valley Sightings, Scientific Study, and the Glow That Would Not Settle</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Hessdalen Lights: Valley Sightings, Scientific Study, and the Glow That Would Not Settle" data-url="https://kyunolab.com/stories/hessdalen-lights-mystery">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Hessdalen Lights: Valley Sightings, Scientific Study, and the Glow That Would Not Settle" data-url="https://kyunolab.com/stories/hessdalen-lights-mystery" data-description="Hessdalen Lights explains recurring light phenomena reported in Norway Hessdalen valley and studied without one fully settled explanation through unexplained." data-category="Unexplained Mysteries">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:hessdalen-lights-mystery:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Tamam Shud Case: The Somerton Man, the Hidden Phrase, and a Mystery of Identity</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Tamam Shud Case: The Somerton Man, the Hidden Phrase, and a Mystery of Identity" data-url="https://kyunolab.com/stories/tamam-shud-case">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Tamam Shud Case: The Somerton Man, the Hidden Phrase, and a Mystery of Identity" data-url="https://kyunolab.com/stories/tamam-shud-case" data-description="Tamam Shud Case explains Somerton Man case remembered through an unidentified body, a torn phrase from a book, and decades of speculation through unexplained." data-category="Unexplained Mysteries">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:tamam-shud-case:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Phoenix Lights Mystery: Night Sky Formation, Witness Reports, and the Event That Stayed Visible</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Phoenix Lights Mystery: Night Sky Formation, Witness Reports, and the Event That Stayed Visible" data-url="https://kyunolab.com/stories/phoenix-lights-mystery">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Phoenix Lights Mystery: Night Sky Formation, Witness Reports, and the Event That Stayed Visible" data-url="https://kyunolab.com/stories/phoenix-lights-mystery" data-description="Phoenix Lights Mystery explores the origin, meaning, and folklore behind 1997 Arizona sky-sighting event remembered through lights, witness reports, official." data-category="Unexplained Mysteries">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:phoenix-lights-mystery:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Flying Dutchman Folklore: The Ghost Ship, the Horizon, and a Maritime Legend</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Flying Dutchman Folklore: The Ghost Ship, the Horizon, and a Maritime Legend" data-url="https://kyunolab.com/stories/flying-dutchman-folklore">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Flying Dutchman Folklore: The Ghost Ship, the Horizon, and a Maritime Legend" data-url="https://kyunolab.com/stories/flying-dutchman-folklore" data-description="Flying Dutchman Folklore explains maritime legend of a ghost ship condemned to sail and appear at sea as an omen through unexplained mysteries, separating." data-category="Unexplained Mysteries">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:flying-dutchman-folklore:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Amber Room Mystery: The Lost Treasure That Still Refuses a Final Ending</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Amber Room Mystery: The Lost Treasure That Still Refuses a Final Ending" data-url="https://kyunolab.com/stories/amber-room-mystery">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Amber Room Mystery: The Lost Treasure That Still Refuses a Final Ending" data-url="https://kyunolab.com/stories/amber-room-mystery" data-description="Amber Room Mystery explores the origin, meaning, and folklore behind disappearance of the Amber Room during World War II and the search theories that." data-category="Unexplained Mysteries">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:amber-room-mystery:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Rendlesham Forest Incident: Lights, Military Witnesses, and Britain’s Famous UFO Case</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Rendlesham Forest Incident: Lights, Military Witnesses, and Britain’s Famous UFO Case" data-url="https://kyunolab.com/stories/rendlesham-forest-incident">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Rendlesham Forest Incident: Lights, Military Witnesses, and Britain’s Famous UFO Case" data-url="https://kyunolab.com/stories/rendlesham-forest-incident" data-description="Rendlesham Forest Incident explores the origin, meaning, and folklore behind reported lights and strange encounters near RAF Woodbridge and Rendlesham Forest." data-category="Unexplained Mysteries">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:rendlesham-forest-incident:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Taos Hum Mystery: Low Sound, Witness Reports, and the Noise No One Fully Explains</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Taos Hum Mystery: Low Sound, Witness Reports, and the Noise No One Fully Explains" data-url="https://kyunolab.com/stories/taos-hum-mystery">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Taos Hum Mystery: Low Sound, Witness Reports, and the Noise No One Fully Explains" data-url="https://kyunolab.com/stories/taos-hum-mystery" data-description="Taos Hum Mystery explores the origin, meaning, and folklore behind low-frequency hum reported by some residents and visitors around Taos, New Mexico, tracing." data-category="Unexplained Mysteries">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:taos-hum-mystery:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Oak Island Money Pit: Treasure, Tunnels, and the Mystery That Refuses to End</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Oak Island Money Pit: Treasure, Tunnels, and the Mystery That Refuses to End" data-url="https://kyunolab.com/stories/oak-island-money-pit">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Oak Island Money Pit: Treasure, Tunnels, and the Mystery That Refuses to End" data-url="https://kyunolab.com/stories/oak-island-money-pit" data-description="Oak Island Money Pit explains long-running Nova Scotia treasure mystery built around the Money Pit, flood tunnels, reported finds, and repeated excavations." data-category="Unexplained Mysteries">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:oak-island-money-pit:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">D.B. Cooper Hijacking: Ransom, Parachute, and the Unsolved Man in the Suit</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="D.B. Cooper Hijacking: Ransom, Parachute, and the Unsolved Man in the Suit" data-url="https://kyunolab.com/stories/db-cooper-hijacking-mystery">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="D.B. Cooper Hijacking: Ransom, Parachute, and the Unsolved Man in the Suit" data-url="https://kyunolab.com/stories/db-cooper-hijacking-mystery" data-description="D.B. Cooper Hijacking explains 1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified through unexplained." data-category="Unexplained Mysteries">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:db-cooper-hijacking-mystery:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Radio Tower Log Desk Catalog Page Kept Outside the Sequence</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Radio Tower Log Desk Catalog Page Kept Outside the Sequence" data-url="https://kyunolab.com/stories/the-radio-tower-log-desk-catalog-page-kept-outside-the-sequence">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Radio Tower Log Desk Catalog Page Kept Outside the Sequence" data-url="https://kyunolab.com/stories/the-radio-tower-log-desk-catalog-page-kept-outside-the-sequence" data-description="The Radio Tower Log Desk Catalog Page Kept Outside the Sequence explores the origin, meaning, and folklore behind the scene where a catalog page from radio." data-category="Unexplained Mysteries">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-radio-tower-log-desk-catalog-page-kept-outside-the-sequence:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Census Shelf Drawer Notebook That Adds One Entry Overnight</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Census Shelf Drawer Notebook That Adds One Entry Overnight" data-url="https://kyunolab.com/stories/the-census-shelf-drawer-notebook-that-adds-one-entry-overnight">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Census Shelf Drawer Notebook That Adds One Entry Overnight" data-url="https://kyunolab.com/stories/the-census-shelf-drawer-notebook-that-adds-one-entry-overnight" data-description="The Census Shelf Drawer Notebook That Adds One Entry Overnight explains the scene where a census shelf drawer notebook gains one overnight entry about a." data-category="Unexplained Mysteries">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-census-shelf-drawer-notebook-that-adds-one-entry-overnight:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Fire Alarm Panel Room Request Slip Signed by No Reader</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Fire Alarm Panel Room Request Slip Signed by No Reader" data-url="https://kyunolab.com/stories/the-fire-alarm-panel-room-request-slip-signed-by-no-reader">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Fire Alarm Panel Room Request Slip Signed by No Reader" data-url="https://kyunolab.com/stories/the-fire-alarm-panel-room-request-slip-signed-by-no-reader" data-description="The Fire Alarm Panel Room Request Slip Signed by No Reader explains the image of a request slip at fire alarm panel room asks for an unmapped zone alert under." data-category="Unexplained Mysteries">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-fire-alarm-panel-room-request-slip-signed-by-no-reader:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Rescue Dispatch Board Map Note Pointing to a Removed Door</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Rescue Dispatch Board Map Note Pointing to a Removed Door" data-url="https://kyunolab.com/stories/the-rescue-dispatch-board-map-note-pointing-to-a-removed-door">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Rescue Dispatch Board Map Note Pointing to a Removed Door" data-url="https://kyunolab.com/stories/the-rescue-dispatch-board-map-note-pointing-to-a-removed-door" data-description="A calm guide to The Rescue Dispatch Board Map Note Pointing to a Removed Door, its common versions, source limits, and the record mystery motif that makes the." data-category="Unexplained Mysteries">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-rescue-dispatch-board-map-note-pointing-to-a-removed-door:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Court Evidence Shelf Inventory Tag for an Object No One Stored</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Court Evidence Shelf Inventory Tag for an Object No One Stored" data-url="https://kyunolab.com/stories/the-court-evidence-shelf-inventory-tag-for-an-object-no-one-stored">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Court Evidence Shelf Inventory Tag for an Object No One Stored" data-url="https://kyunolab.com/stories/the-court-evidence-shelf-inventory-tag-for-an-object-no-one-stored" data-description="The Court Evidence Shelf Inventory Tag for an Object No One Stored explains the scene where an inventory tag at court evidence shelf describes an envelope." data-category="Unexplained Mysteries">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-court-evidence-shelf-inventory-tag-for-an-object-no-one-stored:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Harbor Incident Office Audit Log From a Silent Hour</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Harbor Incident Office Audit Log From a Silent Hour" data-url="https://kyunolab.com/stories/the-harbor-incident-office-audit-log-from-a-silent-hour">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Harbor Incident Office Audit Log From a Silent Hour" data-url="https://kyunolab.com/stories/the-harbor-incident-office-audit-log-from-a-silent-hour" data-description="The Harbor Incident Office Audit Log From a Silent Hour explains the image of a harbor incident office audit log records a vessel name erased from every later." data-category="Unexplained Mysteries">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-harbor-incident-office-audit-log-from-a-silent-hour:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Weather Station Table Receipt Book With a Future Stamp</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Weather Station Table Receipt Book With a Future Stamp" data-url="https://kyunolab.com/stories/the-weather-station-table-receipt-book-with-a-future-stamp">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Weather Station Table Receipt Book With a Future Stamp" data-url="https://kyunolab.com/stories/the-weather-station-table-receipt-book-with-a-future-stamp" data-description="The Weather Station Table Receipt Book With a Future Stamp explores the origin, meaning, and folklore behind the image of a weather station table receipt book." data-category="Unexplained Mysteries">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-weather-station-table-receipt-book-with-a-future-stamp:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Lab Freezer Intake Shelf Index Card for an Unlisted Shelf</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Lab Freezer Intake Shelf Index Card for an Unlisted Shelf" data-url="https://kyunolab.com/stories/the-lab-freezer-intake-shelf-index-card-for-an-unlisted-shelf">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Lab Freezer Intake Shelf Index Card for an Unlisted Shelf" data-url="https://kyunolab.com/stories/the-lab-freezer-intake-shelf-index-card-for-an-unlisted-shelf" data-description="The Lab Freezer Intake Shelf Index Card for an Unlisted Shelf explores the origin, meaning, and folklore behind the scene where an index card from lab freezer." data-category="Unexplained Mysteries">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-lab-freezer-intake-shelf-index-card-for-an-unlisted-shelf:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Observatory Cabinet Ledger That Refuses the Final Number</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Observatory Cabinet Ledger That Refuses the Final Number" data-url="https://kyunolab.com/stories/the-observatory-cabinet-ledger-that-refuses-the-final-number">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Observatory Cabinet Ledger That Refuses the Final Number" data-url="https://kyunolab.com/stories/the-observatory-cabinet-ledger-that-refuses-the-final-number" data-description="The Observatory Cabinet Ledger That Refuses the Final Number explains the image of a observatory cabinet ledger counts a star count not repeated in later." data-category="Unexplained Mysteries">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-observatory-cabinet-ledger-that-refuses-the-final-number:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Coroner Archive Desk Register With a Line Written Too Early</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Coroner Archive Desk Register With a Line Written Too Early" data-url="https://kyunolab.com/stories/the-coroner-archive-desk-register-with-a-line-written-too-early">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Coroner Archive Desk Register With a Line Written Too Early" data-url="https://kyunolab.com/stories/the-coroner-archive-desk-register-with-a-line-written-too-early" data-description="A calm guide to The Coroner Archive Desk Register With a Line Written Too Early, its common versions, source limits, and the record mystery motif that makes." data-category="Unexplained Mysteries">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-coroner-archive-desk-register-with-a-line-written-too-early:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Fire Alarm Panel History With One Unmapped Zone</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Fire Alarm Panel History With One Unmapped Zone" data-url="https://kyunolab.com/stories/the-fire-alarm-panel-history-with-one-unmapped-zone">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Fire Alarm Panel History With One Unmapped Zone" data-url="https://kyunolab.com/stories/the-fire-alarm-panel-history-with-one-unmapped-zone" data-description="The Fire Alarm Panel History With One Unmapped Zone explains the image of a fire alarm panel history records an alert from a zone absent from the building map." data-category="Unexplained Mysteries">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-fire-alarm-panel-history-with-one-unmapped-zone:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Radio Station Call Sheet With a Silent Frequency</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Radio Station Call Sheet With a Silent Frequency" data-url="https://kyunolab.com/stories/the-radio-station-call-sheet-with-a-silent-frequency">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Radio Station Call Sheet With a Silent Frequency" data-url="https://kyunolab.com/stories/the-radio-station-call-sheet-with-a-silent-frequency" data-description="The Radio Station Call Sheet With a Silent Frequency explains the image of a radio station call sheet schedules a frequency that engineers say was silent." data-category="Unexplained Mysteries">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-radio-station-call-sheet-with-a-silent-frequency:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Museum Acquisition Card for an Object Not Found</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Museum Acquisition Card for an Object Not Found" data-url="https://kyunolab.com/stories/the-museum-acquisition-card-for-an-object-not-found">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Museum Acquisition Card for an Object Not Found" data-url="https://kyunolab.com/stories/the-museum-acquisition-card-for-an-object-not-found" data-description="The Museum Acquisition Card for an Object Not Found explains the image of a museum acquisition card describes an object that no collection shelf contains." data-category="Unexplained Mysteries">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-museum-acquisition-card-for-an-object-not-found:naver"> Published</label>
+          </div>
+        </li>
+        </ul>
+        <nav class="publishing-pagination" aria-label="Unexplained Mysteries pagination">
+          <span aria-disabled="true">Previous</span>
+          <span aria-current="page">1</span><a href="/publishing-center/unexplained-mysteries/page-2/">2</a><a href="/publishing-center/unexplained-mysteries/page-3/">3</a><a href="/publishing-center/unexplained-mysteries/page-4/">4</a>
+          <a href="/publishing-center/unexplained-mysteries/page-2/">Next</a>
+        </nav>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <p><strong>Kyunolab Mystery Archive</strong> collects legends, folklore, mysteries, and strange tales with calm source-aware notes.</p>
+    <p><a href="/archive">Archive Index</a> - <a href="/newest">Newest</a> - <a href="/popular">Popular</a> - <a href="/categories">Categories</a> - <a href="/scripts/">Scripts</a> - <a href="/about">About</a> - <a href="/fiction-disclaimer">Story &amp; Source Notice</a> - <a href="/privacy">Privacy</a> - <a href="/rss.xml">RSS</a> - <a href="/publishing-center/">Publishing Center</a></p>
+  </footer>
+  <script defer src="/engagement.js?v=20260720-creator-part-visual-beats"></script>
+  <script defer src="/assets/publishing-center.js?v=20260720-creator-part-visual-beats"></script>
+</body>
+</html>

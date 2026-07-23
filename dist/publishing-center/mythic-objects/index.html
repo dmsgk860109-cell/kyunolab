@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mythic Objects Publishing Center | Kyunolab Mystery Archive</title>
+  <meta name="description" content="Internal publishing management page for Mythic Objects archive records.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:title" content="Mythic Objects Publishing Center | Kyunolab Mystery Archive">
+  <meta property="og:description" content="Internal publishing management page for Mythic Objects archive records.">
+  <meta property="og:site_name" content="Kyunolab Mystery Archive">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kyunolab.com/publishing-center/mythic-objects/">
+  <meta property="og:image" content="https://kyunolab.com/icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mythic Objects Publishing Center | Kyunolab Mystery Archive">
+  <meta name="twitter:description" content="Internal publishing management page for Mythic Objects archive records.">
+  <meta name="twitter:image" content="https://kyunolab.com/icon-512.png">
+  <link rel="canonical" href="https://kyunolab.com/publishing-center/mythic-objects/">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/favicon-48x48.png" type="image/png" sizes="48x48">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles.css?v=20260720-creator-part-visual-beats">
+</head>
+<body>
+  <header class="site-header">
+    <div class="topline">A Kyuno Lab publication</div>
+    <div class="header-inner">
+      <a class="brand" href="/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
+
+      <nav class="nav"><a href="/newest">Newest</a><a href="/popular">Popular</a><a href="/categories">Categories</a><a href="/mystery-board">Mystery Board</a><a href="/about">About</a></nav>
+    </div>
+  </header>
+  <main class="article-shell">
+    <div class="archive-page-main publishing-center" data-publishing-center>
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/publishing-center/">Publishing Center</a><span aria-hidden="true">/</span><span aria-current="page">Mythic Objects</span></nav>
+      <p class="label">Internal Tool</p>
+      <h1 class="article-title">Mythic Objects</h1>
+      <style>
+        .publishing-category-list,
+        .publishing-record-list {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+
+        .publishing-category-list li {
+          margin: 0 0 0.35rem;
+        }
+
+        .publishing-record {
+          align-items: center;
+          border-bottom: 1px solid var(--border-color, #d9d2c4);
+          display: grid;
+          gap: 0.65rem 1.25rem;
+          grid-template-columns: minmax(18rem, 1fr) max-content;
+          min-height: 3.25rem;
+          padding: 0.45rem 0.35rem;
+        }
+
+        .publishing-record-title {
+          overflow-wrap: anywhere;
+        }
+
+        .publishing-record-actions {
+          align-items: center;
+          display: flex;
+          gap: 0.5rem;
+          justify-content: flex-end;
+          white-space: nowrap;
+        }
+
+        .publishing-record .button {
+          font-size: 0.85rem;
+          line-height: 1.1;
+          min-height: 2.35rem;
+          min-width: 4.1rem;
+          padding: 0.48rem 0.7rem;
+          position: relative;
+          z-index: 1;
+        }
+
+        .publishing-published-label {
+          align-items: center;
+          cursor: pointer;
+          display: inline-flex;
+          gap: 0.25rem;
+          margin: 0;
+          min-height: 2.35rem;
+          padding: 0.25rem 0.25rem;
+          position: relative;
+          z-index: 1;
+        }
+
+        .publishing-published {
+          cursor: pointer;
+          height: 1.05rem;
+          width: 1.05rem;
+        }
+
+        .publishing-status {
+          color: var(--muted, #6b6258);
+          font-size: 0.9rem;
+          margin: -0.25rem 0 0.65rem;
+          min-height: 1.2rem;
+        }
+
+        .publishing-manual-copy {
+          border: 1px solid var(--border-color, #d9d2c4);
+          box-sizing: border-box;
+          font: inherit;
+          margin: 0 0 0.9rem;
+          min-height: 6rem;
+          padding: 0.65rem;
+          width: 100%;
+        }
+
+        .publishing-pagination {
+          align-items: center;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.35rem;
+          margin-top: 1rem;
+        }
+
+        .publishing-pagination a,
+        .publishing-pagination span {
+          border: 1px solid var(--border-color, #d9d2c4);
+          border-radius: 4px;
+          display: inline-flex;
+          line-height: 1;
+          padding: 0.45rem 0.6rem;
+        }
+
+        .publishing-pagination span[aria-current="page"] {
+          background: var(--ink, #171717);
+          border-color: var(--ink, #171717);
+          color: var(--paper, #fffaf1);
+        }
+
+        .publishing-pagination span[aria-disabled="true"] {
+          opacity: 0.55;
+        }
+
+        @media (max-width: 720px) {
+          .publishing-record {
+            grid-template-columns: 1fr;
+          }
+
+          .publishing-record-actions {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            white-space: normal;
+          }
+        }
+      </style>
+      <section class="script-material" aria-label="Mythic Objects records">
+        <h2>Archive Records</h2>
+        <p class="publishing-status" role="status" aria-live="polite"></p>
+        <ul class="publishing-record-list">
+        <li class="publishing-record">
+          <span class="publishing-record-title">Spear of Destiny Legend: Holy Lance, Relic History, and the Object That Gathered Power Claims</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Spear of Destiny Legend: Holy Lance, Relic History, and the Object That Gathered Power Claims" data-url="https://kyunolab.com/stories/spear-of-destiny-legend">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Spear of Destiny Legend: Holy Lance, Relic History, and the Object That Gathered Power Claims" data-url="https://kyunolab.com/stories/spear-of-destiny-legend" data-description="Spear of Destiny Legend explains Holy Lance tradition and later legends that attach power, relic identity, and political imagination to a sacred weapon." data-category="Mythic Objects">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:spear-of-destiny-legend:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Golden Fleece: Jason’s Quest, Royal Proof, and the Object Guarded Far From Home</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Golden Fleece: Jason’s Quest, Royal Proof, and the Object Guarded Far From Home" data-url="https://kyunolab.com/stories/golden-fleece-myth">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Golden Fleece: Jason’s Quest, Royal Proof, and the Object Guarded Far From Home" data-url="https://kyunolab.com/stories/golden-fleece-myth" data-description="Golden Fleece explains object sought by Jason and the Argonauts, remembered as proof of kingship, dangerous travel, and guarded treasure through mythic." data-category="Mythic Objects">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:golden-fleece-myth:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Seven-League Boots: Impossible Travel, Fairy Tale Speed, and the Object That Shrinks Distance</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Seven-League Boots: Impossible Travel, Fairy Tale Speed, and the Object That Shrinks Distance" data-url="https://kyunolab.com/stories/seven-league-boots-folklore">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Seven-League Boots: Impossible Travel, Fairy Tale Speed, and the Object That Shrinks Distance" data-url="https://kyunolab.com/stories/seven-league-boots-folklore" data-description="Seven-League Boots explains fairy-tale boots that allow impossible strides across great distances and turn travel itself into a magical power through mythic." data-category="Mythic Objects">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:seven-league-boots-folklore:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Hand of Glory: Thief’s Charm, Candle Folklore, and the Object That Freezes a House</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Hand of Glory: Thief’s Charm, Candle Folklore, and the Object That Freezes a House" data-url="https://kyunolab.com/stories/hand-of-glory-folklore">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Hand of Glory: Thief’s Charm, Candle Folklore, and the Object That Freezes a House" data-url="https://kyunolab.com/stories/hand-of-glory-folklore" data-description="Hand of Glory explains European folk-magic object made from a human hand and remembered as a charm for thieves, sleep, and locked houses through mythic." data-category="Mythic Objects">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:hand-of-glory-folklore:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Book of Thoth: Forbidden Knowledge, Egyptian Magic, and the Text No Reader Can Hold Safely</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Book of Thoth: Forbidden Knowledge, Egyptian Magic, and the Text No Reader Can Hold Safely" data-url="https://kyunolab.com/stories/book-of-thoth-legend">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Book of Thoth: Forbidden Knowledge, Egyptian Magic, and the Text No Reader Can Hold Safely" data-url="https://kyunolab.com/stories/book-of-thoth-legend" data-description="A calm guide to Book of Thoth, its common versions, source limits, and the forbidden book legend motif that makes Egyptian legendary book associated with." data-category="Mythic Objects">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:book-of-thoth-legend:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Pandora&#39;s Box Origin: The Jar, the Box, and the Mistake That Changed a Mythic Object</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Pandora&#39;s Box Origin: The Jar, the Box, and the Mistake That Changed a Mythic Object" data-url="https://kyunolab.com/stories/pandoras-box-origin">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Pandora&#39;s Box Origin: The Jar, the Box, and the Mistake That Changed a Mythic Object" data-url="https://kyunolab.com/stories/pandoras-box-origin" data-description="Pandora&#39;s Box Origin explains later object tradition that changed Pandora&#39;s jar into Pandora&#39;s box in popular memory through mythic objects, separating." data-category="Mythic Objects">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:pandoras-box-origin:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Sword in the Stone Legend: The Arthurian Object That Proved a King</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Sword in the Stone Legend: The Arthurian Object That Proved a King" data-url="https://kyunolab.com/stories/sword-in-the-stone-legend">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Sword in the Stone Legend: The Arthurian Object That Proved a King" data-url="https://kyunolab.com/stories/sword-in-the-stone-legend" data-description="A calm guide to Sword in the Stone Legend, its common versions, source limits, and the arthurian object motif that makes Arthurian legend in which the true." data-category="Mythic Objects">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:sword-in-the-stone-legend:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Ark of the Covenant Legend: Sacred Chest, Lost Relic, and the Object No One Can Treat as Ordinary</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Ark of the Covenant Legend: Sacred Chest, Lost Relic, and the Object No One Can Treat as Ordinary" data-url="https://kyunolab.com/stories/ark-of-the-covenant-legend">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Ark of the Covenant Legend: Sacred Chest, Lost Relic, and the Object No One Can Treat as Ordinary" data-url="https://kyunolab.com/stories/ark-of-the-covenant-legend" data-description="A calm guide to Ark of the Covenant Legend, its common versions, source limits, and the sacred object legend motif that makes sacred chest from biblical." data-category="Mythic Objects">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:ark-of-the-covenant-legend:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Ring of Gyges: Invisibility, Power, and the Mythic Object That Tests Justice</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Ring of Gyges: Invisibility, Power, and the Mythic Object That Tests Justice" data-url="https://kyunolab.com/stories/ring-of-gyges-myth">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Ring of Gyges: Invisibility, Power, and the Mythic Object That Tests Justice" data-url="https://kyunolab.com/stories/ring-of-gyges-myth" data-description="Ring of Gyges explains philosophical myth of a ring that makes its wearer invisible and tests whether justice survives without witnesses through mythic." data-category="Mythic Objects">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:ring-of-gyges-myth:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Mjolnir: Thor&#39;s Hammer, Protection Symbol, and the Mythic Object That Returns</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Mjolnir: Thor&#39;s Hammer, Protection Symbol, and the Mythic Object That Returns" data-url="https://kyunolab.com/stories/mjolnir-thors-hammer">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Mjolnir: Thor&#39;s Hammer, Protection Symbol, and the Mythic Object That Returns" data-url="https://kyunolab.com/stories/mjolnir-thors-hammer" data-description="Mjolnir explores the origin, meaning, and folklore behind Thor&#39;s hammer in Norse myth, a returning weapon associated with thunder, protection, divine power." data-category="Mythic Objects">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:mjolnir-thors-hammer:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Spear of Destiny: Holy Lance, Relic Tradition, and the Object That Claims History</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Spear of Destiny: Holy Lance, Relic Tradition, and the Object That Claims History" data-url="https://kyunolab.com/stories/spear-of-destiny-holy-lance">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Spear of Destiny: Holy Lance, Relic Tradition, and the Object That Claims History" data-url="https://kyunolab.com/stories/spear-of-destiny-holy-lance" data-description="Spear of Destiny explores the origin, meaning, and folklore behind relic tradition around the lance said to have pierced Christ and the later legends of." data-category="Mythic Objects">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:spear-of-destiny-holy-lance:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Sealed Scroll Room Catalog Page Kept Outside the Sequence</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Sealed Scroll Room Catalog Page Kept Outside the Sequence" data-url="https://kyunolab.com/stories/the-sealed-scroll-room-catalog-page-kept-outside-the-sequence">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Sealed Scroll Room Catalog Page Kept Outside the Sequence" data-url="https://kyunolab.com/stories/the-sealed-scroll-room-catalog-page-kept-outside-the-sequence" data-description="The Sealed Scroll Room Catalog Page Kept Outside the Sequence explores the origin, meaning, and folklore behind the scene where a catalog page from sealed." data-category="Mythic Objects">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-sealed-scroll-room-catalog-page-kept-outside-the-sequence:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Pocket Compass Box Notebook That Adds One Entry Overnight</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Pocket Compass Box Notebook That Adds One Entry Overnight" data-url="https://kyunolab.com/stories/the-pocket-compass-box-notebook-that-adds-one-entry-overnight">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Pocket Compass Box Notebook That Adds One Entry Overnight" data-url="https://kyunolab.com/stories/the-pocket-compass-box-notebook-that-adds-one-entry-overnight" data-description="The Pocket Compass Box Notebook That Adds One Entry Overnight explains the image of a pocket compass box notebook gains one overnight entry about homes." data-category="Mythic Objects">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-pocket-compass-box-notebook-that-adds-one-entry-overnight:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Clay Tablet Drawer Request Slip Signed by No Reader</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Clay Tablet Drawer Request Slip Signed by No Reader" data-url="https://kyunolab.com/stories/the-clay-tablet-drawer-request-slip-signed-by-no-reader">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Clay Tablet Drawer Request Slip Signed by No Reader" data-url="https://kyunolab.com/stories/the-clay-tablet-drawer-request-slip-signed-by-no-reader" data-description="The Clay Tablet Drawer Request Slip Signed by No Reader explores the origin, meaning, and folklore behind the image of a request slip at clay tablet drawer." data-category="Mythic Objects">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-clay-tablet-drawer-request-slip-signed-by-no-reader:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Inkstone Desk Map Note Pointing to a Removed Door</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Inkstone Desk Map Note Pointing to a Removed Door" data-url="https://kyunolab.com/stories/the-inkstone-desk-map-note-pointing-to-a-removed-door">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Inkstone Desk Map Note Pointing to a Removed Door" data-url="https://kyunolab.com/stories/the-inkstone-desk-map-note-pointing-to-a-removed-door" data-description="A calm guide to The Inkstone Desk Map Note Pointing to a Removed Door, its common versions, source limits, and the mythic object record motif that makes the." data-category="Mythic Objects">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-inkstone-desk-map-note-pointing-to-a-removed-door:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Wooden Bowl Cabinet Inventory Tag for an Object No One Stored</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Wooden Bowl Cabinet Inventory Tag for an Object No One Stored" data-url="https://kyunolab.com/stories/the-wooden-bowl-cabinet-inventory-tag-for-an-object-no-one-stored">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Wooden Bowl Cabinet Inventory Tag for an Object No One Stored" data-url="https://kyunolab.com/stories/the-wooden-bowl-cabinet-inventory-tag-for-an-object-no-one-stored" data-description="A calm guide to The Wooden Bowl Cabinet Inventory Tag for an Object No One Stored, its common versions, source limits, and the mythic object record motif that." data-category="Mythic Objects">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-wooden-bowl-cabinet-inventory-tag-for-an-object-no-one-stored:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Iron Mask Case Audit Log From a Silent Hour</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Iron Mask Case Audit Log From a Silent Hour" data-url="https://kyunolab.com/stories/the-iron-mask-case-audit-log-from-a-silent-hour">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Iron Mask Case Audit Log From a Silent Hour" data-url="https://kyunolab.com/stories/the-iron-mask-case-audit-log-from-a-silent-hour" data-description="A calm guide to The Iron Mask Case Audit Log From a Silent Hour, its common versions, source limits, and the mythic object record motif that makes the image." data-category="Mythic Objects">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-iron-mask-case-audit-log-from-a-silent-hour:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Silver Bell Shelf Receipt Book With a Future Stamp</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Silver Bell Shelf Receipt Book With a Future Stamp" data-url="https://kyunolab.com/stories/the-silver-bell-shelf-receipt-book-with-a-future-stamp">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Silver Bell Shelf Receipt Book With a Future Stamp" data-url="https://kyunolab.com/stories/the-silver-bell-shelf-receipt-book-with-a-future-stamp" data-description="The Silver Bell Shelf Receipt Book With a Future Stamp explains the scene where a silver bell shelf receipt book stamps sounds written down before ringing." data-category="Mythic Objects">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-silver-bell-shelf-receipt-book-with-a-future-stamp:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Red Thread Drawer Index Card for an Unlisted Shelf</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Red Thread Drawer Index Card for an Unlisted Shelf" data-url="https://kyunolab.com/stories/the-red-thread-drawer-index-card-for-an-unlisted-shelf">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Red Thread Drawer Index Card for an Unlisted Shelf" data-url="https://kyunolab.com/stories/the-red-thread-drawer-index-card-for-an-unlisted-shelf" data-description="The Red Thread Drawer Index Card for an Unlisted Shelf explores the origin, meaning, and folklore behind the scene where an index card from red thread drawer." data-category="Mythic Objects">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-red-thread-drawer-index-card-for-an-unlisted-shelf:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Mirror Catalog Room Ledger That Refuses the Final Number</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Mirror Catalog Room Ledger That Refuses the Final Number" data-url="https://kyunolab.com/stories/the-mirror-catalog-room-ledger-that-refuses-the-final-number">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Mirror Catalog Room Ledger That Refuses the Final Number" data-url="https://kyunolab.com/stories/the-mirror-catalog-room-ledger-that-refuses-the-final-number" data-description="The Mirror Catalog Room Ledger That Refuses the Final Number explains the image of a mirror catalog room ledger counts the viewer listed before the glass but." data-category="Mythic Objects">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-mirror-catalog-room-ledger-that-refuses-the-final-number:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Bronze Key Bench Register With a Line Written Too Early</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Bronze Key Bench Register With a Line Written Too Early" data-url="https://kyunolab.com/stories/the-bronze-key-bench-register-with-a-line-written-too-early">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Bronze Key Bench Register With a Line Written Too Early" data-url="https://kyunolab.com/stories/the-bronze-key-bench-register-with-a-line-written-too-early" data-description="The Bronze Key Bench Register With a Line Written Too Early explains the image of a bronze key bench register places a key made for a door without a frame one." data-category="Mythic Objects">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-bronze-key-bench-register-with-a-line-written-too-early:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Pocket Compass Log Pointing to Forgotten Homes</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Pocket Compass Log Pointing to Forgotten Homes" data-url="https://kyunolab.com/stories/the-pocket-compass-log-pointing-to-forgotten-homes">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Pocket Compass Log Pointing to Forgotten Homes" data-url="https://kyunolab.com/stories/the-pocket-compass-log-pointing-to-forgotten-homes" data-description="The Pocket Compass Log Pointing to Forgotten Homes explores the origin, meaning, and folklore behind the scene where a pocket compass log points travelers." data-category="Mythic Objects">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-pocket-compass-log-pointing-to-forgotten-homes:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Clay Tablet Receipt for a Promise Never Made</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Clay Tablet Receipt for a Promise Never Made" data-url="https://kyunolab.com/stories/the-clay-tablet-receipt-for-a-promise-never-made">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Clay Tablet Receipt for a Promise Never Made" data-url="https://kyunolab.com/stories/the-clay-tablet-receipt-for-a-promise-never-made" data-description="The Clay Tablet Receipt for a Promise Never Made explains the image of a clay tablet receipt records a promise that no witness admits was made through mythic." data-category="Mythic Objects">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-clay-tablet-receipt-for-a-promise-never-made:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Inkstone Record That Darkens After Names Are Spoken</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Inkstone Record That Darkens After Names Are Spoken" data-url="https://kyunolab.com/stories/the-inkstone-record-that-darkens-after-names-are-spoken">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Inkstone Record That Darkens After Names Are Spoken" data-url="https://kyunolab.com/stories/the-inkstone-record-that-darkens-after-names-are-spoken" data-description="The Inkstone Record That Darkens After Names Are Spoken explains the scene where an inkstone record darkens whenever names are spoken near it in the story." data-category="Mythic Objects">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-inkstone-record-that-darkens-after-names-are-spoken:naver"> Published</label>
+          </div>
+        </li>
+        </ul>
+        <nav class="publishing-pagination" aria-label="Mythic Objects pagination">
+          <span aria-disabled="true">Previous</span>
+          <span aria-current="page">1</span><a href="/publishing-center/mythic-objects/page-2/">2</a><a href="/publishing-center/mythic-objects/page-3/">3</a><a href="/publishing-center/mythic-objects/page-4/">4</a>
+          <a href="/publishing-center/mythic-objects/page-2/">Next</a>
+        </nav>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <p><strong>Kyunolab Mystery Archive</strong> collects legends, folklore, mysteries, and strange tales with calm source-aware notes.</p>
+    <p><a href="/archive">Archive Index</a> - <a href="/newest">Newest</a> - <a href="/popular">Popular</a> - <a href="/categories">Categories</a> - <a href="/scripts/">Scripts</a> - <a href="/about">About</a> - <a href="/fiction-disclaimer">Story &amp; Source Notice</a> - <a href="/privacy">Privacy</a> - <a href="/rss.xml">RSS</a> - <a href="/publishing-center/">Publishing Center</a></p>
+  </footer>
+  <script defer src="/engagement.js?v=20260720-creator-part-visual-beats"></script>
+  <script defer src="/assets/publishing-center.js?v=20260720-creator-part-visual-beats"></script>
+</body>
+</html>

@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Strange Places Publishing Center | Kyunolab Mystery Archive</title>
+  <meta name="description" content="Internal publishing management page for Strange Places archive records.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:title" content="Strange Places Publishing Center | Kyunolab Mystery Archive">
+  <meta property="og:description" content="Internal publishing management page for Strange Places archive records.">
+  <meta property="og:site_name" content="Kyunolab Mystery Archive">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kyunolab.com/publishing-center/strange-places/">
+  <meta property="og:image" content="https://kyunolab.com/icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Strange Places Publishing Center | Kyunolab Mystery Archive">
+  <meta name="twitter:description" content="Internal publishing management page for Strange Places archive records.">
+  <meta name="twitter:image" content="https://kyunolab.com/icon-512.png">
+  <link rel="canonical" href="https://kyunolab.com/publishing-center/strange-places/">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/favicon-48x48.png" type="image/png" sizes="48x48">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles.css?v=20260720-creator-part-visual-beats">
+</head>
+<body>
+  <header class="site-header">
+    <div class="topline">A Kyuno Lab publication</div>
+    <div class="header-inner">
+      <a class="brand" href="/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
+
+      <nav class="nav"><a href="/newest">Newest</a><a href="/popular">Popular</a><a href="/categories">Categories</a><a href="/mystery-board">Mystery Board</a><a href="/about">About</a></nav>
+    </div>
+  </header>
+  <main class="article-shell">
+    <div class="archive-page-main publishing-center" data-publishing-center>
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/publishing-center/">Publishing Center</a><span aria-hidden="true">/</span><span aria-current="page">Strange Places</span></nav>
+      <p class="label">Internal Tool</p>
+      <h1 class="article-title">Strange Places</h1>
+      <style>
+        .publishing-category-list,
+        .publishing-record-list {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+
+        .publishing-category-list li {
+          margin: 0 0 0.35rem;
+        }
+
+        .publishing-record {
+          align-items: center;
+          border-bottom: 1px solid var(--border-color, #d9d2c4);
+          display: grid;
+          gap: 0.65rem 1.25rem;
+          grid-template-columns: minmax(18rem, 1fr) max-content;
+          min-height: 3.25rem;
+          padding: 0.45rem 0.35rem;
+        }
+
+        .publishing-record-title {
+          overflow-wrap: anywhere;
+        }
+
+        .publishing-record-actions {
+          align-items: center;
+          display: flex;
+          gap: 0.5rem;
+          justify-content: flex-end;
+          white-space: nowrap;
+        }
+
+        .publishing-record .button {
+          font-size: 0.85rem;
+          line-height: 1.1;
+          min-height: 2.35rem;
+          min-width: 4.1rem;
+          padding: 0.48rem 0.7rem;
+          position: relative;
+          z-index: 1;
+        }
+
+        .publishing-published-label {
+          align-items: center;
+          cursor: pointer;
+          display: inline-flex;
+          gap: 0.25rem;
+          margin: 0;
+          min-height: 2.35rem;
+          padding: 0.25rem 0.25rem;
+          position: relative;
+          z-index: 1;
+        }
+
+        .publishing-published {
+          cursor: pointer;
+          height: 1.05rem;
+          width: 1.05rem;
+        }
+
+        .publishing-status {
+          color: var(--muted, #6b6258);
+          font-size: 0.9rem;
+          margin: -0.25rem 0 0.65rem;
+          min-height: 1.2rem;
+        }
+
+        .publishing-manual-copy {
+          border: 1px solid var(--border-color, #d9d2c4);
+          box-sizing: border-box;
+          font: inherit;
+          margin: 0 0 0.9rem;
+          min-height: 6rem;
+          padding: 0.65rem;
+          width: 100%;
+        }
+
+        .publishing-pagination {
+          align-items: center;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.35rem;
+          margin-top: 1rem;
+        }
+
+        .publishing-pagination a,
+        .publishing-pagination span {
+          border: 1px solid var(--border-color, #d9d2c4);
+          border-radius: 4px;
+          display: inline-flex;
+          line-height: 1;
+          padding: 0.45rem 0.6rem;
+        }
+
+        .publishing-pagination span[aria-current="page"] {
+          background: var(--ink, #171717);
+          border-color: var(--ink, #171717);
+          color: var(--paper, #fffaf1);
+        }
+
+        .publishing-pagination span[aria-disabled="true"] {
+          opacity: 0.55;
+        }
+
+        @media (max-width: 720px) {
+          .publishing-record {
+            grid-template-columns: 1fr;
+          }
+
+          .publishing-record-actions {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            white-space: normal;
+          }
+        }
+      </style>
+      <section class="script-material" aria-label="Strange Places records">
+        <h2>Archive Records</h2>
+        <p class="publishing-status" role="status" aria-live="polite"></p>
+        <ul class="publishing-record-list">
+        <li class="publishing-record">
+          <span class="publishing-record-title">Stull Cemetery Legend: Gateway Rumors, College Folklore, and a Haunted Kansas Graveyard</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Stull Cemetery Legend: Gateway Rumors, College Folklore, and a Haunted Kansas Graveyard" data-url="https://kyunolab.com/stories/stull-cemetery-legend">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Stull Cemetery Legend: Gateway Rumors, College Folklore, and a Haunted Kansas Graveyard" data-url="https://kyunolab.com/stories/stull-cemetery-legend" data-description="Stull Cemetery Legend explores the origin, meaning, and folklore behind Kansas cemetery legend shaped by gateway-to-hell rumors, student retellings, and." data-category="Strange Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:stull-cemetery-legend:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Paris Catacombs Legends: Bones, Tunnels, and the City Beneath the City</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Paris Catacombs Legends: Bones, Tunnels, and the City Beneath the City" data-url="https://kyunolab.com/stories/paris-catacombs-legends">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Paris Catacombs Legends: Bones, Tunnels, and the City Beneath the City" data-url="https://kyunolab.com/stories/paris-catacombs-legends" data-description="Paris Catacombs Legends explains underground ossuary and tunnel folklore surrounding the Paris Catacombs and stories of a hidden city below the streets." data-category="Strange Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:paris-catacombs-legends:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Door to Hell: Darvaza Gas Crater, Burning Desert, and the Place That Became a Legend</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Door to Hell: Darvaza Gas Crater, Burning Desert, and the Place That Became a Legend" data-url="https://kyunolab.com/stories/door-to-hell-darvaza-crater">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Door to Hell: Darvaza Gas Crater, Burning Desert, and the Place That Became a Legend" data-url="https://kyunolab.com/stories/door-to-hell-darvaza-crater" data-description="Door to Hell explores the origin, meaning, and folklore behind burning Darvaza gas crater in Turkmenistan that became known as the Door to Hell through travel." data-category="Strange Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:door-to-hell-darvaza-crater:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Crooked Forest of Poland: Bent Pines, Missing Explanation, and a Landscape That Looks Arranged</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Crooked Forest of Poland: Bent Pines, Missing Explanation, and a Landscape That Looks Arranged" data-url="https://kyunolab.com/stories/crooked-forest-poland-mystery">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Crooked Forest of Poland: Bent Pines, Missing Explanation, and a Landscape That Looks Arranged" data-url="https://kyunolab.com/stories/crooked-forest-poland-mystery" data-description="A calm guide to Crooked Forest of Poland, its common versions, source limits, and the unusual woodland motif that makes grove of bent pine trees in Poland." data-category="Strange Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:crooked-forest-poland-mystery:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Hoia Baciu Forest: Vanishing Paths, Unusual Clearings, and Romania’s Strange Woodland Legend</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Hoia Baciu Forest: Vanishing Paths, Unusual Clearings, and Romania’s Strange Woodland Legend" data-url="https://kyunolab.com/stories/hoia-baciu-forest-legend">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Hoia Baciu Forest: Vanishing Paths, Unusual Clearings, and Romania’s Strange Woodland Legend" data-url="https://kyunolab.com/stories/hoia-baciu-forest-legend" data-description="Hoia Baciu Forest explores the origin, meaning, and folklore behind Romanian forest known in popular accounts for strange experiences, unusual clearings, and." data-category="Strange Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:hoia-baciu-forest-legend:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Tower of London Ghosts: Royal Memory, Execution Stories, and a Haunted Landmark</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Tower of London Ghosts: Royal Memory, Execution Stories, and a Haunted Landmark" data-url="https://kyunolab.com/stories/tower-of-london-ghosts">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Tower of London Ghosts: Royal Memory, Execution Stories, and a Haunted Landmark" data-url="https://kyunolab.com/stories/tower-of-london-ghosts" data-description="A calm guide to Tower of London Ghosts, its common versions, source limits, and the haunted landmark motif that makes haunted-place tradition surrounding the." data-category="Strange Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:tower-of-london-ghosts:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Eastern State Penitentiary Haunting: Why an Abandoned Prison Became a Strange Place</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Eastern State Penitentiary Haunting: Why an Abandoned Prison Became a Strange Place" data-url="https://kyunolab.com/stories/eastern-state-penitentiary-haunting">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Eastern State Penitentiary Haunting: Why an Abandoned Prison Became a Strange Place" data-url="https://kyunolab.com/stories/eastern-state-penitentiary-haunting" data-description="A calm guide to Eastern State Penitentiary Haunting, its common versions, source limits, and the haunted prison motif that makes haunting reputation around." data-category="Strange Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:eastern-state-penitentiary-haunting:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Nazca Lines Mystery: Desert Geoglyphs, Giant Figures, and the Place Seen From Above</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Nazca Lines Mystery: Desert Geoglyphs, Giant Figures, and the Place Seen From Above" data-url="https://kyunolab.com/stories/nazca-lines-mystery">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Nazca Lines Mystery: Desert Geoglyphs, Giant Figures, and the Place Seen From Above" data-url="https://kyunolab.com/stories/nazca-lines-mystery" data-description="Nazca Lines Mystery explains giant desert geoglyphs of southern Peru and the long-running questions about their purpose and meaning through strange places." data-category="Strange Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:nazca-lines-mystery:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Bhangarh Fort Legend: Ruins, Warnings, and the Haunted Place Story of Rajasthan</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Bhangarh Fort Legend: Ruins, Warnings, and the Haunted Place Story of Rajasthan" data-url="https://kyunolab.com/stories/bhangarh-fort-legend">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Bhangarh Fort Legend: Ruins, Warnings, and the Haunted Place Story of Rajasthan" data-url="https://kyunolab.com/stories/bhangarh-fort-legend" data-description="Bhangarh Fort Legend explores the origin, meaning, and folklore behind haunted-place legend surrounding the ruined Bhangarh Fort in Rajasthan, tracing why." data-category="Strange Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:bhangarh-fort-legend:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Bennington Triangle: Disappearances, Mountain Roads, and a Vermont Place Legend</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Bennington Triangle: Disappearances, Mountain Roads, and a Vermont Place Legend" data-url="https://kyunolab.com/stories/bennington-triangle-legend">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Bennington Triangle: Disappearances, Mountain Roads, and a Vermont Place Legend" data-url="https://kyunolab.com/stories/bennington-triangle-legend" data-description="A calm guide to Bennington Triangle, its common versions, source limits, and the place legend motif that makes Vermont place legend linking several." data-category="Strange Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:bennington-triangle-legend:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Island of the Dolls: Xochimilco, Don Julian, and the Strange Place Legend</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Island of the Dolls: Xochimilco, Don Julian, and the Strange Place Legend" data-url="https://kyunolab.com/stories/island-of-the-dolls-xochimilco">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Island of the Dolls: Xochimilco, Don Julian, and the Strange Place Legend" data-url="https://kyunolab.com/stories/island-of-the-dolls-xochimilco" data-description="A calm guide to Island of the Dolls, its common versions, source limits, and the place legend motif that makes Xochimilco island covered with weathered dolls." data-category="Strange Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:island-of-the-dolls-xochimilco:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Roadside Chapel Desk Catalog Page Kept Outside the Sequence</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Roadside Chapel Desk Catalog Page Kept Outside the Sequence" data-url="https://kyunolab.com/stories/the-roadside-chapel-desk-catalog-page-kept-outside-the-sequence">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Roadside Chapel Desk Catalog Page Kept Outside the Sequence" data-url="https://kyunolab.com/stories/the-roadside-chapel-desk-catalog-page-kept-outside-the-sequence" data-description="The Roadside Chapel Desk Catalog Page Kept Outside the Sequence explains the scene where a catalog page from roadside chapel desk keeps a door number higher." data-category="Strange Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-roadside-chapel-desk-catalog-page-kept-outside-the-sequence:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Airport Service Hall Notebook That Adds One Entry Overnight</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Airport Service Hall Notebook That Adds One Entry Overnight" data-url="https://kyunolab.com/stories/the-airport-service-hall-notebook-that-adds-one-entry-overnight">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Airport Service Hall Notebook That Adds One Entry Overnight" data-url="https://kyunolab.com/stories/the-airport-service-hall-notebook-that-adds-one-entry-overnight" data-description="The Airport Service Hall Notebook That Adds One Entry Overnight explores the origin, meaning, and folklore behind the image of a airport service hall notebook." data-category="Strange Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-airport-service-hall-notebook-that-adds-one-entry-overnight:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Old Market Staircase Request Slip Signed by No Reader</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Old Market Staircase Request Slip Signed by No Reader" data-url="https://kyunolab.com/stories/the-old-market-staircase-request-slip-signed-by-no-reader">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Old Market Staircase Request Slip Signed by No Reader" data-url="https://kyunolab.com/stories/the-old-market-staircase-request-slip-signed-by-no-reader" data-description="A calm guide to The Old Market Staircase Request Slip Signed by No Reader, its common versions, source limits, and the place record legend motif that makes." data-category="Strange Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-old-market-staircase-request-slip-signed-by-no-reader:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Underpass Survey Office Map Note Pointing to a Removed Door</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Underpass Survey Office Map Note Pointing to a Removed Door" data-url="https://kyunolab.com/stories/the-underpass-survey-office-map-note-pointing-to-a-removed-door">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Underpass Survey Office Map Note Pointing to a Removed Door" data-url="https://kyunolab.com/stories/the-underpass-survey-office-map-note-pointing-to-a-removed-door" data-description="The Underpass Survey Office Map Note Pointing to a Removed Door explores the origin, meaning, and folklore behind the scene where a map note from underpass." data-category="Strange Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-underpass-survey-office-map-note-pointing-to-a-removed-door:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Cemetery Front Gate Inventory Tag for an Object No One Stored</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Cemetery Front Gate Inventory Tag for an Object No One Stored" data-url="https://kyunolab.com/stories/the-cemetery-front-gate-inventory-tag-for-an-object-no-one-stored">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Cemetery Front Gate Inventory Tag for an Object No One Stored" data-url="https://kyunolab.com/stories/the-cemetery-front-gate-inventory-tag-for-an-object-no-one-stored" data-description="The Cemetery Front Gate Inventory Tag for an Object No One Stored explores the origin, meaning, and folklore behind the scene where an inventory tag at." data-category="Strange Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-cemetery-front-gate-inventory-tag-for-an-object-no-one-stored:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Inland Lighthouse Room Audit Log From a Silent Hour</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Inland Lighthouse Room Audit Log From a Silent Hour" data-url="https://kyunolab.com/stories/the-inland-lighthouse-room-audit-log-from-a-silent-hour">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Inland Lighthouse Room Audit Log From a Silent Hour" data-url="https://kyunolab.com/stories/the-inland-lighthouse-room-audit-log-from-a-silent-hour" data-description="The Inland Lighthouse Room Audit Log From a Silent Hour explains the image of a inland lighthouse room audit log records a keeper log from a coast miles away." data-category="Strange Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-inland-lighthouse-room-audit-log-from-a-silent-hour:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Museum Corridor File Receipt Book With a Future Stamp</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Museum Corridor File Receipt Book With a Future Stamp" data-url="https://kyunolab.com/stories/the-museum-corridor-file-receipt-book-with-a-future-stamp">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Museum Corridor File Receipt Book With a Future Stamp" data-url="https://kyunolab.com/stories/the-museum-corridor-file-receipt-book-with-a-future-stamp" data-description="The Museum Corridor File Receipt Book With a Future Stamp explores the origin, meaning, and folklore behind the image of a museum corridor file receipt book." data-category="Strange Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-museum-corridor-file-receipt-book-with-a-future-stamp:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Unused Ferry Office Index Card for an Unlisted Shelf</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Unused Ferry Office Index Card for an Unlisted Shelf" data-url="https://kyunolab.com/stories/the-unused-ferry-office-index-card-for-an-unlisted-shelf">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Unused Ferry Office Index Card for an Unlisted Shelf" data-url="https://kyunolab.com/stories/the-unused-ferry-office-index-card-for-an-unlisted-shelf" data-description="The Unused Ferry Office Index Card for an Unlisted Shelf explores the origin, meaning, and folklore behind the scene where an index card from unused ferry." data-category="Strange Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-unused-ferry-office-index-card-for-an-unlisted-shelf:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Hill Motel Archive Ledger That Refuses the Final Number</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Hill Motel Archive Ledger That Refuses the Final Number" data-url="https://kyunolab.com/stories/the-hill-motel-archive-ledger-that-refuses-the-final-number">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Hill Motel Archive Ledger That Refuses the Final Number" data-url="https://kyunolab.com/stories/the-hill-motel-archive-ledger-that-refuses-the-final-number" data-description="The Hill Motel Archive Ledger That Refuses the Final Number explores the origin, meaning, and folklore behind the image of a hill motel archive ledger counts." data-category="Strange Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-hill-motel-archive-ledger-that-refuses-the-final-number:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Sealed Platform Office Register With a Line Written Too Early</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Sealed Platform Office Register With a Line Written Too Early" data-url="https://kyunolab.com/stories/the-sealed-platform-office-register-with-a-line-written-too-early">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Sealed Platform Office Register With a Line Written Too Early" data-url="https://kyunolab.com/stories/the-sealed-platform-office-register-with-a-line-written-too-early" data-description="The Sealed Platform Office Register With a Line Written Too Early explores the origin, meaning, and folklore behind the image of a sealed platform office." data-category="Strange Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-sealed-platform-office-register-with-a-line-written-too-early:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Old Hotel Floor Plan With One Warm Room</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Old Hotel Floor Plan With One Warm Room" data-url="https://kyunolab.com/stories/the-old-hotel-floor-plan-with-one-warm-room">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Old Hotel Floor Plan With One Warm Room" data-url="https://kyunolab.com/stories/the-old-hotel-floor-plan-with-one-warm-room" data-description="The Old Hotel Floor Plan With One Warm Room explains the image of an old hotel floor plan marks one room that staff describe as warm even in winter closures." data-category="Strange Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-old-hotel-floor-plan-with-one-warm-room:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Underpass Survey Marker That Changes Sides</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Underpass Survey Marker That Changes Sides" data-url="https://kyunolab.com/stories/the-underpass-survey-marker-that-changes-sides">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Underpass Survey Marker That Changes Sides" data-url="https://kyunolab.com/stories/the-underpass-survey-marker-that-changes-sides" data-description="The Underpass Survey Marker That Changes Sides explores the origin, meaning, and folklore behind the scene where an underpass survey marker appears on." data-category="Strange Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-underpass-survey-marker-that-changes-sides:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Airport Service Door Listing a Closed Terminal</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Airport Service Door Listing a Closed Terminal" data-url="https://kyunolab.com/stories/the-airport-service-door-listing-a-closed-terminal">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Airport Service Door Listing a Closed Terminal" data-url="https://kyunolab.com/stories/the-airport-service-door-listing-a-closed-terminal" data-description="The Airport Service Door Listing a Closed Terminal explains the image of an airport service-door list preserves a route into a terminal closed before the wing." data-category="Strange Places">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-airport-service-door-listing-a-closed-terminal:naver"> Published</label>
+          </div>
+        </li>
+        </ul>
+        <nav class="publishing-pagination" aria-label="Strange Places pagination">
+          <span aria-disabled="true">Previous</span>
+          <span aria-current="page">1</span><a href="/publishing-center/strange-places/page-2/">2</a><a href="/publishing-center/strange-places/page-3/">3</a><a href="/publishing-center/strange-places/page-4/">4</a>
+          <a href="/publishing-center/strange-places/page-2/">Next</a>
+        </nav>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <p><strong>Kyunolab Mystery Archive</strong> collects legends, folklore, mysteries, and strange tales with calm source-aware notes.</p>
+    <p><a href="/archive">Archive Index</a> - <a href="/newest">Newest</a> - <a href="/popular">Popular</a> - <a href="/categories">Categories</a> - <a href="/scripts/">Scripts</a> - <a href="/about">About</a> - <a href="/fiction-disclaimer">Story &amp; Source Notice</a> - <a href="/privacy">Privacy</a> - <a href="/rss.xml">RSS</a> - <a href="/publishing-center/">Publishing Center</a></p>
+  </footer>
+  <script defer src="/engagement.js?v=20260720-creator-part-visual-beats"></script>
+  <script defer src="/assets/publishing-center.js?v=20260720-creator-part-visual-beats"></script>
+</body>
+</html>

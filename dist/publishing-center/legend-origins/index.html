@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Legend Origins Publishing Center | Kyunolab Mystery Archive</title>
+  <meta name="description" content="Internal publishing management page for Legend Origins archive records.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:title" content="Legend Origins Publishing Center | Kyunolab Mystery Archive">
+  <meta property="og:description" content="Internal publishing management page for Legend Origins archive records.">
+  <meta property="og:site_name" content="Kyunolab Mystery Archive">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kyunolab.com/publishing-center/legend-origins/">
+  <meta property="og:image" content="https://kyunolab.com/icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Legend Origins Publishing Center | Kyunolab Mystery Archive">
+  <meta name="twitter:description" content="Internal publishing management page for Legend Origins archive records.">
+  <meta name="twitter:image" content="https://kyunolab.com/icon-512.png">
+  <link rel="canonical" href="https://kyunolab.com/publishing-center/legend-origins/">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/favicon-48x48.png" type="image/png" sizes="48x48">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles.css?v=20260720-creator-part-visual-beats">
+</head>
+<body>
+  <header class="site-header">
+    <div class="topline">A Kyuno Lab publication</div>
+    <div class="header-inner">
+      <a class="brand" href="/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
+
+      <nav class="nav"><a href="/newest">Newest</a><a href="/popular">Popular</a><a href="/categories">Categories</a><a href="/mystery-board">Mystery Board</a><a href="/about">About</a></nav>
+    </div>
+  </header>
+  <main class="article-shell">
+    <div class="archive-page-main publishing-center" data-publishing-center>
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/publishing-center/">Publishing Center</a><span aria-hidden="true">/</span><span aria-current="page">Legend Origins</span></nav>
+      <p class="label">Internal Tool</p>
+      <h1 class="article-title">Legend Origins</h1>
+      <style>
+        .publishing-category-list,
+        .publishing-record-list {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+
+        .publishing-category-list li {
+          margin: 0 0 0.35rem;
+        }
+
+        .publishing-record {
+          align-items: center;
+          border-bottom: 1px solid var(--border-color, #d9d2c4);
+          display: grid;
+          gap: 0.65rem 1.25rem;
+          grid-template-columns: minmax(18rem, 1fr) max-content;
+          min-height: 3.25rem;
+          padding: 0.45rem 0.35rem;
+        }
+
+        .publishing-record-title {
+          overflow-wrap: anywhere;
+        }
+
+        .publishing-record-actions {
+          align-items: center;
+          display: flex;
+          gap: 0.5rem;
+          justify-content: flex-end;
+          white-space: nowrap;
+        }
+
+        .publishing-record .button {
+          font-size: 0.85rem;
+          line-height: 1.1;
+          min-height: 2.35rem;
+          min-width: 4.1rem;
+          padding: 0.48rem 0.7rem;
+          position: relative;
+          z-index: 1;
+        }
+
+        .publishing-published-label {
+          align-items: center;
+          cursor: pointer;
+          display: inline-flex;
+          gap: 0.25rem;
+          margin: 0;
+          min-height: 2.35rem;
+          padding: 0.25rem 0.25rem;
+          position: relative;
+          z-index: 1;
+        }
+
+        .publishing-published {
+          cursor: pointer;
+          height: 1.05rem;
+          width: 1.05rem;
+        }
+
+        .publishing-status {
+          color: var(--muted, #6b6258);
+          font-size: 0.9rem;
+          margin: -0.25rem 0 0.65rem;
+          min-height: 1.2rem;
+        }
+
+        .publishing-manual-copy {
+          border: 1px solid var(--border-color, #d9d2c4);
+          box-sizing: border-box;
+          font: inherit;
+          margin: 0 0 0.9rem;
+          min-height: 6rem;
+          padding: 0.65rem;
+          width: 100%;
+        }
+
+        .publishing-pagination {
+          align-items: center;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.35rem;
+          margin-top: 1rem;
+        }
+
+        .publishing-pagination a,
+        .publishing-pagination span {
+          border: 1px solid var(--border-color, #d9d2c4);
+          border-radius: 4px;
+          display: inline-flex;
+          line-height: 1;
+          padding: 0.45rem 0.6rem;
+        }
+
+        .publishing-pagination span[aria-current="page"] {
+          background: var(--ink, #171717);
+          border-color: var(--ink, #171717);
+          color: var(--paper, #fffaf1);
+        }
+
+        .publishing-pagination span[aria-disabled="true"] {
+          opacity: 0.55;
+        }
+
+        @media (max-width: 720px) {
+          .publishing-record {
+            grid-template-columns: 1fr;
+          }
+
+          .publishing-record-actions {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            white-space: normal;
+          }
+        }
+      </style>
+      <section class="script-material" aria-label="Legend Origins records">
+        <h2>Archive Records</h2>
+        <p class="publishing-status" role="status" aria-live="polite"></p>
+        <ul class="publishing-record-list">
+        <li class="publishing-record">
+          <span class="publishing-record-title">Why Names Have Power in Legends: True Names, Summoning, and the Risk of Being Known</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Why Names Have Power in Legends: True Names, Summoning, and the Risk of Being Known" data-url="https://kyunolab.com/stories/why-names-have-power-in-legends">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Why Names Have Power in Legends: True Names, Summoning, and the Risk of Being Known" data-url="https://kyunolab.com/stories/why-names-have-power-in-legends" data-description="Why Names Have Power in Legends explores the origin, meaning, and folklore behind legend motif in which knowing, hiding, speaking, or stealing a true name." data-category="Legend Origins">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:why-names-have-power-in-legends:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Why Circles Protect in Folklore: Boundaries, Ritual Space, and the Shape That Keeps Danger Out</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Why Circles Protect in Folklore: Boundaries, Ritual Space, and the Shape That Keeps Danger Out" data-url="https://kyunolab.com/stories/why-circles-protect-in-folklore">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Why Circles Protect in Folklore: Boundaries, Ritual Space, and the Shape That Keeps Danger Out" data-url="https://kyunolab.com/stories/why-circles-protect-in-folklore" data-description="Why Circles Protect in Folklore explains folklore pattern that treats circles as protective boundaries in ritual, magic, household custom, and story space." data-category="Legend Origins">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:why-circles-protect-in-folklore:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Why Crossroads Become Supernatural Places: Choices, Boundaries, and Meetings at the Road’s Edge</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Why Crossroads Become Supernatural Places: Choices, Boundaries, and Meetings at the Road’s Edge" data-url="https://kyunolab.com/stories/why-crossroads-become-supernatural-places">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Why Crossroads Become Supernatural Places: Choices, Boundaries, and Meetings at the Road’s Edge" data-url="https://kyunolab.com/stories/why-crossroads-become-supernatural-places" data-description="Why Crossroads Become Supernatural Places explains folklore pattern that makes crossroads feel like places of choice, spirit contact, bargains, burial, or." data-category="Legend Origins">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:why-crossroads-become-supernatural-places:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Why Ravens Become Omens: Black Birds, Battlefield Memory, and the Messenger Bird Motif</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Why Ravens Become Omens: Black Birds, Battlefield Memory, and the Messenger Bird Motif" data-url="https://kyunolab.com/stories/why-ravens-become-omens">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Why Ravens Become Omens: Black Birds, Battlefield Memory, and the Messenger Bird Motif" data-url="https://kyunolab.com/stories/why-ravens-become-omens" data-description="A calm guide to Why Ravens Become Omens, its common versions, source limits, and the omen motif motif that makes folklore pattern that turns ravens and black." data-category="Legend Origins">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:why-ravens-become-omens:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Why Mirrors Mean Bad Luck: Reflections, Souls, and the Folklore of Broken Glass</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Why Mirrors Mean Bad Luck: Reflections, Souls, and the Folklore of Broken Glass" data-url="https://kyunolab.com/stories/why-mirrors-mean-bad-luck">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Why Mirrors Mean Bad Luck: Reflections, Souls, and the Folklore of Broken Glass" data-url="https://kyunolab.com/stories/why-mirrors-mean-bad-luck" data-description="Why Mirrors Mean Bad Luck explores the origin, meaning, and folklore behind folklore pattern that links mirrors with souls, reflection, household danger, and." data-category="Legend Origins">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:why-mirrors-mean-bad-luck:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Rabbit&#39;s Foot Luck Origin: The Charm, the Animal, and the Superstition of Carried Luck</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Rabbit&#39;s Foot Luck Origin: The Charm, the Animal, and the Superstition of Carried Luck" data-url="https://kyunolab.com/stories/rabbits-foot-luck-origin">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Rabbit&#39;s Foot Luck Origin: The Charm, the Animal, and the Superstition of Carried Luck" data-url="https://kyunolab.com/stories/rabbits-foot-luck-origin" data-description="Rabbit&#39;s Foot Luck Origin explores the origin, meaning, and folklore behind folk belief that a rabbit&#39;s foot can be carried as a charm for luck or protection." data-category="Legend Origins">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:rabbits-foot-luck-origin:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Evil Eye Origin: How a Harmful Glance Became One of the World&#39;s Oldest Protective Beliefs</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Evil Eye Origin: How a Harmful Glance Became One of the World&#39;s Oldest Protective Beliefs" data-url="https://kyunolab.com/stories/evil-eye-origin">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Evil Eye Origin: How a Harmful Glance Became One of the World&#39;s Oldest Protective Beliefs" data-url="https://kyunolab.com/stories/evil-eye-origin" data-description="Evil Eye Origin explains belief that envy or a hostile glance can cause harm, leading to protective charms, gestures, and rituals across many cultures through." data-category="Legend Origins">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:evil-eye-origin:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Horseshoe Luck Origin: Iron, Doorways, and How a Stable Object Became a Protective Sign</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Horseshoe Luck Origin: Iron, Doorways, and How a Stable Object Became a Protective Sign" data-url="https://kyunolab.com/stories/horseshoe-luck-origin">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Horseshoe Luck Origin: Iron, Doorways, and How a Stable Object Became a Protective Sign" data-url="https://kyunolab.com/stories/horseshoe-luck-origin" data-description="Horseshoe Luck Origin explains superstition that a horseshoe brings luck or protection when kept near a doorway or hung in a particular direction through." data-category="Legend Origins">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:horseshoe-luck-origin:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Black Cat Superstition Origin: Luck, Witchcraft, and How an Animal Became an Omen</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Black Cat Superstition Origin: Luck, Witchcraft, and How an Animal Became an Omen" data-url="https://kyunolab.com/stories/black-cat-superstition-origin">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Black Cat Superstition Origin: Luck, Witchcraft, and How an Animal Became an Omen" data-url="https://kyunolab.com/stories/black-cat-superstition-origin" data-description="A calm guide to Black Cat Superstition Origin, its common versions, source limits, and the superstition origin motif that makes changing folklore around black." data-category="Legend Origins">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:black-cat-superstition-origin:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Jack-o-Lantern Origin: Stingy Jack, Turnips, and the Halloween Light</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Jack-o-Lantern Origin: Stingy Jack, Turnips, and the Halloween Light" data-url="https://kyunolab.com/stories/jack-o-lantern-stingy-jack-origin">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Jack-o-Lantern Origin: Stingy Jack, Turnips, and the Halloween Light" data-url="https://kyunolab.com/stories/jack-o-lantern-stingy-jack-origin" data-description="Jack-o-Lantern Origin explores the origin, meaning, and folklore behind Halloween lantern tradition often explained through the Irish Stingy Jack story." data-category="Legend Origins">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:jack-o-lantern-stingy-jack-origin:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Friday the 13th Origin: Superstition, Metafolklore, and the Making of an Unlucky Date</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Friday the 13th Origin: Superstition, Metafolklore, and the Making of an Unlucky Date" data-url="https://kyunolab.com/stories/friday-the-13th-origin">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Friday the 13th Origin: Superstition, Metafolklore, and the Making of an Unlucky Date" data-url="https://kyunolab.com/stories/friday-the-13th-origin" data-description="Friday the 13th Origin explains modern superstition that joins an unlucky Friday with the number thirteen and then searches backward for older explanations." data-category="Legend Origins">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:friday-the-13th-origin:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Checklist Screen Catalog Page Kept Outside the Sequence</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Checklist Screen Catalog Page Kept Outside the Sequence" data-url="https://kyunolab.com/stories/the-checklist-screen-catalog-page-kept-outside-the-sequence">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Checklist Screen Catalog Page Kept Outside the Sequence" data-url="https://kyunolab.com/stories/the-checklist-screen-catalog-page-kept-outside-the-sequence" data-description="A calm guide to The Checklist Screen Catalog Page Kept Outside the Sequence, its common versions, source limits, and the record origin motif motif that makes." data-category="Legend Origins">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-checklist-screen-catalog-page-kept-outside-the-sequence:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Signature File Notebook That Adds One Entry Overnight</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Signature File Notebook That Adds One Entry Overnight" data-url="https://kyunolab.com/stories/the-signature-file-notebook-that-adds-one-entry-overnight">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Signature File Notebook That Adds One Entry Overnight" data-url="https://kyunolab.com/stories/the-signature-file-notebook-that-adds-one-entry-overnight" data-description="A calm guide to The Signature File Notebook That Adds One Entry Overnight, its common versions, source limits, and the record origin motif motif that makes." data-category="Legend Origins">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-signature-file-notebook-that-adds-one-entry-overnight:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Map Error Desk Request Slip Signed by No Reader</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Map Error Desk Request Slip Signed by No Reader" data-url="https://kyunolab.com/stories/the-map-error-desk-request-slip-signed-by-no-reader">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Map Error Desk Request Slip Signed by No Reader" data-url="https://kyunolab.com/stories/the-map-error-desk-request-slip-signed-by-no-reader" data-description="A calm guide to The Map Error Desk Request Slip Signed by No Reader, its common versions, source limits, and the record origin motif motif that makes the." data-category="Legend Origins">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-map-error-desk-request-slip-signed-by-no-reader:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Guestbook Path Map Note Pointing to a Removed Door</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Guestbook Path Map Note Pointing to a Removed Door" data-url="https://kyunolab.com/stories/the-guestbook-path-map-note-pointing-to-a-removed-door">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Guestbook Path Map Note Pointing to a Removed Door" data-url="https://kyunolab.com/stories/the-guestbook-path-map-note-pointing-to-a-removed-door" data-description="A calm guide to The Guestbook Path Map Note Pointing to a Removed Door, its common versions, source limits, and the record origin motif motif that makes the." data-category="Legend Origins">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-guestbook-path-map-note-pointing-to-a-removed-door:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Ledger Shelf Inventory Tag for an Object No One Stored</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Ledger Shelf Inventory Tag for an Object No One Stored" data-url="https://kyunolab.com/stories/the-ledger-shelf-inventory-tag-for-an-object-no-one-stored">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Ledger Shelf Inventory Tag for an Object No One Stored" data-url="https://kyunolab.com/stories/the-ledger-shelf-inventory-tag-for-an-object-no-one-stored" data-description="A calm guide to The Ledger Shelf Inventory Tag for an Object No One Stored, its common versions, source limits, and the record origin motif motif that makes." data-category="Legend Origins">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-ledger-shelf-inventory-tag-for-an-object-no-one-stored:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Census Drawer Audit Log From a Silent Hour</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Census Drawer Audit Log From a Silent Hour" data-url="https://kyunolab.com/stories/the-census-drawer-audit-log-from-a-silent-hour">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Census Drawer Audit Log From a Silent Hour" data-url="https://kyunolab.com/stories/the-census-drawer-audit-log-from-a-silent-hour" data-description="A calm guide to The Census Drawer Audit Log From a Silent Hour, its common versions, source limits, and the record origin motif motif that makes the image of." data-category="Legend Origins">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-census-drawer-audit-log-from-a-silent-hour:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Timestamp Table Receipt Book With a Future Stamp</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Timestamp Table Receipt Book With a Future Stamp" data-url="https://kyunolab.com/stories/the-timestamp-table-receipt-book-with-a-future-stamp">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Timestamp Table Receipt Book With a Future Stamp" data-url="https://kyunolab.com/stories/the-timestamp-table-receipt-book-with-a-future-stamp" data-description="The Timestamp Table Receipt Book With a Future Stamp explores the origin, meaning, and folklore behind the scene where a timestamp table receipt book stamps." data-category="Legend Origins">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-timestamp-table-receipt-book-with-a-future-stamp:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Receipt Archive Desk Index Card for an Unlisted Shelf</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Receipt Archive Desk Index Card for an Unlisted Shelf" data-url="https://kyunolab.com/stories/the-receipt-archive-desk-index-card-for-an-unlisted-shelf">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Receipt Archive Desk Index Card for an Unlisted Shelf" data-url="https://kyunolab.com/stories/the-receipt-archive-desk-index-card-for-an-unlisted-shelf" data-description="A calm guide to The Receipt Archive Desk Index Card for an Unlisted Shelf, its common versions, source limits, and the record origin motif motif that makes." data-category="Legend Origins">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-receipt-archive-desk-index-card-for-an-unlisted-shelf:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Field Notebook Archive Ledger That Refuses the Final Number</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Field Notebook Archive Ledger That Refuses the Final Number" data-url="https://kyunolab.com/stories/the-field-notebook-archive-ledger-that-refuses-the-final-number">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Field Notebook Archive Ledger That Refuses the Final Number" data-url="https://kyunolab.com/stories/the-field-notebook-archive-ledger-that-refuses-the-final-number" data-description="The Field Notebook Archive Ledger That Refuses the Final Number explains the image of a field notebook archive ledger counts how missing observations become." data-category="Legend Origins">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-field-notebook-archive-ledger-that-refuses-the-final-number:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Motif Index Shelf Register With a Line Written Too Early</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Motif Index Shelf Register With a Line Written Too Early" data-url="https://kyunolab.com/stories/the-motif-index-shelf-register-with-a-line-written-too-early">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Motif Index Shelf Register With a Line Written Too Early" data-url="https://kyunolab.com/stories/the-motif-index-shelf-register-with-a-line-written-too-early" data-description="A calm guide to The Motif Index Shelf Register With a Line Written Too Early, its common versions, source limits, and the record origin motif motif that makes." data-category="Legend Origins">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-motif-index-shelf-register-with-a-line-written-too-early:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">How Census Records Turn Absence Into Story</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="How Census Records Turn Absence Into Story" data-url="https://kyunolab.com/stories/how-census-records-turn-absence-into-story">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="How Census Records Turn Absence Into Story" data-url="https://kyunolab.com/stories/how-census-records-turn-absence-into-story" data-description="How Census Records Turn Absence Into Story explains census records turn absence into story when a missing household, blank line, or duplicate address becomes." data-category="Legend Origins">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:how-census-records-turn-absence-into-story:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Why Call Sheets Create Voice and Radio Legends</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Why Call Sheets Create Voice and Radio Legends" data-url="https://kyunolab.com/stories/why-call-sheets-create-voice-and-radio-legends">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Why Call Sheets Create Voice and Radio Legends" data-url="https://kyunolab.com/stories/why-call-sheets-create-voice-and-radio-legends" data-description="Why Call Sheets Create Voice and Radio Legends explores the origin, meaning, and folklore behind call sheets create voice and radio legends because scheduled." data-category="Legend Origins">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:why-call-sheets-create-voice-and-radio-legends:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">How Inventories Make Mythic Objects Feel Real</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="How Inventories Make Mythic Objects Feel Real" data-url="https://kyunolab.com/stories/how-inventories-make-mythic-objects-feel-real">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="How Inventories Make Mythic Objects Feel Real" data-url="https://kyunolab.com/stories/how-inventories-make-mythic-objects-feel-real" data-description="A calm guide to How Inventories Make Mythic Objects Feel Real, its common versions, source limits, and the record origin motif motif that makes inventories." data-category="Legend Origins">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:how-inventories-make-mythic-objects-feel-real:naver"> Published</label>
+          </div>
+        </li>
+        </ul>
+        <nav class="publishing-pagination" aria-label="Legend Origins pagination">
+          <span aria-disabled="true">Previous</span>
+          <span aria-current="page">1</span><a href="/publishing-center/legend-origins/page-2/">2</a><a href="/publishing-center/legend-origins/page-3/">3</a><a href="/publishing-center/legend-origins/page-4/">4</a>
+          <a href="/publishing-center/legend-origins/page-2/">Next</a>
+        </nav>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <p><strong>Kyunolab Mystery Archive</strong> collects legends, folklore, mysteries, and strange tales with calm source-aware notes.</p>
+    <p><a href="/archive">Archive Index</a> - <a href="/newest">Newest</a> - <a href="/popular">Popular</a> - <a href="/categories">Categories</a> - <a href="/scripts/">Scripts</a> - <a href="/about">About</a> - <a href="/fiction-disclaimer">Story &amp; Source Notice</a> - <a href="/privacy">Privacy</a> - <a href="/rss.xml">RSS</a> - <a href="/publishing-center/">Publishing Center</a></p>
+  </footer>
+  <script defer src="/engagement.js?v=20260720-creator-part-visual-beats"></script>
+  <script defer src="/assets/publishing-center.js?v=20260720-creator-part-visual-beats"></script>
+</body>
+</html>

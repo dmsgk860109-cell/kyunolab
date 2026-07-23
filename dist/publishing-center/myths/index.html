@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Myths Publishing Center | Kyunolab Mystery Archive</title>
+  <meta name="description" content="Internal publishing management page for Myths archive records.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:title" content="Myths Publishing Center | Kyunolab Mystery Archive">
+  <meta property="og:description" content="Internal publishing management page for Myths archive records.">
+  <meta property="og:site_name" content="Kyunolab Mystery Archive">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kyunolab.com/publishing-center/myths/">
+  <meta property="og:image" content="https://kyunolab.com/icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Myths Publishing Center | Kyunolab Mystery Archive">
+  <meta name="twitter:description" content="Internal publishing management page for Myths archive records.">
+  <meta name="twitter:image" content="https://kyunolab.com/icon-512.png">
+  <link rel="canonical" href="https://kyunolab.com/publishing-center/myths/">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/favicon-48x48.png" type="image/png" sizes="48x48">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles.css?v=20260720-creator-part-visual-beats">
+</head>
+<body>
+  <header class="site-header">
+    <div class="topline">A Kyuno Lab publication</div>
+    <div class="header-inner">
+      <a class="brand" href="/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
+
+      <nav class="nav"><a href="/newest">Newest</a><a href="/popular">Popular</a><a href="/categories">Categories</a><a href="/mystery-board">Mystery Board</a><a href="/about">About</a></nav>
+    </div>
+  </header>
+  <main class="article-shell">
+    <div class="archive-page-main publishing-center" data-publishing-center>
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/publishing-center/">Publishing Center</a><span aria-hidden="true">/</span><span aria-current="page">Myths</span></nav>
+      <p class="label">Internal Tool</p>
+      <h1 class="article-title">Myths</h1>
+      <style>
+        .publishing-category-list,
+        .publishing-record-list {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+
+        .publishing-category-list li {
+          margin: 0 0 0.35rem;
+        }
+
+        .publishing-record {
+          align-items: center;
+          border-bottom: 1px solid var(--border-color, #d9d2c4);
+          display: grid;
+          gap: 0.65rem 1.25rem;
+          grid-template-columns: minmax(18rem, 1fr) max-content;
+          min-height: 3.25rem;
+          padding: 0.45rem 0.35rem;
+        }
+
+        .publishing-record-title {
+          overflow-wrap: anywhere;
+        }
+
+        .publishing-record-actions {
+          align-items: center;
+          display: flex;
+          gap: 0.5rem;
+          justify-content: flex-end;
+          white-space: nowrap;
+        }
+
+        .publishing-record .button {
+          font-size: 0.85rem;
+          line-height: 1.1;
+          min-height: 2.35rem;
+          min-width: 4.1rem;
+          padding: 0.48rem 0.7rem;
+          position: relative;
+          z-index: 1;
+        }
+
+        .publishing-published-label {
+          align-items: center;
+          cursor: pointer;
+          display: inline-flex;
+          gap: 0.25rem;
+          margin: 0;
+          min-height: 2.35rem;
+          padding: 0.25rem 0.25rem;
+          position: relative;
+          z-index: 1;
+        }
+
+        .publishing-published {
+          cursor: pointer;
+          height: 1.05rem;
+          width: 1.05rem;
+        }
+
+        .publishing-status {
+          color: var(--muted, #6b6258);
+          font-size: 0.9rem;
+          margin: -0.25rem 0 0.65rem;
+          min-height: 1.2rem;
+        }
+
+        .publishing-manual-copy {
+          border: 1px solid var(--border-color, #d9d2c4);
+          box-sizing: border-box;
+          font: inherit;
+          margin: 0 0 0.9rem;
+          min-height: 6rem;
+          padding: 0.65rem;
+          width: 100%;
+        }
+
+        .publishing-pagination {
+          align-items: center;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.35rem;
+          margin-top: 1rem;
+        }
+
+        .publishing-pagination a,
+        .publishing-pagination span {
+          border: 1px solid var(--border-color, #d9d2c4);
+          border-radius: 4px;
+          display: inline-flex;
+          line-height: 1;
+          padding: 0.45rem 0.6rem;
+        }
+
+        .publishing-pagination span[aria-current="page"] {
+          background: var(--ink, #171717);
+          border-color: var(--ink, #171717);
+          color: var(--paper, #fffaf1);
+        }
+
+        .publishing-pagination span[aria-disabled="true"] {
+          opacity: 0.55;
+        }
+
+        @media (max-width: 720px) {
+          .publishing-record {
+            grid-template-columns: 1fr;
+          }
+
+          .publishing-record-actions {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            white-space: normal;
+          }
+        }
+      </style>
+      <section class="script-material" aria-label="Myths records">
+        <h2>Archive Records</h2>
+        <p class="publishing-status" role="status" aria-live="polite"></p>
+        <ul class="publishing-record-list">
+        <li class="publishing-record">
+          <span class="publishing-record-title">Demeter and Persephone: Abduction, Seasons, and the Myth of Return With a Condition</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Demeter and Persephone: Abduction, Seasons, and the Myth of Return With a Condition" data-url="https://kyunolab.com/stories/demeter-and-persephone-myth">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Demeter and Persephone: Abduction, Seasons, and the Myth of Return With a Condition" data-url="https://kyunolab.com/stories/demeter-and-persephone-myth" data-description="Demeter and Persephone explains Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return through." data-category="Myths">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:demeter-and-persephone-myth:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Maui Slows the Sun: Rope, Dawn, and the Myth That Made the Day Longer</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Maui Slows the Sun: Rope, Dawn, and the Myth That Made the Day Longer" data-url="https://kyunolab.com/stories/maui-slows-the-sun-myth">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Maui Slows the Sun: Rope, Dawn, and the Myth That Made the Day Longer" data-url="https://kyunolab.com/stories/maui-slows-the-sun-myth" data-description="A calm guide to Maui Slows the Sun, its common versions, source limits, and the polynesian culture hero myth motif that makes Polynesian myth in which Maui." data-category="Myths">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:maui-slows-the-sun-myth:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Osiris and Isis: Dismemberment, Search, and the Egyptian Myth of Restoration</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Osiris and Isis: Dismemberment, Search, and the Egyptian Myth of Restoration" data-url="https://kyunolab.com/stories/osiris-isis-resurrection-myth">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Osiris and Isis: Dismemberment, Search, and the Egyptian Myth of Restoration" data-url="https://kyunolab.com/stories/osiris-isis-resurrection-myth" data-description="Osiris and Isis explores the origin, meaning, and folklore behind Egyptian myth cycle in which Isis searches for Osiris after his murder and restoration." data-category="Myths">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:osiris-isis-resurrection-myth:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">King Midas and the Golden Touch: Wish, Hunger, and the Myth of Desire Turning Heavy</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="King Midas and the Golden Touch: Wish, Hunger, and the Myth of Desire Turning Heavy" data-url="https://kyunolab.com/stories/king-midas-golden-touch-myth">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="King Midas and the Golden Touch: Wish, Hunger, and the Myth of Desire Turning Heavy" data-url="https://kyunolab.com/stories/king-midas-golden-touch-myth" data-description="King Midas and the Golden Touch explores the origin, meaning, and folklore behind Greek myth of a king whose wish turns everything he touches into gold until." data-category="Myths">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:king-midas-golden-touch-myth:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Heracles and the Twelve Labors: Impossible Tasks, Atonement, and the Hero Tested Again and Again</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Heracles and the Twelve Labors: Impossible Tasks, Atonement, and the Hero Tested Again and Again" data-url="https://kyunolab.com/stories/heracles-twelve-labors-myth">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Heracles and the Twelve Labors: Impossible Tasks, Atonement, and the Hero Tested Again and Again" data-url="https://kyunolab.com/stories/heracles-twelve-labors-myth" data-description="A calm guide to Heracles and the Twelve Labors, its common versions, source limits, and the greek hero myth motif that makes Greek hero cycle in which." data-category="Myths">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:heracles-twelve-labors-myth:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Sisyphus Myth: The Stone, the Hill, and the Punishment That Never Ends</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Sisyphus Myth: The Stone, the Hill, and the Punishment That Never Ends" data-url="https://kyunolab.com/stories/sisyphus-myth">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Sisyphus Myth: The Stone, the Hill, and the Punishment That Never Ends" data-url="https://kyunolab.com/stories/sisyphus-myth" data-description="A calm guide to Sisyphus Myth, its common versions, source limits, and the greek myth motif that makes Greek myth of Sisyphus, condemned in the underworld to." data-category="Myths">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:sisyphus-myth:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Persephone and the Underworld: The Greek Myth Behind Loss, Return, and the Seasons</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Persephone and the Underworld: The Greek Myth Behind Loss, Return, and the Seasons" data-url="https://kyunolab.com/stories/persephone-underworld-myth">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Persephone and the Underworld: The Greek Myth Behind Loss, Return, and the Seasons" data-url="https://kyunolab.com/stories/persephone-underworld-myth" data-description="A calm guide to Persephone and the Underworld, its common versions, source limits, and the greek myth motif that makes Greek myth in which Persephone is taken." data-category="Myths">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:persephone-underworld-myth:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Icarus Flight Myth: Wax Wings, the Sun, and the Warning About Flying Too High</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Icarus Flight Myth: Wax Wings, the Sun, and the Warning About Flying Too High" data-url="https://kyunolab.com/stories/icarus-flight-myth">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Icarus Flight Myth: Wax Wings, the Sun, and the Warning About Flying Too High" data-url="https://kyunolab.com/stories/icarus-flight-myth" data-description="A calm guide to Icarus Flight Myth, its common versions, source limits, and the greek myth motif that makes Greek myth of Icarus flying with wax wings and." data-category="Myths">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:icarus-flight-myth:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Phaethon Sun Chariot Myth: Fire, Fall, and the Danger of Driving the Sun</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Phaethon Sun Chariot Myth: Fire, Fall, and the Danger of Driving the Sun" data-url="https://kyunolab.com/stories/phaethon-sun-chariot-myth">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Phaethon Sun Chariot Myth: Fire, Fall, and the Danger of Driving the Sun" data-url="https://kyunolab.com/stories/phaethon-sun-chariot-myth" data-description="A calm guide to Phaethon Sun Chariot Myth, its common versions, source limits, and the greek myth motif that makes Greek myth of Phaethon driving the chariot." data-category="Myths">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:phaethon-sun-chariot-myth:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Prometheus Fire Myth: Theft, Punishment, and the Gift That Changed Humanity</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Prometheus Fire Myth: Theft, Punishment, and the Gift That Changed Humanity" data-url="https://kyunolab.com/stories/prometheus-fire-myth">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Prometheus Fire Myth: Theft, Punishment, and the Gift That Changed Humanity" data-url="https://kyunolab.com/stories/prometheus-fire-myth" data-description="Prometheus Fire Myth explores the origin, meaning, and folklore behind Greek myth of Prometheus stealing fire for humanity and suffering punishment for." data-category="Myths">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:prometheus-fire-myth:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Narcissus and Echo: Reflection, Voice, and the Greek Myth of Unreachable Love</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Narcissus and Echo: Reflection, Voice, and the Greek Myth of Unreachable Love" data-url="https://kyunolab.com/stories/narcissus-and-echo-myth">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Narcissus and Echo: Reflection, Voice, and the Greek Myth of Unreachable Love" data-url="https://kyunolab.com/stories/narcissus-and-echo-myth" data-description="Narcissus and Echo explains Greek myth in which Echo can only return another voice while Narcissus falls in love with his own reflection through myths." data-category="Myths">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:narcissus-and-echo-myth:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Medusa and Perseus: The Gorgon, the Mirrored Shield, and the Power of the Severed Head</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Medusa and Perseus: The Gorgon, the Mirrored Shield, and the Power of the Severed Head" data-url="https://kyunolab.com/stories/medusa-and-perseus-myth">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Medusa and Perseus: The Gorgon, the Mirrored Shield, and the Power of the Severed Head" data-url="https://kyunolab.com/stories/medusa-and-perseus-myth" data-description="Medusa and Perseus explores the origin, meaning, and folklore behind the image of a mirrored shield, tracing why this greek myth story keeps circulating." data-category="Myths">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:medusa-and-perseus-myth:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Arachne Myth: Athena, Weaving, and the Origin of the Spider</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Arachne Myth: Athena, Weaving, and the Origin of the Spider" data-url="https://kyunolab.com/stories/arachne-myth">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Arachne Myth: Athena, Weaving, and the Origin of the Spider" data-url="https://kyunolab.com/stories/arachne-myth" data-description="Arachne Myth explains the image of the myth in which Arachne challenges Athena to a weaving contest and is transformed into a spider through myths, separating." data-category="Myths">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:arachne-myth:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Pandora&#39;s Jar: The Greek Myth Behind Pandora&#39;s Box</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Pandora&#39;s Jar: The Greek Myth Behind Pandora&#39;s Box" data-url="https://kyunolab.com/stories/pandoras-jar-myth">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Pandora&#39;s Jar: The Greek Myth Behind Pandora&#39;s Box" data-url="https://kyunolab.com/stories/pandoras-jar-myth" data-description="A calm guide to Pandora&#39;s Jar, its common versions, source limits, and the greek myth motif that makes the scene where the Greek myth in which Pandora opens a." data-category="Myths">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:pandoras-jar-myth:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Ra’s Solar Boat: Egyptian Myth, Night Journey, and the Daily Return of the Sun</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Ra’s Solar Boat: Egyptian Myth, Night Journey, and the Daily Return of the Sun" data-url="https://kyunolab.com/stories/ra-solar-boat-myth">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Ra’s Solar Boat: Egyptian Myth, Night Journey, and the Daily Return of the Sun" data-url="https://kyunolab.com/stories/ra-solar-boat-myth" data-description="Ra’s Solar Boat explains the scene where the Egyptian mythic image of Ra traveling across the sky by day and through the underworld by night before the sun." data-category="Myths">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:ra-solar-boat-myth:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Maui Fishing Up the Islands: Polynesian Myth, Trickster Hero, and Land From the Sea</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Maui Fishing Up the Islands: Polynesian Myth, Trickster Hero, and Land From the Sea" data-url="https://kyunolab.com/stories/maui-fishing-up-the-islands-myth">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Maui Fishing Up the Islands: Polynesian Myth, Trickster Hero, and Land From the Sea" data-url="https://kyunolab.com/stories/maui-fishing-up-the-islands-myth" data-description="A calm guide to Maui Fishing Up the Islands, its common versions, source limits, and the polynesian myth motif that makes the image of the Polynesian Maui." data-category="Myths">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:maui-fishing-up-the-islands-myth:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Anansi the Spider: Trickster Stories, Wisdom, and the Web of Tales</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Anansi the Spider: Trickster Stories, Wisdom, and the Web of Tales" data-url="https://kyunolab.com/stories/anansi-spider-stories-myth">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Anansi the Spider: Trickster Stories, Wisdom, and the Web of Tales" data-url="https://kyunolab.com/stories/anansi-spider-stories-myth" data-description="Anansi the Spider explains the image of the West African and Caribbean Anansi tradition, where the spider trickster uses wit, hunger, bargaining, and stories." data-category="Myths">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:anansi-spider-stories-myth:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Amaterasu Cave Myth: Hidden Sun, Ritual, and the Return of Light</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Amaterasu Cave Myth: Hidden Sun, Ritual, and the Return of Light" data-url="https://kyunolab.com/stories/amaterasu-cave-myth">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Amaterasu Cave Myth: Hidden Sun, Ritual, and the Return of Light" data-url="https://kyunolab.com/stories/amaterasu-cave-myth" data-description="Amaterasu Cave Myth explains the image of the Japanese myth of Amaterasu withdrawing into a cave, darkening the world until ritual, performance, and." data-category="Myths">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:amaterasu-cave-myth:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Izanagi and Izanami: Creation, Underworld, and the Boundary Between Life and Death</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Izanagi and Izanami: Creation, Underworld, and the Boundary Between Life and Death" data-url="https://kyunolab.com/stories/izanagi-and-izanami-myth">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Izanagi and Izanami: Creation, Underworld, and the Boundary Between Life and Death" data-url="https://kyunolab.com/stories/izanagi-and-izanami-myth" data-description="Izanagi and Izanami explores the origin, meaning, and folklore behind the image of the Japanese creation myth of Izanagi and Izanami, including the making of." data-category="Myths">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:izanagi-and-izanami-myth:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Quetzalcoatl: Feathered Serpent Myth, Culture Hero, and Sacred Knowledge</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Quetzalcoatl: Feathered Serpent Myth, Culture Hero, and Sacred Knowledge" data-url="https://kyunolab.com/stories/quetzalcoatl-feathered-serpent-myth">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Quetzalcoatl: Feathered Serpent Myth, Culture Hero, and Sacred Knowledge" data-url="https://kyunolab.com/stories/quetzalcoatl-feathered-serpent-myth" data-description="Quetzalcoatl explains the image of the Mesoamerican figure of Quetzalcoatl, the feathered serpent associated with sacred knowledge, creation, rulership, and." data-category="Myths">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:quetzalcoatl-feathered-serpent-myth:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Gilgamesh Flood Myth: Utnapishtim, Mortality, and the Search for Life</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Gilgamesh Flood Myth: Utnapishtim, Mortality, and the Search for Life" data-url="https://kyunolab.com/stories/gilgamesh-flood-myth">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Gilgamesh Flood Myth: Utnapishtim, Mortality, and the Search for Life" data-url="https://kyunolab.com/stories/gilgamesh-flood-myth" data-description="A calm guide to Gilgamesh Flood Myth, its common versions, source limits, and the mesopotamian myth motif that makes the image of the flood episode in the." data-category="Myths">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:gilgamesh-flood-myth:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Yggdrasil World Tree: Norse Myth, Nine Worlds, and the Shape of the Cosmos</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Yggdrasil World Tree: Norse Myth, Nine Worlds, and the Shape of the Cosmos" data-url="https://kyunolab.com/stories/yggdrasil-world-tree-myth">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Yggdrasil World Tree: Norse Myth, Nine Worlds, and the Shape of the Cosmos" data-url="https://kyunolab.com/stories/yggdrasil-world-tree-myth" data-description="Yggdrasil World Tree explains the image of the Norse mythic image of Yggdrasil, the immense world tree that connects gods, beings, roots, wells, and the nine." data-category="Myths">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:yggdrasil-world-tree-myth:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Theseus and the Minotaur: Labyrinth, Thread, and the Monster at the Center</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Theseus and the Minotaur: Labyrinth, Thread, and the Monster at the Center" data-url="https://kyunolab.com/stories/theseus-and-the-minotaur-myth">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Theseus and the Minotaur: Labyrinth, Thread, and the Monster at the Center" data-url="https://kyunolab.com/stories/theseus-and-the-minotaur-myth" data-description="Theseus and the Minotaur explores the origin, meaning, and folklore behind the image of the Greek myth of Theseus entering the Cretan Labyrinth, facing the." data-category="Myths">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:theseus-and-the-minotaur-myth:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Icarus Myth: Wings, Warning, and the Meaning of Flying Too Close to the Sun</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Icarus Myth: Wings, Warning, and the Meaning of Flying Too Close to the Sun" data-url="https://kyunolab.com/stories/icarus-myth">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Icarus Myth: Wings, Warning, and the Meaning of Flying Too Close to the Sun" data-url="https://kyunolab.com/stories/icarus-myth" data-description="A calm guide to Icarus Myth, its common versions, source limits, and the greek myth motif that makes the image of the Greek myth of Icarus, whose wax-fastened." data-category="Myths">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:icarus-myth:naver"> Published</label>
+          </div>
+        </li>
+        </ul>
+        <nav class="publishing-pagination" aria-label="Myths pagination">
+          <span aria-disabled="true">Previous</span>
+          <span aria-current="page">1</span><a href="/publishing-center/myths/page-2/">2</a><a href="/publishing-center/myths/page-3/">3</a><a href="/publishing-center/myths/page-4/">4</a><a href="/publishing-center/myths/page-5/">5</a>
+          <a href="/publishing-center/myths/page-2/">Next</a>
+        </nav>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <p><strong>Kyunolab Mystery Archive</strong> collects legends, folklore, mysteries, and strange tales with calm source-aware notes.</p>
+    <p><a href="/archive">Archive Index</a> - <a href="/newest">Newest</a> - <a href="/popular">Popular</a> - <a href="/categories">Categories</a> - <a href="/scripts/">Scripts</a> - <a href="/about">About</a> - <a href="/fiction-disclaimer">Story &amp; Source Notice</a> - <a href="/privacy">Privacy</a> - <a href="/rss.xml">RSS</a> - <a href="/publishing-center/">Publishing Center</a></p>
+  </footer>
+  <script defer src="/engagement.js?v=20260720-creator-part-visual-beats"></script>
+  <script defer src="/assets/publishing-center.js?v=20260720-creator-part-visual-beats"></script>
+</body>
+</html>

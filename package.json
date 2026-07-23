@@ -2,6 +2,9 @@
   "private": true,
   "scripts": {
     "build": "node scripts/apply-content-dna.js && node scripts/validate-tags.js && node scripts/generate-site.js && node scripts/generate-guides.js && node scripts/generate-tags.js && node scripts/normalize-public-urls.js",
+    "build:pages": "node scripts/apply-content-dna.js && node scripts/validate-tags.js && node scripts/generate-site.js && node scripts/generate-guides.js && node scripts/generate-tags.js && node scripts/normalize-public-urls.js && node scripts/build-cloudflare-pages-dist.js",
+    "build:pages:dist": "node scripts/build-cloudflare-pages-dist.js",
+    "verify:pages-dist": "node scripts/verify-cloudflare-pages-dist.js",
     "apply:content-dna": "node scripts/apply-content-dna.js",
     "generate:site": "node scripts/generate-site.js",
     "generate:guides": "node scripts/generate-guides.js",

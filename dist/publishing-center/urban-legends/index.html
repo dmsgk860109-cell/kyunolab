@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Urban Legends Publishing Center | Kyunolab Mystery Archive</title>
+  <meta name="description" content="Internal publishing management page for Urban Legends archive records.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:title" content="Urban Legends Publishing Center | Kyunolab Mystery Archive">
+  <meta property="og:description" content="Internal publishing management page for Urban Legends archive records.">
+  <meta property="og:site_name" content="Kyunolab Mystery Archive">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kyunolab.com/publishing-center/urban-legends/">
+  <meta property="og:image" content="https://kyunolab.com/icon-512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Urban Legends Publishing Center | Kyunolab Mystery Archive">
+  <meta name="twitter:description" content="Internal publishing management page for Urban Legends archive records.">
+  <meta name="twitter:image" content="https://kyunolab.com/icon-512.png">
+  <link rel="canonical" href="https://kyunolab.com/publishing-center/urban-legends/">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/favicon-48x48.png" type="image/png" sizes="48x48">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles.css?v=20260720-creator-part-visual-beats">
+</head>
+<body>
+  <header class="site-header">
+    <div class="topline">A Kyuno Lab publication</div>
+    <div class="header-inner">
+      <a class="brand" href="/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
+
+      <nav class="nav"><a href="/newest">Newest</a><a href="/popular">Popular</a><a href="/categories">Categories</a><a href="/mystery-board">Mystery Board</a><a href="/about">About</a></nav>
+    </div>
+  </header>
+  <main class="article-shell">
+    <div class="archive-page-main publishing-center" data-publishing-center>
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/publishing-center/">Publishing Center</a><span aria-hidden="true">/</span><span aria-current="page">Urban Legends</span></nav>
+      <p class="label">Internal Tool</p>
+      <h1 class="article-title">Urban Legends</h1>
+      <style>
+        .publishing-category-list,
+        .publishing-record-list {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+
+        .publishing-category-list li {
+          margin: 0 0 0.35rem;
+        }
+
+        .publishing-record {
+          align-items: center;
+          border-bottom: 1px solid var(--border-color, #d9d2c4);
+          display: grid;
+          gap: 0.65rem 1.25rem;
+          grid-template-columns: minmax(18rem, 1fr) max-content;
+          min-height: 3.25rem;
+          padding: 0.45rem 0.35rem;
+        }
+
+        .publishing-record-title {
+          overflow-wrap: anywhere;
+        }
+
+        .publishing-record-actions {
+          align-items: center;
+          display: flex;
+          gap: 0.5rem;
+          justify-content: flex-end;
+          white-space: nowrap;
+        }
+
+        .publishing-record .button {
+          font-size: 0.85rem;
+          line-height: 1.1;
+          min-height: 2.35rem;
+          min-width: 4.1rem;
+          padding: 0.48rem 0.7rem;
+          position: relative;
+          z-index: 1;
+        }
+
+        .publishing-published-label {
+          align-items: center;
+          cursor: pointer;
+          display: inline-flex;
+          gap: 0.25rem;
+          margin: 0;
+          min-height: 2.35rem;
+          padding: 0.25rem 0.25rem;
+          position: relative;
+          z-index: 1;
+        }
+
+        .publishing-published {
+          cursor: pointer;
+          height: 1.05rem;
+          width: 1.05rem;
+        }
+
+        .publishing-status {
+          color: var(--muted, #6b6258);
+          font-size: 0.9rem;
+          margin: -0.25rem 0 0.65rem;
+          min-height: 1.2rem;
+        }
+
+        .publishing-manual-copy {
+          border: 1px solid var(--border-color, #d9d2c4);
+          box-sizing: border-box;
+          font: inherit;
+          margin: 0 0 0.9rem;
+          min-height: 6rem;
+          padding: 0.65rem;
+          width: 100%;
+        }
+
+        .publishing-pagination {
+          align-items: center;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.35rem;
+          margin-top: 1rem;
+        }
+
+        .publishing-pagination a,
+        .publishing-pagination span {
+          border: 1px solid var(--border-color, #d9d2c4);
+          border-radius: 4px;
+          display: inline-flex;
+          line-height: 1;
+          padding: 0.45rem 0.6rem;
+        }
+
+        .publishing-pagination span[aria-current="page"] {
+          background: var(--ink, #171717);
+          border-color: var(--ink, #171717);
+          color: var(--paper, #fffaf1);
+        }
+
+        .publishing-pagination span[aria-disabled="true"] {
+          opacity: 0.55;
+        }
+
+        @media (max-width: 720px) {
+          .publishing-record {
+            grid-template-columns: 1fr;
+          }
+
+          .publishing-record-actions {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            white-space: normal;
+          }
+        }
+      </style>
+      <section class="script-material" aria-label="Urban Legends records">
+        <h2>Archive Records</h2>
+        <p class="publishing-status" role="status" aria-live="polite"></p>
+        <ul class="publishing-record-list">
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Microwaved Pet Urban Legend: Household Technology, Legal Rumor, and Impossible Carelessness</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Microwaved Pet Urban Legend: Household Technology, Legal Rumor, and Impossible Carelessness" data-url="https://kyunolab.com/stories/the-microwaved-pet-urban-legend">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Microwaved Pet Urban Legend: Household Technology, Legal Rumor, and Impossible Carelessness" data-url="https://kyunolab.com/stories/the-microwaved-pet-urban-legend" data-description="A calm guide to The Microwaved Pet Urban Legend, its common versions, source limits, and the household rumor motif that makes urban legend in which a pet is." data-category="Urban Legends">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-microwaved-pet-urban-legend:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Blue Star Acid Urban Legend: Temporary Tattoos, School Warnings, and Drug Panic Folklore</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Blue Star Acid Urban Legend: Temporary Tattoos, School Warnings, and Drug Panic Folklore" data-url="https://kyunolab.com/stories/blue-star-acid-urban-legend">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Blue Star Acid Urban Legend: Temporary Tattoos, School Warnings, and Drug Panic Folklore" data-url="https://kyunolab.com/stories/blue-star-acid-urban-legend" data-description="A calm guide to Blue Star Acid Urban Legend, its common versions, source limits, and the drug panic legend motif that makes school-warning legend that." data-category="Urban Legends">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:blue-star-acid-urban-legend:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Poisoned Halloween Candy Legend: Trick-or-Treat Fear, Rumor, and the Dangerous Treat</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Poisoned Halloween Candy Legend: Trick-or-Treat Fear, Rumor, and the Dangerous Treat" data-url="https://kyunolab.com/stories/poisoned-halloween-candy-legend">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Poisoned Halloween Candy Legend: Trick-or-Treat Fear, Rumor, and the Dangerous Treat" data-url="https://kyunolab.com/stories/poisoned-halloween-candy-legend" data-description="Poisoned Halloween Candy Legend explains Halloween warning legend that strangers hide poison, blades, or dangerous objects inside trick-or-treat candy through." data-category="Urban Legends">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:poisoned-halloween-candy-legend:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Alligators in the Sewers: Urban Wildlife, City Rumor, and the Monster Below the Street</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Alligators in the Sewers: Urban Wildlife, City Rumor, and the Monster Below the Street" data-url="https://kyunolab.com/stories/alligators-in-the-sewers-legend">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Alligators in the Sewers: Urban Wildlife, City Rumor, and the Monster Below the Street" data-url="https://kyunolab.com/stories/alligators-in-the-sewers-legend" data-description="Alligators in the Sewers explores the origin, meaning, and folklore behind city legend that discarded pet alligators survived beneath urban streets and grew." data-category="Urban Legends">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:alligators-in-the-sewers-legend:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Hookman Urban Legend: Lovers Lane, Radio Warning, and the Hook on the Door</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Hookman Urban Legend: Lovers Lane, Radio Warning, and the Hook on the Door" data-url="https://kyunolab.com/stories/the-hookman-urban-legend">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Hookman Urban Legend: Lovers Lane, Radio Warning, and the Hook on the Door" data-url="https://kyunolab.com/stories/the-hookman-urban-legend" data-description="The Hookman Urban Legend explores the origin, meaning, and folklore behind lovers-lane warning story in which a radio report about an escaped killer ends with." data-category="Urban Legends">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-hookman-urban-legend:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Licked Hand Urban Legend: The Dog, the Bed, and the Message on the Wall</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Licked Hand Urban Legend: The Dog, the Bed, and the Message on the Wall" data-url="https://kyunolab.com/stories/licked-hand-urban-legend">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Licked Hand Urban Legend: The Dog, the Bed, and the Message on the Wall" data-url="https://kyunolab.com/stories/licked-hand-urban-legend" data-description="A calm guide to The Licked Hand Urban Legend, its common versions, source limits, and the bedroom urban legend motif that makes urban legend in which a person." data-category="Urban Legends">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:licked-hand-urban-legend:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Resurrection Mary Legend: The Chicago Hitchhiker Who Keeps Returning to the Road</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Resurrection Mary Legend: The Chicago Hitchhiker Who Keeps Returning to the Road" data-url="https://kyunolab.com/stories/resurrection-mary-legend">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Resurrection Mary Legend: The Chicago Hitchhiker Who Keeps Returning to the Road" data-url="https://kyunolab.com/stories/resurrection-mary-legend" data-description="A calm guide to Resurrection Mary Legend, its common versions, source limits, and the vanishing hitchhiker motif that makes Chicago-area vanishing hitchhiker." data-category="Urban Legends">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:resurrection-mary-legend:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Sewer Alligator Urban Legend: City Drains, Escaped Pets, and the Monster Below the Street</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Sewer Alligator Urban Legend: City Drains, Escaped Pets, and the Monster Below the Street" data-url="https://kyunolab.com/stories/sewer-alligator-urban-legend">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Sewer Alligator Urban Legend: City Drains, Escaped Pets, and the Monster Below the Street" data-url="https://kyunolab.com/stories/sewer-alligator-urban-legend" data-description="Sewer Alligator Urban Legend explains modern city legend that alligators live beneath streets after being abandoned as exotic pets through urban legends." data-category="Urban Legends">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:sewer-alligator-urban-legend:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Clown Statue Urban Legend: Babysitter, Unwanted Object, and the Figure in the Room</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Clown Statue Urban Legend: Babysitter, Unwanted Object, and the Figure in the Room" data-url="https://kyunolab.com/stories/clown-statue-urban-legend">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Clown Statue Urban Legend: Babysitter, Unwanted Object, and the Figure in the Room" data-url="https://kyunolab.com/stories/clown-statue-urban-legend" data-description="A calm guide to Clown Statue Urban Legend, its common versions, source limits, and the babysitter legend motif that makes babysitter legend in which a clown." data-category="Urban Legends">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:clown-statue-urban-legend:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Vanishing Hitchhiker Urban Legend: The Passenger Who Disappears Before Arrival</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Vanishing Hitchhiker Urban Legend: The Passenger Who Disappears Before Arrival" data-url="https://kyunolab.com/stories/vanishing-hitchhiker-urban-legend">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Vanishing Hitchhiker Urban Legend: The Passenger Who Disappears Before Arrival" data-url="https://kyunolab.com/stories/vanishing-hitchhiker-urban-legend" data-description="Vanishing Hitchhiker Urban Legend explores the origin, meaning, and folklore behind roadside legend of a driver who gives a stranger a ride, only to learn the." data-category="Urban Legends">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:vanishing-hitchhiker-urban-legend:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">Kidney Theft Urban Legend: Bathtub Ice, Travel Fear, and the Organ Theft Rumor</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="Kidney Theft Urban Legend: Bathtub Ice, Travel Fear, and the Organ Theft Rumor" data-url="https://kyunolab.com/stories/kidney-theft-urban-legend">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="Kidney Theft Urban Legend: Bathtub Ice, Travel Fear, and the Organ Theft Rumor" data-url="https://kyunolab.com/stories/kidney-theft-urban-legend" data-description="Kidney Theft Urban Legend explains modern rumor in which a traveler wakes in a bathtub of ice and discovers that a kidney has supposedly been stolen through." data-category="Urban Legends">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:kidney-theft-urban-legend:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Basement Gym Scanner Catalog Page Kept Outside the Sequence</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Basement Gym Scanner Catalog Page Kept Outside the Sequence" data-url="https://kyunolab.com/stories/the-basement-gym-scanner-catalog-page-kept-outside-the-sequence">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Basement Gym Scanner Catalog Page Kept Outside the Sequence" data-url="https://kyunolab.com/stories/the-basement-gym-scanner-catalog-page-kept-outside-the-sequence" data-description="The Basement Gym Scanner Catalog Page Kept Outside the Sequence explores the origin, meaning, and folklore behind the scene where a catalog page from basement." data-category="Urban Legends">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-basement-gym-scanner-catalog-page-kept-outside-the-sequence:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Taxi Stand Receipt Box Notebook That Adds One Entry Overnight</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Taxi Stand Receipt Box Notebook That Adds One Entry Overnight" data-url="https://kyunolab.com/stories/the-taxi-stand-receipt-box-notebook-that-adds-one-entry-overnight">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Taxi Stand Receipt Box Notebook That Adds One Entry Overnight" data-url="https://kyunolab.com/stories/the-taxi-stand-receipt-box-notebook-that-adds-one-entry-overnight" data-description="The Taxi Stand Receipt Box Notebook That Adds One Entry Overnight explores the origin, meaning, and folklore behind the image of a taxi stand receipt box." data-category="Urban Legends">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-taxi-stand-receipt-box-notebook-that-adds-one-entry-overnight:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The City Hall Annex File Request Slip Signed by No Reader</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The City Hall Annex File Request Slip Signed by No Reader" data-url="https://kyunolab.com/stories/the-city-hall-annex-file-request-slip-signed-by-no-reader">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The City Hall Annex File Request Slip Signed by No Reader" data-url="https://kyunolab.com/stories/the-city-hall-annex-file-request-slip-signed-by-no-reader" data-description="The City Hall Annex File Request Slip Signed by No Reader explains the image of a request slip at city hall annex file asks for a permit number assigned to a." data-category="Urban Legends">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-city-hall-annex-file-request-slip-signed-by-no-reader:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Hospital Visitor Desk Map Note Pointing to a Removed Door</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Hospital Visitor Desk Map Note Pointing to a Removed Door" data-url="https://kyunolab.com/stories/the-hospital-visitor-desk-map-note-pointing-to-a-removed-door">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Hospital Visitor Desk Map Note Pointing to a Removed Door" data-url="https://kyunolab.com/stories/the-hospital-visitor-desk-map-note-pointing-to-a-removed-door" data-description="A calm guide to The Hospital Visitor Desk Map Note Pointing to a Removed Door, its common versions, source limits, and the urban record legend motif that." data-category="Urban Legends">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-hospital-visitor-desk-map-note-pointing-to-a-removed-door:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Laundromat Counter Ledger Inventory Tag for an Object No One Stored</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Laundromat Counter Ledger Inventory Tag for an Object No One Stored" data-url="https://kyunolab.com/stories/the-laundromat-counter-ledger-inventory-tag-for-an-object-no-one-stored">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Laundromat Counter Ledger Inventory Tag for an Object No One Stored" data-url="https://kyunolab.com/stories/the-laundromat-counter-ledger-inventory-tag-for-an-object-no-one-stored" data-description="A calm guide to The Laundromat Counter Ledger Inventory Tag for an Object No One Stored, its common versions, source limits, and the urban record legend motif." data-category="Urban Legends">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-laundromat-counter-ledger-inventory-tag-for-an-object-no-one-stored:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Parking Kiosk Cabinet Audit Log From a Silent Hour</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Parking Kiosk Cabinet Audit Log From a Silent Hour" data-url="https://kyunolab.com/stories/the-parking-kiosk-cabinet-audit-log-from-a-silent-hour">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Parking Kiosk Cabinet Audit Log From a Silent Hour" data-url="https://kyunolab.com/stories/the-parking-kiosk-cabinet-audit-log-from-a-silent-hour" data-description="The Parking Kiosk Cabinet Audit Log From a Silent Hour explains the image of a parking kiosk cabinet audit log records a ticket for a level the garage does." data-category="Urban Legends">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-parking-kiosk-cabinet-audit-log-from-a-silent-hour:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The School Office File Receipt Book With a Future Stamp</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The School Office File Receipt Book With a Future Stamp" data-url="https://kyunolab.com/stories/the-school-office-file-receipt-book-with-a-future-stamp">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The School Office File Receipt Book With a Future Stamp" data-url="https://kyunolab.com/stories/the-school-office-file-receipt-book-with-a-future-stamp" data-description="The School Office File Receipt Book With a Future Stamp explores the origin, meaning, and folklore behind the image of a school office file receipt book." data-category="Urban Legends">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-school-office-file-receipt-book-with-a-future-stamp:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Diner Counter Book Index Card for an Unlisted Shelf</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Diner Counter Book Index Card for an Unlisted Shelf" data-url="https://kyunolab.com/stories/the-diner-counter-book-index-card-for-an-unlisted-shelf">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Diner Counter Book Index Card for an Unlisted Shelf" data-url="https://kyunolab.com/stories/the-diner-counter-book-index-card-for-an-unlisted-shelf" data-description="A calm guide to The Diner Counter Book Index Card for an Unlisted Shelf, its common versions, source limits, and the urban record legend motif that makes the." data-category="Urban Legends">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-diner-counter-book-index-card-for-an-unlisted-shelf:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Apartment Lobby Desk Ledger That Refuses the Final Number</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Apartment Lobby Desk Ledger That Refuses the Final Number" data-url="https://kyunolab.com/stories/the-apartment-lobby-desk-ledger-that-refuses-the-final-number">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Apartment Lobby Desk Ledger That Refuses the Final Number" data-url="https://kyunolab.com/stories/the-apartment-lobby-desk-ledger-that-refuses-the-final-number" data-description="A calm guide to The Apartment Lobby Desk Ledger That Refuses the Final Number, its common versions, source limits, and the urban record legend motif that." data-category="Urban Legends">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-apartment-lobby-desk-ledger-that-refuses-the-final-number:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Bus Depot Night Desk Register With a Line Written Too Early</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Bus Depot Night Desk Register With a Line Written Too Early" data-url="https://kyunolab.com/stories/the-bus-depot-night-desk-register-with-a-line-written-too-early">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Bus Depot Night Desk Register With a Line Written Too Early" data-url="https://kyunolab.com/stories/the-bus-depot-night-desk-register-with-a-line-written-too-early" data-description="The Bus Depot Night Desk Register With a Line Written Too Early explores the origin, meaning, and folklore behind the image of a bus depot night desk register." data-category="Urban Legends">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-bus-depot-night-desk-register-with-a-line-written-too-early:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Library Computer Log That Borrowed a Room Key</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Library Computer Log That Borrowed a Room Key" data-url="https://kyunolab.com/stories/the-library-computer-log-that-borrowed-a-room-key">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Library Computer Log That Borrowed a Room Key" data-url="https://kyunolab.com/stories/the-library-computer-log-that-borrowed-a-room-key" data-description="The Library Computer Log That Borrowed a Room Key explains the image of a library computer log records a room-key checkout made by a terminal with no user." data-category="Urban Legends">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-library-computer-log-that-borrowed-a-room-key:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Hospital Visitor Badge Printed for Tomorrow</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Hospital Visitor Badge Printed for Tomorrow" data-url="https://kyunolab.com/stories/the-hospital-visitor-badge-printed-for-tomorrow">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Hospital Visitor Badge Printed for Tomorrow" data-url="https://kyunolab.com/stories/the-hospital-visitor-badge-printed-for-tomorrow" data-description="The Hospital Visitor Badge Printed for Tomorrow explores the origin, meaning, and folklore behind the scene where a hospital visitor badge prints a date one." data-category="Urban Legends">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-hospital-visitor-badge-printed-for-tomorrow:naver"> Published</label>
+          </div>
+        </li>
+        <li class="publishing-record">
+          <span class="publishing-record-title">The Laundromat Lost-Sock Register With Matching Addresses</span>
+          <div class="publishing-record-actions">
+            <button class="button publishing-share" type="button" data-title="The Laundromat Lost-Sock Register With Matching Addresses" data-url="https://kyunolab.com/stories/the-laundromat-lost-sock-register-with-matching-addresses">Share</button>
+            <button class="button publishing-naver-copy" type="button" data-title="The Laundromat Lost-Sock Register With Matching Addresses" data-url="https://kyunolab.com/stories/the-laundromat-lost-sock-register-with-matching-addresses" data-description="The Laundromat Lost-Sock Register With Matching Addresses explains the image of a laundromat register for lost clothing begins matching socks to addresses no." data-category="Urban Legends">Naver Copy</button>
+            <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-laundromat-lost-sock-register-with-matching-addresses:naver"> Published</label>
+          </div>
+        </li>
+        </ul>
+        <nav class="publishing-pagination" aria-label="Urban Legends pagination">
+          <span aria-disabled="true">Previous</span>
+          <span aria-current="page">1</span><a href="/publishing-center/urban-legends/page-2/">2</a><a href="/publishing-center/urban-legends/page-3/">3</a><a href="/publishing-center/urban-legends/page-4/">4</a>
+          <a href="/publishing-center/urban-legends/page-2/">Next</a>
+        </nav>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <p><strong>Kyunolab Mystery Archive</strong> collects legends, folklore, mysteries, and strange tales with calm source-aware notes.</p>
+    <p><a href="/archive">Archive Index</a> - <a href="/newest">Newest</a> - <a href="/popular">Popular</a> - <a href="/categories">Categories</a> - <a href="/scripts/">Scripts</a> - <a href="/about">About</a> - <a href="/fiction-disclaimer">Story &amp; Source Notice</a> - <a href="/privacy">Privacy</a> - <a href="/rss.xml">RSS</a> - <a href="/publishing-center/">Publishing Center</a></p>
+  </footer>
+  <script defer src="/engagement.js?v=20260720-creator-part-visual-beats"></script>
+  <script defer src="/assets/publishing-center.js?v=20260720-creator-part-visual-beats"></script>
+</body>
+</html>

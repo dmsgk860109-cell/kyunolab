@@ -1,0 +1,5 @@
+name = "kyunolab"
+pages_build_output_dir = "./dist"
+
+# Pages Functions live in the repository-level functions/ directory.
+# Existing dashboard bindings, including INTERESTING_KV, are not guessed here.
