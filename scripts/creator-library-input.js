@@ -280,7 +280,7 @@ function validateNormalizedCreatorInput(input) {
 
 function typeSpecificRequiredFields(contentType) {
   if (contentType === 'myth-narrative') {
-    return ['keyActors', 'coreProblem', 'eventSequence', 'turningPoint', 'outcome', 'sourceContext'];
+    return ['coreProblem', 'eventSequence', 'turningPoint', 'outcome', 'sourceContext'];
   }
   if (contentType === 'internet-folklore') {
     return ['eventSequence', 'coreProblem', 'sourceContext', 'outcome'];

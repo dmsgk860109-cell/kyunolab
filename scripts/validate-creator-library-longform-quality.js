@@ -14,10 +14,13 @@ const {
   detectBrokenNarration,
   detectInternalNarrationMetadata
 } = require('./creator-library-longform');
+const {
+  loadCreatorValidationPacks
+} = require('./creator-library-validation-data');
 
 const root = path.resolve(__dirname, '..');
 const stories = readJson(path.join(root, 'data', 'stories.json'));
-const scripts = readJson(path.join(root, 'data', 'scripts.json'));
+const scripts = loadCreatorValidationPacks();
 const categories = readJson(path.join(root, 'data', 'categories.json'));
 
 const fixtureSlugs = [
@@ -291,7 +294,7 @@ function topRepeatedSentences(limit) {
 }
 
 function snapshotProtectedFiles() {
-  return new Map(protectedFiles.map((filePath) => [filePath, hashFile(filePath)]));
+  return new Map(protectedFiles.filter(fs.existsSync).map((filePath) => [filePath, hashFile(filePath)]));
 }
 
 function assertProtectedFilesUnchanged(beforeHashes) {

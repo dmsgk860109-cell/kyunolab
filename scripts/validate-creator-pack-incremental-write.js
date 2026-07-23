@@ -12,6 +12,9 @@ const {
   generateCreatorPackForSlug,
   generateCreatorPacksForSlugs
 } = require('./generate-creator-pack');
+const {
+  loadCreatorValidationPacks
+} = require('./creator-library-validation-data');
 
 const root = path.resolve(__dirname, '..');
 const failures = [];
@@ -19,7 +22,7 @@ const failures = [];
 function main() {
   const tempRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'kyunolab-creator-pack-incremental-'));
   try {
-    const samples = readJson(path.join(root, 'data', 'scripts.json')).slice(0, 3).map(clonePack);
+    const samples = loadCreatorValidationPacks().slice(0, 3).map(clonePack);
     testInitialWrites(tempRoot, samples);
     testUnchangedWrites(tempRoot, samples);
     testSingleUpdate(tempRoot, samples);

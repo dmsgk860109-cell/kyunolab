@@ -4,6 +4,9 @@ const {
   buildAndValidateCreatorLibraryEntry
 } = require('./creator-library-pipeline');
 const {
+  normalizeCreatorStoryInput
+} = require('./creator-library-input');
+const {
   listCreatorPackEntries,
   readCreatorPack,
   upsertCreatorPack,
@@ -33,6 +36,22 @@ function generateCreatorPackForSlug(slug, options = {}) {
     };
   }
   return upsertCreatorPack(pack, options);
+}
+
+function validateCreatorPackInputForSlug(slug, options = {}) {
+  const context = loadGenerationContext(options);
+  const resolved = resolveStoryForSlug(slug, context);
+  const normalizedInput = normalizeCreatorStoryInput(resolved.story, resolved.category);
+  return {
+    inputSlug: slug,
+    slug: `${resolved.story.slug}-youtube-script`,
+    originalStorySlug: resolved.story.slug,
+    story: resolved.story,
+    category: resolved.category,
+    normalizedInput,
+    missingRequiredFields: normalizedInput.missingRequiredFields || [],
+    valid: !(normalizedInput.missingRequiredFields || []).length
+  };
 }
 
 function generateCreatorPacksForSlugs(slugs, options = {}) {
@@ -102,7 +121,7 @@ function loadExistingCreatorPacks(options = {}) {
 
 function main() {
   const args = parseArgs(process.argv.slice(2));
-  if (!args.slug && !args.all) {
+  if (!args.slug && !args.all && !args.slugsFile) {
     printUsage();
     process.exit(1);
   }
@@ -116,9 +135,11 @@ function main() {
     failFast: args.failFast
   };
   const context = loadGenerationContext();
-  const slugs = args.all
-    ? context.stories.map((story) => story.slug)
-    : [args.slug];
+  const slugs = args.slugsFile
+    ? readSlugFile(args.slugsFile)
+    : args.all
+      ? context.stories.map((story) => story.slug)
+      : [args.slug];
   const report = generateCreatorPacksForSlugs(slugs, { ...options, ...context });
   console.log(JSON.stringify({
     total: report.total,
@@ -141,6 +162,7 @@ function parseArgs(argv) {
     const arg = argv[index];
     if (arg === '--slug') args.slug = argv[++index];
     else if (arg === '--all') args.all = true;
+    else if (arg === '--slugs-file') args.slugsFile = argv[++index];
     else if (arg === '--output-root') args.outputRoot = argv[++index];
     else if (arg === '--apply') args.apply = true;
     else if (arg === '--dry-run') args.dryRun = true;
@@ -152,7 +174,15 @@ function parseArgs(argv) {
 function printUsage() {
   console.log('Usage: node scripts/generate-creator-pack.js --slug <archive-or-pack-slug> --output-root <path>');
   console.log('       node scripts/generate-creator-pack.js --all --output-root <path>');
+  console.log('       node scripts/generate-creator-pack.js --slugs-file <json-or-text-file> --output-root <path>');
   console.log('       node scripts/generate-creator-pack.js --slug <archive-or-pack-slug> --apply');
+}
+
+function readSlugFile(filePath) {
+  const text = fs.readFileSync(path.resolve(filePath), 'utf8').trim();
+  if (!text) return [];
+  if (text.startsWith('[')) return JSON.parse(text).map((slug) => String(slug).trim()).filter(Boolean);
+  return text.split(/\r?\n/).map((slug) => slug.trim()).filter(Boolean);
 }
 
 function readJson(filePath) {
@@ -164,5 +194,7 @@ if (require.main === module) main();
 module.exports = {
   generateCreatorPackForSlug,
   generateCreatorPacksForSlugs,
+  validateCreatorPackInputForSlug,
+  loadGenerationContext,
   resolveStoryForSlug
 };

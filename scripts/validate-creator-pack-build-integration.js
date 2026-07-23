@@ -9,6 +9,9 @@ const {
   listCreatorPackEntries,
   readCreatorPackManifest
 } = require('./creator-library-store');
+const {
+  legacyScriptsFileExists
+} = require('./creator-library-validation-data');
 
 const root = path.resolve(__dirname, '..');
 const representativeSlugs = [
@@ -30,12 +33,16 @@ function main() {
   const failures = [];
 
   try {
-    const legacyReport = migrateCreatorPacksToFiles({
-      source: path.join(root, 'data', 'scripts.json'),
-      outputRoot: legacyStore
-    });
-    assert(failures, 'legacy-conversion', legacyReport.total === 371, `expected 371 legacy packs, got ${legacyReport.total}`);
-    assert(failures, 'legacy-conversion', legacyReport.manifestEntries === 371, `expected 371 manifest entries, got ${legacyReport.manifestEntries}`);
+    const legacyReport = legacyScriptsFileExists()
+      ? migrateCreatorPacksToFiles({
+        source: path.join(root, 'data', 'scripts.json'),
+        outputRoot: legacyStore
+      })
+      : { total: 0, manifestEntries: 0, skipped: true };
+    if (!legacyReport.skipped) {
+      assert(failures, 'legacy-conversion', legacyReport.total === 371, `expected 371 legacy packs, got ${legacyReport.total}`);
+      assert(failures, 'legacy-conversion', legacyReport.manifestEntries === 371, `expected 371 manifest entries, got ${legacyReport.manifestEntries}`);
+    }
 
     const generatedReport = generateCreatorPacksForSlugs(representativeSlugs, { root: generatedStore, failFast: true });
     assert(failures, 'generated-store', generatedReport.failed === 0, `generated store failures: ${generatedReport.failed}`);
@@ -58,6 +65,7 @@ function main() {
     console.log('Creator Pack build integration validation passed.');
     console.log(JSON.stringify({
       legacyPacks: legacyReport.total,
+      legacyConversionSkipped: Boolean(legacyReport.skipped),
       generatedPacks: generatedReport.total,
       detailHtmlChecked: representativeSlugs.length,
       scriptsJsonReads: stats.scriptsJsonReads,
@@ -181,11 +189,12 @@ function validateSourceBoundaries(failures) {
   ];
   for (const relativePath of productionFiles) {
     const source = fs.readFileSync(path.join(root, relativePath), 'utf8');
-    if (relativePath !== 'scripts/build-cloudflare-pages-dist.js' && relativePath !== 'scripts/verify-cloudflare-pages-dist.js') {
+    const distUtility = relativePath === 'scripts/build-cloudflare-pages-dist.js' || relativePath === 'scripts/verify-cloudflare-pages-dist.js';
+    if (!distUtility) {
       assert(failures, 'source-boundary', !source.includes('data/scripts.json'), `${relativePath} references data/scripts.json`);
       assert(failures, 'source-boundary', !/scripts\.json\s*fallback|legacyScripts|readLegacyScripts/i.test(source), `${relativePath} contains legacy fallback wording`);
+      assert(failures, 'source-boundary', !/all-packs\.json|scripts-v2\.json|creator-packs\.json/.test(source), `${relativePath} references combined Creator Pack JSON`);
     }
-    assert(failures, 'source-boundary', !/all-packs\.json|scripts-v2\.json|creator-packs\.json/.test(source), `${relativePath} references combined Creator Pack JSON`);
   }
 }
 

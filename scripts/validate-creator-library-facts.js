@@ -14,10 +14,13 @@ const {
   buildCreatorScenePlan,
   validateCreatorScenePlan
 } = require('./creator-library-scene-plan');
+const {
+  loadCreatorValidationPacks
+} = require('./creator-library-validation-data');
 
 const root = path.resolve(__dirname, '..');
 const stories = readJson(path.join(root, 'data', 'stories.json'));
-const scripts = readJson(path.join(root, 'data', 'scripts.json'));
+const scripts = loadCreatorValidationPacks();
 const categories = readJson(path.join(root, 'data', 'categories.json'));
 
 const fixtureSlugs = [

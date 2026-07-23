@@ -25,13 +25,16 @@ const {
   validateShortformNarrationScene,
   validateShortformSceneFocus
 } = require('./creator-library-shortform');
+const {
+  loadCreatorValidationPacks
+} = require('./creator-library-validation-data');
 
 const root = path.resolve(__dirname, '..');
 const storiesPath = path.join(root, 'data', 'stories.json');
 const scriptsPath = path.join(root, 'data', 'scripts.json');
 const categoriesPath = path.join(root, 'data', 'categories.json');
 const stories = readJson(storiesPath);
-const scripts = readJson(scriptsPath);
+const scripts = loadCreatorValidationPacks();
 const categories = readJson(categoriesPath);
 
 const fixtureSlugs = [

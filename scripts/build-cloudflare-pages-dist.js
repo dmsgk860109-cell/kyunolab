@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
-const DIST = path.join(ROOT, 'dist');
+const DIST = resolveDistRoot(process.argv.slice(2));
 const MAX_ASSET_BYTES = 25 * 1024 * 1024;
 
 const ROOT_FILES = [
@@ -64,8 +64,15 @@ const DATA_FILES = [
 
 const FORBIDDEN_DIST_PATHS = [
   'data/scripts.json',
+  'data/scripts-v2.json',
+  'data/all-packs.json',
+  'data/creator-packs.json',
+  'data/creator-packs',
   'data/stories.json',
   'data/categories.json',
+  'scripts-v2.json',
+  'all-packs.json',
+  'creator-packs.json',
   'functions',
   'node_modules',
   'docs',
@@ -89,6 +96,12 @@ function resetDist() {
   }
   fs.rmSync(DIST, { recursive: true, force: true });
   fs.mkdirSync(DIST, { recursive: true });
+}
+
+function resolveDistRoot(argv) {
+  const distIndex = argv.indexOf('--dist');
+  const value = distIndex >= 0 ? argv[distIndex + 1] : '';
+  return path.resolve(ROOT, value || 'dist');
 }
 
 function copyRootFiles() {
