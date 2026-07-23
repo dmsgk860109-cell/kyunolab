@@ -208,7 +208,7 @@ function selectRequiredEntities(normalizedInput, sceneRule) {
 
 function splitFactsForParts(sourceFacts, sceneRule) {
   if (sourceFacts.length >= 2) return [[sourceFacts[0]], [sourceFacts[1], sourceFacts[2]].filter(Boolean)];
-  if (sourceFacts.length === 1) return [[sourceFacts[0]], [sourceFacts[0], sceneRule.purpose]];
+  if (sourceFacts.length === 1) return [[sourceFacts[0]], [sourceFacts[0]]];
   return [[], []];
 }
 

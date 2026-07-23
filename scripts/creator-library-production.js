@@ -8,6 +8,23 @@ const {
 const PRODUCTION_SCHEMA_VERSION = '1.0';
 const SCENE_COUNT = 5;
 const PARTS_PER_SCENE = 2;
+const INTERNAL_METADATA_PATTERNS = [
+  /establish the point/i,
+  /develop the point/i,
+  /close the point/i,
+  /preserve the point/i,
+  /defining event/i,
+  /core sequence/i,
+  /turning point and consequence/i,
+  /variants and source context/i,
+  /outcome and meaning/i,
+  /needs this part to preserve/i,
+  /keep the visual work centered/i,
+  /confirmed story material/i,
+  /part purpose/i,
+  /source facts/i,
+  /scene plan/i
+];
 
 const CONTENT_TYPE_PROFILES = {
   'myth-narrative': {
@@ -62,9 +79,10 @@ function buildCreatorProductionFields(normalizedInput, scenePlan, longformResult
   ];
   const scenes = (scenePlan.scenes || []).map((scene, sceneIndex) => {
     const longformScene = (longformResult.scenes || [])[sceneIndex] || {};
+    const productionScene = publicSceneContextFromScene(scene);
     const sceneContext = {
       normalizedInput,
-      scene,
+      scene: productionScene,
       longformScene,
       productionProfile
     };
@@ -79,7 +97,7 @@ function buildCreatorProductionFields(normalizedInput, scenePlan, longformResult
         const narrationPart = (longformScene.narrationParts || [])[partIndex] || {};
         const partContext = {
           ...sceneContext,
-          partPlan,
+          partPlan: publicPartContextFromPlan(partPlan),
           narrationPart
         };
         return {
@@ -137,6 +155,9 @@ function validateCreatorProductionFields(result, scenePlan, longformResult) {
     for (const field of ['role', 'sceneFocus', 'backgroundMusic', 'voiceDirection', 'soundEffect']) {
       if (!sanitizeProductionText(scene[field])) errors.push(detailError(result, sceneNumber, 0, 0, field, `${field} is required.`));
     }
+    if (containsInternalProductionMetadata(scene.sceneFocus)) {
+      errors.push(detailError(result, sceneNumber, 0, 0, 'sceneFocus', 'Scene Focus contains internal Scene Plan metadata.'));
+    }
     if (containsFieldMixing(scene.backgroundMusic, ['sound effect', 'voice direction', 'camera'])) {
       errors.push(detailError(result, sceneNumber, 0, 0, 'backgroundMusic', 'Background Music contains another production field.'));
     }
@@ -162,6 +183,9 @@ function validateCreatorProductionFields(result, scenePlan, longformResult) {
       const expectedPart = expectedLongformScene.narrationParts?.[partIndex] || {};
       if (part.partIndex !== partNumber) errors.push(detailError(result, sceneNumber, partNumber, 0, 'partIndex', 'Part index is invalid.'));
       if (!sanitizeProductionText(part.creatorNote)) errors.push(detailError(result, sceneNumber, partNumber, 0, 'creatorNote', 'Creator Note is required.'));
+      if (containsInternalProductionMetadata(part.creatorNote)) {
+        errors.push(detailError(result, sceneNumber, partNumber, 0, 'creatorNote', 'Creator Note contains internal Scene Plan metadata.'));
+      }
       if (part.creatorNote && exactTextKey(part.creatorNote) === exactTextKey(expectedPart.narration)) {
         errors.push(detailError(result, sceneNumber, partNumber, 0, 'creatorNote', 'Creator Note copies the Narration.'));
       }
@@ -178,6 +202,12 @@ function validateCreatorProductionFields(result, scenePlan, longformResult) {
         if (beat.beatIndex !== beatNumber) errors.push(detailError(result, sceneNumber, partNumber, beatNumber, 'beatIndex', 'Beat index is invalid.'));
         if (!sanitizeProductionText(beat.imagePrompt)) errors.push(detailError(result, sceneNumber, partNumber, beatNumber, 'imagePrompt', 'Image Prompt is required.'));
         if (!sanitizeProductionText(beat.beatMotion)) errors.push(detailError(result, sceneNumber, partNumber, beatNumber, 'beatMotion', 'Beat Motion is required.'));
+        if (containsInternalProductionMetadata(beat.imagePrompt)) {
+          errors.push(detailError(result, sceneNumber, partNumber, beatNumber, 'imagePrompt', 'Image Prompt contains internal Scene Plan metadata.'));
+        }
+        if (containsInternalProductionMetadata(beat.beatMotion)) {
+          errors.push(detailError(result, sceneNumber, partNumber, beatNumber, 'beatMotion', 'Beat Motion contains internal Scene Plan metadata.'));
+        }
         if (!Array.isArray(beat.sourceFieldRefs)) errors.push(detailError(result, sceneNumber, partNumber, beatNumber, 'sourceFieldRefs', 'sourceFieldRefs must be an array.'));
         if (containsBrokenPromptText(beat.imagePrompt)) errors.push(detailError(result, sceneNumber, partNumber, beatNumber, 'imagePrompt', 'Image Prompt contains broken text.'));
         if (containsFieldMixing(beat.imagePrompt, ['sound effect', 'voice direction', 'beat motion', 'motion prompt'])) {
@@ -202,9 +232,9 @@ function validateCreatorProductionFields(result, scenePlan, longformResult) {
 
 function buildCreatorNoteForPart(context) {
   const { normalizedInput, scene, partPlan, narrationPart } = context;
-  const topic = safeTerm(normalizedInput.topic);
-  const purpose = safeTerm(partPlan.purpose || scene.purpose);
-  const fact = selectBestFact(partPlan.sourceFacts, scene.sourceFacts, normalizedInput.coreProblem);
+  const fact = selectPublicFact(partPlan.sourceFacts, scene.sourceFacts, normalizedInput.coreProblem, normalizedInput.topic);
+  const passageLabel = Number(partPlan.partIndex || 1) === 1 ? 'opening passage' : 'follow-up passage';
+  const sequenceLabel = sequenceLabelForScene(scene.sceneIndex);
   const guidance = [
     ...(scene.variantGuidance || []),
     ...(scene.sourceGuidance || []),
@@ -212,8 +242,8 @@ function buildCreatorNoteForPart(context) {
   ].map(safeTerm).filter(Boolean)[0];
   const caution = noteCautionForPart(context, narrationPart.narration);
   const lines = [
-    `${topic} needs this part to preserve ${purpose.toLowerCase()} through the fact that ${lowercaseStart(fact)}.`,
-    guidance ? `Keep the source layer close: ${lowercaseStart(guidance)}.` : caution,
+    `For the ${sequenceLabel} ${passageLabel}, keep the narration anchored in ${lowercaseStart(fact)}.`,
+    guidance ? `Keep the source layer clear: ${lowercaseStart(guidance)}.` : caution,
     guidance ? caution : ''
   ].filter(Boolean);
   return sanitizeProductionText(lines.slice(0, 3).join(' '));
@@ -247,17 +277,19 @@ function buildVisualBeatsForPart(context) {
 function buildImagePromptForBeat(context) {
   const { normalizedInput, productionProfile, scene, partPlan, beatIndex, beatSubject, beatFact } = context;
   const subject = safePromptValue(beatSubject || normalizedInput.topic);
-  const actionOrState = safePromptValue(actionStateFromFact(beatFact, scene.role));
+  const actionOrState = safePromptValue(actionStateFromFact(beatFact, subject));
   const setting = safePromptValue(selectSetting(productionProfile, scene, beatFact));
   const composition = compositionForBeat(scene, partPlan, beatIndex);
   const lighting = lightingForScene(scene, productionProfile);
   const atmosphere = safePromptValue(selectAtmosphere(productionProfile, scene));
   const culture = safePromptValue(productionProfile.culturalContext[0] || normalizedInput.categoryName || productionProfile.profileType);
-  const purpose = safePromptValue(partPlan.purpose || scene.purpose);
+  const visualPhase = visualPhaseForBeat(partPlan, beatIndex);
+  const sequenceLabel = sequenceLabelForScene(scene.sceneIndex);
   const exclusions = exclusionsForProfile(productionProfile);
   return sanitizeProductionText([
     `A ${productionProfile.visualTone} image shows ${subject} ${actionOrState} in ${setting}.`,
-    `Frame it as ${composition}, emphasizing ${purpose}, with ${lighting}, ${atmosphere}, and cultural context from ${culture}.`,
+    `Frame it as ${composition}, with ${lighting}, ${atmosphere}, and cultural context from ${culture}.`,
+    `The image should read as ${visualPhase} in the ${sequenceLabel}.`,
     exclusions
   ].filter(Boolean).join(' '));
 }
@@ -265,16 +297,19 @@ function buildImagePromptForBeat(context) {
 function buildBeatMotionForBeat(context) {
   const { scene, partPlan, beatIndex, beatSubject, beatFact, productionProfile } = context;
   const subject = safePromptValue(beatSubject || context.normalizedInput.topic);
-  const visualTarget = safePromptValue(truncateWords([partPlan.purpose, beatFact].filter(Boolean).join(' '), 14));
+  const visualTarget = safePromptValue(truncateWords(selectMotionTarget(beatFact, beatSubject, subject), 14));
+  const motionPhase = motionPhaseForBeat(partPlan, beatIndex);
+  const sequenceLabel = sequenceLabelForScene(scene.sceneIndex);
   const movements = [
-    `Animate the still image with a slow push toward ${subject}, keeping ${visualTarget} as the visual anchor.`,
-    `Use a gentle lateral pan across the frame, letting ${visualTarget} guide the shift between foreground and background.`,
-    `Begin with a static hold, then make a subtle pullback that reveals ${visualTarget} inside the wider setting.`
+    `Animate the still image with a slow push toward ${subject}, keeping ${visualTarget} as the ${sequenceLabel} ${motionPhase} visual anchor.`,
+    `Use a gentle lateral pan across the frame, letting ${visualTarget} guide the ${sequenceLabel} ${motionPhase} shift between foreground and background.`,
+    `Begin with a static hold, then make a subtle pullback that reveals ${visualTarget} as the ${sequenceLabel} ${motionPhase} detail inside the wider setting.`
   ];
   const movementIndex = (beatIndex + Number(partPlan.partIndex || 1) - 1) % movements.length;
-  const ending = /source|variant|evidence|account|trace/i.test(scene.role)
-    ? 'Keep the movement quiet so the source material remains careful and non-dramatic.'
-    : /meaning|closing|legacy|unresolved/i.test(scene.role)
+  const role = sceneRoleText(scene);
+  const ending = /source|variant|evidence|account|trace/i.test(role)
+    ? 'Keep the movement quiet and non-dramatic.'
+    : /meaning|closing|legacy|unresolved/i.test(role)
       ? 'Let the final movement settle softly without adding new action.'
       : `Use only light shifts that match the ${productionProfile.profileType} tone.`;
   return sanitizeProductionText(`${movements[movementIndex]} ${ending}`);
@@ -282,7 +317,7 @@ function buildBeatMotionForBeat(context) {
 
 function buildBackgroundMusicForScene(context) {
   const { scene, productionProfile } = context;
-  const role = String(scene.role || '').toLowerCase();
+  const role = sceneRoleText(scene);
   const core = productionProfile.musicCore;
   const lead = /defining|familiar|identity|initial|what, when|hook|claim/.test(role)
     ? 'quiet opening pulse'
@@ -300,7 +335,7 @@ function buildBackgroundMusicForScene(context) {
 function buildVoiceDirectionForScene(context) {
   const narration = (context.longformScene.narrationParts || []).map((part) => part.narration).join(' ');
   const emphasis = selectEmphasisTerm(context, narration);
-  const role = String(context.scene.role || '').toLowerCase();
+  const role = sceneRoleText(context.scene);
   const pace = /source|variant|evidence|account|comparison/.test(role)
     ? 'careful pace'
     : /closing|meaning|legacy|unresolved|outcome/.test(role)
@@ -342,7 +377,9 @@ function buildProductionProfile(normalizedInput) {
     ].map(safeTerm).filter(Boolean)).slice(0, 10),
     allowedSettings: uniqueText([
       ...(normalizedInput.setting || []),
-      ...(normalizedInput.sourceContext || [])
+      ...(normalizedInput.sourceContext || []),
+      normalizedInput.categoryName,
+      'quiet archival setting'
     ].map(safeTerm).filter(Boolean)).slice(0, 8),
     allowedObjects: uniqueText([
       ...(normalizedInput.visualVocabulary || []),
@@ -396,8 +433,14 @@ function sanitizeProductionText(value) {
 }
 
 function buildSceneFocusForScene(context) {
-  const fact = selectBestFact(context.scene.sourceFacts, context.normalizedInput.coreProblem, [context.scene.purpose]);
-  return sanitizeProductionText(`${context.scene.role}: keep the visual work centered on ${lowercaseStart(fact)}.`);
+  const fact = selectPublicFact(
+    context.scene.requiredEvents,
+    context.scene.requiredEntities,
+    context.scene.sourceFacts,
+    context.normalizedInput.coreProblem,
+    context.normalizedInput.topic
+  );
+  return sanitizeProductionText(`The central visual should show ${lowercaseStart(fact)}.`);
 }
 
 function noteCautionForPart(context, narration) {
@@ -417,6 +460,16 @@ function selectBestFact(...groups) {
     || 'the confirmed story material';
 }
 
+function selectPublicFact(...groups) {
+  return groups.flat()
+    .map(safeTerm)
+    .filter(Boolean)
+    .filter((item) => !containsInternalProductionMetadata(item))
+    .find((item) => item.length >= 12)
+    || groups.flat().map(safeTerm).filter(Boolean).find((item) => !containsInternalProductionMetadata(item))
+    || 'the central subject';
+}
+
 function selectBeatSubject(context, visualFacts, beatIndex) {
   const entities = [
     ...(context.scene.requiredEntities || []),
@@ -426,9 +479,9 @@ function selectBeatSubject(context, visualFacts, beatIndex) {
   return entities[beatIndex % Math.max(1, entities.length)] || visualFacts[beatIndex] || context.normalizedInput.topic;
 }
 
-function actionStateFromFact(fact, role) {
+function actionStateFromFact(fact, fallbackSubject) {
   const clean = safeTerm(fact);
-  if (!clean) return `connected to ${safeTerm(role).toLowerCase()}`;
+  if (!clean || containsInternalProductionMetadata(clean)) return `present as ${lowercaseStart(fallbackSubject)}`;
   const short = truncateWords(clean, 18).replace(/[.!?]+$/, '');
   return `connected to ${lowercaseStart(short)}`;
 }
@@ -441,7 +494,7 @@ function selectSetting(profile, scene, fact) {
 }
 
 function compositionForBeat(scene, partPlan, beatIndex) {
-  const role = String(scene.role || '').toLowerCase();
+  const role = sceneRoleText(scene);
   const isDevelopingPart = Number(partPlan.partIndex || 1) > 1;
   if (/source|variant|evidence|account|comparison|trace/.test(role)) {
     if (isDevelopingPart) return beatIndex === 0 ? 'a medium frame that separates the main subject from supporting evidence' : 'a close archival detail with the source boundary visible';
@@ -458,7 +511,7 @@ function compositionForBeat(scene, partPlan, beatIndex) {
 }
 
 function lightingForScene(scene, profile) {
-  const role = String(scene.role || '').toLowerCase();
+  const role = sceneRoleText(scene);
   if (/source|variant|evidence|account|comparison|trace/.test(role)) return 'soft archival light';
   if (/turning|incident|problem|consequence|core/.test(role)) return 'low directional light with restrained contrast';
   if (/closing|meaning|legacy|unresolved|outcome/.test(role)) return 'subdued fading light';
@@ -467,10 +520,38 @@ function lightingForScene(scene, profile) {
 }
 
 function selectAtmosphere(profile, scene) {
-  const role = String(scene.role || '').toLowerCase();
+  const role = sceneRoleText(scene);
   if (/source|variant|evidence|account|comparison|trace/.test(role)) return 'careful documentary restraint';
   if (/closing|meaning|legacy|unresolved|outcome/.test(role)) return 'quiet reflective tension';
   return profile.allowedAtmosphere[0] || 'restrained mystery atmosphere';
+}
+
+function visualPhaseForBeat(partPlan, beatIndex) {
+  const passage = Number(partPlan.partIndex || 1) === 1 ? 'an opening visual' : 'a follow-up visual';
+  if (beatIndex === 0) return `${passage} with one clear focal point`;
+  if (beatIndex === 1) return `${passage} that adds a second visual detail`;
+  return `${passage} that widens the frame without adding new story elements`;
+}
+
+function motionPhaseForBeat(partPlan, beatIndex) {
+  const passage = Number(partPlan.partIndex || 1) === 1 ? 'opening' : 'follow-up';
+  if (beatIndex === 0) return `${passage} focal`;
+  if (beatIndex === 1) return `${passage} detail`;
+  return `${passage} wider`;
+}
+
+function sequenceLabelForScene(sceneIndex) {
+  const labels = ['first sequence', 'second sequence', 'middle sequence', 'fourth sequence', 'final sequence'];
+  return labels[Math.max(0, Math.min(labels.length - 1, Number(sceneIndex || 1) - 1))];
+}
+
+function selectMotionTarget(...values) {
+  return values
+    .map(safeTerm)
+    .filter(Boolean)
+    .find((value) => !containsFieldMixing(value, ['sound effect', 'music', 'voice direction', 'narration']))
+    || values.map(safeTerm).filter(Boolean)[0]
+    || 'the central subject';
 }
 
 function exclusionsForProfile(profile) {
@@ -539,6 +620,44 @@ function containsBrokenPromptText(value) {
 
 function containsBrokenMotionText(value) {
   return /(?:slow slow|restrained restrained|focuses on the story|keep the subject readable|viewer should|appears clearly in the frame)/i.test(String(value || ''));
+}
+
+function containsInternalProductionMetadata(value) {
+  return INTERNAL_METADATA_PATTERNS.some((pattern) => pattern.test(String(value || '')));
+}
+
+function publicSceneContextFromScene(scene) {
+  return {
+    sceneIndex: scene.sceneIndex,
+    sceneRoleCode: roleCodeFromRole(scene.role),
+    sourceFacts: [...(scene.sourceFacts || [])],
+    sourceFieldRefs: [...(scene.sourceFieldRefs || [])],
+    requiredEntities: [...(scene.requiredEntities || [])],
+    requiredEvents: [...(scene.requiredEvents || [])],
+    variantGuidance: [...(scene.variantGuidance || [])],
+    sourceGuidance: [...(scene.sourceGuidance || [])],
+    meaningGuidance: [...(scene.meaningGuidance || [])]
+  };
+}
+
+function publicPartContextFromPlan(partPlan) {
+  return {
+    partIndex: partPlan.partIndex,
+    sourceFacts: [...(partPlan.sourceFacts || [])],
+    sourceFieldRefs: [...(partPlan.sourceFieldRefs || [])],
+    targetWords: partPlan.targetWords
+  };
+}
+
+function sceneRoleText(scene) {
+  return String(scene?.sceneRoleCode || '').toLowerCase();
+}
+
+function roleCodeFromRole(role) {
+  return String(role || '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
 }
 
 function isGenericCreatorNote(value) {
@@ -639,5 +758,6 @@ module.exports = {
   buildSoundEffectForScene,
   buildProductionProfile,
   validateProductionProfile,
-  sanitizeProductionText
+  sanitizeProductionText,
+  containsInternalProductionMetadata
 };
