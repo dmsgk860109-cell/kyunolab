@@ -1,3 +1,9 @@
+const {
+  buildCreatorFactRecords,
+  deriveCompatibilityFields,
+  validateCreatorFactRecords
+} = require('./creator-library-facts');
+
 const SUPPORTED_CONTENT_TYPES = new Set([
   'myth-narrative',
   'folklore-legend',
@@ -71,9 +77,7 @@ function normalizeCreatorStoryInput(story = {}, category = {}) {
   const missingRequiredFields = [];
   const brief = objectValue(story.storyBrief);
   const dna = objectValue(story.contentDNA);
-  const articlePlan = objectValue(story.publicArticlePlan);
-
-  const input = {
+  const base = {
     schemaVersion: '1.0',
     slug: firstString([
       sourceValue(story.slug, 'story.slug', sourceFieldMap, 'slug')
@@ -90,8 +94,31 @@ function normalizeCreatorStoryInput(story = {}, category = {}) {
       sourceValue(category.title, 'category.title', sourceFieldMap, 'categoryName'),
       sourceValue(category.name, 'category.name', sourceFieldMap, 'categoryName'),
       sourceValue(brief.category, 'storyBrief.category', sourceFieldMap, 'categoryName')
-    ], warnings),
-    contentType: '',
+    ], warnings)
+  };
+
+  base.contentType = classifyCreatorContentType({ story, category, input: base });
+  markSource(sourceFieldMap, 'contentType', classificationSource(story, category, base.contentType));
+
+  const factStats = {};
+  const factRecords = buildCreatorFactRecords(story, category, {
+    contentType: base.contentType,
+    topic: base.topic,
+    stats: factStats
+  });
+  const compatibility = deriveCompatibilityFields(factRecords);
+  for (const [field, factTypes] of Object.entries(compatibilitySourceTypes())) {
+    for (const sourceRef of factRecords
+      .filter((record) => factTypes.includes(record.factType))
+      .flatMap((record) => record.sourceRefs || [])) {
+      markSource(sourceFieldMap, field, sourceRef);
+    }
+  }
+
+  const input = {
+    ...base,
+    contentType: base.contentType,
+    factRecords,
     knownNames: collectArray([
       sourceValue(brief.knownNames, 'storyBrief.knownNames', sourceFieldMap, 'knownNames'),
       sourceValue(story.subjectSpecificVocabulary, 'story.subjectSpecificVocabulary', sourceFieldMap, 'knownNames')
@@ -105,45 +132,17 @@ function normalizeCreatorStoryInput(story = {}, category = {}) {
       sourceValue(brief.setting, 'storyBrief.setting', sourceFieldMap, 'setting'),
       sourceValue(brief.cultureOrContext, 'storyBrief.cultureOrContext', sourceFieldMap, 'setting'),
       sourceValue(story.setting, 'story.setting', sourceFieldMap, 'setting'),
-      sourceValue(story.sceneAnchor, 'story.sceneAnchor', sourceFieldMap, 'setting')
+      sourceValue(story.sceneAnchor, 'story.sceneAnchor', sourceFieldMap, 'setting'),
+      sourceValue(compatibility.visualVocabulary.filter((item) => /place|region|culture|tradition|urban|internet|myth|legend|archive|road|room|temple|sea|island|forest|town|meeting|digital/i.test(item)), 'factRecords.settingTerms', sourceFieldMap, 'setting')
     ], warnings),
-    coreProblem: collectArray([
-      sourceValue(brief.coreProblem, 'storyBrief.coreProblem', sourceFieldMap, 'coreProblem'),
-      sourceValue(dna.centralMotif, 'contentDNA.centralMotif', sourceFieldMap, 'coreProblem'),
-      sourceValue(story.primaryTag, 'story.primaryTag', sourceFieldMap, 'coreProblem'),
-      sourceValue(story.summaryAnswer, 'story.summaryAnswer', sourceFieldMap, 'coreProblem')
-    ], warnings),
-    eventSequence: collectEventSequence(story, brief, articlePlan, sourceFieldMap, warnings),
-    turningPoint: collectArray([
-      sourceValue(brief.turningPoint, 'storyBrief.turningPoint', sourceFieldMap, 'turningPoint'),
-      sourceValue(dna.turningPoint, 'contentDNA.turningPoint', sourceFieldMap, 'turningPoint'),
-      sourceValue(story.detail, 'story.detail', sourceFieldMap, 'turningPoint')
-    ], warnings),
-    outcome: collectArray([
-      sourceValue(brief.outcome, 'storyBrief.outcome', sourceFieldMap, 'outcome'),
-      sourceValue(dna.outcome, 'contentDNA.outcome', sourceFieldMap, 'outcome'),
-      sourceValue(story.summaryAnswer, 'story.summaryAnswer', sourceFieldMap, 'outcome'),
-      sourceValue(story.excerpt, 'story.excerpt', sourceFieldMap, 'outcome')
-    ], warnings),
-    reportedVariants: collectVariants(brief, sourceFieldMap, warnings),
-    sourceContext: collectArray([
-      sourceValue(brief.cultureOrContext, 'storyBrief.cultureOrContext', sourceFieldMap, 'sourceContext'),
-      sourceValue(story.publicSourceBasis, 'story.publicSourceBasis', sourceFieldMap, 'sourceContext'),
-      sourceValue(story.publicSourceNoteSeed, 'story.publicSourceNoteSeed', sourceFieldMap, 'sourceContext'),
-      sourceValue(articlePlan.publicSourceNote, 'publicArticlePlan.publicSourceNote', sourceFieldMap, 'sourceContext')
-    ], warnings),
-    meaningOptions: collectArray([
-      sourceValue(brief.editorialInterpretationOptions, 'storyBrief.editorialInterpretationOptions', sourceFieldMap, 'meaningOptions'),
-      sourceValue(dna.interpretiveAngles, 'contentDNA.interpretiveAngles', sourceFieldMap, 'meaningOptions'),
-      sourceValue(story.uniqueAngle, 'story.uniqueAngle', sourceFieldMap, 'meaningOptions')
-    ], warnings),
-    visualVocabulary: collectArray([
-      sourceValue(story.subjectSpecificVocabulary, 'story.subjectSpecificVocabulary', sourceFieldMap, 'visualVocabulary'),
-      sourceValue(dna.requiredSpecificDetails, 'contentDNA.requiredSpecificDetails', sourceFieldMap, 'visualVocabulary'),
-      sourceValue(dna.subjectSpecificVocabulary, 'contentDNA.subjectSpecificVocabulary', sourceFieldMap, 'visualVocabulary'),
-      sourceValue(story.sceneAnchor, 'story.sceneAnchor', sourceFieldMap, 'visualVocabulary'),
-      sourceValue(story.detail, 'story.detail', sourceFieldMap, 'visualVocabulary')
-    ], warnings),
+    coreProblem: compatibility.coreProblem,
+    eventSequence: compatibility.eventSequence,
+    turningPoint: compatibility.turningPoint,
+    outcome: compatibility.outcome,
+    reportedVariants: compatibility.reportedVariants,
+    sourceContext: compatibility.sourceContext,
+    meaningOptions: compatibility.meaningOptions,
+    visualVocabulary: compatibility.visualVocabulary,
     forbiddenInventions: collectArray([
       sourceValue(brief.prohibitedInventions, 'storyBrief.prohibitedInventions', sourceFieldMap, 'forbiddenInventions'),
       sourceValue(story.prohibitedInventions, 'story.prohibitedInventions', sourceFieldMap, 'forbiddenInventions'),
@@ -156,8 +155,9 @@ function normalizeCreatorStoryInput(story = {}, category = {}) {
     warnings
   };
 
-  input.contentType = classifyCreatorContentType({ story, category, input });
-  markSource(sourceFieldMap, 'contentType', classificationSource(story, category, input.contentType));
+  if (factStats.removedInternalInstruction) warnings.push(`Removed ${factStats.removedInternalInstruction} internal instruction fact candidate(s).`);
+  if (factStats.removedFragment) warnings.push(`Removed ${factStats.removedFragment} incomplete fact fragment candidate(s).`);
+  if (factStats.removedDuplicate) warnings.push(`Merged ${factStats.removedDuplicate} duplicate fact candidate(s).`);
   validateNormalizedCreatorInput(input);
   return input;
 }
@@ -207,6 +207,7 @@ function validateNormalizedCreatorInput(input) {
   const warnings = new Set(Array.isArray(input.warnings) ? input.warnings : []);
 
   for (const field of [
+    'factRecords',
     'knownNames',
     'keyActors',
     'setting',
@@ -250,6 +251,20 @@ function validateNormalizedCreatorInput(input) {
   if (!input.sourceContext.length) missing.add('sourceContext');
   if (!input.visualVocabulary.length) missing.add('visualVocabulary');
 
+  const factValidation = validateCreatorFactRecords(input.factRecords, input.contentType);
+  if (!factValidation.valid) {
+    missing.add('factRecords');
+    factValidation.errors.slice(0, 10).forEach((error) => warnings.add(`Fact validation: ${error}`));
+  }
+
+  const derived = deriveCompatibilityFields(input.factRecords);
+  for (const field of ['coreProblem', 'eventSequence', 'turningPoint', 'outcome', 'reportedVariants', 'sourceContext', 'meaningOptions', 'visualVocabulary']) {
+    if (JSON.stringify(input[field]) !== JSON.stringify(derived[field])) {
+      warnings.add(`${field} was re-derived from factRecords.`);
+      input[field] = derived[field];
+    }
+  }
+
   const typeRequired = typeSpecificRequiredFields(input.contentType);
   for (const field of typeRequired) {
     if (Array.isArray(input[field]) && input[field].length) continue;
@@ -274,6 +289,19 @@ function typeSpecificRequiredFields(contentType) {
     return ['setting', 'eventSequence', 'sourceContext', 'coreProblem', 'outcome'];
   }
   return ['eventSequence', 'sourceContext', 'visualVocabulary'];
+}
+
+function compatibilitySourceTypes() {
+  return {
+    coreProblem: ['problem'],
+    eventSequence: ['event'],
+    turningPoint: ['turning-point'],
+    outcome: ['outcome'],
+    reportedVariants: ['variant'],
+    sourceContext: ['source-context'],
+    meaningOptions: ['meaning'],
+    visualVocabulary: ['subject', 'relationship', 'setting', 'problem', 'event', 'turning-point', 'outcome', 'visual']
+  };
 }
 
 function collectEventSequence(story, brief, articlePlan, sourceFieldMap, warnings) {

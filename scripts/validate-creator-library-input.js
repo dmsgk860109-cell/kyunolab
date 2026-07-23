@@ -7,6 +7,10 @@ const {
   validateNormalizedCreatorInput
 } = require('./creator-library-input');
 const {
+  deriveCompatibilityFields,
+  validateCreatorFactRecords
+} = require('./creator-library-facts');
+const {
   buildCreatorLibraryEntry
 } = require('./creator-library-pipeline');
 
@@ -29,6 +33,7 @@ const expectedSchemaKeys = [
   'categorySlug',
   'categoryName',
   'contentType',
+  'factRecords',
   'knownNames',
   'keyActors',
   'setting',
@@ -131,6 +136,9 @@ function assertSchema(input, slug) {
   if (!input.sourceFieldMap || typeof input.sourceFieldMap !== 'object' || Array.isArray(input.sourceFieldMap)) {
     fail(slug, 'sourceFieldMap must be an object');
   }
+  if (!Array.isArray(input.factRecords)) fail(slug, 'factRecords must be an array');
+  const factValidation = validateCreatorFactRecords(input.factRecords, input.contentType);
+  if (!factValidation.valid) fail(slug, `factRecords invalid: ${factValidation.errors.slice(0, 5).join('; ')}`);
 }
 
 function assertNoUndefined(value, slug, pathName = 'input') {
@@ -161,7 +169,27 @@ function assertCommonInputQuality(input, slug) {
   if (!input.sourceContext.length) fail(slug, 'sourceContext is empty');
   if (!input.visualVocabulary.length) fail(slug, 'visualVocabulary is empty');
   if (!Object.keys(input.sourceFieldMap).length) fail(slug, 'sourceFieldMap is empty');
-  const packed = JSON.stringify(input);
+  const derived = deriveCompatibilityFields(input.factRecords);
+  for (const field of ['coreProblem', 'eventSequence', 'turningPoint', 'outcome', 'reportedVariants', 'sourceContext', 'meaningOptions', 'visualVocabulary']) {
+    if (JSON.stringify(input[field]) !== JSON.stringify(derived[field])) {
+      fail(slug, `${field} was not derived from factRecords`);
+    }
+  }
+  const badEventRecords = input.factRecords.filter((record) => record.factType === 'event' && /source-context/i.test(record.factText));
+  if (badEventRecords.length) {
+    fail(slug, 'eventSequence contains source-context fact');
+  }
+  const packed = JSON.stringify({
+    coreProblem: input.coreProblem,
+    eventSequence: input.eventSequence,
+    turningPoint: input.turningPoint,
+    outcome: input.outcome,
+    reportedVariants: input.reportedVariants,
+    sourceContext: input.sourceContext,
+    meaningOptions: input.meaningOptions,
+    visualVocabulary: input.visualVocabulary,
+    factText: input.factRecords.map((record) => record.factText)
+  });
   if (/this article follows|the article should|the heading keeps the focus|source-aware kyunolab record/i.test(packed)) {
     fail(slug, 'internal template phrase remains in normalized input');
   }

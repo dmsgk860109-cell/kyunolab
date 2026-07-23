@@ -82,9 +82,25 @@ function assertScenePlanSchema(slug, normalizedInput, scenePlan) {
     if (scene.role !== rules[index]?.role) fail(slug, `Scene ${index + 1} role does not match content type rule`);
     if (scene.narrationParts.length !== 2) fail(slug, `Scene ${index + 1} part count must be 2`);
     if (!scene.sourceFacts.length) fail(slug, `Scene ${index + 1} has no source facts`);
+    if (!Array.isArray(scene.sourceFactIds) || !scene.sourceFactIds.length) fail(slug, `Scene ${index + 1} has no sourceFactIds`);
     if (!scene.sourceFieldRefs.length) fail(slug, `Scene ${index + 1} has no source refs`);
+    const factById = new Map((scenePlan.factRecords || []).map((record) => [record.id, record]));
+    scene.sourceFactIds.forEach((factId) => {
+      const record = factById.get(factId);
+      if (!record) fail(slug, `Scene ${index + 1} references missing factId ${factId}`);
+      if (record && !rules[index]?.factTypes?.includes(record.factType)) {
+        fail(slug, `Scene ${index + 1} uses ${record.factType} outside allowed fact types`);
+      }
+    });
+    if ((scene.sourceFacts || []).some((fact) => /establish the point|develop the point|source-aware|pre-existing subject/i.test(fact))) {
+      fail(slug, `Scene ${index + 1} sourceFacts contain role, purpose, or internal instruction`);
+    }
     scene.narrationParts.forEach((part) => {
       if (!part.sourceFacts.length) fail(slug, `Scene ${index + 1} Part ${part.partIndex} has no source facts`);
+      if (!Array.isArray(part.sourceFactIds) || !part.sourceFactIds.length) fail(slug, `Scene ${index + 1} Part ${part.partIndex} has no sourceFactIds`);
+      part.sourceFactIds.forEach((factId) => {
+        if (!factById.has(factId)) fail(slug, `Scene ${index + 1} Part ${part.partIndex} references missing factId ${factId}`);
+      });
       if (part.targetWords < 55 || part.targetWords > 80) fail(slug, `Scene ${index + 1} Part ${part.partIndex} targetWords outside range`);
     });
   });
