@@ -101,7 +101,8 @@ function fail(failures) {
 
 function resolveDistRoot(argv) {
   const distIndex = argv.indexOf('--dist');
-  const value = distIndex >= 0 ? argv[distIndex + 1] : '';
+  const rootIndex = argv.indexOf('--root');
+  const value = distIndex >= 0 ? argv[distIndex + 1] : rootIndex >= 0 ? argv[rootIndex + 1] : '';
   return path.resolve(ROOT, value || 'dist');
 }
 

@@ -14,7 +14,8 @@ Applies to:
 - `scripts/creator-library-store.js`
 - `scripts/generate-site.js`
 - `scripts/creator-library.js`
-- `data/scripts.json`
+- `data/creator-packs/manifest.json`
+- `data/creator-packs/<slug>.json`
 - generated Creator Library HTML under `scripts/*-youtube-script.html`
 
 Related generation file:
@@ -68,13 +69,13 @@ The production pipeline is:
 15. Short-form Image Prompt
 16. Short-form Motion Prompt
 17. Runtime Plan
-18. `data/scripts.json` storage
+18. `data/creator-packs/` per-article storage
 19. `generate-site.js` HTML rendering
 20. `creator-library.js` copy behavior
 
 Each step must use the current Story Brief, current Scene, current Narration Part, or current Visual Beat. Do not skip to category, scene number, array index, or broad content type as the only basis for production content.
 
-The active stored pipeline version is `single-path-v1`. All Creator Packs in `data/scripts.json` must use this version.
+The active stored pipeline version is `single-path-v1`. All Creator Packs in `data/creator-packs/<slug>.json` must use this version.
 
 ## Field Contracts
 
@@ -164,7 +165,7 @@ The active stored pipeline version is `single-path-v1`. All Creator Packs in `da
 
 Renderer does not provide a legacy compatibility path.
 
-The official renderer accepts only stored `single-path-v1` Creator Packs. It must read production fields from `data/scripts.json` and render them. It must not generate missing Long-form, Short-form, Image Prompt, Beat Motion, Short-form Image Prompt, Short-form Motion Prompt, Background Music, Voice Direction, Sound Effect, Creator Note, or Scene Focus content during rendering.
+The official renderer accepts only stored `single-path-v1` Creator Packs. It must read production fields from `data/creator-packs/manifest.json` and the matching per-article Pack file, then render them. It must not generate missing Long-form, Short-form, Image Prompt, Beat Motion, Short-form Image Prompt, Short-form Motion Prompt, Background Music, Voice Direction, Sound Effect, Creator Note, or Scene Focus content during rendering.
 
 For Short-form scenes, the renderer must read Image Prompt only from `shortForm.scenes[i].imagePrompt` and Motion Prompt only from `shortForm.scenes[i].motionPrompt`.
 

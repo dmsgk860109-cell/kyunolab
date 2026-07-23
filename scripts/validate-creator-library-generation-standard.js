@@ -1,5 +1,8 @@
 const fs = require('fs');
 const path = require('path');
+const {
+  loadCreatorValidationPacks
+} = require('./creator-library-validation-data');
 
 const root = path.resolve(__dirname, '..');
 const errors = [];
@@ -51,7 +54,7 @@ function main() {
   requireText(agents, 'single-path-v1', 'AGENTS.md must document the active Creator Library pipeline version');
 
   const stories = readJson('data/stories.json');
-  const scripts = readJson('data/scripts.json');
+  const scripts = loadCreatorValidationPacks();
 
   validateNoLegacyExceptionFile();
   validateNoLegacyEntries(scripts);
@@ -210,7 +213,7 @@ function validateShortForm(fixture, script) {
 
   const wordCount = countWords(shorts.join(' '));
   const readSeconds = estimatedSeconds(shorts.join(' '));
-  const finalSeconds = shorts
+  const finalSeconds = script.shortForm?.finalVideoSeconds || shorts
     .map((line) => estimatedSeconds(line))
     .reduce((sum, seconds) => sum + Math.min(60, Math.max(5, seconds) + 2), 0);
 
@@ -323,7 +326,7 @@ function validateNoLegacyExceptionFile() {
 
 function validateNoLegacyEntries(scripts) {
   const legacy = scripts.filter((script) => script.creatorPipelineVersion !== 'single-path-v1');
-  if (legacy.length) error('data/scripts.json', 'legacy', `legacy Creator Pack entries remain: ${legacy.length}`);
+  if (legacy.length) error('data/creator-packs', 'legacy', `legacy Creator Pack entries remain: ${legacy.length}`);
 }
 
 function validateNoNewSubjectSpecificBranches() {

@@ -9,10 +9,12 @@ const {
 } = require('./creator-library-store');
 
 const root = path.resolve(__dirname, '..');
-const defaultSource = path.join(root, 'data', 'scripts.json');
 
 function migrateCreatorPacksToFiles(options = {}) {
-  const sourcePath = path.resolve(options.source || defaultSource);
+  if (!options.source) {
+    throw new Error('Migration requires an explicit --source path.');
+  }
+  const sourcePath = path.resolve(options.source);
   const outputRoot = options.apply
     ? path.join(root, 'data', 'creator-packs')
     : path.resolve(options.outputRoot || '');
@@ -118,7 +120,7 @@ function main() {
 }
 
 function parseArgs(argv) {
-  const args = { source: defaultSource };
+  const args = {};
   for (let index = 0; index < argv.length; index += 1) {
     const arg = argv[index];
     if (arg === '--source') args.source = argv[++index];

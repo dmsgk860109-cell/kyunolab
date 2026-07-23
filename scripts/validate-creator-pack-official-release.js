@@ -173,6 +173,9 @@ function validateLongformStructure(pack) {
 
   scenes.forEach((scene, sceneIndex) => {
     if (!scene.sceneFocus) fail('longform', `${pack.slug} scene ${sceneIndex + 1} missing Scene Focus.`);
+    if (!Array.isArray(scene.sourceFactIds) || !scene.sourceFactIds.length) {
+      fail('longform', `${pack.slug} scene ${sceneIndex + 1} missing sourceFactIds.`);
+    }
     const parts = Array.isArray(scene.narrationParts) ? scene.narrationParts : [];
     stats.longParts += parts.length;
     parts.forEach((part, partIndex) => {
@@ -219,7 +222,7 @@ function validatePublicFields(pack) {
     stats.publicFieldsChecked += 1;
     const text = String(value || '');
     if (!text.trim()) fail('content', `${pack.slug} ${pathName} is empty.`);
-    if (/undefined|\[object Object\]/.test(text)) fail('content', `${pack.slug} ${pathName} exposes invalid placeholder text.`);
+    if (/undefined|\[object Object\]|^null$/.test(text)) fail('content', `${pack.slug} ${pathName} exposes invalid placeholder text.`);
     for (const pattern of FORBIDDEN_PUBLIC_PATTERNS) {
       if (pattern.test(text)) fail('content', `${pack.slug} ${pathName} contains forbidden phrase: ${pattern}`);
     }
@@ -294,12 +297,13 @@ function parseArgs(argv) {
   const output = {};
   for (let index = 0; index < argv.length; index += 1) {
     const arg = argv[index];
-    if (arg === '--root') output.root = argv[++index];
+    if (arg === '--root' || arg === '--creator-pack-root') output.root = argv[++index];
     else if (arg === '--expected-count') output.expectedCount = argv[++index];
     else if (arg === '--expected-slugs') output.expectedSlugs = argv[++index];
     else if (arg === '--html-root') output.htmlRoot = argv[++index];
     else if (arg === '--legacy-deleted') output.legacyDeleted = true;
     else if (arg === '--no-write') output.noWrite = true;
+    else if (arg === '--validate-existing') output.validateExisting = true;
   }
   return output;
 }
@@ -354,7 +358,13 @@ const FORBIDDEN_PUBLIC_PATTERNS = [
   /begins with a detail that gives the story its shape/i,
   /connected to its strongest image/i,
   /\bA ancient\b/i,
-  /becomes of/i
+  /becomes of/i,
+  /Part purpose/i,
+  /Scene Plan/i,
+  /source facts/i,
+  /required events/i,
+  /Hold that image/i,
+  /viewer should/i
 ];
 
 main();

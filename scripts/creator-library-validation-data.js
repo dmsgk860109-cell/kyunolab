@@ -7,7 +7,6 @@ const {
 } = require('./creator-library-store');
 
 const root = path.resolve(__dirname, '..');
-const legacyScriptsPath = path.join(root, 'data', 'scripts.json');
 
 function loadCreatorValidationPacks(options = {}) {
   const storeOptions = options.root ? { root: options.root } : {};
@@ -16,9 +15,8 @@ function loadCreatorValidationPacks(options = {}) {
     const packs = iterateCreatorPacks(storeOptions);
     if (packs.length) return packs;
   }
-  if (fs.existsSync(legacyScriptsPath)) return readJson(legacyScriptsPath);
   const storeRoot = getCreatorPackRoot(storeOptions);
-  const error = new Error(`No Creator Library validation source found. Expected ${manifestPath} or ${legacyScriptsPath}.`);
+  const error = new Error(`No Creator Library validation source found. Expected ${manifestPath}.`);
   error.code = 'CREATOR_VALIDATION_SOURCE_MISSING';
   error.storeRoot = storeRoot;
   throw error;
@@ -29,20 +27,15 @@ function loadCreatorValidationStorySlugs(options = {}) {
 }
 
 function legacyScriptsFileExists() {
-  return fs.existsSync(legacyScriptsPath);
+  return false;
 }
 
 function unique(values) {
   return [...new Set(values)];
 }
 
-function readJson(filePath) {
-  return JSON.parse(fs.readFileSync(filePath, 'utf8'));
-}
-
 module.exports = {
   loadCreatorValidationPacks,
   loadCreatorValidationStorySlugs,
-  legacyScriptsFileExists,
-  legacyScriptsPath
+  legacyScriptsFileExists
 };

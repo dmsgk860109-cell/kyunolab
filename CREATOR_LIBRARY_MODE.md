@@ -44,6 +44,6 @@ One Archive story maps to one Creator Library page.
 
 ## Implementation Note
 
-Current Creator Library pages are generated through `scripts/generate-site.js` from `data/scripts.json`.
+Current Creator Library pages are generated through `scripts/generate-site.js` from the official per-article Creator Pack Store at `data/creator-packs/`.
 
 When editing Creator Library output, update the generator and data source first. Avoid manually editing generated HTML unless the task explicitly calls for it.

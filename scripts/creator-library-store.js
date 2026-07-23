@@ -7,7 +7,6 @@ const {
 } = require('./creator-library-pipeline');
 
 const root = path.resolve(__dirname, '..');
-const scriptsPath = path.join(root, 'data', 'scripts.json');
 const CREATOR_PACK_ROOT = path.join(root, 'data', 'creator-packs');
 const PACK_STORAGE_SCHEMA_VERSION = 'creator-pack-file-v1';
 const MANIFEST_SCHEMA_VERSION = 'creator-pack-manifest-v1';
@@ -166,23 +165,6 @@ function normalizeCreatorPackForStorage(pack) {
   };
   validateCreatorPackFile(normalized);
   return normalized;
-}
-
-function loadCreatorLibraryEntries(options = {}) {
-  return readJson(options.scriptsPath || scriptsPath);
-}
-
-function saveCreatorLibraryEntry(entry, options = {}) {
-  return saveCreatorLibraryEntries([entry], options);
-}
-
-function saveCreatorLibraryEntries(entries, options = {}) {
-  const current = options.currentEntries || loadCreatorLibraryEntries(options);
-  const additions = ensureArray(entries);
-  const next = mergeCreatorLibraryEntries(current, additions, options);
-  if (options.dryRun) return next;
-  writeJsonAtomic(options.scriptsPath || scriptsPath, next);
-  return next;
 }
 
 function mergeCreatorLibraryEntries(currentEntries, entries, options = {}) {
@@ -377,9 +359,6 @@ module.exports = {
   validateCreatorPackFile,
   calculateCreatorPackChecksum,
   stableSerializeCreatorPack,
-  loadCreatorLibraryEntries,
-  saveCreatorLibraryEntry,
-  saveCreatorLibraryEntries,
   assertCreatorEntryIsSaveable,
   mergeCreatorLibraryEntries,
   mergeCreatorLibraryEntry,

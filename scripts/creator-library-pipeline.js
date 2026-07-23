@@ -306,7 +306,10 @@ function mapShortformResultToStoredShortForm(shortformResult) {
       backgroundMusic: scene.backgroundMusic,
       voiceDirection: scene.voiceDirection,
       soundEffect: scene.soundEffect,
-      estimatedReadSeconds: scene.estimatedReadSeconds
+      estimatedReadSeconds: scene.estimatedReadSeconds,
+      sourceFactIds: scene.sourceFactIds || [],
+      sourceFieldRefs: scene.sourceFieldRefs || [],
+      usedFactTexts: scene.usedFactTexts || []
     })),
     totalWordCount: shortformResult.totalWordCount,
     narrationReadSeconds: shortformResult.narrationReadSeconds,
@@ -317,6 +320,8 @@ function mapShortformResultToStoredShortForm(shortformResult) {
 function mapProductionResultToVisualGuide(productionResult, longformResult) {
   return (productionResult.scenes || []).map((scene, sceneIndex) => {
     const longformScene = (longformResult.scenes || [])[sceneIndex] || {};
+    const sceneSourceFactIds = unique((longformScene.narrationParts || []).flatMap((part) => part.sourceFactIds || []));
+    const sceneSourceFieldRefs = unique((longformScene.narrationParts || []).flatMap((part) => part.sourceFieldRefs || []));
     return {
       sceneRole: scene.role,
       sceneFocus: scene.sceneFocus,
@@ -325,17 +330,25 @@ function mapProductionResultToVisualGuide(productionResult, longformResult) {
       backgroundMusic: scene.backgroundMusic,
       soundEffect: scene.soundEffect,
       visualDirection: visualDirectionFromProductionScene(scene),
+      sourceFactIds: sceneSourceFactIds.length ? sceneSourceFactIds : scene.sourceFactIds || [],
+      sourceFieldRefs: sceneSourceFieldRefs.length ? sceneSourceFieldRefs : scene.sourceFieldRefs || [],
       narrationParts: (scene.narrationParts || []).map((part, partIndex) => {
         const narrationPart = (longformScene.narrationParts || [])[partIndex] || {};
         return {
           narration: narrationPart.narration || '',
           estimatedReadingTime: secondsToApproxLabel(narrationPart.estimatedReadSeconds || estimatedNarrationSecondsFromText(narrationPart.narration || '')),
           creatorNote: part.creatorNote,
+          sourceFactIds: narrationPart.sourceFactIds || part.sourceFactIds || [],
+          sourceFieldRefs: narrationPart.sourceFieldRefs || part.sourceFieldRefs || [],
+          usedFactTexts: narrationPart.usedFactTexts || [],
           visualBeats: (part.visualBeats || []).map((beat, beatIndex) => ({
             label: `Image Prompt ${beatIndex + 1}`,
             imagePrompt: beat.imagePrompt,
             motionPrompt: beat.beatMotion,
-            beatMotion: beat.beatMotion
+            beatMotion: beat.beatMotion,
+            sourceFactIds: beat.sourceFactIds || [],
+            sourceFieldRefs: beat.sourceFieldRefs || [],
+            usedFactTexts: beat.usedFactTexts || []
           }))
         };
       })
