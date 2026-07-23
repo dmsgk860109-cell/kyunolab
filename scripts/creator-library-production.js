@@ -4,6 +4,11 @@ const {
 const {
   estimateNarrationReadTime
 } = require('./creator-library-longform');
+const {
+  validateCreatorFactRecord,
+  isInternalInstruction,
+  isIncompleteFactFragment
+} = require('./creator-library-facts');
 
 const PRODUCTION_SCHEMA_VERSION = '1.0';
 const SCENE_COUNT = 5;
@@ -73,23 +78,36 @@ const CONTENT_TYPE_PROFILES = {
 
 function buildCreatorProductionFields(normalizedInput, scenePlan, longformResult) {
   const productionProfile = buildProductionProfile(normalizedInput);
+  const factRecords = Array.isArray(normalizedInput.factRecords) ? normalizedInput.factRecords : [];
+  const factById = new Map(factRecords.map((record) => [record.id, record]));
   const warnings = [
     ...(normalizedInput.warnings || []),
     ...(scenePlan.warnings || [])
   ];
+  const seenCreatorNotes = new Set();
+  const seenSceneFocuses = new Set();
+  const seenImagePrompts = new Set();
+  const seenBeatMotions = new Set();
   const scenes = (scenePlan.scenes || []).map((scene, sceneIndex) => {
     const longformScene = (longformResult.scenes || [])[sceneIndex] || {};
-    const productionScene = publicSceneContextFromScene(scene);
+    const productionScene = publicSceneContextFromScene(scene, factById);
     const sceneContext = {
       normalizedInput,
       scene: productionScene,
       longformScene,
-      productionProfile
+      productionProfile,
+      factRecords,
+      factById
     };
+    const sceneFocus = uniquifySceneFocus(
+      buildSceneFocusForScene(sceneContext),
+      sceneContext,
+      seenSceneFocuses
+    );
     return {
       sceneIndex: scene.sceneIndex,
       role: scene.role,
-      sceneFocus: buildSceneFocusForScene(sceneContext),
+      sceneFocus,
       backgroundMusic: buildBackgroundMusicForScene(sceneContext),
       voiceDirection: buildVoiceDirectionForScene(sceneContext),
       soundEffect: buildSoundEffectForScene(sceneContext),
@@ -97,13 +115,21 @@ function buildCreatorProductionFields(normalizedInput, scenePlan, longformResult
         const narrationPart = (longformScene.narrationParts || [])[partIndex] || {};
         const partContext = {
           ...sceneContext,
-          partPlan: publicPartContextFromPlan(partPlan),
+          partPlan: publicPartContextFromPlan(partPlan, factById),
           narrationPart
         };
+        const creatorNote = uniquifyCreatorNote(
+          buildCreatorNoteForPart(partContext),
+          partContext,
+          seenCreatorNotes
+        );
         return {
           partIndex: partPlan.partIndex,
-          creatorNote: buildCreatorNoteForPart(partContext),
-          visualBeats: buildVisualBeatsForPart(partContext)
+          creatorNote,
+          visualBeats: buildVisualBeatsForPart(partContext, {
+            imagePrompts: seenImagePrompts,
+            beatMotions: seenBeatMotions
+          })
         };
       })
     };
@@ -202,6 +228,7 @@ function validateCreatorProductionFields(result, scenePlan, longformResult) {
         if (beat.beatIndex !== beatNumber) errors.push(detailError(result, sceneNumber, partNumber, beatNumber, 'beatIndex', 'Beat index is invalid.'));
         if (!sanitizeProductionText(beat.imagePrompt)) errors.push(detailError(result, sceneNumber, partNumber, beatNumber, 'imagePrompt', 'Image Prompt is required.'));
         if (!sanitizeProductionText(beat.beatMotion)) errors.push(detailError(result, sceneNumber, partNumber, beatNumber, 'beatMotion', 'Beat Motion is required.'));
+        if (!Array.isArray(beat.sourceFactIds) || !beat.sourceFactIds.length) errors.push(detailError(result, sceneNumber, partNumber, beatNumber, 'sourceFactIds', 'Visual Beat must contain sourceFactIds.'));
         if (containsInternalProductionMetadata(beat.imagePrompt)) {
           errors.push(detailError(result, sceneNumber, partNumber, beatNumber, 'imagePrompt', 'Image Prompt contains internal Scene Plan metadata.'));
         }
@@ -209,11 +236,11 @@ function validateCreatorProductionFields(result, scenePlan, longformResult) {
           errors.push(detailError(result, sceneNumber, partNumber, beatNumber, 'beatMotion', 'Beat Motion contains internal Scene Plan metadata.'));
         }
         if (!Array.isArray(beat.sourceFieldRefs)) errors.push(detailError(result, sceneNumber, partNumber, beatNumber, 'sourceFieldRefs', 'sourceFieldRefs must be an array.'));
-        if (containsBrokenPromptText(beat.imagePrompt)) errors.push(detailError(result, sceneNumber, partNumber, beatNumber, 'imagePrompt', 'Image Prompt contains broken text.'));
+        if (containsBrokenPromptText(beat.imagePrompt) || detectBrokenProductionText(beat.imagePrompt).length) errors.push(detailError(result, sceneNumber, partNumber, beatNumber, 'imagePrompt', 'Image Prompt contains broken text.'));
         if (containsFieldMixing(beat.imagePrompt, ['sound effect', 'voice direction', 'beat motion', 'motion prompt'])) {
           errors.push(detailError(result, sceneNumber, partNumber, beatNumber, 'imagePrompt', 'Image Prompt contains another production field.'));
         }
-        if (containsBrokenMotionText(beat.beatMotion)) errors.push(detailError(result, sceneNumber, partNumber, beatNumber, 'beatMotion', 'Beat Motion contains broken text.'));
+        if (containsBrokenMotionText(beat.beatMotion) || detectBrokenProductionText(beat.beatMotion).length) errors.push(detailError(result, sceneNumber, partNumber, beatNumber, 'beatMotion', 'Beat Motion contains broken text.'));
         if (containsFieldMixing(beat.beatMotion, ['sound effect', 'music', 'voice direction', 'narration'])) {
           errors.push(detailError(result, sceneNumber, partNumber, beatNumber, 'beatMotion', 'Beat Motion contains another production field.'));
         }
@@ -231,88 +258,395 @@ function validateCreatorProductionFields(result, scenePlan, longformResult) {
 }
 
 function buildCreatorNoteForPart(context) {
-  const { normalizedInput, scene, partPlan, narrationPart } = context;
-  const fact = selectPublicFact(partPlan.sourceFacts, scene.sourceFacts, normalizedInput.coreProblem, normalizedInput.topic);
-  const passageLabel = Number(partPlan.partIndex || 1) === 1 ? 'opening passage' : 'follow-up passage';
-  const sequenceLabel = sequenceLabelForScene(scene.sceneIndex);
-  const guidance = [
-    ...(scene.variantGuidance || []),
-    ...(scene.sourceGuidance || []),
-    ...(scene.meaningGuidance || [])
-  ].map(safeTerm).filter(Boolean)[0];
-  const caution = noteCautionForPart(context, narrationPart.narration);
-  const lines = [
-    `For the ${sequenceLabel} ${passageLabel}, keep the narration anchored in ${lowercaseStart(fact)}.`,
-    guidance ? `Keep the source layer clear: ${lowercaseStart(guidance)}.` : caution,
-    guidance ? caution : ''
-  ].filter(Boolean);
-  return sanitizeProductionText(lines.slice(0, 3).join(' '));
+  const records = selectProductionFactRecords(context, { preferVisual: false }).slice(0, 3);
+  const primary = records[0] || {};
+  const secondary = selectSceneBoundaryRecord(context, records)
+    || selectPartSecondaryRecord(context, primary)
+    || selectNarrationFactRecord(context, records)
+    || records.find((record) => record.factType !== primary.factType)
+    || records[1]
+    || primary;
+  const entity = selectEntityFromRecords(records, context.normalizedInput.topic);
+  const primaryText = lowercaseStart(stripFinalPunctuation(realizeVisualFact(primary, context)));
+  const noteParts = [
+    `${entity} must stay tied to ${primaryText}.`
+  ];
+  if (secondary && secondary.id !== primary.id) {
+    noteParts.push(noteCautionForFact(secondary, context));
+  } else {
+    noteParts.push(noteCautionForFact(primary, context));
+  }
+  return sanitizeProductionText(noteParts.filter(Boolean).slice(0, 2).join(' '));
 }
 
-function buildVisualBeatsForPart(context) {
-  const readSeconds = Number(context.narrationPart?.estimatedReadSeconds || estimateNarrationReadTime(context.narrationPart?.narration || ''));
-  const visualFacts = uniqueText([
-    ...(context.partPlan.sourceFacts || []),
-    ...(context.scene.requiredEvents || []),
-    ...(context.scene.requiredEntities || [])
-  ].map(safeTerm).filter(Boolean));
-  const count = Math.min(3, Math.max(1, readSeconds >= 30 || visualFacts.length >= 3 ? 3 : readSeconds >= 20 || visualFacts.length >= 2 ? 2 : 1));
-  return Array.from({ length: count }, (_, beatIndex) => {
-    const beatContext = {
-      ...context,
-      beatIndex,
-      beatSubject: selectBeatSubject(context, visualFacts, beatIndex),
-      beatFact: visualFacts[beatIndex] || visualFacts[0] || selectBestFact(context.partPlan.sourceFacts, context.scene.sourceFacts, [context.normalizedInput.topic])
-    };
-    const imagePrompt = buildImagePromptForBeat(beatContext);
+function uniquifyCreatorNote(note, context, seen) {
+  let candidate = sanitizeProductionText(note);
+  let key = exactTextKey(candidate);
+  if (!seen.has(key)) {
+    seen.add(key);
+    return candidate;
+  }
+  const boundarySentences = uniqueRecords([
+    ...(context.partPlan?.factRecords || []),
+    ...(context.scene?.factRecords || []),
+    ...(context.normalizedInput?.factRecords || [])
+  ])
+    .filter(isProductionFactRecord)
+    .map((record) => {
+      const text = lowercaseStart(stripFinalPunctuation(realizeVisualFact(record, context)));
+      return text ? `Keep the production boundary on ${text}.` : '';
+    })
+    .filter(Boolean);
+  for (const sentence of boundarySentences) {
+    const expanded = sanitizeProductionText(`${candidate} ${sentence}`);
+    key = exactTextKey(expanded);
+    if (!seen.has(key)) {
+      seen.add(key);
+      return expanded;
+    }
+  }
+  const fallback = sanitizeProductionText(`${candidate} Keep the production boundary on ${lowercaseStart(context.normalizedInput.topic)} in the ${sequenceLabelForScene(context.scene.sceneIndex)}.`);
+  seen.add(exactTextKey(fallback));
+  return fallback;
+}
+
+function uniquifySceneFocus(sceneFocus, context, seen) {
+  let candidate = sanitizeProductionText(sceneFocus);
+  let key = exactTextKey(candidate);
+  if (!seen.has(key)) {
+    seen.add(key);
+    return candidate;
+  }
+  const records = uniqueRecords([
+    ...(context.scene?.factRecords || []),
+    ...(context.normalizedInput?.factRecords || [])
+  ]).filter(isProductionFactRecord);
+  for (const record of records) {
+    const text = lowercaseStart(stripFinalPunctuation(realizeVisualFact(record, context)));
+    if (!text) continue;
+    const expanded = sanitizeProductionText(`${candidate} Frame it through ${text}.`);
+    key = exactTextKey(expanded);
+    if (!seen.has(key)) {
+      seen.add(key);
+      return expanded;
+    }
+  }
+  const fallback = sanitizeProductionText(`${candidate} Keep it specific to the ${sequenceLabelForScene(context.scene.sceneIndex)}.`);
+  seen.add(exactTextKey(fallback));
+  return fallback;
+}
+
+function buildVisualBeatsForPart(context, seenFields = {}) {
+  const plans = buildVisualBeatPlan(context);
+  return plans.map((beatPlan, beatIndex) => {
+    const beatContext = { ...context, beatIndex, beatPlan };
+    const imagePrompt = uniquifyBeatField(
+      buildImagePromptForBeat(beatContext),
+      beatContext,
+      seenFields.imagePrompts,
+      'imagePrompt'
+    );
     return {
       beatIndex: beatIndex + 1,
+      sourceFactIds: [...beatPlan.sourceFactIds],
       imagePrompt,
-      beatMotion: buildBeatMotionForBeat({ ...beatContext, imagePrompt }),
+      beatMotion: uniquifyBeatField(
+        buildBeatMotionForBeat({ ...beatContext, imagePrompt }),
+        { ...beatContext, imagePrompt },
+        seenFields.beatMotions,
+        'beatMotion'
+      ),
       sourceFieldRefs: context.partPlan.sourceFieldRefs || context.scene.sourceFieldRefs || []
     };
   });
 }
 
+function uniquifyBeatField(value, context, seen, field) {
+  let candidate = sanitizeProductionText(value);
+  if (!seen) return candidate;
+  let key = exactTextKey(candidate);
+  if (!seen.has(key)) {
+    seen.add(key);
+    return candidate;
+  }
+  const detail = safeMotionValue(
+    (context.beatPlan?.visualTerms || [])[context.beatIndex]
+      || (context.beatPlan?.supportingObjects || [])[context.beatIndex]
+      || context.beatPlan?.subject
+      || context.normalizedInput.topic,
+    context.normalizedInput.topic
+  );
+  const passage = visualPhaseForBeat(context.partPlan, context.beatIndex);
+  const addition = field === 'imagePrompt'
+    ? `Keep ${detail} visible as the distinct ${passage}.`
+    : `Let ${detail} remain the distinct ${passage}.`;
+  candidate = sanitizeProductionText(`${candidate} ${addition}`);
+  key = exactTextKey(candidate);
+  if (!seen.has(key)) {
+    seen.add(key);
+    return candidate;
+  }
+  const fallback = sanitizeProductionText(`${candidate} Match the ${sequenceLabelForScene(context.scene.sceneIndex)}.`);
+  seen.add(exactTextKey(fallback));
+  return fallback;
+}
+
+function buildVisualBeatPlan(context) {
+  const visualRecords = selectVisualFactRecords(context);
+  const beatCount = determineVisualBeatCount(context, visualRecords);
+  return visualRecords.slice(0, beatCount).map((record, index) => {
+    const subject = selectSubjectForBeat(record, context);
+    const setting = selectSetting(context.productionProfile, context.scene, record.factText);
+    return {
+      beatIndex: index + 1,
+      sourceFactIds: [record.id],
+      factRecords: [record],
+      subject,
+      actionOrState: actionStateFromFactRecord(record, subject),
+      setting,
+      supportingObjects: selectSupportingObjects(record, context),
+      visualTerms: uniqueText([...(record.visualTerms || []), ...(record.settingTerms || [])]).slice(0, 5),
+      compositionType: compositionForBeat(context.scene, context.partPlan, index),
+      culturalContext: selectCulturalContext(context, record),
+      exclusions: [exclusionsForProfile(context.productionProfile)]
+    };
+  });
+}
+
+function selectVisualFactRecords(context) {
+  const selected = selectProductionFactRecords(context, { preferVisual: true });
+  const fallback = [
+    ...(context.scene.factRecords || []),
+    ...(context.normalizedInput.factRecords || [])
+  ].filter(isProductionFactRecord);
+  return uniqueRecords([...selected, ...fallback]).slice(0, 3);
+}
+
+function selectProductionFactRecords(context, options = {}) {
+  const partRecords = (context.partPlan.factRecords || []).filter(isProductionFactRecord);
+  const sceneRecords = (context.scene.factRecords || []).filter(isProductionFactRecord);
+  const allRecords = (context.normalizedInput.factRecords || []).filter(isProductionFactRecord);
+  const role = sceneRoleText(context.scene);
+  const preferredTypes = productionPreferredFactTypes(role, options);
+  return uniqueRecords([
+    ...sortProductionRecords(partRecords, preferredTypes),
+    ...sortProductionRecords(sceneRecords, preferredTypes),
+    ...sortProductionRecords(allRecords, preferredTypes)
+  ]);
+}
+
+function productionPreferredFactTypes(role, options = {}) {
+  if (options.preferVisual) {
+    if (/source|variant|evidence|account|comparison|trace/.test(role)) {
+      return ['visual', 'source-context', 'variant', 'event', 'turning-point', 'outcome', 'setting', 'subject', 'meaning', 'problem'];
+    }
+    if (/closing|meaning|legacy|unresolved|outcome/.test(role)) {
+      return ['visual', 'meaning', 'outcome', 'event', 'variant', 'setting', 'subject', 'relationship', 'problem'];
+    }
+    return ['visual', 'event', 'turning-point', 'outcome', 'setting', 'subject', 'relationship', 'problem'];
+  }
+  if (/source|variant|evidence|account|comparison|trace/.test(role)) {
+    return ['source-context', 'variant', 'meaning', 'event', 'turning-point', 'outcome', 'problem', 'subject', 'relationship', 'setting'];
+  }
+  if (/closing|meaning|legacy|unresolved|outcome/.test(role)) {
+    return ['meaning', 'outcome', 'variant', 'event', 'source-context', 'problem', 'subject', 'relationship', 'setting'];
+  }
+  return ['event', 'turning-point', 'outcome', 'variant', 'source-context', 'meaning', 'problem', 'subject', 'relationship', 'setting'];
+}
+
+function selectSceneBoundaryRecord(context, selectedRecords) {
+  const selectedIds = new Set((selectedRecords || []).map((record) => record?.id).filter(Boolean));
+  const partIds = new Set((context.partPlan?.sourceFactIds || []).filter(Boolean));
+  return (context.scene?.factRecords || [])
+    .filter(isProductionFactRecord)
+    .find((record) => record.id && !partIds.has(record.id) && !selectedIds.has(record.id))
+    || (context.scene?.factRecords || [])
+      .filter(isProductionFactRecord)
+      .find((record) => record.id && !partIds.has(record.id));
+}
+
+function selectPartSecondaryRecord(context, primaryRecord) {
+  return (context.partPlan?.factRecords || [])
+    .filter(isProductionFactRecord)
+    .find((record) => record.id && record.id !== primaryRecord?.id);
+}
+
+function selectNarrationFactRecord(context, selectedRecords) {
+  const selectedIds = new Set((selectedRecords || []).map((record) => record?.id).filter(Boolean));
+  const narration = exactTextKey(context.narrationPart?.narration || '');
+  if (!narration) return null;
+  return (context.normalizedInput?.factRecords || [])
+    .filter(isProductionFactRecord)
+    .find((record) => record.id && !selectedIds.has(record.id) && narration.includes(exactTextKey(record.factText)));
+}
+
+function realizeVisualFact(record, context = {}) {
+  if (!record?.factText) return context.normalizedInput?.topic || 'the central subject';
+  const text = safeTerm(record.factText);
+  if (record.factType === 'variant') return `the variant detail that ${lowercaseStart(text)}`;
+  if (record.factType === 'source-context') return `the source boundary around ${lowercaseStart(text)}`;
+  if (record.factType === 'meaning') return `the interpretation connected to ${lowercaseStart(text)}`;
+  return text;
+}
+
 function buildImagePromptForBeat(context) {
-  const { normalizedInput, productionProfile, scene, partPlan, beatIndex, beatSubject, beatFact } = context;
-  const subject = safePromptValue(beatSubject || normalizedInput.topic);
-  const actionOrState = safePromptValue(actionStateFromFact(beatFact, subject));
-  const setting = safePromptValue(selectSetting(productionProfile, scene, beatFact));
-  const composition = compositionForBeat(scene, partPlan, beatIndex);
+  const { normalizedInput, productionProfile, scene, partPlan, beatIndex, beatPlan } = context;
+  const subject = safePromptValue(beatPlan.subject || normalizedInput.topic);
+  const actionOrState = safePromptValue(stripFinalPunctuation(beatPlan.actionOrState));
+  const setting = safePromptValue(stripFinalPunctuation(beatPlan.setting));
+  const composition = beatPlan.compositionType || compositionForBeat(scene, partPlan, beatIndex);
   const lighting = lightingForScene(scene, productionProfile);
   const atmosphere = safePromptValue(selectAtmosphere(productionProfile, scene));
-  const culture = safePromptValue(productionProfile.culturalContext[0] || normalizedInput.categoryName || productionProfile.profileType);
+  const culture = safePromptValue(beatPlan.culturalContext[0] || productionProfile.culturalContext[0] || normalizedInput.categoryName || productionProfile.profileType);
   const visualPhase = visualPhaseForBeat(partPlan, beatIndex);
   const sequenceLabel = sequenceLabelForScene(scene.sceneIndex);
-  const exclusions = exclusionsForProfile(productionProfile);
+  const supporting = beatPlan.supportingObjects.length ? ` Include ${beatPlan.supportingObjects.slice(0, 3).join(', ')} as supporting visual details.` : '';
+  const exclusions = beatPlan.exclusions[0] || exclusionsForProfile(productionProfile);
   return sanitizeProductionText([
-    `A ${productionProfile.visualTone} image shows ${subject} ${actionOrState} in ${setting}.`,
-    `Frame it as ${composition}, with ${lighting}, ${atmosphere}, and cultural context from ${culture}.`,
-    `The image should read as ${visualPhase} in the ${sequenceLabel}.`,
+    `${articleFor(productionProfile.visualTone)} ${productionProfile.visualTone} image shows ${subject} ${actionOrState} in ${setting}.`,
+    `Frame one clear scene as ${composition}, with ${lighting}, ${atmosphere}, and cultural context from ${culture}.${supporting}`,
+    `This should feel like ${visualPhase} during the ${sequenceLabel}.`,
     exclusions
   ].filter(Boolean).join(' '));
 }
 
 function buildBeatMotionForBeat(context) {
-  const { scene, partPlan, beatIndex, beatSubject, beatFact, productionProfile } = context;
-  const subject = safePromptValue(beatSubject || context.normalizedInput.topic);
-  const visualTarget = safePromptValue(truncateWords(selectMotionTarget(beatFact, beatSubject, subject), 14));
+  const { scene, partPlan, beatIndex, beatPlan, productionProfile } = context;
+  const subject = safeMotionValue(beatPlan.subject || context.normalizedInput.topic, context.normalizedInput.topic);
+  const setting = safePromptValue(beatPlan.setting);
+  const visualTarget = safeMotionValue(truncateWords(selectMotionTarget(beatPlan.actionOrState, beatPlan.setting, subject), 14), subject);
+  const visualDetail = safeMotionValue((beatPlan.visualTerms || [])[beatIndex] || (beatPlan.supportingObjects || [])[beatIndex] || beatPlan.compositionType || visualTarget, visualTarget);
   const motionPhase = motionPhaseForBeat(partPlan, beatIndex);
-  const sequenceLabel = sequenceLabelForScene(scene.sceneIndex);
   const movements = [
-    `Animate the still image with a slow push toward ${subject}, keeping ${visualTarget} as the ${sequenceLabel} ${motionPhase} visual anchor.`,
-    `Use a gentle lateral pan across the frame, letting ${visualTarget} guide the ${sequenceLabel} ${motionPhase} shift between foreground and background.`,
-    `Begin with a static hold, then make a subtle pullback that reveals ${visualTarget} as the ${sequenceLabel} ${motionPhase} detail inside the wider setting.`
+    `Use a slow controlled push toward ${subject}, with ${visualTarget} staying fixed as the ${motionPhase} and ${visualDetail} visible.`,
+    `Use a restrained lateral pan across ${setting}, letting ${subject} hold the ${motionPhase} while ${visualDetail} stays in frame.`,
+    `Start with a static hold, then pull back slightly to reveal ${visualTarget} and ${visualDetail} within the wider frame.`
   ];
   const movementIndex = (beatIndex + Number(partPlan.partIndex || 1) - 1) % movements.length;
   const role = sceneRoleText(scene);
   const ending = /source|variant|evidence|account|trace/i.test(role)
-    ? 'Keep the movement quiet and non-dramatic.'
+    ? 'Keep the movement restrained and documentary.'
     : /meaning|closing|legacy|unresolved/i.test(role)
-      ? 'Let the final movement settle softly without adding new action.'
+      ? 'End with a slow hold and no new action.'
       : `Use only light shifts that match the ${productionProfile.profileType} tone.`;
   return sanitizeProductionText(`${movements[movementIndex]} ${ending}`);
+}
+
+function determineVisualBeatCount(context, visualRecords) {
+  const distinctVisualTerms = uniqueText(visualRecords.flatMap((record) => [
+    record.factText,
+    ...(record.visualTerms || []),
+    ...(record.entities || []),
+    ...(record.settingTerms || [])
+  ]));
+  const hasMovement = visualRecords.some((record) => ['event', 'turning-point', 'outcome'].includes(record.factType));
+  const hasSourceOrMeaning = visualRecords.some((record) => ['source-context', 'meaning', 'variant'].includes(record.factType));
+  if (distinctVisualTerms.length >= 5 && hasMovement && visualRecords.length >= 3) return 3;
+  if ((distinctVisualTerms.length >= 3 && visualRecords.length >= 2) || (hasMovement && hasSourceOrMeaning)) return 2;
+  return 1;
+}
+
+function selectSubjectForBeat(record, context) {
+  return [
+    ...(record.entities || []),
+    ...(context.scene.requiredEntities || []),
+    ...(context.productionProfile.allowedEntities || []),
+    context.normalizedInput.topic
+  ]
+    .map(safeTerm)
+    .filter(Boolean)
+    .filter((item) => !/^(once|later|some|one|another|the|this|that|in)$/i.test(item))[0]
+    || context.normalizedInput.topic;
+}
+
+function selectEntityFromRecords(records, fallback) {
+  return records
+    .flatMap((record) => record.entities || [])
+    .map(safeTerm)
+    .filter(Boolean)[0]
+    || safeTerm(fallback)
+    || 'The central subject';
+}
+
+function actionStateFromFactRecord(record, subject) {
+  const text = stripFinalPunctuation(safeTerm(record.factText));
+  if (!text) return 'held as the central visual subject';
+  if (record.factType === 'subject') return 'held as the central visual subject';
+  if (record.factType === 'relationship') return `shown through ${lowercaseStart(text)}`;
+  if (record.factType === 'setting') return `placed within ${lowercaseStart(text)}`;
+  if (record.factType === 'variant') return `associated with a variant where ${lowercaseStart(text)}`;
+  if (record.factType === 'source-context') return `shown through source material connected to ${lowercaseStart(text)}`;
+  if (record.factType === 'meaning') return `framed by the interpretation that ${lowercaseStart(text)}`;
+  return `connected to ${lowercaseStart(truncateWords(text, 22))}`;
+}
+
+function selectSupportingObjects(record, context) {
+  return uniqueText([
+    ...(record.visualTerms || []),
+    ...(context.productionProfile.allowedObjects || []),
+    ...(record.settingTerms || [])
+  ])
+    .map(stripFinalPunctuation)
+    .filter((item) => !/[,.]$/.test(item))
+    .filter((item) => !/^(once|later|some|one|another|the|this|that|appeared)$/i.test(item))
+    .filter((item) => exactTextKey(item) !== exactTextKey(record.factText))
+    .slice(0, 4);
+}
+
+function selectCulturalContext(context, record) {
+  return uniqueText([
+    ...(record.settingTerms || []),
+    ...(context.productionProfile.culturalContext || []),
+    context.productionProfile.profileType
+  ]).slice(0, 4);
+}
+
+function noteCautionForFact(record, context) {
+  const text = stripFinalPunctuation(realizeVisualFact(record, context));
+  if (record.factType === 'variant') return `Present ${lowercaseStart(text)} as a version detail, not as the only fixed form.`;
+  if (record.factType === 'source-context') return `Keep ${lowercaseStart(text)} source-limited, without turning it into a stronger claim.`;
+  if (record.factType === 'meaning') return `Use ${lowercaseStart(text)} as interpretation, not as a new event.`;
+  if (record.factType === 'outcome') return `Let ${lowercaseStart(text)} define the result for this Part.`;
+  return `Do not add figures, motives, or incidents beyond ${lowercaseStart(text)}.`;
+}
+
+function isProductionFactRecord(record) {
+  if (!record || !record.id || !record.factText) return false;
+  const validation = validateCreatorFactRecord(record);
+  if (!validation.valid) return false;
+  const text = safeTerm(record.factText);
+  if (isInternalInstruction(text) || isIncompleteFactFragment(text)) return false;
+  if (containsInternalProductionMetadata(text)) return false;
+  if (detectBrokenProductionText(text).length) return false;
+  if (/^(?:later versions|source comparison|public source note|category title)$/i.test(text)) return false;
+  return text.length >= 8;
+}
+
+function sortProductionRecords(records, preferredTypes) {
+  const typeRank = new Map((preferredTypes || []).map((type, index) => [type, preferredTypes.length - index]));
+  return [...records].sort((a, b) => {
+    const typeScore = (typeRank.get(b.factType) || 0) - (typeRank.get(a.factType) || 0);
+    if (typeScore) return typeScore;
+    const visualScore = Number(Boolean(b.visualTerms?.length)) - Number(Boolean(a.visualTerms?.length));
+    if (visualScore) return visualScore;
+    return Number(a.sourcePriority || 0) - Number(b.sourcePriority || 0);
+  });
+}
+
+function uniqueRecords(records) {
+  const seen = new Set();
+  const output = [];
+  for (const record of records || []) {
+    const key = record?.id || exactTextKey(record?.factText);
+    if (!key || seen.has(key)) continue;
+    seen.add(key);
+    output.push(record);
+  }
+  return output;
+}
+
+function recordsForIds(ids, factById) {
+  return (ids || []).map((id) => factById.get(id)).filter(Boolean).filter(isProductionFactRecord);
 }
 
 function buildBackgroundMusicForScene(context) {
@@ -428,6 +762,10 @@ function sanitizeProductionText(value) {
     .replace(/\bsource-aware\b/gi, 'source-limited')
     .replace(/\bis a pre-existing [a-z\s-]+ built\b/gi, 'is preserved')
     .replace(/\bviewer should\b/gi, 'the image should')
+    .replace(/\baround\s+and\b/gi, 'around the main detail and')
+    .replace(/\bcenters(?:\s+on)?\s+and\b/gi, 'centers on the main detail and')
+    .replace(/\bsome\s+a\b/gi, 'some describe a')
+    .replace(/,+\s*,+/g, ',')
     .replace(/\s+/g, ' ')
     .trim();
 }
@@ -440,7 +778,7 @@ function buildSceneFocusForScene(context) {
     context.normalizedInput.coreProblem,
     context.normalizedInput.topic
   );
-  return sanitizeProductionText(`The central visual should show ${lowercaseStart(fact)}.`);
+  return sanitizeProductionText(`The central visual should show ${lowercaseStart(stripFinalPunctuation(fact))}.`);
 }
 
 function noteCautionForPart(context, narration) {
@@ -535,9 +873,9 @@ function visualPhaseForBeat(partPlan, beatIndex) {
 
 function motionPhaseForBeat(partPlan, beatIndex) {
   const passage = Number(partPlan.partIndex || 1) === 1 ? 'opening' : 'follow-up';
-  if (beatIndex === 0) return `${passage} focal`;
+  if (beatIndex === 0) return `${passage} anchor`;
   if (beatIndex === 1) return `${passage} detail`;
-  return `${passage} wider`;
+  return `${passage} wider frame`;
 }
 
 function sequenceLabelForScene(sceneIndex) {
@@ -626,24 +964,106 @@ function containsInternalProductionMetadata(value) {
   return INTERNAL_METADATA_PATTERNS.some((pattern) => pattern.test(String(value || '')));
 }
 
-function publicSceneContextFromScene(scene) {
+function detectBrokenProductionText(value) {
+  const text = String(value || '');
+  const patterns = [
+    /^\s*works because\b/i,
+    /\bbegins with works because\b/i,
+    /\bcentered on works because\b/i,
+    /\bA ancient\b/i,
+    /\bbecomes of\b/i,
+    /\bconnected to its strongest image\b/i,
+    /,,|\.\./,
+    /\band\s+and\b/i,
+    /\bof\s+of\b/i,
+    /\bthe\s+the\b/i,
+    /\b(?:and|of|to|with|because)\s*[.!?]?$/i,
+    /\bcenters and\b/i,
+    /\baround and\b/i,
+    /\bsome\s+a\b/i,
+    /\bavoid no\b/i,
+    /\brestrained restrained\b/i
+  ];
+  return patterns.filter((pattern) => pattern.test(text)).map((pattern) => pattern.toString());
+}
+
+function detectGenericProductionText(value) {
+  const patterns = [
+    /needs this part to preserve/i,
+    /keep the visual work centered/i,
+    /confirmed story material/i,
+    /treat variant details as separate layers/i,
+    /avoid adding outside incidents/i,
+    /give the audience one clear idea/i,
+    /keep this simple/i,
+    /use this part as a transition/i,
+    /the viewer should recognize/i,
+    /this section works best when/i,
+    /keep the movement quiet/i,
+    /let the final movement settle softly/i,
+    /keep the subject readable/i,
+    /appears clearly in the frame/i
+  ];
+  return patterns.filter((pattern) => pattern.test(String(value || ''))).map((pattern) => pattern.toString());
+}
+
+function detectProductionFactLeak(value) {
+  const text = String(value || '');
+  const patterns = [
+    /\bfact-\d{3,}\b/i,
+    /\bsourceFieldRefs?\b/i,
+    /\btargetWords\b/i,
+    /\brawText\b/i,
+    /\bpurpose\s*:/i,
+    /\brole\s*:/i
+  ];
+  return patterns.filter((pattern) => pattern.test(text)).map((pattern) => pattern.toString());
+}
+
+function detectDuplicateProductionFields(result) {
+  const fields = {
+    creatorNote: [],
+    sceneFocus: [],
+    imagePrompt: [],
+    beatMotion: []
+  };
+  (result?.scenes || []).forEach((scene) => {
+    fields.sceneFocus.push(scene.sceneFocus);
+    (scene.narrationParts || []).forEach((part) => {
+      fields.creatorNote.push(part.creatorNote);
+      (part.visualBeats || []).forEach((beat) => {
+        fields.imagePrompt.push(beat.imagePrompt);
+        fields.beatMotion.push(beat.beatMotion);
+      });
+    });
+  });
+  return Object.fromEntries(Object.entries(fields).map(([field, values]) => [field, duplicateValues(values)]));
+}
+
+function publicSceneContextFromScene(scene, factById = new Map()) {
+  const factRecords = recordsForIds(scene.sourceFactIds, factById);
   return {
     sceneIndex: scene.sceneIndex,
     sceneRoleCode: roleCodeFromRole(scene.role),
-    sourceFacts: [...(scene.sourceFacts || [])],
+    sourceFactIds: [...(scene.sourceFactIds || [])],
+    factRecords,
+    sourceFacts: factRecords.map((record) => record.factText),
     sourceFieldRefs: [...(scene.sourceFieldRefs || [])],
-    requiredEntities: [...(scene.requiredEntities || [])],
-    requiredEvents: [...(scene.requiredEvents || [])],
+    requiredEntities: uniqueText([...(scene.requiredEntities || []), ...factRecords.flatMap((record) => record.entities || [])]),
+    requiredEvents: uniqueText([...factRecords.filter((record) => ['event', 'turning-point', 'outcome', 'problem'].includes(record.factType)).map((record) => record.factText), ...(scene.requiredEvents || [])]),
     variantGuidance: [...(scene.variantGuidance || [])],
     sourceGuidance: [...(scene.sourceGuidance || [])],
     meaningGuidance: [...(scene.meaningGuidance || [])]
   };
 }
 
-function publicPartContextFromPlan(partPlan) {
+function publicPartContextFromPlan(partPlan, factById = new Map()) {
+  const factRecords = recordsForIds(partPlan.sourceFactIds, factById);
   return {
     partIndex: partPlan.partIndex,
-    sourceFacts: [...(partPlan.sourceFacts || [])],
+    sourceFactIds: [...(partPlan.sourceFactIds || [])],
+    factRecords,
+    sourceFacts: factRecords.map((record) => record.factText),
     sourceFieldRefs: [...(partPlan.sourceFieldRefs || [])],
     targetWords: partPlan.targetWords
   };
@@ -684,15 +1104,34 @@ function safeTerm(value) {
 
 function safePromptValue(value) {
   const text = safeTerm(value)
+    .replace(/[.!?]+$/g, '')
+    .replace(/[,\s]+$/g, '')
     .replace(/[;:]+$/g, '')
-    .replace(/\b(scene|part|subject|record|article)\b/gi, '')
+    .replace(/\b(?:scene|subject|article)\b/gi, '')
     .replace(/\baround\s+and\b/gi, 'around the main detail')
+    .replace(/\bcenters(?:\s+on)?\s+and\b/gi, 'centers on the main detail and')
     .replace(/\bsome\s+a\b/gi, 'one')
     .replace(/\b(?:and|or|with|to|of)\s*$/gi, '')
     .replace(/\s+/g, ' ')
     .trim();
   if (!text || /^(and|or|with|to|of|in|on|as)$/i.test(text)) return 'the central subject';
   return text;
+}
+
+function safeMotionValue(value, fallback = 'the central visual detail') {
+  const text = safePromptValue(value);
+  if (!text || containsFieldMixing(text, ['sound effect', 'music', 'voice direction', 'narration'])) {
+    return safePromptValue(fallback) || 'the central visual detail';
+  }
+  return text;
+}
+
+function stripFinalPunctuation(value) {
+  return safeTerm(value).replace(/[.!?]+$/g, '').trim();
+}
+
+function articleFor(value) {
+  return /^[aeiou]/i.test(String(value || '').trim()) ? 'An' : 'A';
 }
 
 function extractVisualObject(value) {
@@ -728,6 +1167,16 @@ function hasExactDuplicate(values) {
   return false;
 }
 
+function duplicateValues(values) {
+  const counts = new Map();
+  for (const value of values || []) {
+    const key = exactTextKey(value);
+    if (!key) continue;
+    counts.set(key, { value, count: (counts.get(key)?.count || 0) + 1 });
+  }
+  return [...counts.values()].filter((item) => item.count > 1);
+}
+
 function uniqueText(values) {
   const seen = new Set();
   const output = [];
@@ -750,14 +1199,23 @@ module.exports = {
   buildCreatorProductionFields,
   validateCreatorProductionFields,
   buildCreatorNoteForPart,
+  buildSceneFocusForScene,
   buildVisualBeatsForPart,
+  buildVisualBeatPlan,
   buildImagePromptForBeat,
   buildBeatMotionForBeat,
+  selectVisualFactRecords,
+  realizeVisualFact,
   buildBackgroundMusicForScene,
   buildVoiceDirectionForScene,
   buildSoundEffectForScene,
   buildProductionProfile,
   validateProductionProfile,
   sanitizeProductionText,
-  containsInternalProductionMetadata
+  containsInternalProductionMetadata,
+  detectBrokenProductionText,
+  detectGenericProductionText,
+  detectInternalProductionMetadata: containsInternalProductionMetadata,
+  detectProductionFactLeak,
+  detectDuplicateProductionFields
 };
