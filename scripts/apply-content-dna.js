@@ -330,14 +330,41 @@ function buildBodySections(story) {
   }));
 }
 
+function buildLongformSupplementarySections(article) {
+  if (Array.isArray(article.supplementarySections)) {
+    return article.supplementarySections
+      .filter((section) => section?.heading && Array.isArray(section.paragraphs))
+      .map((section) => ({
+        id: section.id || slugify(section.heading),
+        heading: section.heading,
+        paragraphs: section.paragraphs
+      }));
+  }
+
+  return [
+    {
+      id: 'versions-and-record',
+      heading: 'Versions and the Record',
+      paragraphs: article.versionsAndRecord || []
+    },
+    {
+      id: 'interpretation-and-meaning',
+      heading: 'Interpretation and Meaning',
+      paragraphs: article.interpretationAndMeaning || []
+    }
+  ];
+}
+
 function buildLongformNavigationSections(article) {
   return [
     ...(article.storyBody || []).map((section) => ({
       id: section.id || slugify(section.heading),
       title: section.heading
     })),
-    { id: 'versions-and-record', title: 'Versions and the Record' },
-    { id: 'interpretation-and-meaning', title: 'Interpretation and Meaning' }
+    ...buildLongformSupplementarySections(article).map((section) => ({
+      id: section.id,
+      title: section.heading
+    }))
   ];
 }
 
@@ -347,6 +374,10 @@ function renderLongformArticle(article) {
     .join('\n');
   const storyBody = (article.storyBody || []).map((section) => `<h2 id="${escapeAttr(section.id || slugify(section.heading))}">${escapeHtml(section.heading)}</h2>
           ${renderParagraphs(section.paragraphs)}`).join('\n');
+  const supplementarySections = buildLongformSupplementarySections(article)
+    .map((section) => `<h2 id="${escapeAttr(section.id)}">${escapeHtml(section.heading)}</h2>
+          ${renderParagraphs(section.paragraphs)}`)
+    .join('\n');
   const qa = (article.qa || []).map((item) => `
             <h3>${escapeHtml(item.question)}</h3>
             <p>${escapeHtml(item.answer)}</p>`).join('');
@@ -355,10 +386,7 @@ function renderLongformArticle(article) {
 
   return `<div class="story-body archive-entry longform-archive-entry">
           ${storyBody}
-          <h2 id="versions-and-record">Versions and the Record</h2>
-          ${renderParagraphs(article.versionsAndRecord)}
-          <h2 id="interpretation-and-meaning">Interpretation and Meaning</h2>
-          ${renderParagraphs(article.interpretationAndMeaning)}
+          ${supplementarySections}
           <h2 id="faq">Q&amp;A</h2>
           <div class="faq-list">${qa}
           </div>
