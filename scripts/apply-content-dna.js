@@ -12,6 +12,8 @@ const stories = readJson(storiesPath);
 const categories = readJson(path.join(root, 'data', 'categories.json'));
 const scripts = readOptionalJson(path.join(root, 'data', 'scripts.json'), []);
 const seoOverrides = readOptionalJson(path.join(root, 'data', 'story-seo-overrides.json'), {});
+const storyArgIndex = process.argv.indexOf('--story');
+const selectedStorySlug = storyArgIndex >= 0 ? process.argv[storyArgIndex + 1] : '';
 
 const storyBySlug = new Map(stories.map((story) => [story.slug, story]));
 const scriptByStorySlug = new Map(scripts.map((script) => [script.originalStorySlug, script]));
@@ -55,14 +57,20 @@ for (const story of stories) {
 
 writeJson(storiesPath, stories);
 
+let generatedStoryCount = 0;
 for (let index = 0; index < stories.length; index += 1) {
   const story = stories[index];
+  if (selectedStorySlug && story.slug !== selectedStorySlug) continue;
   const previousStory = stories[index + 1] || null;
   const nextStory = stories[index - 1] || null;
   writeFile(`stories/${story.slug}.html`, renderStoryPage(story, previousStory, nextStory));
+  generatedStoryCount += 1;
 }
 
-console.log(`Applied contentDNA and regenerated ${stories.length} story page(s).`);
+if (selectedStorySlug && generatedStoryCount === 0) {
+  throw new Error(`Story not found for --story: ${selectedStorySlug}`);
+}
+console.log(`Applied contentDNA and regenerated ${generatedStoryCount} story page(s).`);
 
 function backfillStoryMetadata(story) {
   const title = story.title || story.displayTitle || titleFromSlug(story.slug);
@@ -221,7 +229,10 @@ function renderStoryPage(story, previousStory, nextStory) {
   const navigationStories = getNavigationStories(story, previousStory, nextStory);
   const recommendationSlots = allocateRecommendationSlots(relatedStories, navigationStories);
   const dna = story.contentDNA;
-  const sections = dedupeSectionParagraphs(buildBodySections(story));
+  const longformArticle = story.longformArticle;
+  const sections = longformArticle
+    ? buildLongformNavigationSections(longformArticle)
+    : dedupeSectionParagraphs(buildBodySections(story));
   const scriptCta = renderScriptCta(story);
 
   return `<!doctype html>
@@ -259,20 +270,20 @@ function renderStoryPage(story, previousStory, nextStory) {
         <header class="archive-article-header">
           <p class="label">${escapeHtml(story.category)}</p>
           <h1 class="article-title">${escapeHtml(title)}</h1>
-          <p class="deck">${escapeHtml(story.introSummary || story.excerpt || story.summaryAnswer || description)}</p>
+          <p class="deck">${escapeHtml(longformArticle?.deck || story.introSummary || story.excerpt || story.summaryAnswer || description)}</p>
           <p class="article-updated">Updated ${escapeHtml(formatDate(story.updatedAt || story.publishedAt))}</p>
 ${renderHeroImage(story)}
           ${renderMetaGrid(story)}
         </header>
         ${renderSearchSummary(story)}
-        ${renderStoryMap(sections)}
+        ${longformArticle ? renderLongformArticle(longformArticle) : `${renderStoryMap(sections)}
         ${renderReadingBridge(story, recommendationSlots.bridge)}
         <div class="story-body archive-entry">
           ${renderOpening(story)}
           ${sections.map((section, index) => `${renderSection(section)}${renderArchiveInsightBox(story, index, sections.length)}`).join('\n')}
           ${renderFaq(story)}
           ${renderSourceNote(story)}
-        </div>
+        </div>`}
 ${scriptCta ? `        ${scriptCta}
 ` : ''}        ${renderRelatedArticles(recommendationSlots.related)}
         ${renderPrevNext(navigationStories.previous, navigationStories.next)}
@@ -317,6 +328,46 @@ function buildBodySections(story) {
     title: heading,
     paragraphs: sectionParagraphs(story, heading, index, vocabulary, details)
   }));
+}
+
+function buildLongformNavigationSections(article) {
+  return [
+    ...(article.storyBody || []).map((section) => ({
+      id: section.id || slugify(section.heading),
+      title: section.heading
+    })),
+    { id: 'versions-and-record', title: 'Versions and the Record' },
+    { id: 'interpretation-and-meaning', title: 'Interpretation and Meaning' }
+  ];
+}
+
+function renderLongformArticle(article) {
+  const renderParagraphs = (paragraphs) => (paragraphs || [])
+    .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
+    .join('\n');
+  const storyBody = (article.storyBody || []).map((section) => `<h2 id="${escapeAttr(section.id || slugify(section.heading))}">${escapeHtml(section.heading)}</h2>
+          ${renderParagraphs(section.paragraphs)}`).join('\n');
+  const qa = (article.qa || []).map((item) => `
+            <h3>${escapeHtml(item.question)}</h3>
+            <p>${escapeHtml(item.answer)}</p>`).join('');
+  const references = (article.references || []).map((reference) => `
+            <li><a href="${escapeAttr(reference.url)}">${escapeHtml(reference.title)}</a></li>`).join('');
+
+  return `<div class="story-body archive-entry longform-archive-entry">
+          ${storyBody}
+          <h2 id="versions-and-record">Versions and the Record</h2>
+          ${renderParagraphs(article.versionsAndRecord)}
+          <h2 id="interpretation-and-meaning">Interpretation and Meaning</h2>
+          ${renderParagraphs(article.interpretationAndMeaning)}
+          <h2 id="faq">Q&amp;A</h2>
+          <div class="faq-list">${qa}
+          </div>
+          <h2 id="source-note">Story &amp; Source Note</h2>
+          ${renderParagraphs(article.storySourceNote)}
+          <h2 id="references">References</h2>
+          <ul class="article-references">${references}
+          </ul>
+        </div>`;
 }
 
 function dedupeSectionParagraphs(sections) {
@@ -677,6 +728,14 @@ function renderHeroImage(story) {
 }
 
 function renderSearchSummary(story) {
+  if (story.longformArticle?.quickAnswer?.length) {
+    return `<aside class="search-summary" aria-labelledby="quick-answer-title">
+      <h2 id="quick-answer-title">Quick Answer</h2>
+      <div class="search-summary-grid">
+        <div>${story.longformArticle.quickAnswer.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join('')}</div>
+      </div>
+    </aside>`;
+  }
   const plan = buildPublicArticlePlan(story);
   if (plan?.quickAnswer) {
     const paragraphs = Array.isArray(plan.quickAnswer.paragraphs)
