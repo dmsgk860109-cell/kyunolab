@@ -6,7 +6,7 @@ const { buildPublicArticlePlan } = require('./public-article-plan');
 
 const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://kyunolab.com';
-const styleVersion = '20260719-unified-link-priority';
+const styleVersion = '20260727-story-content-package';
 const storiesPath = path.join(root, 'data', 'stories.json');
 const stories = readJson(storiesPath);
 const categories = readJson(path.join(root, 'data', 'categories.json'));
@@ -23,6 +23,8 @@ for (const story of stories) {
 }
 
 for (const story of stories) {
+  if (selectedStorySlug && story.slug !== selectedStorySlug) continue;
+  if (story.longformArticle?.contentPackageVersion === 'archive-story-content-v1') continue;
   backfillStoryMetadata(story);
   if (seoOverrides[story.slug]) Object.assign(story, seoOverrides[story.slug]);
   const generatedDNA = buildContentDNA(story, existingQueries);
@@ -265,7 +267,7 @@ function renderStoryPage(story, previousStory, nextStory) {
   ${renderHeader()}
   <main class="article-shell article-layout">
       ${renderLeftRail(story, sections)}
-      <article>
+      <article class="archive-story">
         ${renderBreadcrumb(story)}
         <header class="archive-article-header">
           <p class="label">${escapeHtml(story.category)}</p>
@@ -276,7 +278,9 @@ ${renderHeroImage(story)}
           ${renderMetaGrid(story)}
         </header>
         ${renderSearchSummary(story)}
-        ${longformArticle ? renderLongformArticle(longformArticle) : `${renderStoryMap(sections)}
+        ${longformArticle ? `${renderStoryMap(sections)}
+        ${renderReadingBridge(story, recommendationSlots.bridge)}
+        ${renderLongformArticle(longformArticle)}` : `${renderStoryMap(sections)}
         ${renderReadingBridge(story, recommendationSlots.bridge)}
         <div class="story-body archive-entry">
           ${renderOpening(story)}
@@ -356,46 +360,47 @@ function buildLongformSupplementarySections(article) {
 }
 
 function buildLongformNavigationSections(article) {
-  return [
-    ...(article.storyBody || []).map((section) => ({
-      id: section.id || slugify(section.heading),
-      title: section.heading
-    })),
-    ...buildLongformSupplementarySections(article).map((section) => ({
-      id: section.id,
-      title: section.heading
-    }))
-  ];
+  return (article.storyBody || []).map((section) => ({
+    id: section.id || slugify(section.heading),
+    title: section.heading
+  }));
 }
 
 function renderLongformArticle(article) {
-  const renderParagraphs = (paragraphs) => (paragraphs || [])
+  const renderParagraphs = (paragraphs) => (Array.isArray(paragraphs) ? paragraphs : [paragraphs].filter(Boolean))
     .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
     .join('\n');
   const storyBody = (article.storyBody || []).map((section) => `<h2 id="${escapeAttr(section.id || slugify(section.heading))}">${escapeHtml(section.heading)}</h2>
           ${renderParagraphs(section.paragraphs)}`).join('\n');
-  const supplementarySections = buildLongformSupplementarySections(article)
-    .map((section) => `<h2 id="${escapeAttr(section.id)}">${escapeHtml(section.heading)}</h2>
-          ${renderParagraphs(section.paragraphs)}`)
-    .join('\n');
   const qa = (article.qa || []).map((item) => `
-            <h3>${escapeHtml(item.question)}</h3>
-            <p>${escapeHtml(item.answer)}</p>`).join('');
+            <article class="story-qa-item"><h3>${escapeHtml(item.question)}</h3>
+            <p>${escapeHtml(item.answer)}</p></article>`).join('');
   const references = (article.references || []).map((reference) => `
-            <li><a href="${escapeAttr(reference.url)}">${escapeHtml(reference.title)}</a></li>`).join('');
+            <li>${reference.url ? `<a href="${escapeAttr(reference.url)}">${escapeHtml(reference.title)}</a>` : escapeHtml(reference.title)}</li>`).join('');
+  const relatedKeywords = (article.relatedKeywords || []).map((keyword) => `<span>${escapeHtml(keyword)}</span>`).join('');
+  const opening = renderParagraphs(article.opening);
 
   return `<div class="story-body archive-entry longform-archive-entry">
-          ${storyBody}
-          ${supplementarySections}
-          <h2 id="faq">Q&amp;A</h2>
+          ${opening ? `${opening}\n          ` : ''}${storyBody}
+        </div>
+        <section class="story-supplement story-qa" aria-labelledby="story-qa-heading">
+          <h2 id="story-qa-heading">Q&amp;A</h2>
           <div class="faq-list">${qa}
           </div>
-          <h2 id="source-note">Story &amp; Source Note</h2>
+        </section>
+        <section class="story-supplement story-source-note" aria-labelledby="story-source-note-heading">
+          <h2 id="story-source-note-heading">Source Note</h2>
           ${renderParagraphs(article.storySourceNote)}
-          <h2 id="references">References</h2>
+        </section>
+        <section class="story-supplement story-sources" aria-labelledby="story-sources-heading">
+          <h2 id="story-sources-heading">Sources</h2>
           <ul class="article-references">${references}
           </ul>
-        </div>`;
+        </section>
+        <section class="story-supplement story-keywords" aria-labelledby="story-keywords-heading">
+          <h2 id="story-keywords-heading">Related Keywords</h2>
+          <p class="related-keywords">${relatedKeywords}</p>
+        </section>`;
 }
 
 function dedupeSectionParagraphs(sections) {
@@ -741,7 +746,7 @@ function cleanSourceTitle(value) {
 
 function renderStoryMap(sections) {
   const items = sections.map((section) => `<li><a href="#${escapeAttr(section.id)}">${escapeHtml(section.title)}</a></li>`).join('');
-  return `<section class="story-map" aria-label="Story map"><h2>Story Map</h2><ol>${items}<li><a href="#faq">Frequently Asked Questions</a></li><li><a href="#source-note">Story &amp; Source Note</a></li></ol></section>`;
+  return `<section class="story-map" aria-label="Story map"><h2>Story Map</h2><ol>${items}</ol></section>`;
 }
 
 function renderBreadcrumb(story) {
@@ -756,11 +761,24 @@ function renderHeroImage(story) {
 }
 
 function renderSearchSummary(story) {
-  if (story.longformArticle?.quickAnswer?.length) {
+  const packageQuickAnswer = story.longformArticle?.quickAnswer;
+  if (packageQuickAnswer && !Array.isArray(packageQuickAnswer)) {
+    const fields = [
+      ['Identity', packageQuickAnswer.identity],
+      ['Role', packageQuickAnswer.role],
+      ['Importance', packageQuickAnswer.importance]
+    ].filter(([, value]) => value);
+    return `<aside class="search-summary" aria-labelledby="quick-answer-title">
+      <h2 id="quick-answer-title">Quick Answer</h2>
+      <dl class="search-summary-grid">${fields.map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join('')}
+      </dl>
+    </aside>`;
+  }
+  if (Array.isArray(packageQuickAnswer) && packageQuickAnswer.length) {
     return `<aside class="search-summary" aria-labelledby="quick-answer-title">
       <h2 id="quick-answer-title">Quick Answer</h2>
       <div class="search-summary-grid">
-        <div>${story.longformArticle.quickAnswer.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join('')}</div>
+        <div>${packageQuickAnswer.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join('')}</div>
       </div>
     </aside>`;
   }
@@ -815,8 +833,7 @@ function renderLeftRail(story, sections) {
   return `<aside class="article-rail article-rail-left" aria-label="Article navigation">
       <div class="rail-card">
         <p class="rail-label">In this article</p>
-        ${sections.slice(0, 6).map((section, index) => `<a${index === 0 ? ' class="is-current"' : ''} href="#${escapeAttr(section.id)}">${escapeHtml(section.title)}</a>`).join('')}
-        <a href="#faq">FAQ</a>
+        ${sections.map((section, index) => `<a${index === 0 ? ' class="is-current"' : ''} href="#${escapeAttr(section.id)}">${escapeHtml(section.title)}</a>`).join('')}
       </div>
       <div class="rail-card rail-card-subtle">
         <p class="rail-label">Archive paths</p>
