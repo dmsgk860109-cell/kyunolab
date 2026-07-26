@@ -730,3 +730,43 @@
     return escapeHtml(value);
   }
 })();
+
+(() => {
+  const article = document.querySelector('.excalibur-story');
+  if (!article) return;
+
+  const links = Array.from(document.querySelectorAll('.article-rail-left a[href^="#"], .story-map a[href^="#"]'));
+  const headings = Array.from(new Map(links.map((link) => {
+    const heading = document.getElementById(link.getAttribute('href').slice(1));
+    return heading ? [heading.id, heading] : null;
+  }).filter(Boolean)).values());
+  const header = document.querySelector('.site-header');
+
+  if (!links.length || !headings.length || !header) return;
+
+  let scheduled = false;
+  const updateActiveLink = () => {
+    scheduled = false;
+    const readingLine = Math.ceil(header.getBoundingClientRect().height + 20);
+    let activeHeading = headings[0];
+
+    for (const heading of headings) {
+      if (heading.getBoundingClientRect().top <= readingLine) activeHeading = heading;
+      else break;
+    }
+
+    links.forEach((link) => link.classList.toggle('is-current', link.getAttribute('href') === `#${activeHeading.id}`));
+  };
+  const scheduleUpdate = () => {
+    if (!scheduled) {
+      scheduled = true;
+      requestAnimationFrame(updateActiveLink);
+    }
+  };
+
+  window.addEventListener('scroll', scheduleUpdate, { passive: true });
+  window.addEventListener('resize', scheduleUpdate);
+  window.addEventListener('hashchange', scheduleUpdate);
+  window.addEventListener('load', scheduleUpdate, { once: true });
+  updateActiveLink();
+})();
