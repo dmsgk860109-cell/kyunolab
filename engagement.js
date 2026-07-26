@@ -732,7 +732,7 @@
 })();
 
 (() => {
-  const article = document.querySelector('.excalibur-story');
+  const article = document.querySelector('.excalibur-story, .sailing-stones-story');
   if (!article) return;
 
   const links = Array.from(document.querySelectorAll('.article-rail-left a[href^="#"], .story-map a[href^="#"]'));
