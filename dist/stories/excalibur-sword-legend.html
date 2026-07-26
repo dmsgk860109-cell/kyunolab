@@ -216,6 +216,7 @@
       window.addEventListener('scroll', scheduleUpdate, { passive: true });
       window.addEventListener('resize', scheduleUpdate);
       window.addEventListener('hashchange', scheduleUpdate);
+      window.addEventListener('load', scheduleUpdate, { once: true });
       updateActiveLink();
     })();
   </script>
