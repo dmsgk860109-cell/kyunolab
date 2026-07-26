@@ -196,7 +196,7 @@
       let scheduled = false;
       const updateActiveLink = () => {
         scheduled = false;
-        const readingLine = header.getBoundingClientRect().height + 20;
+        const readingLine = Math.ceil(header.getBoundingClientRect().height + 20);
         let activeHeading = headings[0];
 
         for (const heading of headings) {
