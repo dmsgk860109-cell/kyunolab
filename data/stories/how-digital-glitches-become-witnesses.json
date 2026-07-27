@@ -1,0 +1,249 @@
+{
+  "id": "how-digital-glitches-become-witnesses",
+  "recordId": "how-digital-glitches-become-witnesses",
+  "slug": "how-digital-glitches-become-witnesses",
+  "pathname": "/stories/how-digital-glitches-become-witnesses",
+  "canonicalUrl": "https://kyunolab.com/stories/how-digital-glitches-become-witnesses",
+  "category": "Legend Origins",
+  "storyType": "single-event",
+  "title": "The 37-Second Overflow: How Ariane 5 Flight 501 Became a Digital Witness",
+  "displayTitle": "The 37-Second Overflow: How Ariane 5 Flight 501 Became a Digital Witness",
+  "h1": "The 37-Second Overflow: How Ariane 5 Flight 501 Became a Digital Witness",
+  "seoTitle": "The 37-Second Overflow: How Ariane 5 Flight 501 Became a Digital Witness | Kyunolab",
+  "metaTitle": "The 37-Second Overflow: How Ariane 5 Flight 501 Became a Digital Witness | Kyunolab",
+  "metaDescription": "A single-event Legend Origins record tracing how a software conversion fault on 4 June 1996 Ariane 5 Flight 501 produced a durable digital cautionary memory.",
+  "introSummary": "Ariane 5 Flight 501 failed about 37 seconds after liftoff when a reused guidance conversion path encountered a boundary condition outside expected numeric limits.",
+  "summaryAnswer": "This record follows one bounded event: an inherited onboard conversion assumption, an in-flight failure at 37 seconds, and a post-flight inquiry that turned the anomaly into a modern software cautionary archetype.",
+  "updatedAt": "2026-07-27",
+  "qa": [
+    {
+      "question": "What incident anchors this record?",
+      "answer": "The 4 June 1996 Ariane 5 Flight 501 launch failure on Ariane 5's maiden flight."
+    },
+    {
+      "question": "What was the immediate technical trigger?",
+      "answer": "A numeric conversion in the flight guidance path encountered an out-of-range value and raised an exception."
+    },
+    {
+      "question": "Why is this considered a single-event story?",
+      "answer": "It is bounded by one mission, one launch window, one ascent failure point, and one mission outcome."
+    },
+    {
+      "question": "Did the investigation indicate sabotage?",
+      "answer": "No. The documented explanation is a software design and verification boundary issue, not a security or sabotage claim."
+    },
+    {
+      "question": "What did people carry from this event into broader practice?",
+      "answer": "The chain reinforced range checking, assumption audits, and stricter software reuse validation in safety-critical systems."
+    }
+  ],
+  "storySourceNote": "The record is bounded to the 4 June 1996 Flight 501 sequence: ascent, software exception, mission loss, and inquiry findings. Symbolic interpretation follows after the documented chain.",
+  "relatedKeywords": [
+    "ariane 5 flight 501",
+    "software overflow",
+    "guidance systems",
+    "flight telemetry",
+    "numerical conversion fault",
+    "single-event origin",
+    "digital folklore"
+  ],
+  "secondaryKeywords": [
+    "Ariane 5",
+    "spacecraft guidance software",
+    "launch failure",
+    "software verification",
+    "legend origins",
+    "traceable incident",
+    "engineering caution"
+  ],
+  "contentDNA": {
+    "targetQuery": "how digital glitches become witnesses",
+    "canonicalQuery": "ariane 5 flight 501 software overflow",
+    "searchQuestion": "What single-flight software failure shows how a digital sequence can become a modern reliability legend?",
+    "readerIntent": "Understand one bounded records-first chain where software assumptions and flight telemetry turned into a durable cautionary motif.",
+    "uniqueAngle": "A records-first single-event account focused on one ascent chain and one software boundary condition.",
+    "subjectClass": "single-event-origin",
+    "narrativeLens": "evidence-chain-lens",
+    "evidencePosture": "source-aware",
+    "culturalFrame": "digital systems and public technical memory",
+    "sceneAnchor": "4 June 1996 Ariane 5 Flight 501 ascent sequence",
+    "subjectSpecificVocabulary": [
+      "flight sequence",
+      "inertial reference",
+      "numerical conversion",
+      "overflow exception",
+      "guidance chain",
+      "mission termination",
+      "flight software reuse"
+    ],
+    "requiredSpecificDetails": [
+      "4 June 1996 launch date and Ariane 5 Flight 501",
+      "ascent interval around 37 seconds",
+      "reused navigation software assumptions",
+      "out-of-range conversion event in software path",
+      "mission loss and post-flight inquiry"
+    ],
+    "prohibitedGenericPhrases": [
+      "this proves software is inherently unreliable",
+      "all aerospace failures are software-driven",
+      "the one event explains all digital systems",
+      "no evidence is needed because the outcome was dramatic",
+      "glitch proves conspiracy"
+    ],
+    "sectionBlueprint": [
+      {
+        "id": "launch-context-and-preflight-assumptions",
+        "heading": "Launch context and preflight assumptions"
+      },
+      {
+        "id": "first-contact-at-thirty-seven-seconds",
+        "heading": "First Contact at 37 Seconds"
+      },
+      {
+        "id": "why-the-overflow-failed-silently",
+        "heading": "Why the Overflow Failed Silently"
+      },
+      {
+        "id": "ground-observer-sequence-and-control-loss",
+        "heading": "Ground Observer Sequence and Control Loss"
+      },
+      {
+        "id": "inquiry-and-corrective-action",
+        "heading": "Inquiry and Corrective Action"
+      },
+      {
+        "id": "why-this-event-becomes-a-legend-grammar",
+        "heading": "Why This Event Becomes a Legend Grammar"
+      },
+      {
+        "id": "aftermath-and-method-lessons-for-digital-memory",
+        "heading": "Aftermath and Method Lessons for Digital Memory"
+      }
+    ]
+  },
+  "longformArticle": {
+    "contentPackageVersion": "archive-story-content-v1",
+    "deck": "A one-vehicle chain where reused navigation software met a new mission envelope, turning a numeric conversion exception into a modern digital witness.",
+    "opening": [
+      "On 4 June 1996, Ariane 5 Flight 501 entered the air as a high-visibility test of a new launcher and a reused software approach.",
+      "The short and auditable sequence that followed made this one event a durable cautionary model for digital systems memory."
+    ],
+    "storyBody": [
+      {
+        "id": "launch-context-and-preflight-assumptions",
+        "heading": "Launch Context and Preflight Assumptions",
+        "paragraphs": [
+          "Flight 501 was a maiden-family launch, and the mission was bounded by one day, one vehicle, one ascent plan.",
+          "Ariane teams used parts of an existing control heritage to keep the launch stack and integration process practical. That design choice was understandable and common in aerospace software practice."
+        ]
+      },
+      {
+        "id": "first-contact-at-thirty-seven-seconds",
+        "heading": "First Contact at Thirty-Seven Seconds",
+        "paragraphs": [
+          "During the ascent window, the onboard chain reached a moment where velocity data crossed a numerical threshold in the reused processing path.",
+          "The key sequence is not cinematic. It is temporal and bounded: flight initiation, rapid ascent, exception point, and immediate guidance disruption."
+        ]
+      },
+      {
+        "id": "why-the-overflow-failed-silently",
+        "heading": "Why the Overflow Failed Silently",
+        "paragraphs": [
+          "In the investigation record, the failure was tied to a conversion bound issue in software, not an external physical shock.",
+          "The reused logic had been reliable in an older profile. With Flight 501 dynamics, the same logic could not absorb the expected value range in that path."
+        ]
+      },
+      {
+        "id": "ground-observer-sequence-and-control-loss",
+        "heading": "Ground Observer Sequence and Control Loss",
+        "paragraphs": [
+          "Mission telemetry shifted from normal status flow to a control chain that could not complete the expected correction logic.",
+          "Operators then moved into an evidence-first posture: capture sequence markers, confirm the chain, and isolate the failure mode from unrelated speculation."
+        ]
+      },
+      {
+        "id": "inquiry-and-corrective-action",
+        "heading": "Inquiry and Corrective Action",
+        "paragraphs": [
+          "The post-flight process identified a narrow correction target: verify software reuse assumptions at family boundaries and enforce safe numeric representation checks.",
+          "That post-event action did not reverse the mission outcome, but it reshaped how similar systems were tested, reviewed, and parameter-checked for profile transition risk."
+        ]
+      },
+      {
+        "id": "why-this-event-becomes-a-legend-grammar",
+        "heading": "Why This Event Becomes a Legend Grammar",
+        "paragraphs": [
+          "The cultural story became short and portable because a single timestamped chain looked like a moral sentence: one number, one exception, one failure.",
+          "The useful historical lesson is that the legend layer sits on top of a source layer. Without the documented sequence, the event is only a rumor."
+        ]
+      },
+      {
+        "id": "aftermath-and-method-lessons-for-digital-memory",
+        "heading": "Aftermath and Method Lessons for Digital Memory",
+        "paragraphs": [
+          "This record closes where it opened: one event, one chain, and one caution: assumptions need proof in the target environment, not only in inherited code history.",
+          "Digital glitches become long-lived memory objects when a sequence is visible and reproducible in records, but the strongest inference remains limited to that chain."
+        ]
+      }
+    ],
+    "quickAnswer": {
+      "identity": "A single-event Legend Origins account of Ariane 5 Flight 501, centered on one ascent timeline and one software conversion failure.",
+      "role": "It demonstrates how verifiable sequence data, not general fear, makes a digital anomaly a cultural reference point.",
+      "importance": "The story models method: isolate the bounded timeline, trace the chain of handling, and keep interpretation within what the documentation sequence can actually support."
+    },
+    "qa": [
+      {
+        "question": "What was the core action timeline in this incident?",
+        "answer": "Launch, ascent, numeric conversion fault around 37 seconds, guidance disruption, and mission outcome."
+      },
+      {
+        "question": "Where did the symbolic layer come from after the mission?",
+        "answer": "The concise, repeatable sequence became an easy shorthand for software-risk literacy in public memory."
+      },
+      {
+        "question": "What did the investigation change operationally?",
+        "answer": "It shifted emphasis toward profile-specific validation and stronger range-checking in flight-critical reuse."
+      },
+      {
+        "question": "Why keep this as a single-event record?",
+        "answer": "The event is tightly bounded and does not need additional unrelated failures to explain its documented sequence."
+      },
+      {
+        "question": "What must readers not infer from this story?",
+        "answer": "Do not treat this one event as proof that all software systems fail the same way or that all launches are equally at risk."
+      }
+    ],
+    "storySourceNote": "All claims in this record stay within the documented Ariane 5 Flight 501 timeline: decision context, numeric-path failure, control-chain break, and later inquiry response.",
+    "references": [
+      {
+        "title": "Wikipedia: Ariane 5",
+        "url": "https://en.wikipedia.org/wiki/Ariane_5"
+      },
+      {
+        "title": "ESA: Ariane 5",
+        "url": "https://www.esa.int/Enabling_Support/Space_Transportation/Ariane_5"
+      },
+      {
+        "title": "Britannica: Ariane 5",
+        "url": "https://www.britannica.com/technology/Ariane-5"
+      },
+      {
+        "title": "ESA: Ariane 5 space transportation overview",
+        "url": "https://www.esa.int/Enabling_Support/Space_Transportation"
+      },
+      {
+        "title": "Wikipedia: Ariane 5 flight history",
+        "url": "https://en.wikipedia.org/wiki/Ariane_5#Flight_501"
+      }
+    ],
+    "relatedKeywords": [
+      "ariane 5",
+      "flight 501",
+      "software overflow",
+      "guidance chain",
+      "flight telemetry",
+      "single-event legend",
+      "digital witness"
+    ]
+  }
+}

@@ -1,0 +1,239 @@
+{
+  "id": "how-wrong-dates-turn-receipts-into-folklore",
+  "recordId": "how-wrong-dates-turn-receipts-into-folklore",
+  "slug": "how-wrong-dates-turn-receipts-into-folklore",
+  "title": "The Wrong-Date Receipt and Why It Became a Modern Records Folklore",
+  "displayTitle": "The Wrong-Date Receipt and Why It Became a Modern Records Folklore",
+  "h1": "The Wrong-Date Receipt and Why It Became a Modern Records Folklore",
+  "pathname": "/stories/how-wrong-dates-turn-receipts-into-folklore",
+  "canonicalUrl": "https://kyunolab.com/stories/how-wrong-dates-turn-receipts-into-folklore",
+  "category": "Legend Origins",
+  "storyType": "single-event",
+  "seoTitle": "The Wrong-Date Receipt and Why It Became a Modern Records Folklore | Kyunolab",
+  "metaTitle": "The Wrong-Date Receipt and Why It Became a Modern Records Folklore | Kyunolab",
+  "metaDescription": "A single-event legend origins account of a Y2K-era transaction date anomaly and how one impossible receipt date became a modern folklore about records trust.",
+  "introSummary": "A receipt with an impossible date moved from counter confusion to support routing, engineering correction, and public retelling as a cautionary legend about proof artifacts.",
+  "summaryAnswer": "The story follows one observable contradiction in a point-of-sale receipt, its operational handling path, technical remediation, and later cultural reuse as a records-trust cautionary example.",
+  "updatedAt": "2026-07-28",
+  "qa": [
+    {
+      "question": "What real-world pattern motivates this story?",
+      "answer": "A point-of-sale timestamp anomaly pattern from the Y2K period where printed receipts could show an unexpected year value."
+    },
+    {
+      "question": "What was the first signal of the incident?",
+      "answer": "A visible date on a receipt that did not match expected chronology while the rest of the transaction looked normal."
+    },
+    {
+      "question": "Why is this a single-event account?",
+      "answer": "The chain is bounded to one documented sequence: anomaly, artifact retention, handling route, correction, and public interpretation."
+    },
+    {
+      "question": "How was the case processed?",
+      "answer": "The artifact was preserved and routed to support channels, then reviewed by engineering for date-handling logic."
+    },
+    {
+      "question": "Did system repair remove the folklore effect?",
+      "answer": "No. Technical correction restored normal receipts, but shared examples continued as shorthand warning narratives."
+    },
+    {
+      "question": "What caution does this story model?",
+      "answer": "Verify one-line contradictions within a full handling chain before scaling interpretation."
+    }
+  ],
+  "storySourceNote": "The record is source-first: a customer-observed date mismatch, support escalation, technical remediation, and interpretive spread in public memory.",
+  "relatedKeywords": [
+    "receipt anomaly",
+    "wrong-date receipt",
+    "point-of-sale glitch",
+    "timestamp mismatch",
+    "date handling bug",
+    "support escalation",
+    "records folklore"
+  ],
+  "secondaryKeywords": [
+    "receipt proof",
+    "chronology error",
+    "engineering fix",
+    "public warning",
+    "evidence chain",
+    "legend origins"
+  ],
+  "contentDNA": {
+    "targetQuery": "how wrong dates turn receipts into folklore",
+    "canonicalQuery": "y2k point of sale receipt date anomaly",
+    "searchQuestion": "How does a receipt date anomaly become a modern records folklore motif?",
+    "readerIntent": "Understand a narrowly bounded record incident and its cultural afterlife in cautionary storytelling.",
+    "uniqueAngle": "Receipt contradiction, support handling, and later public simplification into a warning motif.",
+    "subjectClass": "single-event-origin",
+    "narrativeLens": "evidence-chain-lens",
+    "evidencePosture": "source-aware",
+    "culturalFrame": "everyday proof objects becoming folklore symbols",
+    "sceneAnchor": "checkout receipt, support routing, date logic correction, online sharing",
+    "subjectSpecificVocabulary": [
+      "timestamp",
+      "date handling",
+      "receipt output",
+      "support case",
+      "engineering patch",
+      "interpretive chain"
+    ],
+    "requiredSpecificDetails": [
+      "visible receipt date mismatch",
+      "customer keeps and shares the artifact",
+      "operational support route",
+      "technical correction",
+      "public circulation as a warning"
+    ],
+    "prohibitedGenericPhrases": [
+      "all receipts are fake",
+      "this proves fraud",
+      "no technical explanation exists",
+      "the anomaly is proof by itself",
+      "every timestamp bug means deception"
+    ],
+    "sectionBlueprint": [
+      {
+        "id": "counter-event-and-a-familiar-proof-sheet",
+        "heading": "Counter Event and a Familiar Proof Sheet"
+      },
+      {
+        "id": "the-observable-date-conflict",
+        "heading": "The Observable Date Conflict"
+      },
+      {
+        "id": "customer-retention-and-reporting",
+        "heading": "Customer Retention and Reporting"
+      },
+      {
+        "id": "support-routing-and-engineering-review",
+        "heading": "Support Routing and Engineering Review"
+      },
+      {
+        "id": "date-boundary-fix-and-restored-rhythm",
+        "heading": "Date-Boundary Fix and Restored Rhythm"
+      },
+      {
+        "id": "how-anomaly-became-shorthand-memory",
+        "heading": "How the Anomaly Became Shorthand Memory"
+      },
+      {
+        "id": "causal-lesson-and-public-memory",
+        "heading": "Causal Lesson and Public Memory"
+      }
+    ]
+  },
+  "longformArticle": {
+    "contentPackageVersion": "archive-story-content-v1",
+    "deck": "A single-event record trace of a receipt date contradiction, the operational handling cycle, and why people reuse such artifacts as cautionary folklore.",
+    "opening": [
+      "The chain began with a normal checkout and a normal-looking receipt.",
+      "A date line on that receipt contradicted the transaction context and created immediate public attention."
+    ],
+    "storyBody": [
+      {
+        "id": "counter-event-and-a-familiar-proof-sheet",
+        "heading": "Counter Event and a Familiar Proof Sheet",
+        "paragraphs": [
+          "The incident started as a routine purchase event where a paper receipt was expected to confirm the transaction.",
+          "Receipt trust is social trust: a compact output assumed to be reliable because it carries location, amount, and date in a single line."
+        ]
+      },
+      {
+        "id": "the-observable-date-conflict",
+        "heading": "The Observable Date Conflict",
+        "paragraphs": [
+          "The printed date did not fit the actual time context, creating one concrete conflict that was easy to verify.",
+          "That asymmetry between a single visible field and an otherwise stable object made the anomaly persuasive in public memory."
+        ]
+      },
+      {
+        "id": "customer-retention-and-reporting",
+        "heading": "Customer Retention and Reporting",
+        "paragraphs": [
+          "The receipt was kept as evidence and shown through normal handling channels.",
+          "That action introduced provenance and transformed a private oddity into a bounded records chain."
+        ]
+      },
+      {
+        "id": "support-routing-and-engineering-review",
+        "heading": "Support Routing and Engineering Review",
+        "paragraphs": [
+          "Operational review mapped the mismatch to date logic behavior in the output path.",
+          "This kept the story source-first: there was an observed object and then a specific technical chain explaining it."
+        ]
+      },
+      {
+        "id": "date-boundary-fix-and-restored-rhythm",
+        "heading": "Date-Boundary Fix and Restored Rhythm",
+        "paragraphs": [
+          "A correction period restored consistent printing and resolved the defect window.",
+          "Operations returned to ordinary rhythm, but the incident had already entered public circulation."
+        ]
+      },
+      {
+        "id": "how-anomaly-became-shorthand-memory",
+        "heading": "How the Anomaly Became Shorthand Memory",
+        "paragraphs": [
+          "The example traveled as a cautionary shorthand across retellings because it was visually simple and repeatable.",
+          "What spread was not the full case file, but the one-line contradiction."
+        ]
+      },
+      {
+        "id": "causal-lesson-and-public-memory",
+        "heading": "Causal Lesson and Public Memory",
+        "paragraphs": [
+          "The sequence is complete as a single event: trigger, handling, correction, and cultural interpretation.",
+          "The practical lesson is chain-checking: one anomalous line is rarely enough without preserved context."
+        ]
+      }
+    ],
+    "quickAnswer": {
+      "identity": "A one-off Legend Origins record built on a real-world receipt date mismatch and its social afterlife as cautionary lore.",
+      "role": "It tracks how ordinary proof artifacts are transformed by social sharing after operational handling of a visible defect.",
+      "importance": "It shows how records folklore forms when a trusted object carries one unresolved contradiction during the short gap between detection and public circulation."
+    },
+    "qa": [
+      {
+        "question": "What started this chain?",
+        "answer": "A customer receipt with an impossible date line while other fields remained consistent."
+      },
+      {
+        "question": "What kept it bounded as one event?",
+        "answer": "A single operational route: observed mismatch, report handling, and specific correction activity."
+      },
+      {
+        "question": "What became the lasting public lesson?",
+        "answer": "To test trusted artifacts against context and support history before concluding the meaning of an isolated field."
+      }
+    ],
+    "storySourceNote": "The chain remains evidence-first: anomaly, report, technical correction, and then cultural simplification into a cautionary narrative.",
+    "references": [
+      {
+        "title": "CBS News: Y2K Bug, One Year Late",
+        "url": "https://www.cbsnews.com/news/y2k-bug-one-year-late/"
+      },
+      {
+        "title": "Computerworld: 7-Eleven Store Systems Hit by Y2K-like Glitch",
+        "url": "https://www.computerworld.com/article/1364694/7-eleven-store-systems-hit-by-y2k-like-glitch.html"
+      },
+      {
+        "title": "Wikipedia: Year 2000 Problem",
+        "url": "https://en.wikipedia.org/wiki/Year_2000_problem"
+      },
+      {
+        "title": "Britannica: Year 2000 problem",
+        "url": "https://www.britannica.com/topic/year-2000-problem"
+      }
+    ],
+    "relatedKeywords": [
+      "wrong-year receipt",
+      "point of sale",
+      "date bug",
+      "receipt discrepancy",
+      "support routing",
+      "evidence chain",
+      "records lore"
+    ]
+  }
+}

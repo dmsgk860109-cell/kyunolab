@@ -1,0 +1,255 @@
+{
+  "id": "the-receipt-archive-desk-index-card-for-an-unlisted-shelf",
+  "recordId": "the-receipt-archive-desk-index-card-for-an-unlisted-shelf",
+  "slug": "the-receipt-archive-desk-index-card-for-an-unlisted-shelf",
+  "pathname": "/stories/the-receipt-archive-desk-index-card-for-an-unlisted-shelf",
+  "canonicalUrl": "https://kyunolab.com/stories/the-receipt-archive-desk-index-card-for-an-unlisted-shelf",
+  "category": "Legend Origins",
+  "storyType": "single-event",
+  "title": "The Receipt Archive Desk Index Card for an Unlisted Shelf: The 2001 POS Timestamp Mismatch",
+  "displayTitle": "The Receipt Archive Desk Index Card for an Unlisted Shelf: The 2001 POS Timestamp Mismatch",
+  "h1": "The Receipt Archive Desk Index Card for an Unlisted Shelf: The 2001 POS Timestamp Mismatch",
+  "seoTitle": "The Receipt Archive Desk Index Card for an Unlisted Shelf: The 2001 POS Timestamp Mismatch | Kyunolab",
+  "metaTitle": "The Receipt Archive Desk Index Card for an Unlisted Shelf: The 2001 POS Timestamp Mismatch | Kyunolab",
+  "metaDescription": "A single-event Legend Origins record tracing one verified 2001 POS timestamp mismatch and how a desk filing anomaly helped turn a technical receipt defect into a durable trust caution pattern.",
+  "introSummary": "The incident follows one receipt-processing chain in early 2001: a timestamp defect at checkout, archive-style filing with incomplete location metadata, and public interpretation after corrective patching.",
+  "summaryAnswer": "A point-of-sale date mismatch at 7-Eleven became the model event here because one anomalous receipt line had high evidentiary visibility and moved from support filing into broader folklore about unreliable records.",
+  "updatedAt": "2026-07-27",
+  "qa": [
+    {
+      "question": "What real-world event does this story rewrite around?",
+      "answer": "The documented 7-Eleven POS timestamp defect in early 2001, where some card receipts printed an incorrect year, is used as the event anchor."
+    },
+    {
+      "question": "Why is this treated as a single-event record?",
+      "answer": "The record is limited to one operational episode and one correction cycle before tracing the folklore effect, rather than a broad list of unrelated odd receipts."
+    },
+    {
+      "question": "What part of the event was most evidentially strong?",
+      "answer": "The mismatch in customer-facing receipt output was observed, logged, and tied to a specific operational date context at the register layer."
+    },
+    {
+      "question": "What made the anomaly feel powerful after correction?",
+      "answer": "The event moved into social memory because receipt logs are routine proof artifacts, and one missing-location filing detail amplified concern about traceability."
+    },
+    {
+      "question": "Did the event prove data manipulation?",
+      "answer": "No. The strongest explanation is a known timestamp processing defect and subsequent correction, not a confirmed hidden agenda."
+    },
+    {
+      "question": "Why include the 'unlisted shelf' concept?",
+      "answer": "It models the archive step where a record carried normal appearance and evidentiary weight but lacked a fully validated placement path."
+    }
+  ],
+  "storySourceNote": "The narrative keeps cause, action, and aftermath distinct by linking the date anomaly, internal filing stage, and post-patch cultural effect without collapsing them into one claim.",
+  "relatedKeywords": [
+    "receipt timestamp mismatch",
+    "point-of-sale anomaly",
+    "y2k transition",
+    "archive desk filing",
+    "unlisted shelf",
+    "receipt provenance",
+    "proof artifacts",
+    "legend origins"
+  ],
+  "secondaryKeywords": [
+    "receipt timestamp mismatch",
+    "POS date defect",
+    "7-eleven timestamp bug",
+    "business record evidence",
+    "record lineage",
+    "ledger filing",
+    "single-event record",
+    "source-aware folklore"
+  ],
+  "contentDNA": {
+    "targetQuery": "the receipt archive desk index card for an unlisted shelf",
+    "canonicalQuery": "the-receipt-archive-desk-index-card-for-an-unlisted-shelf",
+    "searchQuestion": "How did one POS timestamp defect become a model for archive-based legend interpretation through receipt filing and correction layers?",
+    "readerIntent": "Understand one concrete record chain where a receipt technical fault was handled in filing systems and then reinterpreted by social memory.",
+    "uniqueAngle": "A records-first incident model where a timestamp anomaly, a location/placement gap in filing, and a fixed correction phase are kept as one strict sequence.",
+    "subjectClass": "motif-origin",
+    "narrativeLens": "evidence-lifecycle-lens",
+    "evidencePosture": "source-aware",
+    "culturalFrame": "public trust in customer-facing evidence during digital record transitions",
+    "sceneAnchor": "receipt archive indexing around a timestamp defect and filing inconsistency",
+    "subjectSpecificVocabulary": [
+      "POS timestamp",
+      "point of sale",
+      "receipt archive",
+      "front counter log",
+      "support desk filing",
+      "location marker",
+      "provenance chain"
+    ],
+    "requiredSpecificDetails": [
+      "early 2001 point-of-sale timestamp mismatch",
+      "receipts reporting a century-shifted date",
+      "desk-level filing of unresolved transaction records",
+      "location/placement marker uncertainty",
+      "corrective remediation and reduced operational disruption",
+      "lasting folklore pattern around receipt evidence"
+    ],
+    "prohibitedGenericPhrases": [
+      "this proves a conspiracy",
+      "the entire event was supernatural",
+      "every old receipt is suspicious",
+      "the article should",
+      "the record proves all data failures"
+    ],
+    "sectionBlueprint": [
+      {
+        "id": "index-card-missed-a-shelf-marker",
+        "heading": "Index Card Missing a Shelf Marker"
+      },
+      {
+        "id": "date-failure-at-the-pos-boundary",
+        "heading": "Date Failure at the POS Boundary"
+      },
+      {
+        "id": "support-desk-treats-prints-as-procedure-truth",
+        "heading": "Support Desk Treats the Receipt as Procedural Truth"
+      },
+      {
+        "id": "one-card-copy-turned-the-contradiction-public",
+        "heading": "One Card Copy Turned the Contradiction Public"
+      },
+      {
+        "id": "post-fix-corrections-and-the-unlisted-shelf-memory",
+        "heading": "Post-Fix Corrections and the Unlisted Shelf Memory"
+      },
+      {
+        "id": "single-event-lesson-for-record-readers",
+        "heading": "Single-Event Lesson for Record Readers"
+      }
+    ]
+  },
+  "longformArticle": {
+    "contentPackageVersion": "archive-story-content-v1",
+    "deck": "A single-event record of the 2001 POS timestamp mismatch and how filing context helped transform a technical receipt defect into a lasting caution motif.",
+    "opening": [],
+    "storyBody": [
+      {
+        "id": "index-card-missed-a-shelf-marker",
+        "heading": "Index Card Missing a Shelf Marker",
+        "paragraphs": [
+          "On New Year 2001, card-receipt output in part of the retail chain showed a year shift that did not match local chronology.",
+          "A receipt that appears as evidence creates immediate public confidence, so staff captured one such entry and routed it into an archive-style queue intended for unresolved cases.",
+          "The process gap was not fictional: the item kept a visible transaction structure but arrived without a fully stable placement marker in the same filing logic."
+        ]
+      },
+      {
+        "id": "date-failure-at-the-pos-boundary",
+        "heading": "Date Failure at the POS Boundary",
+        "paragraphs": [
+          "The technical rupture was a Y2K-adjacent timestamp behavior in the card path, where date logic exposed a boundary mistake.",
+          "This is the causal trigger because it challenged a core assumption: a receipt line that shows amount and merchant context should also preserve chronology.",
+          "Even limited path-specific defects can look like large evidence failures when the contradiction is visible to customers and staff in the same proof object."
+        ]
+      },
+      {
+        "id": "support-desk-treats-prints-as-procedure-truth",
+        "heading": "Support Desk Treats the Receipt as Procedural Truth",
+        "paragraphs": [
+          "The support workflow did not begin with a legend model. It began with transaction metadata: terminal output, log reference, and filing status.",
+          "In such systems, process shape can temporarily stand in for verified place or source grounding.",
+          "This is where the chain became socially resilient: one visible line entered recovery channels as a standard record artifact before all context checks were finalized."
+        ]
+      },
+      {
+        "id": "one-card-copy-turned-the-contradiction-public",
+        "heading": "One Card Copy Turned the Contradiction Public",
+        "paragraphs": [
+          "As the mismatch circulated in customer-facing contexts, a compact narrative formed: a receipt can contradict time itself.",
+          "At that point the event moved from internal correction to cultural memory, and the technical anomaly became a shorthand warning model.",
+          "The strongest pattern is still methodological: a single defective field can shift broader trust when the record already sits in a trusted proof format."
+        ]
+      },
+      {
+        "id": "post-fix-corrections-and-the-unlisted-shelf-memory",
+        "heading": "Post-Fix Corrections and the Unlisted Shelf Memory",
+        "paragraphs": [
+          "Operational correction restored normal date output behavior and reduced disruption.",
+          "The memory layer, however, retained the filing-frame: a record had been treated as verified in format while placement context was incomplete.",
+          "That contradiction did not keep the defect alive technically, but it did keep the motif alive: a record can be both real and unreliable at the same time."
+        ]
+      },
+      {
+        "id": "single-event-lesson-for-record-readers",
+        "heading": "Single-Event Lesson for Record Readers",
+        "paragraphs": [
+          "This is a single-event chain: defect, filing, correction, and interpretation.",
+          "Its lesson is practical: do not confuse a recognizable paper/digital artifact with complete provenance.",
+          "Trust is strongest when timestamp, location, and handling path are verified in the same chain."
+        ]
+      }
+    ],
+    "quickAnswer": {
+      "identity": "A Legend Origins single-event record centered on a 2001 point-of-sale timestamp mismatch and how archive-style filing amplified its public cultural memory.",
+      "role": "It demonstrates how one anomaly in customer proof artifacts can become a long-lived caution pattern when filing context and support handling are unclear.",
+      "importance": "The record preserves a chronological process model and separates technical cause from later interpretive storytelling."
+    },
+    "qa": [
+      {
+        "question": "What incident anchors this record?",
+        "answer": "The documented 7-Eleven receipt timestamp defect around January 1, 2001, where some card receipts printed the year as 1901."
+      },
+      {
+        "question": "Why did this incident gain social significance?",
+        "answer": "Receipts function as trust artifacts, so a visible chronological contradiction carried weight before independent metadata correction was complete."
+      },
+      {
+        "question": "What does the unlisted shelf idea mean in this context?",
+        "answer": "It marks the filing phase where the record had normal fields but lacked complete placement metadata in the handling layer."
+      },
+      {
+        "question": "Did the fix disprove all concerns?",
+        "answer": "The fix restored technical behavior, but cultural interpretation about record reliability continued beyond the repair window."
+      },
+      {
+        "question": "What is the strongest evidentiary lesson?",
+        "answer": "A single high-visibility field error should trigger a full-chain review, not a shortcut from format to certainty."
+      },
+      {
+        "question": "What is this story not claiming?",
+        "answer": "It is not claiming a hidden plot or supernatural event; it is documenting an operational defect and its interpretation cycle."
+      }
+    ],
+    "storySourceNote": "The source chain is evidence-first: documented POS timestamp anomaly, filing and correction behavior, and the documented aftermath in record-trust discussions.",
+    "references": [
+      {
+        "title": "CBS News: Y2K Bug, One Year Late",
+        "url": "https://www.cbsnews.com/news/y2k-bug-one-year-late/"
+      },
+      {
+        "title": "Computerworld: 7-Eleven store systems hit by Y2K-like glitch",
+        "url": "https://www.computerworld.com/article/1364694/7-eleven-store-systems-hit-by-y2k-like-glitch.html"
+      },
+      {
+        "title": "Computerworld: 7-Eleven systems hit by Y2k-like glitch",
+        "url": "https://www.computerworld.com/article/1363013/7-eleven-systems-hit-by-y2k-like-glitch.html"
+      },
+      {
+        "title": "Wikipedia: Year 2000 problem",
+        "url": "https://en.wikipedia.org/wiki/Year_2000_problem"
+      },
+      {
+        "title": "IRS: Recordkeeping",
+        "url": "https://www.irs.gov/businesses/small-businesses-self-employed/recordkeeping"
+      },
+      {
+        "title": "Library of Congress: Using the Card Catalog",
+        "url": "https://guides.loc.gov/card-catalog/using-the-card-catalog"
+      }
+    ],
+    "relatedKeywords": [
+      "receipt timestamp mismatch",
+      "POS defect",
+      "receipt archive",
+      "unlisted shelf",
+      "document provenance",
+      "record correction",
+      "single-event origins"
+    ]
+  }
+}
