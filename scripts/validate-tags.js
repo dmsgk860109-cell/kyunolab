@@ -1,8 +1,9 @@
 const fs = require('fs');
 const path = require('path');
+const { loadStories } = require('./lib/load-stories');
 
 const root = path.resolve(__dirname, '..');
-const stories = readJson(path.join(root, 'data', 'stories.json'));
+const stories = loadStories(root);
 const guides = readOptionalJson(path.join(root, 'data', 'guides.json'));
 const articles = [...stories, ...guides];
 const broadTags = new Set(['Mystery', 'Story', 'Legend', 'Strange', 'Interesting', 'Article', 'Folklore']);

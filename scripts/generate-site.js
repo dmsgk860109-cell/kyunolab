@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { loadStories } = require('./lib/load-stories');
 const {
   getCreatorPackRoot,
   getCreatorPackManifestPath,
@@ -19,7 +20,7 @@ const libraryPageSize = 10;
 const publishingCenterPageSize = 24;
 const rssLimit = 20;
 
-const stories = readJson(path.join(root, 'data', 'stories.json'));
+const stories = loadStories(root);
 const categories = readJson(path.join(root, 'data', 'categories.json'));
 const guides = readOptionalJson(path.join(root, 'data', 'guides.json'));
 const creatorScripts = loadCreatorScriptsForBuild(creatorPackOptions);

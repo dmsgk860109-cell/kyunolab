@@ -1,11 +1,12 @@
 const fs = require('fs');
 const path = require('path');
+const { loadStories } = require('./lib/load-stories');
 
 const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://kyunolab.com';
 const styleVersion = '20260717-search-ui';
 const guides = readJson(path.join(root, 'data', 'guides.json'));
-const stories = readJson(path.join(root, 'data', 'stories.json'));
+const stories = loadStories(root);
 const storyById = new Map(stories.map((story) => [story.id || story.slug, story]));
 const guideById = new Map(guides.map((guide) => [guide.id || guide.slug, guide]));
 

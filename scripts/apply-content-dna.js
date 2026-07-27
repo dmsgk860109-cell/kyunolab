@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { loadStories } = require('./lib/load-stories');
 const { buildContentDNA } = require('./article-dna-utils');
 const { policyAppliesToStory } = require('./content-policy');
 const { buildPublicArticlePlan } = require('./public-article-plan');
@@ -7,8 +8,7 @@ const { buildPublicArticlePlan } = require('./public-article-plan');
 const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://kyunolab.com';
 const styleVersion = '20260727-story-content-package';
-const storiesPath = path.join(root, 'data', 'stories.json');
-const stories = readJson(storiesPath);
+const stories = loadStories(root);
 const categories = readJson(path.join(root, 'data', 'categories.json'));
 const scripts = readOptionalJson(path.join(root, 'data', 'scripts.json'), []);
 const seoOverrides = readOptionalJson(path.join(root, 'data', 'story-seo-overrides.json'), {});
@@ -56,8 +56,6 @@ for (const story of stories) {
     }));
   }
 }
-
-writeJson(storiesPath, stories);
 
 let generatedStoryCount = 0;
 for (let index = 0; index < stories.length; index += 1) {

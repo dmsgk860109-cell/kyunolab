@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { execFileSync } = require('child_process');
+const { loadStories, writeStory } = require('./lib/load-stories');
 
 const root = path.resolve(__dirname, '..');
 const args = process.argv.slice(2);
@@ -14,8 +15,7 @@ if (!storyId || !inputPath) {
 const sourcePath = path.resolve(inputPath);
 if (!fs.existsSync(sourcePath)) throw new Error(`Input file not found: ${sourcePath}`);
 
-const storiesPath = path.join(root, 'data', 'stories.json');
-const stories = JSON.parse(fs.readFileSync(storiesPath, 'utf8'));
+const stories = loadStories(root);
 const story = stories.find((item) => item.id === storyId);
 if (!story) throw new Error(`Story record not found: ${storyId}`);
 
@@ -57,7 +57,7 @@ if (story.id !== identity.id || story.slug !== identity.slug) {
   throw new Error('Record identity must remain unchanged during content deployment');
 }
 
-fs.writeFileSync(storiesPath, `${JSON.stringify(stories, null, 2)}\n`, 'utf8');
+writeStory(root, story);
 execFileSync(process.execPath, [path.join(__dirname, 'apply-content-dna.js'), '--story', story.slug], { stdio: 'inherit' });
 
 const sourcePage = path.join(root, 'stories', `${story.slug}.html`);

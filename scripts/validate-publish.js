@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { loadStories } = require('./lib/load-stories');
 const {
   validateContentDNA,
   findBannedPhrases,
@@ -21,7 +22,7 @@ const listPageSize = 12;
 const errors = [];
 
 const args = parseArgs(process.argv.slice(2));
-const stories = readJson(path.join(root, 'data', 'stories.json'));
+const stories = loadStories(root);
 const categories = readOptionalJson(path.join(root, 'data', 'categories.json'));
 const guides = readOptionalJson(path.join(root, 'data', 'guides.json'));
 const siteConfig = readOptionalJson(path.join(root, 'data', 'site.json'), {});
