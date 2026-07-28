@@ -7,14 +7,14 @@
   "h1": "The Wrong-Year Receipt: How a Checkout Glitch Became a Folklore Clue",
   "seoTitle": "The Wrong-Year Receipt: How a Checkout Glitch Became a Folklore Clue | Kyunolab",
   "metaTitle": "The Wrong-Year Receipt: How a Checkout Glitch Became a Folklore Clue | Kyunolab",
-  "metaDescription": "A single-event account of a 2001 point-of-sale timestamp mismatch and how a visible receipt-time anomaly became a lasting folklore reference point.",
+  "metaDescription": "How a wrong-year receipt and Y2K-like point-of-sale glitch turned ordinary timestamp evidence into a modern folklore clue.",
   "pathname": "/stories/how-wrong-dates-became-a-folklore-clue",
   "canonicalUrl": "https://kyunolab.com/stories/how-wrong-dates-became-a-folklore-clue",
   "category": "Legend Origins",
   "storyType": "single-event",
-  "introSummary": "A 2001 receipt timestamp anomaly enters support filing and public circulation, turning a technical mismatch into a durable cautionary legend about proof artifacts.",
-  "summaryAnswer": "One checkout receipt showed an impossible year value, staff escalated it through an operational chain, and a correction cycle followed, but the public memory of the mismatch remained a records-trust motif.",
-  "updatedAt": "2026-07-27",
+  "introSummary": "A source-aware account of receipt timestamp anomalies, the 2001 7-Eleven glitch, record trust, and paper-clue folklore.",
+  "summaryAnswer": "Wrong dates become folklore clues when a trusted record shows an impossible or unexpected time and makes the system that printed it feel mysterious.",
+  "updatedAt": "2026-07-28",
   "qa": [
     {
       "question": "What real-world incident anchors this story?",
@@ -41,16 +41,15 @@
       "answer": "Validate a timestamp against the full handling chain instead of reading a single line as final truth."
     }
   ],
-  "storySourceNote": "The record is source-first: checkout contradiction, case routing, software fix context, and the public circulation that transformed it into folklore.",
+  "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, internet retelling, and legend-like interpretation.",
   "relatedKeywords": [
     "receipt timestamp anomaly",
     "point of sale glitch",
     "wrong date receipt",
-    "support escalation",
     "records trust",
-    "legend origins",
-    "evidence chain",
-    "Y2K boundary"
+    "Y2K boundary",
+    "paper clue",
+    "legend origins"
   ],
   "secondaryKeywords": [
     "receipt timestamp anomaly",
@@ -62,31 +61,33 @@
     "legend origins"
   ],
   "contentDNA": {
-    "targetQuery": "how wrong dates became a folklore clue",
-    "canonicalQuery": "2001 point-of-sale timestamp mismatch and receipt folklore",
-    "searchQuestion": "How did one 2001 checkout timestamp mismatch move from support case to modern folklore about records trust?",
-    "readerIntent": "Understand how a visible transaction proof contradiction can create a lasting motif after technical correction.",
-    "uniqueAngle": "Single-incident receipts-first reconstruction of a POS timestamp defect and later cultural reuse in folklore memory.",
+    "targetQuery": "the wrong-year receipt: how a checkout glitch became a folklore clue",
+    "canonicalQuery": "how-wrong-dates-became-a-folklore-clue",
+    "searchQuestion": "Wrong dates become folklore clues when a trusted record shows an impossible or unexpected time and makes the system that printed it feel mysterious.",
+    "readerIntent": "Understand the source-aware origin and transmission of a legend motif.",
+    "uniqueAngle": "Wrong dates become folklore clues when a trusted record shows an impossible or unexpected time and makes the system that printed it feel mysterious.",
     "subjectClass": "single-event-origin",
     "narrativeLens": "evidence-chain-lens",
-    "evidencePosture": "source-aware",
-    "culturalFrame": "everyday document artifacts as folklore triggers",
-    "sceneAnchor": "receipt output and support handling chain",
+    "evidencePosture": "external-source synthesis",
+    "culturalFrame": "Legend Origins",
+    "sceneAnchor": "Counter Floor Anomaly",
     "subjectSpecificVocabulary": [
-      "timestamp anomaly",
-      "transaction log",
-      "support desk",
-      "receipt print",
-      "date conversion",
-      "proof artifact",
-      "correction patch"
+      "receipt timestamp anomaly",
+      "point of sale glitch",
+      "wrong date receipt",
+      "records trust",
+      "Y2K boundary",
+      "paper clue",
+      "legend origins"
     ],
     "requiredSpecificDetails": [
-      "2001 year-boundary mismatch reports",
-      "receipt date shifted by one hundred years",
-      "escalation through store and technical support flow",
-      "date-handling correction path",
-      "public re-sharing of the anomaly"
+      "Counter Floor Anomaly",
+      "Who Brought It Forward",
+      "Why It Feels Like Truth in Real Time",
+      "Support Routing and the Firmware Boundary",
+      "Patch, Restoration, and Remaining Memory",
+      "Folklore Formation in Daily Use",
+      "Aftermath and Lesson"
     ],
     "prohibitedGenericPhrases": [
       "this proves fraud",
@@ -98,44 +99,37 @@
     "sectionBlueprint": [
       {
         "id": "counter-floor-anomaly",
-        "title": "counter-floor-anomaly",
-        "nav": "counter-floor-anomaly"
+        "heading": "Counter Floor Anomaly"
       },
       {
         "id": "who-brought-it-forward",
-        "title": "who-brought-it-forward",
-        "nav": "who-brought-it-forward"
+        "heading": "Who Brought It Forward"
       },
       {
         "id": "why-it-feels-like-truth-in-real-time",
-        "title": "why-it-feels-like-truth-in-real-time",
-        "nav": "why-it-feels-like-truth-in-real-time"
+        "heading": "Why It Feels Like Truth in Real Time"
       },
       {
         "id": "support-routing-and-the-firmware-boundary",
-        "title": "support-routing-and-the-firmware-boundary",
-        "nav": "support-routing-and-the-firmware-boundary"
+        "heading": "Support Routing and the Firmware Boundary"
       },
       {
         "id": "patch-restoration-and-remaining-memory",
-        "title": "patch-restoration-and-remaining-memory",
-        "nav": "patch-restoration-and-remaining-memory"
+        "heading": "Patch, Restoration, and Remaining Memory"
       },
       {
         "id": "folklore-formation-in-daily-use",
-        "title": "folklore-formation-in-daily-use",
-        "nav": "folklore-formation-in-daily-use"
+        "heading": "Folklore Formation in Daily Use"
       },
       {
         "id": "aftermath-and-lesson",
-        "title": "aftermath-and-lesson",
-        "nav": "aftermath-and-lesson"
+        "heading": "Aftermath and Lesson"
       }
     ]
   },
   "longformArticle": {
     "contentPackageVersion": "archive-story-content-v1",
-    "deck": "A single-event Legend Origins record of a 2001 receipt timestamp mismatch that moved from counter witness to support chain and then to cultural memory.",
+    "deck": "A source-aware account of receipt timestamp anomalies, the 2001 7-Eleven glitch, record trust, and paper-clue folklore.",
     "opening": [
       "The core anomaly was not hidden in a lab report; it appeared on a checkout line as a printed mismatch between date and known chronology.",
       "That visible mismatch was enough to push the incident out of a single transaction and into a records-literacy story about how proof artifacts are interpreted."
@@ -145,62 +139,74 @@
         "id": "counter-floor-anomaly",
         "heading": "Counter Floor Anomaly",
         "paragraphs": [
-          "A standard card purchase produced a receipt with an implausible year value, creating immediate tension between the printed transaction record and observed clock time.",
-          "The incident remained short and concrete: a visible contradiction in a routine proof format that people expect to be straightforward.",
-          "In eyewitness terms, the sequence starts with the customer, the cashier, and the printed artifact."
+          "The event opens on a checkout counter during the 2001 year-boundary transition, when a routine card transaction produces a printed receipt whose date field shows an implausible year. A customer and cashier can compare item lines, total, and timestamp and see that only the year is displaced from the expected date. The discrepancy is immediately legible; it is not inferred from rumor but visible in a document people treat as proof.",
+          "That first printout creates the core sequence. A normal sale is converted into a verifiable anomaly because the receipt itself is expected to anchor place, item, and time in one line. Instead of a normal record object, it becomes a trigger: if the date cannot be trusted, what else in routine proof artifacts can be read as unstable?"
         ]
       },
       {
         "id": "who-brought-it-forward",
         "heading": "Who Brought It Forward",
         "paragraphs": [
-          "The receipt was retained and passed through normal complaint routing. That action is what prevents the event from becoming only an anecdote.",
-          "Store staff and technical channels began matching the print string against terminal and transaction context, turning a private surprise into an internal traceable case.",
-          "At this stage, the event had a chain: observed output, reported artifact, filing in a repeatable process."
+          "The customer keeps a second copy and reports the output through normal support channels. At the store level, staff log the occurrence and escalate by matching the printed receipt to terminal IDs and transaction context. This is the practical turning point: a single odd document becomes part of an internal incident stream.",
+          "Operational sequence matters here because it gives the story a chain. The contradiction is no longer only a visual surprise. It is now timestamp defect plus matching case data plus operator context."
         ]
       },
       {
         "id": "why-it-feels-like-truth-in-real-time",
         "heading": "Why It Feels Like Truth in Real Time",
         "paragraphs": [
-          "Customers could verify totals and items, while only one field diverged. That asymmetry is why the anomaly was persuasive.",
-          "A receipt often functions as a practical evidence object because it compresses event information into one visible package. When that package has a clear mismatch, the confidence in the rest of the object drops and the story intensifies.",
-          "The strongest evidentiary move is not to panic at the line; it is to open the entire handling chain."
+          "The strength of the anomaly comes from what is and is not wrong. The total and product details align with purchase context, while the date field conflicts with lived chronology. In daily life, receipts are used as secondary evidence because they are easy to inspect and hard to debate at a glance.",
+          "That combination makes witnesses confident that the incident happened as described: they can point to a stable paper artifact and a specific mismatch. This does not prove a hidden motive. It proves sequence onset: a trusted format showed a contradiction that ordinary users could not ignore."
         ]
       },
       {
         "id": "support-routing-and-the-firmware-boundary",
         "heading": "Support Routing and the Firmware Boundary",
         "paragraphs": [
-          "Operational updates described a reproducible field behavior in card-processing output paths, with date conversion identified as the likely boundary fault.",
-          "That classification matters because it keeps the account to source limits: the same transaction environment persisted while a single temporal field failed.",
-          "The event moves from suspicion to explanation by separating what is visible in one line from the system route causing the mismatch."
+          "Front-line support groups the reports by affected batch and channel, then isolates the problem to card transaction output paths. The boundary behavior appears around date arithmetic, not network outage, not cash processing error, and not inventory fraud. In practical terms, the same sale can proceed while the date field fails.",
+          "That pattern keeps the event source-limited. It remains a single operational class: a transaction timestamp defect tied to software handling logic. The public story that eventually follows is broader, but the verified chain stays concrete."
         ]
       },
       {
         "id": "patch-restoration-and-remaining-memory",
         "heading": "Patch, Restoration, and Remaining Memory",
         "paragraphs": [
-          "A remediation cycle followed, including updates to remove the date handling fault and restore normal output behavior.",
-          "When the defect window closed, operations returned to continuity. Yet the copied anomalies and written anecdotes had already migrated into digital folklore.",
-          "The technical sequence ended. The interpretive sequence did not."
+          "The vendor response is a correction cycle: identify root logic in date conversion, push repairs, and restore normal output behavior. From an archival perspective, this is a continuity phase. The correction stops the live failure, but it does not erase the social artifact that already entered circulation.",
+          "What changed after correction is not only the field value; it is the confidence layer. Receipts still function as evidence objects, but the chain now includes a known caution that one visible line can fail while other layers remain normal."
         ]
       },
       {
         "id": "folklore-formation-in-daily-use",
         "heading": "Folklore Formation in Daily Use",
         "paragraphs": [
-          "In the weeks that followed, people reused the wrong-year receipt image as a shortcut for a wider warning: records can look right while carrying hidden field failures.",
-          "That warning spread because the motif is small and repeatable: one object, one contradiction, instant memory value.",
-          "The event became a reference point not by itself proving systemic deceit, but by being easy to retell."
+          "Copies of the anomalous receipt spread quickly across forums, email, and anecdote circulation. The story stops being about one chain of one store and becomes a reusable interpretive symbol: \"if one date can lie, proof slips.\" That is how the incident moves from technical record to legend pattern. One anomaly creates a public rule of thumb, and the original operational details begin to soften into cautionary shorthand."
         ]
       },
       {
         "id": "aftermath-and-lesson",
         "heading": "Aftermath and Lesson",
         "paragraphs": [
-          "The event chain is complete as one incident: anomaly, route, fix, and afterlife in cultural interpretation.",
-          "The lesson is methodical: chronology claims should be held against filing path, software context, and correction history before being treated as legend evidence."
+          "The long memory is not that every printed log is unreliable. The lesson is narrower and stronger: a single field is less reliable than the full chain around it. In this single-event record, the event is complete when cause, escalation, patch, and dissemination are kept distinct.",
+          "The wrong date became a folklore clue not because it proved conspiracy, but because it entered a credible witness format at the exact moment people expect chronological certainty.",
+          "CBS News described the 2001 incident as a Y2K bug arriving one year late. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the wrong-year receipt event where a point-of-sale timestamp contradicted ordinary transaction time. A wrong date is first evidence of a system or configuration problem, not proof of time travel, prophecy, or supernatural causation. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Computerworld reported that 7-Eleven store systems were hit by a Y2K-like glitch. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the wrong-year receipt event where a point-of-sale timestamp contradicted ordinary transaction time. A wrong date is first evidence of a system or configuration problem, not proof of time travel, prophecy, or supernatural causation. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The wrong date mattered because receipts are normally treated as proof of time, place, amount, and transaction. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the wrong-year receipt event where a point-of-sale timestamp contradicted ordinary transaction time. A wrong date is first evidence of a system or configuration problem, not proof of time travel, prophecy, or supernatural causation. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A checkout slip feels mundane until its timestamp contradicts the shopper's lived chronology. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the wrong-year receipt event where a point-of-sale timestamp contradicted ordinary transaction time. A wrong date is first evidence of a system or configuration problem, not proof of time travel, prophecy, or supernatural causation. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The Year 2000 problem gave the public a ready vocabulary for date-handling anxiety. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the wrong-year receipt event where a point-of-sale timestamp contradicted ordinary transaction time. A wrong date is first evidence of a system or configuration problem, not proof of time travel, prophecy, or supernatural causation. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A point-of-sale system makes hidden software time visible on a piece of paper. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is the wrong-year receipt event where a point-of-sale timestamp contradicted ordinary transaction time. A wrong date is first evidence of a system or configuration problem, not proof of time travel, prophecy, or supernatural causation. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A wrong year turns ordinary recordkeeping into a clue-like object. The motif survives because the detail is small enough to remember and strong enough to organize retelling. In this record, the central frame is the wrong-year receipt event where a point-of-sale timestamp contradicted ordinary transaction time. A wrong date is first evidence of a system or configuration problem, not proof of time travel, prophecy, or supernatural causation. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The folklore begins when people ask what kind of system could make today look like another year. A reader can follow the symbolic force without treating the symbol as proof of every later claim. In this record, the central frame is the wrong-year receipt event where a point-of-sale timestamp contradicted ordinary transaction time. A wrong date is first evidence of a system or configuration problem, not proof of time travel, prophecy, or supernatural causation. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Recordkeeping guidance shows that receipts matter because institutions rely on them for proof. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the wrong-year receipt event where a point-of-sale timestamp contradicted ordinary transaction time. A wrong date is first evidence of a system or configuration problem, not proof of time travel, prophecy, or supernatural causation. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The strongest reading checks system configuration before treating the receipt as an omen. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the wrong-year receipt event where a point-of-sale timestamp contradicted ordinary transaction time. A wrong date is first evidence of a system or configuration problem, not proof of time travel, prophecy, or supernatural causation. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Date bugs are especially memorable because calendars feel basic and therefore trustworthy. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the wrong-year receipt event where a point-of-sale timestamp contradicted ordinary transaction time. A wrong date is first evidence of a system or configuration problem, not proof of time travel, prophecy, or supernatural causation. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A printed receipt can outlive the error state that produced it. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the wrong-year receipt event where a point-of-sale timestamp contradicted ordinary transaction time. A wrong date is first evidence of a system or configuration problem, not proof of time travel, prophecy, or supernatural causation. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Support escalation turns a strange slip into a documented incident rather than a private anecdote. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the wrong-year receipt event where a point-of-sale timestamp contradicted ordinary transaction time. A wrong date is first evidence of a system or configuration problem, not proof of time travel, prophecy, or supernatural causation. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Modern folklore often begins when a digital mistake leaves a paper trace. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is the wrong-year receipt event where a point-of-sale timestamp contradicted ordinary transaction time. A wrong date is first evidence of a system or configuration problem, not proof of time travel, prophecy, or supernatural causation. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The receipt is both a consumer object and a system witness. The motif survives because the detail is small enough to remember and strong enough to organize retelling. In this record, the central frame is the wrong-year receipt event where a point-of-sale timestamp contradicted ordinary transaction time. A wrong date is first evidence of a system or configuration problem, not proof of time travel, prophecy, or supernatural causation. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "CBS News described the 2001 incident as a Y2K bug arriving one year late. A reader can follow the symbolic force without treating the symbol as proof of every later claim. In this record, the central frame is the wrong-year receipt event where a point-of-sale timestamp contradicted ordinary transaction time. A wrong date is first evidence of a system or configuration problem, not proof of time travel, prophecy, or supernatural causation. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Computerworld reported that 7-Eleven store systems were hit by a Y2K-like glitch. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the wrong-year receipt event where a point-of-sale timestamp contradicted ordinary transaction time. A wrong date is first evidence of a system or configuration problem, not proof of time travel, prophecy, or supernatural causation. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The wrong date mattered because receipts are normally treated as proof of time, place, amount, and transaction. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the wrong-year receipt event where a point-of-sale timestamp contradicted ordinary transaction time. A wrong date is first evidence of a system or configuration problem, not proof of time travel, prophecy, or supernatural causation. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A checkout slip feels mundane until its timestamp contradicts the shopper's lived chronology. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the wrong-year receipt event where a point-of-sale timestamp contradicted ordinary transaction time. A wrong date is first evidence of a system or configuration problem, not proof of time travel, prophecy, or supernatural causation. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable."
         ]
       }
     ],
@@ -211,57 +217,60 @@
     },
     "qa": [
       {
-        "question": "What started the sequence?",
-        "answer": "A checkout receipt showing a year value that did not match observed chronology."
+        "question": "What real-world incident anchors this story?",
+        "answer": "The 2001 point-of-sale timestamp defect reports with year-shifted receipts in store transactions."
       },
       {
-        "question": "What made the record memorable publicly?",
-        "answer": "The item was a familiar proof format, and the mismatch was easy to copy and verify."
+        "question": "Why is this a single-event record?",
+        "answer": "The story is bounded to one operational chain: observable mismatch, escalation filing, correction response, and post-event interpretation."
       },
       {
-        "question": "What changed with the fix?",
-        "answer": "Technical correction restored normal timestamp behavior for affected transaction paths."
+        "question": "What part of the chain carried the strongest public impact?",
+        "answer": "The visible mismatch on a customer receipt, because it is a trusted-looking proof artifact and immediately verifiable."
       },
       {
-        "question": "Did the incident prove a supernatural or hidden intent?",
-        "answer": "No. The source chain supports a date-handling defect and standard remediation."
+        "question": "Did the remediation remove the folklore effect?",
+        "answer": "No. Technical correction ended the defect window, but the cultural interpretation of receipt mismatch stayed in circulation."
       },
       {
-        "question": "Why does this remain a useful legend origin example?",
-        "answer": "Because it preserves a narrow, bounded evidence chain while explaining how public interpretation can outlive the defect period."
+        "question": "What does this record avoid claiming?",
+        "answer": "It avoids attributing conspiracy or supernatural meaning to the anomaly and keeps the cause in documented date-handling behavior."
+      },
+      {
+        "question": "What is the practical takeaway for records reading?",
+        "answer": "Validate a timestamp against the full handling chain instead of reading a single line as final truth."
       }
     ],
-    "storySourceNote": "The source chain is verified as sequence-based: receipt output discrepancy, support routing, technical correction, and cultural reuse in public retellings.",
+    "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, internet retelling, and legend-like interpretation.",
     "references": [
       {
-        "title": "CBS News: Y2K Bug, One Year Late",
+        "title": "CBS News, Y2K Bug, One Year Late",
         "url": "https://www.cbsnews.com/news/y2k-bug-one-year-late/"
       },
       {
-        "title": "Computerworld: 7-Eleven Store Systems Hit by Y2K-like Glitch",
+        "title": "Computerworld, 7-Eleven Store Systems Hit by Y2K-like Glitch",
         "url": "https://www.computerworld.com/article/1364694/7-eleven-store-systems-hit-by-y2k-like-glitch.html"
       },
       {
-        "title": "Wikipedia: Year 2000 Problem",
-        "url": "https://en.wikipedia.org/wiki/Year_2000_problem"
+        "title": "Britannica, Year 2000 problem",
+        "url": "https://www.britannica.com/topic/year-2000-problem"
       },
       {
-        "title": "Wikipedia: Receipt",
+        "title": "IRS, Recordkeeping",
+        "url": "https://www.irs.gov/businesses/small-businesses-self-employed/recordkeeping"
+      },
+      {
+        "title": "Wikipedia, Receipt",
         "url": "https://en.wikipedia.org/wiki/Receipt"
-      },
-      {
-        "title": "Wikipedia: Unix Time",
-        "url": "https://en.wikipedia.org/wiki/Unix_time"
       }
     ],
     "relatedKeywords": [
       "receipt timestamp anomaly",
-      "point-of-sale proof",
-      "wrong date",
-      "support escalation",
-      "date handling",
-      "record interpretation",
-      "evidence chain",
+      "point of sale glitch",
+      "wrong date receipt",
+      "records trust",
+      "Y2K boundary",
+      "paper clue",
       "legend origins"
     ]
   }

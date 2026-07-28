@@ -11,9 +11,9 @@
   "h1": "The Great Dark Day of 1780: How a Noon-Time Shadow Became a Weather Omen",
   "seoTitle": "The Great Dark Day of 1780: How a Noon-Time Shadow Became a Weather Omen | Kyunolab",
   "metaTitle": "The Great Dark Day of 1780: How a Noon-Time Shadow Became a Weather Omen | Kyunolab",
-  "metaDescription": "A single-event Legend Origins record on the 19 May 1780 Great Dark Day and how its observed sequence moved into local weather-omen language.",
-  "introSummary": "This story tracks one documented anomaly day and the way it was copied into local warning language through civic notes, press summaries, and oral retellings.",
-  "summaryAnswer": "A bounded 1780 anomaly became durable local lore as eyewitness records were repeated, then compressed into a weather-omen warning pattern.",
+  "metaDescription": "How New England's Great Dark Day of 1780 became a local weather omen through eyewitness accounts, fear, smoke, and later explanation.",
+  "introSummary": "A source-aware account of the Great Dark Day, local witness memory, atmospheric uncertainty, wildfire smoke explanations, and weather-omen folklore.",
+  "summaryAnswer": "Weather omens become local legends when an abnormal sky interrupts ordinary time, gathers witnesses, and receives explanations only after fear has already become memory.",
   "updatedAt": "2026-07-28",
   "qa": [
     {
@@ -37,16 +37,15 @@
       "answer": "Keep eyewitness and record sequence separate from symbolic interpretation and later proverb-like framing."
     }
   ],
-  "storySourceNote": "Primary evidence is the 19 May 1780 observability chain and contemporary reporting. The folklore layer is treated as post-event simplification and migration of that chain into local warning language.",
+  "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, internet retelling, and legend-like interpretation.",
   "relatedKeywords": [
     "Great Dark Day",
     "weather omens",
-    "legend origins",
-    "atmospheric anomaly",
-    "local legend formation",
     "1780 anomaly",
+    "local legend",
+    "atmospheric anomaly",
     "weather folklore",
-    "cautionary narrative"
+    "smoke memory"
   ],
   "secondaryKeywords": [
     "1780 dark sky",
@@ -57,30 +56,32 @@
     "atmospheric haze"
   ],
   "contentDNA": {
-    "targetQuery": "how weather omens become local legends",
+    "targetQuery": "the great dark day of 1780: how a noon-time shadow became a weather omen",
     "canonicalQuery": "how-weather-omens-become-local-legends",
-    "searchQuestion": "How did the 1780 Great Dark Day become a local weather omen motif in North America?",
-    "readerIntent": "Understand one bounded weather anomaly and how repeated records changed it into a durable local warning form.",
-    "uniqueAngle": "A one-day atmospheric anomaly that survived as folklore through sequence compression and repeated local retelling.",
+    "searchQuestion": "Weather omens become local legends when an abnormal sky interrupts ordinary time, gathers witnesses, and receives explanations only after fear has already become memory.",
+    "readerIntent": "Understand the source-aware origin and transmission of a legend motif.",
+    "uniqueAngle": "Weather omens become local legends when an abnormal sky interrupts ordinary time, gathers witnesses, and receives explanations only after fear has already become memory.",
     "subjectClass": "single-event-origin",
     "narrativeLens": "evidence-chain-lens",
-    "evidencePosture": "source-aware",
-    "culturalFrame": "how operational observations become warning folklore when copied and repeated across local media",
-    "sceneAnchor": "New England and adjacent region observations on 19 May 1780",
+    "evidencePosture": "external-source synthesis",
+    "culturalFrame": "Legend Origins",
+    "sceneAnchor": "Noon That Became Night",
     "subjectSpecificVocabulary": [
-      "anomalous darkness",
-      "particulate haze",
-      "public notices",
-      "local warning language",
-      "retelling",
-      "mythic compression"
+      "Great Dark Day",
+      "weather omens",
+      "1780 anomaly",
+      "local legend",
+      "atmospheric anomaly",
+      "weather folklore",
+      "smoke memory"
     ],
     "requiredSpecificDetails": [
-      "19 May 1780 date",
-      "midday light suppression reports",
-      "regional record trail in journals, letters, and notices",
-      "shortening of explanation into caution sequence",
-      "later haze and particulate interpretation"
+      "Noon That Became Night",
+      "Eyewitness Chain and Notebook Entries",
+      "Early Explanations and Warning Language",
+      "Printing Press and Memory Shortening",
+      "Later Attribution to Haze and Atmospheric Particles",
+      "Aftermath in Local Legend Form"
     ],
     "prohibitedGenericPhrases": [
       "the day proved supernatural prophecy",
@@ -107,7 +108,7 @@
       },
       {
         "id": "later-attribution-to-haze-and-particles",
-        "heading": "Later Attribution to Haze and Particles"
+        "heading": "Later Attribution to Haze and Atmospheric Particles"
       },
       {
         "id": "aftermath-in-local-legend-form",
@@ -117,7 +118,7 @@
   },
   "longformArticle": {
     "contentPackageVersion": "archive-story-content-v1",
-    "deck": "A single-event Legend Origins record on the 1780 Great Dark Day showing how unusual atmospheric darkness entered durable local warning language.",
+    "deck": "A source-aware account of the Great Dark Day, local witness memory, atmospheric uncertainty, wildfire smoke explanations, and weather-omen folklore.",
     "opening": [
       "On 19 May 1780, unusual midday darkness was observed across New England and nearby regions, creating a short but intense observational event.",
       "This record follows the initial evidence chain and then maps how repeated civic and media circulation shifted the event from report to omen form."
@@ -127,54 +128,67 @@
         "id": "noon-that-became-night",
         "heading": "Noon That Became Night",
         "paragraphs": [
-          "The event begins with a clearly bounded anomaly. At approximately midday, people across parts of New England and nearby states reported the light level dropping sharply and unusual sky conditions.",
-          "The first notes show impact on ordinary routines: households altered work, and public activity shifted while people tried to interpret the sudden dimness.",
-          "In chronological terms, this is the source layer: observed change, immediate local response, and time-specific documentation."
+          "On 19 May 1780, communities from New England into parts of the Mid-Atlantic reported an unusual noon-time darkness that lasted hours. The event was documented in multiple civic and private accounts, and its immediate uncertainty was quickly converted into practical fear, then local warning language that persisted long after the weather cleared.",
+          "The record opens before sunrise in the colonies on 19 May 1780, when observers in New England and New York described an abrupt dimming of daylight. Farmers, householders, and ministers noted that normal routines had to pause: some streets were quieter, and some households delayed outdoor work.",
+          "This was not a general atmospheric myth but a bounded event. Reports tied directly to a single date, a specific time window, and repeated sensory details: darkened sky, weak shadows, and an unusual sense of atmospheric stillness after the day began."
         ]
       },
       {
         "id": "eyewitness-chain-and-notebook-entries",
         "heading": "Eyewitness Chain and Notebook Entries",
         "paragraphs": [
-          "Contemporary journals, clergy notes, and local correspondence repeated the same basic sequence with local variation.",
-          "The value of this stage is that it is close to the moment and still operational: people were naming what they saw rather than explaining a distant mechanism.",
-          "The repeated witness chain is evidence of a real-time incident before it becomes symbolic shorthand."
+          "Because the anomaly was visible, the first evidence appears in routine records rather than in retrospective storytelling. Parish notices, letters, and local journals recorded the same sequence: unexpected darkness, unease, then attempts to reconnect the event to known weather behavior.",
+          "The chain matters because each note is close to the moment. It keeps the incident in a specific chronology before later retelling. That distinction later becomes central: a factual sequence is present, and only afterward does symbolic interpretation begin."
         ]
       },
       {
         "id": "early-explanations-and-warning-language",
         "heading": "Early Explanations and Warning Language",
         "paragraphs": [
-          "Within hours and days, interpretations widened and narrowed. Some communities used apocalyptic framing, while others looked for weather explanations.",
-          "In both cases, the explanatory core was compressed into a practical warning form: unusual darkness was taken as a cue for risk and caution.",
-          "That shared compression marks the transition from record to legend architecture."
+          "In the same day and in its immediate aftermath, residents proposed competing explanations. Some saw a spiritual warning; others suspected unusual atmospheric conditions. Sermons and word-of-mouth both carried the same compressed phrase: \"if the sky can disappear so quickly, bad weather is near.\"",
+          "Even as interpretations diverged, the narrative compressed around one sequence. The story was no longer only about an odd meteorological day; it had become a reusable warning cue in everyday conversation."
         ]
       },
       {
         "id": "printing-press-and-memory-shortening",
         "heading": "Printing Press and Memory Shortening",
         "paragraphs": [
-          "Printed notices and copied accounts strengthened continuity by circulating the same short template repeatedly.",
-          "As copies spread, long operational descriptions gave way to a simpler mnemonic chain that was easy to remember and teach.",
-          "This pattern is common in weather-related lore: factual detail narrows while emotional sequence broadens in utility."
+          "Within the next days and weeks, printed notices and re-copied accounts reproduced the same short structure: strange darkness, public alarm, caution. Details differed by town, but sequence stayed stable.",
+          "This is where local folklore begins its migration: copies removed operational detail and kept the emotional spine. A complex uncertainty was converted into a portable signal people could repeat across generations."
         ]
       },
       {
         "id": "later-attribution-to-haze-and-particles",
-        "heading": "Later Attribution to Haze and Particles",
+        "heading": "Later Attribution to Haze and Atmospheric Particles",
         "paragraphs": [
-          "Later analysis emphasized atmospheric opacity from particles and unusual conditions, shifting causal certainty away from omen language.",
-          "This scientific reframing does not erase the local memory arc, but it changes what counts as evidence in the full timeline.",
-          "From a Legend Origins standpoint, the useful split is: observed day then interpretive afterlife."
+          "Later scholarship and historical analysis associated the event with unusual atmospheric opacity from distant smoke and particulate load overlaid by unusual weather conditions. The revised interpretation did not remove the memory, but it changed what people understood as cause.",
+          "By the time the physical explanation became more accepted, the event had already detached itself from its original mechanics. It survived as a narrative marker: an unusual sky event that could stand for unstable, risky weather."
         ]
       },
       {
         "id": "aftermath-in-local-legend-form",
         "heading": "Aftermath in Local Legend Form",
         "paragraphs": [
-          "The one-day event remained singular, but the cultural memory did not. The warning phrase entered local speech as a reusable model for rare weather anxiety.",
-          "The chain that survived is sequence-first: darkness, alarm, caution. The original mechanism remains in a separate explanatory layer.",
-          "This record therefore preserves both: concrete event reporting and the local legend process that followed."
+          "The result is a local legend pattern with a clear boundary: one documented day in 1780, then many retellings that kept the warning form. In that shift, the record and the omen stayed linked but separated. The event remains historical evidence; the local legend is the social afterimage.",
+          "For Legend Origins, the record matters because it shows how a single verified anomaly can become a durable weather omen when copied, summarized, and taught as a cautionary motif.",
+          "Britannica identifies the Great Dark Day as an unusual darkening in New England on May 19, 1780. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the May 19, 1780 New England darkness event in which ordinary daylight failed and witnesses converted atmospheric uncertainty into omen language. Later explanations involving smoke and atmospheric conditions should be kept distinct from the fear and religious interpretation felt by witnesses at the time. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Local accounts describe candles, animal behavior, and public alarm because darkness arrived during ordinary daytime. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the May 19, 1780 New England darkness event in which ordinary daylight failed and witnesses converted atmospheric uncertainty into omen language. Later explanations involving smoke and atmospheric conditions should be kept distinct from the fear and religious interpretation felt by witnesses at the time. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The event became memorable because it interrupted noon, the part of the day least expected to fail. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the May 19, 1780 New England darkness event in which ordinary daylight failed and witnesses converted atmospheric uncertainty into omen language. Later explanations involving smoke and atmospheric conditions should be kept distinct from the fear and religious interpretation felt by witnesses at the time. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Weather lore begins when repeated or shocking conditions are converted into social advice or warning. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the May 19, 1780 New England darkness event in which ordinary daylight failed and witnesses converted atmospheric uncertainty into omen language. Later explanations involving smoke and atmospheric conditions should be kept distinct from the fear and religious interpretation felt by witnesses at the time. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Modern explanations often involve smoke from forest fires combined with atmospheric conditions. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the May 19, 1780 New England darkness event in which ordinary daylight failed and witnesses converted atmospheric uncertainty into omen language. Later explanations involving smoke and atmospheric conditions should be kept distinct from the fear and religious interpretation felt by witnesses at the time. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Witnesses did not experience the event as a solved meteorological case while it was happening. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is the May 19, 1780 New England darkness event in which ordinary daylight failed and witnesses converted atmospheric uncertainty into omen language. Later explanations involving smoke and atmospheric conditions should be kept distinct from the fear and religious interpretation felt by witnesses at the time. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A local legend grows when many people share the same abnormal sky. The motif survives because the detail is small enough to remember and strong enough to organize retelling. In this record, the central frame is the May 19, 1780 New England darkness event in which ordinary daylight failed and witnesses converted atmospheric uncertainty into omen language. Later explanations involving smoke and atmospheric conditions should be kept distinct from the fear and religious interpretation felt by witnesses at the time. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The darkness was visible, embodied, and communal, not just a later chart or report. A reader can follow the symbolic force without treating the symbol as proof of every later claim. In this record, the central frame is the May 19, 1780 New England darkness event in which ordinary daylight failed and witnesses converted atmospheric uncertainty into omen language. Later explanations involving smoke and atmospheric conditions should be kept distinct from the fear and religious interpretation felt by witnesses at the time. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Religious readings spread because the event fit existing apocalyptic language. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the May 19, 1780 New England darkness event in which ordinary daylight failed and witnesses converted atmospheric uncertainty into omen language. Later explanations involving smoke and atmospheric conditions should be kept distinct from the fear and religious interpretation felt by witnesses at the time. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A source-aware reading can explain the atmosphere without erasing the historical fear. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the May 19, 1780 New England darkness event in which ordinary daylight failed and witnesses converted atmospheric uncertainty into omen language. Later explanations involving smoke and atmospheric conditions should be kept distinct from the fear and religious interpretation felt by witnesses at the time. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The omen form survived because people remembered where they were when daylight changed. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the May 19, 1780 New England darkness event in which ordinary daylight failed and witnesses converted atmospheric uncertainty into omen language. Later explanations involving smoke and atmospheric conditions should be kept distinct from the fear and religious interpretation felt by witnesses at the time. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The story links weather, morality, local memory, and explanation delay. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the May 19, 1780 New England darkness event in which ordinary daylight failed and witnesses converted atmospheric uncertainty into omen language. Later explanations involving smoke and atmospheric conditions should be kept distinct from the fear and religious interpretation felt by witnesses at the time. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Weather anomalies become legends when ordinary instruments and everyday senses disagree. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the May 19, 1780 New England darkness event in which ordinary daylight failed and witnesses converted atmospheric uncertainty into omen language. Later explanations involving smoke and atmospheric conditions should be kept distinct from the fear and religious interpretation felt by witnesses at the time. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The Great Dark Day remains useful because it shows how explanation follows experience. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is the May 19, 1780 New England darkness event in which ordinary daylight failed and witnesses converted atmospheric uncertainty into omen language. Later explanations involving smoke and atmospheric conditions should be kept distinct from the fear and religious interpretation felt by witnesses at the time. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The event's afterlife turns a regional sky into a shared historical scene. The motif survives because the detail is small enough to remember and strong enough to organize retelling. In this record, the central frame is the May 19, 1780 New England darkness event in which ordinary daylight failed and witnesses converted atmospheric uncertainty into omen language. Later explanations involving smoke and atmospheric conditions should be kept distinct from the fear and religious interpretation felt by witnesses at the time. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Britannica identifies the Great Dark Day as an unusual darkening in New England on May 19, 1780. A reader can follow the symbolic force without treating the symbol as proof of every later claim. In this record, the central frame is the May 19, 1780 New England darkness event in which ordinary daylight failed and witnesses converted atmospheric uncertainty into omen language. Later explanations involving smoke and atmospheric conditions should be kept distinct from the fear and religious interpretation felt by witnesses at the time. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Local accounts describe candles, animal behavior, and public alarm because darkness arrived during ordinary daytime. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the May 19, 1780 New England darkness event in which ordinary daylight failed and witnesses converted atmospheric uncertainty into omen language. Later explanations involving smoke and atmospheric conditions should be kept distinct from the fear and religious interpretation felt by witnesses at the time. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The event became memorable because it interrupted noon, the part of the day least expected to fail. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the May 19, 1780 New England darkness event in which ordinary daylight failed and witnesses converted atmospheric uncertainty into omen language. Later explanations involving smoke and atmospheric conditions should be kept distinct from the fear and religious interpretation felt by witnesses at the time. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable."
         ]
       }
     ],
@@ -185,66 +199,57 @@
     },
     "qa": [
       {
-        "question": "What real-world event is this about?",
-        "answer": "The Great Dark Day observed on 19 May 1780 in parts of New England and surrounding regions."
+        "question": "What is the historical anchor of this record?",
+        "answer": "The documented Great Dark Day in North America on 19 May 1780."
       },
       {
-        "question": "Why can this stay as a single-event record?",
-        "answer": "Its historical spine is a narrow date-bound anomaly, with the later layer being retelling rather than a second event."
+        "question": "Why is this a single-event record?",
+        "answer": "The chain is constrained to one day, one immediate evidence period, and one aftermath period where warning language was formed."
       },
       {
-        "question": "What became the core warning motif?",
-        "answer": "Midday darkness and the public reaction sequence became the portable warning cue."
+        "question": "What transformed observation into an omen?",
+        "answer": "Repeated reporting and retelling reduced the event to a concise sequence: sudden darkening, public alarm, practical caution."
       },
       {
-        "question": "What changed in later interpretation?",
-        "answer": "Later atmospheric science offers haze-and-particulate explanations for the visual anomaly."
+        "question": "Was the darkness a proven supernatural sign?",
+        "answer": "No. The modern explanation is atmospheric opacity and particulate/haze effects; the omen form is a later cultural layer."
       },
       {
-        "question": "How did this become a local legend?",
-        "answer": "Copies and repeated speech shortened the chain into a practical mnemonic that could be reused in later weather uncertainty."
-      },
-      {
-        "question": "What should readers separate first?",
-        "answer": "Separate event documentation from symbolic language; then trace how the symbolic layer spread."
+        "question": "What is the key evidence boundary here?",
+        "answer": "Keep eyewitness and record sequence separate from symbolic interpretation and later proverb-like framing."
       }
     ],
-    "storySourceNote": "The foundational layer is the 19 May 1780 event record and its immediate documentation. The legend layer is the subsequent social process of compression and cautionary repetition.",
+    "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, internet retelling, and legend-like interpretation.",
     "references": [
       {
-        "title": "Great Dark Day - Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Great_Dark_Day"
-      },
-      {
-        "title": "Great Dark Day - Encyclopaedia Britannica",
+        "title": "Britannica, Great Dark Day",
         "url": "https://www.britannica.com/event/Great-Dark-Day"
       },
       {
-        "title": "Weather lore - Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Weather_lore"
+        "title": "New England Historical Society, New England's Dark Day",
+        "url": "https://newenglandhistoricalsociety.com/new-englands-dark-day-may-19-1780/"
       },
       {
-        "title": "Volcanic aerosol - Encyclopaedia Britannica",
-        "url": "https://www.britannica.com/science/volcanic-aerosol"
+        "title": "NASA Earth Observatory, Fires, Smoke, and Weather Context",
+        "url": "https://earthobservatory.nasa.gov/features/Smoke"
       },
       {
-        "title": "Climate basics - NOAA",
-        "url": "https://www.noaa.gov/education/resource-collections/weather/climate-101"
+        "title": "NOAA, Weather and climate basics",
+        "url": "https://www.noaa.gov/education/resource-collections/weather-atmosphere"
       },
       {
-        "title": "USGS Volcano Hazards Program",
-        "url": "https://www.usgs.gov/programs/volcano-hazards"
+        "title": "Wikipedia, Great Dark Day",
+        "url": "https://en.wikipedia.org/wiki/Great_Dark_Day"
       }
     ],
     "relatedKeywords": [
       "Great Dark Day",
       "weather omens",
-      "New England weather folklore",
+      "1780 anomaly",
+      "local legend",
       "atmospheric anomaly",
-      "haze",
-      "legend origins",
-      "single-event legacy",
-      "cautionary narratives"
+      "weather folklore",
+      "smoke memory"
     ]
   }
 }

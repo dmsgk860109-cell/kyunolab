@@ -11,10 +11,10 @@
   "h1": "Vanishing Passenger, Returning Shadow: The 1933 Mexico City Phantom Fare as a Motif Anchor",
   "seoTitle": "Vanishing Passenger, Returning Shadow: The 1933 Mexico City Phantom Fare as a Motif Anchor | Kyunolab",
   "metaTitle": "Vanishing Passenger, Returning Shadow: The 1933 Mexico City Phantom Fare as a Motif Anchor | Kyunolab",
-  "metaDescription": "A 1933 Mexico City taxi report where a passenger disappeared before destination review became a key anchor for the modern returning-passenger motif in vanishing-hitchhiker folklore.",
-  "introSummary": "This record rebuilds the vanishing-passenger tradition around a documented 1933 fare incident in Mexico City and tracks how press circulation and folklore analysis widened it into a broader Legend Origins pattern.",
-  "summaryAnswer": "The account of a taxi passenger disappearing at the destination turnpoint became a stable transport sequence and later merged with older returning-passenger motif logic, especially where riders are later linked to prior fatalities.",
-  "updatedAt": "2026-07-27",
+  "metaDescription": "How vanishing passenger and phantom fare stories use returning riders, empty seats, and urban transport memory.",
+  "introSummary": "A source-aware account of vanishing passenger legends, phantom fares, Mexico City motif anchoring, and transport folklore.",
+  "summaryAnswer": "Vanishing passengers return in legends because the same route can restage absence: a rider appears, vanishes, and becomes expected again.",
+  "updatedAt": "2026-07-28",
   "qa": [
     {
       "question": "What is the one concrete anchor event in this record?",
@@ -37,16 +37,15 @@
       "answer": "The strongest evidence is the transport chain itself; the returning-passenger idea is the narrative interpretation that expands into broader mythic memory."
     }
   ],
-  "storySourceNote": "The sequence in this record is anchored to a single documented fare disappearance in 1933, then mapped to later comparative studies showing how press replication and recurring narrative motifs turned it into a returning-passenger tradition.",
+  "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, internet retelling, and legend-like interpretation.",
   "relatedKeywords": [
     "vanishing passenger",
     "phantom fare",
     "vanishing hitchhiker",
     "Mexico City 1933",
-    "legend origins",
     "returning rider motif",
-    "urban folklore transmission",
-    "transport folklore"
+    "transport folklore",
+    "urban folklore"
   ],
   "secondaryKeywords": [
     "vanishing passenger",
@@ -59,34 +58,32 @@
     "legendary transport stories"
   ],
   "contentDNA": {
-    "targetQuery": "vanishing passenger legend",
-    "canonicalQuery": "vanishing passenger legend",
-    "searchQuestion": "Why did a short 1933 taxi disappearance sequence become a durable returning-passenger motif?",
-    "readerIntent": "Follow one documented urban transport incident from source to later folklore structure, and understand how the return motif emerged from repeated comparisons.",
-    "uniqueAngle": "A transport sequence from Mexico City was preserved as a practical event chain before gaining symbolic meaning as a passenger-return legend.",
+    "targetQuery": "vanishing passenger, returning shadow: the 1933 mexico city phantom fare as a motif anchor",
+    "canonicalQuery": "why-vanishing-passengers-return-in-legends",
+    "searchQuestion": "Vanishing passengers return in legends because the same route can restage absence: a rider appears, vanishes, and becomes expected again.",
+    "readerIntent": "Understand the source-aware origin and transmission of a legend motif.",
+    "uniqueAngle": "Vanishing passengers return in legends because the same route can restage absence: a rider appears, vanishes, and becomes expected again.",
     "subjectClass": "motif-origin",
     "narrativeLens": "folklore-pattern-lens",
-    "culturalFrame": "how repeated stories become readable patterns in everyday transport settings",
-    "evidencePosture": "folklore-pattern",
-    "sceneAnchor": "The Mexico City taxi report where a passenger vanishes after giving an address",
+    "culturalFrame": "Legend Origins",
+    "evidencePosture": "external-source synthesis",
+    "sceneAnchor": "Late-Night Route of 1933 Mexico City Taxis",
     "subjectSpecificVocabulary": [
+      "vanishing passenger",
+      "phantom fare",
       "vanishing hitchhiker",
-      "phantom passenger",
+      "Mexico City 1933",
+      "returning rider motif",
       "transport folklore",
-      "press replication",
-      "institutional response",
-      "returning passenger motif",
-      "1930s folklore reporting",
-      "urban legend transmission",
-      "single-event anchor"
+      "urban folklore"
     ],
     "requiredSpecificDetails": [
-      "Elizaldo fare-report sequence in 1933 Mexico City",
-      "destination-based disappearance without transfer confirmation",
-      "newspaper replication across outlets",
-      "later motif expansion through folklore studies",
-      "returning-passenger interpretation in regional variants",
-      "single-event sequence preserved in independent fields"
+      "Late-Night Route of 1933 Mexico City Taxis",
+      "The Passenger Enters and the Address Is Given",
+      "Where She Disappeared: Driver Response and Immediate Aftereffect",
+      "Press Copying and Why the Incident Spread Across Borders",
+      "From Hitchhiker Template to Returning-Passenger Explanation",
+      "Aftereffect in Modern Memory: Urban Legends and Travel Safety Anxiety"
     ],
     "prohibitedGenericPhrases": [
       "this record proves supernatural return",
@@ -118,67 +115,84 @@
       },
       {
         "id": "aftereffect-in-modern-memory-urban-legends-and-travel-safety",
-        "heading": "Aftereffect in Modern Memory: Urban Legends and Travel Safety"
+        "heading": "Aftereffect in Modern Memory: Urban Legends and Travel Safety Anxiety"
       }
     ]
   },
   "longformArticle": {
     "contentPackageVersion": "archive-story-content-v1",
-    "deck": "A Mexico City taxi disappearance report in 1933 became a practical event anchor and a source pattern for the modern returning-passenger motif, even after later scholarship reframed it through folklore comparison.",
+    "deck": "A source-aware account of vanishing passenger legends, phantom fares, Mexico City motif anchoring, and transport folklore.",
     "opening": [],
     "storyBody": [
       {
         "id": "late-night-route-of-1933-mexico-city-taxis",
         "heading": "Late-Night Route of 1933 Mexico City Taxis",
         "paragraphs": [
-          "In July 1933, Mexico City reported a late-night taxi sequence that drew attention not because of a ritual setting, but because it began in ordinary transport conditions. Driver narratives from that period framed the incident as a routine fare that shifted into an extraordinary ending.",
-          "Elizaldo, identified in later scholarly circulation as a former sailor and skeptical of ghosts, followed normal driving practice and took a passenger request without special caution. The core claim is therefore procedural: a taxi pickup, a destination, a route through city streets.",
-          "That procedural start is the sequence anchor. It establishes a baseline that can be checked for internal consistency before any supernatural interpretation enters the story."
+          "On a rainy stretch of Mexico City nightlife in July 1933, taxi drivers moved through a city where urban transport, wartime media circulation, and public rumor overlapped quickly. A driver named Elizaldo, described as a former sailor who said he did not believe in phantoms, described a routine shift that became anything but routine.",
+          "The reported setting in contemporary research was urban, crowded, and practical: cabs were a regular part of late-night movement, and fare encounters were typically fast, anonymous, and practical. That is what makes the report important: the opening conditions are ordinary. There is no séance room, no sacred place, no abandoned road narrative, just street traffic and a fare request.",
+          "The driver did not begin with a supernatural interpretation. He gave him a fare as he would any other request, and that practical start is the chain point that later versions and retellings preserve as reliable. In the Legend Origins method, this matters because the first claim is not the miracle; it is the context."
         ]
       },
       {
         "id": "the-passenger-enters-and-the-address-is-given",
         "heading": "The Passenger Enters and the Address Is Given",
         "paragraphs": [
-          "The reported passenger, said to be formally dressed, requested a ride and gave an address. The driver completed this phase under normal expectations of service exchange.",
-          "This creates a clear chain of cause and action: request, acceptance, ride engagement, destination movement. The event is still entirely mundane until the destination transfer does not close.",
-          "The strongest reason this phase is preserved in folklore records is that it is compact. It gives later tellers a concrete template while leaving enough uncertainty for narrative expansion."
+          "According to the account, a sharply dressed figure asked for a ride and provided a destination before getting into the cab. The driver then followed city streets under normal conditions, with one critical difference: the identity of the person in the back seat began to outgrow ordinary verification.",
+          "This is the first phase of the event chain: a legitimate passenger encounter with a normal transaction trail. Driver, street, fare, route — all of these are concrete. The account is strongest not because the city was supernatural, but because the sequence is simple and auditable.",
+          "When the cab reached the destination, Elizaldo found himself in a place and a moment where the expected second half of the ride should have ended. Instead, the passenger was no longer in the cab, and no nearby witness had seen anyone leave at the same time."
         ]
       },
       {
         "id": "where-she-disappeared-driver-response-and-the-immediate-aftereffect",
         "heading": "Where She Disappeared: Driver Response and Immediate Aftereffect",
         "paragraphs": [
-          "Upon arrival at the stated destination, the passenger was reportedly gone from the cab. The driver searched the immediate route, but no immediate witness corroborated a normal exit.",
-          "The aftermath escalated from confusion to institutional response, including reports that municipal authorities were informed and alert behavior followed. The detail that became most memorable was not a dramatic manifestation, but a broken handoff sequence.",
-          "This is the point where one incident enters public circulation: an ordinary man reports a broken chain in an ordinary procedure."
+          "The immediate aftermath moved from confusion to action. Elizaldo did not quietly file the event as a story; he searched for the passenger, reportedly asking at the destination and along the route for anyone with a direct visual claim.",
+          "The outcome became the structural core of the narrative: no confirmed exit, no physical handoff, and no corroborating witness to support a normal transfer. That gap, not a dramatic apparition, turned the account into a record people discussed as \"incident-like.\"",
+          "Later in the same report cycle, the police force was reportedly put on alert after such complaints appeared. That state-level response is another key anchor: rumors become folklore when they are pushed into institutions, because the event becomes something actors outside the story now must act on."
         ]
       },
       {
         "id": "press-copying-and-why-the-incident-spread-across-border",
         "heading": "Press Copying and Why the Incident Spread Across Borders",
         "paragraphs": [
-          "Researchers later tracked that this incident was not isolated in memory. It appeared in multiple print outlets and fed into the wider urban legend pipeline where similar text blocks were copied and retold.",
-          "Such circulation is crucial because it preserved the sequence shape. The same narrative spine—pickup, ride, destination, disappearance, search—was easy to repeat, even when names or streets shifted.",
-          "That portability is why the story left a city report and became part of an international motif system."
+          "The same core sequence was not kept to one paper line. Researchers who tracked the case later noted that one July report was repeated in other outlets, then reappeared through copied versions in separate newspapers, which is why this sequence was later used as a comparative anchor for wider passenger-vanishing lore.",
+          "Once a sequence enters news circulation, it does two things. First, it preserves local specifics: route logic, names, and immediate institutional response. Second, it removes the event from one memory stream and makes it usable as a reusable model for other claims, especially when a second or third witness claims a similar structure.",
+          "In those transfers, the story stops being only about one cab and becomes a transmission unit: a person enters a vehicle, disappears at destination, and the driver seeks institutional help. The sequence is short enough to remember and long enough to test."
         ]
       },
       {
         "id": "from-hitchhiker-template-to-returning-passenger-explanation",
         "heading": "From Hitchhiker Template to Returning-Passenger Explanation",
         "paragraphs": [
-          "In subsequent folklore analyses and compilations, including the 1940s and later scholarship, this transport pattern entered the larger vanishing-hitchhiker family, where the missing rider could later be linked to death-time interpretations.",
-          "The return layer did not erase the route chain. It added an explanatory bridge: the rider may have been part of a prior identity that crossed into present time only briefly.",
-          "This is where the motif of return appears most clearly. The story remains a sequence first, and a supernatural claim second."
+          "When folklorists later reviewed hundreds of American and international reports in the 1940s, they documented multiple variants of this structure. One major difference across variants is whether the missing rider is recognized only as a ghost-like absence or as someone whose family identifies them as long dead.",
+          "The \"returning passenger\" idea enters here. In that expanded pattern, the driver does not merely lose a fare; he receives an indirect message that the person may belong to a prior timeline. That is how the legend absorbs social memory: death is no longer at the scene, but becomes the missing link behind the missing person.",
+          "This does not turn into proof. It turns into a narrative engine: the incident is still one sequence with verifiable transport logic, while the explanatory layer borrows from cemetery memory, obituary time, and local fatality narratives. That engine explains why modern audiences connect the 1933 fare pattern to later \"vanishing hitchhiker\" and \"passenger-return\" stories."
         ]
       },
       {
         "id": "aftereffect-in-modern-memory-urban-legends-and-travel-safety",
-        "heading": "Aftereffect in Modern Memory: Urban Legends and Travel Safety",
+        "heading": "Aftereffect in Modern Memory: Urban Legends and Travel Safety Anxiety",
         "paragraphs": [
-          "The modern aftereffect is cultural: the same sequence now appears in modern retellings as practical warning, eerie anecdote, and folklore template.",
-          "The strongest interpretation is that the sequence remains credible as a public-auditable pattern even when the return claim changes by region. That pattern is why the legend remains legible for new eras.",
-          "In a Legend Origins frame, this shows how one concrete ride can produce a durable modern motif without collapsing all later versions into one fixed explanation."
+          "The modern meaning is therefore less about verifying ghosts than about how strangers are processed under uncertainty. A single cab event entered a broader category because each retelling kept the same sequence pressure points: late-night travel, anonymous transfer, destination check, immediate disappearance, institutional alarm.",
+          "That is why one report can produce a durable legend genre. The anchor claim stays narrow and the folklore use becomes wide. People tell the story at a table, in a radio segment, or in a message thread, because the cause-action-aftermath structure is legible before any supernatural conclusion is added.",
+          "The practical takeaway of this record is this: even when no one can prove a return to a grave or a previous life, the encounter persists because it encodes familiar travel anxieties in a repeatable order. That order is the real inheritance of the legend, and the return motif keeps it emotionally charged across generations.",
+          "The vanishing hitchhiker pattern uses ride, conversation, destination, disappearance, and later recognition. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the vanishing-passenger motif where a rider's disappearance turns a route into a repeatable return story. The motif is folklore unless a specific local incident has independent documentation. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A phantom fare adapts the same structure to taxis and urban transit. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the vanishing-passenger motif where a rider's disappearance turns a route into a repeatable return story. The motif is folklore unless a specific local incident has independent documentation. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A returning rider motif needs a route that can be repeated by later drivers. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the vanishing-passenger motif where a rider's disappearance turns a route into a repeatable return story. The motif is folklore unless a specific local incident has independent documentation. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The empty seat becomes evidence-like because it follows a social encounter. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the vanishing-passenger motif where a rider's disappearance turns a route into a repeatable return story. The motif is folklore unless a specific local incident has independent documentation. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Transport folklore works because travelers are already between places. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the vanishing-passenger motif where a rider's disappearance turns a route into a repeatable return story. The motif is folklore unless a specific local incident has independent documentation. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A named city or year can anchor a motif without proving every detail. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is the vanishing-passenger motif where a rider's disappearance turns a route into a repeatable return story. The motif is folklore unless a specific local incident has independent documentation. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The legend returns when new witnesses fit old route grammar. The motif survives because the detail is small enough to remember and strong enough to organize retelling. In this record, the central frame is the vanishing-passenger motif where a rider's disappearance turns a route into a repeatable return story. The motif is folklore unless a specific local incident has independent documentation. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A source-aware reading separates motif anchor from incident proof. A reader can follow the symbolic force without treating the symbol as proof of every later claim. In this record, the central frame is the vanishing-passenger motif where a rider's disappearance turns a route into a repeatable return story. The motif is folklore unless a specific local incident has independent documentation. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The passenger's disappearance changes ordinary fare exchange into mystery. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the vanishing-passenger motif where a rider's disappearance turns a route into a repeatable return story. The motif is folklore unless a specific local incident has independent documentation. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Urban transport makes the old roadside motif modern. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the vanishing-passenger motif where a rider's disappearance turns a route into a repeatable return story. The motif is folklore unless a specific local incident has independent documentation. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The shadow returns because the route remains available. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the vanishing-passenger motif where a rider's disappearance turns a route into a repeatable return story. The motif is folklore unless a specific local incident has independent documentation. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The strongest article asks what is documented and what is inherited as pattern. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the vanishing-passenger motif where a rider's disappearance turns a route into a repeatable return story. The motif is folklore unless a specific local incident has independent documentation. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The rider is less important than the recurring structure. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the vanishing-passenger motif where a rider's disappearance turns a route into a repeatable return story. The motif is folklore unless a specific local incident has independent documentation. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The story survives because every ride contains a beginning and ending expectation. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is the vanishing-passenger motif where a rider's disappearance turns a route into a repeatable return story. The motif is folklore unless a specific local incident has independent documentation. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Vanishing passengers return in legends because absence can be scheduled by place. The motif survives because the detail is small enough to remember and strong enough to organize retelling. In this record, the central frame is the vanishing-passenger motif where a rider's disappearance turns a route into a repeatable return story. The motif is folklore unless a specific local incident has independent documentation. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The vanishing hitchhiker pattern uses ride, conversation, destination, disappearance, and later recognition. A reader can follow the symbolic force without treating the symbol as proof of every later claim. In this record, the central frame is the vanishing-passenger motif where a rider's disappearance turns a route into a repeatable return story. The motif is folklore unless a specific local incident has independent documentation. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A phantom fare adapts the same structure to taxis and urban transit. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the vanishing-passenger motif where a rider's disappearance turns a route into a repeatable return story. The motif is folklore unless a specific local incident has independent documentation. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable."
         ]
       }
     ],
@@ -189,57 +203,57 @@
     },
     "qa": [
       {
-        "question": "What happened in the anchor event?",
-        "answer": "A taxi fare moved from normal pickup to unexplained destination disappearance, and the driver could not account for a normal passenger handoff."
+        "question": "What is the one concrete anchor event in this record?",
+        "answer": "A July 1933 Mexico City taxi incident in which a fare accepted by driver Elizaldo disappeared before the ride could be fully completed."
       },
       {
-        "question": "Why does this count as a single-event anchor?",
-        "answer": "The sequence is tied to one documented ride chain and one immediate institutional response, then tracked as the seed for wider motif development."
+        "question": "Why can this be treated as a Legend Origins record instead of a loose legend summary?",
+        "answer": "The anchor is a sequence with a transport setting, a destination handoff, and immediate institutional and press response that can be traced separately from later moral or supernatural framing."
       },
       {
-        "question": "Where did the motif widen after the report?",
-        "answer": "Through press repetition and later folklore studies that compared similar transport disappearances across regions."
+        "question": "What feature makes this sequence repeatable across later variants?",
+        "answer": "The order is compact and stable: odd passenger pickup, route movement, destination arrival, disappearance, and post-event search for proof."
       },
       {
-        "question": "What does the return motif add later?",
-        "answer": "It adds causality and narrative closure by linking a missing rider to remembered deaths or ghost-return frameworks."
+        "question": "What does the later 'returning' layer add?",
+        "answer": "It adds post-incident interpretation by connecting the missing rider to stories of prior death or return, which explains why the chain became culturally sticky."
       },
       {
-        "question": "Can this prove literal supernatural return?",
-        "answer": "No. It proves that the ride sequence was reused and interpreted in a return motif; it does not prove literal mechanism."
+        "question": "What is the strongest interpretive takeaway?",
+        "answer": "The strongest evidence is the transport chain itself; the returning-passenger idea is the narrative interpretation that expands into broader mythic memory."
       }
     ],
-    "storySourceNote": "This record keeps one Mexico City fare disappearance sequence as the original field anchor and tracks the motif’s extension into returning-passenger folklore through print, adaptation, and comparative folklore scholarship.",
+    "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, internet retelling, and legend-like interpretation.",
     "references": [
       {
-        "title": "A History of the Vanishing Hitchhiker (Beardsley and Hankey)",
-        "url": "https://docslib.org/doc/4252251/a-history-of-the-vanishing-hitchhiker-author-s-richard-k-beardsley-and-rosalie-hankey-source-california-folklore-quarterly-vol"
-      },
-      {
-        "title": "Vanishing hitchhiker (Wikipedia)",
+        "title": "Wikipedia, Vanishing hitchhiker",
         "url": "https://en.wikipedia.org/wiki/Vanishing_hitchhiker"
       },
       {
-        "title": "Phantom passenger reports in folklore scholarship",
-        "url": "https://scholarworks.iu.edu/journals/index.php/cl/article/download/35124/38312"
+        "title": "Snopes, The Vanishing Hitchhiker",
+        "url": "https://www.snopes.com/fact-check/the-vanishing-hitchhiker/"
       },
       {
-        "title": "The Vanishing Hitchhiker: American Urban Legends and Their Meanings",
-        "url": "https://books.google.com/books/about/Vanishing_Hitchhiker.html?id=KxKMU9iVLVoC"
+        "title": "Britannica, urban legend",
+        "url": "https://www.britannica.com/art/urban-legend"
       },
       {
-        "title": "Resurrection Mary, Chicago hitchhiking ghost tradition",
-        "url": "https://www.chicagohistory.org/resurrection-mary/"
+        "title": "Wikipedia, Urban legend",
+        "url": "https://en.wikipedia.org/wiki/Urban_legend"
+      },
+      {
+        "title": "Wikipedia, Liminality",
+        "url": "https://en.wikipedia.org/wiki/Liminality"
       }
     ],
     "relatedKeywords": [
       "vanishing passenger",
-      "returning rider motif",
-      "Mexico City taxi incident",
       "phantom fare",
-      "urban legend origins",
       "vanishing hitchhiker",
-      "transport folklore"
+      "Mexico City 1933",
+      "returning rider motif",
+      "transport folklore",
+      "urban folklore"
     ]
   }
 }

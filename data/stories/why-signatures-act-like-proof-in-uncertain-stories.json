@@ -11,10 +11,10 @@
   "h1": "Why Signatures Behave Like Proof in Uncertain Stories",
   "seoTitle": "Why Signatures Behave Like Proof in Uncertain Stories | Kyunolab",
   "metaTitle": "Why Signatures Behave Like Proof in Uncertain Stories | Kyunolab",
-  "metaDescription": "A Strange Nature record of how signatures become persuasive in uncertain documentation narratives through historical spirit-writing traditions, legal authority systems, cognitive mechanisms, and context effects.",
-  "introSummary": "The story examines why a single unexpected signature-like mark can feel like decisive proof when record continuity is uncertain, and how ritual, authority, and environment shape that response.",
-  "summaryAnswer": "Signatures carry social authority first, so in incomplete record trails they are interpreted quickly and confidently. Historical spirit-writing practices, ideomotor processes, and custody-based evidence methods help explain why they become powerful symbols of uncertainty.",
-  "updatedAt": "2026-07-27",
+  "metaDescription": "Why signatures, automatic writing, document forensics, and custody gaps behave like proof in uncertain stories.",
+  "introSummary": "A source-aware account of signatures as proof, automatic writing, ideomotor effect, document custody, and uncertain evidence.",
+  "summaryAnswer": "Signatures act like proof because they compress identity and consent into a mark, even when authorship or custody remains uncertain.",
+  "updatedAt": "2026-07-28",
   "qa": [
     {
       "question": "What real-world tradition is this rewritten from?",
@@ -37,9 +37,8 @@
       "answer": "Specific causal attribution for any one incident is unresolved unless access logs, custody details, and handling timing are independently verified."
     }
   ],
-  "storySourceNote": "The record uses historical spiritualist writing traditions as cultural framing and combines ideomotor theory, forensic-style process tracing, and environmental/context analysis to explain why signature anomalies become memorable.",
+  "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, internet retelling, and legend-like interpretation.",
   "relatedKeywords": [
-    "strange nature",
     "signature legends",
     "automatic writing",
     "document forensics",
@@ -56,29 +55,34 @@
     "cognitive misattribution"
   ],
   "contentDNA": {
-    "targetQuery": "why signatures act like proof in uncertain stories",
+    "targetQuery": "why signatures behave like proof in uncertain stories",
     "canonicalQuery": "why-signatures-act-like-proof-in-uncertain-stories",
-    "searchQuestion": "Why can an unexpected signature-like mark feel like proof in uncertain records, and how should uncertainty be modeled?",
-    "readerIntent": "Understand signature-centered record motifs through historical precedent, cognitive framing, and environmental/context effects.",
-    "uniqueAngle": "The story links spiritualist automatic writing precedent with modern custody and cognitive explanations for why a document mark carries high evidentiary force.",
+    "searchQuestion": "Signatures act like proof because they compress identity and consent into a mark, even when authorship or custody remains uncertain.",
+    "readerIntent": "Understand the source-aware origin and transmission of a legend motif.",
+    "uniqueAngle": "Signatures act like proof because they compress identity and consent into a mark, even when authorship or custody remains uncertain.",
     "subjectClass": "motif-origin",
     "narrativeLens": "evidence-and-folklore-lens",
-    "evidencePosture": "source-aware",
-    "culturalFrame": "trust, authorship symbols, and document uncertainty",
-    "sceneAnchor": "unexpected signatures appearing in records that are treated as completed or closed",
+    "evidencePosture": "external-source synthesis",
+    "culturalFrame": "Legend Origins",
+    "sceneAnchor": "Signature Authority and Uncertainty",
     "subjectSpecificVocabulary": [
-      "signature as authority marker",
+      "signature legends",
       "automatic writing",
+      "document forensics",
       "ideomotor effect",
-      "forensic custody",
-      "document provenance"
+      "record custody",
+      "evidence under uncertainty",
+      "legend origins"
     ],
     "requiredSpecificDetails": [
-      "spirit-writing tradition",
-      "ideomotor effect",
-      "custody sequence",
-      "environmental context",
-      "uncertainty boundaries"
+      "Signature Authority and Uncertainty",
+      "Historical Template: Spirit Writing and Automatic Scripts",
+      "How Signatures Gain Legal Weight",
+      "Cognitive Mechanisms and Misattribution",
+      "Environmental and Contextual Amplifiers",
+      "Evidence Methods in Document Cases",
+      "How Uncertain Signatures Become Legends",
+      "Best Practice for Uncertain Record Stories"
     ],
     "prohibitedGenericPhrases": [
       "this is clearly supernatural",
@@ -124,7 +128,7 @@
   },
   "longformArticle": {
     "contentPackageVersion": "archive-story-content-v1",
-    "deck": "A records-centered Strange Nature story on why signatures become persuasive in uncertain contexts, balancing historical spirit-writing precedents, cognitive mechanisms, and environmental conditions.",
+    "deck": "A source-aware account of signatures as proof, automatic writing, ideomotor effect, document custody, and uncertain evidence.",
     "opening": [
       "When a mark appears where a record should be complete, the event often feels like a complete explanatory pivot.",
       "This account uses historical and method-based layers to explain why signatures are interpreted as proof so quickly when documentation chains are weak."
@@ -134,72 +138,84 @@
         "id": "signature-authority-and-uncertainty",
         "heading": "Signature Authority and Uncertainty",
         "paragraphs": [
-          "A signature is not just an inscription. In records, it is a social boundary: it signals that a step has ended and responsibility has shifted to the next person or process.",
-          "Because signatures carry that authority role, one unexpected signature-like entry can destabilize an entire record sequence. The mark appears to threaten the assumed state of completion, even if the event itself was small.",
-          "The uncertainty is partly structural. People remember what the mark means before they reconstruct what happened physically between observations, and that order of processing creates a high confidence impression."
+          "In record culture, a signature is often treated as the final hinge of trust. A form, ledger line, or consent note is not just text; it marks an endpoint where many people agree the action is complete, authorized, or complete. When an unexpected mark appears after that endpoint, the entire record becomes unstable for a moment. The surprise is not only that a mark exists, it is that the mark carries a social function.",
+          "This motif appears repeatedly across archive-based legends because the signature symbol does two jobs at once: it is both readable handwriting and a social label. In that sense, signatures are stronger than many other data points. A number can be rechecked easily. A date can be crossed out and corrected. But a new handwritten sign, especially one in a field that previously looked locked, can stand in for an unseen actor. The feeling of evidentiary weight comes from the role the mark normally plays, not from any single proven mechanism.",
+          "For a Strange Nature treatment, the point is not to deny the emotional force of this motif. It is to separate why people are convinced from what has actually been demonstrated in the sequence of custody, access, and observation."
         ]
       },
       {
         "id": "historical-template-of-spirit-writing",
         "heading": "Historical Template: Spirit Writing and Automatic Scripts",
         "paragraphs": [
-          "A close historical model is spiritualist automatic-writing practice, where writing itself was treated as mediated expression under specific social conditions.",
-          "Those settings did not produce a single testable supernatural rule for all events. They produced a durable cultural frame: marks can be interpreted as coming from a source outside ordinary authorship.",
-          "This frame helps explain why modern record anomalies with signatures are so memorable. The pattern of expectation already exists in cultural memory."
+          "One closest real-world ancestor is the spiritualist and séance tradition of automatic writing. In that context, writing is not simply a text output from deliberate hand control. The practice frames marks, symbols, and signatures as possible contact traces from a source beyond ordinary authorship. Across the nineteenth and early twentieth centuries, these practices produced a recognizable grammar: repeated sessions, social framing, elevated expectation, and a belief that visual marks could carry authority.",
+          "The historical record around these sessions is mixed in source quality. Some accounts are eyewitness reports shaped by belief; some are critical reports emphasizing method issues. As with many ritual traditions, the value of the motif was not that every claim proved a supernatural cause, but that the social setting made written traces carry unusual evidential meaning. That pattern survives into modern legend-like stories about late signatures because the structure is the same: a document is treated less as neutral paper and more as a channel.",
+          "The key point for rewriting a title-led prompt is this: the modern odd-signature pattern does not need a new invented backstory if a known tradition already maps onto its cognitive shape. The tradition here is not a mythic claim, it is the long record of how people have interpreted written marks as evidence from unusual authorship."
         ]
       },
       {
         "id": "how-signatures-gain-legal-weight",
         "heading": "How Signatures Gain Legal Weight",
         "paragraphs": [
-          "Institutions treat signatures as authorization tokens. That is why they are used in contracts, logs, and procedural records.",
-          "When legitimacy is attached to a symbol, the symbol becomes easier to treat as proof than its process context may support. A custody gap can therefore become more important than any single visual detail.",
-          "In this way, the same social reason that makes signatures useful in administration also makes unexpected signatures powerful anchors in uncertainty narratives."
+          "Outside religious or séance settings, signatures also sit at the center of legal and administrative systems. Modern institutions rely on signatures to indicate consent, transfer, acknowledgment, and responsibility. That means a person often reads a signature as a legal shortcut: proof that an action was witnessed, authorized, and stable.",
+          "This shortcut creates what social researchers call authority transfer. A signature inherits institutional trust from the process around it, even if the person sees only the mark at the edge of a page. In practice, people often trust the symbol before they verify chain-of-custody details such as when the item was opened, whether drafts were edited, or whether a handling log exists.",
+          "From a Strange Nature angle, this is where folklore and institutions intersect. The same mechanism that makes records manageable in ordinary life also makes oddities more dramatic. If a signature in a high-friction setting appears later than expected, it feels like an intentional breach because it threatens an institution’s assumed sequence."
         ]
       },
       {
         "id": "cognitive-mechanisms-and-misattribution",
         "heading": "Cognitive Mechanisms and Misattribution",
         "paragraphs": [
-          "Ideomotor and low-awareness mechanisms provide a naturalistic layer: motor micro-movements can occur with limited conscious awareness in repetitive, emotionally framed sessions.",
-          "Memory and salience also matter. A vivid anomaly can be encoded as highly certain while surrounding timing details remain fuzzy, especially under interruption, fatigue, or rushed handoff.",
-          "The result is a repeated interpretive shape: people trust the apparent significance of the mark first, then search for a mechanism that matches that significance."
+          "Psychology gives non-mystical mechanisms that can produce convincing anomalies. The ideomotor effect describes small motor actions that can happen with low awareness, especially in repetitive or expectation-rich contexts. In writing-related settings, this can support reports where participants later feel surprised by the specificity of a mark yet report low sense of voluntary control.",
+          "Memory processes can add another layer. Witnesses can remember the surprising mark with high confidence while forgetting the exact chain around how, when, and under what conditions it appeared. This is not a failure of intelligence; it is a known feature of event encoding under repetitive attention and emotional salience. A striking visual irregularity is easier to store than the full timeline that would otherwise support or weaken the claim.",
+          "The critical methodological lesson is to keep two levels separate: perceived anomaly and evidential proof. A mark can be visually strong and socially persuasive while still lacking a complete mechanism trail. That separation is exactly how uncertain record stories become durable and why they should be analyzed in layers rather than collapsed into a single claim."
         ]
       },
       {
         "id": "environmental-and-contextual-amplifiers",
         "heading": "Environmental and Contextual Amplifiers",
         "paragraphs": [
-          "Lighting, sleep debt, social silence, and delayed checking can amplify misattribution in document settings.",
-          "If a room is dark or attention is fragmented, small handling differences are noticed less accurately, and the visual surprise of a new mark dominates the confidence model.",
-          "Context can also include institution pressure, rumor flow, or prior expectation. That context does not create the mark by itself, but it changes how quickly the anomaly becomes fixed as proof."
+          "Environmental conditions can increase the speed at which uncertainty becomes narrative certainty. Low light, late hours, fatigue, repetitive routines, and social silence can all reduce immediate verification quality. In an archive, office, or ritual room, these conditions increase the chance that participants notice a final state (the final mark) without a high-resolution process log.",
+          "Context matters too: stress, expectation, and group framing shape interpretation speed. If a group already discusses hidden authors, spiritual causes, or institutional mistakes, an isolated signature-like trace may be integrated into those beliefs before anyone checks timestamps, edits, or handling sequence. The environment does not invent the trace; it changes whether the trace passes from \"odd detail\" to \"proof.\"",
+          "A non-mystical setting can still feel supernatural when institutional markers fail at the moment of uncertainty. That is why the same document pattern feels very different in an observed control room versus a dimly lit, delayed-check room. The marks are not inherently the same, but the interpretation pressure is."
         ]
       },
       {
         "id": "evidence-methods-in-document-cases",
         "heading": "Evidence Methods in Document Cases",
         "paragraphs": [
-          "A rigorous method starts with access. Who had lawful control between the last verified state and the claimed anomaly?",
-          "From there, chain continuity, image records, timestamp integrity, and procedural notes determine whether the anomaly can be reproduced or independently reconstructed.",
-          "If those checks remain incomplete, the strongest claim should stay at the level of interpreted pattern, not confirmed cause."
+          "When a signature anomaly appears, the strongest response is process mapping: who had legitimate access, when the item was physically handled, and whether custody notes remain complete. Forensic-style procedures can include timestamp continuity, imaging records, controlled checks for overwriting, and consistent access logs.",
+          "These methods are not anti-story; they are the reason Strange Nature framing remains useful. The lore around signatures survives because the visual pattern is strong and old. Evidence discipline survives because unresolved patterns are common. Both sides are true if we avoid the final false move: concluding cause before method is complete.",
+          "In practical terms, a convincing analysis should ask whether the anomaly is reproducible, whether an unnoticed action is plausible under context conditions, and whether alternative explanations can be eliminated with equal attention. If the result is still undecidable, the best conclusion is not certainty and not dismissal, but a ranked uncertainty with transparent limits."
         ]
       },
       {
         "id": "how-uncertain-signatures-become-legends",
         "heading": "How Uncertain Signatures Become Legends",
         "paragraphs": [
-          "Once symbolic significance and incomplete process evidence combine, the story leaves the desk and enters legend circulation.",
-          "The motif remains compact because it works quickly: one mark plus one trust structure equals a durable explanation template. The template can travel across institutions while adapting to each local setting.",
-          "That portability explains why these stories survive long after details are forgotten. The core remains the same: a sign of authority appears where certainty was expected to be settled."
+          "The legend function appears when one signature-like anomaly can explain a much larger social fear: the fear that records may be manipulated, corrupted, or authored by hidden authority. In that structure, a single mark is no longer just a mark. It becomes a model of the world: an archive can be entered by forces beyond ordinary checking.",
+          "That transformation happens faster than most people expect because it uses existing cultural scripts. People already know of inherited motifs where marks appear as proof, whether in séance scripts, courtroom culture, or bureaucratic folklore. Modern digital and analog environments add speed and replication, so one credible-sounding detail can circulate quickly as a full uncertainty story.",
+          "The value of the Strange Nature version is not to erase those scripts. It is to keep them visible and bounded: the historical tradition explains why the mark feels meaningful, while the evidence layer explains what remains open. The strongest reading is one that preserves both without conflating them."
         ]
       },
       {
         "id": "best-practice-for-uncertain-record-stories",
         "heading": "Best Practice for Uncertain Record Stories",
         "paragraphs": [
-          "The most useful balance is observational before causal: describe what changed first, then explain interpretive amplifiers, then test mechanism hypotheses.",
-          "This keeps curiosity intact. It also avoids replacing one certainty with another. A story can stay compelling without asserting what is not evidenced.",
-          "The value is in disciplined openness: a visible anomaly may remain a meaningful cultural pattern while still being method-limited."
+          "For readers, creators, and researchers, the practical path is to preserve distinction at all stages. Treat the first question as phenomenological: what changed in the record sequence? Then treat interpretation as secondary: why did this pattern become accepted as extraordinary? Then test environmental and cognitive factors before symbolic conclusions.",
+          "That sequence protects both curiosity and scientific framing. It allows the story to remain striking while refusing overconfidence. It also mirrors how reliable traditions often mature: by acknowledging that some stories feel certain to participants, yet remain probabilistic in method.",
+          "Automatic writing research describes writing without ordinary experience of conscious volition. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the signature-proof motif where a mark is asked to resolve identity, agency, and custody questions. A signature is strong evidence only when authorship, context, and custody are also supported. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Ideomotor explanations connect expectation and suggestion to small movements that feel unwilled. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the signature-proof motif where a mark is asked to resolve identity, agency, and custody questions. A signature is strong evidence only when authorship, context, and custody are also supported. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A signature behaves like proof because institutions treat it as identity, consent, or presence. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the signature-proof motif where a mark is asked to resolve identity, agency, and custody questions. A signature is strong evidence only when authorship, context, and custody are also supported. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Uncertain stories become stronger when a mark appears to settle who was there. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the signature-proof motif where a mark is asked to resolve identity, agency, and custody questions. A signature is strong evidence only when authorship, context, and custody are also supported. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Document forensics asks about ink, paper, sequence, pressure, and custody before accepting a signature claim. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the signature-proof motif where a mark is asked to resolve identity, agency, and custody questions. A signature is strong evidence only when authorship, context, and custody are also supported. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A signature legend begins when authorship is disputed but the mark remains. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is the signature-proof motif where a mark is asked to resolve identity, agency, and custody questions. A signature is strong evidence only when authorship, context, and custody are also supported. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The ideomotor effect helps explain how writing-like motion can occur without felt agency. The motif survives because the detail is small enough to remember and strong enough to organize retelling. In this record, the central frame is the signature-proof motif where a mark is asked to resolve identity, agency, and custody questions. A signature is strong evidence only when authorship, context, and custody are also supported. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A source-aware reading separates the existence of a signature from the meaning assigned to it. A reader can follow the symbolic force without treating the symbol as proof of every later claim. In this record, the central frame is the signature-proof motif where a mark is asked to resolve identity, agency, and custody questions. A signature is strong evidence only when authorship, context, and custody are also supported. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Office and archive settings modernize older automatic-writing motifs. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the signature-proof motif where a mark is asked to resolve identity, agency, and custody questions. A signature is strong evidence only when authorship, context, and custody are also supported. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A signature can be forged, automatic, mistaken, ritual, or ordinary. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the signature-proof motif where a mark is asked to resolve identity, agency, and custody questions. A signature is strong evidence only when authorship, context, and custody are also supported. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The proof effect comes from social convention more than ink alone. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the signature-proof motif where a mark is asked to resolve identity, agency, and custody questions. A signature is strong evidence only when authorship, context, and custody are also supported. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The strongest article keeps custody and agency questions visible. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the signature-proof motif where a mark is asked to resolve identity, agency, and custody questions. A signature is strong evidence only when authorship, context, and custody are also supported. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A signature line is a threshold between claim and accountability. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the signature-proof motif where a mark is asked to resolve identity, agency, and custody questions. A signature is strong evidence only when authorship, context, and custody are also supported. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable."
         ]
       }
     ],
@@ -210,70 +226,57 @@
     },
     "qa": [
       {
-        "question": "What real-world tradition does this rewrite use?",
-        "answer": "It draws from historical spiritualist automatic writing settings and from signature-centered authorization practices in legal and administrative records."
+        "question": "What real-world tradition is this rewritten from?",
+        "answer": "It is based on historical spiritualist automatic writing practices and signature-centered document culture, where handwritten marks are used as evidence tokens."
       },
       {
-        "question": "What evidence supports this interpretation?",
-        "answer": "The strongest support comes from documented historical practices and modern cognitive research on ideomotor activity, plus custody and document-processing standards."
+        "question": "What supports this as an evidence-aware interpretation?",
+        "answer": "The interpretation uses known historical practices, documented ideomotor explanations, and standard record-custody reasoning rather than claiming a single final mechanism."
       },
       {
-        "question": "Could these signatures still be interpreted as fraud or error?",
-        "answer": "Yes. Fraud, unintentional handling, or methodological gaps are all possible and must be tested before causal conclusions are made."
+        "question": "Why does this motif often feel convincing?",
+        "answer": "Because signatures are treated as authority marks in legal and administrative systems, so any unexpected mark is read through existing trust structures."
       },
       {
-        "question": "What evidence supports this specifically?",
-        "answer": "The strongest evidence is procedural: access records, timestamps, custody continuity, and independent reproduction attempts, not a single striking visual marker."
+        "question": "Which context factors increase certainty bias?",
+        "answer": "Dim settings, fatigue, social expectation, and delayed verification can increase misattribution and make one anomaly feel more final than process data would support."
       },
       {
-        "question": "How do environmental factors influence these cases?",
-        "answer": "Lighting, fatigue, expectation, and delayed verification can strengthen certainty bias by reducing the accuracy of immediate observation and increasing symbol-driven interpretation."
-      },
-      {
-        "question": "What remains most uncertain after this analysis?",
-        "answer": "Specific causal attribution for any single event remains provisional until complete process evidence is available."
+        "question": "What remains unresolved in this account?",
+        "answer": "Specific causal attribution for any one incident is unresolved unless access logs, custody details, and handling timing are independently verified."
       }
     ],
-    "storySourceNote": "This account separates historical spiritualist motifs, cognitive mechanisms, and documentary process checks. It treats signatures as cultural authority symbols first, then evaluates whether process evidence supports each specific causal interpretation.",
+    "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, internet retelling, and legend-like interpretation.",
     "references": [
       {
-        "title": "Britannica: Spiritualism",
-        "url": "https://www.britannica.com/topic/spiritualism"
+        "title": "PMC, Voluntary and involuntary motor behaviours in religious experience",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11882502/"
       },
       {
-        "title": "Britannica: Ouija",
-        "url": "https://www.britannica.com/topic/Ouija"
+        "title": "PubMed, Ideomotor signaling historical perspective",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/21404952/"
       },
       {
-        "title": "Britannica: Ideomotor effect",
-        "url": "https://www.britannica.com/science/ideomotor-effect"
+        "title": "PMC, Strong evidence for ideomotor theory",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10110922/"
       },
       {
-        "title": "Wikipedia: Automatic writing",
-        "url": "https://en.wikipedia.org/wiki/Automatic_writing"
-      },
-      {
-        "title": "Wikipedia: Ideomotor response",
-        "url": "https://en.wikipedia.org/wiki/Ideomotor_response"
-      },
-      {
-        "title": "Wikipedia: Forensic document examination",
-        "url": "https://en.wikipedia.org/wiki/Forensic_document_examination"
-      },
-      {
-        "title": "Wikipedia: Signature",
+        "title": "Wikipedia, Signature",
         "url": "https://en.wikipedia.org/wiki/Signature"
+      },
+      {
+        "title": "Wikipedia, Questioned document examination",
+        "url": "https://en.wikipedia.org/wiki/Questioned_document_examination"
       }
     ],
     "relatedKeywords": [
-      "strange nature",
       "signature legends",
       "automatic writing",
+      "document forensics",
       "ideomotor effect",
-      "forensic document analysis",
       "record custody",
-      "document anomaly",
-      "evidence under uncertainty"
+      "evidence under uncertainty",
+      "legend origins"
     ]
   }
 }

@@ -11,9 +11,9 @@
   "h1": "How Unused Floors Became Building Myths: The 13th-Floor Tradition as Place Memory",
   "seoTitle": "How Unused Floors Became Building Myths: The 13th-Floor Tradition as Place Memory | Kyunolab",
   "metaTitle": "How Unused Floors Became Building Myths: The 13th-Floor Tradition as Place Memory | Kyunolab",
-  "metaDescription": "A place-history record showing how floor-numbering practices around 13 and 4 become visible place-myth signals through building records, signage, and modern retelling.",
-  "introSummary": "This place-history record follows how skipped or relabeled floor numbers produce durable place-memory around urban high-rises and hospitality buildings.",
-  "summaryAnswer": "Numbering policy is the source layer of this story: operational floor-label conventions are repeated in public systems, then retold as building myths when meaning shifts from administration to place memory.",
+  "metaDescription": "How unused or skipped floors, number taboos, elevator panels, and real-estate wayfinding turn building levels into modern place myths.",
+  "introSummary": "A source-aware account of 13th-floor avoidance, tetraphobia, unused floors, and the place-memory legends created by building numbering.",
+  "summaryAnswer": "Unused floors become building myths when a practical numbering or marketing decision leaves a visible gap that visitors interpret as a hidden place.",
   "updatedAt": "2026-07-28",
   "qa": [
     {
@@ -41,17 +41,15 @@
       "answer": "Evidence is the documented naming and listing chain; interpretation is the later narrative layer that turns it into legend."
     }
   ],
-  "storySourceNote": "Rewritten from documented building floor-number traditions and their role in place-memory transmission.",
+  "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, internet retelling, and legend-like interpretation.",
   "relatedKeywords": [
     "13th floor",
-    "floor naming",
+    "unused floors",
     "building folklore",
     "place memory",
     "triskaidekaphobia",
     "tetraphobia",
-    "elevator numbering",
-    "urban architecture",
-    "building mythology"
+    "elevator numbering"
   ],
   "secondaryKeywords": [
     "missing floor",
@@ -64,31 +62,33 @@
     "public signage"
   ],
   "contentDNA": {
-    "targetQuery": "how-unused-floors-become-building-myths",
+    "targetQuery": "how unused floors became building myths: the 13th-floor tradition as place memory",
     "canonicalQuery": "how-unused-floors-become-building-myths-origin-of-a-modern-place-legend",
-    "searchQuestion": "Why do skipped or relabeled floors become stable building myths in modern urban place memory?",
-    "readerIntent": "Understand how administrative floor-labeling traditions create long-lived place-based legend structures.",
-    "uniqueAngle": "A place-history lens on building floor numbering: documentation-first origins and adaptation into urban memory through repeated visibility.",
+    "searchQuestion": "Unused floors become building myths when a practical numbering or marketing decision leaves a visible gap that visitors interpret as a hidden place.",
+    "readerIntent": "Understand the source-aware origin and transmission of a legend motif.",
+    "uniqueAngle": "Unused floors become building myths when a practical numbering or marketing decision leaves a visible gap that visitors interpret as a hidden place.",
     "subjectClass": "place-memory",
     "narrativeLens": "floor-number-memory-lens",
-    "evidencePosture": "source-aware",
-    "culturalFrame": "urban architectural identity formed by numbering conventions and repeated institutional publication.",
-    "sceneAnchor": "lobbies, elevators, and building directories in high-density commercial and hospitality districts",
+    "evidencePosture": "external-source synthesis",
+    "culturalFrame": "Legend Origins",
+    "sceneAnchor": "Geography",
     "subjectSpecificVocabulary": [
-      "floor omission",
-      "floor skip",
-      "renumbering",
+      "13th floor",
+      "unused floors",
+      "building folklore",
+      "place memory",
       "triskaidekaphobia",
       "tetraphobia",
-      "wayfinding",
-      "place memory"
+      "elevator numbering"
     ],
     "requiredSpecificDetails": [
-      "13th floor avoidance in many building markets",
-      "4-based naming sensitivity in East Asian contexts",
-      "repetition through directories, elevators, and guest-facing documentation",
-      "transition from operational label to place-memory interpretation",
-      "modern reinterpretation into secrecy or paranormal motifs"
+      "Geography",
+      "Event Narrative",
+      "Naming Significance",
+      "Recurrent Practices",
+      "Memory",
+      "Historical Continuity Across Periods",
+      "Modern Interpretation"
     ],
     "prohibitedGenericPhrases": [
       "every skipped floor is evidence of a hidden construction",
@@ -129,70 +129,82 @@
   },
   "longformArticle": {
     "contentPackageVersion": "archive-story-content-v1",
-    "deck": "Unused floors are often the result of building numbering practice, which becomes place-memory when records are repeated publicly and retellings replace policy context.",
+    "deck": "A source-aware account of 13th-floor avoidance, tetraphobia, unused floors, and the place-memory legends created by building numbering.",
     "opening": [],
     "storyBody": [
       {
         "id": "geography",
         "heading": "Geography",
         "paragraphs": [
-          "The 13th-floor motif is strongest in dense built environments where people regularly interact with labeled levels: airports, hotels, office towers, and mixed-use urban blocks.",
-          "In those settings, floor lists and elevator labels are encountered often enough to make sequence changes culturally visible.",
-          "Visibility and repetition allow a small numeric decision to become a place cue across cities."
+          "The modern claim that a floor is \"unused\" is often a narrative afterlife of building practice. Most cases begin with naming systems that shift, skip, or rename specific floor numbers, then repeat those labels across planning, signage, and user-facing materials.",
+          "The motif appears most clearly in dense urban building systems where high-rises are common: hotels, offices, and mixed-use towers. In those environments, floor labels are public wayfinding objects, not obscure documents. Because people encounter elevators and directories daily, sequence patterns become part of place memory as quickly as lobby routes or district landmarks."
         ]
       },
       {
         "id": "event-narrative",
         "heading": "Event Narrative",
         "paragraphs": [
-          "Historically, operators and planners adjusted floor labels where cultural expectations around certain numbers were strong.",
-          "In many systems, this meant skipping 13, and in other systems, avoiding 4-shaped combinations or related values tied to local naming beliefs.",
-          "The structural layout remained continuous even as public labeling changed."
+          "The oldest observable layer is practical rather than mysterious. Building operators in many regions have avoided certain floor labels, especially 13 and 4, because cultural expectations and customer comfort favor different numbering patterns. This can produce a sequence where a floor appears to be skipped even when the structure remains physically continuous.",
+          "The action in this layer is administrative: a number is relabeled, omitted, or reassigned before the change enters public systems. At this stage, the building story is a documentation chain, not a hidden architecture claim."
         ]
       },
       {
         "id": "naming-significance",
         "heading": "Naming Significance",
         "paragraphs": [
-          "A visible sequence turns into meaning when people can repeat it: lobby maps, directory pages, and elevator buttons create a shared mnemonic.",
-          "The phrase '13th floor' gains social weight as a place-like token before anyone checks internal planning documentation.",
-          "That is when a naming convention begins to function as place identity."
+          "A floor label becomes memorable when repeated in consistent, authoritative forms. The phrase \"13th floor\" becomes a place-like tag even if no one verifies the original procedural note that caused it. What was once a maintenance or guest-experience decision begins to act like a local toponym inside the building narrative.",
+          "The strength of the motif is structural memory: people trust formal lists and infer meaning from omissions when those lists are seen as trustworthy."
         ]
       },
       {
         "id": "recurrent-practices",
         "heading": "Recurrent Practices",
         "paragraphs": [
-          "The motif stabilizes through institutional copying: floor plans, signage updates, digital wayfinding, and facility documents restate the same sequence.",
-          "Each restatement shifts interpretation less toward policy and more toward shared narrative memory.",
-          "Cross-property comparisons then spread the claim pattern far beyond any original building."
+          "The narrative becomes durable through repetitive copying. Elevator programming, directories, lease plans, facility apps, and service documentation all reproduce the same sequence, often across decades and vendors. Each repetition lowers uncertainty and increases acceptance that the gap belongs to place tradition rather than operational design choice.",
+          "Cross-building comparison deepens the effect: travelers map one building’s gap onto another’s. That portability is how the motif travels without requiring a shared event or single owner."
         ]
       },
       {
         "id": "memory",
         "heading": "Memory",
         "paragraphs": [
-          "Over time, the record becomes a story: the missing floor is narrated as a warning, a mystery, or a marker of exclusivity.",
-          "Because people prioritize memorable patterns, the sequence becomes part of urban memory, not just building management practice.",
-          "This is the core place-history mechanism, where memory survives even when its original function recedes."
+          "Once the sequence is known, recollection shifts from policy to place. Guests describe the \"missing level\" as a caution or curiosity. Local guides, message boards, and anecdotes extend the idea into stories about restricted or sealed spaces.",
+          "This does not erase the operational records, but it overlays them with stronger social evidence. In place-history terms, the strongest record becomes what many people repeatedly say about the same named sequence."
         ]
       },
       {
         "id": "historical-continuity",
         "heading": "Historical Continuity Across Periods",
         "paragraphs": [
-          "In earlier decades, static print records and limited correction cycles let omissions persist and gain narrative patience.",
-          "Digital systems later accelerated propagation and exposure, adding scale but not removing the symbolic gap.",
-          "Across periods, the continuity is in the place-pattern: an apparently missing level in an otherwise complete sequence."
+          "Older print-based building ecosystems spread omissions slowly but persistently through paper plans, old directories, and copy updates. Later digital and app-era systems made sequences easier to duplicate, not harder to imagine, and sometimes even easier to dramatize.",
+          "The historical change is therefore from silent repetition to visibly networked repetition. The story meaning shifts, but the anchor remains: a formal listing with a visible void."
         ]
       },
       {
         "id": "modern-interpretation",
         "heading": "Modern Interpretation",
         "paragraphs": [
-          "Current retellings often apply secrecy, surveillance, or paranormal labels to the same pattern.",
-          "Yet the strongest signal for persistence remains the same: an official-looking list that seems to indicate something missing.",
-          "A place-history reading keeps the sequence distinction clear by separating operational facts from cultural adaptation."
+          "In contemporary retellings, the void is often interpreted as secrecy, access control, or paranormal residue. That layer is persuasive because it builds on already familiar symbols: numbered progression, official signage, and the feeling that no number should be missing.",
+          "The useful boundary for place-history analysis is simple: documentation-origin layers and interpretive layers can be separated. This preserves the historical record while still explaining why the legend remains active across cities and generations.",
+          "Thirteen has a long public reputation as an unlucky number in many Western settings. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the building-numbering gap where a level is renamed, skipped, marketed differently, or removed from public wayfinding. A skipped or unused floor usually points first to numbering practice, superstition, market preference, or operations, not a hidden supernatural level. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Four carries different associations in some East Asian contexts, so floor omission can follow more than one cultural logic. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the building-numbering gap where a level is renamed, skipped, marketed differently, or removed from public wayfinding. A skipped or unused floor usually points first to numbering practice, superstition, market preference, or operations, not a hidden supernatural level. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A building's physical floors and its public floor labels do not always match. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the building-numbering gap where a level is renamed, skipped, marketed differently, or removed from public wayfinding. A skipped or unused floor usually points first to numbering practice, superstition, market preference, or operations, not a hidden supernatural level. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Elevators, directories, and room numbers make the gap visible to ordinary visitors. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the building-numbering gap where a level is renamed, skipped, marketed differently, or removed from public wayfinding. A skipped or unused floor usually points first to numbering practice, superstition, market preference, or operations, not a hidden supernatural level. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A skipped label can become place memory because people encounter it repeatedly while moving through the building. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the building-numbering gap where a level is renamed, skipped, marketed differently, or removed from public wayfinding. A skipped or unused floor usually points first to numbering practice, superstition, market preference, or operations, not a hidden supernatural level. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The 13th-floor tradition turns abstract number fear into a spatial practice. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is the building-numbering gap where a level is renamed, skipped, marketed differently, or removed from public wayfinding. A skipped or unused floor usually points first to numbering practice, superstition, market preference, or operations, not a hidden supernatural level. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Unused service levels, mechanical spaces, and renamed floors can all be folded into the same legend grammar. The motif survives because the detail is small enough to remember and strong enough to organize retelling. In this record, the central frame is the building-numbering gap where a level is renamed, skipped, marketed differently, or removed from public wayfinding. A skipped or unused floor usually points first to numbering practice, superstition, market preference, or operations, not a hidden supernatural level. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Real-estate and hospitality decisions may keep the practice alive even among people who do not personally believe the superstition. A reader can follow the symbolic force without treating the symbol as proof of every later claim. In this record, the central frame is the building-numbering gap where a level is renamed, skipped, marketed differently, or removed from public wayfinding. A skipped or unused floor usually points first to numbering practice, superstition, market preference, or operations, not a hidden supernatural level. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The myth begins when a visitor asks where the missing number went. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the building-numbering gap where a level is renamed, skipped, marketed differently, or removed from public wayfinding. A skipped or unused floor usually points first to numbering practice, superstition, market preference, or operations, not a hidden supernatural level. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A building legend grows because architecture feels stable while labels feel official. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the building-numbering gap where a level is renamed, skipped, marketed differently, or removed from public wayfinding. A skipped or unused floor usually points first to numbering practice, superstition, market preference, or operations, not a hidden supernatural level. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The motif works especially well in hotels because guests are temporary and rely on signs. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the building-numbering gap where a level is renamed, skipped, marketed differently, or removed from public wayfinding. A skipped or unused floor usually points first to numbering practice, superstition, market preference, or operations, not a hidden supernatural level. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A skipped floor can be both ordinary management and a memorable uncanny detail. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the building-numbering gap where a level is renamed, skipped, marketed differently, or removed from public wayfinding. A skipped or unused floor usually points first to numbering practice, superstition, market preference, or operations, not a hidden supernatural level. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Place folklore often begins at the point where wayfinding stops feeling transparent. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the building-numbering gap where a level is renamed, skipped, marketed differently, or removed from public wayfinding. A skipped or unused floor usually points first to numbering practice, superstition, market preference, or operations, not a hidden supernatural level. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The source-aware reading asks what the building calls the level and what the structure actually contains. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is the building-numbering gap where a level is renamed, skipped, marketed differently, or removed from public wayfinding. A skipped or unused floor usually points first to numbering practice, superstition, market preference, or operations, not a hidden supernatural level. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The unused floor becomes mythic because absence is encountered physically. The motif survives because the detail is small enough to remember and strong enough to organize retelling. In this record, the central frame is the building-numbering gap where a level is renamed, skipped, marketed differently, or removed from public wayfinding. A skipped or unused floor usually points first to numbering practice, superstition, market preference, or operations, not a hidden supernatural level. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Thirteen has a long public reputation as an unlucky number in many Western settings. A reader can follow the symbolic force without treating the symbol as proof of every later claim. In this record, the central frame is the building-numbering gap where a level is renamed, skipped, marketed differently, or removed from public wayfinding. A skipped or unused floor usually points first to numbering practice, superstition, market preference, or operations, not a hidden supernatural level. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Four carries different associations in some East Asian contexts, so floor omission can follow more than one cultural logic. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the building-numbering gap where a level is renamed, skipped, marketed differently, or removed from public wayfinding. A skipped or unused floor usually points first to numbering practice, superstition, market preference, or operations, not a hidden supernatural level. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A building's physical floors and its public floor labels do not always match. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the building-numbering gap where a level is renamed, skipped, marketed differently, or removed from public wayfinding. A skipped or unused floor usually points first to numbering practice, superstition, market preference, or operations, not a hidden supernatural level. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Elevators, directories, and room numbers make the gap visible to ordinary visitors. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the building-numbering gap where a level is renamed, skipped, marketed differently, or removed from public wayfinding. A skipped or unused floor usually points first to numbering practice, superstition, market preference, or operations, not a hidden supernatural level. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable."
         ]
       }
     ],
@@ -203,72 +215,65 @@
     },
     "qa": [
       {
-        "question": "What makes this a place-history case?",
-        "answer": "The same place-form—an omitted or relabeled level in shared building systems—persists and evolves across audiences and periods."
+        "question": "What is this record about?",
+        "answer": "It is a place-history account of how floor-number omission practices became a recurring legend frame in high-rise and hotel environments."
       },
       {
-        "question": "What is the strongest historical cause?",
-        "answer": "Cultural number-avoidance traditions, especially around 13 and 4, and the operational need to reduce guest discomfort."
+        "question": "What is the historical source of the motif?",
+        "answer": "The source is operational: triskaidekaphobia around 13, tetraphobia around 4, and related local naming sensitivities in building numbering."
       },
       {
-        "question": "How do these floors become memory objects?",
-        "answer": "They are repeated in user-visible systems such as directories and elevators, which are encountered and verbalized repeatedly."
+        "question": "How does the motif become a place legend?",
+        "answer": "When skipped or altered levels are repeated in visible systems like directories and elevators, the omitted number becomes a memorable place anchor."
       },
       {
-        "question": "Does modern evidence prove hidden architecture?",
-        "answer": "No; the stronger evidence is naming and sequence repetition, not a hidden-room investigation."
+        "question": "Is the floor actually missing?",
+        "answer": "Usually no; the sequence may be relabeled or merged while the building remains continuous."
       },
       {
-        "question": "What transformed across periods?",
-        "answer": "The explanatory layer changed from practical labeling policy to cautionary, symbolic, or paranormal narrative."
+        "question": "What changed in modern retellings?",
+        "answer": "Retellings moved from practical explanation to suspicion, often adding secrecy or paranormal framing."
       },
       {
-        "question": "What is this record's boundary line?",
-        "answer": "Separate verifiable numbering policy from later interpretive overlays."
+        "question": "How is evidence separated from interpretation?",
+        "answer": "Evidence is the documented naming and listing chain; interpretation is the later narrative layer that turns it into legend."
       }
     ],
-    "storySourceNote": "This JSON record maps documented floor-numbering practice into a place-history chain: naming decision, public reproduction, memory transfer, and modern adaptation.",
+    "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, internet retelling, and legend-like interpretation.",
     "references": [
       {
-        "title": "13th floor",
-        "url": "https://en.wikipedia.org/wiki/13th_floor"
-      },
-      {
-        "title": "Triskaidekaphobia",
-        "url": "https://en.wikipedia.org/wiki/Triskaidekaphobia"
-      },
-      {
-        "title": "Tetraphobia",
-        "url": "https://en.wikipedia.org/wiki/Tetraphobia"
-      },
-      {
-        "title": "Britannica: Number 13",
+        "title": "Britannica, Number 13",
         "url": "https://www.britannica.com/topic/13"
       },
       {
-        "title": "Britannica: Number 4",
+        "title": "Britannica, Number 4",
         "url": "https://www.britannica.com/topic/4"
       },
       {
-        "title": "Britannica: Floor",
+        "title": "Britannica, Floor",
         "url": "https://www.britannica.com/technology/floor"
       },
       {
-        "title": "Feng shui",
-        "url": "https://en.wikipedia.org/wiki/Feng_shui"
+        "title": "Wikipedia, 13th floor",
+        "url": "https://en.wikipedia.org/wiki/13th_floor"
+      },
+      {
+        "title": "Wikipedia, Triskaidekaphobia",
+        "url": "https://en.wikipedia.org/wiki/Triskaidekaphobia"
+      },
+      {
+        "title": "Wikipedia, Tetraphobia",
+        "url": "https://en.wikipedia.org/wiki/Tetraphobia"
       }
     ],
     "relatedKeywords": [
       "13th floor",
-      "floor naming",
-      "building myth",
+      "unused floors",
+      "building folklore",
       "place memory",
       "triskaidekaphobia",
       "tetraphobia",
-      "elevator numbering",
-      "urban legend",
-      "wayfinding",
-      "place-history"
+      "elevator numbering"
     ]
   }
 }

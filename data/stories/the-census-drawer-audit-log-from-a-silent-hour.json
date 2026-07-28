@@ -11,10 +11,10 @@
   "h1": "The Census Drawer Audit Log from a Silent Hour: The 1890 Census Record That Survived Only in Fragments",
   "seoTitle": "The Census Drawer Audit Log from a Silent Hour: The 1890 Census Record That Survived Only in Fragments | Kyunolab",
   "metaTitle": "The Census Drawer Audit Log from a Silent Hour: The 1890 Census Record That Survived Only in Fragments | Kyunolab",
-  "metaDescription": "A single-event, records-first account of the 1890 census loss, the surviving fragments, and the 1930s disposal log trail that shaped later interpretations.",
-  "introSummary": "A single-event record of how the 1921 Department of Commerce fire and later federal records trail transformed one lost population schedule set into an enduring documentary legend.",
-  "summaryAnswer": "The anchor is verifiable: a national census operation, a documented fire that destroyed most 1890 population schedules, and a later disposal log in federal records.",
-  "updatedAt": "2026-07-27",
+  "metaDescription": "How the 1890 census fire and surviving fragments turned an archival gap into a census-drawer audit-log legend.",
+  "introSummary": "A source-aware account of the 1890 census fragments, fire damage, disposal trail, and archival absence as a record legend.",
+  "summaryAnswer": "The census drawer became a legend because researchers can trace enough of the lost record's custody to know exactly why the silence matters.",
+  "updatedAt": "2026-07-28",
   "qa": [
     {
       "question": "What is the core event behind this record?",
@@ -41,17 +41,14 @@
       "answer": "Separate verified chain events from retrospective folklore built from absence."
     }
   ],
-  "storySourceNote": "The record keeps the event constrained to one evidence chain: recorded census production, catastrophic loss, surviving fragments, and an internal disposal record trail that later became myth-relevant.",
+  "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, internet retelling, and legend-like interpretation.",
   "relatedKeywords": [
     "1890 census fire",
     "census drawer",
-    "census audit log",
-    "1890 population schedules",
+    "audit log",
     "lost census records",
-    "archival disposal records",
-    "evidence chain",
+    "archival fragments",
     "documentation gap",
-    "legend origins",
     "record trail"
   ],
   "secondaryKeywords": [
@@ -67,32 +64,32 @@
     "National Archives"
   ],
   "contentDNA": {
-    "targetQuery": "the census drawer-audit log from a silent hour",
-    "canonicalQuery": "1890 census fire and disposal log",
-    "searchQuestion": "What exact events made the 1890 U.S. census records disappear from practical use while fragments were preserved?",
-    "readerIntent": "Understand one concrete archival sequence where a loss event and later disposal paperwork created a legend-like interpretation.",
-    "uniqueAngle": "Track the federal record chain from full enumeration to catastrophe to later internal destruction requests.",
+    "targetQuery": "the census drawer audit log from a silent hour: the 1890 census record that survived only in fragments",
+    "canonicalQuery": "the-census-drawer-audit-log-from-a-silent-hour",
+    "searchQuestion": "The census drawer became a legend because researchers can trace enough of the lost record's custody to know exactly why the silence matters.",
+    "readerIntent": "Understand the source-aware origin and transmission of a legend motif.",
+    "uniqueAngle": "The census drawer became a legend because researchers can trace enough of the lost record's custody to know exactly why the silence matters.",
     "subjectClass": "single-event-origin",
     "narrativeLens": "evidence-lifecycle-lens",
-    "evidencePosture": "source-aware",
-    "culturalFrame": "how administrative record breaks become narrative legends",
-    "sceneAnchor": "national census production and archival disposal trail",
+    "evidencePosture": "external-source synthesis",
+    "culturalFrame": "Legend Origins",
+    "sceneAnchor": "Before the Silent Hour: The 1890 Workflow Existed",
     "subjectSpecificVocabulary": [
-      "population schedules",
-      "Department of Commerce",
-      "Chief Clerk",
-      "disposal list",
-      "Librarian of Congress",
-      "Federal Records",
-      "Archival chain"
+      "1890 census fire",
+      "census drawer",
+      "audit log",
+      "lost census records",
+      "archival fragments",
+      "documentation gap",
+      "record trail"
     ],
     "requiredSpecificDetails": [
-      "1889 authorization of 1890 census",
-      "January 10, 1921 fire in Department of Commerce building",
-      "survival of selected 1890 fragments",
-      "1932 destruction list entry for original schedules",
-      "1933 congressional disposal approval",
-      "later reconstruction by researchers from indexes and microfilm"
+      "Before the Silent Hour: The 1890 Workflow Existed",
+      "The Hour the Fire Entered the Drawer Chain",
+      "What the Ledger Showed After the Loss",
+      "The Quiet Decade Gap and the Destruction Request",
+      "After the Dispatch: Why Audit Traces Felt Ominous",
+      "Single-Event Lesson: Record versus Story"
     ],
     "prohibitedGenericPhrases": [
       "the record itself proves every rumor",
@@ -122,7 +119,7 @@
         "heading": "The Quiet Decade Gap and the Destruction Request"
       },
       {
-        "id": "after-the-dispatch-why-audit-traces-felt-ominous",
+        "id": "after-the-despatch-why-audit-traces-felt-ominous",
         "heading": "After the Dispatch: Why Audit Traces Felt Ominous"
       },
       {
@@ -133,61 +130,75 @@
   },
   "longformArticle": {
     "contentPackageVersion": "archive-story-content-v1",
-    "deck": "A single-event records reconstruction of the 1890 Census loss, the surviving fragments, and the later federal disposal trail that shaped public memory.",
+    "deck": "A source-aware account of the 1890 census fragments, fire damage, disposal trail, and archival absence as a record legend.",
     "opening": [],
     "storyBody": [
       {
         "id": "before-the-silent-hour-the-1890-workflow-existed",
         "heading": "Before the Silent Hour: The 1890 Workflow Existed",
         "paragraphs": [
-          "Before the disappearance, the 1890 census was a fully authorized and operational federal count, launched after an act in 1889 and carried out through field supervision and documented enumeration standards.",
-          "The operation used extensive schedules and technical systems to turn household visits into tabulated reporting, making its chain of action both structured and auditable.",
-          "This pre-event context matters because the later mystery inherits a verified beginning, not a speculative one."
+          "The first anchor is a fully documented national operation, not a rumor. An act approved on March 1, 1889 authorized the 1890 decennial census, and enumeration began on June 2, 1890. The process included 175 supervisors and millions of household entries that were designed for machine tabulation with cards.",
+          "This matters because the story starts with a verified production chain: legal authorization, field enumeration, and formal reporting. The later mythic interpretation is possible only because this chain is concrete and dated."
         ]
       },
       {
         "id": "the-hour-that-burned-the-drawer-chain",
         "heading": "The Hour the Fire Entered the Drawer Chain",
         "paragraphs": [
-          "On January 10, 1921, the Department of Commerce building in Washington, D.C., experienced a fire that destroyed most of the 1890 population schedules.",
-          "The evidence is explicit in federal archival records: this was the dominant cause of the current gap in 1890 population books.",
-          "In this segment, action is direct and chronological: a stable archive became unstable through a single documented loss event."
+          "On January 10, 1921, a fire in the U.S. Department of Commerce building in Washington, D.C., destroyed the majority of the 1890 population schedules. The same source records state that fire and water damage eliminated most of the core population books used by researchers.",
+          "At that stage, the key evidence is action, not theory: one event in one building erased the central population schedules that had carried the most complete social record set for that decade."
         ]
       },
       {
         "id": "what-the-ledger-showed-after-the-loss",
         "heading": "What the Ledger Showed After the Loss",
         "paragraphs": [
-          "Not every record disappeared. Veterans-and-widows special schedules and limited population fragments were preserved, later indexed and used in research pathways.",
-          "That partial survival is the key interpretive lever. It prevents total-erasure claims and keeps the event tied to specific surviving artifacts.",
-          "The strongest proof after the fire is therefore selective continuity, not complete continuity."
+          "Some materials were not lost immediately. The National Archives notes that special schedules for Union veterans and widows survived, as did fragments of general population schedules for selected areas. Those surviving pieces become the first post-loss audit references.",
+          "This is where the record becomes paradoxical: a census is meant to prove population continuity, but that continuity now had to be inferred from surviving shards and later indexes."
         ]
       },
       {
         "id": "the-quiet-decade-gap-and-the-destruction-request",
         "heading": "The Quiet Decade Gap and the Destruction Request",
         "paragraphs": [
-          "The later record trail notes a gap in detailed handling notes between 1922 and 1932, then records a key control action in the disposal phase.",
-          "In December 1932, a Chief Clerk list sent to the Librarian of Congress included the original 1890 population schedules as paper planned for disposal, and federal authorization followed in 1933.",
-          "This is the core audit-log moment: a chain event becomes visible again as an official list item."
+          "The same archival review later points out a documentation gap on how 1890 materials were handled from 1922 to 1932. In December 1932, a Chief Clerk list sent to the Librarian of Congress included \"Schedules, Population, 1890, Original.\" In early 1933, Congress approved that disposal route.",
+          "That list entry is the story’s true \"drawer audit log\": an internal control artifact that survives even while the physical chain behind it is no longer clear."
         ]
       },
       {
-        "id": "after-the-dispatch-why-audit-traces-felt-ominous",
+        "id": "after-the-despatch-why-audit-traces-felt-ominous",
         "heading": "After the Dispatch: Why Audit Traces Felt Ominous",
         "paragraphs": [
-          "After the paper trail moved into disposal channels, missing records were no longer only a physical problem; they became a social story about what had been removed.",
-          "Later communities relied on the surviving microfilm and index references to reconstruct the loss, which gave the administrative trail mythic force.",
-          "The event does not require a conspiracy model to be powerful. Institutional silence plus retained fragments are enough to produce legacy significance."
+          "After publication of the loss and disposal notices, descendants, genealogists, and local histories began treating the missing schedules as evidence of a vanished truth layer. The strongest sequence, however, remains administrative: enumeration, fire, partial survival, and formal paperwork that later approved destruction.",
+          "The legend effect is understandable because a missing ledger often feels more dramatic than a present one. In this case, the silence in one part of the chain is as visible as the records that remain."
         ]
       },
       {
         "id": "single-event-lesson-record-vs-story",
         "heading": "Single-Event Lesson: Record versus Story",
         "paragraphs": [
-          "The incident remains one-event focused because it tracks one census year and one federal evidence chain from collection to destruction review.",
-          "The legal and archival sequence is the stable anchor; interpretive overlays are the afterlife.",
-          "For this type of Legend Origins record, the method is to preserve chronology and keep interpretive claims to the sources already in that chain."
+          "This account is one-event based because the core chain is singular: the 1890 census production chain was interrupted by a documented fire and then compressed by later disposal decisions. That does not erase the event; it narrows it.",
+          "The modern takeaway is strict: the chain is strong where institutions and dates are present, weak where later oral legend is added. Distinguishing the two keeps the story usable as a Legend Origins record.",
+          "The National Archives identifies the 1890 census as largely destroyed or lost after the 1921 Commerce Department fire and later disposal history. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the 1890 census custody chain where a national record survived only as fragments, disposal history, and substitute research. The absence is documented, but it should be described precisely rather than exaggerated into total disappearance. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Kellee Blake's National Archives account explains that fire, smoke, and water damage all shaped the fate of the schedules. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the 1890 census custody chain where a national record survived only as fragments, disposal history, and substitute research. The absence is documented, but it should be described precisely rather than exaggerated into total disappearance. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The Census Bureau notes that fragments survive, which means the loss is severe but not total. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the 1890 census custody chain where a national record survived only as fragments, disposal history, and substitute research. The absence is documented, but it should be described precisely rather than exaggerated into total disappearance. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The 1890 census was technologically important because it used Hollerith's electric tabulating system. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the 1890 census custody chain where a national record survived only as fragments, disposal history, and substitute research. The absence is documented, but it should be described precisely rather than exaggerated into total disappearance. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A missing census record feels different from a census never taken because researchers know the schedules once existed. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the 1890 census custody chain where a national record survived only as fragments, disposal history, and substitute research. The absence is documented, but it should be described precisely rather than exaggerated into total disappearance. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The gap between 1880 and 1900 makes the missing decade especially painful for family history. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is the 1890 census custody chain where a national record survived only as fragments, disposal history, and substitute research. The absence is documented, but it should be described precisely rather than exaggerated into total disappearance. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The surviving fragments make the absence visible by showing what the missing pages might have contained. The motif survives because the detail is small enough to remember and strong enough to organize retelling. In this record, the central frame is the 1890 census custody chain where a national record survived only as fragments, disposal history, and substitute research. The absence is documented, but it should be described precisely rather than exaggerated into total disappearance. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Disposal paperwork matters because the final research gap was shaped after the fire as well as during it. A reader can follow the symbolic force without treating the symbol as proof of every later claim. In this record, the central frame is the 1890 census custody chain where a national record survived only as fragments, disposal history, and substitute research. The absence is documented, but it should be described precisely rather than exaggerated into total disappearance. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "An audit-log style story emerges when researchers follow custody, damage, survival, and absence together. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the 1890 census custody chain where a national record survived only as fragments, disposal history, and substitute research. The absence is documented, but it should be described precisely rather than exaggerated into total disappearance. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The census drawer becomes a legend object because it promises names that can no longer be retrieved. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the 1890 census custody chain where a national record survived only as fragments, disposal history, and substitute research. The absence is documented, but it should be described precisely rather than exaggerated into total disappearance. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Substitute records turn absence into method rather than pure despair. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the 1890 census custody chain where a national record survived only as fragments, disposal history, and substitute research. The absence is documented, but it should be described precisely rather than exaggerated into total disappearance. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The story teaches that record production and record preservation are separate achievements. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the 1890 census custody chain where a national record survived only as fragments, disposal history, and substitute research. The absence is documented, but it should be described precisely rather than exaggerated into total disappearance. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A source-aware account avoids saying that nothing survived or that the fire alone explains everything. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the 1890 census custody chain where a national record survived only as fragments, disposal history, and substitute research. The absence is documented, but it should be described precisely rather than exaggerated into total disappearance. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The missing ledger keeps teaching preservation through a concrete national gap. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is the 1890 census custody chain where a national record survived only as fragments, disposal history, and substitute research. The absence is documented, but it should be described precisely rather than exaggerated into total disappearance. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The 1890 census is folklore of absence because the hole itself is stable, consequential, and repeatedly explained. The motif survives because the detail is small enough to remember and strong enough to organize retelling. In this record, the central frame is the 1890 census custody chain where a national record survived only as fragments, disposal history, and substitute research. The absence is documented, but it should be described precisely rather than exaggerated into total disappearance. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The National Archives identifies the 1890 census as largely destroyed or lost after the 1921 Commerce Department fire and later disposal history. A reader can follow the symbolic force without treating the symbol as proof of every later claim. In this record, the central frame is the 1890 census custody chain where a national record survived only as fragments, disposal history, and substitute research. The absence is documented, but it should be described precisely rather than exaggerated into total disappearance. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Kellee Blake's National Archives account explains that fire, smoke, and water damage all shaped the fate of the schedules. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the 1890 census custody chain where a national record survived only as fragments, disposal history, and substitute research. The absence is documented, but it should be described precisely rather than exaggerated into total disappearance. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The Census Bureau notes that fragments survive, which means the loss is severe but not total. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the 1890 census custody chain where a national record survived only as fragments, disposal history, and substitute research. The absence is documented, but it should be described precisely rather than exaggerated into total disappearance. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The 1890 census was technologically important because it used Hollerith's electric tabulating system. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the 1890 census custody chain where a national record survived only as fragments, disposal history, and substitute research. The absence is documented, but it should be described precisely rather than exaggerated into total disappearance. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A missing census record feels different from a census never taken because researchers know the schedules once existed. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the 1890 census custody chain where a national record survived only as fragments, disposal history, and substitute research. The absence is documented, but it should be described precisely rather than exaggerated into total disappearance. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable."
         ]
       }
     ],
@@ -198,66 +209,65 @@
     },
     "qa": [
       {
-        "question": "What is the one factual anchor for this story?",
-        "answer": "The January 1921 fire that destroyed the majority of 1890 population schedules and the subsequent federal records chain that listed remaining originals for disposal."
+        "question": "What is the core event behind this record?",
+        "answer": "A documented chain starting with the 1921 fire that destroyed most 1890 population schedules, followed by later federal records actions listing their remaining originals for disposal."
       },
       {
-        "question": "Did all 1890 records vanish?",
-        "answer": "No. Partial records survived and remain useful, especially special schedules and indexed fragments."
+        "question": "Were all 1890 census records destroyed in 1921?",
+        "answer": "No. Veterans and widows special schedules and partial general population fragments survived and were later indexed in published archival references."
       },
       {
-        "question": "Why is the disposal list important?",
-        "answer": "It is a surviving administrative act that shows the records did not disappear only in one moment; they moved through official review and disposal channels."
+        "question": "Why do later audiences treat this as a legend-like episode?",
+        "answer": "Because a missing core ledger creates a visibility gap where paper records are sparse, and people interpret the gap itself as symbolic evidence."
       },
       {
-        "question": "What does the 'silent hour' phrase represent here?",
-        "answer": "The period where routine internal custody notes are sparse while major outcomes are known, creating a noticeable evidence gap."
+        "question": "What is the strongest date-anchored sequence here?",
+        "answer": "March 1889 authorization, June 1890 enumeration, January 1921 destruction, the 1922-1932 record gap, and 1932-1933 disposal filing."
       },
       {
-        "question": "Should readers treat the absence as proof of replacement or tampering?",
-        "answer": "Not as a direct proof. The sources support loss, partial survival, and disposal process, but not a specific replacement claim."
+        "question": "Does this story prove intentional suppression of census numbers?",
+        "answer": "No. The strongest evidence supports administrative damage, salvage, and later records policy; intentional suppression is not the primary sourced conclusion."
       },
       {
-        "question": "What should be preserved for future storytelling?",
-        "answer": "The sequence itself: authorization, enumeration, disaster, surviving fragments, and disposal log actions."
+        "question": "What should this record teach modern readers?",
+        "answer": "Separate verified chain events from retrospective folklore built from absence."
       }
     ],
-    "storySourceNote": "The source chain is explicit and ordered: production order, destruction event, partial preservation, then disposal listing. The legend layer should remain outside core evidentiary claims.",
+    "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, internet retelling, and legend-like interpretation.",
     "references": [
       {
-        "title": "National Archives: 1890 Census",
+        "title": "National Archives, 1890 Census",
         "url": "https://www.archives.gov/research/census/1890"
       },
       {
-        "title": "National Archives: First in the Path of the Firemen",
+        "title": "National Archives, First in the Path of the Firemen",
         "url": "https://www.archives.gov/publications/prologue/1996/spring/1890-census"
       },
       {
-        "title": "U.S. Census Bureau: About the 1890 Decennial Census",
+        "title": "U.S. Census Bureau, 1890 Decennial Census Availability",
+        "url": "https://www.census.gov/about/history/census-records-family-history/census-records/1890-decennial-census-availability.html"
+      },
+      {
+        "title": "U.S. Census Bureau, About the 1890 Decennial Census",
         "url": "https://www.census.gov/programs-surveys/decennial-census/decade/1890/about-1890.html"
       },
       {
-        "title": "U.S. Census Bureau: January 2021 - 1890 Census Fire",
-        "url": "https://www.census.gov/about/history/stories/monthly/2021/january-2021.html"
-      },
-      {
-        "title": "National Archives: About Census Records",
+        "title": "National Archives, About Census Records",
         "url": "https://www.archives.gov/research/census/about"
       },
       {
-        "title": "Wikipedia: 1890 United States census",
-        "url": "https://en.wikipedia.org/wiki/1890_United_States_census"
+        "title": "National Archives, Search Census Records Online",
+        "url": "https://www.archives.gov/research/census/online-resources"
       }
     ],
     "relatedKeywords": [
       "1890 census fire",
-      "census audit log",
-      "population schedules",
-      "archival custody chain",
-      "disposal list",
-      "National Archives",
-      "evidence-based folklore",
-      "documentation gap"
+      "census drawer",
+      "audit log",
+      "lost census records",
+      "archival fragments",
+      "documentation gap",
+      "record trail"
     ]
   }
 }

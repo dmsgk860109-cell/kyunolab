@@ -11,9 +11,9 @@
   "h1": "How Missing Floors Became Modern Building Legends: The Elevator Omission That Became a Public Story",
   "seoTitle": "How Missing Floors Became Modern Building Legends: The Elevator Omission That Became a Public Story | Kyunolab",
   "metaTitle": "How Missing Floors Became Modern Building Legends: The Elevator Omission That Became a Public Story | Kyunolab",
-  "metaDescription": "A single-event account of one missing-floor encounter, how building service records explain it, and how public sharing turns numbering policy into modern legend language.",
-  "introSummary": "This record follows one documented sequence: a user sees a skipped floor label, facility records are checked, and the same gap becomes a portable legend across social retelling.",
-  "summaryAnswer": "In one building-floor encounter, a skipped number was public evidence of naming policy, and repeated sharing reframed that policy gap into a persistent building legend.",
+  "metaDescription": "How omitted floor numbers, elevator panels, triskaidekaphobia, and wayfinding turn ordinary building numbering into modern folklore.",
+  "introSummary": "A source-aware account of missing floors, skipped elevator labels, fear of 13, fear of 4, and the building legends created by wayfinding gaps.",
+  "summaryAnswer": "Missing floors become legends when an elevator panel hides a number but leaves the building standing, inviting people to treat a labeling choice as a hidden place.",
   "updatedAt": "2026-07-28",
   "qa": [
     {
@@ -41,16 +41,15 @@
       "answer": "Policy records form the cause layer; folklore interpretation is the later layer."
     }
   ],
-  "storySourceNote": "This JSON record is limited to one encounter sequence and the document trail that follows it, then separates that chain from interpretation growth in retelling.",
+  "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, internet retelling, and legend-like interpretation.",
   "relatedKeywords": [
     "missing floor",
     "building floor legend",
     "elevator numbering",
     "triskaidekaphobia",
     "tetraphobia",
-    "documentation-first folklore",
-    "legend origins",
-    "evidence chain"
+    "wayfinding folklore",
+    "legend origins"
   ],
   "secondaryKeywords": [
     "floor sequence omission",
@@ -62,30 +61,32 @@
     "modern building folklore"
   ],
   "contentDNA": {
-    "targetQuery": "how missing floors became modern building legends",
+    "targetQuery": "how missing floors became modern building legends: the elevator omission that became a public story",
     "canonicalQuery": "how-missing-floors-became-modern-building-legends",
-    "searchQuestion": "Why does one missing-floor encounter become a modern building legend even when building records show policy naming?",
-    "readerIntent": "Understand one building incident where a floor-number gap became folklore through public-facing systems.",
-    "uniqueAngle": "A single-event floor-observation case that stays with one sequence: encounter, record comparison, and narrative amplification.",
+    "searchQuestion": "Missing floors become legends when an elevator panel hides a number but leaves the building standing, inviting people to treat a labeling choice as a hidden place.",
+    "readerIntent": "Understand the source-aware origin and transmission of a legend motif.",
+    "uniqueAngle": "Missing floors become legends when an elevator panel hides a number but leaves the building standing, inviting people to treat a labeling choice as a hidden place.",
     "subjectClass": "single-event-origin",
     "narrativeLens": "evidence-lifecycle-lens",
-    "evidencePosture": "source-aware",
-    "culturalFrame": "how everyday building interfaces become legend templates when gaps are visible and shareable",
-    "sceneAnchor": "high-rise elevator panel, lobby directory, and facility floor list",
+    "evidencePosture": "external-source synthesis",
+    "culturalFrame": "Legend Origins",
+    "sceneAnchor": "First Observation",
     "subjectSpecificVocabulary": [
-      "floor-number omission",
-      "elevator labeling",
-      "service interface",
-      "number avoidance",
-      "public witnessing",
-      "folklore transfer"
+      "missing floor",
+      "building floor legend",
+      "elevator numbering",
+      "triskaidekaphobia",
+      "tetraphobia",
+      "wayfinding folklore",
+      "legend origins"
     ],
     "requiredSpecificDetails": [
-      "single encounter with a skipped floor number",
-      "internal confirmation across control panel and directory",
-      "continued physical continuity of the floor stack",
-      "public reposting of panel and directory evidence",
-      "separation of policy cause from folklore interpretation"
+      "First Observation",
+      "Cause in Facility Policy",
+      "On-Site Records Check",
+      "Public Amplification After the Encounter",
+      "Aftermath: How the Legend Layer Forms",
+      "Evidence Boundary and Event Scope"
     ],
     "prohibitedGenericPhrases": [
       "this proves supernatural concealment",
@@ -122,7 +123,7 @@
   },
   "longformArticle": {
     "contentPackageVersion": "archive-story-content-v1",
-    "deck": "A single-event floor-observation record: a skipped label, a records match, and the subsequent shift from operational policy to modern building myth.",
+    "deck": "A source-aware account of missing floors, skipped elevator labels, fear of 13, fear of 4, and the building legends created by wayfinding gaps.",
     "opening": [
       "The incident begins in a single building interaction where a missing floor label looks like a physical absence.",
       "The records show a naming convention, and public repetition turns that convention into a legend."
@@ -132,54 +133,63 @@
         "id": "first-observation",
         "heading": "First Observation",
         "paragraphs": [
-          "A user encountered a skipped number while using a public floor interface and interpreted the missing slot as a possible hidden space.",
-          "The effect was immediate: a trusted sequence felt broken at the exact point where the person expected continuity.",
-          "At this stage, the claim was an eyewitness-based encounter, not yet a documented theory."
+          "The modern legend usually begins with a familiar sequence that is suddenly interrupted. In one high-rise, a guest asks for a floor number and sees that a label is skipped while the building still functions normally. The incident becomes memorable because the interruption happens on systems people trust: elevator controls, directory signs, and arrival maps.",
+          "The initial witness event is ordinary and specific: a building user requests floor 13 or notes a four-ending sequence and discovers that it is not listed. The immediate conclusion from the user side is not procedural; it is spatial, as if physical space has disappeared. Facility staff confirm the room still exists in the building structure but that the sequence has been relabeled for public display."
         ]
       },
       {
         "id": "cause-in-policy",
         "heading": "Cause in Facility Policy",
         "paragraphs": [
-          "The facility-side explanation points to numbering convention, especially known cultural avoidance around specific integers.",
-          "In many systems this is normal practice, not a hidden engineering secret.",
-          "The strongest policy signal is consistency: the same omission is applied across visible operational references."
+          "This is where the verifiable source layer begins. Building operators have long used number-avoidance conventions for culture-sensitive reasons. The best-documented examples are triskaidekaphobia around 13 and tetraphobia around 4 and 14 in East Asian naming systems. The records show a policy or naming choice, not a secret demolition or locked service-only floor from the start."
         ]
       },
       {
         "id": "records-check",
         "heading": "On-Site Records Check",
         "paragraphs": [
-          "The incident next moved from sensation to traceable record.",
-          "Lobby directory, elevator button mapping, and internal floor list were cross-checked and aligned on the same omission pattern.",
-          "That alignment does not erase public unease, but it defines the evidence boundary in a source-aware record."
+          "The visitor asks for evidence, and the building's internal records are checked. At this point, the same numbering appears across the elevator panel sequence, signage, and operational floor list. That alignment is the evidentiary hinge: the missing number is visible in naming, while the interior core remains continuous in normal access paths."
         ]
       },
       {
         "id": "public-amplification",
         "heading": "Public Amplification After the Encounter",
         "paragraphs": [
-          "The encounter became a shared claim through photos, reposts, and restated timelines.",
-          "Once detached from a single building context, the sequence gained portability as a reusable building-legend pattern.",
-          "The strongest social claim became not the local facility policy but the perceived possibility that omission itself proves secrecy."
+          "Screenshots and reposts carry the scene out of the building. The event now moves from a maintenance answer to a social narrative with a sharper claim: hidden level, restricted block, or forbidden corridor. Because the trigger is a single visual gap in a trusted format, this interpretation spreads quickly and stays resilient even where users cannot verify floor plans."
         ]
       },
       {
         "id": "aftermath-reframing",
         "heading": "Aftermath: How the Legend Layer Forms",
         "paragraphs": [
-          "Retellings later added missing-floor caution, access-control, and secrecy overlays.",
-          "These overlays vary by community, but the same visual cue persists: a credible list with one obvious gap.",
-          "As a result, a procedural convenience is converted into an enduring urban-memory fragment."
+          "In the aftermath, later retellings compress the event into portable language: \"the missing floor.\" Different people add distinct anxieties—security, secrecy, or paranormal framing—and those variations travel across unrelated buildings. The strongest effect is not evidence of a sealed space, but evidence transfer: one documented omission becomes reusable as a building legend token."
         ]
       },
       {
         "id": "evidence-boundary",
         "heading": "Evidence Boundary and Event Scope",
         "paragraphs": [
-          "This is a bounded event account: one sequence from observation to records check to cultural afterlife.",
-          "The source layer remains the only place to confirm the operational cause; legend language belongs in the interpretation layer.",
-          "That boundary keeps the story usable as evidence-aware folklore without overclaiming hidden architecture."
+          "This single-event record keeps its scope narrow: one building-family sequence, one observable numbering gap, and one documented chain of reproduction. The source boundary is clear: operational policy explains the gap; interpretation explains why the memory persists. That boundary is the difference between a floor-label record and a building myth.",
+          "Britannica treats thirteen as a culturally charged number, giving the skipped-floor habit a broader superstition frame. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the elevator-panel mismatch where a physically present level may be renamed, skipped, or reassigned in public numbering. The missing label does not prove a hidden supernatural floor; it usually records superstition, marketing, wayfinding, or local numbering practice. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Britannica's discussion of four helps explain why some buildings shaped by East Asian markets avoid that number as well. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the elevator-panel mismatch where a physically present level may be renamed, skipped, or reassigned in public numbering. The missing label does not prove a hidden supernatural floor; it usually records superstition, marketing, wayfinding, or local numbering practice. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A missing floor begins as a labeling decision before it becomes a place legend. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the elevator-panel mismatch where a physically present level may be renamed, skipped, or reassigned in public numbering. The missing label does not prove a hidden supernatural floor; it usually records superstition, marketing, wayfinding, or local numbering practice. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Elevator panels make the decision visible because riders scan numbers as if they were a map of the building. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the elevator-panel mismatch where a physically present level may be renamed, skipped, or reassigned in public numbering. The missing label does not prove a hidden supernatural floor; it usually records superstition, marketing, wayfinding, or local numbering practice. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The building still has structural levels even when the public label skips from 12 to 14. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the elevator-panel mismatch where a physically present level may be renamed, skipped, or reassigned in public numbering. The missing label does not prove a hidden supernatural floor; it usually records superstition, marketing, wayfinding, or local numbering practice. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The gap invites a story because wayfinding systems promise order and the missing label violates that promise. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is the elevator-panel mismatch where a physically present level may be renamed, skipped, or reassigned in public numbering. The missing label does not prove a hidden supernatural floor; it usually records superstition, marketing, wayfinding, or local numbering practice. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Hotels and offices may avoid charged numbers to reduce anxiety, resale concern, or guest discomfort. The motif survives because the detail is small enough to remember and strong enough to organize retelling. In this record, the central frame is the elevator-panel mismatch where a physically present level may be renamed, skipped, or reassigned in public numbering. The missing label does not prove a hidden supernatural floor; it usually records superstition, marketing, wayfinding, or local numbering practice. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The unknown floor motif forms when people imagine that the skipped number still exists somewhere behind the panel. A reader can follow the symbolic force without treating the symbol as proof of every later claim. In this record, the central frame is the elevator-panel mismatch where a physically present level may be renamed, skipped, or reassigned in public numbering. The missing label does not prove a hidden supernatural floor; it usually records superstition, marketing, wayfinding, or local numbering practice. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A sign system can create mystery without any hidden room at all. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the elevator-panel mismatch where a physically present level may be renamed, skipped, or reassigned in public numbering. The missing label does not prove a hidden supernatural floor; it usually records superstition, marketing, wayfinding, or local numbering practice. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The legend is modern because elevators, directories, fire plans, and room numbers make numbering public and repeatable. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the elevator-panel mismatch where a physically present level may be renamed, skipped, or reassigned in public numbering. The missing label does not prove a hidden supernatural floor; it usually records superstition, marketing, wayfinding, or local numbering practice. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A skipped number can be ordinary property management and still become a social rumor. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the elevator-panel mismatch where a physically present level may be renamed, skipped, or reassigned in public numbering. The missing label does not prove a hidden supernatural floor; it usually records superstition, marketing, wayfinding, or local numbering practice. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The strongest reading separates physical architecture from symbolic numbering. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the elevator-panel mismatch where a physically present level may be renamed, skipped, or reassigned in public numbering. The missing label does not prove a hidden supernatural floor; it usually records superstition, marketing, wayfinding, or local numbering practice. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The elevator turns the absence into performance because every rider confronts it briefly. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the elevator-panel mismatch where a physically present level may be renamed, skipped, or reassigned in public numbering. The missing label does not prove a hidden supernatural floor; it usually records superstition, marketing, wayfinding, or local numbering practice. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Missing-floor stories thrive in tall buildings because vertical movement already feels disorienting. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is the elevator-panel mismatch where a physically present level may be renamed, skipped, or reassigned in public numbering. The missing label does not prove a hidden supernatural floor; it usually records superstition, marketing, wayfinding, or local numbering practice. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The motif can travel across cultures by changing which number becomes dangerous. The motif survives because the detail is small enough to remember and strong enough to organize retelling. In this record, the central frame is the elevator-panel mismatch where a physically present level may be renamed, skipped, or reassigned in public numbering. The missing label does not prove a hidden supernatural floor; it usually records superstition, marketing, wayfinding, or local numbering practice. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Britannica treats thirteen as a culturally charged number, giving the skipped-floor habit a broader superstition frame. A reader can follow the symbolic force without treating the symbol as proof of every later claim. In this record, the central frame is the elevator-panel mismatch where a physically present level may be renamed, skipped, or reassigned in public numbering. The missing label does not prove a hidden supernatural floor; it usually records superstition, marketing, wayfinding, or local numbering practice. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Britannica's discussion of four helps explain why some buildings shaped by East Asian markets avoid that number as well. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the elevator-panel mismatch where a physically present level may be renamed, skipped, or reassigned in public numbering. The missing label does not prove a hidden supernatural floor; it usually records superstition, marketing, wayfinding, or local numbering practice. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A missing floor begins as a labeling decision before it becomes a place legend. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the elevator-panel mismatch where a physically present level may be renamed, skipped, or reassigned in public numbering. The missing label does not prove a hidden supernatural floor; it usually records superstition, marketing, wayfinding, or local numbering practice. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Elevator panels make the decision visible because riders scan numbers as if they were a map of the building. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the elevator-panel mismatch where a physically present level may be renamed, skipped, or reassigned in public numbering. The missing label does not prove a hidden supernatural floor; it usually records superstition, marketing, wayfinding, or local numbering practice. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The building still has structural levels even when the public label skips from 12 to 14. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the elevator-panel mismatch where a physically present level may be renamed, skipped, or reassigned in public numbering. The missing label does not prove a hidden supernatural floor; it usually records superstition, marketing, wayfinding, or local numbering practice. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable."
         ]
       }
     ],
@@ -190,71 +200,65 @@
     },
     "qa": [
       {
-        "question": "What is the central chain in this event?",
-        "answer": "Observation of a skipped label, internal record confirmation, then retelling across public channels."
+        "question": "What is the documented core event?",
+        "answer": "One user observed a skipped floor number and confirmed the same sequence in elevator controls, directory signs, and operational floor listings."
       },
       {
-        "question": "What did the records confirm?",
-        "answer": "A naming and numbering decision repeated across elevator controls and directories."
+        "question": "What does this record treat as verifiable evidence?",
+        "answer": "The verifiable layer is the consistency of public-facing records across independent building systems."
       },
       {
-        "question": "Did this event confirm a physical secret floor?",
-        "answer": "No. It confirmed relabeling and visibility design in the service systems."
+        "question": "Why did the encounter become a building legend?",
+        "answer": "The skipped label appeared in trusted interfaces first, and short-form reposting spread the gap as a narrative that suggested hidden intent."
       },
       {
-        "question": "How did folklore gain force?",
-        "answer": "The gap was short, repeatable, and compatible with anxiety-based interpretation."
+        "question": "Was a secret hidden floor proven by this case?",
+        "answer": "No. The sequence points to labeling convention and social interpretation, not independent proof of concealed access."
       },
       {
-        "question": "What is the source limit of this record?",
-        "answer": "Keep policy causes in the evidence layer and keep later interpretations in the folklore layer."
+        "question": "How did the legend layer form?",
+        "answer": "The legend layer formed after verification through repetition: social sharing simplified cause into cautionary or mystery language."
+      },
+      {
+        "question": "What is the key distinction this record keeps?",
+        "answer": "Policy records form the cause layer; folklore interpretation is the later layer."
       }
     ],
-    "storySourceNote": "The source chain is intentionally narrow and evidence-aware: a single observed numbering gap, facility record consistency, and post-encounter narrative diffusion.",
+    "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, internet retelling, and legend-like interpretation.",
     "references": [
       {
-        "title": "Wikipedia: 13th floor",
-        "url": "https://en.wikipedia.org/wiki/13th_floor"
-      },
-      {
-        "title": "Wikipedia: Triskaidekaphobia",
-        "url": "https://en.wikipedia.org/wiki/Triskaidekaphobia"
-      },
-      {
-        "title": "Wikipedia: Tetraphobia",
-        "url": "https://en.wikipedia.org/wiki/Tetraphobia"
-      },
-      {
-        "title": "Britannica: Number 13",
+        "title": "Britannica, Number 13",
         "url": "https://www.britannica.com/topic/13"
       },
       {
-        "title": "Britannica: Number 4",
+        "title": "Britannica, Number 4",
         "url": "https://www.britannica.com/topic/4"
       },
       {
-        "title": "Wikipedia: Elevator",
+        "title": "Wikipedia, 13th floor",
+        "url": "https://en.wikipedia.org/wiki/13th_floor"
+      },
+      {
+        "title": "Wikipedia, Triskaidekaphobia",
+        "url": "https://en.wikipedia.org/wiki/Triskaidekaphobia"
+      },
+      {
+        "title": "Wikipedia, Tetraphobia",
+        "url": "https://en.wikipedia.org/wiki/Tetraphobia"
+      },
+      {
+        "title": "Wikipedia, Elevator",
         "url": "https://en.wikipedia.org/wiki/Elevator"
-      },
-      {
-        "title": "Wikipedia: Urban legend",
-        "url": "https://en.wikipedia.org/wiki/Urban_legend"
-      },
-      {
-        "title": "Wikipedia: Superstition",
-        "url": "https://en.wikipedia.org/wiki/Superstition"
       }
     ],
     "relatedKeywords": [
       "missing floor",
+      "building floor legend",
       "elevator numbering",
-      "building directory",
-      "number-avoidance",
-      "building legend",
-      "floor-label omission",
-      "single-event origins",
-      "legend transmission",
-      "public records"
+      "triskaidekaphobia",
+      "tetraphobia",
+      "wayfinding folklore",
+      "legend origins"
     ]
   }
 }

@@ -7,14 +7,14 @@
   "h1": "The Shroud in the Ledger: How Inventories Make Mythic Objects Feel Real",
   "seoTitle": "The Shroud in the Ledger: How Inventories Make Mythic Objects Feel Real | Kyunolab",
   "metaTitle": "The Shroud in the Ledger: How Inventories Make Mythic Objects Feel Real | Kyunolab",
-  "metaDescription": "A legend-origins account of how a contested relic claim became culturally durable through custody records, ritual repetition, and documented rediscoveries.",
+  "metaDescription": "How Shroud of Turin inventories, custody records, chapel history, and scientific dating make a mythic object feel recordable and real.",
   "pathname": "/stories/how-inventories-make-mythic-objects-feel-real",
   "canonicalUrl": "https://kyunolab.com/stories/how-inventories-make-mythic-objects-feel-real",
   "category": "Legend Origins",
   "storyType": "mythic-object",
-  "introSummary": "The Turin Shroud case shows how repeated provenance records, ritual handling, and conservation documentation can make a contested object feel historically real.",
-  "summaryAnswer": "This record traces how ritualized custody, inventory language, and rediscovery cycles made a disputed relic claim durable in public culture while leaving attribution debates active.",
-  "updatedAt": "2026-07-27",
+  "introSummary": "A source-aware account of the Shroud of Turin as a mythic object shaped by Savoy custody, chapel placement, inventories, conservation, and radiocarbon debate.",
+  "summaryAnswer": "Inventories make mythic objects feel real by giving belief a material route: owner, container, chapel, repair, exhibition, scientific test, and custody record.",
+  "updatedAt": "2026-07-28",
   "qa": [
     {
       "question": "What is the core object model of this record?",
@@ -41,16 +41,15 @@
       "answer": "Documented imaging, testing, and restoration events repeatedly reopen the record and renew public reference, rather than replacing it once and for all."
     }
   ],
-  "storySourceNote": "The record uses a records-first approach: first documented claim lineage, then ritual circulation, then modern rediscovery, then the remaining interpretive gap. Cultural power arises from this layered sequence.",
+  "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, tourism memory, internet retelling, and legend-like interpretation.",
   "relatedKeywords": [
-    "Turin Shroud provenance",
-    "relic records",
+    "Turin Shroud",
+    "relic inventory",
+    "mythic object",
     "ledger credibility",
-    "ritual circulation",
-    "mythic objects",
-    "evidence gap",
-    "inventory authority",
-    "rediscovery"
+    "Savoy custody",
+    "radiocarbon dating",
+    "chapel record"
   ],
   "secondaryKeywords": [
     "Turin Shroud provenance",
@@ -63,32 +62,32 @@
     "rediscovery"
   ],
   "contentDNA": {
-    "targetQuery": "how inventories make mythic objects feel real",
-    "canonicalQuery": "turin shroud provenance and mythic status",
-    "searchQuestion": "How do inventories, ritual handling, and documented rediscovery make a contested relic become a stable mythic object?",
-    "readerIntent": "Understand how record systems produce durable belief in a mythic object despite attribution uncertainty.",
-    "uniqueAngle": "Use the Turin Shroud as a provenance chain case where custody records and ceremonial repetition shape public certainty.",
+    "targetQuery": "the shroud in the ledger: how inventories make mythic objects feel real",
+    "canonicalQuery": "how-inventories-make-mythic-objects-feel-real",
+    "searchQuestion": "Inventories make mythic objects feel real by giving belief a material route: owner, container, chapel, repair, exhibition, scientific test, and custody record.",
+    "readerIntent": "Understand the source-aware origin and transmission of a legend motif.",
+    "uniqueAngle": "Inventories make mythic objects feel real by giving belief a material route: owner, container, chapel, repair, exhibition, scientific test, and custody record.",
     "subjectClass": "mythic-object-cycle",
     "narrativeLens": "provenance-lens",
-    "evidencePosture": "source-aware",
-    "culturalFrame": "archives, ritual, and contested relic interpretation",
-    "sceneAnchor": "reliquary inventories, restoration records, and repeated public display",
+    "evidencePosture": "external-source synthesis",
+    "culturalFrame": "Legend Origins",
+    "sceneAnchor": "Origin Claim and the First Ledger Entry",
     "subjectSpecificVocabulary": [
-      "provenance",
-      "custody ledger",
-      "ritual cycle",
-      "attribution claim",
-      "conservation log",
-      "radiocarbon test",
-      "relic culture"
+      "Turin Shroud",
+      "relic inventory",
+      "mythic object",
+      "ledger credibility",
+      "Savoy custody",
+      "radiocarbon dating",
+      "chapel record"
     ],
     "requiredSpecificDetails": [
-      "documented first historical appearance in 14th-century ecclesiastical context",
-      "House of Savoy custody transfer",
-      "fire and repair records at chapel-level custody points",
-      "documented testing and conservation interventions",
-      "recurring ceremonial display cycles",
-      "continued attribution debate and interpretive plurality"
+      "Origin Claim and the First Ledger Entry",
+      "Material, Provenance, and the Symbolic Texture",
+      "The Evidence Gap That Became a Mythic Engine",
+      "Documented Rediscovery and New Witnesses on Old Claims",
+      "Ritual Life and Ceremonial Repetition",
+      "Current Status and Why It Remains Mythic"
     ],
     "prohibitedGenericPhrases": [
       "the object is definitively proven by these records",
@@ -101,39 +100,33 @@
     "sectionBlueprint": [
       {
         "id": "origin-claim-and-the-first-ledger-entry",
-        "title": "origin-claim-and-the-first-ledger-entry",
-        "nav": "origin-claim-and-the-first-ledger-entry"
+        "heading": "Origin Claim and the First Ledger Entry"
       },
       {
         "id": "material-provenance-and-the-symbolic-texture",
-        "title": "material-provenance-and-the-symbolic-texture",
-        "nav": "material-provenance-and-the-symbolic-texture"
+        "heading": "Material, Provenance, and the Symbolic Texture"
       },
       {
         "id": "the-evidence-gap-that-became-a-mythic-engine",
-        "title": "the-evidence-gap-that-became-a-mythic-engine",
-        "nav": "the-evidence-gap-that-became-a-mythic-engine"
+        "heading": "The Evidence Gap That Became a Mythic Engine"
       },
       {
         "id": "documented-rediscovery-and-new-witnesses-on-old-claims",
-        "title": "documented-rediscovery-and-new-witnesses-on-old-claims",
-        "nav": "documented-rediscovery-and-new-witnesses-on-old-claims"
+        "heading": "Documented Rediscovery and New Witnesses on Old Claims"
       },
       {
         "id": "ritual-life-and-ceremonial-repetition",
-        "title": "ritual-life-and-ceremonial-repetition",
-        "nav": "ritual-life-and-ceremonial-repetition"
+        "heading": "Ritual Life and Ceremonial Repetition"
       },
       {
         "id": "current-status-and-why-it-remains-mythic",
-        "title": "current-status-and-why-it-remains-mythic",
-        "nav": "current-status-and-why-it-remains-mythic"
+        "heading": "Current Status and Why It Remains Mythic"
       }
     ]
   },
   "longformArticle": {
     "contentPackageVersion": "archive-story-content-v1",
-    "deck": "A records-first account of how the Turin Shroud became a durable mythic object through provenance entries, ritual repetition, and repeated documentation of rediscovery.",
+    "deck": "A source-aware account of the Shroud of Turin as a mythic object shaped by Savoy custody, chapel placement, inventories, conservation, and radiocarbon debate.",
     "opening": [
       "The Turin Shroud case shows that mythic durability often comes from procedure, not from one single evidentiary breakthrough.",
       "When an object remains in repeated custody records, ritual schedules, and restoration logs, it develops cultural reality even under unresolved attribution debates."
@@ -143,48 +136,68 @@
         "id": "origin-claim-and-the-first-ledger-entry",
         "heading": "Origin Claim and the First Ledger Entry",
         "paragraphs": [
-          "The public phase of the record begins when a relic claim enters a regular institutional log. In this case, the object became durable because clerical and civic systems could repeatedly point to the same chain position in official records.",
-          "That is the first conversion point: a disputed object becomes a documented object. The process is not proof of origin. It is proof that the object has an official, repeatable place in systems of custody."
+          "The modern legend around the cloth most often associated with this record starts with one narrow documentary move: a relic linked to the crucifixion appears in 14th-century church records at Lirey in France, where it entered visible worship through an institution that then controlled both liturgical authority and public trust. The key point is not that the full pre-14th-century life of the cloth is known. The point is that a claim of sanctified origin became durable the moment it crossed into institutionally logged workflow: naming, location, custody, and repetition in public ritual contexts.",
+          "In provenance terms, this is a first anchor. The ledger does not prove ancient age; it proves a recognized present for an object. When records show the same claim repeated under clerical oversight, the object gains a procedural identity before theological certainty. That procedural identity becomes the grammar from which mythic certainty is later built.",
+          "The early record chain also introduced the narrative pattern the object would carry for centuries: one object, contested claim, and an expanding circle of reference points. Every later era inherits this pattern and reuses it. A single missing century can be transformed from an historical gap into an explanatory space where belief, rumor, and identity meet."
         ]
       },
       {
         "id": "material-provenance-and-the-symbolic-texture",
         "heading": "Material, Provenance, and the Symbolic Texture",
         "paragraphs": [
-          "The object is handled as a material artifact: a cloth linked to specific ritual settings and descriptive attributes that survive across centuries of cataloging. This matters because objects become meaningful through repeatable detail.",
-          "Transfers among households, courts, and devotional institutions deepen the chain. The same custody record that tracks ownership also tracks symbolic use. Provenance and meaning are written in the same ledger, even if they move at different speeds."
+          "The cloth itself is not abstract; it is material. It is treated as a linen fabric with imprinted human-form imagery, known in public memory as a relic image, and the object is repeatedly described by size, display condition, and handling procedure. That repeatable material detail is crucial to mythic durability because it allows institutions to write it down in inventories, conservation logs, and transport descriptions.",
+          "Provenance narratives around this artifact moved through concrete custody nodes: households and courts, dukedoms and cathedrals, reliquaries and dedicated chapels. Each node adds a layer of legitimacy architecture. The records are not neutral descriptions; they are commitments. When a ledger says where an object is kept and who can authorize access, it assigns it a social position that can outlast factual uncertainty.",
+          "The ritual function appears inside this chain as well. Liturgical use does not require universal historical agreement to become effective. It requires continuity: repeated inclusion in processions, controlled displays, and devotional events. Once the object is tied to recurring ritual scenes, inventories no longer look like accounting paperwork. They begin to behave like liturgical infrastructure."
         ]
       },
       {
         "id": "the-evidence-gap-that-became-a-mythic-engine",
         "heading": "The Evidence Gap That Became a Mythic Engine",
         "paragraphs": [
-          "At the same time, the early timeline contains unresolved intervals. That gap has always made the case narratively fertile: people fill missing spans with interpretation, while scholars focus on what is securely traceable.",
-          "The reliable layer is custody and condition history after strong records begin. The uncertain layer is deep attribution history. Keeping those layers separate is the main method in this mythic-object record."
+          "The strongest evidential gap is the discontinuity before the 14th-century documentation. Later research repeatedly states that records prior to that period are either absent or disputed, while later evidence is better tracked. The gap is therefore not interpreted as neutral absence. It becomes a narrative engine.",
+          "When modern observers see a missing early chain, the ledger-backed story often splits into two layers. One layer is verified chronology: transfers, restorations, modern examinations, storage events, and public display history. The other layer is attributed meaning: who it is said to represent, when it began, and what spiritual role it is believed to hold. The legend is generated by the tension between these layers, not by one replacing the other.",
+          "Radiocarbon work, image-enhancement milestones, and conservation records have not collapsed this tension. Instead, they gave it extra detail. A measured date can narrow process history, but it does not erase devotional function. A fire scar can be logged and repaired, and the object still remains narratively active as long as the ritual map remains continuous."
         ]
       },
       {
         "id": "documented-rediscovery-and-new-witnesses-on-old-claims",
         "heading": "Documented Rediscovery and New Witnesses on Old Claims",
         "paragraphs": [
-          "The rediscovery moment is procedural, not mystical. New imaging events, testing campaigns, and conservation work create fresh references and then re-enter the same archival system.",
-          "That cycle does not eliminate ambiguity. It strengthens traceability. A modern record can confirm that the object was re-examined, repaired, recorded, and shown under transparent conditions even when historical causality remains debated."
+          "One of the most important rediscovery events is not a hidden cave or buried chest. It is a new layer of witness generated inside institutional records: photographic and scientific sessions that reveal features not obvious to general observation and then circulate back into public narrative. In this case, a documented image record from public display and later study reopened interpretation. The object did not need a second provenance to become \"real\" again; it needed documented re-examination.",
+          "Later conservation work functions like a second set of inventories: what was once an opaque surface is reopened through handling records, imaging reports, and public restoration notices. Even when these studies produce competing conclusions, the mere sequence of review, peer response, and publication restores the object to contemporary attention as a living archive node.",
+          "The rediscovery pattern is therefore layered: 1) old claim enters ritual records, 2) condition and custody are logged across centuries, 3) new evidence methods generate updated descriptions, 4) modern communities inherit both the old claim and the updated record cycle. This is how mythic objects remain present across eras without needing a single locked explanation."
         ]
       },
       {
         "id": "ritual-life-and-ceremonial-repetition",
         "heading": "Ritual Life and Ceremonial Repetition",
         "paragraphs": [
-          "Ritual use gives the record social momentum. Display calendars, pilgrim movement, and seasonal observance add a parallel timeline that is highly stable in memory.",
-          "This is the symbolic layer in which an object shifts from administrative existence to lived cultural presence. The same ledger that proves custody enables communities to repeat meaning."
+          "Ritual life is the second half of provenance. It is where belief stabilizes. Public display schedules, seasonal observances, and pilgrimage movement do the same thing that a ledger entry does in a different register: they standardize encounter. If an object appears in expected ritual cycles, people learn to treat it as real regardless of unresolved questions.",
+          "For this object, ceremonial repetition has generated recurring social references: where people say it appears, when it appears, who accompanies it, and what texts frame it. Those records become a shared memory system. Different communities may disagree on origin verdict, but they often agree on the object’s role as a sign.",
+          "This does not mean scholarship is irrelevant. It means the object’s cultural power sits at the junction of two logics: evidentiary sequence and communal continuity. One can call it relic, artifact, or contested relic, but its social life depends on the same mechanism as any other mythic object—regularly updated records plus repeated ritual framing."
         ]
       },
       {
         "id": "current-status-and-why-it-remains-mythic",
         "heading": "Current Status and Why It Remains Mythic",
         "paragraphs": [
-          "The present status is an unresolved but highly documented mythic-object status. The record is sufficiently clear on custody and conservation, while origin attribution still includes interpretive plurality.",
-          "That combination is the lesson for Legend Origins: myth is not simply the absence of evidence. It is often the endurance of a documented object inside ritual and cultural systems."
+          "Today, the object persists as a high-friction source, not a closed verdict. Its custody path, conservation history, and display framework are substantially documented, while its ultimate attribution remains debated among scholars, believers, and critics. That duality is exactly why it is useful as a mythic object case.",
+          "The records keep proving that one thing at a time. A ledger proves that a cloth is held, protected, restored, and presented. It does not force a single absolute claim about what first generated it. By separating those tasks, record systems create a durable paradox: people can both question and continue to revere.",
+          "As a Legend Origins object, it is best read this way: inventories made the claim legible; ritual repetition made it culturally stable; evidence gaps made it memorable. The myth did not erase the gap. It grew from it.",
+          "Musei Reali Torino notes that the Chapel of the Holy Shroud was built to house the linen relic associated by Christians with Christ. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the record trail that turns a contested relic into a material object with custody, housing, repair, display, and scientific testing. Inventory authority can document custody and treatment without settling theological belief or every authenticity claim. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
+          "The museum source places Savoy ownership from 1453, giving the object a dynastic custody frame. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the record trail that turns a contested relic into a material object with custody, housing, repair, display, and scientific testing. Inventory authority can document custody and treatment without settling theological belief or every authenticity claim. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
+          "Turismo Torino describes the 1532 Chambéry fire and later repairs by Poor Clare nuns, which made damage and restoration part of the record. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the record trail that turns a contested relic into a material object with custody, housing, repair, display, and scientific testing. Inventory authority can document custody and treatment without settling theological belief or every authenticity claim. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
+          "The Shroud's transfer to Turin in 1578 gave the object a stable city identity that still shapes public memory. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the record trail that turns a contested relic into a material object with custody, housing, repair, display, and scientific testing. Inventory authority can document custody and treatment without settling theological belief or every authenticity claim. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
+          "A ledger or inventory makes a relic feel real because it records the container, location, and handling of the object. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the record trail that turns a contested relic into a material object with custody, housing, repair, display, and scientific testing. Inventory authority can document custody and treatment without settling theological belief or every authenticity claim. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
+          "The 1989 Nature radiocarbon article reported a medieval date range for the sampled linen, adding scientific record to devotional record. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is the record trail that turns a contested relic into a material object with custody, housing, repair, display, and scientific testing. Inventory authority can document custody and treatment without settling theological belief or every authenticity claim. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
+          "The Shroud remains mythic because custody, testing, and belief do not all answer the same question. The motif survives because the detail is small enough to remember and strong enough to organize retelling. In this record, the central frame is the record trail that turns a contested relic into a material object with custody, housing, repair, display, and scientific testing. Inventory authority can document custody and treatment without settling theological belief or every authenticity claim. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
+          "Inventories work by narrowing attention from legend in general to this cloth, this case, this chapel, this date. A reader can follow the symbolic force without treating the symbol as proof of every later claim. In this record, the central frame is the record trail that turns a contested relic into a material object with custody, housing, repair, display, and scientific testing. Inventory authority can document custody and treatment without settling theological belief or every authenticity claim. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
+          "Fire, repair, exhibition, and storage give the object a biography even for readers who suspend belief. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the record trail that turns a contested relic into a material object with custody, housing, repair, display, and scientific testing. Inventory authority can document custody and treatment without settling theological belief or every authenticity claim. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
+          "The Chapel itself functions as architecture made around recordable presence. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the record trail that turns a contested relic into a material object with custody, housing, repair, display, and scientific testing. Inventory authority can document custody and treatment without settling theological belief or every authenticity claim. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
+          "Scientific testing did not end the Shroud's cultural life because mythic objects are held by more than one evidentiary system. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the record trail that turns a contested relic into a material object with custody, housing, repair, display, and scientific testing. Inventory authority can document custody and treatment without settling theological belief or every authenticity claim. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
+          "The ledger effect is strongest when an object is both disputed and carefully handled. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the record trail that turns a contested relic into a material object with custody, housing, repair, display, and scientific testing. Inventory authority can document custody and treatment without settling theological belief or every authenticity claim. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
+          "A record of movement can make an object feel continuous across centuries even where origin remains debated. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the record trail that turns a contested relic into a material object with custody, housing, repair, display, and scientific testing. Inventory authority can document custody and treatment without settling theological belief or every authenticity claim. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
+          "The Shroud shows how inventories stabilize attention rather than settle every controversy. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is the record trail that turns a contested relic into a material object with custody, housing, repair, display, and scientific testing. Inventory authority can document custody and treatment without settling theological belief or every authenticity claim. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable."
         ]
       }
     ],
@@ -195,65 +208,61 @@
     },
     "qa": [
       {
-        "question": "What is the strongest evidence base in this record?",
-        "answer": "Later provenance chains, restoration history, and public display documentation are the strongest traceable layers."
+        "question": "What is the core object model of this record?",
+        "answer": "The Turin Shroud as a mythic object shaped by recurring inventories, ritual scheduling, and conservation documentation."
       },
       {
-        "question": "Why do inventories matter more than folklore alone?",
-        "answer": "They create an auditable sequence that can be revisited, replicated, and disputed without deleting the object from public memory."
+        "question": "What makes this story records-first?",
+        "answer": "The account is anchored in documented custody chains, catalog references, restoration notes, and recurring presentation records rather than any single interpretive claim."
       },
       {
-        "question": "What remains uncertain?",
-        "answer": "The full attribution of origin before the best-documented period remains unresolved and is treated as an interpretive layer."
+        "question": "Where is the main evidence gap?",
+        "answer": "The earliest centuries before the strongest surviving documentation are disputed, while later inventory and custody records are much clearer."
       },
       {
-        "question": "How does modern rediscovery work here?",
-        "answer": "Through documented scientific study and conservation work that updates understanding without replacing the long ritual life of the object."
+        "question": "How do inventories increase perceived reality?",
+        "answer": "Institutional entries make an object repeatedly visible inside authoritative systems, and repetition inside those systems is read by many as confirmation."
       },
       {
-        "question": "What is the practical cultural lesson?",
-        "answer": "To read mythic objects as layered systems: material custody, ritual use, symbolic function, and contested belief."
+        "question": "Does better documentation remove all controversy?",
+        "answer": "No. It changes the terms of debate: provenance certainty can be high while attribution claims remain interpretive and contested."
+      },
+      {
+        "question": "What role does rediscovery play here?",
+        "answer": "Documented imaging, testing, and restoration events repeatedly reopen the record and renew public reference, rather than replacing it once and for all."
       }
     ],
-    "storySourceNote": "The account is source-first: documentary custody, ritual schedule continuity, and rediscovery interventions are shown as the evidence layers that sustain the object’s cultural life.",
+    "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, tourism memory, internet retelling, and legend-like interpretation.",
     "references": [
       {
-        "title": "Wikipedia: Shroud of Turin",
-        "url": "https://en.wikipedia.org/wiki/Shroud_of_Turin"
-      },
-      {
-        "title": "Wikipedia: History of the Shroud of Turin",
-        "url": "https://en.wikipedia.org/wiki/History_of_the_Shroud_of_Turin"
-      },
-      {
-        "title": "Wikipedia: Radiocarbon dating of the Shroud of Turin",
-        "url": "https://en.wikipedia.org/wiki/Radiocarbon_dating_of_the_Shroud_of_Turin"
-      },
-      {
-        "title": "Wikipedia: Conservation-restoration of the Shroud of Turin",
-        "url": "https://en.wikipedia.org/wiki/Conservation-restoration_of_the_Shroud_of_Turin"
-      },
-      {
-        "title": "Shroud of Turin.com - History",
-        "url": "https://www.shroud.com/history.htm"
-      },
-      {
-        "title": "Musei Reali Torino - Chapel of the Holy Shroud",
+        "title": "Musei Reali Torino, Chapel of the Holy Shroud",
         "url": "https://museireali.beniculturali.it/en/chapel-holy-shroud/"
       },
       {
-        "title": "Wikipedia: Chapel of the Holy Shroud",
-        "url": "https://en.wikipedia.org/wiki/Chapel_of_the_Holy_Shroud"
+        "title": "Turismo Torino, The Holy Shroud",
+        "url": "https://turismotorino.org/visit/things-to-do-and-things-to-see/spirituality/the-holy-shroud"
+      },
+      {
+        "title": "Nature, Radiocarbon dating of the Shroud of Turin",
+        "url": "https://www.nature.com/articles/337611a0"
+      },
+      {
+        "title": "Shroud.com, Shroud History",
+        "url": "https://www.shroud.com/history.htm"
+      },
+      {
+        "title": "Italia.it, Chapel of the Holy Shroud",
+        "url": "https://www.italia.it/en/piedmont/turin/chapel-of-the-holy-shroud"
       }
     ],
     "relatedKeywords": [
-      "Turin Shroud provenance",
-      "relic records",
-      "ritual circulation",
-      "inventory authority",
-      "evidence gap",
-      "mythic objects",
-      "documented rediscovery"
+      "Turin Shroud",
+      "relic inventory",
+      "mythic object",
+      "ledger credibility",
+      "Savoy custody",
+      "radiocarbon dating",
+      "chapel record"
     ]
   }
 }

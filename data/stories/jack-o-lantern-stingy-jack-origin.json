@@ -11,10 +11,10 @@
   "h1": "From Stingy Jack to the Jack-o'-Lantern: How a Turnip Legend Became a Halloween Light",
   "seoTitle": "From Stingy Jack to the Jack-o'-Lantern: How a Turnip Legend Became a Halloween Light | Kyunolab",
   "metaTitle": "From Stingy Jack to the Jack-o'-Lantern: How a Turnip Legend Became a Halloween Light | Kyunolab",
-  "metaDescription": "A single-event record tracing a captured eighteenth/nineteenth-century Irish legend through turnip lantern practice and its North American adaptation into the modern jack-o'-lantern form.",
-  "introSummary": "The record uses Croker-era publication capture as the event anchor, then follows the turnip-lantern practice into transatlantic adaptation and the later pumpkin-centered Halloween form.",
-  "summaryAnswer": "A printed folklore capture in the 1820s preserved the Stingy Jack narrative pattern, while migration and material substitution later shifted the object from turnip lanterns to pumpkins.",
-  "updatedAt": "2026-07-27",
+  "metaDescription": "How Stingy Jack, Irish turnip lanterns, will-o'-the-wisp lore, and transatlantic pumpkin carving formed the jack-o'-lantern tradition.",
+  "introSummary": "A source-aware account of Stingy Jack, Irish lantern folklore, carved turnips, pumpkins, and Halloween migration.",
+  "summaryAnswer": "The jack-o'-lantern became a Halloween light when an Irish warning tale about Stingy Jack joined carved turnip practice and later American pumpkin abundance.",
+  "updatedAt": "2026-07-28",
   "qa": [
     {
       "question": "What is the one incident anchor used in this record?",
@@ -41,7 +41,7 @@
       "answer": "The symbol became portable because the printed and oral chain provided a repeatable frame that could absorb material and market changes."
     }
   ],
-  "storySourceNote": "The record holds separate the sequence start (print-captured Stingy Jack tradition), the turnip-lantern practice, and the later pumpkin commercialization phase.",
+  "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, internet retelling, and legend-like interpretation.",
   "relatedKeywords": [
     "jack-o'-lantern origin",
     "Stingy Jack",
@@ -49,9 +49,7 @@
     "Irish folklore",
     "Halloween tradition",
     "pumpkin carving",
-    "transatlantic migration",
-    "legend origins",
-    "single-event folklore"
+    "transatlantic migration"
   ],
   "secondaryKeywords": [
     "jack-o'-lantern",
@@ -64,32 +62,31 @@
     "Halloween object history"
   ],
   "contentDNA": {
-    "targetQuery": "jack-o'-lantern origin",
+    "targetQuery": "from stingy jack to the jack-o'-lantern: how a turnip legend became a halloween light",
     "canonicalQuery": "jack-o-lantern-stingy-jack-origin",
-    "searchQuestion": "How did an Irish Stingy Jack legend and turnip lantern tradition become the basis for modern jack-o'-lantern practice?",
-    "readerIntent": "Understand one concrete origin chain and how it was transformed through migration and material substitution.",
-    "uniqueAngle": "Trace the first stable documentation point and the practical logic of adaptation, rather than presenting a romantic or single-location supernatural myth.",
+    "searchQuestion": "The jack-o'-lantern became a Halloween light when an Irish warning tale about Stingy Jack joined carved turnip practice and later American pumpkin abundance.",
+    "readerIntent": "Understand the source-aware origin and transmission of a legend motif.",
+    "uniqueAngle": "The jack-o'-lantern became a Halloween light when an Irish warning tale about Stingy Jack joined carved turnip practice and later American pumpkin abundance.",
     "subjectClass": "motif-origin",
     "narrativeLens": "folklore-transmission-lens",
-    "evidencePosture": "source-aware",
-    "culturalFrame": "how oral tradition and print circulation turned a local warning motif into a modern seasonal symbol",
-    "sceneAnchor": "Croker-era preservation of Irish Stingy Jack material and later turnip-to-pumpkin ritual adaptation",
+    "evidencePosture": "external-source synthesis",
+    "culturalFrame": "Legend Origins",
+    "sceneAnchor": "The Published Anchor: Ireland in the 1820s",
     "subjectSpecificVocabulary": [
+      "jack-o'-lantern origin",
       "Stingy Jack",
-      "jack-o'-lantern",
       "turnip lantern",
-      "all hallows",
-      "pumpkin",
-      "folklore transmission",
-      "migration adaptation"
+      "Irish folklore",
+      "Halloween tradition",
+      "pumpkin carving",
+      "transatlantic migration"
     ],
     "requiredSpecificDetails": [
-      "early nineteenth-century folklore collection context",
-      "named narrative sequence in recorded form",
-      "turnip or root-vegetable lantern custom in Celtic regions",
-      "Atlantic migration of seasonal custom",
-      "pumpkin substitution for carving practice",
-      "public Halloween framing in North America"
+      "The Published Anchor: Ireland in the 1820s",
+      "A Turnip Lamp for All-Hallows' Eve",
+      "The Atlantic Transfer and Meaning Shift",
+      "Pumpkins Replace Turnips: The Practical Breakpoint",
+      "Aftermath: Modern Halloween Memory"
     ],
     "prohibitedGenericPhrases": [
       "this record proves supernatural behavior",
@@ -124,52 +121,68 @@
   },
   "longformArticle": {
     "contentPackageVersion": "archive-story-content-v1",
-    "deck": "The story follows one preserved narrative source point and shows how turnip-lantern practice became a pumpkin-centered Halloween icon through migration and adaptation.",
+    "deck": "A source-aware account of Stingy Jack, Irish lantern folklore, carved turnips, pumpkins, and Halloween migration.",
     "opening": [],
     "storyBody": [
       {
         "id": "the-published-anchor-ireland-1820s",
         "heading": "The Published Anchor: Ireland in the 1820s",
         "paragraphs": [
-          "In the early 1820s, Thomas Croker's folklore compilation preserved an Irish Stingy Jack narrative cycle in written form. The publication does not create the tale from nothing, but it does create a stable chain point that later retellings repeatedly cite.",
-          "For this record, the cause-action effect begins with that preservation step: oral legend is captured, attributed context is retained, and a named sequence becomes reproducible.",
-          "From there, the motif has a clear documentary origin point and can be followed through later shifts without collapsing all versions into a single fabricated account."
+          "In the early 1820s, folklorist Thomas Crofton Croker gathered oral material from southern Irish communities and published it in *Fairy Legends and Traditions of the South of Ireland*. The book did not invent the Stingy Jack tale; it preserved a regional narrative where one drifter-like figure, Jack, repeatedly defeats the devil by tricks and then is denied entry to both heaven and hell. The printed chain gives a concrete beginning for the modern motif: a named storyline, a specific conflict, and a narrative consequence.",
+          "The event to track is that publication moment: oral tradition entered a stable, reproducible form. What mattered for later folklore was not just the character details, but that Croker’s text made the sequence transportable. Once it was on paper and circulating, the core pattern detached from one village context and started to travel under the same title.",
+          "This transfer explains why later versions call for fewer local details and keep more dramatic structure. The legend becomes portable first, then repeatable. That is the start-point before any turnip carving spread is mapped onto it."
         ]
       },
       {
         "id": "a-turnip-lamp-for-all-hallows-evening",
         "heading": "A Turnip Lamp for All-Hallows' Eve",
         "paragraphs": [
-          "In regions where the practice was strongest, carved root vegetables supplied the seasonal lighting object. The resulting lamp connected the Jack figure with a visual warning image during the dark autumn period.",
-          "The sequence is practical: choose a vegetable, hollow a cavity, place flame. Then a community explanation attaches the figure of the wandering Jack to the ritual scene.",
-          "This phase is still local and material-specific. It matters because it is the part before global standardization, where the ritual remains tied to place and method."
+          "The most stable early practice associated with the name is not a pumpkin, but a hollowed root vegetable used as a lantern. In parts of Ireland and neighbouring regions, autumn custom used carved turnips or related root crops to make light in the dark season. Accounts connect this practice to guardian-and-warning symbolism: a face cut into a root, a wick and flame inside, and a story frame that explains why that light should represent a restless soul.",
+          "The sequence is concrete enough to read as incident-level: a night setting, a practical choice of vegetable, an object made to hold light, and a legend used as interpretation. The point is not that every household carved for the same reason, but that a recognizable ritual chain existed when later storytellers and immigrants recalled it.",
+          "At this stage, the lantern is an Irish seasonal marker, not yet a national American icon. The object is tied to agricultural constraints and local tradition. The later mythology still relies on this phase because it explains why a story about a wandering spirit and a flickering face could survive as a visual practice."
         ]
       },
       {
         "id": "the-atlantic-transfer-and-meaning-shift",
         "heading": "The Atlantic Transfer and Meaning Shift",
         "paragraphs": [
-          "As communities moved to North America, the textual motif and carving method traveled together but did not stay fixed. The legend name remained recognizable while local practice changed according to supply and audience.",
-          "The strongest change was not the moral core but the context: the symbol moved from a regional winter-light routine to a broader holiday marker with public visibility.",
-          "That movement explains why later narratives retain the same spirit-frame while differing on the finer details of the original oral setting."
+          "In the nineteenth century, Irish migration carried the practice across the Atlantic into communities where turnips were not always the easiest source for carving. The same story-name and warning logic traveled, but the practical setting changed: fewer people kept the custom exactly as recorded, and more communities adapted the ritual as a marker for a particular season, later named more specifically as Halloween.",
+          "This is the strongest cause-and-effect segment of the chain. The cause is continuity in memory and publication-backed naming; the action is adaptation to a new regional ecology and urban settlement pattern; the aftermath is a reframed symbol that survives even when its vegetable and ritual details change.",
+          "By the time printed American period culture absorbed the practice, the object had shifted from a local folk signal to a public seasonal sign. The old legend still operated as emotional shorthand, while local conditions changed the technical method."
         ]
       },
       {
         "id": "pumpkins-replace-turnips-the-practical-breakpoint",
         "heading": "Pumpkins Replace Turnips: The Practical Breakpoint",
         "paragraphs": [
-          "In many communities, pumpkins became the preferred material because they were easier to hollow and carve than smaller root crops at scale. This practical adjustment created a stable, repeatable visual format.",
-          "The cause is utility, not doctrine; the action is material substitution; the aftermath is a durable icon that can be distributed through print, craft, and seasonal commerce.",
-          "That is why the modern jack-o'-lantern is visually dominant while retaining the older legend name."
+          "Pumpkin carving replaced turnip carving where pumpkins were larger, easier to hollow, and easier to decorate at scale. That practical shift became the key turning point between two eras of the same symbol: one defined by village-root materials, the other by mass seasonal display.",
+          "The single-thread logic is clear: the legend name remains, the medium changes, and the public meaning broadens. Instead of a warning light tied to oral cautionary narrative alone, the carved lamp becomes a communal marker. The modern image of the demon-face pumpkin lantern is therefore not the original form but the latest stable implementation of the earlier practice.",
+          "The transition did not erase Stingy Jack; it simplified him. Once the turnip became secondary and pumpkin dominant, later print and market culture kept only what was visually memorable. That made the custom reproducible but also made origin details harder to separate from invented elaboration."
         ]
       },
       {
         "id": "aftermath-modern-halloween-memory",
         "heading": "Aftermath: Modern Halloween Memory",
         "paragraphs": [
-          "The record closes with the current stage: the jack-o'-lantern as a public Halloween sign, often detached from the earliest Irish turnip practice but still linked through narrative memory.",
-          "Different regions then add their own commercial, family, and creative rules. Those are meaningful for modern culture but are not equivalent to the original event sequence.",
-          "A single-event method is preserved when the sequence is read as transition rather than equivalence: capture, adaptation, substitution, and iconization."
+          "The remaining evidence chain is therefore a sequence of transmission, not a frozen myth event. A printed 1820s collection gave the legend textual continuity. Root-lantern custom supplied the ritual method. Migration and adaptation supplied the material shift. Public seasonal culture supplied scale and repetition.",
+          "For a single-event framing, the record therefore ends at the transition point where one recorded tradition became a broadly repeated modern icon. The story that survives is still centered on a lighted figure and a named cautionary role, even when details differ by region, family memory, or period.",
+          "The safest reading is to treat the jack-o'-lantern as a historical carryover of sequence: legend, material practice, migration adaptation, and market display repeating in order. That order matters for distinguishing verifiable anchor points from later decorative mythology.",
+          "Britannica defines the jack-o'-lantern as a carved pumpkin lantern associated with Halloween. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the folklore pathway where a wandering Jack tale, carved root vegetables, and migration turned a warning light into Halloween material culture. The modern pumpkin is not the whole origin; it is a later, highly visible American form of an older lantern tradition. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "History.com traces the tradition to Irish folklore about Stingy Jack and carved turnips or potatoes. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the folklore pathway where a wandering Jack tale, carved root vegetables, and migration turned a warning light into Halloween material culture. The modern pumpkin is not the whole origin; it is a later, highly visible American form of an older lantern tradition. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "National Geographic emphasizes the transatlantic shift from turnips to pumpkins in North America. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the folklore pathway where a wandering Jack tale, carved root vegetables, and migration turned a warning light into Halloween material culture. The modern pumpkin is not the whole origin; it is a later, highly visible American form of an older lantern tradition. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The Stingy Jack tale explains a restless figure carrying a light after tricking the Devil. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the folklore pathway where a wandering Jack tale, carved root vegetables, and migration turned a warning light into Halloween material culture. The modern pumpkin is not the whole origin; it is a later, highly visible American form of an older lantern tradition. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A lantern is powerful folklore because it is both object and action: it must be carved, lit, carried, or displayed. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the folklore pathway where a wandering Jack tale, carved root vegetables, and migration turned a warning light into Halloween material culture. The modern pumpkin is not the whole origin; it is a later, highly visible American form of an older lantern tradition. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The turnip version matters because it prevents the pumpkin from swallowing the older Irish context. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is the folklore pathway where a wandering Jack tale, carved root vegetables, and migration turned a warning light into Halloween material culture. The modern pumpkin is not the whole origin; it is a later, highly visible American form of an older lantern tradition. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Migration changed the material without erasing the warning structure. The motif survives because the detail is small enough to remember and strong enough to organize retelling. In this record, the central frame is the folklore pathway where a wandering Jack tale, carved root vegetables, and migration turned a warning light into Halloween material culture. The modern pumpkin is not the whole origin; it is a later, highly visible American form of an older lantern tradition. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Halloween stabilized the object by giving it an annual performance date. A reader can follow the symbolic force without treating the symbol as proof of every later claim. In this record, the central frame is the folklore pathway where a wandering Jack tale, carved root vegetables, and migration turned a warning light into Halloween material culture. The modern pumpkin is not the whole origin; it is a later, highly visible American form of an older lantern tradition. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A carved face turns household threshold decoration into a watcher at the door. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the folklore pathway where a wandering Jack tale, carved root vegetables, and migration turned a warning light into Halloween material culture. The modern pumpkin is not the whole origin; it is a later, highly visible American form of an older lantern tradition. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The jack-o'-lantern survives because it is frightening, comic, protective, and communal at once. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the folklore pathway where a wandering Jack tale, carved root vegetables, and migration turned a warning light into Halloween material culture. The modern pumpkin is not the whole origin; it is a later, highly visible American form of an older lantern tradition. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The legend turns moral cleverness into wandering punishment. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the folklore pathway where a wandering Jack tale, carved root vegetables, and migration turned a warning light into Halloween material culture. The modern pumpkin is not the whole origin; it is a later, highly visible American form of an older lantern tradition. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The pumpkin made the practice easier, larger, and more visually dramatic. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the folklore pathway where a wandering Jack tale, carved root vegetables, and migration turned a warning light into Halloween material culture. The modern pumpkin is not the whole origin; it is a later, highly visible American form of an older lantern tradition. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The object became folklore because people could make the story with their hands. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the folklore pathway where a wandering Jack tale, carved root vegetables, and migration turned a warning light into Halloween material culture. The modern pumpkin is not the whole origin; it is a later, highly visible American form of an older lantern tradition. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A source-aware account distinguishes the tale of Jack from the broader history of seasonal lanterns. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is the folklore pathway where a wandering Jack tale, carved root vegetables, and migration turned a warning light into Halloween material culture. The modern pumpkin is not the whole origin; it is a later, highly visible American form of an older lantern tradition. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The Halloween light remains a migrated object with an older warning inside it. The motif survives because the detail is small enough to remember and strong enough to organize retelling. In this record, the central frame is the folklore pathway where a wandering Jack tale, carved root vegetables, and migration turned a warning light into Halloween material culture. The modern pumpkin is not the whole origin; it is a later, highly visible American form of an older lantern tradition. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Britannica defines the jack-o'-lantern as a carved pumpkin lantern associated with Halloween. A reader can follow the symbolic force without treating the symbol as proof of every later claim. In this record, the central frame is the folklore pathway where a wandering Jack tale, carved root vegetables, and migration turned a warning light into Halloween material culture. The modern pumpkin is not the whole origin; it is a later, highly visible American form of an older lantern tradition. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable."
         ]
       }
     ],
@@ -180,62 +193,61 @@
     },
     "qa": [
       {
-        "question": "What is the event chain anchor in this record?",
-        "answer": "The early nineteenth-century circulation of the Stingy Jack motif in Croker's folklore context is used as the anchor before later adaptation."
+        "question": "What is the one incident anchor used in this record?",
+        "answer": "The anchor is the early nineteenth-century print preservation of the Stingy Jack tradition in Croker's folklore collection cycle, which fixed the motif for wider circulation."
       },
       {
-        "question": "Why is turnip-to-pumpkin shift central here?",
-        "answer": "It marks the transition from local craft conditions to scalable seasonal practice, which is the moment the icon becomes globally visible."
+        "question": "Why is this treated as a single-event story?",
+        "answer": "It traces one clear chain start: textual preservation of an oral motif, followed by material and regional adaptation, rather than presenting every later decorative variant as equal origin evidence."
       },
       {
-        "question": "Did this record prove the legend is historically exact in every modern form?",
-        "answer": "No. It proves a transmission sequence, not a complete equivalence between modern rules and earliest practice."
+        "question": "What changed when the custom crossed the Atlantic?",
+        "answer": "The naming and symbolic frame remained connected, while the practical medium shifted toward pumpkins because they were easier to carve and suitable for broader seasonal display."
       },
       {
-        "question": "What does the migration phase change in the timeline?",
-        "answer": "It shifts the material and social context while preserving the name and core motif, producing a new dominant image."
+        "question": "Does this imply a single moment proves modern jack-o'-lantern meaning?",
+        "answer": "No. It identifies one dominant sequence and shows how each later phase layers new context onto it."
       },
       {
-        "question": "How should conflicting later claims about the custom be handled?",
-        "answer": "As regionally shaped variants that come after the first captured sequence, not as replacements for it."
+        "question": "How should readers treat competing rule sets in the tradition?",
+        "answer": "As later regional codifications. The earlier account shows a narrative core and turnip-lantern method, not a fixed modern instruction list."
+      },
+      {
+        "question": "What is the strongest conclusion from the incident sequence?",
+        "answer": "The symbol became portable because the printed and oral chain provided a repeatable frame that could absorb material and market changes."
       }
     ],
-    "storySourceNote": "The timeline is anchored in a nineteenth-century recordization of the Stingy Jack narrative, followed by root-vegetable lantern custom and then the later pumpkin adaptation in transatlantic seasonal culture.",
+    "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, internet retelling, and legend-like interpretation.",
     "references": [
       {
-        "title": "Britannica: Jack-o'-lantern",
+        "title": "Britannica, Jack-o'-lantern",
         "url": "https://www.britannica.com/topic/jack-o-lantern"
       },
       {
-        "title": "History.com: The Origins of the Jack-o'-Lantern",
+        "title": "History.com, The Origins of the Jack-o'-Lantern",
         "url": "https://www.history.com/articles/history-of-the-jack-o-lantern-irish-origins"
       },
       {
-        "title": "National Geographic: The Twisted Transatlantic Tale of American Jack-o'-Lanterns",
+        "title": "National Geographic, The Transatlantic Tale of American Jack-o'-Lanterns",
         "url": "https://www.nationalgeographic.com/history/article/the-twisted-transatlantic-tale-of-american-jack-o-lanterns"
       },
       {
-        "title": "Project Gutenberg: Fairy Legends and Traditions of the South of Ireland",
+        "title": "Project Gutenberg, Fairy Legends and Traditions of the South of Ireland",
         "url": "https://www.gutenberg.org/ebooks/39752"
       },
       {
-        "title": "Merriam-Webster Words at Play: The History of the Jack-o'-Lantern",
+        "title": "Merriam-Webster, History of Jack-o'-Lantern",
         "url": "https://www.merriam-webster.com/words-at-play/the-history-of-jack-o-lantern"
-      },
-      {
-        "title": "Ask About Ireland: Digital Book Collection - Croker",
-        "url": "https://www.askaboutireland.ie/reading-room/digital-book-collection/digital-books-by-subject/folklore-of-ireland/croker-fairy-legends-and-/"
       }
     ],
     "relatedKeywords": [
       "jack-o'-lantern origin",
-      "stingy jack",
-      "turnip lantern history",
-      "Irish folklore transmission",
-      "all-hallows tradition",
-      "pumpkin jack-o'-lantern",
-      "transatlantic custom adaptation",
-      "legend origins"
+      "Stingy Jack",
+      "turnip lantern",
+      "Irish folklore",
+      "Halloween tradition",
+      "pumpkin carving",
+      "transatlantic migration"
     ]
   }
 }

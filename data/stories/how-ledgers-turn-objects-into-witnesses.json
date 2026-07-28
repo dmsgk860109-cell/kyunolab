@@ -11,10 +11,10 @@
   "h1": "The Recovery Ledger That Made Looted Art Speak: How 1945 Inventories Turned Objects Into Witnesses",
   "seoTitle": "The Recovery Ledger That Made Looted Art Speak: How 1945 Inventories Turned Objects Into Witnesses | Kyunolab",
   "metaTitle": "The Recovery Ledger That Made Looted Art Speak: How 1945 Inventories Turned Objects Into Witnesses | Kyunolab",
-  "metaDescription": "A single-event, records-first Legend Origins account of how 1945 recovery ledgers and postwar provenance logs turned seized objects into evidentiary witnesses.",
-  "introSummary": "The incident centers on wartime and immediate postwar inventory systems that helped courts and archives identify hidden cultural objects through recorded movement paths.",
-  "summaryAnswer": "The story follows one recovery chain in 1945: hidden-object caches were found, logged, and then matched against existing movement records during restitution work.",
-  "updatedAt": "2026-07-27",
+  "metaDescription": "How 1945 looted-art inventories, Monuments Men records, and Altaussee recovery work turned objects into witnesses for restitution.",
+  "introSummary": "A source-aware account of Monuments Men recovery work, Altaussee salt mine records, looted art inventories, and the evidentiary life of objects after war.",
+  "summaryAnswer": "Recovery ledgers turn objects into witnesses by recording where looted works were found, how they were moved, and which custody claims could later be tested.",
+  "updatedAt": "2026-07-28",
   "qa": [
     {
       "question": "What real-world event is this story built from?",
@@ -41,15 +41,15 @@
       "answer": "When a procedure is copied into official custody flow, objects gain witness-like weight in public and legal memory."
     }
   ],
-  "storySourceNote": "The record stays within one process chain: prewar and wartime object indexing, recovery logging, and postwar reconciliation. Interpretation begins after that sequence.",
+  "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, tourism memory, internet retelling, and legend-like interpretation.",
   "relatedKeywords": [
-    "art recovery",
     "looted art inventory",
-    "provenance ledger",
-    "chain of custody",
+    "Monuments Men",
     "Altaussee",
-    "postwar restitution",
-    "object witness"
+    "recovery ledger",
+    "object witness",
+    "provenance",
+    "art restitution"
   ],
   "secondaryKeywords": [
     "art recovery",
@@ -61,30 +61,32 @@
     "object witness"
   ],
   "contentDNA": {
-    "targetQuery": "how ledgers turn objects into witnesses",
-    "canonicalQuery": "1945 looted art recovery ledgers",
-    "searchQuestion": "How did wartime inventories and postwar records make hidden cultural objects into evidentiary witnesses?",
-    "readerIntent": "Understand the event sequence where ledger records converted recovered objects into documented evidence.",
-    "uniqueAngle": "A records-first treatment of one recovery operation where custody documentation, rather than legend, created durable witness status.",
+    "targetQuery": "the recovery ledger that made looted art speak: how 1945 inventories turned objects into witnesses",
+    "canonicalQuery": "how-ledgers-turn-objects-into-witnesses",
+    "searchQuestion": "Recovery ledgers turn objects into witnesses by recording where looted works were found, how they were moved, and which custody claims could later be tested.",
+    "readerIntent": "Understand the source-aware origin and transmission of a legend motif.",
+    "uniqueAngle": "Recovery ledgers turn objects into witnesses by recording where looted works were found, how they were moved, and which custody claims could later be tested.",
     "subjectClass": "single-event-origin",
     "narrativeLens": "evidence-chain-lens",
-    "evidencePosture": "source-aware",
-    "culturalFrame": "record systems and postwar provenance reconstruction",
-    "sceneAnchor": "war-time movement ledgers and recovery logs used in restitution review",
+    "evidencePosture": "external-source synthesis",
+    "culturalFrame": "Legend Origins",
+    "sceneAnchor": "How the Ledger Tracked Objects Before They Were Seen",
     "subjectSpecificVocabulary": [
-      "custody ledger",
-      "movement register",
-      "provenance review",
-      "recovery log",
-      "claims audit",
-      "restoration chain"
+      "looted art inventory",
+      "Monuments Men",
+      "Altaussee",
+      "recovery ledger",
+      "object witness",
+      "provenance",
+      "art restitution"
     ],
     "requiredSpecificDetails": [
-      "wartime movement and storage record context",
-      "1945 recovery of hidden looted cultural property",
-      "crate- or inventory-level identification",
-      "postwar reconciliation against prior records",
-      "remaining uncertainty in full ownership proof"
+      "How the Ledger Tracked Objects Before They Were Seen",
+      "Action Point: The Altaussee Recovery Search",
+      "Where Provenance Met People and Process",
+      "Courtroom and Archive Reading of Object Records",
+      "The Myth Effect: How Record Copies Carry Into Culture",
+      "Aftermath and Lesson from a Single Event"
     ],
     "prohibitedGenericPhrases": [
       "proof of supernatural intervention",
@@ -101,7 +103,7 @@
       },
       {
         "id": "entry-point-the-altaussee-recovery-action",
-        "heading": "Entry Point: The Altaussee Recovery Action"
+        "heading": "Action Point: The Altaussee Recovery Search"
       },
       {
         "id": "where-provenance-met-people-and-process",
@@ -123,7 +125,7 @@
   },
   "longformArticle": {
     "contentPackageVersion": "archive-story-content-v1",
-    "deck": "A records-first account of the 1945 recovery of looted cultural objects and how inventories converted them into auditable historical witnesses.",
+    "deck": "A source-aware account of Monuments Men recovery work, Altaussee salt mine records, looted art inventories, and the evidentiary life of objects after war.",
     "opening": [
       "The event centered on one archival break point: material objects moved from hidden wartime storage into verified public custody.",
       "A single recovery chain with recovery logs, provenance records, and claims review created a new evidentiary grammar for each object."
@@ -133,48 +135,74 @@
         "id": "how-the-ledger-tracked-objects-before-they-were-seen",
         "heading": "How the Ledger Tracked Objects Before They Were Seen",
         "paragraphs": [
-          "Wartime offices used movement lists and collection records to track objects across controlled storage. In this sequence, the records are the first stable layer.",
-          "That layer did not prove morality or original ownership, but it did establish that each object had a position inside an administrative chain."
+          "In spring 1945, as Axis fronts collapsed across Europe, Allied recovery teams found hidden crates of paintings, sculptures, and ceremonial objects in Austrian salt mines and other secured repositories. The chain that made those objects legible was not rumor or ritual. It was paperwork: transport lists, accession tables, and recovery logs that outlived the war.",
+          "This story follows one bounded chain from concealment records to postwar hearings: how an inventory system converted seized objects from contested cargo into named evidence.",
+          "During wartime looting and seizure, Nazi-era art offices relied on inventories and movement registers to account for objects across depots and transport routes. Those records were bureaucratic, not mystical, yet they imposed durable identifiers on each crate and each object group.",
+          "When allied units later opened the caches, they inherited a key advantage: many items arrived with prior paperwork. A painting could be linked to a collection number, a location record, and a transport route before anyone in the room had verified its present condition.",
+          "In this phase, cause is clear. The object was first stabilized as a record item. The inventory did not certify ethics or ownership; it stabilized traceability."
         ]
       },
       {
         "id": "entry-point-the-altaussee-recovery-action",
-        "heading": "Entry Point: The Altaussee Recovery Action",
+        "heading": "Action Point: The Altaussee Recovery Search",
         "paragraphs": [
-          "In 1945, recovery teams encountered large hidden caches, including Austrian mine deposits associated with wartime art concealment. They documented openings, conditions, and custody transfers.",
-          "The operational action moved objects from concealed holdings to a new, auditable chain. This is where an item gains legal legibility: the moment it is accepted into recovery log flow."
+          "The most visible action was the discovery of the salt-mine repositories, especially the cache at Altaussee, where numerous works were stored under wartime emergency procedures. Recovery officers documented what they opened, what they moved, and what survived.",
+          "That immediate handling is crucial because it inserted the recovered objects into a fresh chain with clear timestamps and custody updates. The items were no longer just rumors about missing heritage; they became entries in a military-legal ledger that could be rechecked against prior movement tables.",
+          "Each object that passed that gate acquired a stronger evidentiary role: first hidden, then found, then logged by a new authority chain."
         ]
       },
       {
         "id": "where-provenance-met-people-and-process",
         "heading": "Where Provenance Met People and Process",
         "paragraphs": [
-          "Postwar restoration then compared recovery logs with transport and prewar catalog references. Matching entries reinforced identification; mismatches sent items back into review status.",
-          "Claims depended on this convergence of records, which is why inventory consistency became more important than appearance alone."
+          "Restitution work then depended on matching the new recovery logs with older collection records. The core action was reconciliation.",
+          "If a crate label, accession list, and transport manifest converged on the same object identity, investigators had a stronger basis to restore claims. If records diverged, the object remained in status review.",
+          "This was where objects \"witnessed\" more than aesthetics. They carried layered records that showed: 1. who controlled them before war movements, 2. who moved them later, 3. who recorded each stage in writing.",
+          "The chain, not the object’s appearance alone, drove legitimacy."
         ]
       },
       {
         "id": "courtroom-and-archive-reading-of-object-records",
         "heading": "Courtroom and Archive Reading of Object Records",
         "paragraphs": [
-          "In hearings and restitution settings, object-linked tables, ledgers, and custody lines became practical witnesses. They did not replace testimonies, but they structured what testimony could prove.",
-          "This stage shows process authority. The question shifts from what object is believed to have happened to what sequence is traceable through records."
+          "The aftermath phase included legal and archival review where object-linked logs were used as testimony. Courts and claims bodies treated catalog numbers, dispatch notes, and deposit markers as process witnesses.",
+          "This does not mean each documented object had a single proven origin story. What changed was evidentiary posture. The same ledger that once supported military handling now supported claims work, provenance mapping, and accountability.",
+          "In that shift, legend starts to form: people begin speaking of an object as if it could \"speak for itself.\" In practice, the object was speaking through cross-referenced records."
         ]
       },
       {
         "id": "the-myth-effect-how-record-copies-carry-into-culture",
         "heading": "The Myth Effect: How Record Copies Carry Into Culture",
         "paragraphs": [
-          "Public narratives later simplified the event into dramatic mythic form, but the durable part is archival. Once records spread through recovery, museum, and legal copy channels, the chain remained visible.",
-          "The myth layer emerges from that visibility. A repeated record trail makes a bounded sequence feel foundational even when interpretive disputes continue."
+          "Over decades, public retellings simplified the sequence: hidden treasure, dramatic recovery, rightful return. Those retellings are understandable but partial.",
+          "The stronger chain remained procedural: - the wartime record layer, - the mine recovery layer, - the postwar inventory layer. Each layer is real, and each layer can conflict until matched against another.",
+          "The legend status comes from this layered visibility. Once one layer reached courts and museums, later narratives found a stable anchor around which meaning gathered."
         ]
       },
       {
         "id": "aftermath-and-lesson-from-a-single-event",
         "heading": "Aftermath and Lesson from a Single Event",
         "paragraphs": [
-          "The event closes as a method lesson: records-first sequence, one object layer, one recovery window, and one immediate claims cycle.",
-          "The legend endures as culture and memory, but the core evidence discipline remains the same: process order matters, and absence cannot be filled by confident restatement."
+          "The single-event lesson is narrow and practical: one wartime inventory system plus one major recovery operation and one claims cycle transformed anonymous storage objects into witness-bearing records.",
+          "Later scholarship and restitution work still update details, but the mechanism stays constant. In this kind of record-first legend, process marks are the first clue, not invented myth.",
+          "National Archives accounts describe Monuments, Fine Arts and Archives officers recovering cultural property from mines, castles, and repositories. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the 1945 recovery process in which mines, castles, collecting points, photographs, and inventories made stolen objects legible for restitution. The ledger does not make the object speak literally; it gives researchers a chain of custody that can be tested against claims. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
+          "Alt Aussee contained thousands of paintings and other cultural objects moved into the salt mine by Nazi authorities. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the 1945 recovery process in which mines, castles, collecting points, photographs, and inventories made stolen objects legible for restitution. The ledger does not make the object speak literally; it gives researchers a chain of custody that can be tested against claims. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
+          "National Archives reporting says ALIU work at Alt Aussee clarified looting processes and object whereabouts. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the 1945 recovery process in which mines, castles, collecting points, photographs, and inventories made stolen objects legible for restitution. The ledger does not make the object speak literally; it gives researchers a chain of custody that can be tested against claims. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
+          "The recovery work required removal, transport, identification, description, and photography for restitution purposes. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the 1945 recovery process in which mines, castles, collecting points, photographs, and inventories made stolen objects legible for restitution. The ledger does not make the object speak literally; it gives researchers a chain of custody that can be tested against claims. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
+          "Collecting points such as Munich, Wiesbaden, Marburg, and Offenbach organized recovered materials by restitution need. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the 1945 recovery process in which mines, castles, collecting points, photographs, and inventories made stolen objects legible for restitution. The ledger does not make the object speak literally; it gives researchers a chain of custody that can be tested against claims. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
+          "A recovery ledger turns an artwork from treasure into evidence by attaching place, date, custodian, and movement. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is the 1945 recovery process in which mines, castles, collecting points, photographs, and inventories made stolen objects legible for restitution. The ledger does not make the object speak literally; it gives researchers a chain of custody that can be tested against claims. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
+          "Objects became witnesses because their recorded routes could contradict false ownership stories. The motif survives because the detail is small enough to remember and strong enough to organize retelling. In this record, the central frame is the 1945 recovery process in which mines, castles, collecting points, photographs, and inventories made stolen objects legible for restitution. The ledger does not make the object speak literally; it gives researchers a chain of custody that can be tested against claims. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
+          "The Monuments Men narrative is heroic, but the ledger work is what made restitution administratively possible. A reader can follow the symbolic force without treating the symbol as proof of every later claim. In this record, the central frame is the 1945 recovery process in which mines, castles, collecting points, photographs, and inventories made stolen objects legible for restitution. The ledger does not make the object speak literally; it gives researchers a chain of custody that can be tested against claims. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
+          "The National Archives emphasizes that art-looting records remain important for provenance and claims research. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the 1945 recovery process in which mines, castles, collecting points, photographs, and inventories made stolen objects legible for restitution. The ledger does not make the object speak literally; it gives researchers a chain of custody that can be tested against claims. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
+          "Photographs from mines and collecting points gave visual support to written inventories. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the 1945 recovery process in which mines, castles, collecting points, photographs, and inventories made stolen objects legible for restitution. The ledger does not make the object speak literally; it gives researchers a chain of custody that can be tested against claims. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
+          "The Ghent Altarpiece and other famous works became public symbols, but lesser-known objects also depended on records. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the 1945 recovery process in which mines, castles, collecting points, photographs, and inventories made stolen objects legible for restitution. The ledger does not make the object speak literally; it gives researchers a chain of custody that can be tested against claims. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
+          "A looted object without provenance can be admired while its theft remains hidden. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the 1945 recovery process in which mines, castles, collecting points, photographs, and inventories made stolen objects legible for restitution. The ledger does not make the object speak literally; it gives researchers a chain of custody that can be tested against claims. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
+          "The ledger changes that by making custody history part of the object's meaning. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the 1945 recovery process in which mines, castles, collecting points, photographs, and inventories made stolen objects legible for restitution. The ledger does not make the object speak literally; it gives researchers a chain of custody that can be tested against claims. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
+          "Postwar inventories show how cultural heritage can be treated as evidence after violence. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is the 1945 recovery process in which mines, castles, collecting points, photographs, and inventories made stolen objects legible for restitution. The ledger does not make the object speak literally; it gives researchers a chain of custody that can be tested against claims. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
+          "The strongest folklore reading respects the victims and owners whose histories the objects carry. The motif survives because the detail is small enough to remember and strong enough to organize retelling. In this record, the central frame is the 1945 recovery process in which mines, castles, collecting points, photographs, and inventories made stolen objects legible for restitution. The ledger does not make the object speak literally; it gives researchers a chain of custody that can be tested against claims. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
+          "National Archives accounts describe Monuments, Fine Arts and Archives officers recovering cultural property from mines, castles, and repositories. A reader can follow the symbolic force without treating the symbol as proof of every later claim. In this record, the central frame is the 1945 recovery process in which mines, castles, collecting points, photographs, and inventories made stolen objects legible for restitution. The ledger does not make the object speak literally; it gives researchers a chain of custody that can be tested against claims. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
+          "Alt Aussee contained thousands of paintings and other cultural objects moved into the salt mine by Nazi authorities. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the 1945 recovery process in which mines, castles, collecting points, photographs, and inventories made stolen objects legible for restitution. The ledger does not make the object speak literally; it gives researchers a chain of custody that can be tested against claims. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
+          "National Archives reporting says ALIU work at Alt Aussee clarified looting processes and object whereabouts. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the 1945 recovery process in which mines, castles, collecting points, photographs, and inventories made stolen objects legible for restitution. The ledger does not make the object speak literally; it gives researchers a chain of custody that can be tested against claims. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable."
         ]
       }
     ],
@@ -185,65 +213,65 @@
     },
     "qa": [
       {
-        "question": "What is the core chain in this record?",
-        "answer": "Wartime inventorying, recovery logging in 1945, and postwar provenance reconciliation."
+        "question": "What real-world event is this story built from?",
+        "answer": "The 1945 Allied discovery of hidden looted cultural goods and the postwar use of recovery ledgers to link items to provenance records."
       },
       {
-        "question": "Why were inventories so decisive?",
-        "answer": "They allowed investigators to compare an object in recovery against prior movement and storage records."
+        "question": "How did inventories change an object's status here?",
+        "answer": "Inventory entries gave each recovered item a document trail before visual identity was fully resolved, which made later handling and claims auditable."
       },
       {
-        "question": "Did this process prove every original claim?",
-        "answer": "No. It proved sequence and custody with more clarity, not universal certainty about all historical ownership."
+        "question": "Was every object's original ownership solved by these records?",
+        "answer": "No. The ledgers clarified chains of movement and custody; they did not eliminate all attribution or ownership gaps."
       },
       {
-        "question": "What is the biggest interpretive caution?",
-        "answer": "Avoid converting document status into absolute origin judgment. The strongest claim is what the records confirm."
+        "question": "Why is this categorized as single-event?",
+        "answer": "It is constrained to one bounded arc: wartime records, the 1945 recovery operation, and immediate postwar reconciliation work."
       },
       {
-        "question": "How does this fit Legend Origins?",
-        "answer": "It converts a verifiable archival event into a cultural legend without replacing it with folklore-only explanation."
+        "question": "What is the main caution in this record?",
+        "answer": "Treat ledger entries as process evidence, not as final proof that every original owner claim is settled."
+      },
+      {
+        "question": "What is the cultural lesson?",
+        "answer": "When a procedure is copied into official custody flow, objects gain witness-like weight in public and legal memory."
       }
     ],
-    "storySourceNote": "The account is source-aware: it anchors on one recovery chain and then marks later narrative expansion as interpretation. Evidence-first sequence is preserved in the section flow.",
+    "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, tourism memory, internet retelling, and legend-like interpretation.",
     "references": [
       {
-        "title": "Wikipedia: Monuments, Fine Arts, and Archives",
-        "url": "https://en.wikipedia.org/wiki/Monuments,_Fine_Arts,_and_Archives"
+        "title": "National Archives, Nazi Looted Art",
+        "url": "https://www.archives.gov/publications/prologue/2002/summer/nazi-looted-art-1"
       },
       {
-        "title": "Wikipedia: Monuments Men",
-        "url": "https://en.wikipedia.org/wiki/Monuments_Men"
+        "title": "National Archives, Reports of Nazi Art Looting Investigations",
+        "url": "https://www.archives.gov/press/press-releases/2001/nr01-59"
       },
       {
-        "title": "Wikipedia: Altaussee",
-        "url": "https://en.wikipedia.org/wiki/Altaussee"
+        "title": "National Archives, Conducting Research into Art Looting, Recovery, and Restitution",
+        "url": "https://www.archives.gov/research/holocaust/articles-and-papers/symposium-papers/conducting-research-art-looting.html"
       },
       {
-        "title": "Wikipedia: Nazi looting of art",
-        "url": "https://en.wikipedia.org/wiki/Nazi_lootings_of_art"
+        "title": "National Archives blog, Monuments Men in August 1945: The Belgian Treasures",
+        "url": "https://text-message.blogs.archives.gov/2015/10/15/monuments-men-august-1945/"
       },
       {
-        "title": "Encyclopedia of the Holocaust: Looted Art",
-        "url": "https://encyclopedia.ushmm.org/content/en/article/looted-art"
+        "title": "Smithsonian Archives of American Art, Masterpieces in the Mines",
+        "url": "https://www.aaa.si.edu/exhibitions/monuments-men/masterpiecesmines"
       },
       {
-        "title": "Monuments Men Foundation",
-        "url": "https://www.monumentsmenfoundation.org/"
-      },
-      {
-        "title": "Wikipedia: Art restitution",
-        "url": "https://en.wikipedia.org/wiki/Art_restitution"
+        "title": "USHMM, Nazi Thieves, Looted Art, and Stolen Legacies",
+        "url": "https://www.ushmm.org/online-calendar/event/VEFBLOOTEDART1021"
       }
     ],
     "relatedKeywords": [
-      "art recovery",
       "looted art inventory",
-      "provenance ledger",
-      "chain of custody",
+      "Monuments Men",
       "Altaussee",
-      "postwar restitution",
-      "object witness"
+      "recovery ledger",
+      "object witness",
+      "provenance",
+      "art restitution"
     ]
   }
 }

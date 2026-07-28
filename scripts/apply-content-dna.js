@@ -358,17 +358,23 @@ function buildLongformSupplementarySections(article) {
 }
 
 function buildLongformNavigationSections(article) {
-  return (article.storyBody || []).map((section) => ({
+  return normalizeLongformStoryBody(article.storyBody).map((section) => ({
     id: section.id || slugify(section.heading),
     title: section.heading
   }));
+}
+
+function normalizeLongformStoryBody(storyBody) {
+  if (Array.isArray(storyBody)) return storyBody;
+  if (storyBody && typeof storyBody === 'object') return [storyBody];
+  return [];
 }
 
 function renderLongformArticle(article) {
   const renderParagraphs = (paragraphs) => (Array.isArray(paragraphs) ? paragraphs : [paragraphs].filter(Boolean))
     .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
     .join('\n');
-  const storyBody = (article.storyBody || []).map((section) => `<h2 id="${escapeAttr(section.id || slugify(section.heading))}">${escapeHtml(section.heading)}</h2>
+  const storyBody = normalizeLongformStoryBody(article.storyBody).map((section) => `<h2 id="${escapeAttr(section.id || slugify(section.heading))}">${escapeHtml(section.heading)}</h2>
           ${renderParagraphs(section.paragraphs)}`).join('\n');
   const qa = (article.qa || []).map((item) => `
             <article class="story-qa-item"><h3>${escapeHtml(item.question)}</h3>

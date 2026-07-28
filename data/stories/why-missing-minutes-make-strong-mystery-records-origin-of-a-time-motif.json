@@ -11,9 +11,9 @@
   "h1": "How Missing Minutes Became a Mystery Motif: The Real-World Timekeeping Record Path",
   "seoTitle": "How Missing Minutes Became a Mystery Motif: The Real-World Timekeeping Record Path | Kyunolab",
   "metaTitle": "How Missing Minutes Became a Mystery Motif: The Real-World Timekeeping Record Path | Kyunolab",
-  "metaDescription": "A motif-transmission record tracing how calendar reform, time standardization, and timestamp correction chains turned missing-minute records into recurring mystery narratives.",
-  "introSummary": "The motif begins in documented timekeeping transitions and shifts into folklore as timestamp discontinuities travel from policy records to social sharing systems.",
-  "summaryAnswer": "Missing-minute stories became strong when trusted record formats with visible gaps moved from technical processes into copy-driven circulation without their correction context.",
+  "metaDescription": "How calendar reform, standard time, leap seconds, and timestamp anomalies turned missing minutes into mystery records.",
+  "introSummary": "A source-aware account of missing minutes, timekeeping reform, standard time, leap seconds, and record-based folklore.",
+  "summaryAnswer": "Missing minutes become strong mystery records because time is supposed to be continuous, so any official gap feels like evidence that demands explanation.",
   "updatedAt": "2026-07-28",
   "qa": [
     {
@@ -41,17 +41,14 @@
       "answer": "Keep provenance first: source notice, policy description, correction trail, and chain context are original; atmosphere and suspicion are adaptation."
     }
   ],
-  "storySourceNote": "This record keeps process and interpretation separate by mapping calendar and synchronization corrections, then tracking their migration through record systems and online culture.",
+  "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, internet retelling, and legend-like interpretation.",
   "relatedKeywords": [
     "timekeeping reform",
     "missing minutes",
     "timestamp anomaly",
     "calendar reform",
     "standard time",
-    "coordinated universal time",
     "leap second",
-    "motif transmission",
-    "provenance chain",
     "record-based folklore"
   ],
   "secondaryKeywords": [
@@ -64,31 +61,32 @@
     "public trust in clocks"
   ],
   "contentDNA": {
-    "targetQuery": "missing minutes mystery records origin",
-    "canonicalQuery": "missing-minutes-mystery-records-origin",
-    "searchQuestion": "How do documented timekeeping transitions become a reusable mystery motif around missing minutes in records?",
-    "readerIntent": "Understand the source chain and transmission path from timekeeping policy changes to modern internet mystery retellings.",
-    "uniqueAngle": "Follow the chain from calendar and synchronization corrections to the public reinterpretation of timestamp discontinuities.",
+    "targetQuery": "how missing minutes became a mystery motif: the real-world timekeeping record path",
+    "canonicalQuery": "why-missing-minutes-make-strong-mystery-records-origin-of-a-time-motif",
+    "searchQuestion": "Missing minutes become strong mystery records because time is supposed to be continuous, so any official gap feels like evidence that demands explanation.",
+    "readerIntent": "Understand the source-aware origin and transmission of a legend motif.",
+    "uniqueAngle": "Missing minutes become strong mystery records because time is supposed to be continuous, so any official gap feels like evidence that demands explanation.",
     "subjectClass": "motif-origin",
     "narrativeLens": "folklore-pattern-lens",
-    "evidencePosture": "source-aware",
-    "culturalFrame": "records-first treatment of temporal discontinuity motifs across institutions and digital culture",
-    "sceneAnchor": "timers, timetables, civil records, and timestamp systems that show visible gaps",
+    "evidencePosture": "external-source synthesis",
+    "culturalFrame": "Legend Origins",
+    "sceneAnchor": "Origin of Recorded Time Shifts",
     "subjectSpecificVocabulary": [
-      "timestamp gap",
-      "calendar correction",
-      "synchronization trail",
-      "time-zone conversion",
-      "standard-time adoption",
-      "ledger continuity",
-      "provenance"
+      "timekeeping reform",
+      "missing minutes",
+      "timestamp anomaly",
+      "calendar reform",
+      "standard time",
+      "leap second",
+      "record-based folklore"
     ],
     "requiredSpecificDetails": [
-      "historical timekeeping transitions",
-      "public administrative notice and schedule records",
-      "copy and reuse through timetables and logs",
-      "social circulation via screenshots and repost layers",
-      "difference between technical cause and folklore interpretation"
+      "Origin of Recorded Time Shifts",
+      "Transmission Channels Across Regions and Media",
+      "Transformations: From Archive Fact to Mystery Pattern",
+      "Cultural Anchors, Symbols, and Phrase Patterns",
+      "Original Versus Adapted Layers",
+      "Current Interpretations and Regional Adaptations"
     ],
     "prohibitedGenericPhrases": [
       "proof of hidden time travel",
@@ -126,7 +124,7 @@
   },
   "longformArticle": {
     "contentPackageVersion": "archive-story-content-v1",
-    "deck": "A source-aware motif-transmission account of how documented timekeeping transitions became a recurring mystery pattern in records culture.",
+    "deck": "A source-aware account of missing minutes, timekeeping reform, standard time, leap seconds, and record-based folklore.",
     "opening": [
       "Time systems have repeatedly changed at the institutional level, and each change left a residue in public records.",
       "Those residues can move far from their policy context and become a recognizable mystery template when copied as isolated timestamp anomalies."
@@ -136,54 +134,77 @@
         "id": "origin-of-recorded-time-shifts",
         "heading": "Origin of Recorded Time Shifts",
         "paragraphs": [
-          "The origin chain starts with formal changes to how societies measure and publish time: calendar transitions, national time-standard policies, and synchronization systems.",
-          "When official systems update, the output can include discontinuities. A missing block in records is often a known administrative consequence, not a hidden event.",
-          "That procedural core is the first layer of the motif."
+          "The first layer is technical, not supernatural. In the eighteenth and nineteenth centuries, authorities changed how civil time was represented, and those changes created documented discontinuities in records.",
+          "Britain and its colonies switched from Julian to Gregorian dating in 1752, removing dates from September that had already been assigned as normal calendar entries in planning and daily bookkeeping. That is a real historical gap in public records, created by policy and mathematics rather than occult force.",
+          "In North America, railway standard time in the late nineteenth century replaced local solar time. Telegraph and timetable systems had to align clocks across regions, creating timestamp sequences that looked authoritative while being newly standardized, not inherently local. The original motif anchor is this: when a trusted time system changes, records first show a discontinuity and then demand interpretation."
         ]
       },
       {
         "id": "transmission-channels-across-regions-and-media",
         "heading": "Transmission Channels Across Regions and Media",
         "paragraphs": [
-          "Print notices, manuals, timetables, and station logs copied the new timing rules across regions.",
-          "Later, digital logs, incident records, and social channels repeated the same pattern: a trusted format, a visible discontinuity, a short explanation.",
-          "Each layer copied the claim faster than provenance context, so the narrative moved beyond the institutions that created it."
+          "From there, the chain moved through three durable channels.",
+          "Government notices and newspapers described calendar correction events and local scheduling rules, so communities first encountered missing-time evidence as public administrative text.",
+          "Railway and shipping ledgers, later telegraph logs and station schedules, copied these standards into practical records. The same correction pattern appeared in different geographies because standardization itself was transregional.",
+          "By the time digital systems replaced paper logs, the older memory of “time changed because authorities redefined it” was replaced in public circulation by posts, screenshots, and short videos where people point to timestamps and call them anomalies. A technical change became a repeatable narrative template."
         ]
       },
       {
         "id": "transformations-from-archive-fact-to-mystery",
         "heading": "Transformations: From Archive Fact to Mystery Pattern",
         "paragraphs": [
-          "In adaptation, the original technical rationale is frequently replaced with stronger symbolic reading.",
-          "The phrase-level mutation is especially stable: what began as schedule alignment can become an accusation of hidden records control.",
-          "The strongest transfer is from verified process to symbolic proof in public memory."
+          "The first transmission retained a procedural explanation. The adapted layer added atmosphere.",
+          "Original statements explained causes: calendar reform, DST jumps, time-zone conversion, synchronization correction. Adapted statements framed the same structure as mystery: a missing minute implies a hidden cut, a hidden vault, or a hidden event.",
+          "The most durable transformation is phrasing-level, not just event-level. Expressions like \"the clock jumped\", \"minutes vanished\", or \"the record skipped\" detach from local technical context and attach to any place where a timestamp is shown out of order.",
+          "Each retelling keeps the anchor (a visible discontinuity in a trusted format) and replaces the cause with a stronger story cause."
         ]
       },
       {
         "id": "cultural-anchors-symbols-and-phrase-patterns",
         "heading": "Cultural Anchors, Symbols, and Phrase Patterns",
         "paragraphs": [
-          "Timestamp lines, index tables, and sequence markers are authority cues even when the system behind them is no longer shown.",
-          "These cues make short narratives stick because they appear precise and auditable on first glance.",
-          "Recurring phrases like missing minutes, clock jump, and timestamp mismatch then function as portable anchors across languages and regions."
+          "The motif survives because the evidence objects are familiar:",
+          "- stamped timestamps that look machine-clean, - sequence tables with fixed intervals, - custody-oriented logs showing arrival, departure, update, and handoff.",
+          "These are powerful trust signals. A missing interval appears more convincing when it is embedded in a form people expect to be deterministic.",
+          "Phrase patterns carry the spread. The pairings are especially stable: \"missing minutes\", \"timestamp mismatch\", \"official records\", \"who changed the clock.\" Once those phrases repeat across media, one community's technical note becomes another community's proof phrase."
         ]
       },
       {
         "id": "original-vs-adapted-layers",
         "heading": "Original Versus Adapted Layers",
         "paragraphs": [
-          "Original layers: planning documents, correction policies, synchronization updates, and custody notices.",
-          "Adapted layers: fear-of-hiding, hidden manipulation, and mystery amplification.",
-          "The distinction is where evidence remains strongest. Records show process; adaptations show cultural meaning."
+          "The original layer is the administrative sequence: policy change, synchronization update, correction log, and restoration notes. The adapted layer is the narrative sequence: suspicious gap, urgent inquiry, fear of hidden manipulation, and cautionary folklore.",
+          "The original records answer what changed and which process did the changing. Adapted versions answer what should be felt about that change.",
+          "This is the key boundary in the story. A verified interval gap can be real while a hidden-time interpretation can remain unverified."
         ]
       },
       {
         "id": "current-interpretations-and-regional-interpretations",
         "heading": "Current Interpretations and Regional Adaptations",
         "paragraphs": [
-          "Modern retellings vary by media ecology. Some preserve policy history, some treat every gap as a puzzle, and some merge the motif into broader digital trust debates.",
-          "The motif persists because it links two habits: modern audiences trust structured records and distrust opaque systems.",
-          "Transmission is now fastest through clip culture, but legitimacy remains tied to whether context, chain, and correction history are still present."
+          "Today the motif appears in three broad regions of transmission.",
+          "- Archive heritage communities that emphasize chronology and policy context. - Media cultures that amplify screenshots of odd timestamps as immediate proof. - Everyday folklore circles that reuse the pattern for cautionary myths about digital systems.",
+          "The difference is now less about clocks and more about trust channels. The same records that once traveled through ministries and timetables now travel through short-form feeds and community pages. That expansion increases motif density while reducing context depth.",
+          "The pattern remains valid when the interpretation is explicit: missing-time records are strong because trusted formatting and short interval claims are both easy to copy and hard to verify out of context.",
+          "NIST explains time and frequency standards as technical systems rather than intuitive everyday time. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the timekeeping record path where calendar and clock reforms make official gaps visible in logs, dates, and public memory. A time gap can be a rule change or standardization effect before it is a mystery event. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Leap seconds show that official timekeeping can add or adjust seconds to keep systems aligned. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the timekeeping record path where calendar and clock reforms make official gaps visible in logs, dates, and public memory. A time gap can be a rule change or standardization effect before it is a mystery event. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The Gregorian calendar adoption created famous missing-date narratives because calendar reform skipped dates. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the timekeeping record path where calendar and clock reforms make official gaps visible in logs, dates, and public memory. A time gap can be a rule change or standardization effect before it is a mystery event. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Standard time changed local time into coordinated public time. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the timekeeping record path where calendar and clock reforms make official gaps visible in logs, dates, and public memory. A time gap can be a rule change or standardization effect before it is a mystery event. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Missing minutes become mysterious when a record gap appears inside a system expected to be continuous. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the timekeeping record path where calendar and clock reforms make official gaps visible in logs, dates, and public memory. A time gap can be a rule change or standardization effect before it is a mystery event. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A timestamp anomaly is strong folklore because it is precise enough to look evidentiary. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is the timekeeping record path where calendar and clock reforms make official gaps visible in logs, dates, and public memory. A time gap can be a rule change or standardization effect before it is a mystery event. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Calendar reform turns ordinary dates into institutional decisions. The motif survives because the detail is small enough to remember and strong enough to organize retelling. In this record, the central frame is the timekeeping record path where calendar and clock reforms make official gaps visible in logs, dates, and public memory. A time gap can be a rule change or standardization effect before it is a mystery event. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Timekeeping records depend on who maintained the clock, calendar, or standard. A reader can follow the symbolic force without treating the symbol as proof of every later claim. In this record, the central frame is the timekeeping record path where calendar and clock reforms make official gaps visible in logs, dates, and public memory. A time gap can be a rule change or standardization effect before it is a mystery event. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The motif travels from calendars to railway time, digital logs, leap seconds, and receipts. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the timekeeping record path where calendar and clock reforms make official gaps visible in logs, dates, and public memory. A time gap can be a rule change or standardization effect before it is a mystery event. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A source-aware reading asks which time standard the record used. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the timekeeping record path where calendar and clock reforms make official gaps visible in logs, dates, and public memory. A time gap can be a rule change or standardization effect before it is a mystery event. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The missing-minute story becomes durable because everyone feels time should be universal. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the timekeeping record path where calendar and clock reforms make official gaps visible in logs, dates, and public memory. A time gap can be a rule change or standardization effect before it is a mystery event. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Official time is produced by institutions, instruments, and rules. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the timekeeping record path where calendar and clock reforms make official gaps visible in logs, dates, and public memory. A time gap can be a rule change or standardization effect before it is a mystery event. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A time gap can be real as a reform without being mysterious as an event. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the timekeeping record path where calendar and clock reforms make official gaps visible in logs, dates, and public memory. A time gap can be a rule change or standardization effect before it is a mystery event. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The strongest article distinguishes missing recorded time from missing lived experience. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is the timekeeping record path where calendar and clock reforms make official gaps visible in logs, dates, and public memory. A time gap can be a rule change or standardization effect before it is a mystery event. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Time folklore begins when clock authority and personal memory disagree. The motif survives because the detail is small enough to remember and strong enough to organize retelling. In this record, the central frame is the timekeeping record path where calendar and clock reforms make official gaps visible in logs, dates, and public memory. A time gap can be a rule change or standardization effect before it is a mystery event. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "NIST explains time and frequency standards as technical systems rather than intuitive everyday time. A reader can follow the symbolic force without treating the symbol as proof of every later claim. In this record, the central frame is the timekeeping record path where calendar and clock reforms make official gaps visible in logs, dates, and public memory. A time gap can be a rule change or standardization effect before it is a mystery event. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Leap seconds show that official timekeeping can add or adjust seconds to keep systems aligned. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the timekeeping record path where calendar and clock reforms make official gaps visible in logs, dates, and public memory. A time gap can be a rule change or standardization effect before it is a mystery event. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The Gregorian calendar adoption created famous missing-date narratives because calendar reform skipped dates. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the timekeeping record path where calendar and clock reforms make official gaps visible in logs, dates, and public memory. A time gap can be a rule change or standardization effect before it is a mystery event. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Standard time changed local time into coordinated public time. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the timekeeping record path where calendar and clock reforms make official gaps visible in logs, dates, and public memory. A time gap can be a rule change or standardization effect before it is a mystery event. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable."
         ]
       }
     ],
@@ -194,83 +215,65 @@
     },
     "qa": [
       {
-        "question": "What is the earliest layer in this motif?",
-        "answer": "Administrative timekeeping reforms and synchronization changes that create documented discontinuities in records."
+        "question": "What real-world process anchors this motif?",
+        "answer": "Public timekeeping transitions, including calendar correction, standard-time adoption, and synchronization policy, where trusted records are intentionally reshaped."
       },
       {
-        "question": "How did the motif cross regions?",
-        "answer": "Through schedules, manuals, copied logs, and later social distribution systems that preserve form while shrinking context."
+        "question": "Why this theme is central to motif transmission?",
+        "answer": "Because a visible gap in a timestamped record can be copied quickly while its technical context is often not copied at the same pace."
       },
       {
-        "question": "Which phrase patterns carried the adaptation?",
-        "answer": "Terms such as time jump, missing minutes, clock inconsistency, and timestamp mismatch."
+        "question": "Where did transmission become transregional?",
+        "answer": "Through railways, telegraph and shipping ledgers, and later global digital platforms that reused the same discontinuity pattern in new languages and locales."
       },
       {
-        "question": "What changed between original and adapted versions?",
-        "answer": "The adapted versions foreground emotional certainty and suspicion, while original versions foreground implementation and correction processes."
+        "question": "How did the record change during adaptation?",
+        "answer": "Original causes like calendar reform and synchronization rules were often replaced by narratives about suppression or hidden temporal control."
       },
       {
-        "question": "How should readers evaluate a circulated timestamp anomaly?",
-        "answer": "Trace it to the originating institution, timezone policy, and synchronization or correction log before accepting interpretation."
+        "question": "What phrase patterns keep the motif active?",
+        "answer": "Recurring terms include missing minutes, timestamp mismatch, time skip, and clock jump, which are easy to transmit in short-form storytelling."
       },
       {
-        "question": "Why does this motif still spread easily?",
-        "answer": "The structure is compact and reusable: one visible gap in trusted format plus a concise suspicion phrase."
+        "question": "How do you separate original from adapted layers?",
+        "answer": "Keep provenance first: source notice, policy description, correction trail, and chain context are original; atmosphere and suspicion are adaptation."
       }
     ],
-    "storySourceNote": "Source tracking runs from documented temporal policy change, to operational record systems, to social retellings that reframe the same discontinuity as a broader mystery motif.",
+    "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, internet retelling, and legend-like interpretation.",
     "references": [
       {
-        "title": "Wikipedia: Gregorian calendar",
-        "url": "https://en.wikipedia.org/wiki/Gregorian_calendar"
+        "title": "NIST, Time and Frequency from A to Z",
+        "url": "https://www.nist.gov/pml/time-and-frequency-division/popular-links/time-frequency-z"
       },
       {
-        "title": "Wikipedia: Calendar reform",
-        "url": "https://en.wikipedia.org/wiki/Calendar_reform"
+        "title": "NIST, Leap Seconds",
+        "url": "https://www.nist.gov/pml/time-and-frequency-division/time-realization/leap-seconds"
       },
       {
-        "title": "Wikipedia: Standard time",
-        "url": "https://en.wikipedia.org/wiki/Standard_time"
+        "title": "Royal Museums Greenwich, The adoption of the Gregorian calendar",
+        "url": "https://www.rmg.co.uk/stories/topics/when-did-britain-adopt-gregorian-calendar"
       },
       {
-        "title": "Wikipedia: Railway time",
-        "url": "https://en.wikipedia.org/wiki/Railway_time"
+        "title": "Britannica, standard time",
+        "url": "https://www.britannica.com/science/standard-time"
       },
       {
-        "title": "Wikipedia: Time zone",
-        "url": "https://en.wikipedia.org/wiki/Time_zone"
-      },
-      {
-        "title": "Wikipedia: Daylight saving time",
-        "url": "https://en.wikipedia.org/wiki/Daylight_saving_time"
-      },
-      {
-        "title": "Wikipedia: Coordinated Universal Time",
-        "url": "https://en.wikipedia.org/wiki/Coordinated_Universal_Time"
-      },
-      {
-        "title": "Wikipedia: Leap second",
+        "title": "Wikipedia, Leap second",
         "url": "https://en.wikipedia.org/wiki/Leap_second"
       },
       {
-        "title": "IANA Time Zone Database",
-        "url": "https://www.iana.org/time-zones"
-      },
-      {
-        "title": "RFC 3339: Date and Time on the Internet: Timestamps",
-        "url": "https://www.rfc-editor.org/rfc/rfc3339"
+        "title": "Wikipedia, Gregorian calendar",
+        "url": "https://en.wikipedia.org/wiki/Gregorian_calendar"
       }
     ],
     "relatedKeywords": [
       "timekeeping reform",
-      "timestamp anomaly",
-      "time-zone conversion",
       "missing minutes",
-      "railway time",
-      "calendar transition",
-      "ledger continuity",
-      "motif transmission",
-      "evidence chain"
+      "timestamp anomaly",
+      "calendar reform",
+      "standard time",
+      "leap second",
+      "record-based folklore"
     ]
   }
 }

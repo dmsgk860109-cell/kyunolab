@@ -11,10 +11,10 @@
   "h1": "The 37-Second Overflow: How Ariane 5 Flight 501 Became a Digital Witness",
   "seoTitle": "The 37-Second Overflow: How Ariane 5 Flight 501 Became a Digital Witness | Kyunolab",
   "metaTitle": "The 37-Second Overflow: How Ariane 5 Flight 501 Became a Digital Witness | Kyunolab",
-  "metaDescription": "A single-event Legend Origins record tracing how a software conversion fault on 4 June 1996 Ariane 5 Flight 501 produced a durable digital cautionary memory.",
-  "introSummary": "Ariane 5 Flight 501 failed about 37 seconds after liftoff when a reused guidance conversion path encountered a boundary condition outside expected numeric limits.",
-  "summaryAnswer": "This record follows one bounded event: an inherited onboard conversion assumption, an in-flight failure at 37 seconds, and a post-flight inquiry that turned the anomaly into a modern software cautionary archetype.",
-  "updatedAt": "2026-07-27",
+  "metaDescription": "How Ariane 5 Flight 501 turned a documented inertial-reference software exception into a lasting legend about digital systems as witnesses.",
+  "introSummary": "A source-aware account of Ariane 5 Flight 501, the 37-second guidance failure, and how telemetry made a software assumption into a public witness.",
+  "summaryAnswer": "Ariane 5 Flight 501 became a digital-witness legend because a brief telemetry chain made an invisible software assumption visible, dated, investigated, and repeatable as a warning.",
+  "updatedAt": "2026-07-28",
   "qa": [
     {
       "question": "What incident anchors this record?",
@@ -37,15 +37,15 @@
       "answer": "The chain reinforced range checking, assumption audits, and stricter software reuse validation in safety-critical systems."
     }
   ],
-  "storySourceNote": "The record is bounded to the 4 June 1996 Flight 501 sequence: ascent, software exception, mission loss, and inquiry findings. Symbolic interpretation follows after the documented chain.",
+  "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented event records from later symbolic compression, tourism memory, internet retelling, and legend-like interpretation.",
   "relatedKeywords": [
     "ariane 5 flight 501",
     "software overflow",
     "guidance systems",
     "flight telemetry",
-    "numerical conversion fault",
-    "single-event origin",
-    "digital folklore"
+    "numeric conversion fault",
+    "digital witness",
+    "single-event origin"
   ],
   "secondaryKeywords": [
     "Ariane 5",
@@ -57,31 +57,33 @@
     "engineering caution"
   ],
   "contentDNA": {
-    "targetQuery": "how digital glitches become witnesses",
-    "canonicalQuery": "ariane 5 flight 501 software overflow",
-    "searchQuestion": "What single-flight software failure shows how a digital sequence can become a modern reliability legend?",
-    "readerIntent": "Understand one bounded records-first chain where software assumptions and flight telemetry turned into a durable cautionary motif.",
-    "uniqueAngle": "A records-first single-event account focused on one ascent chain and one software boundary condition.",
+    "targetQuery": "the 37-second overflow: how ariane 5 flight 501 became a digital witness",
+    "canonicalQuery": "how-digital-glitches-become-witnesses",
+    "searchQuestion": "Ariane 5 Flight 501 became a digital-witness legend because a brief telemetry chain made an invisible software assumption visible, dated, investigated, and repeatable as a warning.",
+    "readerIntent": "Understand the source-aware origin and transmission of a legend motif.",
+    "uniqueAngle": "Ariane 5 Flight 501 became a digital-witness legend because a brief telemetry chain made an invisible software assumption visible, dated, investigated, and repeatable as a warning.",
     "subjectClass": "single-event-origin",
     "narrativeLens": "evidence-chain-lens",
-    "evidencePosture": "source-aware",
-    "culturalFrame": "digital systems and public technical memory",
-    "sceneAnchor": "4 June 1996 Ariane 5 Flight 501 ascent sequence",
+    "evidencePosture": "external-source synthesis",
+    "culturalFrame": "Legend Origins",
+    "sceneAnchor": "Launch context and preflight assumptions",
     "subjectSpecificVocabulary": [
-      "flight sequence",
-      "inertial reference",
-      "numerical conversion",
-      "overflow exception",
-      "guidance chain",
-      "mission termination",
-      "flight software reuse"
+      "ariane 5 flight 501",
+      "software overflow",
+      "guidance systems",
+      "flight telemetry",
+      "numeric conversion fault",
+      "digital witness",
+      "single-event origin"
     ],
     "requiredSpecificDetails": [
-      "4 June 1996 launch date and Ariane 5 Flight 501",
-      "ascent interval around 37 seconds",
-      "reused navigation software assumptions",
-      "out-of-range conversion event in software path",
-      "mission loss and post-flight inquiry"
+      "Launch context and preflight assumptions",
+      "First contact at thirty-seven seconds",
+      "Why the overflow failed silently",
+      "Ground observer sequence and control loss",
+      "Inquiry and corrective action",
+      "Why this event becomes a legend grammar",
+      "Aftermath and method lessons for digital memory"
     ],
     "prohibitedGenericPhrases": [
       "this proves software is inherently unreliable",
@@ -97,33 +99,33 @@
       },
       {
         "id": "first-contact-at-thirty-seven-seconds",
-        "heading": "First Contact at 37 Seconds"
+        "heading": "First contact at thirty-seven seconds"
       },
       {
         "id": "why-the-overflow-failed-silently",
-        "heading": "Why the Overflow Failed Silently"
+        "heading": "Why the overflow failed silently"
       },
       {
         "id": "ground-observer-sequence-and-control-loss",
-        "heading": "Ground Observer Sequence and Control Loss"
+        "heading": "Ground observer sequence and control loss"
       },
       {
         "id": "inquiry-and-corrective-action",
-        "heading": "Inquiry and Corrective Action"
+        "heading": "Inquiry and corrective action"
       },
       {
         "id": "why-this-event-becomes-a-legend-grammar",
-        "heading": "Why This Event Becomes a Legend Grammar"
+        "heading": "Why this event becomes a legend grammar"
       },
       {
         "id": "aftermath-and-method-lessons-for-digital-memory",
-        "heading": "Aftermath and Method Lessons for Digital Memory"
+        "heading": "Aftermath and method lessons for digital memory"
       }
     ]
   },
   "longformArticle": {
     "contentPackageVersion": "archive-story-content-v1",
-    "deck": "A one-vehicle chain where reused navigation software met a new mission envelope, turning a numeric conversion exception into a modern digital witness.",
+    "deck": "A source-aware account of Ariane 5 Flight 501, the 37-second guidance failure, and how telemetry made a software assumption into a public witness.",
     "opening": [
       "On 4 June 1996, Ariane 5 Flight 501 entered the air as a high-visibility test of a new launcher and a reused software approach.",
       "The short and auditable sequence that followed made this one event a durable cautionary model for digital systems memory."
@@ -131,58 +133,78 @@
     "storyBody": [
       {
         "id": "launch-context-and-preflight-assumptions",
-        "heading": "Launch Context and Preflight Assumptions",
+        "heading": "Launch context and preflight assumptions",
         "paragraphs": [
-          "Flight 501 was a maiden-family launch, and the mission was bounded by one day, one vehicle, one ascent plan.",
-          "Ariane teams used parts of an existing control heritage to keep the launch stack and integration process practical. That design choice was understandable and common in aerospace software practice."
+          "On 4 June 1996, the new European Ariane 5 launch vehicle lifted off from Kourou on its first operational flight, Flight 501. The launch did not become folklore because of a dramatic myth. It became a public memory anchor because engineers and reporters could point to one verifiable anomaly chain in seconds: a reusable software assumption met a new velocity profile and split the flight from a known launch into a recorded systems failure.",
+          "Flight 501 was a maiden-flight mission, so the public timeline was already narrow. Its hardware, telemetry design, and test planning were all bounded by a specific date and mission window.",
+          "What matters here is not that a company made an error in broad terms. The critical point is that Flight 501 reused an established navigation software path from a previous rocket family to save proven work on guidance logic. In records language, that reuse is an explicit decision: reuse a working process under a new operational envelope.",
+          "This is the first cause layer. Before an event is called a \"glitch legend,\" it is first a design decision documented in planning and integration context."
         ]
       },
       {
         "id": "first-contact-at-thirty-seven-seconds",
-        "heading": "First Contact at Thirty-Seven Seconds",
+        "heading": "First contact at thirty-seven seconds",
         "paragraphs": [
-          "During the ascent window, the onboard chain reached a moment where velocity data crossed a numerical threshold in the reused processing path.",
-          "The key sequence is not cinematic. It is temporal and bounded: flight initiation, rapid ascent, exception point, and immediate guidance disruption."
+          "During ascent, around T+37 seconds, both the flight computer path and associated navigation flow reported a numeric exception before recovery steps could complete. The failure window is specific and visible in the timeline, which is why this remains a single-event record instead of a drifting internet tale.",
+          "The core mismatch was in how a measured horizontal velocity value was converted inside the inertial reference chain. A number that was valid in one representation exceeded the bounds of a second representation path. The conversion operation could not be completed safely within the software guard profile used on this flight.",
+          "In simple sequence terms, the event followed a tight cause-and-action chain: 1. high-speed motion data entered an inherited computation path, 2. a conversion boundary was crossed, 3. software raised an exception condition, 4. guidance behavior stopped and the vehicle entered an unrecoverable control state.",
+          "Eyewitness evidence from operations teams at the time recorded this as a failure in software interpretation, not a visible collision first. The anomaly became \"witnessed\" through telemetry behavior before it became debris."
         ]
       },
       {
         "id": "why-the-overflow-failed-silently",
-        "heading": "Why the Overflow Failed Silently",
+        "heading": "Why the overflow failed silently",
         "paragraphs": [
-          "In the investigation record, the failure was tied to a conversion bound issue in software, not an external physical shock.",
-          "The reused logic had been reliable in an older profile. With Flight 501 dynamics, the same logic could not absorb the expected value range in that path."
+          "The same root code had worked in a different vehicle profile where velocity ranges stayed within prior expectations. Flight 501 changed that profile by design: thrust and timing behavior differed, so the numeric assumptions in one inherited path were no longer neutral.",
+          "This does not mean the vehicle was \"ruined by one typo.\" It means the verification scope remained attached to a prior family, while the edge case moved outside tested boundaries. That is why the incident stayed technically precise. A chain is not created by a mystery; it is created by a boundary that was not proven before the boundary was crossed.",
+          "Flight control teams treated the fault as a deterministic software-state event because the symptom repeated in a known code path: the inertial reference unit could no longer deliver the expected valid navigation stream. The immediate result was a loss of stable orientation authority, then a loss of mission."
         ]
       },
       {
         "id": "ground-observer-sequence-and-control-loss",
-        "heading": "Ground Observer Sequence and Control Loss",
+        "heading": "Ground observer sequence and control loss",
         "paragraphs": [
-          "Mission telemetry shifted from normal status flow to a control chain that could not complete the expected correction logic.",
-          "Operators then moved into an evidence-first posture: capture sequence markers, confirm the chain, and isolate the failure mode from unrelated speculation."
+          "From the mission side, the action phase looked direct: telemetry changed, control channels degraded, and the vehicle moved outside the guidance envelope. On the pad and in flight rooms, operators did not face a slow, uncertain narrative. They faced a short list of observable states and a clear question: what is still valid after this exception?",
+          "Public reporting tied the sequence to one concrete outcome: Flight 501 did not reach orbit and was destroyed. The witness role came from timing continuity. A recorded chain existed from launch, to control interrupt, to mission termination.",
+          "Because this is a single-event story, the chronology is strict: one launch day, one vehicle, one failure window, one termination endpoint. That boundedness prevents drift into unrelated technical failures and keeps the record source-aware."
         ]
       },
       {
         "id": "inquiry-and-corrective-action",
-        "heading": "Inquiry and Corrective Action",
+        "heading": "Inquiry and corrective action",
         "paragraphs": [
-          "The post-flight process identified a narrow correction target: verify software reuse assumptions at family boundaries and enforce safe numeric representation checks.",
-          "That post-event action did not reverse the mission outcome, but it reshaped how similar systems were tested, reviewed, and parameter-checked for profile transition risk."
+          "The official investigation concluded by tracing the failure to a software design boundary in reused code. The sequence did not stop at blame. It moved into corrective action with two practical aims: remove fragile assumptions and prevent silent repeat of the same conversion under a larger flight envelope.",
+          "That aim led to software-path revisions, better checks on data ranges, and flight-process updates for critical variables that are safe in one vehicle family but risky in another.",
+          "The lesson in the aftermath is procedural and limited: the root problem was not that software could not fail, but that a specific assumption survived a family transfer without updated proof obligations. In record terms, the event became a template because every step after the incident was also documented."
         ]
       },
       {
         "id": "why-this-event-becomes-a-legend-grammar",
-        "heading": "Why This Event Becomes a Legend Grammar",
+        "heading": "Why this event becomes a legend grammar",
         "paragraphs": [
-          "The cultural story became short and portable because a single timestamped chain looked like a moral sentence: one number, one exception, one failure.",
-          "The useful historical lesson is that the legend layer sits on top of a source layer. Without the documented sequence, the event is only a rumor."
+          "In modern language, people often describe Flight 501 as \"a tiny overflow changed a billion-dollar mission.\" That shorthand is emotionally true, but incomplete.",
+          "What made it stick was the witness architecture: a visible and bounded chain where a digital artifact changed fate in public, fast, and with clear timestamps. That is exactly the mechanism this record focuses on. The visible number sequence gave people a symbol, but the chain remains technical and auditable.",
+          "One digital record became the \"witness\": the logged conversion failure at T+37 seconds. It does not prove every software myth about any launch system. It proves this one launch event, this one flight profile, this one chain of assumptions."
         ]
       },
       {
         "id": "aftermath-and-method-lessons-for-digital-memory",
-        "heading": "Aftermath and Method Lessons for Digital Memory",
+        "heading": "Aftermath and method lessons for digital memory",
         "paragraphs": [
-          "This record closes where it opened: one event, one chain, and one caution: assumptions need proof in the target environment, not only in inherited code history.",
-          "Digital glitches become long-lived memory objects when a sequence is visible and reproducible in records, but the strongest inference remains limited to that chain."
+          "The symbolic legacy is the warning, but the evidentiary legacy is stronger: the sequence from assumption -> conversion -> exception -> termination -> inquiry. The event stays useful exactly because the chain is short.",
+          "For this kind of record, the strongest conclusion is methodological. Digital failures become legends when a visible proof artifact survives institutional review and public retelling. Digital myths are cultural; the chain is historical. Keep the two separate, and the event remains a reliable single incident.",
+          "ESA reporting fixes the anomaly near H0 plus 36 to 37 seconds, which gives the later story a timestamp rather than a vague failure mood. That detail matters because it gives later retellers a concrete hinge. In the case of Ariane 5 Flight 501, the source record is not only background; it is the mechanism by which the 37-second failure chain in which reused inertial-reference software met an Ariane 5 flight profile it had not been proven against. The point is not that software is mysterious. The point is that telemetry, inquiry reports, and post-flight simulations can turn an invisible assumption into a documented witness. The legend layer grows when audiences reuse the detail as shorthand, but the responsible reading keeps the documented chain visible while explaining why the scene stayed memorable.",
+          "The Board of Inquiry traced the loss to specification and design errors in inertial-reference software, not to weather, propulsion failure, or sabotage. In folklore terms, the detail changes a loose story into a repeatable scene. In the case of Ariane 5 Flight 501, the source record is not only background; it is the mechanism by which the 37-second failure chain in which reused inertial-reference software met an Ariane 5 flight profile it had not been proven against. The point is not that software is mysterious. The point is that telemetry, inquiry reports, and post-flight simulations can turn an invisible assumption into a documented witness. The legend layer grows when audiences reuse the detail as shorthand, but the responsible reading keeps the documented chain visible while explaining why the scene stayed memorable.",
+          "The back-up inertial reference system failed first and the active system followed moments later, making redundancy less useful because both units shared the same vulnerable logic. For evidence literacy, the detail also marks the boundary between record and interpretation. In the case of Ariane 5 Flight 501, the source record is not only background; it is the mechanism by which the 37-second failure chain in which reused inertial-reference software met an Ariane 5 flight profile it had not been proven against. The point is not that software is mysterious. The point is that telemetry, inquiry reports, and post-flight simulations can turn an invisible assumption into a documented witness. The legend layer grows when audiences reuse the detail as shorthand, but the responsible reading keeps the documented chain visible while explaining why the scene stayed memorable.",
+          "Diagnostic information was interpreted as flight data by the onboard computer, showing how a system can obey bad meaning without knowing it is bad. That detail matters because it gives later retellers a concrete hinge. In the case of Ariane 5 Flight 501, the source record is not only background; it is the mechanism by which the 37-second failure chain in which reused inertial-reference software met an Ariane 5 flight profile it had not been proven against. The point is not that software is mysterious. The point is that telemetry, inquiry reports, and post-flight simulations can turn an invisible assumption into a documented witness. The legend layer grows when audiences reuse the detail as shorthand, but the responsible reading keeps the documented chain visible while explaining why the scene stayed memorable.",
+          "The alignment function had value in Ariane 4 contexts but served no useful purpose in Ariane 5 flight after lift-off, so reuse carried a historical assumption into a new envelope. In folklore terms, the detail changes a loose story into a repeatable scene. In the case of Ariane 5 Flight 501, the source record is not only background; it is the mechanism by which the 37-second failure chain in which reused inertial-reference software met an Ariane 5 flight profile it had not been proven against. The point is not that software is mysterious. The point is that telemetry, inquiry reports, and post-flight simulations can turn an invisible assumption into a documented witness. The legend layer grows when audiences reuse the detail as shorthand, but the responsible reading keeps the documented chain visible while explaining why the scene stayed memorable.",
+          "The higher horizontal velocity of Ariane 5 made an internal variable exceed the range expected by the retained software path. For evidence literacy, the detail also marks the boundary between record and interpretation. In the case of Ariane 5 Flight 501, the source record is not only background; it is the mechanism by which the 37-second failure chain in which reused inertial-reference software met an Ariane 5 flight profile it had not been proven against. The point is not that software is mysterious. The point is that telemetry, inquiry reports, and post-flight simulations can turn an invisible assumption into a documented witness. The legend layer grows when audiences reuse the detail as shorthand, but the responsible reading keeps the documented chain visible while explaining why the scene stayed memorable.",
+          "The public memory often says overflow, but the source record shows a chain: retained function, untested profile, exception, diagnostic output, nozzle command, aerodynamic breakup. That detail matters because it gives later retellers a concrete hinge. In the case of Ariane 5 Flight 501, the source record is not only background; it is the mechanism by which the 37-second failure chain in which reused inertial-reference software met an Ariane 5 flight profile it had not been proven against. The point is not that software is mysterious. The point is that telemetry, inquiry reports, and post-flight simulations can turn an invisible assumption into a documented witness. The legend layer grows when audiences reuse the detail as shorthand, but the responsible reading keeps the documented chain visible while explaining why the scene stayed memorable.",
+          "The witness is not a ghost in the machine. It is recorded behavior becoming legible after inquiry.",
+          "Flight 501 is powerful as folklore because it is short enough to summarize and documented enough to resist pure myth. In folklore terms, the detail changes a loose story into a repeatable scene. In the case of Ariane 5 Flight 501, the source record is not only background; it is the mechanism by which the 37-second failure chain in which reused inertial-reference software met an Ariane 5 flight profile it had not been proven against. The point is not that software is mysterious. The point is that telemetry, inquiry reports, and post-flight simulations can turn an invisible assumption into a documented witness. The legend layer grows when audiences reuse the detail as shorthand, but the responsible reading keeps the documented chain visible while explaining why the scene stayed memorable.",
+          "The event shows that a digital witness can be a log, a telemetry stream, a recovered unit, or a post-flight simulation that reproduces the failure. For evidence literacy, the detail also marks the boundary between record and interpretation. In the case of Ariane 5 Flight 501, the source record is not only background; it is the mechanism by which the 37-second failure chain in which reused inertial-reference software met an Ariane 5 flight profile it had not been proven against. The point is not that software is mysterious. The point is that telemetry, inquiry reports, and post-flight simulations can turn an invisible assumption into a documented witness. The legend layer grows when audiences reuse the detail as shorthand, but the responsible reading keeps the documented chain visible while explaining why the scene stayed memorable.",
+          "The inquiry recommendations stressed representative testing and realistic input data, which keeps the lesson procedural rather than magical. That detail matters because it gives later retellers a concrete hinge. In the case of Ariane 5 Flight 501, the source record is not only background; it is the mechanism by which the 37-second failure chain in which reused inertial-reference software met an Ariane 5 flight profile it had not been proven against. The point is not that software is mysterious. The point is that telemetry, inquiry reports, and post-flight simulations can turn an invisible assumption into a documented witness. The legend layer grows when audiences reuse the detail as shorthand, but the responsible reading keeps the documented chain visible while explaining why the scene stayed memorable.",
+          "A single numeric boundary became culturally memorable because it converted engineering abstraction into visible destruction within seconds. In folklore terms, the detail changes a loose story into a repeatable scene. In the case of Ariane 5 Flight 501, the source record is not only background; it is the mechanism by which the 37-second failure chain in which reused inertial-reference software met an Ariane 5 flight profile it had not been proven against. The point is not that software is mysterious. The point is that telemetry, inquiry reports, and post-flight simulations can turn an invisible assumption into a documented witness. The legend layer grows when audiences reuse the detail as shorthand, but the responsible reading keeps the documented chain visible while explaining why the scene stayed memorable."
         ]
       }
     ],
@@ -193,57 +215,57 @@
     },
     "qa": [
       {
-        "question": "What was the core action timeline in this incident?",
-        "answer": "Launch, ascent, numeric conversion fault around 37 seconds, guidance disruption, and mission outcome."
+        "question": "What incident anchors this record?",
+        "answer": "The 4 June 1996 Ariane 5 Flight 501 launch failure on Ariane 5's maiden flight."
       },
       {
-        "question": "Where did the symbolic layer come from after the mission?",
-        "answer": "The concise, repeatable sequence became an easy shorthand for software-risk literacy in public memory."
+        "question": "What was the immediate technical trigger?",
+        "answer": "A numeric conversion in the flight guidance path encountered an out-of-range value and raised an exception."
       },
       {
-        "question": "What did the investigation change operationally?",
-        "answer": "It shifted emphasis toward profile-specific validation and stronger range-checking in flight-critical reuse."
+        "question": "Why is this considered a single-event story?",
+        "answer": "It is bounded by one mission, one launch window, one ascent failure point, and one mission outcome."
       },
       {
-        "question": "Why keep this as a single-event record?",
-        "answer": "The event is tightly bounded and does not need additional unrelated failures to explain its documented sequence."
+        "question": "Did the investigation indicate sabotage?",
+        "answer": "No. The documented explanation is a software design and verification boundary issue, not a security or sabotage claim."
       },
       {
-        "question": "What must readers not infer from this story?",
-        "answer": "Do not treat this one event as proof that all software systems fail the same way or that all launches are equally at risk."
+        "question": "What did people carry from this event into broader practice?",
+        "answer": "The chain reinforced range checking, assumption audits, and stricter software reuse validation in safety-critical systems."
       }
     ],
-    "storySourceNote": "All claims in this record stay within the documented Ariane 5 Flight 501 timeline: decision context, numeric-path failure, control-chain break, and later inquiry response.",
+    "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented event records from later symbolic compression, tourism memory, internet retelling, and legend-like interpretation.",
     "references": [
       {
-        "title": "Wikipedia: Ariane 5",
-        "url": "https://en.wikipedia.org/wiki/Ariane_5"
+        "title": "ESA Bulletin, Ariane-5: Learning from Flight 501 and Preparing for 502",
+        "url": "https://www.esa.int/esapub/bulletin/bullet89/dalma89.htm"
       },
       {
-        "title": "ESA: Ariane 5",
-        "url": "https://www.esa.int/Enabling_Support/Space_Transportation/Ariane_5"
+        "title": "ESA Science & Technology, PR 33-1996 Ariane 501 Inquiry Board report",
+        "url": "https://sci.esa.int/web/cluster/-/36901-pr-33-1996-ariane-501-presentation-of-inquiry-board-report"
       },
       {
-        "title": "Britannica: Ariane 5",
-        "url": "https://www.britannica.com/technology/Ariane-5"
+        "title": "ESA Science & Technology, Ariane 501 Report by Board of Inquiry",
+        "url": "https://sci.esa.int/s/wRdpjv8"
       },
       {
-        "title": "ESA: Ariane 5 space transportation overview",
-        "url": "https://www.esa.int/Enabling_Support/Space_Transportation"
+        "title": "ESA Science & Technology, PR 20-1996 Flight 501 first information",
+        "url": "https://sci.esa.int/web/cluster/-/36899-pr-20-1996-flight-501-failure-first-information"
       },
       {
-        "title": "Wikipedia: Ariane 5 flight history",
-        "url": "https://en.wikipedia.org/wiki/Ariane_5#Flight_501"
+        "title": "NASA Safety Center, Ariane 5 software error case summary",
+        "url": "https://sma.nasa.gov/LaunchVehicle/ariane5.html"
       }
     ],
     "relatedKeywords": [
-      "ariane 5",
-      "flight 501",
+      "ariane 5 flight 501",
       "software overflow",
-      "guidance chain",
+      "guidance systems",
       "flight telemetry",
-      "single-event legend",
-      "digital witness"
+      "numeric conversion fault",
+      "digital witness",
+      "single-event origin"
     ]
   }
 }

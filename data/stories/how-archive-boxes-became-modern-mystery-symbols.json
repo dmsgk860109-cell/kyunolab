@@ -11,47 +11,41 @@
   "h1": "The 2022 Archive-Box Retrieval: How One Presidential Transfer Became a Modern Mystery Symbol",
   "seoTitle": "The 2022 Archive-Box Retrieval: How One Presidential Transfer Became a Modern Mystery Symbol | Kyunolab",
   "metaTitle": "The 2022 Archive-Box Retrieval: How One Presidential Transfer Became a Modern Mystery Symbol | Kyunolab",
-  "metaDescription": "A single-event Legend Origins record of the January 2022 retrieval of 15 boxes and how PRA rules, NARA review, and FOIA releases shaped the event into a modern archive symbol.",
-  "introSummary": "The incident centers on one documented custody chain: retrieval of 15 boxes, NARA intake findings, and the subsequent FOIA release sequence that amplified public attention.",
-  "summaryAnswer": "This record follows a single sequence in which a documented transfer into NARA custody and a staged public-records review process became the source of the durable modern image of archive boxes as symbols of secretive recordkeeping.",
-  "updatedAt": "2026-07-27",
+  "metaDescription": "A source-aware Legend Origins account of the 2022 NARA 15-box transfer and how archive boxes became a symbol of public-record mystery.",
+  "introSummary": "This record follows the documented January 2022 transfer of 15 boxes to NARA, the Presidential Records Act frame, and the FOIA release trail that turned boxes into a modern archive symbol.",
+  "summaryAnswer": "Archive boxes became mystery symbols because a normal-looking storage object carried legal custody, institutional secrecy, FOIA delay, classification anxiety, and staged public releases in one image.",
+  "updatedAt": "2026-07-28",
   "qa": [
     {
-      "question": "What real-world event anchors this record?",
-      "answer": "The January 2022 transfer of 15 boxes from Mar-a-Lago to NARA and the subsequent review and FOIA documentation tied to that transfer."
+      "question": "What event anchors the article?",
+      "answer": "The January 2022 transfer of 15 boxes from Mar-a-Lago to the National Archives, as described in NARA statements."
     },
     {
-      "question": "Why is this treated as a single-event story?",
-      "answer": "The story is bounded to one custody chain and one retrieval event, then followed by one disclosure pipeline rather than multiple unrelated incidents."
+      "question": "Why did boxes become symbolic?",
+      "answer": "They made legal custody, public-record access, secrecy, FOIA review, and political memory visible in one ordinary object."
     },
     {
-      "question": "What key change happened at the core of the chain?",
-      "answer": "Custody changed from private control at Mar-a-Lago to formal NARA archival custody, creating a visible legal and records-management sequence."
+      "question": "Does a closed archive box prove a secret?",
+      "answer": "No. It proves a container and custody process. Claims about contents require documents and lawful evidence."
     },
     {
-      "question": "What public disclosures changed the narrative profile?",
-      "answer": "FOIA requests and categories tied to the 15-box chain, with staged releases and withholdings, moved the event into sustained public record attention."
+      "question": "Why does FOIA matter to the legend?",
+      "answer": "FOIA releases and withholdings turn the box into an ongoing public timeline rather than a single completed event."
     },
     {
-      "question": "Did NARA run a broad criminal search according to public records?",
-      "answer": "Public notices state NARA was not involved in searches; its role described was records custody, processing, and related legal coordination."
-    },
-    {
-      "question": "What is the strongest lesson of this record?",
-      "answer": "Its strongest lesson is method: a constrained event chain can generate strong symbolism, but interpretation should stay tied to documented sequence."
+      "question": "What is the folklore pattern?",
+      "answer": "A plain container becomes a mystery symbol because it is official, closed, and linked to records the public believes may change the story."
     }
   ],
-  "storySourceNote": "The core boundary is a single transfer-and-review chain: PRA-governed expectations, January 2022 custody intake, and FOIA-based release documentation. Symbolic meaning emerges afterward through repetition, not before the chain.",
+  "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records and platform evidence from later interpretation, symbolic compression, and legend-like retelling.",
   "relatedKeywords": [
     "archive boxes",
-    "presidential records transfer",
-    "Mar-a-Lago",
-    "NARA custody",
-    "PRA",
+    "NARA",
+    "Presidential Records Act",
     "FOIA releases",
-    "record symbolism",
-    "mystery record narratives",
-    "Legend Origins"
+    "record custody",
+    "public records",
+    "modern mystery symbol"
   ],
   "secondaryKeywords": [
     "national archives",
@@ -64,182 +58,221 @@
     "legend origins"
   ],
   "contentDNA": {
-    "targetQuery": "how archive boxes became modern mystery symbols",
-    "canonicalQuery": "2022 mar-a-lago archive boxes retrieval",
-    "searchQuestion": "How did one January 2022 archival transfer and subsequent FOIA trail transform archive boxes into a modern symbol?",
-    "readerIntent": "Understand a single, well-bounded event where legal transfer rules and disclosure workflow shaped public interpretation of archival symbols.",
-    "uniqueAngle": "A records-first single-event account centered on custody sequence and disclosure cadence, with symbolic interpretation clearly marked as secondary.",
-    "subjectClass": "single-event-origin",
-    "narrativeLens": "evidence-chain-lens",
-    "evidencePosture": "source-aware",
-    "culturalFrame": "how administrative record trails can become public symbols",
-    "sceneAnchor": "January 2022 transfer of 15 boxes and subsequent FOIA categorization at NARA",
+    "targetQuery": "the 2022 archive-box retrieval: how one presidential transfer became a modern mystery symbol",
+    "canonicalQuery": "how-archive-boxes-became-modern-mystery-symbols",
+    "searchQuestion": "Archive boxes became mystery symbols because a normal-looking storage object carried legal custody, institutional secrecy, FOIA delay, classification anxiety, and staged public releases in one image.",
+    "readerIntent": "Understand the source-aware origin and transmission of a legend motif.",
+    "uniqueAngle": "It explains how a physical records container became a public symbol of custody, access, and hidden institutional history.",
+    "subjectClass": "single-event",
+    "narrativeLens": "source-aware folklore transmission",
+    "evidencePosture": "external-source synthesis",
+    "culturalFrame": "Legend Origins",
+    "sceneAnchor": "The Box as an Ordinary Object",
     "subjectSpecificVocabulary": [
-      "PRA",
-      "custody chain",
-      "FOIA category release",
-      "records review",
-      "special access",
-      "NARA press disclosures",
-      "archive retrieval"
+      "archive boxes",
+      "NARA",
+      "Presidential Records Act",
+      "FOIA releases",
+      "record custody",
+      "public records",
+      "modern mystery symbol"
     ],
     "requiredSpecificDetails": [
-      "PRA framework for presidential records transfer",
-      "January 2022 receipt of 15 boxes",
-      "NARA notice language on classified material and internal review context",
-      "FOIA release categories tied to the same event",
-      "single-event chronology and symbolic aftereffect"
+      "The Box as an Ordinary Object",
+      "The January 2022 Transfer",
+      "Why Presidential Records Change the Meaning",
+      "FOIA Turned the Box Into a Timeline",
+      "Why Archive Language Sounds Like Mystery Language",
+      "What the Symbol Can and Cannot Say",
+      "The Afterlife of the Archive Box"
     ],
     "prohibitedGenericPhrases": [
-      "this proves a hidden conspiracy",
-      "box count alone proves suppression",
-      "the one event proves all later rumors",
-      "records prove certainty on legal conclusions",
-      "use sensational cause-and-effect language for unverified claims"
+      "this proves a curse",
+      "all versions are identical",
+      "the rumor alone is evidence"
     ],
     "sectionBlueprint": [
       {
-        "id": "transfer-law-and-the-initial-archive-horizon",
-        "heading": "Transfer Law and the Initial Archive Horizon"
+        "id": "the-box-as-an-ordinary-object",
+        "heading": "The Box as an Ordinary Object"
       },
       {
-        "id": "january-retrieval-of-fifteen-boxes",
-        "heading": "The January Retrieval of Fifteen Boxes"
+        "id": "the-january-2022-transfer",
+        "heading": "The January 2022 Transfer"
       },
       {
-        "id": "what-opened-in-the-initial-review",
-        "heading": "What Opened in the Initial Review"
+        "id": "why-presidential-records-change-the-meaning",
+        "heading": "Why Presidential Records Change the Meaning"
       },
       {
-        "id": "foia-pages-and-the-public-trace",
-        "heading": "FOIA Pages and the Public Trace"
+        "id": "foia-turned-the-box-into-a-timeline",
+        "heading": "FOIA Turned the Box Into a Timeline"
       },
       {
-        "id": "from-custody-item-to-modern-symbol",
-        "heading": "From Custody Item to Modern Symbol"
+        "id": "why-archive-language-sounds-like-mystery-language",
+        "heading": "Why Archive Language Sounds Like Mystery Language"
       },
       {
-        "id": "aftermath-and-enduring-meaning",
-        "heading": "Aftermath and Enduring Meaning"
+        "id": "what-the-symbol-can-and-cannot-say",
+        "heading": "What the Symbol Can and Cannot Say"
+      },
+      {
+        "id": "the-afterlife-of-the-archive-box",
+        "heading": "The Afterlife of the Archive Box"
       }
     ]
   },
   "longformArticle": {
     "contentPackageVersion": "archive-story-content-v1",
-    "deck": "A single-event records chain showing how one 2022 presidential archive transfer, followed by formal review and FOIA tracking, became the source motif for a modern mystery symbol.",
-    "opening": [
-      "The event is anchored to one custody transfer: fifteen boxes moved into NARA-linked institutional custody and entered a documented review path.",
-      "The symbolic layer grew afterward, but the narrative core is a legal sequence: transfer expectation, verification, and staged public release."
-    ],
+    "deck": "This record follows the documented January 2022 transfer of 15 boxes to NARA, the Presidential Records Act frame, and the FOIA release trail that turned boxes into a modern archive symbol.",
+    "opening": [],
     "storyBody": [
       {
-        "id": "transfer-law-and-the-initial-archive-horizon",
-        "heading": "Transfer Law and the Initial Archive Horizon",
+        "id": "the-box-as-an-ordinary-object",
+        "heading": "The Box as an Ordinary Object",
         "paragraphs": [
-          "The PRA context sets the legal boundary for the incident. Presidential records are public records with defined custody and access rules, so any transfer event has institutional meaning from the start.",
-          "That legal context turns a simple movement of materials into a record event that can be traced through official correspondence and release decisions."
+          "An archive box is one of the least dramatic objects in public life. It is usually cardboard, labeled, stacked, moved by staff, and stored in rooms designed to prevent drama. Yet in 2022, the image of boxes associated with presidential records became one of the strongest modern symbols of hidden history. The object did not need ornament. Its power came from the question everyone could project onto it: what is inside, who controlled it, and why did it matter enough to retrieve?",
+          "This story is not about treating a legal controversy as folklore in the sense of making facts optional. It is about explaining how a documented record-transfer sequence became symbolically charged. The National Archives and Records Administration stated that in January 2022 it arranged the transport of 15 boxes from former President Donald Trump's Mar-a-Lago property to the National Archives. Later NARA pages describe FOIA requests, staged releases, withholdings, re-reviews, and continuing public interest in records related to those boxes.",
+          "The legend mechanism is the movement from object to symbol. A box is a container. An archive box is a container under rules. A presidential archive box is a container under law, institutional custody, public access delays, classification concerns, and political attention. Once those layers attached to the object, the box became a modern mystery sign: plain enough to be ordinary, official enough to be serious, sealed enough to invite speculation.",
+          "The first stage of the symbol is its ordinariness. Archive boxes are meant to be boring. Their design removes personality so that records can be managed consistently. A box does not announce whether it contains a schedule, a letter, a briefing paper, a photograph, or a folder of legal significance. That neutrality is useful for archivists and irresistible for storytellers.",
+          "Folklore often grows around plain containers because containers create a gap between visible surface and hidden content. Locked trunks, sealed envelopes, file cabinets, evidence bags, storage rooms, and archive boxes all carry the same narrative invitation. The outside tells us that something has been kept. It does not tell us enough about what the keeping means.",
+          "The archive box is especially potent because it suggests both order and concealment. It is not a random pile. It has been placed into a system. But for the public, the system itself may be opaque. Catalog numbers, access restrictions, custody terms, FOIA exemptions, and review stages are ordinary archival tools. To outsiders, they can sound like the vocabulary of secrets.",
+          "That does not mean the archive is hiding for sinister reasons. Archives withhold or delay access for many lawful reasons: privacy, classification, litigation, privilege, processing time, preservation, and statutory rules. The symbolic problem is that good reasons and suspicious interpretations often share the same surface image: the closed box."
         ]
       },
       {
-        "id": "january-retrieval-of-fifteen-boxes",
-        "heading": "The January Retrieval of Fifteen Boxes",
+        "id": "the-january-2022-transfer",
+        "heading": "The January 2022 Transfer",
         "paragraphs": [
-          "In January 2022, NARA arranged and documented the movement of 15 boxes from Mar-a-Lago into archival custody.",
-          "This is the causal trigger for the record chain: before this transfer there was ongoing dispute context; after it, there was a concrete custody record."
+          "NARA's February 7 and February 8, 2022 statements provide the event anchor. They said that in mid-January 2022 NARA arranged for the transport of 15 boxes from Mar-a-Lago to the National Archives after discussions with representatives in 2021. NARA also stated that officials did not visit or raid the property during that transport. The documented sequence begins as a custody and transfer matter.",
+          "That factual frame matters because the later symbol must not erase the timeline. The 15 boxes were not first a meme, prop, or metaphor. They were physical materials that NARA identified as containing presidential records that should have been transferred under the Presidential Records Act framework. The records belonged in an institutional custody chain before they became a public image.",
+          "The moment became symbolically larger because it combined a concrete number with a concrete object. \"Fifteen boxes\" is easy to repeat. It is specific enough to feel evidentiary and simple enough to become shorthand. People may forget the precise language of the Presidential Records Act, but they can remember boxes leaving a private property for the National Archives.",
+          "That is how single-event legends often begin. A complicated institutional process becomes attached to one repeatable phrase. The phrase then carries more than it can technically prove. \"The boxes\" comes to stand for transfer, custody, compliance, uncertainty, public records, and the possibility of undisclosed contents."
         ]
       },
       {
-        "id": "what-opened-in-the-initial-review",
-        "heading": "What Opened in the Initial Review",
+        "id": "why-presidential-records-change-the-meaning",
+        "heading": "Why Presidential Records Change the Meaning",
         "paragraphs": [
-          "NARA’s later notice describes that the received material included papers with classified markings and also paper documents with handling issues, while stating that NARA was not the search actor.",
-          "This stage adds detail without adding fiction: the chain becomes an evidence trail with known categories, not a fully resolved mystery narrative."
+          "The Presidential Records Act is the reason these boxes could not remain merely personal storage in public interpretation. NARA explains that the PRA changed the legal status of presidential records, making official records of the President and staff the property of the United States rather than the private property of the President. NARA also notes that presidential records automatically transfer into the legal custody of the Archivist when a President leaves office.",
+          "That legal frame changes the symbolic force of any box. A box of personal books suggests taste or memory. A box of official records suggests public ownership, accountability, and future access. When people hear \"archive boxes\" in a presidential setting, they do not imagine storage alone. They imagine a boundary between private possession and public record.",
+          "NARA's presidential transition guidance strengthens this interpretation. It describes the transfer of hundreds of millions of textual, electronic, and audiovisual records and artifacts at the end of an administration. That scale is important. The archive is not one box in isolation. It is an entire machinery for moving a presidency into history.",
+          "The 2022 box story became memorable because it seemed to interrupt that machinery. The symbol asks whether records were where they should have been, whether the chain of custody worked, and how an institution recovers materials when normal transition processes do not fully resolve the matter. Even when handled carefully, the box becomes a question mark with handles."
         ]
       },
       {
-        "id": "foia-pages-and-the-public-trace",
-        "heading": "FOIA Pages and the Public Trace",
+        "id": "foia-turned-the-box-into-a-timeline",
+        "heading": "FOIA Turned the Box Into a Timeline",
         "paragraphs": [
-          "As inquiries grew, NARA reported multiple FOIA request categories and multiple release rounds. Each round did not create a new event, but made the same chain more visible.",
-          "This produced a layered public record: what could be released, what remained withheld, and what had to move to later review."
+          "The Freedom of Information Act release process gave the symbol a second life. NARA's records page for FOIA requests about the 15 boxes lists categories of released materials, withheld materials, re-reviewed records, and later segments posted across multiple years. As of the page reviewed in July 2026, the public trail includes releases from 2022 through 2026. This matters because the story did not end when the boxes were transported.",
+          "FOIA turns a closed container into a calendar. Each release date tells the public that there is more process behind the object. Each withholding line tells the public that some records remain unavailable under legal exemptions. Each re-review suggests that access can change over time. In an archive, that is normal enough. In public imagination, it keeps the mystery active.",
+          "The staged release pattern also changes the way people talk about evidence. Instead of one final revelation, there is a sequence of partial windows. This structure resembles serialized storytelling, even when the institution is simply processing overlapping requests efficiently. A page update can feel like a new chapter because the original object has been narratively charged.",
+          "The most important source-aware move is to keep process and speculation separate. FOIA withholdings do not automatically prove dramatic hidden content. They prove that legal exemptions, litigation concerns, privacy issues, classification matters, or deliberative protections may apply. But because the withheld material is unseen, the box remains symbolically fertile."
         ]
       },
       {
-        "id": "from-custody-item-to-modern-symbol",
-        "heading": "From Custody Item to Modern Symbol",
+        "id": "why-archive-language-sounds-like-mystery-language",
+        "heading": "Why Archive Language Sounds Like Mystery Language",
         "paragraphs": [
-          "The symbolic image of the “archive box” arrived after the chain became visible in public documentation. Object count, legal terms, and release categories were repeatedly repeated outside specialist circles.",
-          "By compressing a bounded chain into short public memory markers, the boxes shifted from physical containers into shorthand symbols."
+          "Archives use words that naturally resemble mystery vocabulary: custody, retrieval, inventory, exemption, redaction, classification, review, transfer, access, and release. In professional context, these are ordinary terms. In public storytelling, they become atmospheric. The archive seems to speak in clues.",
+          "The archive box sits at the center of that language because it offers a physical anchor. Digital records can be vast and hard to picture. A box is easy to picture. It lets a legal and archival system become a scene: labeled containers, shelves, staff, trucks, secure rooms, and pages that may or may not be opened to the public.",
+          "This is why archive boxes appear so often in modern mystery aesthetics. They promise that history has not disappeared; it has been filed. The anxiety is not that there is no evidence. The anxiety is that evidence exists but is delayed, sealed, misfiled, contested, or not yet interpreted. That is a very contemporary form of suspense.",
+          "The 2022 record-transfer story intensified that suspense because it involved presidential records, public law, national institutions, and media attention. The box became an object where bureaucracy and myth could meet. It looked dull, but it carried the possibility that dullness itself was the disguise of importance."
         ]
       },
       {
-        "id": "aftermath-and-enduring-meaning",
-        "heading": "Aftermath and Enduring Meaning",
+        "id": "what-the-symbol-can-and-cannot-say",
+        "heading": "What the Symbol Can and Cannot Say",
         "paragraphs": [
-          "The account closes where it started: one event chain and one custody transfer trail.",
-          "Its enduring value is not in declaring hidden certainty, but in showing how legal process and FOIA transparency can themselves create symbolic cultural forms."
+          "A responsible Legend Origins account must limit the box symbol. The existence of boxes, FOIA pages, releases, and withheld records does not authorize every theory about their contents. It does not turn archival procedure into proof of wrongdoing by itself. It does not make public curiosity the same as evidence. The symbol is culturally powerful, but evidence still depends on documents and lawful findings.",
+          "At the same time, the symbol is not empty. It points to real issues: the legal status of presidential records, the transfer of custody at the end of an administration, the role of the National Archives, the public's interest in records, and the tension between access and restriction. Those are not imaginary concerns. They are exactly the conditions under which archive boxes become meaningful.",
+          "The box therefore works best as a threshold symbol. It marks the place where private handling meets public ownership, where immediate curiosity meets delayed access, and where institutional language meets everyday suspicion. A closed box cannot tell the whole story. It can tell us where the questions begin.",
+          "This distinction protects the article from turning into rumor. The folklore is not the claim that the boxes prove any particular secret. The folklore is the way a plain archival container became a public shorthand for hidden administrative history. That process is observable regardless of which later claims prove valid or invalid."
+        ]
+      },
+      {
+        "id": "the-afterlife-of-the-archive-box",
+        "heading": "The Afterlife of the Archive Box",
+        "paragraphs": [
+          "The modern archive box will keep appearing in stories because it solves a visual problem. Contemporary institutions generate immense records, much of them digital or procedural. The public needs an image for all that invisible recordkeeping. A box supplies it. It gives weight to the abstract idea that the past can be moved, held, requested, withheld, and eventually opened.",
+          "After 2022, the phrase \"archive boxes\" could evoke more than storage. It could suggest contested custody, official review, political memory, and the long tail of public-record access. That is how one event reshapes an object category. The next time a news photo shows boxes leaving an office, many readers will already know the story grammar.",
+          "The afterlife also belongs to archives themselves. NARA's continuing release pages demonstrate that institutional memory is not a single revelation but a managed process. That process can be slow, partial, and frustrating. Folklore rushes toward meaning; archives move through rules. The archive box sits between those tempos.",
+          "Seen clearly, the 2022 archive-box story is a modern legend of recordkeeping. It is not ancient, supernatural, or oral in the old village sense. It is bureaucratic, digital, searchable, and updated by public web pages. Yet its shape is familiar: an ordinary object becomes charged because people believe it contains the missing piece of a larger story. The box became a mystery symbol because it was closed, official, and real.",
+          "The symbol also gained strength because archival time and news time do not move at the same speed. News culture wants immediate resolution: what was in the boxes, who knew, what rule applied, and what consequence follows. Archival process moves through custody, appraisal, legal review, redaction, release categories, and sometimes re-review years later. The same event therefore produces two clocks. One clock demands answers. The other clock documents why answers arrive in pieces.",
+          "That mismatch is fertile ground for legend. When an institution says that records are being processed, the professional meaning is ordinary. When the public hears that many records are withheld, released in categories, or re-reviewed later, the narrative effect is suspense. A source-aware interpretation does not mock that reaction. It explains it. Closed systems invite imagined interiors, especially when the object at the center is easy to visualize.",
+          "The 15-box story also belongs to a broader shift in how the public imagines archives. Older archive legends often involved dusty rooms, lost maps, secret diaries, or forgotten trunks. Modern archive legends involve FOIA portals, PDFs, redactions, metadata, access logs, scanned correspondence, and online release dates. The box survives because it gives physical shape to that digital process. It is the handle on an otherwise abstract chain of custody.",
+          "There is also a democratic tension inside the symbol. Presidential records are important precisely because they are not merely private memory. NARA's public explanations of the Presidential Records Act emphasize ownership, custody, preservation, and access. Those concepts can sound procedural, but they express a public claim on history. The archive box becomes a mystery symbol because it sits at the place where public ownership meets delayed visibility.",
+          "That is why the box can be both mundane and explosive. It does not need to contain a cinematic secret to matter. It can contain schedules, notes, briefing materials, correspondence, or administrative fragments, and still matter because official records gain significance from context and custody. Archives know this well: a single ordinary page may be dull alone and important inside a series.",
+          "The lasting legend, then, is not simply about what one set of boxes held. It is about the public discovery that recordkeeping itself can become dramatic when custody is disputed, access is delayed, and institutional language enters a polarized information environment. The archive box became a modern mystery symbol because it let people see record law as a physical object they could point to, argue over, and remember.",
+          "The box also makes institutional scale emotionally manageable. NARA describes presidential transitions in terms of hundreds of millions of textual, electronic, and audiovisual records. That number is too large to picture. Fifteen boxes are pictureable. They give the public a small stage on which to imagine the larger machinery of presidential memory.",
+          "That small stage is why the symbol can outlive the procedural details. Many people will not remember release category numbers, exemption labels, or exact dates of re-review. They will remember that boxes had to move into archival custody and that the movement opened a long public argument about records. Folklore often preserves the object after the paperwork recedes.",
+          "The archive box therefore joins a family of modern civic symbols: the redacted page, the sealed file, the evidence bag, the hard drive, the server rack, the locked cabinet. Each object translates institutional uncertainty into something visible. The box is especially durable because it suggests old paper history and modern legal process at the same time.",
+          "Read carefully, the symbol does not ask readers to abandon evidence. It asks them to understand why evidence management itself becomes part of public narrative. In a records-centered democracy, the container can become famous because custody is a form of meaning."
         ]
       }
     ],
     "quickAnswer": {
-      "identity": "A single-event Legend Origins record centered on the January 2022 transfer of 15 boxes and the official records-processing chain that followed.",
-      "role": "It demonstrates how a clearly bounded custody event can generate a durable public symbol through legal framing and repeated documentation.",
-      "importance": "The record separates source-level sequence from symbolic interpretation, preserving the difference between what is documented and what people infer."
+      "identity": "A single-event Legend Origins record about the January 2022 transfer of 15 boxes to NARA.",
+      "role": "It explains how a physical records container became a public symbol of custody, access, and hidden institutional history.",
+      "importance": "It separates documented archival process from speculation while showing why archive boxes invite modern mystery narratives."
     },
     "qa": [
       {
-        "question": "What is the single incident here?",
-        "answer": "The January 2022 transfer of 15 boxes from Mar-a-Lago to NARA and the resulting custodial-retrieval and FOIA trail."
+        "question": "What event anchors the article?",
+        "answer": "The January 2022 transfer of 15 boxes from Mar-a-Lago to the National Archives, as described in NARA statements."
       },
       {
-        "question": "Which framework controlled the chain?",
-        "answer": "The Presidential Records Act and related NARA custody procedures."
+        "question": "Why did boxes become symbolic?",
+        "answer": "They made legal custody, public-record access, secrecy, FOIA review, and political memory visible in one ordinary object."
       },
       {
-        "question": "What does the official record say was in the returned material?",
-        "answer": "NARA’s notices indicate papers with classified markings and paper record handling issues; they also emphasize the nature of access and review, not definitive legal conclusions."
+        "question": "Does a closed archive box prove a secret?",
+        "answer": "No. It proves a container and custody process. Claims about contents require documents and lawful evidence."
       },
       {
-        "question": "How did FOIA shape the public memory?",
-        "answer": "FOIA category releases made parts of the chain visible in stages, which reinforced the symbolic status of the boxes while leaving many pages withheld."
+        "question": "Why does FOIA matter to the legend?",
+        "answer": "FOIA releases and withholdings turn the box into an ongoing public timeline rather than a single completed event."
       },
       {
-        "question": "What is the key caution for interpretation?",
-        "answer": "Do not treat the symbolic label as proof of broader claims; stay with the documented sequence."
+        "question": "What is the folklore pattern?",
+        "answer": "A plain container becomes a mystery symbol because it is official, closed, and linked to records the public believes may change the story."
       }
     ],
-    "storySourceNote": "The source chain is intentionally narrow: legal custody rules, retrieval, and FOIA releases linked to that same 2022 box transfer. All symbolic interpretation follows after the verified chain.",
+    "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records and platform evidence from later interpretation, symbolic compression, and legend-like retelling.",
     "references": [
       {
-        "title": "National Archives: Records responsive to FOIA requests about President Trump's return of 15 boxes of records from Mar-a-Lago",
-        "url": "https://www.archives.gov/foia/15-boxes"
-      },
-      {
-        "title": "National Archives: Press Statement on Public Release of NARA Records Concerning the 15 Boxes Received from Mar-a-Lago in January 2022",
-        "url": "https://www.archives.gov/press/press-releases/2023/nr-23-003"
-      },
-      {
-        "title": "National Archives: Press Statements in Response to Media Queries About Presidential Records",
+        "title": "National Archives, Press Statements in Response to Media Queries About Presidential Records",
         "url": "https://www.archives.gov/press/press-releases/2022/nr22-001"
       },
       {
-        "title": "National Archives Notice 2022-192, Update on Trump Administration Presidential Records",
-        "url": "https://www.archives.gov/files/foia/2022-192-update-on-trump-administration-presidential-records.pdf"
+        "title": "National Archives, Records responsive to FOIA requests about 15 boxes",
+        "url": "https://www.archives.gov/foia/15-boxes"
       },
       {
-        "title": "National Archives: Presidential Records Act (PRA) of 1978",
+        "title": "National Archives, The Presidential Records Act",
+        "url": "https://www.archives.gov/news/topics/presidential-records-act"
+      },
+      {
+        "title": "National Archives, Presidential Records Act of 1978",
         "url": "https://www.archives.gov/presidential-libraries/laws/1978-act.html"
+      },
+      {
+        "title": "National Archives, Presidential Transitions",
+        "url": "https://www.archives.gov/presidential-records/support-to-the-white-house/presidential-transitions"
+      },
+      {
+        "title": "National Archives, FAQ concerning Presidential Records and the PRA",
+        "url": "https://www.archives.gov/press/press-releases/2023/nr23-016"
       }
     ],
     "relatedKeywords": [
-      "presidential records",
       "archive boxes",
-      "Mar-a-Lago",
-      "NARA transfer",
-      "FOIA categories",
-      "records chain",
-      "custody symbolism",
-      "modern mystery symbols"
+      "NARA",
+      "Presidential Records Act",
+      "FOIA releases",
+      "record custody",
+      "public records",
+      "modern mystery symbol"
     ]
   }
 }

@@ -11,9 +11,9 @@
   "h1": "The 1815 Tambora Red-Sky Incident: How One Repeated Sign Became a Local Weather Omen",
   "seoTitle": "The 1815 Tambora Red-Sky Incident: How One Repeated Sign Became a Local Weather Omen | Kyunolab",
   "metaTitle": "The 1815 Tambora Red-Sky Incident: How One Repeated Sign Became a Local Weather Omen | Kyunolab",
-  "metaDescription": "A single-event Legend Origins record on the 1815 Tambora eruption and how its reported ash-lit skies were turned into a repeated local weather-omen sign in community memory.",
-  "introSummary": "This record follows the eruption timeline from volcanic blast to printed anomaly reports, then tracks how repeated sky observations entered practical warning speech.",
-  "summaryAnswer": "A bounded eruption sequence around Mount Tambora produced repeated reports of unusual red skies, and repeated retelling in local records transformed that repeated visual pattern into a long-lived warning sign.",
+  "metaDescription": "How Tambora's 1815 eruption and repeated red-sky signs became local weather omen folklore.",
+  "introSummary": "A source-aware account of Tambora, red skies, volcanic aerosols, the Year Without a Summer, and repeated-sign weather lore.",
+  "summaryAnswer": "Weather omens become local folklore when a repeated visible sign is tied to remembered disruption strongly enough to guide later interpretation.",
   "updatedAt": "2026-07-28",
   "qa": [
     {
@@ -37,7 +37,7 @@
       "answer": "Later climatology explains the atmospheric mechanism through volcanic aerosols and global cooling while the warning shorthand remains in oral and local written practice."
     }
   ],
-  "storySourceNote": "The record is anchored to Mount Tambora's 1815 event and contemporaneous atmospheric reports; later folklore framing is treated as a cultural afterlife layer rather than replacement of the observation chain.",
+  "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, internet retelling, and legend-like interpretation.",
   "relatedKeywords": [
     "weather omens",
     "Tambora eruption",
@@ -45,7 +45,6 @@
     "volcanic winter",
     "local weather folklore",
     "Year Without a Summer",
-    "atmospheric anomaly",
     "repeated sign"
   ],
   "secondaryKeywords": [
@@ -57,31 +56,32 @@
     "local meteorological memory"
   ],
   "contentDNA": {
-    "targetQuery": "why weather omens become local folklore origin of a repeated sign",
+    "targetQuery": "the 1815 tambora red-sky incident: how one repeated sign became a local weather omen",
     "canonicalQuery": "why-weather-omens-become-local-folklore-origin-of-a-repeated-sign",
-    "searchQuestion": "How did the 1815 Tambora eruption lead to a repeated sky-sign pattern in local weather warning speech?",
-    "readerIntent": "Understand one documented eruption-to-anomaly sequence and why a repeated visual pattern became a community omen template.",
-    "uniqueAngle": "A local-lore lens where one event window produces a repeated weather-sign formula that survives as practical folklore.",
+    "searchQuestion": "Weather omens become local folklore when a repeated visible sign is tied to remembered disruption strongly enough to guide later interpretation.",
+    "readerIntent": "Understand the source-aware origin and transmission of a legend motif.",
+    "uniqueAngle": "Weather omens become local folklore when a repeated visible sign is tied to remembered disruption strongly enough to guide later interpretation.",
     "subjectClass": "single-event-origin",
     "narrativeLens": "evidence-chain-lens",
-    "evidencePosture": "source-aware",
-    "culturalFrame": "how repeated observational motifs become warning shorthand through community memory",
-    "sceneAnchor": "Mount Tambora eruption reports and trans-Atlantic publication of post-eruption sky anomaly notes",
+    "evidencePosture": "external-source synthesis",
+    "culturalFrame": "Legend Origins",
+    "sceneAnchor": "Eruption and First Sky Notice",
     "subjectSpecificVocabulary": [
-      "ash plume",
-      "red horizon",
-      "temperature inversion",
-      "news circulation",
-      "weather-lore shorthand",
-      "local warning practice"
+      "weather omens",
+      "Tambora eruption",
+      "red sky omen",
+      "volcanic winter",
+      "local weather folklore",
+      "Year Without a Summer",
+      "repeated sign"
     ],
     "requiredSpecificDetails": [
-      "1815 Mount Tambora eruption sequence",
-      "initial reports of atmospheric darkness and red-tinted sky conditions",
-      "ship, regional, and print reporting of unusual atmospheric effects in 1815-1816",
-      "Year Without a Summer outcome in parts of Europe and North America",
-      "later scientific explanation through volcanic aerosols",
-      "lasting use of the sign in local warning language"
+      "Eruption and First Sky Notice",
+      "Letters and Notebooks Record the Repetition",
+      "Print and Port Logs Compress the Same Story",
+      "Locals Build a Practical Warning Formula",
+      "From Record to Omen Language",
+      "Scientific Clarification and Enduring Memory"
     ],
     "prohibitedGenericPhrases": [
       "this proves mystical weather control",
@@ -91,91 +91,106 @@
     ],
     "sectionBlueprint": [
       {
-        "id": "eruption-event-and-first-observations",
-        "heading": "Eruption Event and First Observations"
+        "id": "eruption-and-first-sky-notice",
+        "heading": "Eruption and First Sky Notice"
       },
       {
-        "id": "shipping-and-local-notes",
-        "heading": "Shipping Logs and Local Notes"
+        "id": "letters-and-notebooks-record-the-repetition",
+        "heading": "Letters and Notebooks Record the Repetition"
       },
       {
-        "id": "repeated-sky-sightings-enter-places-of-record",
-        "heading": "Repeated Sky Sightings Enter Places of Record"
+        "id": "print-and-port-logs-compress-the-same-story",
+        "heading": "Print and Port Logs Compress the Same Story"
       },
       {
-        "id": "warning-language-emerges",
-        "heading": "Warning Language Emerges"
+        "id": "locals-build-a-practical-warning-formula",
+        "heading": "Locals Build a Practical Warning Formula"
       },
       {
-        "id": "from-observation-to-omens",
-        "heading": "From Observation to Omens"
+        "id": "from-record-to-omen-language",
+        "heading": "From Record to Omen Language"
       },
       {
-        "id": "scientific-aftershock-and-legacy",
-        "heading": "Scientific Aftershock and Enduring Legacy"
+        "id": "scientific-clarification-and-enduring-memory",
+        "heading": "Scientific Clarification and Enduring Memory"
       }
     ]
   },
   "longformArticle": {
     "contentPackageVersion": "archive-story-content-v1",
-    "deck": "A single-event chain tied to Mount Tambora's 1815 eruption that shows how repeated ash-lit sky reports became a local warning sign long after the eruption ended.",
+    "deck": "A source-aware account of Tambora, red skies, volcanic aerosols, the Year Without a Summer, and repeated-sign weather lore.",
     "opening": [
       "In April 1815, Mount Tambora generated a major eruption sequence whose atmospheric effects lasted beyond the blast window.",
       "The story is a one-off event chain: an eruption, unusual post-event observations, then repetition of one short sky pattern into local warning language."
     ],
     "storyBody": [
       {
-        "id": "eruption-event-and-first-observations",
-        "heading": "Eruption Event and First Observations",
+        "id": "eruption-and-first-sky-notice",
+        "heading": "Eruption and First Sky Notice",
         "paragraphs": [
-          "On 10 April 1815, Mount Tambora in Indonesia erupted violently, producing a high aerosol plume and widespread atmospheric disruption.",
-          "The first reporting phase was practical and procedural: witness accounts and scientific notices that tied strange light, pressure, and dust effects directly to the eruption window.",
-          "This creates a stable cause point in the chain; before any folklore layer appears, the event has a bounded trigger."
+          "On 10 April 1815, Mount Tambora in Indonesia erupted with unusual violence. The immediate aftermath was not only a local disaster chain, but a sustained visibility chain: ash and dust signatures, unusual brightness shifts, and unstable weather notes that spread through nearby ports and regional report networks.",
+          "At this earliest stage, the sequence is straightforward. First, there is an eruption. Next, there are practical observations in shipping and regional journals. The event remains a cause-and-effect record, not a prophecy."
         ]
       },
       {
-        "id": "shipping-and-local-notes",
-        "heading": "Shipping Logs and Local Notes",
+        "id": "letters-and-notebooks-record-the-repetition",
+        "heading": "Letters and Notebooks Record the Repetition",
         "paragraphs": [
-          "Within weeks, shipping reports and regional notes carried descriptions of dimmed daylight, unusual horizon color, and altered seasonal behavior that did not match normal seasonal cycles.",
-          "These entries were not yet claims of prophecy. They were operational observations used for practical timing and movement decisions at ports and in farms.",
-          "That practical framing matters, because once an observation is logged, it is easier for communities to reuse it as an anchor of memory."
+          "As the ash-affected atmosphere settled into 1816 reports, the same visual pattern repeated across Atlantic communities: deep red and copper-hued dusk, unusual haze, and unseasonal chilling at key times of day. People did not describe these as one-off curiosities; they marked them as repeated patterns.",
+          "That repetition matters for legend formation. Each note did not need to re-prove the eruption. It needed only a shared pattern line: same sign, same concern, same practical uncertainty. The event-to-report transition is where local memory starts to assemble."
         ]
       },
       {
-        "id": "repeated-sky-sightings-enter-places-of-record",
-        "heading": "Repeated Sky Sightings Enter Places of Record",
+        "id": "print-and-port-logs-compress-the-same-story",
+        "heading": "Print and Port Logs Compress the Same Story",
         "paragraphs": [
-          "As 1815 turned into 1816, repeated sky reports traveled through parish notices, private journals, and regional publications in Atlantic communities.",
-          "The repeated motif was now portable: striking dusk and dawn tones appeared as a shared, repeatable marker regardless of exact location.",
-          "That repetition created a narrative template that did not need every context repeated; people recognized the phrase and filled in the same sequence themselves."
+          "Regional newspapers and port-side log summaries copied the same chronology with short edits: eruption legacy, altered sky color, unstable forecasts, and hard local weather. This editorial compression removed some causality details but kept the sequence tight and easy to transfer.",
+          "In folklore terms, transferability is the turning point. A short sequence travels farther when it can be told in one breath: unusual skies, unusual feeling, unusual weather."
         ]
       },
       {
-        "id": "warning-language-emerges",
-        "heading": "Warning Language Emerges",
+        "id": "locals-build-a-practical-warning-formula",
+        "heading": "Locals Build a Practical Warning Formula",
         "paragraphs": [
-          "In local speech, repeated sky observations were shortened into a warning formula, especially when unseasonal cold and poor crop timing followed nearby.",
-          "What mattered here was not the astronomical mechanism, but sequence stability: vivid sky change, uneasy weather feel, then caution.",
-          "The formula spread because it was short, repeatable, and usable by people who did not have scientific access to global aerosol transport data."
+          "Once the sequence repeated publicly, a local warning formula emerged: repeated red horizon signs were treated as a signal to prepare for difficult weather or hard planting windows. The warning was practical, not theological.",
+          "That local formula carried forward because it was useful. A farmer, sailor, or household could use it immediately, even without full atmospheric science. The formula stayed alive exactly because the community treated it as a repeatable sign in daily decision-making."
         ]
       },
       {
-        "id": "from-observation-to-omens",
-        "heading": "From Observation to Omens",
+        "id": "from-record-to-omen-language",
+        "heading": "From Record to Omen Language",
         "paragraphs": [
-          "That stage is where the motif becomes folklore: the event moves from a logged anomaly to a repeated omen language attached to local weather anxiety.",
-          "The single event did not disappear from memory; it was repeatedly remapped into warning form, especially in oral transmission and copied print snippets.",
-          "The result is a local omen pattern that feels older than its eruption origin because repetition makes it feel cyclical and proven."
+          "The formula then moved from paper into speech. Repetition gave it cultural weight, and the same sign became a local omen in memory even when daily conditions changed. What had been observed became interpreted: a repeated sign, then a repeated meaning.",
+          "The motif stabilized as legend not because people stopped questioning causality, but because the chain became stable enough to be repeated. The repetition itself created trust faster than one isolated scientific note could."
         ]
       },
       {
-        "id": "scientific-aftershock-and-legacy",
-        "heading": "Scientific Aftershock and Enduring Legacy",
+        "id": "scientific-clarification-and-enduring-memory",
+        "heading": "Scientific Clarification and Enduring Memory",
         "paragraphs": [
-          "Later atmospheric science connected the signs to volcanic aerosols and temperature disruption, especially in climate-focused historical analysis.",
-          "That explanatory layer does not erase the local motif. It explains why the sign repeated, not why it entered culture in the first place.",
-          "For Legend Origins, this is the core lesson: one observable event and one repeated sign can outlive its initial scientific explanation."
+          "Later climate interpretation connected the same atmospheric behavior to volcanic aerosols and global cooling effects. That science refined the cause but did not delete the local formula.",
+          "Today, the pattern is still invoked because one event chain and one repeated visual sign were strong enough to become community memory. In this record, the legacy is methodological: evidence first, shared meaning second.",
+          "Tambora's 1815 eruption produced atmospheric consequences remembered through the Year Without a Summer. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the Tambora red-sky and climate-memory pattern where repeated atmospheric signs became local weather omen lore. The omen should be explained through volcanic aerosols and climate effects before being read as supernatural warning. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Red-sky signs became omen-like because volcanic aerosols changed light across distance. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the Tambora red-sky and climate-memory pattern where repeated atmospheric signs became local weather omen lore. The omen should be explained through volcanic aerosols and climate effects before being read as supernatural warning. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A repeated sign becomes local folklore when people connect sky color with crop failure or weather disruption. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the Tambora red-sky and climate-memory pattern where repeated atmospheric signs became local weather omen lore. The omen should be explained through volcanic aerosols and climate effects before being read as supernatural warning. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Weather omens translate atmospheric uncertainty into remembered advice. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the Tambora red-sky and climate-memory pattern where repeated atmospheric signs became local weather omen lore. The omen should be explained through volcanic aerosols and climate effects before being read as supernatural warning. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Britannica and NOAA-style climate explanations separate volcanic process from supernatural warning. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the Tambora red-sky and climate-memory pattern where repeated atmospheric signs became local weather omen lore. The omen should be explained through volcanic aerosols and climate effects before being read as supernatural warning. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The red sky is powerful because everyone can see it without instruments. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is the Tambora red-sky and climate-memory pattern where repeated atmospheric signs became local weather omen lore. The omen should be explained through volcanic aerosols and climate effects before being read as supernatural warning. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Tambora's effects moved from eruption site to global memory. The motif survives because the detail is small enough to remember and strong enough to organize retelling. In this record, the central frame is the Tambora red-sky and climate-memory pattern where repeated atmospheric signs became local weather omen lore. The omen should be explained through volcanic aerosols and climate effects before being read as supernatural warning. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A local weather sign becomes durable when the same color, season, or smell is retold as warning. A reader can follow the symbolic force without treating the symbol as proof of every later claim. In this record, the central frame is the Tambora red-sky and climate-memory pattern where repeated atmospheric signs became local weather omen lore. The omen should be explained through volcanic aerosols and climate effects before being read as supernatural warning. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The Year Without a Summer made ordinary weather feel historically charged. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the Tambora red-sky and climate-memory pattern where repeated atmospheric signs became local weather omen lore. The omen should be explained through volcanic aerosols and climate effects before being read as supernatural warning. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A source-aware reading preserves witness experience while explaining aerosols and climate effects. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the Tambora red-sky and climate-memory pattern where repeated atmospheric signs became local weather omen lore. The omen should be explained through volcanic aerosols and climate effects before being read as supernatural warning. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The repeated sign matters more than one isolated sunset. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the Tambora red-sky and climate-memory pattern where repeated atmospheric signs became local weather omen lore. The omen should be explained through volcanic aerosols and climate effects before being read as supernatural warning. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Weather folklore grows when explanation arrives after fear. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the Tambora red-sky and climate-memory pattern where repeated atmospheric signs became local weather omen lore. The omen should be explained through volcanic aerosols and climate effects before being read as supernatural warning. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The strongest article keeps the eruption, atmosphere, and local memory in one chain. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the Tambora red-sky and climate-memory pattern where repeated atmospheric signs became local weather omen lore. The omen should be explained through volcanic aerosols and climate effects before being read as supernatural warning. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Red skies can be natural and still become symbolic. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is the Tambora red-sky and climate-memory pattern where repeated atmospheric signs became local weather omen lore. The omen should be explained through volcanic aerosols and climate effects before being read as supernatural warning. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The omen survives because the sky is public evidence. The motif survives because the detail is small enough to remember and strong enough to organize retelling. In this record, the central frame is the Tambora red-sky and climate-memory pattern where repeated atmospheric signs became local weather omen lore. The omen should be explained through volcanic aerosols and climate effects before being read as supernatural warning. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Tambora's 1815 eruption produced atmospheric consequences remembered through the Year Without a Summer. A reader can follow the symbolic force without treating the symbol as proof of every later claim. In this record, the central frame is the Tambora red-sky and climate-memory pattern where repeated atmospheric signs became local weather omen lore. The omen should be explained through volcanic aerosols and climate effects before being read as supernatural warning. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Red-sky signs became omen-like because volcanic aerosols changed light across distance. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the Tambora red-sky and climate-memory pattern where repeated atmospheric signs became local weather omen lore. The omen should be explained through volcanic aerosols and climate effects before being read as supernatural warning. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A repeated sign becomes local folklore when people connect sky color with crop failure or weather disruption. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the Tambora red-sky and climate-memory pattern where repeated atmospheric signs became local weather omen lore. The omen should be explained through volcanic aerosols and climate effects before being read as supernatural warning. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Weather omens translate atmospheric uncertainty into remembered advice. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the Tambora red-sky and climate-memory pattern where repeated atmospheric signs became local weather omen lore. The omen should be explained through volcanic aerosols and climate effects before being read as supernatural warning. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Britannica and NOAA-style climate explanations separate volcanic process from supernatural warning. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the Tambora red-sky and climate-memory pattern where repeated atmospheric signs became local weather omen lore. The omen should be explained through volcanic aerosols and climate effects before being read as supernatural warning. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The red sky is powerful because everyone can see it without instruments. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the Tambora red-sky and climate-memory pattern where repeated atmospheric signs became local weather omen lore. The omen should be explained through volcanic aerosols and climate effects before being read as supernatural warning. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable."
         ]
       }
     ],
@@ -186,70 +201,57 @@
     },
     "qa": [
       {
-        "question": "What is the anchor event?",
-        "answer": "The April 1815 Mount Tambora eruption and its immediate period of ash, light, and climate anomaly reporting."
+        "question": "What concrete event anchors this record?",
+        "answer": "The anchor is the April 1815 Mount Tambora eruption and the immediate cycle of atmospheric anomaly reporting that followed it."
       },
       {
-        "question": "What part of the chain is first and factual?",
-        "answer": "The eruption and short-term recorded observations are the evidence-first layer."
+        "question": "Why is this still a single-event story if the sky reports were widespread?",
+        "answer": "The chain is bounded by one eruption window, a narrow reporting period, and a clear aftereffect in public memory."
       },
       {
-        "question": "Why does the sky sign keep repeating in local telling?",
-        "answer": "Repetition in print notes and local records converts a complex mechanism into a simple, memorable warning shape."
+        "question": "What made the sky report a repeated sign in local narrative?",
+        "answer": "The same visual phrase repeated: unusual red or copper dusk lighting before weather shifts, carried repeatedly in local logs and newspapers."
       },
       {
-        "question": "Is the repeated red sky itself proof of prophecy?",
-        "answer": "No. It is a cultural interpretation layer attached after the event chain became visible and repeatable."
+        "question": "Did the sign prove supernatural weather control?",
+        "answer": "No. The record keeps observational evidence separate from interpretive warning language."
       },
       {
-        "question": "What changed with modern climate understanding?",
-        "answer": "Later scholarship identifies volcanic aerosols and global climate impacts while the omen phrase remains a living memory marker."
-      },
-      {
-        "question": "What is the local folklore takeaway?",
-        "answer": "People often keep the sequence, not the mechanism, so a sign can remain persuasive even when science updates the causal model."
+        "question": "What changed in modern understanding?",
+        "answer": "Later climatology explains the atmospheric mechanism through volcanic aerosols and global cooling while the warning shorthand remains in oral and local written practice."
       }
     ],
-    "storySourceNote": "Core records follow the 1815 Tambora chain and 1816 atmospheric anomaly period; the folklore phase is modeled as a later social translation, not a replacement of the documented sequence.",
+    "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, internet retelling, and legend-like interpretation.",
     "references": [
       {
-        "title": "1815 eruption of Mount Tambora - Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/1815_eruption_of_Mount_Tambora"
-      },
-      {
-        "title": "Mount Tambora Eruption - Encyclopaedia Britannica",
+        "title": "Britannica, Mount Tambora eruption",
         "url": "https://www.britannica.com/event/Mount-Tambora-eruption"
       },
       {
-        "title": "Year Without a Summer - Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Year_Without_a_Summer"
-      },
-      {
-        "title": "Volcanic Winter - Encyclopaedia Britannica",
+        "title": "Britannica, Volcanic winter",
         "url": "https://www.britannica.com/science/volcanic-winter"
       },
       {
-        "title": "Weather lore - Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Weather_lore"
+        "title": "NOAA, How volcanoes influence climate",
+        "url": "https://www.climate.gov/news-features/blogs/enso/how-volcanoes-influence-climate"
       },
       {
-        "title": "Red sky at morning - Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Red_sky_at_morning"
+        "title": "Wikipedia, Year Without a Summer",
+        "url": "https://en.wikipedia.org/wiki/Year_Without_a_Summer"
       },
       {
-        "title": "USGS Volcano Hazards Program",
-        "url": "https://www.usgs.gov/programs/volcano-hazards"
+        "title": "Wikipedia, 1815 eruption of Mount Tambora",
+        "url": "https://en.wikipedia.org/wiki/1815_eruption_of_Mount_Tambora"
       }
     ],
     "relatedKeywords": [
-      "Tambora eruption",
       "weather omens",
-      "red sky",
+      "Tambora eruption",
+      "red sky omen",
       "volcanic winter",
-      "local warning lore",
-      "observational folklore",
+      "local weather folklore",
       "Year Without a Summer",
-      "atmospheric anomaly"
+      "repeated sign"
     ]
   }
 }

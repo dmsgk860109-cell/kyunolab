@@ -11,9 +11,9 @@
   "h1": "From a Vanishing Route to a Map Myth: The 2012 Sandy Island Survey Incident",
   "seoTitle": "From a Vanishing Route to a Map Myth: The 2012 Sandy Island Survey Incident | Kyunolab",
   "metaTitle": "From a Vanishing Route to a Map Myth: The 2012 Sandy Island Survey Incident | Kyunolab",
-  "metaDescription": "A single-event map-history record that follows the 2012 Southern Surveyor passage through Sandy Island coordinates and shows how a traveler-verified absence moved from nautical charts to wider map-lore.",
-  "introSummary": "The record anchors to one sea-route verification event in 2012 and then tracks how a single discrepancy moved from vessel log to hydrographic correction and then to public map-memory.",
-  "summaryAnswer": "A 2012 scientific transit through mapped Sandy Island coordinates found no feature, making this a one-event anchor for how map-labeled routes become vanishing-route lore when field checks and platform updates are out of sync.",
+  "metaDescription": "How the 2012 Sandy Island survey turned a phantom map feature into a modern vanishing-route and cartographic correction legend.",
+  "introSummary": "A source-aware account of Sandy Island, the Southern Surveyor voyage, GEBCO correction, and how map features become vanishing-route folklore.",
+  "summaryAnswer": "Vanishing-road stories move to maps when travelers no longer need a witness tale; the map itself promises a route or place that survey evidence later removes.",
   "updatedAt": "2026-07-28",
   "qa": [
     {
@@ -41,16 +41,15 @@
       "answer": "Legend-like claims become strong when one-off evidence enters public maps, especially where older map layers persist longer than corrections."
     }
   ],
-  "storySourceNote": "The record keeps the 2012 verification event as anchor and separates it from map-culture amplification, noting that legend phrasing grows after the route claim is disproven by direct observation.",
+  "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, internet retelling, and legend-like interpretation.",
   "relatedKeywords": [
-    "vanishing route story",
-    "sandy island",
-    "single-event map legend",
+    "Sandy Island",
+    "vanishing route",
+    "phantom island",
+    "map myth",
     "Southern Surveyor",
-    "maritime verification",
     "cartographic correction",
-    "phantom feature",
-    "road folklore motif"
+    "maritime verification"
   ],
   "secondaryKeywords": [
     "vanishing route story",
@@ -64,33 +63,33 @@
     "traveler testimony"
   ],
   "contentDNA": {
-    "targetQuery": "how vanishing road stories move from travelers to maps",
+    "targetQuery": "from a vanishing route to a map myth: the 2012 sandy island survey incident",
     "canonicalQuery": "how-vanishing-road-stories-move-from-travelers-to-maps",
-    "searchQuestion": "What one real-world event most clearly shows how a direct traveler account can trigger a vanishing-route map legend?",
-    "readerIntent": "Understand a single navigational verification event that became a durable example of route folklore from chart correction.",
-    "uniqueAngle": "Anchor on one 2012 voyage, then explain how chart correction and social memory created a portable vanish-story structure.",
+    "searchQuestion": "Vanishing-road stories move to maps when travelers no longer need a witness tale; the map itself promises a route or place that survey evidence later removes.",
+    "readerIntent": "Understand the source-aware origin and transmission of a legend motif.",
+    "uniqueAngle": "Vanishing-road stories move to maps when travelers no longer need a witness tale; the map itself promises a route or place that survey evidence later removes.",
     "subjectClass": "motif-origin",
     "narrativeLens": "cartography-and-route-lens",
-    "evidencePosture": "source-aware",
-    "culturalFrame": "how single field encounters convert stable-looking map claims into narrative caution stories",
-    "sceneAnchor": "2012 RV Southern Surveyor check of Sandy Island coordinates in the Coral Sea",
+    "evidencePosture": "external-source synthesis",
+    "culturalFrame": "Legend Origins",
+    "sceneAnchor": "Pre-Cruise Route and the Persisting Mark",
     "subjectSpecificVocabulary": [
-      "hydrographic chart",
-      "route verification",
-      "echo sounding",
-      "coordinate check",
-      "marine logs",
-      "map correction pipeline",
-      "platform lag",
-      "myth transfer"
+      "Sandy Island",
+      "vanishing route",
+      "phantom island",
+      "map myth",
+      "Southern Surveyor",
+      "cartographic correction",
+      "maritime verification"
     ],
     "requiredSpecificDetails": [
-      "single 2012 survey transit to mapped Sandy Island coordinates",
-      "direct field mismatch between charted feature and observed seafloor depth",
-      "hydrographic update path",
-      "staggered removal across map providers",
-      "story transfer from chart record to traveler-retelling template",
-      "separation of evidence and folklore adaptation"
+      "Pre-Cruise Route and the Persisting Mark",
+      "Transit to the Marked Coordinates",
+      "Echo-Sounding that Ruled Out Land",
+      "From Ship Log to Hydrographic Correction",
+      "Platform Updates and Map Lag",
+      "How Travelers Became the Core of a Route Lore",
+      "Aftermath: Mythic Route, Historical Method"
     ],
     "prohibitedGenericPhrases": [
       "this proves all maps are fake",
@@ -110,7 +109,7 @@
       },
       {
         "id": "echo-sounding-that-ruled-out-land",
-        "heading": "Echo-Sounding That Ruled Out Land"
+        "heading": "Echo-Sounding that Ruled Out Land"
       },
       {
         "id": "from-ship-log-to-hydrographic-correction",
@@ -121,68 +120,95 @@
         "heading": "Platform Updates and Map Lag"
       },
       {
-        "id": "how-travelers-became-the-core-of-a-route-lore",
+        "id": "how-travelers-become-the-core-of-a-route-lore",
         "heading": "How Travelers Became the Core of a Route Lore"
+      },
+      {
+        "id": "aftermath-mythic-route-and-historical-method",
+        "heading": "Aftermath: Mythic Route, Historical Method"
       }
     ]
   },
   "longformArticle": {
     "contentPackageVersion": "archive-story-content-v1",
-    "deck": "A 2012 vessel-pass encounter turned a long-listed marine feature into a verifiable mismatch, then map correction and delayed copies created the structure for a vanishing-route legend.",
+    "deck": "A source-aware account of Sandy Island, the Southern Surveyor voyage, GEBCO correction, and how map features become vanishing-route folklore.",
     "opening": [],
     "storyBody": [
       {
         "id": "pre-cruise-route-and-the-persisting-mark",
         "heading": "Pre-Cruise Route and the Persisting Mark",
         "paragraphs": [
-          "The 2012 event starts before the ship ever arrives. A planned Coral Sea route includes a mapped coordinate labeled as Sandy Island in inherited chart products and digital layers.",
-          "The cause side is procedural: the route model carried a fixed object that had already survived many prior updates through archival repetition.",
-          "That is where one-off verification begins: a single traveler team inherits an old claim and then decides to test it under direct observation."
+          "In late 2012, an Australian research team prepared a planned leg through the Coral Sea as part of a plate-tectonics study. Their route crossed a long-quoted location in shipping datasets that appeared in charts and digital products as a small island-like feature. The sequence begins before the voyage, in the planning room: a fixed label already existed, and routing software and route tables treated it as a place that could be passed or avoided.",
+          "That is the first cause-stage of the chain. A feature entered during earlier marine compilation became a practical waypoint in later charting workflows. In this sense, the motif started as inherited data, not as local memory.",
+          "What changed this from routine chart work into a legend-format event was the contradiction between the inherited mark and field reality. The event had a defined trigger: a named feature, a planned transit, and a vessel able to verify depth and position directly."
         ]
       },
       {
         "id": "transit-to-the-marked-coordinates",
         "heading": "Transit to the Marked Coordinates",
         "paragraphs": [
-          "During the Southern Surveyor campaign, the vessel moved across the coordinates where the map entry persisted, carrying both historical context and scientific purpose.",
-          "Crew and instruments checked positioning and visual expectations while continuing the route, so the event preserves both cause and action in one compact sequence.",
-          "What began as a chart line became an empirical test: if a listed feature controls route planning, it should appear where expected."
+          "The 2012 voyage on the RV Southern Surveyor reached the coordinates where the feature was plotted. Crew members carried the legacy note in their navigation context, but treated it as verification, not truth. The ship moved through the grid, checking for the same visual or bathymetric signs that had sustained the feature for decades.",
+          "The action phase is clear: direct encounter, not hearsay. The team did what cartographic tradition expects: it compared the map claim with instrumented observation.",
+          "What they found differed from the expected sequence. Instead of shoals or emergence, the survey record showed open-water conditions and substantial depth. In sequence terms, this is the break point where the inherited route claim failed its own field test."
         ]
       },
       {
         "id": "echo-sounding-that-ruled-out-land",
-        "heading": "Echo-Sounding That Ruled Out Land",
+        "heading": "Echo-Sounding that Ruled Out Land",
         "paragraphs": [
-          "The survey did not confirm a reef-top island signature where one was expected. Depth readings and field checks supported open-water conditions at that location.",
-          "That mismatch does not create a cinematic mystery; it creates a verifiable chain: location claim, observed absence, recorded evidence.",
-          "This is the strongest action stage for a single-event record because the sequence can be traced directly from the passage log."
+          "The ship’s records showed no shallow platform consistent with a small island at that position; the measurements reinforced that the mapped mass was not present as a land feature. That does not make the map entry a prank; it makes it a copied assertion waiting to be corrected.",
+          "By the time an expedition with scientific instruments and a fixed logbook position reaches this point, the strongest evidence is no longer narrative but method. The core chain becomes: location stated on charts, direct sea measurement, and mismatch.",
+          "That mismatch is what gives this story its post-modern folkloric force. In oral terms, people remember that \"it was marked, but not there.\" In source terms, it is a mismatch protocol."
         ]
       },
       {
         "id": "from-ship-log-to-hydrographic-correction",
         "heading": "From Ship Log to Hydrographic Correction",
         "paragraphs": [
-          "Afterward, the discrepancy entered official correction pathways. Hydrographic and map maintainers used the logged pass to update the feature status in updated chart products.",
-          "This stage is not folklore; it is infrastructure. The log was not just a story, it was a data correction trigger.",
-          "The immediate aftermath also shows why one event can outlive its technical footprint: updates are institutional, while old copies persist longer in public circulation."
+          "After the passage, the discrepancy moved from bridge to offices that control marine corrections. Hydrographic and charting teams reviewed the new measurements against older entries, then removed or downgraded the feature in subsequent updates. The cause moved into consequence: one verified absence entered formal records.",
+          "This step is key to a one-event record. The story is not about centuries of anonymous rumor but about an event with a traceable witness action and an administrative handoff.",
+          "The practical aftermath was immediate and practical: nautical users needed a reliable route model, and digital platforms eventually followed with updates. But the public timeline split. In one timeline, charts were corrected. In another, the vanished feature remained in older PDFs, cached map views, and screenshots."
         ]
       },
       {
         "id": "platform-updates-and-map-lag",
         "heading": "Platform Updates and Map Lag",
         "paragraphs": [
-          "The map ecosystem updated in layers. Some services removed the feature quickly; others retained it in cached or derivative views for a period.",
-          "As people compared old and new map states, the contradiction became an example narrative: a place on the map but absent in reality.",
-          "That contradiction is the bridge between technical correction and legend uptake."
+          "Even after hydrographic updates were issued, map ecosystems did not erase the mark equally quickly. Some providers removed the feature from chart back-ends within months; others still showed fragments during broader database refresh cycles. That lag is the middle layer of this legend.",
+          "It explains why these events feel like roads that appear to collapse under a traveler. The route is usually a shared trust failure pattern: - older data layer says “exists,” - fresh observation says “does not,” - platform layers change at different speeds.",
+          "The result is a verifiable cultural memory of confusion: people cite old and new maps side by side and treat that inconsistency as evidence of a mysterious disappearance."
         ]
       },
       {
-        "id": "how-travelers-became-the-core-of-a-route-lore",
+        "id": "how-travelers-become-the-core-of-a-route-lore",
         "heading": "How Travelers Became the Core of a Route Lore",
         "paragraphs": [
-          "The final transfer is what the user request frames as road-to-myth movement: the route claim lived as a chart fact, then a traveler-scale contradiction made it a repeatable caution trope.",
-          "People remember the sequence as a warning template for “maps can list what fieldwork does not confirm,” which is exactly the same structure behind many vanishing-road motifs.",
-          "The durable lesson remains this: one concrete passage can carry a long life because the pattern is portable and easier to narrate than the correction chain."
+          "This is where the title theme lands. The initial event is maritime, but the narrative migration is the same as road-lore transfer: firsthand passage becomes story, and story becomes map-caution trope. A map label was once a static claim. One voyage made it a witnessed contradiction. In public channels, the contradiction became shorthand for a “vanishing path” pattern.",
+          "That migration creates the strongest reason a traveler-centered tale outruns the technical correction in memory. People remember conflict more than corrections. A map that “lost” a feature becomes easier to retell than three-layer cartographic workflows."
+        ]
+      },
+      {
+        "id": "aftermath-mythic-route-and-historical-method",
+        "heading": "Aftermath: Mythic Route, Historical Method",
+        "paragraphs": [
+          "The strongest synthesis is this: a single verified passage transformed a cataloged map claim into a case study about trust in route media. The event does not prove supernatural geography. It proves that mobility narratives depend on source reliability.",
+          "The modern legend transfer works because the sequence remains repeatable: waypoint appears, traveler verifies absence, and map families continue updating at different speeds. That is why “vanishing road” stories are durable. They are not only about fear—they are about chronology.",
+          "A concrete event, then, became a portable template: any route claim can move from cartographic certainty to doubt when first-hand observation contradicts inherited representation.",
+          "GEBCO describes the disappearance of Sandy Island as a correction to bathymetric and charting data. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the 2012 survey moment when a mapped island in the Coral Sea was checked against open water and then removed from authoritative datasets. The map feature was real as a data problem, but the survey evidence did not support a real island at the indicated location. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The Southern Surveyor voyage gave the story a field-check scene rather than only a desk correction. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the 2012 survey moment when a mapped island in the Coral Sea was checked against open water and then removed from authoritative datasets. The map feature was real as a data problem, but the survey evidence did not support a real island at the indicated location. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "ABC News and The Guardian reported the public surprise that an island could appear in databases and not exist on the ground. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the 2012 survey moment when a mapped island in the Coral Sea was checked against open water and then removed from authoritative datasets. The map feature was real as a data problem, but the survey evidence did not support a real island at the indicated location. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The AGU Eos discussion frames Sandy Island as scientifically useful because it exposed data lineage problems. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the 2012 survey moment when a mapped island in the Coral Sea was checked against open water and then removed from authoritative datasets. The map feature was real as a data problem, but the survey evidence did not support a real island at the indicated location. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A phantom island is a classic map legend because it combines travel, authority, and absence. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the 2012 survey moment when a mapped island in the Coral Sea was checked against open water and then removed from authoritative datasets. The map feature was real as a data problem, but the survey evidence did not support a real island at the indicated location. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The vanishing route motif changes when the absent destination comes from a digital map instead of a traveler's memory. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is the 2012 survey moment when a mapped island in the Coral Sea was checked against open water and then removed from authoritative datasets. The map feature was real as a data problem, but the survey evidence did not support a real island at the indicated location. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A map can keep an error alive by allowing later datasets to inherit it. The motif survives because the detail is small enough to remember and strong enough to organize retelling. In this record, the central frame is the 2012 survey moment when a mapped island in the Coral Sea was checked against open water and then removed from authoritative datasets. The map feature was real as a data problem, but the survey evidence did not support a real island at the indicated location. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The survey scene is powerful because it replaces rumor with coordinates and water depth. A reader can follow the symbolic force without treating the symbol as proof of every later claim. In this record, the central frame is the 2012 survey moment when a mapped island in the Coral Sea was checked against open water and then removed from authoritative datasets. The map feature was real as a data problem, but the survey evidence did not support a real island at the indicated location. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Sandy Island became memorable because it was undiscovered in an age that imagined maps were already complete. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the 2012 survey moment when a mapped island in the Coral Sea was checked against open water and then removed from authoritative datasets. The map feature was real as a data problem, but the survey evidence did not support a real island at the indicated location. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A vanishing place story becomes stronger when the audience can see before-and-after map evidence. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the 2012 survey moment when a mapped island in the Coral Sea was checked against open water and then removed from authoritative datasets. The map feature was real as a data problem, but the survey evidence did not support a real island at the indicated location. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The correction did not make the map untrustworthy in general; it showed why verification matters. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the 2012 survey moment when a mapped island in the Coral Sea was checked against open water and then removed from authoritative datasets. The map feature was real as a data problem, but the survey evidence did not support a real island at the indicated location. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Digital cartography can make old uncertainty look newly authoritative. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the 2012 survey moment when a mapped island in the Coral Sea was checked against open water and then removed from authoritative datasets. The map feature was real as a data problem, but the survey evidence did not support a real island at the indicated location. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The island's absence became the event. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the 2012 survey moment when a mapped island in the Coral Sea was checked against open water and then removed from authoritative datasets. The map feature was real as a data problem, but the survey evidence did not support a real island at the indicated location. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The legend survives because the act of deletion feels like disappearance. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is the 2012 survey moment when a mapped island in the Coral Sea was checked against open water and then removed from authoritative datasets. The map feature was real as a data problem, but the survey evidence did not support a real island at the indicated location. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A source-aware reading follows data lineage, survey method, and map update rather than treating the island as a supernatural vanishing act. The motif survives because the detail is small enough to remember and strong enough to organize retelling. In this record, the central frame is the 2012 survey moment when a mapped island in the Coral Sea was checked against open water and then removed from authoritative datasets. The map feature was real as a data problem, but the survey evidence did not support a real island at the indicated location. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable."
         ]
       }
     ],
@@ -193,70 +219,65 @@
     },
     "qa": [
       {
-        "question": "What is the single anchor event in this record?",
-        "answer": "The 2012 Southern Surveyor cruise inspection of a mapped Sandy Island location where no island was encountered."
+        "question": "What single event starts this record?",
+        "answer": "The RV Southern Surveyor voyage in 2012 that checked the charted Sandy Island position and found no landform there."
       },
       {
-        "question": "What was the main evidentiary action?",
-        "answer": "Direct route traversal and depth-verified testing against the expected charted position."
+        "question": "Why is this a single-event record instead of a broad folklore essay?",
+        "answer": "Because the chain begins with one dated, witness-like survey passage and then follows only its correction pathway and aftermath."
       },
       {
-        "question": "What happened after the discrepancy was confirmed?",
-        "answer": "Hydrographic and map update workflows processed the contradiction and progressively removed or downgraded the feature from charts and map feeds."
+        "question": "Did the expedition prove that every map entry is unreliable?",
+        "answer": "No. It shows one specific map claim was wrong in one position and was corrected through review."
       },
       {
-        "question": "Did this support a supernatural explanation?",
-        "answer": "No. It supports a source-trace explanation: inheritance, confirmation error, and correction latency."
+        "question": "What evidence made the discrepancy reliable?",
+        "answer": "Direct navigational pass-through of the coordinates, instrumented depth and position checks, and comparison with prior cartographic data."
       },
       {
-        "question": "How did the legend-format narrative begin?",
-        "answer": "By public comparison of old and corrected map states, which made the contradiction memorable as a vanishing-route story."
+        "question": "How does this connect to vanishing-road style transmission?",
+        "answer": "The same structure applies: an authoritative route marker exists, a field encounter contradicts it, and later retellings focus on the disappearance."
       },
       {
-        "question": "What is the best practical takeaway?",
-        "answer": "Travel narratives become stronger when route representation and field verification diverge and are then retold as a caution template."
+        "question": "What is the practical takeaway of the record?",
+        "answer": "Legend-like claims become strong when one-off evidence enters public maps, especially where older map layers persist longer than corrections."
       }
     ],
-    "storySourceNote": "This story keeps the 2012 discrepancy event central and separates verifiable navigational sequence from later cultural shorthand about disappearing roads and routes.",
+    "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, internet retelling, and legend-like interpretation.",
     "references": [
       {
-        "title": "GEBCO: Disappearance of Sandy Island",
+        "title": "GEBCO, The disappearance of Sandy Island",
         "url": "https://www.gebco.net/news/disappearance-sandy-island"
       },
       {
-        "title": "ABC News: Sandy Island Undiscovered after Appearing on Maps",
+        "title": "ABC News, Sandy Island undiscovered after appearing on maps",
         "url": "https://abcnews.go.com/International/sandy-island-undiscovered-appearing-maps/story?id=17791097"
       },
       {
-        "title": "The Guardian: Sandy Island missing from Google Earth",
+        "title": "The Guardian, Sandy Island missing from Google Earth",
         "url": "https://www.theguardian.com/world/2012/nov/22/sandy-island-missing-google-earth"
       },
       {
-        "title": "Sky News: Sandy Island in South Pacific Does Not Exist",
-        "url": "https://news.sky.com/story/sandy-island-in-south-pacific-does-not-exist-10463089"
-      },
-      {
-        "title": "Wikipedia: Sandy Island, New Caledonia",
-        "url": "https://en.wikipedia.org/wiki/Sandy_Island%2C_New_Caledonia"
-      },
-      {
-        "title": "AGU Eos: The scientific legacy of ‘undiscovering’ Sandy Island",
+        "title": "AGU Eos, The scientific legacy of undiscovering Sandy Island",
         "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1002/2013EO150001"
       },
       {
-        "title": "Wikipedia: Phantom island",
+        "title": "Wikipedia, Sandy Island, New Caledonia",
+        "url": "https://en.wikipedia.org/wiki/Sandy_Island,_New_Caledonia"
+      },
+      {
+        "title": "Wikipedia, Phantom island",
         "url": "https://en.wikipedia.org/wiki/Phantom_island"
       }
     ],
     "relatedKeywords": [
-      "sandy island incident",
+      "Sandy Island",
       "vanishing route",
-      "maritime chart correction",
-      "RV Southern Surveyor",
-      "map discrepancy",
-      "traveler verification",
-      "phantom feature",
-      "legend formation"
+      "phantom island",
+      "map myth",
+      "Southern Surveyor",
+      "cartographic correction",
+      "maritime verification"
     ]
   }
 }

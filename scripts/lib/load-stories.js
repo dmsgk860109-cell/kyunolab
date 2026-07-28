@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { readJsonFile } = require('./json-utils');
 
 const DEFAULT_ROOT = path.resolve(__dirname, '..', '..');
 const LEGACY_PATH = ['data', 'stories.json'];
@@ -16,7 +17,7 @@ function loadStories(root = DEFAULT_ROOT) {
 
   for (const entry of entries) {
     const packagePath = resolvePackagePath(root, entry.file);
-    const packageData = readJson(packagePath, `independent Story file for ${entry.id}`);
+    const packageData = readJsonFile(packagePath, `independent Story file for ${entry.id}`);
     const found = legacyById.get(entry.id);
 
     if (!found) throw new Error(`Independent Story ${entry.id}: no matching legacy record exists.`);
@@ -28,7 +29,7 @@ function loadStories(root = DEFAULT_ROOT) {
 }
 
 function loadLegacyStories(root = DEFAULT_ROOT) {
-  const stories = readJson(path.join(root, ...LEGACY_PATH), 'legacy stories.json');
+  const stories = readJsonFile(path.join(root, ...LEGACY_PATH), 'legacy stories.json');
   if (!Array.isArray(stories)) throw new Error('Legacy stories.json must contain an array.');
   return stories;
 }
@@ -36,7 +37,7 @@ function loadLegacyStories(root = DEFAULT_ROOT) {
 function loadIndependentEntries(root = DEFAULT_ROOT) {
   const indexPath = path.join(root, ...INDEX_PATH);
   if (!fs.existsSync(indexPath)) return [];
-  const index = readJson(indexPath, 'independent Story index');
+  const index = readJsonFile(indexPath, 'independent Story index');
   const entries = Array.isArray(index) ? index : index.stories;
   if (!Array.isArray(entries)) throw new Error('data/stories/index.json must contain a stories array.');
 
@@ -167,14 +168,6 @@ function resolvePackagePath(root, file) {
   if (!resolved.startsWith(`${directory}${path.sep}`)) throw new Error(`Independent Story file must remain inside data/stories: ${file}`);
   if (!fs.existsSync(resolved)) throw new Error(`Independent Story file is missing: ${resolved}`);
   return resolved;
-}
-
-function readJson(filePath, label) {
-  try {
-    return JSON.parse(fs.readFileSync(filePath, 'utf8'));
-  } catch (error) {
-    throw new Error(`Unable to read ${label}: ${error.message}`);
-  }
 }
 
 function pathnameFor(slug) {

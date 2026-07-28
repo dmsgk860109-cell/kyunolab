@@ -11,10 +11,10 @@
   "h1": "The Red-Sky Omen: How Krakatoa Became Weather Lore in Modern Storytelling",
   "seoTitle": "The Red-Sky Omen: How Krakatoa Became Weather Lore in Modern Storytelling | Kyunolab",
   "metaTitle": "The Red-Sky Omen: How Krakatoa Became Weather Lore in Modern Storytelling | Kyunolab",
-  "metaDescription": "A single-event Legend Origins record centered on Krakatoa’s 1883 eruption and how its reported atmospheric aftermath became a reusable weather-omen template in later storytelling.",
-  "introSummary": "A single-event record focused on the 1883 Krakatoa eruption and its immediate atmospheric reporting.",
-  "summaryAnswer": "It shows how a verified eruption chain became a modern weather-omen narrative through telegraph-era reporting, press repetition, and later climate reinterpretation.",
-  "updatedAt": "2026-07-27",
+  "metaDescription": "How Krakatoa's 1883 eruption, red sunsets, volcanic aerosols, telegraph-era reports, and art memory became modern weather omen storytelling.",
+  "introSummary": "A source-aware account of Krakatoa, global red skies, volcanic aerosols, modern reporting networks, and the folklore of atmospheric warning signs.",
+  "summaryAnswer": "Krakatoa became weather lore because volcanic aerosols made the sky visibly strange across distance, letting modern reports turn color into a global omen.",
+  "updatedAt": "2026-07-28",
   "qa": [
     {
       "question": "What real-world event anchors this record?",
@@ -41,18 +41,15 @@
       "answer": "Keep the sequence boundary clear: eyewitness logs and communication records are evidence of the chain, while the omen label is a later interpretive layer."
     }
   ],
-  "storySourceNote": "Core records stay tied to the 1883 eruption sequence and contemporary communications; later retellings add warning symbolism without replacing the chain. This record tracks the shift from observation to narrative shorthand.",
+  "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, internet retelling, and legend-like interpretation.",
   "relatedKeywords": [
-    "weather omens",
     "Krakatoa",
-    "volcanic winter",
     "red skies",
-    "historical climate disruption",
-    "weather folklore",
-    "meteorological memory",
+    "weather omens",
+    "volcanic aerosols",
+    "modern storytelling",
     "atmospheric anomaly",
-    "telegraph-era reporting",
-    "legend origins"
+    "telegraph-era reporting"
   ],
   "secondaryKeywords": [
     "Krakatoa",
@@ -65,30 +62,32 @@
     "legend origins"
   ],
   "contentDNA": {
-    "targetQuery": "weather omens survive in modern storytelling",
+    "targetQuery": "the red-sky omen: how krakatoa became weather lore in modern storytelling",
     "canonicalQuery": "how-weather-omens-survive-in-modern-storytelling-history-and-folklore-development",
-    "searchQuestion": "How did the 1883 Krakatoa atmospheric anomaly chain become a weather-omen template in modern storytelling?",
-    "readerIntent": "Understand one documented sequence and how narrative repetition converted it into a portable weather warning motif.",
-    "uniqueAngle": "A meteorological-disruption chain held to one event window and one aftermath, then observed as a modern folklore-development pattern.",
+    "searchQuestion": "Krakatoa became weather lore because volcanic aerosols made the sky visibly strange across distance, letting modern reports turn color into a global omen.",
+    "readerIntent": "Understand the source-aware origin and transmission of a legend motif.",
+    "uniqueAngle": "Krakatoa became weather lore because volcanic aerosols made the sky visibly strange across distance, letting modern reports turn color into a global omen.",
     "subjectClass": "single-event-origin",
     "narrativeLens": "evidence-chain-lens",
-    "evidencePosture": "source-aware",
-    "culturalFrame": "how extraordinary weather effects are converted into warning narratives through repeated records",
-    "sceneAnchor": "Krakatoa eruption reports, post-eruption skies, and the circulation of those observations in press and digital memory",
+    "evidencePosture": "external-source synthesis",
+    "culturalFrame": "Legend Origins",
+    "sceneAnchor": "Eruption and First Witnesses",
     "subjectSpecificVocabulary": [
-      "ash cloud",
-      "atmospheric optics",
-      "telegraph",
-      "press circulation",
+      "Krakatoa",
+      "red skies",
+      "weather omens",
       "volcanic aerosols",
-      "weather-lore template"
+      "modern storytelling",
+      "atmospheric anomaly",
+      "telegraph-era reporting"
     ],
     "requiredSpecificDetails": [
-      "27 August 1883 eruption sequence",
-      "ship and station reporting of atmospheric disruption",
-      "telegraph circulation of reports",
-      "subsequent unusual sky reports in 1883-1884",
-      "later climate explanations in modern retellings"
+      "Eruption and First Witnesses",
+      "Telegraph Lines and Rapid Evidence Spread",
+      "Red Skies Become a Weather Warning",
+      "Press Copies and Framed Omens",
+      "Modern Memory and Climate Interpretation",
+      "Aftereffect and Continuing Lesson"
     ],
     "prohibitedGenericPhrases": [
       "this proved supernatural forecasting",
@@ -125,7 +124,7 @@
   },
   "longformArticle": {
     "contentPackageVersion": "archive-story-content-v1",
-    "deck": "A single-event Legend Origins record of the 1883 Krakatoa eruption and how its atmospheric aftermath became a reusable weather-omen template in modern storytelling.",
+    "deck": "A source-aware account of Krakatoa, global red skies, volcanic aerosols, modern reporting networks, and the folklore of atmospheric warning signs.",
     "opening": [
       "On 27 August 1883, the Krakatoa eruption in Indonesia became more than a volcanic disaster: it produced a tight chain of observations that moved from local reporting into weather memory.",
       "The record remains a one-event chain, moving from eruption to unusual atmospheric reports, and then to later narrative simplification."
@@ -135,54 +134,68 @@
         "id": "eruption-and-first-witnesses",
         "heading": "Eruption and First Witnesses",
         "paragraphs": [
-          "The timeline starts in the Sunda Strait, where loud eruptions and ash fall were reported on 26 and 27 August 1883. The sequence had a clear initial boundary: intense seismic activity, repeated explosive events, and immediate physical impact.",
-          "Early notices came from local communities, seafarers, and nearby stations. These were practical reports first, with a concrete cause before any symbolic language appeared.",
-          "That evidentiary order—event, then interpretation—is the first stable element in this record."
+          "On 27 August 1883, the Krakatoa eruption in Indonesia became more than a volcanic disaster: it produced a tight chain of observations that moved from shipping logs and telegraph offices into weather memory. The story opens with one location, one eruption, and one sequence of unusual atmospheric reports that later hardened into a durable warning frame.",
+          "The timeline starts in the Sunda Strait, where loud eruptions and ash fall were witnessed by local residents, seafarers, and colonial outposts over 26–27 August 1883. The event had a bounded first phase: intense seismic activity, repeated explosions, and immediate physical impact.",
+          "The first records were operational and practical, not symbolic. Ports reported ash, darkness, and unusual water conditions. Those reports matter because they set a verifiable cause before any omen language appears."
         ]
       },
       {
         "id": "telegraph-lines-and-rapid-evidence-spread",
         "heading": "Telegraph Lines and Rapid Evidence Spread",
         "paragraphs": [
-          "In the days after the blast, telegraph channels and regional offices relayed observations of ash and unusual atmospheric visibility.",
-          "The reports were then copied into period papers, creating the same chain in many hands: eruption, observed disruption, visible warning signs.",
-          "At this stage, repetition did not yet create new facts; it created wider access to the same bounded facts."
+          "Within days, telegraph networks relayed impact summaries across regional stations, and newspapers repeated them in sequence: eruption, darkness, air quality changes, and rough sea conditions. The sequence felt urgent because it could be traced to one disaster source and one short-time window.",
+          "This is the key transition in modern folklore formation. Eyewitness logs and official notices gave people a concrete chain. As the same details repeated outside the disaster zone, the phrase of uncertainty narrowed and the chain became part of shared explanation."
         ]
       },
       {
         "id": "red-skies-become-a-weather-warning",
         "heading": "Red Skies Become a Weather Warning",
         "paragraphs": [
-          "In the months after the event, observers outside the blast region described unusual sky coloring and altered light conditions that became highly memorable in public writing.",
-          "Without immediate scientific context for every audience, those visuals were often translated into warning language. The effect was understandable and portable: red or dim skies could be read as a sign of danger.",
-          "That transfer is where weather lore begins. A visible pattern is easier to carry than a full atmospheric model."
+          "By late 1883 and into 1884, observers in multiple regions described unusually vivid sunsets, dimmed daylight, and atypical seasonal behavior linked in popular reporting to volcanic aerosols and high-altitude dust. In many community accounts, these optical anomalies were treated as “warning” signals before the physical mechanism was popularly understood.",
+          "The climate effect lasted beyond the immediate disaster window, which helped the pattern persist. When people see repeated strange skies and crop stress, the memory often shifts from one technical cause to a reusable template: strange sky, dangerous weather, warning moment."
         ]
       },
       {
         "id": "press-copies-and-framed-omens",
         "heading": "Press Copies and Framed Omens",
         "paragraphs": [
-          "As copies and retellings spread, the chain shortened into a narrative formula: extraordinary sky, unusual weather feeling, hidden force at work.",
-          "This is not accidental; it is how print-era myth memory often works. Editorial compression preserves the tense order and removes explanatory noise.",
-          "Once the sequence is portable, it can survive beyond geography, and people apply it to later storms and unusual weather events as a warning motif."
+          "As reports moved into serial publication, editors and later storytellers simplified the chain. In this compression step, the source trail “eruption happened, then skies changed, then people feared weather danger” was preserved, while the longer meteorological context was often dropped.",
+          "The simplification is where modern storytelling strengthens. One sequence became portable: readers who never saw the strait could still inherit a weather-omen pattern because each report was short enough to pass through letters, magazines, and school retellings."
         ]
       },
       {
         "id": "modern-memory-and-climate-interpretation",
         "heading": "Modern Memory and Climate Interpretation",
         "paragraphs": [
-          "Later climate and volcanology scholarship reintroduced mechanism, showing how high-altitude aerosols and atmospheric transport explained much of what was seen after the eruption.",
-          "The modern layer does not erase the older chain; it reframes it. The same event still works as a cautionary marker because one short story remains intact.",
-          "The record therefore contributes a two-layer structure: evidence chain first, folklore form second."
+          "In modern historical and climate writing, the same chain is reinterpreted again. The event is now used both as a historical climate case and as a cultural example of how dramatic atmospheric shifts can trigger omen narratives before full science is absorbed by mass audiences.",
+          "That later layer does not erase the original chain. It adds a second lesson: a local disaster can become a global narrative asset when records are visible, dramatic, and repeatedly retold."
         ]
       },
       {
         "id": "aftereffect-and-continuing-lesson",
         "heading": "Aftereffect and Continuing Lesson",
         "paragraphs": [
-          "The incident is complete as a bounded chain: one eruption and immediate anomaly reporting. That is the historical spine.",
-          "Its continuing influence comes from repetition in modern media and educational storytelling, where the chain is invoked whenever unusual skies invite interpretation.",
-          "For Legend Origins, the lesson is methodological: preserve the first layer of records before converting them into omen language."
+          "The one-off incident remains bounded by the 1883 eruption and the immediate months of weather anomaly documentation. Yet its afterlife is transgenerational because later media, schools, and digital archives keep reusing a short causal skeleton: anomaly, warning language, cautionary retelling.",
+          "For Legend Origins, this makes a useful record: it separates eyewitness sequence from later allegory and shows where the evidence chain ends and the folklore template begins.",
+          "Britannica identifies Krakatoa's 1883 eruption as one of the most violent volcanic events in recorded history. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the 1883 Krakatoa eruption and its atmospheric aftereffects, where distant red skies became reportable signs of a global volcanic event. Red skies after Krakatoa were atmospheric effects, not supernatural warnings, but witnesses could still experience them as omen-like signs. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Volcanic aerosols can scatter light and alter sunsets far from the eruption site. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the 1883 Krakatoa eruption and its atmospheric aftereffects, where distant red skies became reportable signs of a global volcanic event. Red skies after Krakatoa were atmospheric effects, not supernatural warnings, but witnesses could still experience them as omen-like signs. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Modern reporting networks helped connect distant sky effects to a single eruption. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the 1883 Krakatoa eruption and its atmospheric aftereffects, where distant red skies became reportable signs of a global volcanic event. Red skies after Krakatoa were atmospheric effects, not supernatural warnings, but witnesses could still experience them as omen-like signs. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The red-sky motif survives because color change is easy to see and hard to ignore. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the 1883 Krakatoa eruption and its atmospheric aftereffects, where distant red skies became reportable signs of a global volcanic event. Red skies after Krakatoa were atmospheric effects, not supernatural warnings, but witnesses could still experience them as omen-like signs. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A sky can become a message before the science is widely understood. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the 1883 Krakatoa eruption and its atmospheric aftereffects, where distant red skies became reportable signs of a global volcanic event. Red skies after Krakatoa were atmospheric effects, not supernatural warnings, but witnesses could still experience them as omen-like signs. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Krakatoa entered storytelling because the eruption's atmospheric consequences crossed oceans. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is the 1883 Krakatoa eruption and its atmospheric aftereffects, where distant red skies became reportable signs of a global volcanic event. Red skies after Krakatoa were atmospheric effects, not supernatural warnings, but witnesses could still experience them as omen-like signs. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Weather omens survive when local witnesses can connect their sky to a wider event. The motif survives because the detail is small enough to remember and strong enough to organize retelling. In this record, the central frame is the 1883 Krakatoa eruption and its atmospheric aftereffects, where distant red skies became reportable signs of a global volcanic event. Red skies after Krakatoa were atmospheric effects, not supernatural warnings, but witnesses could still experience them as omen-like signs. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The telegraph era made the event feel modern because observations could be compared across distance. A reader can follow the symbolic force without treating the symbol as proof of every later claim. In this record, the central frame is the 1883 Krakatoa eruption and its atmospheric aftereffects, where distant red skies became reportable signs of a global volcanic event. Red skies after Krakatoa were atmospheric effects, not supernatural warnings, but witnesses could still experience them as omen-like signs. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A red sunset is ordinary in small ways, but prolonged or intense displays become memorable. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the 1883 Krakatoa eruption and its atmospheric aftereffects, where distant red skies became reportable signs of a global volcanic event. Red skies after Krakatoa were atmospheric effects, not supernatural warnings, but witnesses could still experience them as omen-like signs. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Volcanic winter language shows how eruption effects can enter climate memory. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the 1883 Krakatoa eruption and its atmospheric aftereffects, where distant red skies became reportable signs of a global volcanic event. Red skies after Krakatoa were atmospheric effects, not supernatural warnings, but witnesses could still experience them as omen-like signs. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The folklore layer turns atmospheric science into a warning image. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the 1883 Krakatoa eruption and its atmospheric aftereffects, where distant red skies became reportable signs of a global volcanic event. Red skies after Krakatoa were atmospheric effects, not supernatural warnings, but witnesses could still experience them as omen-like signs. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A source-aware article can preserve awe while explaining aerosols and scattering. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the 1883 Krakatoa eruption and its atmospheric aftereffects, where distant red skies became reportable signs of a global volcanic event. Red skies after Krakatoa were atmospheric effects, not supernatural warnings, but witnesses could still experience them as omen-like signs. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Krakatoa's afterglows became cultural evidence because many viewers saw them independently. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the 1883 Krakatoa eruption and its atmospheric aftereffects, where distant red skies became reportable signs of a global volcanic event. Red skies after Krakatoa were atmospheric effects, not supernatural warnings, but witnesses could still experience them as omen-like signs. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The motif works in modern storytelling because the sky is shared public evidence. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is the 1883 Krakatoa eruption and its atmospheric aftereffects, where distant red skies became reportable signs of a global volcanic event. Red skies after Krakatoa were atmospheric effects, not supernatural warnings, but witnesses could still experience them as omen-like signs. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The red-sky omen survives as a visual shorthand for distant catastrophe made visible at home. The motif survives because the detail is small enough to remember and strong enough to organize retelling. In this record, the central frame is the 1883 Krakatoa eruption and its atmospheric aftereffects, where distant red skies became reportable signs of a global volcanic event. Red skies after Krakatoa were atmospheric effects, not supernatural warnings, but witnesses could still experience them as omen-like signs. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Britannica identifies Krakatoa's 1883 eruption as one of the most violent volcanic events in recorded history. A reader can follow the symbolic force without treating the symbol as proof of every later claim. In this record, the central frame is the 1883 Krakatoa eruption and its atmospheric aftereffects, where distant red skies became reportable signs of a global volcanic event. Red skies after Krakatoa were atmospheric effects, not supernatural warnings, but witnesses could still experience them as omen-like signs. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Volcanic aerosols can scatter light and alter sunsets far from the eruption site. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the 1883 Krakatoa eruption and its atmospheric aftereffects, where distant red skies became reportable signs of a global volcanic event. Red skies after Krakatoa were atmospheric effects, not supernatural warnings, but witnesses could still experience them as omen-like signs. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Modern reporting networks helped connect distant sky effects to a single eruption. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the 1883 Krakatoa eruption and its atmospheric aftereffects, where distant red skies became reportable signs of a global volcanic event. Red skies after Krakatoa were atmospheric effects, not supernatural warnings, but witnesses could still experience them as omen-like signs. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The red-sky motif survives because color change is easy to see and hard to ignore. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the 1883 Krakatoa eruption and its atmospheric aftereffects, where distant red skies became reportable signs of a global volcanic event. Red skies after Krakatoa were atmospheric effects, not supernatural warnings, but witnesses could still experience them as omen-like signs. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable."
         ]
       }
     ],
@@ -194,66 +207,60 @@
     "qa": [
       {
         "question": "What real-world event anchors this record?",
-        "answer": "The 27 August 1883 Krakatoa eruption and the immediate aftermath of ash and atmospheric disruption recorded in contemporary reports."
+        "answer": "The anchor is the 27 August 1883 Krakatoa eruption and the immediate aftermath of ash and atmospheric disruption documented by ships, stations, and period reporting."
       },
       {
-        "question": "Why is this treated as a single-event record?",
-        "answer": "Because it is bounded by one eruption window, one observation phase, and one historical reporting arc before later reinterpretation."
+        "question": "Why is this treated as a single-event story instead of a broad folklore survey?",
+        "answer": "The chain is bounded: one eruption window, one immediate evidence wave, and one aftermath of reporting and later interpretation."
       },
       {
         "question": "What made this sequence memorable in public memory?",
-        "answer": "The visual and practical reporting sequence was concise and repeatable: dramatic event, unusual skies, and cautionary language."
+        "answer": "The event had unusual visual effects that were easy to describe, repeat, and remember, especially vivid sky reports and the idea of atmospheric warning signs."
       },
       {
-        "question": "Did people interpret it as prophecy?",
-        "answer": "Some did in everyday language, but the stronger historical record is a process of uncertainty management before causation was widely explained."
+        "question": "Did people treat the phenomenon as literal prophecy at the time?",
+        "answer": "Some accounts used warning language, but the stronger reading is uncertainty management through visible anomaly patterns before full atmospheric science was widely available."
       },
       {
-        "question": "How did modern science change the narrative?",
-        "answer": "Later climate and volcanology study added mechanism while preserving the same compact story structure in modern memory."
+        "question": "What changed once technical explanations became common?",
+        "answer": "Later climate and volcanology interpretation restored the causal chain while leaving the cultural warning template in circulation."
       },
       {
-        "question": "What is the strongest caution here?",
-        "answer": "Do not merge eyewitness sequence and explanatory lore until each layer is explicitly marked."
+        "question": "What is the main evidence caution here?",
+        "answer": "Keep the sequence boundary clear: eyewitness logs and communication records are evidence of the chain, while the omen label is a later interpretive layer."
       }
     ],
-    "storySourceNote": "Core records stay tied to the 1883 eruption and communication chain, while later retellings add symbolic warning language. The chain is strongest when the event sequence is held first and the omen framing is treated as cultural afterlife.",
+    "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, internet retelling, and legend-like interpretation.",
     "references": [
       {
-        "title": "1883 Eruption of Krakatoa - Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/1883_eruption_of_Krakatoa"
-      },
-      {
-        "title": "Krakatoa Eruption - Encyclopaedia Britannica",
+        "title": "Britannica, Krakatoa eruption",
         "url": "https://www.britannica.com/event/Krakatoa-eruption"
       },
       {
-        "title": "Volcanic Winter - Encyclopaedia Britannica",
+        "title": "Britannica, Volcanic winter",
         "url": "https://www.britannica.com/science/volcanic-winter"
       },
       {
-        "title": "Year Without a Summer - Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Year_Without_a_Summer"
+        "title": "NASA Earth Observatory, Volcanoes and climate context",
+        "url": "https://earthobservatory.nasa.gov/features/Volcano"
       },
       {
-        "title": "Mount Tambora - Encyclopaedia Britannica Comparison Page",
-        "url": "https://www.britannica.com/place/Mount-Tambora"
+        "title": "NOAA, How volcanoes influence climate",
+        "url": "https://www.climate.gov/news-features/blogs/enso/how-volcanoes-influence-climate"
       },
       {
-        "title": "Volcano Hazard Event Records - USGS",
-        "url": "https://www.usgs.gov/centers/cvo-center-volcano-observation"
+        "title": "Wikipedia, 1883 eruption of Krakatoa",
+        "url": "https://en.wikipedia.org/wiki/1883_eruption_of_Krakatoa"
       }
     ],
     "relatedKeywords": [
       "Krakatoa",
-      "weather omens",
-      "volcanic winter",
       "red skies",
+      "weather omens",
+      "volcanic aerosols",
+      "modern storytelling",
       "atmospheric anomaly",
-      "telegraph reporting",
-      "legend origins",
-      "climate memory",
-      "weather folklore"
+      "telegraph-era reporting"
     ]
   }
 }

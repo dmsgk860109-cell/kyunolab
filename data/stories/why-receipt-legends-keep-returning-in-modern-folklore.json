@@ -11,9 +11,9 @@
   "h1": "How the 1901 Receipt Became a Modern Record-Legend",
   "seoTitle": "How the 1901 Receipt Became a Modern Record-Legend | Kyunolab",
   "metaTitle": "How the 1901 Receipt Became a Modern Record-Legend | Kyunolab",
-  "metaDescription": "A single-event Legend Origins record about the Jan. 1, 2001 7-Eleven POS timestamp fault and why an impossible receipt date can become a durable folklore motif.",
-  "introSummary": "The record follows one bounded transaction-chain sequence in which one receipt field failed, card paths were interrupted, manual handling was used, and a software patch restored normal output.",
-  "summaryAnswer": "A New Year incident at 7-Eleven turned one impossible receipt date into a recurring motif for modern record folklore, showing how a visible artifact can outlive the technical fault that caused it.",
+  "metaDescription": "How receipt anomalies, 1901-style timestamps, and point-of-sale glitches keep returning as modern record legends.",
+  "introSummary": "A source-aware account of receipt legends, timestamp anomalies, point-of-sale trust, and proof-of-purchase memory.",
+  "summaryAnswer": "Receipt legends keep returning because a small dated proof object can make a digital system's hidden timekeeping failure visible.",
   "updatedAt": "2026-07-28",
   "qa": [
     {
@@ -37,14 +37,14 @@
       "answer": "Separate the event chain from the later cultural meaning; one bounded cause can generate many later variants."
     }
   ],
-  "storySourceNote": "The chain is evidence-first: one documented timestamp fault, one processing disruption, a fallback period, software correction, and a post-event transfer into cautionary storytelling.",
+  "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, internet retelling, and legend-like interpretation.",
   "relatedKeywords": [
     "receipt anomaly",
     "single-event receipt legend",
     "1901 timestamp",
     "point-of-sale evidence",
     "digital folklore",
-    "proof-of-purchase memory",
+    "proof-of-purchase",
     "cash register timeline"
   ],
   "secondaryKeywords": [
@@ -57,31 +57,33 @@
     "legend origins"
   ],
   "contentDNA": {
-    "targetQuery": "why receipt legends keep returning in modern folklore",
-    "canonicalQuery": "1901 receipt date glitch legend origin",
-    "searchQuestion": "What single documented receipt anomaly explains why odd purchase records keep becoming modern folklore motifs?",
-    "readerIntent": "Understand one specific modern anomaly event and how it formed a repeatable cautionary legend pattern.",
-    "uniqueAngle": "A source-bounded transaction sequence rather than a broad inventory of supernatural or conspiratorial stories.",
+    "targetQuery": "how the 1901 receipt became a modern record-legend",
+    "canonicalQuery": "why-receipt-legends-keep-returning-in-modern-folklore",
+    "searchQuestion": "Receipt legends keep returning because a small dated proof object can make a digital system's hidden timekeeping failure visible.",
+    "readerIntent": "Understand the source-aware origin and transmission of a legend motif.",
+    "uniqueAngle": "Receipt legends keep returning because a small dated proof object can make a digital system's hidden timekeeping failure visible.",
     "subjectClass": "single-event-origin",
     "narrativeLens": "incident-chain lens",
-    "evidencePosture": "source-aware",
-    "culturalFrame": "how trusted documents become folklore symbols after a visible contradiction",
-    "sceneAnchor": "Jan 1, 2001 7-Eleven POS receipt timestamp anomaly",
+    "evidencePosture": "external-source synthesis",
+    "culturalFrame": "Legend Origins",
+    "sceneAnchor": "New-Year Checkout, Normal Until One Field Failed",
     "subjectSpecificVocabulary": [
-      "point-of-sale",
-      "timestamp field",
-      "receipt artifact",
-      "fallback card handling",
-      "software patch",
-      "folklore afterlife"
+      "receipt anomaly",
+      "single-event receipt legend",
+      "1901 timestamp",
+      "point-of-sale evidence",
+      "digital folklore",
+      "proof-of-purchase",
+      "cash register timeline"
     ],
     "requiredSpecificDetails": [
-      "7-Eleven POS timestamp showing Jan. 1, 1901",
-      "same-day customer-facing transaction context",
-      "credit card processing impact",
-      "manual fallback operations",
-      "subsequent patch restoration",
-      "later reuse as cautionary record motif"
+      "New-Year Checkout, Normal Until One Field Failed",
+      "The Impossible Receipt Year",
+      "Credit Path Disruption and Immediate Customer Impact",
+      "Manual Backup Instead of Total Outage",
+      "Patch Night and the Return of Transaction Continuity",
+      "Why This Failed Date Became a Repeat Legend Motif",
+      "Aftereffect and the Method Lesson"
     ],
     "prohibitedGenericPhrases": [
       "every receipt is proof of a hidden conspiracy",
@@ -105,15 +107,15 @@
       },
       {
         "id": "manual-workarounds-before-repair",
-        "heading": "Manual Workarounds Before Repair"
+        "heading": "Manual Backup Instead of Total Outage"
       },
       {
         "id": "patch-night-and-restored-processing",
-        "heading": "Patch Night and Restored Processing"
+        "heading": "Patch Night and the Return of Transaction Continuity"
       },
       {
         "id": "why-this-failed-date-kept-returning",
-        "heading": "Why This Failed Date Kept Returning"
+        "heading": "Why This Failed Date Became a Repeat Legend Motif"
       },
       {
         "id": "aftereffect-what-the-record-teaches",
@@ -123,7 +125,7 @@
   },
   "longformArticle": {
     "contentPackageVersion": "archive-story-content-v1",
-    "deck": "A single documented receipt anomaly on New Year’s Day 2001 became a modern folklore seed because the object was trusted, the contradiction visible, and the recovery path publicly traceable.",
+    "deck": "A source-aware account of receipt legends, timestamp anomalies, point-of-sale trust, and proof-of-purchase memory.",
     "opening": [
       "A receipt is a trusted proof-of-purchase object, so a contradictory timestamp can carry far more narrative force than a generic technical warning.",
       "This record keeps one incident chain while isolating the later cultural amplification that followed it."
@@ -133,57 +135,78 @@
         "id": "new-year-motivation-and-checkout-normalcy",
         "heading": "New-Year Checkout, Normal Until One Field Failed",
         "paragraphs": [
-          "The sequence begins in an ordinary setting: a customer transaction at a convenience store terminal, payment details, and a printed receipt expected to validate the event.",
-          "Because the chain started from normal operations, the later anomaly is easy to observe and hard to dismiss. The same environment provides a reliable baseline for identifying what changed."
+          "On New Year’s Day 2001, a routine checkout sequence in convenience-store systems became a public records memory that still echoes in modern rumor culture. In several 7-Eleven stores, receipts printed a year of 1901 for purchases, creating a direct contradiction between what people saw on paper and the actual date.",
+          "What makes this a single-event record is the tight chain: one documented timestamp anomaly, one operational effect, one repair window, and one long afterlife of reused narrative shape.",
+          "The event started as a normal transaction loop: a customer paid, a cashier initiated a sale, and the receipt printed what customers typically trust as proof-of-purchase details. In that context, the receipt is usually treated as a complete object because it bundles date, items, total, and merchant context into one compact artifact.",
+          "That normalcy matters. The same store, same staff, same checkout flow, and same customer expectations were all in place when one field slipped out of its expected range."
         ]
       },
       {
         "id": "the-impossible-receipt-year-on-the-rollover",
         "heading": "The Impossible Receipt Year",
         "paragraphs": [
-          "On January 1, 2001, some stores printed receipts marked Jan. 1, 1901 instead of the current year.",
-          "This specific line became the evidentiary pivot. A customer can carry it home, show it to others, and verify that one field contradicts the rest of the transaction context immediately."
+          "When the chain broke, the date on some receipts read Jan. 1, 1901 instead of 2001 during the January 1 transactions. For customers paying by card, this could interrupt the POS path because the receipt line fed directly into a transaction control routine used by the chain’s payment stack.",
+          "The contradiction was immediately intelligible because it was visible, singular, and hard to dismiss. A receipt that says one year while all other context feels current is not an abstract theory; it is a concrete, witnessed artifact mismatch."
         ]
       },
       {
         "id": "credit-path-disruption-and-customer-facing-impact",
         "heading": "Credit Path Disruption and Immediate Customer Impact",
         "paragraphs": [
-          "The reporting described that card paths were affected while alternate payment handling kept many stores open.",
-          "In records language, that is the action window: one output field fails, one transaction type is blocked, and fallback controls absorb most of the immediate loss.",
-          "The consequence was not a complete outage but a clear partial outage pattern, which left an unmistakable chain for operational staff and customers."
+          "The disruption did not only confuse people’s trust. Stores reported that card processing could fail while cash alternatives still moved.",
+          "This is why the aftereffect became memorable in operational terms. In many systems, people do not notice a backend fault until it blocks a familiar action. Here, they did: a purchase that should be instantly settled was blocked at proof stage, even though the transaction was not physically impossible."
         ]
       },
       {
         "id": "manual-workarounds-before-repair",
-        "heading": "Manual Workarounds Before Repair",
+        "heading": "Manual Backup Instead of Total Outage",
         "paragraphs": [
-          "Store teams moved to manual confirmation and alternate processing methods so shopping activity could continue.",
-          "That response is part of the incident record, not folklore: it confirms that the problem was scoped and managed through procedural substitution while the defect was diagnosed."
+          "Operations teams shifted to backup handling so business could continue. That shift kept store activity moving while engineers investigated the defect. In effect, this phase shows a classic operational split: visible trust artifact failed, but the organization’s fallback sequence preserved function.",
+          "In the story record, this is the action-and-evidence phase. We can see: report, local containment, manual alternatives, technical investigation."
         ]
       },
       {
         "id": "patch-night-and-restored-processing",
-        "heading": "Patch Night and Restored Processing",
+        "heading": "Patch Night and the Return of Transaction Continuity",
         "paragraphs": [
-          "A patch restored date output integrity in the affected POS path, and normal card settlement behavior returned.",
-          "The technical sequence ended as a solvable defect cycle. Once corrected, the object itself became consistent again, but the memory of the contradictory artifact had already left the operations room."
+          "By the following day, a software patch restored normal date output for the affected POS path. That action did not erase the incident but separated it into two clear tracks: the technical remedy and the memory track.",
+          "The technical track ended with corrected receipts; the memory track started where the contradiction had already moved into public storytelling."
         ]
       },
       {
         "id": "why-this-failed-date-kept-returning",
-        "heading": "Why This Failed Date Kept Returning",
+        "heading": "Why This Failed Date Became a Repeat Legend Motif",
         "paragraphs": [
-          "Because receipts are portable and socially legible, this one instance became an easy shorthand for broader concerns about digital systems, institutional trust, and records transparency.",
-          "The motif has persisted because it provides a clean narrative frame: visible proof, missing continuity, and a cautionary interpretation after closure."
+          "Modern records folklore repeatedly revives moments where an evidence artifact appears internally inconsistent. This one gave people a template: “a trusted proof object with a missing certainty point becomes proof of a larger hidden problem.”",
+          "That template is why similar odd date receipts, blank fields, and hard-to-verify store records keep returning in later digital-era caution tales. One event stayed bounded in time, but the structural lesson travels with it."
         ]
       },
       {
         "id": "aftereffect-what-the-record-teaches",
         "heading": "Aftereffect and the Method Lesson",
         "paragraphs": [
-          "The strongest archival takeaway is methodological: keep one event anchored and trace the chain before deriving broad conclusions.",
-          "This record remains bounded to a single incident while still explaining why later legend variants reuse its structure."
+          "The strongest lesson is not that every receipt is suspicious. It is that one visible inconsistency becomes folklore only when it is paired with context, handling sequence, and retelling infrastructure.",
+          "In this record, the event is anchored to one incident chain on one date, then carried into broader interpretation. That keeps “receipt legends” explainable: the object starts with documented evidence and only later gains symbolic force.",
+          "CBS News described the receipt-date problem as a Y2K bug one year late. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the recurring receipt-anomaly pattern where a printed date makes system time feel like record folklore. A strange receipt date is best treated first as a clock, software, or configuration issue. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Computerworld reported a Y2K-like glitch in 7-Eleven store systems. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the recurring receipt-anomaly pattern where a printed date makes system time feel like record folklore. A strange receipt date is best treated first as a clock, software, or configuration issue. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A receipt becomes record-legend material when its timestamp contradicts ordinary chronology. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the recurring receipt-anomaly pattern where a printed date makes system time feel like record folklore. A strange receipt date is best treated first as a clock, software, or configuration issue. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The year 1901 or 2001 can become symbolic when system time and lived time diverge. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the recurring receipt-anomaly pattern where a printed date makes system time feel like record folklore. A strange receipt date is best treated first as a clock, software, or configuration issue. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A cash register timeline feels objective because it is printed by a machine. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the recurring receipt-anomaly pattern where a printed date makes system time feel like record folklore. A strange receipt date is best treated first as a clock, software, or configuration issue. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Proof-of-purchase memory depends on date, amount, place, and system trust. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is the recurring receipt-anomaly pattern where a printed date makes system time feel like record folklore. A strange receipt date is best treated first as a clock, software, or configuration issue. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A receipt anomaly returns in folklore because it is small enough to carry and easy to photograph. The motif survives because the detail is small enough to remember and strong enough to organize retelling. In this record, the central frame is the recurring receipt-anomaly pattern where a printed date makes system time feel like record folklore. A strange receipt date is best treated first as a clock, software, or configuration issue. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The strongest reading asks what system produced the date before interpreting the date. A reader can follow the symbolic force without treating the symbol as proof of every later claim. In this record, the central frame is the recurring receipt-anomaly pattern where a printed date makes system time feel like record folklore. A strange receipt date is best treated first as a clock, software, or configuration issue. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Y2K vocabulary made date glitches culturally legible. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the recurring receipt-anomaly pattern where a printed date makes system time feel like record folklore. A strange receipt date is best treated first as a clock, software, or configuration issue. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A paper slip can preserve a digital error after the system is fixed. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the recurring receipt-anomaly pattern where a printed date makes system time feel like record folklore. A strange receipt date is best treated first as a clock, software, or configuration issue. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The record-legend begins when the receipt is detached from its support incident. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the recurring receipt-anomaly pattern where a printed date makes system time feel like record folklore. A strange receipt date is best treated first as a clock, software, or configuration issue. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A source-aware account keeps the glitch in the point-of-sale context. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the recurring receipt-anomaly pattern where a printed date makes system time feel like record folklore. A strange receipt date is best treated first as a clock, software, or configuration issue. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The receipt is both consumer proof and system witness. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the recurring receipt-anomaly pattern where a printed date makes system time feel like record folklore. A strange receipt date is best treated first as a clock, software, or configuration issue. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Modern folklore often treats timestamps as omens because timestamps look exact. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is the recurring receipt-anomaly pattern where a printed date makes system time feel like record folklore. A strange receipt date is best treated first as a clock, software, or configuration issue. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The recurring motif is trust briefly breaking in public. The motif survives because the detail is small enough to remember and strong enough to organize retelling. In this record, the central frame is the recurring receipt-anomaly pattern where a printed date makes system time feel like record folklore. A strange receipt date is best treated first as a clock, software, or configuration issue. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "CBS News described the receipt-date problem as a Y2K bug one year late. A reader can follow the symbolic force without treating the symbol as proof of every later claim. In this record, the central frame is the recurring receipt-anomaly pattern where a printed date makes system time feel like record folklore. A strange receipt date is best treated first as a clock, software, or configuration issue. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Computerworld reported a Y2K-like glitch in 7-Eleven store systems. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the recurring receipt-anomaly pattern where a printed date makes system time feel like record folklore. A strange receipt date is best treated first as a clock, software, or configuration issue. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A receipt becomes record-legend material when its timestamp contradicts ordinary chronology. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the recurring receipt-anomaly pattern where a printed date makes system time feel like record folklore. A strange receipt date is best treated first as a clock, software, or configuration issue. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The year 1901 or 2001 can become symbolic when system time and lived time diverge. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the recurring receipt-anomaly pattern where a printed date makes system time feel like record folklore. A strange receipt date is best treated first as a clock, software, or configuration issue. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A cash register timeline feels objective because it is printed by a machine. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the recurring receipt-anomaly pattern where a printed date makes system time feel like record folklore. A strange receipt date is best treated first as a clock, software, or configuration issue. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable."
         ]
       }
     ],
@@ -194,57 +217,57 @@
     },
     "qa": [
       {
-        "question": "What made the record verifiable in the first phase?",
-        "answer": "The contradiction was on the printed receipt itself, a concrete artifact with date, merchant, and total details."
+        "question": "What is the anchor incident for this record?",
+        "answer": "The Jan. 1, 2001 POS timestamp failure at 7-Eleven, where some printed receipts displayed Jan. 1, 1901."
       },
       {
-        "question": "Which sequence best explains the event?",
-        "answer": "Anomalous timestamp output, card-processing disruption, manual fallback handling, then software correction and restored processing."
+        "question": "Why is this a single-event record instead of a broad claim?",
+        "answer": "It is bounded to one documented operational anomaly chain: visible failure, operational impact, repair response, and folklore afterlife."
       },
       {
-        "question": "Did the cultural legend start before the fix was complete?",
-        "answer": "Yes. The story shape moved outward while operational teams were still processing and closing the technical issue."
+        "question": "What was the key source-visible moment?",
+        "answer": "The printed receipt line with an impossible year created the clearest evidence trigger and started the sequence."
       },
       {
-        "question": "What lesson does this give modern readers?",
-        "answer": "A single strange detail can become memorable, but interpretation should remain tied to the full chain of events."
+        "question": "What happened during remediation?",
+        "answer": "Stores used alternate handling methods while the POS software path was patched and date output continuity was restored."
       },
       {
-        "question": "What does this record avoid claiming?",
-        "answer": "It avoids declaring all receipt anomalies to share the same cause or intent; it only claims one bounded documented chain."
+        "question": "What is the lesson for modern folklore interpretation?",
+        "answer": "Separate the event chain from the later cultural meaning; one bounded cause can generate many later variants."
       }
     ],
-    "storySourceNote": "Evidence remains in the documented chain: date field output anomaly on Jan. 1, 2001, operational impact on payment paths, manual fallback, and the subsequent patch.",
+    "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, internet retelling, and legend-like interpretation.",
     "references": [
       {
-        "title": "CBS News: Y2K Bug, One Year Late",
+        "title": "CBS News, Y2K Bug, One Year Late",
         "url": "https://www.cbsnews.com/news/y2k-bug-one-year-late/"
       },
       {
-        "title": "Computerworld: 7-Eleven Systems Hit by Y2k-like Glitch",
-        "url": "https://www.computerworld.com/article/1363013/7-eleven-systems-hit-by-y2k-like-glitch.html"
+        "title": "Computerworld, 7-Eleven Store Systems Hit by Y2K-like Glitch",
+        "url": "https://www.computerworld.com/article/1364694/7-eleven-store-systems-hit-by-y2k-like-glitch.html"
       },
       {
-        "title": "HowStuffWorks: How Urban Legends Work",
-        "url": "https://people.howstuffworks.com/urban-legend.htm"
+        "title": "Britannica, Year 2000 problem",
+        "url": "https://www.britannica.com/topic/year-2000-problem"
       },
       {
-        "title": "Wikipedia: Year 2000 problem",
-        "url": "https://en.wikipedia.org/wiki/Year_2000_problem"
+        "title": "IRS, Recordkeeping",
+        "url": "https://www.irs.gov/businesses/small-businesses-self-employed/recordkeeping"
       },
       {
-        "title": "Wikipedia: Receipt",
+        "title": "Wikipedia, Receipt",
         "url": "https://en.wikipedia.org/wiki/Receipt"
       }
     ],
     "relatedKeywords": [
-      "receipt legend",
-      "7-eleven timestamp anomaly",
-      "proof of purchase",
-      "point-of-sale defect",
-      "manual fallback",
-      "urban folklore mechanics",
-      "single-event origin"
+      "receipt anomaly",
+      "single-event receipt legend",
+      "1901 timestamp",
+      "point-of-sale evidence",
+      "digital folklore",
+      "proof-of-purchase",
+      "cash register timeline"
     ]
   }
 }

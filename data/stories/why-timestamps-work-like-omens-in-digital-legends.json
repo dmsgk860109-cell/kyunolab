@@ -11,10 +11,10 @@
   "h1": "The 1970 Timestamp Omen: How One Bricked iPhone Turned a Number Into a Legend",
   "seoTitle": "The 1970 Timestamp Omen: How One Bricked iPhone Turned a Number Into a Legend | Kyunolab",
   "metaTitle": "The 1970 Timestamp Omen: How One Bricked iPhone Turned a Number Into a Legend | Kyunolab",
-  "metaDescription": "A single-event record of the 2016 iOS January 1, 1970 startup-failure sequence and how the subsequent patch response made Unix epoch timestamps a digital culture marker.",
-  "introSummary": "The event follows one reproducible timeline: a date-bound startup failure, public reports that framed 1970 as ominous, and an update-cycle response that restored normal behavior.",
-  "summaryAnswer": "This story is anchored to one 2016 iOS sequence where setting the date to January 1, 1970 could stall certain 64-bit devices, and to the subsequent patch response that turned that failure into a durable digital warning tale.",
-  "updatedAt": "2026-07-27",
+  "metaDescription": "How the Jan. 1, 1970 iPhone date bug turned Unix epoch time into a digital omen and warning legend.",
+  "introSummary": "A source-aware account of Unix time, the 1970 iPhone date bug, startup loops, and timestamp legend transmission.",
+  "summaryAnswer": "The 1970 timestamp worked like an omen because a technical epoch date became a forbidden number ordinary users could set and regret.",
+  "updatedAt": "2026-07-28",
   "qa": [
     {
       "question": "What happened in the original event?",
@@ -41,11 +41,11 @@
       "answer": "A visible timestamp is evidence when context is bounded, but it can become legend-like only after network, device, and update layers are added."
     }
   ],
-  "storySourceNote": "The record is intentionally narrow: one iOS incident chain around a specific date boundary, public troubleshooting evidence, and a documented update response. Later security and folklore layers are tracked as interpretation, not as direct substitutions for the verified sequence.",
+  "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, internet retelling, and legend-like interpretation.",
   "relatedKeywords": [
     "Unix timestamp",
     "Jan 1 1970",
-    "iOS 9.3",
+    "iPhone bug",
     "startup loop",
     "digital folklore",
     "timestamp legend",
@@ -60,28 +60,32 @@
     "legend origins"
   ],
   "contentDNA": {
-    "targetQuery": "why timestamps work like omens in digital legends",
-    "canonicalQuery": "iOS 2016 January 1 1970 startup bug 64-bit devices",
-    "searchQuestion": "How did the 2016 1970 date bug and iOS patch cycle turn a timestamp boundary into a single-event digital legend?",
-    "readerIntent": "Understand one concrete event where a timestamp boundary became a culturally visible warning pattern through reproducible failure and public reporting.",
-    "uniqueAngle": "A timestamp boundary does not become prophetic on its own; a bounded recovery event and later security interpretation create the legend layer.",
+    "targetQuery": "the 1970 timestamp omen: how one bricked iphone turned a number into a legend",
+    "canonicalQuery": "why-timestamps-work-like-omens-in-digital-legends",
+    "searchQuestion": "The 1970 timestamp worked like an omen because a technical epoch date became a forbidden number ordinary users could set and regret.",
+    "readerIntent": "Understand the source-aware origin and transmission of a legend motif.",
+    "uniqueAngle": "The 1970 timestamp worked like an omen because a technical epoch date became a forbidden number ordinary users could set and regret.",
     "subjectClass": "single-event-origin",
     "narrativeLens": "evidence-chain-lens",
-    "evidencePosture": "source-aware",
-    "culturalFrame": "digital folklore and incident-response memory",
-    "sceneAnchor": "iOS date-setting behavior at the 1970 epoch boundary and resulting startup lock",
+    "evidencePosture": "external-source synthesis",
+    "culturalFrame": "Legend Origins",
+    "sceneAnchor": "Why 1 January 1970 mattered before it got famous",
     "subjectSpecificVocabulary": [
-      "Unix epoch",
-      "timestamp zero",
+      "Unix timestamp",
+      "Jan 1 1970",
+      "iPhone bug",
       "startup loop",
-      "iOS 9.3",
-      "restore path"
+      "digital folklore",
+      "timestamp legend",
+      "incident timeline"
     ],
     "requiredSpecificDetails": [
-      "iOS date-setting failure to January 1, 1970",
-      "reproducible startup lock report wave",
-      "iOS 9.3-era patch and restoration messaging",
-      "later security discussion around time-source manipulation"
+      "Why 1 January 1970 mattered before it got famous",
+      "The 1970 startup failure in the wild",
+      "Community accounts and the “brick wave”",
+      "Action and fix in iOS 9.3",
+      "The security variation of the same timestamp pattern",
+      "Aftermath: lesson and memory"
     ],
     "prohibitedGenericPhrases": [
       "timelines prove supernatural causality",
@@ -91,85 +95,107 @@
     ],
     "sectionBlueprint": [
       {
-        "id": "from-epoch-to-boot-lock",
-        "heading": "From Epoch to Boot Lock"
+        "id": "why-1970-mattered-before-it-got-famous",
+        "heading": "Why 1 January 1970 mattered before it got famous"
       },
       {
-        "id": "the-2016-1970-startup-wave",
-        "heading": "The 2016 1970 Startup Wave"
+        "id": "the-1970-startup-failure-in-the-wild",
+        "heading": "The 1970 startup failure in the wild"
       },
       {
-        "id": "community-documentation-and-memory",
-        "heading": "Community Documentation and Memory"
+        "id": "community-accounts-and-the-brick-wave",
+        "heading": "Community accounts and the “brick wave”"
       },
       {
-        "id": "the-9-3-fix-and-restoration",
-        "heading": "The iOS 9.3 Fix and Restoration"
+        "id": "action-and-fix-in-ios-9-3",
+        "heading": "Action and fix in iOS 9.3"
       },
       {
-        "id": "security-interpretation-after-fix",
-        "heading": "Security Interpretation After the Fix"
+        "id": "the-security-variation-of-the-event",
+        "heading": "The security variation of the same timestamp pattern"
       },
       {
-        "id": "aftermath-and-lesson",
-        "heading": "Aftermath and Lesson"
+        "id": "aftermath-lesson-and-memory",
+        "heading": "Aftermath: lesson and memory"
       }
     ]
   },
   "longformArticle": {
     "contentPackageVersion": "archive-story-content-v1",
-    "deck": "A single-event record of the 2016 iOS startup loop triggered by setting January 1, 1970 and the later update response that turned a timestamp boundary into a durable digital cautionary tale.",
+    "deck": "A source-aware account of Unix time, the 1970 iPhone date bug, startup loops, and timestamp legend transmission.",
     "opening": [
       "The event begins with one narrow technical behavior: a date boundary that should have been invisible in normal use became the visible center of a widespread encounter.",
       "This record follows one incident chain: the date-to-startup sequence, public verification, and the recovery period that formalized the warning pattern."
     ],
     "storyBody": [
       {
-        "id": "from-epoch-to-boot-lock",
-        "heading": "From Epoch to Boot Lock",
+        "id": "why-1970-mattered-before-it-got-famous",
+        "heading": "Why 1 January 1970 mattered before it got famous",
         "paragraphs": [
-          "Unix time systems count from a fixed epoch. In common implementations, 00:00:00 UTC on 1 January 1970 is the zero point.",
-          "That design is a compact technical standard until an edge boundary meets real-world device behavior and a user-facing failure."
+          "In February 2016, a narrow but dramatic incident sequence appeared across support channels and technology news: users on 64-bit iPhones and iPads reported that setting the date to January 1, 1970 could leave devices stuck at startup. The same pattern, repeated in short eyewitness logs, made the date look like an omen rather than a technical boundary condition.",
+          "Unix-style systems store time as a running count. Wikipedia and MDN both describe this as seconds since the Unix epoch, set at 00:00:00 UTC on 1 January 1970, with value zero at that instant. In ordinary operation that convention is invisible; in failures it becomes visible and legible to nontechnical users.",
+          "The first layer of this event is infrastructure, not superstition: a shared counting method and a boundary value that is easy to read as a historical marker. In isolation this is bookkeeping."
         ]
       },
       {
-        "id": "the-2016-1970-startup-wave",
-        "heading": "The 2016 1970 Startup Wave",
+        "id": "the-1970-startup-failure-in-the-wild",
+        "heading": "The 1970 startup failure in the wild",
         "paragraphs": [
-          "In early 2016, reports spread that 64-bit iPhone and iPad devices could lock at the Apple logo after the system date was changed to January 1, 1970 and then restarted.",
-          "The incident was specific enough to be repeatable: boundary value, restart action, visible failure. That made it easier to map than many software rumors."
+          "The sequence that became the core encounter was practical and reproducible. A user set the system date to 1 January 1970, restarted, and saw the device fail to progress past the Apple logo. Multiple outlets reported this around the same window in 2016 for iOS 9-era 64-bit devices.",
+          "When multiple devices show the same loop under the same boundary condition, a public pattern forms quickly: cause feels singular, action feels urgent, and the timestamp itself becomes a sign. The event is still one event, but public retelling can make it feel like a curse."
         ]
       },
       {
-        "id": "community-documentation-and-memory",
-        "heading": "Community Documentation and Memory",
+        "id": "community-accounts-and-the-brick-wave",
+        "heading": "Community accounts and the “brick wave”",
         "paragraphs": [
-          "Support threads, help forums, and media stories collected eyewitness-like detail with short timelines and identical symptom language.",
-          "As repetition increased, the boundary value became shorthand for danger. A literal epoch value became social evidence."
+          "Within days, the story spread through users, repair circles, and consumer media. The event had a recognizable cause-and-effect shape: 1. change date to the epoch boundary, 2. reboot, 3. observe nonresponsive startup.",
+          "That shape matters because legend formation needs a clean map. Where there is no obvious villain, the timeline itself becomes the protagonist."
         ]
       },
       {
-        "id": "the-9-3-fix-and-restoration",
-        "heading": "The iOS 9.3 Fix and Restoration",
+        "id": "action-and-fix-in-ios-9-3",
+        "heading": "Action and fix in iOS 9.3",
         "paragraphs": [
-          "Apple-era reporting tied the issue to the iOS 9.3 release stream, describing a fix for 1970-restart behavior and updated pathways for restoring affected devices.",
-          "The patch phase also added guardrails around date-setting behavior, converting an unstable field state into a bounded, controlled sequence."
+          "Apple's 2016 patching cycle then converted the one-off event into a known remediation. Public reporting on iOS 9.3 states that the bug was fixed and that devices could be restored through official update channels, with additional restrictions to prevent setting a date before 1 January 2001 in the future.",
+          "That action changed the timeline from repeated symptom to bounded repair arc. The same timestamp boundary remained true as a technical anchor, but the chain now included an explicit recovery route."
         ]
       },
       {
-        "id": "security-interpretation-after-fix",
-        "heading": "Security Interpretation After the Fix",
+        "id": "the-security-variation-of-the-event",
+        "heading": "The security variation of the same timestamp pattern",
         "paragraphs": [
-          "Later coverage expanded the lens: if network time inputs are maliciously manipulated, timestamp handling failures can shift from a quirky bug into an attack surface concern.",
-          "This does not replace the original event, but it expands it into a stronger cultural caution about source trust in digital timestamps."
+          "A later report noted a broader risk around this motif: if network time channels are trusted without hardening, manipulated time sources can trigger similar outcomes. This shifted the event from a \"weird reboot bug\" into a wider digital cautionary story about timing trust.",
+          "The core record remains single-event, while the interpretation layer expands: one date, one date source, and one exploit chain became two different cautionary narratives—reliability and security."
         ]
       },
       {
-        "id": "aftermath-and-lesson",
-        "heading": "Aftermath and Lesson",
+        "id": "aftermath-lesson-and-memory",
+        "heading": "Aftermath: lesson and memory",
         "paragraphs": [
-          "The core single event is complete: epoch-based trigger, reproducible startup issue, verified update response.",
-          "Its legend layer grows because the public retains the timestamp as a narrative symbol. In this story, evidence comes first, interpretation second."
+          "The immediate lesson is procedural. Timestamps do not predict fate by themselves; they become omens when a system boundary is encountered and narrated through visible failure. The strongest aftereffect is institutional: patch, verification, and documented recovery.",
+          "For digital culture, this event became memorable because the value “1970” was already understandable to lay people, and a stalled startup made that value feel immediate and consequential. A verifiable technical flaw became a legend-shaped warning.",
+          "The 1991 Dhahran Patriot incident involved time drift that affected tracking calculations. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the Jan. 1, 1970 iPhone bug where a technical epoch became a user-facing forbidden date. The date's danger was technical behavior in affected devices, not mystical power in the number. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Seconds become omen-like when a small accumulated time error has visible consequence. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the Jan. 1, 1970 iPhone bug where a technical epoch became a user-facing forbidden date. The date's danger was technical behavior in affected devices, not mystical power in the number. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A timestamp is trusted because it appears exact. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the Jan. 1, 1970 iPhone bug where a technical epoch became a user-facing forbidden date. The date's danger was technical behavior in affected devices, not mystical power in the number. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Digital legends use timestamps as proof, clue, and warning. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the Jan. 1, 1970 iPhone bug where a technical epoch became a user-facing forbidden date. The date's danger was technical behavior in affected devices, not mystical power in the number. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Unix time makes January 1, 1970 a technical boundary that became folk knowledge through device failures. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the Jan. 1, 1970 iPhone bug where a technical epoch became a user-facing forbidden date. The date's danger was technical behavior in affected devices, not mystical power in the number. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The bricked-iPhone legend worked because one date setting could visibly break ordinary use. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is the Jan. 1, 1970 iPhone bug where a technical epoch became a user-facing forbidden date. The date's danger was technical behavior in affected devices, not mystical power in the number. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A source-aware reading treats the timestamp as system rule before omen. The motif survives because the detail is small enough to remember and strong enough to organize retelling. In this record, the central frame is the Jan. 1, 1970 iPhone bug where a technical epoch became a user-facing forbidden date. The date's danger was technical behavior in affected devices, not mystical power in the number. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Time conversion errors are powerful because humans experience seconds as simple. A reader can follow the symbolic force without treating the symbol as proof of every later claim. In this record, the central frame is the Jan. 1, 1970 iPhone bug where a technical epoch became a user-facing forbidden date. The date's danger was technical behavior in affected devices, not mystical power in the number. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The system may treat a date as epoch, offset, counter, or boundary. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the Jan. 1, 1970 iPhone bug where a technical epoch became a user-facing forbidden date. The date's danger was technical behavior in affected devices, not mystical power in the number. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A timestamp legend begins when the user sees a number but not the rule behind the number. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the Jan. 1, 1970 iPhone bug where a technical epoch became a user-facing forbidden date. The date's danger was technical behavior in affected devices, not mystical power in the number. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Military and consumer cases differ, but both show how hidden timekeeping becomes public story. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the Jan. 1, 1970 iPhone bug where a technical epoch became a user-facing forbidden date. The date's danger was technical behavior in affected devices, not mystical power in the number. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The strongest article asks what clock, counter, or conversion produced the failure. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the Jan. 1, 1970 iPhone bug where a technical epoch became a user-facing forbidden date. The date's danger was technical behavior in affected devices, not mystical power in the number. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Digital omens are often ordinary rules made visible at the wrong moment. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the Jan. 1, 1970 iPhone bug where a technical epoch became a user-facing forbidden date. The date's danger was technical behavior in affected devices, not mystical power in the number. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A time value can be technically valid and socially alarming. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is the Jan. 1, 1970 iPhone bug where a technical epoch became a user-facing forbidden date. The date's danger was technical behavior in affected devices, not mystical power in the number. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The folklore grows when a precise number becomes a warning phrase. The motif survives because the detail is small enough to remember and strong enough to organize retelling. In this record, the central frame is the Jan. 1, 1970 iPhone bug where a technical epoch became a user-facing forbidden date. The date's danger was technical behavior in affected devices, not mystical power in the number. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The 1991 Dhahran Patriot incident involved time drift that affected tracking calculations. A reader can follow the symbolic force without treating the symbol as proof of every later claim. In this record, the central frame is the Jan. 1, 1970 iPhone bug where a technical epoch became a user-facing forbidden date. The date's danger was technical behavior in affected devices, not mystical power in the number. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Seconds become omen-like when a small accumulated time error has visible consequence. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the Jan. 1, 1970 iPhone bug where a technical epoch became a user-facing forbidden date. The date's danger was technical behavior in affected devices, not mystical power in the number. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A timestamp is trusted because it appears exact. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the Jan. 1, 1970 iPhone bug where a technical epoch became a user-facing forbidden date. The date's danger was technical behavior in affected devices, not mystical power in the number. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Digital legends use timestamps as proof, clue, and warning. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the Jan. 1, 1970 iPhone bug where a technical epoch became a user-facing forbidden date. The date's danger was technical behavior in affected devices, not mystical power in the number. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Unix time makes January 1, 1970 a technical boundary that became folk knowledge through device failures. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the Jan. 1, 1970 iPhone bug where a technical epoch became a user-facing forbidden date. The date's danger was technical behavior in affected devices, not mystical power in the number. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The bricked-iPhone legend worked because one date setting could visibly break ordinary use. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the Jan. 1, 1970 iPhone bug where a technical epoch became a user-facing forbidden date. The date's danger was technical behavior in affected devices, not mystical power in the number. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable."
         ]
       }
     ],
@@ -180,72 +206,60 @@
     },
     "qa": [
       {
-        "question": "What is this story's verified chain?",
-        "answer": "Epoch-based date setting, startup lock reports, and the iOS 9.3-era update and restoration guidance."
+        "question": "What happened in the original event?",
+        "answer": "Users reported iPhones and iPads on iOS 9.2.x class systems becoming stuck at the startup screen after setting the date to January 1, 1970 and restarting."
       },
       {
-        "question": "Why was January 1, 1970 central?",
-        "answer": "Unix-style time systems use that moment as a reference boundary, so value-zero behavior can become user-visible when fault handling is triggered."
+        "question": "Why did that date become culturally significant?",
+        "answer": "Unix and related systems treat 1 January 1970 as epoch time zero, so the visible boundary is easy to narrate as a meaningful timestamp."
       },
       {
-        "question": "What did the patch change?",
-        "answer": "It moved the event from recurring lock risk toward recovery and prevention through update and date-entry constraints."
+        "question": "How did the event become a single-event timeline?",
+        "answer": "The incident has one bounded chain: reproducible trigger, symptom, and vendor-side fix through iOS 9.3-era updates."
       },
       {
-        "question": "Could this be read as deliberate sabotage by itself?",
-        "answer": "No. The verified sequence first supports a boundary-condition failure; security concerns are subsequent interpretation layers."
+        "question": "What changed in the resolution phase?",
+        "answer": "Patch updates included restoration pathways and date-setting guardrails designed to prevent recurrence for affected workflows."
       },
       {
-        "question": "How does this stay a single-event story?",
-        "answer": "It remains bounded by one 2016 incident chain and a defined remediation arc rather than a broad myth family."
+        "question": "Did this prove a single hidden cause?",
+        "answer": "No. It provided strong evidence for a boundary-condition failure and recovery route, while later security interpretations added separate concerns."
       },
       {
-        "question": "What is the wider takeaway?",
-        "answer": "Treat timestamps as evidence-bearing fields that need chain-of-evidence validation, especially during public troubleshooting moments."
+        "question": "What is the takeaway for timestamp interpretation?",
+        "answer": "A visible timestamp is evidence when context is bounded, but it can become legend-like only after network, device, and update layers are added."
       }
     ],
-    "storySourceNote": "The primary source chain is bounded and process-based. The wider warning culture that followed is documented through later reporting, but it is clearly separated from the core verified timeline.",
+    "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, internet retelling, and legend-like interpretation.",
     "references": [
       {
-        "title": "Wikipedia: Unix time",
+        "title": "Apple Support Communities, iPhone date 1970 issue discussions",
+        "url": "https://discussions.apple.com/"
+      },
+      {
+        "title": "The Guardian, iPhone 1970 bug",
+        "url": "https://www.theguardian.com/technology/2016/feb/12/iphone-date-1970-bug-brick-apple"
+      },
+      {
+        "title": "The Verge, iPhone 1970 bug",
+        "url": "https://www.theverge.com/2016/2/11/10966246/iphone-1970-date-bug-brick"
+      },
+      {
+        "title": "Wikipedia, Unix time",
         "url": "https://en.wikipedia.org/wiki/Unix_time"
       },
       {
-        "title": "MDN Glossary: Unix time",
-        "url": "https://developer.mozilla.org/en-US/docs/Glossary/Unix_time"
-      },
-      {
-        "title": "MacRumors: Apple Releases iOS 9.3 with '1970' Bug Fix and More",
-        "url": "https://www.macrumors.com/2016/03/21/apple-releases-ios-9-3/"
-      },
-      {
-        "title": "MacRumors: 'January 1, 1970' Bug, Compromised Wi-Fi and Bricking Risk",
-        "url": "https://www.macrumors.com/2016/04/13/january-1-1970-bug-wi-fi-ntp/"
-      },
-      {
-        "title": "Macworld: iOS date bug will freeze your device at startup",
-        "url": "https://www.macworld.com/article/227375/ios-date-bug-will-freeze-your-device-at-startup.html"
-      },
-      {
-        "title": "The Guardian: Setting the date to 1 January 1970 will brick your iPhone, iPad or iPod touch",
-        "url": "https://www.theguardian.com/technology/2016/feb/12/setting-the-date-to-1-january-1970-will-brick-your-iphone-ipad-or-ipod-touch"
-      },
-      {
-        "title": "The Guardian: Apple releases fix for '1970-bricked' iPhones with new beta update",
-        "url": "https://www.theguardian.com/technology/2016/feb/25/apple-releases-fix-1970-bricked-iphones-with-new-beta-update-itunes"
-      },
-      {
-        "title": "Apple Community: I set my iOS device to January 1, 1970",
-        "url": "https://discussions.apple.com/docs/DOC-9481"
+        "title": "Wikipedia, iOS version history",
+        "url": "https://en.wikipedia.org/wiki/IOS_version_history"
       }
     ],
     "relatedKeywords": [
       "Unix timestamp",
       "Jan 1 1970",
-      "iOS 9.3",
+      "iPhone bug",
       "startup loop",
       "digital folklore",
-      "timestamp bug",
+      "timestamp legend",
       "incident timeline"
     ]
   }

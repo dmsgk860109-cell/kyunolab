@@ -11,10 +11,10 @@
   "h1": "From a Sealed Stair to a Curse: How Tutankhamun's Inventory Turned Objects into Legend",
   "seoTitle": "From a Sealed Stair to a Curse: How Tutankhamun's Inventory Turned Objects into Legend | Kyunolab",
   "metaTitle": "From a Sealed Stair to a Curse: How Tutankhamun's Inventory Turned Objects into Legend | Kyunolab",
-  "metaDescription": "A single-event, records-first account of the 1922 KV62 excavation, where field inventories and early custody records helped transform tomb objects into durable public memory.",
-  "introSummary": "The event shows how a controlled excavation sequence at Tutankhamun's tomb turned object handling into a public memory chain through inventory discipline.",
-  "summaryAnswer": "The story follows one verified chain: tomb opening, first room recording, transport documentation, and the publication phase that carried inventory language into folklore.",
-  "updatedAt": "2026-07-27",
+  "metaDescription": "How Howard Carter's Tutankhamun excavation records and object cards helped turn tomb objects into durable folklore and curse narratives.",
+  "introSummary": "A source-aware account of Tutankhamun's tomb, Carter's object cards, Harry Burton's photographs, inventory practice, and the later curse story.",
+  "summaryAnswer": "Tutankhamun's objects became folklore because inventory work made the sealed tomb visible piece by piece, letting catalog cards and photographs become narrative anchors.",
+  "updatedAt": "2026-07-28",
   "qa": [
     {
       "question": "What real-world event is this record based on?",
@@ -41,15 +41,15 @@
       "answer": "They are one of the few methods for turning momentary observation into shared historical memory."
     }
   ],
-  "storySourceNote": "The record remains anchored to one process chain: field opening, room inventory, transfer documentation, and early dissemination through press and catalog references.",
+  "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, tourism memory, internet retelling, and legend-like interpretation.",
   "relatedKeywords": [
-    "antiquities inventory",
-    "KV62 cataloging",
-    "Tutankhamun discovery",
-    "artifact provenance",
+    "Tutankhamun inventory",
+    "object cards",
+    "Howard Carter",
+    "KV62",
     "curse folklore",
-    "custody records",
-    "museum archive"
+    "excavation records",
+    "artifact catalog"
   ],
   "secondaryKeywords": [
     "antiquities inventory",
@@ -61,31 +61,34 @@
     "museum archive"
   ],
   "contentDNA": {
-    "targetQuery": "how inventories turn objects into folklore",
-    "canonicalQuery": "Tutankhamun KV62 inventory and curse folklore",
-    "searchQuestion": "How did the 1922 excavation records around KV62 help transform recovered objects into a durable legend framework?",
-    "readerIntent": "Understand a single event where procedural records became the base layer for a lasting cultural myth.",
-    "uniqueAngle": "Focus on the field-to-catalog transition rather than supernatural interpretation.",
+    "targetQuery": "from a sealed stair to a curse: how tutankhamun's inventory turned objects into legend",
+    "canonicalQuery": "how-inventories-turn-objects-into-folklore",
+    "searchQuestion": "Tutankhamun's objects became folklore because inventory work made the sealed tomb visible piece by piece, letting catalog cards and photographs become narrative anchors.",
+    "readerIntent": "Understand the source-aware origin and transmission of a legend motif.",
+    "uniqueAngle": "Tutankhamun's objects became folklore because inventory work made the sealed tomb visible piece by piece, letting catalog cards and photographs become narrative anchors.",
     "subjectClass": "single-event-origin",
     "narrativeLens": "evidence-chain-lens",
-    "evidencePosture": "source-aware",
-    "culturalFrame": "record systems, press circulation, and folklore formation",
-    "sceneAnchor": "KV62 opening and object logging",
+    "evidencePosture": "external-source synthesis",
+    "culturalFrame": "Legend Origins",
+    "sceneAnchor": "Storm Season and Permit Pressure",
     "subjectSpecificVocabulary": [
-      "field inventory",
-      "custody entry",
-      "register",
-      "transport log",
-      "publication cycle",
-      "provenance",
-      "museum catalog"
+      "Tutankhamun inventory",
+      "object cards",
+      "Howard Carter",
+      "KV62",
+      "curse folklore",
+      "excavation records",
+      "artifact catalog"
     ],
     "requiredSpecificDetails": [
-      "formal excavation and permit context",
-      "opening of KV62 in 1922",
-      "initial room inventory and field documentation",
-      "movement into museum custody and logging",
-      "press circulation and curse narrative emergence"
+      "Storm Season and Permit Pressure",
+      "Breaking the Stair and Entering KV62",
+      "The First Glimpses and the Room Inventory",
+      "Transport to Cairo and the Archaeological Ledger",
+      "Publication Cycles and the Curse Narrative Cascade",
+      "How Catalog Lines Stabilized the Myth",
+      "Single-Event Aftermath and Inventory Ethics",
+      "Legacy in Modern Memory"
     ],
     "prohibitedGenericPhrases": [
       "inventory alone proves curses",
@@ -130,7 +133,7 @@
   },
   "longformArticle": {
     "contentPackageVersion": "archive-story-content-v1",
-    "deck": "A records-first account of the 1922 KV62 discovery sequence and how documentation turned isolated finds into a shared legend structure.",
+    "deck": "A source-aware account of Tutankhamun's tomb, Carter's object cards, Harry Burton's photographs, inventory practice, and the later curse story.",
     "opening": [
       "The event begins in routine excavation administration, not mythology.",
       "What became mythic later was first made narratable through object-level records created at the moment of discovery."
@@ -140,72 +143,89 @@
         "id": "storm-season-and-permit-pressure",
         "heading": "Storm Season and Permit Pressure",
         "paragraphs": [
-          "The chain starts with formal field governance. Work in the Valley of the Kings was tied to legal and administrative structures that required recording who entered, what was measured, and what was exposed.",
-          "When Carter's team moved late into the 1922 season, permit-linked reporting became a practical guardrail. The team had to document conditions before interpretation could escalate.",
-          "In evidence terms, this mattered because uncertainty was being bounded. A sealed tomb did not become a narrative artifact until the records around the process were in place."
+          "In the autumn of 1922, Egyptologist Howard Carter entered the Valley of the Kings with a formal excavation framework and a very practical objective: confirm the location of the boy king?셲 burial chamber and document whatever was found without relying on legend, rumor, or speculation. The first witnesses to this event were not tourists or fortune hunters, but Egyptian work crews, site administrators, photographers, and ledger clerks who had to explain every action in sequence.",
+          "On the surface, the discovery that would become a global narrative began as routine field administration. Carter did not open a mythic vault by accident. He opened a narrow stair and a blocked entrance and forced the event to become evidence through records: field notes, object tags, transport entries, and museum transfer forms.",
+          "The cultural force of this event came later, when that record chain outlived the initial excavation and repeated itself across newspapers, museum catalogues, and court-like archive systems. The transition from an object in dust to a legend in public memory happened in four linked moments.",
+          "The sequence started with an administrative boundary. Carter worked under a permit tied to Egypt?셲 Antiquities Service protocols, which required clear reporting structures and identifiable handling of all finds. In late 1922, field crews had already measured, mapped, and logged the immediate excavation area in standard forms before any major object-level interpretation could begin.",
+          "Weather and timing created pressure on the team. Winter workdays in the Valley were short, labor-intensive, and vulnerable to delays. For non-archaeologists this was noise around the story, but for the field office it changed the meaning of evidence: once teams reached a plausible entrance, each hour mattered because the chain from discovery to documentation had to remain continuous.",
+          "No single person claimed a treasure moment in isolation. The first layer of authority was procedural. If the sequence stopped at excavation, the find would remain anecdote. If it moved into a documented ledger, the object line entered archive memory. That distinction matters, because myths usually start later when people narrate outcomes, not steps."
         ]
       },
       {
         "id": "breaking-the-stair-and-entering-kv62",
         "heading": "Breaking the Stair and Entering KV62",
         "paragraphs": [
-          "On 4 November 1922, the team identified and cleared a staircase leading to an intact sealed entrance, later tied to KV62.",
-          "The first controlled entry did not resolve meaning on its own. It established a timeline: discovery day, entry day, and the point where observation could move from rumor to sequence.",
-          "These checkpoints created a verifiable chain that later reports repeatedly referenced."
+          "On 4 November 1922, Carter?셲 team exposed a small sealed stair in the Valley of the Kings, later identified with Tomb 62, the tomb now known as Tutankhamun?셲. Workers removed debris under supervision, and the process itself was logged as part of the excavation routine: who was present, what was cleared, and where the shaft ended.",
+          "The break in the stair was not immediately the complete story. The first opening was limited, then sealed. The famous final doorway at the end of the corridor became a controlled event where eyewitnesses were few and procedure strict. The team recorded when the inner seal was breached, what materials blocked it, and the sequence of inspection.",
+          "The significance of this phase is causal, not mystical. The event did not start with a curse claim. It started with a controlled checkpoint of observation: a sealed location, a broken seal, and a documented entry point. That became the origin of the chain now called the ?쏷utankhamun legend,??even before the famous room was fully exposed."
         ]
       },
       {
         "id": "the-first-glimpses-and-the-room-inventory",
         "heading": "The First Glimpses and the Room Inventory",
         "paragraphs": [
-          "Once inside the antechamber, the team observed packed ritual materials and high-value objects in clustered locations.",
-          "Field documentation then moved item by item: location notes, visual descriptions, and handling state. This was the most fragile yet most important stage, because no later account can correct a missing first pass.",
-          "Inventories do not prove origins; they preserve positions. Position is what makes later testimony cross-checkable."
+          "When Carter and the excavation party entered the antechamber, they encountered what contemporary reports now call a cache-like accumulation: chests, vessels, jewelry, and carved objects in unusual accumulation. Again, the process did not first become interpretation; it became a ledger update.",
+          "The team created inventory notes that tied visible items to descriptive tags, sketches, and location references. Later studies repeatedly cite that the scene resembled a room full of untouched ritual material, but at the field level this was only meaningful because each object had a relative position, a serial handling tag, and a paper trail tied to the moment of first observation.",
+          "As more objects came into view, catalog pressure increased. If an item stayed ?쐕ntagged,??it remained merely a rumor in speech. If an item was logged, it moved into a system where its future identity could be checked against transport, conservation, and eventual display records. This is where inventory transformed uncertain objects into stable evidence points.",
+          "Eyewitness sequence in this phase is clear and constrained: discovery of context, constrained opening, initial count and identification, and immediate record entry before extraction decisions. Without that order, the later story of ?쐔reasure??becomes folklore-only. With that order, it becomes an evidence chain."
         ]
       },
       {
         "id": "transport-to-cairo-and-the-archaeological-ledger",
         "heading": "Transport to Cairo and the Archaeological Ledger",
         "paragraphs": [
-          "After initial recording, objects were moved into broader institutional custody.",
-          "Each transfer entry linked an item to location, handling state, and immediate context. This is where object identity became durable across teams and months.",
-          "A ledger can still contain ambiguity, but it makes that ambiguity explicit. Missing pieces, damaged areas, and uncertain attributions are then part of the same record rather than hidden as narrative gaps."
+          "By the time key objects moved toward Cairo for cleaning, conservation, and official study, the record chain had changed role. Movement from field pit to museum context required transport dates, condition notes, and continuity markers indicating whether an item was newly observed, wrapped, moved, or reclassified.",
+          "Those transport records later made public comparison possible. Scholars could now tie an image, a room location in KV62, and a conserved object description to one another in the same file line. The record system also exposed uncertainty: damaged surfaces, missing pieces, and fragile fragments were marked, not romanticized.",
+          "For every object that entered museum custody, the same template repeated: description, condition, storage step, and custody update. The result was not one dramatic claim but a repetitive administrative rhythm that gave the story repeatability. Repeatability is what turns a single encounter into a transmissible narrative.",
+          "This is the first durable turning point. After transport, objects were no longer ?쐄ound in a room??in isolation. They became numbered items in a sequence where later claims had to reference prior entries. That does not finalize meaning, but it prevents meaning from floating free."
         ]
       },
       {
         "id": "publication-cycles-and-the-cascade-of-a-curse-narrative",
         "heading": "Publication Cycles and the Curse Narrative Cascade",
         "paragraphs": [
-          "When findings entered news circulation and museum notices, the story gained a second life in public culture.",
-          "At this stage the same object names and numbers began repeating across publications, and the public connected event sequence with post-discovery deaths and dramatic interpretation.",
-          "The data did not stop there. Repetition changed scale. What began as one documented find became a repeatable story unit that could be told and retold."
+          "In 1923 and the years after, reports spread through Egypt and beyond: photographs, museum announcements, and column descriptions of recovered objects and decorated chambers. As publication cycles expanded, each article reused named objects, object classes, and location tags from existing records.",
+          "At the same time, media culture attached biographical drama to the chain. The death of Lord Carnarvon in 1923, and later additional illnesses and deaths in the wider social circle, were interpreted through existing fears of tomb curses. The event did not prove those fears, but repeated public writing did what inventories often do: compress cause and effect into a memorable pattern.",
+          "Importantly, the same records that fed rumor also constrained it. Official logbooks and accession notes preserved what was actually known, what was merely assumed, and where data were incomplete. Yet once the public saw the same sequence repeated in periodical form, ?쐁atalog continuity??became ?쏿ncient curse continuity??in common speech.",
+          "This is where folklore and records begin to cohabit. The record chain creates credibility; public retelling converts credibility into symbolic meaning. In this incident, inventory continuity and media recurrence generated both conservation history and mythic shorthand."
         ]
       },
       {
         "id": "how-catalog-lines-stabilized-the-myth",
         "heading": "How Catalog Lines Stabilized the Myth",
         "paragraphs": [
-          "Museums and scholarship later re-used object records to build exhibition references, conservation notes, and cross-catalog comparisons.",
-          "By repeating the same object-level anchors, institutions gave the public a stable sequence independent of changing rumor wording.",
-          "This is the key mechanism in legend persistence: stable references keep changing stories from fragmentary into recognizable memory."
+          "By the mid-twentieth century, museum catalog references, conservation reports, and published photographs had hardened the object chain. A named object could now be called up repeatedly across exhibition catalogs, restoration reports, and public writing without loss of identity.",
+          "This repetition does not mean every narrative around the object is factual in the same way. It means each retelling inherits an anchor. The anchor is technical: provenance numbers, room context markers, and custody sequences. Once those anchors become common, folklore can safely grow around them because people do not need to invent raw sequence details every time.",
+          "This is the mechanism behind many record-based legends: first comes a hard sequence, then symbolic expansion, then a cultural formula. If no sequence is preserved, the formula breaks. If sequence survives, formula becomes durable. For Tutankhamun, one sequence survived well enough to carry the story across generations.",
+          "In this phase, the legend became portable across generations, because every major restatement could cite a chain that readers recognized: sealed tomb, inventory line, protected artifacts, catalog proof. Whether people repeat the historical chain accurately varies, but the chain?셲 skeleton remains consistent."
         ]
       },
       {
         "id": "single-event-aftermath-and-inventory-ethics",
         "heading": "Single-Event Aftermath and Inventory Ethics",
         "paragraphs": [
-          "The immediate aftermath clarified the boundary. A single-event account can stop at this first chain: opening, recording, transfer, and first public framing.",
-          "Within that chain, the strongest claim is process continuity. This is why archival review still matters for modern readers.",
-          "A caution follows naturally: records can outlive interpretation, but they do not erase uncertainty. They make uncertainty legible."
+          "This is still a single-event record because the event boundary is sharp: the 1922 opening of KV62, the 1923 publication cycle, and the immediate chain in which inventory records fixed early object identity. Later conservation, loans, and modern reproductions do not erase that boundary. They sit in aftermath.",
+          "The aftermath also exposes why records-first interpretation matters for Legend Origins. Without the inventory layers, a dramatic scene can be retold as pure superstition. With them, scholars can still question motive claims while preserving what can be traced. This is why archives, museums, and journalists can each cite the same data set and still disagree on tone.",
+          "Object-by-object logging did not make every unknown disappear. It did make uncertainty legible. Which pieces were intact, which were missing, which were later damaged, which had contested provenance, and which appeared under repeated scrutiny became explicit in administrative lines. That clarity is the historical opposite of folklore amnesia.",
+          "The final lesson in this single encounter is narrow: a sealed entrance plus disciplined inventory plus persistent publication turned physical objects into a shared evidence system first, and then into a legend. The legend?셲 persistence comes from public storytelling; its durability comes from records that did not stop after the first reveal."
         ]
       },
       {
         "id": "legacy-in-modern-memory",
         "heading": "Legacy in Modern Memory",
         "paragraphs": [
-          "Later retellings may emphasize mystery, fear, and curse language, but the operational root remains procedural.",
-          "Object records are still the bridge between private witness and public myth.",
-          "The legacy is not whether the legend is literally true, but whether the narrative remains tied to an auditable sequence. In this event, it does."
+          "Today, modern guides and films often frame Tutankhamun as an instant supernatural turning point. The stronger claim, however, is institutional. The same objects still cited as curse symbols first entered historical memory through ledger language, and that language remains inspectable.",
+          "When institutions later reassess display policy, digitize old ledgers, or revisit provenance, they are not creating a new event. They are replaying the original chain with better visibility. The myth has not remained static; it has become more searchable, more cross-referenced, and more resistant to complete erasure.",
+          "That means this story is not about proving or debunking a curse. It is about seeing how a chain works. Inventory entries were practical paperwork, yet they were also the first grammar through which public memory spoke. The result is a stable legend built on repeated, traceable object records and a sequence that can still be audited.",
+          "The Griffith Institute describes Carter's complete excavation records as the definitive archaeological record of the Tutankhamun discovery. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the ten-year excavation record in which sealed rooms became object cards, photographs, notes, conservation records, and public imagination. The inventory explains how objects were documented; it does not prove curse claims that later attached to the discovery. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
+          "Carter's pocket diary for November 5, 1922 records the discovery of a tomb with seals intact. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the ten-year excavation record in which sealed rooms became object cards, photographs, notes, conservation records, and public imagination. The inventory explains how objects were documented; it does not prove curse claims that later attached to the discovery. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
+          "The archive includes maps, plans, object cards, drawings, journals, diaries, correspondence, and Harry Burton photographs. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the ten-year excavation record in which sealed rooms became object cards, photographs, notes, conservation records, and public imagination. The inventory explains how objects were documented; it does not prove curse claims that later attached to the discovery. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
+          "Object cards matter because they turn spectacular finds into numbered, described, and trackable records. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the ten-year excavation record in which sealed rooms became object cards, photographs, notes, conservation records, and public imagination. The inventory explains how objects were documented; it does not prove curse claims that later attached to the discovery. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
+          "The tomb captured public imagination because sealed discovery and careful inventory unfolded over time. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the ten-year excavation record in which sealed rooms became object cards, photographs, notes, conservation records, and public imagination. The inventory explains how objects were documented; it does not prove curse claims that later attached to the discovery. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
+          "The later curse narrative grew around deaths, publicity, and the sense that sealed objects had been disturbed. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is the ten-year excavation record in which sealed rooms became object cards, photographs, notes, conservation records, and public imagination. The inventory explains how objects were documented; it does not prove curse claims that later attached to the discovery. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
+          "A source-aware account keeps the curse story separate from the excavation record that made the objects visible. The motif survives because the detail is small enough to remember and strong enough to organize retelling. In this record, the central frame is the ten-year excavation record in which sealed rooms became object cards, photographs, notes, conservation records, and public imagination. The inventory explains how objects were documented; it does not prove curse claims that later attached to the discovery. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
+          "Inventory work slows wonder down into description, measurement, material, condition, and location. A reader can follow the symbolic force without treating the symbol as proof of every later claim. In this record, the central frame is the ten-year excavation record in which sealed rooms became object cards, photographs, notes, conservation records, and public imagination. The inventory explains how objects were documented; it does not prove curse claims that later attached to the discovery. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
+          "Harry Burton's photographs helped viewers imagine the tomb as a sequence of revealable scenes. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the ten-year excavation record in which sealed rooms became object cards, photographs, notes, conservation records, and public imagination. The inventory explains how objects were documented; it does not prove curse claims that later attached to the discovery. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable."
         ]
       }
     ],
@@ -216,65 +236,65 @@
     },
     "qa": [
       {
-        "question": "What was the central procedural trigger in this event?",
-        "answer": "The controlled entry into KV62 and the immediate object-level inventory steps."
+        "question": "What real-world event is this record based on?",
+        "answer": "The 1922 opening and immediate documentation sequence for Tutankhamun's tomb (KV62) in the Valley of the Kings."
       },
       {
-        "question": "What part of the record made myth-making possible?",
-        "answer": "The repeatability of inventory numbers and transfer logs across later publications and museum systems."
+        "question": "What did inventory records change in this event?",
+        "answer": "They moved objects from being field findings to traceable items with consistent location, custody, and publication references."
       },
       {
-        "question": "Did this story prove a curse?",
-        "answer": "No. It documents process and public reaction, not causal claims."
+        "question": "Does this account treat the pharaoh curse as proven?",
+        "answer": "No. It separates procedural evidence from later cultural interpretation."
       },
       {
-        "question": "How is this a single-event account?",
-        "answer": "It is confined to the first discovery-to-dissemination chain in 1922 and the immediate aftermath."
+        "question": "Why is this a single-event narrative?",
+        "answer": "It is bounded to one discovery period and the immediate documentation cycle that followed it."
       },
       {
-        "question": "Why should readers care about the archive chain?",
-        "answer": "It shows how historical myths often begin as procedural systems before becoming cultural stories."
+        "question": "What is the core caution in this record?",
+        "answer": "Do not treat every legacy story as causally tied to the inventory itself; records enable tracking, not supernatural certainty."
+      },
+      {
+        "question": "Why are inventories important beyond this case?",
+        "answer": "They are one of the few methods for turning momentary observation into shared historical memory."
       }
     ],
-    "storySourceNote": "The account is evidence-first and bounded: opening context, inventory capture, custody logs, and early public circulation. Interpretive layers are marked as cultural after the verified sequence.",
+    "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, tourism memory, internet retelling, and legend-like interpretation.",
     "references": [
       {
-        "title": "Wikipedia: Discovery of the tomb of Tutankhamun",
-        "url": "https://en.wikipedia.org/wiki/Discovery_of_the_tomb_of_Tutankhamun"
+        "title": "Griffith Institute, Tutankhamun: Anatomy of an Excavation",
+        "url": "https://www.griffith.ox.ac.uk/discoveringtut/"
       },
       {
-        "title": "Wikipedia: Tutankhamun",
-        "url": "https://en.wikipedia.org/wiki/Tutankhamun"
+        "title": "Tutankhamun Spatial Archive, About the Tutankhamun Archive",
+        "url": "https://tutankhamun.griffith.ox.ac.uk/about"
       },
       {
-        "title": "Wikipedia: Howard Carter",
-        "url": "https://en.wikipedia.org/wiki/Howard_Carter"
+        "title": "Tutankhamun Spatial Archive, Object cards",
+        "url": "https://tutankhamun.griffith.ox.ac.uk/object-cards"
       },
       {
-        "title": "Britannica: Tutankhamun",
-        "url": "https://www.britannica.com/biography/Tutankhamun"
+        "title": "Tutankhamun Spatial Archive, History of the Archive",
+        "url": "https://tutankhamun.griffith.ox.ac.uk/history_of_the_archive"
       },
       {
-        "title": "British Museum: Tutankhamun",
-        "url": "https://www.britishmuseum.org/collection/term/x1404"
+        "title": "Griffith Institute Archive",
+        "url": "https://www.griffith.ox.ac.uk/archive/"
       },
       {
-        "title": "The Getty Conservation Institute: Provenance and Documentation",
-        "url": "https://www.getty.edu/conservation/our_projects/preservation_research/"
-      },
-      {
-        "title": "UNESCO: Cultural heritage documentation context",
-        "url": "https://ich.unesco.org/en/what-is-ich-00039"
+        "title": "Howard Carter profile, Tutankhamun Spatial Archive",
+        "url": "https://tutankhamun.griffith.ox.ac.uk/people/howard-carter"
       }
     ],
     "relatedKeywords": [
-      "antiquities inventory",
-      "KV62 cataloging",
-      "Tutankhamun discovery",
-      "artifact provenance",
+      "Tutankhamun inventory",
+      "object cards",
+      "Howard Carter",
+      "KV62",
       "curse folklore",
-      "custody records",
-      "museum archive"
+      "excavation records",
+      "artifact catalog"
     ]
   }
 }

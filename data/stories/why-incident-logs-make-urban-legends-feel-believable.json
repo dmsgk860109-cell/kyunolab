@@ -11,10 +11,10 @@
   "h1": "Why Incident Logs Turned a 1947 Crash Claim into a Durable Urban Legend",
   "seoTitle": "Why Incident Logs Turned a 1947 Crash Claim into a Durable Urban Legend | Kyunolab",
   "metaTitle": "Why Incident Logs Turned a 1947 Crash Claim into a Durable Urban Legend | Kyunolab",
-  "metaDescription": "A real-incident account of how official incident logs, public corrections, and later reviews made the 1947 Roswell reporting chain feel legend-like while leaving key points unresolved.",
-  "introSummary": "The story tracks how 1947 military incident reporting around Roswell became the model for how logs can make urban-legend narratives feel credible.",
-  "summaryAnswer": "The enduring effect came from a documented chain: an initial report, a correction, and later review records, not from one confirmed hidden origin claim.",
-  "updatedAt": "2026-07-27",
+  "metaDescription": "How Roswell incident logs, military reporting, Project Blue Book, and declassified records made a crash claim durable.",
+  "introSummary": "A source-aware account of Roswell, incident logs, Project Blue Book, military reports, declassified records, and records-first myth.",
+  "summaryAnswer": "Incident logs make urban legends feel believable because they give uncertain claims dates, offices, forms, witnesses, and a paper trail to argue over.",
+  "updatedAt": "2026-07-28",
   "qa": [
     {
       "question": "What real-world event is this story based on?",
@@ -41,7 +41,7 @@
       "answer": "It shows a records-first mechanism where documentation itself becomes the cultural engine behind persistent legend status."
     }
   ],
-  "storySourceNote": "This package keeps the account evidence-first: report chronology, institutional review history, and unresolved interpretation points are separated from dramatic retellings.",
+  "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, internet retelling, and legend-like interpretation.",
   "relatedKeywords": [
     "incident logs",
     "Roswell archives",
@@ -49,9 +49,7 @@
     "military reporting",
     "document chain",
     "legend credibility",
-    "records-first myth",
-    "declassified review",
-    "historical uncertainty"
+    "declassified review"
   ],
   "secondaryKeywords": [
     "incident logs",
@@ -65,31 +63,33 @@
     "historical uncertainty"
   ],
   "contentDNA": {
-    "targetQuery": "incident logs urban legends roswell",
-    "canonicalQuery": "roswell incident logs and legend",
-    "searchQuestion": "How did incident reporting and reviews make the Roswell story feel believable to the public?",
-    "readerIntent": "Understand how archival logs and corrections can stabilize a contested legend.",
-    "uniqueAngle": "A record-chain approach that keeps confirmed milestones separate from unresolved interpretations.",
+    "targetQuery": "why incident logs turned a 1947 crash claim into a durable urban legend",
+    "canonicalQuery": "why-incident-logs-make-urban-legends-feel-believable",
+    "searchQuestion": "Incident logs make urban legends feel believable because they give uncertain claims dates, offices, forms, witnesses, and a paper trail to argue over.",
+    "readerIntent": "Understand the source-aware origin and transmission of a legend motif.",
+    "uniqueAngle": "Incident logs make urban legends feel believable because they give uncertain claims dates, offices, forms, witnesses, and a paper trail to argue over.",
     "subjectClass": "real-incident-origin",
     "narrativeLens": "records-and-evidence-lens",
-    "evidencePosture": "source-aware",
-    "culturalFrame": "incident documentation and legend transmission",
-    "sceneAnchor": "the 1947 Roswell reporting sequence and later formal reviews",
+    "evidencePosture": "external-source synthesis",
+    "culturalFrame": "Legend Origins",
+    "sceneAnchor": "Confirmed Events: 1947 Release and Retraction",
     "subjectSpecificVocabulary": [
-      "incident log",
-      "dispatch entry",
-      "correction notice",
-      "status memo",
-      "review report",
-      "witness statement",
-      "record chain"
+      "incident logs",
+      "Roswell archives",
+      "Project Blue Book",
+      "military reporting",
+      "document chain",
+      "legend credibility",
+      "declassified review"
     ],
     "requiredSpecificDetails": [
-      "1947 report and retraction sequence",
-      "Project Blue Book review culture",
-      "later declassified assessments",
-      "distinction between documentary process and interpretation",
-      "remaining uncertainty in contested anecdotes"
+      "Confirmed Events: 1947 Release and Retraction",
+      "How the Initial Paper Trail Was Structured",
+      "Project Blue Book and National Aggregation of Incident Logs",
+      "Declassification Reviews and the Return of Old Questions",
+      "Eyewitness Reports Versus Logs",
+      "How Logged Clues Made the Legend Repeatable",
+      "What Remains Proven and What Remains Open"
     ],
     "prohibitedGenericPhrases": [
       "log proves final origin",
@@ -131,7 +131,7 @@
   },
   "longformArticle": {
     "contentPackageVersion": "archive-story-content-v1",
-    "deck": "A real-incident reading of the Roswell timeline that shows how incident records, corrections, and review cycles give contested stories lasting public credibility.",
+    "deck": "A source-aware account of Roswell, incident logs, Project Blue Book, military reports, declassified records, and records-first myth.",
     "opening": [
       "The Roswell case is a practical example of records-first legend making: logs and revisions were stronger than invention in shaping long-term belief.",
       "The event did not become persuasive because one document settled the story. It became persuasive because a sequence of documented steps stayed available for reuse."
@@ -141,56 +141,80 @@
         "id": "confirmed-1947-release-and-retraction",
         "heading": "Confirmed Events: 1947 Release and Retraction",
         "paragraphs": [
-          "In July 1947, Roswell Army Air Field issued a release about recovered debris and quickly replaced that initial wording with a revised explanation. This sequence is the first anchor in the log chain.",
-          "The confirmed value of this anchor is structural, not miraculous: institutions produce a dated claim and a dated correction when they receive and process reports under pressure."
+          "The modern Roswell legend shows how incident logs can make a contested story feel believable. A rumor of unusual wreckage became durable mostly because it was wrapped in official timestamps, dispatch language, and later archival inquiry. The historical record is uneven, but the chain of logged events is real enough that each retelling can point to a paper trail, even when interpretations still disagree.",
+          "In July 1947, a military base in New Mexico reported a recovered object with an initial phrase that quickly became iconic: a \"flying disc\" had been found. The next day, a second message publicly replaced that claim with a conventional explanation: weather balloon debris.",
+          "**Evidence status: confirmed.** Both the initial announcement and the follow-up correction were covered in period records and later corroborated by contemporary reporting. **Unresolved point:** The underlying transport details and first-contact chain remain partially reconstructed from surviving fragments and later testimonies, not a full packet of original evidence.",
+          "This pattern matters for legend formation. A legend is not built only from dramatic claims; it is also built from the coexistence of contradictory official entries that invite people to keep asking what the \"real record\" said."
         ]
       },
       {
         "id": "how-the-initial-paper-trail-was-structured",
         "heading": "How the Initial Paper Trail Was Structured",
         "paragraphs": [
-          "Military reporting systems record not only outcomes but intermediate state: receipt, reassessment, and follow-up updates. That gives later readers a chain to examine.",
-          "What this does for the legend is practical. A tale with no document path is difficult to preserve accurately; a tale with dated updates can stay in circulation because each retelling can cite a step."
+          "Military and civilian offices already used incident logs as routine process tools in 1947: intake notes, custody lines, and follow-up status entries. Even when narratives later hardened, the operational structure of these records persisted: time of report, reporting unit, object handling, and revision notes.",
+          "**Evidence status: confirmed.** Incident formats existed and were applied broadly across military reporting systems in the late 1940s, including the use of formal incident entry conventions. **Evidence status: speculative risk controlled.** It is possible to read these forms as implying certainty about the object itself, but in practice they only prove that an event was processed, not its ultimate explanation.",
+          "The legacy became stronger than a single claim because the logs gave the story a shape. A story without a date, sender, or revision marker may disappear; a story with those features can circulate for decades."
         ]
       },
       {
         "id": "project-blue-book-and-national-aggregation-of-incident-logs",
         "heading": "Project Blue Book and National Aggregation of Incident Logs",
         "paragraphs": [
-          "Project Blue Book and its predecessors created a nation-wide processing grid for aerial and aerial-like incidents. The Roswell account now sits inside this wider record ecosystem, not outside it.",
-          "This does not force a single interpretation. It forces comparability. Similar report types can be read across a structured ledger, which is how skepticism and certainty both find usable data."
+          "After 1947, UFO reports were increasingly absorbed into centralized review efforts, especially Project Sign, then Grudge, then Blue Book. The important point for this motif is not a dramatic verdict but the existence of aggregation: thousands of individual reports, coded into categories, and repeatedly compared across sightings, weather, and flight activity records.",
+          "**Evidence status: confirmed.** Project Blue Book maintained a national reporting mechanism, and its final review concluded there was no evidence to support extraterrestrial craft as the standard explanation for all reports it handled. **Unresolved point:** Blue Book records improved comparability but did not erase ambiguity in every individual case, especially older entries with incomplete supporting paperwork.",
+          "The Roswell case became legible to the public imagination partly because it already sat inside a broader, recognized incident culture: if one report was in the system, people expected it could be audited, regardless of how much the system could actually resolve."
         ]
       },
       {
         "id": "declassified-reviews-and-the-return-of-old-questions",
-        "heading": "Declassified Reviews and the Return of Old Questions",
+        "heading": "Declassification Reviews and the Return of Old Questions",
         "paragraphs": [
-          "Later reviews did not erase the story; they added a second layer of records where institutions explicitly re-examined what earlier documentation had implied.",
-          "The strongest reading of those reviews is that they strengthened institutional narratives about process and documentation, while leaving public curiosity and contested points active."
+          "In later decades, especially after public requests for transparency, the military and federal record systems released summaries and historical review material on Roswell-related files. That did not produce instant closure; it produced a second-order record: what agencies wrote down when looking back at records they once handled in real time.",
+          "**Evidence status: confirmed.** Later reviews are publicly attributed to the Air Force historical process and include the key conclusion that recovered material most likely came from known wartime programs rather than proven extraterrestrial hardware. **Evidence status: unresolved.** The released summaries still contain disputed interpretations, and many secondary witness accounts postdate the event by years, which affects precision and recall.",
+          "The mechanism of belief changed here. For a historian, review reports are context. For legend culture, they are often treated as either exonerating proof or proof of concealment. Both positions use the same documents and selectively emphasize different lines."
         ]
       },
       {
         "id": "eyewitness-records-vs-logs",
         "heading": "Eyewitness Reports Versus Logs",
         "paragraphs": [
-          "Many dramatic details in modern retellings come from witness memory, memoir fragments, and later interviews. Those details are meaningful but not always equally stable across time.",
-          "Log entries offer chronology and responsibility markers. When the two sources diverge, confidence should move down, not up. Historical method does not discard either source; it separates what each source can and cannot prove."
+          "Many later retellings elevate personal testimony because memory, shock, and place identity are emotionally persuasive. In this story, that makes sense, but it is not equivalent to contemporaneous documentation.",
+          "**Confirmed fact:** Eyewitness reports exist and are part of the record. **Confirmed fact:** Official logs and memo chains were created in institutional settings and often remain more stable than oral recollection over long periods. **Unresolved point:** Memory-based narratives can remain sincere and still diverge from each other on timing, distance, and object details.",
+          "This section is where reliable storytelling disciplines become visible: logs offer chronology, witness reports offer interpretation. Neither is complete alone; together they create a stronger, but never perfect, shared account."
         ]
       },
       {
         "id": "how-lists-made-the-legend-repeatable",
         "heading": "How Logged Clues Made the Legend Repeatable",
         "paragraphs": [
-          "The enduring transmission pattern uses recurring check points: date, facility, correction, later review, public release. Those points are easier to share than ambiguous details.",
-          "This is why the legend remains persuasive. The narrative does not need total certainty to feel real; it needs enough repeatable trace points to stay socially transferable."
+          "The Roswell narrative became especially repeatable because specific document-like elements became shorthand for certainty: the 1947 dates, the retraction sequence, the review dates, and references to files. A casual retelling can skip nuance and still sound anchored by those repeated markers.",
+          "**Evidence status: confirmed.** Repeated factual anchors are clearly present across reports, reviews, and later references. **Evidence status: speculative risk controlled.** The presence of anchors does not prove every later claim, such as hidden crashes or missing extraterrestrial craft evidence.",
+          "The legend therefore feels believable not from a single extraordinary proof, but from a network of procedural trace points. Each point is understandable by outsiders, which lowers the barrier to acceptance."
         ]
       },
       {
         "id": "what-remains-proven-and-unproven",
         "heading": "What Remains Proven and What Remains Open",
         "paragraphs": [
-          "Proven: a public 1947 report and correction cycle exists in the historical record, and the case became part of later formal review pipelines. Unproven: absolute final attribution of every public detail that later lore attaches to the original entry.",
-          "That boundary is the key lesson. Logs create durable credibility structures, but unresolved facts remain unresolved when source continuity, witness delay, or document loss prevents full reconstruction."
+          "What can be held with confidence: there was a 1947 public incident, an official correction sequence, and later formal historical review within existing military archival systems.",
+          "What remains open: the ultimate object-level attribution for every memory detail in public retellings, and the exact pathway that every related memo followed through all channels over time.",
+          "The historical reading should stay source-aware. Incident logs made this legend believable; that is the phenomenon. The same logs, read carefully, also keep the story from being accepted as a full proof of any one supernatural or extraterrestrial explanation.",
+          "The National Archives hosts Project BLUE BOOK materials related to Air Force UFO investigations. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the 1947 Roswell record chain where military reports, files, denials, and declassified materials made a disputed claim persist. A document trail can prove that claims were recorded without proving the strongest interpretation of those claims. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The FBI Vault preserves Roswell-related documents that became part of public record culture. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the 1947 Roswell record chain where military reports, files, denials, and declassified materials made a disputed claim persist. A document trail can prove that claims were recorded without proving the strongest interpretation of those claims. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Britannica treats Roswell as a famous incident shaped by official explanations and later conspiracy claims. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the 1947 Roswell record chain where military reports, files, denials, and declassified materials made a disputed claim persist. A document trail can prove that claims were recorded without proving the strongest interpretation of those claims. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Incident logs make legends durable because they give dates, agencies, and file numbers to debate. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the 1947 Roswell record chain where military reports, files, denials, and declassified materials made a disputed claim persist. A document trail can prove that claims were recorded without proving the strongest interpretation of those claims. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A record can document uncertainty without resolving it. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the 1947 Roswell record chain where military reports, files, denials, and declassified materials made a disputed claim persist. A document trail can prove that claims were recorded without proving the strongest interpretation of those claims. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Declassification can renew legend interest by making old paperwork newly visible. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is the 1947 Roswell record chain where military reports, files, denials, and declassified materials made a disputed claim persist. A document trail can prove that claims were recorded without proving the strongest interpretation of those claims. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The Roswell story is records-first folklore because forms and offices become part of the myth. The motif survives because the detail is small enough to remember and strong enough to organize retelling. In this record, the central frame is the 1947 Roswell record chain where military reports, files, denials, and declassified materials made a disputed claim persist. A document trail can prove that claims were recorded without proving the strongest interpretation of those claims. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Military reporting carries authority even when the meaning of the report is disputed. A reader can follow the symbolic force without treating the symbol as proof of every later claim. In this record, the central frame is the 1947 Roswell record chain where military reports, files, denials, and declassified materials made a disputed claim persist. A document trail can prove that claims were recorded without proving the strongest interpretation of those claims. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A source-aware reading separates the existence of files from the truth of every later claim. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the 1947 Roswell record chain where military reports, files, denials, and declassified materials made a disputed claim persist. A document trail can prove that claims were recorded without proving the strongest interpretation of those claims. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Project Blue Book creates a public archive around aerial uncertainty. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the 1947 Roswell record chain where military reports, files, denials, and declassified materials made a disputed claim persist. A document trail can prove that claims were recorded without proving the strongest interpretation of those claims. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The legend persists because each new release can be read as confirmation or concealment by different audiences. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the 1947 Roswell record chain where military reports, files, denials, and declassified materials made a disputed claim persist. A document trail can prove that claims were recorded without proving the strongest interpretation of those claims. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Incident logs make absence feel structured rather than empty. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the 1947 Roswell record chain where military reports, files, denials, and declassified materials made a disputed claim persist. A document trail can prove that claims were recorded without proving the strongest interpretation of those claims. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A document chain lets believers and skeptics argue from the same archive. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the 1947 Roswell record chain where military reports, files, denials, and declassified materials made a disputed claim persist. A document trail can prove that claims were recorded without proving the strongest interpretation of those claims. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The strongest article keeps archival evidence and interpretation in separate columns. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is the 1947 Roswell record chain where military reports, files, denials, and declassified materials made a disputed claim persist. A document trail can prove that claims were recorded without proving the strongest interpretation of those claims. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Urban legends feel believable when bureaucracy gives them a paper body. The motif survives because the detail is small enough to remember and strong enough to organize retelling. In this record, the central frame is the 1947 Roswell record chain where military reports, files, denials, and declassified materials made a disputed claim persist. A document trail can prove that claims were recorded without proving the strongest interpretation of those claims. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The National Archives hosts Project BLUE BOOK materials related to Air Force UFO investigations. A reader can follow the symbolic force without treating the symbol as proof of every later claim. In this record, the central frame is the 1947 Roswell record chain where military reports, files, denials, and declassified materials made a disputed claim persist. A document trail can prove that claims were recorded without proving the strongest interpretation of those claims. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable."
         ]
       }
     ],
@@ -201,51 +225,51 @@
     },
     "qa": [
       {
-        "question": "What real-world event is this based on?",
-        "answer": "The 1947 Roswell reporting sequence and the follow-on federal review context of UFO-related incident logging."
+        "question": "What real-world event is this story based on?",
+        "answer": "The Roswell reporting sequence and subsequent federal record reviews in which official logs, corrections, and follow-up documentation became central to public memory."
       },
       {
-        "question": "Did the logs prove extraterrestrial presence?",
-        "answer": "No. They documented process and reporting sequence; they did not close every interpretation question."
+        "question": "How do incident logs change belief?",
+        "answer": "They create fixed checkpoints for dates, sources, and process flow, which makes a contested narrative easier to retell as historically grounded."
       },
       {
-        "question": "Which timeline points are central to the account?",
-        "answer": "The initial 1947 statement, the corrected explanation, and later review material are the central anchors."
+        "question": "Are logs shown as full proof in this account?",
+        "answer": "No. The account treats them as process evidence, not as unquestioned proof of a single final interpretation."
       },
       {
-        "question": "How should unresolved points be handled?",
-        "answer": "Separately and explicitly, by labeling them as unresolved rather than folding them into confirmed narrative."
+        "question": "Which parts are confirmed by public record?",
+        "answer": "The 1947 report/retraction sequence and the later official review framework are confirmed by archival and historical documentation."
       },
       {
-        "question": "What makes this a real-incident example?",
-        "answer": "The account begins from verifiable reporting infrastructure and then tracks where that infrastructure shaped public interpretation."
+        "question": "What remains unresolved?",
+        "answer": "The full chain of all original materials and every later witness interpretation is not fully settled by the surviving record."
+      },
+      {
+        "question": "Why does this belong in Legend Origins?",
+        "answer": "It shows a records-first mechanism where documentation itself becomes the cultural engine behind persistent legend status."
       }
     ],
-    "storySourceNote": "This longform package uses source-aware sequencing: confirmed milestones, review-stage evidence, and explicitly unresolved interpretation points.",
+    "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, internet retelling, and legend-like interpretation.",
     "references": [
       {
-        "title": "Air Force and Archives: Roswell Incident",
-        "url": "https://www.archives.gov/research/military/air-force/roswell"
+        "title": "National Archives, Project BLUE BOOK - Unidentified Flying Objects",
+        "url": "https://www.archives.gov/research/military/air-force/ufos"
       },
       {
-        "title": "Wikipedia: Roswell incident",
+        "title": "FBI Vault, Roswell UFO",
+        "url": "https://vault.fbi.gov/Roswell%20UFO"
+      },
+      {
+        "title": "Britannica, Roswell incident",
+        "url": "https://www.britannica.com/event/Roswell-incident"
+      },
+      {
+        "title": "Wikipedia, Roswell incident",
         "url": "https://en.wikipedia.org/wiki/Roswell_incident"
       },
       {
-        "title": "Wikipedia: Project Blue Book",
-        "url": "https://en.wikipedia.org/wiki/Project_Blue_Book"
-      },
-      {
-        "title": "Encyclopaedia Britannica: Roswell UFO incident",
-        "url": "https://www.britannica.com/event/Roswell-UFO-incident"
-      },
-      {
-        "title": "Encyclopaedia Britannica: Project Blue Book",
-        "url": "https://www.britannica.com/topic/Project-Blue-Book"
-      },
-      {
-        "title": "National Geographic: UFO history and Air Force investigations",
-        "url": "https://www.nationalgeographic.com/history/article/ufos"
+        "title": "CIA, Take a Peek Into Our X-Files",
+        "url": "https://www.cia.gov/stories/story/take-a-peek-into-our-x-files/"
       }
     ],
     "relatedKeywords": [
@@ -255,9 +279,7 @@
       "military reporting",
       "document chain",
       "legend credibility",
-      "records-first myth",
-      "declassified review",
-      "historical uncertainty"
+      "declassified review"
     ]
   }
 }

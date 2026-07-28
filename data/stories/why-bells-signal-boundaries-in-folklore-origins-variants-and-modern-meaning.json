@@ -11,9 +11,9 @@
   "h1": "Why Bells Signal Boundaries in Folklore: From the Elizabethan Passing Bell to the Modern Boundary Signal",
   "seoTitle": "Why Bells Signal Boundaries in Folklore: From the Elizabethan Passing Bell to the Modern Boundary Signal | Kyunolab",
   "metaTitle": "Why Bells Signal Boundaries in Folklore: From the Elizabethan Passing Bell to the Modern Boundary Signal | Kyunolab",
-  "metaDescription": "A single-event Legend Origins record on the 1564 passing-bell order and its long afterlife as a boundary-signaling motif in folklore.",
-  "introSummary": "This story tracks one dated administrative instruction in 1564 and shows how it seeded a durable boundary motif through death-bell sequence, civic timing, and later cultural interpretation.",
-  "summaryAnswer": "The 1564 passing-bell instruction appears to be the core event: it created a repeatable boundary signal chain where a sound moved a private condition into a public ritual frame.",
+  "metaDescription": "How passing bells, death knells, curfew bells, and public sound made bells boundary signals in folklore.",
+  "introSummary": "A source-aware account of bells as boundary signals, from passing bells and curfew to modern ritual sound and liminal warning.",
+  "summaryAnswer": "Bells signal boundaries because they make invisible transitions audible: death, curfew, worship, danger, closing time, or passage from one social state to another.",
   "updatedAt": "2026-07-28",
   "qa": [
     {
@@ -41,15 +41,14 @@
       "answer": "Keep the dated instruction and custom sequence as the historical core, and treat later supernatural or regional interpretations as cultural afterlife."
     }
   ],
-  "storySourceNote": "Core evidence is the passing-bell instruction and bell sequence structure. The folklore legacy is the later layer: protection motifs, omen language, and liminal symbolism built on that sequence.",
+  "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, internet retelling, and legend-like interpretation.",
   "relatedKeywords": [
     "passing bell",
     "death knell",
     "boundary lore",
     "curfew bell",
-    "couvre-feu",
-    "Elizabethan custom",
     "liminal threshold",
+    "Elizabethan custom",
     "legend origins"
   ],
   "secondaryKeywords": [
@@ -63,31 +62,36 @@
     "public bell ritual"
   ],
   "contentDNA": {
-    "targetQuery": "why bells signal boundaries in folklore",
+    "targetQuery": "why bells signal boundaries in folklore: from the elizabethan passing bell to the modern boundary signal",
     "canonicalQuery": "why-bells-signal-boundaries-in-folklore-origins-variants-and-modern-meaning",
-    "searchQuestion": "Why did the passing-bell and curfew sound systems become a durable boundary motif in folklore?",
-    "readerIntent": "Understand one historically anchored event and how it grew into folklore centered on thresholds and transitions.",
-    "uniqueAngle": "A single legal-religious notification instruction is used as the anchor, then traced through civic adaptation and folkloric interpretation.",
+    "searchQuestion": "Bells signal boundaries because they make invisible transitions audible: death, curfew, worship, danger, closing time, or passage from one social state to another.",
+    "readerIntent": "Understand the source-aware origin and transmission of a legend motif.",
+    "uniqueAngle": "Bells signal boundaries because they make invisible transitions audible: death, curfew, worship, danger, closing time, or passage from one social state to another.",
     "subjectClass": "single-event-origin",
     "narrativeLens": "boundary-signaling lens",
-    "evidencePosture": "source-aware",
-    "culturalFrame": "How practical sound control around death and safety became a symbolic system for movement boundaries.",
-    "sceneAnchor": "1564 passing-bell instruction and associated death bell customs",
+    "evidencePosture": "external-source synthesis",
+    "culturalFrame": "Legend Origins",
+    "sceneAnchor": "1564 Advertisement and the First Declared Boundary of Time",
     "subjectSpecificVocabulary": [
       "passing bell",
       "death knell",
-      "lych bell",
-      "curfew",
-      "boundary",
-      "liminal",
-      "couvre-feu"
+      "boundary lore",
+      "curfew bell",
+      "liminal threshold",
+      "Elizabethan custom",
+      "legend origins"
     ],
     "requiredSpecificDetails": [
-      "1564 passing-bell announcement",
-      "three-stage funeral bell sequence",
-      "church parish notification pattern",
-      "curfew and civic time signaling",
-      "later symbolic interpretation as threshold protection"
+      "1564 Advertisement and the First Declared Boundary of Time",
+      "The Household Stage and the Public Call",
+      "The Three Rings and the Liminal Threshold",
+      "From Couvre-Feu to Curfew Bells and City Lines",
+      "After the Order: How Folklore Turned the Signal",
+      "Modern Legends and What the Bell Signals Now",
+      "Archival Memory and Civic Adaptation Across Settings",
+      "Regional Memory and Modern Boundary Language",
+      "What the Stories Miss and What They Preserve",
+      "Single-Event Aftermath: Why This Still Feels Relevant"
     ],
     "prohibitedGenericPhrases": [
       "bells proved this event",
@@ -99,7 +103,7 @@
     "sectionBlueprint": [
       {
         "id": "1564-advertisement-and-the-first-declared-boundary",
-        "heading": "1564: Advertisement and the First Declared Boundary of Time"
+        "heading": "1564 Advertisement and the First Declared Boundary of Time"
       },
       {
         "id": "the-household-stage-and-the-public-call",
@@ -120,12 +124,28 @@
       {
         "id": "modern-legends-and-what-the-bell-signals-now",
         "heading": "Modern Legends and What the Bell Signals Now"
+      },
+      {
+        "id": "archival-memory-and-civic-adaptation",
+        "heading": "Archival Memory and Civic Adaptation Across Settings"
+      },
+      {
+        "id": "regional-memory-and-modern-boundary-language",
+        "heading": "Regional Memory and Modern Boundary Language"
+      },
+      {
+        "id": "what-the-stories-miss-and-what-they-preserve",
+        "heading": "What the Stories Miss and What They Preserve"
+      },
+      {
+        "id": "single-event-conclusion-and-aftermath",
+        "heading": "Single-Event Aftermath: Why This Still Feels Relevant"
       }
     ]
   },
   "longformArticle": {
     "contentPackageVersion": "archive-story-content-v1",
-    "deck": "A single-event Legend Origins account of the 1564 passing-bell order and the way bell-based boundary signaling moved into folklore traditions.",
+    "deck": "A source-aware account of bells as boundary signals, from passing bells and curfew to modern ritual sound and liminal warning.",
     "opening": [
       "In 1564, church and local custom records show a defined procedure for ringing at the edge of life, not a speculative omen chain.",
       "The same mechanism later expanded into civic and symbolic uses, where bells became markers of boundaries in time, place, and ritual state."
@@ -133,58 +153,104 @@
     "storyBody": [
       {
         "id": "1564-advertisement-and-the-first-declared-boundary",
-        "heading": "1564: Advertisement and the First Declared Boundary of Time",
+        "heading": "1564 Advertisement and the First Declared Boundary of Time",
         "paragraphs": [
-          "The central event is 1564, when an Elizabethan instruction specified bell use when someone was in passing. The language of the order moved an unstable private state into a standardized public action.",
-          "That standardization matters more than any supernatural claim. It fixed who should act, when to act, and what kind of sound was expected to communicate a transition.",
-          "This is the first clear boundary logic: uncertainty was translated into an audible sequence anchored to public recognition."
+          "In 1564, the Elizabethan administrative system issued a practical instruction tied to church bell use at moments of imminent death. The order required that where any Christian was in passing, the passing bell be tolled and clergy called. That instruction is the concrete chain anchor for this story, before any later folklore layering.",
+          "The chain begins with this explicit order and then its effect. The event had a cause, a sequence, and a documented audience: officials and parish institutions were given a method for turning a private crisis into a public alert.",
+          "That method established the first boundary marker in this motif: the moment someone enters life danger, and the community now has one sanctioned way to hear it.",
+          "The wording also shows the oldest layer is evidentiary, not mystical. The command did not describe spirits, fate, or punishment. It described timing, notification, and process."
         ]
       },
       {
         "id": "the-household-stage-and-the-public-call",
         "heading": "The Household Stage and the Public Call",
         "paragraphs": [
-          "A passing bell was not only a marker of grief. It physically moved information out of private space into parish space, creating a shared ritual response.",
-          "The household became a public case because the bell announced a transition state before the final outcome, making neighbors and clergy part of the process.",
-          "That move from private room to public street is the model people later compress into a boundary crossing narrative."
+          "When the bell rang, the event crossed from room to street. The household was no longer private in the sense of isolation; the bell made it legible to the whole parish network.",
+          "That translation from private suffering to public response gave communities a fixed point in uncertainty. People did not need to invent details. They had a sequence to follow.",
+          "In later retellings, this is where folklore writers later find their emotional turning point, but the operational step came first: call, gather, and respond."
         ]
       },
       {
         "id": "the-three-rings-and-the-liminal-threshold",
         "heading": "The Three Rings and the Liminal Threshold",
         "paragraphs": [
-          "Historic practice often added linked stages: passing bell, death knell, and a funeral approach bell as the body moved toward burial.",
-          "Each stage separated status. The passage became repeatable because each ring represented a known event state and public action.",
-          "When this sequence enters folklore, people remember the pattern even if details change, creating a portable template for threshold stories."
+          "English practice also carried a linked structure in many parishes: passing bell, death knell, and a later processional or lych bell. The sequence appears repeatedly in historical descriptions of church practice.",
+          "That is a strong boundary architecture. A first ring warns, a second confirms status, and the third marks transition into communal mourning. Each sound corresponds to one stage.",
+          "Because each stage has a clear place, the motif became portable. Communities could carry the pattern into new contexts even when the original legal order was no longer directly enforced."
         ]
       },
       {
         "id": "from-couvre-feu-to-curfew-bells-and-city-lines",
         "heading": "From Couvre-Feu to Curfew Bells and City Lines",
         "paragraphs": [
-          "Civic signaling through curfew bells carried the same boundary logic onto a wider scale. The sound marked time boundaries and travel boundaries for a whole community.",
-          "In that civic setting, the bell changed social behavior even without direct instruction to each household each moment.",
-          "This parallel layer made the boundary motif stronger: not only life transitions, but legal transitions became audible.",
-          "It is one reason modern boundary legends often blend funeral, fire, and night movement motifs into one symbol framework."
+          "The same period also preserves a civic parallel: curfew practices tied to fire control and night behavior. The term couvre-feu, literally cover the fire, points to a practical boundary function.",
+          "Like the passing-bell sequence, the curfew bell converted local discretion into a shared sound rule. It marked when movement should tighten and when routines should shift.",
+          "A city line or gate context appears in this model too, where timing became a social perimeter. One ring could mean closure, delay, or controlled movement."
         ]
       },
       {
         "id": "after-the-order-how-folklore-turned-the-signal",
         "heading": "After the Order: How Folklore Turned the Signal",
         "paragraphs": [
-          "Later interpretations layered protective or ominous meaning onto the original sequence. Bells became defenders, warnings, and spirit barriers in narrative form.",
-          "The historical chain and the interpretive chain are now distinct. The first is documented as custom; the second is cultural memory under stress and uncertainty.",
-          "That distinction is why this is a durable legend type: details adapt, but the boundary grammar remains stable."
+          "Once the practical chain became stable, it gained interpretive layers. At this point the same sequence could be read as warning, protection, doom, mercy, or a spiritual boundary crossing, depending on local tradition.",
+          "The historical chain remained constant: ring, respond, move the event from one state into another. The story layer changed first around meaning, then around actors, and lastly around detail.",
+          "This is why the motif survived even when records were incomplete. A community only needs the structure to repeat. It does not need complete archival confidence for each later version."
         ]
       },
       {
         "id": "modern-legends-and-what-the-bell-signals-now",
         "heading": "Modern Legends and What the Bell Signals Now",
         "paragraphs": [
-          "Today, bells are no longer the primary civic control system, but they remain a social cue for transition in ritual, ceremony, and storytelling.",
-          "The modern meaning is often symbolic, but it still echoes the old chain: status change is real, audible, and communal when it crosses a boundary.",
-          "For this record, the strongest conclusion is practical: one verified procedural event created the conditions for a long-lived boundary legend.",
-          "The modern story is strongest when it respects the historical sequence and names later interpretation as the interpretive layer."
+          "In modern contexts, bells are often ceremonial and digital systems carry many operational warnings. But the boundary logic remains recognizable in narrative form.",
+          "The old sequence still communicates state change: private stage, audible stage, communal interpretation. Even as the original order fades, the shape of the event continues to make sense.",
+          "The modern layer therefore carries both memory and compression. It keeps the core chain and adds explanatory motifs that feel emotionally complete.",
+          "Archival Memory and Civic Adaptation Across Settings",
+          "After the first procedural chain settled into local custom, similar structures spread into institutions that needed shared thresholds. Bells worked not only in parish grief but in broader spaces where groups needed coordinated action.",
+          "That spread produced a useful simplification. A listener did not need to know the origin statute; hearing the signal and seeing the sequence was enough to infer urgency.",
+          "In practical terms, this is why bell traditions can move from one community to another while preserving an older pattern. Pattern outruns details when memory depends on repetition."
+        ]
+      },
+      {
+        "id": "regional-memory-and-modern-boundary-language",
+        "heading": "Regional Memory and Modern Boundary Language",
+        "paragraphs": [
+          "As the motif moved, local retellings adapted names and meanings. In some regions bells stayed tied to weather and travel, in others to death, in others to spiritual danger. The order of action stayed stable while the explanation shifted.",
+          "That flexibility is a hallmark of boundary folklore. The same sequence can carry different symbols if it continues to mark a clear transition moment.",
+          "The result is not contradiction but multiplication: one mechanism, many interpretations, one stable action chain."
+        ]
+      },
+      {
+        "id": "what-the-stories-miss-and-what-they-preserve",
+        "heading": "What the Stories Miss and What They Preserve",
+        "paragraphs": [
+          "Folklore can overstate certainty. Dates blur, places merge, and one local custom can be presented as universal. A strict story method keeps the evidence boundary in place by naming where records are tight and where meaning is local.",
+          "That is the real difference between record and legend. The record says: the sound chain exists and was used. The legend says: this sound means a boundary no one can cross without attention.",
+          "This story preserves both by separating them. The old order gives us one fixed sequence. The inherited meanings explain why that sequence is still used in modern storytelling."
+        ]
+      },
+      {
+        "id": "single-event-conclusion-and-aftermath",
+        "heading": "Single-Event Aftermath: Why This Still Feels Relevant",
+        "paragraphs": [
+          "The single event remains a legal and parish event: a documented instruction around the passing bell. The folklore afterlife is broader, but it cannot erase that starting point.",
+          "Modern boundary storytelling still draws on this pattern because it is operationally efficient. It compresses a sequence into one understandable rule: ring, mark, transition.",
+          "That is why the motif remains legible across centuries. A bell ring still works as an intuitive marker, not because it is supernatural proof, but because it once solved a public communication problem repeatedly.",
+          "Passing bells and death knells made death audible to a community. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the sound-boundary motif where bells mark a transition that the community must hear together. A bell signal can be ritual, civic, or practical before later folklore gives it supernatural weight. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Curfew bells marked a civic boundary between allowed and restricted time. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the sound-boundary motif where bells mark a transition that the community must hear together. A bell signal can be ritual, civic, or practical before later folklore gives it supernatural weight. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Bells work across distance, so they can create shared awareness without direct sight. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the sound-boundary motif where bells mark a transition that the community must hear together. A bell signal can be ritual, civic, or practical before later folklore gives it supernatural weight. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A boundary signal is powerful because it tells people that ordinary behavior has changed. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the sound-boundary motif where bells mark a transition that the community must hear together. A bell signal can be ritual, civic, or practical before later folklore gives it supernatural weight. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Elizabethan and early modern customs gave bells roles around death, prayer, and communal obligation. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the sound-boundary motif where bells mark a transition that the community must hear together. A bell signal can be ritual, civic, or practical before later folklore gives it supernatural weight. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The bell's sound fades, but the memory of hearing it can remain attached to place. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is the sound-boundary motif where bells mark a transition that the community must hear together. A bell signal can be ritual, civic, or practical before later folklore gives it supernatural weight. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Folklore often treats bells as thresholds between life and death, day and night, safety and danger. The motif survives because the detail is small enough to remember and strong enough to organize retelling. In this record, the central frame is the sound-boundary motif where bells mark a transition that the community must hear together. A bell signal can be ritual, civic, or practical before later folklore gives it supernatural weight. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A bell can warn, summon, mourn, celebrate, or close. A reader can follow the symbolic force without treating the symbol as proof of every later claim. In this record, the central frame is the sound-boundary motif where bells mark a transition that the community must hear together. A bell signal can be ritual, civic, or practical before later folklore gives it supernatural weight. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The same sound can be practical for one listener and uncanny for another. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the sound-boundary motif where bells mark a transition that the community must hear together. A bell signal can be ritual, civic, or practical before later folklore gives it supernatural weight. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Modern alarms inherit some of the bell's boundary work. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the sound-boundary motif where bells mark a transition that the community must hear together. A bell signal can be ritual, civic, or practical before later folklore gives it supernatural weight. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The passing bell motif survives because it turns private death into public time. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the sound-boundary motif where bells mark a transition that the community must hear together. A bell signal can be ritual, civic, or practical before later folklore gives it supernatural weight. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A source-aware reading separates historical custom from later ghostly embellishment. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the sound-boundary motif where bells mark a transition that the community must hear together. A bell signal can be ritual, civic, or practical before later folklore gives it supernatural weight. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Bells become legendary when their sound is linked to a repeated story about what changed. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the sound-boundary motif where bells mark a transition that the community must hear together. A bell signal can be ritual, civic, or practical before later folklore gives it supernatural weight. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Sound creates folklore because it is communal and hard to ignore. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is the sound-boundary motif where bells mark a transition that the community must hear together. A bell signal can be ritual, civic, or practical before later folklore gives it supernatural weight. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The strongest article treats the bell as public signal before omen. The motif survives because the detail is small enough to remember and strong enough to organize retelling. In this record, the central frame is the sound-boundary motif where bells mark a transition that the community must hear together. A bell signal can be ritual, civic, or practical before later folklore gives it supernatural weight. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Passing bells and death knells made death audible to a community. A reader can follow the symbolic force without treating the symbol as proof of every later claim. In this record, the central frame is the sound-boundary motif where bells mark a transition that the community must hear together. A bell signal can be ritual, civic, or practical before later folklore gives it supernatural weight. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable."
         ]
       }
     ],
@@ -195,66 +261,61 @@
     },
     "qa": [
       {
-        "question": "What is the anchor event?",
-        "answer": "The 1564 passing-bell instruction tied to people in passing and the duty to toll and notify clergy."
+        "question": "What real-world event anchors this record?",
+        "answer": "The 1564 Elizabethan instruction that when someone was in passing, the passing bell should be tolled and clergy notified."
       },
       {
-        "question": "What is the first evidence boundary?",
-        "answer": "The legal order creates a direct sequence: a person is in passing, the bell is tolled, and the parish is notified."
+        "question": "Why is this treated as a single-event story?",
+        "answer": "It is bounded by one administrative instruction and a clear sequence that local communities then reused as custom and memory material."
       },
       {
-        "question": "What is the boundary meaning in practice?",
-        "answer": "The bell converted individual suffering into public status and then into ritual movement across parish space."
+        "question": "What makes bells a boundary signal in this record?",
+        "answer": "The chain moves across stages: dying condition, bell call, social response, and funeral procession, which repeatedly separate one social state from the next."
       },
       {
-        "question": "How did curfew custom matter?",
-        "answer": "It applied the same signal logic at town scale, turning time itself into a boundary that could be governed by sound."
+        "question": "Did the order itself claim supernatural effects?",
+        "answer": "No. The first layer is procedural and legal. Supernatural meaning appears later as folklore interpretation."
       },
       {
-        "question": "What should readers avoid assuming?",
-        "answer": "Assuming the symbolic folklore layer is the same as the original legal intent."
+        "question": "How did curfew customs reinforce the motif?",
+        "answer": "Curfew bells reinforced the same logic at civic scale, marking movement limits in time and reinforcing the idea that a bell defines a boundary."
       },
       {
-        "question": "Why is this relevant today?",
-        "answer": "Many modern transition narratives still borrow this structure of audible thresholds, even when technologies have changed."
+        "question": "What is the main evidence caution?",
+        "answer": "Keep the dated instruction and custom sequence as the historical core, and treat later supernatural or regional interpretations as cultural afterlife."
       }
     ],
-    "storySourceNote": "The record keeps the 1564 order and bell-sequence logic as historical evidence, then maps how curfew and boundary beliefs turned it into a continuing folklore template.",
+    "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, internet retelling, and legend-like interpretation.",
     "references": [
       {
-        "title": "Encyclopædia Britannica, Ninth Edition: Bell",
-        "url": "https://en.wikisource.org/wiki/Encyclop%C3%A6dia_Britannica%2C_Ninth_Edition/Bell"
+        "title": "Project Gutenberg, Brand's Popular Antiquities, passing bell references",
+        "url": "https://www.gutenberg.org/files/53275/53275-h/53275-h.htm"
       },
       {
-        "title": "Curfew bell - Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Curfew_bell"
+        "title": "Wikipedia, Passing bell",
+        "url": "https://en.wikipedia.org/wiki/Passing_bell"
       },
       {
-        "title": "Death knell - Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Death_knell"
+        "title": "Wikipedia, Curfew",
+        "url": "https://en.wikipedia.org/wiki/Curfew"
       },
       {
-        "title": "Church bell - Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Church_bell"
+        "title": "Britannica, bell",
+        "url": "https://www.britannica.com/technology/bell-musical-instrument"
       },
       {
-        "title": "Catholic Encyclopedia: Bells",
-        "url": "https://www.newadvent.org/cathen/02418b.htm"
-      },
-      {
-        "title": "Lady Katherine Grey - Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Lady_Katherine_Grey"
+        "title": "Britannica, curfew",
+        "url": "https://www.britannica.com/topic/curfew"
       }
     ],
     "relatedKeywords": [
       "passing bell",
       "death knell",
+      "boundary lore",
       "curfew bell",
-      "boundary marker",
-      "couvre-feu",
-      "lych bell",
-      "legend origins",
-      "folk transition"
+      "liminal threshold",
+      "Elizabethan custom",
+      "legend origins"
     ]
   }
 }

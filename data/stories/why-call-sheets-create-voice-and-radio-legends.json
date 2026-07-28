@@ -11,10 +11,10 @@
   "h1": "Why a Radio Call Sheet Became a Legend: The 1938 War of the Worlds Broadcast",
   "seoTitle": "Why a Radio Call Sheet Became a Legend: The 1938 War of the Worlds Broadcast | Kyunolab",
   "metaTitle": "Why a Radio Call Sheet Became a Legend: The 1938 War of the Worlds Broadcast | Kyunolab",
-  "metaDescription": "A single broadcast event in 1938 shows how production cue sheets, staged news inserts, and audience call-back behavior turned one radio drama into a persistent legend about voice and media trust.",
-  "introSummary": "The record follows one CBS program chain: a scheduled drama cue sheet, a realistic bulletin sequence, immediate audience response, and the legacy framing that followed in print and media culture.",
-  "summaryAnswer": "This is a single-event chain where one broadcast operation in 1938 became a legend because timing documents, voice style, and reaction logs fused into a durable warning narrative.",
-  "updatedAt": "2026-07-27",
+  "metaDescription": "How the 1938 War of the Worlds broadcast, call sheets, bulletins, and listener reaction made a radio legend.",
+  "introSummary": "A source-aware account of Orson Welles's War of the Worlds broadcast, radio cueing, fake bulletins, and media-panic folklore.",
+  "summaryAnswer": "Radio call sheets create legends when scripted voices, cues, and bulletin formats imitate live authority strongly enough for later audiences to retell the confusion.",
+  "updatedAt": "2026-07-28",
   "qa": [
     {
       "question": "What is the one event this record is anchored to?",
@@ -37,15 +37,15 @@
       "answer": "No. Later research treats reactions as mixed and regional, while still treating the sequence itself as historically significant."
     }
   ],
-  "storySourceNote": "The record keeps the 1938 CBS event sequence as its anchor: scheduled production sheets, scripted realistic bulletin cues, audience verification requests, and afterward myth consolidation through media reports.",
+  "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, internet retelling, and legend-like interpretation.",
   "relatedKeywords": [
     "War of the Worlds broadcast",
     "Orson Welles",
     "radio legend origins",
     "broadcast cue sheets",
     "fake emergency bulletins",
-    "listener reaction logs",
-    "1938 media panic"
+    "1938 media panic",
+    "voice folklore"
   ],
   "secondaryKeywords": [
     "War of the Worlds broadcast",
@@ -58,31 +58,31 @@
     "emergency voice format"
   ],
   "contentDNA": {
-    "targetQuery": "why call sheets create voice and radio legends",
+    "targetQuery": "why a radio call sheet became a legend: the 1938 war of the worlds broadcast",
     "canonicalQuery": "why-call-sheets-create-voice-and-radio-legends",
-    "searchQuestion": "How did the 1938 War of the Worlds broadcast become a long-lived model for voice-based radio legend formation?",
-    "readerIntent": "Understand one concrete broadcast incident and how operational documents and audience reporting shaped its afterlife as a legend.",
-    "uniqueAngle": "Track one event with a strict cause-action-aftermath chain anchored to station cue sheets and early listener response rather than generalized media fear claims.",
+    "searchQuestion": "Radio call sheets create legends when scripted voices, cues, and bulletin formats imitate live authority strongly enough for later audiences to retell the confusion.",
+    "readerIntent": "Understand the source-aware origin and transmission of a legend motif.",
+    "uniqueAngle": "Radio call sheets create legends when scripted voices, cues, and bulletin formats imitate live authority strongly enough for later audiences to retell the confusion.",
     "subjectClass": "motif-origin",
     "narrativeLens": "records-and-reaction-lens",
-    "evidencePosture": "source-aware",
-    "culturalFrame": "media trust, procedural authority, and story transmission in broadcast history",
-    "sceneAnchor": "October 1938 CBS broadcast with scripted interruption-style bulletins",
+    "evidencePosture": "external-source synthesis",
+    "culturalFrame": "Legend Origins",
+    "sceneAnchor": "Production Sheets and the Halloween Slot",
     "subjectSpecificVocabulary": [
-      "cue sheet",
-      "production log",
-      "Emergency bulletin format",
-      "audience call-back",
-      "media reaction cycle",
-      "broadcast folklore"
+      "War of the Worlds broadcast",
+      "Orson Welles",
+      "radio legend origins",
+      "broadcast cue sheets",
+      "fake emergency bulletins",
+      "1938 media panic",
+      "voice folklore"
     ],
     "requiredSpecificDetails": [
-      "CBS broadcast schedule as the event trigger",
-      "scripted faux-news interruptions",
-      "audience uncertainty from late tuning or partial listening",
-      "station call and response pressure",
-      "later print amplification",
-      "post-event correction of scale claims"
+      "Production Sheets and the Halloween Slot",
+      "Scripted Bulletins Cut In as News",
+      "Listener Confusion and the Station Call Log",
+      "Print Coverage and Broadcast Aftershocks",
+      "Why the Incident Outlived Its Exact Audience Count"
     ],
     "prohibitedGenericPhrases": [
       "this proves all radio can cause panic",
@@ -105,7 +105,7 @@
       },
       {
         "id": "print-and-broadcast-aftershocks",
-        "heading": "Print and Broadcast Aftershocks"
+        "heading": "Print Coverage and Broadcast Aftershocks"
       },
       {
         "id": "why-the-incident-outlived-fact",
@@ -115,52 +115,63 @@
   },
   "longformArticle": {
     "contentPackageVersion": "archive-story-content-v1",
-    "deck": "A scheduled 1938 radio drama used a realistic bulletin format and then entered public memory as a case study in how procedural broadcast cues can produce enduring media folklore.",
+    "deck": "A source-aware account of Orson Welles's War of the Worlds broadcast, radio cueing, fake bulletins, and media-panic folklore.",
     "opening": [],
     "storyBody": [
       {
         "id": "production-sheets-and-the-halloween-slot",
         "heading": "Production Sheets and the Halloween Slot",
         "paragraphs": [
-          "On October 30, 1938, CBS aired The War of the Worlds as a scripted adaptation in a regular evening slot.",
-          "Station cue sheets and continuity instructions defined the sequence of music, narration, and bulletin-like inserts that came next.",
-          "The chain begins with this operational setup, not with the legend; it is the documented first step."
+          "The story chain begins on the evening of October 30, 1938, when CBS scheduled the Mercury Theatre version of H. G. Wells’ *The War of the Worlds* in a standard radio-night slot. Internal program logs and cue sheets identified exact transition points: opening introduction, scripted drama scene, then a sequence of urgent-sounding bulletins. In short, the event starts as a normal broadcast operation with an internal chain of scheduling documents, actor cues, and announcer timing."
         ]
       },
       {
         "id": "scripted-bulletins-cut-in-as-news",
         "heading": "Scripted Bulletins Cut In as News",
         "paragraphs": [
-          "During the show, the format shifted into emergency-style news reports, including escalating local-impact descriptions.",
-          "For listeners hearing only the middle sections, the transition had the rhythm of live reporting rather than a play announcement.",
-          "That was the action stage: a believable communication style transformed theatrical tone into apparent field reality."
+          "At the scheduled transition, the program switched into faux breaking-news segments that described a comet strike in New Jersey and moving emergency conditions. The audience heard the same language and tone as live reporting, not a theatrical warning frame. This was the key sequencing change: listeners who tuned in mid-program missed the disclaimer that it was fiction, so the call-sheeted cue became part of the perceived present tense."
         ]
       },
       {
         "id": "listener-confusion-and-station-call-log",
         "heading": "Listener Confusion and the Station Call Log",
         "paragraphs": [
-          "As the transmission continued, stations received calls from people seeking confirmation and context.",
-          "Reaction was not uniform, but the call logs show a real feedback loop: uncertainty moved from the airwaves into institutional channels within minutes.",
-          "The response phase matters because it converted an isolated broadcast design choice into a social record."
+          "Within minutes, stations received calls from listeners asking for clarifications, and local institutions were reported in newspaper columns as receiving urgent public questions. The incident was not a perfectly uniform mass panic, but a measurable chain: ambiguous on-air framing, uncertainty in the audience, then verification attempts through phone contact and desk-level response. That call log pressure turned the broadcast into an event record, because each incoming report fed the idea that the broadcast had crossed into public emergency context."
         ]
       },
       {
         "id": "print-and-broadcast-aftershocks",
-        "heading": "Print and Broadcast Aftershocks",
+        "heading": "Print Coverage and Broadcast Aftershocks",
         "paragraphs": [
-          "Next day, newspapers and industry commentary carried the event as a warning about radio credibility.",
-          "Each repetition retained the core sequence while removing operational nuance, leaving a compact cautionary version.",
-          "The motif shifted from a specific performance to a media-heritage lesson."
+          "The next step was immediate amplification. Morning papers and rival network commentators repeated the event as a cautionary example of media authority and realism. As stories repeated, the original production cue sequence was compressed into a simpler warning formula: fake bulletins can turn entertainment into panic when timing and trust collapse. The incident therefore moved from one studio broadcast to a lesson-shaped narrative repeated in journalism, media studies, and radio history."
         ]
       },
       {
         "id": "why-the-incident-outlived-fact",
         "heading": "Why the Incident Outlived Its Exact Audience Count",
         "paragraphs": [
-          "Later scholarship challenged claims of uniformly massive panic while preserving the causal chain.",
-          "The surviving legend is therefore about process: trusted schedule, staged voice, live-style framing, and rapid audience verification pressure.",
-          "The chain remains valid as a single-event record because the initial chronology is stable even as scale details remain debated."
+          "What survives in legend is not a single verified panic statistic. It is the sequence itself: schedule sheet, trusted voice, interpretive collapse, institutional response, and retrospective retelling. That chain is why this one event became the anchor for modern folklore about broadcast credibility and voicemail-like urgency, even as later researchers correct the original scale details and keep the chain logic intact.",
+          "The Library of Congress preserves the broadcast as a recorded media artifact. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the 1938 broadcast sequence where scripted bulletins and radio performance made fictional invasion sound like live emergency reporting. The broadcast became legendary through performance and reception, but later panic claims should be checked against contemporary evidence. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The program used news-bulletin style interruption to give fiction the sound of live reporting. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the 1938 broadcast sequence where scripted bulletins and radio performance made fictional invasion sound like live emergency reporting. The broadcast became legendary through performance and reception, but later panic claims should be checked against contemporary evidence. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Orson Welles and the Mercury Theatre turned voice timing into dramatic evidence. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the 1938 broadcast sequence where scripted bulletins and radio performance made fictional invasion sound like live emergency reporting. The broadcast became legendary through performance and reception, but later panic claims should be checked against contemporary evidence. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A call sheet or cue list matters because radio performance depends on ordered entries, voices, and timing. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the 1938 broadcast sequence where scripted bulletins and radio performance made fictional invasion sound like live emergency reporting. The broadcast became legendary through performance and reception, but later panic claims should be checked against contemporary evidence. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The legend grew because listeners and newspapers retold the broadcast as a national panic story. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the 1938 broadcast sequence where scripted bulletins and radio performance made fictional invasion sound like live emergency reporting. The broadcast became legendary through performance and reception, but later panic claims should be checked against contemporary evidence. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Later scholarship has debated the scale of actual panic, which makes source-aware caution important. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is the 1938 broadcast sequence where scripted bulletins and radio performance made fictional invasion sound like live emergency reporting. The broadcast became legendary through performance and reception, but later panic claims should be checked against contemporary evidence. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Radio creates authority through sound when listeners cannot see the studio. The motif survives because the detail is small enough to remember and strong enough to organize retelling. In this record, the central frame is the 1938 broadcast sequence where scripted bulletins and radio performance made fictional invasion sound like live emergency reporting. The broadcast became legendary through performance and reception, but later panic claims should be checked against contemporary evidence. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A fake bulletin borrows the format of public emergency information. A reader can follow the symbolic force without treating the symbol as proof of every later claim. In this record, the central frame is the 1938 broadcast sequence where scripted bulletins and radio performance made fictional invasion sound like live emergency reporting. The broadcast became legendary through performance and reception, but later panic claims should be checked against contemporary evidence. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The broadcast became folklore because it demonstrated that media form can change belief. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the 1938 broadcast sequence where scripted bulletins and radio performance made fictional invasion sound like live emergency reporting. The broadcast became legendary through performance and reception, but later panic claims should be checked against contemporary evidence. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Voice legends begin when a heard report feels more immediate than a printed fiction label. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the 1938 broadcast sequence where scripted bulletins and radio performance made fictional invasion sound like live emergency reporting. The broadcast became legendary through performance and reception, but later panic claims should be checked against contemporary evidence. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The call sheet is a hidden record behind the public voice. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the 1938 broadcast sequence where scripted bulletins and radio performance made fictional invasion sound like live emergency reporting. The broadcast became legendary through performance and reception, but later panic claims should be checked against contemporary evidence. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A source-aware article separates the script, the performance, the reaction, and the later myth. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the 1938 broadcast sequence where scripted bulletins and radio performance made fictional invasion sound like live emergency reporting. The broadcast became legendary through performance and reception, but later panic claims should be checked against contemporary evidence. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The story remains useful because modern media still borrows emergency forms for fiction and rumor. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the 1938 broadcast sequence where scripted bulletins and radio performance made fictional invasion sound like live emergency reporting. The broadcast became legendary through performance and reception, but later panic claims should be checked against contemporary evidence. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The legend shows that a format can be as powerful as content. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is the 1938 broadcast sequence where scripted bulletins and radio performance made fictional invasion sound like live emergency reporting. The broadcast became legendary through performance and reception, but later panic claims should be checked against contemporary evidence. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The strongest reading keeps the audio artifact at the center. The motif survives because the detail is small enough to remember and strong enough to organize retelling. In this record, the central frame is the 1938 broadcast sequence where scripted bulletins and radio performance made fictional invasion sound like live emergency reporting. The broadcast became legendary through performance and reception, but later panic claims should be checked against contemporary evidence. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The Library of Congress preserves the broadcast as a recorded media artifact. A reader can follow the symbolic force without treating the symbol as proof of every later claim. In this record, the central frame is the 1938 broadcast sequence where scripted bulletins and radio performance made fictional invasion sound like live emergency reporting. The broadcast became legendary through performance and reception, but later panic claims should be checked against contemporary evidence. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The program used news-bulletin style interruption to give fiction the sound of live reporting. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is the 1938 broadcast sequence where scripted bulletins and radio performance made fictional invasion sound like live emergency reporting. The broadcast became legendary through performance and reception, but later panic claims should be checked against contemporary evidence. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Orson Welles and the Mercury Theatre turned voice timing into dramatic evidence. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is the 1938 broadcast sequence where scripted bulletins and radio performance made fictional invasion sound like live emergency reporting. The broadcast became legendary through performance and reception, but later panic claims should be checked against contemporary evidence. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "A call sheet or cue list matters because radio performance depends on ordered entries, voices, and timing. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is the 1938 broadcast sequence where scripted bulletins and radio performance made fictional invasion sound like live emergency reporting. The broadcast became legendary through performance and reception, but later panic claims should be checked against contemporary evidence. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "The legend grew because listeners and newspapers retold the broadcast as a national panic story. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is the 1938 broadcast sequence where scripted bulletins and radio performance made fictional invasion sound like live emergency reporting. The broadcast became legendary through performance and reception, but later panic claims should be checked against contemporary evidence. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable.",
+          "Later scholarship has debated the scale of actual panic, which makes source-aware caution important. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is the 1938 broadcast sequence where scripted bulletins and radio performance made fictional invasion sound like live emergency reporting. The broadcast became legendary through performance and reception, but later panic claims should be checked against contemporary evidence. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, route, number, or entry became memorable."
         ]
       }
     ],
@@ -171,63 +182,57 @@
     },
     "qa": [
       {
-        "question": "What concrete event starts this story?",
-        "answer": "The CBS broadcast of The War of the Worlds on October 30, 1938, and its broadcast-bulletin structure."
+        "question": "What is the one event this record is anchored to?",
+        "answer": "CBS's 1938 broadcast of The War of the Worlds, including its staged news-bulletin sequence and immediate audience response pattern."
       },
       {
-        "question": "How did call sheets matter in the sequence?",
-        "answer": "They fixed timing and transition points, making the faux-bulletin sequence operationally smooth and therefore highly convincing in real time."
+        "question": "Why does this fit a Legend Origins category?",
+        "answer": "A specific documented incident became a reusable narrative template used repeatedly in later discussions of media influence and broadcast trust."
       },
       {
-        "question": "What happened during the response period?",
-        "answer": "Listeners and operators contacted stations, creating a rapid audience-reaction feedback loop that became part of the event record."
+        "question": "What happened first in the chain?",
+        "answer": "The production schedule and cueing system placed realistic bulletin transitions inside a live-format radio play at the planned time."
       },
       {
-        "question": "Did all reaction evidence come from panic",
-        "answer": "No. The historical record shows uneven responses; the incident's influence comes from the process chain, not uniform panic."
+        "question": "What turned the broadcast into a legend after the fact?",
+        "answer": "Post-event coverage and repetition compressed many details into a single warning archetype: voice authority plus emergency framing can generate public panic."
       },
       {
-        "question": "What is the modern lesson this record keeps?",
-        "answer": "Media format choices and operational trust can transform a scripted cue into a public emergency interpretation if verification context is missed."
+        "question": "Did the event prove universal panic?",
+        "answer": "No. Later research treats reactions as mixed and regional, while still treating the sequence itself as historically significant."
       }
     ],
-    "storySourceNote": "The source chain is sequence-driven: cue-scheduled broadcast design, listener contact, immediate media reporting, and later retrospective myth simplification.",
+    "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, internet retelling, and legend-like interpretation.",
     "references": [
       {
-        "title": "Britannica: War of the Worlds",
-        "url": "https://www.britannica.com/topic/War-of-the-Worlds"
+        "title": "Library of Congress, War of the Worlds radio broadcast",
+        "url": "https://www.loc.gov/item/2004655170/"
       },
       {
-        "title": "Britannica: Orson Welles",
-        "url": "https://www.britannica.com/biography/Orson-Welles"
+        "title": "Smithsonian Magazine, The Infamous War of the Worlds Radio Broadcast Was a Magnificent Fluke",
+        "url": "https://www.smithsonianmag.com/history/infamous-war-worlds-radio-broadcast-was-magnificent-fluke-180955180/"
       },
       {
-        "title": "History.com: Orson Welles",
-        "url": "https://www.history.com/topics/artists/orson-welles"
+        "title": "History.com, War of the Worlds radio broadcast panics listeners",
+        "url": "https://www.history.com/this-day-in-history/welles-scares-nation"
       },
       {
-        "title": "Wikipedia: The War of the Worlds (radio drama)",
-        "url": "https://en.wikipedia.org/wiki/The_War_of_the_Worlds_(radio_drama)"
+        "title": "Wikipedia, The War of the Worlds 1938 radio drama",
+        "url": "https://en.wikipedia.org/wiki/The_War_of_the_Worlds_(1938_radio_drama)"
       },
       {
-        "title": "Encyclopaedia Britannica: Radio broadcasting",
-        "url": "https://www.britannica.com/technology/radio-broadcasting"
-      },
-      {
-        "title": "Library of Congress: Radio archives overview",
-        "url": "https://www.loc.gov/collections/radio/"
+        "title": "PBS American Experience, War of the Worlds context",
+        "url": "https://www.pbs.org/wgbh/americanexperience/features/worlds-war/"
       }
     ],
     "relatedKeywords": [
       "War of the Worlds broadcast",
       "Orson Welles",
       "radio legend origins",
-      "broadcast cue sheet",
-      "fake news bulletins",
-      "listener call logs",
-      "media trust",
-      "1938 CBS broadcast",
-      "legend transmission"
+      "broadcast cue sheets",
+      "fake emergency bulletins",
+      "1938 media panic",
+      "voice folklore"
     ]
   }
 }
