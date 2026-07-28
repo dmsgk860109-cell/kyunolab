@@ -1,7 +1,452 @@
 [
   {
+    "id": "black-cat-superstition-origin",
+    "slug": "black-cat-superstition-origin",
+    "file": "black-cat-superstition-origin.json"
+  },
+  {
+    "id": "evil-eye-origin",
+    "slug": "evil-eye-origin",
+    "file": "evil-eye-origin.json"
+  },
+  {
+    "id": "friday-the-13th-origin",
+    "slug": "friday-the-13th-origin",
+    "file": "friday-the-13th-origin.json"
+  },
+  {
+    "id": "horseshoe-luck-origin",
+    "slug": "horseshoe-luck-origin",
+    "file": "horseshoe-luck-origin.json"
+  },
+  {
+    "id": "how-a-shortcut-becomes-a-haunted-road",
+    "slug": "how-a-shortcut-becomes-a-haunted-road",
+    "file": "how-a-shortcut-becomes-a-haunted-road.json"
+  },
+  {
+    "id": "how-a-warning-becomes-a-legend",
+    "slug": "how-a-warning-becomes-a-legend",
+    "file": "how-a-warning-becomes-a-legend.json"
+  },
+  {
+    "id": "how-archive-boxes-became-modern-mystery-symbols",
+    "slug": "how-archive-boxes-became-modern-mystery-symbols",
+    "file": "how-archive-boxes-became-modern-mystery-symbols.json"
+  },
+  {
+    "id": "how-blank-pages-became-evidence-in-office-legends",
+    "slug": "how-blank-pages-became-evidence-in-office-legends",
+    "file": "how-blank-pages-became-evidence-in-office-legends.json"
+  },
+  {
+    "id": "how-census-records-turn-absence-into-story",
+    "slug": "how-census-records-turn-absence-into-story",
+    "file": "how-census-records-turn-absence-into-story.json"
+  },
+  {
+    "id": "how-checklists-became-part-of-digital-folklore",
+    "slug": "how-checklists-became-part-of-digital-folklore",
+    "file": "how-checklists-became-part-of-digital-folklore.json"
+  },
+  {
+    "id": "how-cursed-images-became-internet-folklore",
+    "slug": "how-cursed-images-became-internet-folklore",
+    "file": "how-cursed-images-became-internet-folklore.json"
+  },
+  {
+    "id": "how-digital-glitches-become-witnesses",
+    "slug": "how-digital-glitches-become-witnesses",
+    "file": "how-digital-glitches-become-witnesses.json"
+  },
+  {
+    "id": "how-doorway-rules-become-household-legends-folklore-origin-and-meaning",
+    "slug": "how-doorway-rules-become-household-legends-folklore-origin-and-meaning",
+    "file": "how-doorway-rules-become-household-legends-folklore-origin-and-meaning.json"
+  },
+  {
+    "id": "how-doorway-warnings-become-household-folklore",
+    "slug": "how-doorway-warnings-become-household-folklore",
+    "file": "how-doorway-warnings-become-household-folklore.json"
+  },
+  {
+    "id": "how-elevator-legends-became-modern-threshold-stories",
+    "slug": "how-elevator-legends-became-modern-threshold-stories",
+    "file": "how-elevator-legends-became-modern-threshold-stories.json"
+  },
+  {
+    "id": "how-guest-registers-turn-places-into-folklore",
+    "slug": "how-guest-registers-turn-places-into-folklore",
+    "file": "how-guest-registers-turn-places-into-folklore.json"
+  },
+  {
+    "id": "how-guestbooks-became-threshold-objects-in-legends",
+    "slug": "how-guestbooks-became-threshold-objects-in-legends",
+    "file": "how-guestbooks-became-threshold-objects-in-legends.json"
+  },
+  {
+    "id": "how-internet-glitches-become-folklore-instead-of-error-reports",
+    "slug": "how-internet-glitches-become-folklore-instead-of-error-reports",
+    "file": "how-internet-glitches-become-folklore-instead-of-error-reports.json"
+  },
+  {
+    "id": "how-inventories-make-mythic-objects-feel-real",
+    "slug": "how-inventories-make-mythic-objects-feel-real",
+    "file": "how-inventories-make-mythic-objects-feel-real.json"
+  },
+  {
+    "id": "how-inventories-turn-objects-into-folklore",
+    "slug": "how-inventories-turn-objects-into-folklore",
+    "file": "how-inventories-turn-objects-into-folklore.json"
+  },
+  {
+    "id": "how-ledgers-turn-objects-into-witnesses",
+    "slug": "how-ledgers-turn-objects-into-witnesses",
+    "file": "how-ledgers-turn-objects-into-witnesses.json"
+  },
+  {
+    "id": "how-lost-media-became-internet-folklore-how-the-motif-changed-across-retellings",
+    "slug": "how-lost-media-became-internet-folklore-how-the-motif-changed-across-retellings",
+    "file": "how-lost-media-became-internet-folklore-how-the-motif-changed-across-retellings.json"
+  },
+  {
+    "id": "how-missing-floors-became-modern-building-legends",
+    "slug": "how-missing-floors-became-modern-building-legends",
+    "file": "how-missing-floors-became-modern-building-legends.json"
+  },
+  {
+    "id": "how-old-maps-create-lost-place-legends-origin-of-a-cartographic-motif",
+    "slug": "how-old-maps-create-lost-place-legends-origin-of-a-cartographic-motif",
+    "file": "how-old-maps-create-lost-place-legends-origin-of-a-cartographic-motif.json"
+  },
+  {
+    "id": "how-receipts-became-modern-folklore-evidence",
+    "slug": "how-receipts-became-modern-folklore-evidence",
+    "file": "how-receipts-became-modern-folklore-evidence.json"
+  },
+  {
+    "id": "how-repeated-screenshots-become-internet-legends-origin-of-digital-folklore",
+    "slug": "how-repeated-screenshots-become-internet-legends-origin-of-digital-folklore",
+    "file": "how-repeated-screenshots-become-internet-legends-origin-of-digital-folklore.json"
+  },
+  {
+    "id": "how-the-unknown-floor-entered-building-legends-how-the-motif-changed-across-retellings",
+    "slug": "how-the-unknown-floor-entered-building-legends-how-the-motif-changed-across-retellings",
+    "file": "how-the-unknown-floor-entered-building-legends-how-the-motif-changed-across-retellings.json"
+  },
+  {
+    "id": "how-the-wrong-passenger-became-a-roadside-legend-motif-how-the-motif-changed-across-retellings",
+    "slug": "how-the-wrong-passenger-became-a-roadside-legend-motif-how-the-motif-changed-across-retellings",
+    "file": "how-the-wrong-passenger-became-a-roadside-legend-motif-how-the-motif-changed-across-retellings.json"
+  },
+  {
+    "id": "how-unused-floors-become-building-myths-origin-of-a-modern-place-legend",
+    "slug": "how-unused-floors-become-building-myths-origin-of-a-modern-place-legend",
+    "file": "how-unused-floors-become-building-myths-origin-of-a-modern-place-legend.json"
+  },
+  {
+    "id": "how-vanishing-road-stories-move-from-travelers-to-maps",
+    "slug": "how-vanishing-road-stories-move-from-travelers-to-maps",
+    "file": "how-vanishing-road-stories-move-from-travelers-to-maps.json"
+  },
+  {
+    "id": "how-weather-omens-become-local-legends",
+    "slug": "how-weather-omens-become-local-legends",
+    "file": "how-weather-omens-become-local-legends.json"
+  },
+  {
+    "id": "how-weather-omens-survive-in-modern-storytelling-history-and-folklore-development",
+    "slug": "how-weather-omens-survive-in-modern-storytelling-history-and-folklore-development",
+    "file": "how-weather-omens-survive-in-modern-storytelling-history-and-folklore-development.json"
+  },
+  {
+    "id": "how-weather-smells-become-local-omens",
+    "slug": "how-weather-smells-become-local-omens",
+    "file": "how-weather-smells-become-local-omens.json"
+  },
+  {
+    "id": "how-wrong-dates-became-a-folklore-clue",
+    "slug": "how-wrong-dates-became-a-folklore-clue",
+    "file": "how-wrong-dates-became-a-folklore-clue.json"
+  },
+  {
+    "id": "how-wrong-dates-turn-receipts-into-folklore",
+    "slug": "how-wrong-dates-turn-receipts-into-folklore",
+    "file": "how-wrong-dates-turn-receipts-into-folklore.json"
+  },
+  {
+    "id": "how-wrong-receipts-turn-into-modern-folklore-origin-of-a-paper-clue-legend",
+    "slug": "how-wrong-receipts-turn-into-modern-folklore-origin-of-a-paper-clue-legend",
+    "file": "how-wrong-receipts-turn-into-modern-folklore-origin-of-a-paper-clue-legend.json"
+  },
+  {
+    "id": "jack-o-lantern-stingy-jack-origin",
+    "slug": "jack-o-lantern-stingy-jack-origin",
+    "file": "jack-o-lantern-stingy-jack-origin.json"
+  },
+  {
+    "id": "rabbits-foot-luck-origin",
+    "slug": "rabbits-foot-luck-origin",
+    "file": "rabbits-foot-luck-origin.json"
+  },
+  {
+    "id": "the-census-drawer-audit-log-from-a-silent-hour",
+    "slug": "the-census-drawer-audit-log-from-a-silent-hour",
+    "file": "the-census-drawer-audit-log-from-a-silent-hour.json"
+  },
+  {
+    "id": "the-checklist-screen-catalog-page-kept-outside-the-sequence",
+    "slug": "the-checklist-screen-catalog-page-kept-outside-the-sequence",
+    "file": "the-checklist-screen-catalog-page-kept-outside-the-sequence.json"
+  },
+  {
+    "id": "the-field-notebook-archive-ledger-that-refuses-the-final-number",
+    "slug": "the-field-notebook-archive-ledger-that-refuses-the-final-number",
+    "file": "the-field-notebook-archive-ledger-that-refuses-the-final-number.json"
+  },
+  {
+    "id": "the-guestbook-path-map-note-pointing-to-a-removed-door",
+    "slug": "the-guestbook-path-map-note-pointing-to-a-removed-door",
+    "file": "the-guestbook-path-map-note-pointing-to-a-removed-door.json"
+  },
+  {
+    "id": "the-ledger-shelf-inventory-tag-for-an-object-no-one-stored",
+    "slug": "the-ledger-shelf-inventory-tag-for-an-object-no-one-stored",
+    "file": "the-ledger-shelf-inventory-tag-for-an-object-no-one-stored.json"
+  },
+  {
+    "id": "the-map-error-desk-request-slip-signed-by-no-reader",
+    "slug": "the-map-error-desk-request-slip-signed-by-no-reader",
+    "file": "the-map-error-desk-request-slip-signed-by-no-reader.json"
+  },
+  {
+    "id": "the-motif-index-shelf-register-with-a-line-written-too-early",
+    "slug": "the-motif-index-shelf-register-with-a-line-written-too-early",
+    "file": "the-motif-index-shelf-register-with-a-line-written-too-early.json"
+  },
+  {
+    "id": "the-origin-of-the-road-that-repeats-itself-history-and-folklore-development",
+    "slug": "the-origin-of-the-road-that-repeats-itself-history-and-folklore-development",
+    "file": "the-origin-of-the-road-that-repeats-itself-history-and-folklore-development.json"
+  },
+  {
+    "id": "the-receipt-archive-desk-index-card-for-an-unlisted-shelf",
+    "slug": "the-receipt-archive-desk-index-card-for-an-unlisted-shelf",
+    "file": "the-receipt-archive-desk-index-card-for-an-unlisted-shelf.json"
+  },
+  {
+    "id": "the-signature-file-notebook-that-adds-one-entry-overnight",
+    "slug": "the-signature-file-notebook-that-adds-one-entry-overnight",
+    "file": "the-signature-file-notebook-that-adds-one-entry-overnight.json"
+  },
+  {
+    "id": "the-timestamp-table-receipt-book-with-a-future-stamp",
+    "slug": "the-timestamp-table-receipt-book-with-a-future-stamp",
+    "file": "the-timestamp-table-receipt-book-with-a-future-stamp.json"
+  },
+  {
+    "id": "where-the-forbidden-room-legend-comes-from-origins-variants-and-modern-meaning",
+    "slug": "where-the-forbidden-room-legend-comes-from-origins-variants-and-modern-meaning",
+    "file": "where-the-forbidden-room-legend-comes-from-origins-variants-and-modern-meaning.json"
+  },
+  {
+    "id": "why-anonymous-photographs-generate-modern-legends-origins-variants-and-modern-meaning",
+    "slug": "why-anonymous-photographs-generate-modern-legends-origins-variants-and-modern-meaning",
+    "file": "why-anonymous-photographs-generate-modern-legends-origins-variants-and-modern-meaning.json"
+  },
+  {
+    "id": "why-bells-signal-boundaries-in-folklore-origins-variants-and-modern-meaning",
+    "slug": "why-bells-signal-boundaries-in-folklore-origins-variants-and-modern-meaning",
+    "file": "why-bells-signal-boundaries-in-folklore-origins-variants-and-modern-meaning.json"
+  },
+  {
+    "id": "why-bridges-keep-appearing-in-warning-tales-origin-of-a-crossing-motif",
+    "slug": "why-bridges-keep-appearing-in-warning-tales-origin-of-a-crossing-motif",
+    "file": "why-bridges-keep-appearing-in-warning-tales-origin-of-a-crossing-motif.json"
+  },
+  {
+    "id": "why-call-sheets-create-voice-and-radio-legends",
+    "slug": "why-call-sheets-create-voice-and-radio-legends",
+    "file": "why-call-sheets-create-voice-and-radio-legends.json"
+  },
+  {
+    "id": "why-circles-protect-in-folklore",
+    "slug": "why-circles-protect-in-folklore",
+    "file": "why-circles-protect-in-folklore.json"
+  },
+  {
+    "id": "why-crossroads-become-folklore-thresholds",
+    "slug": "why-crossroads-become-folklore-thresholds",
+    "file": "why-crossroads-become-folklore-thresholds.json"
+  },
+  {
     "id": "why-crossroads-become-supernatural-places",
     "slug": "why-crossroads-become-supernatural-places",
     "file": "why-crossroads-become-supernatural-places.json"
+  },
+  {
+    "id": "why-doorways-make-better-warnings-than-rooms",
+    "slug": "why-doorways-make-better-warnings-than-rooms",
+    "file": "why-doorways-make-better-warnings-than-rooms.json"
+  },
+  {
+    "id": "why-elevators-became-modern-folklore-machines",
+    "slug": "why-elevators-became-modern-folklore-machines",
+    "file": "why-elevators-became-modern-folklore-machines.json"
+  },
+  {
+    "id": "why-empty-elevators-became-a-modern-legend-setting-history-and-folklore-development",
+    "slug": "why-empty-elevators-became-a-modern-legend-setting-history-and-folklore-development",
+    "file": "why-empty-elevators-became-a-modern-legend-setting-history-and-folklore-development.json"
+  },
+  {
+    "id": "why-empty-roads-become-vanishing-passenger-legends-origin-and-meaning",
+    "slug": "why-empty-roads-become-vanishing-passenger-legends-origin-and-meaning",
+    "file": "why-empty-roads-become-vanishing-passenger-legends-origin-and-meaning.json"
+  },
+  {
+    "id": "why-empty-seats-become-urban-legend-signals",
+    "slug": "why-empty-seats-become-urban-legend-signals",
+    "file": "why-empty-seats-become-urban-legend-signals.json"
+  },
+  {
+    "id": "why-forbidden-rooms-create-lasting-legends",
+    "slug": "why-forbidden-rooms-create-lasting-legends",
+    "file": "why-forbidden-rooms-create-lasting-legends.json"
+  },
+  {
+    "id": "why-incident-logs-make-urban-legends-feel-believable",
+    "slug": "why-incident-logs-make-urban-legends-feel-believable",
+    "file": "why-incident-logs-make-urban-legends-feel-believable.json"
+  },
+  {
+    "id": "why-ledgers-appear-in-household-warning-stories",
+    "slug": "why-ledgers-appear-in-household-warning-stories",
+    "file": "why-ledgers-appear-in-household-warning-stories.json"
+  },
+  {
+    "id": "why-locked-rooms-attract-return-stories-a-folklore-origin-note",
+    "slug": "why-locked-rooms-attract-return-stories-a-folklore-origin-note",
+    "file": "why-locked-rooms-attract-return-stories-a-folklore-origin-note.json"
+  },
+  {
+    "id": "why-lost-place-legends-need-maps-even-when-the-place-is-uncertain",
+    "slug": "why-lost-place-legends-need-maps-even-when-the-place-is-uncertain",
+    "file": "why-lost-place-legends-need-maps-even-when-the-place-is-uncertain.json"
+  },
+  {
+    "id": "why-map-errors-feel-like-invitations",
+    "slug": "why-map-errors-feel-like-invitations",
+    "file": "why-map-errors-feel-like-invitations.json"
+  },
+  {
+    "id": "why-maps-with-extra-roads-become-lost-place-stories",
+    "slug": "why-maps-with-extra-roads-become-lost-place-stories",
+    "file": "why-maps-with-extra-roads-become-lost-place-stories.json"
+  },
+  {
+    "id": "why-mirror-legends-cross-from-folklore-into-internet-stories",
+    "slug": "why-mirror-legends-cross-from-folklore-into-internet-stories",
+    "file": "why-mirror-legends-cross-from-folklore-into-internet-stories.json"
+  },
+  {
+    "id": "why-mirrors-appear-in-so-many-warning-legends-history-and-folklore-development",
+    "slug": "why-mirrors-appear-in-so-many-warning-legends-history-and-folklore-development",
+    "file": "why-mirrors-appear-in-so-many-warning-legends-history-and-folklore-development.json"
+  },
+  {
+    "id": "why-mirrors-become-haunted-objects",
+    "slug": "why-mirrors-become-haunted-objects",
+    "file": "why-mirrors-become-haunted-objects.json"
+  },
+  {
+    "id": "why-mirrors-mean-bad-luck",
+    "slug": "why-mirrors-mean-bad-luck",
+    "file": "why-mirrors-mean-bad-luck.json"
+  },
+  {
+    "id": "why-missing-minutes-make-strong-mystery-records-origin-of-a-time-motif",
+    "slug": "why-missing-minutes-make-strong-mystery-records-origin-of-a-time-motif",
+    "file": "why-missing-minutes-make-strong-mystery-records-origin-of-a-time-motif.json"
+  },
+  {
+    "id": "why-missing-page-numbers-create-archive-mysteries",
+    "slug": "why-missing-page-numbers-create-archive-mysteries",
+    "file": "why-missing-page-numbers-create-archive-mysteries.json"
+  },
+  {
+    "id": "why-missing-pages-create-strong-mystery-records",
+    "slug": "why-missing-pages-create-strong-mystery-records",
+    "file": "why-missing-pages-create-strong-mystery-records.json"
+  },
+  {
+    "id": "why-missing-record-mysteries-feel-more-convincing-than-full-stories",
+    "slug": "why-missing-record-mysteries-feel-more-convincing-than-full-stories",
+    "file": "why-missing-record-mysteries-feel-more-convincing-than-full-stories.json"
+  },
+  {
+    "id": "why-names-have-power-in-legends",
+    "slug": "why-names-have-power-in-legends",
+    "file": "why-names-have-power-in-legends.json"
+  },
+  {
+    "id": "why-object-legends-often-begin-with-ordinary-tools",
+    "slug": "why-object-legends-often-begin-with-ordinary-tools",
+    "file": "why-object-legends-often-begin-with-ordinary-tools.json"
+  },
+  {
+    "id": "why-old-wells-attract-source-limit-stories",
+    "slug": "why-old-wells-attract-source-limit-stories",
+    "file": "why-old-wells-attract-source-limit-stories.json"
+  },
+  {
+    "id": "why-ravens-become-omens",
+    "slug": "why-ravens-become-omens",
+    "file": "why-ravens-become-omens.json"
+  },
+  {
+    "id": "why-receipt-legends-keep-returning-in-modern-folklore",
+    "slug": "why-receipt-legends-keep-returning-in-modern-folklore",
+    "file": "why-receipt-legends-keep-returning-in-modern-folklore.json"
+  },
+  {
+    "id": "why-receipts-became-modern-evidence-folklore",
+    "slug": "why-receipts-became-modern-evidence-folklore",
+    "file": "why-receipts-became-modern-evidence-folklore.json"
+  },
+  {
+    "id": "why-record-books-make-legends-feel-more-believable",
+    "slug": "why-record-books-make-legends-feel-more-believable",
+    "file": "why-record-books-make-legends-feel-more-believable.json"
+  },
+  {
+    "id": "why-signatures-act-like-proof-in-uncertain-stories",
+    "slug": "why-signatures-act-like-proof-in-uncertain-stories",
+    "file": "why-signatures-act-like-proof-in-uncertain-stories.json"
+  },
+  {
+    "id": "why-timestamps-feel-like-modern-omens",
+    "slug": "why-timestamps-feel-like-modern-omens",
+    "file": "why-timestamps-feel-like-modern-omens.json"
+  },
+  {
+    "id": "why-timestamps-work-like-omens-in-digital-legends",
+    "slug": "why-timestamps-work-like-omens-in-digital-legends",
+    "file": "why-timestamps-work-like-omens-in-digital-legends.json"
+  },
+  {
+    "id": "why-unmarked-stops-keep-returning-in-transit-folklore",
+    "slug": "why-unmarked-stops-keep-returning-in-transit-folklore",
+    "file": "why-unmarked-stops-keep-returning-in-transit-folklore.json"
+  },
+  {
+    "id": "why-vanishing-passengers-return-in-legends",
+    "slug": "why-vanishing-passengers-return-in-legends",
+    "file": "why-vanishing-passengers-return-in-legends.json"
+  },
+  {
+    "id": "why-weather-omens-become-local-folklore-origin-of-a-repeated-sign",
+    "slug": "why-weather-omens-become-local-folklore-origin-of-a-repeated-sign",
+    "file": "why-weather-omens-become-local-folklore-origin-of-a-repeated-sign.json"
   }
 ]
