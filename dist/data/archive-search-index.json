@@ -149,7 +149,7 @@
     "url": "/stories/spear-of-destiny-legend",
     "category": "Mythic Objects",
     "summary": "Spear of Destiny is a pre-existing Mythic Objects subject built around the Holy Lance tradition and later legends that attach power, relic identity, and political imagination to a sacred weapon.",
-    "description": "Spear of Destiny Legend explains Holy Lance tradition and later legends that attach power, relic identity, and political imagination to a sacred weapon.",
+    "description": "A source-aware guide to the Spear of Destiny legend, the Holy Lance relic traditions, medieval imperial symbolism, and later power claims attached to the object.",
     "tags": [
       "Relic Legend",
       "Spear of Destiny",
@@ -158,25 +158,25 @@
     ],
     "motif": "Relic Legend",
     "topics": [
-      "MythicObjectRecord",
+      "relic-legend",
       "Mythic Objects / Relic Legend / Mythic tradition and symbolic reading",
-      "spear of destiny legend",
-      "Spear of Destiny is treated through one concrete anchor: the Holy Lance tradition and later legends that attach power, relic identity, and political imagination to a sacred weapon.",
-      "Spear of Destiny",
+      "spear-of-destiny-legend",
+      "The article separates relic tradition, imperial display, material study, and twentieth-century mythmaking.",
       "Holy Lance",
-      "relic legend",
-      "sacred weapon",
-      "power claim"
+      "Longinus",
+      "imperial regalia",
+      "relic display",
+      "crucifixion tradition"
     ]
   },
   {
     "id": "golden-fleece-myth",
     "slug": "golden-fleece-myth",
-    "title": "Golden Fleece: Jason’s Quest, Royal Proof, and the Object Guarded Far From Home",
+    "title": "Golden Fleece: Jason's Quest, Royal Proof, and the Object Guarded Far From Home",
     "url": "/stories/golden-fleece-myth",
     "category": "Mythic Objects",
     "summary": "Golden Fleece is a pre-existing Mythic Objects subject built around the object sought by Jason and the Argonauts, remembered as proof of kingship, dangerous travel, and guarded treasure.",
-    "description": "Golden Fleece explains object sought by Jason and the Argonauts, remembered as proof of kingship, dangerous travel, and guarded treasure through mythic.",
+    "description": "A source-aware guide to the Golden Fleece myth, Jason and the Argonauts, royal proof, guarded treasure, and why the object became a model quest prize.",
     "tags": [
       "Heroic Quest Object",
       "Golden Fleece",
@@ -185,15 +185,16 @@
     ],
     "motif": "Heroic Quest Object",
     "topics": [
-      "MythicObjectRecord",
+      "heroic-quest-object",
       "Mythic Objects / Heroic Quest Object / Mythic tradition and symbolic reading",
-      "golden fleece myth",
-      "Golden Fleece is treated through one concrete anchor: the object sought by Jason and the Argonauts, remembered as proof of kingship, dangerous travel, and guarded treasure.",
-      "Golden Fleece",
-      "Jason",
+      "golden-fleece-myth",
+      "The article treats the fleece as a proof object rather than simple treasure.",
       "Argonauts",
+      "Colchis",
+      "Medea",
+      "Pelias",
       "quest object",
-      "guarded treasure"
+      "guardian serpent"
     ]
   },
   {
@@ -203,7 +204,7 @@
     "url": "/stories/seven-league-boots-folklore",
     "category": "Mythic Objects",
     "summary": "Seven-League Boots is a pre-existing Mythic Objects subject built around the fairy-tale boots that allow impossible strides across great distances and turn travel itself into a magical power.",
-    "description": "Seven-League Boots explains fairy-tale boots that allow impossible strides across great distances and turn travel itself into a magical power through mythic.",
+    "description": "A source-aware guide to seven-league boots in fairy tale tradition, impossible travel, Perrault retellings, ogre imagery, and the folklore of shrinking distance.",
     "tags": [
       "Fairy Tale Object",
       "Seven-League Boots",
@@ -212,25 +213,25 @@
     ],
     "motif": "Fairy Tale Object",
     "topics": [
-      "MythicObjectRecord",
+      "fairy-tale-object",
       "Mythic Objects / Fairy Tale Object / Mythic tradition and symbolic reading",
-      "seven league boots folklore",
-      "Seven-League Boots is treated through one concrete anchor: the fairy-tale boots that allow impossible strides across great distances and turn travel itself into a magical power.",
-      "Seven-League Boots",
-      "fairy tale object",
-      "impossible travel",
+      "seven-league-boots-folklore",
+      "The article treats the boots as a technology of distance in oral and literary fairy tale logic.",
+      "seven leagues",
       "magical boots",
-      "distance"
+      "Hop o My Thumb",
+      "fairy tale pursuit",
+      "impossible stride"
     ]
   },
   {
     "id": "hand-of-glory-folklore",
     "slug": "hand-of-glory-folklore",
-    "title": "Hand of Glory: Thief’s Charm, Candle Folklore, and the Object That Freezes a House",
+    "title": "Hand of Glory: Thief's Charm, Candle Folklore, and the Object That Freezes a House",
     "url": "/stories/hand-of-glory-folklore",
     "category": "Mythic Objects",
     "summary": "Hand of Glory is a pre-existing Mythic Objects subject built around the European folk-magic object made from a human hand and remembered as a charm for thieves, sleep, and locked houses.",
-    "description": "Hand of Glory explains European folk-magic object made from a human hand and remembered as a charm for thieves, sleep, and locked houses through mythic.",
+    "description": "A source-aware guide to the Hand of Glory, folk magic, thief charm traditions, museum objects, candle lore, and the legend of freezing a household.",
     "tags": [
       "Folk Magic Object",
       "Hand of Glory",
@@ -239,15 +240,16 @@
     ],
     "motif": "Folk Magic Object",
     "topics": [
-      "MythicObjectRecord",
+      "folk-magic-object",
       "Mythic Objects / Folk Magic Object / Mythic tradition and symbolic reading",
-      "hand of glory folklore",
-      "Hand of Glory is treated through one concrete anchor: the European folk-magic object made from a human hand and remembered as a charm for thieves, sleep, and locked houses.",
-      "Hand of Glory",
-      "folk magic",
+      "hand-of-glory-folklore",
+      "The article reads the Hand of Glory as a domestic-security nightmare object: the house fails while the thief moves.",
       "thief charm",
-      "candle folklore",
-      "locked house"
+      "dead hand",
+      "candle",
+      "threshold",
+      "sleep charm",
+      "folk magic"
     ]
   },
   {
@@ -257,7 +259,7 @@
     "url": "/stories/book-of-thoth-legend",
     "category": "Mythic Objects",
     "summary": "Book of Thoth is a pre-existing Mythic Objects subject built around the Egyptian legendary book associated with divine knowledge, magic, dangerous reading, and later occult imagination.",
-    "description": "A calm guide to Book of Thoth, its common versions, source limits, and the forbidden book legend motif that makes Egyptian legendary book associated with.",
+    "description": "A source-aware guide to the Book of Thoth legend, Egyptian wisdom traditions, Setne Khamwas stories, forbidden knowledge, and dangerous reading.",
     "tags": [
       "Forbidden Book Legend",
       "Book of Thoth",
@@ -266,15 +268,16 @@
     ],
     "motif": "Forbidden Book Legend",
     "topics": [
-      "MythicObjectRecord",
+      "forbidden-book-legend",
       "Mythic Objects / Forbidden Book Legend / Mythic tradition and symbolic reading",
-      "book of thoth legend",
-      "Book of Thoth is treated through one concrete anchor: the Egyptian legendary book associated with divine knowledge, magic, dangerous reading, and later occult imagination.",
-      "Book of Thoth",
-      "forbidden knowledge",
+      "book-of-thoth-legend",
+      "The article treats the book as a legend about knowledge that cannot be safely possessed like property.",
+      "Thoth",
+      "Setne Khamwas",
+      "forbidden book",
+      "divine scribe",
       "Egyptian magic",
-      "dangerous text",
-      "Thoth"
+      "dangerous reading"
     ]
   },
   {
@@ -284,7 +287,7 @@
     "url": "/stories/yomi-japanese-underworld",
     "category": "Legendary Places",
     "summary": "Yomi is a pre-existing Legendary Places subject built around the underworld in Japanese myth associated with death, pollution, return, and the separation between Izanagi and Izanami.",
-    "description": "A calm guide to Yomi, its common versions, source limits, and the japanese underworld motif that makes underworld in Japanese myth associated with death.",
+    "description": "A source-aware guide to Yomi in Japanese myth, the Izanagi and Izanami underworld episode, pollution, return, and the boundary between death and life.",
     "tags": [
       "Japanese Underworld",
       "Yomi",
@@ -293,15 +296,16 @@
     ],
     "motif": "Japanese Underworld",
     "topics": [
-      "LegendaryPlaceRecord",
+      "underworld-place",
       "Legendary Places / Japanese Underworld / Mythic tradition and symbolic reading",
-      "yomi japanese underworld",
-      "Yomi is treated through one concrete anchor: the underworld in Japanese myth associated with death, pollution, return, and the separation between Izanagi and Izanami.",
+      "yomi-japanese-underworld",
+      "The article treats Yomi as a return-failure place, where seeing the dead makes the boundary permanent.",
       "Yomi",
-      "Japanese underworld",
       "Izanagi",
       "Izanami",
-      "forbidden glance"
+      "Yomotsu Hirasaka",
+      "pollution",
+      "purification"
     ]
   },
   {
@@ -311,7 +315,7 @@
     "url": "/stories/mictlan-aztec-underworld",
     "category": "Legendary Places",
     "summary": "Mictlan is a pre-existing Legendary Places subject built around the Aztec underworld associated with a difficult post-death journey through levels before reaching the realm of the dead.",
-    "description": "Mictlan explores the origin, meaning, and folklore behind Aztec underworld associated with a difficult post-death journey through levels before reaching the.",
+    "description": "A source-aware guide to Mictlan in Nahua and Mexica tradition, the post-death journey, Mictlantecuhtli, offerings, dogs, and the underworld road.",
     "tags": [
       "Underworld Place",
       "Mictlan",
@@ -320,15 +324,16 @@
     ],
     "motif": "Underworld Place",
     "topics": [
-      "LegendaryPlaceRecord",
+      "underworld-journey",
       "Legendary Places / Underworld Place / Mythic tradition and symbolic reading",
-      "mictlan aztec underworld",
-      "Mictlan is treated through one concrete anchor: the Aztec underworld associated with a difficult post-death journey through levels before reaching the realm of the dead.",
+      "mictlan-aztec-underworld",
+      "The article treats Mictlan as a travel structure for the dead, not only a destination.",
       "Mictlan",
-      "Aztec underworld",
-      "nine levels",
-      "afterlife journey",
-      "Mictlantecuhtli"
+      "Mictlantecuhtli",
+      "Mictecacihuatl",
+      "Florentine Codex",
+      "underworld journey",
+      "offerings"
     ]
   },
   {
@@ -338,7 +343,7 @@
     "url": "/stories/asgard-norse-mythic-place",
     "category": "Legendary Places",
     "summary": "Asgard is a pre-existing Legendary Places subject built around the Norse mythic realm of the Aesir gods, linked with Bifrost, divine halls, and the larger structure of the worlds.",
-    "description": "Asgard explores the origin, meaning, and folklore behind Norse mythic realm of the Aesir gods, linked with Bifrost, divine halls, and the larger structure of.",
+    "description": "A source-aware guide to Asgard in Norse mythology, the Aesir, Bifrost, divine halls, Snorri, and the place of the gods in mythic geography.",
     "tags": [
       "Norse Mythic Realm",
       "Asgard",
@@ -347,25 +352,26 @@
     ],
     "motif": "Norse Mythic Realm",
     "topics": [
-      "LegendaryPlaceRecord",
+      "divine-realm",
       "Legendary Places / Norse Mythic Realm / Mythic tradition and symbolic reading",
-      "asgard norse mythic place",
-      "Asgard is treated through one concrete anchor: the Norse mythic realm of the Aesir gods, linked with Bifrost, divine halls, and the larger structure of the worlds.",
+      "asgard-norse-mythic-place",
+      "The article reads Asgard as a built realm of divine order that remains exposed to time, conflict, and Ragnarok.",
       "Asgard",
       "Aesir",
       "Bifrost",
-      "Norse mythology",
-      "divine realm"
+      "Yggdrasil",
+      "Valhalla",
+      "Gylfaginning"
     ]
   },
   {
     "id": "camelot-legendary-court",
     "slug": "camelot-legendary-court",
-    "title": "Camelot: Arthur’s Court, Round Table Memory, and the Place That Became an Ideal",
+    "title": "Camelot: Arthur's Court, Round Table Memory, and the Place That Became an Ideal",
     "url": "/stories/camelot-legendary-court",
     "category": "Legendary Places",
     "summary": "Camelot is a pre-existing Legendary Places subject built around the legendary court of King Arthur remembered as the center of the Round Table, chivalric order, and later idealized rule.",
-    "description": "A calm guide to Camelot, its common versions, source limits, and the arthurian court motif that makes legendary court of King Arthur remembered as the center.",
+    "description": "A source-aware guide to Camelot in Arthurian legend, the Round Table, chivalric court, literary development, ideal rule, and the problem of locating a legendary place.",
     "tags": [
       "Arthurian Court",
       "Camelot",
@@ -374,15 +380,16 @@
     ],
     "motif": "Arthurian Court",
     "topics": [
-      "LegendaryPlaceRecord",
+      "legendary-court",
       "Legendary Places / Arthurian Court / Mythic tradition and symbolic reading",
-      "camelot legendary court",
-      "Camelot is treated through one concrete anchor: the legendary court of King Arthur remembered as the center of the Round Table, chivalric order, and later idealized rule.",
+      "camelot-legendary-court",
+      "The article reads Camelot as a place that turns political ideals into architecture and memory.",
       "Camelot",
-      "King Arthur",
+      "Arthur",
       "Round Table",
-      "Arthurian legend",
-      "ideal court"
+      "chivalry",
+      "Malory",
+      "romance"
     ]
   },
   {
@@ -392,7 +399,7 @@
     "url": "/stories/tir-na-nog-legendary-place",
     "category": "Legendary Places",
     "summary": "Tir na nOg is a pre-existing Legendary Places subject built around the Irish otherworld or land of youth where time moves differently and return to ordinary life becomes dangerous.",
-    "description": "A calm guide to Tir na nOg, its common versions, source limits, and the irish otherworld motif that makes Irish otherworld or land of youth where time moves.",
+    "description": "A source-aware guide to Tir na nOg in Irish tradition, the Land of Youth, Oisin, otherworld time, return danger, and the place beyond ordinary aging.",
     "tags": [
       "Irish Otherworld",
       "Tir na nOg",
@@ -401,15 +408,16 @@
     ],
     "motif": "Irish Otherworld",
     "topics": [
-      "LegendaryPlaceRecord",
+      "otherworld-place",
       "Legendary Places / Irish Otherworld / Mythic tradition and symbolic reading",
-      "tir na nog legendary place",
-      "Tir na nOg is treated through one concrete anchor: the Irish otherworld or land of youth where time moves differently and return to ordinary life becomes dangerous.",
+      "tir-na-nog-legendary-place",
+      "The article reads Tir na nOg as a time-trap paradise: the wonder is real, but ordinary time waits outside.",
       "Tir na nOg",
-      "Irish otherworld",
-      "land of youth",
+      "Land of Youth",
       "Oisin",
-      "time difference"
+      "Niamh",
+      "Irish Otherworld",
+      "return taboo"
     ]
   },
   {
@@ -419,7 +427,7 @@
     "url": "/stories/fairy-rings-folklore",
     "category": "Strange Nature",
     "summary": "Fairy Rings is a pre-existing Strange Nature subject built around the natural circles of mushrooms or grass that became linked with fairies, dancing, warnings, and enchanted places.",
-    "description": "A calm guide to Fairy Rings, its common versions, source limits, and the mushroom folklore motif that makes natural circles of mushrooms or grass that became.",
+    "description": "A source-aware guide to fairy rings, mushroom circles, grass patterns, fungal growth, fairy folklore, warning tales, and why natural circles became enchanted places.",
     "tags": [
       "Mushroom Folklore",
       "Fairy Rings",
@@ -428,15 +436,16 @@
     ],
     "motif": "Mushroom Folklore",
     "topics": [
-      "StrangeNatureRecord",
+      "natural-folklore-pattern",
       "Strange Nature / Mushroom Folklore / Evidence-limited public record",
-      "fairy rings folklore",
-      "Fairy Rings is treated through one concrete anchor: the natural circles of mushrooms or grass that became linked with fairies, dancing, warnings, and enchanted places.",
-      "fairy rings",
+      "fairy-rings-folklore",
+      "The article reads fairy rings as natural geometry that became a threshold in folk imagination.",
+      "fairy ring",
+      "mycelium",
       "mushroom circle",
-      "fairy folklore",
-      "grass pattern",
-      "enchanted place"
+      "grass ring",
+      "fairy dance",
+      "threshold"
     ]
   },
   {
@@ -446,7 +455,7 @@
     "url": "/stories/naga-fireballs-legend",
     "category": "Strange Nature",
     "summary": "Naga Fireballs is a pre-existing Strange Nature subject built around the Mekong River light phenomenon reported as glowing balls rising from the water and interpreted through both local belief and debate.",
-    "description": "Naga Fireballs explores the origin, meaning, and folklore behind Mekong River light phenomenon reported as glowing balls rising from the water and interpreted.",
+    "description": "A source-aware guide to Naga fireballs on the Mekong River, local belief, Buddhist festival timing, reports, debate, and why the lights remain folklore-shaped.",
     "tags": [
       "River Light Phenomenon",
       "Naga Fireballs",
@@ -455,15 +464,16 @@
     ],
     "motif": "River Light Phenomenon",
     "topics": [
-      "StrangeNatureRecord",
+      "river-light-phenomenon",
       "Strange Nature / River Light Phenomenon / Evidence-limited public record",
-      "naga fireballs legend",
-      "Naga Fireballs is treated through one concrete anchor: the Mekong River light phenomenon reported as glowing balls rising from the water and interpreted through both local belief and debate.",
+      "naga-fireballs-legend",
+      "The article treats the fireballs as a public river phenomenon whose meaning depends on timing, place, and community interpretation.",
       "Naga fireballs",
       "Mekong River",
-      "river lights",
-      "Thai folklore",
-      "light phenomenon"
+      "Phaya Naga",
+      "Nong Khai",
+      "Ok Phansa",
+      "festival reports"
     ]
   },
   {
@@ -501,7 +511,7 @@
     "url": "/stories/morning-glory-cloud",
     "category": "Strange Nature",
     "summary": "Morning Glory Cloud is a pre-existing Strange Nature subject built around the rare rolling cloud formation especially associated with northern Australia and dramatic wave-like movement across the sky.",
-    "description": "A calm guide to Morning Glory Cloud, its common versions, source limits, and the cloud phenomenon motif that makes rare rolling cloud formation especially.",
+    "description": "A source-aware guide to Morning Glory clouds, roll clouds, atmospheric waves, northern Australia, Gulf of Carpentaria, gliding culture, and sky folklore.",
     "tags": [
       "Cloud Phenomenon",
       "Morning Glory Cloud",
@@ -510,15 +520,16 @@
     ],
     "motif": "Cloud Phenomenon",
     "topics": [
-      "StrangeNatureRecord",
+      "atmospheric-wave-phenomenon",
       "Strange Nature / Cloud Phenomenon / Evidence-limited public record",
-      "morning glory cloud",
-      "Morning Glory Cloud is treated through one concrete anchor: the rare rolling cloud formation especially associated with northern Australia and dramatic wave-like movement across the sky.",
+      "morning-glory-cloud",
+      "The article reads the cloud as visible atmospheric wave structure that becomes local sky spectacle.",
       "Morning Glory cloud",
-      "rolling cloud",
-      "Australia",
-      "atmospheric wave",
-      "sky phenomenon"
+      "roll cloud",
+      "Gulf of Carpentaria",
+      "solitary wave",
+      "Burketown",
+      "low-level wave"
     ]
   },
   {
@@ -528,7 +539,7 @@
     "url": "/stories/ball-lightning-phenomenon",
     "category": "Strange Nature",
     "summary": "Ball Lightning is a pre-existing Strange Nature subject built around the reported atmospheric phenomenon of glowing spheres seen during storms and debated through science, witness reports, and folklore-like retellings.",
-    "description": "Ball Lightning explores the origin, meaning, and folklore behind reported atmospheric phenomenon of glowing spheres seen during storms and debated through.",
+    "description": "A source-aware guide to ball lightning, glowing sphere reports, storm testimony, scientific theories, laboratory models, and why the phenomenon behaves like folklore.",
     "tags": [
       "Atmospheric Phenomenon",
       "Ball Lightning",
@@ -537,15 +548,16 @@
     ],
     "motif": "Atmospheric Phenomenon",
     "topics": [
-      "StrangeNatureRecord",
+      "atmospheric-mystery",
       "Strange Nature / Atmospheric Phenomenon / Evidence-limited public record",
-      "ball lightning phenomenon",
-      "Ball Lightning is treated through one concrete anchor: the reported atmospheric phenomenon of glowing spheres seen during storms and debated through science, witness reports, and folklore-like retellings.",
+      "ball-lightning-phenomenon",
+      "The article treats ball lightning as a reported natural phenomenon whose evidence problem makes it travel like folklore.",
       "ball lightning",
       "glowing sphere",
-      "storm reports",
-      "atmospheric phenomenon",
-      "natural mystery"
+      "atmospheric electricity",
+      "plasma",
+      "storm testimony",
+      "luminous ball"
     ]
   },
   {
@@ -555,7 +567,7 @@
     "url": "/stories/kitezh-hidden-city-legend",
     "category": "Lost Worlds",
     "summary": "Kitezh is a pre-existing Lost Worlds subject built around the Russian legend of a city hidden beneath or beyond Lake Svetloyar after disappearing from invading forces.",
-    "description": "Kitezh explains Russian legend of a city hidden beneath or beyond Lake Svetloyar after disappearing from invading forces through lost worlds, separating.",
+    "description": "A source-aware guide to Kitezh, Lake Svetloyar, the Russian hidden city legend, invasion, invisibility, bells beneath the water, and sacred loss.",
     "tags": [
       "Hidden City Legend",
       "Kitezh",
@@ -564,15 +576,16 @@
     ],
     "motif": "Hidden City Legend",
     "topics": [
-      "LostWorldRecord",
+      "hidden-city-legend",
       "Lost Worlds / Hidden City Legend / Mythic tradition and symbolic reading",
-      "kitezh hidden city legend",
-      "Kitezh is treated through one concrete anchor: the Russian legend of a city hidden beneath or beyond Lake Svetloyar after disappearing from invading forces.",
+      "kitezh-hidden-city-legend",
+      "The article treats Kitezh as a victory-by-withdrawal story, where sacred disappearance replaces military triumph.",
       "Kitezh",
       "Lake Svetloyar",
+      "Batu Khan",
+      "Yuri Vsevolodovich",
       "hidden city",
-      "Russian legend",
-      "vanished town"
+      "bells beneath water"
     ]
   },
   {
@@ -582,7 +595,7 @@
     "url": "/stories/city-of-ys-legend",
     "category": "Lost Worlds",
     "summary": "City of Ys is a pre-existing Lost Worlds subject built around the Breton legend of a city swallowed by the sea after gates, pride, or betrayal allow the water in.",
-    "description": "City of Ys explains Breton legend of a city swallowed by the sea after gates, pride, or betrayal allow the water in through lost worlds, separating folklore.",
+    "description": "A source-aware guide to the City of Ys, Breton folklore, King Gradlon, Dahut, the sea gate, drowned bells, moral retelling, and sunken city tradition.",
     "tags": [
       "Sunken City Legend",
       "City of Ys",
@@ -591,15 +604,17 @@
     ],
     "motif": "Sunken City Legend",
     "topics": [
-      "LostWorldRecord",
+      "sunken-city-legend",
       "Lost Worlds / Sunken City Legend / Mythic tradition and symbolic reading",
-      "city of ys legend",
-      "City of Ys is treated through one concrete anchor: the Breton legend of a city swallowed by the sea after gates, pride, or betrayal allow the water in.",
-      "City of Ys",
-      "Breton legend",
-      "sunken city",
-      "flooded gates",
-      "sea kingdom"
+      "city-of-ys-legend",
+      "The article reads Ys as a city whose entire survival depends on managing a boundary with the sea.",
+      "Ys",
+      "Ker-Is",
+      "Dahut",
+      "Gradlon",
+      "Gwenole",
+      "sea gate",
+      "Douarnenez"
     ]
   },
   {
@@ -609,7 +624,7 @@
     "url": "/stories/el-dorado-lost-city",
     "category": "Lost Worlds",
     "summary": "El Dorado is a pre-existing Lost Worlds subject built around the South American legend that shifted from a gilded ruler ritual into European searches for a golden city or kingdom.",
-    "description": "A calm guide to El Dorado, its common versions, source limits, and the golden city legend motif that makes South American legend that shifted from a gilded.",
+    "description": "A source-aware guide to El Dorado, the Muisca gilded ruler ritual, Lake Guatavita, Spanish conquest rumors, golden city searches, and colonial imagination.",
     "tags": [
       "Golden City Legend",
       "El Dorado",
@@ -618,15 +633,16 @@
     ],
     "motif": "Golden City Legend",
     "topics": [
-      "LostWorldRecord",
+      "exploration-rumor-legend",
       "Lost Worlds / Golden City Legend / Mythic tradition and symbolic reading",
-      "el dorado lost city",
-      "El Dorado is treated through one concrete anchor: the South American legend that shifted from a gilded ruler ritual into European searches for a golden city or kingdom.",
+      "el-dorado-lost-city",
+      "The article follows the inflation of a specific ritual image into a continent-sized colonial desire map.",
       "El Dorado",
-      "golden city",
       "Muisca",
-      "South America",
-      "gilded ruler"
+      "Lake Guatavita",
+      "gilded ruler",
+      "conquistadors",
+      "golden city"
     ]
   },
   {
@@ -636,7 +652,7 @@
     "url": "/stories/hyperborea-lost-northern-land",
     "category": "Lost Worlds",
     "summary": "Hyperborea is a pre-existing Lost Worlds subject built around the Greek idea of a far northern land beyond Boreas where blessed people lived outside ordinary hardship.",
-    "description": "Hyperborea explores the origin, meaning, and folklore behind Greek idea of a far northern land beyond Boreas where blessed people lived outside ordinary.",
+    "description": "A source-aware guide to Hyperborea in Greek myth, Apollo, northern geography, blessed people beyond Boreas, Delian offerings, and mythic mapmaking.",
     "tags": [
       "Mythic Northern Land",
       "Hyperborea",
@@ -645,15 +661,16 @@
     ],
     "motif": "Mythic Northern Land",
     "topics": [
-      "LostWorldRecord",
+      "mythic-geography",
       "Lost Worlds / Mythic Northern Land / Mythic tradition and symbolic reading",
-      "hyperborea lost northern land",
-      "Hyperborea is treated through one concrete anchor: the Greek idea of a far northern land beyond Boreas where blessed people lived outside ordinary hardship.",
+      "hyperborea-lost-northern-land",
+      "The article reads Hyperborea as a paradoxical beyond-place: past the north wind, beyond hardship, and outside ordinary map certainty.",
       "Hyperborea",
-      "Greek geography",
-      "northern land",
       "Boreas",
-      "blessed people"
+      "Apollo",
+      "Delos",
+      "Arimaspians",
+      "Rhipaean Mountains"
     ]
   },
   {
@@ -663,7 +680,7 @@
     "url": "/stories/avalon-legendary-island",
     "category": "Lost Worlds",
     "summary": "Avalon is a pre-existing Lost Worlds subject built around the Arthurian island or otherworldly place associated with healing, apples, and the final resting place of King Arthur.",
-    "description": "A calm guide to Avalon, its common versions, source limits, and the arthurian lost island motif that makes Arthurian island or otherworldly place associated.",
+    "description": "A source-aware guide to Avalon in Arthurian legend, the Isle of Apples, Geoffrey of Monmouth, Morgan le Fay, Arthur’s healing, and Glastonbury association.",
     "tags": [
       "Arthurian Lost Island",
       "Avalon",
@@ -672,15 +689,16 @@
     ],
     "motif": "Arthurian Lost Island",
     "topics": [
-      "LostWorldRecord",
+      "arthurian-otherworld-island",
       "Lost Worlds / Arthurian Lost Island / Mythic tradition and symbolic reading",
-      "avalon legendary island",
-      "Avalon is treated through one concrete anchor: the Arthurian island or otherworldly place associated with healing, apples, and the final resting place of King Arthur.",
+      "avalon-legendary-island",
+      "The article treats Avalon as a suspended ending: a place that refuses to decide whether Arthur is dead, healed, or waiting.",
       "Avalon",
-      "Arthurian legend",
-      "island of apples",
-      "King Arthur",
-      "otherworld"
+      "Isle of Apples",
+      "Arthur",
+      "Morgan le Fay",
+      "Glastonbury",
+      "Insula Avallonis"
     ]
   },
   {
@@ -690,7 +708,7 @@
     "url": "/stories/naga-serpent-folklore",
     "category": "Mythic Creatures",
     "summary": "Naga is a pre-existing Mythic Creatures subject built around the serpent beings of South and Southeast Asian traditions connected with water, protection, treasure, and sacred places.",
-    "description": "Naga Folklore explains serpent beings of South and Southeast Asian traditions connected with water, protection, treasure, and sacred places through mythic.",
+    "description": "A source-aware guide to Naga serpent beings in South and Southeast Asian traditions, water, guardianship, treasure, temples, thresholds, and living belief.",
     "tags": [
       "Serpent Being",
       "Naga",
@@ -699,15 +717,16 @@
     ],
     "motif": "Serpent Being",
     "topics": [
-      "MythicCreatureRecord",
+      "serpent-guardian",
       "Mythic Creatures / Serpent Being / Mythic tradition and symbolic reading",
-      "naga serpent folklore",
-      "Naga is treated through one concrete anchor: the serpent beings of South and Southeast Asian traditions connected with water, protection, treasure, and sacred places.",
+      "naga-serpent-folklore",
+      "The article treats Naga as boundary guardians whose meaning changes across religious and regional contexts.",
       "Naga",
       "serpent being",
       "water guardian",
-      "South Asian mythology",
-      "sacred threshold"
+      "Mucalinda",
+      "Mekong",
+      "treasure guardian"
     ]
   },
   {
@@ -717,7 +736,7 @@
     "url": "/stories/qilin-mythic-creature",
     "category": "Mythic Creatures",
     "summary": "Qilin is a pre-existing Mythic Creatures subject built around the East Asian mythic creature associated with auspicious appearance, gentleness, moral order, and wise rulership.",
-    "description": "Qilin explores the origin, meaning, and folklore behind East Asian mythic creature associated with auspicious appearance, gentleness, moral order, and wise.",
+    "description": "A source-aware guide to the Qilin in Chinese and East Asian tradition, auspicious appearance, gentle power, moral rulership, iconography, and later reception.",
     "tags": [
       "Auspicious Creature",
       "Qilin",
@@ -726,15 +745,16 @@
     ],
     "motif": "Auspicious Creature",
     "topics": [
-      "MythicCreatureRecord",
+      "auspicious-creature",
       "Mythic Creatures / Auspicious Creature / Mythic tradition and symbolic reading",
-      "qilin mythic creature",
-      "Qilin is treated through one concrete anchor: the East Asian mythic creature associated with auspicious appearance, gentleness, moral order, and wise rulership.",
+      "qilin-mythic-creature",
+      "The article reads the Qilin as a mythic creature whose strength is measured by restraint rather than attack.",
       "Qilin",
+      "Kilin",
       "auspicious creature",
-      "East Asian mythology",
+      "sage ruler",
       "gentle power",
-      "moral order"
+      "Chinese unicorn"
     ]
   },
   {
@@ -744,7 +764,7 @@
     "url": "/stories/kelpie-water-horse-folklore",
     "category": "Mythic Creatures",
     "summary": "Kelpie is a pre-existing Mythic Creatures subject built around the Scottish water-horse creature remembered through river danger, deceptive beauty, and riders carried into water.",
-    "description": "A calm guide to Kelpie Folklore, its common versions, source limits, and the water horse folklore motif that makes Scottish water-horse creature remembered.",
+    "description": "A source-aware guide to the Kelpie in Scottish folklore, water horses, lochs, rivers, deceptive beauty, sticky hide, drowning warnings, and local landscape fear.",
     "tags": [
       "Water Horse Folklore",
       "Kelpie",
@@ -753,15 +773,17 @@
     ],
     "motif": "Water Horse Folklore",
     "topics": [
-      "MythicCreatureRecord",
+      "water-horse-warning",
       "Mythic Creatures / Water Horse Folklore / Mythic tradition and symbolic reading",
-      "kelpie water horse folklore",
-      "Kelpie is treated through one concrete anchor: the Scottish water-horse creature remembered through river danger, deceptive beauty, and riders carried into water.",
+      "kelpie-water-horse-folklore",
+      "The article reads the Kelpie as a creature that makes water risk visible by borrowing the trustworthy shape of a horse.",
       "Kelpie",
       "water horse",
-      "Scottish folklore",
-      "river danger",
-      "deceptive creature"
+      "loch",
+      "river",
+      "sticky hide",
+      "drowning",
+      "each-uisge"
     ]
   },
   {
@@ -771,7 +793,7 @@
     "url": "/stories/chimera-greek-monster-myth",
     "category": "Mythic Creatures",
     "summary": "Chimera is a pre-existing Mythic Creatures subject built around the Greek hybrid creature usually described through lion, goat, serpent, and fire-breathing elements.",
-    "description": "Chimera explores the origin, meaning, and folklore behind Greek hybrid creature usually described through lion, goat, serpent, and fire-breathing elements.",
+    "description": "A source-aware guide to the Chimera in Greek myth, the lion-goat-serpent body, fire breathing, Bellerophon, Pegasus, Lycia, and hybrid monster symbolism.",
     "tags": [
       "Hybrid Monster",
       "Chimera",
@@ -780,15 +802,17 @@
     ],
     "motif": "Hybrid Monster",
     "topics": [
-      "MythicCreatureRecord",
+      "hybrid-monster",
       "Mythic Creatures / Hybrid Monster / Mythic tradition and symbolic reading",
-      "chimera greek monster myth",
-      "Chimera is treated through one concrete anchor: the Greek hybrid creature usually described through lion, goat, serpent, and fire-breathing elements.",
+      "chimera-greek-monster-myth",
+      "The article reads the Chimera as a monster whose mixed body makes disorder visible before Bellerophon defeats it from the air.",
       "Chimera",
-      "hybrid monster",
-      "fire breathing",
+      "Khimaira",
       "Bellerophon",
-      "Greek creature"
+      "Pegasus",
+      "Typhon",
+      "Echidna",
+      "Lycia"
     ]
   },
   {
@@ -798,7 +822,7 @@
     "url": "/stories/pegasus-winged-horse-myth",
     "category": "Mythic Creatures",
     "summary": "Pegasus is a pre-existing Mythic Creatures subject built around the winged horse of Greek mythology connected with flight, heroes, poetic inspiration, and later symbolic imagination.",
-    "description": "A calm guide to Pegasus, its common versions, source limits, and the winged horse motif that makes winged horse of Greek mythology connected with flight.",
+    "description": "A source-aware guide to Pegasus in Greek mythology, Medusa, Poseidon, Bellerophon, the Chimera, Olympus, Hippocrene, and winged horse symbolism.",
     "tags": [
       "Winged Horse",
       "Pegasus",
@@ -807,15 +831,17 @@
     ],
     "motif": "Winged Horse",
     "topics": [
-      "MythicCreatureRecord",
+      "winged-horse",
       "Mythic Creatures / Winged Horse / Mythic tradition and symbolic reading",
-      "pegasus winged horse myth",
-      "Pegasus is treated through one concrete anchor: the winged horse of Greek mythology connected with flight, heroes, poetic inspiration, and later symbolic imagination.",
+      "pegasus-winged-horse-myth",
+      "The article reads Pegasus as upward transformation: a creature born from violence who carries heroes, water, thunder, and poetry.",
       "Pegasus",
-      "winged horse",
+      "Pegasos",
+      "Medusa",
       "Bellerophon",
-      "Greek mythology",
-      "flight"
+      "Chimera",
+      "Hippocrene",
+      "Peirene"
     ]
   },
   {
@@ -825,7 +851,7 @@
     "url": "/stories/demeter-and-persephone-myth",
     "category": "Myths",
     "summary": "Demeter and Persephone is a pre-existing Myths subject built around the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return.",
-    "description": "Demeter and Persephone explains Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return through.",
+    "description": "A source-aware guide to Demeter and Persephone, Hades, the pomegranate, Eleusis, seasonal change, grief, return, and underworld marriage in Greek myth.",
     "tags": [
       "Greek Seasonal Myth",
       "Demeter and Persephone",
@@ -834,15 +860,17 @@
     ],
     "motif": "Greek Seasonal Myth",
     "topics": [
-      "MythRecord",
+      "seasonal-underworld-myth",
       "Myths / Greek Seasonal Myth / Mythic tradition and symbolic reading",
-      "demeter and persephone myth",
-      "Demeter and Persephone is treated through one concrete anchor: the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return.",
+      "demeter-and-persephone-myth",
+      "The article treats the myth as a story of return with a condition rather than a simple spring allegory.",
       "Demeter",
       "Persephone",
-      "underworld",
-      "seasons",
-      "Greek myth"
+      "Hades",
+      "pomegranate",
+      "Eleusis",
+      "Hermes",
+      "Hekate"
     ]
   },
   {
@@ -852,7 +880,7 @@
     "url": "/stories/maui-slows-the-sun-myth",
     "category": "Myths",
     "summary": "Maui Slows the Sun is a pre-existing Myths subject built around the Polynesian myth in which Maui restrains or slows the sun so people have enough daylight for work and life.",
-    "description": "A calm guide to Maui Slows the Sun, its common versions, source limits, and the polynesian culture hero myth motif that makes Polynesian myth in which Maui.",
+    "description": "A source-aware guide to Maui slowing the sun, flax ropes, the jawbone weapon, Tamanuitera, daylight, labor, and culture-hero myth in Polynesian and Maori tradition.",
     "tags": [
       "Polynesian Culture Hero Myth",
       "Maui Slows the Sun",
@@ -861,15 +889,17 @@
     ],
     "motif": "Polynesian Culture Hero Myth",
     "topics": [
-      "MythRecord",
+      "culture-hero-sun-myth",
       "Myths / Polynesian Culture Hero Myth / Mythic tradition and symbolic reading",
-      "maui slows the sun myth",
-      "Maui Slows the Sun is treated through one concrete anchor: the Polynesian myth in which Maui restrains or slows the sun so people have enough daylight for work and life.",
+      "maui-slows-the-sun-myth",
+      "The article reads the myth as a practical culture-hero story about time becoming livable.",
       "Maui",
-      "sun snaring",
-      "Polynesian myth",
+      "Tamanuitera",
+      "flax rope",
+      "jawbone",
+      "Murirangawhenua",
       "culture hero",
-      "longer days"
+      "sun snaring"
     ]
   },
   {
@@ -879,7 +909,7 @@
     "url": "/stories/osiris-isis-resurrection-myth",
     "category": "Myths",
     "summary": "Osiris and Isis is a pre-existing Myths subject built around the Egyptian myth cycle in which Isis searches for Osiris after his murder and restoration becomes part of kingship and afterlife meaning.",
-    "description": "Osiris and Isis explores the origin, meaning, and folklore behind Egyptian myth cycle in which Isis searches for Osiris after his murder and restoration.",
+    "description": "A source-aware guide to the Osiris and Isis myth, Set, dismemberment, the search, Horus, kingship, afterlife hope, Nile fertility, and restoration in Egyptian mythology.",
     "tags": [
       "Egyptian Myth",
       "Osiris and Isis",
@@ -888,15 +918,18 @@
     ],
     "motif": "Egyptian Myth",
     "topics": [
-      "MythRecord",
+      "restoration-and-afterlife-myth",
       "Myths / Egyptian Myth / Mythic tradition and symbolic reading",
-      "osiris isis resurrection myth",
-      "Osiris and Isis is treated through one concrete anchor: the Egyptian myth cycle in which Isis searches for Osiris after his murder and restoration becomes part of kingship and afterlife meaning.",
+      "osiris-isis-resurrection-myth",
+      "The article treats the myth as restoration without simple reversal: death is answered, but not erased.",
       "Osiris",
       "Isis",
       "Set",
-      "Egyptian myth",
-      "restoration"
+      "Horus",
+      "afterlife",
+      "djed",
+      "Abydos",
+      "ma at"
     ]
   },
   {
@@ -906,7 +939,7 @@
     "url": "/stories/king-midas-golden-touch-myth",
     "category": "Myths",
     "summary": "King Midas is a pre-existing Myths subject built around the Greek myth of a king whose wish turns everything he touches into gold until the gift becomes a curse.",
-    "description": "King Midas and the Golden Touch explores the origin, meaning, and folklore behind Greek myth of a king whose wish turns everything he touches into gold until.",
+    "description": "A source-aware guide to King Midas, the golden touch, Dionysus, Silenus, Pactolus, hunger, wealth, foolish wishes, and Greek moral myth.",
     "tags": [
       "Greek Moral Myth",
       "King Midas",
@@ -915,15 +948,17 @@
     ],
     "motif": "Greek Moral Myth",
     "topics": [
-      "MythRecord",
+      "wish-as-curse-myth",
       "Myths / Greek Moral Myth / Mythic tradition and symbolic reading",
-      "king midas golden touch myth",
-      "King Midas is treated through one concrete anchor: the Greek myth of a king whose wish turns everything he touches into gold until the gift becomes a curse.",
-      "King Midas",
+      "king-midas-golden-touch-myth",
+      "The article reads the golden touch as a myth about desire becoming too literal to live with.",
+      "Midas",
       "golden touch",
       "Dionysus",
-      "wish",
-      "Greek myth"
+      "Silenus",
+      "Pactolus",
+      "Phrygia",
+      "Ovid"
     ]
   },
   {
@@ -933,7 +968,7 @@
     "url": "/stories/heracles-twelve-labors-myth",
     "category": "Myths",
     "summary": "Heracles and the Twelve Labors is a pre-existing Myths subject built around the Greek hero cycle in which Heracles completes a series of impossible labors as punishment, proof, and mythic trial.",
-    "description": "A calm guide to Heracles and the Twelve Labors, its common versions, source limits, and the greek hero myth motif that makes Greek hero cycle in which.",
+    "description": "A source-aware guide to Heracles and the Twelve Labors, Eurystheus, Hera, atonement, monsters, impossible tasks, heroic strength, and Greek mythic endurance.",
     "tags": [
       "Greek Hero Myth",
       "Heracles and the Twelve Labors",
@@ -942,15 +977,18 @@
     ],
     "motif": "Greek Hero Myth",
     "topics": [
-      "MythRecord",
+      "heroic-atonement-cycle",
       "Myths / Greek Hero Myth / Mythic tradition and symbolic reading",
-      "heracles twelve labors myth",
-      "Heracles and the Twelve Labors is treated through one concrete anchor: the Greek hero cycle in which Heracles completes a series of impossible labors as punishment, proof, and mythic trial.",
+      "heracles-twelve-labors-myth",
+      "The article reads the labors as a system of repeated testing rather than a mere monster checklist.",
       "Heracles",
-      "Twelve Labors",
-      "Greek hero",
-      "atonement",
-      "impossible tasks"
+      "Hercules",
+      "Eurystheus",
+      "Hera",
+      "Nemean Lion",
+      "Hydra",
+      "Cerberus",
+      "Augean stables"
     ]
   },
   {
@@ -960,7 +998,7 @@
     "url": "/stories/fresno-nightcrawler-legend",
     "category": "Modern Legends",
     "summary": "Fresno Nightcrawler is a pre-existing Modern Legends subject built around the modern cryptid legend shaped by video clips of pale walking figures and later online interpretation.",
-    "description": "Fresno Nightcrawler Legend explains modern cryptid legend shaped by video clips of pale walking figures and later online interpretation through modern.",
+    "description": "A source-aware guide to the Fresno Nightcrawler legend, the 2007 video, Yosemite reports, viral cryptid culture, hoax theories, and why walking white figures became folklore.",
     "tags": [
       "Video Cryptid Legend",
       "Fresno Nightcrawler",
@@ -969,15 +1007,17 @@
     ],
     "motif": "Video Cryptid Legend",
     "topics": [
-      "ModernLegendRecord",
+      "video-cryptid-legend",
       "Modern Legends / Video Cryptid Legend / Source-aware folklore record",
-      "fresno nightcrawler legend",
-      "Fresno Nightcrawler is treated through one concrete anchor: the modern cryptid legend shaped by video clips of pale walking figures and later online interpretation.",
+      "fresno-nightcrawler-legend",
+      "The article treats the Nightcrawler as a cryptid built by replay, not by a long chain of dangerous encounters.",
       "Fresno Nightcrawler",
-      "video cryptid",
-      "walking figure",
-      "California legend",
-      "online sightings"
+      "Nightcrawler",
+      "cryptid",
+      "CCTV",
+      "Yosemite",
+      "Fact or Faked",
+      "viral footage"
     ]
   },
   {
@@ -987,7 +1027,7 @@
     "url": "/stories/bunny-man-legend",
     "category": "Modern Legends",
     "summary": "Bunny Man is a pre-existing Modern Legends subject built around the Northern Virginia legend of a costumed figure, bridge rumors, and stories that grew from reported local incidents.",
-    "description": "A calm guide to Bunny Man Legend, its common versions, source limits, and the costumed figure legend motif that makes Northern Virginia legend of a costumed.",
+    "description": "A source-aware guide to the Bunny Man legend, Fairfax County, Bunny Man Bridge, 1970 incidents, local rumor, costumed threats, and Northern Virginia folklore.",
     "tags": [
       "Costumed Figure Legend",
       "Bunny Man",
@@ -996,15 +1036,17 @@
     ],
     "motif": "Costumed Figure Legend",
     "topics": [
-      "ModernLegendRecord",
+      "costumed-figure-legend",
       "Modern Legends / Costumed Figure Legend / Source-aware folklore record",
-      "bunny man legend",
-      "Bunny Man is treated through one concrete anchor: the Northern Virginia legend of a costumed figure, bridge rumors, and stories that grew from reported local incidents.",
+      "bunny-man-legend",
+      "The article reads Bunny Man as a legend where absurdity helps fear survive.",
       "Bunny Man",
       "Bunny Man Bridge",
       "Fairfax County",
-      "costumed figure",
-      "local legend"
+      "Clifton",
+      "Colchester Overpass",
+      "hatchet",
+      "costume"
     ]
   },
   {
@@ -1014,7 +1056,7 @@
     "url": "/stories/black-eyed-children-legend",
     "category": "Modern Legends",
     "summary": "Black-Eyed Children is a pre-existing Modern Legends subject built around the modern legend of children with completely dark eyes who ask for entry into cars, homes, or private spaces.",
-    "description": "Black-Eyed Children Legend explains modern legend of children with completely dark eyes who ask for entry into cars, homes, or private spaces through modern.",
+    "description": "A source-aware guide to the Black-Eyed Children legend, Brian Bethel, doorway encounters, requests to enter, creepypasta spread, child fear, and modern urban folklore.",
     "tags": [
       "Doorway Legend",
       "Black-Eyed Children",
@@ -1023,15 +1065,17 @@
     ],
     "motif": "Doorway Legend",
     "topics": [
-      "ModernLegendRecord",
+      "doorway-invitation-legend",
       "Modern Legends / Doorway Legend / Source-aware folklore record",
-      "black eyed children legend",
-      "Black-Eyed Children is treated through one concrete anchor: the modern legend of children with completely dark eyes who ask for entry into cars, homes, or private spaces.",
+      "black-eyed-children-legend",
+      "The article reads Black-Eyed Children as a permission legend about private space and moral hesitation.",
       "Black-Eyed Children",
-      "doorway encounter",
-      "request to enter",
-      "dark eyes",
-      "modern legend"
+      "BEK",
+      "Brian Bethel",
+      "doorway",
+      "threshold",
+      "invitation",
+      "creepypasta"
     ]
   },
   {
@@ -1041,7 +1085,7 @@
     "url": "/stories/bell-witch-legend",
     "category": "Modern Legends",
     "summary": "Bell Witch is a pre-existing Modern Legends subject built around the Tennessee legend of the Bell family haunting, remembered through voices, disturbances, local memory, and later retellings.",
-    "description": "Bell Witch Legend explores the origin, meaning, and folklore behind Tennessee legend of the Bell family haunting, remembered through voices, disturbances.",
+    "description": "A source-aware guide to the Bell Witch legend, Adams Tennessee, John Bell, Betsy Bell, Kate, voices, disturbances, local memory, and American haunting folklore.",
     "tags": [
       "Haunting Legend",
       "Bell Witch",
@@ -1050,15 +1094,17 @@
     ],
     "motif": "Haunting Legend",
     "topics": [
-      "ModernLegendRecord",
+      "regional-haunting-legend",
       "Modern Legends / Haunting Legend / Source-aware folklore record",
-      "bell witch legend",
-      "Bell Witch is treated through one concrete anchor: the Tennessee legend of the Bell family haunting, remembered through voices, disturbances, local memory, and later retellings.",
+      "bell-witch-legend",
+      "The article reads the Bell Witch as a haunting that became public through voice and local memory.",
       "Bell Witch",
-      "Tennessee legend",
-      "Bell family",
-      "haunting voice",
-      "local folklore"
+      "John Bell",
+      "Betsy Bell",
+      "Kate",
+      "Adams",
+      "Robertson County",
+      "haunting"
     ]
   },
   {
@@ -1068,7 +1114,7 @@
     "url": "/stories/loveland-frogman-legend",
     "category": "Modern Legends",
     "summary": "Loveland Frogman is a pre-existing Modern Legends subject built around the Ohio modern legend of a frog-like figure reported near roads, rivers, and local sighting stories around Loveland.",
-    "description": "A calm guide to Loveland Frogman Legend, its common versions, source limits, and the regional creature legend motif that makes Ohio modern legend of a.",
+    "description": "A source-aware guide to the Loveland Frogman legend, Little Miami River, 1955 and 1972 sighting traditions, Ohio folklore, police-officer accounts, and local mascot afterlife.",
     "tags": [
       "Regional Creature Legend",
       "Loveland Frogman",
@@ -1077,15 +1123,17 @@
     ],
     "motif": "Regional Creature Legend",
     "topics": [
-      "ModernLegendRecord",
+      "regional-creature-legend",
       "Modern Legends / Regional Creature Legend / Source-aware folklore record",
-      "loveland frogman legend",
-      "Loveland Frogman is treated through one concrete anchor: the Ohio modern legend of a frog-like figure reported near roads, rivers, and local sighting stories around Loveland.",
+      "loveland-frogman-legend",
+      "The article reads the Frogman as a local cryptid that became friendly without losing its roadside mystery.",
       "Loveland Frogman",
-      "Ohio legend",
-      "frog-like figure",
-      "river road",
-      "local sightings"
+      "Loveland Frog",
+      "Loveland Lizard",
+      "Little Miami River",
+      "Riverside Drive",
+      "Kemper Road",
+      "Ohio cryptid"
     ]
   },
   {
@@ -1095,7 +1143,7 @@
     "url": "/stories/dullahan-irish-folklore",
     "category": "Classic Folklore",
     "summary": "Dullahan is a pre-existing Classic Folklore subject built around the Irish headless rider figure remembered through night roads, a carried head, and death-warning associations.",
-    "description": "Dullahan Folklore explores the origin, meaning, and folklore behind Irish headless rider figure remembered through night roads, a carried head, and.",
+    "description": "A source-aware guide to the Dullahan in Irish folklore, the headless rider, death coach, carried head, gold taboo, night roads, and death-omen meaning.",
     "tags": [
       "Headless Rider Folklore",
       "Dullahan",
@@ -1104,15 +1152,17 @@
     ],
     "motif": "Headless Rider Folklore",
     "topics": [
-      "ClassicFolkloreRecord",
+      "headless-rider-death-omen",
       "Classic Folklore / Headless Rider Folklore / Source-aware folklore record",
-      "dullahan irish folklore",
-      "Dullahan is treated through one concrete anchor: the Irish headless rider figure remembered through night roads, a carried head, and death-warning associations.",
+      "dullahan-irish-folklore",
+      "The article reads the Dullahan as death made mobile and vocal rather than as a generic headless horseman.",
       "Dullahan",
       "headless rider",
-      "Irish folklore",
+      "death coach",
+      "carried head",
       "night road",
-      "death warning"
+      "gold",
+      "death omen"
     ]
   },
   {
@@ -1122,7 +1172,7 @@
     "url": "/stories/brownie-house-spirit-folklore",
     "category": "Classic Folklore",
     "summary": "Brownie is a pre-existing Classic Folklore subject built around the household spirit in Scottish and English folklore remembered for secret night work, small offerings, and rules around gratitude.",
-    "description": "Brownie Folklore explores the origin, meaning, and folklore behind household spirit in Scottish and English folklore remembered for secret night work, small.",
+    "description": "A source-aware guide to Brownie folklore, Scottish and English house spirits, night work, offerings, clothing taboos, gratitude rules, and domestic reciprocity.",
     "tags": [
       "House Spirit Folklore",
       "Brownie",
@@ -1131,15 +1181,17 @@
     ],
     "motif": "House Spirit Folklore",
     "topics": [
-      "ClassicFolkloreRecord",
+      "household-helper-spirit",
       "Classic Folklore / House Spirit Folklore / Source-aware folklore record",
-      "brownie house spirit folklore",
-      "Brownie is treated through one concrete anchor: the household spirit in Scottish and English folklore remembered for secret night work, small offerings, and rules around gratitude.",
+      "brownie-house-spirit-folklore",
+      "The article reads Brownies as folklore about invisible domestic labor and the limits of payment.",
       "Brownie",
+      "broonie",
       "house spirit",
       "night work",
-      "household folklore",
-      "small offering"
+      "offering",
+      "clothing taboo",
+      "boggart"
     ]
   },
   {
@@ -1149,7 +1201,7 @@
     "url": "/stories/kitsune-folklore",
     "category": "Classic Folklore",
     "summary": "Kitsune is a pre-existing Classic Folklore subject built around the Japanese fox-spirit tradition in which foxes may trick, protect, possess, or appear in human form.",
-    "description": "Kitsune Folklore explains Japanese fox-spirit tradition in which foxes may trick, protect, possess, or appear in human form through classic folklore.",
+    "description": "A source-aware guide to Kitsune folklore, Japanese fox spirits, Inari messengers, shapeshifting, fox wives, possession, nine tails, and trickster blessing.",
     "tags": [
       "Fox Spirit Folklore",
       "Kitsune",
@@ -1158,15 +1210,18 @@
     ],
     "motif": "Fox Spirit Folklore",
     "topics": [
-      "ClassicFolkloreRecord",
+      "fox-spirit-shapeshifter",
       "Classic Folklore / Fox Spirit Folklore / Source-aware folklore record",
-      "kitsune fox spirit folklore",
-      "Kitsune is treated through one concrete anchor: the Japanese fox-spirit tradition in which foxes may trick, protect, possess, or appear in human form.",
+      "kitsune-folklore",
+      "The article reads Kitsune through ambiguity: blessing and deception are not separate species but recurring possibilities inside fox folklore.",
       "Kitsune",
-      "fox spirit",
-      "shape-shifting",
-      "Japanese folklore",
-      "trickster"
+      "Inari",
+      "byakko",
+      "zenko",
+      "yako",
+      "fox wife",
+      "nine-tailed fox",
+      "possession"
     ]
   },
   {
@@ -1176,7 +1231,7 @@
     "url": "/stories/leprechaun-irish-folklore",
     "category": "Classic Folklore",
     "summary": "Leprechaun is a pre-existing Classic Folklore subject built around the Irish fairy figure remembered through shoemaking, hidden gold, trick bargains, and the difficulty of holding a captured helper.",
-    "description": "Leprechaun Folklore explains Irish fairy figure remembered through shoemaking, hidden gold, trick bargains, and the difficulty of holding a captured helper.",
+    "description": "A source-aware guide to Leprechaun folklore, Irish fairy shoemakers, hidden gold, capture rules, trick bargains, solitary fairies, and modern Irish iconography.",
     "tags": [
       "Irish Fairy Folklore",
       "Leprechaun",
@@ -1185,15 +1240,17 @@
     ],
     "motif": "Irish Fairy Folklore",
     "topics": [
-      "ClassicFolkloreRecord",
+      "solitary-fairy-gold-bargain",
       "Classic Folklore / Irish Fairy Folklore / Source-aware folklore record",
-      "leprechaun irish folklore",
-      "Leprechaun is treated through one concrete anchor: the Irish fairy figure remembered through shoemaking, hidden gold, trick bargains, and the difficulty of holding a captured helper.",
+      "leprechaun-irish-folklore",
+      "The article reads the Leprechaun as a bargain story about attention rather than a simple lucky mascot.",
       "Leprechaun",
-      "Irish fairy",
-      "hidden gold",
-      "shoemaker",
-      "trick bargain"
+      "Lepracaun",
+      "cluricaun",
+      "far darrig",
+      "brogue",
+      "crock of gold",
+      "solitary fairy"
     ]
   },
   {
@@ -1203,7 +1260,7 @@
     "url": "/stories/tengu-japanese-folklore",
     "category": "Classic Folklore",
     "summary": "Tengu is a pre-existing Classic Folklore subject built around the Japanese folklore beings associated with mountains, birdlike features, masks, martial skill, and ambiguous danger or protection.",
-    "description": "A calm guide to Tengu Folklore, its common versions, source limits, and the mountain spirit folklore motif that makes Japanese folklore beings associated with.",
+    "description": "A source-aware guide to Tengu folklore, Japanese mountain spirits, birdlike forms, long-nosed masks, yamabushi, martial skill, Buddhist danger, and protective ambiguity.",
     "tags": [
       "Mountain Spirit Folklore",
       "Tengu",
@@ -1212,25 +1269,27 @@
     ],
     "motif": "Mountain Spirit Folklore",
     "topics": [
-      "ClassicFolkloreRecord",
+      "mountain-spirit-bird-yokai",
       "Classic Folklore / Mountain Spirit Folklore / Source-aware folklore record",
-      "tengu japanese folklore",
-      "Tengu is treated through one concrete anchor: the Japanese folklore beings associated with mountains, birdlike features, masks, martial skill, and ambiguous danger or protection.",
+      "tengu-japanese-folklore",
+      "The article reads Tengu as mountain ambiguity: they punish arrogance and protect sacred space while remaining dangerous.",
       "Tengu",
+      "karasu tengu",
+      "konoha tengu",
+      "yamabushi",
+      "Shugendo",
       "mountain spirit",
-      "Japanese folklore",
-      "birdlike figure",
-      "mask tradition"
+      "possession"
     ]
   },
   {
     "id": "devils-sea-mystery",
     "slug": "devils-sea-mystery",
-    "title": "Devil’s Sea Mystery: Dragon’s Triangle, Maritime Rumor, and the Dangerous Waters of Legend",
+    "title": "Devil's Sea Mystery: Dragon's Triangle, Maritime Rumor, and the Dangerous Waters of Legend",
     "url": "/stories/devils-sea-mystery",
     "category": "Unexplained Mysteries",
     "summary": "Devil’s Sea is a pre-existing Unexplained Mysteries subject built around the Pacific maritime legend sometimes called the Dragon Triangle and compared with other dangerous-sea mystery zones.",
-    "description": "Devil’s Sea Mystery explains Pacific maritime legend sometimes called the Dragon Triangle and compared with other dangerous-sea mystery zones through.",
+    "description": "A source-aware guide to the Devil's Sea mystery, Dragon's Triangle claims, missing ships, volcanic waters, Bermuda Triangle comparisons, and maritime folklore.",
     "tags": [
       "Maritime Legend",
       "Devil’s Sea",
@@ -1239,15 +1298,17 @@
     ],
     "motif": "Maritime Legend",
     "topics": [
-      "UnexplainedMysteryRecord",
+      "maritime-danger-zone-legend",
       "Unexplained Mysteries / Maritime Legend / Evidence-limited public record",
-      "devils sea mystery",
-      "Devil’s Sea is treated through one concrete anchor: the Pacific maritime legend sometimes called the Dragon Triangle and compared with other dangerous-sea mystery zones.",
-      "Devil’s Sea",
-      "Dragon Triangle",
-      "Pacific Ocean",
-      "maritime rumor",
-      "dangerous waters"
+      "devils-sea-mystery",
+      "The article reads the mystery as a map-made legend: a dangerous ocean region turned into a single story by naming, geometry, and repetition.",
+      "Devil's Sea",
+      "Dragon's Triangle",
+      "Miyake-jima",
+      "Izu Islands",
+      "missing ships",
+      "volcanic waters",
+      "maritime hazard"
     ]
   },
   {
@@ -1257,7 +1318,7 @@
     "url": "/stories/greenbrier-ghost-case",
     "category": "Unexplained Mysteries",
     "summary": "Greenbrier Ghost is a pre-existing Unexplained Mysteries subject built around the West Virginia case remembered through a death investigation, a ghostly claim, and later folklore around testimony and justice.",
-    "description": "Greenbrier Ghost Case explains West Virginia case remembered through a death investigation, a ghostly claim, and later folklore around testimony and justice.",
+    "description": "A source-aware guide to the Greenbrier Ghost case, Zona Heaster Shue, Mary Heaster, the apparition claim, exhumation, trial memory, and West Virginia folklore.",
     "tags": [
       "Apparition Case",
       "Greenbrier Ghost",
@@ -1266,15 +1327,17 @@
     ],
     "motif": "Apparition Case",
     "topics": [
-      "UnexplainedMysteryRecord",
+      "apparition-courtroom-memory-case",
       "Unexplained Mysteries / Apparition Case / Evidence-limited public record",
-      "greenbrier ghost case",
-      "Greenbrier Ghost is treated through one concrete anchor: the West Virginia case remembered through a death investigation, a ghostly claim, and later folklore around testimony and justice.",
-      "Greenbrier Ghost",
-      "West Virginia",
-      "apparition claim",
-      "courtroom memory",
-      "death investigation"
+      "greenbrier-ghost-case",
+      "The article treats the ghost not as court evidence alone but as a social force that moved suspicion toward investigation.",
+      "Zona Heaster Shue",
+      "Mary Jane Heaster",
+      "Erasmus Shue",
+      "Greenbrier County",
+      "apparition",
+      "exhumation",
+      "trial"
     ]
   },
   {
@@ -1284,7 +1347,7 @@
     "url": "/stories/hessdalen-lights-mystery",
     "category": "Unexplained Mysteries",
     "summary": "Hessdalen Lights is a pre-existing Unexplained Mysteries subject built around the recurring light phenomena reported in Norway Hessdalen valley and studied without one fully settled explanation.",
-    "description": "Hessdalen Lights explains recurring light phenomena reported in Norway Hessdalen valley and studied without one fully settled explanation through unexplained.",
+    "description": "A source-aware guide to the Hessdalen Lights mystery, Norway valley sightings, Project Hessdalen, instrumented observation, plasma ideas, witness reports, and folklore.",
     "tags": [
       "Light Phenomenon",
       "Hessdalen Lights",
@@ -1293,15 +1356,17 @@
     ],
     "motif": "Light Phenomenon",
     "topics": [
-      "UnexplainedMysteryRecord",
+      "recurring-valley-light-phenomenon",
       "Unexplained Mysteries / Light Phenomenon / Evidence-limited public record",
-      "hessdalen lights mystery",
-      "Hessdalen Lights is treated through one concrete anchor: the recurring light phenomena reported in Norway Hessdalen valley and studied without one fully settled explanation.",
-      "Hessdalen Lights",
-      "Norway",
+      "hessdalen-lights-mystery",
+      "The article reads Hessdalen as a rare mystery where folklore and field science occupy the same hillside without canceling each other.",
+      "Hessdalen",
+      "Project Hessdalen",
+      "Blue Box",
+      "automatic measurement station",
       "valley lights",
-      "light phenomenon",
-      "field study"
+      "radar",
+      "plasma"
     ]
   },
   {
@@ -1311,7 +1376,7 @@
     "url": "/stories/tamam-shud-case",
     "category": "Unexplained Mysteries",
     "summary": "Tamam Shud Case is a pre-existing Unexplained Mysteries subject built around the Somerton Man case remembered through an unidentified body, a torn phrase from a book, and decades of speculation.",
-    "description": "Tamam Shud Case explains Somerton Man case remembered through an unidentified body, a torn phrase from a book, and decades of speculation through unexplained.",
+    "description": "A source-aware guide to the Tamam Shud case, Somerton Man, torn book phrase, code, DNA identification claims, police caution, and why the mystery endured.",
     "tags": [
       "Unidentified Person Mystery",
       "Tamam Shud Case",
@@ -1320,15 +1385,17 @@
     ],
     "motif": "Unidentified Person Mystery",
     "topics": [
-      "UnexplainedMysteryRecord",
+      "unidentified-body-code-mystery",
       "Unexplained Mysteries / Unidentified Person Mystery / Evidence-limited public record",
-      "tamam shud case",
-      "Tamam Shud Case is treated through one concrete anchor: the Somerton Man case remembered through an unidentified body, a torn phrase from a book, and decades of speculation.",
-      "Tamam Shud",
+      "tamam-shud-case",
+      "The article treats the case as a mystery of evidence that kept becoming more literary every time a new object appeared.",
       "Somerton Man",
-      "unidentified body",
-      "rubaiyat",
-      "identity mystery"
+      "Tamam Shud",
+      "Rubaiyat",
+      "code",
+      "Charles Webb",
+      "DNA genealogy",
+      "Adelaide"
     ]
   },
   {
@@ -1338,7 +1405,7 @@
     "url": "/stories/phoenix-lights-mystery",
     "category": "Unexplained Mysteries",
     "summary": "Phoenix Lights is a pre-existing Unexplained Mysteries subject built around the 1997 Arizona sky-sighting event remembered through lights, witness reports, official explanations, and continuing debate.",
-    "description": "Phoenix Lights Mystery explores the origin, meaning, and folklore behind 1997 Arizona sky-sighting event remembered through lights, witness reports, official.",
+    "description": "A source-aware guide to the Phoenix Lights mystery, March 13 1997 Arizona sightings, V formation reports, flare explanations, witness memory, and UFO folklore.",
     "tags": [
       "Mass Sighting Mystery",
       "Phoenix Lights",
@@ -1347,15 +1414,17 @@
     ],
     "motif": "Mass Sighting Mystery",
     "topics": [
-      "UnexplainedMysteryRecord",
+      "mass-sighting-night-sky-event",
       "Unexplained Mysteries / Mass Sighting Mystery / Evidence-limited public record",
-      "phoenix lights mystery",
-      "Phoenix Lights is treated through one concrete anchor: the 1997 Arizona sky-sighting event remembered through lights, witness reports, official explanations, and continuing debate.",
+      "phoenix-lights-mystery",
+      "The article reads the Phoenix Lights as a split event: a night where multiple sky stories were later compressed into one famous name.",
       "Phoenix Lights",
-      "Arizona sighting",
-      "night sky formation",
-      "1997",
-      "witness reports"
+      "Arizona",
+      "March 13 1997",
+      "V formation",
+      "flares",
+      "witness reports",
+      "Fife Symington"
     ]
   },
   {
@@ -1365,7 +1434,7 @@
     "url": "/stories/stull-cemetery-legend",
     "category": "Strange Places",
     "summary": "Stull Cemetery is a pre-existing Strange Places subject built around the Kansas cemetery legend shaped by gateway-to-hell rumors, student retellings, and repeated haunted-place claims.",
-    "description": "Stull Cemetery Legend explores the origin, meaning, and folklore behind Kansas cemetery legend shaped by gateway-to-hell rumors, student retellings, and.",
+    "description": "A source-aware guide to the Stull Cemetery legend, the Kansas gateway-to-hell rumor, college folklore, vandalism concerns, and why the graveyard became famous.",
     "tags": [
       "Cemetery Legend",
       "Stull Cemetery",
@@ -1374,15 +1443,17 @@
     ],
     "motif": "Cemetery Legend",
     "topics": [
-      "StrangePlaceRecord",
+      "cemetery-gateway-urban-legend",
       "Strange Places / Cemetery Legend / Source-aware folklore record",
-      "stull cemetery legend",
-      "Stull Cemetery is treated through one concrete anchor: the Kansas cemetery legend shaped by gateway-to-hell rumors, student retellings, and repeated haunted-place claims.",
+      "stull-cemetery-legend",
+      "The article reads Stull as a case where folklore did not only describe a place; it changed how people behaved toward that place.",
       "Stull Cemetery",
-      "Kansas legend",
-      "gateway rumor",
-      "haunted cemetery",
-      "college folklore"
+      "Gateway to Hell",
+      "Douglas County",
+      "University Daily Kansan",
+      "Halloween",
+      "spring equinox",
+      "ruined church"
     ]
   },
   {
@@ -1392,7 +1463,7 @@
     "url": "/stories/paris-catacombs-legends",
     "category": "Strange Places",
     "summary": "Paris Catacombs Legends is a pre-existing Strange Places subject built around the underground ossuary and tunnel folklore surrounding the Paris Catacombs and stories of a hidden city below the streets.",
-    "description": "Paris Catacombs Legends explains underground ossuary and tunnel folklore surrounding the Paris Catacombs and stories of a hidden city below the streets.",
+    "description": "A source-aware guide to Paris Catacombs legends, the municipal ossuary, former quarries, illegal tunnels, cataphiles, death imagery, and underground folklore.",
     "tags": [
       "Underground Place",
       "Paris Catacombs Legends",
@@ -1401,15 +1472,17 @@
     ],
     "motif": "Underground Place",
     "topics": [
-      "StrangePlaceRecord",
+      "underground-ossuary-urban-legend",
       "Strange Places / Underground Place / Source-aware folklore record",
-      "paris catacombs tunnel legends",
-      "Paris Catacombs Legends is treated through one concrete anchor: the underground ossuary and tunnel folklore surrounding the Paris Catacombs and stories of a hidden city below the streets.",
+      "paris-catacombs-legends",
+      "The article reads the Catacombs as a rare place where the factual history is already gothic enough to generate legend without much invention.",
       "Paris Catacombs",
-      "ossuary",
-      "underground tunnels",
-      "bones",
-      "hidden city"
+      "municipal ossuary",
+      "Tombe-Issoire",
+      "quarries",
+      "Héricart de Thury",
+      "cataphiles",
+      "ossuary"
     ]
   },
   {
@@ -1419,7 +1492,7 @@
     "url": "/stories/door-to-hell-darvaza-crater",
     "category": "Strange Places",
     "summary": "Door to Hell is a pre-existing Strange Places subject built around the burning Darvaza gas crater in Turkmenistan that became known as the Door to Hell through travel writing and online images.",
-    "description": "Door to Hell explores the origin, meaning, and folklore behind burning Darvaza gas crater in Turkmenistan that became known as the Door to Hell through travel.",
+    "description": "A source-aware guide to the Door to Hell, Darvaza gas crater in Turkmenistan, uncertain origin stories, methane fire, tourism, and strange-place legend.",
     "tags": [
       "Burning Crater",
       "Door to Hell",
@@ -1428,15 +1501,17 @@
     ],
     "motif": "Burning Crater",
     "topics": [
-      "StrangePlaceRecord",
+      "burning-industrial-landscape-legend",
       "Strange Places / Burning Crater / Source-aware folklore record",
-      "door to hell darvaza crater",
-      "Door to Hell is treated through one concrete anchor: the burning Darvaza gas crater in Turkmenistan that became known as the Door to Hell through travel writing and online images.",
+      "door-to-hell-darvaza-crater",
+      "The article reads Darvaza as a modern infernal place made from industry, geology, photography, and nickname rather than ancient myth.",
+      "Darvaza",
+      "Karakum Desert",
+      "methane",
+      "gas crater",
       "Door to Hell",
-      "Darvaza crater",
       "Turkmenistan",
-      "burning crater",
-      "desert fire"
+      "extinguish"
     ]
   },
   {
@@ -1446,7 +1521,7 @@
     "url": "/stories/crooked-forest-poland-mystery",
     "category": "Strange Places",
     "summary": "Crooked Forest is a pre-existing Strange Places subject built around the grove of bent pine trees in Poland whose curved trunks invite explanations ranging from human shaping to lost local practice.",
-    "description": "A calm guide to Crooked Forest of Poland, its common versions, source limits, and the unusual woodland motif that makes grove of bent pine trees in Poland.",
+    "description": "A source-aware guide to Poland's Crooked Forest, Krzywy Las, bent pine theories, human shaping, preservation efforts, and why the grove became a strange-place legend.",
     "tags": [
       "Unusual Woodland",
       "Crooked Forest",
@@ -1455,25 +1530,27 @@
     ],
     "motif": "Unusual Woodland",
     "topics": [
-      "StrangePlaceRecord",
+      "bent-pine-landscape-mystery",
       "Strange Places / Unusual Woodland / Source-aware folklore record",
-      "crooked forest poland mystery",
-      "Crooked Forest is treated through one concrete anchor: the grove of bent pine trees in Poland whose curved trunks invite explanations ranging from human shaping to lost local practice.",
-      "Crooked Forest",
-      "Poland",
+      "crooked-forest-poland-mystery",
+      "The article reads the Crooked Forest as a small landscape mystery where visual order makes absence of documentation feel stranger.",
+      "Krzywy Las",
+      "Gryfino",
+      "Nowe Czarnowo",
       "bent pines",
-      "unusual trees",
-      "landscape mystery"
+      "natural monument",
+      "forestry",
+      "revitalization"
     ]
   },
   {
     "id": "hoia-baciu-forest-legend",
     "slug": "hoia-baciu-forest-legend",
-    "title": "Hoia Baciu Forest: Vanishing Paths, Unusual Clearings, and Romania’s Strange Woodland Legend",
+    "title": "Hoia Baciu Forest: Vanishing Paths, Unusual Clearings, and Romania's Strange Woodland Legend",
     "url": "/stories/hoia-baciu-forest-legend",
     "category": "Strange Places",
     "summary": "Hoia Baciu Forest is a pre-existing Strange Places subject built around the Romanian forest known in popular accounts for strange experiences, unusual clearings, and haunted woodland stories.",
-    "description": "Hoia Baciu Forest explores the origin, meaning, and folklore behind Romanian forest known in popular accounts for strange experiences, unusual clearings, and.",
+    "description": "A source-aware guide to Hoia Baciu Forest, Romania haunted forest legends, unusual clearings, 1968 UFO reports, tourism, local landscape, and folklore.",
     "tags": [
       "Haunted Forest",
       "Hoia Baciu Forest",
@@ -1482,15 +1559,17 @@
     ],
     "motif": "Haunted Forest",
     "topics": [
-      "StrangePlaceRecord",
+      "haunted-forest-ufo-folklore",
       "Strange Places / Haunted Forest / Source-aware folklore record",
-      "hoia baciu forest legend",
-      "Hoia Baciu Forest is treated through one concrete anchor: the Romanian forest known in popular accounts for strange experiences, unusual clearings, and haunted woodland stories.",
-      "Hoia Baciu Forest",
-      "Romania",
-      "haunted forest",
-      "unusual clearing",
-      "woodland legend"
+      "hoia-baciu-forest-legend",
+      "The article reads Hoia Baciu as a modern forest legend where the city edge makes the uncanny feel reachable.",
+      "Hoia Baciu",
+      "Cluj-Napoca",
+      "Baciu Gorge",
+      "clearing",
+      "1968 UFO",
+      "AGERPRES",
+      "haunted forest"
     ]
   },
   {
@@ -1500,7 +1579,7 @@
     "url": "/stories/russian-sleep-experiment-creepypasta",
     "category": "Internet Folklore",
     "summary": "Russian Sleep Experiment is a pre-existing Internet Folklore subject built around the creepypasta framed as a secret experiment in which prisoners are kept awake until the account becomes impossible.",
-    "description": "A calm guide to Russian Sleep Experiment Creepypasta, its common versions, source limits, and the fake document horror motif that makes creepypasta framed as.",
+    "description": "A source-aware guide to the Russian Sleep Experiment creepypasta, its fake-document style, OrangeSoda attribution, viral image confusion, and why people believed it.",
     "tags": [
       "Fake Document Horror",
       "Russian Sleep Experiment",
@@ -1509,15 +1588,17 @@
     ],
     "motif": "Fake Document Horror",
     "topics": [
-      "InternetFolkloreRecord",
+      "fake-document-laboratory-creepypasta",
       "Internet Folklore / Fake Document Horror / Source-aware folklore record",
-      "russian sleep experiment creepypasta",
-      "Russian Sleep Experiment is treated through one concrete anchor: the creepypasta framed as a secret experiment in which prisoners are kept awake until the account becomes impossible.",
+      "russian-sleep-experiment-creepypasta",
+      "The article reads the story as a fake archive whose power comes from making fiction sound like a leaked historical record.",
       "Russian Sleep Experiment",
-      "fake document",
+      "OrangeSoda",
+      "Creepypasta Wiki",
       "sleep deprivation",
-      "laboratory horror",
-      "viral creepypasta"
+      "Soviet experiment",
+      "fake document",
+      "Spazm image"
     ]
   },
   {
@@ -1527,7 +1608,7 @@
     "url": "/stories/smile-dog-creepypasta",
     "category": "Internet Folklore",
     "summary": "Smile Dog is a pre-existing Internet Folklore subject built around the internet horror legend about a disturbing dog image that spreads through messages and demands to be shared.",
-    "description": "A calm guide to Smile Dog Creepypasta, its common versions, source limits, and the haunted image legend motif that makes internet horror legend about a.",
+    "description": "A source-aware guide to Smile Dog creepypasta, smile.jpg, haunted image folklore, chain-letter logic, 4chan-era spread, and why the cursed picture motif endured.",
     "tags": [
       "Haunted Image Legend",
       "Smile Dog",
@@ -1536,15 +1617,17 @@
     ],
     "motif": "Haunted Image Legend",
     "topics": [
-      "InternetFolkloreRecord",
+      "haunted-image-chain-creepypasta",
       "Internet Folklore / Haunted Image Legend / Source-aware folklore record",
-      "smile dog creepypasta",
-      "Smile Dog is treated through one concrete anchor: the internet horror legend about a disturbing dog image that spreads through messages and demands to be shared.",
+      "smile-dog-creepypasta",
+      "The article reads Smile Dog as a story about transmission anxiety, where the monster is also the act of sharing.",
       "Smile Dog",
-      "haunted image",
-      "email chain",
-      "share the image",
-      "internet horror"
+      "smile.jpg",
+      "cursed image",
+      "chain letter",
+      "4chan /x/",
+      "Mary E.",
+      "spread the word"
     ]
   },
   {
@@ -1554,7 +1637,7 @@
     "url": "/stories/ben-drowned-creepypasta",
     "category": "Internet Folklore",
     "summary": "Ben Drowned is a pre-existing Internet Folklore subject built around the internet horror story framed around a haunted game cartridge, strange video uploads, and forum-style updates.",
-    "description": "Ben Drowned Creepypasta explains internet horror story framed around a haunted game cartridge, strange video uploads, and forum-style updates through internet.",
+    "description": "A source-aware guide to BEN Drowned, Jadusable, the Majora's Mask haunted cartridge story, 2010 4chan origin, videos, ARG structure, and internet folklore.",
     "tags": [
       "Haunted Game Legend",
       "Ben Drowned",
@@ -1563,25 +1646,27 @@
     ],
     "motif": "Haunted Game Legend",
     "topics": [
-      "InternetFolkloreRecord",
+      "haunted-game-arg-creepypasta",
       "Internet Folklore / Haunted Game Legend / Source-aware folklore record",
-      "ben drowned creepypasta",
-      "Ben Drowned is treated through one concrete anchor: the internet horror story framed around a haunted game cartridge, strange video uploads, and forum-style updates.",
-      "Ben Drowned",
-      "haunted game",
-      "Majora mask",
-      "forum updates",
-      "digital ghost"
+      "ben-drowned-creepypasta",
+      "The article reads BEN Drowned as the moment a creepypasta ghost learned to use platform behavior: comments, videos, accounts, and updates.",
+      "BEN Drowned",
+      "Jadusable",
+      "Alex Hall",
+      "Majora's Mask",
+      "haunted cartridge",
+      "4chan /x/",
+      "ARG"
     ]
   },
   {
     "id": "candle-cove-creepypasta",
     "slug": "candle-cove-creepypasta",
-    "title": "Candle Cove Creepypasta: Lost Children’s Television, Forum Memory, and the Static Ending",
+    "title": "Candle Cove Creepypasta: Lost Children's Television, Forum Memory, and the Static Ending",
     "url": "/stories/candle-cove-creepypasta",
     "category": "Internet Folklore",
     "summary": "Candle Cove is a pre-existing Internet Folklore subject built around the creepypasta built around adults remembering a strange children television show that may never have existed.",
-    "description": "Candle Cove Creepypasta explores the origin, meaning, and folklore behind creepypasta built around adults remembering a strange children television show that.",
+    "description": "A source-aware guide to Candle Cove creepypasta, Kris Straub, Ichor Falls, lost children's television, forum-memory format, and why the static ending became iconic.",
     "tags": [
       "Lost Media Creepypasta",
       "Candle Cove",
@@ -1590,15 +1675,17 @@
     ],
     "motif": "Lost Media Creepypasta",
     "topics": [
-      "InternetFolkloreRecord",
+      "lost-television-forum-memory-creepypasta",
       "Internet Folklore / Lost Media Creepypasta / Source-aware folklore record",
-      "candle cove lost television creepypasta",
-      "Candle Cove is treated through one concrete anchor: the creepypasta built around adults remembering a strange children television show that may never have existed.",
+      "candle-cove-creepypasta",
+      "The article reads Candle Cove as a story about collaborative memory, where a fake forum thread makes nostalgia itself unreliable.",
       "Candle Cove",
-      "lost television",
-      "forum thread",
-      "childhood memory",
-      "static ending"
+      "Kris Straub",
+      "Ichor Falls",
+      "NetNostalgia",
+      "lost media",
+      "static",
+      "children's TV"
     ]
   },
   {
@@ -1608,7 +1695,7 @@
     "url": "/stories/ted-the-caver-internet-legend",
     "category": "Internet Folklore",
     "summary": "Ted the Caver is a pre-existing Internet Folklore subject built around the early online horror story presented as a caving journal about a narrow passage and a presence below ground.",
-    "description": "Ted the Caver explores the origin, meaning, and folklore behind early online horror story presented as a caving journal about a narrow passage and a presence.",
+    "description": "A source-aware guide to Ted the Caver, the early Angelfire cave journal, found-footage style web horror, caving detail, authenticity debate, and internet folklore.",
     "tags": [
       "Early Web Horror",
       "Ted the Caver",
@@ -1617,15 +1704,17 @@
     ],
     "motif": "Early Web Horror",
     "topics": [
-      "InternetFolkloreRecord",
+      "early-web-cave-journal-horror",
       "Internet Folklore / Early Web Horror / Source-aware folklore record",
-      "ted the caver internet legend",
-      "Ted the Caver is treated through one concrete anchor: the early online horror story presented as a caving journal about a narrow passage and a presence below ground.",
+      "ted-the-caver-internet-legend",
+      "The article reads Ted the Caver as a pre-social-media horror artifact whose page design made discovery itself part of the fear.",
       "Ted the Caver",
-      "cave journal",
-      "early internet horror",
-      "found diary",
-      "online fiction"
+      "Ted's Caving Page",
+      "Angelfire",
+      "Mystery Cave",
+      "Floyd's Tomb",
+      "caving journal",
+      "found document"
     ]
   },
   {
@@ -1635,7 +1724,7 @@
     "url": "/stories/the-microwaved-pet-urban-legend",
     "category": "Urban Legends",
     "summary": "The Microwaved Pet is a pre-existing Urban Legends subject built around the urban legend in which a pet is harmed after someone misunderstands a microwave as a drying device.",
-    "description": "A calm guide to The Microwaved Pet Urban Legend, its common versions, source limits, and the household rumor motif that makes urban legend in which a pet is.",
+    "description": "A source-aware guide to the microwaved pet urban legend, exploding poodle stories, microwave anxiety, legal rumor, household technology, and cautionary folklore.",
     "tags": [
       "Household Rumor",
       "The Microwaved Pet",
@@ -1644,15 +1733,17 @@
     ],
     "motif": "Household Rumor",
     "topics": [
-      "UrbanLegendRecord",
+      "household-technology-cautionary-legend",
       "Urban Legends / Household Rumor / Source-aware folklore record",
-      "microwaved pet urban legend",
-      "The Microwaved Pet is treated through one concrete anchor: the urban legend in which a pet is harmed after someone misunderstands a microwave as a drying device.",
+      "the-microwaved-pet-urban-legend",
+      "The article reads the legend as a story about the moment a new appliance entered ordinary homes before everyone trusted or understood it.",
       "microwaved pet",
-      "household technology",
+      "poodle",
+      "microwave oven",
+      "exploding pet",
       "legal rumor",
-      "warning story",
-      "modern appliance"
+      "Brunvand",
+      "appliance fear"
     ]
   },
   {
@@ -1662,7 +1753,7 @@
     "url": "/stories/blue-star-acid-urban-legend",
     "category": "Urban Legends",
     "summary": "Blue Star Acid is a pre-existing Urban Legends subject built around the school-warning legend that temporary tattoos or stickers shaped like stars were secretly laced with LSD.",
-    "description": "A calm guide to Blue Star Acid Urban Legend, its common versions, source limits, and the drug panic legend motif that makes school-warning legend that.",
+    "description": "A source-aware guide to the Blue Star Acid urban legend, LSD temporary tattoo warnings, school flyers, drug panic, cartoon blotter rumors, and folklore spread.",
     "tags": [
       "Drug Panic Legend",
       "Blue Star Acid",
@@ -1671,15 +1762,17 @@
     ],
     "motif": "Drug Panic Legend",
     "topics": [
-      "UrbanLegendRecord",
+      "school-drug-panic-warning-legend",
       "Urban Legends / Drug Panic Legend / Source-aware folklore record",
-      "blue star acid urban legend",
-      "Blue Star Acid is treated through one concrete anchor: the school-warning legend that temporary tattoos or stickers shaped like stars were secretly laced with LSD.",
-      "blue star acid",
+      "blue-star-acid-urban-legend",
+      "The article reads Blue Star Acid as a chain letter that dressed itself as child protection.",
+      "Blue Star Acid",
+      "LSD",
       "temporary tattoo",
-      "school warning",
-      "drug panic",
-      "parent flyer"
+      "Mickey Mouse acid",
+      "Bart Simpson",
+      "school flyer",
+      "DEA"
     ]
   },
   {
@@ -1689,7 +1782,7 @@
     "url": "/stories/poisoned-halloween-candy-legend",
     "category": "Urban Legends",
     "summary": "Poisoned Halloween Candy is a pre-existing Urban Legends subject built around the Halloween warning legend that strangers hide poison, blades, or dangerous objects inside trick-or-treat candy.",
-    "description": "Poisoned Halloween Candy Legend explains Halloween warning legend that strangers hide poison, blades, or dangerous objects inside trick-or-treat candy through.",
+    "description": "A source-aware guide to the poisoned Halloween candy legend, Halloween sadism research, Joel Best, razor blades, stranger danger, and trick-or-treat fear.",
     "tags": [
       "Halloween Warning Legend",
       "Poisoned Halloween Candy",
@@ -1698,15 +1791,17 @@
     ],
     "motif": "Halloween Warning Legend",
     "topics": [
-      "UrbanLegendRecord",
+      "halloween-contaminated-treat-warning-legend",
       "Urban Legends / Halloween Warning Legend / Source-aware folklore record",
-      "poisoned halloween candy legend",
-      "Poisoned Halloween Candy is treated through one concrete anchor: the Halloween warning legend that strangers hide poison, blades, or dangerous objects inside trick-or-treat candy.",
-      "Halloween candy",
+      "poisoned-halloween-candy-legend",
+      "The article reads candy inspection as a ritual that makes abstract stranger danger visible and manageable.",
+      "Halloween sadism",
+      "Joel Best",
       "trick-or-treat",
+      "razor blade apple",
+      "contaminated candy",
       "stranger danger",
-      "razor blades",
-      "holiday panic"
+      "treat inspection"
     ]
   },
   {
@@ -1716,7 +1811,7 @@
     "url": "/stories/alligators-in-the-sewers-legend",
     "category": "Urban Legends",
     "summary": "Alligators in the Sewers is a pre-existing Urban Legends subject built around the city legend that discarded pet alligators survived beneath urban streets and grew into hidden sewer animals.",
-    "description": "Alligators in the Sewers explores the origin, meaning, and folklore behind city legend that discarded pet alligators survived beneath urban streets and grew.",
+    "description": "A source-aware guide to the alligators in the sewers legend, New York sewer-gator stories, 1935 reports, Robert Daley, Brunvand, and urban wildlife folklore.",
     "tags": [
       "Sewer Legend",
       "Alligators in the Sewers",
@@ -1725,15 +1820,17 @@
     ],
     "motif": "Sewer Legend",
     "topics": [
-      "UrbanLegendRecord",
+      "urban-wildlife-below-city-legend",
       "Urban Legends / Sewer Legend / Source-aware folklore record",
-      "alligators in the sewers legend",
-      "Alligators in the Sewers is treated through one concrete anchor: the city legend that discarded pet alligators survived beneath urban streets and grew into hidden sewer animals.",
-      "sewer alligators",
-      "New York rumor",
-      "urban wildlife",
-      "discarded pets",
-      "underground city"
+      "alligators-in-the-sewers-legend",
+      "The article reads sewer alligators as a cognitive map of the hidden city: what residents imagine when infrastructure disappears under their feet.",
+      "sewer alligator",
+      "New York sewers",
+      "Teddy May",
+      "Robert Daley",
+      "Bronx River",
+      "Harlem 1935",
+      "urban wildlife"
     ]
   },
   {
@@ -1743,7 +1840,7 @@
     "url": "/stories/the-hookman-urban-legend",
     "category": "Urban Legends",
     "summary": "The Hookman is a pre-existing Urban Legends subject built around the lovers-lane warning story in which a radio report about an escaped killer ends with a hook found on the car door.",
-    "description": "The Hookman Urban Legend explores the origin, meaning, and folklore behind lovers-lane warning story in which a radio report about an escaped killer ends with.",
+    "description": "A source-aware guide to the Hookman urban legend, lovers lane, radio warnings, escaped killer motif, Jan Harold Brunvand, teen sexuality, and warning folklore.",
     "tags": [
       "Lovers Lane Legend",
       "The Hookman",
@@ -1752,15 +1849,17 @@
     ],
     "motif": "Lovers Lane Legend",
     "topics": [
-      "UrbanLegendRecord",
+      "lovers-lane-warning-legend",
       "Urban Legends / Lovers Lane Legend / Source-aware folklore record",
-      "the hookman lovers lane legend",
-      "The Hookman is treated through one concrete anchor: the lovers-lane warning story in which a radio report about an escaped killer ends with a hook found on the car door.",
-      "The Hookman",
+      "the-hookman-urban-legend",
+      "The article reads the hook as proof left by a social boundary: the teenagers escaped because someone listened to discomfort.",
+      "Hookman",
       "lovers lane",
-      "radio warning",
+      "radio bulletin",
+      "escaped killer",
       "hook on the door",
-      "escaped killer"
+      "Brunvand",
+      "warning legend"
     ]
   },
   {
@@ -1799,7 +1898,7 @@
     "url": "/stories/pandoras-box-origin",
     "category": "Mythic Objects",
     "summary": "Pandora's Box is the familiar modern name for a Greek mythic object that older tradition more accurately describes as a jar or pithos.",
-    "description": "Pandora's Box Origin explains later object tradition that changed Pandora's jar into Pandora's box in popular memory through mythic objects, separating.",
+    "description": "A source-aware guide to Pandora's Box origin, the older pithos or jar tradition, Hesiod, hope, translation history, and the object that became a proverb.",
     "tags": [
       "Mythic Object Origin",
       "Pandora's Box",
@@ -1808,15 +1907,18 @@
     ],
     "motif": "Mythic Object Origin",
     "topics": [
-      "MythicObjectRecord",
+      "mythic-container-hope-origin",
       "Mythic Objects / Mythic Object Origin / Mythic tradition and symbolic reading",
-      "pandoras box origin",
-      "Pandora's Box is treated through one concrete anchor: the later object tradition that changed Pandora's jar into Pandora's box in popular memory.",
+      "pandoras-box-origin",
+      "The article keeps the jar-to-box mistake visible as part of the object folklore instead of treating it as a footnote.",
       "Pandora's Box",
-      "Pandora's Jar",
+      "Pandora's jar",
       "pithos",
-      "hope",
-      "Greek myth"
+      "Elpis",
+      "Epimetheus",
+      "Prometheus",
+      "Hesiod",
+      "Works and Days"
     ]
   },
   {
@@ -1826,7 +1928,7 @@
     "url": "/stories/lake-titicaca-legendary-place",
     "category": "Legendary Places",
     "summary": "Lake Titicaca is a real Andean lake strongly associated with sacred geography, origin stories, and Inca memory.",
-    "description": "Lake Titicaca Legendary Place explores the origin, meaning, and folklore behind Andean sacred lake associated with origin stories, Inca memory, and mythic.",
+    "description": "A source-aware guide to Lake Titicaca as a legendary place, including Inca origin stories, Isla del Sol, Viracocha, Tiwanaku, pilgrimage, and Andean sacred geography.",
     "tags": [
       "Sacred Lake",
       "Lake Titicaca",
@@ -1835,15 +1937,18 @@
     ],
     "motif": "Sacred Lake",
     "topics": [
-      "LegendaryPlaceRecord",
+      "sacred-origin-lake-legend",
       "Legendary Places / Sacred Lake / Mythic tradition and symbolic reading",
-      "lake titicaca legendary place",
-      "Lake Titicaca is treated through one concrete anchor: the Andean sacred lake associated with origin stories, Inca memory, and mythic emergence from water.",
+      "lake-titicaca-legendary-place",
+      "The article reads the lake as a living sacred geography where myth, landscape, and archaeology reinforce one another without becoming the same kind of evidence.",
       "Lake Titicaca",
-      "Andean myth",
-      "Inca origin",
-      "sacred lake",
-      "Island of the Sun"
+      "Isla del Sol",
+      "Sacred Rock",
+      "Viracocha",
+      "Manco Capac",
+      "Mama Ocllo",
+      "Tiwanaku",
+      "Inti"
     ]
   },
   {
@@ -1853,7 +1958,7 @@
     "url": "/stories/st-elmos-fire-phenomenon",
     "category": "Strange Nature",
     "summary": "St. Elmo's Fire is a luminous electrical phenomenon that can appear as a blue or violet glow around pointed objects during storm conditions.",
-    "description": "St. Elmo's Fire Phenomenon explains luminous electrical weather phenomenon remembered by sailors as a blue or violet glow during storms through strange.",
+    "description": "A source-aware guide to St. Elmo's Fire, corona discharge, ship masts, storm electricity, St. Erasmus, sailor folklore, omens, and atmospheric phenomena.",
     "tags": [
       "Storm Light Phenomenon",
       "St. Elmo's Fire",
@@ -1862,15 +1967,17 @@
     ],
     "motif": "Storm Light Phenomenon",
     "topics": [
-      "StrangeNatureRecord",
+      "storm-light-sailor-omen",
       "Strange Nature / Storm Light Phenomenon / Evidence-limited public record",
-      "st elmos fire phenomenon",
-      "St. Elmo's Fire is treated through one concrete anchor: the luminous electrical weather phenomenon remembered by sailors as a blue or violet glow during storms.",
+      "st-elmos-fire-phenomenon",
+      "The article reads the phenomenon as a real storm-light that became meaningful because it appeared exactly when sailors most needed signs.",
       "St. Elmo's Fire",
-      "blue glow",
-      "storm electricity",
-      "sailor omen",
-      "weather phenomenon"
+      "corona discharge",
+      "plasma",
+      "electric field",
+      "mast",
+      "St. Erasmus",
+      "corposant"
     ]
   },
   {
@@ -1880,7 +1987,7 @@
     "url": "/stories/hy-brasil-legendary-island",
     "category": "Lost Worlds",
     "summary": "Hy-Brasil is a legendary island often placed west of Ireland on old maps and described as difficult or impossible to reach.",
-    "description": "Hy-Brasil Legendary Island explains legendary island Hy-Brasil, said to appear west of Ireland and vanish from ordinary reach through lost worlds, separating.",
+    "description": "A source-aware guide to Hy-Brasil, the phantom island west of Ireland, old maps, Irish folklore, seven-year visibility, cartographic rumor, and Atlantic legend.",
     "tags": [
       "Vanishing Island",
       "Hy-Brasil",
@@ -1889,15 +1996,17 @@
     ],
     "motif": "Vanishing Island",
     "topics": [
-      "LostWorldRecord",
+      "phantom-island-map-legend",
       "Lost Worlds / Vanishing Island / Mythic tradition and symbolic reading",
-      "hy-brasil legendary island",
-      "Hy-Brasil is treated through one concrete anchor: the legendary island Hy-Brasil, said to appear west of Ireland and vanish from ordinary reach.",
+      "hy-brasil-legendary-island",
+      "The article treats Hy-Brasil as a place that became persuasive because maps and stories borrowed credibility from each other.",
       "Hy-Brasil",
-      "vanishing island",
-      "Atlantic map",
-      "Irish folklore",
-      "lost island"
+      "Brasil Island",
+      "O Brasil",
+      "phantom island",
+      "portolan chart",
+      "Angelino Dulcert",
+      "fog bank"
     ]
   },
   {
@@ -1907,7 +2016,7 @@
     "url": "/stories/cerberus-mythic-creature",
     "category": "Mythic Creatures",
     "summary": "Eurystheus gave Heracles no ceremonial welcome. He gave him a final order in the blunt voice of command: go to the realm below and bring Cer...",
-    "description": "Heracles and the Last Labor explains Greek mythic creature Cerberus, the many-headed guard dog of the underworld through mythic creatures, separating folklore.",
+    "description": "A source-aware guide to Cerberus, the hound of Hades, Heracles last labor, underworld guardians, many-headed mythic creatures, and Greek myth variants.",
     "tags": [
       "Underworld Creature",
       "Cerberus",
@@ -1916,15 +2025,19 @@
     ],
     "motif": "Underworld Creature",
     "topics": [
-      "MythicCreatureRecord",
+      "underworld-guardian-creature",
       "Mythic Creatures / Underworld Creature / Mythic tradition and symbolic reading",
-      "cerberus mythic creature",
-      "Cerberus is treated through one concrete anchor: the Greek mythic creature Cerberus, the many-headed guard dog of the underworld.",
+      "cerberus-mythic-creature",
+      "The article reads Cerberus less as a monster to kill than as a boundary creature Heracles must master without destroying.",
       "Cerberus",
-      "three-headed dog",
-      "underworld",
+      "Kerberos",
       "Hades",
-      "guardian monster"
+      "Heracles",
+      "Eurystheus",
+      "Persephone",
+      "Acheron",
+      "Typhon",
+      "Echidna"
     ]
   },
   {
@@ -1934,7 +2047,7 @@
     "url": "/stories/sisyphus-myth",
     "category": "Myths",
     "summary": "Sisyphus is a Greek mythic figure condemned in the underworld to roll a stone uphill, only for it to fall back again.",
-    "description": "A calm guide to Sisyphus Myth, its common versions, source limits, and the greek myth motif that makes Greek myth of Sisyphus, condemned in the underworld to.",
+    "description": "A source-aware guide to the Sisyphus myth, the rolling stone, underworld punishment, Greek trickster kings, Camus, and the meaning of Sisyphean labor.",
     "tags": [
       "Greek Myth",
       "Sisyphus",
@@ -1943,15 +2056,18 @@
     ],
     "motif": "Greek Myth",
     "topics": [
-      "MythRecord",
+      "endless-underworld-labor-myth",
       "Myths / Greek Myth / Mythic tradition and symbolic reading",
-      "sisyphus myth",
-      "Sisyphus is treated through one concrete anchor: the Greek myth of Sisyphus, condemned in the underworld to push a stone uphill forever.",
+      "sisyphus-myth",
+      "The article reads Sisyphus as a myth about repetition made visible through one stone, one hill, and one returning failure.",
       "Sisyphus",
+      "Sisyphos",
       "stone",
       "underworld",
-      "endless labor",
-      "Greek myth"
+      "Zeus",
+      "Thanatos",
+      "Hermes",
+      "Camus"
     ]
   },
   {
@@ -1961,7 +2077,7 @@
     "url": "/stories/goatman-modern-legend",
     "category": "Modern Legends",
     "summary": "Goatman is a modern monster legend about a half-human, half-goat figure often connected with bridges, wooded roads, and local warnings.",
-    "description": "Goatman Modern Legend explains modern legend of a half-human, half-goat figure connected with bridges, backroads, and local monster stories through modern.",
+    "description": "A source-aware guide to the Goatman modern legend, Maryland and Texas variants, bridges, backroads, hybrid monsters, local rumor, and cryptid folklore.",
     "tags": [
       "Modern Monster Legend",
       "Goatman",
@@ -1970,15 +2086,18 @@
     ],
     "motif": "Modern Monster Legend",
     "topics": [
-      "ModernLegendRecord",
+      "bridge-backroad-hybrid-legend",
       "Modern Legends / Modern Monster Legend / Source-aware folklore record",
-      "goatman modern legend",
-      "Goatman is treated through one concrete anchor: the modern legend of a half-human, half-goat figure connected with bridges, backroads, and local monster stories.",
+      "goatman-modern-legend",
+      "The article reads Goatman as a hybrid figure that gives backroads a body and local rumor a destination.",
       "Goatman",
-      "bridge legend",
-      "half-goat figure",
-      "backroad monster",
-      "local legend"
+      "Beltsville",
+      "Prince Georges County",
+      "Old Alton Bridge",
+      "Fletchertown Road",
+      "hybrid",
+      "axe",
+      "Lovers Lane"
     ]
   },
   {
@@ -1988,7 +2107,7 @@
     "url": "/stories/headless-horseman-legend",
     "category": "Classic Folklore",
     "summary": "The Headless Horseman is a ghostly rider figure remembered through Sleepy Hollow and older folklore about headless apparitions on roads or battle-haunted places.",
-    "description": "A calm guide to Headless Horseman Legend, its common versions, source limits, and the rider folklore motif that makes folklore figure of a headless rider.",
+    "description": "A source-aware guide to the Headless Horseman legend, Sleepy Hollow, Washington Irving, spectral riders, Hessian trooper lore, and missing-head folklore.",
     "tags": [
       "Rider Folklore",
       "Headless Horseman",
@@ -1997,15 +2116,17 @@
     ],
     "motif": "Rider Folklore",
     "topics": [
-      "ClassicFolkloreRecord",
+      "spectral-rider-folklore",
       "Classic Folklore / Rider Folklore / Source-aware folklore record",
-      "headless horseman legend",
-      "The Headless Horseman is treated through one concrete anchor: the folklore figure of a headless rider, especially remembered through Sleepy Hollow and older spectral rider motifs.",
+      "headless-horseman-legend",
+      "The article reads the Headless Horseman as both a literary figure and a folklore machine built from local rumor, pursuit, and uncertainty.",
       "Headless Horseman",
       "Sleepy Hollow",
-      "spectral rider",
-      "night road",
-      "ghost story"
+      "Ichabod Crane",
+      "Brom Bones",
+      "Hessian trooper",
+      "Katrina Van Tassel",
+      "churchyard"
     ]
   },
   {
@@ -2015,7 +2136,7 @@
     "url": "/stories/flying-dutchman-folklore",
     "category": "Unexplained Mysteries",
     "summary": "The Flying Dutchman is a maritime legend about a ghost ship condemned to sail the seas and appear on the horizon.",
-    "description": "Flying Dutchman Folklore explains maritime legend of a ghost ship condemned to sail and appear at sea as an omen through unexplained mysteries, separating.",
+    "description": "A source-aware guide to the Flying Dutchman, ghost ship folklore, Cape of Good Hope traditions, Vanderdecken, sea omens, mirage explanations, and maritime legend.",
     "tags": [
       "Ghost Ship Legend",
       "Flying Dutchman",
@@ -2024,15 +2145,17 @@
     ],
     "motif": "Ghost Ship Legend",
     "topics": [
-      "UnexplainedMysteryRecord",
+      "ghost-ship-omen-folklore",
       "Unexplained Mysteries / Ghost Ship Legend / Evidence-limited public record",
-      "flying dutchman folklore",
-      "The Flying Dutchman is treated through one concrete anchor: the maritime legend of a ghost ship condemned to sail and appear at sea as an omen.",
+      "flying-dutchman-folklore",
+      "The article reads the Flying Dutchman as a horizon legend where distance turns guilt, storm, and optical uncertainty into a ship that can never arrive.",
       "Flying Dutchman",
+      "Vanderdecken",
+      "Cape of Good Hope",
       "ghost ship",
-      "maritime legend",
-      "sailor omen",
-      "cursed voyage"
+      "sea omen",
+      "Fata Morgana",
+      "storm"
     ]
   },
   {
@@ -2042,7 +2165,7 @@
     "url": "/stories/tower-of-london-ghosts",
     "category": "Strange Places",
     "summary": "Tower of London ghost stories attach haunting traditions to a real historic landmark associated with imprisonment, executions, royal power, and public memory.",
-    "description": "A calm guide to Tower of London Ghosts, its common versions, source limits, and the haunted landmark motif that makes haunted-place tradition surrounding the.",
+    "description": "A source-aware guide to Tower of London ghosts, Anne Boleyn, Tower Green, the Princes in the Tower, royal prisoners, executions, and haunted landmark folklore.",
     "tags": [
       "Haunted Landmark",
       "Tower of London",
@@ -2051,15 +2174,18 @@
     ],
     "motif": "Haunted Landmark",
     "topics": [
-      "StrangePlaceRecord",
+      "haunted-royal-landmark",
       "Strange Places / Haunted Landmark / Source-aware folklore record",
-      "tower of london ghosts",
-      "Tower of London Ghosts is treated through one concrete anchor: the haunted-place tradition surrounding the Tower of London and stories of royal figures, prisoners, and executions.",
+      "tower-of-london-ghosts",
+      "The article reads the ghosts as a public memory system that turns documented royal violence into recurring haunted-place folklore.",
       "Tower of London",
+      "Tower Green",
       "Anne Boleyn",
+      "Catherine Howard",
       "Princes in the Tower",
-      "royal ghosts",
-      "haunted landmark"
+      "Bloody Tower",
+      "Jewel House",
+      "Yeomen Warders"
     ]
   },
   {
@@ -2069,7 +2195,7 @@
     "url": "/stories/jeff-the-killer-creepypasta",
     "category": "Internet Folklore",
     "summary": "Jeff the Killer is a creepypasta figure known for a pale face, carved-looking smile, and the phrase go to sleep.",
-    "description": "Jeff the Killer Creepypasta explains internet horror character associated with a pale face, fixed smile, and the phrase go to sleep through internet folklore.",
+    "description": "A source-aware guide to Jeff the Killer, the viral image, creepypasta spread, Go to Sleep catchphrase, image-origin rumors, and internet horror folklore.",
     "tags": [
       "Creepypasta Legend",
       "Jeff the Killer",
@@ -2078,15 +2204,18 @@
     ],
     "motif": "Creepypasta Legend",
     "topics": [
-      "InternetFolkloreRecord",
+      "viral-image-creepypasta-legend",
       "Internet Folklore / Creepypasta Legend / Source-aware folklore record",
-      "jeff the killer creepypasta",
-      "Jeff the Killer is treated through one concrete anchor: the internet horror character associated with a pale face, fixed smile, and the phrase go to sleep.",
+      "jeff-the-killer-creepypasta",
+      "The article treats Jeff as a legend made by the collision of a viral face and a story that arrived later.",
       "Jeff the Killer",
+      "Go to sleep",
       "creepypasta",
-      "go to sleep",
-      "viral image",
-      "internet horror"
+      "screamer",
+      "pya.cc",
+      "Newgrounds",
+      "4chan",
+      "Katy Robinson rumor"
     ]
   },
   {
@@ -2096,7 +2225,7 @@
     "url": "/stories/licked-hand-urban-legend",
     "category": "Urban Legends",
     "summary": "The Licked Hand is a modern urban legend about someone alone at night who feels a reassuring lick from what they believe is the family dog.",
-    "description": "A calm guide to The Licked Hand Urban Legend, its common versions, source limits, and the bedroom urban legend motif that makes urban legend in which a person.",
+    "description": "A source-aware guide to The Licked Hand urban legend, Humans Can Lick Too, bedroom intruder folklore, dog protection, slumber-party horror, and warning stories.",
     "tags": [
       "Bedroom Urban Legend",
       "The Licked Hand",
@@ -2105,15 +2234,17 @@
     ],
     "motif": "Bedroom Urban Legend",
     "topics": [
-      "UrbanLegendRecord",
+      "bedroom-intruder-warning-legend",
       "Urban Legends / Bedroom Urban Legend / Source-aware folklore record",
-      "the licked hand urban legend",
-      "The Licked Hand is treated through one concrete anchor: the urban legend in which a person thinks the family dog is licking their hand, only to discover an intruder was inside the room.",
-      "licked hand",
-      "dog under the bed",
-      "humans can lick too",
-      "intruder",
-      "bedroom legend"
+      "licked-hand-urban-legend",
+      "The article reads the legend as a story where comfort becomes retrospective evidence of danger.",
+      "The Licked Hand",
+      "Humans Can Lick Too",
+      "dog",
+      "bedroom",
+      "bathroom mirror",
+      "dripping sound",
+      "intruder"
     ]
   },
   {
@@ -2152,7 +2283,7 @@
     "url": "/stories/sword-in-the-stone-legend",
     "category": "Mythic Objects",
     "summary": "The Sword in the Stone is an Arthurian legend in which the rightful king is revealed by pulling a sword from stone or anvil. The act proves legitimacy through an impossible test.",
-    "description": "A calm guide to Sword in the Stone Legend, its common versions, source limits, and the arthurian object motif that makes Arthurian legend in which the true.",
+    "description": "A source-aware guide to the Sword in the Stone legend, Arthurian kingship, Robert de Boron, Excalibur, anvil variants, and the mythic object that proves a ruler.",
     "tags": [
       "Arthurian Object",
       "Kingship Test",
@@ -2161,15 +2292,18 @@
     ],
     "motif": "Arthurian Object",
     "topics": [
-      "MythicObjectRecord",
+      "arthurian-kingship-test-object",
       "Mythic Objects / Arthurian Object / Mythic tradition and symbolic reading",
-      "sword in the stone legend sword-in-the-stone-legend",
-      "The Sword in the Stone is treated through one concrete anchor: the Arthurian legend in which the true king is revealed by drawing a sword from stone or anvil.",
+      "sword-in-the-stone-legend",
+      "The article reads the sword as a public machine for proving a hidden king.",
       "Sword in the Stone",
-      "King Arthur",
-      "Arthurian legend",
-      "kingship",
-      "Excalibur"
+      "anvil",
+      "Excalibur",
+      "Arthur",
+      "Merlin",
+      "Uther Pendragon",
+      "Robert de Boron",
+      "Malory"
     ]
   },
   {
@@ -2179,7 +2313,7 @@
     "url": "/stories/mount-kailash-legendary-place",
     "category": "Legendary Places",
     "summary": "Mount Kailash is a sacred mountain in Tibet revered in several religious traditions. It is known for pilgrimage circuits around the mountain rather than ordinary summit climbing.",
-    "description": "A calm guide to Mount Kailash Legendary Place, its common versions, source limits, and the sacred mountain motif that makes sacred mountain in Tibet revered.",
+    "description": "A source-aware guide to Mount Kailash as a legendary sacred place, including pilgrimage, circumambulation, Hindu, Buddhist, Bon and Jain significance, and sacred geography.",
     "tags": [
       "Sacred Mountain",
       "Pilgrimage Place",
@@ -2188,15 +2322,18 @@
     ],
     "motif": "Sacred Mountain",
     "topics": [
-      "LegendaryPlaceRecord",
+      "sacred-mountain-pilgrimage-place",
       "Legendary Places / Sacred Mountain / Mythic tradition and symbolic reading",
-      "mount kailash legendary place mount-kailash-legendary-place",
-      "Mount Kailash is treated through one concrete anchor: the sacred mountain in Tibet revered in multiple religious traditions and known for pilgrimage circuits rather than summit conquest.",
+      "mount-kailash-legendary-place",
+      "The article reads Kailash as a legendary place defined by reverent approach rather than summit conquest.",
       "Mount Kailash",
-      "Tibet",
-      "pilgrimage",
-      "sacred mountain",
-      "kora"
+      "Kangrinboqe",
+      "Lake Manasarovar",
+      "kora",
+      "circumambulation",
+      "Shiva",
+      "Bon",
+      "Jain"
     ]
   },
   {
@@ -2206,7 +2343,7 @@
     "url": "/stories/raining-animals-phenomenon",
     "category": "Strange Nature",
     "summary": "Raining animals refers to reports of fish, frogs, or other small creatures falling from the sky. Possible explanations often involve waterspouts or strong weather lifting animals from nearby water.",
-    "description": "Raining Animals Phenomenon explains reports of fish, frogs, or other small animals falling from the sky, often explained through unusual weather while.",
+    "description": "A source-aware guide to raining animals, fish rain, frog rain, waterspouts, updrafts, strange weather reports, folklore, and skeptical explanation.",
     "tags": [
       "Unusual Weather Phenomenon",
       "Fish Rain",
@@ -2215,15 +2352,18 @@
     ],
     "motif": "Unusual Weather Phenomenon",
     "topics": [
-      "StrangeNatureRecord",
+      "animal-rain-weather-folklore",
       "Strange Nature / Unusual Weather Phenomenon / Evidence-limited public record",
-      "raining animals phenomenon raining-animals-phenomenon",
-      "Raining Animals is treated through one concrete anchor: reports of fish, frogs, or other small animals falling from the sky, often explained through unusual weather while remembered as wonder or omen.",
+      "raining-animals-phenomenon",
+      "The article reads animal rain as a phenomenon where plausible weather mechanics still leave a powerful story behind.",
       "raining animals",
       "fish rain",
       "frog rain",
       "waterspout",
-      "unusual weather"
+      "updraft",
+      "vortex",
+      "tornado",
+      "deposition"
     ]
   },
   {
@@ -2233,7 +2373,7 @@
     "url": "/stories/lyonesse-lost-land-legend",
     "category": "Lost Worlds",
     "summary": "Lyonesse is a legendary lost land often placed off the coast of Cornwall. Later tradition connects it with drowned kingdoms, coastal memory, and Arthurian material.",
-    "description": "A calm guide to Lyonesse Lost Land Legend, its common versions, source limits, and the drowned land legend motif that makes legendary drowned land often.",
+    "description": "A source-aware guide to the Lyonesse lost land legend, Cornwall, Arthurian romance, drowned kingdom folklore, Scilly traditions, and coastal memory.",
     "tags": [
       "Drowned Land Legend",
       "Arthurian Legend",
@@ -2242,15 +2382,18 @@
     ],
     "motif": "Drowned Land Legend",
     "topics": [
-      "LostWorldRecord",
+      "drowned-arthurian-land-legend",
       "Lost Worlds / Drowned Land Legend / Mythic tradition and symbolic reading",
-      "lyonesse lost land legend lyonesse-lost-land-legend",
-      "Lyonesse is treated through one concrete anchor: the legendary drowned land often placed off Cornwall and linked in later tradition with Arthurian memory.",
+      "lyonesse-lost-land-legend",
+      "The article reads Lyonesse as a coastal memory machine where geography, romance, and loss keep reinforcing one another.",
       "Lyonesse",
+      "Lyonnesse",
       "Cornwall",
+      "Isles of Scilly",
+      "Tristram",
       "drowned land",
-      "Arthurian legend",
-      "lost kingdom"
+      "Arthurian romance",
+      "submergence"
     ]
   },
   {
@@ -2260,7 +2403,7 @@
     "url": "/stories/griffin-folklore",
     "category": "Mythic Creatures",
     "summary": "The griffin is a mythic creature usually combining the head and wings of an eagle with the body of a lion. It is often linked with guardianship, treasure, and powerful places.",
-    "description": "Griffin Folklore explores the origin, meaning, and folklore behind hybrid creature with eagle and lion traits, often linked with guardianship, treasure, and.",
+    "description": "A source-aware guide to griffin folklore, the eagle-lion hybrid, ancient art, treasure guardians, Scythian gold stories, medieval symbolism, and fossil-origin debates.",
     "tags": [
       "Hybrid Guardian Creature",
       "Ancient Myth",
@@ -2269,15 +2412,18 @@
     ],
     "motif": "Hybrid Guardian Creature",
     "topics": [
-      "MythicCreatureRecord",
+      "hybrid-treasure-guardian-creature",
       "Mythic Creatures / Hybrid Guardian Creature / Mythic tradition and symbolic reading",
-      "griffin folklore griffin-folklore",
-      "The Griffin is treated through one concrete anchor: the hybrid creature with eagle and lion traits, often linked with guardianship, treasure, and royal or sacred power.",
+      "griffin-folklore",
+      "The article reads the griffin as a creature whose body itself is an argument about guarding power.",
       "griffin",
+      "gryphon",
+      "griffon",
       "eagle",
       "lion",
-      "treasure guardian",
-      "bestiary"
+      "gold",
+      "Scythia",
+      "treasure guardian"
     ]
   },
   {
@@ -2287,7 +2433,7 @@
     "url": "/stories/persephone-underworld-myth",
     "category": "Myths",
     "summary": "The Persephone myth tells how Persephone is taken to the underworld, how Demeter grieves, and how Persephone returns for part of the year. The cycle is often connected with seasonal change.",
-    "description": "A calm guide to Persephone and the Underworld, its common versions, source limits, and the greek myth motif that makes Greek myth in which Persephone is taken.",
+    "description": "A source-aware guide to Persephone and the underworld, Demeter, Hades, pomegranate seeds, seasonal return, Eleusinian mysteries, and Greek mythic meaning.",
     "tags": [
       "Greek Myth",
       "Underworld",
@@ -2296,15 +2442,18 @@
     ],
     "motif": "Greek Myth",
     "topics": [
-      "MythRecord",
+      "seasonal-underworld-return-myth",
       "Myths / Greek Myth / Mythic tradition and symbolic reading",
-      "persephone underworld myth persephone-underworld-myth",
-      "Persephone and the Underworld is treated through one concrete anchor: the Greek myth in which Persephone is taken to the underworld, Demeter grieves, and the cycle of return becomes tied to the seasons.",
+      "persephone-underworld-myth",
+      "The article reads Persephone as both taken daughter and underworld queen, not only as a seasonal symbol.",
       "Persephone",
+      "Kore",
       "Demeter",
       "Hades",
-      "underworld",
-      "seasons"
+      "pomegranate",
+      "Eleusis",
+      "Hecate",
+      "underworld"
     ]
   },
   {
@@ -2314,7 +2463,7 @@
     "url": "/stories/dover-demon-legend",
     "category": "Modern Legends",
     "summary": "The Dover Demon is a modern monster legend based on reports from Dover, Massachusetts, in 1977. Witnesses described a small, strange humanoid figure with an unusual head and glowing eyes.",
-    "description": "Dover Demon Legend explains 1977 Massachusetts reports of a strange small humanoid figure later known as the Dover Demon through modern legends, separating.",
+    "description": "A source-aware guide to the Dover Demon legend, 1977 Massachusetts sightings, Bill Bartlett, teenage witnesses, cryptid culture, sketches, and skeptical readings.",
     "tags": [
       "Modern Monster Legend",
       "Massachusetts Folklore",
@@ -2323,15 +2472,18 @@
     ],
     "motif": "Modern Monster Legend",
     "topics": [
-      "ModernLegendRecord",
+      "brief-humanoid-sighting-modern-legend",
       "Modern Legends / Modern Monster Legend / Source-aware folklore record",
-      "dover demon legend dover-demon-legend",
-      "The Dover Demon is treated through one concrete anchor: the 1977 Massachusetts reports of a strange small humanoid figure later known as the Dover Demon.",
+      "dover-demon-legend",
+      "The article reads the Dover Demon as a legend made stronger by how little time it occupied.",
       "Dover Demon",
-      "Dover Massachusetts",
-      "1977 sightings",
-      "cryptid",
-      "modern legend"
+      "Bill Bartlett",
+      "Farm Street",
+      "John Baxter",
+      "Abby Brabham",
+      "Will Taintor",
+      "orange eyes",
+      "watermelon-shaped head"
     ]
   },
   {
@@ -2341,7 +2493,7 @@
     "url": "/stories/tomte-nisse-folklore",
     "category": "Classic Folklore",
     "summary": "The tomte or nisse is a Nordic household spirit often linked with farms, barns, and family protection. It may help when treated well, but punish disrespect or neglect.",
-    "description": "Tomte and Nisse Folklore explores the origin, meaning, and folklore behind Nordic household or farm spirit known as a tomte or nisse, often helpful when.",
+    "description": "A source-aware guide to tomte and nisse folklore, Nordic household spirits, farm guardians, porridge offerings, Christmas transformation, and Scandinavian tradition.",
     "tags": [
       "Household Spirit",
       "Nordic Folklore",
@@ -2350,15 +2502,18 @@
     ],
     "motif": "Household Spirit",
     "topics": [
-      "ClassicFolkloreRecord",
+      "nordic-household-guardian-spirit",
       "Classic Folklore / Household Spirit / Source-aware folklore record",
-      "tomte nisse folklore tomte-nisse-folklore",
-      "Tomte and Nisse is treated through one concrete anchor: the Nordic household or farm spirit known as a tomte or nisse, often helpful when respected and troublesome when offended.",
+      "tomte-nisse-folklore",
+      "The article reads the tomte/nisse as a labor spirit before a Christmas decoration.",
       "tomte",
       "nisse",
-      "household spirit",
+      "gardstomte",
+      "jultomte",
+      "porridge",
+      "butter",
       "farm guardian",
-      "Nordic folklore"
+      "homestead"
     ]
   },
   {
@@ -2368,7 +2523,7 @@
     "url": "/stories/amber-room-mystery",
     "category": "Unexplained Mysteries",
     "summary": "The Amber Room was an ornate chamber of amber panels and gold decoration that disappeared during World War II. A reconstruction exists, but the fate of the original remains disputed.",
-    "description": "Amber Room Mystery explores the origin, meaning, and folklore behind disappearance of the Amber Room during World War II and the search theories that.",
+    "description": "A source-aware guide to the Amber Room mystery, Prussian gift, Catherine Palace, Nazi looting, Konigsberg, reconstruction, theories, and why the lost treasure endures.",
     "tags": [
       "Lost Treasure Mystery",
       "World War II",
@@ -2377,14 +2532,17 @@
     ],
     "motif": "Lost Treasure Mystery",
     "topics": [
-      "UnexplainedMysteryRecord",
+      "lost-art-treasure-mystery",
       "Unexplained Mysteries / Lost Treasure Mystery / Evidence-limited public record",
-      "amber room mystery amber-room-mystery",
-      "The Amber Room is treated through one concrete anchor: the disappearance of the Amber Room during World War II and the search theories that followed.",
+      "amber-room-mystery",
+      "The article reads the Amber Room as a mystery where the replica closes the visual wound but not the historical case.",
       "Amber Room",
-      "World War II",
-      "Königsberg",
+      "Catherine Palace",
       "Tsarskoye Selo",
+      "Konigsberg",
+      "amber panels",
+      "Nazi looting",
+      "reconstruction",
       "lost treasure"
     ]
   },
@@ -2395,7 +2553,7 @@
     "url": "/stories/eastern-state-penitentiary-haunting",
     "category": "Strange Places",
     "summary": "Eastern State Penitentiary is a former prison in Philadelphia whose architecture, solitary-confinement history, and abandoned appearance helped create a strong haunting reputation.",
-    "description": "A calm guide to Eastern State Penitentiary Haunting, its common versions, source limits, and the haunted prison motif that makes haunting reputation around.",
+    "description": "A source-aware guide to Eastern State Penitentiary hauntings, Philadelphia prison history, solitary confinement, abandonment, Halloween reputation, and haunted-place folklore.",
     "tags": [
       "Haunted Prison",
       "Philadelphia",
@@ -2404,14 +2562,17 @@
     ],
     "motif": "Haunted Prison",
     "topics": [
-      "StrangePlaceRecord",
+      "historic-prison-haunting-place",
       "Strange Places / Haunted Prison / Source-aware folklore record",
-      "eastern state penitentiary haunting eastern-state-penitentiary-haunting",
-      "Eastern State Penitentiary is treated through one concrete anchor: the haunting reputation around the former Philadelphia prison known for solitary confinement, radial architecture, and later ghost stories.",
+      "eastern-state-penitentiary-haunting",
+      "The article reads the haunting reputation as an afterimage of architecture, isolation, abandonment, media, and preservation culture.",
       "Eastern State Penitentiary",
-      "Philadelphia",
+      "Pennsylvania System",
       "solitary confinement",
-      "radial prison",
+      "cellblocks",
+      "radial plan",
+      "Al Capone",
+      "Halloween Nights",
       "haunting"
     ]
   },
@@ -2422,7 +2583,7 @@
     "url": "/stories/the-rake-creepypasta",
     "category": "Internet Folklore",
     "summary": "The Rake is an internet horror figure usually described as a pale, unnatural humanoid creature. It spread through creepypasta-style posts, retellings, images, and fragmented witness-like accounts.",
-    "description": "The Rake Creepypasta explains internet horror figure described as a pale humanoid creature that appears in bedrooms, woods, and fragmented online accounts.",
+    "description": "A source-aware guide to The Rake creepypasta, 4chan origins, pale humanoid imagery, copypasta spread, Slenderverse crossover, fake sightings, and internet folklore.",
     "tags": [
       "Creepypasta Creature",
       "Internet Horror",
@@ -2431,15 +2592,18 @@
     ],
     "motif": "Creepypasta Creature",
     "topics": [
-      "InternetFolkloreRecord",
+      "collaborative-internet-horror-creature",
       "Internet Folklore / Creepypasta Creature / Source-aware folklore record",
-      "the rake creepypasta the-rake-creepypasta",
-      "The Rake is treated through one concrete anchor: the internet horror figure described as a pale humanoid creature that appears in bedrooms, woods, and fragmented online accounts.",
+      "the-rake-creepypasta",
+      "The article reads The Rake as a creature assembled by communities that wanted a monster to look archival before it had a stable canon.",
       "The Rake",
       "creepypasta",
-      "humanoid creature",
-      "forum horror",
-      "digital folklore"
+      "4chan",
+      "copypasta",
+      "pale humanoid",
+      "EverymanHYBRID",
+      "Slenderverse",
+      "fake sighting"
     ]
   },
   {
@@ -2449,7 +2613,7 @@
     "url": "/stories/resurrection-mary-legend",
     "category": "Urban Legends",
     "summary": "Resurrection Mary is a Chicago-area ghost legend about a young woman who appears near Archer Avenue, accepts or requests a ride, and vanishes near Resurrection Cemetery.",
-    "description": "A calm guide to Resurrection Mary Legend, its common versions, source limits, and the vanishing hitchhiker motif that makes Chicago-area vanishing hitchhiker.",
+    "description": "A source-aware guide to Resurrection Mary, Chicago vanishing hitchhiker folklore, Archer Avenue, Resurrection Cemetery, dance hall origins, roadside ghosts, and urban legend structure.",
     "tags": [
       "Vanishing Hitchhiker",
       "Chicago Ghost Story",
@@ -2458,15 +2622,18 @@
     ],
     "motif": "Vanishing Hitchhiker",
     "topics": [
-      "UrbanLegendRecord",
+      "vanishing-hitchhiker-ghost-legend",
       "Urban Legends / Vanishing Hitchhiker / Source-aware folklore record",
-      "resurrection mary legend resurrection-mary-legend",
-      "Resurrection Mary is treated through one concrete anchor: the Chicago-area vanishing hitchhiker story tied to Archer Avenue, a dance hall, and Resurrection Cemetery.",
+      "resurrection-mary-legend",
+      "The article reads Resurrection Mary as the moment a portable ghost motif becomes local infrastructure: road, ballroom, cemetery, and name.",
       "Resurrection Mary",
       "Archer Avenue",
       "Resurrection Cemetery",
       "vanishing hitchhiker",
-      "Chicago"
+      "dance hall",
+      "Willowbrook Ballroom",
+      "Chicago",
+      "woman in white"
     ]
   },
   {
@@ -2505,7 +2672,7 @@
     "url": "/stories/ark-of-the-covenant-legend",
     "category": "Mythic Objects",
     "summary": "The Ark of the Covenant is the sacred chest described in biblical tradition as connected with the tablets of the covenant and divine presence. Later legend focuses on its power, disappearance, and possible hidden location.",
-    "description": "A calm guide to Ark of the Covenant Legend, its common versions, source limits, and the sacred object legend motif that makes sacred chest from biblical.",
+    "description": "A source-aware guide to the Ark of the Covenant legend, Exodus description, tablets, cherubim, Temple history, disappearance, Ethiopia claim, and sacred relic folklore.",
     "tags": [
       "Sacred Object Legend",
       "Ark of the Covenant",
@@ -2514,15 +2681,18 @@
     ],
     "motif": "Sacred Object Legend",
     "topics": [
-      "MythicObjectRecord",
+      "sacred-lost-relic-object",
       "Mythic Objects / Sacred Object Legend / Mythic tradition and symbolic reading",
-      "ark of the covenant legend",
-      "Ark of the Covenant is treated through one concrete anchor: the sacred chest from biblical tradition and the later legends about its power, disappearance, and possible location.",
+      "ark-of-the-covenant-legend",
+      "The article reads the Ark as an object whose detailed sacred description made later absence unusually powerful.",
       "Ark of the Covenant",
-      "sacred chest",
-      "lost object",
-      "biblical tradition",
-      "location"
+      "tablets",
+      "cherubim",
+      "mercy seat",
+      "tabernacle",
+      "Holy of Holies",
+      "Solomon's Temple",
+      "Axum"
     ]
   },
   {
@@ -2532,7 +2702,7 @@
     "url": "/stories/stonehenge-legendary-place",
     "category": "Legendary Places",
     "summary": "Stonehenge is a prehistoric stone monument in Wiltshire that has gathered archaeological interpretation, medieval legend, and modern sacred-place meanings. It is real, but no single explanation contains its full cultural afterlife.",
-    "description": "Stonehenge Legend explores the origin, meaning, and folklore behind prehistoric stone monument in Wiltshire and the later legends, meanings, and.",
+    "description": "A source-aware guide to Stonehenge legends, Merlin, Geoffrey of Monmouth, bluestones, solstice alignments, prehistoric archaeology, and sacred-place folklore.",
     "tags": [
       "Legendary Monument",
       "Stonehenge",
@@ -2541,15 +2711,18 @@
     ],
     "motif": "Legendary Monument",
     "topics": [
-      "LegendaryPlaceRecord",
+      "prehistoric-monument-legendary-place",
       "Legendary Places / Legendary Monument / Mythic tradition and symbolic reading",
-      "stonehenge legend",
-      "Stonehenge is treated through one concrete anchor: the prehistoric stone monument in Wiltshire and the later legends, meanings, and interpretations attached to it.",
+      "stonehenge-legendary-place",
+      "The article reads Stonehenge as a monument whose incompleteness of meaning is not a weakness but the reason it became legendary.",
       "Stonehenge",
-      "stones",
+      "Salisbury Plain",
+      "sarsen",
+      "bluestone",
+      "solstice",
       "Merlin",
-      "monument",
-      "archaeology"
+      "Geoffrey of Monmouth",
+      "megalith"
     ]
   },
   {
@@ -2559,7 +2732,7 @@
     "url": "/stories/blood-rain-phenomenon",
     "category": "Strange Nature",
     "summary": "Blood rain refers to rain that appears red or reddish because particles such as dust, sand, spores, or other material color the water. In many periods, red rain also became an omen story because the sky seemed to be raining blood.",
-    "description": "Blood Rain Phenomenon explores the origin, meaning, and folklore behind red-colored rain events that have been explained through dust, algae, spores, or other.",
+    "description": "A source-aware guide to blood rain, red rain, Saharan dust, algae claims, historical omen stories, Kerala red rain, weather folklore, and scientific explanations.",
     "tags": [
       "Strange Weather",
       "Blood Rain",
@@ -2568,25 +2741,28 @@
     ],
     "motif": "Strange Weather",
     "topics": [
-      "StrangeNatureRecord",
+      "red-rain-natural-omen-phenomenon",
       "Strange Nature / Strange Weather / Evidence-limited public record",
-      "blood rain phenomenon",
-      "Blood Rain is treated through one concrete anchor: red-colored rain events that have been explained through dust, algae, spores, or other natural material while also becoming omen folklore.",
+      "blood-rain-phenomenon",
+      "The article reads blood rain as a color failure in ordinary weather that makes the sky feel suddenly interpretive.",
       "blood rain",
       "red rain",
       "dust",
-      "weather",
+      "Saharan dust",
+      "aerosols",
+      "Kerala",
+      "algae",
       "omen"
     ]
   },
   {
     "id": "atlantis-lost-city",
     "slug": "atlantis-lost-city",
-    "title": "Atlantis Lost City: Plato’s Island, Sunken Power, and the World That Vanished Beneath the Sea",
+    "title": "Atlantis Lost City: Plato's Island, Sunken Power, and the World That Vanished Beneath the Sea",
     "url": "/stories/atlantis-lost-city",
     "category": "Lost Worlds",
     "summary": "Atlantis is the legendary island power described by Plato and later imagined as a lost civilization that sank beneath the sea. The original account appears in philosophical dialogue, not as a modern archaeological report.",
-    "description": "A calm guide to Atlantis Lost City, its common versions, source limits, and the lost city legend motif that makes legendary island power described by Plato.",
+    "description": "A source-aware guide to Atlantis, Plato, Timaeus, Critias, lost island tradition, moral allegory, archaeological claims, and why the sunken city legend endures.",
     "tags": [
       "Lost City Legend",
       "Atlantis",
@@ -2595,15 +2771,18 @@
     ],
     "motif": "Lost City Legend",
     "topics": [
-      "LostWorldRecord",
+      "platonic-lost-island-world",
       "Lost Worlds / Lost City Legend / Mythic tradition and symbolic reading",
-      "atlantis lost city",
-      "Atlantis is treated through one concrete anchor: the legendary island power described by Plato and later reimagined as a sunken lost civilization.",
+      "atlantis-lost-city",
+      "The article reads Atlantis as a story that keeps turning philosophy into geography because readers want warnings to have ruins.",
       "Atlantis",
       "Plato",
+      "Timaeus",
+      "Critias",
+      "Poseidon",
       "sunken island",
-      "lost city",
-      "lost civilization"
+      "lost civilization",
+      "allegory"
     ]
   },
   {
@@ -2613,7 +2792,7 @@
     "url": "/stories/kraken-sea-monster-folklore",
     "category": "Mythic Creatures",
     "summary": "The Kraken is a northern sea-monster figure often imagined as an enormous creature beneath the surface, large enough to endanger ships. Later retellings frequently connect it with giant squid or octopus imagery.",
-    "description": "Kraken Folklore explains northern sea-monster tradition of a vast creature large enough to threaten ships from below through mythic creatures, separating.",
+    "description": "A source-aware guide to kraken folklore, Nordic sea monster tradition, giant squid connections, sailor reports, island-like bodies, ship danger, and ocean legend.",
     "tags": [
       "Sea Monster Folklore",
       "Kraken",
@@ -2622,15 +2801,18 @@
     ],
     "motif": "Sea Monster Folklore",
     "topics": [
-      "MythicCreatureRecord",
+      "nordic-sea-monster-folklore",
       "Mythic Creatures / Sea Monster Folklore / Mythic tradition and symbolic reading",
-      "kraken sea monster folklore",
-      "Kraken is treated through one concrete anchor: the northern sea-monster tradition of a vast creature large enough to threaten ships from below.",
-      "Kraken",
-      "sea monster",
+      "kraken-sea-monster-folklore",
+      "The article reads the kraken as the point where oceanic scale makes exaggeration feel rational.",
+      "kraken",
       "giant squid",
-      "ship",
-      "Nordic folklore"
+      "tentacles",
+      "Norway",
+      "sailor lore",
+      "sea monster",
+      "whirlpool",
+      "deep sea"
     ]
   },
   {
@@ -2640,7 +2822,7 @@
     "url": "/stories/icarus-flight-myth",
     "category": "Myths",
     "summary": "Icarus is the Greek mythic figure who escapes Crete with wings made by Daedalus, but flies too close to the sun. The wax melts, the wings fail, and Icarus falls into the sea.",
-    "description": "A calm guide to Icarus Flight Myth, its common versions, source limits, and the greek myth motif that makes Greek myth of Icarus flying with wax wings and.",
+    "description": "A source-aware guide to the Icarus flight myth, Daedalus, wax wings, Crete, escape from the Labyrinth, the sun, falling, and later interpretations of ambition.",
     "tags": [
       "Greek Myth",
       "Icarus",
@@ -2649,13 +2831,16 @@
     ],
     "motif": "Greek Myth",
     "topics": [
-      "MythRecord",
+      "greek-flight-warning-myth",
       "Myths / Greek Myth / Mythic tradition and symbolic reading",
-      "icarus flight myth",
-      "Icarus is treated through one concrete anchor: the Greek myth of Icarus flying with wax wings and falling after ignoring Daedalus’s warning.",
+      "icarus-flight-myth",
+      "The article reads Icarus as a myth about the emotional problem of new freedom, not merely a slogan against ambition.",
       "Icarus",
       "Daedalus",
       "wax wings",
+      "Crete",
+      "Minos",
+      "Labyrinth",
       "sun",
       "fall"
     ]
@@ -2667,7 +2852,7 @@
     "url": "/stories/mothman-point-pleasant-legend",
     "category": "Modern Legends",
     "summary": "Mothman is a modern legend centered on reports of a large winged figure with glowing red eyes around Point Pleasant, West Virginia, in the 1960s. The story became linked in public memory with strange warnings and the Silver Bridge collapse.",
-    "description": "Mothman Legend explores the origin, meaning, and folklore behind modern legend of a winged red-eyed figure reported around Point Pleasant, West Virginia, in.",
+    "description": "A source-aware guide to the Mothman legend, Point Pleasant sightings, TNT area reports, red eyes, Silver Bridge aftermath, John Keel, tourism, and modern monster folklore.",
     "tags": [
       "Modern Monster Legend",
       "Mothman",
@@ -2676,15 +2861,18 @@
     ],
     "motif": "Modern Monster Legend",
     "topics": [
-      "ModernLegendRecord",
+      "winged-omen-modern-monster-legend",
       "Modern Legends / Modern Monster Legend / Source-aware folklore record",
-      "mothman point pleasant legend",
-      "Mothman is treated through one concrete anchor: the modern legend of a winged red-eyed figure reported around Point Pleasant, West Virginia, in the 1960s.",
+      "mothman-point-pleasant-legend",
+      "The article reads Mothman as a creature that became an omen because tragedy reorganized earlier sightings into prophecy.",
       "Mothman",
       "Point Pleasant",
+      "TNT area",
       "red eyes",
-      "winged figure",
-      "Silver Bridge"
+      "Silver Bridge",
+      "John Keel",
+      "UFO",
+      "omen"
     ]
   },
   {
@@ -2694,7 +2882,7 @@
     "url": "/stories/selkie-folklore",
     "category": "Classic Folklore",
     "summary": "Selkies are seal people in Scottish, Orcadian, and North Atlantic folklore. They can remove their seal skins, appear in human form, and sometimes become trapped on land when the skin is hidden.",
-    "description": "Selkie Folklore explores the origin, meaning, and folklore behind North Atlantic folklore of seal people who can remove their skins and live briefly as humans.",
+    "description": "A source-aware guide to selkie folklore, Orkney and Shetland seal people, stolen skins, sea brides, coastal grief, shape-shifting, and Scottish island tradition.",
     "tags": [
       "Shape-Shifter Folklore",
       "Selkie",
@@ -2703,25 +2891,28 @@
     ],
     "motif": "Shape-Shifter Folklore",
     "topics": [
-      "ClassicFolkloreRecord",
+      "seal-skin-shapeshifter-folklore",
       "Classic Folklore / Shape-Shifter Folklore / Source-aware folklore record",
-      "selkie folklore",
-      "Selkie is treated through one concrete anchor: the North Atlantic folklore of seal people who can remove their skins and live briefly as humans on shore.",
+      "selkie-folklore",
+      "The article reads the selkie skin as a folklore technology of consent, captivity, and return.",
       "selkie",
       "seal skin",
+      "Orkney",
+      "Shetland",
+      "shape-shifter",
+      "sea bride",
       "shore",
-      "sea",
-      "shape"
+      "seal people"
     ]
   },
   {
     "id": "rendlesham-forest-incident",
     "slug": "rendlesham-forest-incident",
-    "title": "Rendlesham Forest Incident: Lights, Military Witnesses, and Britain’s Famous UFO Case",
+    "title": "Rendlesham Forest Incident: Lights, Military Witnesses, and Britain's Famous UFO Case",
     "url": "/stories/rendlesham-forest-incident",
     "category": "Unexplained Mysteries",
     "summary": "The Rendlesham Forest Incident refers to reports of strange lights and encounters near RAF Woodbridge in Suffolk in December 1980. It is often called one of Britain’s best-known UFO cases because military personnel were among the witnesses.",
-    "description": "Rendlesham Forest Incident explores the origin, meaning, and folklore behind reported lights and strange encounters near RAF Woodbridge and Rendlesham Forest.",
+    "description": "A source-aware guide to the Rendlesham Forest incident, RAF Woodbridge, Halt memo, December 1980 lights, Ministry of Defence files, skeptical readings, and UFO folklore.",
     "tags": [
       "UFO Case",
       "Rendlesham Forest",
@@ -2730,15 +2921,18 @@
     ],
     "motif": "UFO Case",
     "topics": [
-      "UnexplainedMysteryRecord",
+      "military-ufo-file-mystery",
       "Unexplained Mysteries / UFO Case / Evidence-limited public record",
-      "rendlesham forest incident",
-      "Rendlesham Forest Incident is treated through one concrete anchor: the reported lights and strange encounters near RAF Woodbridge and Rendlesham Forest in December 1980.",
+      "rendlesham-forest-incident",
+      "The article reads Rendlesham as a mystery made durable by paperwork: official files do not solve the case, but they make the uncertainty feel institutional.",
       "Rendlesham Forest",
       "RAF Woodbridge",
+      "RAF Bentwaters",
+      "Halt memo",
+      "Unexplained Lights",
+      "MOD",
       "UFO",
-      "lights",
-      "military witnesses"
+      "radar"
     ]
   },
   {
@@ -2748,7 +2942,7 @@
     "url": "/stories/nazca-lines-mystery",
     "category": "Strange Places",
     "summary": "The Nazca Lines are large geoglyphs in the desert of southern Peru, including straight lines, geometric forms, animals, and plant-like figures. They are real archaeological features, but their full purpose remains debated.",
-    "description": "Nazca Lines Mystery explains giant desert geoglyphs of southern Peru and the long-running questions about their purpose and meaning through strange places.",
+    "description": "A source-aware guide to the Nazca Lines mystery, Peru geoglyphs, UNESCO site, desert preservation, ritual landscapes, aerial visibility, Maria Reiche, and anti-alien caution.",
     "tags": [
       "Ancient Place Mystery",
       "Nazca Lines",
@@ -2757,15 +2951,18 @@
     ],
     "motif": "Ancient Place Mystery",
     "topics": [
-      "StrangePlaceRecord",
+      "desert-geoglyph-sacred-landscape-mystery",
       "Strange Places / Ancient Place Mystery / Source-aware folklore record",
-      "nazca lines mystery",
-      "Nazca Lines is treated through one concrete anchor: the giant desert geoglyphs of southern Peru and the long-running questions about their purpose and meaning.",
+      "nazca-lines-mystery",
+      "The article reads the Nazca Lines as a landscape that became mysterious because modern aerial vision changed how people encounter ground-based ritual marks.",
       "Nazca Lines",
-      "geoglyphs",
-      "southern Peru",
-      "desert",
-      "from above"
+      "Nasca",
+      "Palpa",
+      "geoglyph",
+      "pampas",
+      "Peru",
+      "Maria Reiche",
+      "UNESCO"
     ]
   },
   {
@@ -2775,7 +2972,7 @@
     "url": "/stories/backrooms-internet-folklore",
     "category": "Internet Folklore",
     "summary": "The Backrooms is an internet folklore setting built around the idea of slipping out of reality into endless yellow rooms and fluorescent-lit halls. It began as a short online horror concept and expanded through memes, wikis, videos, and collaborative stories.",
-    "description": "A calm guide to The Backrooms Internet Folklore, its common versions, source limits, and the liminal space legend motif that makes internet-born legend of an.",
+    "description": "A source-aware guide to The Backrooms internet folklore, 4chan origin, liminal spaces, yellow rooms, noclip language, Kane Pixels, analog horror, and collaborative mythmaking.",
     "tags": [
       "Liminal Space Legend",
       "Backrooms",
@@ -2784,15 +2981,18 @@
     ],
     "motif": "Liminal Space Legend",
     "topics": [
-      "InternetFolkloreRecord",
+      "liminal-space-digital-urban-legend",
       "Internet Folklore / Liminal Space Legend / Source-aware folklore record",
-      "backrooms internet folklore",
-      "The Backrooms is treated through one concrete anchor: the internet-born legend of an endless yellow office-like space reached by slipping out of normal reality.",
+      "backrooms-internet-folklore",
+      "The article reads The Backrooms as horror built from failed familiarity: spaces made for people become terrifying when people vanish.",
       "Backrooms",
-      "yellow rooms",
-      "humming lights",
-      "no-clip",
-      "liminal space"
+      "liminal space",
+      "noclip",
+      "4chan",
+      "creepypasta",
+      "mono-yellow",
+      "fluorescent lights",
+      "analog horror"
     ]
   },
   {
@@ -2802,7 +3002,7 @@
     "url": "/stories/sewer-alligator-urban-legend",
     "category": "Urban Legends",
     "summary": "The sewer alligator is a famous urban legend about reptiles living in city sewer systems after being abandoned, flushed, or lost. The story is especially linked with New York, where the hidden city below the street becomes part of the fear.",
-    "description": "Sewer Alligator Urban Legend explains modern city legend that alligators live beneath streets after being abandoned as exotic pets through urban legends.",
+    "description": "A source-aware guide to the sewer alligator urban legend, New York reports, abandoned pet motifs, city drains, sewer folklore, and why the hidden monster below the street endures.",
     "tags": [
       "Urban Animal Legend",
       "Sewer Alligator",
@@ -2811,15 +3011,18 @@
     ],
     "motif": "Urban Animal Legend",
     "topics": [
-      "UrbanLegendRecord",
+      "urban-animal-infrastructure-legend",
       "Urban Legends / Urban Animal Legend / Source-aware folklore record",
-      "sewer alligator urban legend",
-      "Sewer Alligator is treated through one concrete anchor: the modern city legend that alligators live beneath streets after being abandoned as exotic pets.",
-      "sewer alligator",
-      "city drains",
-      "escaped pets",
+      "sewer-alligator-urban-legend",
+      "The article reads the alligator as the city's discarded consequence given animal form under the street.",
+      "sewer",
+      "storm drain",
+      "alligator",
+      "caiman",
+      "abandoned pet",
       "New York",
-      "urban animal"
+      "infrastructure",
+      "urban legend"
     ]
   },
   {
@@ -2858,7 +3061,7 @@
     "url": "/stories/ring-of-gyges-myth",
     "category": "Mythic Objects",
     "summary": "The Ring of Gyges is a story in Plato Republic about a ring that grants invisibility. The tale asks whether a person would remain just if no one could see or punish them.",
-    "description": "Ring of Gyges explains philosophical myth of a ring that makes its wearer invisible and tests whether justice survives without witnesses through mythic.",
+    "description": "A source-aware guide to Plato's Ring of Gyges, invisibility, Glaucon's challenge, justice, power, reputation, and why the mythic object remains a moral test.",
     "tags": [
       "Invisibility Object",
       "Ring of Gyges",
@@ -2867,15 +3070,18 @@
     ],
     "motif": "Invisibility Object",
     "topics": [
-      "MythicObjectRecord",
+      "mythic-object-ethical-test",
       "Mythic Objects / Invisibility Object / Mythic tradition and symbolic reading",
-      "ring of gyges myth ring-of-gyges-myth",
-      "Ring of Gyges is treated through one concrete anchor: the philosophical myth of a ring that makes its wearer invisible and tests whether justice survives without witnesses.",
-      "Ring of Gyges",
-      "Plato",
+      "ring-of-gyges-myth",
+      "The article reads the ring as a machine that removes witnesses and therefore exposes what social approval had been doing.",
+      "Gyges",
+      "Glaucon",
+      "Republic",
       "invisibility",
       "justice",
-      "thought experiment"
+      "impunity",
+      "reputation",
+      "tyranny"
     ]
   },
   {
@@ -2885,7 +3091,7 @@
     "url": "/stories/oracle-of-delphi-legend",
     "category": "Legendary Places",
     "summary": "The Oracle of Delphi was the most famous ancient Greek oracle, associated with Apollo and the priestess known as the Pythia. People came to Delphi seeking responses to political, personal, and religious questions.",
-    "description": "Oracle of Delphi explores the origin, meaning, and folklore behind ancient Greek sacred site where the Pythia delivered oracular responses associated with.",
+    "description": "A source-aware guide to the Oracle of Delphi, Pythia, Apollo's sanctuary, sacred landscape, Greek prophecy, political consultation, ambiguity, and legendary memory.",
     "tags": [
       "Sacred Site",
       "Oracle of Delphi",
@@ -2894,15 +3100,18 @@
     ],
     "motif": "Sacred Site",
     "topics": [
-      "LegendaryPlaceRecord",
+      "sacred-place-prophecy-legend",
       "Legendary Places / Sacred Site / Mythic tradition and symbolic reading",
-      "oracle of delphi legend oracle-of-delphi-legend",
-      "Oracle of Delphi is treated through one concrete anchor: the ancient Greek sacred site where the Pythia delivered oracular responses associated with Apollo.",
+      "oracle-of-delphi-legend",
+      "The article reads Delphi as a place where landscape, ritual, and ambiguous language made prophecy into public authority.",
       "Delphi",
       "Pythia",
       "Apollo",
-      "oracle",
-      "sacred site"
+      "omphalos",
+      "sanctuary",
+      "prophecy",
+      "consultation",
+      "Pythian Games"
     ]
   },
   {
@@ -2912,7 +3121,7 @@
     "url": "/stories/green-flash-sunset-phenomenon",
     "category": "Strange Nature",
     "summary": "The Green Flash is a brief optical phenomenon sometimes seen near the upper edge of the sun at sunrise or sunset. It is linked to atmospheric refraction and viewing conditions near a clear horizon.",
-    "description": "Green Flash at Sunset explains brief green light sometimes seen near the sun at sunrise or sunset under specific atmospheric conditions through strange.",
+    "description": "A source-aware guide to the green flash at sunset, atmospheric refraction, mirage conditions, horizon watching, optical science, sea lore, and why the brief green light feels legendary.",
     "tags": [
       "Optical Phenomenon",
       "Green Flash",
@@ -2921,15 +3130,18 @@
     ],
     "motif": "Optical Phenomenon",
     "topics": [
-      "StrangeNatureRecord",
+      "optical-phenomenon-horizon-lore",
       "Strange Nature / Optical Phenomenon / Evidence-limited public record",
-      "green flash sunset phenomenon green-flash-sunset-phenomenon",
-      "Green Flash is treated through one concrete anchor: the brief green light sometimes seen near the sun at sunrise or sunset under specific atmospheric conditions.",
+      "green-flash-sunset-phenomenon",
+      "The article treats the green flash as science that behaves like folklore because it requires witness, timing, and a threshold.",
       "green flash",
-      "sunset",
-      "atmospheric refraction",
+      "refraction",
+      "scattering",
+      "mirage",
+      "inferior mirage",
       "horizon",
-      "phenomenon"
+      "sunset",
+      "sunrise"
     ]
   },
   {
@@ -2939,7 +3151,7 @@
     "url": "/stories/agartha-hollow-earth-legend",
     "category": "Lost Worlds",
     "summary": "Agartha, also spelled Agharta in some sources, is a hidden-world legend often connected with hollow-earth and esoteric geography. It is imagined as an inner realm, secret civilization, or spiritual center beneath ordinary maps.",
-    "description": "Agartha Hollow Earth Legend explores the origin, meaning, and folklore behind esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath the.",
+    "description": "A source-aware guide to Agartha, Agharta, Hollow Earth legend, esoteric geography, hidden kingdoms, Saint-Yves d'Alveydre, occult reception, and why the inner-world myth endures.",
     "tags": [
       "Hidden World",
       "Agartha",
@@ -2948,15 +3160,18 @@
     ],
     "motif": "Hidden World",
     "topics": [
-      "LostWorldRecord",
+      "hidden-world-esoteric-geography",
       "Lost Worlds / Hidden World / Mythic tradition and symbolic reading",
-      "agartha hollow earth legend agartha-hollow-earth-legend",
-      "Agartha is treated through one concrete anchor: the esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath the earth.",
+      "agartha-hollow-earth-legend",
+      "The article reads Agartha as a downward lost-world map that turns spiritual authority into geography beneath the visible surface.",
       "Agartha",
       "Agharta",
+      "Agarttha",
       "Hollow Earth",
       "hidden realm",
-      "inner world"
+      "inner world",
+      "esoteric",
+      "occult geography"
     ]
   },
   {
@@ -2966,7 +3181,7 @@
     "url": "/stories/basilisk-folklore",
     "category": "Mythic Creatures",
     "summary": "The basilisk is a mythic creature often described as a deadly serpent or serpent-like king whose gaze, breath, or touch can kill. Medieval and later traditions sometimes blend it with rooster-serpent imagery related to the cockatrice.",
-    "description": "A calm guide to Basilisk Folklore, its common versions, source limits, and the mythic reptile motif that makes basilisk tradition of a deadly serpent or.",
+    "description": "A source-aware guide to basilisk folklore, Pliny, medieval bestiaries, deadly gaze motifs, weasel remedies, cockatrice overlap, and the serpent king's meaning.",
     "tags": [
       "Mythic Reptile",
       "Basilisk",
@@ -2975,15 +3190,18 @@
     ],
     "motif": "Mythic Reptile",
     "topics": [
-      "MythicCreatureRecord",
+      "deadly-gaze-bestiary-creature",
       "Mythic Creatures / Mythic Reptile / Mythic tradition and symbolic reading",
-      "basilisk folklore basilisk-folklore",
-      "Basilisk is treated through one concrete anchor: the basilisk tradition of a deadly serpent or serpent-like king whose gaze, breath, or presence can kill.",
+      "basilisk-folklore",
+      "The article reads the basilisk as a monster of fatal proximity, where sight, scent, voice, touch, and kingship all become weapons.",
       "basilisk",
+      "regulus",
+      "cockatrice",
+      "weasel",
       "deadly gaze",
-      "serpent king",
       "bestiary",
-      "monster folklore"
+      "serpent",
+      "diadem"
     ]
   },
   {
@@ -2993,7 +3211,7 @@
     "url": "/stories/phaethon-sun-chariot-myth",
     "category": "Myths",
     "summary": "Phaethon is a Greek mythic figure who asks to drive the chariot of the sun and loses control. The burning path threatens the world until Zeus strikes him down.",
-    "description": "A calm guide to Phaethon Sun Chariot Myth, its common versions, source limits, and the greek myth motif that makes Greek myth of Phaethon driving the chariot.",
+    "description": "A source-aware guide to the Phaethon sun chariot myth, Ovid, Helios or Sol, proof of parentage, cosmic fire, Zeus's thunderbolt, the Eridanus, and the Heliades.",
     "tags": [
       "Greek Myth",
       "Phaethon",
@@ -3002,15 +3220,18 @@
     ],
     "motif": "Greek Myth",
     "topics": [
-      "MythRecord",
+      "greek-solar-catastrophe-myth",
       "Myths / Greek Myth / Mythic tradition and symbolic reading",
-      "phaethon sun chariot myth phaethon-sun-chariot-myth",
-      "Phaethon is treated through one concrete anchor: the Greek myth of Phaethon driving the chariot of the sun and losing control of its fire.",
+      "phaethon-sun-chariot-myth",
+      "The article reads Phaethon as a myth about inherited power becoming disaster when proof is confused with capacity.",
       "Phaethon",
-      "Apollo",
+      "Helios",
+      "Sol",
+      "Clymene",
       "sun chariot",
-      "fire",
-      "fall"
+      "Eridanus",
+      "Heliades",
+      "thunderbolt"
     ]
   },
   {
@@ -3020,7 +3241,7 @@
     "url": "/stories/beast-of-bray-road-legend",
     "category": "Modern Legends",
     "summary": "The Beast of Bray Road is a modern Wisconsin legend about a wolf-like or werewolf-like creature reported near Bray Road and the Elkhorn area. Witnesses describe a large animal or upright figure with canine features.",
-    "description": "Beast of Bray Road explores the origin, meaning, and folklore behind Wisconsin modern legend of a wolf-like or werewolf-like creature reported near Bray Road.",
+    "description": "A source-aware guide to the Beast of Bray Road, Elkhorn Wisconsin sightings, Linda Godfrey, dogman and werewolf imagery, roadkill reports, rural roads, and modern cryptid folklore.",
     "tags": [
       "Modern Cryptid",
       "Beast of Bray Road",
@@ -3029,15 +3250,18 @@
     ],
     "motif": "Modern Cryptid",
     "topics": [
-      "ModernLegendRecord",
+      "modern-roadside-cryptid-legend",
       "Modern Legends / Modern Cryptid / Source-aware folklore record",
-      "beast of bray road beast-of-bray-road-legend",
-      "Beast of Bray Road is treated through one concrete anchor: the Wisconsin modern legend of a wolf-like or werewolf-like creature reported near Bray Road.",
-      "Beast of Bray Road",
+      "beast-of-bray-road-legend",
+      "The article reads the Beast as a road-edge monster that turns brief rural encounters into a local werewolf archive.",
+      "Bray Road",
+      "Elkhorn",
       "Wisconsin",
+      "Linda Godfrey",
+      "dogman",
       "werewolf",
-      "creature",
-      "reports"
+      "roadkill",
+      "headlights"
     ]
   },
   {
@@ -3047,7 +3271,7 @@
     "url": "/stories/green-children-woolpit-folklore",
     "category": "Classic Folklore",
     "summary": "The Green Children of Woolpit is a medieval English story about two children with green skin who appeared near Woolpit, spoke an unknown language, and at first would eat only beans.",
-    "description": "Green Children of Woolpit explores the origin, meaning, and folklore behind medieval English story of two green-skinned children who appeared near Woolpit and.",
+    "description": "A source-aware guide to the Green Children of Woolpit, Ralph of Coggeshall, William of Newburgh, medieval wonder, green skin, beans, St Martin's Land, and folklore interpretations.",
     "tags": [
       "Medieval Wonder",
       "Green Children",
@@ -3056,15 +3280,18 @@
     ],
     "motif": "Medieval Wonder",
     "topics": [
-      "ClassicFolkloreRecord",
+      "medieval-wonder-child-legend",
       "Classic Folklore / Medieval Wonder / Source-aware folklore record",
-      "green children of woolpit green-children-woolpit-folklore",
-      "Green Children of Woolpit is treated through one concrete anchor: the medieval English story of two green-skinned children who appeared near Woolpit and spoke an unknown language.",
-      "Green Children",
+      "green-children-woolpit-folklore",
+      "The article reads the story as a medieval border tale where village hospitality meets language, color, hunger, and the possibility of another world.",
       "Woolpit",
+      "green children",
+      "Ralph of Coggeshall",
+      "William of Newburgh",
+      "beans",
       "St Martin's Land",
-      "medieval wonder",
-      "English folklore"
+      "Suffolk",
+      "medieval wonder"
     ]
   },
   {
@@ -3074,7 +3301,7 @@
     "url": "/stories/taos-hum-mystery",
     "category": "Unexplained Mysteries",
     "summary": "The Taos Hum is a reported low sound heard by some people around Taos, New Mexico. Witnesses describe a persistent hum, drone, or vibration that not everyone can hear.",
-    "description": "Taos Hum Mystery explores the origin, meaning, and folklore behind low-frequency hum reported by some residents and visitors around Taos, New Mexico, tracing.",
+    "description": "A source-aware guide to the Taos Hum mystery, New Mexico witness reports, low-frequency sound, scientific investigation, hearers, theories, and why the hum remains unresolved.",
     "tags": [
       "Unexplained Sound",
       "Taos Hum",
@@ -3083,15 +3310,18 @@
     ],
     "motif": "Unexplained Sound",
     "topics": [
-      "UnexplainedMysteryRecord",
+      "unexplained-sound-witness-mystery",
       "Unexplained Mysteries / Unexplained Sound / Evidence-limited public record",
-      "taos hum mystery taos-hum-mystery",
-      "Taos Hum is treated through one concrete anchor: the low-frequency hum reported by some residents and visitors around Taos, New Mexico.",
+      "taos-hum-mystery",
+      "The article reads the Taos Hum as a mystery of divided perception, where the central problem is not only what makes the sound but why only some people experience it.",
       "Taos Hum",
-      "low sound",
-      "New Mexico",
-      "witnesses",
-      "hum"
+      "hearers",
+      "low frequency",
+      "acoustic",
+      "seismic",
+      "electromagnetic",
+      "infrasound",
+      "New Mexico"
     ]
   },
   {
@@ -3101,7 +3331,7 @@
     "url": "/stories/bhangarh-fort-legend",
     "category": "Strange Places",
     "summary": "Bhangarh Fort is a ruined fort in Rajasthan widely associated with haunted-place legends. Retellings connect the site with curses, forbidden nighttime entry, and stories of a settlement that became abandoned.",
-    "description": "Bhangarh Fort Legend explores the origin, meaning, and folklore behind haunted-place legend surrounding the ruined Bhangarh Fort in Rajasthan, tracing why.",
+    "description": "A source-aware guide to Bhangarh Fort legend, Rajasthan ruins, ASI warnings, the sadhu curse, Princess Ratnavati, haunted tourism, and why the place story endures.",
     "tags": [
       "Haunted Fort",
       "Bhangarh",
@@ -3110,15 +3340,18 @@
     ],
     "motif": "Haunted Fort",
     "topics": [
-      "StrangePlaceRecord",
+      "haunted-ruins-place-legend",
       "Strange Places / Haunted Fort / Source-aware folklore record",
-      "bhangarh fort legend bhangarh-fort-legend",
-      "Bhangarh Fort is treated through one concrete anchor: the haunted-place legend surrounding the ruined Bhangarh Fort in Rajasthan.",
-      "Bhangarh Fort",
+      "bhangarh-fort-legend",
+      "The article reads Bhangarh as a place where abandoned urban form turns curse stories into a walkable haunting.",
+      "Bhangarh",
       "Rajasthan",
-      "ruins",
-      "haunted fort",
-      "local legend"
+      "Aravalli",
+      "Ratnavati",
+      "Baba Balau Nath",
+      "curse",
+      "fort",
+      "ruins"
     ]
   },
   {
@@ -3128,7 +3361,7 @@
     "url": "/stories/this-man-dream-hoax",
     "category": "Internet Folklore",
     "summary": "This Man is an internet legend built around a composite-looking face and the claim that many unrelated people had seen him in dreams. The story spread through posters, websites, forums, and image sharing.",
-    "description": "A calm guide to This Man Dream Hoax, its common versions, source limits, and the internet hoax motif that makes viral internet legend claiming that thousands.",
+    "description": "A source-aware guide to the This Man dream hoax, the viral face, shared dream legend, Andrea Natella, internet mystery design, and why the image spread.",
     "tags": [
       "Internet Hoax",
       "This Man",
@@ -3137,15 +3370,18 @@
     ],
     "motif": "Internet Hoax",
     "topics": [
-      "InternetFolkloreRecord",
+      "viral-dream-face-internet-hoax",
       "Internet Folklore / Internet Hoax / Source-aware folklore record",
-      "this man dream hoax this-man-dream-hoax",
-      "This Man is treated through one concrete anchor: the viral internet legend claiming that thousands of people saw the same unknown face in dreams.",
+      "this-man-dream-hoax",
+      "The article reads This Man as a recognition trap that turns dream memory into participatory evidence.",
       "This Man",
-      "dreams",
+      "dream",
+      "hoax",
+      "website",
       "face",
-      "internet legend",
-      "shared dreams"
+      "recognition",
+      "viral",
+      "internet folklore"
     ]
   },
   {
@@ -3155,7 +3391,7 @@
     "url": "/stories/clown-statue-urban-legend",
     "category": "Urban Legends",
     "summary": "The Clown Statue is a modern urban legend about a babysitter who notices a clown statue or doll in the house, only to learn that the family does not own one. The object becomes frightening because it has been present in the room while being treated as harmless.",
-    "description": "A calm guide to Clown Statue Urban Legend, its common versions, source limits, and the babysitter legend motif that makes babysitter legend in which a clown.",
+    "description": "A source-aware guide to the clown statue urban legend, babysitter horror, home intruder motif, clown fear, hidden stranger, and why the room figure twist works.",
     "tags": [
       "Babysitter Legend",
       "Clown Statue",
@@ -3164,14 +3400,17 @@
     ],
     "motif": "Babysitter Legend",
     "topics": [
-      "UrbanLegendRecord",
+      "babysitter-home-intruder-legend",
       "Urban Legends / Babysitter Legend / Source-aware folklore record",
-      "clown statue urban legend clown-statue-urban-legend",
-      "Clown Statue is treated through one concrete anchor: the babysitter legend in which a clown statue in the house turns out not to be a statue at all.",
-      "clown statue",
+      "clown-statue-urban-legend",
+      "The article reads the clown statue as a misrecognized intruder, where the horror comes from politeness delaying action.",
       "babysitter",
-      "home intruder",
+      "clown statue",
+      "intruder",
       "phone call",
+      "children",
+      "living room",
+      "uncanny object",
       "urban legend"
     ]
   },
@@ -3182,7 +3421,7 @@
     "url": "/stories/vanishing-hitchhiker-urban-legend",
     "category": "Urban Legends",
     "summary": "The Vanishing Hitchhiker is a widely known urban legend about a driver who picks up a quiet passenger on a lonely road. The passenger disappears before the ride ends, or the driver later learns that the person died years earlier.",
-    "description": "Vanishing Hitchhiker Urban Legend explores the origin, meaning, and folklore behind roadside legend of a driver who gives a stranger a ride, only to learn the.",
+    "description": "A source-aware guide to the vanishing hitchhiker urban legend, roadside ghost motifs, Jan Harold Brunvand, white lady variants, drivers, addresses, and why the passenger disappears.",
     "tags": [
       "Roadside Urban Legend",
       "Vanishing Hitchhiker",
@@ -3192,18 +3431,18 @@
     ],
     "motif": "Roadside Urban Legend",
     "topics": [
-      "Urban Legend",
+      "roadside-ghost-urban-legend",
       "Urban Legends / Roadside Urban Legend / Existing folklore and public cultural memory",
-      "vanishing hitchhiker urban legend",
-      "Vanishing Hitchhiker is treated through one concrete anchor: the roadside legend of a driver who gives a stranger a ride, only to learn the passenger vanished or died long before the meeting.",
-      "Roadside Urban Legend",
-      "Vanishing Hitchhiker",
-      "Ghost Story",
-      "Travel Rumor",
-      "Folklore Motif",
-      "vanishing hitchhiker urban legend origin",
-      "vanishing hitchhiker urban legend meaning",
-      "roadside urban legend folklore"
+      "vanishing-hitchhiker-urban-legend",
+      "The article reads the disappearing passenger as a road memory that briefly enters ordinary travel and then refuses arrival.",
+      "vanishing hitchhiker",
+      "roadside ghost",
+      "driver",
+      "passenger",
+      "address",
+      "grave",
+      "white lady",
+      "urban legend"
     ]
   },
   {
@@ -3213,7 +3452,7 @@
     "url": "/stories/polybius-arcade-game-legend",
     "category": "Internet Folklore",
     "summary": "Polybius is an internet folklore story about a mysterious arcade game supposedly tested in the early 1980s. The legend says the cabinet caused strange physical or psychological effects, then disappeared.",
-    "description": "Polybius Arcade Game Legend explores the origin, meaning, and folklore behind internet legend of a mysterious arcade cabinet said to cause strange effects.",
+    "description": "A source-aware guide to the Polybius arcade game legend, Portland arcade rumors, Sinnesloschen, men in black, lost cabinets, game culture, hoax clues, and internet folklore.",
     "tags": [
       "Arcade Game Legend",
       "Polybius",
@@ -3223,18 +3462,18 @@
     ],
     "motif": "Arcade Game Legend",
     "topics": [
-      "Internet Folklore",
+      "lost-arcade-internet-legend",
       "Internet Folklore / Arcade Game Legend / Existing folklore and public cultural memory",
-      "polybius arcade game legend",
-      "Polybius is treated through one concrete anchor: the internet legend of a mysterious arcade cabinet said to cause strange effects before disappearing from public view.",
-      "Arcade Game Legend",
+      "polybius-arcade-game-legend",
+      "The article reads Polybius as a missing-object legend whose lack of evidence makes the arcade cabinet more powerful.",
       "Polybius",
-      "Lost Game",
-      "Digital Rumor",
-      "Arcade Rumor",
-      "polybius arcade game legend origin",
-      "polybius arcade game legend meaning",
-      "arcade game legend folklore"
+      "arcade cabinet",
+      "Sinnesloschen",
+      "Portland",
+      "ROM",
+      "men in black",
+      "coin-op",
+      "lost game"
     ]
   },
   {
@@ -3244,7 +3483,7 @@
     "url": "/stories/bennington-triangle-legend",
     "category": "Strange Places",
     "summary": "The Bennington Triangle is a regional place legend connected with disappearances around Glastenbury Mountain and the Bennington area of Vermont. The name groups several events into one mysterious landscape.",
-    "description": "A calm guide to Bennington Triangle, its common versions, source limits, and the place legend motif that makes Vermont place legend linking several.",
+    "description": "A source-aware guide to the Bennington Triangle legend, Glastenbury Mountain, Paula Welden, Middie Rivers, Vermont disappearances, and how a regional mystery formed.",
     "tags": [
       "Place Legend",
       "Bennington Triangle",
@@ -3254,18 +3493,18 @@
     ],
     "motif": "Place Legend",
     "topics": [
-      "Strange Place",
+      "regional-disappearance-place-legend",
       "Strange Places / Place Legend / Existing folklore and public cultural memory",
-      "bennington triangle legend",
-      "Bennington Triangle is treated through one concrete anchor: the Vermont place legend linking several disappearances around Glastenbury Mountain and the Bennington area.",
-      "Place Legend",
-      "Bennington Triangle",
-      "Vermont Folklore",
-      "Disappearances",
-      "Mountain Mystery",
-      "bennington triangle legend origin",
-      "bennington triangle legend meaning",
-      "place legend folklore"
+      "bennington-triangle-legend",
+      "The article reads the Bennington Triangle as a retroactive map that turns separate disappearances into one haunted geography.",
+      "Bennington",
+      "Glastenbury",
+      "Long Trail",
+      "Paula Welden",
+      "Middie Rivers",
+      "Vermont",
+      "triangle",
+      "disappearance"
     ]
   },
   {
@@ -3275,7 +3514,7 @@
     "url": "/stories/oak-island-money-pit",
     "category": "Unexplained Mysteries",
     "summary": "The Oak Island Money Pit is a famous Nova Scotia mystery about a supposed buried treasure site discovered in the late eighteenth century. Later stories describe platforms, flood tunnels, strange finds, and repeated digs.",
-    "description": "Oak Island Money Pit explains long-running Nova Scotia treasure mystery built around the Money Pit, flood tunnels, reported finds, and repeated excavations.",
+    "description": "A source-aware guide to the Oak Island Money Pit mystery, 1795 discovery story, flood tunnels, inscribed stone, treasure theories, search history, and evidence limits.",
     "tags": [
       "Treasure Mystery",
       "Oak Island",
@@ -3285,18 +3524,18 @@
     ],
     "motif": "Treasure Mystery",
     "topics": [
-      "Unsolved Mystery",
+      "treasure-hunt-mystery-place",
       "Unexplained Mysteries / Treasure Mystery / Public reports and source-limited interpretation",
-      "oak island money pit",
-      "Oak Island Money Pit is treated through one concrete anchor: the long-running Nova Scotia treasure mystery built around the Money Pit, flood tunnels, reported finds, and repeated excavations.",
-      "Treasure Mystery",
+      "oak-island-money-pit",
+      "The article reads the Money Pit as a mystery machine where obstruction becomes evidence and failure becomes fuel.",
       "Oak Island",
       "Money Pit",
       "Nova Scotia",
-      "Unsolved Mystery",
-      "oak island money pit origin",
-      "oak island money pit meaning",
-      "treasure mystery folklore"
+      "flood tunnel",
+      "Smith's Cove",
+      "inscribed stone",
+      "treasure",
+      "shaft"
     ]
   },
   {
@@ -3306,7 +3545,7 @@
     "url": "/stories/wild-hunt-folklore",
     "category": "Classic Folklore",
     "summary": "The Wild Hunt is a European folklore motif about a supernatural host, often heard or seen moving through the night sky, winter weather, or storm. It may appear as ghostly riders, hunters, hounds, or a procession of the dead.",
-    "description": "Wild Hunt Folklore explores the origin, meaning, and folklore behind European folklore motif of a supernatural hunting party or ghostly host moving through.",
+    "description": "A source-aware guide to Wild Hunt folklore, Woden or Odin, ghostly riders, winter storms, spectral hounds, Frau Holle, regional variants, and why the passing host endures.",
     "tags": [
       "European Folklore",
       "Wild Hunt",
@@ -3316,18 +3555,18 @@
     ],
     "motif": "European Folklore",
     "topics": [
-      "Folklore",
+      "european-spirit-procession-folklore",
       "Classic Folklore / European Folklore / Existing folklore and public cultural memory",
-      "wild hunt folklore",
-      "Wild Hunt is treated through one concrete anchor: the European folklore motif of a supernatural hunting party or ghostly host moving through storm, night, or winter sky.",
-      "European Folklore",
+      "wild-hunt-folklore",
+      "The article reads the Wild Hunt as a sound-first legend: a storm becomes a passing host because people hear movement in the dark.",
       "Wild Hunt",
-      "Ghostly Riders",
-      "Storm Folklore",
-      "Omen",
-      "wild hunt folklore origin",
-      "wild hunt folklore meaning",
-      "european folklore folklore"
+      "Woden",
+      "Odin",
+      "ghost riders",
+      "hounds",
+      "Frau Holle",
+      "Yule",
+      "storm"
     ]
   },
   {
@@ -3337,7 +3576,7 @@
     "url": "/stories/men-in-black-legend",
     "category": "Modern Legends",
     "summary": "The Men in Black legend describes strange dark-suited visitors who allegedly appear after UFO sightings, ask questions, and warn witnesses to keep quiet. The figures are usually calm, intimidating, and slightly wrong.",
-    "description": "Men in Black Legend explains modern legend of dark-suited visitors who appear after UFO sightings and warn witnesses to stay silent through modern legends.",
+    "description": "A source-aware guide to the Men in Black legend, Maury Island, Albert Bender, Gray Barker, UFO witnesses, black suits, intimidation motifs, and conspiracy folklore.",
     "tags": [
       "UFO-Era Legend",
       "Men in Black",
@@ -3347,18 +3586,18 @@
     ],
     "motif": "UFO-Era Legend",
     "topics": [
-      "Modern Legend",
+      "ufo-witness-intimidation-legend",
       "Modern Legends / UFO-Era Legend / Existing folklore and public cultural memory",
-      "men in black legend",
-      "Men in Black is treated through one concrete anchor: the modern legend of dark-suited visitors who appear after UFO sightings and warn witnesses to stay silent.",
-      "UFO-Era Legend",
+      "men-in-black-legend",
+      "The article reads Men in Black as the folklore of the second visit: the mystery continues because someone arrives to control the first story.",
       "Men in Black",
-      "Conspiracy Folklore",
-      "Witness Story",
-      "Modern Legend",
-      "men in black legend origin",
-      "men in black legend meaning",
-      "ufo-era legend folklore"
+      "UFO",
+      "Maury Island",
+      "Albert Bender",
+      "Gray Barker",
+      "black suit",
+      "witness",
+      "cover-up"
     ]
   },
   {
@@ -3368,7 +3607,7 @@
     "url": "/stories/prometheus-fire-myth",
     "category": "Myths",
     "summary": "Prometheus is a Greek mythic figure remembered for stealing fire and giving it to humanity. Zeus punishes him for crossing divine limits, often by binding him while an eagle tears at him.",
-    "description": "Prometheus Fire Myth explores the origin, meaning, and folklore behind Greek myth of Prometheus stealing fire for humanity and suffering punishment for.",
+    "description": "A source-aware guide to the Prometheus fire myth, Hesiod, Zeus, Mekone, fennel stalk, Pandora, eagle punishment, Heracles, and why the fire theft endures.",
     "tags": [
       "Greek Myth",
       "Prometheus",
@@ -3378,18 +3617,18 @@
     ],
     "motif": "Greek Myth",
     "topics": [
-      "Myth",
+      "greek-culture-hero-fire-myth",
       "Myths / Greek Myth / Mythic tradition and variant-aware interpretation",
-      "prometheus fire myth",
-      "Prometheus is treated through one concrete anchor: the Greek myth of Prometheus stealing fire for humanity and suffering punishment for crossing divine boundaries.",
-      "Greek Myth",
+      "prometheus-fire-myth",
+      "The article reads Prometheus as a myth about the cost of mediation between divine power and human need.",
       "Prometheus",
-      "Fire Myth",
-      "Trickster",
-      "Punishment",
-      "prometheus fire myth origin",
-      "prometheus fire myth meaning",
-      "greek myth folklore"
+      "Zeus",
+      "fire",
+      "Mekone",
+      "fennel stalk",
+      "Pandora",
+      "eagle",
+      "Heracles"
     ]
   },
   {
@@ -3399,7 +3638,7 @@
     "url": "/stories/phoenix-mythic-bird",
     "category": "Mythic Creatures",
     "summary": "The phoenix is a mythic bird associated with fire, death, and renewal. In many later versions, it dies in flame or on a nest and returns from ashes.",
-    "description": "Phoenix Mythic Bird explains mythic bird associated with fire, death, renewal, and the image of returning from ashes through mythic creatures, separating.",
+    "description": "A source-aware guide to the phoenix mythic bird, from Herodotus and Egyptian solar birds to Roman, Christian, bestiary, and modern renewal symbolism.",
     "tags": [
       "Mythic Bird",
       "Phoenix",
@@ -3409,18 +3648,18 @@
     ],
     "motif": "Mythic Bird",
     "topics": [
-      "Mythic Creature",
+      "mythic-creature-renewal-bird",
       "Mythic Creatures / Mythic Bird / Mythic tradition and variant-aware interpretation",
-      "phoenix mythic bird",
-      "Phoenix is treated through one concrete anchor: the mythic bird associated with fire, death, renewal, and the image of returning from ashes.",
-      "Mythic Bird",
-      "Phoenix",
-      "Fire Symbolism",
-      "Renewal",
-      "Bestiary",
-      "phoenix mythic bird origin",
-      "phoenix mythic bird meaning",
-      "mythic bird folklore"
+      "phoenix-mythic-bird",
+      "The article reads the phoenix as a portable ritual image for making endings narratively survivable.",
+      "phoenix",
+      "Bennu",
+      "Heliopolis",
+      "Herodotus",
+      "ashes",
+      "solar bird",
+      "resurrection",
+      "bestiary"
     ]
   },
   {
@@ -3430,7 +3669,7 @@
     "url": "/stories/shambhala-hidden-kingdom",
     "category": "Lost Worlds",
     "summary": "Shambhala is a hidden kingdom associated with Buddhist tradition, sacred geography, and prophecy. Later Western writing often transformed it into a lost-world or hidden-paradise idea.",
-    "description": "Shambhala Hidden Kingdom explores the origin, meaning, and folklore behind hidden kingdom associated with Buddhist tradition, sacred geography, prophecy, and.",
+    "description": "A source-aware guide to Shambhala, the hidden kingdom of Kalachakra tradition, sacred geography, prophecy, pure land language, and later lost-world reception.",
     "tags": [
       "Hidden Kingdom",
       "Shambhala",
@@ -3440,18 +3679,18 @@
     ],
     "motif": "Hidden Kingdom",
     "topics": [
-      "Lost World",
+      "lost-world-sacred-geography",
       "Lost Worlds / Hidden Kingdom / Existing folklore and public cultural memory",
-      "shambhala hidden kingdom",
-      "Shambhala is treated through one concrete anchor: the hidden kingdom associated with Buddhist tradition, sacred geography, prophecy, and later Western lost-world imagination.",
-      "Hidden Kingdom",
+      "shambhala-hidden-kingdom",
+      "The article treats Shambhala as a map that deliberately tests the limits of maps.",
       "Shambhala",
-      "Sacred Geography",
-      "Lost World",
-      "Buddhist Tradition",
-      "shambhala hidden kingdom origin",
-      "shambhala hidden kingdom meaning",
-      "hidden kingdom folklore"
+      "Kalachakra",
+      "Suchandra",
+      "Kulika",
+      "pure land",
+      "Tibet",
+      "Central Asia",
+      "prophecy"
     ]
   },
   {
@@ -3461,7 +3700,7 @@
     "url": "/stories/marfa-lights-mystery",
     "category": "Strange Nature",
     "summary": "The Marfa Lights are mysterious lights reported in the desert near Marfa, Texas. Witnesses describe glowing points that appear, move, split, fade, or hover in the distance.",
-    "description": "Marfa Lights Mystery explains West Texas light phenomenon reported near Marfa, where distant glows appear in the desert and invite natural, optical, and.",
+    "description": "A source-aware guide to the Marfa Lights mystery, Texas witness reports, Paisano Pass, Chinati Mountains, mirage explanations, folklore, and roadside viewing culture.",
     "tags": [
       "Light Phenomenon",
       "Marfa Lights",
@@ -3471,18 +3710,18 @@
     ],
     "motif": "Light Phenomenon",
     "topics": [
-      "Natural Mystery",
+      "strange-natural-light-phenomenon",
       "Strange Nature / Light Phenomenon / Public reports and source-limited interpretation",
-      "marfa lights mystery",
-      "Marfa Lights is treated through one concrete anchor: the West Texas light phenomenon reported near Marfa, where distant glows appear in the desert and invite natural, optical, and folklore explanations.",
-      "Light Phenomenon",
-      "Marfa Lights",
-      "Texas Mystery",
-      "Desert Lights",
-      "Optical Mystery",
-      "marfa lights mystery origin",
-      "marfa lights mystery meaning",
-      "light phenomenon folklore"
+      "marfa-lights-mystery",
+      "The article reads the Marfa Lights as a roadside mystery sustained by distance, desert optics, and repeated public watching.",
+      "Marfa",
+      "Paisano Pass",
+      "Chinati Mountains",
+      "viewing center",
+      "mirage",
+      "headlights",
+      "desert",
+      "Texas"
     ]
   },
   {
@@ -3492,7 +3731,7 @@
     "url": "/stories/mount-olympus-greek-myth",
     "category": "Legendary Places",
     "summary": "Mount Olympus is both a real mountain in Greece and the mythic home of the Olympian gods. In Greek tradition, it becomes the place above human affairs where divine power gathers.",
-    "description": "Mount Olympus in Greek Myth explores the origin, meaning, and folklore behind Greek mythic mountain associated with the Olympian gods, divine assembly, and.",
+    "description": "A source-aware guide to Mount Olympus in Greek myth, the Olympian gods, Homeric palace imagery, Zeus, sacred mountain symbolism, and the 2026 UNESCO listing.",
     "tags": [
       "Sacred Mountain",
       "Mount Olympus",
@@ -3502,18 +3741,18 @@
     ],
     "motif": "Sacred Mountain",
     "topics": [
-      "Legendary Place",
+      "legendary-place-sacred-mountain",
       "Legendary Places / Sacred Mountain / Existing folklore and public cultural memory",
-      "mount olympus greek myth",
-      "Mount Olympus is treated through one concrete anchor: the Greek mythic mountain associated with the Olympian gods, divine assembly, and the imagined space above ordinary human life.",
-      "Sacred Mountain",
-      "Mount Olympus",
-      "Greek Myth",
-      "Home of the Gods",
-      "Legendary Place",
-      "mount olympus greek myth origin",
-      "mount olympus greek myth meaning",
-      "sacred mountain folklore"
+      "mount-olympus-greek-myth",
+      "The article reads Olympus as a vertical address for divine power, where landscape becomes social order.",
+      "Olympus",
+      "Olympos",
+      "Zeus",
+      "Olympians",
+      "Homer",
+      "Hesiod",
+      "Mytikas",
+      "sacred mountain"
     ]
   },
   {
@@ -3523,7 +3762,7 @@
     "url": "/stories/mjolnir-thors-hammer",
     "category": "Mythic Objects",
     "summary": "Mjolnir is Thor's hammer in Norse myth, a powerful weapon associated with thunder, protection, consecration, and divine force. It is famous for being hurled and returning.",
-    "description": "Mjolnir explores the origin, meaning, and folklore behind Thor's hammer in Norse myth, a returning weapon associated with thunder, protection, divine power.",
+    "description": "A source-aware guide to Mjolnir, Thor's hammer in Norse myth, dwarf-forging, giant fighting, returning weapon motifs, blessing rituals, amulets, and modern symbolism.",
     "tags": [
       "Mythic Weapon",
       "Mjolnir",
@@ -3533,18 +3772,18 @@
     ],
     "motif": "Mythic Weapon",
     "topics": [
-      "Mythic Object",
+      "mythic-object-divine-weapon",
       "Mythic Objects / Mythic Weapon / Mythic tradition and variant-aware interpretation",
-      "mjolnir thors hammer",
-      "Mjolnir is treated through one concrete anchor: Thor's hammer in Norse myth, a returning weapon associated with thunder, protection, divine power, and later symbolic use.",
-      "Mythic Weapon",
+      "mjolnir-thors-hammer",
+      "The article reads Mjolnir as a boundary object: it breaks chaos outside the community and blesses order inside it.",
       "Mjolnir",
       "Thor",
-      "Norse Myth",
-      "Protection Symbol",
-      "mjolnir thors hammer origin",
-      "mjolnir thors hammer meaning",
-      "mythic weapon folklore"
+      "jotnar",
+      "Thrym",
+      "dwarves",
+      "amulet",
+      "consecration",
+      "Ragnarok"
     ]
   },
   {
