@@ -882,7 +882,7 @@ function allocateRecommendationSlots(relatedStories, navigationStories) {
     readNext: pool[0] || null,
     related: pool.slice(1, 7),
     bridge: pool.slice(7, 10),
-    rail: pool.slice(10, 14)
+    rail: pool.slice(1, 5)
   };
 }
 
