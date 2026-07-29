@@ -1,266 +1,743 @@
 {
   "id": "friday-the-13th-origin",
-  "recordId": "friday-the-13th-origin",
   "slug": "friday-the-13th-origin",
-  "pathname": "/stories/friday-the-13th-origin",
-  "canonicalUrl": "https://kyunolab.com/stories/friday-the-13th-origin",
-  "category": "Legend Origins",
-  "storyType": "motif-transmission",
   "title": "Friday the 13th: How Separate Fears Became One Calendar Omen",
   "displayTitle": "Friday the 13th: How Separate Fears Became One Calendar Omen",
   "h1": "Friday the 13th: How Separate Fears Became One Calendar Omen",
-  "seoTitle": "Friday the 13th: How Separate Fears Became One Calendar Omen",
-  "metaTitle": "Friday the 13th: How Separate Fears Became One Calendar Omen",
-  "metaDescription": "How unlucky Friday, unlucky thirteen, Templar mythology, print culture, and modern psychology combined into the Friday the 13th superstition.",
-  "introSummary": "Friday the 13th is not a simple medieval inheritance; it is a modern calendar omen built from older anxieties about Friday, the number thirteen, and later origin stories.",
-  "summaryAnswer": "Friday the 13th became unlucky when two older symbolic systems, unlucky Friday and unlucky thirteen, were combined and stabilized by modern print culture. The 1307 Templar arrests are real, but the claim that they originated the superstition is a later explanation rather than a proven source.",
-  "updatedAt": "2026-07-28",
-  "qa": [
-    {
-      "question": "Did the Knights Templar create Friday the 13th superstition?",
-      "answer": "No. The 1307 arrests happened on Friday the 13th, but the link to the superstition is a later explanation, not a proven origin."
-    },
-    {
-      "question": "Why is thirteen considered unlucky?",
-      "answer": "Explanations include Christian Last Supper imagery and broader discomfort with thirteen as a number beyond symbolic twelve."
-    },
-    {
-      "question": "Why was Friday considered unlucky?",
-      "answer": "Christian crucifixion memory and other weekday taboos gave Friday its own cautionary associations."
-    },
-    {
-      "question": "When did the combined phrase become prominent?",
-      "answer": "Evidence points to modern print culture, especially nineteenth- and early twentieth-century circulation, rather than a continuous medieval tradition."
-    },
-    {
-      "question": "Why does the date still affect people?",
-      "answer": "A familiar cultural warning makes bad outcomes easier to imagine and gives ordinary coincidence a narrative frame."
-    }
-  ],
-  "storySourceNote": "This article is a source-aware folklore reconstruction that distinguishes documented references from later legend interpretation.",
+  "seoTitle": "Friday the 13th Origin: From the 1307 Templar Arrests to the Modern Unlucky-Date Myth | Kyunolab",
+  "metaTitle": "Friday the 13th Origin: From the 1307 Templar Arrests to the Modern Unlucky-Date Myth | Kyunolab",
+  "metaDescription": "A source-aware guide to Friday the 13th, with folklore context, source limits, cultural meaning, and the record-like tradition behind the legend.",
+  "category": "Legend Origins",
+  "categorySlug": "legend-origins",
+  "categoryGroup": "Supplemental Archive",
+  "tag": "Superstition Origin",
+  "primaryTag": "Superstition Origin",
+  "seedKeyword": "friday the 13th",
+  "primaryKeyword": "friday the 13th",
+  "searchIntent": "origin",
+  "articleFormat": "search-info",
+  "cluster": "Legend Origins / Superstition Origin",
   "relatedKeywords": [
     "Friday the 13th",
-    "triskaidekaphobia",
-    "Knights Templar",
-    "unlucky thirteen",
-    "calendar superstition",
-    "metafolklore",
-    "superstition origins"
+    "superstition origin",
+    "calendar omen",
+    "unlucky number",
+    "folklore",
+    "modern fear"
   ],
-  "contentDNA": {
-    "targetQuery": "friday the 13th: how separate fears became one calendar omen",
-    "canonicalQuery": "friday-the-13th-origin",
-    "searchQuestion": "Friday the 13th became unlucky when two older symbolic systems, unlucky Friday and unlucky thirteen, were combined and stabilized by modern print culture. The 1307 Templar arrests are real, but the claim that they originated the superstition is a later explanation rather than a proven source.",
-    "readerIntent": "Understand the source-aware origin and transmission of a legend motif.",
-    "uniqueAngle": "It separates older fears of Friday and thirteen from later explanations such as the Templar arrest story.",
-    "subjectClass": "motif-transmission",
-    "narrativeLens": "source-aware folklore transmission",
-    "evidencePosture": "external-source synthesis",
-    "culturalFrame": "Legend Origins",
-    "sceneAnchor": "Two Older Fears Before One Date",
-    "subjectSpecificVocabulary": [
+  "secondaryKeywords": [
+    "friday the 13th origin",
+    "knights templar",
+    "friday 13 superstition",
+    "temple trial records",
+    "france 1307",
+    "legend origins",
+    "myth transmission",
+    "single-event narrative"
+  ],
+  "topicScore": 92,
+  "topicStatus": "approved",
+  "scoreBreakdown": {
+    "searchDemand": 29,
+    "clickCuriosity": 24,
+    "siteFit": 23,
+    "expansionPotential": 10,
+    "sourceSafety": 6
+  },
+  "summaryAnswer": "Friday the 13th matters because it turns calendar fear, unlucky numbers, weekday symbolism, popular superstition, media repetition, and modern risk imagination into a recognizable cultural pattern. A source-aware reading keeps ordinary explanations visible while explaining why the tradition remains powerful.",
+  "readTime": "9 min read",
+  "storyType": "legend-origins-calendar-omen",
+  "contentStandard": "unified",
+  "editorialStatus": "approved",
+  "legacyContent": false,
+  "substantiveRevisionAt": "2026-07-19",
+  "internalLinkEligible": true,
+  "sourceStatus": "Legend Origins / Superstition Origin / Folklore origin and motif record",
+  "publicSourceBasis": "Library of Congress Folklife Today research and modern folklore discussion of the superstition",
+  "excerpt": "Friday the 13th is a modern superstition that combines two older streams of belief: unlucky Fridays and the uneasy number thirteen. The combined date is much easier to document in the 19th and early 20th centuries than in the Middle Ages.",
+  "introSummary": "Friday the 13th becomes durable because a date that combines separate anxieties about Friday and the number thirteen into one portable modern omen, turning calendar superstition origin into a source-aware folklore record.",
+  "publishedAt": "2026-07-19",
+  "updatedAt": "2026-07-29",
+  "relatedStoryIds": [
+    "black-cat-superstition-origin",
+    "evil-eye-origin",
+    "horseshoe-luck-origin",
+    "rabbits-foot-luck-origin"
+  ],
+  "relatedStorySlugs": [
+    "black-cat-superstition-origin",
+    "evil-eye-origin",
+    "walking-under-ladders-superstition",
+    "horseshoe-luck-origin"
+  ],
+  "tags": [
+    "Superstition Origin",
+    "Friday the 13th",
+    "Metafolklore",
+    "Unlucky Day",
+    "Calendar Belief"
+  ],
+  "detail": "modern superstition that joins an unlucky Friday with the number thirteen and then searches backward for older explanations",
+  "evidence": "Library of Congress folklore writing, newspaper references, 19th-century belief history, and later pop-culture reception",
+  "researchSources": [
+    {
+      "title": "Library of Congress - On the Possible Origins of Friday the Thirteenth",
+      "url": "https://blogs.loc.gov/folklife/2024/12/on-the-possible-origins-of-friday-the-thirteenth-metafolklore-fear-and-fun/",
+      "sourceType": "reference",
+      "supports": "Supports the metafolklore frame, 19th-century evidence, and caution around the Knights Templar explanation."
+    },
+    {
+      "title": "Library of Congress - Who Is Afraid of Friday the Thirteenth?",
+      "url": "https://blogs.loc.gov/folklife/2017/01/whos-afraid-of-friday-the-thirteenth/",
+      "sourceType": "reference",
+      "supports": "Supports the history of the belief, the Thirteen Club, and the distinction between older unlucky-day beliefs and the modern combined date."
+    },
+    {
+      "title": "HISTORY - Friday the 13th Origins",
+      "url": "https://www.history.com/topics/folklore/friday-the-13th",
+      "sourceType": "reference",
+      "supports": "Supports popular-history context and the range of common explanations."
+    }
+  ],
+  "sourceNotes": {
+    "sharedVerifiedPoints": [
+      "Friday the 13th is a pre-existing subject in folklore, myth, legend, mystery, or public cultural memory.",
+      "The article can responsibly describe the common record around the modern superstition that joins an unlucky Friday with the number thirteen and then searches backward for older explanations.",
+      "The strongest reading stays within Library of Congress folklore writing, newspaper references, 19th-century belief history, and later pop-culture reception."
+    ],
+    "variants": [
+      "Specific details shift by source, region, retelling, publication history, or community memory.",
+      "Later popular versions often make the story cleaner than the source record allows."
+    ],
+    "unsupportedClaimsToAvoid": [
+      "Do not present supernatural or speculative claims as verified fact.",
+      "Do not invent witnesses, documents, dates, or discoveries beyond the source-aware record.",
+      "Do not imply a single definitive origin when the record contains variants or source limits."
+    ],
+    "sourceLimits": [
+      "The article explains the story and its reception without treating all claims as equally proven.",
+      "Interpretive meanings are presented as readings, not as settled historical facts."
+    ]
+  },
+  "targetQuery": "friday the 13th",
+  "canonicalQuery": "friday the 13th",
+  "uniqueAngle": "Friday the 13th is treated through one concrete anchor: the modern superstition that joins an unlucky Friday with the number thirteen and then searches backward for older explanations.",
+  "sceneAnchor": "the modern superstition that joins an unlucky Friday with the number thirteen and then searches backward for older explanations",
+  "subjectSpecificVocabulary": [
+    "Friday the 13th",
+    "metafolklore",
+    "superstition",
+    "unlucky",
+    "Friday"
+  ],
+  "contentType": "story",
+  "storyBrief": {
+    "topic": "Friday the 13th",
+    "category": "Legend Origins",
+    "contentType": "legend-origins",
+    "existenceStatus": "confirmed",
+    "circulationLevel": "widely known",
+    "knownNames": [
       "Friday the 13th",
-      "triskaidekaphobia",
-      "Knights Templar",
-      "unlucky thirteen",
-      "calendar superstition",
-      "metafolklore",
-      "superstition origins"
+      "Friday the 13th Origin",
+      "Superstition Origin",
+      "Metafolklore",
+      "Unlucky Day",
+      "Calendar Belief"
     ],
-    "requiredSpecificDetails": [
-      "Two Older Fears Before One Date",
-      "Why Thirteen Felt Beyond Completion",
-      "Why Friday Carried Its Own Weight",
-      "The Templar Date and the Origin Myth",
-      "Print Culture Made the Combination Stick",
-      "Modern Fear, Behavior, and Pop Culture",
-      "Reading the Date With Source Discipline"
+    "cultureOrContext": "Library of Congress Folklife Today research and modern folklore discussion of the superstition",
+    "coreStoryElements": [
+      "Friday the 13th is a modern superstition that combines two older streams of belief: unlucky Fridays and the uneasy number thirteen. The combined date is much easier to document in the 19th and early 20th centuries than in the Middle Ages.",
+      "Many origin stories point to the Knights Templar, the Last Supper, or Norse myth, but folklore researchers treat those as later explanations unless strong earlier evidence appears.",
+      "Friday the 13th is treated in many parts of Europe and North America as an unlucky day. Some people avoid travel, business, weddings, or new projects on that date.",
+      "Folklorists use the idea of metafolklore for stories people tell about folklore itself. Friday the 13th is full of it."
     ],
-    "prohibitedGenericPhrases": [
-      "this proves a curse",
-      "all versions are identical",
-      "the rumor alone is evidence"
+    "reportedVariants": [
+      {
+        "claim": "Library of Congress folklore writing points to 19th-century references and early 20th-century popularization. The belief was circulating before some famous works used it.",
+        "scope": "source and variant record"
+      },
+      {
+        "claim": "This means the superstition was not invented by one novel, one movie, or one medieval event. It grew through jokes, newspapers, social custom, and repeated explanations.",
+        "scope": "interpretive caution"
+      }
     ],
-    "sectionBlueprint": [
+    "editorialInterpretationOptions": [
+      "Friday the 13th works because it is compact. It turns an ordinary calendar square into a small omen.",
+      "People do not need to believe strongly for the date to function. A joke, a nervous habit, a movie title, or a warning is enough to keep it alive."
+    ],
+    "uncertainDetails": [
+      "The exact origin, motive, or earliest form may be disputed or incomplete.",
+      "Later retellings may simplify, intensify, or relocate the story."
+    ],
+    "prohibitedInventions": [
+      "Do not add a hidden witness or newly discovered document.",
+      "Do not turn folklore or speculation into confirmed fact.",
+      "Do not invent modern evidence that is not in the source record."
+    ],
+    "existenceEvidence": [
       {
-        "id": "two-older-fears-before-one-date",
-        "heading": "Two Older Fears Before One Date"
+        "title": "Library of Congress - On the Possible Origins of Friday the Thirteenth",
+        "url": "https://blogs.loc.gov/folklife/2024/12/on-the-possible-origins-of-friday-the-thirteenth-metafolklore-fear-and-fun/",
+        "sourceType": "reference",
+        "supports": "Supports the metafolklore frame, 19th-century evidence, and caution around the Knights Templar explanation."
       },
       {
-        "id": "why-thirteen-felt-beyond-completion",
-        "heading": "Why Thirteen Felt Beyond Completion"
+        "title": "Library of Congress - Who Is Afraid of Friday the Thirteenth?",
+        "url": "https://blogs.loc.gov/folklife/2017/01/whos-afraid-of-friday-the-thirteenth/",
+        "sourceType": "reference",
+        "supports": "Supports the history of the belief, the Thirteen Club, and the distinction between older unlucky-day beliefs and the modern combined date."
       },
       {
-        "id": "why-friday-carried-its-own-weight",
-        "heading": "Why Friday Carried Its Own Weight"
-      },
-      {
-        "id": "the-templar-date-and-the-origin-myth",
-        "heading": "The Templar Date and the Origin Myth"
-      },
-      {
-        "id": "print-culture-made-the-combination-stick",
-        "heading": "Print Culture Made the Combination Stick"
-      },
-      {
-        "id": "modern-fear-behavior-and-pop-culture",
-        "heading": "Modern Fear, Behavior, and Pop Culture"
-      },
-      {
-        "id": "reading-the-date-with-source-discipline",
-        "heading": "Reading the Date With Source Discipline"
+        "title": "HISTORY - Friday the 13th Origins",
+        "url": "https://www.history.com/topics/folklore/friday-the-13th",
+        "sourceType": "reference",
+        "supports": "Supports popular-history context and the range of common explanations."
       }
     ]
   },
+  "seoHeadings": [
+    "The Belief Itself",
+    "How Origin Stories Gathered Around It",
+    "What the Evidence Suggests",
+    "Why the Date Still Works"
+  ],
+  "publicArticlePlan": {
+    "title": "Friday the 13th Origin: Superstition, Metafolklore, and the Making of an Unlucky Date",
+    "dek": "Friday the 13th combines two separate unlucky ideas: suspicion around Fridays and the number thirteen, joined into a modern superstition that later searched for older origins.",
+    "quickAnswer": {
+      "paragraphs": [
+        "In brief, Friday the 13th is a modern superstition that combines two older streams of belief: unlucky Fridays and the uneasy number thirteen. The combined date is much easier to document in the 19th and early 20th centuries than in the Middle Ages. Many origin stories point to the Knights Templar, the Last Supper, or Norse myth, but folklore researchers treat those as later explanations unless strong earlier evidence appears.",
+        "The main movement is clear: Friday the 13th is treated in many parts of Europe and North America as an unlucky day. Some people avoid travel, business, weddings, or new projects on that date. Library of Congress folklore writing points to 19th-century references and early 20th-century popularization. The belief was circulating before some famous works used it. Friday the 13th works because it is compact. It turns an ordinary calendar square into a small omen."
+      ],
+      "targetWords": {
+        "min": 90,
+        "max": 180
+      }
+    },
+    "introduction": [
+      "Friday the 13th is anchored by the modern superstition that joins an unlucky Friday with the number thirteen and then searches backward for older explanations. It also appears through names such as Friday the 13th, Friday the 13th Origin, Superstition Origin, Metafolklore.",
+      "Friday the 13th is a modern superstition that combines two older streams of belief: unlucky Fridays and the uneasy number thirteen. The combined date is much easier to document in the 19th and early 20th centuries than in the Middle Ages. The exact origin, motive, or earliest form may be disputed or incomplete."
+    ],
+    "sections": [
+      {
+        "id": "the-detail-that-defines-friday-the-13th",
+        "heading": "The Detail That Defines Friday the 13th",
+        "purpose": "",
+        "contentLayer": "existing-story",
+        "storyBriefInputs": [],
+        "targetWords": {
+          "min": 170,
+          "max": 360
+        },
+        "paragraphs": [
+          "Friday the 13th begins with a belief whose origin is layered rather than single: the modern superstition that joins an unlucky Friday with the number thirteen."
+        ]
+      },
+      {
+        "id": "how-friday-the-13th-is-usually-remembered",
+        "heading": "How Friday the 13th Is Usually Remembered",
+        "purpose": "",
+        "contentLayer": "existing-story",
+        "storyBriefInputs": [],
+        "targetWords": {
+          "min": 170,
+          "max": 360
+        },
+        "paragraphs": [
+          "Friday the 13th is treated in many parts of Europe and North America as an unlucky day. Some people avoid travel, business, weddings, or new projects on that date. Friday the 13th is treated in many parts of Europe and North America as an unlucky day. Some people avoid travel, business, weddings, or new projects on that date.",
+          "Folklorists use the idea of metafolklore for stories people tell about folklore itself. Friday the 13th is full of it."
+        ]
+      },
+      {
+        "id": "where-later-versions-differ",
+        "heading": "Where Later Versions Differ",
+        "purpose": "",
+        "contentLayer": "reported-variant",
+        "storyBriefInputs": [],
+        "targetWords": {
+          "min": 170,
+          "max": 360
+        },
+        "paragraphs": [
+          "Later retellings do not always keep the same emphasis. Library of Congress folklore writing points to 19th-century references and early 20th-century popularization. The belief was circulating before some famous works used it.",
+          "Another difference appears in the details that later audiences remember. This means the superstition was not invented by one novel, one movie, or one medieval event. It grew through jokes, newspapers, social custom, and repeated explanations."
+        ]
+      },
+      {
+        "id": "what-the-available-sources-show",
+        "heading": "What the Available Sources Show",
+        "purpose": "",
+        "contentLayer": "source-context",
+        "storyBriefInputs": [],
+        "targetWords": {
+          "min": 170,
+          "max": 360
+        },
+        "paragraphs": [
+          "Friday the 13th appears in source material connected with Library of Congress Folklife Today research and modern folklore discussion of the superstition. Public references used for orientation include Library of Congress and HISTORY.",
+          "Library of Congress folklore writing, newspaper references, 19th-century belief history, and later pop-culture reception. Those references are useful for checking local circulation, repeated reports, and later retellings. Recurring terms include Friday the 13th, metafolklore, superstition, unlucky and Friday."
+        ]
+      },
+      {
+        "id": "what-friday-the-13th-means",
+        "heading": "What Friday the 13th Means",
+        "purpose": "",
+        "contentLayer": "variant-and-interpretation",
+        "storyBriefInputs": [],
+        "targetWords": {
+          "min": 170,
+          "max": 360
+        },
+        "paragraphs": [
+          "One possible reading is that friday the 13th works because it is compact. It turns an ordinary calendar square into a small omen.",
+          "People do not need to believe strongly for the date to function. A joke, a nervous habit, a movie title, or a warning is enough to keep it alive."
+        ]
+      }
+    ],
+    "conclusion": {
+      "paragraphs": [
+        "Friday the 13th remains memorable because the modern superstition that joins an unlucky Friday with the number thirteen and then searches backward for older explanations gives the subject a concrete shape readers can follow.",
+        "Friday the 13th works because it is compact. It turns an ordinary calendar square into a small omen. Library of Congress folklore writing points to 19th-century references and early 20th-century popularization. The belief was circulating before some famous works used it."
+      ],
+      "targetWords": {
+        "min": 100,
+        "max": 180
+      }
+    },
+    "faq": [
+      {
+        "q": "Where did Friday the 13th originate?",
+        "a": "In context, folklorists use the idea of metafolklore for stories people tell about folklore itself. Friday the 13th is full of it."
+      },
+      {
+        "q": "What is the earliest known form?",
+        "a": "In the main account, Friday the 13th is treated in many parts of Europe and North America as an unlucky day. Some people avoid travel, business, weddings, or new projects on that date."
+      },
+      {
+        "q": "Which elements appeared later?",
+        "a": "Library of Congress folklore writing points to 19th-century references and early 20th-century popularization. The belief was circulating before some famous works used it. This means the superstition was not invented by one novel, one movie, or one medieval event. It grew through jokes, newspapers, social custom, and repeated explanations."
+      },
+      {
+        "q": "How does the belief differ by region?",
+        "a": "Another useful reading is that people do not need to believe strongly for the date to function. A joke, a nervous habit, a movie title, or a warning is enough to keep it alive."
+      }
+    ],
+    "publicSourceNote": "Friday the 13th is treated through Library of Congress Folklife Today research and modern folklore discussion of the superstition. References such as Library of Congress and HISTORY are used as orientation points, not as proof for every later claim. Later versions are kept separate from the core account when they shift emphasis. Library of Congress folklore writing points to 19th-century references and early 20th-century popularization. The belief was circulating before some famous works used it. This means the superstition was not invented by one novel, one movie, or one medieval event. It grew through jokes, newspapers, social custom, and repeated explanations. For Friday the 13th, origin claims are presented as layered belief history rather than one settled starting point."
+  },
+  "contentDNA": {
+    "targetQuery": "friday the 13th origin",
+    "canonicalQuery": "friday-the-13th-origin",
+    "searchQuestion": "Why does Friday the 13th remain culturally memorable?",
+    "readerIntent": "Understand the folklore, source context, and record-like structure behind Friday the 13th: How Separate Fears Became One Calendar Omen.",
+    "uniqueAngle": "The article treats a date that combines separate anxieties about Friday and the number thirteen into one portable modern omen as a record-shaped folklore problem.",
+    "subjectClass": "calendar superstition origin",
+    "narrativeLens": "source-aware-folklore-record-reading",
+    "evidencePosture": "source-aware",
+    "culturalFrame": "calendar fear, unlucky numbers, weekday symbolism, popular superstition, media repetition, and modern risk imagination",
+    "sceneAnchor": "a calendar square that looks ordinary until inherited rules make it feel charged",
+    "subjectSpecificVocabulary": [
+      "Friday the 13th",
+      "triskaidekaphobia",
+      "calendar omen",
+      "unlucky Friday",
+      "number thirteen",
+      "superstition"
+    ],
+    "requiredSpecificDetails": [
+      "Friday the 13th",
+      "triskaidekaphobia",
+      "calendar omen",
+      "unlucky Friday",
+      "number thirteen",
+      "superstition"
+    ],
+    "prohibitedGenericPhrases": [
+      "this proves every legend is factual",
+      "ordinary explanations are impossible",
+      "all later claims are verified"
+    ],
+    "sectionBlueprint": []
+  },
+  "scriptSlug": "friday-the-13th-origin-youtube-script",
+  "recordId": "friday-the-13th-origin",
+  "pathname": "/stories/friday-the-13th-origin",
+  "canonicalUrl": "https://kyunolab.com/stories/friday-the-13th-origin",
+  "qa": [
+    {
+      "question": "Is Friday the 13th: How Separate Fears Became One Calendar Omen treated as literal proof?",
+      "answer": "No. This article reads the subject as a source-aware folklore tradition rather than as a claim that every attached detail is literally verified."
+    },
+    {
+      "question": "What ordinary explanations come first?",
+      "answer": "The first explanations include number symbolism, Christian cultural memory, weekday associations, almanac habits, popular journalism, film titles, and retrospective origin claims."
+    },
+    {
+      "question": "Why does the record-like form matter?",
+      "answer": "The calendar-omen tradition matters because it makes the tradition easier to name, preserve, compare, and question."
+    },
+    {
+      "question": "Why do sources matter here?",
+      "answer": "Folklife, cultural-heritage, archival provenance, and records-context sources help keep the reading grounded in transmission and interpretation."
+    },
+    {
+      "question": "What is the main meaning?",
+      "answer": "The main meaning is that Friday the 13th stores uncertainty in an organized cultural form that later audiences can keep re-reading."
+    }
+  ],
+  "storySourceNote": "This article reads Friday the 13th: How Separate Fears Became One Calendar Omen through folklore, cultural-heritage, provenance, and records-context methods. It uses external source frameworks to explain transmission, genre, and cautious interpretation without claiming that the tradition is literal proof in every detail.",
   "longformArticle": {
     "contentPackageVersion": "archive-story-content-v1",
-    "deck": "Friday the 13th is not a simple medieval inheritance; it is a modern calendar omen built from older anxieties about Friday, the number thirteen, and later origin stories.",
-    "opening": [],
+    "deck": "Friday the 13th becomes durable because a date that combines separate anxieties about Friday and the number thirteen into one portable modern omen, turning calendar superstition origin into a source-aware folklore record.",
+    "opening": [
+      "Friday the 13th survives because it gives tradition a shape that can be named, repeated, and argued over. The subject is a calendar superstition origin, but the story works like a record problem: a place, phenomenon, omen, or object is treated as if it could be filed and explained, while part of it remains outside ordinary proof.",
+      "The central detail is a date that combines separate anxieties about Friday and the number thirteen into one portable modern omen. This article reads that detail through source-aware folklore practice rather than as a claim of literal verification. The aim is to explain why calendar fear, unlucky numbers, weekday symbolism, popular superstition, media repetition, and modern risk imagination can feel durable, meaningful, and strangely documentable without flattening the tradition into either simple fact or simple mistake."
+    ],
     "storyBody": [
       {
-        "id": "two-older-fears-before-one-date",
-        "heading": "Two Older Fears Before One Date",
+        "id": "the-first-record-shape",
+        "heading": "The First Record Shape",
         "paragraphs": [
-          "Friday the 13th feels ancient because it joins two old-looking ingredients: a weekday associated with misfortune in Christian memory and a number often treated as excessive, irregular, or unlucky. Yet the combined superstition is harder to trace than the mood suggests. Scholars and folklore writers repeatedly warn that the famous origin stories are cleaner than the evidence. The date is powerful because it feels like inherited doom, but much of its familiar explanation is modern.",
-          "The best way to understand Friday the 13th is to separate the parts. Friday had its own burden. Thirteen had its own burden. The Knights Templar arrests of Friday, October 13, 1307, were a real historical event. Later writers connected that event to the superstition. Print culture, psychology, horror media, and casual ritual then made the combined date into one of the most recognizable Western calendar omens.",
-          "Many popular accounts treat Friday the 13th as if people feared the exact date continuously from the Middle Ages onward. The evidence is messier. Fear of the number thirteen and suspicion of Friday circulated separately in several traditions before they were fused into one cultural phrase. That separation matters because it prevents a false origin story from replacing the actual transmission process.",
-          "Unlucky thirteen appears in explanations connected to the Last Supper, where Judas is remembered as the thirteenth guest, and in more general numerological discomfort with the number after twelve. Friday carries Christian associations with crucifixion and, in some cultures, execution or unlucky beginnings. Each part could make people uneasy without requiring the exact date combination.",
-          "The combined phrase works because it feels like a double warning. A bad number falls on a bad day. The calendar becomes a small trap of coincidence. Since the Gregorian calendar regularly produces such Fridays, the superstition also returns predictably. It is rare enough to notice and common enough to become ritual.",
-          "This periodic return helps the tradition survive. People remind one another, media outlets publish explainers, businesses market around it, and horror franchises reuse it. The date arrives with its own publicity. Even skeptics know the script."
+          "The first record shape is the calendar-omen tradition. A tradition becomes easier to remember when it has a form that can be entered into speech, manuscripts, reports, indexes, guidebooks, or household rules.",
+          "That form matters because it gives the subject a surface. Friday the 13th is not only an idea floating in the air. It is attached to names, scenes, phrases, witness habits, and repeated interpretive rules."
         ]
       },
       {
-        "id": "why-thirteen-felt-beyond-completion",
-        "heading": "Why Thirteen Felt Beyond Completion",
+        "id": "the-scene-people-remember",
+        "heading": "The Scene People Remember",
         "paragraphs": [
-          "One recurring explanation for fear of thirteen is that twelve feels complete. There are twelve months, zodiac signs, apostles, Olympian gods in common lists, hours on a clock face, and other culturally familiar twelves. Thirteen follows that order and appears to exceed it. Whether or not this numerological explanation is universal, it captures why the number can feel irregular inside symbolic systems built around twelve.",
-          "Religious storytelling adds another layer. In Christian tradition, the Last Supper includes thirteen at table when Judas's betrayal is remembered. Later folklore often generalizes this into a warning against thirteen guests at a meal. The number becomes associated with imbalance, betrayal, or the extra person who turns fellowship toward disaster.",
-          "Such explanations are examples of metafolklore: stories people tell about why a belief exists. They do not always prove an origin, but they show how communities rationalize a feeling. The number thirteen may be feared because it has been repeatedly explained as fearsome. Each explanation strengthens the next retelling.",
-          "The result is a number that can migrate into architecture, hotel rooms, elevator panels, lottery choices, dinner seating, and calendar fear. It becomes a sign that a system has passed beyond comfortable order. Friday the 13th inherits this older number-anxiety and gives it a date."
+          "The scene is a calendar square that looks ordinary until inherited rules make it feel charged. It is compact enough to travel and specific enough to be retold. A listener can picture it before deciding what to believe about it.",
+          "Folklore often depends on this kind of scene. The scene carries more than information. It carries mood, permission, warning, wonder, and a sense that the ordinary world has briefly opened onto another rule."
         ]
       },
       {
-        "id": "why-friday-carried-its-own-weight",
-        "heading": "Why Friday Carried Its Own Weight",
+        "id": "ordinary-explanations-first",
+        "heading": "Ordinary Explanations First",
         "paragraphs": [
-          "Friday's unlucky associations are also older than the combined superstition. In Christian memory, Friday is the day of Jesus's crucifixion. In some English-language traditions, Friday could be called hangman's day or treated as an unlucky day to begin a journey, ship, marriage, or major work. These beliefs varied, but they gave the weekday a symbolic heaviness.",
-          "Weekday superstition works because days structure routine. If a culture marks a day as risky, people can adjust behavior: delay a departure, avoid a ceremony, postpone business, or perform protective rituals. The day becomes a schedule for caution. Friday the 13th intensifies that scheduling because the suspect weekday coincides with the suspect number.",
-          "Other cultures organize calendar unease differently. Spain and parts of the Spanish-speaking world often treat Tuesday the 13th as more ominous. Italy has strong traditions around unlucky seventeen. These variations show that fear attaches to culturally meaningful combinations, not to a universal property of one date.",
-          "Friday's role in the modern superstition is therefore not a complete explanation but a necessary ingredient. It supplies a sacred and social mood of caution. Thirteen supplies numerical irregularity. Together they create a date that feels overdetermined, as if two warning systems have agreed."
+          "A careful reading begins with ordinary explanations. For this subject, those explanations include number symbolism, Christian cultural memory, weekday associations, almanac habits, popular journalism, film titles, and retrospective origin claims. These are not boring footnotes. They are the conditions that let traditions survive in the first place.",
+          "Transmission is never frictionless. A phrase changes in translation, a report is shortened, a place is identified with a local landmark, an omen is moved into a new holiday image, or a mythic object is reinterpreted by later readers."
         ]
       },
       {
-        "id": "the-templar-date-and-the-origin-myth",
-        "heading": "The Templar Date and the Origin Myth",
+        "id": "why-the-tradition-feels-larger",
+        "heading": "Why The Tradition Feels Larger",
         "paragraphs": [
-          "The Knights Templar arrests are the most famous supposed origin. On Friday, October 13, 1307, King Philip IV of France moved against the order, and Templars were arrested under accusations of heresy and other crimes. The date is real, and the event was devastating for the order. What is not established is that medieval people began fearing Friday the 13th because of it.",
-          "National Geographic and the Library of Congress Folklife discussion both emphasize the gap. The Templar connection appears to be a later rationalization, popularized by modern books and fiction. It is attractive because it offers a dramatic historical scene: secretive knights, royal debt, accusations, arrests, torture, and downfall. The story feels like an origin even when evidence for direct transmission is weak.",
-          "This is a classic folklore problem. A later explanation can become more famous than the origin it claims to explain. People remember the Templar story because it gives the date a cinematic beginning. It turns an abstract superstition into a political betrayal. The historical event is real, but its use as the origin of the superstition is part of the superstition's modern mythology.",
-          "A source-aware article can include the Templars without overstating them. They belong to the afterlife of the belief: one powerful way modern culture explains why the date should matter. They do not provide a clean medieval birth certificate for Friday the 13th fear."
+          "The tradition feels larger because it joins a small sign to a much bigger question. A bridge to the gods becomes a map of order. A hidden island becomes a hope of return. A glowing sphere becomes weather with personality. A black cat becomes a test of luck. A forbidden book becomes a question about knowledge and danger.",
+          "That movement from sign to question is the engine of the legend. The story does not merely tell the reader what happened. It asks what kind of world would allow the sign to matter."
         ]
       },
       {
-        "id": "print-culture-made-the-combination-stick",
-        "heading": "Print Culture Made the Combination Stick",
+        "id": "names-as-anchors",
+        "heading": "Names As Anchors",
         "paragraphs": [
-          "The combined phrase Friday the 13th appears to have become culturally prominent much later than its ingredients. Scholars often point to nineteenth- and early twentieth-century print references, including the Thirteen Club, which challenged superstition, and Thomas W. Lawson's 1907 novel Friday, the Thirteenth, which helped give the date a modern public identity. Whether any single publication created the belief is less important than the print pattern itself.",
-          "Print culture stabilized the combination. Newspapers could mention the date, explain it, mock it, or report behavior around it. Almanacs, advice columns, novels, and later radio, television, and film could repeat the phrase. The date became searchable before digital search existed: a recognized headline, theme, and joke.",
-          "This process also encouraged origin hunting. Once the phrase was familiar, writers needed stories to explain it. Biblical accounts, Norse myths, Templar arrests, numerology, and invented ancient customs all became available. The superstition gained depth through accumulation. Not every explanation was accurate, but each one made the date feel older and more meaningful.",
-          "The modern omen is therefore a product of repetition as much as inheritance. It became real in behavior because people kept naming it. Calendars printed it, media flagged it, and ordinary speakers reminded one another. A superstition does not need a single founder when it has a reliable schedule and a memorable label."
+          "Names anchor uncertain material. Friday the 13th, triskaidekaphobia, calendar omen, unlucky Friday, number thirteen, superstition are not decorative terms. They are the vocabulary that lets the tradition stay recognizable across different tellings.",
+          "A name also lets disagreement continue. People can argue about location, origin, meaning, or evidence because the name gives them a shared object of attention."
         ]
       },
       {
-        "id": "modern-fear-behavior-and-pop-culture",
-        "heading": "Modern Fear, Behavior, and Pop Culture",
+        "id": "the-boundary-function",
+        "heading": "The Boundary Function",
         "paragraphs": [
-          "Friday the 13th now operates on several levels. Some people sincerely avoid travel, business decisions, weddings, or risk. Others joke about it while still noticing the date. Psychologists studying superstition have noted that even nonbelievers can be influenced by a familiar jinx because the bad outcome becomes easier to imagine. The date creates attention, and attention can make coincidence feel meaningful.",
-          "Popular culture has amplified the effect. Horror films, especially the Friday the 13th franchise, gave the date a visual and emotional identity far beyond older religious explanations. The date became not only unlucky but cinematic. A calendar superstition became a genre signal.",
-          "Commercial culture also uses the date playfully. Tattoo shops run specials, brands post jokes, travel sites publish explainers, and news outlets ask whether the day is really unlucky. These practices may seem to weaken belief, but they also keep the phrase alive. A superstition can survive as entertainment.",
-          "This mixed status is typical of modern folklore. People can both disbelieve and perform. They knock on wood, mention the date, avoid saying something aloud, or laugh while taking a small precaution. Friday the 13th is powerful because it supports all those modes at once."
+          "This tradition works at a boundary. It may be a boundary between realms, water and land, storm and room, path and omen, or sacred knowledge and ordinary reading.",
+          "Boundaries are useful in folklore because they make change visible. When the subject appears at a threshold, the teller can imply that crossing matters even before explaining what has changed."
         ]
       },
       {
-        "id": "reading-the-date-with-source-discipline",
-        "heading": "Reading the Date With Source Discipline",
+        "id": "evidence-with-edges",
+        "heading": "Evidence With Edges",
         "paragraphs": [
-          "The responsible conclusion is that Friday the 13th is not one story. It is a convergence. Unlucky thirteen, unlucky Friday, religious memory, numerology, print culture, Templar mythology, psychological attention, and horror media all contribute. A clean origin is tempting because folklore likes memorable beginnings, but the evidence points to gradual assembly.",
-          "That assembly is more interesting than the simplified version. It shows how modern people create ancient-looking traditions. A date can feel old because its parts are old, because its explanations are old-sounding, and because it returns with ritual regularity. The fear is culturally real even if many of its origin claims are weak.",
-          "For readers, the key is to keep layers separate. The Templar arrests happened on Friday, October 13, 1307. Fear of thirteen and fear of Friday have older roots. The combined superstition gained modern form later. The horror brand is later still. Confusing these layers makes the story cleaner but less truthful.",
-          "Friday the 13th remains useful as folklore because it dramatizes how people make order out of chance. The calendar is neutral, but culture marks certain squares with warning. Once marked, they attract attention. Once attention gathers, coincidence becomes story. That is how a day becomes an omen.",
-          "The Templar explanation is worth keeping in the article precisely because it shows how origin stories are made. A known date, a dramatic event, and a later superstition fit together so neatly that the connection feels inevitable. The problem is that neatness is not evidence. A historical event can be memorable without being the source of every later meaning attached to its date. In this case, the arrests belong to medieval political and financial history, while the Friday-the-13th superstition belongs to a later calendar folklore system.",
-          "This difference matters because false origins change how people understand the past. The Templar story can make medieval history look like a secret code designed to explain modern fear. The actual story is more ordinary and more revealing: rulers pursued wealth and power, accusations were used as political tools, and the order's downfall later attracted mythmakers because its end felt too abrupt. The date became useful to modern storytellers because it gave the superstition a grand scene.",
-          "The same process happens with biblical and Norse explanations. They may preserve older symbolic material, but popular accounts often stretch them into direct origins. Judas as the thirteenth guest, Loki as an unwanted extra, or Friday as crucifixion day can all explain why the ingredients felt ominous. They do not automatically prove that people historically combined them into Friday the 13th in a continuous line. They are explanatory resources, not always evidence of transmission.",
-          "A good source note therefore has to name the gap. It can say that thirteen and Friday had separate unlucky associations. It can say that Friday, October 13, 1307, was a real date in the Templar suppression. It can say that modern writers repeatedly connect these materials. But it should resist the phrase \"this is where the superstition began\" unless the evidence shows that people at the time made that connection.",
-          "The date's modern strength comes from public rehearsal. Every occurrence gives newspapers, schools, offices, families, and social feeds a reason to retell the origin question. The explanations do not need to agree. In fact, disagreement helps. One person mentions Judas, another the Templars, another numerology, another horror films. The day becomes a small annual seminar in superstition, and that repeated conversation keeps it alive.",
-          "The horror franchise added a separate kind of memory. For many people, Friday the 13th first means a movie title rather than a religious or historical argument. Popular culture made the date visual, marketable, and repeatable. It gave the superstition a mask, a soundtrack, and a genre. That media layer can be historically late and still culturally powerful. Folklore is not weakened by late additions; it often survives because late additions make old signs usable again.",
-          "Even skepticism becomes part of the ritual. Articles appear explaining that the date is not statistically unlucky, that emergency rooms do not overflow, or that the stock market is not doomed. These skeptical explanations still mark the day as special. They tell readers not to be afraid, but by doing so they repeat the name of the fear. The debunking becomes another way the omen circulates.",
-          "This is why Friday the 13th is best understood as a layered calendar performance. Some people fear it, some mock it, some sell it, some debunk it, and many simply notice it. The noticing is the core. The date has become a cultural prompt: look for risk, tell the origin, decide whether you believe, perform a little caution, and move on. A day becomes folklore when ordinary time is asked to carry a story every time it returns.",
-          "The calendar gives that story a useful rhythm. Unlike a rumor that must find new occasions to survive, Friday the 13th returns automatically. Each occurrence renews the archive. Old explanations are republished, new jokes are attached, and personal anecdotes are added: a delayed flight, a broken phone, a strange coincidence, a lucky escape. The date becomes a filing system for mishaps people might otherwise forget.",
-          "This filing effect is one reason the superstition feels persuasive. If a bad thing happens on an ordinary Tuesday, it may remain ordinary. If the same thing happens on Friday the 13th, the date gives it a label. The label does not cause the event, but it changes memory. People notice the match and tell it more readily.",
-          "The date also lets people practice caution without committing to fear. Someone may double-check a reservation, avoid a risky joke, or knock on wood while insisting they are not superstitious. That small performance is part of modern belief behavior. The superstition survives not because everyone fully believes it, but because enough people keep rehearsing what belief would look like.",
-          "In that sense, Friday the 13th is a model for many modern legends. It is made from old fragments, later explanations, media repetition, and playful half-belief. Its origin is not a single hidden key. Its origin is the repeated cultural act of making a date mean more than the calendar says.",
-          "That repeated act is the real tradition. The date keeps returning."
+          "Evidence with edges is evidence that can be examined but not stretched beyond its strength. A manuscript reference, storm report, local custom, motif comparison, or iconographic pattern can illuminate the tradition. It cannot automatically prove every later claim attached to it.",
+          "The article keeps those edges visible. The point is not to drain the subject of wonder. The point is to keep the wonder connected to responsible reading."
+        ]
+      },
+      {
+        "id": "the-role-of-retelling",
+        "heading": "The Role Of Retelling",
+        "paragraphs": [
+          "Retelling does not simply copy a legend. It selects what the next audience needs. A medieval compiler, antiquarian, scientist, newspaper editor, parent, occult reader, or online writer may all preserve different parts of the same structure.",
+          "Friday the 13th lasts because the structure can survive those changes. The precise explanation may shift, but the memorable relation between sign, rule, and uncertainty remains."
+        ]
+      },
+      {
+        "id": "the-human-system-around-it",
+        "heading": "The Human System Around It",
+        "paragraphs": [
+          "Every tradition has a human system around it. There are tellers, collectors, scribes, readers, observers, believers, skeptics, and people who repeat the line because it is useful even when they doubt it.",
+          "The calendar-omen tradition lets that system become visible. It shows how a community can make an uncertain thing legible enough to pass on."
+        ]
+      },
+      {
+        "id": "why-caution-helps",
+        "heading": "Why Caution Helps",
+        "paragraphs": [
+          "Caution helps because it protects the tradition from being forced into a false choice. A source-aware reader does not have to say that every report is proof or that every legend is worthless.",
+          "The better reading asks how the tradition works. What does it organize? What fear, hope, warning, or curiosity does it make shareable?"
+        ]
+      },
+      {
+        "id": "symbolic-fit",
+        "heading": "Symbolic Fit",
+        "paragraphs": [
+          "The symbolic fit is strong. The subject belongs with the images and rules that gather around it. That fit is why the tradition feels natural even when the evidence remains partial.",
+          "Symbolic fit is not the same as historical proof. It explains why the story is satisfying, why it is easy to remember, and why it keeps attracting new contexts."
+        ]
+      },
+      {
+        "id": "the-archive-question",
+        "heading": "The Archive Question",
+        "paragraphs": [
+          "The archive question is simple: what would need to survive for the tradition to become clearer? A stronger manuscript chain, a better provenance note, a fuller witness record, a regional comparison, a dated printed source, or a contextual explanation might narrow the uncertainty.",
+          "Most legends do not provide all of that. They give enough to invite reading and enough absence to keep the question alive."
+        ]
+      },
+      {
+        "id": "local-and-literary-memory",
+        "heading": "Local And Literary Memory",
+        "paragraphs": [
+          "Local memory and literary memory often meet inside these subjects. A place may be attached to a town, an omen to a household rule, a natural mystery to a family story, and a forbidden object to a written tale.",
+          "That meeting creates layered authority. The tradition can feel old because it is cited, local because it is told nearby, and personal because it gives someone a rule for interpreting experience."
+        ]
+      },
+      {
+        "id": "the-problem-of-origin",
+        "heading": "The Problem Of Origin",
+        "paragraphs": [
+          "Origin is rarely a single clean point. A tradition may have older motifs, later names, regional variants, learned reinterpretations, and modern images layered together.",
+          "For Friday the 13th, the origin question is best treated as a history of convergence. Different materials gather until the subject becomes a stable cultural sign."
+        ]
+      },
+      {
+        "id": "the-modern-afterlife",
+        "heading": "The Modern Afterlife",
+        "paragraphs": [
+          "Modern afterlives matter. A mythic place can become a fantasy setting, a legendary island can become a tourist argument, a weather mystery can become a documentary subject, an omen can become seasonal merchandise, and a forbidden book can become occult shorthand.",
+          "These afterlives do not erase older meanings. They show that the tradition still has enough structure to be reused."
+        ]
+      },
+      {
+        "id": "why-the-small-detail-works",
+        "heading": "Why The Small Detail Works",
+        "paragraphs": [
+          "The small detail works because it is easy to carry. A bridge, island, sphere, crossing animal, or dangerous book gives the audience something concrete.",
+          "Once the detail is concrete, the larger questions can remain unresolved. The reader does not need a complete theory before feeling the pull of the image."
+        ]
+      },
+      {
+        "id": "comparative-reading",
+        "heading": "Comparative Reading",
+        "paragraphs": [
+          "Comparative reading asks what other traditions do with similar materials. Other sacred places, hidden islands, strange lights, animal omens, and forbidden texts can reveal the family resemblance without making every story the same.",
+          "The comparison is useful because it distinguishes a living motif from an isolated curiosity. Friday the 13th becomes clearer when placed beside neighboring patterns."
+        ]
+      },
+      {
+        "id": "what-not-to-claim",
+        "heading": "What Not To Claim",
+        "paragraphs": [
+          "The careful reading should not claim more than the sources can carry. It should not treat mythic geography as ordinary cartography, every sighting as laboratory proof, every omen as fixed doctrine, or every forbidden book story as a recoverable manual.",
+          "That restraint is part of the craft. It lets the article remain generous toward tradition and honest about evidence."
+        ]
+      },
+      {
+        "id": "the-reader-s-test",
+        "heading": "The Reader's Test",
+        "paragraphs": [
+          "The reader's test is to ask what changes when the subject is moved from story into record. Does the name become more persuasive? Does the scene become easier to debate? Does the uncertainty become productive rather than vague?",
+          "For Friday the 13th, the answer is yes. The record-like shape helps the tradition feel available for inspection while keeping its core tension intact."
+        ]
+      },
+      {
+        "id": "why-it-endures",
+        "heading": "Why It Endures",
+        "paragraphs": [
+          "It endures because it solves a narrative problem. People need ways to talk about unreachable places, unstable phenomena, inherited warnings, and knowledge that should not be handled lightly.",
+          "Friday the 13th gives that need a memorable form. It lets culture store a question where later readers can find it."
+        ]
+      },
+      {
+        "id": "source-aware-reading",
+        "heading": "Source-Aware Reading",
+        "paragraphs": [
+          "Source-aware reading is not an attempt to make the tradition smaller. It is an attempt to see the machinery clearly: transmission, context, genre, collection, preservation, and reinterpretation.",
+          "The calendar-omen tradition becomes useful because it gathers that machinery into one manageable question. Why does this sign feel meaningful here?"
+        ]
+      },
+      {
+        "id": "the-problem-of-scale",
+        "heading": "The Problem Of Scale",
+        "paragraphs": [
+          "Scale is one reason the tradition needs a compact sign. Friday the 13th may involve realms, islands, storms, inherited rules, or dangerous knowledge, all of which are too large to hold in a single explanation.",
+          "The small record shape solves that problem. It gives the audience a handle: one name, one scene, one rule, one report, or one object. The larger tradition can then gather around that handle without becoming shapeless."
+        ]
+      },
+      {
+        "id": "the-social-use",
+        "heading": "The Social Use",
+        "paragraphs": [
+          "The social use of the tradition is practical. It gives people a way to warn, wonder, remember, teach, debate, or test the limits of ordinary explanation.",
+          "That use does not require every detail to be historically settled. A tradition can guide behavior, structure imagination, and preserve cultural memory while remaining open to argument."
+        ]
+      },
+      {
+        "id": "transmission-pressure",
+        "heading": "Transmission Pressure",
+        "paragraphs": [
+          "Transmission pressure is what happens when a story has to survive new media and new audiences. A phrase that worked in oral telling may need a manuscript frame. A local sign may need a printed explanation. A technical report may be reshaped by popular retelling.",
+          "Friday the 13th shows that pressure clearly. The subject remains recognizable because the central image is strong enough to move between learned commentary, popular summary, and everyday reference."
+        ]
+      },
+      {
+        "id": "the-difference-between-motif-and-claim",
+        "heading": "The Difference Between Motif And Claim",
+        "paragraphs": [
+          "A motif is a recurring structure. A claim asks for a particular kind of evidence. Confusing the two makes folklore harder to read.",
+          "This article treats Friday the 13th primarily as a motif. That means the important question is not only whether one attached detail can be verified, but how the pattern keeps organizing meaning across contexts."
+        ]
+      },
+      {
+        "id": "why-contradictions-survive",
+        "heading": "Why Contradictions Survive",
+        "paragraphs": [
+          "Contradictions often survive because they are useful. A place can be near and unreachable. A natural event can be reported and elusive. An omen can be lucky in one setting and unlucky in another. A book can promise knowledge and punish the reader.",
+          "Those contradictions are not always failures of memory. They can be the very feature that lets the tradition adapt to different communities and moments."
+        ]
+      },
+      {
+        "id": "the-material-imagination",
+        "heading": "The Material Imagination",
+        "paragraphs": [
+          "The material imagination gives the tradition weight. A bridge, shore, storm room, path, cat's body, manuscript, or forbidden volume makes the subject feel touchable even when its meaning remains uncertain.",
+          "The material detail also keeps the tradition from becoming abstract. Readers remember what the subject looks like before they remember the full interpretive argument."
+        ]
+      },
+      {
+        "id": "reader-responsibility",
+        "heading": "Reader Responsibility",
+        "paragraphs": [
+          "Reader responsibility means refusing both careless belief and careless dismissal. The tradition deserves attention because it has carried meaning for people. It also deserves precision because claims about origin, evidence, and history can easily be overstated.",
+          "The responsible reading asks what can be known, what can be inferred, and what should remain a live question."
+        ]
+      },
+      {
+        "id": "the-pattern-left-behind",
+        "heading": "The Pattern Left Behind",
+        "paragraphs": [
+          "When the details are compared, the pattern left behind is clear. Friday the 13th turns uncertainty into a stable cultural form.",
+          "That pattern is the real archive value of the tradition. It shows how people preserve what cannot be fully settled by making it memorable, repeatable, and open to careful return."
+        ]
+      },
+      {
+        "id": "the-interpretive-middle",
+        "heading": "The Interpretive Middle",
+        "paragraphs": [
+          "The strongest reading usually sits in the middle. It does not treat the tradition as a laboratory report, and it does not treat it as disposable fantasy. It asks why this particular subject kept attracting attention.",
+          "That middle position is useful for Friday the 13th because the subject has both shape and instability. It can be named confidently, but its meaning still depends on who is telling, collecting, translating, or using the story."
+        ]
+      },
+      {
+        "id": "the-context-test",
+        "heading": "The Context Test",
+        "paragraphs": [
+          "The context test asks what happens when the subject is placed back beside surrounding practices. Does it belong with ritual speech, map imagination, weather observation, household warning, literary instruction, or learned commentary?",
+          "For this tradition, context usually clarifies more than it closes. It shows why the subject made sense to tellers without forcing every later version into one official explanation."
+        ]
+      },
+      {
+        "id": "the-emotional-logic",
+        "heading": "The Emotional Logic",
+        "paragraphs": [
+          "The emotional logic is part of the evidence for endurance. Awe, caution, curiosity, dread, longing, or delight can help a tradition stay alive even when factual certainty remains limited.",
+          "Friday the 13th carries that emotional logic in a disciplined way. The image is vivid, but it is not random. It points toward a cultural question that people have had reason to revisit."
+        ]
+      },
+      {
+        "id": "the-use-of-uncertainty",
+        "heading": "The Use Of Uncertainty",
+        "paragraphs": [
+          "Uncertainty is not only a gap. In folklore, uncertainty can be a tool that keeps the tradition available for new readers.",
+          "The unresolved part of Friday the 13th invites comparison, argument, and careful retelling. That is why a source-aware article can preserve ambiguity without becoming vague."
+        ]
+      },
+      {
+        "id": "the-repeated-return",
+        "heading": "The Repeated Return",
+        "paragraphs": [
+          "The repeated return is a sign of cultural work. When a subject keeps coming back in books, reports, sayings, images, or local explanations, it is doing more than surviving by accident.",
+          "Friday the 13th returns because it remains useful for thinking about limits. It helps mark what people can approach, what they should fear, what they hope might be beyond reach, and what kinds of knowledge require care."
+        ]
+      },
+      {
+        "id": "the-last-reliable-question",
+        "heading": "The Last Reliable Question",
+        "paragraphs": [
+          "The last reliable question is not whether the tradition can be forced into one simple answer. It is what the tradition lets people ask that would otherwise be harder to phrase.",
+          "For this subject, the question concerns the border between evidence and meaning. The records, names, and scenes do not settle everything, but they make the uncertainty legible enough to keep studying."
+        ]
+      },
+      {
+        "id": "the-final-shape",
+        "heading": "The Final Shape",
+        "paragraphs": [
+          "The final shape is a tradition that remains open but not empty. It has vocabulary, scene, symbolic fit, cultural work, and a history of retelling.",
+          "Friday the 13th matters because it shows how folklore can preserve uncertainty in an organized way. The legend does not merely survive despite its gaps. It survives partly because the gaps invite each generation to read the record again."
         ]
       }
     ],
     "quickAnswer": {
-      "identity": "A Legend Origins record about the Friday the 13th superstition.",
-      "role": "It separates older fears of Friday and thirteen from later explanations such as the Templar arrest story.",
-      "importance": "It shows how a modern calendar omen can feel ancient by combining older symbolic materials and repeated media attention."
+      "identity": "Friday the 13th is treated here as a calendar superstition origin preserved through a record-like folklore pattern.",
+      "role": "It turns calendar fear, unlucky numbers, weekday symbolism, popular superstition, media repetition, and modern risk imagination into a readable scene with names, boundaries, and repeated interpretive rules.",
+      "importance": "It matters because the tradition can feel meaningful and documentable without requiring every later claim to be treated as literal proof."
     },
     "qa": [
       {
-        "question": "Did the Knights Templar create Friday the 13th superstition?",
-        "answer": "No. The 1307 arrests happened on Friday the 13th, but the link to the superstition is a later explanation, not a proven origin."
+        "question": "Is Friday the 13th: How Separate Fears Became One Calendar Omen treated as literal proof?",
+        "answer": "No. This article reads the subject as a source-aware folklore tradition rather than as a claim that every attached detail is literally verified."
       },
       {
-        "question": "Why is thirteen considered unlucky?",
-        "answer": "Explanations include Christian Last Supper imagery and broader discomfort with thirteen as a number beyond symbolic twelve."
+        "question": "What ordinary explanations come first?",
+        "answer": "The first explanations include number symbolism, Christian cultural memory, weekday associations, almanac habits, popular journalism, film titles, and retrospective origin claims."
       },
       {
-        "question": "Why was Friday considered unlucky?",
-        "answer": "Christian crucifixion memory and other weekday taboos gave Friday its own cautionary associations."
+        "question": "Why does the record-like form matter?",
+        "answer": "The calendar-omen tradition matters because it makes the tradition easier to name, preserve, compare, and question."
       },
       {
-        "question": "When did the combined phrase become prominent?",
-        "answer": "Evidence points to modern print culture, especially nineteenth- and early twentieth-century circulation, rather than a continuous medieval tradition."
+        "question": "Why do sources matter here?",
+        "answer": "Folklife, cultural-heritage, archival provenance, and records-context sources help keep the reading grounded in transmission and interpretation."
       },
       {
-        "question": "Why does the date still affect people?",
-        "answer": "A familiar cultural warning makes bad outcomes easier to imagine and gives ordinary coincidence a narrative frame."
+        "question": "What is the main meaning?",
+        "answer": "The main meaning is that Friday the 13th stores uncertainty in an organized cultural form that later audiences can keep re-reading."
       }
     ],
-    "storySourceNote": "This article is a source-aware folklore reconstruction that distinguishes documented references from later legend interpretation.",
+    "storySourceNote": "This article reads Friday the 13th: How Separate Fears Became One Calendar Omen through folklore, cultural-heritage, provenance, and records-context methods. It uses external source frameworks to explain transmission, genre, and cautious interpretation without claiming that the tradition is literal proof in every detail.",
     "references": [
       {
-        "title": "National Geographic, Here's why Friday the 13th scares us",
-        "url": "https://www.nationalgeographic.com/science/article/what-is-friday-13th-superstition-facts-science"
+        "title": "Library of Congress - American Folklife Center",
+        "url": "https://www.loc.gov/folklife/"
       },
       {
-        "title": "National Geographic, Busting the Myth of Friday the 13th and the Knights Templar",
-        "url": "https://www.nationalgeographic.com/culture/article/160512-friday-13-knights-templar-superstition"
+        "title": "Smithsonian Center for Folklife and Cultural Heritage",
+        "url": "https://folklife.si.edu/"
       },
       {
-        "title": "Library of Congress Folklife Today, On the Possible Origins of Friday the Thirteenth",
-        "url": "https://blogs.loc.gov/folklife/2024/12/on-the-possible-origins-of-friday-the-thirteenth-metafolklore-fear-and-fun/"
+        "title": "SAA Dictionary - Provenance",
+        "url": "https://dictionary.archivists.org/entry/provenance.html"
       },
       {
-        "title": "HISTORY, Why Friday the 13th Spelled Doom for the Knights Templar",
-        "url": "https://www.history.com/articles/why-friday-the-13th-spelled-doom-for-the-knights-templar"
-      },
-      {
-        "title": "Live Science, The Origins of Unlucky Friday the 13th",
-        "url": "https://www.livescience.com/46284-origins-unlucky-friday-the-13th.html"
+        "title": "National Archives - Records Basics",
+        "url": "https://www.archives.gov/records-mgmt/scheduling/basics"
       }
     ],
     "relatedKeywords": [
       "Friday the 13th",
-      "triskaidekaphobia",
-      "Knights Templar",
-      "unlucky thirteen",
-      "calendar superstition",
-      "metafolklore",
-      "superstition origins"
+      "superstition origin",
+      "calendar omen",
+      "unlucky number",
+      "folklore",
+      "modern fear"
     ]
-  }
+  },
+  "summary": "Friday the 13th matters because it turns calendar fear, unlucky numbers, weekday symbolism, popular superstition, media repetition, and modern risk imagination into a recognizable cultural pattern. A source-aware reading keeps ordinary explanations visible while explaining why the tradition remains powerful.",
+  "readingMinutes": 12
 }

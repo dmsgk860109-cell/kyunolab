@@ -1,276 +1,738 @@
 {
   "id": "naga-fireballs-legend",
-  "recordId": "naga-fireballs-legend",
   "slug": "naga-fireballs-legend",
-  "pathname": "/stories/naga-fireballs-legend",
-  "canonicalUrl": "https://kyunolab.com/stories/naga-fireballs-legend",
-  "category": "Strange Nature",
-  "storyType": "river-light-phenomenon",
   "title": "Naga Fireballs: Mekong Lights, Festival Reports, and the River Phenomenon Between Belief and Debate",
   "displayTitle": "Naga Fireballs: Mekong Lights, Festival Reports, and the River Phenomenon Between Belief and Debate",
   "h1": "Naga Fireballs: Mekong Lights, Festival Reports, and the River Phenomenon Between Belief and Debate",
   "seoTitle": "Naga Fireballs: Mekong Lights, Festival Reports, and the River Phenomenon Between Belief and Debate",
   "metaTitle": "Naga Fireballs: Mekong Lights, Festival Reports, and the River Phenomenon Between Belief and Debate",
-  "metaDescription": "A source-aware guide to Naga fireballs on the Mekong River, local belief, Buddhist festival timing, reports, debate, and why the lights remain folklore-shaped.",
-  "introSummary": "Naga fireballs are reported glowing balls seen rising near the Mekong River, especially around festival time, where local belief, tourism, skepticism, and uncertain evidence meet.",
-  "summaryAnswer": "Naga fireballs matter because they are not only a claimed light phenomenon. They are a river event where local Naga belief, public viewing, festival timing, and debate shape how reports are understood.",
-  "updatedAt": "2026-07-28",
-  "relatedStorySlugs": [
-    "fairy-rings-folklore",
-    "sailing-stones-death-valley",
-    "morning-glory-cloud",
-    "ball-lightning-phenomenon"
-  ],
-  "qa": [
-    {
-      "question": "What are Naga fireballs?",
-      "answer": "They are reported glowing balls or lights seen near the Mekong River, especially around the end of Buddhist Lent in northeastern Thailand and Laos."
-    },
-    {
-      "question": "Are they proven supernatural?",
-      "answer": "No. The Naga interpretation is culturally important, but individual lights require source-aware evidence before cause can be claimed."
-    },
-    {
-      "question": "Why are they linked to the Naga?",
-      "answer": "Naga or Phaya Naga beliefs connect serpent-like water beings with the Mekong, sacred power, and local river identity."
-    },
-    {
-      "question": "Could some lights be human-made?",
-      "answer": "Some reports may involve fireworks, flares, or other human activity, but each sighting needs its own evidence."
-    },
-    {
-      "question": "Why does the event continue?",
-      "answer": "The festival setting, river landscape, local belief, public anticipation, and unresolved debate all keep the tradition alive."
-    }
-  ],
-  "storySourceNote": "This article treats Naga fireballs as evidence-limited river light reports embedded in local belief and festival practice. It does not claim that every reported light has the same cause.",
+  "metaDescription": "A source-aware guide to Naga Fireballs, with folklore context, source limits, cultural meaning, and the record-like tradition behind the legend.",
+  "category": "Strange Nature",
+  "categorySlug": "strange-nature",
+  "categoryGroup": "Mythic & Imagined Realms",
+  "tag": "River Light Phenomenon",
+  "primaryTag": "River Light Phenomenon",
+  "seedKeyword": "naga fireballs legend",
+  "primaryKeyword": "naga fireballs legend",
+  "searchIntent": "facts-and-theories",
+  "articleFormat": "story-archive",
+  "cluster": "Strange Nature / River Light Phenomenon",
   "relatedKeywords": [
+    "Naga Fireballs",
+    "Mekong lights",
+    "river folklore",
+    "strange nature",
+    "festival sighting",
+    "Naga legend"
+  ],
+  "secondaryKeywords": [
+    "naga fireballs legend origin",
+    "naga fireballs legend meaning",
+    "river light phenomenon folklore",
+    "strange nature explained",
     "Naga fireballs",
     "Mekong River",
     "river lights",
-    "Phaya Naga",
-    "Nong Khai",
-    "Buddhist Lent",
-    "strange light reports"
+    "Thai folklore"
   ],
-  "contentDNA": {
-    "targetQuery": "Naga fireballs legend",
-    "canonicalQuery": "naga-fireballs-legend",
-    "searchQuestion": "Why do Naga fireballs remain both a local legend and a debated river phenomenon?",
-    "readerIntent": "Understand reports of the Mekong lights while separating local belief, tourism, skepticism, and source limits.",
-    "uniqueAngle": "The article treats the fireballs as a public river phenomenon whose meaning depends on timing, place, and community interpretation.",
-    "subjectClass": "strange-nature",
-    "narrativeLens": "reported-light-and-local-belief",
-    "evidencePosture": "evidence-limited",
-    "culturalFrame": "Mekong River culture, Naga belief, Buddhist festival viewing, tourism, and skeptical debate",
-    "sceneAnchor": "glowing balls reportedly rising from the Mekong River at night",
-    "subjectSpecificVocabulary": [
+  "topicScore": 94,
+  "topicStatus": "approved",
+  "scoreBreakdown": {
+    "searchDemand": 30,
+    "clickCuriosity": 24,
+    "siteFit": 24,
+    "expansionPotential": 10,
+    "sourceSafety": 6
+  },
+  "summaryAnswer": "Naga Fireballs matters because it turns Mekong lights, Naga belief, river festivals, witness reports, local devotion, and contested natural explanation into a recognizable cultural pattern. A source-aware reading keeps ordinary explanations visible while explaining why the tradition remains powerful.",
+  "readTime": "9 min read",
+  "storyType": "strange-nature-river-lights",
+  "generationBatch": "real-five-each-20260721",
+  "contentStandard": "unified",
+  "generatorVersion": "unified-public-article-v2",
+  "templateVersion": "variable-sections-v2",
+  "articlePlanVersion": "public-plan-v2",
+  "validationVersion": "public-validation-v2",
+  "generatedAt": "2026-07-21T00:00:00.000Z",
+  "editorialStatus": "approved",
+  "legacyContent": false,
+  "substantiveRevisionAt": "2026-07-21",
+  "internalLinkEligible": true,
+  "sourceStatus": "Strange Nature / River Light Phenomenon / Evidence-limited public record",
+  "publicSourceBasis": "natural phenomenon reports, folklore interpretation, scientific discussion, and public observation",
+  "excerpt": "Naga Fireballs is a pre-existing Strange Nature subject built around the Mekong River light phenomenon reported as glowing balls rising from the water and interpreted through both local belief and debate.",
+  "introSummary": "Naga Fireballs becomes durable because lights rising near the Mekong that are reported through festival attention, local belief, debate, and repeated witness gathering, turning river-light phenomenon and belief tradition into a source-aware folklore record.",
+  "publishedAt": "2026-07-21",
+  "updatedAt": "2026-07-29",
+  "relatedStoryIds": [],
+  "relatedStorySlugs": [
+    "will-o-the-wisp-folklore",
+    "ball-lightning-phenomenon",
+    "phoenix-lights-mystery",
+    "the-river-depth-book-that-measured-a-dry-channel"
+  ],
+  "tags": [
+    "River Light Phenomenon",
+    "Naga Fireballs",
+    "Mekong River",
+    "river lights"
+  ],
+  "detail": "Mekong River light phenomenon reported as glowing balls rising from the water and interpreted through both local belief and debate",
+  "evidence": "strange nature references, folklore summaries, public cultural records, and source-aware retellings",
+  "researchSources": [
+    {
+      "title": "Wikipedia - Naga Fireballs",
+      "url": "https://en.wikipedia.org/wiki/Naga_fireball",
+      "sourceType": "reference",
+      "supports": "Supports the public record for Naga Fireballs."
+    },
+    {
+      "title": "Tourism Thailand - Naga Fireballs",
+      "url": "https://www.tourismthailand.org/Attraction/naga-fireball",
+      "sourceType": "reference",
+      "supports": "Supports source-aware context around Naga Fireballs."
+    }
+  ],
+  "sourceNotes": {
+    "sharedVerifiedPoints": [
+      "Naga Fireballs is a pre-existing subject in folklore, myth, legend, mystery, or public cultural memory.",
+      "Naga Fireballs can be described through the Mekong River light phenomenon reported as glowing balls rising from the water and interpreted through both local belief and debate.",
+      "The strongest reading stays within strange nature references, folklore summaries, public cultural records, and source-aware retellings."
+    ],
+    "variants": [
+      "Specific details shift by source, region, retelling, publication history, or community memory.",
+      "Later popular versions often make the story cleaner than the source trail allows."
+    ],
+    "unsupportedClaimsToAvoid": [
+      "Do not present supernatural or speculative claims as verified fact.",
+      "Do not invent witnesses, documents, dates, or discoveries beyond the source-aware record.",
+      "Do not imply a single definitive origin when the record contains variants or source limits."
+    ],
+    "sourceLimits": [
+      "The article explains the story and its reception without treating all claims as equally proven.",
+      "Interpretive meanings are presented as readings, not as settled historical facts."
+    ]
+  },
+  "targetQuery": "naga fireballs",
+  "canonicalQuery": "naga fireballs legend",
+  "uniqueAngle": "Naga Fireballs is treated through one concrete anchor: the Mekong River light phenomenon reported as glowing balls rising from the water and interpreted through both local belief and debate.",
+  "sceneAnchor": "the Mekong River light phenomenon reported as glowing balls rising from the water and interpreted through both local belief and debate",
+  "subjectSpecificVocabulary": [
+    "Naga fireballs",
+    "Mekong River",
+    "river lights",
+    "Thai folklore",
+    "light phenomenon"
+  ],
+  "contentType": "story",
+  "storyBrief": {
+    "topic": "Naga Fireballs",
+    "category": "Strange Nature",
+    "contentType": "strange-nature",
+    "existenceStatus": "confirmed",
+    "circulationLevel": "widely known",
+    "knownNames": [
+      "Naga Fireballs",
       "Naga fireballs",
       "Mekong River",
-      "Phaya Naga",
-      "Nong Khai",
-      "Ok Phansa",
-      "festival reports"
+      "river lights"
     ],
-    "requiredSpecificDetails": [
-      "Mekong setting",
-      "festival timing",
-      "Naga belief",
-      "public reports",
-      "debated explanations"
+    "cultureOrContext": "natural phenomenon reports, folklore interpretation, scientific discussion, and public observation",
+    "coreStoryElements": [
+      "Naga Fireballs is a pre-existing Strange Nature subject built around the Mekong River light phenomenon reported as glowing balls rising from the water and interpreted through both local belief and debate.",
+      "Its strongest image is specific enough to follow across retellings while still leaving room for careful interpretation.",
+      "The familiar account centers on the Mekong River light phenomenon reported as glowing balls rising from the water and interpreted through both local belief and debate.",
+      "Naga Fireballs belongs to natural phenomenon reports, folklore interpretation, scientific discussion, and public observation, so the article treats it as inherited material rather than a newly invented Kyunolab record.",
+      "Most retellings preserve Naga fireballs, Mekong River, river lights as the signs that make Naga Fireballs recognizable.",
+      "The strongest version works when the concrete image stays visible and later explanation does not flatten the uncertainty."
     ],
-    "prohibitedGenericPhrases": [
-      "the fireballs are proven supernatural",
-      "all reports are hoaxes",
-      "one explanation settles every sighting"
+    "reportedVariants": [
+      {
+        "claim": "Versions of Naga Fireballs differ by source, region, period, or online retelling, but the central anchor remains Naga fireballs.",
+        "scope": "variant tradition"
+      },
+      {
+        "claim": "Later summaries often simplify the story into a single clean form, while older or parallel versions keep more than one emphasis alive.",
+        "scope": "later versions and source comparison"
+      }
     ],
-    "sectionBlueprint": [
+    "editorialInterpretationOptions": [
+      "Naga Fireballs may be read as a story about how natural patterns become signs.",
+      "That reading keeps the article focused on meaning and source limits instead of adding unsupported events."
+    ],
+    "uncertainDetails": [
+      "The exact earliest form may be disputed, incomplete, or preserved through later retellings.",
+      "Later versions may simplify, relocate, intensify, or reinterpret the story."
+    ],
+    "prohibitedInventions": [
+      "Do not add a hidden witness or newly discovered document.",
+      "Do not turn folklore or speculation into confirmed fact.",
+      "Do not invent modern evidence that is not in the source record."
+    ],
+    "existenceEvidence": [
       {
-        "title": "What Naga Fireballs Are",
-        "nav": "Reports"
+        "title": "Wikipedia - Naga Fireballs",
+        "url": "https://en.wikipedia.org/wiki/Naga_fireball",
+        "sourceType": "reference",
+        "supports": "Supports the public record for Naga Fireballs."
       },
       {
-        "title": "Why the Mekong Setting Matters",
-        "nav": "River"
-      },
-      {
-        "title": "How Naga Belief Shapes the Lights",
-        "nav": "Belief"
-      },
-      {
-        "title": "Why Festival Timing Changes the Evidence",
-        "nav": "Festival"
-      },
-      {
-        "title": "How Debate Became Part of the Phenomenon",
-        "nav": "Debate"
-      },
-      {
-        "title": "Why Light Reports Behave Like Folklore",
-        "nav": "Folklore"
-      },
-      {
-        "title": "How to Read Claims Carefully",
-        "nav": "Evidence"
-      },
-      {
-        "title": "Why the Fireballs Still Draw Crowds",
-        "nav": "Why It Lasts"
+        "title": "Tourism Thailand - Naga Fireballs",
+        "url": "https://www.tourismthailand.org/Attraction/naga-fireball",
+        "sourceType": "reference",
+        "supports": "Supports source-aware context around Naga Fireballs."
       }
     ]
   },
+  "seoHeadings": [
+    "The Detail That Defines Naga Fireballs",
+    "How Naga Fireballs Is Usually Remembered",
+    "Where Later Versions Differ",
+    "What the Available Sources Show",
+    "What Naga Fireballs Means"
+  ],
+  "faqQuestions": [
+    "What is Naga Fireballs?",
+    "How is Naga Fireballs usually remembered?",
+    "Where do versions of Naga Fireballs differ?",
+    "What does Naga Fireballs mean?"
+  ],
+  "publicSourceNoteSeed": "This article follows Naga Fireballs as a known Strange Nature subject. It separates existing tradition, reported variants, and Kyunolab interpretation without inventing new evidence.",
+  "publicArticlePlan": {
+    "title": "Naga Fireballs: Mekong Lights, Festival Reports, and the River Phenomenon Between Belief and Debate",
+    "dek": "Naga Fireballs begins with naga fireballs and follows how that image kept moving through strange nature retellings.",
+    "quickAnswer": {
+      "paragraphs": [
+        "In brief, Naga Fireballs is a pre-existing Strange Nature subject built around the Mekong River light phenomenon reported as glowing balls rising from the water and interpreted through both local belief and debate. Its strongest image is specific enough to follow across retellings while still leaving room for careful interpretation.",
+        "The main movement is clear: The familiar account centers on the Mekong River light phenomenon reported as glowing balls rising from the water and interpreted through both local belief and debate. Versions of Naga Fireballs differ by source, region, period, or online retelling, but the central anchor remains Naga fireballs. Naga Fireballs may be read as a story about how natural patterns become signs."
+      ],
+      "targetWords": {
+        "min": 90,
+        "max": 180
+      }
+    },
+    "introduction": [
+      "Naga Fireballs is anchored by the Mekong River light phenomenon reported as glowing balls rising from the water and interpreted through both local belief and debate. It also appears through names such as Naga Fireballs, Naga fireballs, Mekong River, river lights.",
+      "Naga Fireballs is a pre-existing Strange Nature subject built around the Mekong River light phenomenon reported as glowing balls rising from the water and interpreted through both local belief and debate."
+    ],
+    "sections": [
+      {
+        "id": "the-detail-that-defines-naga-fireballs",
+        "heading": "The Detail That Defines Naga Fireballs",
+        "purpose": "",
+        "contentLayer": "existing-story",
+        "storyBriefInputs": [],
+        "targetWords": {
+          "min": 170,
+          "max": 360
+        },
+        "paragraphs": [
+          "Naga Fireballs begins with a visible break in ordinary weather: the Mekong River light phenomenon reported as glowing balls rising from the water."
+        ]
+      },
+      {
+        "id": "how-naga-fireballs-is-usually-remembered",
+        "heading": "How Naga Fireballs Is Usually Remembered",
+        "purpose": "",
+        "contentLayer": "existing-story",
+        "storyBriefInputs": [],
+        "targetWords": {
+          "min": 170,
+          "max": 360
+        },
+        "paragraphs": [
+          "The familiar account centers on the Mekong River light phenomenon reported as glowing balls rising from the water and interpreted through both local belief and debate. Most retellings preserve Naga fireballs, Mekong River, river lights as the signs that make Naga Fireballs recognizable.",
+          "Naga Fireballs belongs to natural phenomenon reports, folklore interpretation, scientific discussion, and public observation, so the article treats it as inherited material rather than a newly invented Kyunolab record. The strongest version works when the concrete image stays visible and later explanation does not flatten the uncertainty."
+        ]
+      },
+      {
+        "id": "where-later-versions-differ",
+        "heading": "Where Later Versions Differ",
+        "purpose": "",
+        "contentLayer": "reported-variant",
+        "storyBriefInputs": [],
+        "targetWords": {
+          "min": 170,
+          "max": 360
+        },
+        "paragraphs": [
+          "Later retellings do not always keep the same emphasis. Versions of Naga Fireballs differ by source, region, period, or online retelling, but the central anchor remains Naga fireballs.",
+          "Another difference appears in the details that later audiences remember. Later summaries often simplify the story into a single clean form, while older or parallel versions keep more than one emphasis alive."
+        ]
+      },
+      {
+        "id": "what-the-available-sources-show",
+        "heading": "What the Available Sources Show",
+        "purpose": "",
+        "contentLayer": "source-context",
+        "storyBriefInputs": [],
+        "targetWords": {
+          "min": 170,
+          "max": 360
+        },
+        "paragraphs": [
+          "Naga Fireballs appears in source material connected with natural phenomenon reports, folklore interpretation, scientific discussion, and public observation. Public references used for orientation include Wikipedia and Tourism Thailand.",
+          "strange nature references, folklore summaries, public cultural records, and source-aware retellings. Those references are useful for separating observation, scientific explanation, and folklore response. Recurring terms include Naga fireballs, Mekong River, river lights, Thai folklore and light phenomenon."
+        ]
+      },
+      {
+        "id": "what-naga-fireballs-means",
+        "heading": "What Naga Fireballs Means",
+        "purpose": "",
+        "contentLayer": "variant-and-interpretation",
+        "storyBriefInputs": [],
+        "targetWords": {
+          "min": 170,
+          "max": 360
+        },
+        "paragraphs": [
+          "One possible reading is that naga Fireballs may be read as a story about how natural patterns become signs.",
+          "That reading keeps the article focused on meaning and source limits instead of adding unsupported events."
+        ]
+      }
+    ],
+    "conclusion": {
+      "paragraphs": [
+        "Naga Fireballs remains memorable because the Mekong River light phenomenon reported as glowing balls rising from the water and interpreted through both local belief and debate gives the subject a concrete shape readers can follow.",
+        "Naga Fireballs may be read as a story about how natural patterns become signs. Versions of Naga Fireballs differ by source, region, period, or online retelling, but the central anchor remains Naga fireballs."
+      ],
+      "targetWords": {
+        "min": 100,
+        "max": 180
+      }
+    },
+    "faq": [
+      {
+        "q": "What is Naga Fireballs?",
+        "a": "Naga Fireballs refers to mekong River light phenomenon reported as glowing balls rising from the water and interpreted through both local belief and debate."
+      },
+      {
+        "q": "How is Naga Fireballs usually remembered?",
+        "a": "In the main account, The familiar account centers on the Mekong River light phenomenon reported as glowing balls rising from the water and interpreted through both local belief and debate. Most retellings preserve Naga fireballs, Mekong River, river lights as the signs that make Naga Fireballs recognizable."
+      },
+      {
+        "q": "Where do versions of Naga Fireballs differ?",
+        "a": "Versions of Naga Fireballs differ by source, region, period, or online retelling, but the central anchor remains Naga fireballs. Later summaries often simplify the story into a single clean form, while older or parallel versions keep more than one emphasis alive."
+      },
+      {
+        "q": "What does Naga Fireballs mean?",
+        "a": "As an interpretation, naga Fireballs may be read as a story about how natural patterns become signs."
+      }
+    ],
+    "publicSourceNote": "Naga Fireballs is treated through natural phenomenon reports, folklore interpretation, scientific discussion, and public observation. References such as Wikipedia and Tourism Thailand are used as orientation points, not as proof for every later claim. Later versions are kept separate from the core account when they shift emphasis. Versions of Naga Fireballs differ by source, region, period, or online retelling, but the central anchor remains Naga fireballs. Later summaries often simplify the story into a single clean form, while older or parallel versions keep more than one emphasis alive. For Naga Fireballs, observation and explanation are separated from the folklore that grows around the event."
+  },
+  "contentDNA": {
+    "targetQuery": "naga fireballs legend",
+    "canonicalQuery": "naga-fireballs-legend",
+    "searchQuestion": "Why does Naga Fireballs remain culturally memorable?",
+    "readerIntent": "Understand the folklore, source context, and record-like structure behind Naga Fireballs: Mekong Lights, Festival Reports, and the River Phenomenon Between Belief and Debate.",
+    "uniqueAngle": "The article treats lights rising near the Mekong that are reported through festival attention, local belief, debate, and repeated witness gathering as a record-shaped folklore problem.",
+    "subjectClass": "river-light phenomenon and belief tradition",
+    "narrativeLens": "source-aware-folklore-record-reading",
+    "evidencePosture": "source-aware",
+    "culturalFrame": "Mekong lights, Naga belief, river festivals, witness reports, local devotion, and contested natural explanation",
+    "sceneAnchor": "a crowd watching the river at night as lights rise into a space shared by observation and devotion",
+    "subjectSpecificVocabulary": [
+      "Naga Fireballs",
+      "Mekong",
+      "river lights",
+      "Naga belief",
+      "festival reports",
+      "strange nature"
+    ],
+    "requiredSpecificDetails": [
+      "Naga Fireballs",
+      "Mekong",
+      "river lights",
+      "Naga belief",
+      "festival reports",
+      "strange nature"
+    ],
+    "prohibitedGenericPhrases": [
+      "this proves every legend is factual",
+      "ordinary explanations are impossible",
+      "all later claims are verified"
+    ],
+    "sectionBlueprint": []
+  },
+  "recordId": "naga-fireballs-legend",
+  "pathname": "/stories/naga-fireballs-legend",
+  "canonicalUrl": "https://kyunolab.com/stories/naga-fireballs-legend",
+  "summary": "Naga Fireballs matters because it turns Mekong lights, Naga belief, river festivals, witness reports, local devotion, and contested natural explanation into a recognizable cultural pattern. A source-aware reading keeps ordinary explanations visible while explaining why the tradition remains powerful.",
+  "readingMinutes": 12,
+  "qa": [
+    {
+      "question": "Is Naga Fireballs: Mekong Lights, Festival Reports, and the River Phenomenon Between Belief and Debate treated as literal proof?",
+      "answer": "No. This article reads the subject as a source-aware folklore tradition rather than as a claim that every attached detail is literally verified."
+    },
+    {
+      "question": "What ordinary explanations come first?",
+      "answer": "The first explanations include festival timing, visual distance, atmospheric effects, human activity, media reports, local economy, and belief-centered interpretation."
+    },
+    {
+      "question": "Why does the record-like form matter?",
+      "answer": "The festival-sighting tradition matters because it makes the tradition easier to name, preserve, compare, and question."
+    },
+    {
+      "question": "Why do sources matter here?",
+      "answer": "Folklife, cultural-heritage, archival provenance, and records-context sources help keep the reading grounded in transmission and interpretation."
+    },
+    {
+      "question": "What is the main meaning?",
+      "answer": "The main meaning is that Naga Fireballs stores uncertainty in an organized cultural form that later audiences can keep re-reading."
+    }
+  ],
+  "storySourceNote": "This article reads Naga Fireballs: Mekong Lights, Festival Reports, and the River Phenomenon Between Belief and Debate through folklore, cultural-heritage, provenance, and records-context methods. It uses external source frameworks to explain transmission, genre, and cautious interpretation without claiming that the tradition is literal proof in every detail.",
   "longformArticle": {
     "contentPackageVersion": "archive-story-content-v1",
-    "deck": "Naga fireballs are reported glowing balls seen rising near the Mekong River, especially around festival time, where local belief, tourism, skepticism, and uncertain evidence meet.",
+    "deck": "Naga Fireballs becomes durable because lights rising near the Mekong that are reported through festival attention, local belief, debate, and repeated witness gathering, turning river-light phenomenon and belief tradition into a source-aware folklore record.",
     "opening": [
-      "Naga fireballs are usually described as glowing balls that rise from or near the Mekong River and vanish into the night. The reports are most closely associated with northeastern Thailand, Laos, and the end of Buddhist Lent, when crowds gather along the river to watch. The lights are not only a claimed phenomenon. They are an event: a place, a season, a crowd, a belief, and a debate.",
-      "That event structure is the key to reading Naga fireballs carefully. Local belief connects the lights with the Naga or Phaya Naga, serpent beings associated with water and protection. Skeptics raise questions about flares, fireworks, sightlines, and festival performance. Tourists arrive hoping to see something. Reports circulate because the river becomes a stage where all these interpretations meet."
+      "Naga Fireballs survives because it gives tradition a shape that can be named, repeated, and argued over. The subject is a river-light phenomenon and belief tradition, but the story works like a record problem: a place, phenomenon, omen, or object is treated as if it could be filed and explained, while part of it remains outside ordinary proof.",
+      "The central detail is lights rising near the Mekong that are reported through festival attention, local belief, debate, and repeated witness gathering. This article reads that detail through source-aware folklore practice rather than as a claim of literal verification. The aim is to explain why Mekong lights, Naga belief, river festivals, witness reports, local devotion, and contested natural explanation can feel durable, meaningful, and strangely documentable without flattening the tradition into either simple fact or simple mistake."
     ],
     "storyBody": [
       {
-        "id": "what-naga-fireballs-are",
-        "heading": "What Naga Fireballs Are",
+        "id": "the-first-record-shape",
+        "heading": "The First Record Shape",
         "paragraphs": [
-          "Naga fireballs are reported lights, often described as reddish or pinkish glowing balls, that appear to rise from the Mekong River or nearby areas before disappearing. The most famous reports cluster around the time of Ok Phansa, the end of Buddhist Lent, especially in Nong Khai province and neighboring areas. Accounts vary in number, height, color, distance, and duration. This variability is important because the phenomenon is known largely through public reports, observation events, media accounts, and local interpretation.",
-          "The fireballs are not best approached as a single simple object. They are a recurring claim about lights in a river setting. Some viewers say they see balls rising silently from the water. Others see distant lights that may be hard to locate precisely. Some years produce many reports; other years fewer. The event is therefore evidence-limited in a specific way. It has witnesses and public attention, but individual lights may be difficult to document with the precision needed to settle cause.",
-          "This makes the Naga fireballs a classic Strange Nature subject. They sit between environment, community, belief, spectacle, and uncertainty. The article should not declare every report supernatural, and it should not dismiss the tradition as meaningless because questions remain. The useful task is to ask how the lights are reported, how the place shapes interpretation, and why the story continues to gather people at the river.",
-          "The term fireball can also shape expectations. In English it may suggest heat, flame, meteor, or explosion, while many witness descriptions emphasize glowing balls that rise and vanish. Translation and media labels can therefore thicken the mystery. A source-aware reader asks what local terms are used, what observers actually describe, and how the English phrase may import assumptions. Naming does not merely report the phenomenon; it frames it."
+          "The first record shape is the festival-sighting tradition. A tradition becomes easier to remember when it has a form that can be entered into speech, manuscripts, reports, indexes, guidebooks, or household rules.",
+          "That form matters because it gives the subject a surface. Naga Fireballs is not only an idea floating in the air. It is attached to names, scenes, phrases, witness habits, and repeated interpretive rules."
         ]
       },
       {
-        "id": "why-the-mekong-setting-matters",
-        "heading": "Why the Mekong Setting Matters",
+        "id": "the-scene-people-remember",
+        "heading": "The Scene People Remember",
         "paragraphs": [
-          "The Mekong setting matters because rivers are natural folklore engines. A river moves, reflects, hides, divides, carries, feeds, floods, and marks borders. At night, a river also complicates sight. Distance over water can be difficult to judge; reflections can confuse direction; sounds travel strangely; lights on the far bank may appear displaced. A reported light over a river is therefore never just a light. It is a light seen through a landscape that already encourages uncertainty.",
-          "The Mekong is also culturally dense. It is not a blank backdrop for a mystery. Communities along the river have long-standing relationships with water, spirits, ritual, trade, agriculture, and border life. A light associated with the Mekong enters that cultural field immediately. The river gives the report authority because it is already powerful in everyday life. It can nourish and endanger. A river that behaves strangely is not a trivial stage.",
-          "The border setting adds another layer. Viewers on one side may look toward lights that appear near the other side, and explanations can involve cross-river sightlines, festival activity, or claims from multiple communities. This does not automatically solve the phenomenon. It shows why careful observation matters. A source-aware reading asks where the viewer stood, where the light appeared, what else was happening, and how the river itself shaped perception.",
-          "The river also makes the event collective. A mountain apparition may be seen by one climber, but a riverbank festival gathers many lines of sight at once. People point, count, argue, cheer, and compare. That social field becomes part of the evidence problem and part of the tradition. The Mekong does not only host the lights. It organizes the viewers into a temporary community facing the water together."
+          "The scene is a crowd watching the river at night as lights rise into a space shared by observation and devotion. It is compact enough to travel and specific enough to be retold. A listener can picture it before deciding what to believe about it.",
+          "Folklore often depends on this kind of scene. The scene carries more than information. It carries mood, permission, warning, wonder, and a sense that the ordinary world has briefly opened onto another rule."
         ]
       },
       {
-        "id": "how-naga-belief-shapes-the-lights",
-        "heading": "How Naga Belief Shapes the Lights",
+        "id": "ordinary-explanations-first",
+        "heading": "Ordinary Explanations First",
         "paragraphs": [
-          "Naga belief gives the lights their strongest local meaning. In mainland Southeast Asian traditions, Naga are serpent or dragon-like beings associated with water, fertility, protection, and sacred power. The Phaya Naga connection turns reported lights into more than atmospheric oddities. They can be read as signs of a river being alive with sacred presence. This belief frame does not need to operate like a scientific hypothesis. It works as cultural interpretation.",
-          "That distinction matters. When local viewers connect the fireballs with the Naga, they may be speaking from religious tradition, regional identity, family memory, festival experience, or reverence for the river. A skeptical scientific explanation, even if persuasive for some lights, does not automatically erase those meanings. It changes the evidentiary claim, not the entire cultural life of the event. People often gather for more than proof. They gather for participation.",
-          "Naga belief also makes the timing meaningful. If the lights appear near an important Buddhist calendar moment, they can be understood as part of a sacred rhythm rather than random occurrence. The calendar gives the phenomenon narrative order. A light on an ordinary night may be strange; a light during a ritual season can become a sign. Folklore often grows where natural uncertainty meets meaningful timing.",
-          "Naga belief also gives the phenomenon moral tone. A light connected with the river serpent is not merely strange; it may be read as auspicious, sacred, protective, or regionally meaningful. This helps explain why purely dismissive accounts often fail to understand the event. Even if a particular light were explained as human-made or natural, the reason people gather is larger than mechanism. They gather because the river and its beings matter."
+          "A careful reading begins with ordinary explanations. For this subject, those explanations include festival timing, visual distance, atmospheric effects, human activity, media reports, local economy, and belief-centered interpretation. These are not boring footnotes. They are the conditions that let traditions survive in the first place.",
+          "Transmission is never frictionless. A phrase changes in translation, a report is shortened, a place is identified with a local landmark, an omen is moved into a new holiday image, or a mythic object is reinterpreted by later readers."
         ]
       },
       {
-        "id": "why-festival-timing-changes-the-evidence",
-        "heading": "Why Festival Timing Changes the Evidence",
+        "id": "why-the-tradition-feels-larger",
+        "heading": "Why The Tradition Feels Larger",
         "paragraphs": [
-          "Festival timing changes the evidence because it increases observers and increases possible sources of confusion at the same time. A large crowd means more people are watching, which can produce many reports. But a festival also means more boats, fireworks, cameras, noise, performances, expectations, and social pressure. The public event can preserve observations and complicate them. A careful reader should not treat crowd size alone as proof or disproof.",
-          "Expectation is especially important. People who come to see Naga fireballs are primed to interpret ambiguous lights through that tradition. This does not mean every witness is unreliable. It means perception happens inside a frame. The same is true for skeptics, who may be primed to classify lights as flares or hoaxes. Both believers and skeptics can see through expectations. Good evidence must therefore include location, timing, direction, video context, and independent corroboration where possible.",
-          "The festival frame also helps explain why the story survives even when debate continues. The event offers community, anticipation, and an encounter with the river at night. Whether a particular viewer sees many fireballs, one distant light, or none, the gathering itself reinforces the tradition. The phenomenon becomes annual memory. That memory is part of the subject and should be studied rather than waved away.",
-          "The timing also makes absence meaningful. If crowds gather and few lights appear, that too becomes part of the annual story. People may discuss weather, merit, luck, river mood, skepticism, or disappointment. A recurring phenomenon is not only made of successful sightings. It is made of expectation across years. The festival calendar keeps the tradition alive even when evidence varies."
+          "The tradition feels larger because it joins a small sign to a much bigger question. A bridge to the gods becomes a map of order. A hidden island becomes a hope of return. A glowing sphere becomes weather with personality. A black cat becomes a test of luck. A forbidden book becomes a question about knowledge and danger.",
+          "That movement from sign to question is the engine of the legend. The story does not merely tell the reader what happened. It asks what kind of world would allow the sign to matter."
         ]
       },
       {
-        "id": "how-debate-became-part-of-the-phenomenon",
-        "heading": "How Debate Became Part of the Phenomenon",
+        "id": "names-as-anchors",
+        "heading": "Names As Anchors",
         "paragraphs": [
-          "Debate is now part of the Naga fireballs. Explanations have included natural gas, phosphine, atmospheric effects, fireworks, flares, tracer rounds, festival performance, or misidentified lights. Some proposed explanations are more plausible for certain reports than others, and some have been criticized. The important point is that no single phrase should be used to settle every sighting without evidence. A river event observed over many years can contain different kinds of lights and different kinds of claims.",
-          "The debate also changes the way reports circulate. A believer may share a video as confirmation. A skeptic may analyze the same video for trajectory, sound, or source point. A news outlet may frame the event as mystery tourism. A local authority may emphasize cultural heritage and visitor interest. Each retelling does something different with the light. The fireball becomes not only an observed object but a contested story object.",
-          "This contested status is not a failure of the topic. It is the topic. Strange Nature often involves phenomena that are partly explainable, partly uncertain, and partly folkloric in transmission. The Naga fireballs are interesting because public meaning persists under debate. The argument has not ended the event; it has become one of the ways the event is remembered.",
-          "Debate also gives outsiders a familiar entry point. A visitor who does not share local Naga belief can still participate through the question what causes the lights. That question is not neutral, but it is powerful. It turns the event into a public mystery legible to journalists, skeptics, tourists, and scientists. The fireballs therefore circulate through two engines at once: reverence and argument."
+          "Names anchor uncertain material. Naga Fireballs, Mekong, river lights, Naga belief, festival reports, strange nature are not decorative terms. They are the vocabulary that lets the tradition stay recognizable across different tellings.",
+          "A name also lets disagreement continue. People can argue about location, origin, meaning, or evidence because the name gives them a shared object of attention."
         ]
       },
       {
-        "id": "why-light-reports-behave-like-folklore",
-        "heading": "Why Light Reports Behave Like Folklore",
+        "id": "the-boundary-function",
+        "heading": "The Boundary Function",
         "paragraphs": [
-          "Light reports behave like folklore because lights are easy to see, hard to measure, and highly suggestive. A light appears, moves, vanishes, and leaves no object behind. Witnesses compare memories. Videos may be shaky, distant, or context-poor. The event is brief, but the retelling can last for years. This is why mysterious lights appear in many traditions: will-o-the-wisps, ghost lights, earthquake lights, ball lightning, and river fireballs all share the problem of fleeting evidence.",
-          "Folklore transmission does not mean fabrication. It means the report travels through memory, repetition, local explanation, correction, and embellishment. A witness may be sincere while details still shift. A community may preserve a real viewing tradition while individual stories become stylized. The Naga fireballs should be read inside that human process. The way people tell the lights matters almost as much as the lights themselves.",
-          "The Naga frame gives the reports a narrative body. Without it, a distant light might remain a puzzling flash. With it, the light becomes a sign from the river world. That does not prove the supernatural interpretation, but it explains why the report has emotional weight. A light with a story attached is easier to remember than a light without one.",
-          "The brevity of the lights also encourages counting. Reports often mention how many balls appeared in a year or at a viewing point. Counting gives uncertainty a public shape. Numbers can impress, disappoint, or be challenged. They can become headlines or local memory. Yet numbers without observation context can mislead. A count says that people marked appearances; it does not by itself settle what every appearance was."
+          "This tradition works at a boundary. It may be a boundary between realms, water and land, storm and room, path and omen, or sacred knowledge and ordinary reading.",
+          "Boundaries are useful in folklore because they make change visible. When the subject appears at a threshold, the teller can imply that crossing matters even before explaining what has changed."
         ]
       },
       {
-        "id": "how-to-read-claims-carefully",
-        "heading": "How to Read Claims Carefully",
+        "id": "evidence-with-edges",
+        "heading": "Evidence With Edges",
         "paragraphs": [
-          "A careful reader separates levels of claim. First, there are public reports of lights near the Mekong. Second, there are cultural interpretations connecting those lights to the Naga. Third, there are proposed natural or human-made explanations. Fourth, there are tourism and media narratives that shape how people encounter the event. These levels overlap, but they are not identical. Evidence for one does not automatically prove the others.",
-          "The strongest observation evidence would identify date, time, location, direction, camera position, sound, weather, river traffic, and possible activity on both banks. It would also compare independent recordings from different vantage points. Many public videos and reports do not reach that standard. That does not make them worthless. It means they should be treated as reports and cultural records rather than final proof of cause.",
-          "Respect also matters. Skeptical reading should not mock local belief, and belief-centered reading should not treat every uncertain light as settled evidence. The better approach is source-aware: name what is reported, name what is interpreted, name what remains unresolved, and recognize that the Mekong event belongs to living communities rather than to outsiders curiosity alone.",
-          "It is also important to distinguish cultural respect from evidentiary agreement. A reader can respect the Naga tradition, the festival, and local community without accepting every supernatural claim as proven. Likewise, a reader can analyze possible human-made or natural lights without treating local believers as naive. The difficult middle is the honest one. It allows the event to be both culturally meaningful and evidentially complex."
+          "Evidence with edges is evidence that can be examined but not stretched beyond its strength. A manuscript reference, storm report, local custom, motif comparison, or iconographic pattern can illuminate the tradition. It cannot automatically prove every later claim attached to it.",
+          "The article keeps those edges visible. The point is not to drain the subject of wonder. The point is to keep the wonder connected to responsible reading."
         ]
       },
       {
-        "id": "why-the-fireballs-still-draw-crowds",
-        "heading": "Why the Fireballs Still Draw Crowds",
+        "id": "the-role-of-retelling",
+        "heading": "The Role Of Retelling",
         "paragraphs": [
-          "Naga fireballs still draw crowds because they offer an experience that modern life rarely provides: a shared wait for the river to do something mysterious. The crowd watches the dark water, the sky, the far bank, and one another. Anticipation becomes communal. Even before a light appears, the event has already changed ordinary riverbank space into a charged threshold.",
-          "The lights also remain compelling because they are modest in form and large in meaning. A small glowing ball, if seen, is not spectacular in the way a storm or eruption is spectacular. Its power comes from context: timing, river, belief, repetition, and dispute. The phenomenon asks viewers to decide what kind of world they are standing in. Is the river showing a natural process, a human performance, a sacred sign, or a mixture of story and light?",
-          "That unresolved question is why the Naga fireballs belong in an archive of strange nature. They are not presented here as proven supernatural events. They are presented as a living phenomenon of report, belief, gathering, and debate. The river lights endure because uncertainty has not emptied them. It has given communities, skeptics, travelers, and storytellers a reason to keep watching the water.",
-          "The continued crowd also changes the river economically and politically. Festivals bring visitors, vendors, media attention, local pride, and sometimes pressure to produce spectacle. These factors can complicate testimony, but they also show that the fireballs have become part of living public culture. The phenomenon is not sealed in old legend. It continues to shape present-day behavior along the Mekong."
+          "Retelling does not simply copy a legend. It selects what the next audience needs. A medieval compiler, antiquarian, scientist, newspaper editor, parent, occult reader, or online writer may all preserve different parts of the same structure.",
+          "Naga Fireballs lasts because the structure can survive those changes. The precise explanation may shift, but the memorable relation between sign, rule, and uncertainty remains."
         ]
       },
       {
-        "id": "how-naga-fireballs-compare-with-other-light-mysteries",
-        "heading": "How Naga Fireballs Compare With Other Light Mysteries",
+        "id": "the-human-system-around-it",
+        "heading": "The Human System Around It",
         "paragraphs": [
-          "Naga fireballs belong to the wide family of mysterious light reports, but their river and festival setting makes them distinctive. Ball lightning is usually tied to storms and private or sudden witness moments. Will-o-the-wisp traditions often belong to marshes, graveyards, or dangerous night travel. Earthquake lights are associated with geological stress. Naga fireballs are public, seasonal, and culturally framed by Naga belief. The crowd is part of the phenomenon in a way that many other light mysteries do not share.",
-          "Compared with ball lightning, the Naga fireballs also show how place can dominate interpretation. A glowing sphere in a storm is likely to be discussed through atmospheric electricity. A glowing sphere over the Mekong during a sacred calendar moment enters river mythology first for many local viewers. This does not decide cause. It shows that cause and meaning are different questions. The same visual category, strange light, can become a different kind of story in a different landscape.",
-          "Compared with purely staged lights, the tradition also resists a single answer because reports, beliefs, tourism, and possible human activity can coexist. Some lights may have one cause, others another, and some may remain poorly documented. The archive value lies in keeping that mixed status visible. Naga fireballs are best read as a living light tradition with unresolved evidentiary layers, not as a puzzle solved by one slogan."
+          "Every tradition has a human system around it. There are tellers, collectors, scribes, readers, observers, believers, skeptics, and people who repeat the line because it is useful even when they doubt it.",
+          "The festival-sighting tradition lets that system become visible. It shows how a community can make an uncertain thing legible enough to pass on."
+        ]
+      },
+      {
+        "id": "why-caution-helps",
+        "heading": "Why Caution Helps",
+        "paragraphs": [
+          "Caution helps because it protects the tradition from being forced into a false choice. A source-aware reader does not have to say that every report is proof or that every legend is worthless.",
+          "The better reading asks how the tradition works. What does it organize? What fear, hope, warning, or curiosity does it make shareable?"
+        ]
+      },
+      {
+        "id": "symbolic-fit",
+        "heading": "Symbolic Fit",
+        "paragraphs": [
+          "The symbolic fit is strong. The subject belongs with the images and rules that gather around it. That fit is why the tradition feels natural even when the evidence remains partial.",
+          "Symbolic fit is not the same as historical proof. It explains why the story is satisfying, why it is easy to remember, and why it keeps attracting new contexts."
+        ]
+      },
+      {
+        "id": "the-archive-question",
+        "heading": "The Archive Question",
+        "paragraphs": [
+          "The archive question is simple: what would need to survive for the tradition to become clearer? A stronger manuscript chain, a better provenance note, a fuller witness record, a regional comparison, a dated printed source, or a contextual explanation might narrow the uncertainty.",
+          "Most legends do not provide all of that. They give enough to invite reading and enough absence to keep the question alive."
+        ]
+      },
+      {
+        "id": "local-and-literary-memory",
+        "heading": "Local And Literary Memory",
+        "paragraphs": [
+          "Local memory and literary memory often meet inside these subjects. A place may be attached to a town, an omen to a household rule, a natural mystery to a family story, and a forbidden object to a written tale.",
+          "That meeting creates layered authority. The tradition can feel old because it is cited, local because it is told nearby, and personal because it gives someone a rule for interpreting experience."
+        ]
+      },
+      {
+        "id": "the-problem-of-origin",
+        "heading": "The Problem Of Origin",
+        "paragraphs": [
+          "Origin is rarely a single clean point. A tradition may have older motifs, later names, regional variants, learned reinterpretations, and modern images layered together.",
+          "For Naga Fireballs, the origin question is best treated as a history of convergence. Different materials gather until the subject becomes a stable cultural sign."
+        ]
+      },
+      {
+        "id": "the-modern-afterlife",
+        "heading": "The Modern Afterlife",
+        "paragraphs": [
+          "Modern afterlives matter. A mythic place can become a fantasy setting, a legendary island can become a tourist argument, a weather mystery can become a documentary subject, an omen can become seasonal merchandise, and a forbidden book can become occult shorthand.",
+          "These afterlives do not erase older meanings. They show that the tradition still has enough structure to be reused."
+        ]
+      },
+      {
+        "id": "why-the-small-detail-works",
+        "heading": "Why The Small Detail Works",
+        "paragraphs": [
+          "The small detail works because it is easy to carry. A bridge, island, sphere, crossing animal, or dangerous book gives the audience something concrete.",
+          "Once the detail is concrete, the larger questions can remain unresolved. The reader does not need a complete theory before feeling the pull of the image."
+        ]
+      },
+      {
+        "id": "comparative-reading",
+        "heading": "Comparative Reading",
+        "paragraphs": [
+          "Comparative reading asks what other traditions do with similar materials. Other sacred places, hidden islands, strange lights, animal omens, and forbidden texts can reveal the family resemblance without making every story the same.",
+          "The comparison is useful because it distinguishes a living motif from an isolated curiosity. Naga Fireballs becomes clearer when placed beside neighboring patterns."
+        ]
+      },
+      {
+        "id": "what-not-to-claim",
+        "heading": "What Not To Claim",
+        "paragraphs": [
+          "The careful reading should not claim more than the sources can carry. It should not treat mythic geography as ordinary cartography, every sighting as laboratory proof, every omen as fixed doctrine, or every forbidden book story as a recoverable manual.",
+          "That restraint is part of the craft. It lets the article remain generous toward tradition and honest about evidence."
+        ]
+      },
+      {
+        "id": "the-reader-s-test",
+        "heading": "The Reader's Test",
+        "paragraphs": [
+          "The reader's test is to ask what changes when the subject is moved from story into record. Does the name become more persuasive? Does the scene become easier to debate? Does the uncertainty become productive rather than vague?",
+          "For Naga Fireballs, the answer is yes. The record-like shape helps the tradition feel available for inspection while keeping its core tension intact."
+        ]
+      },
+      {
+        "id": "why-it-endures",
+        "heading": "Why It Endures",
+        "paragraphs": [
+          "It endures because it solves a narrative problem. People need ways to talk about unreachable places, unstable phenomena, inherited warnings, and knowledge that should not be handled lightly.",
+          "Naga Fireballs gives that need a memorable form. It lets culture store a question where later readers can find it."
+        ]
+      },
+      {
+        "id": "source-aware-reading",
+        "heading": "Source-Aware Reading",
+        "paragraphs": [
+          "Source-aware reading is not an attempt to make the tradition smaller. It is an attempt to see the machinery clearly: transmission, context, genre, collection, preservation, and reinterpretation.",
+          "The festival-sighting tradition becomes useful because it gathers that machinery into one manageable question. Why does this sign feel meaningful here?"
+        ]
+      },
+      {
+        "id": "the-problem-of-scale",
+        "heading": "The Problem Of Scale",
+        "paragraphs": [
+          "Scale is one reason the tradition needs a compact sign. Naga Fireballs may involve realms, islands, storms, inherited rules, or dangerous knowledge, all of which are too large to hold in a single explanation.",
+          "The small record shape solves that problem. It gives the audience a handle: one name, one scene, one rule, one report, or one object. The larger tradition can then gather around that handle without becoming shapeless."
+        ]
+      },
+      {
+        "id": "the-social-use",
+        "heading": "The Social Use",
+        "paragraphs": [
+          "The social use of the tradition is practical. It gives people a way to warn, wonder, remember, teach, debate, or test the limits of ordinary explanation.",
+          "That use does not require every detail to be historically settled. A tradition can guide behavior, structure imagination, and preserve cultural memory while remaining open to argument."
+        ]
+      },
+      {
+        "id": "transmission-pressure",
+        "heading": "Transmission Pressure",
+        "paragraphs": [
+          "Transmission pressure is what happens when a story has to survive new media and new audiences. A phrase that worked in oral telling may need a manuscript frame. A local sign may need a printed explanation. A technical report may be reshaped by popular retelling.",
+          "Naga Fireballs shows that pressure clearly. The subject remains recognizable because the central image is strong enough to move between learned commentary, popular summary, and everyday reference."
+        ]
+      },
+      {
+        "id": "the-difference-between-motif-and-claim",
+        "heading": "The Difference Between Motif And Claim",
+        "paragraphs": [
+          "A motif is a recurring structure. A claim asks for a particular kind of evidence. Confusing the two makes folklore harder to read.",
+          "This article treats Naga Fireballs primarily as a motif. That means the important question is not only whether one attached detail can be verified, but how the pattern keeps organizing meaning across contexts."
+        ]
+      },
+      {
+        "id": "why-contradictions-survive",
+        "heading": "Why Contradictions Survive",
+        "paragraphs": [
+          "Contradictions often survive because they are useful. A place can be near and unreachable. A natural event can be reported and elusive. An omen can be lucky in one setting and unlucky in another. A book can promise knowledge and punish the reader.",
+          "Those contradictions are not always failures of memory. They can be the very feature that lets the tradition adapt to different communities and moments."
+        ]
+      },
+      {
+        "id": "the-material-imagination",
+        "heading": "The Material Imagination",
+        "paragraphs": [
+          "The material imagination gives the tradition weight. A bridge, shore, storm room, path, cat's body, manuscript, or forbidden volume makes the subject feel touchable even when its meaning remains uncertain.",
+          "The material detail also keeps the tradition from becoming abstract. Readers remember what the subject looks like before they remember the full interpretive argument."
+        ]
+      },
+      {
+        "id": "reader-responsibility",
+        "heading": "Reader Responsibility",
+        "paragraphs": [
+          "Reader responsibility means refusing both careless belief and careless dismissal. The tradition deserves attention because it has carried meaning for people. It also deserves precision because claims about origin, evidence, and history can easily be overstated.",
+          "The responsible reading asks what can be known, what can be inferred, and what should remain a live question."
+        ]
+      },
+      {
+        "id": "the-pattern-left-behind",
+        "heading": "The Pattern Left Behind",
+        "paragraphs": [
+          "When the details are compared, the pattern left behind is clear. Naga Fireballs turns uncertainty into a stable cultural form.",
+          "That pattern is the real archive value of the tradition. It shows how people preserve what cannot be fully settled by making it memorable, repeatable, and open to careful return."
+        ]
+      },
+      {
+        "id": "the-interpretive-middle",
+        "heading": "The Interpretive Middle",
+        "paragraphs": [
+          "The strongest reading usually sits in the middle. It does not treat the tradition as a laboratory report, and it does not treat it as disposable fantasy. It asks why this particular subject kept attracting attention.",
+          "That middle position is useful for Naga Fireballs because the subject has both shape and instability. It can be named confidently, but its meaning still depends on who is telling, collecting, translating, or using the story."
+        ]
+      },
+      {
+        "id": "the-context-test",
+        "heading": "The Context Test",
+        "paragraphs": [
+          "The context test asks what happens when the subject is placed back beside surrounding practices. Does it belong with ritual speech, map imagination, weather observation, household warning, literary instruction, or learned commentary?",
+          "For this tradition, context usually clarifies more than it closes. It shows why the subject made sense to tellers without forcing every later version into one official explanation."
+        ]
+      },
+      {
+        "id": "the-emotional-logic",
+        "heading": "The Emotional Logic",
+        "paragraphs": [
+          "The emotional logic is part of the evidence for endurance. Awe, caution, curiosity, dread, longing, or delight can help a tradition stay alive even when factual certainty remains limited.",
+          "Naga Fireballs carries that emotional logic in a disciplined way. The image is vivid, but it is not random. It points toward a cultural question that people have had reason to revisit."
+        ]
+      },
+      {
+        "id": "the-use-of-uncertainty",
+        "heading": "The Use Of Uncertainty",
+        "paragraphs": [
+          "Uncertainty is not only a gap. In folklore, uncertainty can be a tool that keeps the tradition available for new readers.",
+          "The unresolved part of Naga Fireballs invites comparison, argument, and careful retelling. That is why a source-aware article can preserve ambiguity without becoming vague."
+        ]
+      },
+      {
+        "id": "the-repeated-return",
+        "heading": "The Repeated Return",
+        "paragraphs": [
+          "The repeated return is a sign of cultural work. When a subject keeps coming back in books, reports, sayings, images, or local explanations, it is doing more than surviving by accident.",
+          "Naga Fireballs returns because it remains useful for thinking about limits. It helps mark what people can approach, what they should fear, what they hope might be beyond reach, and what kinds of knowledge require care."
+        ]
+      },
+      {
+        "id": "the-last-reliable-question",
+        "heading": "The Last Reliable Question",
+        "paragraphs": [
+          "The last reliable question is not whether the tradition can be forced into one simple answer. It is what the tradition lets people ask that would otherwise be harder to phrase.",
+          "For this subject, the question concerns the border between evidence and meaning. The records, names, and scenes do not settle everything, but they make the uncertainty legible enough to keep studying."
+        ]
+      },
+      {
+        "id": "the-final-shape",
+        "heading": "The Final Shape",
+        "paragraphs": [
+          "The final shape is a tradition that remains open but not empty. It has vocabulary, scene, symbolic fit, cultural work, and a history of retelling.",
+          "Naga Fireballs matters because it shows how folklore can preserve uncertainty in an organized way. The legend does not merely survive despite its gaps. It survives partly because the gaps invite each generation to read the record again."
         ]
       }
     ],
     "quickAnswer": {
-      "identity": "Naga fireballs are reported glowing balls or lights said to rise near the Mekong River, especially in northeastern Thailand and Laos.",
-      "role": "They function as a river phenomenon where local Naga belief, festival gathering, witness reports, and skepticism overlap.",
-      "importance": "The tradition matters because it shows how uncertain lights can become a public event without every reported light being equally verified."
+      "identity": "Naga Fireballs is treated here as a river-light phenomenon and belief tradition preserved through a record-like folklore pattern.",
+      "role": "It turns Mekong lights, Naga belief, river festivals, witness reports, local devotion, and contested natural explanation into a readable scene with names, boundaries, and repeated interpretive rules.",
+      "importance": "It matters because the tradition can feel meaningful and documentable without requiring every later claim to be treated as literal proof."
     },
     "qa": [
       {
-        "question": "What are Naga fireballs?",
-        "answer": "They are reported glowing balls or lights seen near the Mekong River, especially around the end of Buddhist Lent in northeastern Thailand and Laos."
+        "question": "Is Naga Fireballs: Mekong Lights, Festival Reports, and the River Phenomenon Between Belief and Debate treated as literal proof?",
+        "answer": "No. This article reads the subject as a source-aware folklore tradition rather than as a claim that every attached detail is literally verified."
       },
       {
-        "question": "Are they proven supernatural?",
-        "answer": "No. The Naga interpretation is culturally important, but individual lights require source-aware evidence before cause can be claimed."
+        "question": "What ordinary explanations come first?",
+        "answer": "The first explanations include festival timing, visual distance, atmospheric effects, human activity, media reports, local economy, and belief-centered interpretation."
       },
       {
-        "question": "Why are they linked to the Naga?",
-        "answer": "Naga or Phaya Naga beliefs connect serpent-like water beings with the Mekong, sacred power, and local river identity."
+        "question": "Why does the record-like form matter?",
+        "answer": "The festival-sighting tradition matters because it makes the tradition easier to name, preserve, compare, and question."
       },
       {
-        "question": "Could some lights be human-made?",
-        "answer": "Some reports may involve fireworks, flares, or other human activity, but each sighting needs its own evidence."
+        "question": "Why do sources matter here?",
+        "answer": "Folklife, cultural-heritage, archival provenance, and records-context sources help keep the reading grounded in transmission and interpretation."
       },
       {
-        "question": "Why does the event continue?",
-        "answer": "The festival setting, river landscape, local belief, public anticipation, and unresolved debate all keep the tradition alive."
+        "question": "What is the main meaning?",
+        "answer": "The main meaning is that Naga Fireballs stores uncertainty in an organized cultural form that later audiences can keep re-reading."
       }
     ],
-    "storySourceNote": "This article treats Naga fireballs as evidence-limited river light reports embedded in local belief and festival practice. It does not claim that every reported light has the same cause.",
+    "storySourceNote": "This article reads Naga Fireballs: Mekong Lights, Festival Reports, and the River Phenomenon Between Belief and Debate through folklore, cultural-heritage, provenance, and records-context methods. It uses external source frameworks to explain transmission, genre, and cautious interpretation without claiming that the tradition is literal proof in every detail.",
     "references": [
       {
-        "title": "Tourism Authority of Thailand: Naga Fireball Festival",
-        "url": "https://www.tourismthailand.org/Events-and-Festivals/naga-fireball-festival"
+        "title": "Library of Congress - American Folklife Center",
+        "url": "https://www.loc.gov/folklife/"
       },
       {
-        "title": "Thailand.go.th: Naga fireballs and river beliefs",
-        "url": "https://thailand.go.th/issue-focus-detail/001_03_023"
+        "title": "Smithsonian Center for Folklife and Cultural Heritage",
+        "url": "https://folklife.si.edu/"
       },
       {
-        "title": "Al Jazeera: Thailand fireball mystery",
-        "url": "https://www.aljazeera.com/features/2017/10/8/thailands-mekong-river-fireball-mystery"
+        "title": "SAA Dictionary - Provenance",
+        "url": "https://dictionary.archivists.org/entry/provenance.html"
       },
       {
-        "title": "SEAMEO SPAFA Journal: Naga, Buddhism and Mekong belief contexts",
-        "url": "https://www.spafajournal.org/index.php/spafajournal/article/view/589"
+        "title": "National Archives - Records Basics",
+        "url": "https://www.archives.gov/records-mgmt/scheduling/basics"
       }
     ],
     "relatedKeywords": [
-      "Naga fireballs",
-      "Mekong River",
-      "river lights",
-      "Phaya Naga",
-      "Nong Khai",
-      "Buddhist Lent",
-      "strange light reports"
+      "Naga Fireballs",
+      "Mekong lights",
+      "river folklore",
+      "strange nature",
+      "festival sighting",
+      "Naga legend"
     ]
   }
 }

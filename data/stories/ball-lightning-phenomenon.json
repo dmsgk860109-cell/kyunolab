@@ -1,276 +1,738 @@
 {
   "id": "ball-lightning-phenomenon",
-  "recordId": "ball-lightning-phenomenon",
   "slug": "ball-lightning-phenomenon",
-  "pathname": "/stories/ball-lightning-phenomenon",
-  "canonicalUrl": "https://kyunolab.com/stories/ball-lightning-phenomenon",
-  "category": "Strange Nature",
-  "storyType": "atmospheric-mystery",
   "title": "Ball Lightning: Glowing Spheres, Storm Reports, and the Natural Mystery That Behaves Like Folklore",
   "displayTitle": "Ball Lightning: Glowing Spheres, Storm Reports, and the Natural Mystery That Behaves Like Folklore",
   "h1": "Ball Lightning: Glowing Spheres, Storm Reports, and the Natural Mystery That Behaves Like Folklore",
   "seoTitle": "Ball Lightning: Glowing Spheres, Storm Reports, and the Natural Mystery That Behaves Like Folklore",
   "metaTitle": "Ball Lightning: Glowing Spheres, Storm Reports, and the Natural Mystery That Behaves Like Folklore",
-  "metaDescription": "A source-aware guide to ball lightning, glowing sphere reports, storm testimony, scientific theories, laboratory models, and why the phenomenon behaves like folklore.",
-  "introSummary": "Ball lightning is a reported atmospheric phenomenon of glowing spheres seen around storms, difficult to document, scientifically debated, and repeatedly retold like folklore.",
-  "summaryAnswer": "Ball lightning matters because it sits at the boundary between witness testimony and atmospheric science: a reported luminous sphere that many people describe but few instruments capture clearly.",
-  "updatedAt": "2026-07-28",
-  "relatedStorySlugs": [
-    "naga-fireballs-legend",
-    "morning-glory-cloud",
-    "fairy-rings-folklore",
-    "sailing-stones-death-valley"
-  ],
-  "qa": [
-    {
-      "question": "Is ball lightning real?",
-      "answer": "Many credible reports exist and scientists study the problem, but direct instrumented evidence remains limited and explanations may not cover every case."
-    },
-    {
-      "question": "What does ball lightning look like?",
-      "answer": "It is usually described as a glowing sphere or ball, often appearing during or near thunderstorms and lasting longer than ordinary lightning."
-    },
-    {
-      "question": "Has science solved ball lightning?",
-      "answer": "Not completely. Several theories and laboratory analogues exist, but no single explanation is accepted for all credible reports."
-    },
-    {
-      "question": "Are all reports reliable?",
-      "answer": "No. Some may involve misperception, other electrical effects, reflections, or story influence, so context and corroboration matter."
-    },
-    {
-      "question": "Why does it behave like folklore?",
-      "answer": "It is brief, vivid, hard to document, and often retold from witness memory, which lets motifs and dramatic details travel."
-    }
-  ],
-  "storySourceNote": "This article treats ball lightning as an evidence-limited atmospheric phenomenon. It respects witness reports and scientific research while avoiding claims that the mystery is either fully solved or supernatural.",
+  "metaDescription": "A source-aware guide to ball lightning, storm reports, glowing spheres, witness memory, and strange-nature folklore.",
+  "category": "Strange Nature",
+  "categorySlug": "strange-nature",
+  "categoryGroup": "Mythic & Imagined Realms",
+  "tag": "Atmospheric Phenomenon",
+  "primaryTag": "Atmospheric Phenomenon",
+  "seedKeyword": "ball lightning phenomenon",
+  "primaryKeyword": "ball lightning phenomenon",
+  "searchIntent": "facts-and-theories",
+  "articleFormat": "story-archive",
+  "cluster": "Strange Nature / Atmospheric Phenomenon",
   "relatedKeywords": [
     "ball lightning",
-    "glowing sphere",
-    "atmospheric electricity",
-    "storm reports",
-    "luminous phenomenon",
-    "lightning folklore",
-    "plasma hypothesis"
+    "strange nature",
+    "storm folklore",
+    "luminous sphere",
+    "weather mystery",
+    "witness report"
   ],
-  "contentDNA": {
-    "targetQuery": "ball lightning phenomenon",
-    "canonicalQuery": "ball-lightning-phenomenon",
-    "searchQuestion": "Why does ball lightning remain both a scientific problem and a folklore-like report?",
-    "readerIntent": "Understand ball lightning reports, source limits, scientific theories, and why witness stories remain important but difficult.",
-    "uniqueAngle": "The article treats ball lightning as a reported natural phenomenon whose evidence problem makes it travel like folklore.",
-    "subjectClass": "strange-nature",
-    "narrativeLens": "witness-report-and-atmospheric-science",
-    "evidencePosture": "evidence-limited",
-    "culturalFrame": "storm observation, atmospheric electricity, laboratory theory, witness memory, and folklore transmission",
-    "sceneAnchor": "a glowing ball appearing during or near a thunderstorm and vanishing seconds later",
-    "subjectSpecificVocabulary": [
+  "secondaryKeywords": [
+    "ball lightning phenomenon origin",
+    "ball lightning phenomenon meaning",
+    "atmospheric phenomenon folklore",
+    "strange nature explained",
+    "ball lightning",
+    "glowing sphere",
+    "storm reports",
+    "atmospheric phenomenon"
+  ],
+  "topicScore": 94,
+  "topicStatus": "approved",
+  "scoreBreakdown": {
+    "searchDemand": 30,
+    "clickCuriosity": 24,
+    "siteFit": 24,
+    "expansionPotential": 10,
+    "sourceSafety": 6
+  },
+  "summaryAnswer": "ball lightning matters because it turns storm observation, luminous spheres, household testimony, laboratory caution, and the border between weather science and wonder into a recognizable cultural pattern. A source-aware reading keeps ordinary explanations visible while explaining why the tradition remains powerful.",
+  "readTime": "9 min read",
+  "storyType": "strange-nature-observed-phenomenon",
+  "generationBatch": "real-five-each-20260721",
+  "contentStandard": "unified",
+  "generatorVersion": "unified-public-article-v2",
+  "templateVersion": "variable-sections-v2",
+  "articlePlanVersion": "public-plan-v2",
+  "validationVersion": "public-validation-v2",
+  "generatedAt": "2026-07-21T00:00:00.000Z",
+  "editorialStatus": "approved",
+  "legacyContent": false,
+  "substantiveRevisionAt": "2026-07-21",
+  "internalLinkEligible": true,
+  "sourceStatus": "Strange Nature / Atmospheric Phenomenon / Evidence-limited public record",
+  "publicSourceBasis": "natural phenomenon reports, folklore interpretation, scientific discussion, and public observation",
+  "excerpt": "Ball Lightning is a pre-existing Strange Nature subject built around the reported atmospheric phenomenon of glowing spheres seen during storms and debated through science, witness reports, and folklore-like retellings.",
+  "introSummary": "ball lightning becomes durable because a luminous weather report that often sounds precise in witness memory while remaining difficult to reproduce on demand, turning strange natural phenomenon into a source-aware folklore record.",
+  "publishedAt": "2026-07-21",
+  "updatedAt": "2026-07-29",
+  "relatedStoryIds": [],
+  "relatedStorySlugs": [
+    "st-elmos-fire-folklore",
+    "will-o-the-wisp-folklore",
+    "fairy-rings-folklore",
+    "the-lightning-map-that-marked-a-silent-hill"
+  ],
+  "tags": [
+    "Atmospheric Phenomenon",
+    "Ball Lightning",
+    "glowing sphere",
+    "storm reports"
+  ],
+  "detail": "reported atmospheric phenomenon of glowing spheres seen during storms and debated through science, witness reports, and folklore-like retellings",
+  "evidence": "strange nature references, folklore summaries, public cultural records, and source-aware retellings",
+  "researchSources": [
+    {
+      "title": "Wikipedia - Ball Lightning",
+      "url": "https://en.wikipedia.org/wiki/Ball_lightning",
+      "sourceType": "reference",
+      "supports": "Supports the public record for Ball Lightning."
+    },
+    {
+      "title": "Britannica - Ball Lightning",
+      "url": "https://www.britannica.com/science/ball-lightning",
+      "sourceType": "reference",
+      "supports": "Supports source-aware context around Ball Lightning."
+    }
+  ],
+  "sourceNotes": {
+    "sharedVerifiedPoints": [
+      "Ball Lightning is a pre-existing subject in folklore, myth, legend, mystery, or public cultural memory.",
+      "Ball Lightning can be described through the reported atmospheric phenomenon of glowing spheres seen during storms and debated through science, witness reports, and folklore-like retellings.",
+      "The strongest reading stays within strange nature references, folklore summaries, public cultural records, and source-aware retellings."
+    ],
+    "variants": [
+      "Specific details shift by source, region, retelling, publication history, or community memory.",
+      "Later popular versions often make the story cleaner than the source trail allows."
+    ],
+    "unsupportedClaimsToAvoid": [
+      "Do not present supernatural or speculative claims as verified fact.",
+      "Do not invent witnesses, documents, dates, or discoveries beyond the source-aware record.",
+      "Do not imply a single definitive origin when the record contains variants or source limits."
+    ],
+    "sourceLimits": [
+      "The article explains the story and its reception without treating all claims as equally proven.",
+      "Interpretive meanings are presented as readings, not as settled historical facts."
+    ]
+  },
+  "targetQuery": "ball lightning",
+  "canonicalQuery": "ball lightning phenomenon",
+  "uniqueAngle": "Ball Lightning is treated through one concrete anchor: the reported atmospheric phenomenon of glowing spheres seen during storms and debated through science, witness reports, and folklore-like retellings.",
+  "sceneAnchor": "the reported atmospheric phenomenon of glowing spheres seen during storms and debated through science, witness reports, and folklore-like retellings",
+  "subjectSpecificVocabulary": [
+    "ball lightning",
+    "glowing sphere",
+    "storm reports",
+    "atmospheric phenomenon",
+    "natural mystery"
+  ],
+  "contentType": "story",
+  "storyBrief": {
+    "topic": "Ball Lightning",
+    "category": "Strange Nature",
+    "contentType": "strange-nature",
+    "existenceStatus": "confirmed",
+    "circulationLevel": "widely known",
+    "knownNames": [
+      "Ball Lightning",
       "ball lightning",
       "glowing sphere",
-      "atmospheric electricity",
-      "plasma",
-      "storm testimony",
-      "luminous ball"
+      "storm reports"
     ],
-    "requiredSpecificDetails": [
-      "storm association",
-      "brief duration",
-      "witness report problem",
-      "scientific hypotheses",
-      "difficulty of direct measurement"
+    "cultureOrContext": "natural phenomenon reports, folklore interpretation, scientific discussion, and public observation",
+    "coreStoryElements": [
+      "Ball Lightning is a pre-existing Strange Nature subject built around the reported atmospheric phenomenon of glowing spheres seen during storms and debated through science, witness reports, and folklore-like retellings.",
+      "Its strongest image is specific enough to follow across retellings while still leaving room for careful interpretation.",
+      "The familiar account centers on the reported atmospheric phenomenon of glowing spheres seen during storms and debated through science, witness reports, and folklore-like retellings.",
+      "Ball Lightning belongs to natural phenomenon reports, folklore interpretation, scientific discussion, and public observation, so the article treats it as inherited material rather than a newly invented Kyunolab record.",
+      "Most retellings preserve ball lightning, glowing sphere, storm reports as the signs that make Ball Lightning recognizable.",
+      "The strongest version works when the concrete image stays visible and later explanation does not flatten the uncertainty."
     ],
-    "prohibitedGenericPhrases": [
-      "ball lightning is fully solved",
-      "all reports are imaginary",
-      "one lab effect explains every case"
+    "reportedVariants": [
+      {
+        "claim": "Versions of Ball Lightning differ by source, region, period, or online retelling, but the central anchor remains ball lightning.",
+        "scope": "variant tradition"
+      },
+      {
+        "claim": "Later summaries often simplify the story into a single clean form, while older or parallel versions keep more than one emphasis alive.",
+        "scope": "later versions and source comparison"
+      }
     ],
-    "sectionBlueprint": [
+    "editorialInterpretationOptions": [
+      "Ball Lightning may be read as a story about how natural patterns become signs.",
+      "That reading keeps the article focused on meaning and source limits instead of adding unsupported events."
+    ],
+    "uncertainDetails": [
+      "The exact earliest form may be disputed, incomplete, or preserved through later retellings.",
+      "Later versions may simplify, relocate, intensify, or reinterpret the story."
+    ],
+    "prohibitedInventions": [
+      "Do not add a hidden witness or newly discovered document.",
+      "Do not turn folklore or speculation into confirmed fact.",
+      "Do not invent modern evidence that is not in the source record."
+    ],
+    "existenceEvidence": [
       {
-        "title": "What Ball Lightning Is Reported To Be",
-        "nav": "Reports"
+        "title": "Wikipedia - Ball Lightning",
+        "url": "https://en.wikipedia.org/wiki/Ball_lightning",
+        "sourceType": "reference",
+        "supports": "Supports the public record for Ball Lightning."
       },
       {
-        "title": "Why Witness Testimony Matters",
-        "nav": "Witnesses"
-      },
-      {
-        "title": "How Storm Context Shapes the Reports",
-        "nav": "Storms"
-      },
-      {
-        "title": "Why Science Has Trouble With It",
-        "nav": "Science"
-      },
-      {
-        "title": "What Theories Try to Explain",
-        "nav": "Theories"
-      },
-      {
-        "title": "Why the Reports Behave Like Folklore",
-        "nav": "Folklore"
-      },
-      {
-        "title": "How to Read Ball Lightning Claims",
-        "nav": "Evidence"
-      },
-      {
-        "title": "Why the Mystery Still Matters",
-        "nav": "Why It Lasts"
+        "title": "Britannica - Ball Lightning",
+        "url": "https://www.britannica.com/science/ball-lightning",
+        "sourceType": "reference",
+        "supports": "Supports source-aware context around Ball Lightning."
       }
     ]
   },
+  "seoHeadings": [
+    "The Detail That Defines Ball Lightning",
+    "How Ball Lightning Is Usually Remembered",
+    "Where Later Versions Differ",
+    "What the Available Sources Show",
+    "What Ball Lightning Means"
+  ],
+  "faqQuestions": [
+    "What is Ball Lightning?",
+    "How is Ball Lightning usually remembered?",
+    "Where do versions of Ball Lightning differ?",
+    "What does Ball Lightning mean?"
+  ],
+  "publicSourceNoteSeed": "This article follows Ball Lightning as a known Strange Nature subject. It separates existing tradition, reported variants, and Kyunolab interpretation without inventing new evidence.",
+  "publicArticlePlan": {
+    "title": "Ball Lightning: Glowing Spheres, Storm Reports, and the Natural Mystery That Behaves Like Folklore",
+    "dek": "Ball Lightning begins with ball lightning and follows how that image kept moving through strange nature retellings.",
+    "quickAnswer": {
+      "paragraphs": [
+        "In brief, Ball Lightning is a pre-existing Strange Nature subject built around the reported atmospheric phenomenon of glowing spheres seen during storms and debated through science, witness reports, and folklore-like retellings. Its strongest image is specific enough to follow across retellings while still leaving room for careful interpretation.",
+        "The main movement is clear: The familiar account centers on the reported atmospheric phenomenon of glowing spheres seen during storms and debated through science, witness reports, and folklore-like retellings. Versions of Ball Lightning differ by source, region, period, or online retelling, but the central anchor remains ball lightning. Ball Lightning may be read as a story about how natural patterns become signs."
+      ],
+      "targetWords": {
+        "min": 90,
+        "max": 180
+      }
+    },
+    "introduction": [
+      "Ball Lightning is anchored by the reported atmospheric phenomenon of glowing spheres seen during storms and debated through science, witness reports, and folklore-like retellings. It also appears through names such as Ball Lightning, ball lightning, glowing sphere, storm reports.",
+      "Ball Lightning is a pre-existing Strange Nature subject built around the reported atmospheric phenomenon of glowing spheres seen during storms and debated through science, witness reports, and folklore-like retellings."
+    ],
+    "sections": [
+      {
+        "id": "the-detail-that-defines-ball-lightning",
+        "heading": "The Detail That Defines Ball Lightning",
+        "purpose": "",
+        "contentLayer": "existing-story",
+        "storyBriefInputs": [],
+        "targetWords": {
+          "min": 170,
+          "max": 360
+        },
+        "paragraphs": [
+          "Ball Lightning begins with a visible break in ordinary weather: the reported atmospheric phenomenon of glowing spheres seen during storms."
+        ]
+      },
+      {
+        "id": "how-ball-lightning-is-usually-remembered",
+        "heading": "How Ball Lightning Is Usually Remembered",
+        "purpose": "",
+        "contentLayer": "existing-story",
+        "storyBriefInputs": [],
+        "targetWords": {
+          "min": 170,
+          "max": 360
+        },
+        "paragraphs": [
+          "The familiar account centers on the reported atmospheric phenomenon of glowing spheres seen during storms and debated through science, witness reports, and folklore-like retellings. Most retellings preserve ball lightning, glowing sphere, storm reports as the signs that make Ball Lightning recognizable.",
+          "Ball Lightning belongs to natural phenomenon reports, folklore interpretation, scientific discussion, and public observation, so the article treats it as inherited material rather than a newly invented Kyunolab record. The strongest version works when the concrete image stays visible and later explanation does not flatten the uncertainty."
+        ]
+      },
+      {
+        "id": "where-later-versions-differ",
+        "heading": "Where Later Versions Differ",
+        "purpose": "",
+        "contentLayer": "reported-variant",
+        "storyBriefInputs": [],
+        "targetWords": {
+          "min": 170,
+          "max": 360
+        },
+        "paragraphs": [
+          "Later retellings do not always keep the same emphasis. Versions of Ball Lightning differ by source, region, period, or online retelling, but the central anchor remains ball lightning.",
+          "Another difference appears in the details that later audiences remember. Later summaries often simplify the story into a single clean form, while older or parallel versions keep more than one emphasis alive."
+        ]
+      },
+      {
+        "id": "what-the-available-sources-show",
+        "heading": "What the Available Sources Show",
+        "purpose": "",
+        "contentLayer": "source-context",
+        "storyBriefInputs": [],
+        "targetWords": {
+          "min": 170,
+          "max": 360
+        },
+        "paragraphs": [
+          "Ball Lightning appears in source material connected with natural phenomenon reports, folklore interpretation, scientific discussion, and public observation. Public references used for orientation include Wikipedia and Britannica.",
+          "strange nature references, folklore summaries, public cultural records, and source-aware retellings. Those references are useful for separating observation, scientific explanation, and folklore response. Recurring terms include ball lightning, glowing sphere, storm reports, atmospheric phenomenon and natural mystery."
+        ]
+      },
+      {
+        "id": "what-ball-lightning-means",
+        "heading": "What Ball Lightning Means",
+        "purpose": "",
+        "contentLayer": "variant-and-interpretation",
+        "storyBriefInputs": [],
+        "targetWords": {
+          "min": 170,
+          "max": 360
+        },
+        "paragraphs": [
+          "One possible reading is that ball Lightning may be read as a story about how natural patterns become signs.",
+          "That reading keeps the article focused on meaning and source limits instead of adding unsupported events."
+        ]
+      }
+    ],
+    "conclusion": {
+      "paragraphs": [
+        "Ball Lightning remains memorable because the reported atmospheric phenomenon of glowing spheres seen during storms and debated through science, witness reports, and folklore-like retellings gives the subject a concrete shape readers can follow.",
+        "Ball Lightning may be read as a story about how natural patterns become signs. Versions of Ball Lightning differ by source, region, period, or online retelling, but the central anchor remains ball lightning."
+      ],
+      "targetWords": {
+        "min": 100,
+        "max": 180
+      }
+    },
+    "faq": [
+      {
+        "q": "What is Ball Lightning?",
+        "a": "Ball Lightning refers to reported atmospheric phenomenon of glowing spheres seen during storms and debated through science, witness reports, and folklore-like retellings."
+      },
+      {
+        "q": "How is Ball Lightning usually remembered?",
+        "a": "In the main account, The familiar account centers on the reported atmospheric phenomenon of glowing spheres seen during storms and debated through science, witness reports, and folklore-like retellings. Most retellings preserve ball lightning, glowing sphere, storm reports as the signs that make Ball Lightning recognizable."
+      },
+      {
+        "q": "Where do versions of Ball Lightning differ?",
+        "a": "Versions of Ball Lightning differ by source, region, period, or online retelling, but the central anchor remains ball lightning. Later summaries often simplify the story into a single clean form, while older or parallel versions keep more than one emphasis alive."
+      },
+      {
+        "q": "What does Ball Lightning mean?",
+        "a": "As an interpretation, ball Lightning may be read as a story about how natural patterns become signs."
+      }
+    ],
+    "publicSourceNote": "Ball Lightning is treated through natural phenomenon reports, folklore interpretation, scientific discussion, and public observation. References such as Wikipedia and Britannica are used as orientation points, not as proof for every later claim. Later versions are kept separate from the core account when they shift emphasis. Versions of Ball Lightning differ by source, region, period, or online retelling, but the central anchor remains ball lightning. Later summaries often simplify the story into a single clean form, while older or parallel versions keep more than one emphasis alive. For Ball Lightning, observation and explanation are separated from the folklore that grows around the event."
+  },
+  "contentDNA": {
+    "targetQuery": "ball lightning phenomenon",
+    "canonicalQuery": "ball-lightning-phenomenon",
+    "searchQuestion": "Why does ball lightning remain culturally memorable?",
+    "readerIntent": "Understand the folklore, source context, and record-like structure behind Ball Lightning: Glowing Spheres, Storm Reports, and the Natural Mystery That Behaves Like Folklore.",
+    "uniqueAngle": "The article treats a luminous weather report that often sounds precise in witness memory while remaining difficult to reproduce on demand as a record-shaped folklore problem.",
+    "subjectClass": "strange natural phenomenon",
+    "narrativeLens": "source-aware-folklore-record-reading",
+    "evidencePosture": "source-aware",
+    "culturalFrame": "storm observation, luminous spheres, household testimony, laboratory caution, and the border between weather science and wonder",
+    "sceneAnchor": "a storm account where a glowing sphere moves through an ordinary room or road as if weather had briefly become an apparition",
+    "subjectSpecificVocabulary": [
+      "ball lightning",
+      "storm report",
+      "luminous sphere",
+      "electrical weather",
+      "witness account",
+      "natural mystery"
+    ],
+    "requiredSpecificDetails": [
+      "ball lightning",
+      "storm report",
+      "luminous sphere",
+      "electrical weather",
+      "witness account",
+      "natural mystery"
+    ],
+    "prohibitedGenericPhrases": [
+      "this proves every legend is factual",
+      "ordinary explanations are impossible",
+      "all later claims are verified"
+    ],
+    "sectionBlueprint": []
+  },
+  "recordId": "ball-lightning-phenomenon",
+  "pathname": "/stories/ball-lightning-phenomenon",
+  "canonicalUrl": "https://kyunolab.com/stories/ball-lightning-phenomenon",
+  "summary": "ball lightning matters because it turns storm observation, luminous spheres, household testimony, laboratory caution, and the border between weather science and wonder into a recognizable cultural pattern. A source-aware reading keeps ordinary explanations visible while explaining why the tradition remains powerful.",
+  "readingMinutes": 12,
+  "qa": [
+    {
+      "question": "Is Ball Lightning: Glowing Spheres, Storm Reports, and the Natural Mystery That Behaves Like Folklore treated as literal proof?",
+      "answer": "No. This article reads the subject as a source-aware folklore tradition rather than as a claim that every attached detail is literally verified."
+    },
+    {
+      "question": "What ordinary explanations come first?",
+      "answer": "The first explanations include electrical storm conditions, optical effects, damaged instruments, retrospective testimony, newspaper compression, and laboratory uncertainty."
+    },
+    {
+      "question": "Why does the record-like form matter?",
+      "answer": "The storm report tradition matters because it makes the tradition easier to name, preserve, compare, and question."
+    },
+    {
+      "question": "Why do sources matter here?",
+      "answer": "Folklife, cultural-heritage, archival provenance, and records-context sources help keep the reading grounded in transmission and interpretation."
+    },
+    {
+      "question": "What is the main meaning?",
+      "answer": "The main meaning is that ball lightning stores uncertainty in an organized cultural form that later audiences can keep re-reading."
+    }
+  ],
+  "storySourceNote": "This article reads Ball Lightning: Glowing Spheres, Storm Reports, and the Natural Mystery That Behaves Like Folklore through folklore, cultural-heritage, provenance, and records-context methods. It uses external source frameworks to explain transmission, genre, and cautious interpretation without claiming that the tradition is literal proof in every detail.",
   "longformArticle": {
     "contentPackageVersion": "archive-story-content-v1",
-    "deck": "Ball lightning is a reported atmospheric phenomenon of glowing spheres seen around storms, difficult to document, scientifically debated, and repeatedly retold like folklore.",
+    "deck": "ball lightning becomes durable because a luminous weather report that often sounds precise in witness memory while remaining difficult to reproduce on demand, turning strange natural phenomenon into a source-aware folklore record.",
     "opening": [
-      "Ball lightning is one of the rare natural mysteries where the simplest description sounds impossible: a glowing sphere appears during a storm, floats or moves, lasts for seconds, and vanishes. Witnesses have described balls entering rooms, moving near the ground, passing along wires, exploding, fading silently, or appearing near lightning strikes. The reports are vivid, but the evidence is difficult.",
-      "That difficulty is why ball lightning behaves like folklore even when scientists take it seriously. It is brief, unpredictable, dangerous to approach, and often reported after the fact by startled observers. The phenomenon sits between atmospheric electricity and witness story. To read it well, one must avoid two lazy conclusions: that every report is proven, or that every report is nonsense."
+      "ball lightning survives because it gives tradition a shape that can be named, repeated, and argued over. The subject is a strange natural phenomenon, but the story works like a record problem: a place, phenomenon, omen, or object is treated as if it could be filed and explained, while part of it remains outside ordinary proof.",
+      "The central detail is a luminous weather report that often sounds precise in witness memory while remaining difficult to reproduce on demand. This article reads that detail through source-aware folklore practice rather than as a claim of literal verification. The aim is to explain why storm observation, luminous spheres, household testimony, laboratory caution, and the border between weather science and wonder can feel durable, meaningful, and strangely documentable without flattening the tradition into either simple fact or simple mistake."
     ],
     "storyBody": [
       {
-        "id": "what-ball-lightning-is-reported-to-be",
-        "heading": "What Ball Lightning Is Reported To Be",
+        "id": "the-first-record-shape",
+        "heading": "The First Record Shape",
         "paragraphs": [
-          "Ball lightning is usually reported as a luminous ball or sphere, ranging from small to larger than a human head, appearing during or near thunderstorm conditions. Some accounts describe white, orange, blue, or reddish light. Some describe silent motion; others mention sound, odor, heat, or explosive disappearance. The phenomenon is often said to last longer than ordinary lightning, which makes it especially strange. Ordinary lightning is a flash. Ball lightning, in witness memory, has presence.",
-          "The phrase reported to be is important. Ball lightning is not known primarily through repeatable public demonstrations in the open atmosphere. It is known through witness accounts, rare photographic or instrumental claims, laboratory analogues, and theoretical papers. Some reports may be misperceptions, electrical events, reflections, combustion, or other phenomena. Some may point toward a real atmospheric process not yet fully understood. A careful article keeps that uncertainty visible.",
-          "This uncertainty does not make the topic unscientific. Many natural phenomena entered science through reports before mechanisms were settled. The issue is evidence quality. A glowing sphere during a violent storm is hard to measure in the moment. Instruments may not be pointed at the right place. Witnesses may be frightened. The event may end before anyone can document it. Ball lightning is therefore a problem of nature and evidence at once.",
-          "The sphere shape is central to the fascination. Ordinary lightning is branching, jagged, and instantaneous. A ball is contained. It seems to have a boundary and a body. That contained form makes witnesses describe it almost as an object rather than an event. If a light looks like a thing, people expect it to behave like a thing. Ball lightning unsettles that expectation by being luminous, mobile, and temporary."
+          "The first record shape is the storm report tradition. A tradition becomes easier to remember when it has a form that can be entered into speech, manuscripts, reports, indexes, guidebooks, or household rules.",
+          "That form matters because it gives the subject a surface. ball lightning is not only an idea floating in the air. It is attached to names, scenes, phrases, witness habits, and repeated interpretive rules."
         ]
       },
       {
-        "id": "why-witness-testimony-matters",
-        "heading": "Why Witness Testimony Matters",
+        "id": "the-scene-people-remember",
+        "heading": "The Scene People Remember",
         "paragraphs": [
-          "Witness testimony matters because without witnesses ball lightning would barely exist as a subject. The repeated pattern of reports across time gave researchers something to explain. People from different regions and eras have described luminous balls associated with storms, sometimes with enough similarity to demand attention. The witness archive is not perfect evidence, but it is not nothing. It is the beginning of the problem.",
-          "At the same time, witness testimony has limits. Memory changes. Sudden light can distort distance and size. Storm fear can sharpen some details and erase others. A person may describe what they sincerely saw while misidentifying the cause. This is why ball lightning remains difficult. The testimony is too persistent to ignore, but too variable to treat as a single clean measurement. Source-aware reading respects witnesses without making every detail equally reliable.",
-          "The best testimony includes context: weather conditions, distance, duration, sound, motion, objects nearby, electrical equipment, other witnesses, damage, and timing relative to ordinary lightning. Accounts without context may still be culturally interesting, but they are weaker scientifically. Ball lightning therefore teaches a general lesson about strange nature: reports matter most when they preserve enough detail to test.",
-          "The witness problem is also ethical. It is easy to mock unusual reports after the fact, especially when they sound impossible. But many scientific questions begin with someone reporting what they saw. The right response is neither gullibility nor contempt. It is structured curiosity. What exactly was observed? Under what conditions? What details repeat across accounts? What details vary? Ball lightning needs that disciplined respect."
+          "The scene is a storm account where a glowing sphere moves through an ordinary room or road as if weather had briefly become an apparition. It is compact enough to travel and specific enough to be retold. A listener can picture it before deciding what to believe about it.",
+          "Folklore often depends on this kind of scene. The scene carries more than information. It carries mood, permission, warning, wonder, and a sense that the ordinary world has briefly opened onto another rule."
         ]
       },
       {
-        "id": "how-storm-context-shapes-the-reports",
-        "heading": "How Storm Context Shapes the Reports",
+        "id": "ordinary-explanations-first",
+        "heading": "Ordinary Explanations First",
         "paragraphs": [
-          "Storm context shapes ball lightning reports in several ways. Thunderstorms produce intense electrical fields, lightning strikes, sudden brightness, strong sound, rain, wind, pressure changes, and human anxiety. A luminous sphere seen during a storm enters an environment already full of unusual sensory events. This makes ordinary perception harder and atmospheric explanation more plausible. The storm is not just background. It is part of the evidence.",
-          "Storms also create indoor and boundary reports. Some accounts describe glowing balls entering through windows, chimneys, doors, or along wires. Such details are especially dramatic because they move the phenomenon from sky to household. Ordinary lightning is frightening enough outside; ball lightning stories often become more memorable when the light appears inside a room or near a person. The event crosses a threshold, which is one reason it travels so well as story.",
-          "The threshold quality also makes ball lightning resemble older supernatural reports. A light enters the house, behaves unlike fire, and vanishes. People naturally reach for uncanny language. That language does not prove the event supernatural, but it explains the emotional tone. A storm already makes the world feel unstable. A glowing ball inside that instability becomes an object of awe, fear, and retelling.",
-          "The storm also makes timing difficult. A witness may see ordinary lightning, then a glowing ball seconds later, then hear thunder or another discharge. Sequencing matters for theories, but fear and surprise can blur it. This is why reports collected close to the event are more useful than memories repeated long afterward. A storm is not a calm laboratory. It is a sensory overload in which the unusual can be real and still hard to describe accurately."
+          "A careful reading begins with ordinary explanations. For this subject, those explanations include electrical storm conditions, optical effects, damaged instruments, retrospective testimony, newspaper compression, and laboratory uncertainty. These are not boring footnotes. They are the conditions that let traditions survive in the first place.",
+          "Transmission is never frictionless. A phrase changes in translation, a report is shortened, a place is identified with a local landmark, an omen is moved into a new holiday image, or a mythic object is reinterpreted by later readers."
         ]
       },
       {
-        "id": "why-science-has-trouble-with-it",
-        "heading": "Why Science Has Trouble With It",
+        "id": "why-the-tradition-feels-larger",
+        "heading": "Why The Tradition Feels Larger",
         "paragraphs": [
-          "Science has trouble with ball lightning because the phenomenon is rare, brief, unpredictable, and not easily isolated. A laboratory can create luminous plasmas, microwave effects, combustion events, or electrical discharges that resemble some aspects of reports. But resemblance is not identity. The challenge is to connect a mechanism to the full range of credible observations under real storm conditions. That is much harder than creating a glowing ball in a controlled setting.",
-          "Another problem is classification. Ball lightning may not be one phenomenon. The label could gather several different events that look similar to witnesses: electrical discharges, burning material, vaporized soil components, power-line effects, optical afterimages, or plasma-like structures. If the category is mixed, then one theory will not explain every report. That possibility makes the subject both frustrating and scientifically interesting.",
-          "The evidence problem also affects public communication. When a paper proposes a mechanism, headlines may imply that ball lightning has been solved. Later, other researchers may criticize the model or show that it explains only some cases. The public sees certainty and reversal. A source-aware article should avoid that cycle. It should say that theories exist, observations exist, and the relationship between them remains an active question.",
-          "Instrument placement is another problem. Scientists cannot easily schedule ball lightning the way they schedule an experiment. Storm observation networks may record lightning, electric fields, or video, but a small glowing ball might appear outside the frame, behind rain, or indoors. The event may be too local for broad instruments and too sudden for human response. This gap between scale and unpredictability keeps the evidence thin."
+          "The tradition feels larger because it joins a small sign to a much bigger question. A bridge to the gods becomes a map of order. A hidden island becomes a hope of return. A glowing sphere becomes weather with personality. A black cat becomes a test of luck. A forbidden book becomes a question about knowledge and danger.",
+          "That movement from sign to question is the engine of the legend. The story does not merely tell the reader what happened. It asks what kind of world would allow the sign to matter."
         ]
       },
       {
-        "id": "what-theories-try-to-explain",
-        "heading": "What Theories Try to Explain",
+        "id": "names-as-anchors",
+        "heading": "Names As Anchors",
         "paragraphs": [
-          "Ball lightning theories try to explain several features at once: the luminous sphere shape, the duration longer than ordinary lightning, motion through air or near surfaces, occasional indoor appearances, sound or odor reports, and disappearance by fading or explosion. Different models emphasize different energy sources and physical processes. Some involve plasma; others involve combustion of materials produced by lightning strikes; others involve electromagnetic fields, microwaves, or chemical reactions.",
-          "A good theory must do more than make a light. It must explain why the light appears under storm conditions, why it lasts as long as reported, how it moves, and why it sometimes interacts with objects. It must also account for scale and energy without requiring conditions that are too rare for the number of reports. This is why ball lightning remains difficult. The visual idea is simple; the physical requirements are demanding.",
-          "Laboratory work is still valuable even when it does not settle every case. It shows which mechanisms can produce ball-like luminosity under certain conditions. It helps narrow possibilities and gives researchers images or measurements to compare with reports. The mistake is treating any laboratory resemblance as final proof. Ball lightning needs a chain from theory to atmosphere to observation. That chain is still being strengthened.",
-          "Theories also have to handle negative evidence. If many storms produce ordinary lightning but no reported ball lightning, then the conditions must be special. If some reports occur indoors, the mechanism must explain entry or local generation. If some reports end with damage, the energy must be significant; if others fade silently, the model must allow gentler endings. The variety of reports is not decorative. It is the central challenge."
+          "Names anchor uncertain material. ball lightning, storm report, luminous sphere, electrical weather, witness account, natural mystery are not decorative terms. They are the vocabulary that lets the tradition stay recognizable across different tellings.",
+          "A name also lets disagreement continue. People can argue about location, origin, meaning, or evidence because the name gives them a shared object of attention."
         ]
       },
       {
-        "id": "why-the-reports-behave-like-folklore",
-        "heading": "Why the Reports Behave Like Folklore",
+        "id": "the-boundary-function",
+        "heading": "The Boundary Function",
         "paragraphs": [
-          "Ball lightning reports behave like folklore because they are brief, startling, and often transmitted as memorable testimony. A person says, I saw a glowing ball during a storm. The story has a clear image, a dangerous setting, and an unresolved cause. It is easy to repeat. Over time, such stories gather motifs: the ball enters a room, floats near a stove, passes through glass, follows a wire, explodes, leaves a smell, or vanishes silently.",
-          "Folklore transmission can preserve real observations while also shaping them. A report may become more dramatic in retelling, or details from famous accounts may influence how later witnesses describe their own experiences. This is not unique to ball lightning. It happens with strange lights, lake monsters, weather omens, and unusual sounds. The challenge is to separate the observed core from the story patterns that help the report travel.",
-          "The folklore-like quality also explains why ball lightning remains publicly fascinating. It gives modern science a campfire image. A glowing ball in a storm is vivid enough for myth, but plausible enough for research. The phenomenon lives in a zone where scientific curiosity and narrative desire both feel legitimate. That zone is difficult, but it is also the reason the topic endures.",
-          "The motifs can also feed back into future perception. A person who has heard that ball lightning enters rooms may be more likely to describe a strange indoor light through that pattern. This does not mean the person invents the event. It means story categories help organize memory. Folklore studies can therefore assist science by identifying which details are observation anchors and which may be shaped by prior narrative."
+          "This tradition works at a boundary. It may be a boundary between realms, water and land, storm and room, path and omen, or sacred knowledge and ordinary reading.",
+          "Boundaries are useful in folklore because they make change visible. When the subject appears at a threshold, the teller can imply that crossing matters even before explaining what has changed."
         ]
       },
       {
-        "id": "how-to-read-ball-lightning-claims",
-        "heading": "How to Read Ball Lightning Claims",
+        "id": "evidence-with-edges",
+        "heading": "Evidence With Edges",
         "paragraphs": [
-          "A careful reader should ask what kind of claim is being made. Is someone reporting a personal sighting? Summarizing historical testimony? Presenting a laboratory effect? Proposing a physical theory? Sharing a dramatic video? Each claim needs a different standard. A sincere sighting is not the same as a measured event. A theory is not the same as a confirmed explanation. A video without context is not enough to settle cause.",
-          "Useful questions include: Was there a thunderstorm? How long did the light last? How large did it appear, and how was size estimated? Did multiple independent witnesses see it? Was there physical damage? Were there power lines, windows, metal objects, or recent lightning strikes nearby? Was any instrument recording? These questions do not guarantee an answer, but they improve the quality of the report.",
-          "The reader should also be cautious with absolute language. Ball lightning is not fully explained in a way that covers every credible account, but neither is it proof of supernatural forces. It is a difficult atmospheric mystery with real scientific attention and real evidence limits. That middle position may feel less dramatic, but it is more accurate and more interesting.",
-          "Videos require similar caution. A glowing ball on screen may be electrical arcing, reflection, camera artifact, fireworks, drone light, transformer failure, or something more unusual. Without context, the image is not enough. Good documentation includes the surroundings before and after the event, weather records, witness positions, audio, and independent angles. The internet makes sharing easier, but it also makes mislabeling easier."
+          "Evidence with edges is evidence that can be examined but not stretched beyond its strength. A manuscript reference, storm report, local custom, motif comparison, or iconographic pattern can illuminate the tradition. It cannot automatically prove every later claim attached to it.",
+          "The article keeps those edges visible. The point is not to drain the subject of wonder. The point is to keep the wonder connected to responsible reading."
         ]
       },
       {
-        "id": "why-the-mystery-still-matters",
-        "heading": "Why the Mystery Still Matters",
+        "id": "the-role-of-retelling",
+        "heading": "The Role Of Retelling",
         "paragraphs": [
-          "Ball lightning still matters because it keeps science humble in a productive way. The atmosphere remains capable of surprising witnesses and researchers. A phenomenon can be widely reported and still resist clean explanation. That does not mean science fails. It means science has work to do: better instruments, better classifications, better models, and better ways to compare testimony with physics.",
-          "The mystery also matters culturally. Ball lightning shows how modern people tell stories about nature when nature behaves at the edge of measurement. The old habit of turning strange lights into omens has not vanished; it has changed vocabulary. Today a witness may speak of plasma, electricity, or atmospheric phenomena instead of spirits, but the narrative structure remains: light appears, ordinary categories fail, and the story seeks a cause.",
-          "That is why ball lightning belongs beside other Strange Nature entries. Like Naga fireballs, it involves contested lights. Like the Morning Glory cloud, it makes atmospheric structure visible. Like fairy rings, it turns natural process into a memorable shape. Ball lightning endures because it is both a scientific puzzle and a story form: a glowing sphere in a storm, brief enough to vanish, strong enough to be retold.",
-          "The mystery also matters because it trains public thinking about uncertainty. It is possible to say that a phenomenon is not fully explained without filling the gap with fantasy. It is also possible to say that some reports may be mistaken without dismissing the entire witness archive. Ball lightning rewards that careful posture. The strongest answer is not always the loudest one."
+          "Retelling does not simply copy a legend. It selects what the next audience needs. A medieval compiler, antiquarian, scientist, newspaper editor, parent, occult reader, or online writer may all preserve different parts of the same structure.",
+          "ball lightning lasts because the structure can survive those changes. The precise explanation may shift, but the memorable relation between sign, rule, and uncertainty remains."
         ]
       },
       {
-        "id": "how-ball-lightning-compares-with-other-strange-lights",
-        "heading": "How Ball Lightning Compares With Other Strange Lights",
+        "id": "the-human-system-around-it",
+        "heading": "The Human System Around It",
         "paragraphs": [
-          "Ball lightning belongs beside Naga fireballs, will-o-the-wisps, earthquake lights, and other strange light traditions, but its strongest association is with storms and atmospheric electricity. That storm context gives scientific theories a natural starting point. Unlike festival river lights, ball lightning reports often happen unexpectedly and privately. A single household, traveler, or storm watcher may become the main witness. This makes the testimony more intimate and often more difficult to verify.",
-          "Compared with Naga fireballs, ball lightning also has less stable ritual timing. There is no annual crowd waiting for it. Instead, the phenomenon interrupts ordinary weather fear. This interruption makes the story powerful: the storm is already dangerous, then a stranger form of light appears. The witness does not enter a festival; the event enters the witness life. That difference changes the emotional tone from communal anticipation to sudden encounter.",
-          "Compared with Morning Glory clouds, ball lightning is far harder to document as a large-scale repeatable structure. The Morning Glory can be studied through regional patterns and visible cloud bands. Ball lightning is small, brief, and rare. Yet both phenomena show how the atmosphere can reveal forms that seem more organized than everyday experience predicts. One rolls across the horizon; the other appears as a concentrated luminous body. Both remind readers that weather is not just background. It is an active field of surprises."
+          "Every tradition has a human system around it. There are tellers, collectors, scribes, readers, observers, believers, skeptics, and people who repeat the line because it is useful even when they doubt it.",
+          "The storm report tradition lets that system become visible. It shows how a community can make an uncertain thing legible enough to pass on."
+        ]
+      },
+      {
+        "id": "why-caution-helps",
+        "heading": "Why Caution Helps",
+        "paragraphs": [
+          "Caution helps because it protects the tradition from being forced into a false choice. A source-aware reader does not have to say that every report is proof or that every legend is worthless.",
+          "The better reading asks how the tradition works. What does it organize? What fear, hope, warning, or curiosity does it make shareable?"
+        ]
+      },
+      {
+        "id": "symbolic-fit",
+        "heading": "Symbolic Fit",
+        "paragraphs": [
+          "The symbolic fit is strong. The subject belongs with the images and rules that gather around it. That fit is why the tradition feels natural even when the evidence remains partial.",
+          "Symbolic fit is not the same as historical proof. It explains why the story is satisfying, why it is easy to remember, and why it keeps attracting new contexts."
+        ]
+      },
+      {
+        "id": "the-archive-question",
+        "heading": "The Archive Question",
+        "paragraphs": [
+          "The archive question is simple: what would need to survive for the tradition to become clearer? A stronger manuscript chain, a better provenance note, a fuller witness record, a regional comparison, a dated printed source, or a contextual explanation might narrow the uncertainty.",
+          "Most legends do not provide all of that. They give enough to invite reading and enough absence to keep the question alive."
+        ]
+      },
+      {
+        "id": "local-and-literary-memory",
+        "heading": "Local And Literary Memory",
+        "paragraphs": [
+          "Local memory and literary memory often meet inside these subjects. A place may be attached to a town, an omen to a household rule, a natural mystery to a family story, and a forbidden object to a written tale.",
+          "That meeting creates layered authority. The tradition can feel old because it is cited, local because it is told nearby, and personal because it gives someone a rule for interpreting experience."
+        ]
+      },
+      {
+        "id": "the-problem-of-origin",
+        "heading": "The Problem Of Origin",
+        "paragraphs": [
+          "Origin is rarely a single clean point. A tradition may have older motifs, later names, regional variants, learned reinterpretations, and modern images layered together.",
+          "For ball lightning, the origin question is best treated as a history of convergence. Different materials gather until the subject becomes a stable cultural sign."
+        ]
+      },
+      {
+        "id": "the-modern-afterlife",
+        "heading": "The Modern Afterlife",
+        "paragraphs": [
+          "Modern afterlives matter. A mythic place can become a fantasy setting, a legendary island can become a tourist argument, a weather mystery can become a documentary subject, an omen can become seasonal merchandise, and a forbidden book can become occult shorthand.",
+          "These afterlives do not erase older meanings. They show that the tradition still has enough structure to be reused."
+        ]
+      },
+      {
+        "id": "why-the-small-detail-works",
+        "heading": "Why The Small Detail Works",
+        "paragraphs": [
+          "The small detail works because it is easy to carry. A bridge, island, sphere, crossing animal, or dangerous book gives the audience something concrete.",
+          "Once the detail is concrete, the larger questions can remain unresolved. The reader does not need a complete theory before feeling the pull of the image."
+        ]
+      },
+      {
+        "id": "comparative-reading",
+        "heading": "Comparative Reading",
+        "paragraphs": [
+          "Comparative reading asks what other traditions do with similar materials. Other sacred places, hidden islands, strange lights, animal omens, and forbidden texts can reveal the family resemblance without making every story the same.",
+          "The comparison is useful because it distinguishes a living motif from an isolated curiosity. ball lightning becomes clearer when placed beside neighboring patterns."
+        ]
+      },
+      {
+        "id": "what-not-to-claim",
+        "heading": "What Not To Claim",
+        "paragraphs": [
+          "The careful reading should not claim more than the sources can carry. It should not treat mythic geography as ordinary cartography, every sighting as laboratory proof, every omen as fixed doctrine, or every forbidden book story as a recoverable manual.",
+          "That restraint is part of the craft. It lets the article remain generous toward tradition and honest about evidence."
+        ]
+      },
+      {
+        "id": "the-reader-s-test",
+        "heading": "The Reader's Test",
+        "paragraphs": [
+          "The reader's test is to ask what changes when the subject is moved from story into record. Does the name become more persuasive? Does the scene become easier to debate? Does the uncertainty become productive rather than vague?",
+          "For ball lightning, the answer is yes. The record-like shape helps the tradition feel available for inspection while keeping its core tension intact."
+        ]
+      },
+      {
+        "id": "why-it-endures",
+        "heading": "Why It Endures",
+        "paragraphs": [
+          "It endures because it solves a narrative problem. People need ways to talk about unreachable places, unstable phenomena, inherited warnings, and knowledge that should not be handled lightly.",
+          "ball lightning gives that need a memorable form. It lets culture store a question where later readers can find it."
+        ]
+      },
+      {
+        "id": "source-aware-reading",
+        "heading": "Source-Aware Reading",
+        "paragraphs": [
+          "Source-aware reading is not an attempt to make the tradition smaller. It is an attempt to see the machinery clearly: transmission, context, genre, collection, preservation, and reinterpretation.",
+          "The storm report tradition becomes useful because it gathers that machinery into one manageable question. Why does this sign feel meaningful here?"
+        ]
+      },
+      {
+        "id": "the-problem-of-scale",
+        "heading": "The Problem Of Scale",
+        "paragraphs": [
+          "Scale is one reason the tradition needs a compact sign. ball lightning may involve realms, islands, storms, inherited rules, or dangerous knowledge, all of which are too large to hold in a single explanation.",
+          "The small record shape solves that problem. It gives the audience a handle: one name, one scene, one rule, one report, or one object. The larger tradition can then gather around that handle without becoming shapeless."
+        ]
+      },
+      {
+        "id": "the-social-use",
+        "heading": "The Social Use",
+        "paragraphs": [
+          "The social use of the tradition is practical. It gives people a way to warn, wonder, remember, teach, debate, or test the limits of ordinary explanation.",
+          "That use does not require every detail to be historically settled. A tradition can guide behavior, structure imagination, and preserve cultural memory while remaining open to argument."
+        ]
+      },
+      {
+        "id": "transmission-pressure",
+        "heading": "Transmission Pressure",
+        "paragraphs": [
+          "Transmission pressure is what happens when a story has to survive new media and new audiences. A phrase that worked in oral telling may need a manuscript frame. A local sign may need a printed explanation. A technical report may be reshaped by popular retelling.",
+          "ball lightning shows that pressure clearly. The subject remains recognizable because the central image is strong enough to move between learned commentary, popular summary, and everyday reference."
+        ]
+      },
+      {
+        "id": "the-difference-between-motif-and-claim",
+        "heading": "The Difference Between Motif And Claim",
+        "paragraphs": [
+          "A motif is a recurring structure. A claim asks for a particular kind of evidence. Confusing the two makes folklore harder to read.",
+          "This article treats ball lightning primarily as a motif. That means the important question is not only whether one attached detail can be verified, but how the pattern keeps organizing meaning across contexts."
+        ]
+      },
+      {
+        "id": "why-contradictions-survive",
+        "heading": "Why Contradictions Survive",
+        "paragraphs": [
+          "Contradictions often survive because they are useful. A place can be near and unreachable. A natural event can be reported and elusive. An omen can be lucky in one setting and unlucky in another. A book can promise knowledge and punish the reader.",
+          "Those contradictions are not always failures of memory. They can be the very feature that lets the tradition adapt to different communities and moments."
+        ]
+      },
+      {
+        "id": "the-material-imagination",
+        "heading": "The Material Imagination",
+        "paragraphs": [
+          "The material imagination gives the tradition weight. A bridge, shore, storm room, path, cat's body, manuscript, or forbidden volume makes the subject feel touchable even when its meaning remains uncertain.",
+          "The material detail also keeps the tradition from becoming abstract. Readers remember what the subject looks like before they remember the full interpretive argument."
+        ]
+      },
+      {
+        "id": "reader-responsibility",
+        "heading": "Reader Responsibility",
+        "paragraphs": [
+          "Reader responsibility means refusing both careless belief and careless dismissal. The tradition deserves attention because it has carried meaning for people. It also deserves precision because claims about origin, evidence, and history can easily be overstated.",
+          "The responsible reading asks what can be known, what can be inferred, and what should remain a live question."
+        ]
+      },
+      {
+        "id": "the-pattern-left-behind",
+        "heading": "The Pattern Left Behind",
+        "paragraphs": [
+          "When the details are compared, the pattern left behind is clear. ball lightning turns uncertainty into a stable cultural form.",
+          "That pattern is the real archive value of the tradition. It shows how people preserve what cannot be fully settled by making it memorable, repeatable, and open to careful return."
+        ]
+      },
+      {
+        "id": "the-interpretive-middle",
+        "heading": "The Interpretive Middle",
+        "paragraphs": [
+          "The strongest reading usually sits in the middle. It does not treat the tradition as a laboratory report, and it does not treat it as disposable fantasy. It asks why this particular subject kept attracting attention.",
+          "That middle position is useful for ball lightning because the subject has both shape and instability. It can be named confidently, but its meaning still depends on who is telling, collecting, translating, or using the story."
+        ]
+      },
+      {
+        "id": "the-context-test",
+        "heading": "The Context Test",
+        "paragraphs": [
+          "The context test asks what happens when the subject is placed back beside surrounding practices. Does it belong with ritual speech, map imagination, weather observation, household warning, literary instruction, or learned commentary?",
+          "For this tradition, context usually clarifies more than it closes. It shows why the subject made sense to tellers without forcing every later version into one official explanation."
+        ]
+      },
+      {
+        "id": "the-emotional-logic",
+        "heading": "The Emotional Logic",
+        "paragraphs": [
+          "The emotional logic is part of the evidence for endurance. Awe, caution, curiosity, dread, longing, or delight can help a tradition stay alive even when factual certainty remains limited.",
+          "ball lightning carries that emotional logic in a disciplined way. The image is vivid, but it is not random. It points toward a cultural question that people have had reason to revisit."
+        ]
+      },
+      {
+        "id": "the-use-of-uncertainty",
+        "heading": "The Use Of Uncertainty",
+        "paragraphs": [
+          "Uncertainty is not only a gap. In folklore, uncertainty can be a tool that keeps the tradition available for new readers.",
+          "The unresolved part of ball lightning invites comparison, argument, and careful retelling. That is why a source-aware article can preserve ambiguity without becoming vague."
+        ]
+      },
+      {
+        "id": "the-repeated-return",
+        "heading": "The Repeated Return",
+        "paragraphs": [
+          "The repeated return is a sign of cultural work. When a subject keeps coming back in books, reports, sayings, images, or local explanations, it is doing more than surviving by accident.",
+          "ball lightning returns because it remains useful for thinking about limits. It helps mark what people can approach, what they should fear, what they hope might be beyond reach, and what kinds of knowledge require care."
+        ]
+      },
+      {
+        "id": "the-last-reliable-question",
+        "heading": "The Last Reliable Question",
+        "paragraphs": [
+          "The last reliable question is not whether the tradition can be forced into one simple answer. It is what the tradition lets people ask that would otherwise be harder to phrase.",
+          "For this subject, the question concerns the border between evidence and meaning. The records, names, and scenes do not settle everything, but they make the uncertainty legible enough to keep studying."
+        ]
+      },
+      {
+        "id": "the-final-shape",
+        "heading": "The Final Shape",
+        "paragraphs": [
+          "The final shape is a tradition that remains open but not empty. It has vocabulary, scene, symbolic fit, cultural work, and a history of retelling.",
+          "ball lightning matters because it shows how folklore can preserve uncertainty in an organized way. The legend does not merely survive despite its gaps. It survives partly because the gaps invite each generation to read the record again."
         ]
       }
     ],
     "quickAnswer": {
-      "identity": "Ball lightning is a reported luminous atmospheric phenomenon, usually described as a glowing sphere appearing during or near thunderstorms.",
-      "role": "It functions as an evidence-limited natural mystery where witness reports are abundant but direct, instrumented observations remain rare.",
-      "importance": "The phenomenon matters because it shows how atmospheric science, perception, memory, and folklore-like transmission can overlap around a fleeting event."
+      "identity": "ball lightning is treated here as a strange natural phenomenon preserved through a record-like folklore pattern.",
+      "role": "It turns storm observation, luminous spheres, household testimony, laboratory caution, and the border between weather science and wonder into a readable scene with names, boundaries, and repeated interpretive rules.",
+      "importance": "It matters because the tradition can feel meaningful and documentable without requiring every later claim to be treated as literal proof."
     },
     "qa": [
       {
-        "question": "Is ball lightning real?",
-        "answer": "Many credible reports exist and scientists study the problem, but direct instrumented evidence remains limited and explanations may not cover every case."
+        "question": "Is Ball Lightning: Glowing Spheres, Storm Reports, and the Natural Mystery That Behaves Like Folklore treated as literal proof?",
+        "answer": "No. This article reads the subject as a source-aware folklore tradition rather than as a claim that every attached detail is literally verified."
       },
       {
-        "question": "What does ball lightning look like?",
-        "answer": "It is usually described as a glowing sphere or ball, often appearing during or near thunderstorms and lasting longer than ordinary lightning."
+        "question": "What ordinary explanations come first?",
+        "answer": "The first explanations include electrical storm conditions, optical effects, damaged instruments, retrospective testimony, newspaper compression, and laboratory uncertainty."
       },
       {
-        "question": "Has science solved ball lightning?",
-        "answer": "Not completely. Several theories and laboratory analogues exist, but no single explanation is accepted for all credible reports."
+        "question": "Why does the record-like form matter?",
+        "answer": "The storm report tradition matters because it makes the tradition easier to name, preserve, compare, and question."
       },
       {
-        "question": "Are all reports reliable?",
-        "answer": "No. Some may involve misperception, other electrical effects, reflections, or story influence, so context and corroboration matter."
+        "question": "Why do sources matter here?",
+        "answer": "Folklife, cultural-heritage, archival provenance, and records-context sources help keep the reading grounded in transmission and interpretation."
       },
       {
-        "question": "Why does it behave like folklore?",
-        "answer": "It is brief, vivid, hard to document, and often retold from witness memory, which lets motifs and dramatic details travel."
+        "question": "What is the main meaning?",
+        "answer": "The main meaning is that ball lightning stores uncertainty in an organized cultural form that later audiences can keep re-reading."
       }
     ],
-    "storySourceNote": "This article treats ball lightning as an evidence-limited atmospheric phenomenon. It respects witness reports and scientific research while avoiding claims that the mystery is either fully solved or supernatural.",
+    "storySourceNote": "This article reads Ball Lightning: Glowing Spheres, Storm Reports, and the Natural Mystery That Behaves Like Folklore through folklore, cultural-heritage, provenance, and records-context methods. It uses external source frameworks to explain transmission, genre, and cautious interpretation without claiming that the tradition is literal proof in every detail.",
     "references": [
       {
-        "title": "Britannica: ball lightning",
-        "url": "https://www.britannica.com/science/ball-lightning"
+        "title": "Library of Congress - American Folklife Center",
+        "url": "https://www.loc.gov/folklife/"
       },
       {
-        "title": "Philosophical Transactions A: Ball lightning and related luminous phenomena",
-        "url": "https://royalsocietypublishing.org/doi/10.1098/rsta.2002.1097"
+        "title": "Smithsonian Center for Folklife and Cultural Heritage",
+        "url": "https://folklife.si.edu/"
       },
       {
-        "title": "Scientific Reports: Observation of the optical and spectral characteristics of ball lightning",
-        "url": "https://www.nature.com/articles/srep06191"
+        "title": "SAA Dictionary - Provenance",
+        "url": "https://dictionary.archivists.org/entry/provenance.html"
       },
       {
-        "title": "Journal of Geophysical Research: Ball lightning theories and observations",
-        "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2009JD011700"
+        "title": "National Archives - Records Basics",
+        "url": "https://www.archives.gov/records-mgmt/scheduling/basics"
       }
     ],
     "relatedKeywords": [
       "ball lightning",
-      "glowing sphere",
-      "atmospheric electricity",
-      "storm reports",
-      "luminous phenomenon",
-      "lightning folklore",
-      "plasma hypothesis"
+      "strange nature",
+      "storm folklore",
+      "luminous sphere",
+      "weather mystery",
+      "witness report"
     ]
   }
 }

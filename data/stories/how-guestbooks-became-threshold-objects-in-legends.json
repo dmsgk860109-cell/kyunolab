@@ -1,51 +1,29 @@
 {
   "id": "how-guestbooks-became-threshold-objects-in-legends",
-  "recordId": "how-guestbooks-became-threshold-objects-in-legends",
   "slug": "how-guestbooks-became-threshold-objects-in-legends",
-  "pathname": "/stories/how-guestbooks-became-threshold-objects-in-legends",
-  "canonicalUrl": "https://kyunolab.com/stories/how-guestbooks-became-threshold-objects-in-legends",
-  "category": "Legend Origins",
-  "storyType": "single-event",
   "title": "How Guestbooks Became Threshold Objects in Legends: The Kate Morgan Entry at the Del",
   "displayTitle": "How Guestbooks Became Threshold Objects in Legends: The Kate Morgan Entry at the Del",
   "h1": "How Guestbooks Became Threshold Objects in Legends: The Kate Morgan Entry at the Del",
   "seoTitle": "How Guestbooks Became Threshold Objects in Legends: The Kate Morgan Entry at the Del | Kyunolab",
   "metaTitle": "How Guestbooks Became Threshold Objects in Legends: The Kate Morgan Entry at the Del | Kyunolab",
-  "metaDescription": "How Kate Morgan's Hotel del Coronado guestbook entry turned an arrival record into a threshold object for hotel folklore.",
-  "introSummary": "A source-aware account of Kate Morgan's 1892 Hotel del Coronado arrival, the guestbook as threshold evidence, and the folklore built around a room and a name.",
-  "summaryAnswer": "Guestbooks become threshold objects when they turn a temporary arrival into durable evidence: a name, date, alias, room, and place that later retellings can revisit.",
-  "updatedAt": "2026-07-28",
-  "qa": [
-    {
-      "question": "What is the single incident in this record?",
-      "answer": "Kate Morgan's 1892 guest arrival and fatal death at the Hotel del Coronado, including the unresolved departure narrative in later retellings."
-    },
-    {
-      "question": "Why is this a single-event Legend Origins account?",
-      "answer": "Because it anchors to one documented hospitality sequence and then traces one local afterlife path rather than combining multiple unrelated events."
-    },
-    {
-      "question": "What is the key artifact in the source chain?",
-      "answer": "The recorded guest arrival and subsequent room continuity are the durable anchors, not every later paranormal claim."
-    },
-    {
-      "question": "What happened to the legend after the tragedy?",
-      "answer": "Official histories, tours, and room narratives repeatedly interpreted the same event, giving a paper trail a ritual-like public memory."
-    },
-    {
-      "question": "What should not be concluded from this record?",
-      "answer": "It should not be read as proof of supernatural causation or motive certainty; it is a study in documented sequence and symbolic amplification."
-    }
-  ],
-  "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, tourism memory, internet retelling, and legend-like interpretation.",
+  "metaDescription": "A source-aware guide to guestbooks as threshold objects, with folklore context, source limits, cultural meaning, and the record-like tradition behind the legend.",
+  "category": "Legend Origins",
+  "categorySlug": "legend-origins",
+  "categoryGroup": "Supplemental Archive",
+  "tag": "Guestbook Motif",
+  "primaryTag": "Guestbook Motif",
+  "seedKeyword": "how guestbooks became threshold objects in legends",
+  "primaryKeyword": "how guestbooks became threshold objects in legends",
+  "searchIntent": "origin",
+  "articleFormat": "search-info",
+  "cluster": "Legend Origins / Guestbook Motif",
   "relatedKeywords": [
     "guestbook",
-    "guest register",
     "threshold object",
-    "Hotel del Coronado",
     "Kate Morgan",
-    "arrival log",
-    "room legend"
+    "hotel folklore",
+    "place legend",
+    "arrival record"
   ],
   "secondaryKeywords": [
     "single-event legend",
@@ -56,214 +34,486 @@
     "Hotel del Coronado",
     "Kate Morgan"
   ],
-  "contentDNA": {
-    "targetQuery": "how guestbooks became threshold objects in legends: the kate morgan entry at the del",
-    "canonicalQuery": "how-guestbooks-became-threshold-objects-in-legends",
-    "searchQuestion": "Guestbooks become threshold objects when they turn a temporary arrival into durable evidence: a name, date, alias, room, and place that later retellings can revisit.",
-    "readerIntent": "Understand the source-aware origin and transmission of a legend motif.",
-    "uniqueAngle": "Guestbooks become threshold objects when they turn a temporary arrival into durable evidence: a name, date, alias, room, and place that later retellings can revisit.",
-    "subjectClass": "motif-origin",
-    "narrativeLens": "hospitality-threshold-lens",
-    "evidencePosture": "external-source synthesis",
-    "culturalFrame": "Legend Origins",
-    "sceneAnchor": "Front Desk Entry as a Threshold Record",
-    "subjectSpecificVocabulary": [
-      "guestbook",
-      "guest register",
-      "threshold object",
-      "Hotel del Coronado",
-      "Kate Morgan",
-      "arrival log",
-      "room legend"
+  "topicScore": 90,
+  "topicStatus": "approved",
+  "scoreBreakdown": {
+    "searchDemand": 27,
+    "clickCuriosity": 25,
+    "siteFit": 23,
+    "expansionPotential": 12,
+    "differentiation": 8
+  },
+  "summaryAnswer": "guestbooks as threshold objects matters because it turns guestbooks, hotel thresholds, Kate Morgan lore, signature memory, room legends, and the record of arrival as a narrative trigger into a recognizable cultural pattern. A source-aware reading keeps ordinary explanations visible while explaining why the tradition remains powerful.",
+  "readTime": "11 min read",
+  "storyType": "legend-origins-guestbook-threshold",
+  "sourceStatus": "Legend Origins / Guestbook Motif / Record motif explanation",
+  "excerpt": "A source-aware Kyunolab record tracing guestbooks became threshold objects because they record who entered and who may not have left.",
+  "introSummary": "guestbooks as threshold objects becomes durable because a guestbook entry that feels like a threshold because signing in marks the moment a visitor becomes part of a place's legend, turning threshold object legend origin into a source-aware folklore record.",
+  "publishedAt": "2026-07-16",
+  "updatedAt": "2026-07-29",
+  "relatedStoryIds": [
+    "why-ledgers-appear-in-household-warning-stories",
+    "how-wrong-dates-became-a-folklore-clue",
+    "why-record-books-make-legends-feel-more-believable",
+    "how-cursed-images-became-internet-folklore"
+  ],
+  "relatedStorySlugs": [
+    "how-guest-registers-turn-places-into-folklore",
+    "how-doorway-rules-become-household-legends-folklore-origin-and-meaning",
+    "how-elevator-legends-became-modern-threshold-stories",
+    "the-pilgrim-passport-stamp-from-a-vanished-gate"
+  ],
+  "tags": [
+    "Guestbook Motif",
+    "Guestbooks",
+    "Threshold Folklore",
+    "Visitor Record"
+  ],
+  "detail": "guestbooks became threshold objects because they record who entered and who may not have left",
+  "evidence": "threshold folklore, visitor customs, hotel legends, and written proof motifs",
+  "researchSources": [
+    {
+      "title": "Folklore motif studies, legend scholarship, document culture, and comparative tradition references",
+      "supports": "Provides source-aware context for How Guestbooks Became Threshold Objects in Legends as legend origins rather than a newly invented certainty."
+    },
+    {
+      "title": "Guestbook Motif references, record motifs, and variant-aware archive summaries",
+      "supports": "Supports the common record, recurring written-trace motif, and source-limited treatment of How Guestbooks Became Threshold Objects in Legends."
+    },
+    {
+      "title": "Cultural-history and media-history sources on how motifs change across retellings",
+      "supports": "Supports the distinction between documented background, retelling tradition, symbolic reading, and claims that should not be stated as verified fact."
+    }
+  ],
+  "sourceNotes": {
+    "sharedVerifiedPoints": [
+      "How Guestbooks Became Threshold Objects in Legends is framed as a record-centered archive subject within Legend Origins.",
+      "The article can responsibly describe the recurring motif of logs, ledgers, registers, timestamps, catalogs, or missing entries connected to guestbooks became threshold objects because they record who entered and who may not have left.",
+      "The strongest reading stays within threshold folklore, visitor customs, hotel legends, and written proof motifs rather than presenting uncertain claims as confirmed fact."
     ],
-    "requiredSpecificDetails": [
-      "Front Desk Entry as a Threshold Record",
-      "Assumed Identity and Uncertain Initial Intent",
-      "The Stopping Point That Shaped the Story",
-      "Coroner Review and Public Identification Delay",
-      "Tour Routines and the Room as Memory Node",
-      "From Administration Record to Threshold Object",
-      "Aftereffect and Legacy of an Unfinished Stay"
+    "variants": [
+      "Names, dates, documents, locations, and written details may shift by region, retelling, or platform.",
+      "Later versions often make the record look more precise than the source material can support."
     ],
-    "prohibitedGenericPhrases": [
-      "prove haunting with certainty",
-      "the guestbook itself made the event supernatural",
-      "one event proves every later sighting",
-      "all legends are equally true"
-    ],
-    "sectionBlueprint": [
-      {
-        "id": "front-desk-entry-as-a-threshold",
-        "heading": "Front Desk Entry as a Threshold Record"
-      },
-      {
-        "id": "assumed-identity-and-uncertain-initial-intent",
-        "heading": "Assumed Identity and Uncertain Initial Intent"
-      },
-      {
-        "id": "the-stopping-point-that-shaped-the-story",
-        "heading": "The Stopping Point That Shaped the Story"
-      },
-      {
-        "id": "coroners-inquest-and-public-identification-delay",
-        "heading": "Coroner Review and Public Identification Delay"
-      },
-      {
-        "id": "tour-routines-and-the-room-as-memory-node",
-        "heading": "Tour Routines and the Room as Memory Node"
-      },
-      {
-        "id": "from-admin-record-to-threshold-object",
-        "heading": "From Administration Record to Threshold Object"
-      },
-      {
-        "id": "aftereffect-and-legacy-of-an-unfinished-stay",
-        "heading": "Aftereffect and Legacy of an Unfinished Stay"
-      }
+    "unsupportedClaimsToAvoid": [
+      "Do not present supernatural claims as verified events.",
+      "Do not invent specific documents, witnesses, dates, institutions, or archive numbers beyond the source-aware premise.",
+      "Do not imply that a written trace proves the event happened literally."
     ]
   },
+  "contentType": "story",
+  "contentDNA": {
+    "targetQuery": "how guestbooks became threshold objects in legends",
+    "canonicalQuery": "how-guestbooks-became-threshold-objects-in-legends",
+    "searchQuestion": "Why does guestbooks as threshold objects remain culturally memorable?",
+    "readerIntent": "Understand the folklore, source context, and record-like structure behind How Guestbooks Became Threshold Objects in Legends: The Kate Morgan Entry at the Del.",
+    "uniqueAngle": "The article treats a guestbook entry that feels like a threshold because signing in marks the moment a visitor becomes part of a place's legend as a record-shaped folklore problem.",
+    "subjectClass": "threshold object legend origin",
+    "narrativeLens": "source-aware-folklore-record-reading",
+    "evidencePosture": "source-aware",
+    "culturalFrame": "guestbooks, hotel thresholds, Kate Morgan lore, signature memory, room legends, and the record of arrival as a narrative trigger",
+    "sceneAnchor": "a guestbook page where an arrival entry becomes the first visible step into a place legend",
+    "subjectSpecificVocabulary": [
+      "guestbook",
+      "Kate Morgan",
+      "threshold object",
+      "hotel legend",
+      "arrival entry",
+      "place folklore"
+    ],
+    "requiredSpecificDetails": [
+      "guestbook",
+      "Kate Morgan",
+      "threshold object",
+      "hotel legend",
+      "arrival entry",
+      "place folklore"
+    ],
+    "prohibitedGenericPhrases": [
+      "this proves every legend is factual",
+      "ordinary explanations are impossible",
+      "all later claims are verified"
+    ],
+    "sectionBlueprint": []
+  },
+  "recordId": "how-guestbooks-became-threshold-objects-in-legends",
+  "pathname": "/stories/how-guestbooks-became-threshold-objects-in-legends",
+  "canonicalUrl": "https://kyunolab.com/stories/how-guestbooks-became-threshold-objects-in-legends",
+  "qa": [
+    {
+      "question": "Is How Guestbooks Became Threshold Objects in Legends: The Kate Morgan Entry at the Del treated as literal proof?",
+      "answer": "No. This article reads the subject as a source-aware folklore tradition rather than as a claim that every attached detail is literally verified."
+    },
+    {
+      "question": "What ordinary explanations come first?",
+      "answer": "The first explanations include hotel registration, local history, tourism retelling, name matching, newspaper memory, room lore, and later ghost-story framing."
+    },
+    {
+      "question": "Why does the record-like form matter?",
+      "answer": "The guestbook-entry tradition matters because it makes the tradition easier to name, preserve, compare, and question."
+    },
+    {
+      "question": "Why do sources matter here?",
+      "answer": "Folklife, cultural-heritage, archival provenance, and records-context sources help keep the reading grounded in transmission and interpretation."
+    },
+    {
+      "question": "What is the main meaning?",
+      "answer": "The main meaning is that guestbooks as threshold objects stores uncertainty in an organized cultural form that later audiences can keep re-reading."
+    }
+  ],
+  "storySourceNote": "This article reads How Guestbooks Became Threshold Objects in Legends: The Kate Morgan Entry at the Del through folklore, cultural-heritage, provenance, and records-context methods. It uses external source frameworks to explain transmission, genre, and cautious interpretation without claiming that the tradition is literal proof in every detail.",
   "longformArticle": {
     "contentPackageVersion": "archive-story-content-v1",
-    "deck": "A source-aware account of Kate Morgan's 1892 Hotel del Coronado arrival, the guestbook as threshold evidence, and the folklore built around a room and a name.",
+    "deck": "guestbooks as threshold objects becomes durable because a guestbook entry that feels like a threshold because signing in marks the moment a visitor becomes part of a place's legend, turning threshold object legend origin into a source-aware folklore record.",
     "opening": [
-      "The source chain is narrow and chronological: a front-desk event at the Hotel del Coronado, a delayed exit signal in public memory, then a long interpretive afterlife.",
-      "This sequence shows how a documented hospitality object can shift from ledger utility to legend threshold."
+      "guestbooks as threshold objects survives because it gives tradition a shape that can be named, repeated, and argued over. The subject is a threshold object legend origin, but the story works like a record problem: a place, phenomenon, omen, or object is treated as if it could be filed and explained, while part of it remains outside ordinary proof.",
+      "The central detail is a guestbook entry that feels like a threshold because signing in marks the moment a visitor becomes part of a place's legend. This article reads that detail through source-aware folklore practice rather than as a claim of literal verification. The aim is to explain why guestbooks, hotel thresholds, Kate Morgan lore, signature memory, room legends, and the record of arrival as a narrative trigger can feel durable, meaningful, and strangely documentable without flattening the tradition into either simple fact or simple mistake."
     ],
     "storyBody": [
       {
-        "id": "front-desk-entry-as-a-threshold",
-        "heading": "Front Desk Entry as a Threshold Record",
+        "id": "the-first-record-shape",
+        "heading": "The First Record Shape",
         "paragraphs": [
-          "The incident begins at the registration desk of the Hotel del Coronado, a resort that had opened only a few years earlier. In November 1892, a young woman signed in under the name \"Lottie A Bernard\" and became one of the few visitors who would later define the hotel as much as its architecture did. The record of her entry did more than confirm a room assignment: it fixed a moment at the boundary where a traveler becomes an in-building participant, moving from public street to private guest history.",
-          "The chain is a single-event chain, not a city-wide myth cluster. One recorded arrival creates the first anchor for later retellings, and later accounts repeatedly return to that anchor because it is concrete and dateable. In this case, the guestbook entry is the practical object that marks who entered and when, long after memory has reworked the reasons."
+          "The first record shape is the guestbook-entry tradition. A tradition becomes easier to remember when it has a form that can be entered into speech, manuscripts, reports, indexes, guidebooks, or household rules.",
+          "That form matters because it gives the subject a surface. guestbooks as threshold objects is not only an idea floating in the air. It is attached to names, scenes, phrases, witness habits, and repeated interpretive rules."
         ]
       },
       {
-        "id": "assumed-identity-and-uncertain-initial-intent",
-        "heading": "Assumed Identity and Uncertain Initial Intent",
+        "id": "the-scene-people-remember",
+        "heading": "The Scene People Remember",
         "paragraphs": [
-          "Hotel staff later described this guest as a woman in distress and noted that she asked about someone who was expected but never arrived. Whether the woman was waiting, hiding, or simply alone that week, the register line itself preserved what could not be fully proven: that she had crossed the front threshold with a declared identity and contact details to match a hospitality flow.",
-          "The second sequence step is social, not just administrative. The same line that records her name becomes the interpretive starting point for many later claims, including the idea that a guestbook can act as a symbolic lockbox for unresolved intention. At this stage the event is still documentary: a person checked in, and then continued to report to the same desk through the stay."
+          "The scene is a guestbook page where an arrival entry becomes the first visible step into a place legend. It is compact enough to travel and specific enough to be retold. A listener can picture it before deciding what to believe about it.",
+          "Folklore often depends on this kind of scene. The scene carries more than information. It carries mood, permission, warning, wonder, and a sense that the ordinary world has briefly opened onto another rule."
         ]
       },
       {
-        "id": "the-stopping-point-that-shaped-the-story",
-        "heading": "The Stopping Point That Shaped the Story",
+        "id": "ordinary-explanations-first",
+        "heading": "Ordinary Explanations First",
         "paragraphs": [
-          "Five days later, she was found dead on the exterior staircase leading toward the beach, and the register had no completed departure record to balance the arrival entry. That asymmetry is the decisive sequence break. What had been a routine front-desk line now looked like an unfinished transaction: entered, stayed, and never formally exited through the same administrative object.",
-          "That missing final signature is why the account gains threshold force. In practical hospitality terms, she remained in memory as a guest whose threshold action was incomplete. In folklore terms, that incompleteness is what let the story keep expanding rather than closing."
+          "A careful reading begins with ordinary explanations. For this subject, those explanations include hotel registration, local history, tourism retelling, name matching, newspaper memory, room lore, and later ghost-story framing. These are not boring footnotes. They are the conditions that let traditions survive in the first place.",
+          "Transmission is never frictionless. A phrase changes in translation, a report is shortened, a place is identified with a local landmark, an omen is moved into a new holiday image, or a mythic object is reinterpreted by later readers."
         ]
       },
       {
-        "id": "coroners-inquest-and-public-identification-delay",
-        "heading": "Coroner Review and Public Identification Delay",
+        "id": "why-the-tradition-feels-larger",
+        "heading": "Why The Tradition Feels Larger",
         "paragraphs": [
-          "The 1892 coroner proceedings classified the death as a likely self-inflicted gunshot wound, while surviving period reporting described unresolved confusion about identity until later confirmation. The official and press trail moved from certainty to doubt and back to probable closure, but the register entry kept its own fixed role in that process.",
-          "This is where cause and action meet evidence limits. The administrative line did not create the death, but it does preserve the chain that connects the person at the desk, the body outside on the stairs, and the wider reporting that followed. That chain is the strongest factual spine in the legend."
+          "The tradition feels larger because it joins a small sign to a much bigger question. A bridge to the gods becomes a map of order. A hidden island becomes a hope of return. A glowing sphere becomes weather with personality. A black cat becomes a test of luck. A forbidden book becomes a question about knowledge and danger.",
+          "That movement from sign to question is the engine of the legend. The story does not merely tell the reader what happened. It asks what kind of world would allow the sign to matter."
         ]
       },
       {
-        "id": "tour-routines-and-the-room-as-memory-node",
-        "heading": "Tour Routines and the Room as Memory Node",
+        "id": "names-as-anchors",
+        "heading": "Names As Anchors",
         "paragraphs": [
-          "Once the event entered public memory, the hotel formalized it through tours and room-based interpretation centered on where Kate Morgan is believed to have stayed. A single room reference then linked the earlier guestbook artifact to physical space the public could repeatedly encounter.",
-          "The same cause-and-effect logic appears: documentation in, interpretation out. One entry in one ledger led to an official narrative package, then repeated guided experiences. That repetition did not erase uncertainty, but it made one room and one staircase into portable story locations for people who never saw the original hotel records."
+          "Names anchor uncertain material. guestbook, Kate Morgan, threshold object, hotel legend, arrival entry, place folklore are not decorative terms. They are the vocabulary that lets the tradition stay recognizable across different tellings.",
+          "A name also lets disagreement continue. People can argue about location, origin, meaning, or evidence because the name gives them a shared object of attention."
         ]
       },
       {
-        "id": "from-admin-record-to-threshold-object",
-        "heading": "From Administration Record to Threshold Object",
+        "id": "the-boundary-function",
+        "heading": "The Boundary Function",
         "paragraphs": [
-          "In this single event, the guestbook became a threshold object because it operated at the border between rumor and procedure. It was not just a signed notebook; it was the first witness to the sequence and the first sign that an administrative object could carry symbolic weight after a tragedy.",
-          "What became the legend is a sequence of three actions: a recorded arrival, a tragic end with a missing check-out closure, and a public afterlife built through repeated tours and retellings. The motif persists because it is easy to picture and easy to check, even while some details remain disputed."
+          "This tradition works at a boundary. It may be a boundary between realms, water and land, storm and room, path and omen, or sacred knowledge and ordinary reading.",
+          "Boundaries are useful in folklore because they make change visible. When the subject appears at a threshold, the teller can imply that crossing matters even before explaining what has changed."
         ]
       },
       {
-        "id": "aftereffect-and-legacy-of-an-unfinished-stay",
-        "heading": "Aftereffect and Legacy of an Unfinished Stay",
+        "id": "evidence-with-edges",
+        "heading": "Evidence With Edges",
         "paragraphs": [
-          "The chain did not produce certainty about motive or supernatural cause. It produced a durable pattern for legend: arrival logged, exit unresolved, place-memory institutionalized. As a result, guestbooks and similar records are now often treated as ritual thresholds in modern narrative studies, where the object matters less for one ghost claim and more for how it structures public belief over time.",
-          "This record therefore ends where archive work begins: at the boundary between what is verifiable, what is repeatable, and what a community keeps repeating.",
-          "Hotel del Coronado's own timeline says Kate Morgan checked in alone under the name Lottie A. Bernard from Detroit. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is Kate Morgan's 1892 Hotel del Coronado entry, where an assumed name and a room association made the hotel record feel like a witness. The guestbook anchors a historical stay, but it does not by itself prove paranormal claims or every later version of the story. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
-          "The same hotel account places her death five days later on an exterior staircase leading toward the beach. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is Kate Morgan's 1892 Hotel del Coronado entry, where an assumed name and a room association made the hotel record feel like a witness. The guestbook anchors a historical stay, but it does not by itself prove paranormal claims or every later version of the story. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
-          "The assumed name matters because a guestbook records presence while also preserving uncertainty about identity. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is Kate Morgan's 1892 Hotel del Coronado entry, where an assumed name and a room association made the hotel record feel like a witness. The guestbook anchors a historical stay, but it does not by itself prove paranormal claims or every later version of the story. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
-          "Hotel folklore repeatedly returns to the room because a room makes a large resort legible as a single story location. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is Kate Morgan's 1892 Hotel del Coronado entry, where an assumed name and a room association made the hotel record feel like a witness. The guestbook anchors a historical stay, but it does not by itself prove paranormal claims or every later version of the story. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
-          "The Los Angeles Times described later efforts to set the story straight after many versions began circulating. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is Kate Morgan's 1892 Hotel del Coronado entry, where an assumed name and a room association made the hotel record feel like a witness. The guestbook anchors a historical stay, but it does not by itself prove paranormal claims or every later version of the story. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
-          "The hotel's ghost-story pages distinguish the historical death from later guest and staff reports of unusual experiences. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is Kate Morgan's 1892 Hotel del Coronado entry, where an assumed name and a room association made the hotel record feel like a witness. The guestbook anchors a historical stay, but it does not by itself prove paranormal claims or every later version of the story. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
-          "A guestbook is a threshold object because it is signed at arrival, before the guest fully becomes part of the place. The motif survives because the detail is small enough to remember and strong enough to organize retelling. In this record, the central frame is Kate Morgan's 1892 Hotel del Coronado entry, where an assumed name and a room association made the hotel record feel like a witness. The guestbook anchors a historical stay, but it does not by itself prove paranormal claims or every later version of the story. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
-          "In the Kate Morgan story, the register turns a temporary stay into a durable trace that later tourism can revisit. A reader can follow the symbolic force without treating the symbol as proof of every later claim. In this record, the central frame is Kate Morgan's 1892 Hotel del Coronado entry, where an assumed name and a room association made the hotel record feel like a witness. The guestbook anchors a historical stay, but it does not by itself prove paranormal claims or every later version of the story. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
-          "The room number's changes across hotel history show how folklore adapts when buildings are renumbered or renovated. That point matters because it gives the story a verifiable hinge rather than a floating atmosphere. In this record, the central frame is Kate Morgan's 1892 Hotel del Coronado entry, where an assumed name and a room association made the hotel record feel like a witness. The guestbook anchors a historical stay, but it does not by itself prove paranormal claims or every later version of the story. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
-          "The coroner and public-record layer gives the legend an archival spine beyond word-of-mouth retelling. In folklore terms, the detail changes a broad claim into a scene that can be repeated. In this record, the central frame is Kate Morgan's 1892 Hotel del Coronado entry, where an assumed name and a room association made the hotel record feel like a witness. The guestbook anchors a historical stay, but it does not by itself prove paranormal claims or every later version of the story. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
-          "Tours and hotel heritage pages keep the entry active by making visitors encounter the past as part of the stay. For evidence literacy, the detail marks the boundary between the record and what later audiences want the record to mean. In this record, the central frame is Kate Morgan's 1892 Hotel del Coronado entry, where an assumed name and a room association made the hotel record feel like a witness. The guestbook anchors a historical stay, but it does not by itself prove paranormal claims or every later version of the story. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
-          "The guestbook's power comes from ordinary bureaucracy: a desk, a name, an address, and a date. The later legend grows when people reuse this detail as shorthand for a larger uncertainty. In this record, the central frame is Kate Morgan's 1892 Hotel del Coronado entry, where an assumed name and a room association made the hotel record feel like a witness. The guestbook anchors a historical stay, but it does not by itself prove paranormal claims or every later version of the story. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
-          "The missing or uncertain parts of the story make the signed entry feel more important, not less. The source-aware reading keeps the dramatic image visible while refusing to let it outrun the evidence. In this record, the central frame is Kate Morgan's 1892 Hotel del Coronado entry, where an assumed name and a room association made the hotel record feel like a witness. The guestbook anchors a historical stay, but it does not by itself prove paranormal claims or every later version of the story. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
-          "A hotel is itself a threshold institution where strangers pass through, leave traces, and become stories after departure. This is exactly where a practical record begins to behave like a cultural object. In this record, the central frame is Kate Morgan's 1892 Hotel del Coronado entry, where an assumed name and a room association made the hotel record feel like a witness. The guestbook anchors a historical stay, but it does not by itself prove paranormal claims or every later version of the story. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable.",
-          "The Kate Morgan entry survives as folklore because it joins identity, travel, room memory, and unresolved motive. The motif survives because the detail is small enough to remember and strong enough to organize retelling. In this record, the central frame is Kate Morgan's 1892 Hotel del Coronado entry, where an assumed name and a room association made the hotel record feel like a witness. The guestbook anchors a historical stay, but it does not by itself prove paranormal claims or every later version of the story. The legend layer grows when later audiences reuse the record as shorthand, but the stronger article keeps the documented chain visible and asks why this particular object, file, screen, or entry became memorable."
+          "Evidence with edges is evidence that can be examined but not stretched beyond its strength. A manuscript reference, storm report, local custom, motif comparison, or iconographic pattern can illuminate the tradition. It cannot automatically prove every later claim attached to it.",
+          "The article keeps those edges visible. The point is not to drain the subject of wonder. The point is to keep the wonder connected to responsible reading."
+        ]
+      },
+      {
+        "id": "the-role-of-retelling",
+        "heading": "The Role Of Retelling",
+        "paragraphs": [
+          "Retelling does not simply copy a legend. It selects what the next audience needs. A medieval compiler, antiquarian, scientist, newspaper editor, parent, occult reader, or online writer may all preserve different parts of the same structure.",
+          "guestbooks as threshold objects lasts because the structure can survive those changes. The precise explanation may shift, but the memorable relation between sign, rule, and uncertainty remains."
+        ]
+      },
+      {
+        "id": "the-human-system-around-it",
+        "heading": "The Human System Around It",
+        "paragraphs": [
+          "Every tradition has a human system around it. There are tellers, collectors, scribes, readers, observers, believers, skeptics, and people who repeat the line because it is useful even when they doubt it.",
+          "The guestbook-entry tradition lets that system become visible. It shows how a community can make an uncertain thing legible enough to pass on."
+        ]
+      },
+      {
+        "id": "why-caution-helps",
+        "heading": "Why Caution Helps",
+        "paragraphs": [
+          "Caution helps because it protects the tradition from being forced into a false choice. A source-aware reader does not have to say that every report is proof or that every legend is worthless.",
+          "The better reading asks how the tradition works. What does it organize? What fear, hope, warning, or curiosity does it make shareable?"
+        ]
+      },
+      {
+        "id": "symbolic-fit",
+        "heading": "Symbolic Fit",
+        "paragraphs": [
+          "The symbolic fit is strong. The subject belongs with the images and rules that gather around it. That fit is why the tradition feels natural even when the evidence remains partial.",
+          "Symbolic fit is not the same as historical proof. It explains why the story is satisfying, why it is easy to remember, and why it keeps attracting new contexts."
+        ]
+      },
+      {
+        "id": "the-archive-question",
+        "heading": "The Archive Question",
+        "paragraphs": [
+          "The archive question is simple: what would need to survive for the tradition to become clearer? A stronger manuscript chain, a better provenance note, a fuller witness record, a regional comparison, a dated printed source, or a contextual explanation might narrow the uncertainty.",
+          "Most legends do not provide all of that. They give enough to invite reading and enough absence to keep the question alive."
+        ]
+      },
+      {
+        "id": "local-and-literary-memory",
+        "heading": "Local And Literary Memory",
+        "paragraphs": [
+          "Local memory and literary memory often meet inside these subjects. A place may be attached to a town, an omen to a household rule, a natural mystery to a family story, and a forbidden object to a written tale.",
+          "That meeting creates layered authority. The tradition can feel old because it is cited, local because it is told nearby, and personal because it gives someone a rule for interpreting experience."
+        ]
+      },
+      {
+        "id": "the-problem-of-origin",
+        "heading": "The Problem Of Origin",
+        "paragraphs": [
+          "Origin is rarely a single clean point. A tradition may have older motifs, later names, regional variants, learned reinterpretations, and modern images layered together.",
+          "For guestbooks as threshold objects, the origin question is best treated as a history of convergence. Different materials gather until the subject becomes a stable cultural sign."
+        ]
+      },
+      {
+        "id": "the-modern-afterlife",
+        "heading": "The Modern Afterlife",
+        "paragraphs": [
+          "Modern afterlives matter. A mythic place can become a fantasy setting, a legendary island can become a tourist argument, a weather mystery can become a documentary subject, an omen can become seasonal merchandise, and a forbidden book can become occult shorthand.",
+          "These afterlives do not erase older meanings. They show that the tradition still has enough structure to be reused."
+        ]
+      },
+      {
+        "id": "why-the-small-detail-works",
+        "heading": "Why The Small Detail Works",
+        "paragraphs": [
+          "The small detail works because it is easy to carry. A bridge, island, sphere, crossing animal, or dangerous book gives the audience something concrete.",
+          "Once the detail is concrete, the larger questions can remain unresolved. The reader does not need a complete theory before feeling the pull of the image."
+        ]
+      },
+      {
+        "id": "comparative-reading",
+        "heading": "Comparative Reading",
+        "paragraphs": [
+          "Comparative reading asks what other traditions do with similar materials. Other sacred places, hidden islands, strange lights, animal omens, and forbidden texts can reveal the family resemblance without making every story the same.",
+          "The comparison is useful because it distinguishes a living motif from an isolated curiosity. guestbooks as threshold objects becomes clearer when placed beside neighboring patterns."
+        ]
+      },
+      {
+        "id": "what-not-to-claim",
+        "heading": "What Not To Claim",
+        "paragraphs": [
+          "The careful reading should not claim more than the sources can carry. It should not treat mythic geography as ordinary cartography, every sighting as laboratory proof, every omen as fixed doctrine, or every forbidden book story as a recoverable manual.",
+          "That restraint is part of the craft. It lets the article remain generous toward tradition and honest about evidence."
+        ]
+      },
+      {
+        "id": "the-reader-s-test",
+        "heading": "The Reader's Test",
+        "paragraphs": [
+          "The reader's test is to ask what changes when the subject is moved from story into record. Does the name become more persuasive? Does the scene become easier to debate? Does the uncertainty become productive rather than vague?",
+          "For guestbooks as threshold objects, the answer is yes. The record-like shape helps the tradition feel available for inspection while keeping its core tension intact."
+        ]
+      },
+      {
+        "id": "why-it-endures",
+        "heading": "Why It Endures",
+        "paragraphs": [
+          "It endures because it solves a narrative problem. People need ways to talk about unreachable places, unstable phenomena, inherited warnings, and knowledge that should not be handled lightly.",
+          "guestbooks as threshold objects gives that need a memorable form. It lets culture store a question where later readers can find it."
+        ]
+      },
+      {
+        "id": "source-aware-reading",
+        "heading": "Source-Aware Reading",
+        "paragraphs": [
+          "Source-aware reading is not an attempt to make the tradition smaller. It is an attempt to see the machinery clearly: transmission, context, genre, collection, preservation, and reinterpretation.",
+          "The guestbook-entry tradition becomes useful because it gathers that machinery into one manageable question. Why does this sign feel meaningful here?"
+        ]
+      },
+      {
+        "id": "the-problem-of-scale",
+        "heading": "The Problem Of Scale",
+        "paragraphs": [
+          "Scale is one reason the tradition needs a compact sign. guestbooks as threshold objects may involve realms, islands, storms, inherited rules, or dangerous knowledge, all of which are too large to hold in a single explanation.",
+          "The small record shape solves that problem. It gives the audience a handle: one name, one scene, one rule, one report, or one object. The larger tradition can then gather around that handle without becoming shapeless."
+        ]
+      },
+      {
+        "id": "the-social-use",
+        "heading": "The Social Use",
+        "paragraphs": [
+          "The social use of the tradition is practical. It gives people a way to warn, wonder, remember, teach, debate, or test the limits of ordinary explanation.",
+          "That use does not require every detail to be historically settled. A tradition can guide behavior, structure imagination, and preserve cultural memory while remaining open to argument."
+        ]
+      },
+      {
+        "id": "transmission-pressure",
+        "heading": "Transmission Pressure",
+        "paragraphs": [
+          "Transmission pressure is what happens when a story has to survive new media and new audiences. A phrase that worked in oral telling may need a manuscript frame. A local sign may need a printed explanation. A technical report may be reshaped by popular retelling.",
+          "guestbooks as threshold objects shows that pressure clearly. The subject remains recognizable because the central image is strong enough to move between learned commentary, popular summary, and everyday reference."
+        ]
+      },
+      {
+        "id": "the-difference-between-motif-and-claim",
+        "heading": "The Difference Between Motif And Claim",
+        "paragraphs": [
+          "A motif is a recurring structure. A claim asks for a particular kind of evidence. Confusing the two makes folklore harder to read.",
+          "This article treats guestbooks as threshold objects primarily as a motif. That means the important question is not only whether one attached detail can be verified, but how the pattern keeps organizing meaning across contexts."
+        ]
+      },
+      {
+        "id": "why-contradictions-survive",
+        "heading": "Why Contradictions Survive",
+        "paragraphs": [
+          "Contradictions often survive because they are useful. A place can be near and unreachable. A natural event can be reported and elusive. An omen can be lucky in one setting and unlucky in another. A book can promise knowledge and punish the reader.",
+          "Those contradictions are not always failures of memory. They can be the very feature that lets the tradition adapt to different communities and moments."
+        ]
+      },
+      {
+        "id": "the-material-imagination",
+        "heading": "The Material Imagination",
+        "paragraphs": [
+          "The material imagination gives the tradition weight. A bridge, shore, storm room, path, cat's body, manuscript, or forbidden volume makes the subject feel touchable even when its meaning remains uncertain.",
+          "The material detail also keeps the tradition from becoming abstract. Readers remember what the subject looks like before they remember the full interpretive argument."
+        ]
+      },
+      {
+        "id": "reader-responsibility",
+        "heading": "Reader Responsibility",
+        "paragraphs": [
+          "Reader responsibility means refusing both careless belief and careless dismissal. The tradition deserves attention because it has carried meaning for people. It also deserves precision because claims about origin, evidence, and history can easily be overstated.",
+          "The responsible reading asks what can be known, what can be inferred, and what should remain a live question."
+        ]
+      },
+      {
+        "id": "the-pattern-left-behind",
+        "heading": "The Pattern Left Behind",
+        "paragraphs": [
+          "When the details are compared, the pattern left behind is clear. guestbooks as threshold objects turns uncertainty into a stable cultural form.",
+          "That pattern is the real archive value of the tradition. It shows how people preserve what cannot be fully settled by making it memorable, repeatable, and open to careful return."
+        ]
+      },
+      {
+        "id": "the-interpretive-middle",
+        "heading": "The Interpretive Middle",
+        "paragraphs": [
+          "The strongest reading usually sits in the middle. It does not treat the tradition as a laboratory report, and it does not treat it as disposable fantasy. It asks why this particular subject kept attracting attention.",
+          "That middle position is useful for guestbooks as threshold objects because the subject has both shape and instability. It can be named confidently, but its meaning still depends on who is telling, collecting, translating, or using the story."
+        ]
+      },
+      {
+        "id": "the-context-test",
+        "heading": "The Context Test",
+        "paragraphs": [
+          "The context test asks what happens when the subject is placed back beside surrounding practices. Does it belong with ritual speech, map imagination, weather observation, household warning, literary instruction, or learned commentary?",
+          "For this tradition, context usually clarifies more than it closes. It shows why the subject made sense to tellers without forcing every later version into one official explanation."
+        ]
+      },
+      {
+        "id": "the-emotional-logic",
+        "heading": "The Emotional Logic",
+        "paragraphs": [
+          "The emotional logic is part of the evidence for endurance. Awe, caution, curiosity, dread, longing, or delight can help a tradition stay alive even when factual certainty remains limited.",
+          "guestbooks as threshold objects carries that emotional logic in a disciplined way. The image is vivid, but it is not random. It points toward a cultural question that people have had reason to revisit."
+        ]
+      },
+      {
+        "id": "the-use-of-uncertainty",
+        "heading": "The Use Of Uncertainty",
+        "paragraphs": [
+          "Uncertainty is not only a gap. In folklore, uncertainty can be a tool that keeps the tradition available for new readers.",
+          "The unresolved part of guestbooks as threshold objects invites comparison, argument, and careful retelling. That is why a source-aware article can preserve ambiguity without becoming vague."
+        ]
+      },
+      {
+        "id": "the-repeated-return",
+        "heading": "The Repeated Return",
+        "paragraphs": [
+          "The repeated return is a sign of cultural work. When a subject keeps coming back in books, reports, sayings, images, or local explanations, it is doing more than surviving by accident.",
+          "guestbooks as threshold objects returns because it remains useful for thinking about limits. It helps mark what people can approach, what they should fear, what they hope might be beyond reach, and what kinds of knowledge require care."
+        ]
+      },
+      {
+        "id": "the-last-reliable-question",
+        "heading": "The Last Reliable Question",
+        "paragraphs": [
+          "The last reliable question is not whether the tradition can be forced into one simple answer. It is what the tradition lets people ask that would otherwise be harder to phrase.",
+          "For this subject, the question concerns the border between evidence and meaning. The records, names, and scenes do not settle everything, but they make the uncertainty legible enough to keep studying."
+        ]
+      },
+      {
+        "id": "the-final-shape",
+        "heading": "The Final Shape",
+        "paragraphs": [
+          "The final shape is a tradition that remains open but not empty. It has vocabulary, scene, symbolic fit, cultural work, and a history of retelling.",
+          "guestbooks as threshold objects matters because it shows how folklore can preserve uncertainty in an organized way. The legend does not merely survive despite its gaps. It survives partly because the gaps invite each generation to read the record again."
         ]
       }
     ],
     "quickAnswer": {
-      "identity": "A single-event Legend Origins record centered on the 1892 Kate Morgan arrival, death, and interpretive expansion at the Hotel del Coronado.",
-      "role": "It demonstrates how one bounded guest-record sequence can become a legend template when threshold closure is culturally interpreted as incomplete.",
-      "importance": "The record highlights the difference between verifiable procedure and symbolic amplification, useful for source-aware analysis of legend-building."
+      "identity": "guestbooks as threshold objects is treated here as a threshold object legend origin preserved through a record-like folklore pattern.",
+      "role": "It turns guestbooks, hotel thresholds, Kate Morgan lore, signature memory, room legends, and the record of arrival as a narrative trigger into a readable scene with names, boundaries, and repeated interpretive rules.",
+      "importance": "It matters because the tradition can feel meaningful and documentable without requiring every later claim to be treated as literal proof."
     },
     "qa": [
       {
-        "question": "What is the single incident in this record?",
-        "answer": "Kate Morgan's 1892 guest arrival and fatal death at the Hotel del Coronado, including the unresolved departure narrative in later retellings."
+        "question": "Is How Guestbooks Became Threshold Objects in Legends: The Kate Morgan Entry at the Del treated as literal proof?",
+        "answer": "No. This article reads the subject as a source-aware folklore tradition rather than as a claim that every attached detail is literally verified."
       },
       {
-        "question": "Why is this a single-event Legend Origins account?",
-        "answer": "Because it anchors to one documented hospitality sequence and then traces one local afterlife path rather than combining multiple unrelated events."
+        "question": "What ordinary explanations come first?",
+        "answer": "The first explanations include hotel registration, local history, tourism retelling, name matching, newspaper memory, room lore, and later ghost-story framing."
       },
       {
-        "question": "What is the key artifact in the source chain?",
-        "answer": "The recorded guest arrival and subsequent room continuity are the durable anchors, not every later paranormal claim."
+        "question": "Why does the record-like form matter?",
+        "answer": "The guestbook-entry tradition matters because it makes the tradition easier to name, preserve, compare, and question."
       },
       {
-        "question": "What happened to the legend after the tragedy?",
-        "answer": "Official histories, tours, and room narratives repeatedly interpreted the same event, giving a paper trail a ritual-like public memory."
+        "question": "Why do sources matter here?",
+        "answer": "Folklife, cultural-heritage, archival provenance, and records-context sources help keep the reading grounded in transmission and interpretation."
       },
       {
-        "question": "What should not be concluded from this record?",
-        "answer": "It should not be read as proof of supernatural causation or motive certainty; it is a study in documented sequence and symbolic amplification."
+        "question": "What is the main meaning?",
+        "answer": "The main meaning is that guestbooks as threshold objects stores uncertainty in an organized cultural form that later audiences can keep re-reading."
       }
     ],
-    "storySourceNote": "This article is a source-aware folklore reconstruction. It separates documented records from later symbolic compression, tourism memory, internet retelling, and legend-like interpretation.",
+    "storySourceNote": "This article reads How Guestbooks Became Threshold Objects in Legends: The Kate Morgan Entry at the Del through folklore, cultural-heritage, provenance, and records-context methods. It uses external source frameworks to explain transmission, genre, and cautious interpretation without claiming that the tradition is literal proof in every detail.",
     "references": [
       {
-        "title": "Hotel del Coronado, Kate Morgan Mystery Begins",
-        "url": "https://www.hoteldel.com/timeline/kate-morgan-mystery-begins/"
+        "title": "Library of Congress - American Folklife Center",
+        "url": "https://www.loc.gov/folklife/"
       },
       {
-        "title": "Hotel del Coronado, Ghostly Goings-On at the Hotel del Coronado",
-        "url": "https://www.hoteldel.com/press/haunted-hotel-del-coronado/"
+        "title": "Smithsonian Center for Folklife and Cultural Heritage",
+        "url": "https://folklife.si.edu/"
       },
       {
-        "title": "Hotel del Coronado, The Del's True Ghost Story",
-        "url": "https://www.hoteldel.com/blog/the-dels-true-ghost-story/"
+        "title": "SAA Dictionary - Provenance",
+        "url": "https://dictionary.archivists.org/entry/provenance.html"
       },
       {
-        "title": "KPBS, Room 502 Tour",
-        "url": "https://www.kpbs.org/events/ongoing/room-502-tour"
-      },
-      {
-        "title": "Los Angeles Times, A Historic Ghost Story Wrapped in an Enigma",
-        "url": "https://www.latimes.com/archives/la-xpm-2003-mar-02-me-then2-story.html"
-      },
-      {
-        "title": "San Diego History Center, Public Records Collection guide",
-        "url": "https://sandiegohistory.org/journal/2001/january/images-2/"
+        "title": "National Archives - Records Basics",
+        "url": "https://www.archives.gov/records-mgmt/scheduling/basics"
       }
     ],
     "relatedKeywords": [
       "guestbook",
-      "guest register",
       "threshold object",
-      "Hotel del Coronado",
       "Kate Morgan",
-      "arrival log",
-      "room legend"
+      "hotel folklore",
+      "place legend",
+      "arrival record"
     ]
-  }
+  },
+  "summary": "guestbooks as threshold objects matters because it turns guestbooks, hotel thresholds, Kate Morgan lore, signature memory, room legends, and the record of arrival as a narrative trigger into a recognizable cultural pattern. A source-aware reading keeps ordinary explanations visible while explaining why the tradition remains powerful.",
+  "readingMinutes": 12
 }
