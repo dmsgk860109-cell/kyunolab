@@ -9,6 +9,40 @@ workspace folders are not canonical site roots. Before editing, regenerating,
 committing, pushing, or deploying Kyunolab content, verify that the active repo
 is the canonical production repo above.
 
+## Fixed Root Rule
+
+All Kyunolab source files must be created inside the canonical production repo.
+Do not create archive, library, tool, script, or deployment source files in
+date-based Codex workspace folders such as:
+
+- `C:\Users\lucid\Documents\Codex\2026-08-01\...`
+- `C:\Users\lucid\Documents\Codex\2026-08-02\...`
+- any new-chat default workspace that is not `kyunolab-deploy-main`
+
+Those folders may be used only for temporary scratch files, throwaway analysis,
+or non-source helper output. They must not become a second Kyunolab root.
+
+If a future chat starts outside the canonical repo, first switch to:
+
+```powershell
+cd "C:\Users\lucid\Documents\Codex\2026-07-01\new-chat\work\kyunolab-deploy-main"
+```
+
+Then run:
+
+```powershell
+npm.cmd run audit:content-roots
+```
+
+If PowerShell blocks `npm`, run:
+
+```powershell
+node scripts/audit-content-roots.js
+```
+
+Do not proceed with content edits if the audit reports the wrong root, wrong
+remote, mismatched archive counts, or unknown dirty files.
+
 ## Site Axes
 
 Kyunolab should be managed as one site repo with three internal content axes:
@@ -21,6 +55,25 @@ Kyunolab should be managed as one site repo with three internal content axes:
 The site should not split these axes into separate production repos unless that
 is a deliberate migration. Internal links, search, sitemap generation, category
 pages, and deployment all assume one production repo.
+
+## Source Placement Rule
+
+New files should be placed under the fixed repo tree:
+
+- Archive source packages: `data/stories/<slug>.json`
+- Archive manuscript/support files: `data/stories/<slug>.md`
+- Archive public source HTML: `stories/<slug>.html`
+- Archive deploy HTML: `dist/stories/<slug>.html`
+- Library source data: `data/creator-library...` or another documented
+  library root inside this repo
+- Future tool data: `data/tools/`
+- Future tool pages: `tools/`
+- Scripts: `scripts/`
+- Project rules and operational notes: `docs/`
+
+Do not create alternate roots for the same content axis. For example, do not
+create a second `stories/`, `data/stories/`, `library/`, or `tools/` tree under
+a date-based workspace.
 
 ## Archive Roots
 
@@ -90,13 +143,16 @@ Run this before Kyunolab content work:
 
 ```powershell
 cd "C:\Users\lucid\Documents\Codex\2026-07-01\new-chat\work\kyunolab-deploy-main"
-node scripts/audit-content-roots.js
+npm.cmd run audit:content-roots
 git status --short
 ```
 
 Confirm:
 
 - The repo root is `kyunolab-deploy-main`.
+- The command working directory is inside the canonical repo.
+- The local path matches the canonical production path.
+- The `origin` remote points to `dmsgk860109-cell/kyunolab.git`.
 - `data/stories.json`, `stories/`, and `dist/stories/` describe the same full
   archive population.
 - `data/stories/index.json` and `data/stories/*.json` describe the independent
@@ -109,4 +165,3 @@ Confirm:
 Production deploys are triggered by pushing to `main`.
 
 Do not commit, push, or deploy unless the user explicitly asks for it.
-

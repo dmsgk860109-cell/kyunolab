@@ -4,6 +4,18 @@ const { spawnSync } = require('child_process');
 const { loadStories, loadLegacyStories, loadIndependentEntries } = require('./lib/load-stories');
 
 const root = path.resolve(__dirname, '..');
+const canonicalRoot = 'C:\\Users\\lucid\\Documents\\Codex\\2026-07-01\\new-chat\\work\\kyunolab-deploy-main';
+const expectedRepoName = 'kyunolab-deploy-main';
+const expectedRemotePattern = /github\.com[:/]dmsgk860109-cell\/kyunolab(?:\.git)?$/i;
+
+function normalizePath(value) {
+  return path.resolve(String(value || '')).toLowerCase();
+}
+
+function isInsidePath(child, parent) {
+  const relative = path.relative(parent, child);
+  return relative === '' || (!relative.startsWith('..') && !path.isAbsolute(relative));
+}
 
 function readDirCount(directory, extension) {
   if (!fs.existsSync(directory)) return 0;
@@ -128,13 +140,30 @@ function main() {
   const branch = git(['rev-parse', '--abbrev-ref', 'HEAD']).stdout.trim() || '(unknown)';
   const head = git(['rev-parse', 'HEAD']).stdout.trim() || '(unknown)';
   const originMain = git(['rev-parse', 'origin/main']).stdout.trim() || '(unknown)';
+  const originUrl = git(['remote', 'get-url', 'origin']).stdout.trim() || '(unknown)';
+  const cwd = process.cwd();
+  const normalizedRoot = normalizePath(root);
+  const normalizedCanonicalRoot = normalizePath(canonicalRoot);
+  const normalizedCwd = normalizePath(cwd);
 
   console.log('Kyunolab content root audit');
   console.log('');
   console.log(`Repo root: ${root}`);
+  console.log(`Canonical root: ${canonicalRoot}`);
+  console.log(`Command cwd: ${cwd}`);
   console.log(`Branch: ${branch}`);
   console.log(`HEAD: ${head}`);
   console.log(`origin/main: ${originMain}`);
+  console.log(`origin: ${originUrl}`);
+  console.log('');
+  console.log('Root guard');
+  console.table({
+    'repo directory name': path.basename(root),
+    'repo name ok': path.basename(root) === expectedRepoName,
+    'canonical local path ok': normalizedRoot === normalizedCanonicalRoot,
+    'command cwd inside repo': isInsidePath(normalizedCwd, normalizedRoot),
+    'origin remote ok': expectedRemotePattern.test(originUrl)
+  });
   console.log('');
   console.log('Archive counts');
   console.table({
@@ -174,7 +203,11 @@ function main() {
   }
 
   const failed = checks.filter((check) => !check.ok);
-  if (failed.length) {
+  const rootGuardFailed = path.basename(root) !== expectedRepoName
+    || normalizedRoot !== normalizedCanonicalRoot
+    || !isInsidePath(normalizedCwd, normalizedRoot)
+    || !expectedRemotePattern.test(originUrl);
+  if (failed.length || rootGuardFailed) {
     process.exitCode = 1;
   }
 }
