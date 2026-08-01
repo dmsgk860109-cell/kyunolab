@@ -136,7 +136,68 @@
       "the line proves prophecy",
       "all shrine roads are haunted"
     ],
-    "sectionBlueprint": []
+    "sectionBlueprint": [
+      {
+        "id": "the-register-that-writes-ahead",
+        "heading": "The Register That Writes Ahead",
+        "title": "The Register That Writes Ahead",
+        "nav": "The Register That Writes Ahead"
+      },
+      {
+        "id": "office-records-and-shrine-road-order",
+        "heading": "Office Records And Shrine Road Order",
+        "title": "Office Records And Shrine Road Order",
+        "nav": "Office Records And Shrine Road Order"
+      },
+      {
+        "id": "permission-memory-and-invitation",
+        "heading": "Permission, Memory, And Invitation",
+        "title": "Permission, Memory, And Invitation",
+        "nav": "Permission, Memory, And Invitation"
+      },
+      {
+        "id": "the-office-as-roadside-threshold",
+        "heading": "The Office As Roadside Threshold",
+        "title": "The Office As Roadside Threshold",
+        "nav": "The Office As Roadside Threshold"
+      },
+      {
+        "id": "holding-places-and-premature-traces",
+        "heading": "Holding Places And Premature Traces",
+        "title": "Holding Places And Premature Traces",
+        "nav": "Holding Places And Premature Traces"
+      },
+      {
+        "id": "pace-delay-and-future-memory",
+        "heading": "Pace, Delay, And Future Memory",
+        "title": "Pace, Delay, And Future Memory",
+        "nav": "Pace, Delay, And Future Memory"
+      },
+      {
+        "id": "administrative-pilgrimage-and-local-consequences",
+        "heading": "Administrative Pilgrimage And Local Consequences",
+        "title": "Administrative Pilgrimage And Local Consequences",
+        "nav": "Administrative Pilgrimage And Local Consequences"
+      },
+      {
+        "id": "hospitality-preparation-and-delay",
+        "heading": "Hospitality, Preparation, And Delay",
+        "title": "Hospitality, Preparation, And Delay",
+        "nav": "Hospitality, Preparation, And Delay"
+      },
+      {
+        "id": "pressure-markers-and-ordinary-objects",
+        "heading": "Pressure, Markers, And Ordinary Objects",
+        "title": "Pressure, Markers, And Ordinary Objects",
+        "nav": "Pressure, Markers, And Ordinary Objects"
+      },
+      {
+        "id": "choice-correction-and-patience",
+        "heading": "Choice, Correction, And Patience",
+        "title": "Choice, Correction, And Patience",
+        "nav": "Choice, Correction, And Patience"
+      }
+    ]
   },
   "scriptSlug": "the-shrine-road-office-register-with-a-line-written-too-early-youtube-script",
   "recordId": "the-shrine-road-office-register-with-a-line-written-too-early",
@@ -176,129 +237,51 @@
     ],
     "storyBody": [
       {
-        "id": "what-the-register-does",
-        "heading": "What The Register Does",
+        "id": "the-register-that-writes-ahead",
+        "heading": "The Register That Writes Ahead",
         "paragraphs": [
           "A register preserves entries in order. It may include names, dates, purposes, permits, vehicles, guides, or warnings.",
-          "In this motif, the order fails because one line arrives before its event."
-        ]
-      },
-      {
-        "id": "why-the-shrine-road-matters",
-        "heading": "Why The Shrine Road Matters",
-        "paragraphs": [
+          "In this motif, the order fails because one line arrives before its event.",
           "A shrine road shapes approach. It may be walked, driven, climbed, repaired, closed, or ritually understood.",
-          "The road's meaning depends on movement toward a destination. The early line makes that movement begin on paper."
-        ]
-      },
-      {
-        "id": "the-road-office",
-        "heading": "The Road Office",
-        "paragraphs": [
+          "The road's meaning depends on movement toward a destination. The early line makes that movement begin on paper.",
           "The road office is where sacred approach becomes administration. It may handle maintenance, access, notices, and records.",
-          "This practical setting grounds the legend. The strange line appears where ordinary road care is documented."
-        ]
-      },
-      {
-        "id": "written-too-early",
-        "heading": "Written Too Early",
-        "paragraphs": [
+          "This practical setting grounds the legend. The strange line appears where ordinary road care is documented.",
           "Too early means the register has jumped ahead of sequence. It is not merely wrong; it is premature.",
-          "Prematurity is what makes the record feel expectant. The page waits with knowledge."
-        ]
-      },
-      {
-        "id": "approach-before-arrival",
-        "heading": "Approach Before Arrival",
-        "paragraphs": [
+          "Prematurity is what makes the record feel expectant. The page waits with knowledge.",
           "The line may record a visitor, repair, closure, or permission before the person arrives or the event occurs.",
           "The road becomes a route already written. The body is late to its own record."
         ]
       },
       {
-        "id": "registers-and-accountability",
-        "heading": "Registers And Accountability",
+        "id": "office-records-and-shrine-road-order",
+        "heading": "Office Records And Shrine Road Order",
         "paragraphs": [
           "Registers create accountability. They preserve who came, when, why, and under what conditions.",
-          "The early line creates accountability before action. It asks who is responsible for a future that has already been entered."
-        ]
-      },
-      {
-        "id": "the-shrine-as-destination",
-        "heading": "The Shrine As Destination",
-        "paragraphs": [
+          "The early line creates accountability before action. It asks who is responsible for a future that has already been entered.",
           "The shrine may remain offstage. The motif focuses on the road and office rather than the inner sacred place.",
-          "That distance matters. The record concerns approach, not arrival. The road is the legendary place."
-        ]
-      },
-      {
-        "id": "the-office-desk",
-        "heading": "The Office Desk",
-        "paragraphs": [
+          "That distance matters. The record concerns approach, not arrival. The road is the legendary place.",
           "The office desk may hold pens, stamps, maps, notices, and the register. It is a place of small decisions.",
-          "The early line turns that desk into a threshold. Paper crosses before people do."
-        ]
-      },
-      {
-        "id": "neighboring-entries",
-        "heading": "Neighboring Entries",
-        "paragraphs": [
+          "The early line turns that desk into a threshold. Paper crosses before people do.",
           "Neighboring entries make the anomaly legible. If earlier and later lines are ordinary, the premature line becomes precise.",
-          "The register's order gives the wrong line its edge."
-        ]
-      },
-      {
-        "id": "error-first",
-        "heading": "Error First",
-        "paragraphs": [
+          "The register's order gives the wrong line its edge.",
           "Responsible reading begins with error: wrong date, copied line, prepared entry, backfilled record, or clock confusion.",
           "The legend remains useful because road offices are exactly where such errors matter. Access depends on sequence."
         ]
       },
       {
-        "id": "the-waiting-road",
-        "heading": "The Waiting Road",
+        "id": "permission-memory-and-invitation",
+        "heading": "Permission, Memory, And Invitation",
         "paragraphs": [
           "The road seems to wait for the person named or implied by the line. That waiting gives the motif emotional force.",
-          "The place is no longer passive. It appears to have made room for an arrival."
-        ]
-      },
-      {
-        "id": "permission-and-writing",
-        "heading": "Permission And Writing",
-        "paragraphs": [
+          "The place is no longer passive. It appears to have made room for an arrival.",
           "Permission often becomes real through writing. A name, stamp, line, or note can authorize movement.",
-          "The early line creates documentary permission before lived permission. It reverses the ritual of approach."
-        ]
-      },
-      {
-        "id": "the-road-s-memory",
-        "heading": "The Road's Memory",
-        "paragraphs": [
+          "The early line creates documentary permission before lived permission. It reverses the ritual of approach.",
           "Roads remember through wear, repairs, signs, shrines, offerings, and stories. The office register adds written memory.",
-          "The premature line disturbs both. It marks a journey before the road can remember the footsteps."
-        ]
-      },
-      {
-        "id": "the-pilgrim-shape",
-        "heading": "The Pilgrim Shape",
-        "paragraphs": [
+          "The premature line disturbs both. It marks a journey before the road can remember the footsteps.",
           "Even if the motif does not name pilgrimage, shrine roads carry pilgrim shape: movement toward meaning.",
-          "The early line feels like a pilgrim shadow arriving before the person."
-        ]
-      },
-      {
-        "id": "the-register-as-invitation",
-        "heading": "The Register As Invitation",
-        "paragraphs": [
+          "The early line feels like a pilgrim shadow arriving before the person.",
           "The line can feel like invitation. It says there is a place for someone in the record.",
-          "That invitation may be comforting or frightening depending on whether the named person knows it."
-        ]
-      },
-      {
-        "id": "the-ethics-of-following",
-        "heading": "The Ethics Of Following",
-        "paragraphs": [
+          "That invitation may be comforting or frightening depending on whether the named person knows it.",
           "A premature line should not be treated as permission to enter restricted places. Records can be wrong, old, or misunderstood.",
           "The motif's responsible reading separates curiosity from entitlement."
         ]
@@ -308,288 +291,114 @@
         "heading": "The Office As Roadside Threshold",
         "paragraphs": [
           "The road office is a threshold before the shrine threshold. It translates movement into permission, repair, warning, and record. The visitor may think the shrine is the destination, but the office controls the approach.",
-          "The early line makes that control feel anticipatory. The office seems to know that someone will need the road before they appear at the desk."
-        ]
-      },
-      {
-        "id": "the-register-s-neighboring-time",
-        "heading": "The Register's Neighboring Time",
-        "paragraphs": [
+          "The early line makes that control feel anticipatory. The office seems to know that someone will need the road before they appear at the desk.",
           "The neighboring lines make the premature entry meaningful. If the entries before and after are ordinary, the early line becomes a precise break in time.",
-          "This is why registers are powerful in folklore. They create a rhythm of expected sequence, and one wrong line can disturb the entire road."
-        ]
-      },
-      {
-        "id": "the-road-as-sentence",
-        "heading": "The Road As Sentence",
-        "paragraphs": [
+          "This is why registers are powerful in folklore. They create a rhythm of expected sequence, and one wrong line can disturb the entire road.",
           "The shrine road can be read like a sentence. It has a beginning, direction, pauses, signs, and a destination. The office register supplies grammar: names, dates, permissions, and purposes.",
-          "The early line is a word written before its place in the sentence. It makes the whole approach feel syntactically strange."
-        ]
-      },
-      {
-        "id": "the-visitor-s-unease",
-        "heading": "The Visitor's Unease",
-        "paragraphs": [
+          "The early line is a word written before its place in the sentence. It makes the whole approach feel syntactically strange.",
           "If a visitor later finds their name already written, the unease is intimate. The road has not merely expected a category of person; it has expected this person.",
-          "That intimacy is why the motif feels stronger than a general prediction. The register's format makes anticipation personal."
-        ]
-      },
-      {
-        "id": "practical-reasons-legendary-effect",
-        "heading": "Practical Reasons, Legendary Effect",
-        "paragraphs": [
+          "That intimacy is why the motif feels stronger than a general prediction. The register's format makes anticipation personal.",
           "There may be practical reasons for a line written early: prepared appointments, copied schedules, clerical planning, or backfilled forms. These explanations are important.",
           "The legendary effect remains because the road setting gives preparation a sacred approach shape. A prepared line can still feel like a path waiting for feet."
         ]
       },
       {
-        "id": "the-register-as-holding-place",
-        "heading": "The Register As Holding Place",
+        "id": "holding-places-and-premature-traces",
+        "heading": "Holding Places And Premature Traces",
         "paragraphs": [
           "The register holds a place for a body. Until the person arrives, that line is a small vacancy with a name or time attached.",
-          "The shrine road motif makes that vacancy powerful. It is not only an empty line. It is a waiting point on the way to a meaningful place."
-        ]
-      },
-      {
-        "id": "the-office-after-discovery",
-        "heading": "The Office After Discovery",
-        "paragraphs": [
+          "The shrine road motif makes that vacancy powerful. It is not only an empty line. It is a waiting point on the way to a meaningful place.",
           "After the early line is noticed, the office changes. Pens, stamps, maps, notices, and the register all seem to participate in expectation.",
-          "The place remains ordinary, but the order of arrival has shifted. The road begins on the page before it begins underfoot."
-        ]
-      },
-      {
-        "id": "the-final-approach-question",
-        "heading": "The Final Approach Question",
-        "paragraphs": [
+          "The place remains ordinary, but the order of arrival has shifted. The road begins on the page before it begins underfoot.",
           "The final approach question is whether the record prepares the road or the road prepares the record. The motif refuses to choose too quickly.",
-          "That refusal gives the story its power. A shrine road is already a route toward meaning, and the early line makes meaning arrive too soon."
-        ]
-      },
-      {
-        "id": "the-road-s-office-voice",
-        "heading": "The Road's Office Voice",
-        "paragraphs": [
+          "That refusal gives the story its power. A shrine road is already a route toward meaning, and the early line makes meaning arrive too soon.",
           "The road office gives the shrine road a voice that is not devotional but administrative. It says open, closed, repaired, permitted, delayed, signed, recorded.",
-          "The early line speaks in that office voice. Its strangeness comes from sounding official before the event has earned official status."
-        ]
-      },
-      {
-        "id": "the-premature-entry-as-footprint",
-        "heading": "The Premature Entry As Footprint",
-        "paragraphs": [
+          "The early line speaks in that office voice. Its strangeness comes from sounding official before the event has earned official status.",
           "The premature line is like a footprint before the walker. It marks passage ahead of the body.",
           "This image gives the motif its eerie clarity. The road has not yet received the traveler, but the register has received their trace."
         ]
       },
       {
-        "id": "the-shrine-road-s-pace",
-        "heading": "The Shrine Road's Pace",
+        "id": "pace-delay-and-future-memory",
+        "heading": "Pace, Delay, And Future Memory",
         "paragraphs": [
           "Shrine roads often imply pace. They can be climbed, walked slowly, approached with attention, or measured by stops and signs.",
-          "The early register line breaks that pace. It arrives instantly on paper, while the body would have needed time to travel. The page outruns the road."
-        ]
-      },
-      {
-        "id": "the-office-s-practical-burden",
-        "heading": "The Office's Practical Burden",
-        "paragraphs": [
+          "The early register line breaks that pace. It arrives instantly on paper, while the body would have needed time to travel. The page outruns the road.",
           "Once an early line is found, the office has practical burdens. Staff must decide whether to annotate, correct, preserve, investigate, or warn.",
-          "This grounds the legend. The anomaly is not only atmospheric; it interrupts real recordkeeping behavior."
-        ]
-      },
-      {
-        "id": "the-road-before-dawn",
-        "heading": "The Road Before Dawn",
-        "paragraphs": [
+          "This grounds the legend. The anomaly is not only atmospheric; it interrupts real recordkeeping behavior.",
           "The strongest imagined scene may be the road before dawn, before the office opens and before visitors arrive. The register already contains a line.",
-          "That scene creates a powerful before. The day has not begun, but the record has. The shrine road feels anticipated by its own office."
-        ]
-      },
-      {
-        "id": "the-line-s-possible-kindness",
-        "heading": "The Line's Possible Kindness",
-        "paragraphs": [
+          "That scene creates a powerful before. The day has not begun, but the record has. The shrine road feels anticipated by its own office.",
           "The early line may not be threatening. It may feel like a place prepared for someone, a record holding room for an arrival.",
-          "This ambiguity gives the story depth. The same premature entry can feel ominous, protective, bureaucratic, or tender depending on who reads it."
-        ]
-      },
-      {
-        "id": "the-register-s-memory-of-future",
-        "heading": "The Register's Memory Of Future",
-        "paragraphs": [
+          "This ambiguity gives the story depth. The same premature entry can feel ominous, protective, bureaucratic, or tender depending on who reads it.",
           "The register normally remembers the past. Here it seems to remember the future, which is an impossible phrase but an accurate description of the motif's emotional logic.",
-          "The shrine road becomes a place where memory and expectation change places. The office book looks backward in form and forward in effect."
-        ]
-      },
-      {
-        "id": "the-final-waiting-place",
-        "heading": "The Final Waiting Place",
-        "paragraphs": [
+          "The shrine road becomes a place where memory and expectation change places. The office book looks backward in form and forward in effect.",
           "The office is the final waiting place before the road becomes meaningful movement. It stands between intention and approach.",
           "The early line makes the waiting place wait first. It is the road's answer before the traveler has asked."
         ]
       },
       {
-        "id": "the-shrine-road-s-administrative-pilgrimage",
-        "heading": "The Shrine Road's Administrative Pilgrimage",
+        "id": "administrative-pilgrimage-and-local-consequences",
+        "heading": "Administrative Pilgrimage And Local Consequences",
         "paragraphs": [
           "The register creates an administrative pilgrimage parallel to the physical one. Names travel down the page as bodies travel down the road.",
-          "The early line disturbs that parallel. A name or event advances in the register before the body advances on the road. The two pilgrimages fall out of step."
-        ]
-      },
-      {
-        "id": "the-office-window",
-        "heading": "The Office Window",
-        "paragraphs": [
+          "The early line disturbs that parallel. A name or event advances in the register before the body advances on the road. The two pilgrimages fall out of step.",
           "The road office window, imagined or literal, is a perfect threshold. It is where someone asks, receives, signs, or learns the condition of the road.",
-          "The premature line passes through that window without waiting. It turns the office from a place of response into a place of expectation."
-        ]
-      },
-      {
-        "id": "the-early-line-s-local-consequences",
-        "heading": "The Early Line's Local Consequences",
-        "paragraphs": [
+          "The premature line passes through that window without waiting. It turns the office from a place of response into a place of expectation.",
           "An early line can have local consequences. It may reserve a guide, imply a road opening, mark a permit, or suggest someone has already accepted responsibility.",
-          "That is why the motif is more than a curiosity. A premature record can change behavior if people trust it."
-        ]
-      },
-      {
-        "id": "the-road-s-signs-and-the-register-s-signs",
-        "heading": "The Road's Signs And The Register's Signs",
-        "paragraphs": [
+          "That is why the motif is more than a curiosity. A premature record can change behavior if people trust it.",
           "Road signs and register lines both guide behavior. One stands in the landscape; the other sits on a page.",
-          "The early line becomes a sign before the road sign is encountered. It guides expectation before guiding movement, which is why it feels so strange."
-        ]
-      },
-      {
-        "id": "the-shrine-as-offstage-pressure",
-        "heading": "The Shrine As Offstage Pressure",
-        "paragraphs": [
+          "The early line becomes a sign before the road sign is encountered. It guides expectation before guiding movement, which is why it feels so strange.",
           "The shrine remains offstage but powerful. The register's anomaly matters because the road leads toward a charged destination.",
           "If the road led nowhere meaningful, the early line would be smaller. The shrine gives the line gravity, even from a distance."
         ]
       },
       {
-        "id": "the-premature-line-as-hospitality",
-        "heading": "The Premature Line As Hospitality",
+        "id": "hospitality-preparation-and-delay",
+        "heading": "Hospitality, Preparation, And Delay",
         "paragraphs": [
           "The line may also be read as strange hospitality. A place has prepared a line for someone before they arrive, as if the road had already made room.",
-          "That reading softens the motif without removing unease. Being expected can feel comforting until one realizes no human host made the preparation."
-        ]
-      },
-      {
-        "id": "the-office-s-final-duty",
-        "heading": "The Office's Final Duty",
-        "paragraphs": [
+          "That reading softens the motif without removing unease. Being expected can feel comforting until one realizes no human host made the preparation.",
           "The office's final duty is to keep the road's records honest. A line written too early cannot simply be ignored because it may shape access.",
-          "The legendary quality depends on that duty. The office must preserve the anomaly long enough to understand it, even while continuing ordinary work."
-        ]
-      },
-      {
-        "id": "the-shrine-road-s-double-arrival",
-        "heading": "The Shrine Road's Double Arrival",
-        "paragraphs": [
+          "The legendary quality depends on that duty. The office must preserve the anomaly long enough to understand it, even while continuing ordinary work.",
           "The shrine road creates double arrival: the body arrives at the office, then later at the shrine or its precinct. The early line adds a third arrival, the arrival of the record before the body.",
-          "This three-part timing gives the motif its structure. Record, traveler, and sacred destination no longer move in the expected order."
-        ]
-      },
-      {
-        "id": "the-register-s-possible-preparation",
-        "heading": "The Register's Possible Preparation",
-        "paragraphs": [
+          "This three-part timing gives the motif its structure. Record, traveler, and sacred destination no longer move in the expected order.",
           "A register may be prepared in advance for expected visitors, repairs, ceremonies, or inspections. That practical possibility is important and should be tested.",
-          "The motif becomes legendary when preparation is too specific, too early, or too disconnected from any known schedule. The line stops looking like planning and starts looking like anticipation."
-        ]
-      },
-      {
-        "id": "the-road-office-as-keeper-of-delay",
-        "heading": "The Road Office As Keeper Of Delay",
-        "paragraphs": [
+          "The motif becomes legendary when preparation is too specific, too early, or too disconnected from any known schedule. The line stops looking like planning and starts looking like anticipation.",
           "Road offices often manage delay: closed path, weather damage, repairs, waiting for permission, waiting for a guide. Delay is part of their work.",
           "The early line violates the office's relationship with delay. It refuses to wait, even in the place designed to manage waiting."
         ]
       },
       {
-        "id": "the-line-s-quiet-pressure",
-        "heading": "The Line's Quiet Pressure",
+        "id": "pressure-markers-and-ordinary-objects",
+        "heading": "Pressure, Markers, And Ordinary Objects",
         "paragraphs": [
           "The line does not need to name a dramatic event. A time, a name, a destination, or a note can be enough.",
-          "Quiet pressure is stronger here than spectacle. The register's ordinary form makes the early line look administratively real, which is exactly why it disturbs the road."
-        ]
-      },
-      {
-        "id": "the-shrine-road-s-invisible-host",
-        "heading": "The Shrine Road's Invisible Host",
-        "paragraphs": [
+          "Quiet pressure is stronger here than spectacle. The register's ordinary form makes the early line look administratively real, which is exactly why it disturbs the road.",
           "The early line creates the feeling of an invisible host. Someone has prepared the record, but no one is present to explain the preparation.",
-          "That host may be only procedure, error, or forgotten planning. Still, the road feels strangely welcoming and strangely watchful at the same time."
-        ]
-      },
-      {
-        "id": "the-final-record-question",
-        "heading": "The Final Record Question",
-        "paragraphs": [
+          "That host may be only procedure, error, or forgotten planning. Still, the road feels strangely welcoming and strangely watchful at the same time.",
           "The final record question is whether the line belongs to the road's past, present, or future. It is written now, refers too early, and may be understood only later.",
-          "That unstable tense is the heart of the motif. The shrine road becomes a place where approach is not just spatial, but temporal."
-        ]
-      },
-      {
-        "id": "the-line-as-road-marker",
-        "heading": "The Line As Road Marker",
-        "paragraphs": [
+          "That unstable tense is the heart of the motif. The shrine road becomes a place where approach is not just spatial, but temporal.",
           "The early line becomes a road marker made of ink. It stands before the traveler like a sign already placed on the route.",
-          "That marker is unsettling because it does not wait for experience. It tells the reader that the road has a documentary point ahead of the body."
-        ]
-      },
-      {
-        "id": "the-office-s-ordinary-objects",
-        "heading": "The Office's Ordinary Objects",
-        "paragraphs": [
+          "That marker is unsettling because it does not wait for experience. It tells the reader that the road has a documentary point ahead of the body.",
           "The ordinary objects in the office matter: pen, stamp, chair, desk, notice board, map, key hook, register. They make the anomaly believable because it appears among working things.",
-          "The early line does not float in mythic space. It sits among tools of access. That grounded setting gives the story force."
-        ]
-      },
-      {
-        "id": "the-shrine-road-s-polite-demand",
-        "heading": "The Shrine Road's Polite Demand",
-        "paragraphs": [
+          "The early line does not float in mythic space. It sits among tools of access. That grounded setting gives the story force.",
           "The road makes a polite demand: approach in the right way. The office register is one form of that demand, converting movement into recorded order.",
           "The early line disrupts politeness by arriving before the visitor can respond. It is as if the road has made a demand and supplied the answer itself."
         ]
       },
       {
-        "id": "the-visitor-s-choice",
-        "heading": "The Visitor's Choice",
+        "id": "choice-correction-and-patience",
+        "heading": "Choice, Correction, And Patience",
         "paragraphs": [
           "If the named or implied visitor sees the line, they must choose how to respond. Ignore it, correct it, report it, follow the road, or refuse the invitation.",
-          "That choice is the story's human center. A premature record matters because someone must live with its timing."
-        ]
-      },
-      {
-        "id": "the-register-after-correction",
-        "heading": "The Register After Correction",
-        "paragraphs": [
+          "That choice is the story's human center. A premature record matters because someone must live with its timing.",
           "Even if corrected, the line leaves an afterimage. A note of correction may solve procedure while preserving the story of the error.",
-          "This is how archive folklore survives practical cleanup. Correction does not erase the moment when the road seemed to know too soon."
-        ]
-      },
-      {
-        "id": "the-line-s-final-patience",
-        "heading": "The Line's Final Patience",
-        "paragraphs": [
+          "This is how archive folklore survives practical cleanup. Correction does not erase the moment when the road seemed to know too soon.",
           "The early line waits differently from a blank line. A blank line waits for anyone; this line waits with a shape already formed.",
           "That shaped waiting gives the register its unease. The shrine road is not merely open to future visitors. It appears to have prepared one particular place in the record before the road could receive the step.",
           "The early line therefore becomes a threshold of its own: not a gate on the road, but a place in writing where arrival has already been imagined.",
           "The road waits inside the sentence.",
-          "Still waiting."
-        ]
-      },
-      {
-        "id": "the-final-line",
-        "heading": "The Final Line",
-        "paragraphs": [
+          "Still waiting.",
           "The shrine road office register endures because it makes approach happen twice: first in writing, then perhaps in travel.",
           "When a line is written too early, the road becomes a sentence waiting for its subject. The shrine may be ahead, but the page has already arrived."
         ]
