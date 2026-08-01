@@ -68,7 +68,6 @@ function statusLines() {
 function summarizeStatus(lines) {
   const groups = {
     archivePackages: 0,
-    archiveMarkdown: 0,
     archiveHtml: 0,
     distArchiveHtml: 0,
     tools: 0,
@@ -80,7 +79,6 @@ function summarizeStatus(lines) {
   for (const line of lines) {
     const file = line.replace(/^(?:.. |. )/, '').replace(/\\/g, '/');
     if (/^data\/stories\/[^/]+\.json$/.test(file)) groups.archivePackages += 1;
-    else if (/^data\/stories\/[^/]+\.md$/.test(file)) groups.archiveMarkdown += 1;
     else if (/^stories\/[^/]+\.html$/.test(file)) groups.archiveHtml += 1;
     else if (/^dist\/stories\/[^/]+\.html$/.test(file)) groups.distArchiveHtml += 1;
     else if (/^(data\/tools|tools)\//.test(file)) groups.tools += 1;
@@ -100,7 +98,6 @@ function main() {
   const legacySlugs = new Set(legacyStories.map((story) => story.slug));
   const dataStoriesDir = path.join(root, 'data', 'stories');
   const packageJsonSlugs = listFiles(dataStoriesDir, '.json');
-  const markdownSlugs = listFiles(dataStoriesDir, '.md');
   const htmlCount = readDirCount(path.join(root, 'stories'), '.html');
   const distHtmlCount = readDirCount(path.join(root, 'dist', 'stories'), '.html');
   const lines = statusLines();
@@ -171,7 +168,6 @@ function main() {
     'merged loadStories result': mergedStories.length,
     'data/stories/index.json package entries': independentEntries.length,
     'data/stories/*.json package files': packageJsonSlugs.length,
-    'data/stories/*.md filesystem files': markdownSlugs.length,
     'legacy-only records': legacyStories.length - independentEntries.length,
     'stories/*.html': htmlCount,
     'dist/stories/*.html': distHtmlCount

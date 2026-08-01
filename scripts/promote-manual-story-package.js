@@ -64,7 +64,6 @@ const output = {
 };
 
 writeJson(path.join(root, 'data', 'stories', entry.file), output);
-writeMarkdownCopy(sourcePath, path.join(root, 'data', 'stories', `${legacy.slug}.md`));
 upsertIndependentEntry(entry);
 
 execFileSync(process.execPath, [path.join(__dirname, 'apply-content-dna.js'), '--story', legacy.slug], {
@@ -175,10 +174,6 @@ function upsertIndependentEntry(entry) {
     entries.push(entry);
   }
   writeJson(indexPath, entries);
-}
-
-function writeMarkdownCopy(source, destination) {
-  fs.copyFileSync(source, destination);
 }
 
 function writeJson(file, value) {
