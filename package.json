@@ -19,6 +19,7 @@
     "migrate:creator-library:apply": "node scripts/migrate-creator-library-single-path.js --apply --all --batch-size 10",
     "validate:tags": "node scripts/validate-tags.js",
     "validate:publish": "node scripts/validate-publish.js",
+    "audit:content-roots": "node scripts/audit-content-roots.js",
     "qa:full": "node scripts/apply-content-dna.js && node scripts/validate-tags.js && node scripts/generate-site.js && node scripts/generate-guides.js && node scripts/generate-tags.js && node scripts/normalize-public-urls.js && node scripts/validate-publish.js --all"
   }
 }
