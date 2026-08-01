@@ -132,6 +132,10 @@ function validateIndependentPackage(entry, packageData, legacyStory, packagePath
     throw new Error(`${label}: title and h1 are required content fields.`);
   }
   const article = packageData.longformArticle;
+  if (!article) {
+    validateLegacyPackage(packageData, label);
+    return;
+  }
   if (!article || typeof article !== 'object') throw new Error(`${label}: longformArticle is required.`);
   if (!Array.isArray(article.storyBody) || article.storyBody.length === 0) {
     throw new Error(`${label}: longformArticle.storyBody is required.`);
@@ -154,6 +158,19 @@ function validateIndependentPackage(entry, packageData, legacyStory, packagePath
   if (!Array.isArray(article.references) || article.references.length === 0) throw new Error(`${label}: Sources are required.`);
   if (!Array.isArray(article.relatedKeywords) || article.relatedKeywords.length === 0 || !Array.isArray(packageData.relatedKeywords) || packageData.relatedKeywords.length === 0) {
     throw new Error(`${label}: Related Keywords are required in both Story fields.`);
+  }
+}
+
+function validateLegacyPackage(packageData, label) {
+  const requiredStrings = ['metaTitle', 'metaDescription', 'summaryAnswer', 'excerpt', 'introSummary'];
+  for (const key of requiredStrings) {
+    if (!nonEmptyString(packageData[key])) throw new Error(`${label}: ${key} is required for legacy-format packages.`);
+  }
+  const requiredArrays = ['relatedKeywords', 'relatedStorySlugs', 'tags'];
+  for (const key of requiredArrays) {
+    if (!Array.isArray(packageData[key]) || packageData[key].length === 0) {
+      throw new Error(`${label}: ${key} is required for legacy-format packages.`);
+    }
   }
 }
 

@@ -124,15 +124,15 @@ function main() {
       ok: mergedStories.length === legacyStories.length
     },
     {
-      name: 'independent packages all map to legacy records',
+      name: 'story packages all map to legacy records',
       ok: missingLegacyForIndependent.length === 0
     },
     {
-      name: 'independent package JSON files are indexed',
+      name: 'story package JSON files are indexed',
       ok: packageJsonNotIndexed.length === 0
     },
     {
-      name: 'indexed independent package files exist',
+      name: 'indexed story package files exist',
       ok: indexedPackageMissing.length === 0
     }
   ];
@@ -169,7 +169,7 @@ function main() {
   console.table({
     'data/stories.json full archive': legacyStories.length,
     'merged loadStories result': mergedStories.length,
-    'data/stories/index.json independent entries': independentEntries.length,
+    'data/stories/index.json package entries': independentEntries.length,
     'data/stories/*.json package files': packageJsonSlugs.length,
     'data/stories/*.md filesystem files': markdownSlugs.length,
     'legacy-only records': legacyStories.length - independentEntries.length,

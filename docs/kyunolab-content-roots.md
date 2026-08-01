@@ -83,17 +83,20 @@ The archive currently uses a merged data model:
   - Legacy/main archive list.
   - This is the full archive inventory.
   - Current confirmed count: 1,224 records.
+  - Keep this file until a deliberate later migration removes the legacy list.
 
 - `data/stories/index.json`
-  - Index of independent story packages.
+  - Index of story package files.
   - Each entry points to a file under `data/stories/`.
+  - Current confirmed count: 1,224 entries.
 
 - `data/stories/<slug>.json`
-  - Independent story package overlay.
+  - Canonical per-story source package.
   - These records must match the legacy `id`, `slug`, `category`,
     `pathname`, and `canonicalUrl`.
-  - During site generation, the independent package replaces the matching
-    record from `data/stories.json`.
+  - Current confirmed count: 1,224 files.
+  - During site generation, the package replaces the matching record from
+    `data/stories.json`, so all archive source work should happen here.
 
 - `data/stories/<slug>.md`
   - Regeneration source/draft marker used by the current archive workflow.
@@ -106,8 +109,10 @@ The archive currently uses a merged data model:
 - `dist/stories/<slug>.html`
   - Cloudflare Pages distribution copy.
 
-Important: `data/stories/*.json` is not the full archive. It is the independent
-overlay subset. The full archive count comes from `data/stories.json`.
+Important: after the source-tree consolidation, every archive record has a
+matching `data/stories/<slug>.json` package. `data/stories.json` remains as the
+full archive inventory and compatibility list, but day-to-day story edits should
+use the per-story package files.
 
 ## Library Roots
 
@@ -155,8 +160,8 @@ Confirm:
 - The `origin` remote points to `dmsgk860109-cell/kyunolab.git`.
 - `data/stories.json`, `stories/`, and `dist/stories/` describe the same full
   archive population.
-- `data/stories/index.json` and `data/stories/*.json` describe the independent
-  overlay subset only.
+- `data/stories/index.json` and `data/stories/*.json` describe the full
+  per-story package set.
 - Dirty files are understood before any commit.
 - Existing unrelated dirty files are not included in content commits.
 
