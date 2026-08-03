@@ -2516,7 +2516,6 @@ function renderHomeSignSystem() {
             <h3>Site Notes</h3>
             <a href="/about.html">About Kyunolab</a>
             <a href="/fiction-disclaimer.html">Story and source notice</a>
-            <a href="/sitemap.xml">Sitemap</a>
           </div>
         </section>`;
 }
@@ -2529,7 +2528,9 @@ function renderHomePortalHeader() {
         ${renderHomePortalSearchForm()}
       </div>
       <nav class="home-portal-nav" aria-label="Primary homepage navigation">
-        <a class="active" aria-current="page" href="/">Archive</a>
+        <a class="active" aria-current="page" href="/">Home</a>
+        <a href="/archive.html">Archive</a>
+        <a href="/categories.html">Categories</a>
         <a href="/mystery-board.html">Mystery Board</a>
         <a href="/scripts/">Creator Library</a>
         <a href="/mystery-board/how-to-follow-recurring-motifs-across-the-archive.html">Tools</a>
