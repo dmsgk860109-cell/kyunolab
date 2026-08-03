@@ -2267,7 +2267,7 @@ h1 {
 }
 .home-portal-topbar {
   display: grid;
-  grid-template-columns: minmax(190px, 210px) minmax(360px, 1fr) 186px;
+  grid-template-columns: minmax(190px, 230px) minmax(360px, 1fr);
   gap: 14px;
   align-items: center;
 }
@@ -2422,11 +2422,7 @@ h1 {
 }
 .home-portal-page main.home-shell {
   max-width: 1200px;
-  padding-top: 12px;
-}
-.home-top-ad-slot {
-  min-height: 76px;
-  margin-bottom: 14px;
+  padding-top: 18px;
 }
 .home-portal-page .home-portal-layout {
   grid-template-columns: minmax(0, 1fr) 292px;

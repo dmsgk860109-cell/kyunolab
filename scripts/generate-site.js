@@ -149,7 +149,6 @@ function renderHomePage({ featuredStory, latestStories, popularStories, essentia
 <body class="home-portal-page">
   ${renderHomePortalHeader()}
   <main class="home-shell home-portal-shell">
-    <section class="home-top-ad-slot" aria-label="Top advertising slot">TOP AD SLOT 970 x 90</section>
     <div class="home-portal-layout">
       <div class="home-main-column">
         ${renderHomePortalLead({ featuredStory, popularStories })}
@@ -2491,33 +2490,33 @@ function getHomeMotifLanes() {
 }
 
 function renderHomeSignSystem() {
-  return `<section class="home-sign-system" aria-label="Kyunolab site roads">
+  return `<section class="home-sign-system" aria-label="Kyunolab reading paths">
           <div class="home-sign-intro">
-            <p class="label">Fixed Structure</p>
-            <h2>Grouped signs stay stable while the archive buildings grow.</h2>
-            <p>Archive, Mystery Board, Creator Library, Tools, and Hub stay as the main roads. The first screen now shows real places to enter, not only category labels.</p>
+            <p class="label">Kyunolab Map</p>
+            <h2>Start with stories, then follow the paths that fit your curiosity.</h2>
+            <p>Move between archive stories, reading guides, creator material, and future tools without losing your place.</p>
           </div>
           <div class="home-sign-links">
             <div>
-              <h3>Archive Roads</h3>
+              <h3>Story Paths</h3>
               <a href="/categories/urban-legends.html">Urban Legends</a>
               <a href="/categories/internet-folklore.html">Internet Folklore</a>
               <a href="/categories/myths.html">Myths</a>
               <a href="/categories/strange-places.html">Strange Places</a>
             </div>
             <div>
-              <h3>Cross Roads</h3>
-              <a href="/scripts/">Archive to Library</a>
-              <a href="/mystery-board.html">Archive to Board</a>
-              <a href="/archive.html">Library to Archive</a>
-              <a href="/mystery-board/how-to-follow-recurring-motifs-across-the-archive.html">Tools to Guides</a>
+              <h3>Explore More</h3>
+              <a href="/mystery-board.html">Reading Guides</a>
+              <a href="/scripts/">Creator Library</a>
+              <a href="/archive.html">Full Archive Index</a>
+              <a href="/mystery-board/how-to-follow-recurring-motifs-across-the-archive.html">Motif Guide</a>
             </div>
           </div>
           <div class="home-small-buildings">
-            <h3>Small Buildings</h3>
-            <a href="/about.html">Hub: bookmark, support, and site notes</a>
-            <a href="/fiction-disclaimer.html">Source notice and privacy paths</a>
-            <a href="/sitemap.xml">Sitemap and all destinations</a>
+            <h3>Site Notes</h3>
+            <a href="/about.html">About Kyunolab</a>
+            <a href="/fiction-disclaimer.html">Story and source notice</a>
+            <a href="/sitemap.xml">Sitemap</a>
           </div>
         </section>`;
 }
@@ -2528,7 +2527,6 @@ function renderHomePortalHeader() {
       <div class="home-portal-topbar">
         <a class="home-portal-brand" href="/"><span class="home-portal-brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab</strong><em>Archive, Library, Tools, Hub</em></span></a>
         ${renderHomePortalSearchForm()}
-        <div class="home-header-ad-slot" aria-label="Header advertising slot">AD 186 x 42</div>
       </div>
       <nav class="home-portal-nav" aria-label="Primary homepage navigation">
         <a class="active" aria-current="page" href="/">Archive</a>
@@ -2698,7 +2696,6 @@ function renderHomePortalRail({ popularStories, essentialStories, guideLinks, li
   const guides = guideLinks.slice(0, 3);
   const scripts = libraryScripts.slice(0, 2);
   return `<aside class="home-portal-rail" aria-label="Kyunolab side paths">
-      <section class="home-rail-ad-slot" aria-label="Right rail advertising slot">RIGHT RAIL AD<br>300 x 250</section>
       ${renderKyunolabNetworkCard('archive')}
       <section class="rail-card">
         <p class="rail-label">Known Buildings</p>
