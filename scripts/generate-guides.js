@@ -4,7 +4,7 @@ const { loadStories } = require('./lib/load-stories');
 
 const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://kyunolab.com';
-const styleVersion = '20260717-search-ui';
+const styleVersion = '20260804-nav-flow';
 const guides = readJson(path.join(root, 'data', 'guides.json'));
 const stories = loadStories(root);
 const storyById = new Map(stories.map((story) => [story.id || story.slug, story]));
@@ -21,6 +21,11 @@ console.log(`Generated ${guides.length} Mystery Board guide page(s).`);
 function renderBoardPage() {
   const newest = [...guides].sort((a, b) => (b.publishedAt || '').localeCompare(a.publishedAt || ''));
   const primary = newest[0] || guides[0];
+  const relatedArchiveRecords = getStoriesBySlug([
+    'woman-in-white-roadside-legend',
+    'backrooms-digital-labyrinth',
+    'baba-yaga-folklore'
+  ]);
   const rows = newest.map((guide) => `<article class="story-row">
           <span class="tag">${escapeHtml(guide.tag || guide.category)}</span>
           <h3><a href="${escapeAttr(guide.url || `/mystery-board/${guide.slug}`)}">${escapeHtml(guide.title)}</a></h3>
@@ -39,6 +44,7 @@ function renderBoardPage() {
     <aside class="article-rail article-rail-left" aria-label="Mystery Board topics">
       <div class="rail-card">
         <p class="rail-label">Reader Paths</p>
+        <a href="/archive.html">All Stories</a>
         <a href="/newest.html">Newest Records</a>
         <a href="/popular.html">Popular Records</a>
         <a href="/categories.html">Browse Categories</a>
@@ -67,6 +73,8 @@ function renderBoardPage() {
         <strong>Archive guide:</strong> The Mystery Board introduces how Kyunolab organizes legends, folklore, myths, internet mysteries, and unexplained stories while highlighting the records and reading paths that best represent the archive.
       </section>
 
+      ${renderBoardGuide()}
+
       <div class="story-list">
 ${rows}
       </div>
@@ -79,11 +87,28 @@ ${rows}
       </div>
       <div class="rail-card">
         <p class="rail-label">Related archive records</p>
-        ${stories.slice(0, 3).map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}
+        ${relatedArchiveRecords.map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}
       </div>
     </aside>
   </main>`
   });
+}
+
+function renderBoardGuide() {
+  const guideLinks = getGuidesBySlug([
+    'what-is-an-urban-legend',
+    'why-internet-folklore-spreads',
+    'how-to-check-source-status',
+    'how-to-build-a-reading-path-through-the-strange-archive'
+  ]);
+  return `<section class="notice" aria-label="Mystery Board guide">
+        <p class="label">Board Guide</p>
+        <h2>Use the board before choosing a deeper path</h2>
+        <p>These guides explain how to read the archive, check source limits, follow motifs, and move from a broad question into specific stories.</p>
+        <div class="compact-grid">
+          ${guideLinks.map((guide) => `<a href="${escapeAttr(guide.url || `/mystery-board/${guide.slug}`)}"><span>${escapeHtml(guide.tag || 'Guide')}</span><strong>${escapeHtml(guide.shortTitle || guide.title)}</strong></a>`).join('')}
+        </div>
+      </section>`;
 }
 
 function renderGuidePage(guide) {
@@ -114,6 +139,7 @@ ${section.paragraphs.map((text) => `<p>${linkText(text)}</p>`).join('\n')}`).joi
       <div class="rail-card rail-card-subtle">
         <p class="rail-label">Related shelves</p>
         <a href="/mystery-board.html">Mystery Board</a>
+        <a href="/archive.html">All Stories</a>
         <a href="/categories.html">Browse Categories</a>
         <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a>
       </div>
@@ -220,7 +246,7 @@ function renderHeader() {
     <div class="header-inner">
       <a class="brand" href="/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
       ${renderSiteSearchForm()}
-      <nav class="nav"><a href="/newest.html">Newest</a><a href="/popular.html">Popular</a><a href="/categories.html">Categories</a><a href="/mystery-board.html">Mystery Board</a><a href="/about.html">About</a></nav>
+      <nav class="nav"><a href="/archive.html">All Stories</a><a href="/newest.html">Newest</a><a href="/popular.html">Popular</a><a href="/categories.html">Categories</a><a href="/mystery-board.html">Mystery Board</a><a href="/about.html">About</a></nav>
     </div>
   </header>`;
 }
@@ -247,10 +273,18 @@ function renderKyunolabNetworkCard() {
       </div>`;
 }
 
+function getGuidesBySlug(slugs) {
+  return slugs.map((slug) => guides.find((guide) => guide.slug === slug)).filter(Boolean);
+}
+
+function getStoriesBySlug(slugs) {
+  return slugs.map((slug) => stories.find((story) => story.slug === slug)).filter(Boolean);
+}
+
 function renderFooter() {
   return `<footer class="site-footer">
     <p><strong>Kyunolab Mystery Archive</strong> is a quiet story publication by Kyuno Lab, dedicated to legends, folklore, mysteries, and strange tales from the edges of memory.</p>
-    <p><a href="/archive.html">Archive Index</a> - <a href="/newest.html">Newest</a> - <a href="/popular.html">Popular</a> - <a href="/categories.html">Categories</a> - <a href="/about.html">About</a> - <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a> - <a href="/privacy.html">Privacy</a> - <a href="/rss.xml">RSS</a></p>
+    <p><a href="/archive.html">All Stories</a> - <a href="/newest.html">Newest</a> - <a href="/popular.html">Popular</a> - <a href="/categories.html">Categories</a> - <a href="/mystery-board.html">Mystery Board</a> - <a href="/scripts/">Scripts</a> - <a href="/about.html">About</a> - <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a> - <a href="/privacy.html">Privacy</a> - <a href="/rss.xml">RSS</a></p>
   </footer>`;
 }
 

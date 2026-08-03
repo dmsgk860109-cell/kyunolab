@@ -235,11 +235,26 @@ ${cards}
       <p class="label">Archive Categories</p>
       <h1 class="article-title">Browse by category</h1>
       <p class="deck">Each active category contains multiple records, giving every shelf enough material to test structure, navigation, and reader flow.</p>
+${renderCategoryGuide()}
 ${body}
     </div>
     ${renderCategoryRightRail()}
   </main>`
   }));
+}
+
+function renderCategoryGuide() {
+  return `      <section class="notice" aria-label="Category guide">
+        <p class="label">Category Guide</p>
+        <h2>Find the shelf that matches the story mood</h2>
+        <p>Use these larger entrances when the full map feels too broad. The complete category shelves stay below, with real story links inside each section.</p>
+        <div class="compact-grid">
+          <a href="/categories/urban-legends.html"><span>Modern rumors</span><strong>Urban Legends</strong></a>
+          <a href="/categories/internet-folklore.html"><span>Digital paths</span><strong>Internet Folklore</strong></a>
+          <a href="/categories/classic-folklore.html"><span>Older warnings</span><strong>Classic Folklore</strong></a>
+          <a href="/categories/myths.html"><span>Mythic roots</span><strong>Myths</strong></a>
+        </div>
+      </section>`;
 }
 
 function generateCategoryPages() {
@@ -2920,10 +2935,25 @@ function renderListPage({ canonicalPath, label, title, h1, description, items, b
     networkSection: 'archive',
     content: `  <main class="article-shell article-layout">
     ${renderLeftRail()}
-    <div class="archive-page-main"><p class="label">${escapeHtml(label)}</p><h1 class="article-title">${escapeHtml(h1)}</h1><p class="deck">${escapeHtml(description)}</p><div class="story-list">${items.map(renderStoryRow).join('\n')}</div>${renderPagination(baseName, pageNumber, totalPages)}</div>
+    <div class="archive-page-main"><p class="label">${escapeHtml(label)}</p><h1 class="article-title">${escapeHtml(h1)}</h1><p class="deck">${escapeHtml(description)}</p>${renderArchiveGuide(baseName, pageNumber)}<div class="story-list">${items.map(renderStoryRow).join('\n')}</div>${renderPagination(baseName, pageNumber, totalPages)}</div>
     ${renderRightRail(items, 'Recommended archive paths')}
   </main>`
   });
+}
+
+function renderArchiveGuide(baseName, pageNumber) {
+  if (baseName !== 'archive' || pageNumber !== 1) return '';
+  return `<section class="notice" aria-label="All Stories guide">
+        <p class="label">Archive Guide</p>
+        <h2>Choose a shorter road through every story</h2>
+        <p>All Stories is the full index. These entrances help readers start with a subject shelf, a newer record, a familiar story, or a reading guide before they keep moving through the complete list.</p>
+        <div class="compact-grid">
+          <a href="/categories.html"><span>Browse by shelf</span><strong>Categories</strong></a>
+          <a href="/newest.html"><span>Fresh records</span><strong>Newest</strong></a>
+          <a href="/popular.html"><span>Known paths</span><strong>Popular</strong></a>
+          <a href="/mystery-board.html"><span>Reading guide</span><strong>Mystery Board</strong></a>
+        </div>
+      </section>`;
 }
 
 function renderCategoryPage({ category, pageItems, pageNumber, totalPages, pageTitle, canonicalPath }) {
@@ -3128,9 +3158,19 @@ function renderRightRail(items, label) {
 }
 
 function renderCategoryRightRail() {
-  const start = stories[0];
-  const popular = stories.slice(1, 4);
-  const essentials = stories.slice(4, 7);
+  const categoryRailStories = getHomeStories([
+    'woman-in-white-roadside-legend',
+    'backrooms-digital-labyrinth',
+    'baba-yaga-folklore',
+    'poisoned-halloween-candy-legend',
+    'russian-sleep-experiment-creepypasta',
+    'demeter-and-persephone-myth',
+    'paris-catacombs-legends'
+  ]);
+  const railStories = categoryRailStories.length >= 7 ? categoryRailStories : stories.slice(0, 7);
+  const start = railStories[0];
+  const popular = railStories.slice(1, 4);
+  const essentials = railStories.slice(4, 7);
   return `<aside class="article-rail article-rail-right" aria-label="Category page reading paths">
       ${renderKyunolabNetworkCard('archive')}
       <div class="rail-card rail-feature"><p class="rail-label">Start here</p><a href="/stories/${escapeAttr(start.slug)}"><span>${escapeHtml(start.category)}</span><strong>${escapeHtml(start.title)}</strong></a></div>
