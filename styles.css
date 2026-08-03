@@ -3225,8 +3225,23 @@ textarea {
     min-width: 0;
     height: 44px;
   }
+  .site-search-select {
+    flex-basis: 92px;
+    padding-left: 10px;
+    padding-right: 24px;
+  }
   .site-search-input {
+    width: auto;
     min-width: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .site-search-button {
+    flex-basis: 66px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 11px;
+    letter-spacing: 0;
   }
   .search-page-form {
     width: 100%;

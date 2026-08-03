@@ -13,7 +13,7 @@ const buildArgs = parseBuildArgs(process.argv.slice(2));
 const siteOutputRoot = path.resolve(buildArgs.outputRoot || root);
 const creatorPackOptions = buildArgs.creatorPackRoot ? { root: buildArgs.creatorPackRoot } : {};
 const siteUrl = 'https://kyunolab.com';
-const styleVersion = '20260720-creator-part-visual-beats';
+const styleVersion = '20260804-nav-flow';
 const creatorLibraryScriptVersion = '20260722-copy-fields';
 const pageSize = 12;
 const libraryPageSize = 10;
@@ -48,7 +48,7 @@ function main() {
 
   generateArchivePageSet({
     baseName: 'archive',
-    label: 'Archive Index',
+    label: 'All Stories',
     title: 'Explore every open file in Kyunolab Mystery Archive',
     description: 'Move through every record by category, source status, story type, folklore motif, legend origin, and recurring mystery pattern.',
     items: sortArchive(stories)
@@ -162,7 +162,7 @@ function renderHomePage({ featuredStory, latestStories, popularStories, essentia
           <section id="latest" class="latest latest-compact"><div class="section-head"><h2>Latest Stories</h2><a href="/newest.html">View all newest</a></div><div class="home-story-list">${latestStories.map(renderHomeStoryRow).join('')}</div></section>
         </div>
         <section id="essential-reads" class="essential-reads"><div class="section-head"><h2>Essential Reads</h2><span>Start here</span></div><div class="compact-grid">${essentialStories.map(renderEssentialStory).join('')}</div></section>
-        <section class="archive-cta"><div><p class="label">Archive Index</p><h2>Explore every open file in Kyunolab Mystery Archive.</h2><p>Move through the full collection by category, source status, story type, folklore motif, legend origin, and recurring mystery pattern.</p></div><a class="button" href="/archive.html">Browse all current stories</a></section>
+        <section class="archive-cta"><div><p class="label">All Stories</p><h2>Explore every open file in Kyunolab Mystery Archive.</h2><p>Move through the full collection by category, source status, story type, folklore motif, legend origin, and recurring mystery pattern.</p></div><a class="button" href="/archive.html">Browse all current stories</a></section>
       </div>
       ${renderHomePortalRail({ popularStories, essentialStories, guideLinks, libraryScripts })}
     </div>
@@ -2733,7 +2733,7 @@ function renderHomeRail({ featuredStory, popularStories, essentialStories }) {
 
 function renderHomeLeftRail() {
   return `<aside class="home-left-rail article-rail article-rail-left" aria-label="Homepage archive navigation">
-      <div class="rail-card"><p class="rail-label">Reader Paths</p><a href="/newest.html">Newest Records</a><a href="/popular.html">Known Records</a><a href="/categories.html">Browse Categories</a><a href="/mystery-board.html">Mystery Board</a></div>
+    <div class="rail-card"><p class="rail-label">Reader Paths</p><a href="/archive.html">All Stories</a><a href="/newest.html">Newest Records</a><a href="/popular.html">Known Records</a><a href="/categories.html">Browse Categories</a><a href="/mystery-board.html">Mystery Board</a></div>
       <div class="rail-card rail-card-subtle"><p class="rail-label">Archive Shelves</p><a href="/categories/urban-legends.html">Urban Legends</a><a href="/categories/internet-folklore.html">Internet Folklore</a><a href="/categories/myths.html">Myths</a><a href="/categories/strange-places.html">Strange Places</a></div>
       <div class="rail-card"><p class="rail-label">Source Guide</p><a href="/fiction-disclaimer.html">Story &amp; Source Notice</a><a href="/about.html">About Kyunolab</a></div>
     </aside>`;
@@ -3025,6 +3025,7 @@ function renderMainHeader(currentPath, includeSearch = true) {
       <a class="brand" href="/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
 ${searchForm}
       <nav class="nav">${[
+        navLink('/archive.html', 'All Stories', currentPath === '/archive' || /^\/archive-\d+$/.test(currentPath)),
         navLink('/newest.html', 'Newest', currentPath === '/newest'),
         navLink('/popular.html', 'Popular', currentPath === '/popular'),
         navLink('/categories.html', 'Categories', currentPath === '/categories' || currentPath.startsWith('/categories/')),
@@ -3107,13 +3108,13 @@ function renderFooter(section = 'archive') {
   }
   return `<footer class="site-footer">
     <p><strong>Kyunolab Mystery Archive</strong> collects legends, folklore, mysteries, and strange tales with calm source-aware notes.</p>
-    <p><a href="/archive.html">Archive Index</a> - <a href="/newest.html">Newest</a> - <a href="/popular.html">Popular</a> - <a href="/categories.html">Categories</a> - <a href="/scripts/">Scripts</a> - <a href="/about.html">About</a> - <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a> - <a href="/privacy.html">Privacy</a> - <a href="/rss.xml">RSS</a> - <a href="/publishing-center/">Publishing Center</a></p>
+    <p><a href="/archive.html">All Stories</a> - <a href="/newest.html">Newest</a> - <a href="/popular.html">Popular</a> - <a href="/categories.html">Categories</a> - <a href="/scripts/">Scripts</a> - <a href="/about.html">About</a> - <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a> - <a href="/privacy.html">Privacy</a> - <a href="/rss.xml">RSS</a> - <a href="/publishing-center/">Publishing Center</a></p>
   </footer>`;
 }
 
 function renderLeftRail(label = 'Archive navigation') {
   return `<aside class="article-rail article-rail-left" aria-label="${escapeAttr(label)}">
-    <div class="rail-card"><p class="rail-label">Reader Paths</p><a href="/newest.html">Newest Records</a><a href="/popular.html">Popular Records</a><a href="/categories.html">Browse Categories</a><a href="/mystery-board.html">Mystery Board</a></div>
+    <div class="rail-card"><p class="rail-label">Reader Paths</p><a href="/archive.html">All Stories</a><a href="/newest.html">Newest Records</a><a href="/popular.html">Popular Records</a><a href="/categories.html">Browse Categories</a><a href="/mystery-board.html">Mystery Board</a></div>
     <div class="rail-card rail-card-subtle"><p class="rail-label">Archive Shelves</p><a href="/categories/urban-legends.html">Urban Legends</a><a href="/categories/internet-folklore.html">Internet Folklore</a><a href="/categories/myths.html">Myths</a><a href="/categories/strange-places.html">Strange Places</a></div>
     <div class="rail-card"><p class="rail-label">Source Guide</p><a href="/fiction-disclaimer.html">Story &amp; Source Notice</a><a href="/about.html">About Kyunolab</a></div>
   </aside>`;
