@@ -69,21 +69,42 @@ function main() {
 
 function generateHomePage() {
   const featuredStory = getConfiguredStory(siteConfig.featuredStoryId) || stories[0];
-  const latestStories = stories.slice(0, 8);
+  const latestStories = sortNewest(stories).slice(0, 8);
   const popularStories = getConfiguredStories(siteConfig.popularStoryIds).slice(0, 5);
   const essentialStories = getConfiguredStories(siteConfig.essentialStoryIds).slice(0, 4);
   const categoryGroups = getHomeCategoryGroups();
+  const headlineStories = getHomeStories([
+    'bloody-mary-mirror-legend',
+    'smile-dog-creepypasta',
+    'poisoned-halloween-candy-legend',
+    'demeter-and-persephone-myth',
+    'paris-catacombs-legends'
+  ]);
+  const readerPathGroups = getHomeReaderPathGroups();
+  const motifLanes = getHomeMotifLanes();
+  const guideLinks = getHomeGuides([
+    'what-is-an-urban-legend',
+    'how-to-check-source-status',
+    'why-internet-folklore-spreads',
+    'how-to-build-a-reading-path-through-the-strange-archive'
+  ]);
+  const libraryScripts = sortNewest(creatorScripts).slice(0, 3);
 
   writeFile('index.html', renderHomePage({
     featuredStory,
     latestStories,
     popularStories,
     essentialStories,
-    categoryGroups
+    categoryGroups,
+    headlineStories,
+    readerPathGroups,
+    motifLanes,
+    guideLinks,
+    libraryScripts
   }));
 }
 
-function renderHomePage({ featuredStory, latestStories, popularStories, essentialStories, categoryGroups }) {
+function renderHomePage({ featuredStory, latestStories, popularStories, essentialStories, categoryGroups, headlineStories, readerPathGroups, motifLanes, guideLinks, libraryScripts }) {
   const title = 'Kyunolab Mystery Archive | Urban Legends, Folklore, Myths & Strange Tales';
   const description = "Explore urban legends, folklore origins, internet myths, strange places, mythic creatures, and source-aware mystery stories in Kyunolab's calm archive.";
   const jsonLd = {
@@ -125,26 +146,26 @@ function renderHomePage({ featuredStory, latestStories, popularStories, essentia
   <link rel="stylesheet" href="/styles.css?v=${styleVersion}">
   <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
 </head>
-<body>
-  ${renderHeader()}
-  <main class="home-shell">
-    <div class="home-layout">
-      ${renderHomeLeftRail()}
+<body class="home-portal-page">
+  ${renderHomePortalHeader()}
+  <main class="home-shell home-portal-shell">
+    <section class="home-top-ad-slot" aria-label="Top advertising slot">TOP AD SLOT 970 x 90</section>
+    <div class="home-portal-layout">
       <div class="home-main-column">
-        <section class="hero">
-          <div class="hero-copy"><p class="label">Strange Story Archive</p><h1>Strange legends. Forgotten folklore. Mysteries that refuse to disappear.</h1><p>A quiet archive of urban legends, folklore origins, internet myths, strange places, mythic creatures, and recurring mystery patterns.</p></div>
-          ${renderFeaturedStory(featuredStory)}
-        </section>
+        ${renderHomePortalLead({ featuredStory, popularStories })}
         <section class="notice"><strong>Story &amp; Source Notice:</strong> This site explores folklore, legends, mysteries, and source-aware retellings. Unverified traditions are presented as stories, not as verified fact.</section>
+        ${renderHomeHeadlineDesk(headlineStories, guideLinks)}
+        ${renderHomeReaderPaths(readerPathGroups)}
+        ${renderHomeMotifLanes(motifLanes)}
+        <section id="categories" class="categories"><div class="section-head"><h2>Browse By Category</h2><a href="/categories.html">View all categories</a></div><div class="home-category-groups">${categoryGroups.map(renderHomeCategoryGroup).join('')}</div></section>
+        ${renderHomeCrossroads({ guideLinks, libraryScripts })}
         <div class="home-stream">
           <section id="latest" class="latest latest-compact"><div class="section-head"><h2>Latest Stories</h2><a href="/newest.html">View all newest</a></div><div class="home-story-list">${latestStories.map(renderHomeStoryRow).join('')}</div></section>
         </div>
-        <section class="board" id="rankings"><div class="section-head"><h2>Popular Records</h2><a href="/mystery-board.html">Open mystery board</a></div><div class="ranking-grid"><ol class="ranking-card">${popularStories.map(renderRankingItem).join('')}</ol><aside class="side-panel"><h3>Reader Paths</h3><a href="/newest.html">Newest stories</a><a href="/categories.html">Browse by category</a><a href="#essential-reads">Start with essential reads</a><a href="/fiction-disclaimer.html">Story &amp; source notice</a></aside></div></section>
-        <section id="categories" class="categories"><div class="section-head"><h2>Browse By Category</h2><a href="/categories.html">View all categories</a></div><div class="home-category-groups">${categoryGroups.map(renderHomeCategoryGroup).join('')}</div></section>
         <section id="essential-reads" class="essential-reads"><div class="section-head"><h2>Essential Reads</h2><span>Start here</span></div><div class="compact-grid">${essentialStories.map(renderEssentialStory).join('')}</div></section>
         <section class="archive-cta"><div><p class="label">Archive Index</p><h2>Explore every open file in Kyunolab Mystery Archive.</h2><p>Move through the full collection by category, source status, story type, folklore motif, legend origin, and recurring mystery pattern.</p></div><a class="button" href="/archive.html">Browse all current stories</a></section>
       </div>
-      ${renderHomeRail({ featuredStory, popularStories, essentialStories })}
+      ${renderHomePortalRail({ popularStories, essentialStories, guideLinks, libraryScripts })}
     </div>
   </main>
   ${renderFooter()}${renderGlobalSearchScript()}
@@ -2384,6 +2405,266 @@ function yesNo(value) {
   return value ? 'Yes' : 'No';
 }
 
+function getHomeStories(slugs) {
+  return slugs.map((slug) => stories.find((story) => story.slug === slug)).filter(Boolean);
+}
+
+function getHomeGuides(slugs) {
+  return slugs.map((slug) => guides.find((guide) => guide.slug === slug)).filter(Boolean);
+}
+
+function getHomeReaderPathGroups() {
+  return [
+    {
+      title: 'If you like road legends',
+      deck: 'Roadside ghosts, warnings, vanished passengers, and places where ordinary travel turns strange.',
+      stories: getHomeStories([
+        'woman-in-white-roadside-legend',
+        'vanishing-hitchhiker-urban-legend',
+        'the-hookman-urban-legend',
+        'how-a-shortcut-becomes-a-haunted-road'
+      ])
+    },
+    {
+      title: 'If you like internet folklore',
+      deck: 'Digital spaces, cursed images, game files, and web stories that grew through sharing.',
+      stories: getHomeStories([
+        'backrooms-digital-labyrinth',
+        'russian-sleep-experiment-creepypasta',
+        'ben-drowned-creepypasta',
+        'candle-cove-creepypasta'
+      ])
+    },
+    {
+      title: 'If you want older folklore',
+      deck: 'Folk figures, spirits, warnings, and traditional stories that keep changing across retellings.',
+      stories: getHomeStories([
+        'baba-yaga-folklore',
+        'banshee-irish-folklore',
+        'kitsune-folklore',
+        'dullahan-irish-folklore'
+      ])
+    },
+    {
+      title: 'If you want source-aware reading',
+      deck: 'Guides for reading legends as stories without mistaking repeated claims for proof.',
+      guides: getHomeGuides([
+        'what-is-an-urban-legend',
+        'how-to-check-source-status',
+        'why-internet-folklore-spreads',
+        'how-to-build-a-reading-path-through-the-strange-archive'
+      ])
+    }
+  ];
+}
+
+function getHomeMotifLanes() {
+  return [
+    {
+      title: 'Mirrors and Names',
+      description: 'Stories where reflection, naming, and repeated words change what a person thinks they can control.',
+      stories: getHomeStories([
+        'bloody-mary-mirror-legend',
+        'why-names-have-power-in-legends',
+        'why-mirrors-mean-bad-luck'
+      ])
+    },
+    {
+      title: 'Water and Hidden Places',
+      description: 'Sunken bells, sea creatures, drowned cities, and places that seem to remember more than maps do.',
+      stories: getHomeStories([
+        'bell-under-the-lake-folklore',
+        'kraken-beneath-the-calm-sea',
+        'city-of-ys-legend'
+      ])
+    },
+    {
+      title: 'Creatures and Warnings',
+      description: 'Dragons, doorway visitors, strange footage, and creatures that make a warning easier to remember.',
+      stories: getHomeStories([
+        'dragons-across-the-world',
+        'black-eyed-children-legend',
+        'fresno-nightcrawler-legend'
+      ])
+    }
+  ];
+}
+
+function renderHomeSignSystem() {
+  return `<section class="home-sign-system" aria-label="Kyunolab site roads">
+          <div class="home-sign-intro">
+            <p class="label">Fixed Structure</p>
+            <h2>Grouped signs stay stable while the archive buildings grow.</h2>
+            <p>Archive, Mystery Board, Creator Library, Tools, and Hub stay as the main roads. The first screen now shows real places to enter, not only category labels.</p>
+          </div>
+          <div class="home-sign-links">
+            <div>
+              <h3>Archive Roads</h3>
+              <a href="/categories/urban-legends.html">Urban Legends</a>
+              <a href="/categories/internet-folklore.html">Internet Folklore</a>
+              <a href="/categories/myths.html">Myths</a>
+              <a href="/categories/strange-places.html">Strange Places</a>
+            </div>
+            <div>
+              <h3>Cross Roads</h3>
+              <a href="/scripts/">Archive to Library</a>
+              <a href="/mystery-board.html">Archive to Board</a>
+              <a href="/archive.html">Library to Archive</a>
+              <a href="/mystery-board/how-to-follow-recurring-motifs-across-the-archive.html">Tools to Guides</a>
+            </div>
+          </div>
+          <div class="home-small-buildings">
+            <h3>Small Buildings</h3>
+            <a href="/about.html">Hub: bookmark, support, and site notes</a>
+            <a href="/fiction-disclaimer.html">Source notice and privacy paths</a>
+            <a href="/sitemap.xml">Sitemap and all destinations</a>
+          </div>
+        </section>`;
+}
+
+function renderHomePortalHeader() {
+  return `<header class="home-portal-header">
+    <div class="home-portal-header-inner">
+      <div class="home-portal-topbar">
+        <a class="home-portal-brand" href="/"><span class="home-portal-brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab</strong><em>Archive, Library, Tools, Hub</em></span></a>
+        ${renderHomePortalSearchForm()}
+        <div class="home-header-ad-slot" aria-label="Header advertising slot">AD 186 x 42</div>
+      </div>
+      <nav class="home-portal-nav" aria-label="Primary homepage navigation">
+        <a class="active" aria-current="page" href="/">Archive</a>
+        <a href="/mystery-board.html">Mystery Board</a>
+        <a href="/scripts/">Creator Library</a>
+        <a href="/mystery-board/how-to-follow-recurring-motifs-across-the-archive.html">Tools</a>
+        <a href="/about.html">About</a>
+        <a class="home-portal-hub-link" href="/about.html">Hub</a>
+      </nav>
+      ${renderHomeSignSystem()}
+    </div>
+  </header>`;
+}
+
+function renderHomePortalSearchForm() {
+  return `<form class="site-search home-portal-search" action="/search/" method="get" role="search" aria-label="Search Kyunolab">
+          <input type="hidden" name="type" value="archive">
+          <label class="sr-only" for="home-portal-search-query">Search query</label>
+          <input id="home-portal-search-query" name="q" class="site-search-input" type="search" placeholder="Search legends, guides, scripts, tools, motifs..." autocomplete="off" data-search-input>
+          <button class="site-search-button" type="submit">Search</button>
+        </form>`;
+}
+
+function renderHomePortalLead({ featuredStory, popularStories }) {
+  const knownStories = popularStories.slice(0, 5);
+  return `<section class="home-portal-lead" aria-label="Kyunolab front entrance">
+          <article class="home-lead-story">
+            <p class="label">Featured Archive Building</p>
+            <h1>Known strange stories form the front entrance, not just category labels.</h1>
+            <p>The first screen now opens with real articles: famous legends, internet folklore, myths, strange places, and guides readers can enter immediately.</p>
+            <a class="button" href="/stories/${escapeAttr(featuredStory.slug)}">Open featured record</a>
+          </article>
+          <div class="home-known-list">
+            <h2>Start with known stories</h2>
+            ${knownStories.map(renderHomeKnownStoryLink).join('')}
+          </div>
+        </section>`;
+}
+
+function renderHomeKnownStoryLink(story, index) {
+  return `<a href="/stories/${escapeAttr(story.slug)}"><span>${String(index + 1).padStart(2, '0')}</span><strong>${escapeHtml(story.title)}</strong></a>`;
+}
+
+function renderHomeHeadlineDesk(headlineStories, guideLinks) {
+  const guide = guideLinks[0];
+  const guideLink = guide ? renderHomeGuideRow(guide, 'Guide') : '';
+  return `<section class="home-headline-desk" aria-label="Featured story desk">
+          <div class="section-head"><h2>Headline Desk</h2><span>Selected entry points</span></div>
+          <div class="headline-desk-grid">
+            <div class="headline-list">${headlineStories.map(renderHomeHeadlineRow).join('')}${guideLink}</div>
+            <aside class="home-context-card">
+              <p class="label">Start reading</p>
+              <h3>Begin with stories readers can enter right away.</h3>
+              <p>These selected records mix urban legends, internet folklore, myths, places, and a source guide so the archive feels open before a reader chooses a category.</p>
+            </aside>
+          </div>
+        </section>`;
+}
+
+function renderHomeReaderPaths(groups) {
+  return `<section class="home-reader-paths" aria-label="Reader paths">
+          <div class="section-head"><h2>Reader Paths</h2><span>Curated routes</span></div>
+          <div class="home-path-grid">${groups.map(renderHomeReaderPathGroup).join('')}</div>
+        </section>`;
+}
+
+function renderHomeMotifLanes(lanes) {
+  return `<section class="home-motif-lanes" aria-label="Motif lanes">
+          <div class="section-head"><h2>Motif Lanes</h2><span>Browse by recurring idea</span></div>
+          <div class="home-motif-grid">${lanes.map(renderHomeMotifLane).join('')}</div>
+        </section>`;
+}
+
+function renderHomeCrossroads({ guideLinks, libraryScripts }) {
+  return `<section class="home-crossroads" aria-label="Kyunolab crossroads">
+          <div class="section-head"><h2>Board, Library, and Tools</h2><span>Connected site axes</span></div>
+          <div class="home-crossroad-grid">
+            <article>
+              <p class="category-group-label">Mystery Board</p>
+              <h3><a href="/mystery-board.html">Guides for reading the archive</a></h3>
+              <p>Source status, story types, internet folklore, archive paths, and how to move through strange records without losing context.</p>
+              <div class="category-links">${guideLinks.slice(0, 3).map((guide) => renderHomeGuideLink(guide)).join('')}</div>
+              <a class="text-link" href="/mystery-board.html">Open Mystery Board</a>
+            </article>
+            <article>
+              <p class="category-group-label">Creator Library</p>
+              <h3><a href="/scripts/">Creator-ready story material</a></h3>
+              <p>Script packages, visual planning resources, and creator paths connected back to original archive records.</p>
+              <div class="category-links">${libraryScripts.map(renderHomeScriptLink).join('') || '<a href="/scripts/">Open Creator Library</a>'}</div>
+              <a class="text-link" href="/scripts/">Open Creator Library</a>
+            </article>
+            <article class="home-planned-card">
+              <p class="category-group-label">Tools</p>
+              <h3>Future utilities should feel like stadiums</h3>
+              <p>Motif Finder, Source Checklist, Reading Path Builder, and other tools need quiet roads back to Archive, Board, and Library.</p>
+              <div class="home-planned-list"><span>Motif Finder</span><span>Source Checklist</span><span>Reading Path Builder</span></div>
+            </article>
+          </div>
+        </section>`;
+}
+
+function renderHomeHeadlineRow(story) {
+  return `<a class="home-headline-row" href="/stories/${escapeAttr(story.slug)}"><span>${escapeHtml(story.category)}</span><strong>${escapeHtml(story.title)}</strong></a>`;
+}
+
+function renderHomeGuideRow(guide, label) {
+  return `<a class="home-headline-row" href="/mystery-board/${escapeAttr(guide.slug)}"><span>${escapeHtml(label)}</span><strong>${escapeHtml(guide.title)}</strong></a>`;
+}
+
+function renderHomeReaderPathGroup(group) {
+  const links = group.stories
+    ? group.stories.map(renderCategoryStoryLink).join('')
+    : (group.guides || []).map(renderHomeGuideLink).join('');
+  return `<article>
+          <h3>${escapeHtml(group.title)}</h3>
+          <p>${escapeHtml(group.deck)}</p>
+          <div class="category-links">${links}</div>
+        </article>`;
+}
+
+function renderHomeMotifLane(lane) {
+  return `<article>
+          <h3>${escapeHtml(lane.title)}</h3>
+          <p>${escapeHtml(lane.description)}</p>
+          <div class="category-links">${lane.stories.map(renderCategoryStoryLink).join('')}</div>
+        </article>`;
+}
+
+function renderHomeGuideLink(guide) {
+  return `<a href="/mystery-board/${escapeAttr(guide.slug)}">${escapeHtml(guide.title)}</a>`;
+}
+
+function renderHomeScriptLink(script) {
+  return `<a href="/scripts/${escapeAttr(script.slug)}">${escapeHtml(script.title)}</a>`;
+}
+
 function renderFeaturedStory(story) {
   return `<article class="feature-card"><span class="pill">Featured Record</span><h2><a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a></h2><p>${escapeHtml(story.excerpt || story.metaDescription || '')}</p><div class="meta">${escapeHtml([story.category, story.readTime, story.tag].filter(Boolean).join(' - '))}</div></article>`;
 }
@@ -2411,20 +2692,50 @@ function renderHomeCategoryCard(category) {
       </article>`;
 }
 
+function renderHomePortalRail({ popularStories, essentialStories, guideLinks, libraryScripts }) {
+  const popular = popularStories.slice(0, 5);
+  const essentials = essentialStories.slice(0, 3);
+  const guides = guideLinks.slice(0, 3);
+  const scripts = libraryScripts.slice(0, 2);
+  return `<aside class="home-portal-rail" aria-label="Kyunolab side paths">
+      <section class="home-rail-ad-slot" aria-label="Right rail advertising slot">RIGHT RAIL AD<br>300 x 250</section>
+      ${renderKyunolabNetworkCard('archive')}
+      <section class="rail-card">
+        <p class="rail-label">Known Buildings</p>
+        ${popular.map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}
+      </section>
+      <section class="rail-card rail-card-subtle">
+        <p class="rail-label">Cross Roads</p>
+        ${guides.map((guide) => `<a href="/mystery-board/${escapeAttr(guide.slug)}">${escapeHtml(guide.title)}</a>`).join('')}
+        <a href="/scripts/">Archive to Creator Library</a>
+        ${scripts.map((script) => `<a href="/scripts/${escapeAttr(script.slug)}">${escapeHtml(script.title)}</a>`).join('')}
+      </section>
+      <section class="rail-card">
+        <p class="rail-label">Essential Reads</p>
+        ${essentials.map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}
+      </section>
+      <section class="rail-card rail-feature">
+        <p class="rail-label">Hub</p>
+        <a href="/about.html"><span>Site notes</span><strong>Bookmark, support, events, and future outside activity can live here.</strong></a>
+      </section>
+    </aside>`;
+}
+
 function renderHomeRail({ featuredStory, popularStories, essentialStories }) {
   const popular = popularStories.slice(0, 3);
   const essentials = essentialStories.slice(0, 3);
   return `<aside class="home-rail" aria-label="Homepage reader paths">
       ${renderKyunolabNetworkCard('archive')}
       <div class="rail-card rail-feature"><p class="rail-label">Start here</p><a href="#essential-reads"><span>First visit</span><strong>Begin with essential reads, then follow the archive path that fits your question.</strong></a></div>
-      <div class="rail-card"><p class="rail-label">Popular stories</p>${popular.map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}</div>
+      <div class="rail-card"><p class="rail-label">Known stories</p>${popular.map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}</div>
       <div class="rail-card"><p class="rail-label">Essential reads</p>${essentials.map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}</div>
+      <div class="rail-card rail-card-subtle"><p class="rail-label">Hub</p><a href="/about.html">Bookmark and support notes</a><a href="/mystery-board.html">Events can grow from Board guides</a></div>
     </aside>`;
 }
 
 function renderHomeLeftRail() {
   return `<aside class="home-left-rail article-rail article-rail-left" aria-label="Homepage archive navigation">
-      <div class="rail-card"><p class="rail-label">Reader Paths</p><a href="/newest.html">Newest Records</a><a href="/popular.html">Popular Records</a><a href="/categories.html">Browse Categories</a><a href="/mystery-board.html">Mystery Board</a></div>
+      <div class="rail-card"><p class="rail-label">Reader Paths</p><a href="/newest.html">Newest Records</a><a href="/popular.html">Known Records</a><a href="/categories.html">Browse Categories</a><a href="/mystery-board.html">Mystery Board</a></div>
       <div class="rail-card rail-card-subtle"><p class="rail-label">Archive Shelves</p><a href="/categories/urban-legends.html">Urban Legends</a><a href="/categories/internet-folklore.html">Internet Folklore</a><a href="/categories/myths.html">Myths</a><a href="/categories/strange-places.html">Strange Places</a></div>
       <div class="rail-card"><p class="rail-label">Source Guide</p><a href="/fiction-disclaimer.html">Story &amp; Source Notice</a><a href="/about.html">About Kyunolab</a></div>
     </aside>`;
