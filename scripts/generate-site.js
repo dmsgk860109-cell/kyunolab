@@ -1070,14 +1070,23 @@ function renderScriptsListingPage({ canonicalPath, label, title, deck, sectionTi
 
 function renderScriptCategoriesPage(scripts) {
   const grouped = groupCreatorCategories();
-  const body = Object.entries(grouped).map(([groupName, groupCategories]) => {
+  const groupEntries = Object.entries(grouped);
+  const latestScripts = sortNewest(scripts).slice(0, 5);
+  const featuredScript = latestScripts[0] || scripts[0];
+  const guideLinks = getHomeGuides([
+    'how-to-check-source-status',
+    'how-to-build-a-reading-path-through-the-strange-archive',
+    'how-to-find-internal-link-opportunities-without-forcing-them'
+  ]);
+  const popularStories = getConfiguredStories(siteConfig.popularStoryIds).slice(0, 4);
+  const body = groupEntries.map(([groupName, groupCategories]) => {
     const groupDescription = groupName === 'Modern Strange Records'
       ? 'Creator-ready paths for urban legends, internet folklore, strange places, unexplained mysteries, classic folklore, and modern legends'
       : groupName === 'Mythic & Imagined Realms'
         ? 'Creator-ready paths for myths, creatures, lost worlds, legendary places, strange nature, and symbolic objects'
         : 'Creator-ready origin and motif paths for script packages that explain how legends take shape';
     const cards = groupCategories.map(renderCreatorCategoryCard).join('\n');
-    return `      <section class="category-group">
+    return `      <section id="${escapeAttr(creatorCategoryGroupAnchor(groupName))}" class="category-group creator-category-group">
         <div class="section-head category-group-head"><h2>${escapeHtml(groupName)}</h2><span>${escapeHtml(groupDescription)}</span></div>
         <div class="category-grid category-hub">
 ${cards}
@@ -1090,17 +1099,127 @@ ${cards}
     description: 'Browse Kyunolab Creator Library category paths for mystery YouTube scripts, Shorts planning, image prompts, thumbnails, and video research.',
     metaDescription: 'Browse Creator Library categories for mystery videos, including urban legends, internet folklore, myths, strange places, creatures, and lost worlds.',
     networkSection: 'scripts',
-    content: `  <main class="article-shell article-layout scripts-categories-page">
-    ${renderScriptsBoardLeftRail()}
-    <div class="archive-page-main">
-      <p class="label">Creator Script Categories</p>
-      <h1 class="article-title">Browse Creator Library script categories</h1>
-      <p class="deck">Move through the official Creator Library shelves for longform scripts, Shorts hooks, image prompts, thumbnail ideas, and production planning.</p>
-${body}
+    footerSection: 'scripts',
+    bodyClass: 'home-portal-page',
+    headerHtml: renderCreatorPortalHeader('/scripts/categories/'),
+    content: `  <main class="home-shell home-portal-shell creator-portal-page creator-categories-portal-page">
+    <div class="home-portal-layout">
+      <div class="home-main-column">
+        ${renderCreatorCategoriesPortalLead({ groupEntries, latestScripts })}
+        <section class="notice"><strong>Script Categories purpose:</strong> These shelves organize creator packages by topic and production use. They should help visitors choose a script path, then move into actual packages, Library Board guidance, or original archive records.</section>
+        ${renderAdSlot('ad-creator-categories-after-intro')}
+        ${renderCreatorCategoryShelfDesk(groupEntries)}
+        ${body}
+        ${renderAdSlot('ad-creator-categories-mid-list')}
+        ${renderCreatorCategoryCrossroads({ latestScripts, guideLinks, popularStories })}
+      </div>
+      ${renderCreatorCategoriesPortalRail({ groupEntries, latestScripts, featuredScript, guideLinks, popularStories })}
     </div>
-    ${renderScriptCategoryRightRail(scripts)}
   </main>`
   });
+}
+
+function renderCreatorCategoriesPortalLead({ groupEntries, latestScripts }) {
+  const starters = creatorLibraryCategories.slice(0, 5);
+  return `<section class="home-portal-lead creator-categories-portal-lead" aria-label="Script Categories front entrance">
+          <article class="home-lead-story">
+            <p class="label">Creator Shelf Map</p>
+            <h1>Choose the shelf before choosing the script.</h1>
+            <p>Script Categories turn the Creator Library into visible shelves, so visitors can browse by urban legends, internet folklore, myths, strange places, lost worlds, and other repeatable production paths.</p>
+            <a class="button" href="/scripts/latest/">Open latest packages</a>
+          </article>
+          <div class="home-known-list creator-category-starter-list">
+            <h2>Start with creator shelves</h2>
+            ${starters.map(renderCreatorCategoryStarterLink).join('')}
+          </div>
+        </section>`;
+}
+
+function renderCreatorCategoryStarterLink(category, index) {
+  const count = scriptsForCreatorCategory(category, creatorScripts).length;
+  return `<a href="/scripts/categories/${escapeAttr(category.slug)}/"><span>${String(index + 1).padStart(2, '0')}</span><strong>${escapeHtml(category.title)}</strong><em>${escapeHtml(`${count} script packages`)}</em></a>`;
+}
+
+function renderCreatorCategoryShelfDesk(groupEntries) {
+  const rows = groupEntries.map(([groupName, categories]) => {
+    const count = categories.reduce((total, category) => total + scriptsForCreatorCategory(category, creatorScripts).length, 0);
+    return `<a class="home-headline-row creator-category-group-row" href="#${escapeAttr(creatorCategoryGroupAnchor(groupName))}"><span>${escapeHtml(`${categories.length} shelves`)}</span><strong>${escapeHtml(`${groupName}: ${count} packages`)}</strong></a>`;
+  }).join('');
+  return `<section class="home-headline-desk creator-category-shelf-desk" aria-label="Creator category shelf desk">
+          <div class="section-head"><h2>Shelf Desk</h2><span>Topic groups before individual packages</span></div>
+          <div class="headline-desk-grid">
+            <div class="headline-list">${rows}</div>
+            <aside class="home-context-card">
+              <p class="label">Browsing guide</p>
+              <h3>Categories should lead to packages, not replace them.</h3>
+              <p>The category page is a map. Each shelf should quickly point visitors toward real script packages, format guidance, and original story context.</p>
+              <div class="category-links"><a href="/scripts/">Creator Library</a><a href="/scripts/board/">Library Board</a><a href="/scripts/resources/">Creator Resources</a></div>
+            </aside>
+          </div>
+        </section>`;
+}
+
+function renderCreatorCategoryCrossroads({ latestScripts, guideLinks, popularStories }) {
+  return `<section class="home-crossroads creator-category-crossroads" aria-label="Script Categories crossroads">
+          <div class="section-head"><h2>Shelf Roads</h2><span>Categories should connect both ways</span></div>
+          <div class="home-crossroad-grid">
+            <article>
+              <p class="category-group-label">Creator packages</p>
+              <h3><a href="/scripts/latest/">Move from shelves into new script packages</a></h3>
+              <p>After a visitor chooses a shelf, the strongest next step is a real script package with narration, Shorts hooks, prompts, and thumbnail ideas.</p>
+              <div class="category-links">${latestScripts.slice(0, 3).map((script) => `<a href="/scripts/${escapeAttr(script.slug)}">${escapeHtml(script.title)}</a>`).join('')}</div>
+            </article>
+            <article>
+              <p class="category-group-label">Library Board</p>
+              <h3><a href="/scripts/board/">Use guide pages when the format is unclear</a></h3>
+              <p>Board guides explain the system behind categories, longform scripts, short-form scripts, visual prompts, and source separation.</p>
+              <div class="category-links"><a href="/scripts/board/how-to-choose-between-long-form-and-short-form-scripts/">Choose script format</a><a href="/scripts/board/how-creator-toolkit-fits-into-the-production-flow/">Creator toolkit flow</a><a href="/scripts/resources/">Creator Resources</a></div>
+            </article>
+            <article>
+              <p class="category-group-label">Original archive</p>
+              <h3><a href="/archive.html">Return from production shelves to story records</a></h3>
+              <p>Categories belong to the Creator Library, but the archive road remains open for visitors who want the original story context.</p>
+              <div class="category-links">${popularStories.slice(0, 2).map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}${guideLinks.slice(0, 1).map((guide) => `<a href="/mystery-board/${escapeAttr(guide.slug)}">${escapeHtml(guide.shortTitle || guide.title)}</a>`).join('')}</div>
+            </article>
+          </div>
+        </section>`;
+}
+
+function renderCreatorCategoriesPortalRail({ groupEntries, latestScripts, featuredScript, guideLinks, popularStories }) {
+  const groupLinks = groupEntries.map(([groupName, categories]) => `<a href="#${escapeAttr(creatorCategoryGroupAnchor(groupName))}">${escapeHtml(`${groupName} (${categories.length})`)}</a>`).join('');
+  return `<aside class="home-portal-rail creator-portal-rail creator-categories-portal-rail" aria-label="Script Categories side paths">
+      ${renderKyunolabNetworkCard('scripts')}
+      ${featuredScript ? `<section class="rail-card rail-feature"><p class="rail-label">Start with a package</p><a href="/scripts/${escapeAttr(featuredScript.slug)}"><span>${escapeHtml(featuredScript.genre || 'Creator package')}</span><strong>${escapeHtml(featuredScript.title)}</strong></a></section>` : ''}
+      <section class="rail-card">
+        <p class="rail-label">Shelf groups</p>
+        ${groupLinks}
+      </section>
+      <section class="rail-card rail-card-subtle">
+        <p class="rail-label">Creator paths</p>
+        <a href="/scripts/">Creator Library</a>
+        <a href="/scripts/latest/">Latest Scripts</a>
+        <a href="/scripts/featured/">Featured Scripts</a>
+        <a href="/scripts/resources/">Creator Resources</a>
+      </section>
+      <section class="rail-card">
+        <p class="rail-label">Reading context</p>
+        <a href="/archive.html">Original Archive</a>
+        <a href="/mystery-board.html">Mystery Board</a>
+        ${guideLinks.slice(0, 1).map((guide) => `<a href="/mystery-board/${escapeAttr(guide.slug)}">${escapeHtml(guide.shortTitle || guide.title)}</a>`).join('')}
+      </section>
+      <section class="rail-card rail-card-subtle">
+        <p class="rail-label">Original records</p>
+        ${popularStories.slice(0, 3).map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}
+      </section>
+    </aside>`;
+}
+
+function creatorCategoryGroupAnchor(groupName) {
+  return String(groupName || 'creator-category-group')
+    .toLowerCase()
+    .replace(/&/g, 'and')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '') || 'creator-category-group';
 }
 
 function renderScriptCategoryPage({ category, scripts, relatedScripts, pageScripts, pageNumber, totalPages, basePath }) {

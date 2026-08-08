@@ -2714,11 +2714,30 @@ h1 {
   font-size: 13px;
   line-height: 1.35;
 }
+.creator-categories-portal-page .creator-category-starter-list a {
+  grid-template-columns: 34px minmax(0, 1fr);
+}
+.creator-categories-portal-page .creator-category-starter-list em {
+  grid-column: 2;
+  color: var(--home-muted);
+  font-style: normal;
+  font-size: 13px;
+  line-height: 1.35;
+}
 .creator-portal-page .creator-package-row {
   grid-template-columns: 150px minmax(0, 1fr);
 }
 .creator-resources-portal-page .creator-resource-row {
   grid-template-columns: 150px minmax(0, 1fr);
+}
+.creator-categories-portal-page .creator-category-group-row {
+  grid-template-columns: 150px minmax(0, 1fr);
+}
+.creator-categories-portal-page .creator-category-group {
+  scroll-margin-top: 18px;
+}
+.creator-categories-portal-page .creator-category-group .category-grid {
+  gap: 14px;
 }
 .creator-portal-page .script-card,
 .creator-portal-page .script-genre-card {
