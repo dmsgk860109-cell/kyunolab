@@ -2255,6 +2255,11 @@ h1 {
   background: var(--home-bg);
   color: var(--home-text);
 }
+.home-portal-page *,
+.home-portal-page *::before,
+.home-portal-page *::after {
+  box-sizing: border-box;
+}
 .home-portal-header {
   border-bottom: 2px solid var(--home-ink);
   background: var(--home-shell);
@@ -2665,6 +2670,36 @@ h1 {
 }
 .archive-portal-page .pagination {
   border-top-color: var(--home-line);
+}
+.board-portal-page .board-starter-list a {
+  grid-template-columns: 34px minmax(0, 1fr);
+}
+.board-portal-page .board-guide-link-row {
+  grid-template-columns: 150px minmax(0, 1fr);
+}
+.board-portal-page .board-guide-paths .home-path-grid article {
+  min-height: 0;
+}
+.board-portal-page .board-guide-index .story-row {
+  padding: 16px 0;
+  border-color: var(--home-line);
+}
+.board-portal-page .board-guide-index .story-row:first-child {
+  padding-top: 0;
+}
+.board-portal-page .board-guide-index .story-row h3 {
+  font-family: Arial, sans-serif;
+  font-size: 23px;
+  line-height: 1.15;
+}
+.board-portal-page .board-guide-index .story-row p,
+.board-portal-page .board-guide-index .story-row .meta {
+  color: var(--home-muted);
+  font-family: Arial, sans-serif;
+}
+.board-portal-page .board-guide-index .story-row p {
+  font-size: 15px;
+  line-height: 1.45;
 }
 .home-rail-ad-slot {
   min-height: 250px;
