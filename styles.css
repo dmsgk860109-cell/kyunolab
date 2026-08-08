@@ -2701,6 +2701,49 @@ h1 {
   font-size: 15px;
   line-height: 1.45;
 }
+.creator-portal-page .creator-starter-list a {
+  grid-template-columns: 34px minmax(0, 1fr);
+}
+.creator-portal-page .creator-package-row {
+  grid-template-columns: 150px minmax(0, 1fr);
+}
+.creator-portal-page .script-card,
+.creator-portal-page .script-genre-card {
+  border-color: var(--home-line);
+  border-radius: 6px;
+  background: var(--home-panel);
+  color: var(--home-text);
+}
+.creator-portal-page .script-card h3,
+.creator-portal-page .script-card h3 a,
+.creator-portal-page .script-genre-card h3,
+.creator-portal-page .script-genre-card h3 a,
+.creator-portal-page .script-row h3,
+.creator-portal-page .script-row h3 a {
+  color: var(--home-ink);
+}
+.creator-portal-page .script-card p,
+.creator-portal-page .script-genre-card p,
+.creator-portal-page .script-row p,
+.creator-portal-page .script-row .meta,
+.creator-portal-page .script-badges {
+  color: var(--home-muted);
+}
+.creator-portal-page .script-card-grid,
+.creator-portal-page .script-category-grid {
+  gap: 14px;
+}
+.creator-portal-page .script-row {
+  border-color: var(--home-line);
+}
+.creator-portal-page .script-row h3 {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  line-height: 1.14;
+}
+.creator-portal-page .script-badges div {
+  border-top-color: var(--home-line);
+}
 .home-rail-ad-slot {
   min-height: 250px;
 }

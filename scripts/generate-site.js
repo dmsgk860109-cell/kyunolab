@@ -802,58 +802,201 @@ function renderScriptsHomePage(scripts) {
   const featuredScripts = scripts.slice(0, 3);
   const latestScripts = scripts.slice(0, 8);
   const featuredScript = featuredScripts[0] || scripts[0];
+  const guideLinks = getHomeGuides([
+    'how-to-check-source-status',
+    'how-to-build-a-reading-path-through-the-strange-archive',
+    'how-to-find-internal-link-opportunities-without-forcing-them'
+  ]);
+  const popularStories = getConfiguredStories(siteConfig.popularStoryIds).slice(0, 5);
   return renderPage({
     canonicalPath: '/scripts/',
     title: 'Free Mystery YouTube Scripts | Kyunolab',
     description: 'Free mystery YouTube scripts for creators, including longform YouTube scripts, Shorts scripts, image prompts, thumbnail ideas, and subtitle lines.',
     metaDescription: 'Free mystery, horror, urban legend, and strange history YouTube scripts for creators. Includes longform narration, Shorts scripts, image prompts, thumbnail ideas, and subtitle lines.',
     networkSection: 'scripts',
-    content: `  <main class="home-shell scripts-page scripts-home-page">
-    <div class="home-layout scripts-home-layout">
-      ${renderScriptsLeftRail()}
+    footerSection: 'scripts',
+    bodyClass: 'home-portal-page',
+    headerHtml: renderCreatorPortalHeader('/scripts/'),
+    content: `  <main class="home-shell home-portal-shell creator-portal-page scripts-home-page">
+    <div class="home-portal-layout">
       <div class="home-main-column">
-        <section class="hero scripts-home-hero">
-          <div class="hero-copy"><p class="label">Creator Script Library</p><h1>Free Mystery YouTube Scripts</h1><p>A creator-focused library for longform YouTube scripts, Shorts scripts, image prompts, thumbnail ideas, subtitle lines, and mystery video planning.</p></div>
-          ${renderFeaturedScript(featuredScript)}
-        </section>
-        <section class="notice"><strong>Creator Note:</strong> Script packages are creator materials. Original archive stories stay separate from narration drafts, Shorts hooks, image prompts, thumbnail ideas, and subtitle lines.</section>
-        <section id="featured-scripts" class="scripts-section">
+        ${renderCreatorPortalLead({ featuredScript, latestScripts })}
+        <section class="notice"><strong>Creator Note:</strong> Creator Library pages are production materials. Original archive stories stay separate from narration drafts, Shorts hooks, image prompts, thumbnail ideas, and subtitle lines.</section>
+        ${renderAdSlot('ad-creator-library-after-intro')}
+        ${renderCreatorFormatDesk(featuredScripts)}
+        <section id="featured-scripts" class="home-headline-desk creator-featured-packages">
           <div class="section-head"><h2>Featured Scripts</h2><span>Ready for video planning</span></div>
           <div class="script-card-grid">${featuredScripts.map(renderScriptCard).join('')}</div>
         </section>
-        <section id="latest-scripts" class="scripts-section">
+        <section id="latest-scripts" class="home-headline-desk creator-latest-packages">
           <div class="section-head"><h2>Latest Scripts</h2><span>New creator materials</span></div>
           <div class="script-list">${latestScripts.map(renderScriptRow).join('')}</div>
         </section>
-        <section id="script-board" class="scripts-section script-board">
-          <div>
-            <p class="label">Library Board</p>
-            <h2>Choose a format before you write the voiceover.</h2>
-            <p>Each script package separates the original archive story from creator-facing assets: longform narration, Shorts structure, visual prompts, thumbnail angles, and subtitle lines.</p>
-          </div>
-          <div class="script-board-grid">
-            <article><strong>Longform YouTube</strong><span>8-13 minute narration structures for mystery, folklore, and legend videos.</span></article>
-            <article><strong>Shorts</strong><span>Compressed hooks and ending beats for vertical video.</span></article>
-            <article><strong>Visual Planning</strong><span>Image prompts, thumbnail ideas, and subtitle lines kept separate from the archive article.</span></article>
-          </div>
-        </section>
-        <section id="script-categories" class="scripts-section">
+        <section id="script-categories" class="home-reader-paths creator-category-paths">
           <div class="section-head"><h2>Script Categories</h2><span>Browse by creator use</span></div>
           <div class="script-category-grid">${creatorLibraryCategories.map(renderCreatorCategoryCard).join('')}</div>
         </section>
-        <section id="creator-resources" class="scripts-section creator-resources">
-          <div class="section-head"><h2>Creator Resources</h2><a href="/archive.html">Browse original archive stories</a></div>
-          <div class="script-resource-links">
-            <a href="/scripts/">Free Mystery YouTube Scripts</a>
-            <a href="/mystery-board.html">Mystery Board</a>
-            <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a>
-          </div>
-        </section>
+        ${renderCreatorCrossroads({ guideLinks, popularStories })}
       </div>
-      ${renderScriptsHomeRail({ featuredScript, latestScripts, creatorCategories: creatorLibraryCategories })}
+      ${renderCreatorPortalRail({ featuredScript, latestScripts, creatorCategories: creatorLibraryCategories, guideLinks, popularStories })}
     </div>
   </main>`
   });
+}
+
+function renderCreatorPortalHeader(currentPath = '/scripts/') {
+  const pathForNav = normalizeNavPath(currentPath);
+  return `<header class="home-portal-header creator-portal-header">
+    <div class="home-portal-header-inner">
+      <div class="home-portal-topbar">
+        <a class="home-portal-brand" href="/scripts/"><span class="home-portal-brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Creator Library</strong><em>Scripts, prompts, thumbnails, and creator resources.</em></span></a>
+        ${renderCreatorPortalSearchForm()}
+      </div>
+      <nav class="home-portal-nav" aria-label="Primary Creator Library navigation">
+        ${homePortalNavLink('/', 'Home', pathForNav === '/')}
+        ${homePortalNavLink('/archive.html', 'Archive', pathForNav === '/archive' || /^\/archive-\d+$/.test(pathForNav))}
+        ${homePortalNavLink('/categories.html', 'Categories', pathForNav === '/categories' || pathForNav.startsWith('/categories/'))}
+        ${homePortalNavLink('/mystery-board.html', 'Mystery Board', pathForNav === '/mystery-board' || pathForNav.startsWith('/mystery-board/'))}
+        ${homePortalNavLink('/scripts/', 'Creator Library', isScriptsPath(pathForNav))}
+        ${homePortalNavLink('/tools.html', 'Tools', pathForNav === '/tools')}
+        ${homePortalNavLink('/about.html', 'About', pathForNav === '/about')}
+        ${homePortalNavLink('/hub.html', 'Hub', pathForNav === '/hub', 'home-portal-hub-link')}
+      </nav>
+      ${renderCreatorSignSystem()}
+    </div>
+  </header>`;
+}
+
+function renderCreatorPortalSearchForm() {
+  return `<form class="site-search home-portal-search" action="/search/" method="get" role="search" aria-label="Search Kyunolab Creator Library">
+          <input type="hidden" name="type" value="library">
+          <label class="sr-only" for="creator-portal-search-query">Search query</label>
+          <input id="creator-portal-search-query" name="q" class="site-search-input" type="search" placeholder="Search scripts, prompts, packs, formats..." autocomplete="off" data-search-input>
+          <button class="site-search-button" type="submit">Search</button>
+        </form>`;
+}
+
+function renderCreatorSignSystem() {
+  return `<section class="home-sign-system creator-sign-system" aria-label="Kyunolab creator paths">
+          <div class="home-sign-intro">
+            <p class="label">Start Here</p>
+            <h2>Choose a production package first, then follow the roads back to the archive.</h2>
+            <p>Begin with scripts, browse creator shelves, or cross into source guides, original records, and future tools.</p>
+          </div>
+          <div class="home-sign-links">
+            <div>
+              <h3>Creator Materials</h3>
+              <a href="/scripts/featured/">Featured Scripts</a>
+              <a href="/scripts/latest/">Latest Scripts</a>
+              <a href="/scripts/categories/">Script Categories</a>
+              <a href="/scripts/resources/">Creator Resources</a>
+            </div>
+            <div>
+              <h3>Use The Map</h3>
+              <a href="/archive.html">Original Archive</a>
+              <a href="/mystery-board.html">Reading Guides</a>
+              <a href="/tools.html">Tools</a>
+              <a href="/hub.html">Hub</a>
+            </div>
+          </div>
+          <div class="home-small-buildings">
+            <h3>Site Notes</h3>
+            <a href="/scripts/board/">Library Board</a>
+            <a href="/fiction-disclaimer.html">Story and source notice</a>
+            <a href="/about.html">About Kyunolab</a>
+          </div>
+        </section>`;
+}
+
+function renderCreatorPortalLead({ featuredScript, latestScripts }) {
+  const starters = latestScripts.slice(0, 5);
+  return `<section class="home-portal-lead creator-portal-lead" aria-label="Creator Library front entrance">
+          <article class="home-lead-story">
+            <p class="label">Creator Library Production Desk</p>
+            <h1>Turn strange archive ideas into creator-ready packages.</h1>
+            <p>The Library keeps scripts, Shorts hooks, visual prompts, thumbnail angles, source notes, and planning material visible without confusing them with the original archive records.</p>
+            ${featuredScript ? `<a class="button" href="/scripts/${escapeAttr(featuredScript.slug)}">Open featured script</a>` : '<a class="button" href="/scripts/latest/">Open latest scripts</a>'}
+          </article>
+          <div class="home-known-list creator-starter-list">
+            <h2>Start with creator packages</h2>
+            ${starters.map(renderCreatorStarterLink).join('')}
+          </div>
+        </section>`;
+}
+
+function renderCreatorStarterLink(script, index) {
+  return `<a href="/scripts/${escapeAttr(script.slug)}"><span>${String(index + 1).padStart(2, '0')}</span><strong>${escapeHtml(script.title)}</strong></a>`;
+}
+
+function renderCreatorFormatDesk(featuredScripts) {
+  const rows = featuredScripts.slice(0, 3).map((script) => `<a class="home-headline-row creator-package-row" href="/scripts/${escapeAttr(script.slug)}"><span>${escapeHtml(script.genre || script.contentType || 'Script')}</span><strong>${escapeHtml(script.title)}</strong></a>`).join('');
+  return `<section id="script-board" class="home-headline-desk creator-format-desk" aria-label="Creator format desk">
+          <div class="section-head"><h2>Format Desk</h2><span>Choose the material before the voiceover</span></div>
+          <div class="headline-desk-grid">
+            <div class="headline-list">${rows}</div>
+            <aside class="home-context-card">
+              <p class="label">Library Board</p>
+              <h3>Scripts, prompts, and thumbnails have different jobs.</h3>
+              <p>Each package separates longform narration, Shorts structure, visual direction, thumbnail hooks, and source notes so creators can adapt without flattening the story.</p>
+              <div class="category-links"><a href="/scripts/board/">Open Library Board</a><a href="/scripts/resources/">Creator Resources</a><a href="/fiction-disclaimer.html">Source Notice</a></div>
+            </aside>
+          </div>
+        </section>`;
+}
+
+function renderCreatorCrossroads({ guideLinks, popularStories }) {
+  return `<section id="creator-resources" class="home-crossroads creator-crossroads" aria-label="Creator Library crossroads">
+          <div class="section-head"><h2>Archive, Board, and Tools</h2><span>Creator paths should connect both ways</span></div>
+          <div class="home-crossroad-grid">
+            <article>
+              <p class="category-group-label">Archive</p>
+              <h3><a href="/archive.html">Return to the original reading records</a></h3>
+              <p>The Mystery Archive keeps the source-facing story pages. The Creator Library turns selected material into production aids for videos.</p>
+              <div class="category-links">${popularStories.slice(0, 3).map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}</div>
+            </article>
+            <article>
+              <p class="category-group-label">Mystery Board</p>
+              <h3><a href="/mystery-board.html">Check reading context before adapting</a></h3>
+              <p>Use Board guides for source limits, story types, motifs, and archive paths before turning a topic into narration or visual prompts.</p>
+              <div class="category-links">${guideLinks.map((guide) => `<a href="/mystery-board/${escapeAttr(guide.slug)}">${escapeHtml(guide.shortTitle || guide.title)}</a>`).join('')}</div>
+            </article>
+            <article class="home-planned-card">
+              <p class="category-group-label">Tools</p>
+              <h3><a href="/tools.html">Future utilities can support production workflows</a></h3>
+              <p>Motif Finder, Source Checklist, and Reading Path Builder can later help creators find topics without making tool pages louder than the packages.</p>
+              <div class="home-planned-list"><span>Motif Finder</span><span>Source Checklist</span><span>Reading Paths</span></div>
+            </article>
+          </div>
+        </section>`;
+}
+
+function renderCreatorPortalRail({ featuredScript, latestScripts, creatorCategories, guideLinks, popularStories }) {
+  const latest = latestScripts.slice(0, 4);
+  const categoryLinks = creatorCategories.slice(0, 4);
+  return `<aside class="home-portal-rail creator-portal-rail" aria-label="Creator Library side paths">
+      ${renderKyunolabNetworkCard('scripts')}
+      ${featuredScript ? `<section class="rail-card rail-feature"><p class="rail-label">Start here</p><a href="/scripts/${escapeAttr(featuredScript.slug)}"><span>${escapeHtml(featuredScript.genre || 'Script package')}</span><strong>${escapeHtml(featuredScript.title)}</strong></a></section>` : ''}
+      <section class="rail-card">
+        <p class="rail-label">Latest packages</p>
+        ${latest.map((script) => `<a href="/scripts/${escapeAttr(script.slug)}">${escapeHtml(script.title)}</a>`).join('')}
+      </section>
+      <section class="rail-card rail-card-subtle">
+        <p class="rail-label">Creator shelves</p>
+        ${categoryLinks.map((category) => `<a href="/scripts/categories/${escapeAttr(category.slug)}/">${escapeHtml(category.title)}</a>`).join('')}
+        <a href="/scripts/resources/">Creator Resources</a>
+      </section>
+      <section class="rail-card">
+        <p class="rail-label">Cross roads</p>
+        <a href="/archive.html">Library to Archive</a>
+        <a href="/mystery-board.html">Library to Mystery Board</a>
+        <a href="/tools.html">Library to Tools</a>
+        ${guideLinks.slice(0, 1).map((guide) => `<a href="/mystery-board/${escapeAttr(guide.slug)}">${escapeHtml(guide.shortTitle || guide.title)}</a>`).join('')}
+      </section>
+      <section class="rail-card rail-card-subtle">
+        <p class="rail-label">Original records</p>
+        ${popularStories.slice(0, 3).map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}
+      </section>
+    </aside>`;
 }
 
 function renderScriptsLatestPage({ allScripts, scripts, pageNumber, totalPages, basePath }) {
