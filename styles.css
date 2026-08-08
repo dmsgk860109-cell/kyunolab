@@ -2704,7 +2704,20 @@ h1 {
 .creator-portal-page .creator-starter-list a {
   grid-template-columns: 34px minmax(0, 1fr);
 }
+.creator-resources-portal-page .creator-resources-starter-list a {
+  grid-template-columns: 34px minmax(0, 1fr);
+}
+.creator-resources-portal-page .creator-resources-starter-list em {
+  grid-column: 2;
+  color: var(--home-muted);
+  font-style: normal;
+  font-size: 13px;
+  line-height: 1.35;
+}
 .creator-portal-page .creator-package-row {
+  grid-template-columns: 150px minmax(0, 1fr);
+}
+.creator-resources-portal-page .creator-resource-row {
   grid-template-columns: 150px minmax(0, 1fr);
 }
 .creator-portal-page .script-card,
