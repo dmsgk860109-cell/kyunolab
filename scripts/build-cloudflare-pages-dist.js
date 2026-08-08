@@ -26,13 +26,15 @@ const ROOT_FILES = [
   'newest.html',
   'popular.html',
   'hub.html',
+  'hub/index.html',
   'privacy.html',
   'robots.txt',
   'rss.xml',
   'site.webmanifest',
   'sitemap.xml',
   'styles.css',
-  'tools.html'
+  'tools.html',
+  'tools/index.html'
 ];
 
 const ROOT_FILE_PATTERNS = [
@@ -44,13 +46,11 @@ const ROOT_FILE_PATTERNS = [
 const STATIC_DIRS = [
   'assets',
   'categories',
-  'hub',
   'mystery-board',
   'publishing-center',
   'search',
   'stories',
-  'tags',
-  'tools'
+  'tags'
 ];
 
 const SCRIPT_STATIC_DIRS = [
