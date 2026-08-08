@@ -31,7 +31,7 @@ function renderBoardPage() {
           <h3><a href="${escapeAttr(guide.url || `/mystery-board/${guide.slug}`)}">${escapeHtml(guide.title)}</a></h3>
           <p>${escapeHtml(guide.excerpt)}</p>
           <div class="meta">${escapeHtml([guide.category, guide.tag, guide.readTime].filter(Boolean).join(' - '))}</div>
-        </article>`).join('\n');
+        </article>`);
 
   return renderPage({
     canonicalPath: '/mystery-board.html',
@@ -74,9 +74,10 @@ function renderBoardPage() {
       </section>
 
       ${renderBoardGuide()}
+      ${renderAdSlot('ad-board-after-intro')}
 
       <div class="story-list">
-${rows}
+${renderRowsWithMidAd(rows, 'ad-board-mid-list')}
       </div>
     </div>
     <aside class="article-rail article-rail-right" aria-label="Recommended archive paths">
@@ -164,9 +165,12 @@ ${section.paragraphs.map((text) => `<p>${linkText(text)}</p>`).join('\n')}`).joi
       </section>
 
       ${renderReadingBridge(relatedStories)}
+      ${renderAdSlot('ad-guide-after-map')}
 
       <div class="story-body archive-entry">
 ${sections}
+
+        ${renderAdSlot('ad-guide-mid-article')}
 
         <h2 id="faq">FAQ</h2>
         ${faq}
@@ -205,6 +209,18 @@ function renderReadingBridge(relatedStories) {
           ${relatedStories.slice(0, 3).map((story) => `<a href="/stories/${escapeAttr(story.slug)}"><span>${escapeHtml(story.category)}</span><strong>${escapeHtml(story.title)}</strong></a>`).join('')}
         </div>
       </section>`;
+}
+
+function renderAdSlot(slotName, extraClass = '') {
+  const className = ['ad-slot', extraClass].filter(Boolean).join(' ');
+  return `<aside class="${escapeAttr(className)}" data-ad-slot="${escapeAttr(slotName)}" aria-label="Advertisement"><span>Advertisement</span></aside>`;
+}
+
+function renderRowsWithMidAd(rowsHtml, slotName) {
+  const rows = Array.isArray(rowsHtml) ? [...rowsHtml] : String(rowsHtml || '').split('\n').filter(Boolean);
+  if (rows.length < 7) return rows.join('\n');
+  rows.splice(6, 0, renderAdSlot(slotName));
+  return rows.join('\n');
 }
 
 function renderPage({ canonicalPath, title, description, ogTitle, ogDescription, type, content }) {
@@ -246,7 +262,7 @@ function renderHeader() {
     <div class="header-inner">
       <a class="brand" href="/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
       ${renderSiteSearchForm()}
-      <nav class="nav"><a href="/archive.html">All Stories</a><a href="/newest.html">Newest</a><a href="/popular.html">Popular</a><a href="/categories.html">Categories</a><a href="/mystery-board.html">Mystery Board</a><a href="/about.html">About</a></nav>
+      <nav class="nav"><a href="/archive.html">All Stories</a><a href="/newest.html">Newest</a><a href="/popular.html">Popular</a><a href="/categories.html">Categories</a><a href="/mystery-board.html">Mystery Board</a><a href="/tools.html">Tools</a><a href="/about.html">About</a><a href="/hub.html">Hub</a></nav>
     </div>
   </header>`;
 }

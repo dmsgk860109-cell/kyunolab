@@ -25,12 +25,14 @@ const ROOT_FILES = [
   'mystery-board.html',
   'newest.html',
   'popular.html',
+  'hub.html',
   'privacy.html',
   'robots.txt',
   'rss.xml',
   'site.webmanifest',
   'sitemap.xml',
-  'styles.css'
+  'styles.css',
+  'tools.html'
 ];
 
 const ROOT_FILE_PATTERNS = [

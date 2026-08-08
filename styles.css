@@ -2795,6 +2795,30 @@ textarea {
 .ad-slot[data-empty="true"] {
   display: none;
 }
+.utility-placeholder-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 24px 0;
+}
+.utility-placeholder-grid article {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--panel);
+}
+.utility-placeholder-grid h2 {
+  margin: 6px 0 10px;
+  font-family: Arial, sans-serif;
+  font-size: 22px;
+  line-height: 1.12;
+}
+.utility-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
 @media (max-width: 1100px) {
   .article-layout > .archive-story .story-body h2[id] { scroll-margin-top: 248px; }
   .header-inner, .hero, .ranking-grid, .archive-page-grid, .home-layout, .home-portal-layout, .home-portal-lead, .home-stream, .scripts-hero, .script-board, .script-detail-page { grid-template-columns: 1fr; }
@@ -3381,4 +3405,178 @@ textarea {
     overflow-wrap: anywhere;
   }
   .archive-entry h2 { font-size: 26px; }
+}
+
+@media (max-width: 720px) {
+  body.home-portal-page {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  .home-portal-header-inner {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 12px 12px;
+    overflow: hidden;
+  }
+  .home-portal-topbar {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    width: 100%;
+  }
+  .home-portal-brand,
+  .home-portal-search {
+    width: 100%;
+    max-width: 100%;
+  }
+  .home-portal-brand strong {
+    font-size: 20px;
+    line-height: 1.05;
+  }
+  .home-portal-search {
+    min-height: 42px;
+  }
+  .home-portal-search .site-search-button {
+    flex: 0 0 74px;
+    padding: 0 8px;
+  }
+  .home-portal-nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    overflow: visible;
+  }
+  .home-portal-nav a,
+  .home-portal-nav .home-portal-hub-link {
+    min-width: 0;
+    margin-left: 0;
+    padding: 10px 8px;
+    text-align: center;
+    white-space: normal;
+  }
+  .home-portal-header .home-sign-system,
+  .home-portal-page main.home-shell,
+  .home-portal-page .home-portal-layout,
+  .home-portal-page .home-portal-lead,
+  .home-portal-page .home-portal-rail,
+  .home-portal-page .home-main-column,
+  .home-portal-page .home-lead-story,
+  .home-portal-page .home-known-list,
+  .home-portal-page .notice,
+  .home-portal-page .ad-slot,
+  .home-portal-page .home-headline-desk,
+  .home-portal-page .home-reader-paths,
+  .home-portal-page .home-motif-lanes,
+  .home-portal-page .home-crossroads,
+  .home-portal-page .categories,
+  .home-portal-page .latest,
+  .home-portal-page .essential-reads,
+  .home-portal-page .archive-cta {
+    width: 100%;
+    max-width: 100%;
+  }
+  .home-portal-header .home-sign-system {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    min-width: 0;
+    overflow: hidden;
+  }
+  .home-portal-header .home-sign-intro,
+  .home-portal-header .home-sign-links,
+  .home-portal-header .home-sign-links > div,
+  .home-portal-header .home-small-buildings {
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  .home-portal-header .home-sign-links {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .home-portal-header .home-sign-intro h2,
+  .home-portal-header .home-sign-intro p,
+  .home-portal-header .home-sign-links a,
+  .home-portal-header .home-small-buildings a,
+  .home-portal-page .home-lead-story h1,
+  .home-portal-page .home-lead-story p,
+  .home-portal-page .home-known-list a,
+  .home-portal-page .rail-card a {
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+  .home-portal-page main.home-shell {
+    padding-left: 12px;
+    padding-right: 12px;
+    overflow-x: hidden;
+  }
+  .home-portal-page .home-portal-layout,
+  .home-portal-page .home-portal-lead,
+  .home-portal-page .home-portal-rail {
+    grid-template-columns: 1fr;
+    min-width: 0;
+  }
+  .home-portal-page .home-lead-story {
+    padding: 22px 20px;
+  }
+  .home-portal-page .home-lead-story h1 {
+    font-size: 26px;
+    line-height: 1.08;
+  }
+  .home-portal-page .home-known-list a {
+    grid-template-columns: 32px minmax(0, 1fr);
+  }
+  .utility-placeholder-grid {
+    grid-template-columns: 1fr;
+  }
+  .utility-cta-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .utility-cta-actions .button,
+  .utility-cta-actions .text-link {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 560px) {
+  body.home-portal-page {
+    overflow-x: hidden;
+  }
+  .home-portal-header-inner,
+  .home-portal-page main.home-shell {
+    width: min(100%, calc(100vw - 24px));
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .home-portal-header .home-sign-system,
+  .home-portal-page .home-portal-layout,
+  .home-portal-page .home-portal-lead,
+  .home-portal-page .home-portal-rail,
+  .home-portal-page .home-main-column,
+  .home-portal-page .home-lead-story,
+  .home-portal-page .home-known-list,
+  .home-portal-page .notice,
+  .home-portal-page .ad-slot,
+  .home-portal-page .home-headline-desk,
+  .home-portal-page .home-reader-paths,
+  .home-portal-page .home-motif-lanes,
+  .home-portal-page .home-crossroads,
+  .home-portal-page .categories,
+  .home-portal-page .latest,
+  .home-portal-page .essential-reads,
+  .home-portal-page .archive-cta {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
 }

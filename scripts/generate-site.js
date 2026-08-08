@@ -56,6 +56,7 @@ function main() {
 
   generateCategoryHub();
   generateCategoryPages();
+  generateUtilityPlaceholderPages();
   generatePublishingCenter();
   generateScriptsPages();
   generateSearchPage();
@@ -153,8 +154,10 @@ function renderHomePage({ featuredStory, latestStories, popularStories, essentia
       <div class="home-main-column">
         ${renderHomePortalLead({ featuredStory, popularStories })}
         <section class="notice"><strong>Story &amp; Source Notice:</strong> This site explores folklore, legends, mysteries, and source-aware retellings. Unverified traditions are presented as stories, not as verified fact.</section>
+        ${renderAdSlot('ad-home-after-hero')}
         ${renderHomeHeadlineDesk(headlineStories, guideLinks)}
         ${renderHomeReaderPaths(readerPathGroups)}
+        ${renderAdSlot('ad-home-mid-feed')}
         ${renderHomeMotifLanes(motifLanes)}
         <section id="categories" class="categories"><div class="section-head"><h2>Browse By Category</h2><a href="/categories.html">View all categories</a></div><div class="home-category-groups">${categoryGroups.map(renderHomeCategoryGroup).join('')}</div></section>
         ${renderHomeCrossroads({ guideLinks, libraryScripts })}
@@ -162,6 +165,7 @@ function renderHomePage({ featuredStory, latestStories, popularStories, essentia
           <section id="latest" class="latest latest-compact"><div class="section-head"><h2>Latest Stories</h2><a href="/newest.html">View all newest</a></div><div class="home-story-list">${latestStories.map(renderHomeStoryRow).join('')}</div></section>
         </div>
         <section id="essential-reads" class="essential-reads"><div class="section-head"><h2>Essential Reads</h2><span>Start here</span></div><div class="compact-grid">${essentialStories.map(renderEssentialStory).join('')}</div></section>
+        ${renderAdSlot('ad-home-before-footer')}
         <section class="archive-cta"><div><p class="label">All Stories</p><h2>Explore every open file in Kyunolab Mystery Archive.</h2><p>Move through the full collection by category, source status, story type, folklore motif, legend origin, and recurring mystery pattern.</p></div><a class="button" href="/archive.html">Browse all current stories</a></section>
       </div>
       ${renderHomePortalRail({ popularStories, essentialStories, guideLinks, libraryScripts })}
@@ -236,7 +240,9 @@ ${cards}
       <h1 class="article-title">Browse by category</h1>
       <p class="deck">Each active category contains multiple records, giving every shelf enough material to test structure, navigation, and reader flow.</p>
 ${renderCategoryGuide()}
+${renderAdSlot('ad-category-hub-after-intro')}
 ${body}
+${renderAdSlot('ad-category-hub-before-footer')}
     </div>
     ${renderCategoryRightRail()}
   </main>`
@@ -271,6 +277,73 @@ function generateCategoryPages() {
       writeFile(fileName, renderCategoryPage({ category, pageItems, pageNumber, totalPages: pages.length, pageTitle, canonicalPath }));
     });
   }
+}
+
+function generateUtilityPlaceholderPages() {
+  writeFile('tools.html', renderUtilityPlaceholderPage({
+    canonicalPath: '/tools.html',
+    label: 'Tools',
+    title: 'Kyunolab Tools are under construction',
+    deck: 'This future tools hub will hold utilities for motifs, sources, reading paths, and archive navigation. For now, use the linked archive routes below.',
+    primaryCta: ['Open Mystery Board', '/mystery-board.html'],
+    secondaryCta: ['Browse All Stories', '/archive.html'],
+    cards: [
+      ['Motif Finder', 'A future utility for finding repeated ideas across archive records.'],
+      ['Source Checklist', 'A future utility for checking how a story names uncertainty and source limits.'],
+      ['Reading Path Builder', 'A future utility for moving from one story into related shelves, guides, and creator materials.']
+    ]
+  }));
+
+  writeFile('hub.html', renderUtilityPlaceholderPage({
+    canonicalPath: '/hub.html',
+    label: 'Hub',
+    title: 'Kyunolab Hub is under construction',
+    deck: 'This future site hub will hold bookmark notes, support options, events, announcements, and outside activity. For now, the archive remains the main entrance.',
+    primaryCta: ['Return Home', '/'],
+    secondaryCta: ['About Kyunolab', '/about.html'],
+    cards: [
+      ['Bookmark Kyunolab', 'A future note for readers who want to save the site and return to new archive paths.'],
+      ['Support and Notices', 'A future area for support links, site notices, and reader-facing updates.'],
+      ['Events and Outside Activity', 'A future area for events, mini-book ideas, community projects, or off-site promotions.']
+    ]
+  }));
+}
+
+function renderUtilityPlaceholderPage({ canonicalPath, label, title, deck, primaryCta, secondaryCta, cards }) {
+  return renderPage({
+    canonicalPath,
+    title,
+    description: deck,
+    metaDescription: deck,
+    robots: 'noindex, follow',
+    networkSection: 'archive',
+    content: `  <main class="article-shell article-layout utility-placeholder-page">
+    ${renderLeftRail(`${label} navigation`)}
+    <div class="archive-page-main">
+      <p class="label">${escapeHtml(label)}</p>
+      <h1 class="article-title">${escapeHtml(title)}</h1>
+      <p class="deck">${escapeHtml(deck)}</p>
+      <section class="notice">
+        <strong>Under construction:</strong> This page is linked now so the site structure stays honest. It is marked noindex until the full ${escapeHtml(label.toLowerCase())} section is ready.
+      </section>
+      <section class="utility-placeholder-grid" aria-label="${escapeAttr(label)} planned areas">
+        ${cards.map(([cardTitle, cardText]) => `<article>
+          <p class="category-group-label">Planned Area</p>
+          <h2>${escapeHtml(cardTitle)}</h2>
+          <p>${escapeHtml(cardText)}</p>
+        </article>`).join('\n')}
+      </section>
+      <section class="archive-cta">
+        <div><p class="label">Keep reading</p><h2>Use the active paths while this area is built.</h2><p>Archive records, reading guides, and Creator Library pages remain available from here.</p></div>
+        <div class="utility-cta-actions">
+          <a class="button" href="${escapeAttr(primaryCta[1])}">${escapeHtml(primaryCta[0])}</a>
+          <a class="text-link" href="${escapeAttr(secondaryCta[1])}">${escapeHtml(secondaryCta[0])}</a>
+        </div>
+      </section>
+    </div>
+    ${renderRightRail(stories.slice(0, 4), `${label} fallback paths`)}
+  </main>`
+  });
 }
 
 function generatePublishingCenter() {
@@ -2524,11 +2597,12 @@ function renderHomeSignSystem() {
               <a href="/archive.html">All Stories</a>
               <a href="/mystery-board.html">Reading Guides</a>
               <a href="/scripts/">Creator Library</a>
-              <a href="/mystery-board/how-to-follow-recurring-motifs-across-the-archive.html">Motif Guide</a>
+              <a href="/tools.html">Tools</a>
             </div>
           </div>
           <div class="home-small-buildings">
             <h3>Site Notes</h3>
+            <a href="/hub.html">Hub</a>
             <a href="/about.html">About Kyunolab</a>
             <a href="/fiction-disclaimer.html">Story and source notice</a>
           </div>
@@ -2548,9 +2622,9 @@ function renderHomePortalHeader() {
         <a href="/categories.html">Categories</a>
         <a href="/mystery-board.html">Mystery Board</a>
         <a href="/scripts/">Creator Library</a>
-        <a href="/mystery-board/how-to-follow-recurring-motifs-across-the-archive.html">Tools</a>
+        <a href="/tools.html">Tools</a>
         <a href="/about.html">About</a>
-        <a class="home-portal-hub-link" href="/about.html">Hub</a>
+        <a class="home-portal-hub-link" href="/hub.html">Hub</a>
       </nav>
       ${renderHomeSignSystem()}
     </div>
@@ -2561,7 +2635,7 @@ function renderHomePortalSearchForm() {
   return `<form class="site-search home-portal-search" action="/search/" method="get" role="search" aria-label="Search Kyunolab">
           <input type="hidden" name="type" value="archive">
           <label class="sr-only" for="home-portal-search-query">Search query</label>
-          <input id="home-portal-search-query" name="q" class="site-search-input" type="search" placeholder="Search legends, guides, scripts, tools, motifs..." autocomplete="off" data-search-input>
+          <input id="home-portal-search-query" name="q" class="site-search-input" type="search" placeholder="Search Kyunolab..." autocomplete="off" data-search-input>
           <button class="site-search-button" type="submit">Search</button>
         </form>`;
 }
@@ -2636,9 +2710,10 @@ function renderHomeCrossroads({ guideLinks, libraryScripts }) {
             </article>
             <article class="home-planned-card">
               <p class="category-group-label">Tools</p>
-              <h3>Future utilities should feel like stadiums</h3>
+              <h3><a href="/tools.html">Future utilities should feel like stadiums</a></h3>
               <p>Motif Finder, Source Checklist, Reading Path Builder, and other tools need quiet roads back to Archive, Board, and Library.</p>
               <div class="home-planned-list"><span>Motif Finder</span><span>Source Checklist</span><span>Reading Path Builder</span></div>
+              <a class="text-link" href="/tools.html">Open Tools plan</a>
             </article>
           </div>
         </section>`;
@@ -2729,7 +2804,7 @@ function renderHomePortalRail({ popularStories, essentialStories, guideLinks, li
       </section>
       <section class="rail-card rail-feature">
         <p class="rail-label">Hub</p>
-        <a href="/about.html"><span>Site notes</span><strong>Bookmark, support, events, and future outside activity can live here.</strong></a>
+        <a href="/hub.html"><span>Site notes</span><strong>Bookmark, support, events, and future outside activity can live here.</strong></a>
       </section>
     </aside>`;
 }
@@ -2742,7 +2817,7 @@ function renderHomeRail({ featuredStory, popularStories, essentialStories }) {
       <div class="rail-card rail-feature"><p class="rail-label">Start here</p><a href="#essential-reads"><span>First visit</span><strong>Begin with essential reads, then follow the archive path that fits your question.</strong></a></div>
       <div class="rail-card"><p class="rail-label">Known stories</p>${popular.map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}</div>
       <div class="rail-card"><p class="rail-label">Essential reads</p>${essentials.map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}</div>
-      <div class="rail-card rail-card-subtle"><p class="rail-label">Hub</p><a href="/about.html">Bookmark and support notes</a><a href="/mystery-board.html">Events can grow from Board guides</a></div>
+      <div class="rail-card rail-card-subtle"><p class="rail-label">Hub</p><a href="/hub.html">Bookmark and support notes</a><a href="/mystery-board.html">Events can grow from Board guides</a></div>
     </aside>`;
 }
 
@@ -2935,7 +3010,7 @@ function renderListPage({ canonicalPath, label, title, h1, description, items, b
     networkSection: 'archive',
     content: `  <main class="article-shell article-layout">
     ${renderLeftRail()}
-    <div class="archive-page-main"><p class="label">${escapeHtml(label)}</p><h1 class="article-title">${escapeHtml(h1)}</h1><p class="deck">${escapeHtml(description)}</p>${renderArchiveGuide(baseName, pageNumber)}<div class="story-list">${items.map(renderStoryRow).join('\n')}</div>${renderPagination(baseName, pageNumber, totalPages)}</div>
+    <div class="archive-page-main"><p class="label">${escapeHtml(label)}</p><h1 class="article-title">${escapeHtml(h1)}</h1><p class="deck">${escapeHtml(description)}</p>${renderArchiveGuide(baseName, pageNumber)}${renderAdSlot(`ad-${baseName}-after-intro`)}<div class="story-list">${renderStoryRowsWithMidAd(items, `ad-${baseName}-mid-list`)}</div>${renderPagination(baseName, pageNumber, totalPages)}</div>
     ${renderRightRail(items, 'Recommended archive paths')}
   </main>`
   });
@@ -2968,7 +3043,7 @@ function renderCategoryPage({ category, pageItems, pageNumber, totalPages, pageT
     networkSection: 'archive',
     content: `  <main class="article-shell article-layout">
     ${renderLeftRail()}
-    <div class="archive-page-main"><p class="label">${escapeHtml(category.group)}</p><h1 class="article-title">${escapeHtml(category.title)}</h1><p class="deck">${escapeHtml(category.description)}</p>${pageNumber === 1 ? renderCategoryIntro(category) : ''}<div class="story-list">${pageItems.map(renderStoryRow).join('\n')}</div>${renderPagination(`categories/${category.slug}`, pageNumber, totalPages)}</div>
+    <div class="archive-page-main"><p class="label">${escapeHtml(category.group)}</p><h1 class="article-title">${escapeHtml(category.title)}</h1><p class="deck">${escapeHtml(category.description)}</p>${pageNumber === 1 ? renderCategoryIntro(category) : ''}${renderAdSlot('ad-category-after-intro')}<div class="story-list">${renderStoryRowsWithMidAd(pageItems, 'ad-category-mid-list')}</div>${renderPagination(`categories/${category.slug}`, pageNumber, totalPages)}</div>
     ${renderRightRail(pageItems, 'Recommended archive paths')}
   </main>`
   });
@@ -3060,7 +3135,9 @@ ${searchForm}
         navLink('/popular.html', 'Popular', currentPath === '/popular'),
         navLink('/categories.html', 'Categories', currentPath === '/categories' || currentPath.startsWith('/categories/')),
         navLink('/mystery-board.html', 'Mystery Board', currentPath === '/mystery-board' || currentPath.startsWith('/mystery-board/')),
-        navLink('/about.html', 'About', currentPath === '/about')
+        navLink('/tools.html', 'Tools', currentPath === '/tools'),
+        navLink('/about.html', 'About', currentPath === '/about'),
+        navLink('/hub.html', 'Hub', currentPath === '/hub')
       ].join('')}</nav>
     </div>
   </header>`;
@@ -3138,7 +3215,7 @@ function renderFooter(section = 'archive') {
   }
   return `<footer class="site-footer">
     <p><strong>Kyunolab Mystery Archive</strong> collects legends, folklore, mysteries, and strange tales with calm source-aware notes.</p>
-    <p><a href="/archive.html">All Stories</a> - <a href="/newest.html">Newest</a> - <a href="/popular.html">Popular</a> - <a href="/categories.html">Categories</a> - <a href="/scripts/">Scripts</a> - <a href="/about.html">About</a> - <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a> - <a href="/privacy.html">Privacy</a> - <a href="/rss.xml">RSS</a> - <a href="/publishing-center/">Publishing Center</a></p>
+    <p><a href="/archive.html">All Stories</a> - <a href="/newest.html">Newest</a> - <a href="/popular.html">Popular</a> - <a href="/categories.html">Categories</a> - <a href="/scripts/">Scripts</a> - <a href="/tools.html">Tools</a> - <a href="/hub.html">Hub</a> - <a href="/about.html">About</a> - <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a> - <a href="/privacy.html">Privacy</a> - <a href="/rss.xml">RSS</a> - <a href="/publishing-center/">Publishing Center</a></p>
   </footer>`;
 }
 
@@ -3177,6 +3254,18 @@ function renderCategoryRightRail() {
       <div class="rail-card"><p class="rail-label">Popular stories</p>${popular.map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}</div>
       <div class="rail-card"><p class="rail-label">Essential reads</p>${essentials.map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}</div>
     </aside>`;
+}
+
+function renderAdSlot(slotName, extraClass = '') {
+  const className = ['ad-slot', extraClass].filter(Boolean).join(' ');
+  return `<aside class="${escapeAttr(className)}" data-ad-slot="${escapeAttr(slotName)}" aria-label="Advertisement"><span>Advertisement</span></aside>`;
+}
+
+function renderStoryRowsWithMidAd(items, slotName) {
+  const rows = items.map(renderStoryRow);
+  if (rows.length < 7) return rows.join('\n');
+  rows.splice(6, 0, renderAdSlot(slotName));
+  return rows.join('\n');
 }
 
 function renderCategoryRailLink(category) {

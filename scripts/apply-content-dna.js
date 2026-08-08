@@ -282,12 +282,15 @@ ${renderHeroImage(story)}
         ${renderReadingBridge(story, recommendationSlots.bridge)}
         <div class="story-body archive-entry">
           ${renderOpening(story)}
+          ${renderAdSlot('ad-article-after-opening')}
           ${sections.map((section, index) => `${renderSection(section)}${renderArchiveInsightBox(story, index, sections.length)}`).join('\n')}
+          ${renderAdSlot('ad-article-mid-1')}
           ${renderFaq(story)}
           ${renderSourceNote(story)}
         </div>`}
 ${scriptCta ? `        ${scriptCta}
-` : ''}        ${renderRelatedArticles(recommendationSlots.related)}
+` : ''}        ${renderAdSlot('ad-article-before-related')}
+        ${renderRelatedArticles(recommendationSlots.related)}
         ${renderPrevNext(navigationStories.previous, navigationStories.next)}
       </article>
       ${renderRightRail(story, recommendationSlots.rail, recommendationSlots.readNext)}
@@ -385,8 +388,9 @@ function renderLongformArticle(article) {
   const opening = renderParagraphs(article.opening);
 
   return `<div class="story-body archive-entry longform-archive-entry">
-          ${opening ? `${opening}\n          ` : ''}${storyBody}
+          ${opening ? `${opening}\n          ${renderAdSlot('ad-article-after-opening')}\n          ` : ''}${storyBody}
         </div>
+        ${renderAdSlot('ad-article-mid-1')}
         <section class="story-supplement story-qa" aria-labelledby="story-qa-heading">
           <h2 id="story-qa-heading">Q&amp;A</h2>
           <div class="faq-list">${qa}
@@ -751,6 +755,11 @@ function cleanSourceTitle(value) {
 function renderStoryMap(sections) {
   const items = sections.map((section) => `<li><a href="#${escapeAttr(section.id)}">${escapeHtml(section.title)}</a></li>`).join('');
   return `<section class="story-map" aria-label="Story map"><h2>Story Map</h2><ol>${items}</ol></section>`;
+}
+
+function renderAdSlot(slotName, extraClass = '') {
+  const className = ['ad-slot', extraClass].filter(Boolean).join(' ');
+  return `<aside class="${escapeAttr(className)}" data-ad-slot="${escapeAttr(slotName)}" aria-label="Advertisement"><span>Advertisement</span></aside>`;
 }
 
 function renderBreadcrumb(story) {
@@ -1391,7 +1400,7 @@ function absoluteImageUrl(value) {
 }
 
 function renderHeader() {
-  return `<header class="site-header"><div class="topline">A Kyuno Lab publication</div><div class="header-inner"><a class="brand" href="/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>${renderSiteSearchForm()}<nav class="nav"><a href="/newest.html">Newest</a><a href="/popular.html">Popular</a><a href="/categories.html">Categories</a><a href="/mystery-board.html">Mystery Board</a><a href="/about.html">About</a></nav></div></header>`;
+  return `<header class="site-header"><div class="topline">A Kyuno Lab publication</div><div class="header-inner"><a class="brand" href="/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>${renderSiteSearchForm()}<nav class="nav"><a href="/newest.html">Newest</a><a href="/popular.html">Popular</a><a href="/categories.html">Categories</a><a href="/mystery-board.html">Mystery Board</a><a href="/tools.html">Tools</a><a href="/about.html">About</a><a href="/hub.html">Hub</a></nav></div></header>`;
 }
 
 function renderSiteSearchForm() {
@@ -1408,7 +1417,7 @@ function renderSiteSearchForm() {
 }
 
 function renderFooter() {
-  return `<footer class="site-footer"><p><strong>Kyunolab Mystery Archive</strong> is a quiet story publication by Kyuno Lab, dedicated to legends, folklore, mysteries, and strange tales from the edges of memory.</p><p><a href="/archive.html">Archive Index</a> - <a href="/newest.html">Newest</a> - <a href="/popular.html">Popular</a> - <a href="/categories.html">Categories</a> - <a href="/scripts/">Scripts</a> - <a href="/about.html">About</a> - <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a> - <a href="/privacy.html">Privacy</a> - <a href="/rss.xml">RSS</a></p></footer>`;
+  return `<footer class="site-footer"><p><strong>Kyunolab Mystery Archive</strong> is a quiet story publication by Kyuno Lab, dedicated to legends, folklore, mysteries, and strange tales from the edges of memory.</p><p><a href="/archive.html">Archive Index</a> - <a href="/newest.html">Newest</a> - <a href="/popular.html">Popular</a> - <a href="/categories.html">Categories</a> - <a href="/scripts/">Scripts</a> - <a href="/tools.html">Tools</a> - <a href="/hub.html">Hub</a> - <a href="/about.html">About</a> - <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a> - <a href="/privacy.html">Privacy</a> - <a href="/rss.xml">RSS</a></p></footer>`;
 }
 
 function formatDate(value) {

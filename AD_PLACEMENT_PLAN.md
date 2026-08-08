@@ -125,14 +125,14 @@ Suggested placeholder behavior:
 Current status:
 
 - No live ad code is present.
-- No ad slot placeholders are currently placed in HTML.
+- Visible ad slot placeholders are placed in the main templates for home, archive lists, category pages, story pages, Mystery Board pages, and tag pages.
 - A reusable `.ad-slot` CSS placeholder class is available for future placements.
 - Layout is calm and readable.
 
 Recommended phase:
 
-- Phase 1: add CSS and optional placeholder component pattern.
-- Phase 2: place slots after category hubs and article structure are strengthened.
+- Phase 1: CSS and placeholder component pattern are available.
+- Phase 2: visible placeholders are placed after meaningful content begins, between major sections, and before lower related areas.
 - Phase 3: integrate real ad units after IDs are available.
 
 ## Ad QA

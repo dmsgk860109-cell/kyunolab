@@ -178,7 +178,7 @@ function renderTagPage(tagGroup) {
   const title = `Stories Tagged "${tagGroup.label}"`;
   const description = tagGroup.description || `A small internal archive path for Kyunolab stories connected to ${tagGroup.label}.`;
   const firstArticle = tagGroup.articles[0];
-  const storyRows = tagGroup.articles.map(renderStoryRow).join('\n');
+  const storyRows = renderStoryRowsWithMidAd(tagGroup.articles, 'ad-tag-mid-list');
   const robots = tagGroup.indexable ? 'index, follow' : 'noindex, follow';
 
   return `<!doctype html>
@@ -223,6 +223,7 @@ ${generatedMarker}
       <p class="label">Tag Archive</p>
       <h1 class="article-title">${escapeHtml(title)}</h1>
       <p class="deck">${escapeHtml(description)}</p>
+      ${renderAdSlot('ad-tag-after-intro')}
       <div class="story-list">
 ${storyRows}
       </div>
@@ -261,12 +262,23 @@ function renderStoryRow(article) {
         </article>`;
 }
 
+function renderAdSlot(slotName, extraClass = '') {
+  const className = ['ad-slot', extraClass].filter(Boolean).join(' ');
+  return `<aside class="${escapeAttr(className)}" data-ad-slot="${escapeAttr(slotName)}" aria-label="Advertisement"><span>Advertisement</span></aside>`;
+}
+
+function renderStoryRowsWithMidAd(articles, slotName) {
+  const rows = articles.map(renderStoryRow);
+  if (rows.length >= 7) rows.splice(6, 0, renderAdSlot(slotName));
+  return rows.join('\n');
+}
+
 function renderHeader() {
   return `<header class="site-header">
     <div class="topline">A Kyuno Lab publication</div>
     <div class="header-inner">
       <a class="brand" href="/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
-      <nav class="nav"><a href="/newest">Newest</a><a href="/popular">Popular</a><a href="/categories">Categories</a><a href="/mystery-board">Mystery Board</a><a href="/about">About</a></nav>
+      <nav class="nav"><a href="/newest">Newest</a><a href="/popular">Popular</a><a href="/categories">Categories</a><a href="/mystery-board">Mystery Board</a><a href="/tools">Tools</a><a href="/about">About</a><a href="/hub">Hub</a></nav>
     </div>
   </header>`;
 }
@@ -283,7 +295,7 @@ function renderKyunolabNetworkCard() {
 function renderFooter() {
   return `<footer class="site-footer">
     <p><strong>Kyunolab Mystery Archive</strong> is a quiet story publication by Kyuno Lab, dedicated to legends, folklore, mysteries, and strange tales from the edges of memory.</p>
-    <p><a href="/archive">Archive Index</a> - <a href="/newest">Newest</a> - <a href="/popular">Popular</a> - <a href="/categories">Categories</a> - <a href="/about">About</a> - <a href="/fiction-disclaimer">Story &amp; Source Notice</a> - <a href="/privacy">Privacy</a> - <a href="/rss.xml">RSS</a></p>
+    <p><a href="/archive">Archive Index</a> - <a href="/newest">Newest</a> - <a href="/popular">Popular</a> - <a href="/categories">Categories</a> - <a href="/tools">Tools</a> - <a href="/hub">Hub</a> - <a href="/about">About</a> - <a href="/fiction-disclaimer">Story &amp; Source Notice</a> - <a href="/privacy">Privacy</a> - <a href="/rss.xml">RSS</a></p>
   </footer>`;
 }
 
