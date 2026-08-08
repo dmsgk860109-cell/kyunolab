@@ -280,8 +280,8 @@ function generateCategoryPages() {
 }
 
 function generateUtilityPlaceholderPages() {
-  writeFile('tools.html', renderUtilityPlaceholderPage({
-    canonicalPath: '/tools.html',
+  const toolsPage = renderUtilityPlaceholderPage({
+    canonicalPath: '/tools',
     label: 'Tools',
     title: 'Kyunolab Tools are under construction',
     deck: 'This future tools hub will hold utilities for motifs, sources, reading paths, and archive navigation. For now, use the linked archive routes below.',
@@ -292,10 +292,12 @@ function generateUtilityPlaceholderPages() {
       ['Source Checklist', 'A future utility for checking how a story names uncertainty and source limits.'],
       ['Reading Path Builder', 'A future utility for moving from one story into related shelves, guides, and creator materials.']
     ]
-  }));
+  });
+  writeFile('tools.html', toolsPage);
+  writeFile(path.join('tools', 'index.html'), toolsPage);
 
-  writeFile('hub.html', renderUtilityPlaceholderPage({
-    canonicalPath: '/hub.html',
+  const hubPage = renderUtilityPlaceholderPage({
+    canonicalPath: '/hub',
     label: 'Hub',
     title: 'Kyunolab Hub is under construction',
     deck: 'This future site hub will hold bookmark notes, support options, events, announcements, and outside activity. For now, the archive remains the main entrance.',
@@ -306,7 +308,9 @@ function generateUtilityPlaceholderPages() {
       ['Support and Notices', 'A future area for support links, site notices, and reader-facing updates.'],
       ['Events and Outside Activity', 'A future area for events, mini-book ideas, community projects, or off-site promotions.']
     ]
-  }));
+  });
+  writeFile('hub.html', hubPage);
+  writeFile(path.join('hub', 'index.html'), hubPage);
 }
 
 function renderUtilityPlaceholderPage({ canonicalPath, label, title, deck, primaryCta, secondaryCta, cards }) {

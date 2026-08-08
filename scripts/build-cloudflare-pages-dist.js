@@ -44,11 +44,13 @@ const ROOT_FILE_PATTERNS = [
 const STATIC_DIRS = [
   'assets',
   'categories',
+  'hub',
   'mystery-board',
   'publishing-center',
   'search',
   'stories',
-  'tags'
+  'tags',
+  'tools'
 ];
 
 const SCRIPT_STATIC_DIRS = [
