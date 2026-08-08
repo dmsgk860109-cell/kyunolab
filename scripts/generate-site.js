@@ -202,6 +202,36 @@ function generateArchivePageSet({ baseName, label, title, description, items }) 
 
 function generateCategoryHub() {
   const grouped = groupCategories();
+  const primaryCategories = getCategoryHubPrimaryCategories();
+  const headlineStories = getHomeStories([
+    'woman-in-white-roadside-legend',
+    'the-backrooms-explained',
+    'russian-sleep-experiment-creepypasta',
+    'baba-yaga-forest-folklore',
+    'dragons-across-world-mythology',
+    'paris-catacombs-legends'
+  ]);
+  const readerPathGroups = getHomeReaderPathGroups();
+  const guideLinks = getHomeGuides([
+    'what-is-an-urban-legend',
+    'how-to-check-source-status',
+    'why-internet-folklore-spreads',
+    'how-to-build-a-reading-path-through-the-strange-archive'
+  ]);
+  const libraryScripts = sortNewest(creatorScripts).slice(0, 3);
+  const popularStories = getHomeStories([
+    'woman-in-white-roadside-legend',
+    'the-backrooms-explained',
+    'vanishing-hitchhiker-urban-legend',
+    'baba-yaga-forest-folklore',
+    'dragons-across-world-mythology'
+  ]);
+  const essentialStories = getHomeStories([
+    'woman-in-white-roadside-legend',
+    'the-backrooms-explained',
+    'forest-that-goes-silent-at-noon',
+    'the-bell-under-the-lake'
+  ]);
   const body = Object.entries(grouped).map(([groupName, groupCategories]) => {
     const groupDescription = groupName === 'Modern Strange Records'
       ? 'Modern, near-modern, reported, and internet-era records'
@@ -233,19 +263,28 @@ ${cards}
     title: 'Categories',
     description: 'Browse Kyunolab Mystery Archive through organized category groups, each with active records and internal reading paths.',
     networkSection: 'archive',
-    content: `  <main class="article-shell article-layout">
-    ${renderLeftRail('Category paths')}
-    <div class="archive-page-main">
-      <p class="label">Archive Categories</p>
-      <h1 class="article-title">Browse by category</h1>
-      <p class="deck">Each active category contains multiple records, giving every shelf enough material to test structure, navigation, and reader flow.</p>
-${renderCategoryGuide()}
-${renderAdSlot('ad-category-hub-after-intro')}
+    bodyClass: 'home-portal-page',
+    headerHtml: renderHomePortalHeader('/categories.html'),
+    content: `  <main class="home-shell home-portal-shell category-portal-page">
+    <div class="home-portal-layout">
+      <div class="home-main-column">
+        ${renderCategoryPortalLead(primaryCategories)}
+        <section class="notice"><strong>Category Guide:</strong> Choose a broad story shelf first, then follow the article links inside each category. This page is a map for real archive records, not a replacement for the stories themselves.</section>
+        ${renderAdSlot('ad-category-hub-after-intro')}
+        ${renderCategoryPrimaryDesk(primaryCategories, headlineStories)}
+        ${renderCategoryStoryPaths(readerPathGroups)}
+        <section class="categories category-portal-shelves" aria-label="All archive category shelves">
+          <div class="section-head"><h2>All Category Buildings</h2><span>Every shelf keeps real article doors visible</span></div>
 ${body}
-${renderAdSlot('ad-category-hub-before-footer')}
+        </section>
+        ${renderAdSlot('ad-category-hub-before-footer')}
+        ${renderHomeCrossroads({ guideLinks, libraryScripts })}
+        <section class="archive-cta"><div><p class="label">All Stories</p><h2>Open the full archive when a category feels too narrow.</h2><p>The complete index keeps every current Kyunolab Mystery Archive record in one place, with newest and popular routes nearby.</p></div><a class="button" href="/archive.html">Browse all current stories</a></section>
+      </div>
+      ${renderHomePortalRail({ popularStories, essentialStories, guideLinks, libraryScripts })}
     </div>
-    ${renderCategoryRightRail()}
-  </main>`
+  </main>`,
+    footerSection: 'archive'
   }));
 }
 
@@ -261,6 +300,63 @@ function renderCategoryGuide() {
           <a href="/categories/myths.html"><span>Mythic roots</span><strong>Myths</strong></a>
         </div>
       </section>`;
+}
+
+function getCategoryHubPrimaryCategories() {
+  return [
+    'urban-legends',
+    'internet-folklore',
+    'myths',
+    'strange-places',
+    'mythic-creatures'
+  ].map((slug) => categories.find((category) => category.slug === slug)).filter(Boolean);
+}
+
+function renderCategoryPortalLead(primaryCategories) {
+  return `<section class="home-portal-lead category-portal-lead" aria-label="Category front entrance">
+          <article class="home-lead-story category-lead-story">
+            <p class="label">Archive Category Hub</p>
+            <h1>Choose the shelf, then enter the stories.</h1>
+            <p>Categories work best as building entrances: clear enough to choose quickly, but filled with actual legends, folklore, myths, places, and source-aware records.</p>
+            <a class="button" href="/archive.html">Open all stories</a>
+          </article>
+          <div class="home-known-list category-entrance-list">
+            <h2>Main story shelves</h2>
+            ${primaryCategories.map(renderCategoryEntranceLink).join('')}
+          </div>
+        </section>`;
+}
+
+function renderCategoryEntranceLink(category, index) {
+  const count = stories.filter((story) => story.categorySlug === category.slug).length;
+  return `<a href="/categories/${escapeAttr(category.slug)}.html"><span>${String(index + 1).padStart(2, '0')}</span><strong>${escapeHtml(category.title)}</strong><em>${count} records</em></a>`;
+}
+
+function renderCategoryPrimaryDesk(primaryCategories, headlineStories) {
+  return `<section class="home-headline-desk category-primary-desk" aria-label="Primary category desk">
+          <div class="section-head"><h2>Primary Shelves</h2><span>Fast roads into the archive</span></div>
+          <div class="headline-desk-grid">
+            <div class="headline-list">${primaryCategories.map(renderCategoryDeskRow).join('')}</div>
+            <aside class="home-context-card">
+              <p class="label">Story-first map</p>
+              <h3>The shelf should point to articles, not become the destination.</h3>
+              <p>Use category labels to choose a direction, then move into known stories, origin notes, strange places, and recurring motifs through the links below.</p>
+              <div class="category-links">${headlineStories.slice(0, 3).map(renderCategoryStoryLink).join('')}</div>
+            </aside>
+          </div>
+        </section>`;
+}
+
+function renderCategoryDeskRow(category) {
+  const count = stories.filter((story) => story.categorySlug === category.slug).length;
+  return `<a class="home-headline-row" href="/categories/${escapeAttr(category.slug)}.html"><span>${escapeHtml(category.group)}</span><strong>${escapeHtml(category.title)}</strong><em>${count} records</em></a>`;
+}
+
+function renderCategoryStoryPaths(groups) {
+  return `<section class="home-reader-paths category-story-paths" aria-label="Story-first category paths">
+          <div class="section-head"><h2>Story-First Paths</h2><span>Start with a question, then follow the shelf</span></div>
+          <div class="home-path-grid">${groups.map(renderHomeReaderPathGroup).join('')}</div>
+        </section>`;
 }
 
 function generateCategoryPages() {
@@ -2613,7 +2709,8 @@ function renderHomeSignSystem() {
         </section>`;
 }
 
-function renderHomePortalHeader() {
+function renderHomePortalHeader(currentPath = '/') {
+  const pathForNav = normalizeNavPath(currentPath);
   return `<header class="home-portal-header">
     <div class="home-portal-header-inner">
       <div class="home-portal-topbar">
@@ -2621,18 +2718,24 @@ function renderHomePortalHeader() {
         ${renderHomePortalSearchForm()}
       </div>
       <nav class="home-portal-nav" aria-label="Primary homepage navigation">
-        <a class="active" aria-current="page" href="/">Home</a>
-        <a href="/archive.html">All Stories</a>
-        <a href="/categories.html">Categories</a>
-        <a href="/mystery-board.html">Mystery Board</a>
-        <a href="/scripts/">Creator Library</a>
-        <a href="/tools.html">Tools</a>
-        <a href="/about.html">About</a>
-        <a class="home-portal-hub-link" href="/hub.html">Hub</a>
+        ${homePortalNavLink('/', 'Home', pathForNav === '/')}
+        ${homePortalNavLink('/archive.html', 'All Stories', pathForNav === '/archive' || /^\/archive-\d+$/.test(pathForNav))}
+        ${homePortalNavLink('/categories.html', 'Categories', pathForNav === '/categories' || pathForNav.startsWith('/categories/'))}
+        ${homePortalNavLink('/mystery-board.html', 'Mystery Board', pathForNav === '/mystery-board' || pathForNav.startsWith('/mystery-board/'))}
+        ${homePortalNavLink('/scripts/', 'Creator Library', isScriptsPath(pathForNav))}
+        ${homePortalNavLink('/tools.html', 'Tools', pathForNav === '/tools')}
+        ${homePortalNavLink('/about.html', 'About', pathForNav === '/about')}
+        ${homePortalNavLink('/hub.html', 'Hub', pathForNav === '/hub', 'home-portal-hub-link')}
       </nav>
       ${renderHomeSignSystem()}
     </div>
   </header>`;
+}
+
+function homePortalNavLink(href, label, isActive, extraClass = '') {
+  const classes = [extraClass, isActive ? 'active' : ''].filter(Boolean).join(' ');
+  const classAttr = classes ? ` class="${escapeAttr(classes)}"` : '';
+  return `<a href="${href}"${classAttr}${isActive ? ' aria-current="page"' : ''}>${escapeHtml(label)}</a>`;
 }
 
 function renderHomePortalSearchForm() {
@@ -3053,7 +3156,7 @@ function renderCategoryPage({ category, pageItems, pageNumber, totalPages, pageT
   });
 }
 
-function renderPage({ canonicalPath, title, description, metaDescription, content, robots, networkSection, footerSection }) {
+function renderPage({ canonicalPath, title, description, metaDescription, content, robots, networkSection, footerSection, bodyClass, headerHtml }) {
   const pageDescription = metaDescription || description;
   const pageTitle = title.includes('|') ? title : `${title} | Kyunolab Mystery Archive`;
   const socialImage = `${siteUrl}/icon-512.png`;
@@ -3066,6 +3169,8 @@ function renderPage({ canonicalPath, title, description, metaDescription, conten
   const searchScript = needsSearchScript ? `\n${renderSearchResultsScript()}` : '';
   const globalSearchScript = networkSection !== 'publishing' ? renderGlobalSearchScript() : '';
   const pageStyleVersion = styleVersion;
+  const bodyClassAttr = bodyClass ? ` class="${escapeAttr(bodyClass)}"` : '';
+  const header = typeof headerHtml === 'string' ? headerHtml : renderHeader(canonicalPath, { includeSearch: networkSection !== 'publishing' });
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -3091,8 +3196,8 @@ ${robotsMeta}  <meta property="og:title" content="${escapeAttr(pageTitle)}">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="/styles.css?v=${pageStyleVersion}">
 </head>
-<body>
-  ${renderHeader(canonicalPath, { includeSearch: networkSection !== 'publishing' })}
+<body${bodyClassAttr}>
+  ${header}
 ${content}
   ${renderFooter(footerSection)}${globalSearchScript}${creatorScript}${publishingScript}${searchScript}
 </body>

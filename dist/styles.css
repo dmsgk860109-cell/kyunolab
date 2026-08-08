@@ -2589,6 +2589,32 @@ h1 {
 .home-portal-page .rail-feature span {
   color: #FFE3C2;
 }
+.category-portal-page .category-entrance-list a {
+  grid-template-columns: 34px minmax(0, 1fr) auto;
+  align-items: center;
+}
+.category-portal-page .category-entrance-list em,
+.category-portal-page .category-primary-desk .home-headline-row em {
+  color: var(--home-muted);
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+.category-portal-page .category-primary-desk .home-headline-row {
+  grid-template-columns: 150px minmax(0, 1fr) auto;
+}
+.category-portal-page .home-context-card .category-links {
+  margin-top: 14px;
+}
+.category-portal-page .category-portal-shelves .category-group {
+  margin-top: 18px;
+}
+.category-portal-page .category-portal-shelves .category-group:first-of-type {
+  margin-top: 12px;
+}
 .home-rail-ad-slot {
   min-height: 250px;
 }
@@ -3577,6 +3603,20 @@ textarea {
   .home-portal-page .archive-cta {
     width: 100%;
     max-width: 100%;
+    min-width: 0;
+  }
+  .category-portal-page .category-entrance-list a,
+  .category-portal-page .category-primary-desk .home-headline-row {
+    grid-template-columns: 32px minmax(0, 1fr);
+  }
+  .category-portal-page .category-entrance-list em,
+  .category-portal-page .category-primary-desk .home-headline-row em {
+    grid-column: 2;
+    white-space: normal;
+  }
+  .category-portal-page .category-primary-desk .home-headline-row span,
+  .category-portal-page .category-primary-desk .home-headline-row strong,
+  .category-portal-page .category-primary-desk .home-headline-row em {
     min-width: 0;
   }
 }

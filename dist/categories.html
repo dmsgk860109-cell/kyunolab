@@ -23,47 +23,110 @@
   <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="/styles.css?v=20260804-nav-flow">
 </head>
-<body>
-  <header class="site-header">
-    <div class="topline">A Kyuno Lab publication</div>
-    <div class="header-inner">
-      <a class="brand" href="/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
-
-      <form class="site-search" action="/search/" method="get" role="search" aria-label="Search Archive or Creator Library">
-        <label class="sr-only" for="global-search-type">Search target</label>
-        <select id="global-search-type" name="type" class="site-search-select" data-search-type>
-          <option value="archive" selected>Archive</option>
-          <option value="library">Creator Library</option>
-        </select>
-        <label class="sr-only" for="global-search-query">Search query</label>
-        <input id="global-search-query" name="q" class="site-search-input" type="search" placeholder="Search stories, legends, and mysteries..." autocomplete="off" data-search-input>
-        <button class="site-search-button" type="submit">SEARCH</button>
-      </form>
-      <nav class="nav"><a href="/archive">All Stories</a><a href="/newest">Newest</a><a href="/popular">Popular</a><a href="/categories" class="active" aria-current="page">Categories</a><a href="/mystery-board">Mystery Board</a><a href="/tools">Tools</a><a href="/about">About</a><a href="/hub">Hub</a></nav>
+<body class="home-portal-page">
+  <header class="home-portal-header">
+    <div class="home-portal-header-inner">
+      <div class="home-portal-topbar">
+        <a class="home-portal-brand" href="/"><span class="home-portal-brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
+        <form class="site-search home-portal-search" action="/search/" method="get" role="search" aria-label="Search Kyunolab">
+          <input type="hidden" name="type" value="archive">
+          <label class="sr-only" for="home-portal-search-query">Search query</label>
+          <input id="home-portal-search-query" name="q" class="site-search-input" type="search" placeholder="Search Kyunolab..." autocomplete="off" data-search-input>
+          <button class="site-search-button" type="submit">Search</button>
+        </form>
+      </div>
+      <nav class="home-portal-nav" aria-label="Primary homepage navigation">
+        <a href="/">Home</a>
+        <a href="/archive">All Stories</a>
+        <a href="/categories" class="active" aria-current="page">Categories</a>
+        <a href="/mystery-board">Mystery Board</a>
+        <a href="/scripts/">Creator Library</a>
+        <a href="/tools">Tools</a>
+        <a href="/about">About</a>
+        <a href="/hub" class="home-portal-hub-link">Hub</a>
+      </nav>
+      <section class="home-sign-system" aria-label="Kyunolab reading paths">
+          <div class="home-sign-intro">
+            <p class="label">Start Here</p>
+            <h2>Choose a story shelf first, then use the map when you want the wider site.</h2>
+            <p>Begin with archive stories, open the full index, or cross into reading guides, creator material, and future tools.</p>
+          </div>
+          <div class="home-sign-links">
+            <div>
+              <h3>Browse Stories</h3>
+              <a href="/categories/urban-legends">Urban Legends</a>
+              <a href="/categories/internet-folklore">Internet Folklore</a>
+              <a href="/categories/myths">Myths</a>
+              <a href="/categories/strange-places">Strange Places</a>
+            </div>
+            <div>
+              <h3>Use The Map</h3>
+              <a href="/archive">All Stories</a>
+              <a href="/mystery-board">Reading Guides</a>
+              <a href="/scripts/">Creator Library</a>
+              <a href="/tools">Tools</a>
+            </div>
+          </div>
+          <div class="home-small-buildings">
+            <h3>Site Notes</h3>
+            <a href="/hub">Hub</a>
+            <a href="/about">About Kyunolab</a>
+            <a href="/fiction-disclaimer">Story and source notice</a>
+          </div>
+        </section>
     </div>
   </header>
-  <main class="article-shell article-layout">
-    <aside class="article-rail article-rail-left" aria-label="Category paths">
-    <div class="rail-card"><p class="rail-label">Reader Paths</p><a href="/archive">All Stories</a><a href="/newest">Newest Records</a><a href="/popular">Popular Records</a><a href="/categories">Browse Categories</a><a href="/mystery-board">Mystery Board</a></div>
-    <div class="rail-card rail-card-subtle"><p class="rail-label">Archive Shelves</p><a href="/categories/urban-legends">Urban Legends</a><a href="/categories/internet-folklore">Internet Folklore</a><a href="/categories/myths">Myths</a><a href="/categories/strange-places">Strange Places</a></div>
-    <div class="rail-card"><p class="rail-label">Source Guide</p><a href="/fiction-disclaimer">Story &amp; Source Notice</a><a href="/about">About Kyunolab</a></div>
-  </aside>
-    <div class="archive-page-main">
-      <p class="label">Archive Categories</p>
-      <h1 class="article-title">Browse by category</h1>
-      <p class="deck">Each active category contains multiple records, giving every shelf enough material to test structure, navigation, and reader flow.</p>
-      <section class="notice" aria-label="Category guide">
-        <p class="label">Category Guide</p>
-        <h2>Find the shelf that matches the story mood</h2>
-        <p>Use these larger entrances when the full map feels too broad. The complete category shelves stay below, with real story links inside each section.</p>
-        <div class="compact-grid">
-          <a href="/categories/urban-legends"><span>Modern rumors</span><strong>Urban Legends</strong></a>
-          <a href="/categories/internet-folklore"><span>Digital paths</span><strong>Internet Folklore</strong></a>
-          <a href="/categories/classic-folklore"><span>Older warnings</span><strong>Classic Folklore</strong></a>
-          <a href="/categories/myths"><span>Mythic roots</span><strong>Myths</strong></a>
-        </div>
-      </section>
-<aside class="ad-slot" data-ad-slot="ad-category-hub-after-intro" aria-label="Advertisement"><span>Advertisement</span></aside>
+  <main class="home-shell home-portal-shell category-portal-page">
+    <div class="home-portal-layout">
+      <div class="home-main-column">
+        <section class="home-portal-lead category-portal-lead" aria-label="Category front entrance">
+          <article class="home-lead-story category-lead-story">
+            <p class="label">Archive Category Hub</p>
+            <h1>Choose the shelf, then enter the stories.</h1>
+            <p>Categories work best as building entrances: clear enough to choose quickly, but filled with actual legends, folklore, myths, places, and source-aware records.</p>
+            <a class="button" href="/archive">Open all stories</a>
+          </article>
+          <div class="home-known-list category-entrance-list">
+            <h2>Main story shelves</h2>
+            <a href="/categories/urban-legends"><span>01</span><strong>Urban Legends</strong><em>93 records</em></a><a href="/categories/internet-folklore"><span>02</span><strong>Internet Folklore</strong><em>93 records</em></a><a href="/categories/myths"><span>03</span><strong>Myths</strong><em>111 records</em></a><a href="/categories/strange-places"><span>04</span><strong>Strange Places</strong><em>93 records</em></a><a href="/categories/mythic-creatures"><span>05</span><strong>Mythic Creatures</strong><em>93 records</em></a>
+          </div>
+        </section>
+        <section class="notice"><strong>Category Guide:</strong> Choose a broad story shelf first, then follow the article links inside each category. This page is a map for real archive records, not a replacement for the stories themselves.</section>
+        <aside class="ad-slot" data-ad-slot="ad-category-hub-after-intro" aria-label="Advertisement"><span>Advertisement</span></aside>
+        <section class="home-headline-desk category-primary-desk" aria-label="Primary category desk">
+          <div class="section-head"><h2>Primary Shelves</h2><span>Fast roads into the archive</span></div>
+          <div class="headline-desk-grid">
+            <div class="headline-list"><a class="home-headline-row" href="/categories/urban-legends"><span>Modern Strange Records</span><strong>Urban Legends</strong><em>93 records</em></a><a class="home-headline-row" href="/categories/internet-folklore"><span>Modern Strange Records</span><strong>Internet Folklore</strong><em>93 records</em></a><a class="home-headline-row" href="/categories/myths"><span>Mythic &amp; Imagined Realms</span><strong>Myths</strong><em>111 records</em></a><a class="home-headline-row" href="/categories/strange-places"><span>Modern Strange Records</span><strong>Strange Places</strong><em>93 records</em></a><a class="home-headline-row" href="/categories/mythic-creatures"><span>Mythic &amp; Imagined Realms</span><strong>Mythic Creatures</strong><em>93 records</em></a></div>
+            <aside class="home-context-card">
+              <p class="label">Story-first map</p>
+              <h3>The shelf should point to articles, not become the destination.</h3>
+              <p>Use category labels to choose a direction, then move into known stories, origin notes, strange places, and recurring motifs through the links below.</p>
+              <div class="category-links"><a href="/stories/woman-in-white-roadside-legend">The Woman in White at the Bend: Why This Roadside Legend Still Feels Familiar</a><a href="/stories/russian-sleep-experiment-creepypasta">Russian Sleep Experiment Creepypasta: Fake Document, Laboratory Horror, and Viral Belief</a><a href="/stories/paris-catacombs-legends">Paris Catacombs Legends: Bones, Tunnels, and the City Beneath the City</a></div>
+            </aside>
+          </div>
+        </section>
+        <section class="home-reader-paths category-story-paths" aria-label="Story-first category paths">
+          <div class="section-head"><h2>Story-First Paths</h2><span>Start with a question, then follow the shelf</span></div>
+          <div class="home-path-grid"><article>
+          <h3>If you like road legends</h3>
+          <p>Roadside ghosts, warnings, vanished passengers, and places where ordinary travel turns strange.</p>
+          <div class="category-links"><a href="/stories/woman-in-white-roadside-legend">The Woman in White at the Bend: Why This Roadside Legend Still Feels Familiar</a><a href="/stories/vanishing-hitchhiker-urban-legend">Vanishing Hitchhiker Urban Legend: The Passenger Who Disappears Before Arrival</a><a href="/stories/the-hookman-urban-legend">The Hookman Urban Legend: Lovers Lane, Radio Warning, and the Hook on the Door</a><a href="/stories/how-a-shortcut-becomes-a-haunted-road">How Map Shortcuts Become Haunted Roads</a></div>
+        </article><article>
+          <h3>If you like internet folklore</h3>
+          <p>Digital spaces, cursed images, game files, and web stories that grew through sharing.</p>
+          <div class="category-links"><a href="/stories/backrooms-digital-labyrinth">The Backrooms: Digital Labyrinth, Liminal Space, and the Internet&#39;s Endless Yellow Room</a><a href="/stories/russian-sleep-experiment-creepypasta">Russian Sleep Experiment Creepypasta: Fake Document, Laboratory Horror, and Viral Belief</a><a href="/stories/ben-drowned-creepypasta">Ben Drowned Creepypasta: Haunted Game File, Forum Updates, and a Digital Ghost Story</a><a href="/stories/candle-cove-creepypasta">Candle Cove Creepypasta: Lost Children&#39;s Television, Forum Memory, and the Static Ending</a></div>
+        </article><article>
+          <h3>If you want older folklore</h3>
+          <p>Folk figures, spirits, warnings, and traditional stories that keep changing across retellings.</p>
+          <div class="category-links"><a href="/stories/baba-yaga-folklore">Baba Yaga: Forest Witch, Bone-Legged Grandmother, and the Test at the Edge of the World</a><a href="/stories/banshee-irish-folklore">Banshee: Irish Death Cry, Family Warning, and the Woman of the Fairy Mound</a><a href="/stories/kitsune-folklore">Kitsune Folklore: Fox Spirits, Shape-Shifting, and the Line Between Trick and Blessing</a><a href="/stories/dullahan-irish-folklore">Dullahan Folklore: Headless Rider, Night Road, and the Name Called From the Dark</a></div>
+        </article><article>
+          <h3>If you want source-aware reading</h3>
+          <p>Guides for reading legends as stories without mistaking repeated claims for proof.</p>
+          <div class="category-links"><a href="/mystery-board/what-is-an-urban-legend">Urban Legend Meaning, Modern Folklore, and Social Fear</a><a href="/mystery-board/how-to-check-source-status">Source Status, Evidence Trails, and Strange Story Confidence</a><a href="/mystery-board/why-internet-folklore-spreads">Internet Folklore, Online Sharing, and Digital Legend Patterns</a><a href="/mystery-board/how-to-build-a-reading-path-through-the-strange-archive">Strange Archive Reading Paths, Categories, and Motifs</a></div>
+        </article></div>
+        </section>
+        <section class="categories category-portal-shelves" aria-label="All archive category shelves">
+          <div class="section-head"><h2>All Category Buildings</h2><span>Every shelf keeps real article doors visible</span></div>
       <section class="category-group">
         <div class="section-head category-group-head"><h2>Modern Strange Records</h2><span>Modern, near-modern, reported, and internet-era records</span></div>
         <div class="category-grid category-hub">
@@ -170,19 +233,63 @@
       </article>
         </div>
       </section>
-<aside class="ad-slot" data-ad-slot="ad-category-hub-before-footer" aria-label="Advertisement"><span>Advertisement</span></aside>
-    </div>
-    <aside class="article-rail article-rail-right" aria-label="Category page reading paths">
+        </section>
+        <aside class="ad-slot" data-ad-slot="ad-category-hub-before-footer" aria-label="Advertisement"><span>Advertisement</span></aside>
+        <section class="home-crossroads" aria-label="Kyunolab crossroads">
+          <div class="section-head"><h2>Board, Library, and Tools</h2><span>Connected site axes</span></div>
+          <div class="home-crossroad-grid">
+            <article>
+              <p class="category-group-label">Mystery Board</p>
+              <h3><a href="/mystery-board">Guides for reading the archive</a></h3>
+              <p>Source status, story types, internet folklore, archive paths, and how to move through strange records without losing context.</p>
+              <div class="category-links"><a href="/mystery-board/what-is-an-urban-legend">Urban Legend Meaning, Modern Folklore, and Social Fear</a><a href="/mystery-board/how-to-check-source-status">Source Status, Evidence Trails, and Strange Story Confidence</a><a href="/mystery-board/why-internet-folklore-spreads">Internet Folklore, Online Sharing, and Digital Legend Patterns</a></div>
+              <a class="text-link" href="/mystery-board">Open Mystery Board</a>
+            </article>
+            <article>
+              <p class="category-group-label">Creator Library</p>
+              <h3><a href="/scripts/">Creator-ready story material</a></h3>
+              <p>Script packages, visual planning resources, and creator paths connected back to original archive records.</p>
+              <div class="category-links"><a href="/scripts/agartha-hollow-earth-legend-youtube-script">Agartha Hollow Earth Legend YouTube Script</a><a href="/scripts/amber-room-mystery-youtube-script">Amber Room Mystery YouTube Script</a><a href="/scripts/ark-of-the-covenant-legend-youtube-script">Ark of the Covenant Legend YouTube Script</a></div>
+              <a class="text-link" href="/scripts/">Open Creator Library</a>
+            </article>
+            <article class="home-planned-card">
+              <p class="category-group-label">Tools</p>
+              <h3><a href="/tools">Future utilities should feel like stadiums</a></h3>
+              <p>Motif Finder, Source Checklist, Reading Path Builder, and other tools need quiet roads back to Archive, Board, and Library.</p>
+              <div class="home-planned-list"><span>Motif Finder</span><span>Source Checklist</span><span>Reading Path Builder</span></div>
+              <a class="text-link" href="/tools">Open Tools plan</a>
+            </article>
+          </div>
+        </section>
+        <section class="archive-cta"><div><p class="label">All Stories</p><h2>Open the full archive when a category feels too narrow.</h2><p>The complete index keeps every current Kyunolab Mystery Archive record in one place, with newest and popular routes nearby.</p></div><a class="button" href="/archive">Browse all current stories</a></section>
+      </div>
+      <aside class="home-portal-rail" aria-label="Kyunolab side paths">
       <div class="rail-card rail-card-network">
         <p class="rail-label">Kyunolab Network</p>
         <strong>Creator Library</strong>
         <p>Free mystery YouTube scripts, Shorts scripts, image prompts, and thumbnail ideas for video creators.</p>
         <a class="button" href="/scripts/">Open Creator Library</a>
       </div>
-      <div class="rail-card rail-feature"><p class="rail-label">Start here</p><a href="/stories/woman-in-white-roadside-legend"><span>Urban Legends</span><strong>The Woman in White at the Bend: Why This Roadside Legend Still Feels Familiar</strong></a></div>
-      <div class="rail-card"><p class="rail-label">Popular stories</p><a href="/stories/backrooms-digital-labyrinth">The Backrooms: Digital Labyrinth, Liminal Space, and the Internet&#39;s Endless Yellow Room</a><a href="/stories/baba-yaga-folklore">Baba Yaga: Forest Witch, Bone-Legged Grandmother, and the Test at the Edge of the World</a><a href="/stories/poisoned-halloween-candy-legend">Poisoned Halloween Candy Legend: Trick-or-Treat Fear, Rumor, and the Dangerous Treat</a></div>
-      <div class="rail-card"><p class="rail-label">Essential reads</p><a href="/stories/russian-sleep-experiment-creepypasta">Russian Sleep Experiment Creepypasta: Fake Document, Laboratory Horror, and Viral Belief</a><a href="/stories/demeter-and-persephone-myth">Demeter and Persephone: Abduction, Seasons, and the Myth of Return With a Condition</a><a href="/stories/paris-catacombs-legends">Paris Catacombs Legends: Bones, Tunnels, and the City Beneath the City</a></div>
+      <section class="rail-card">
+        <p class="rail-label">Known Buildings</p>
+        <a href="/stories/woman-in-white-roadside-legend">The Woman in White at the Bend: Why This Roadside Legend Still Feels Familiar</a><a href="/stories/vanishing-hitchhiker-urban-legend">Vanishing Hitchhiker Urban Legend: The Passenger Who Disappears Before Arrival</a>
+      </section>
+      <section class="rail-card rail-card-subtle">
+        <p class="rail-label">Cross Roads</p>
+        <a href="/mystery-board/what-is-an-urban-legend">Urban Legend Meaning, Modern Folklore, and Social Fear</a><a href="/mystery-board/how-to-check-source-status">Source Status, Evidence Trails, and Strange Story Confidence</a><a href="/mystery-board/why-internet-folklore-spreads">Internet Folklore, Online Sharing, and Digital Legend Patterns</a>
+        <a href="/scripts/">Archive to Creator Library</a>
+        <a href="/scripts/agartha-hollow-earth-legend-youtube-script">Agartha Hollow Earth Legend YouTube Script</a><a href="/scripts/amber-room-mystery-youtube-script">Amber Room Mystery YouTube Script</a>
+      </section>
+      <section class="rail-card">
+        <p class="rail-label">Essential Reads</p>
+        <a href="/stories/woman-in-white-roadside-legend">The Woman in White at the Bend: Why This Roadside Legend Still Feels Familiar</a><a href="/stories/forest-that-goes-silent-at-noon">Forest That Goes Silent at Noon: Soundscape Ecology, Heat, Birdsong, and the Folklore of the Hushed Wood</a>
+      </section>
+      <section class="rail-card rail-feature">
+        <p class="rail-label">Hub</p>
+        <a href="/hub"><span>Site notes</span><strong>Bookmark, support, events, and future outside activity can live here.</strong></a>
+      </section>
     </aside>
+    </div>
   </main>
   <footer class="site-footer">
     <p><strong>Kyunolab Mystery Archive</strong> collects legends, folklore, mysteries, and strange tales with calm source-aware notes.</p>
