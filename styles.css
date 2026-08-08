@@ -2615,6 +2615,57 @@ h1 {
 .category-portal-page .category-portal-shelves .category-group:first-of-type {
   margin-top: 12px;
 }
+.archive-portal-page .archive-entrance-list a {
+  grid-template-columns: 34px minmax(0, 1fr);
+}
+.archive-portal-page .archive-entrance-list em {
+  grid-column: 2;
+  color: var(--home-muted);
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.25;
+}
+.archive-portal-page .archive-portal-guide {
+  margin-top: 14px;
+}
+.archive-story-index {
+  margin-top: 14px;
+}
+.archive-story-index-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 320px);
+  gap: 22px;
+  align-items: start;
+}
+.archive-portal-page .story-list {
+  min-width: 0;
+}
+.archive-portal-page .story-row {
+  padding: 16px 0;
+  border-color: var(--home-line);
+}
+.archive-portal-page .story-row:first-child {
+  padding-top: 0;
+}
+.archive-portal-page .story-row h3 {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  line-height: 1.12;
+}
+.archive-portal-page .story-row p {
+  color: var(--home-muted);
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.45;
+}
+.archive-portal-page .story-row .meta {
+  color: var(--home-muted);
+}
+.archive-portal-page .pagination {
+  border-top-color: var(--home-line);
+}
 .home-rail-ad-slot {
   min-height: 250px;
 }
@@ -3618,5 +3669,18 @@ textarea {
   .category-portal-page .category-primary-desk .home-headline-row strong,
   .category-portal-page .category-primary-desk .home-headline-row em {
     min-width: 0;
+  }
+  .archive-story-index-grid {
+    grid-template-columns: 1fr;
+  }
+  .archive-portal-page .archive-entrance-list a {
+    grid-template-columns: 32px minmax(0, 1fr);
+  }
+  .archive-portal-page .archive-entrance-list em {
+    grid-column: 2;
+    white-space: normal;
+  }
+  .archive-portal-page .story-row h3 {
+    font-size: 22px;
   }
 }

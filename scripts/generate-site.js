@@ -40,10 +40,10 @@ function main() {
 
   generateArchivePageSet({
     baseName: 'popular',
-    label: 'Popular Records',
-    title: 'Popular urban legends, folklore, and mystery stories',
+    label: 'Known Records',
+    title: 'Known starting points for legends, folklore, and mystery stories',
     description: 'A curated path through reader-friendly entry points for urban legends, internet folklore, classic myths, strange places, and recurring mystery motifs.',
-    items: stories
+    items: getKnownRecordStories()
   });
 
   generateArchivePageSet({
@@ -198,6 +198,25 @@ function generateArchivePageSet({ baseName, label, title, description, items }) 
       totalPages: pages.length
     }));
   });
+}
+
+function getKnownRecordStories() {
+  const configuredSlugs = [
+    siteConfig.featuredStoryId,
+    ...(siteConfig.popularStoryIds || []),
+    ...(siteConfig.essentialStoryIds || [])
+  ].filter(Boolean);
+  const leadingStories = configuredSlugs
+    .map((slug) => stories.find((story) => story.slug === slug))
+    .filter(Boolean);
+  const seen = new Set();
+  const uniqueLeadingStories = leadingStories.filter((story) => {
+    if (seen.has(story.slug)) return false;
+    seen.add(story.slug);
+    return true;
+  });
+  const remainingStories = sortNewest(stories).filter((story) => !seen.has(story.slug));
+  return uniqueLeadingStories.concat(remainingStories);
 }
 
 function generateCategoryHub() {
@@ -3109,18 +3128,152 @@ function renderListPage({ canonicalPath, label, title, h1, description, items, b
   const metaDescription = pageNumber === 1
     ? description
     : `${description} Page ${pageNumber} of ${totalPages} continues the archive list with more source-aware legend, folklore, and mystery entries.`;
+  const portalConfig = getListPortalConfig(baseName, pageNumber, totalPages);
+  const guideLinks = getHomeGuides([
+    'what-is-an-urban-legend',
+    'how-to-check-source-status',
+    'why-internet-folklore-spreads',
+    'how-to-build-a-reading-path-through-the-strange-archive'
+  ]);
+  const libraryScripts = sortNewest(creatorScripts).slice(0, 3);
+  const popularStories = getConfiguredStories(siteConfig.popularStoryIds).slice(0, 5);
+  const essentialStories = getConfiguredStories(siteConfig.essentialStoryIds).slice(0, 4);
   return renderPage({
     canonicalPath,
     title,
     description,
     metaDescription,
     networkSection: 'archive',
-    content: `  <main class="article-shell article-layout">
-    ${renderLeftRail()}
-    <div class="archive-page-main"><p class="label">${escapeHtml(label)}</p><h1 class="article-title">${escapeHtml(h1)}</h1><p class="deck">${escapeHtml(description)}</p>${renderArchiveGuide(baseName, pageNumber)}${renderAdSlot(`ad-${baseName}-after-intro`)}<div class="story-list">${renderStoryRowsWithMidAd(items, `ad-${baseName}-mid-list`)}</div>${renderPagination(baseName, pageNumber, totalPages)}</div>
-    ${renderRightRail(items, 'Recommended archive paths')}
-  </main>`
+    bodyClass: 'home-portal-page',
+    headerHtml: renderHomePortalHeader(canonicalPath),
+    content: `  <main class="home-shell home-portal-shell archive-portal-page archive-portal-${escapeAttr(baseName)}">
+    <div class="home-portal-layout">
+      <div class="home-main-column">
+        ${renderListPortalLead({ label, h1, description, items, portalConfig })}
+        ${renderListPortalRoutes(baseName, pageNumber)}
+        ${renderAdSlot(`ad-${baseName}-after-intro`)}
+        ${renderListPortalStoryList({ label, items, baseName, pageNumber, totalPages, portalConfig })}
+        ${renderListPortalFooterCta(baseName)}
+        ${renderHomeCrossroads({ guideLinks, libraryScripts })}
+      </div>
+      ${renderHomePortalRail({ popularStories, essentialStories, guideLinks, libraryScripts })}
+    </div>
+  </main>`,
+    footerSection: 'archive'
   });
+}
+
+function getListPortalConfig(baseName, pageNumber, totalPages) {
+  const isPaged = pageNumber > 1;
+  const configs = {
+    archive: {
+      label: isPaged ? 'Archive Index Continued' : 'Archive Index',
+      leadTitle: isPaged ? `More open archive records, page ${pageNumber}.` : 'Every story needs a clear front door.',
+      leadText: isPaged
+        ? `This continuation page keeps the complete Kyunolab Mystery Archive moving through older records without breaking the same roads back to categories, latest entries, and reading guides.`
+        : 'All Stories is the full building directory for Kyunolab Mystery Archive: every current legend, folklore entry, myth, strange place, and source-aware record in one route.',
+      ctaLabel: 'Browse categories',
+      ctaHref: '/categories.html',
+      listTitle: isPaged ? `All Stories, page ${pageNumber}` : 'All Archive Records',
+      listKicker: `${pageNumber} of ${totalPages}`,
+      contextTitle: 'Use the index when you already know you want the full collection.',
+      contextText: 'When the list feels too broad, step sideways into Categories, Newest, Known Records, or Mystery Board before returning to the complete archive.',
+      notice: 'All Stories is the complete index. It should feel like the main directory, while still leaving obvious roads into shorter shelves and guide pages.'
+    },
+    newest: {
+      label: isPaged ? 'Newest Records Continued' : 'Newest Records',
+      leadTitle: isPaged ? `More recent additions, page ${pageNumber}.` : 'Follow the archive as it grows.',
+      leadText: isPaged
+        ? 'This continuation keeps recent archive additions in order while preserving the same route back to the main index and category shelves.'
+        : 'Newest shows the freshest Kyunolab records first, so returning readers can see what changed without digging through the full archive.',
+      ctaLabel: 'Open all stories',
+      ctaHref: '/archive.html',
+      listTitle: isPaged ? `Newest Records, page ${pageNumber}` : 'Latest Story Stream',
+      listKicker: `${pageNumber} of ${totalPages}`,
+      contextTitle: 'Newest is the living street, not the whole city.',
+      contextText: 'Use it to see fresh work, then cross into categories or the full archive when a topic needs a wider path.',
+      notice: 'Newest keeps the site feeling active. The list is ordered by recent updates and still connects back to stable archive roads.'
+    },
+    popular: {
+      label: isPaged ? 'Known Records Continued' : 'Known Records',
+      leadTitle: isPaged ? `More familiar starting points, page ${pageNumber}.` : 'Start with records that are easy to enter.',
+      leadText: isPaged
+        ? 'This continuation keeps reader-friendly entry points available without pretending they are live traffic rankings.'
+        : 'This page is a curated starting route through accessible legends, internet folklore, myths, places, and recurring motifs. It avoids treating early traffic as a finished popularity signal.',
+      ctaLabel: 'Open newest records',
+      ctaHref: '/newest.html',
+      listTitle: isPaged ? `Known Records, page ${pageNumber}` : 'Known Starting Points',
+      listKicker: `${pageNumber} of ${totalPages}`,
+      contextTitle: 'Known records are starting points, not a traffic scoreboard.',
+      contextText: 'They help first-time readers find familiar doors before branching into categories, source guides, and the complete story index.',
+      notice: 'Known Records is intentionally framed as a curated path. It should not overclaim popularity before the site has stable traffic data.'
+    }
+  };
+  return configs[baseName] || configs.archive;
+}
+
+function renderListPortalLead({ label, h1, description, items, portalConfig }) {
+  const leadItems = items.slice(0, 5);
+  return `<section class="home-portal-lead archive-portal-lead" aria-label="${escapeAttr(label)} front entrance">
+          <article class="home-lead-story archive-lead-story">
+            <p class="label">${escapeHtml(portalConfig.label)}</p>
+            <h1>${escapeHtml(portalConfig.leadTitle)}</h1>
+            <p>${escapeHtml(portalConfig.leadText || description)}</p>
+            <a class="button" href="${escapeAttr(portalConfig.ctaHref)}">${escapeHtml(portalConfig.ctaLabel)}</a>
+          </article>
+          <div class="home-known-list archive-entrance-list">
+            <h2>${escapeHtml(portalConfig.listTitle)}</h2>
+            ${leadItems.map(renderArchiveEntranceLink).join('')}
+          </div>
+        </section>`;
+}
+
+function renderArchiveEntranceLink(story, index) {
+  return `<a href="/stories/${escapeAttr(story.slug)}"><span>${String(index + 1).padStart(2, '0')}</span><strong>${escapeHtml(story.title)}</strong><em>${escapeHtml(story.category)}</em></a>`;
+}
+
+function renderListPortalRoutes(baseName, pageNumber) {
+  const showArchiveGuide = baseName === 'archive' && pageNumber === 1;
+  return `<section class="notice archive-portal-guide" aria-label="Archive list guide">
+        <p class="label">${showArchiveGuide ? 'Archive Guide' : 'Reader Roads'}</p>
+        <h2>${showArchiveGuide ? 'Choose a shorter road through every story' : 'Move between the main archive roads'}</h2>
+        <p>${showArchiveGuide ? 'All Stories is the full index. These entrances help readers start with a subject shelf, a newer record, a familiar story, or a reading guide before they keep moving through the complete list.' : 'Use these routes when the current list is too narrow or too broad. Each road stays connected to real stories, guide pages, and category shelves.'}</p>
+        <div class="compact-grid">
+          <a href="/archive.html"><span>Complete index</span><strong>All Stories</strong></a>
+          <a href="/newest.html"><span>Fresh records</span><strong>Newest</strong></a>
+          <a href="/popular.html"><span>Known paths</span><strong>Known Records</strong></a>
+          <a href="/categories.html"><span>Browse by shelf</span><strong>Categories</strong></a>
+        </div>
+      </section>`;
+}
+
+function renderListPortalStoryList({ label, items, baseName, pageNumber, totalPages, portalConfig }) {
+  return `<section class="home-headline-desk archive-story-index" aria-label="${escapeAttr(label)} story list">
+          <div class="section-head"><h2>${escapeHtml(portalConfig.listTitle)}</h2><span>${escapeHtml(portalConfig.listKicker)}</span></div>
+          <div class="archive-story-index-grid">
+            <div class="story-list">${renderStoryRowsWithMidAd(items, `ad-${baseName}-mid-list`)}</div>
+            <aside class="home-context-card">
+              <p class="label">How to use this page</p>
+              <h3>${escapeHtml(portalConfig.contextTitle)}</h3>
+              <p>${escapeHtml(portalConfig.contextText)}</p>
+              <div class="category-links">
+                <a href="/categories/urban-legends.html">Urban Legends</a>
+                <a href="/categories/internet-folklore.html">Internet Folklore</a>
+                <a href="/mystery-board.html">Mystery Board</a>
+              </div>
+            </aside>
+          </div>
+          ${renderPagination(baseName, pageNumber, totalPages)}
+        </section>`;
+}
+
+function renderListPortalFooterCta(baseName) {
+  const copy = {
+    archive: ['Categories', 'When the complete list feels too large, return to the shelf map.', '/categories.html', 'Browse categories'],
+    newest: ['All Stories', 'When the latest stream feels too narrow, return to the full archive.', '/archive.html', 'Open all stories'],
+    popular: ['Newest', 'When known starting points feel too familiar, check what was added recently.', '/newest.html', 'Open newest records']
+  }[baseName] || ['All Stories', 'Return to the complete Kyunolab Mystery Archive index.', '/archive.html', 'Open all stories'];
+  return `<section class="archive-cta"><div><p class="label">${escapeHtml(copy[0])}</p><h2>${escapeHtml(copy[1])}</h2><p>Archive roads should always lead somewhere useful: category shelves, fresh records, guide pages, creator material, and the complete index.</p></div><a class="button" href="${escapeAttr(copy[2])}">${escapeHtml(copy[3])}</a></section>`;
 }
 
 function renderArchiveGuide(baseName, pageNumber) {
