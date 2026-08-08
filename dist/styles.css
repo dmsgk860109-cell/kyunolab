@@ -2744,6 +2744,24 @@ h1 {
 .creator-portal-page .script-badges div {
   border-top-color: var(--home-line);
 }
+.library-board-portal-page .library-board-starter-list a {
+  grid-template-columns: 34px minmax(0, 1fr);
+}
+.library-board-portal-page .library-board-row {
+  grid-template-columns: 150px minmax(0, 1fr);
+}
+.library-board-portal-page .library-board-guide-index .script-list {
+  min-width: 0;
+}
+.library-board-portal-page .library-board-guide-index .script-row {
+  padding: 16px 0;
+}
+.library-board-portal-page .library-board-guide-index .script-row h3 {
+  font-size: 23px;
+}
+.library-board-portal-page .library-board-guide-index .script-row p {
+  max-width: 780px;
+}
 .home-rail-ad-slot {
   min-height: 250px;
 }

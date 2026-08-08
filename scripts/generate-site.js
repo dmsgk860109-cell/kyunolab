@@ -1162,59 +1162,186 @@ function renderScriptCategoryPage({ category, scripts, relatedScripts, pageScrip
 }
 
 function renderScriptBoardPage(scripts, boardPosts = []) {
+  const latestScripts = sortNewest(scripts).slice(0, 5);
+  const featuredScript = latestScripts[0] || scripts[0];
+  const boardStarters = boardPosts.slice(0, 5);
+  const guideLinks = getHomeGuides([
+    'how-to-check-source-status',
+    'how-to-build-a-reading-path-through-the-strange-archive',
+    'how-to-find-internal-link-opportunities-without-forcing-them'
+  ]);
+  const popularStories = getConfiguredStories(siteConfig.popularStoryIds).slice(0, 4);
   return renderPage({
     canonicalPath: '/scripts/board/',
     title: 'Library Board | Guides to the Kyunolab Creator Library',
     description: 'Editorial guides to the Kyunolab Creator Library, including its script formats, categories, resource structure, featured packages, and connections to the Mystery Archive.',
     metaDescription: 'Editorial guides to the Kyunolab Creator Library, including its script formats, categories, resource structure, featured packages, and connections to the Mystery Archive.',
     networkSection: 'scripts',
-    content: `  <main class="article-shell article-layout scripts-board-page">
-    ${renderScriptsBoardLeftRail()}
-
-    <div class="archive-page-main">
-      <p class="label">Editorial Guides to the Creator Library</p>
-      <h1 class="article-title">Library Board</h1>
-      <p class="deck">Explore editorial guides that explain the purpose, structure, formats, categories, and archive relationships of the Kyunolab Creator Library. These pages help visitors understand what the library offers, find the right script packages and resources, and continue into featured collections.</p>
-
-      <section class="notice">
-        <strong>Creator Library guide:</strong> The Library Board introduces how scripts, prompts, source notes, and supporting resources are organized while showing how each package connects back to the Kyunolab Mystery Archive.
-      </section>
-
-      <section class="scripts-section script-board">
-        <div>
-          <p class="label">Library structure</p>
-          <h2>Understand how Creator Library resources connect.</h2>
-          <p>Script detail pages contain finished creator materials. Library Board pages explain formats, categories, resource types, featured packages, and how each package relates to the original archive record.</p>
-        </div>
-        <div class="script-board-grid">
-          <article><strong>Script Formats</strong><span>Guides to long-form scripts, short-form scripts, prompts, source notes, and supporting resources.</span></article>
-          <article><strong>Library Categories</strong><span>Guides for how script packages are grouped by topic, story type, and archive relationship.</span></article>
-          <article><strong>Archive Connections</strong><span>Resources that show how Creator Library packages connect back to original Mystery Archive records.</span></article>
-        </div>
-      </section>
-
-      <section class="notice">
-        <strong>Board status:</strong> Individual script packages remain in the Creator Library. Library Board pages explain the library structure and point visitors toward featured scripts, latest scripts, categories, resources, and original archive records.
-      </section>
-
-      <section class="scripts-section">
-        <div class="section-head"><h2>Latest Library Board Guides</h2><span>${escapeHtml(`${boardPosts.length} guide${boardPosts.length === 1 ? '' : 's'}`)}</span></div>
-        ${boardPosts.length ? `<div class="script-list">${boardPosts.map(renderLibraryBoardPostRow).join('\n')}</div>` : `<div class="notice"><strong>No Library Board guides yet:</strong> This board is ready for future Creator Library guidance.</div>`}
-      </section>
-    </div>
-
-    <aside class="article-rail article-rail-right" aria-label="Recommended creator resources">
-      ${renderKyunolabNetworkCard('scripts')}
-      <div class="rail-card rail-feature"><p class="rail-label">Start here</p><a href="/scripts/resources/"><span>Creator Resources</span><strong>Use the archive without confusing story and script.</strong></a></div>
-      <div class="rail-card">
-        <p class="rail-label">Creator paths</p>
-        <a href="/scripts/">Free Mystery YouTube Scripts</a>
-        <a href="/scripts/categories/">Script Categories</a>
-        <a href="/scripts/resources/">Creator Resources</a>
+    footerSection: 'scripts',
+    bodyClass: 'home-portal-page',
+    headerHtml: renderCreatorPortalHeader('/scripts/board/'),
+    content: `  <main class="home-shell home-portal-shell creator-portal-page library-board-portal-page">
+    <div class="home-portal-layout">
+      <div class="home-main-column">
+        ${renderLibraryBoardPortalLead(boardStarters)}
+        <section class="notice"><strong>Library Board purpose:</strong> These are public creator guides. They explain formats, categories, scene workspaces, source separation, and production flow before a visitor opens a script package.</section>
+        ${renderAdSlot('ad-library-board-after-intro')}
+        ${renderLibraryBoardStructureDesk(boardPosts)}
+        ${renderLibraryBoardGuidePaths(boardPosts)}
+        ${renderAdSlot('ad-library-board-mid-list')}
+        ${renderLibraryBoardGuideIndex(boardPosts)}
+        ${renderLibraryBoardCrossroads({ latestScripts, guideLinks, popularStories })}
       </div>
-    </aside>
+      ${renderLibraryBoardPortalRail({ boardStarters, latestScripts, featuredScript, guideLinks })}
+    </div>
   </main>`
   });
+}
+
+function renderLibraryBoardPortalLead(boardPosts) {
+  const starters = boardPosts.slice(0, 5);
+  const first = starters[0];
+  return `<section class="home-portal-lead library-board-portal-lead" aria-label="Library Board front entrance">
+          <article class="home-lead-story">
+            <p class="label">Library Board Guide Desk</p>
+            <h1>Understand the production system before choosing a package.</h1>
+            <p>The Library Board explains how scripts, Shorts hooks, scene workspaces, prompts, source notes, and archive links fit together without turning creator assets into the original story.</p>
+            ${first ? `<a class="button" href="/scripts/board/${escapeAttr(first.slug)}/">Open first guide</a>` : '<a class="button" href="/scripts/resources/">Open creator resources</a>'}
+          </article>
+          <div class="home-known-list library-board-starter-list">
+            <h2>Start with Library Board guides</h2>
+            ${starters.map(renderLibraryBoardStarterLink).join('')}
+          </div>
+        </section>`;
+}
+
+function renderLibraryBoardStarterLink(post, index) {
+  return `<a href="/scripts/board/${escapeAttr(post.slug)}/"><span>${String(index + 1).padStart(2, '0')}</span><strong>${escapeHtml(post.title)}</strong></a>`;
+}
+
+function renderLibraryBoardStructureDesk(boardPosts) {
+  const rows = boardPosts.slice(0, 4).map((post) => `<a class="home-headline-row library-board-row" href="/scripts/board/${escapeAttr(post.slug)}/"><span>${escapeHtml(post.tag || post.category || 'Guide')}</span><strong>${escapeHtml(post.title)}</strong></a>`).join('');
+  return `<section class="home-headline-desk library-board-structure-desk" aria-label="Library Board structure desk">
+          <div class="section-head"><h2>Structure Desk</h2><span>How creator resources connect</span></div>
+          <div class="headline-desk-grid">
+            <div class="headline-list">${rows}</div>
+            <aside class="home-context-card">
+              <p class="label">Creator Library guide</p>
+              <h3>Script detail pages hold materials; Board pages explain the system.</h3>
+              <p>Use this desk to understand where longform scripts, short-form scripts, prompts, music notes, optional production fields, and source boundaries belong.</p>
+              <div class="category-links"><a href="/scripts/">Creator Library</a><a href="/scripts/resources/">Creator Resources</a><a href="/scripts/categories/">Script Categories</a></div>
+            </aside>
+          </div>
+        </section>`;
+}
+
+function renderLibraryBoardGuidePaths(boardPosts) {
+  const groups = [
+    {
+      title: 'Choose the script format',
+      deck: 'Start here when a creator needs to decide between long-form narration, Shorts structure, scene planning, and a complete video package.',
+      posts: pickLibraryBoardPosts(boardPosts, [
+        'how-to-choose-between-long-form-and-short-form-scripts',
+        'how-to-build-a-complete-video-from-one-script-page',
+        'how-to-use-scene-workspaces-without-losing-the-story'
+      ])
+    },
+    {
+      title: 'Keep story and production separate',
+      deck: 'Use these guides when archive records, summaries, source notes, and creator assets need clear boundaries.',
+      posts: pickLibraryBoardPosts(boardPosts, [
+        'why-story-summary-comes-before-production-assets',
+        'how-original-archive-records-and-creator-scripts-stay-separate',
+        'how-creator-toolkit-fits-into-the-production-flow'
+      ])
+    },
+    {
+      title: 'Plan visual and optional fields',
+      deck: 'These guides explain scene focus, visual prompts, background music language, and advanced notes without making them mandatory.',
+      posts: pickLibraryBoardPosts(boardPosts, [
+        'how-to-read-scene-focus-before-writing-visual-prompts',
+        'how-background-music-keywords-shape-a-mystery-video',
+        'how-advanced-production-notes-should-stay-optional'
+      ])
+    }
+  ];
+  return `<section class="home-reader-paths library-board-guide-paths" aria-label="Library Board guide paths">
+          <div class="section-head"><h2>Library Guide Paths</h2><span>Creator guidance that leads back to packages</span></div>
+          <div class="home-path-grid">${groups.map(renderLibraryBoardPathGroup).join('')}</div>
+        </section>`;
+}
+
+function renderLibraryBoardPathGroup(group) {
+  return `<article>
+          <h3>${escapeHtml(group.title)}</h3>
+          <p>${escapeHtml(group.deck)}</p>
+          <div class="category-links">${group.posts.map(renderLibraryBoardSmallLink).join('')}</div>
+        </article>`;
+}
+
+function renderLibraryBoardSmallLink(post) {
+  return `<a href="/scripts/board/${escapeAttr(post.slug)}/">${escapeHtml(post.title)}</a>`;
+}
+
+function renderLibraryBoardGuideIndex(boardPosts) {
+  return `<section class="home-headline-desk library-board-guide-index" aria-label="All Library Board guides">
+          <div class="section-head"><h2>All Library Board Guides</h2><span>${escapeHtml(`${boardPosts.length} public guides`)}</span></div>
+          ${boardPosts.length ? `<div class="script-list">${boardPosts.map(renderLibraryBoardPostRow).join('\n')}</div>` : `<div class="notice"><strong>No Library Board guides yet:</strong> This board is ready for future Creator Library guidance.</div>`}
+        </section>`;
+}
+
+function renderLibraryBoardCrossroads({ latestScripts, guideLinks, popularStories }) {
+  return `<section class="home-crossroads library-board-crossroads" aria-label="Library Board crossroads">
+          <div class="section-head"><h2>Creator Roads</h2><span>Board guidance should connect both ways</span></div>
+          <div class="home-crossroad-grid">
+            <article>
+              <p class="category-group-label">Creator Library</p>
+              <h3><a href="/scripts/">Move from guide context into script packages</a></h3>
+              <p>After the Board explains a format or workflow, the Creator Library should give the visitor real script packages to open immediately.</p>
+              <div class="category-links">${latestScripts.slice(0, 3).map((script) => `<a href="/scripts/${escapeAttr(script.slug)}">${escapeHtml(script.title)}</a>`).join('')}</div>
+            </article>
+            <article>
+              <p class="category-group-label">Mystery Board</p>
+              <h3><a href="/mystery-board.html">Check source and reading context</a></h3>
+              <p>When production choices depend on uncertainty, source limits, or story type, the Mystery Board keeps the archive-reading side available.</p>
+              <div class="category-links">${guideLinks.map((guide) => `<a href="/mystery-board/${escapeAttr(guide.slug)}">${escapeHtml(guide.shortTitle || guide.title)}</a>`).join('')}</div>
+            </article>
+            <article>
+              <p class="category-group-label">Original Records</p>
+              <h3><a href="/archive.html">Keep roads back to the archive open</a></h3>
+              <p>Creator material should point back to original records when a visitor wants the story page instead of the production package.</p>
+              <div class="category-links">${popularStories.slice(0, 3).map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}</div>
+            </article>
+          </div>
+        </section>`;
+}
+
+function renderLibraryBoardPortalRail({ boardStarters, latestScripts, featuredScript, guideLinks }) {
+  return `<aside class="home-portal-rail creator-portal-rail library-board-portal-rail" aria-label="Library Board side paths">
+      ${renderKyunolabNetworkCard('scripts')}
+      ${featuredScript ? `<section class="rail-card rail-feature"><p class="rail-label">Script package</p><a href="/scripts/${escapeAttr(featuredScript.slug)}"><span>${escapeHtml(featuredScript.genre || 'Creator package')}</span><strong>${escapeHtml(featuredScript.title)}</strong></a></section>` : ''}
+      <section class="rail-card">
+        <p class="rail-label">Board starters</p>
+        ${boardStarters.slice(0, 4).map(renderLibraryBoardSmallLink).join('')}
+      </section>
+      <section class="rail-card rail-card-subtle">
+        <p class="rail-label">Creator paths</p>
+        <a href="/scripts/">Creator Library</a>
+        <a href="/scripts/categories/">Script Categories</a>
+        <a href="/scripts/resources/">Creator Resources</a>
+        ${latestScripts.slice(0, 2).map((script) => `<a href="/scripts/${escapeAttr(script.slug)}">${escapeHtml(script.title)}</a>`).join('')}
+      </section>
+      <section class="rail-card">
+        <p class="rail-label">Reading context</p>
+        <a href="/archive.html">Original Archive</a>
+        <a href="/mystery-board.html">Mystery Board</a>
+        ${guideLinks.slice(0, 1).map((guide) => `<a href="/mystery-board/${escapeAttr(guide.slug)}">${escapeHtml(guide.shortTitle || guide.title)}</a>`).join('')}
+      </section>
+    </aside>`;
+}
+
+function pickLibraryBoardPosts(boardPosts, slugs) {
+  return slugs.map((slug) => boardPosts.find((post) => post.slug === slug)).filter(Boolean);
 }
 
 function renderLibraryBoardPostRow(post) {
