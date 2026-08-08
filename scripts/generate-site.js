@@ -1040,32 +1040,120 @@ function getFeaturedScripts(scripts) {
 function renderScriptsListingPage({ canonicalPath, label, title, deck, sectionTitle, sectionMeta, scripts, pageTitle, description, pageNumber, totalPages, basePath }) {
   const pageStatus = totalPages > 1 ? `<p class="meta library-page-status">Page ${pageNumber} of ${totalPages}</p>` : '';
   const pagination = renderLibraryPagination({ basePath, pageNumber, totalPages, label });
+  const allSortedScripts = sortNewest(creatorScripts);
+  const featuredScript = scripts[0] || allSortedScripts[0];
+  const guideLinks = getHomeGuides([
+    'how-to-check-source-status',
+    'how-to-build-a-reading-path-through-the-strange-archive',
+    'how-to-find-internal-link-opportunities-without-forcing-them'
+  ]);
+  const popularStories = getConfiguredStories(siteConfig.popularStoryIds).slice(0, 4);
+  const isFeaturedListing = String(basePath || '').includes('/featured');
+  const listingClass = isFeaturedListing ? 'creator-featured-listing-page' : 'creator-latest-listing-page';
   return renderPage({
     canonicalPath,
     title: pageTitle,
     description,
     metaDescription: description,
     networkSection: 'scripts',
-    content: `  <main class="article-shell article-layout scripts-listing-page">
-    ${renderScriptsBoardLeftRail()}
-    <div class="archive-page-main">
-      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/scripts/">Creator Library</a><span aria-hidden="true">/</span><span aria-current="page">${escapeHtml(label)}</span></nav>
-      <p class="label">${escapeHtml(label)}</p>
-      <h1 class="article-title">${escapeHtml(title)}</h1>
-      ${pageStatus}
-      <p class="deck">${escapeHtml(deck)}</p>
-      <section class="notice">
-        <strong>Creator Library:</strong> These pages list script packages only. Original archive records remain in Kyunolab Mystery Archive and are linked only when a script package needs a source reference.
-      </section>
-      <section class="scripts-section">
-        <div class="section-head"><h2>${escapeHtml(sectionTitle)}</h2><span>${escapeHtml(sectionMeta)}</span></div>
-        ${scripts.length ? `<div class="script-list">${scripts.map(renderScriptRow).join('\n')}</div>` : `<div class="notice"><strong>No script packages yet:</strong> This page is ready for future creator materials.</div>`}
-        ${pagination}
-      </section>
+    footerSection: 'scripts',
+    bodyClass: 'home-portal-page',
+    headerHtml: renderCreatorPortalHeader(canonicalPath),
+    content: `  <main class="home-shell home-portal-shell creator-portal-page creator-listing-portal-page ${listingClass}">
+    <div class="home-portal-layout">
+      <div class="home-main-column">
+        ${renderCreatorListingPortalLead({ label, title, deck, scripts, pageStatus, isFeaturedListing })}
+        <section class="notice"><strong>Creator Library list:</strong> These pages list script packages only. Original archive records remain in Kyunolab Mystery Archive and are linked when a package needs source context.</section>
+        ${renderAdSlot(isFeaturedListing ? 'ad-creator-featured-after-intro' : 'ad-creator-latest-after-intro')}
+        <section class="home-headline-desk creator-package-listing" aria-label="${escapeAttr(label)} package list">
+          <div class="section-head"><h2>${escapeHtml(sectionTitle)}</h2><span>${escapeHtml(sectionMeta)}</span></div>
+          ${scripts.length ? `<div class="script-list">${scripts.map(renderScriptRow).join('\n')}</div>` : `<div class="notice"><strong>No script packages yet:</strong> This page is ready for future creator materials.</div>`}
+          ${pagination}
+        </section>
+        ${renderCreatorListingCrossroads({ isFeaturedListing, guideLinks, popularStories, latestScripts: allSortedScripts.slice(0, 5) })}
+      </div>
+      ${renderCreatorListingPortalRail({ label, featuredScript, listingScripts: scripts, latestScripts: allSortedScripts.slice(0, 5), guideLinks, popularStories, isFeaturedListing })}
     </div>
-    ${renderScriptCategoryRightRail(sortNewest(creatorScripts))}
   </main>`
   });
+}
+
+function renderCreatorListingPortalLead({ label, title, deck, scripts, pageStatus, isFeaturedListing }) {
+  const starters = scripts.slice(0, 5);
+  const labelText = isFeaturedListing ? 'Featured Package Desk' : 'Latest Package Feed';
+  const ctaHref = isFeaturedListing ? '/scripts/latest/' : '/scripts/featured/';
+  const ctaText = isFeaturedListing ? 'Open latest packages' : 'Open featured packages';
+  return `<section class="home-portal-lead creator-listing-portal-lead" aria-label="${escapeAttr(label)} front entrance">
+          <article class="home-lead-story">
+            <p class="label">${escapeHtml(labelText)}</p>
+            <h1>${escapeHtml(title)}</h1>
+            ${pageStatus}
+            <p>${escapeHtml(deck)}</p>
+            <a class="button" href="${escapeAttr(ctaHref)}">${escapeHtml(ctaText)}</a>
+          </article>
+          <div class="home-known-list creator-listing-starter-list">
+            <h2>Start with packages</h2>
+            ${starters.map(renderCreatorListingStarterLink).join('')}
+          </div>
+        </section>`;
+}
+
+function renderCreatorListingStarterLink(script, index) {
+  return `<a href="/scripts/${escapeAttr(script.slug)}"><span>${String(index + 1).padStart(2, '0')}</span><strong>${escapeHtml(script.title)}</strong><em>${escapeHtml(script.genre || script.contentType || 'Creator package')}</em></a>`;
+}
+
+function renderCreatorListingCrossroads({ isFeaturedListing, guideLinks, popularStories, latestScripts }) {
+  return `<section class="home-crossroads creator-listing-crossroads" aria-label="Creator package list crossroads">
+          <div class="section-head"><h2>Package Roads</h2><span>Lists should lead into packages and context</span></div>
+          <div class="home-crossroad-grid">
+            <article>
+              <p class="category-group-label">${isFeaturedListing ? 'Latest feed' : 'Featured shelf'}</p>
+              <h3><a href="${isFeaturedListing ? '/scripts/latest/' : '/scripts/featured/'}">${isFeaturedListing ? 'Browse the newest production packages' : 'Start from stronger entry packages'}</a></h3>
+              <p>${isFeaturedListing ? 'Featured pages stay selective; the latest feed keeps the full production stream visible.' : 'Latest pages move quickly; featured packages give visitors a smaller starting set.'}</p>
+              <div class="category-links">${latestScripts.slice(0, 3).map((script) => `<a href="/scripts/${escapeAttr(script.slug)}">${escapeHtml(script.title)}</a>`).join('')}</div>
+            </article>
+            <article>
+              <p class="category-group-label">Creator shelves</p>
+              <h3><a href="/scripts/categories/">Use categories when the visitor wants a topic path</a></h3>
+              <p>Category shelves turn a long package list into repeatable browsing paths for urban legends, folklore, myths, places, and objects.</p>
+              <div class="category-links"><a href="/scripts/categories/">Script Categories</a><a href="/scripts/board/">Library Board</a><a href="/scripts/resources/">Creator Resources</a></div>
+            </article>
+            <article>
+              <p class="category-group-label">Archive context</p>
+              <h3><a href="/archive.html">Keep original records close to production pages</a></h3>
+              <p>Creator lists should still give visitors a road back to archive reading, source notes, and story context.</p>
+              <div class="category-links">${popularStories.slice(0, 2).map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}${guideLinks.slice(0, 1).map((guide) => `<a href="/mystery-board/${escapeAttr(guide.slug)}">${escapeHtml(guide.shortTitle || guide.title)}</a>`).join('')}</div>
+            </article>
+          </div>
+        </section>`;
+}
+
+function renderCreatorListingPortalRail({ label, featuredScript, listingScripts, latestScripts, guideLinks, popularStories, isFeaturedListing }) {
+  return `<aside class="home-portal-rail creator-portal-rail creator-listing-portal-rail" aria-label="${escapeAttr(label)} side paths">
+      ${renderKyunolabNetworkCard('scripts')}
+      ${featuredScript ? `<section class="rail-card rail-feature"><p class="rail-label">${isFeaturedListing ? 'Featured start' : 'Latest start'}</p><a href="/scripts/${escapeAttr(featuredScript.slug)}"><span>${escapeHtml(featuredScript.genre || 'Creator package')}</span><strong>${escapeHtml(featuredScript.title)}</strong></a></section>` : ''}
+      <section class="rail-card">
+        <p class="rail-label">Package lists</p>
+        <a href="/scripts/latest/">Latest Scripts</a>
+        <a href="/scripts/featured/">Featured Scripts</a>
+        <a href="/scripts/categories/">Script Categories</a>
+        <a href="/scripts/">Creator Library</a>
+      </section>
+      <section class="rail-card rail-card-subtle">
+        <p class="rail-label">Visible packages</p>
+        ${listingScripts.slice(0, 3).map((script) => `<a href="/scripts/${escapeAttr(script.slug)}">${escapeHtml(script.title)}</a>`).join('')}
+      </section>
+      <section class="rail-card">
+        <p class="rail-label">Creator guidance</p>
+        <a href="/scripts/board/">Library Board</a>
+        <a href="/scripts/resources/">Creator Resources</a>
+        ${guideLinks.slice(0, 1).map((guide) => `<a href="/mystery-board/${escapeAttr(guide.slug)}">${escapeHtml(guide.shortTitle || guide.title)}</a>`).join('')}
+      </section>
+      <section class="rail-card rail-card-subtle">
+        <p class="rail-label">Original records</p>
+        ${popularStories.slice(0, 3).map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}
+      </section>
+    </aside>`;
 }
 
 function renderScriptCategoriesPage(scripts) {

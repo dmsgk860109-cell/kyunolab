@@ -23,43 +23,80 @@
   <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="/styles.css?v=20260804-nav-flow">
 </head>
-<body>
-  <header class="site-header site-header-scripts">
-    <div class="topline">A Kyuno Lab creator resource</div>
-    <div class="header-inner">
-      <a class="brand" href="/scripts/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Creator Library</strong><em>Free mystery YouTube scripts for creators.</em></span></a>
-
-      <form class="site-search" action="/search/" method="get" role="search" aria-label="Search Archive or Creator Library">
-        <label class="sr-only" for="global-search-type">Search target</label>
-        <select id="global-search-type" name="type" class="site-search-select" data-search-type>
-          <option value="archive">Archive</option>
-          <option value="library" selected>Creator Library</option>
-        </select>
-        <label class="sr-only" for="global-search-query">Search query</label>
-        <input id="global-search-query" name="q" class="site-search-input" type="search" placeholder="Search Creator Library..." autocomplete="off" data-search-input>
-        <button class="site-search-button" type="submit">SEARCH</button>
-      </form>
-      <nav class="nav"><a href="/scripts/latest/" class="active" aria-current="page">Latest</a><a href="/scripts/featured/">Featured</a><a href="/scripts/categories/">Categories</a><a href="/scripts/board/">Library Board</a><a href="/scripts/resources/">Resources</a></nav>
+<body class="home-portal-page">
+  <header class="home-portal-header creator-portal-header">
+    <div class="home-portal-header-inner">
+      <div class="home-portal-topbar">
+        <a class="home-portal-brand" href="/scripts/"><span class="home-portal-brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Creator Library</strong><em>Scripts, prompts, thumbnails, and creator resources.</em></span></a>
+        <form class="site-search home-portal-search" action="/search/" method="get" role="search" aria-label="Search Kyunolab Creator Library">
+          <input type="hidden" name="type" value="library">
+          <label class="sr-only" for="creator-portal-search-query">Search query</label>
+          <input id="creator-portal-search-query" name="q" class="site-search-input" type="search" placeholder="Search scripts, prompts, packs, formats..." autocomplete="off" data-search-input>
+          <button class="site-search-button" type="submit">Search</button>
+        </form>
+      </div>
+      <nav class="home-portal-nav" aria-label="Primary Creator Library navigation">
+        <a href="/">Home</a>
+        <a href="/archive.html">Archive</a>
+        <a href="/categories.html">Categories</a>
+        <a href="/mystery-board.html">Mystery Board</a>
+        <a href="/scripts/" class="active" aria-current="page">Creator Library</a>
+        <a href="/tools.html">Tools</a>
+        <a href="/about.html">About</a>
+        <a href="/hub.html" class="home-portal-hub-link">Hub</a>
+      </nav>
+      <section class="home-sign-system creator-sign-system" aria-label="Kyunolab creator paths">
+          <div class="home-sign-intro">
+            <p class="label">Start Here</p>
+            <h2>Choose a production package first, then follow the roads back to the archive.</h2>
+            <p>Begin with scripts, browse creator shelves, or cross into source guides, original records, and future tools.</p>
+          </div>
+          <div class="home-sign-links">
+            <div>
+              <h3>Creator Materials</h3>
+              <a href="/scripts/featured/">Featured Scripts</a>
+              <a href="/scripts/latest/">Latest Scripts</a>
+              <a href="/scripts/categories/">Script Categories</a>
+              <a href="/scripts/resources/">Creator Resources</a>
+            </div>
+            <div>
+              <h3>Use The Map</h3>
+              <a href="/archive.html">Original Archive</a>
+              <a href="/mystery-board.html">Reading Guides</a>
+              <a href="/tools.html">Tools</a>
+              <a href="/hub.html">Hub</a>
+            </div>
+          </div>
+          <div class="home-small-buildings">
+            <h3>Site Notes</h3>
+            <a href="/scripts/board/">Library Board</a>
+            <a href="/fiction-disclaimer.html">Story and source notice</a>
+            <a href="/about.html">About Kyunolab</a>
+          </div>
+        </section>
     </div>
   </header>
-  <main class="article-shell article-layout scripts-listing-page">
-    <aside class="article-rail article-rail-left" aria-label="Library Board navigation">
-      <div class="rail-card"><p class="rail-label">Creator Paths</p><a href="/scripts/">Creator Home</a><a href="/scripts/categories/">Script Categories</a><a href="/scripts/board/">Library Board</a><a href="/scripts/resources/">Creator Resources</a></div>
-      <div class="rail-card rail-card-subtle"><p class="rail-label">Script Shelves</p><a href="/scripts/featured/">Featured Scripts</a><a href="/scripts/latest/">Latest Scripts</a><a href="/scripts/categories/">Browse by Script Type</a></div>
-      <div class="rail-card"><p class="rail-label">Usage Guide</p><a href="/scripts/resources/">Creator Resources</a><a href="/scripts/">Free Mystery YouTube Scripts</a></div>
-    </aside>
-    <div class="archive-page-main">
-      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/scripts/">Creator Library</a><span aria-hidden="true">/</span><span aria-current="page">Latest Scripts</span></nav>
-      <p class="label">Latest Scripts</p>
-      <h1 class="article-title">Latest mystery YouTube scripts</h1>
-      <p class="meta library-page-status">Page 23 of 38</p>
-      <p class="deck">The newest creator-ready script packages from Kyunolab Creator Library, arranged for longform narration, Shorts planning, image prompts, thumbnails, and production notes.</p>
-      <section class="notice">
-        <strong>Creator Library:</strong> These pages list script packages only. Original archive records remain in Kyunolab Mystery Archive and are linked only when a script package needs a source reference.
-      </section>
-      <section class="scripts-section">
-        <div class="section-head"><h2>Newest creator materials</h2><span>371 script packages</span></div>
-        <div class="script-list"><article class="script-row">
+  <main class="home-shell home-portal-shell creator-portal-page creator-listing-portal-page creator-latest-listing-page">
+    <div class="home-portal-layout">
+      <div class="home-main-column">
+        <section class="home-portal-lead creator-listing-portal-lead" aria-label="Latest Scripts front entrance">
+          <article class="home-lead-story">
+            <p class="label">Latest Package Feed</p>
+            <h1>Latest mystery YouTube scripts</h1>
+            <p class="meta library-page-status">Page 23 of 38</p>
+            <p>The newest creator-ready script packages from Kyunolab Creator Library, arranged for longform narration, Shorts planning, image prompts, thumbnails, and production notes.</p>
+            <a class="button" href="/scripts/featured/">Open featured packages</a>
+          </article>
+          <div class="home-known-list creator-listing-starter-list">
+            <h2>Start with packages</h2>
+            <a href="/scripts/the-mountain-pass-toll-record-for-a-silent-bell-youtube-script"><span>01</span><strong>The Mountain Pass Toll Record for a Silent Bell YouTube Script</strong><em>Legendary Places Creator Library</em></a><a href="/scripts/the-museum-acquisition-card-for-an-object-not-found-youtube-script"><span>02</span><strong>The Museum Acquisition Card for an Object Not Found YouTube Script</strong><em>Unexplained Mysteries Creator Library</em></a><a href="/scripts/the-museum-corridor-file-receipt-book-with-a-future-stamp-youtube-script"><span>03</span><strong>The Museum Corridor File Receipt Book With a Future Stamp YouTube Script</strong><em>Strange Places Creator Library</em></a><a href="/scripts/the-mushroom-field-notebook-with-nighttime-spore-counts-youtube-script"><span>04</span><strong>The Mushroom Field Notebook With Nighttime Spore Counts YouTube Script</strong><em>Strange Nature Creator Library</em></a><a href="/scripts/the-mushroom-plot-notebook-map-note-pointing-to-a-removed-door-youtube-script"><span>05</span><strong>The Mushroom Plot Notebook Map Note Pointing to a Removed Door YouTube Script</strong><em>Strange Nature Creator Library</em></a>
+          </div>
+        </section>
+        <section class="notice"><strong>Creator Library list:</strong> These pages list script packages only. Original archive records remain in Kyunolab Mystery Archive and are linked when a package needs source context.</section>
+        <aside class="ad-slot" data-ad-slot="ad-creator-latest-after-intro" aria-label="Advertisement"><span>Advertisement</span></aside>
+        <section class="home-headline-desk creator-package-listing" aria-label="Latest Scripts package list">
+          <div class="section-head"><h2>Newest creator materials</h2><span>371 script packages</span></div>
+          <div class="script-list"><article class="script-row">
         <div><span class="tag">Legendary Places Creator Library</span><h3><a href="/scripts/the-mountain-pass-toll-record-for-a-silent-bell-youtube-script">The Mountain Pass Toll Record for a Silent Bell YouTube Script</a></h3></div>
         <p>The Mountain Pass Toll Record for a Silent Bell is prepared as a creator-ready production workspace based on the archive record, with long-form scenes, Shorts narration, image prompts, music keywords, and editing notes.</p>
         <div class="meta">5-6 minutes - longform script, Shorts script, image prompts, thumbnail ideas</div>
@@ -109,24 +146,67 @@
         <p>The Office Calendar Room List Audit Log From a Silent Hour is prepared as a creator-ready production workspace based on the archive record, with long-form scenes, Shorts narration, image prompts, music keywords, and editing notes.</p>
         <div class="meta">5-6 minutes - longform script, Shorts script, image prompts, thumbnail ideas</div>
       </article></div>
-        <nav class="pagination library-pagination" aria-label="Latest Scripts pagination"><div class="pagination-status">Page 23 of 38</div><div class="pagination-links"><a class="page-link page-step" href="/scripts/latest/page/22/" aria-label="Previous page">Previous</a><a class="page-link" href="/scripts/latest/" aria-label="Page 1">1</a><span class="page-link is-disabled" aria-hidden="true">...</span><a class="page-link" href="/scripts/latest/page/22/" aria-label="Page 22">22</a><span class="page-link is-current" aria-current="page">23</span><a class="page-link" href="/scripts/latest/page/24/" aria-label="Page 24">24</a><span class="page-link is-disabled" aria-hidden="true">...</span><a class="page-link" href="/scripts/latest/page/38/" aria-label="Page 38">38</a><a class="page-link page-step" href="/scripts/latest/page/24/" aria-label="Next page">Next</a></div></nav>
-      </section>
-    </div>
-    <aside class="article-rail article-rail-right" aria-label="Creator category recommendations">
+          <nav class="pagination library-pagination" aria-label="Latest Scripts pagination"><div class="pagination-status">Page 23 of 38</div><div class="pagination-links"><a class="page-link page-step" href="/scripts/latest/page/22/" aria-label="Previous page">Previous</a><a class="page-link" href="/scripts/latest/" aria-label="Page 1">1</a><span class="page-link is-disabled" aria-hidden="true">...</span><a class="page-link" href="/scripts/latest/page/22/" aria-label="Page 22">22</a><span class="page-link is-current" aria-current="page">23</span><a class="page-link" href="/scripts/latest/page/24/" aria-label="Page 24">24</a><span class="page-link is-disabled" aria-hidden="true">...</span><a class="page-link" href="/scripts/latest/page/38/" aria-label="Page 38">38</a><a class="page-link page-step" href="/scripts/latest/page/24/" aria-label="Next page">Next</a></div></nav>
+        </section>
+        <section class="home-crossroads creator-listing-crossroads" aria-label="Creator package list crossroads">
+          <div class="section-head"><h2>Package Roads</h2><span>Lists should lead into packages and context</span></div>
+          <div class="home-crossroad-grid">
+            <article>
+              <p class="category-group-label">Featured shelf</p>
+              <h3><a href="/scripts/featured/">Start from stronger entry packages</a></h3>
+              <p>Latest pages move quickly; featured packages give visitors a smaller starting set.</p>
+              <div class="category-links"><a href="/scripts/agartha-hollow-earth-legend-youtube-script">Agartha Hollow Earth Legend YouTube Script</a><a href="/scripts/amber-room-mystery-youtube-script">Amber Room Mystery YouTube Script</a><a href="/scripts/ark-of-the-covenant-legend-youtube-script">Ark of the Covenant Legend YouTube Script</a></div>
+            </article>
+            <article>
+              <p class="category-group-label">Creator shelves</p>
+              <h3><a href="/scripts/categories/">Use categories when the visitor wants a topic path</a></h3>
+              <p>Category shelves turn a long package list into repeatable browsing paths for urban legends, folklore, myths, places, and objects.</p>
+              <div class="category-links"><a href="/scripts/categories/">Script Categories</a><a href="/scripts/board/">Library Board</a><a href="/scripts/resources/">Creator Resources</a></div>
+            </article>
+            <article>
+              <p class="category-group-label">Archive context</p>
+              <h3><a href="/archive.html">Keep original records close to production pages</a></h3>
+              <p>Creator lists should still give visitors a road back to archive reading, source notes, and story context.</p>
+              <div class="category-links"><a href="/stories/backrooms-digital-labyrinth">The Backrooms: Digital Labyrinth, Liminal Space, and the Internet&#39;s Endless Yellow Room</a><a href="/stories/bloody-mary-mirror-legend">Bloody Mary: Mirror Ritual, Sleepover Dare, and the Face That Appears When Children Call</a><a href="/mystery-board/how-to-check-source-status">Source Status</a></div>
+            </article>
+          </div>
+        </section>
+      </div>
+      <aside class="home-portal-rail creator-portal-rail creator-listing-portal-rail" aria-label="Latest Scripts side paths">
       <div class="rail-card rail-card-network">
         <p class="rail-label">Kyunolab Network</p>
         <strong>Mystery Archive</strong>
         <p>Read the original legends, folklore, strange stories, and mystery records.</p>
         <a class="button" href="/">Open Mystery Archive</a>
       </div>
-      <div class="rail-card rail-feature"><p class="rail-label">Start here</p><a href="/scripts/agartha-hollow-earth-legend-youtube-script"><span>Lost Worlds Creator Library</span><strong>Agartha Hollow Earth Legend YouTube Script</strong></a></div>
-      <div class="rail-card"><p class="rail-label">Latest scripts</p><a href="/scripts/agartha-hollow-earth-legend-youtube-script">Agartha Hollow Earth Legend YouTube Script</a><a href="/scripts/amber-room-mystery-youtube-script">Amber Room Mystery YouTube Script</a><a href="/scripts/ark-of-the-covenant-legend-youtube-script">Ark of the Covenant Legend YouTube Script</a></div>
-      <div class="rail-card"><p class="rail-label">Creator paths</p><a href="/scripts/board/">Library Board</a><a href="/scripts/resources/">Creator Resources</a><a href="/scripts/">Free Mystery YouTube Scripts</a></div>
+      <section class="rail-card rail-feature"><p class="rail-label">Latest start</p><a href="/scripts/the-mountain-pass-toll-record-for-a-silent-bell-youtube-script"><span>Legendary Places Creator Library</span><strong>The Mountain Pass Toll Record for a Silent Bell YouTube Script</strong></a></section>
+      <section class="rail-card">
+        <p class="rail-label">Package lists</p>
+        <a href="/scripts/latest/">Latest Scripts</a>
+        <a href="/scripts/featured/">Featured Scripts</a>
+        <a href="/scripts/categories/">Script Categories</a>
+        <a href="/scripts/">Creator Library</a>
+      </section>
+      <section class="rail-card rail-card-subtle">
+        <p class="rail-label">Visible packages</p>
+        <a href="/scripts/the-mountain-pass-toll-record-for-a-silent-bell-youtube-script">The Mountain Pass Toll Record for a Silent Bell YouTube Script</a><a href="/scripts/the-museum-acquisition-card-for-an-object-not-found-youtube-script">The Museum Acquisition Card for an Object Not Found YouTube Script</a><a href="/scripts/the-museum-corridor-file-receipt-book-with-a-future-stamp-youtube-script">The Museum Corridor File Receipt Book With a Future Stamp YouTube Script</a>
+      </section>
+      <section class="rail-card">
+        <p class="rail-label">Creator guidance</p>
+        <a href="/scripts/board/">Library Board</a>
+        <a href="/scripts/resources/">Creator Resources</a>
+        <a href="/mystery-board/how-to-check-source-status">Source Status</a>
+      </section>
+      <section class="rail-card rail-card-subtle">
+        <p class="rail-label">Original records</p>
+        <a href="/stories/backrooms-digital-labyrinth">The Backrooms: Digital Labyrinth, Liminal Space, and the Internet&#39;s Endless Yellow Room</a><a href="/stories/bloody-mary-mirror-legend">Bloody Mary: Mirror Ritual, Sleepover Dare, and the Face That Appears When Children Call</a><a href="/stories/baba-yaga-folklore">Baba Yaga: Forest Witch, Bone-Legged Grandmother, and the Test at the Edge of the World</a>
+      </section>
     </aside>
+    </div>
   </main>
   <footer class="site-footer">
-    <p><strong>Kyunolab Mystery Archive</strong> collects legends, folklore, mysteries, and strange tales with calm source-aware notes.</p>
-    <p><a href="/archive.html">All Stories</a> - <a href="/newest.html">Newest</a> - <a href="/popular.html">Popular</a> - <a href="/categories.html">Categories</a> - <a href="/scripts/">Scripts</a> - <a href="/tools.html">Tools</a> - <a href="/hub.html">Hub</a> - <a href="/about.html">About</a> - <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a> - <a href="/privacy.html">Privacy</a> - <a href="/rss.xml">RSS</a> - <a href="/publishing-center/">Publishing Center</a></p>
+    <p><strong>Kyunolab Creator Library</strong> provides creator-ready scripts, Shorts hooks, image prompts, thumbnail ideas, and planning resources connected to the Kyunolab Mystery Archive.</p>
+    <p><a href="/scripts/">Scripts Home</a> - <a href="/scripts/latest/">Latest</a> - <a href="/scripts/featured/">Featured</a> - <a href="/scripts/categories/">Script Categories</a> - <a href="/scripts/board/">Library Board</a> - <a href="/scripts/resources/">Creator Resources</a> - <a href="/">Mystery Archive</a> - <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a> - <a href="/privacy.html">Privacy</a> - <a href="/rss.xml">RSS</a></p>
   </footer>  <script defer src="/assets/global-search.js?v=20260804-nav-flow"></script>
 </body>
 </html>
