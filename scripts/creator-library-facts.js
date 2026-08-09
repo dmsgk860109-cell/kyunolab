@@ -470,10 +470,22 @@ function evidenceStrings(evidence) {
 
 function extractVisualTerms(value, knownNames = []) {
   const text = cleanText(value);
+  const phraseTerms = [
+    [/\bempty yellow room\b/i, 'empty yellow room'],
+    [/\bfluorescent hum\b/i, 'fluorescent hum'],
+    [/\bdigital labyrinth\b/i, 'digital labyrinth'],
+    [/\bliminal space\b/i, 'liminal space'],
+    [/\bonline myth\b/i, 'online myth'],
+    [/\bendless rooms?\b/i, 'endless rooms'],
+    [/\bmodern myth\b/i, 'modern myth']
+  ]
+    .filter(([pattern]) => pattern.test(text))
+    .map(([, term]) => term);
   const terms = [
+    ...phraseTerms,
     ...knownNames.filter((name) => text.toLowerCase().includes(String(name).toLowerCase())),
     ...(text.match(/\b(?:record|minutes|ticket|ledger|register|stamp|door|road|sun|rope|name|book|image|photo|room|temple|river|sea|island|forest|house|apartment|screen|code|cipher|map|letter|stone|fire|sky|field|train|hotel|cemetery|library|camera|archive|file|log|history|staircase|crate|weight|goat|spool|signature|wiki|weather|subscription|service|user|database|calendar|clock|receipt|inventory|notebook|folder|panel|dashboard|playlist|album|browser)\b/gi) || []),
-    ...text.split(/\s+/).filter((word) => word.length > 4 && !/^(origin|meaning|legend|story|record|article|source|subject|entry|built|around|centers|public|urban|myths?)$/i.test(word)).slice(0, 4)
+    ...text.split(/\s+/).filter((word) => word.length > 4 && !/^(origin|meaning|legend|story|record|article|source|subject|entry|built|around|centers|public|urban|myths?|birth|digital|preserves|tension|without|overstating|works|because|enough|moving|retellings|feeling|ordinary|opened)$/i.test(word)).slice(0, 4)
   ];
   return unique(terms.map(cleanText).filter(Boolean)).slice(0, 8);
 }

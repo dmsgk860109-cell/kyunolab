@@ -324,7 +324,7 @@ function uniquifySceneFocus(sceneFocus, context, seen) {
   for (const record of records) {
     const text = lowercaseStart(stripFinalPunctuation(realizeVisualFact(record, context)));
     if (!text) continue;
-    const expanded = sanitizeProductionText(`${candidate} Frame it through ${text}.`);
+    const expanded = sanitizeProductionText(`${candidate} Frame it through ${visualCueFromRecord(record, context.normalizedInput.topic)}.`);
     key = exactTextKey(expanded);
     if (!seen.has(key)) {
       seen.add(key);
@@ -378,8 +378,8 @@ function uniquifyBeatField(value, context, seen, field) {
   );
   const passage = visualPhaseForBeat(context.partPlan, context.beatIndex);
   const addition = field === 'imagePrompt'
-    ? `Keep ${detail} visible as the distinct ${passage}.`
-    : `Let ${detail} remain the distinct ${passage}.`;
+    ? `Keep ${detail} visible as a separate visual detail.`
+    : `Let ${detail} remain visible as a separate motion detail.`;
   candidate = sanitizeProductionText(`${candidate} ${addition}`);
   key = exactTextKey(candidate);
   if (!seen.has(key)) {
@@ -483,17 +483,19 @@ function selectNarrationFactRecord(context, selectedRecords) {
 function realizeVisualFact(record, context = {}) {
   if (!record?.factText) return context.normalizedInput?.topic || 'the central subject';
   const text = safeTerm(record.factText);
+  const compact = compactVisualPhrase(text, '');
+  if (compact && (text.length > 80 || /article preserves|works because|without overstating/i.test(text))) return compact;
   if (record.factType === 'variant') return `the variant detail that ${lowercaseStart(text)}`;
-  if (record.factType === 'source-context') return `the source boundary around ${lowercaseStart(text)}`;
-  if (record.factType === 'meaning') return `the interpretation connected to ${lowercaseStart(text)}`;
+  if (record.factType === 'source-context') return sourceBoundaryPhrase(text);
+  if (record.factType === 'meaning') return meaningVisualPhrase(text);
   return text;
 }
 
 function buildImagePromptForBeat(context) {
   const { normalizedInput, productionProfile, scene, partPlan, beatIndex, beatPlan } = context;
   const subject = safePromptValue(beatPlan.subject || normalizedInput.topic);
-  const actionOrState = safePromptValue(stripFinalPunctuation(beatPlan.actionOrState));
-  const setting = safePromptValue(stripFinalPunctuation(beatPlan.setting));
+  const actionOrState = imageActionPhrase(beatPlan.actionOrState);
+  const setting = settingPhrase(beatPlan.setting);
   const composition = beatPlan.compositionType || compositionForBeat(scene, partPlan, beatIndex);
   const lighting = lightingForScene(scene, productionProfile);
   const atmosphere = safePromptValue(selectAtmosphere(productionProfile, scene));
@@ -514,13 +516,13 @@ function buildBeatMotionForBeat(context) {
   const { scene, partPlan, beatIndex, beatPlan, productionProfile } = context;
   const subject = safeMotionValue(beatPlan.subject || context.normalizedInput.topic, context.normalizedInput.topic);
   const setting = safePromptValue(beatPlan.setting);
-  const visualTarget = safeMotionValue(truncateWords(selectMotionTarget(beatPlan.actionOrState, beatPlan.setting, subject), 14), subject);
+  const visualTarget = safeMotionValue(motionTargetFromAction(beatPlan.actionOrState, beatPlan.setting, subject), subject);
   const visualDetail = safeMotionValue((beatPlan.visualTerms || [])[beatIndex] || (beatPlan.supportingObjects || [])[beatIndex] || beatPlan.compositionType || visualTarget, visualTarget);
   const motionPhase = motionPhaseForBeat(partPlan, beatIndex);
   const movements = [
-    `Use a slow controlled push toward ${subject}, with ${visualTarget} staying fixed as the ${motionPhase} and ${visualDetail} visible.`,
-    `Use a restrained lateral pan across ${setting}, letting ${subject} hold the ${motionPhase} while ${visualDetail} stays in frame.`,
-    `Start with a static hold, then pull back slightly to reveal ${visualTarget} and ${visualDetail} within the wider frame.`
+    `Use a slow controlled push toward ${subject}, keeping ${visualTarget} as the ${motionPhase}.`,
+    `Use a restrained lateral pan across ${setting}, keeping ${visualDetail} in frame beside ${subject}.`,
+    `Start with a static hold, then pull back slightly to reveal ${visualTarget} with ${visualDetail}.`
   ];
   const movementIndex = (beatIndex + Number(partPlan.partIndex || 1) - 1) % movements.length;
   const role = sceneRoleText(scene);
@@ -569,27 +571,30 @@ function selectEntityFromRecords(records, fallback) {
 }
 
 function actionStateFromFactRecord(record, subject) {
-  const text = stripFinalPunctuation(safeTerm(record.factText));
-  if (!text) return 'held as the central visual subject';
-  if (record.factType === 'subject') return 'held as the central visual subject';
-  if (record.factType === 'relationship') return `shown through ${lowercaseStart(text)}`;
-  if (record.factType === 'setting') return `placed within ${lowercaseStart(text)}`;
-  if (record.factType === 'variant') return `associated with a variant where ${lowercaseStart(text)}`;
-  if (record.factType === 'source-context') return `shown through source material connected to ${lowercaseStart(text)}`;
-  if (record.factType === 'meaning') return `framed by the interpretation that ${lowercaseStart(text)}`;
-  return `connected to ${lowercaseStart(truncateWords(text, 22))}`;
+  const cue = visualCueFromRecord(record, subject);
+  if (!cue) return 'as the main visual subject';
+  if (record.factType === 'subject') return 'as the main visual subject';
+  if (record.factType === 'relationship') return `framed through ${cue}`;
+  if (record.factType === 'setting') return `inside ${cue}`;
+  if (record.factType === 'variant') return `showing a version detail around ${cue}`;
+  if (record.factType === 'source-context') return `held inside the source boundary around ${cue}`;
+  if (record.factType === 'meaning') return `interpreted through ${cue}`;
+  return `showing ${cue}`;
 }
 
 function selectSupportingObjects(record, context) {
-  return uniqueText([
+  const cleaned = uniqueText([
     ...(record.visualTerms || []),
     ...(context.productionProfile.allowedObjects || []),
     ...(record.settingTerms || [])
   ])
     .map(stripFinalPunctuation)
+    .map(cleanVisualTerm)
     .filter((item) => !/[,.]$/.test(item))
-    .filter((item) => !/^(once|later|some|one|another|the|this|that|appeared)$/i.test(item))
-    .filter((item) => exactTextKey(item) !== exactTextKey(record.factText))
+    .filter(isUsefulVisualTerm)
+    .filter((item) => exactTextKey(item) !== exactTextKey(record.factText));
+  return uniqueText(cleaned)
+    .filter((item, index, values) => exactTextKey(item) !== 'labyrinth' || !values.some((value) => exactTextKey(value) === 'digital labyrinth'))
     .slice(0, 4);
 }
 
@@ -762,6 +767,14 @@ function sanitizeProductionText(value) {
     .replace(/\bsource-aware\b/gi, 'source-limited')
     .replace(/\bis a pre-existing [a-z\s-]+ built\b/gi, 'is preserved')
     .replace(/\bviewer should\b/gi, 'the image should')
+    .replace(/\bwith\s+with\b/gi, 'with')
+    .replace(/\bwith\s+without\b/gi, 'with the source limit visible')
+    .replace(/\bsource boundary([A-Za-z])\b/g, 'source boundary and $1')
+    .replace(/\bsource boundary the\b/gi, 'source boundary around the')
+    .replace(/\breveal\s+as the main visual\s+with\b/gi, 'reveal the main visual with')
+    .replace(/\bthe\s+in\b/gi, 'the main detail in')
+    .replace(/\bmaking the depend\b/gi, 'making the scene depend')
+    .replace(/\bReveal\s+([A-Z][A-Za-z-]*)\.\s+from\b/g, 'Reveal $1 from')
     .replace(/\baround\s+and\b/gi, 'around the main detail and')
     .replace(/\bcenters(?:\s+on)?\s+and\b/gi, 'centers on the main detail and')
     .replace(/\bsome\s+a\b/gi, 'some describe a')
@@ -778,7 +791,8 @@ function buildSceneFocusForScene(context) {
     context.normalizedInput.coreProblem,
     context.normalizedInput.topic
   );
-  return sanitizeProductionText(`The central visual should show ${lowercaseStart(stripFinalPunctuation(fact))}.`);
+  const subject = selectEntityFromRecords(context.scene.factRecords || [], context.normalizedInput.topic);
+  return sanitizeProductionText(`The central visual should keep ${subject} tied to ${plainVisualClause(stripFinalPunctuation(fact))}.`);
 }
 
 function noteCautionForPart(context, narration) {
@@ -821,7 +835,7 @@ function actionStateFromFact(fact, fallbackSubject) {
   const clean = safeTerm(fact);
   if (!clean || containsInternalProductionMetadata(clean)) return `present as ${lowercaseStart(fallbackSubject)}`;
   const short = truncateWords(clean, 18).replace(/[.!?]+$/, '');
-  return `connected to ${lowercaseStart(short)}`;
+  return `with ${plainVisualClause(short)}`;
 }
 
 function selectSetting(profile, scene, fact) {
@@ -953,11 +967,11 @@ function containsFieldMixing(value, words) {
 }
 
 function containsBrokenPromptText(value) {
-  return /(?:centers and|around and|some\s+a\b|avoid no|restrained restrained|\b(?:and|of|to|with)\s*[.!?]?$)/i.test(String(value || ''));
+  return /(?:centers and|around and|some\s+a\b|avoid no|restrained restrained|\bwith\s+with\b|\bthe\s+in\b|\bmaking the depend\b|\b(?:and|of|to|with)\s*[.!?]?$)/i.test(String(value || ''));
 }
 
 function containsBrokenMotionText(value) {
-  return /(?:slow slow|restrained restrained|focuses on the story|keep the subject readable|viewer should|appears clearly in the frame)/i.test(String(value || ''));
+  return /(?:slow slow|restrained restrained|\bwith\s+with\b|Reveal\s+[A-Z][A-Za-z-]*\.\s+from|focuses on the story|keep the subject readable|viewer should|appears clearly in the frame)/i.test(String(value || ''));
 }
 
 function containsInternalProductionMetadata(value) {
@@ -973,6 +987,10 @@ function detectBrokenProductionText(value) {
     /\bA ancient\b/i,
     /\bbecomes of\b/i,
     /\bconnected to its strongest image\b/i,
+    /\bwith\s+with\b/i,
+    /\bthe\s+in\b/i,
+    /\bmaking the depend\b/i,
+    /\bReveal\s+[A-Z][A-Za-z-]*\.\s+from\b/,
     /,,|\.\./,
     /\band\s+and\b/i,
     /\bof\s+of\b/i,
@@ -1100,6 +1118,111 @@ function safeTerm(value) {
   return sanitizeProductionText(value)
     .replace(/\s+/g, ' ')
     .trim();
+}
+
+function visualCueFromRecord(record, fallback) {
+  const compact = compactVisualPhrase(record?.factText, fallback);
+  if (compact && compact !== fallback && record?.factType !== 'subject') return compact;
+  const terms = uniqueText([
+    ...(record?.visualTerms || []),
+    ...(record?.settingTerms || []),
+    ...(record?.entities || [])
+  ])
+    .map(cleanVisualTerm)
+    .filter(isUsefulVisualTerm);
+  if (terms.length >= 2) return joinVisualTerms(terms.slice(0, 3));
+  if (terms.length === 1) return terms[0];
+  return compactVisualPhrase(record?.factText, fallback);
+}
+
+function plainVisualClause(value) {
+  const text = compactVisualPhrase(value, 'the central archive detail')
+    .replace(/\bit treats the material as folklore, legend, or documented retelling rather than confirmed fact\b/gi, 'the source limit')
+    .replace(/\blater retellings do not always keep the same emphasis\b/gi, 'the changing emphasis in later retellings')
+    .replace(/\bthe useful question is not whether every version is literal, but why\b/gi, 'the reason')
+    .replace(/\bthe article preserves that tension without overstating what the sources can support\b/gi, 'the source-limited tension')
+    .replace(/\bthe common idea presents\b/gi, 'the common idea of')
+    .replace(/\bconnected to\b/gi, 'with')
+    .replace(/\bshown through source material\b/gi, 'shown through source traces')
+    .replace(/\bshown through\b/gi, 'through')
+    .replace(/\bframed by the interpretation that\b/gi, 'interpreting')
+    .replace(/\bfollows\s+([a-z0-9 -]+)\s+follows\b/gi, 'follows')
+    .replace(/\s+/g, ' ')
+    .trim();
+  if (!text || /^(?:it|this|that|these)$/i.test(text)) return 'the central archive detail';
+  return lowercaseStart(text);
+}
+
+function sourceBoundaryPhrase(value) {
+  return `the source boundary around ${compactVisualPhrase(value, 'the central archive detail')}`;
+}
+
+function meaningVisualPhrase(value) {
+  return `the interpretation of ${compactVisualPhrase(value, 'the central archive detail')}`;
+}
+
+function compactVisualPhrase(value, fallback = 'the central archive detail') {
+  const text = stripFinalPunctuation(safeTerm(value));
+  const lower = text.toLowerCase();
+  if (!text) return fallback;
+  if (/empty yellow room|fluorescent hum|opened too far/.test(lower)) return 'the empty yellow room and fluorescent hum';
+  if (/liminal space|liminal/.test(lower)) return 'liminal rooms';
+  if (/digital labyrinth/.test(lower)) return 'the digital labyrinth';
+  if (/backrooms/.test(lower)) return 'the Backrooms';
+  if (/internet folklore|online folklore|community retelling/.test(lower)) return 'internet folklore context';
+  if (/source[- ]limited|source boundary|sources can support|source limit/.test(lower)) return 'the source boundary';
+  if (/modern myth/.test(lower)) return 'modern myth context';
+  const cleaned = cleanVisualTerm(text);
+  if (isUsefulVisualTerm(cleaned)) return truncateWords(cleaned, 10);
+  return fallback;
+}
+
+function motionTargetFromAction(actionOrState, setting, fallback) {
+  const text = safePromptValue(actionOrState)
+    .replace(/^(?:with|showing|inside|framed through|held inside|interpreted through)\s+/i, '')
+    .replace(/^a version detail around\s+/i, '')
+    .replace(/^the source boundary around\s+/i, 'the source boundary ')
+    .replace(/\s+/g, ' ')
+    .trim();
+  const target = truncateWords(text || setting || fallback, 10);
+  return target || fallback || 'the central visual detail';
+}
+
+function imageActionPhrase(value) {
+  const text = safePromptValue(stripFinalPunctuation(value));
+  if (/^showing\s+/i.test(text)) return `with ${text.replace(/^showing\s+/i, '')}`;
+  return text;
+}
+
+function settingPhrase(value) {
+  const text = safePromptValue(stripFinalPunctuation(value));
+  if (/^digital labyrinth$/i.test(text)) return 'a digital labyrinth';
+  if (/^backrooms$/i.test(text)) return 'the Backrooms';
+  return text;
+}
+
+function cleanVisualTerm(value) {
+  return stripFinalPunctuation(safeTerm(value))
+    .replace(/\b(?:works because|centers on|the article preserves|without overstating what the sources can support)\b/gi, '')
+    .replace(/\b(?:meaning|legend|story|article|account|record|source|sources|claim|overstating)\b$/gi, '')
+    .replace(/\b(?:preserves|tension|without|because|works|centers|digital|overstating)\b$/gi, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function isUsefulVisualTerm(value) {
+  const text = safeTerm(value);
+  if (!text) return false;
+  if (text.length < 3) return false;
+  if (/^(?:once|later|some|one|another|the|this|that|these|it|appeared|preserves|without|because|works|centers|meaning|legend|story|article|record|source|sources|overstating)$/i.test(text)) return false;
+  return true;
+}
+
+function joinVisualTerms(terms) {
+  const cleanTerms = terms.map(safeTerm).filter(Boolean);
+  if (cleanTerms.length <= 1) return cleanTerms[0] || '';
+  if (cleanTerms.length === 2) return `${cleanTerms[0]} and ${cleanTerms[1]}`;
+  return `${cleanTerms.slice(0, -1).join(', ')}, and ${cleanTerms[cleanTerms.length - 1]}`;
 }
 
 function safePromptValue(value) {

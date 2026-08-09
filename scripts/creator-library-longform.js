@@ -318,7 +318,7 @@ function buildNarrationPart(input) {
     previousRecord = record;
   }
 
-  const narration = cleanNarrationText(sentences.join(' '));
+  const narration = cleanNarrationText(dedupeNarrationSentences(sentences.join(' ')));
   const part = {
     partIndex: normalized.partPlan.partIndex,
     narration,
@@ -349,6 +349,8 @@ function realizeFactRecord(record, context = {}) {
 function buildFactSentence(record, context = {}) {
   const factText = cleanNarrationText(record?.factText || '');
   if (!factText) return '';
+  const naturalSentence = buildNaturalFactSentence(record, context, factText);
+  if (naturalSentence) return ensureSentence(naturalSentence);
   const style = TYPE_STYLE[record.factType] || TYPE_STYLE.event;
   if (isCompleteSentence(factText)) {
     const lead = selectLead(style.completeLeads, context, record);
@@ -356,6 +358,124 @@ function buildFactSentence(record, context = {}) {
   }
   const lead = selectLead(style.completeLeads, context, record);
   return ensureSentence(`${stripFinalPunctuation(lead)}: ${stripFinalPunctuation(style.phrase(stripFinalPunctuation(factText), context))}.`);
+}
+
+function buildNaturalFactSentence(record, context = {}, factText = '') {
+  const topic = cleanNarrationText(context.normalizedInput?.topic || 'The story');
+  const fact = stripFinalPunctuation(factText);
+  const visual = longformVisualAnchor(fact, topic);
+  if (record?.factType === 'subject') {
+    return sceneVariant(context, [
+      `${topic} gives the video a clear subject before the narration moves into concrete story details.`,
+      `Start from ${topic} as a recognizable title, then move quickly into the image that made it spread.`,
+      `Keep ${topic} named clearly, but let the episode feel driven by scenes instead of labels.`,
+      `${topic} should work as the production spine, not as a line repeated without new movement.`,
+      `Use ${topic} as the viewer's map through the package, from hook to source boundary.`,
+      `Let ${topic} introduce the subject while the following beats explain why people remember it.`,
+      `The script can name ${topic} early, then spend its energy on the strange image at the center.`,
+      `Treat ${topic} as the doorway into the video rather than the whole explanation.`,
+      `Return to ${topic} only when the audience needs orientation between details.`,
+      `Close the package with ${topic} still recognizable, but not flattened into a single fixed claim.`
+    ]);
+  }
+  if (/centers on internet folklore/i.test(fact)) {
+    return sceneVariant(context, [
+      `${topic} belongs to internet folklore, so the narration should feel like a shared online legend rather than a settled report.`,
+      `Treat ${topic} as an online legend that grew through repetition, screenshots, and audience retelling.`,
+      `Keep the internet folklore frame visible, because the story works through circulation more than through one fixed canon.`,
+      `The online setting matters: the story spreads because people keep adding paths, levels, and rules.`,
+      `Frame the topic as digital folklore, where the repeated image matters as much as any single origin.`,
+      `Let the internet context explain why the legend can feel shared even when its canon keeps changing.`,
+      `Use the online-folklore angle to keep the video grounded in retelling, not in false certainty.`,
+      `The narration should treat the spread itself as part of the story's strange power.`,
+      `Keep the digital crowd in the background: reposts and edits are part of how the legend survives.`,
+      `By the end, the internet folklore frame should make the uncertainty feel intentional rather than thin.`
+    ]);
+  }
+  if (/empty yellow room|fluorescent hum|opened too far/i.test(fact)) {
+    return sceneVariant(context, [
+      `The strongest hook is ${visual}, because it gives the audience something specific to picture before the legend expands.`,
+      `Use ${visual} as the first concrete image, then let the script explain why people kept building rooms beyond it.`,
+      `Let ${visual} carry the unease, so the video does not need to invent extra monsters or incidents.`,
+      `Return to ${visual} whenever the narration needs a clear visual anchor.`,
+      `Hold on ${visual} long enough for the audience to feel how ordinary the fear is.`,
+      `The visual package should keep ${visual} close, because that plain image is stronger than extra lore.`,
+      `Use ${visual} as the point where the story stops being abstract and becomes a place viewers can imagine.`,
+      `When the script widens into levels and rules, bring it back to ${visual} so the center does not disappear.`,
+      `Let ${visual} act like the recurring shot that ties the whole production together.`,
+      `The final section should remember ${visual} as the reason the legend still feels easy to enter.`
+    ]);
+  }
+  if (/source boundary|source limit|without turning the legend into a fixed claim/i.test(fact)) {
+    return sceneVariant(context, [
+      `Keep the source boundary visible, so the script can use the legend without pretending every later detail is confirmed.`,
+      `The production should name the uncertainty plainly while still letting the legend feel strange.`,
+      `Use the source limit as part of the appeal: the unclear edge is why the story keeps spreading.`,
+      `Do not turn the loose source trail into a fake official history; let the uncertainty stay useful.`,
+      `The narration can be careful without becoming flat: source limits are part of the mystery here.`,
+      `Keep later additions separate from the central image, so the audience understands the layers.`,
+      `The script should sound confident about the motif, not overconfident about every version.`,
+      `Use the source boundary as a production note and as a storytelling beat.`,
+      `Let the unclear source trail explain why different creators can build different versions.`,
+      `By the close, the video should respect the source limit while still giving viewers a memorable shape.`
+    ]);
+  }
+  if (/digital labyrinth/i.test(fact) && !/works because|centers on/i.test(fact)) {
+    return sceneVariant(context, [
+      `The digital labyrinth idea gives the middle of the video a simple path: one ordinary image becomes a place people keep extending.`,
+      `The labyrinth framing helps the video move from one unsettling room to a larger shared mythology.`,
+      `Use the digital labyrinth as the structure for the middle section, not as proof of a single official version.`,
+      `Let the labyrinth feel built from repeated choices: one corridor, then another, then another.`,
+      `The digital labyrinth should explain expansion without burying the original image.`,
+      `Use the maze idea to organize levels, exits, and rules while keeping the tone restrained.`,
+      `The middle section can treat the labyrinth as a map of collective imagination.`,
+      `Keep the labyrinth visual simple: endless rooms are enough before the script adds extra lore.`,
+      `Let the digital maze show how internet stories become places people can revisit.`,
+      `The ending can leave the labyrinth open, because a fully closed map would weaken the legend.`
+    ]);
+  }
+  if (record?.factType === 'visual') {
+    return `Use ${visual} as the visible anchor, then let the narration explain why that image keeps spreading.`;
+  }
+  if (record?.factType === 'meaning') {
+    return `The meaning stays close to ${visual}, not to a new invented event or a stronger claim.`;
+  }
+  if (record?.factType === 'source-context') {
+    return `The source context should stay attached to ${visual}, keeping the production clear about what the archive actually supports.`;
+  }
+  return '';
+}
+
+function sceneVariant(context = {}, variants = []) {
+  if (!variants.length) return '';
+  const sceneIndex = Number(context.scene?.sceneIndex || 1);
+  const partIndex = Number(context.partPlan?.partIndex || 1);
+  const index = Math.abs(((sceneIndex - 1) * 2) + (partIndex - 1)) % variants.length;
+  return variants[index];
+}
+
+function dedupeNarrationSentences(value) {
+  const sentences = splitSentences(value);
+  if (!sentences.length) return value;
+  const seen = new Set();
+  const output = [];
+  for (const sentence of sentences) {
+    const key = comparableNarration(sentence);
+    if (!key || seen.has(key)) continue;
+    seen.add(key);
+    output.push(sentence);
+  }
+  return output.join(' ');
+}
+
+function longformVisualAnchor(value, fallback = 'the central image') {
+  const text = cleanNarrationText(value);
+  const lower = text.toLowerCase();
+  if (/empty yellow room|fluorescent hum|opened too far/.test(lower)) return 'the empty yellow room, the fluorescent hum, and the feeling of a place opening too far';
+  if (/digital labyrinth/.test(lower)) return 'the digital labyrinth';
+  if (/liminal/.test(lower)) return 'the liminal room';
+  if (/backrooms/.test(lower)) return 'the Backrooms';
+  return stripFinalPunctuation(fallback);
 }
 
 function buildFactTransition(previousRecord, currentRecord, context = {}) {
@@ -558,6 +678,8 @@ function detectInternalNarrationMetadata(text) {
 function cleanNarrationText(value) {
   return sanitizeCreatorInputText(value)
     .replace(/\bSt\./g, 'Saint')
+    .replace(/\bThe article preserves that tension without overstating what the sources can support\b/gi, 'The narration keeps the source boundary visible without turning the legend into a fixed claim')
+    .replace(/\bwithout overstating what the sources can support\b/gi, 'while keeping the source boundary visible')
     .replace(/\s+/g, ' ')
     .replace(/\s+([,.!?;:])/g, '$1')
     .replace(/([,.!?]){2,}/g, '$1')

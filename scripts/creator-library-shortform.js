@@ -512,6 +512,9 @@ function sanitizeShortformText(value) {
   return sanitizeCreatorInputText(value)
     .replace(/\bsource-aware\b/gi, 'source-limited')
     .replace(/\bthe viewer should\b/gi, 'the scene keeps')
+    .replace(/\bstarts with works because\b/gi, 'starts with')
+    .replace(/\bcentered on works because\b/gi, 'centered on')
+    .replace(/\bthe article preserves that tension without overstating\b/gi, 'the source limit stays visible')
     .replace(/\s+/g, ' ')
     .trim();
 }
@@ -1090,7 +1093,15 @@ function isGenericPromptTerm(value) {
 }
 
 function compactFact(value, maxWords, topic = '') {
-  const text = sanitizeShortformText(value)
+  const raw = sanitizeShortformText(value);
+  const lower = raw.toLowerCase();
+  if (/empty yellow room|fluorescent hum|opened too far/.test(lower)) return 'the empty yellow room and fluorescent hum';
+  if (/liminal space|liminal/.test(lower)) return 'liminal rooms';
+  if (/digital labyrinth/.test(lower)) return 'the digital labyrinth';
+  if (/internet folklore|community retelling|online folklore/.test(lower)) return 'internet folklore context';
+  if (/source[- ]limited|source boundary|sources can support|without overstating/.test(lower)) return 'the source boundary';
+  if (/modern myth/.test(lower)) return 'modern myth context';
+  const text = raw
     .replace(new RegExp(`^${escapeRegExp(topic)}\\s+(?:follows|is|begins|centers|centered|starts)(?:\\s+on)?\\s+`, 'i'), '')
     .replace(new RegExp(`^${escapeRegExp(topic)}\\s*`, 'i'), '')
     .replace(/^[a-z\s-]+:\s*/i, '')
@@ -1103,6 +1114,7 @@ function compactFact(value, maxWords, topic = '') {
     .replace(/\bis a pre-existing [a-z\s-]+ built around\b/gi, '')
     .replace(/^a pre-existing [a-z\s-]+ built around\b/gi, '')
     .replace(/\bit treats the material as folklore, legend, or documented retelling rather than confirmed fact\b/gi, 'the source limit stays visible')
+    .replace(/^works because\s+/i, '')
     .replace(/\s+,/g, ',')
     .replace(/,+$/g, '')
     .replace(/[.!?]+$/g, '')

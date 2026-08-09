@@ -505,6 +505,8 @@ function sentence(text) {
   const value = String(text || '')
     .replace(/\bA source-aware Kyunolab record tracing\b/gi, 'A record describes')
     .replace(/\bsource-aware Kyunolab record\b/gi, 'archive record')
+    .replace(/\bThe article preserves that tension without overstating what the sources can support\b/gi, 'The production angle keeps the source boundary visible without turning the legend into a fixed claim')
+    .replace(/\bwithout overstating what the sources can support\b/gi, 'while keeping the source boundary visible')
     .replace(/\s+/g, ' ')
     .trim();
   if (!value) return '';
