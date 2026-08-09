@@ -844,7 +844,7 @@ function renderScriptsHomePage(scripts) {
   });
 }
 
-function renderCreatorPortalHeader(currentPath = '/scripts/') {
+function renderCreatorPortalHeader(currentPath = '/scripts/', options = {}) {
   const pathForNav = normalizeNavPath(currentPath);
   return `<header class="home-portal-header creator-portal-header">
     <div class="home-portal-header-inner">
@@ -862,7 +862,7 @@ function renderCreatorPortalHeader(currentPath = '/scripts/') {
         ${homePortalNavLink('/about.html', 'About', pathForNav === '/about')}
         ${homePortalNavLink('/hub.html', 'Hub', pathForNav === '/hub', 'home-portal-hub-link')}
       </nav>
-      ${renderCreatorSignSystem()}
+      ${options.includeSignSystem === false ? '' : renderCreatorSignSystem()}
     </div>
   </header>`;
 }
@@ -1887,6 +1887,11 @@ function renderCreatorResourcesPortalRail({ featuredScript, latestScripts, guide
 function renderScriptDetailPage(script) {
   const originalStory = stories.find((story) => story.slug === script.originalStorySlug);
   const relatedScripts = sortNewest(creatorScripts).filter((item) => item.slug !== script.slug).slice(0, 4);
+  const categorySlug = scriptCreatorCategorySlug(script);
+  const creatorCategory = creatorLibraryCategories.find((category) => category.slug === categorySlug);
+  const categoryScripts = creatorCategory
+    ? scriptsForCreatorCategory(creatorCategory, creatorScripts).filter((item) => item.slug !== script.slug).slice(0, 3)
+    : [];
   const canonicalPath = `/scripts/${script.slug}`;
   const usageNote = script.usageNote || 'This script is provided as a reference for video creators. You may adapt and edit it for your own video format. Credit to Kyunolab is appreciated when used as a source or inspiration. Please present the story as a mystery, legend, or fictional-style narration rather than a confirmed real event.';
   const storyArea = `${renderStorySummarySection(script, originalStory)}
@@ -1903,26 +1908,23 @@ function renderScriptDetailPage(script) {
         <div class="section-head"><h2>Related Scripts</h2></div>
         <div class="related-grid">${relatedScripts.map(renderRelatedScriptLink).join('')}</div>
       </section>`;
-  const content = `  <main class="script-detail-page article-shell article-layout">
-    ${renderScriptsBoardLeftRail()}
-    <article>
-      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/scripts/">Scripts Home</a><span aria-hidden="true">/</span><span aria-current="page">${escapeHtml(script.title)}</span></nav>
-      <header class="archive-article-header">
-        <p class="label">${escapeHtml(script.genre)}</p>
-        <h1 class="article-title">${escapeHtml(script.title)}</h1>
-        <p class="deck">${escapeHtml(script.deck)}</p>
-        ${renderScriptMetaGrid(script)}
-      </header>
-      ${storyArea}
-      ${prepareArea}
-      ${createArea}
-      ${finishArea}
-    </article>
-    <aside class="article-rail article-rail-right">
-      ${renderKyunolabNetworkCard('scripts')}
-      <div class="rail-card rail-feature"><p class="rail-label">Scripts Home</p><a href="/scripts/"><strong>Free Mystery YouTube Scripts</strong><span>Longform, Shorts, prompts, thumbnails</span></a></div>
-      <div class="rail-card"><p class="rail-label">More scripts</p>${relatedScripts.map((item) => `<a href="/scripts/${escapeAttr(item.slug)}">${escapeHtml(item.title)}</a>`).join('')}</div>
-    </aside>
+  const content = `  <main class="home-shell home-portal-shell creator-portal-page script-detail-portal-page">
+    <div class="home-portal-layout">
+      <div class="home-main-column">
+        <nav class="breadcrumb script-detail-breadcrumb" aria-label="Breadcrumb"><a href="/scripts/">Creator Library</a><span aria-hidden="true">/</span>${creatorCategory ? `<a href="/scripts/categories/${escapeAttr(creatorCategory.slug)}/">${escapeHtml(creatorCategory.title)}</a><span aria-hidden="true">/</span>` : ''}<span aria-current="page">${escapeHtml(script.title)}</span></nav>
+        ${renderScriptDetailLead(script, originalStory, creatorCategory)}
+        <section class="notice"><strong>Creator package:</strong> This page is a production-ready script building. It keeps the original archive route, creator format, narration material, image prompts, thumbnails, and reference note connected without turning the package into a category menu.</section>
+        ${renderAdSlot('ad-script-detail-after-intro')}
+        <div id="creator-materials" class="script-detail-content-stack">
+          ${storyArea}
+          ${prepareArea}
+          ${createArea}
+        </div>
+        ${renderAdSlot('ad-script-detail-before-reference')}
+        ${finishArea}
+      </div>
+      ${renderScriptDetailPortalRail({ script, originalStory, relatedScripts, categoryScripts, creatorCategory })}
+    </div>
   </main>`;
   return renderPage({
     canonicalPath,
@@ -1930,10 +1932,64 @@ function renderScriptDetailPage(script) {
     description: script.deck,
     metaDescription: script.metaDescription,
     networkSection: 'scripts',
+    footerSection: 'scripts',
+    bodyClass: 'home-portal-page',
+    headerHtml: renderCreatorPortalHeader(canonicalPath, { includeSignSystem: false }),
     content
   });
 }
 
+function renderScriptDetailLead(script, originalStory, creatorCategory) {
+  const sourceLabel = originalStory ? originalStory.title : 'Archive source route';
+  const categoryHref = creatorCategory ? `/scripts/categories/${escapeAttr(creatorCategory.slug)}/` : '/scripts/categories/';
+  const categoryTitle = creatorCategory ? creatorCategory.title : 'Script Categories';
+  return `<section class="home-portal-lead script-detail-lead" aria-label="Creator script package front entrance">
+          <article class="home-lead-story script-detail-hero">
+            <p class="label">${escapeHtml(script.genre || 'Creator Library Package')}</p>
+            <h1>${escapeHtml(script.title)}</h1>
+            <p>${escapeHtml(script.deck || 'A creator-ready mystery video package with narration, prompts, and production notes.')}</p>
+            <a class="button" href="#creator-materials">Open production material</a>
+          </article>
+          <div class="home-known-list script-package-map">
+            <h2>Package map</h2>
+            <a href="#creator-materials"><span>01</span><strong>Story context and information</strong><em>${escapeHtml(sourceLabel)}</em></a>
+            <a href="#creator-materials"><span>02</span><strong>Creator toolkit and workflow</strong><em>${escapeHtml(script.estimatedVideoLength || 'Video package')}</em></a>
+            <a href="#creator-materials"><span>03</span><strong>Longform, Shorts, prompts, thumbnails</strong><em>${escapeHtml(scriptFeatureSummary(script) || 'Production materials')}</em></a>
+            <a href="${categoryHref}"><span>04</span><strong>${escapeHtml(categoryTitle)}</strong><em>Open the related creator shelf</em></a>
+            ${renderScriptMetaGrid(script)}
+          </div>
+        </section>`;
+}
+
+function renderScriptDetailPortalRail({ script, originalStory, relatedScripts, categoryScripts, creatorCategory }) {
+  const sameShelfLinks = categoryScripts.length
+    ? categoryScripts.map((item) => `<a href="/scripts/${escapeAttr(item.slug)}">${escapeHtml(item.title)}</a>`).join('')
+    : relatedScripts.slice(0, 3).map((item) => `<a href="/scripts/${escapeAttr(item.slug)}">${escapeHtml(item.title)}</a>`).join('');
+  const categoryLink = creatorCategory ? `<a href="/scripts/categories/${escapeAttr(creatorCategory.slug)}/">${escapeHtml(creatorCategory.title)} shelf</a>` : '<a href="/scripts/categories/">Script Categories</a>';
+  return `<aside class="home-portal-rail creator-portal-rail script-detail-rail" aria-label="Creator script side paths">
+      ${renderKyunolabNetworkCard('scripts')}
+      <section class="rail-card rail-feature"><p class="rail-label">Current package</p><a href="/scripts/${escapeAttr(script.slug)}"><span>${escapeHtml(script.genre || 'Creator package')}</span><strong>${escapeHtml(script.title)}</strong></a></section>
+      ${originalStory ? `<section class="rail-card"><p class="rail-label">Original record</p><a href="/stories/${escapeAttr(originalStory.slug)}"><strong>${escapeHtml(originalStory.title)}</strong><span>Read the archive version</span></a></section>` : ''}
+      <section class="rail-card rail-card-subtle">
+        <p class="rail-label">Same shelf</p>
+        ${categoryLink}
+        ${sameShelfLinks}
+      </section>
+      <section class="rail-card">
+        <p class="rail-label">Creator roads</p>
+        <a href="/scripts/">Creator Library home</a>
+        <a href="/scripts/board/">Library Board</a>
+        <a href="/scripts/resources/">Creator Resources</a>
+        <a href="/fiction-disclaimer.html">Story and source notice</a>
+      </section>
+      <section class="rail-card rail-card-subtle">
+        <p class="rail-label">Cross roads</p>
+        <a href="/archive.html">Creator Library to Archive</a>
+        <a href="/mystery-board.html">Creator Library to Mystery Board</a>
+        <a href="/tools.html">Creator Library to Tools</a>
+      </section>
+    </aside>`;
+}
 function renderStorySummarySection(script, originalStory) {
   const subject = scriptMainSubject(script, originalStory);
   const motif = scriptCoreMotif(script);

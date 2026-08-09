@@ -2817,6 +2817,149 @@ h1 {
 .creator-portal-page .script-badges div {
   border-top-color: var(--home-line);
 }
+.script-detail-portal-page .script-detail-breadcrumb {
+  margin: 0 0 14px;
+  color: var(--home-muted);
+}
+.script-detail-portal-page .script-detail-lead {
+  grid-template-columns: minmax(0, 1.05fr) minmax(300px, .95fr);
+}
+.script-detail-portal-page .script-detail-hero {
+  min-height: 260px;
+}
+.script-detail-portal-page .script-package-map a {
+  grid-template-columns: 34px minmax(0, 1fr);
+  align-items: start;
+}
+.script-detail-portal-page .script-package-map a em {
+  grid-column: 2;
+  color: var(--home-muted);
+  font-size: 12px;
+  font-style: normal;
+  line-height: 1.35;
+}
+.script-detail-portal-page .script-package-map .script-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin: 14px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--home-line);
+}
+.script-detail-portal-page .script-package-map .script-meta-grid div {
+  padding: 10px;
+  border: 1px solid var(--home-line);
+  border-radius: 6px;
+  background: #FFF9F1;
+}
+.script-detail-portal-page .script-package-map .script-meta-grid dt {
+  color: var(--home-orange);
+  font-size: 11px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.script-detail-portal-page .script-package-map .script-meta-grid dd {
+  margin: 4px 0 0;
+  color: var(--home-ink);
+  font-size: 13px;
+  font-weight: 700;
+}
+.script-detail-portal-page .script-detail-content-stack {
+  display: grid;
+  gap: 14px;
+}
+.script-detail-portal-page .script-material,
+.script-detail-portal-page .script-summary,
+.script-detail-portal-page .script-version-cta,
+.script-detail-portal-page .creator-reference-list {
+  margin-top: 0;
+  padding: 16px;
+  border: 1px solid var(--home-line);
+  border-radius: 6px;
+  background: var(--home-panel);
+  color: var(--home-text);
+}
+.script-detail-portal-page .script-material h2,
+.script-detail-portal-page .script-summary h2,
+.script-detail-portal-page .creator-reference-list h2 {
+  color: var(--home-ink);
+  font-family: Arial, sans-serif;
+  font-size: 23px;
+  line-height: 1.16;
+}
+.script-detail-portal-page .script-material p,
+.script-detail-portal-page .script-material li,
+.script-detail-portal-page .script-summary dd,
+.script-detail-portal-page .script-version-cta p,
+.script-detail-portal-page .creator-reference-list p {
+  color: var(--home-muted);
+}
+.script-detail-portal-page .script-summary dl,
+.script-detail-portal-page .creator-toolkit-grid,
+.script-detail-portal-page .narration-guide-grid {
+  gap: 10px;
+}
+.script-detail-portal-page .script-summary dl div,
+.script-detail-portal-page .creator-toolkit article,
+.script-detail-portal-page .narration-guide article,
+.script-detail-portal-page .phone-recording-tip,
+.script-detail-portal-page .workflow-tip {
+  border-color: var(--home-line);
+  border-radius: 6px;
+  background: #FFF9F1;
+}
+.script-detail-portal-page .script-summary dt,
+.script-detail-portal-page .creator-toolkit h3,
+.script-detail-portal-page .narration-guide h3,
+.script-detail-portal-page .production-workflow h3,
+.script-detail-portal-page .production-workflow strong,
+.script-detail-portal-page .workflow-tip strong {
+  color: var(--home-ink);
+}
+.script-detail-portal-page .workflow-step-number,
+.script-detail-portal-page .toolkit-terms code,
+.script-detail-portal-page .narration-search-terms code,
+.script-detail-portal-page .narration-copy-button {
+  border-color: var(--home-line);
+  background: var(--home-panel);
+  color: var(--home-ink);
+}
+.script-detail-portal-page .production-workflow li::after {
+  background: var(--home-line);
+}
+.script-detail-portal-page .scene-workspace,
+.script-detail-portal-page .creator-script-panel,
+.script-detail-portal-page .prompt-card,
+.script-detail-portal-page .thumbnail-card,
+.script-detail-portal-page .subtitle-card {
+  border-color: var(--home-line);
+  border-radius: 6px;
+}
+.script-detail-portal-page .related-grid {
+  gap: 10px;
+}
+.script-detail-portal-page .related-card,
+.script-detail-portal-page .related-articles a {
+  border-color: var(--home-line);
+  background: #FFF9F1;
+}
+.script-detail-portal-page .script-detail-rail .rail-card a strong,
+.script-detail-portal-page .script-detail-rail .rail-card a span {
+  display: block;
+}
+.script-detail-portal-page .script-detail-rail .rail-card a span {
+  margin-top: 5px;
+  color: var(--home-muted);
+  font-size: 13px;
+  line-height: 1.35;
+}
+.script-detail-portal-page .script-detail-rail .rail-feature a span {
+  margin-top: 0;
+  color: #FFE3C2;
+}
+.script-detail-portal-page .ad-slot {
+  margin: 14px 0;
+}
 .library-board-portal-page .library-board-starter-list a {
   grid-template-columns: 34px minmax(0, 1fr);
 }
