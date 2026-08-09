@@ -200,7 +200,7 @@ function renderBoardCrossroads() {
               <p class="category-group-label">Creator Library</p>
               <h3><a href="/scripts/">Turn archive context into creator material</a></h3>
               <p>Creator Library pages should be reachable from Board guidance when a reader wants scripts, prompts, or structured production material.</p>
-              <div class="category-links"><a href="/scripts/">Creator Home</a><a href="/scripts/board/">Library Board</a><a href="/scripts/resources/">Creator Resources</a></div>
+              <div class="category-links"><a href="/scripts/">Creator Home</a><a href="/scripts/board/">Library Board</a><a href="/scripts/categories/">Library Categories</a></div>
             </article>
             <article class="home-planned-card">
               <p class="category-group-label">Tools</p>
