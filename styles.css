@@ -2817,6 +2817,132 @@ h1 {
 .creator-portal-page .script-badges div {
   border-top-color: var(--home-line);
 }
+.archive-story-portal-page .breadcrumb {
+  margin: 0 0 14px;
+  color: var(--home-muted);
+}
+.archive-story-portal-page .archive-story-lead {
+  grid-template-columns: minmax(0, 1.08fr) minmax(300px, .92fr);
+}
+.archive-story-portal-page .archive-story-hero {
+  min-height: 326px;
+}
+.archive-story-portal-page .archive-story-hero .article-updated {
+  margin: 8px 0 0;
+  color: #FFE3C2;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+.archive-story-portal-page .archive-record-map a {
+  grid-template-columns: 34px minmax(0, 1fr);
+  align-items: start;
+}
+.archive-story-portal-page .archive-record-map a em {
+  grid-column: 2;
+  color: var(--home-muted);
+  font-size: 12px;
+  font-style: normal;
+  line-height: 1.35;
+}
+.archive-story-portal-page .archive-record-map .article-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin: 14px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--home-line);
+}
+.archive-story-portal-page .archive-record-map .article-meta-grid div {
+  padding: 10px;
+  border: 1px solid var(--home-line);
+  border-radius: 6px;
+  background: #FFF9F1;
+}
+.archive-story-portal-page .archive-record-map .article-meta-grid dt {
+  color: var(--home-orange);
+  font-size: 11px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.archive-story-portal-page .archive-record-map .article-meta-grid dd {
+  margin: 4px 0 0;
+  color: var(--home-ink);
+  font-size: 13px;
+  font-weight: 700;
+}
+.archive-story-portal-page .search-summary,
+.archive-story-portal-page .reading-bridge,
+.archive-story-portal-page .story-body,
+.archive-story-portal-page .story-supplement,
+.archive-story-portal-page .script-version-cta,
+.archive-story-portal-page .related-articles,
+.archive-story-portal-page .prev-next {
+  border-color: var(--home-line);
+  border-radius: 6px;
+  background: var(--home-panel);
+  color: var(--home-text);
+}
+.archive-story-portal-page .search-summary,
+.archive-story-portal-page .reading-bridge,
+.archive-story-portal-page .story-body,
+.archive-story-portal-page .story-supplement,
+.archive-story-portal-page .script-version-cta,
+.archive-story-portal-page .related-articles {
+  margin-top: 14px;
+  padding: 16px;
+  border: 1px solid var(--home-line);
+}
+.archive-story-portal-page .story-body {
+  font-size: 19px;
+  line-height: 1.72;
+}
+.archive-story-portal-page .archive-entry h2,
+.archive-story-portal-page .story-supplement h2,
+.archive-story-portal-page .search-summary h2,
+.archive-story-portal-page .related-articles h2 {
+  color: var(--home-ink);
+  font-family: Arial, sans-serif;
+}
+.archive-story-portal-page .archive-entry h2 {
+  border-top-color: var(--home-line);
+  font-size: 29px;
+  scroll-margin-top: 112px;
+}
+.archive-story-portal-page .story-body p,
+.archive-story-portal-page .search-summary p,
+.archive-story-portal-page .reading-bridge p,
+.archive-story-portal-page .story-supplement p,
+.archive-story-portal-page .script-version-cta p {
+  color: var(--home-muted);
+}
+.archive-story-portal-page .search-summary-grid div,
+.archive-story-portal-page .story-qa-item,
+.archive-story-portal-page .related-grid a,
+.archive-story-portal-page .prev-next a,
+.archive-story-portal-page .reading-bridge a {
+  border-color: var(--home-line);
+  background: #FFF9F1;
+}
+.archive-story-portal-page .reading-bridge > div {
+  gap: 10px;
+}
+.archive-story-portal-page .ad-slot {
+  margin: 14px 0;
+}
+.archive-story-portal-page .archive-story-portal-rail .rail-card a strong,
+.archive-story-portal-page .archive-story-portal-rail .rail-card a span {
+  display: block;
+}
+.archive-story-portal-page .archive-story-portal-rail .rail-card a span {
+  margin-top: 5px;
+  color: var(--home-muted);
+  font-size: 13px;
+  line-height: 1.35;
+}
+.archive-story-portal-page .archive-story-portal-rail .rail-feature a span {
+  margin-top: 0;
+  color: #FFE3C2;
+}
 .script-detail-portal-page .script-detail-breadcrumb {
   margin: 0 0 14px;
   color: var(--home-muted);

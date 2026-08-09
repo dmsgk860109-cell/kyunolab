@@ -261,26 +261,19 @@ function renderStoryPage(story, previousStory, nextStory) {
   <link rel="stylesheet" href="/styles.css?v=${styleVersion}">
   <script type="application/ld+json">${JSON.stringify(renderJsonLd(story, cleanUrl, description))}</script>
 </head>
-<body>
-  ${renderHeader()}
-  <main class="article-shell article-layout">
-      ${renderLeftRail(story, sections)}
-      <article class="archive-story">
+<body class="home-portal-page">
+  ${renderArchivePortalHeader(cleanUrl)}
+  <main class="home-shell home-portal-shell archive-story-portal-page">
+    <div class="home-portal-layout">
+      <div class="home-main-column">
         ${renderBreadcrumb(story)}
-        <header class="archive-article-header">
-          <p class="label">${escapeHtml(story.category)}</p>
-          <h1 class="article-title">${escapeHtml(title)}</h1>
-          <p class="deck">${escapeHtml(longformArticle?.deck || story.introSummary || story.excerpt || story.summaryAnswer || description)}</p>
-          <p class="article-updated">Updated ${escapeHtml(formatDate(story.updatedAt || story.publishedAt))}</p>
-${renderHeroImage(story)}
-          ${renderMetaGrid(story)}
-        </header>
+        ${renderArchiveStoryLead(story, title, description, sections, longformArticle)}
         ${renderSearchSummary(story)}
-        ${longformArticle ? `${renderStoryMap(sections)}
-        ${renderReadingBridge(story, recommendationSlots.bridge)}
-        ${renderLongformArticle(longformArticle)}` : `${renderStoryMap(sections)}
-        ${renderReadingBridge(story, recommendationSlots.bridge)}
-        <div class="story-body archive-entry">
+        ${longformArticle ? `${renderReadingBridge(story, recommendationSlots.bridge)}
+        <div id="story-content" class="archive-story-content-anchor">
+          ${renderLongformArticle(longformArticle)}
+        </div>` : `${renderReadingBridge(story, recommendationSlots.bridge)}
+        <div id="story-content" class="story-body archive-entry">
           ${renderOpening(story)}
           ${renderAdSlot('ad-article-after-opening')}
           ${sections.map((section, index) => `${renderSection(section)}${renderArchiveInsightBox(story, index, sections.length)}`).join('\n')}
@@ -292,8 +285,9 @@ ${scriptCta ? `        ${scriptCta}
 ` : ''}        ${renderAdSlot('ad-article-before-related')}
         ${renderRelatedArticles(recommendationSlots.related)}
         ${renderPrevNext(navigationStories.previous, navigationStories.next)}
-      </article>
-      ${renderRightRail(story, recommendationSlots.rail, recommendationSlots.readNext)}
+      </div>
+      ${renderArchiveStoryPortalRail(story, sections, recommendationSlots.rail, recommendationSlots.readNext)}
+    </div>
   </main>
   ${renderFooter()}
   <script defer src="/assets/global-search.js?v=${styleVersion}"></script>
@@ -1399,6 +1393,116 @@ function absoluteImageUrl(value) {
   return `${siteUrl}${source.startsWith('/') ? source : `/${source}`}`;
 }
 
+function renderArchiveStoryLead(story, title, description, sections, longformArticle) {
+  const deck = longformArticle?.deck || story.introSummary || story.excerpt || story.summaryAnswer || description;
+  const mapLinks = sections.slice(0, 5).map((section, index) => `<a href="#${escapeAttr(section.id)}"><span>${String(index + 1).padStart(2, '0')}</span><strong>${escapeHtml(section.title)}</strong></a>`).join('');
+  return `<section class="home-portal-lead archive-story-lead" aria-label="Archive story front entrance">
+          <article class="home-lead-story archive-story-hero">
+            <p class="label">${escapeHtml(story.category)}</p>
+            <h1>${escapeHtml(title)}</h1>
+            <p>${escapeHtml(deck)}</p>
+            <p class="article-updated">Updated ${escapeHtml(formatDate(story.updatedAt || story.publishedAt))}</p>
+            <a class="button" href="#story-content">Start reading</a>
+          </article>
+          <div class="home-known-list archive-record-map">
+            <h2>Record map</h2>
+            ${mapLinks}
+            <a href="/categories/${escapeAttr(story.categorySlug)}.html"><span>${String(Math.min(sections.length + 1, 6)).padStart(2, '0')}</span><strong>More ${escapeHtml(story.category)}</strong><em>Open the archive shelf</em></a>
+            ${renderArchiveStoryCompactMeta(story)}
+          </div>
+        </section>`;
+}
+
+function renderArchiveStoryCompactMeta(story) {
+  const updated = formatDate(story.updatedAt || story.publishedAt);
+  const storyType = publicStoryType(story);
+  const items = [
+    ['Category', `<a href="/categories/${escapeAttr(story.categorySlug)}.html">${escapeHtml(story.category)}</a>`],
+    ['Read time', escapeHtml(story.readTime || 'Archive read')],
+    storyType ? ['Story Type', `<a href="/fiction-disclaimer.html#story-types">${escapeHtml(storyType)}</a>`] : null,
+    ['Updated', escapeHtml(updated)]
+  ].filter(Boolean);
+  return `<dl class="article-meta-grid archive-story-compact-meta">
+          ${items.map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${value}</dd></div>`).join('')}
+        </dl>`;
+}
+function renderArchiveStoryPortalRail(story, sections, relatedStories, readNextStory) {
+  const readNextCard = readNextStory
+    ? `<section class="rail-card rail-feature"><p class="rail-label">Read next</p><a href="/stories/${escapeAttr(readNextStory.slug)}"><span>${escapeHtml(readNextStory.category)}</span><strong>${escapeHtml(readNextStory.title)}</strong></a></section>`
+    : '';
+  const sectionLinks = sections.slice(0, 6).map((section) => `<a href="#${escapeAttr(section.id)}">${escapeHtml(section.title)}</a>`).join('');
+  const relatedLinks = relatedStories
+    .filter((item) => item.slug !== story.slug)
+    .slice(0, 4)
+    .map((item) => `<a href="/stories/${escapeAttr(item.slug)}">${escapeHtml(item.title)}</a>`)
+    .join('');
+  return `<aside class="home-portal-rail archive-story-portal-rail" aria-label="Archive story side paths">
+      ${renderKyunolabNetworkCard()}
+      ${readNextCard}
+      <section class="rail-card">
+        <p class="rail-label">In this record</p>
+        ${sectionLinks}
+      </section>
+      <section class="rail-card rail-card-subtle">
+        <p class="rail-label">Archive roads</p>
+        <a href="/categories/${escapeAttr(story.categorySlug)}.html">${escapeHtml(story.category)}</a>
+        <a href="/categories.html">All Categories</a>
+        <a href="/archive.html">All Stories</a>
+        <a href="/fiction-disclaimer.html">Story and source notice</a>
+      </section>
+      ${relatedLinks ? `<section class="rail-card"><p class="rail-label">Related stories</p>${relatedLinks}</section>` : ''}
+      <section class="rail-card rail-card-subtle">
+        <p class="rail-label">Cross roads</p>
+        <a href="/mystery-board.html">Archive to Mystery Board</a>
+        <a href="/scripts/">Archive to Creator Library</a>
+        <a href="/tools.html">Archive to Tools</a>
+      </section>
+    </aside>`;
+}
+
+function renderArchivePortalHeader(currentPath = '/') {
+  const pathForNav = normalizeNavPath(currentPath);
+  return `<header class="home-portal-header">
+    <div class="home-portal-header-inner">
+      <div class="home-portal-topbar">
+        <a class="home-portal-brand" href="/"><span class="home-portal-brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
+        ${renderArchivePortalSearchForm()}
+      </div>
+      <nav class="home-portal-nav" aria-label="Primary archive navigation">
+        ${homePortalNavLink('/', 'Home', pathForNav === '/')}
+        ${homePortalNavLink('/archive.html', 'All Stories', pathForNav === '/archive' || /^\/archive-\d+$/.test(pathForNav))}
+        ${homePortalNavLink('/categories.html', 'Categories', pathForNav === '/categories' || pathForNav.startsWith('/categories/'))}
+        ${homePortalNavLink('/mystery-board.html', 'Mystery Board', pathForNav === '/mystery-board' || pathForNav.startsWith('/mystery-board/'))}
+        ${homePortalNavLink('/scripts/', 'Creator Library', pathForNav === '/scripts' || pathForNav.startsWith('/scripts/'))}
+        ${homePortalNavLink('/tools.html', 'Tools', pathForNav === '/tools')}
+        ${homePortalNavLink('/about.html', 'About', pathForNav === '/about')}
+        ${homePortalNavLink('/hub.html', 'Hub', pathForNav === '/hub', 'home-portal-hub-link')}
+      </nav>
+    </div>
+  </header>`;
+}
+
+function renderArchivePortalSearchForm() {
+  return `<form class="site-search home-portal-search" action="/search/" method="get" role="search" aria-label="Search Kyunolab Mystery Archive">
+        <input type="hidden" name="type" value="archive">
+        <label class="sr-only" for="archive-portal-search-query">Search query</label>
+        <input id="archive-portal-search-query" name="q" class="site-search-input" type="search" placeholder="Search Kyunolab..." autocomplete="off" data-search-input>
+        <button class="site-search-button" type="submit">Search</button>
+      </form>`;
+}
+
+function homePortalNavLink(href, label, isActive, extraClass = '') {
+  const classes = [extraClass, isActive ? 'active' : ''].filter(Boolean).join(' ');
+  const classAttr = classes ? ` class="${escapeAttr(classes)}"` : '';
+  return `<a href="${href}"${classAttr}${isActive ? ' aria-current="page"' : ''}>${escapeHtml(label)}</a>`;
+}
+
+function normalizeNavPath(currentPath) {
+  const withoutHash = String(currentPath || '/').split('#')[0].split('?')[0];
+  let normalized = withoutHash.replace(/^https?:\/\/[^/]+/i, '').replace(/\/index\.html$/, '/').replace(/\.html$/, '');
+  if (normalized.length > 1 && normalized.endsWith('/')) normalized = normalized.slice(0, -1);
+  return normalized || '/';
+}
 function renderHeader() {
   return `<header class="site-header"><div class="topline">A Kyuno Lab publication</div><div class="header-inner"><a class="brand" href="/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>${renderSiteSearchForm()}<nav class="nav"><a href="/newest.html">Newest</a><a href="/popular.html">Popular</a><a href="/categories.html">Categories</a><a href="/mystery-board.html">Mystery Board</a><a href="/tools.html">Tools</a><a href="/about.html">About</a><a href="/hub.html">Hub</a></nav></div></header>`;
 }
