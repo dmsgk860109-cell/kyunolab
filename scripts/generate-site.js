@@ -3412,7 +3412,8 @@ function renderHomePortalHeader(currentPath = '/') {
       </div>
       <nav class="home-portal-nav" aria-label="Primary homepage navigation">
         ${homePortalNavLink('/', 'Home', pathForNav === '/')}
-        ${homePortalNavLink('/archive.html', 'All Stories', pathForNav === '/archive' || /^\/archive-\d+$/.test(pathForNav))}
+        ${homePortalNavLink('/popular.html', 'Known Stories', pathForNav === '/popular')}
+        ${homePortalNavLink('/newest.html', 'Newest Stories', pathForNav === '/newest')}
         ${homePortalNavLink('/categories.html', 'Categories', pathForNav === '/categories' || pathForNav.startsWith('/categories/'))}
         ${homePortalNavLink('/mystery-board.html', 'Mystery Board', pathForNav === '/mystery-board' || pathForNav.startsWith('/mystery-board/'))}
         ${homePortalNavLink('/scripts/', 'Creator Library', isScriptsPath(pathForNav))}
@@ -4097,9 +4098,8 @@ function renderMainHeader(currentPath, includeSearch = true) {
       <a class="brand" href="/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
 ${searchForm}
       <nav class="nav">${[
-        navLink('/archive.html', 'All Stories', currentPath === '/archive' || /^\/archive-\d+$/.test(currentPath)),
-        navLink('/newest.html', 'Newest', currentPath === '/newest'),
-        navLink('/popular.html', 'Popular', currentPath === '/popular'),
+        navLink('/popular.html', 'Known Stories', currentPath === '/popular'),
+        navLink('/newest.html', 'Newest Stories', currentPath === '/newest'),
         navLink('/categories.html', 'Categories', currentPath === '/categories' || currentPath.startsWith('/categories/')),
         navLink('/mystery-board.html', 'Mystery Board', currentPath === '/mystery-board' || currentPath.startsWith('/mystery-board/')),
         navLink('/tools.html', 'Tools', currentPath === '/tools'),
