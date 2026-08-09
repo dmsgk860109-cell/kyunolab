@@ -23,37 +23,85 @@
   <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="/styles.css?v=20260804-nav-flow">
 </head>
-<body>
-  <header class="site-header">
-    <div class="topline">A Kyuno Lab publication</div>
-    <div class="header-inner">
-      <a class="brand" href="/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
-
-      <form class="site-search" action="/search/" method="get" role="search" aria-label="Search Archive or Creator Library">
-        <label class="sr-only" for="global-search-type">Search target</label>
-        <select id="global-search-type" name="type" class="site-search-select" data-search-type>
-          <option value="archive" selected>Archive</option>
-          <option value="library">Creator Library</option>
-        </select>
-        <label class="sr-only" for="global-search-query">Search query</label>
-        <input id="global-search-query" name="q" class="site-search-input" type="search" placeholder="Search stories, legends, and mysteries..." autocomplete="off" data-search-input>
-        <button class="site-search-button" type="submit">SEARCH</button>
-      </form>
-      <nav class="nav"><a href="/archive">All Stories</a><a href="/newest">Newest</a><a href="/popular">Popular</a><a href="/categories" class="active" aria-current="page">Categories</a><a href="/mystery-board">Mystery Board</a><a href="/tools">Tools</a><a href="/about">About</a><a href="/hub">Hub</a></nav>
+<body class="home-portal-page">
+  <header class="home-portal-header">
+    <div class="home-portal-header-inner">
+      <div class="home-portal-topbar">
+        <a class="home-portal-brand" href="/"><span class="home-portal-brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
+        <form class="site-search home-portal-search" action="/search/" method="get" role="search" aria-label="Search Kyunolab">
+          <input type="hidden" name="type" value="archive">
+          <label class="sr-only" for="home-portal-search-query">Search query</label>
+          <input id="home-portal-search-query" name="q" class="site-search-input" type="search" placeholder="Search Kyunolab..." autocomplete="off" data-search-input>
+          <button class="site-search-button" type="submit">Search</button>
+        </form>
+      </div>
+      <nav class="home-portal-nav" aria-label="Primary homepage navigation">
+        <a href="/">Home</a>
+        <a href="/archive">All Stories</a>
+        <a href="/categories" class="active" aria-current="page">Categories</a>
+        <a href="/mystery-board">Mystery Board</a>
+        <a href="/scripts/">Creator Library</a>
+        <a href="/tools">Tools</a>
+        <a href="/about">About</a>
+        <a href="/hub" class="home-portal-hub-link">Hub</a>
+      </nav>
+      <section class="home-sign-system" aria-label="Kyunolab reading paths">
+          <div class="home-sign-intro">
+            <p class="label">Start Here</p>
+            <h2>Choose a story shelf first, then use the map when you want the wider site.</h2>
+            <p>Begin with archive stories, open the full index, or cross into reading guides, creator material, and future tools.</p>
+          </div>
+          <div class="home-sign-links">
+            <div>
+              <h3>Browse Stories</h3>
+              <a href="/categories/urban-legends">Urban Legends</a>
+              <a href="/categories/internet-folklore">Internet Folklore</a>
+              <a href="/categories/myths">Myths</a>
+              <a href="/categories/strange-places">Strange Places</a>
+            </div>
+            <div>
+              <h3>Use The Map</h3>
+              <a href="/archive">All Stories</a>
+              <a href="/mystery-board">Reading Guides</a>
+              <a href="/scripts/">Creator Library</a>
+              <a href="/tools">Tools</a>
+            </div>
+          </div>
+          <div class="home-small-buildings">
+            <h3>Site Notes</h3>
+            <a href="/hub">Hub</a>
+            <a href="/about">About Kyunolab</a>
+            <a href="/fiction-disclaimer">Story and source notice</a>
+          </div>
+        </section>
     </div>
   </header>
-  <main class="article-shell article-layout">
-    <aside class="article-rail article-rail-left" aria-label="Archive navigation">
-    <div class="rail-card"><p class="rail-label">Reader Paths</p><a href="/archive">All Stories</a><a href="/newest">Newest Records</a><a href="/popular">Popular Records</a><a href="/categories">Browse Categories</a><a href="/mystery-board">Mystery Board</a></div>
-    <div class="rail-card rail-card-subtle"><p class="rail-label">Archive Shelves</p><a href="/categories/urban-legends">Urban Legends</a><a href="/categories/internet-folklore">Internet Folklore</a><a href="/categories/myths">Myths</a><a href="/categories/strange-places">Strange Places</a></div>
-    <div class="rail-card"><p class="rail-label">Source Guide</p><a href="/fiction-disclaimer">Story &amp; Source Notice</a><a href="/about">About Kyunolab</a></div>
-  </aside>
-    <div class="archive-page-main"><p class="label">Mythic &amp; Imagined Realms</p><h1 class="article-title">Strange Nature</h1><p class="deck">Strange nature folklore, unusual forests, sky omens, sea phenomena, impossible plants, and landscape mysteries read with careful source limits.</p><section class="category-seo-intro" aria-label="Strange Nature overview">
+  <main class="home-shell home-portal-shell category-detail-portal-page">
+    <div class="home-portal-layout">
+      <div class="home-main-column">
+        <section class="home-portal-lead category-portal-lead" aria-label="Strange Nature front entrance">
+          <article class="home-lead-story category-lead-story">
+            <p class="label">Mythic &amp; Imagined Realms</p>
+            <h1>Strange Nature</h1>
+            <p>Strange nature folklore, unusual forests, sky omens, sea phenomena, impossible plants, and landscape mysteries read with careful source limits.</p>
+            <a class="button" href="/categories">Open all categories</a>
+          </article>
+          <div class="home-known-list category-entrance-list">
+            <h2>Start in this shelf</h2>
+            <a href="/stories/fairy-rings-folklore"><span>01</span><strong>Fairy Rings: Mushroom Circles, Grass Patterns, and the Folklore of a Natural Shape</strong><em>Strange Nature</em></a><a href="/stories/naga-fireballs-legend"><span>02</span><strong>Naga Fireballs: Mekong Lights, Festival Reports, and the River Phenomenon Between Belief and Debate</strong><em>Strange Nature</em></a><a href="/stories/sailing-stones-death-valley"><span>03</span><strong>Racetrack Playa Sailing Stones: The Winter the Dry Lakebed Moved</strong><em>Strange Nature</em></a><a href="/stories/morning-glory-cloud"><span>04</span><strong>Morning Glory Cloud: Rolling Sky Waves, Gulf Country, and the Cloud That Looks Alive</strong><em>Strange Nature</em></a><a href="/stories/ball-lightning-phenomenon"><span>05</span><strong>Ball Lightning: Glowing Spheres, Storm Reports, and the Natural Mystery That Behaves Like Folklore</strong><em>Strange Nature</em></a>
+          </div>
+        </section>
+        <section class="category-seo-intro" aria-label="Strange Nature overview">
       <p>Strange Nature is a Kyunolab Mystery Archive reading path for weather omens, unusual landscapes, strange water, seasonal signs, sound boundaries, and natural events interpreted through folklore. The collection approaches each subject through origin, meaning, common versions, cultural setting, and source status. It preserves the atmosphere that makes a legend memorable while separating documented context from oral tradition, community retelling, symbolic interpretation, and original narrative framing.</p>
       <p>Readers can use this page to compare how similar motifs change across regions and formats. Some articles follow older folklore; others examine modern rumors, internet circulation, archival gaps, or stories attached to familiar places and objects. Titles and summaries are written to answer a clear question, but no repeated claim is treated as proof simply because it appears in many versions.</p>
       <p>The entries below are ordered by their latest update. Each article links to related stories, narrower tags, source notes, and the wider archive shelf, making this category a starting point rather than a dead-end list. Begin with the topic closest to your question, then follow the connected motifs to see what changes, what persists, and where the available evidence stops.</p>
       <p>Because the archive includes legends, retellings, symbolic readings, and evidence-limited mysteries, source labels remain visible throughout. That distinction lets readers enjoy the story pattern without confusing cultural importance, online popularity, or local tradition with independent verification.</p>
-    </section><aside class="ad-slot" data-ad-slot="ad-category-after-intro" aria-label="Advertisement"><span>Advertisement</span></aside><div class="story-list"><article class="story-row">
+    </section>
+        <aside class="ad-slot" data-ad-slot="ad-category-after-intro" aria-label="Advertisement"><span>Advertisement</span></aside>
+        <section class="home-headline-desk archive-story-index" aria-label="Strange Nature story list">
+          <div class="section-head"><h2>Strange Nature Records</h2><span>Page 1 of 8</span></div>
+          <div class="archive-story-index-grid">
+            <div class="story-list"><article class="story-row">
           <span class="tag">Strange Nature</span>
           <h3><a href="/stories/fairy-rings-folklore">Fairy Rings: Mushroom Circles, Grass Patterns, and the Folklore of a Natural Shape</a></h3>
           <p>Fairy Rings is a pre-existing Strange Nature subject built around the natural circles of mushrooms or grass that became linked with fairies, dancing, warnings, and enchanted places.</p>
@@ -125,13 +173,24 @@
           <h3><a href="/stories/the-bird-migration-tower-catalog-page-kept-outside-the-sequence">The Bird Migration Tower Catalog Page Kept Outside the Sequence</a></h3>
           <p>The Bird Migration Tower Catalog Page Kept Outside the Sequence follows a catalog page from bird migration tower keeps one flock charted below the ground outside the normal sequence, showing how ordinary paperwork can become the center of a legend, mystery, or symbolic tradition.</p>
           <div class="meta">Strange Nature - Nature Record Legend - 8 min read - Updated Aug 2, 2026</div>
-        </article></div><nav class="pagination" aria-label="Archive pagination"><div class="pagination-status">Page 1 of 8</div><div class="pagination-links"><span class="page-link page-step is-disabled" aria-disabled="true">Previous</span><span class="page-link is-current" aria-current="page">1</span><a class="page-link" href="/categories/strange-nature-2">2</a><a class="page-link" href="/categories/strange-nature-3">3</a><a class="page-link" href="/categories/strange-nature-4">4</a><a class="page-link" href="/categories/strange-nature-5">5</a><a class="page-link" href="/categories/strange-nature-6">6</a><a class="page-link" href="/categories/strange-nature-7">7</a><a class="page-link" href="/categories/strange-nature-8">8</a><a class="page-link page-step" href="/categories/strange-nature-2">Next</a></div></nav></div>
-    <aside class="article-rail article-rail-right" aria-label="Recommended archive paths"><div class="rail-card rail-card-network">
+        </article></div>
+            <aside class="home-context-card">
+              <p class="label">Category road</p>
+              <h3>This shelf should lead directly into stories.</h3>
+              <p>Use this page to choose a record, then follow related tags, guides, and archive links from the article itself.</p>
+              <div class="category-links"><a href="/newest">Newest Records</a><a href="/popular">Known Records</a><a href="/mystery-board">Mystery Board</a></div>
+            </aside>
+          </div>
+          <nav class="pagination" aria-label="Archive pagination"><div class="pagination-status">Page 1 of 8</div><div class="pagination-links"><span class="page-link page-step is-disabled" aria-disabled="true">Previous</span><span class="page-link is-current" aria-current="page">1</span><a class="page-link" href="/categories/strange-nature-2">2</a><a class="page-link" href="/categories/strange-nature-3">3</a><a class="page-link" href="/categories/strange-nature-4">4</a><a class="page-link" href="/categories/strange-nature-5">5</a><a class="page-link" href="/categories/strange-nature-6">6</a><a class="page-link" href="/categories/strange-nature-7">7</a><a class="page-link" href="/categories/strange-nature-8">8</a><a class="page-link page-step" href="/categories/strange-nature-2">Next</a></div></nav>
+        </section>
+      </div>
+      <aside class="home-portal-rail" aria-label="Recommended archive paths"><div class="rail-card rail-card-network">
         <p class="rail-label">Kyunolab Network</p>
         <strong>Creator Library</strong>
         <p>Free mystery YouTube scripts, Shorts scripts, image prompts, and thumbnail ideas for video creators.</p>
         <a class="button" href="/scripts/">Open Creator Library</a>
       </div><div class="rail-card rail-feature"><p class="rail-label">Start here</p><a href="/stories/fairy-rings-folklore"><span>Strange Nature</span><strong>Fairy Rings: Mushroom Circles, Grass Patterns, and the Folklore of a Natural Shape</strong></a></div><div class="rail-card"><p class="rail-label">Related stories</p><a href="/stories/naga-fireballs-legend">Naga Fireballs: Mekong Lights, Festival Reports, and the River Phenomenon Between Belief and Debate</a><a href="/stories/sailing-stones-death-valley">Racetrack Playa Sailing Stones: The Winter the Dry Lakebed Moved</a><a href="/stories/morning-glory-cloud">Morning Glory Cloud: Rolling Sky Waves, Gulf Country, and the Cloud That Looks Alive</a></div></aside>
+    </div>
   </main>
   <footer class="site-footer">
     <p><strong>Kyunolab Mystery Archive</strong> collects legends, folklore, mysteries, and strange tales with calm source-aware notes.</p>

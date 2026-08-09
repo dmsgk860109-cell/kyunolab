@@ -436,31 +436,74 @@ function renderUtilityPlaceholderPage({ canonicalPath, label, title, deck, prima
     metaDescription: deck,
     robots: 'noindex, follow',
     networkSection: 'archive',
-    content: `  <main class="article-shell article-layout utility-placeholder-page">
-    ${renderLeftRail(`${label} navigation`)}
-    <div class="archive-page-main">
-      <p class="label">${escapeHtml(label)}</p>
-      <h1 class="article-title">${escapeHtml(title)}</h1>
-      <p class="deck">${escapeHtml(deck)}</p>
-      <section class="notice">
-        <strong>Under construction:</strong> This page is linked now so the site structure stays honest. It is marked noindex until the full ${escapeHtml(label.toLowerCase())} section is ready.
-      </section>
-      <section class="utility-placeholder-grid" aria-label="${escapeAttr(label)} planned areas">
-        ${cards.map(([cardTitle, cardText]) => `<article>
-          <p class="category-group-label">Planned Area</p>
-          <h2>${escapeHtml(cardTitle)}</h2>
-          <p>${escapeHtml(cardText)}</p>
-        </article>`).join('\n')}
-      </section>
-      <section class="archive-cta">
-        <div><p class="label">Keep reading</p><h2>Use the active paths while this area is built.</h2><p>Archive records, reading guides, and Creator Library pages remain available from here.</p></div>
-        <div class="utility-cta-actions">
-          <a class="button" href="${escapeAttr(primaryCta[1])}">${escapeHtml(primaryCta[0])}</a>
-          <a class="text-link" href="${escapeAttr(secondaryCta[1])}">${escapeHtml(secondaryCta[0])}</a>
-        </div>
-      </section>
+    bodyClass: 'home-portal-page',
+    headerHtml: renderHomePortalHeader(canonicalPath),
+    content: `  <main class="home-shell home-portal-shell utility-placeholder-page">
+    <div class="home-portal-layout">
+      <div class="home-main-column">
+        <section class="home-portal-lead" aria-label="${escapeAttr(label)} front entrance">
+          <article class="home-lead-story">
+            <p class="label">${escapeHtml(label)} Under Construction</p>
+            <h1>${escapeHtml(title)}</h1>
+            <p>${escapeHtml(deck)}</p>
+            <a class="button" href="${escapeAttr(primaryCta[1])}">${escapeHtml(primaryCta[0])}</a>
+          </article>
+          <div class="home-known-list">
+            <h2>Use active paths</h2>
+            <a href="/archive.html"><span>01</span><strong>Browse every archive record</strong></a>
+            <a href="/categories.html"><span>02</span><strong>Open the category shelves</strong></a>
+            <a href="/mystery-board.html"><span>03</span><strong>Read Mystery Board guides</strong></a>
+            <a href="/scripts/"><span>04</span><strong>Move to Creator Library</strong></a>
+          </div>
+        </section>
+        <section class="notice">
+          <strong>Under construction:</strong> This page is linked now so the site structure stays honest. It is marked noindex until the full ${escapeHtml(label.toLowerCase())} section is ready.
+        </section>
+        ${renderAdSlot(`ad-${label.toLowerCase()}-after-intro`)}
+        <section class="home-headline-desk" aria-label="${escapeAttr(label)} planned areas">
+          <div class="section-head"><h2>Planned Areas</h2><span>Reserved route, not a finished section</span></div>
+          <div class="headline-desk-grid">
+            <div class="headline-list">
+              ${cards.map(([cardTitle, cardText]) => `<article class="home-headline-row utility-placeholder-row">
+                <span>Planned</span>
+                <strong>${escapeHtml(cardTitle)}</strong>
+                <em>${escapeHtml(cardText)}</em>
+              </article>`).join('\n')}
+            </div>
+            <aside class="home-context-card">
+              <p class="label">Keep reading</p>
+              <h3>Use the active buildings while this one is built.</h3>
+              <p>Archive records, reading guides, and Creator Library pages remain available from here.</p>
+              <div class="category-links">
+                <a href="${escapeAttr(primaryCta[1])}">${escapeHtml(primaryCta[0])}</a>
+                <a href="${escapeAttr(secondaryCta[1])}">${escapeHtml(secondaryCta[0])}</a>
+              </div>
+            </aside>
+          </div>
+        </section>
+        ${renderHomeCrossroads({ guideLinks: getHomeGuides(['how-to-check-source-status', 'how-to-build-a-reading-path-through-the-strange-archive']), libraryScripts: sortNewest(creatorScripts).slice(0, 2) })}
+      </div>
+      <aside class="home-portal-rail" aria-label="${escapeAttr(label)} side paths">
+        ${renderKyunolabNetworkCard('archive')}
+        <section class="rail-card rail-feature">
+          <p class="rail-label">Start here</p>
+          <a href="/archive.html"><span>Archive</span><strong>Return to the active story collection</strong></a>
+        </section>
+        <section class="rail-card">
+          <p class="rail-label">Active roads</p>
+          <a href="/newest.html">Newest Records</a>
+          <a href="/popular.html">Known Records</a>
+          <a href="/categories.html">Browse Categories</a>
+          <a href="/mystery-board.html">Mystery Board</a>
+        </section>
+        <section class="rail-card rail-card-subtle">
+          <p class="rail-label">${escapeHtml(label)} Status</p>
+          <a href="${escapeAttr(canonicalPath)}">Stable route</a>
+          <a href="/fiction-disclaimer.html">Story and source notice</a>
+          <a href="/about.html">About Kyunolab</a>
+        </section>
+      </aside>
     </div>
-    ${renderRightRail(stories.slice(0, 4), `${label} fallback paths`)}
   </main>`
   });
 }
@@ -498,18 +541,41 @@ function renderPublishingCenterHome(activeCategories) {
     description: 'Internal publishing management page for Kyunolab archive records.',
     robots: 'noindex, nofollow',
     networkSection: 'publishing',
-    content: `  <main class="article-shell">
-    <div class="archive-page-main">
-      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Publishing Center</span></nav>
-      <p class="label">Internal Tool</p>
-      <h1 class="article-title">Publishing Center</h1>
-      ${renderPublishingCenterStyles()}
-      <section class="script-material" aria-label="Archive categories">
-        <h2>Archive Categories</h2>
-        <ul class="publishing-category-list">
+    bodyClass: 'home-portal-page',
+    headerHtml: renderHomePortalHeader('/publishing-center/'),
+    content: `  <main class="home-shell home-portal-shell publishing-portal-page">
+    <div class="home-portal-layout">
+      <div class="home-main-column">
+        <section class="home-portal-lead" aria-label="Publishing Center front entrance">
+          <article class="home-lead-story">
+            <p class="label">Internal Tool</p>
+            <h1>Publishing Center</h1>
+            <p>Internal publishing management page for Kyunolab archive records.</p>
+            <a class="button" href="/archive.html">Return to archive</a>
+          </article>
+          <div class="home-known-list">
+            <h2>Publishing shelves</h2>
+            ${activeCategories.slice(0, 5).map((category, index) => `<a href="/publishing-center/${escapeAttr(category.slug)}/"><span>${String(index + 1).padStart(2, '0')}</span><strong>${escapeHtml(category.title)}</strong><em>${stories.filter((story) => story.categorySlug === category.slug).length} records</em></a>`).join('')}
+          </div>
+        </section>
+        ${renderPublishingCenterStyles()}
+        <section class="home-headline-desk" aria-label="Archive categories">
+          <div class="section-head"><h2>Archive Categories</h2><span>Internal noindex tool</span></div>
+          <ul class="publishing-category-list">
 ${categoryLinks}
-        </ul>
-      </section>
+          </ul>
+        </section>
+      </div>
+      <aside class="home-portal-rail" aria-label="Publishing side paths">
+        ${renderKyunolabNetworkCard('archive')}
+        <section class="rail-card">
+          <p class="rail-label">Active roads</p>
+          <a href="/archive.html">All Stories</a>
+          <a href="/categories.html">Categories</a>
+          <a href="/newest.html">Newest Records</a>
+          <a href="/popular.html">Known Records</a>
+        </section>
+      </aside>
     </div>
   </main>`
   });
@@ -537,20 +603,44 @@ function renderPublishingCategoryPage({ category, stories, pageNumber, totalPage
     description: `Internal publishing management page for ${category.title} archive records.`,
     robots: 'noindex, nofollow',
     networkSection: 'publishing',
-    content: `  <main class="article-shell">
-    <div class="archive-page-main publishing-center" data-publishing-center>
-      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/publishing-center/">Publishing Center</a><span aria-hidden="true">/</span><span aria-current="page">${escapeHtml(category.title)}</span></nav>
-      <p class="label">Internal Tool</p>
-      <h1 class="article-title">${escapeHtml(category.title)}</h1>
-      ${renderPublishingCenterStyles()}
-      <section class="script-material" aria-label="${escapeAttr(category.title)} records">
-        <h2>Archive Records</h2>
-        <p class="publishing-status" role="status" aria-live="polite"></p>
-        <ul class="publishing-record-list">
+    bodyClass: 'home-portal-page',
+    headerHtml: renderHomePortalHeader(publishingCategoryPagePath(category.slug, pageNumber)),
+    content: `  <main class="home-shell home-portal-shell publishing-portal-page">
+    <div class="home-portal-layout">
+      <div class="home-main-column publishing-center" data-publishing-center>
+        <section class="home-portal-lead" aria-label="${escapeAttr(category.title)} Publishing Center front entrance">
+          <article class="home-lead-story">
+            <p class="label">Internal Tool</p>
+            <h1>${escapeHtml(category.title)}</h1>
+            <p>Internal publishing management page for ${escapeHtml(category.title)} archive records.</p>
+            <a class="button" href="/publishing-center/">Publishing Center</a>
+          </article>
+          <div class="home-known-list">
+            <h2>Record actions</h2>
+            <a href="/archive.html"><span>01</span><strong>All Stories</strong></a>
+            <a href="/categories/${escapeAttr(category.slug)}.html"><span>02</span><strong>${escapeHtml(category.title)} public shelf</strong></a>
+            <a href="/newest.html"><span>03</span><strong>Newest Records</strong></a>
+          </div>
+        </section>
+        ${renderPublishingCenterStyles()}
+        <section class="home-headline-desk" aria-label="${escapeAttr(category.title)} records">
+          <div class="section-head"><h2>Archive Records</h2><span>${escapeHtml(`Page ${pageNumber} of ${totalPages}`)}</span></div>
+          <p class="publishing-status" role="status" aria-live="polite"></p>
+          <ul class="publishing-record-list">
 ${rows}
-        </ul>
+          </ul>
 ${pagination}
-      </section>
+        </section>
+      </div>
+      <aside class="home-portal-rail" aria-label="Publishing side paths">
+        ${renderKyunolabNetworkCard('archive')}
+        <section class="rail-card">
+          <p class="rail-label">Publishing shelves</p>
+          <a href="/publishing-center/">Publishing Center</a>
+          <a href="/categories/${escapeAttr(category.slug)}.html">${escapeHtml(category.title)}</a>
+          <a href="/archive.html">All Stories</a>
+        </section>
+      </aside>
     </div>
   </main>`
   });
@@ -1652,64 +1742,61 @@ ${(section.paragraphs || []).map((text) => `<p>${escapeHtml(text)}</p>`).join('\
     description: post.metaDescription || post.excerpt || post.deck,
     metaDescription: post.metaDescription || post.excerpt || post.deck,
     networkSection: 'scripts',
-    content: `  <main class="article-shell article-layout">
-    <aside class="article-rail article-rail-left" aria-label="Library Board navigation">
-      <div class="rail-card">
-        <p class="rail-label">In this guide</p>
-        ${sections.map((section) => `<a href="#${escapeAttr(section.id)}">${escapeHtml(section.nav || section.title)}</a>`).join('')}
-      </div>
-      <div class="rail-card rail-card-subtle">
-        <p class="rail-label">Creator paths</p>
-        <a href="/scripts/">Creator Library</a>
-        <a href="/scripts/categories/">Script Categories</a>
-        <a href="/scripts/resources/">Creator Resources</a>
-      </div>
-    </aside>
-
-    <article>
-      <header class="archive-article-header">
-        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/scripts/">Creator Library</a><span aria-hidden="true">/</span><a href="/scripts/board/">Library Board</a><span aria-hidden="true">/</span><span aria-current="page">${escapeHtml(post.title)}</span></nav>
-        <p class="label">Library Board</p>
-        <h1 class="article-title">${escapeHtml(post.title)}</h1>
-        <p class="deck">${escapeHtml(post.deck || post.excerpt || '')}</p>
-        <dl class="article-meta-grid">
-          <div><dt>Topic</dt><dd>${escapeHtml(post.tag || 'Creator Library')}</dd></div>
-          <div><dt>Best for</dt><dd>Creators using Kyunolab script packages</dd></div>
-          <div><dt>Read time</dt><dd>${escapeHtml(post.readTime || '3 min read')}</dd></div>
-          <div><dt>Updated</dt><dd>${formatDate(post.updatedAt || post.publishedAt)}</dd></div>
-        </dl>
-      </header>
-
-      <section class="story-map" aria-label="Guide map">
-        <h2>Guide Map</h2>
-        <ol>${mapItems}</ol>
-      </section>
-
-      <div class="story-body archive-entry">
+    footerSection: 'scripts',
+    bodyClass: 'home-portal-page',
+    headerHtml: renderCreatorPortalHeader(canonicalPath),
+    content: `  <main class="home-shell home-portal-shell creator-portal-page creator-guide-page">
+    <div class="home-portal-layout">
+      <div class="home-main-column">
+        <article>
+          <header class="archive-article-header">
+            <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/scripts/">Creator Library</a><span aria-hidden="true">/</span><a href="/scripts/board/">Library Board</a><span aria-hidden="true">/</span><span aria-current="page">${escapeHtml(post.title)}</span></nav>
+            <p class="label">Library Board</p>
+            <h1 class="article-title">${escapeHtml(post.title)}</h1>
+            <p class="deck">${escapeHtml(post.deck || post.excerpt || '')}</p>
+            <dl class="article-meta-grid">
+              <div><dt>Topic</dt><dd>${escapeHtml(post.tag || 'Creator Library')}</dd></div>
+              <div><dt>Best for</dt><dd>Creators using Kyunolab script packages</dd></div>
+              <div><dt>Read time</dt><dd>${escapeHtml(post.readTime || '3 min read')}</dd></div>
+              <div><dt>Updated</dt><dd>${formatDate(post.updatedAt || post.publishedAt)}</dd></div>
+            </dl>
+          </header>
+          <section class="story-map" aria-label="Guide map">
+            <h2>Guide Map</h2>
+            <ol>${mapItems}</ol>
+          </section>
+          ${renderAdSlot('ad-library-board-after-map')}
+          <div class="story-body archive-entry">
 ${body}
 
-        <h2>Library Board Note</h2>
-        <p>Library Board guides explain how the Creator Library works. Individual production materials remain inside Creator Library script pages.</p>
+            <h2>Library Board Note</h2>
+            <p>Library Board guides explain how the Creator Library works. Individual production materials remain inside Creator Library script pages.</p>
+          </div>
+        </article>
       </div>
-    </article>
-
-    <aside class="article-rail article-rail-right" aria-label="Related creator resources">
-      ${renderKyunolabNetworkCard('scripts')}
-      <div class="rail-card rail-feature">
-        <p class="rail-label">Read next</p>
-        <a href="/scripts/board/${escapeAttr(nextPost.slug)}/"><span>${escapeHtml(nextPost.tag || nextPost.category || 'Library Board')}</span><strong>${escapeHtml(nextPost.title)}</strong></a>
-      </div>
-      <div class="rail-card">
-        <p class="rail-label">Library Board</p>
-        ${boardPosts.slice(0, 4).map((item) => `<a href="/scripts/board/${escapeAttr(item.slug)}/">${escapeHtml(item.title)}</a>`).join('')}
-      </div>
-      <div class="rail-card rail-card-subtle">
-        <p class="rail-label">Creator paths</p>
-        <a href="/scripts/latest/">Latest Scripts</a>
-        <a href="/scripts/categories/">Script Categories</a>
-        <a href="/scripts/resources/">Creator Resources</a>
-      </div>
-    </aside>
+      <aside class="home-portal-rail creator-portal-rail" aria-label="Related creator resources">
+        ${renderKyunolabNetworkCard('scripts')}
+        <section class="rail-card">
+          <p class="rail-label">In this guide</p>
+          ${sections.map((section) => `<a href="#${escapeAttr(section.id)}">${escapeHtml(section.nav || section.title)}</a>`).join('')}
+        </section>
+        <section class="rail-card rail-feature">
+          <p class="rail-label">Read next</p>
+          <a href="/scripts/board/${escapeAttr(nextPost.slug)}/"><span>${escapeHtml(nextPost.tag || nextPost.category || 'Library Board')}</span><strong>${escapeHtml(nextPost.title)}</strong></a>
+        </section>
+        <section class="rail-card">
+          <p class="rail-label">Library Board</p>
+          ${boardPosts.slice(0, 4).map((item) => `<a href="/scripts/board/${escapeAttr(item.slug)}/">${escapeHtml(item.title)}</a>`).join('')}
+        </section>
+        <section class="rail-card rail-card-subtle">
+          <p class="rail-label">Creator paths</p>
+          <a href="/scripts/">Creator Library</a>
+          <a href="/scripts/latest/">Latest Scripts</a>
+          <a href="/scripts/categories/">Script Categories</a>
+          <a href="/scripts/resources/">Creator Resources</a>
+        </section>
+      </aside>
+    </div>
   </main>`
   });
 }
@@ -2046,26 +2133,59 @@ function generateSearchPage() {
     metaDescription: 'Search Kyunolab Mystery Archive records or Creator Library pages.',
     robots: 'noindex, follow',
     networkSection: 'search',
-    content: `  <main class="article-shell">
-    <div class="archive-page-main search-page" data-search-page>
-      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Search</span></nav>
-      <p class="label">Site Search</p>
-      <h1 class="article-title">Search Kyunolab</h1>
-      <p class="deck" data-search-summary>Choose Archive or Creator Library, then enter a title, legend, category, motif, or keyword.</p>
-      <form class="search-page-form" action="/search/" method="get" role="search" aria-label="Search Kyunolab">
-        <label class="sr-only" for="search-page-type">Search target</label>
-        <select id="search-page-type" name="type" class="site-search-select" data-search-type>
-          <option value="archive">Archive</option>
-          <option value="library">Creator Library</option>
-        </select>
-        <label class="sr-only" for="search-page-query">Search query</label>
-        <input id="search-page-query" name="q" class="site-search-input" type="search" placeholder="Search stories, legends, and mysteries..." autocomplete="off" data-search-input>
-        <button class="site-search-button" type="submit">SEARCH</button>
-      </form>
-      <section class="search-results-panel" aria-live="polite">
-        <div class="section-head"><h2 data-search-heading>Search results</h2><span data-search-count></span></div>
-        <div class="story-list" data-search-results></div>
-      </section>
+    bodyClass: 'home-portal-page',
+    headerHtml: renderHomePortalHeader('/search/'),
+    content: `  <main class="home-shell home-portal-shell search-portal-page">
+    <div class="home-portal-layout">
+      <div class="home-main-column search-page" data-search-page>
+        <section class="home-portal-lead" aria-label="Search front entrance">
+          <article class="home-lead-story">
+            <p class="label">Site Search</p>
+            <h1>Search Kyunolab</h1>
+            <p data-search-summary>Choose Archive or Creator Library, then enter a title, legend, category, motif, or keyword.</p>
+          </article>
+          <div class="home-known-list">
+            <h2>Search routes</h2>
+            <a href="/archive.html"><span>01</span><strong>All Stories</strong></a>
+            <a href="/categories.html"><span>02</span><strong>Categories</strong></a>
+            <a href="/mystery-board.html"><span>03</span><strong>Mystery Board</strong></a>
+            <a href="/scripts/"><span>04</span><strong>Creator Library</strong></a>
+          </div>
+        </section>
+        <section class="home-headline-desk" aria-label="Search form and results">
+          <div class="section-head"><h2>Search Form</h2><span data-search-count></span></div>
+          <form class="search-page-form" action="/search/" method="get" role="search" aria-label="Search Kyunolab">
+            <label class="sr-only" for="search-page-type">Search target</label>
+            <select id="search-page-type" name="type" class="site-search-select" data-search-type>
+              <option value="archive">Archive</option>
+              <option value="library">Creator Library</option>
+            </select>
+            <label class="sr-only" for="search-page-query">Search query</label>
+            <input id="search-page-query" name="q" class="site-search-input" type="search" placeholder="Search stories, legends, and mysteries..." autocomplete="off" data-search-input>
+            <button class="site-search-button" type="submit">SEARCH</button>
+          </form>
+          <section class="search-results-panel" aria-live="polite">
+            <div class="section-head"><h2 data-search-heading>Search results</h2><span></span></div>
+            <div class="story-list" data-search-results></div>
+          </section>
+        </section>
+      </div>
+      <aside class="home-portal-rail" aria-label="Search side paths">
+        ${renderKyunolabNetworkCard('archive')}
+        <section class="rail-card">
+          <p class="rail-label">Archive roads</p>
+          <a href="/archive.html">All Stories</a>
+          <a href="/newest.html">Newest Records</a>
+          <a href="/popular.html">Known Records</a>
+          <a href="/categories.html">Categories</a>
+        </section>
+        <section class="rail-card rail-card-subtle">
+          <p class="rail-label">Other sections</p>
+          <a href="/mystery-board.html">Mystery Board</a>
+          <a href="/scripts/">Creator Library</a>
+          <a href="/tools.html">Tools</a>
+        </section>
+      </aside>
     </div>
   </main>`
   }));
@@ -4019,16 +4139,48 @@ function renderCategoryPage({ category, pageItems, pageNumber, totalPages, pageT
   const metaDescription = pageNumber === 1
     ? category.description
     : `${category.description} Page ${pageNumber} of ${totalPages} continues this category with more related archive entries.`;
+  const categoryLeadItems = pageItems.slice(0, 5);
   return renderPage({
     canonicalPath,
     title: pageTitle,
     description: category.description,
     metaDescription,
     networkSection: 'archive',
-    content: `  <main class="article-shell article-layout">
-    ${renderLeftRail()}
-    <div class="archive-page-main"><p class="label">${escapeHtml(category.group)}</p><h1 class="article-title">${escapeHtml(category.title)}</h1><p class="deck">${escapeHtml(category.description)}</p>${pageNumber === 1 ? renderCategoryIntro(category) : ''}${renderAdSlot('ad-category-after-intro')}<div class="story-list">${renderStoryRowsWithMidAd(pageItems, 'ad-category-mid-list')}</div>${renderPagination(`categories/${category.slug}`, pageNumber, totalPages)}</div>
-    ${renderRightRail(pageItems, 'Recommended archive paths')}
+    bodyClass: 'home-portal-page',
+    headerHtml: renderHomePortalHeader(canonicalPath),
+    content: `  <main class="home-shell home-portal-shell category-detail-portal-page">
+    <div class="home-portal-layout">
+      <div class="home-main-column">
+        <section class="home-portal-lead category-portal-lead" aria-label="${escapeAttr(category.title)} front entrance">
+          <article class="home-lead-story category-lead-story">
+            <p class="label">${escapeHtml(category.group)}</p>
+            <h1>${escapeHtml(category.title)}</h1>
+            <p>${escapeHtml(category.description)}</p>
+            <a class="button" href="/categories.html">Open all categories</a>
+          </article>
+          <div class="home-known-list category-entrance-list">
+            <h2>Start in this shelf</h2>
+            ${categoryLeadItems.map(renderArchiveEntranceLink).join('')}
+          </div>
+        </section>
+        ${pageNumber === 1 ? renderCategoryIntro(category) : ''}
+        ${renderAdSlot('ad-category-after-intro')}
+        <section class="home-headline-desk archive-story-index" aria-label="${escapeAttr(category.title)} story list">
+          <div class="section-head"><h2>${escapeHtml(category.title)} Records</h2><span>${escapeHtml(`Page ${pageNumber} of ${totalPages}`)}</span></div>
+          <div class="archive-story-index-grid">
+            <div class="story-list">${renderStoryRowsWithMidAd(pageItems, 'ad-category-mid-list')}</div>
+            <aside class="home-context-card">
+              <p class="label">Category road</p>
+              <h3>This shelf should lead directly into stories.</h3>
+              <p>Use this page to choose a record, then follow related tags, guides, and archive links from the article itself.</p>
+              <div class="category-links"><a href="/newest.html">Newest Records</a><a href="/popular.html">Known Records</a><a href="/mystery-board.html">Mystery Board</a></div>
+            </aside>
+          </div>
+          ${renderPagination(`categories/${category.slug}`, pageNumber, totalPages)}
+        </section>
+      </div>
+      ${renderRightRail(pageItems, 'Recommended archive paths').replace('article-rail article-rail-right', 'home-portal-rail')}
+    </div>
   </main>`
   });
 }

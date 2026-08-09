@@ -23,32 +23,80 @@
   <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="/styles.css?v=20260804-nav-flow">
 </head>
-<body>
-  <header class="site-header">
-    <div class="topline">A Kyuno Lab publication</div>
-    <div class="header-inner">
-      <a class="brand" href="/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
-
-      <form class="site-search" action="/search/" method="get" role="search" aria-label="Search Archive or Creator Library">
-        <label class="sr-only" for="global-search-type">Search target</label>
-        <select id="global-search-type" name="type" class="site-search-select" data-search-type>
-          <option value="archive" selected>Archive</option>
-          <option value="library">Creator Library</option>
-        </select>
-        <label class="sr-only" for="global-search-query">Search query</label>
-        <input id="global-search-query" name="q" class="site-search-input" type="search" placeholder="Search stories, legends, and mysteries..." autocomplete="off" data-search-input>
-        <button class="site-search-button" type="submit">SEARCH</button>
-      </form>
-      <nav class="nav"><a href="/archive">All Stories</a><a href="/newest">Newest</a><a href="/popular">Popular</a><a href="/categories" class="active" aria-current="page">Categories</a><a href="/mystery-board">Mystery Board</a><a href="/tools">Tools</a><a href="/about">About</a><a href="/hub">Hub</a></nav>
+<body class="home-portal-page">
+  <header class="home-portal-header">
+    <div class="home-portal-header-inner">
+      <div class="home-portal-topbar">
+        <a class="home-portal-brand" href="/"><span class="home-portal-brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
+        <form class="site-search home-portal-search" action="/search/" method="get" role="search" aria-label="Search Kyunolab">
+          <input type="hidden" name="type" value="archive">
+          <label class="sr-only" for="home-portal-search-query">Search query</label>
+          <input id="home-portal-search-query" name="q" class="site-search-input" type="search" placeholder="Search Kyunolab..." autocomplete="off" data-search-input>
+          <button class="site-search-button" type="submit">Search</button>
+        </form>
+      </div>
+      <nav class="home-portal-nav" aria-label="Primary homepage navigation">
+        <a href="/">Home</a>
+        <a href="/archive">All Stories</a>
+        <a href="/categories" class="active" aria-current="page">Categories</a>
+        <a href="/mystery-board">Mystery Board</a>
+        <a href="/scripts/">Creator Library</a>
+        <a href="/tools">Tools</a>
+        <a href="/about">About</a>
+        <a href="/hub" class="home-portal-hub-link">Hub</a>
+      </nav>
+      <section class="home-sign-system" aria-label="Kyunolab reading paths">
+          <div class="home-sign-intro">
+            <p class="label">Start Here</p>
+            <h2>Choose a story shelf first, then use the map when you want the wider site.</h2>
+            <p>Begin with archive stories, open the full index, or cross into reading guides, creator material, and future tools.</p>
+          </div>
+          <div class="home-sign-links">
+            <div>
+              <h3>Browse Stories</h3>
+              <a href="/categories/urban-legends">Urban Legends</a>
+              <a href="/categories/internet-folklore">Internet Folklore</a>
+              <a href="/categories/myths">Myths</a>
+              <a href="/categories/strange-places">Strange Places</a>
+            </div>
+            <div>
+              <h3>Use The Map</h3>
+              <a href="/archive">All Stories</a>
+              <a href="/mystery-board">Reading Guides</a>
+              <a href="/scripts/">Creator Library</a>
+              <a href="/tools">Tools</a>
+            </div>
+          </div>
+          <div class="home-small-buildings">
+            <h3>Site Notes</h3>
+            <a href="/hub">Hub</a>
+            <a href="/about">About Kyunolab</a>
+            <a href="/fiction-disclaimer">Story and source notice</a>
+          </div>
+        </section>
     </div>
   </header>
-  <main class="article-shell article-layout">
-    <aside class="article-rail article-rail-left" aria-label="Archive navigation">
-    <div class="rail-card"><p class="rail-label">Reader Paths</p><a href="/archive">All Stories</a><a href="/newest">Newest Records</a><a href="/popular">Popular Records</a><a href="/categories">Browse Categories</a><a href="/mystery-board">Mystery Board</a></div>
-    <div class="rail-card rail-card-subtle"><p class="rail-label">Archive Shelves</p><a href="/categories/urban-legends">Urban Legends</a><a href="/categories/internet-folklore">Internet Folklore</a><a href="/categories/myths">Myths</a><a href="/categories/strange-places">Strange Places</a></div>
-    <div class="rail-card"><p class="rail-label">Source Guide</p><a href="/fiction-disclaimer">Story &amp; Source Notice</a><a href="/about">About Kyunolab</a></div>
-  </aside>
-    <div class="archive-page-main"><p class="label">Modern Strange Records</p><h1 class="article-title">Modern Legends</h1><p class="deck">Modern legends, reported sightings, rumor cycles, cryptid-like accounts, and near-contemporary folklore shaped by repetition and social memory.</p><aside class="ad-slot" data-ad-slot="ad-category-after-intro" aria-label="Advertisement"><span>Advertisement</span></aside><div class="story-list"><article class="story-row">
+  <main class="home-shell home-portal-shell category-detail-portal-page">
+    <div class="home-portal-layout">
+      <div class="home-main-column">
+        <section class="home-portal-lead category-portal-lead" aria-label="Modern Legends front entrance">
+          <article class="home-lead-story category-lead-story">
+            <p class="label">Modern Strange Records</p>
+            <h1>Modern Legends</h1>
+            <p>Modern legends, reported sightings, rumor cycles, cryptid-like accounts, and near-contemporary folklore shaped by repetition and social memory.</p>
+            <a class="button" href="/categories">Open all categories</a>
+          </article>
+          <div class="home-known-list category-entrance-list">
+            <h2>Start in this shelf</h2>
+            <a href="/stories/the-delivery-bag-that-arrives-without-a-rider"><span>01</span><strong>The Delivery Bag That Arrives Without a Rider</strong><em>Modern Legends</em></a><a href="/stories/the-white-bicycle-locked-outside-every-station"><span>02</span><strong>The White Bicycle Locked Outside Every Station</strong><em>Modern Legends</em></a><a href="/stories/gas-station-receipt-with-tomorrows-date"><span>03</span><strong>Gas Station Receipt With Tomorrow&#39;s Date: POS Clocks, Business Days, and the Folklore of Buying Fuel From the Future</strong><em>Modern Legends</em></a><a href="/stories/white-van-that-waits-with-headlights-off"><span>04</span><strong>The White Van That Waits With Its Headlights Off: Why Parking Lot Legends Keep Returning</strong><em>Modern Legends</em></a><a href="/stories/delivery-driver-who-arrived-twice"><span>05</span><strong>Delivery Driver Who Arrived Twice: Duplicate Couriers, Doorstep Proof, and Gig-Economy Folklore</strong><em>Modern Legends</em></a>
+          </div>
+        </section>
+        
+        <aside class="ad-slot" data-ad-slot="ad-category-after-intro" aria-label="Advertisement"><span>Advertisement</span></aside>
+        <section class="home-headline-desk archive-story-index" aria-label="Modern Legends story list">
+          <div class="section-head"><h2>Modern Legends Records</h2><span>Page 8 of 8</span></div>
+          <div class="archive-story-index-grid">
+            <div class="story-list"><article class="story-row">
           <span class="tag">Modern Legends</span>
           <h3><a href="/stories/the-delivery-bag-that-arrives-without-a-rider">The Delivery Bag That Arrives Without a Rider</a></h3>
           <p>A source-aware entry following a sealed delivery bag appears in apartment lobbies with receipts for restaurants that closed years ago.</p>
@@ -102,13 +150,24 @@
           <h3><a href="/stories/black-dog-on-the-bypass">The Black Dog on the Bypass: Phantom Hounds, Roadside Omens, and the Legend That Crosses Headlights</a></h3>
           <p>The black dog on the bypass is a modern roadside form of the phantom hound legend, where an uncanny dark dog appears near roads, bridges, lanes, or crash sites.</p>
           <div class="meta">Modern Legends - Roadside Sighting - 10 min read - Updated Aug 2, 2026</div>
-        </article></div><nav class="pagination" aria-label="Archive pagination"><div class="pagination-status">Page 8 of 8</div><div class="pagination-links"><a class="page-link page-step" href="/categories/modern-legends-7">Previous</a><a class="page-link" href="/categories/modern-legends">1</a><a class="page-link" href="/categories/modern-legends-2">2</a><a class="page-link" href="/categories/modern-legends-3">3</a><a class="page-link" href="/categories/modern-legends-4">4</a><a class="page-link" href="/categories/modern-legends-5">5</a><a class="page-link" href="/categories/modern-legends-6">6</a><a class="page-link" href="/categories/modern-legends-7">7</a><span class="page-link is-current" aria-current="page">8</span><span class="page-link page-step is-disabled" aria-disabled="true">Next</span></div></nav></div>
-    <aside class="article-rail article-rail-right" aria-label="Recommended archive paths"><div class="rail-card rail-card-network">
+        </article></div>
+            <aside class="home-context-card">
+              <p class="label">Category road</p>
+              <h3>This shelf should lead directly into stories.</h3>
+              <p>Use this page to choose a record, then follow related tags, guides, and archive links from the article itself.</p>
+              <div class="category-links"><a href="/newest">Newest Records</a><a href="/popular">Known Records</a><a href="/mystery-board">Mystery Board</a></div>
+            </aside>
+          </div>
+          <nav class="pagination" aria-label="Archive pagination"><div class="pagination-status">Page 8 of 8</div><div class="pagination-links"><a class="page-link page-step" href="/categories/modern-legends-7">Previous</a><a class="page-link" href="/categories/modern-legends">1</a><a class="page-link" href="/categories/modern-legends-2">2</a><a class="page-link" href="/categories/modern-legends-3">3</a><a class="page-link" href="/categories/modern-legends-4">4</a><a class="page-link" href="/categories/modern-legends-5">5</a><a class="page-link" href="/categories/modern-legends-6">6</a><a class="page-link" href="/categories/modern-legends-7">7</a><span class="page-link is-current" aria-current="page">8</span><span class="page-link page-step is-disabled" aria-disabled="true">Next</span></div></nav>
+        </section>
+      </div>
+      <aside class="home-portal-rail" aria-label="Recommended archive paths"><div class="rail-card rail-card-network">
         <p class="rail-label">Kyunolab Network</p>
         <strong>Creator Library</strong>
         <p>Free mystery YouTube scripts, Shorts scripts, image prompts, and thumbnail ideas for video creators.</p>
         <a class="button" href="/scripts/">Open Creator Library</a>
       </div><div class="rail-card rail-feature"><p class="rail-label">Start here</p><a href="/stories/the-delivery-bag-that-arrives-without-a-rider"><span>Modern Legends</span><strong>The Delivery Bag That Arrives Without a Rider</strong></a></div><div class="rail-card"><p class="rail-label">Related stories</p><a href="/stories/the-white-bicycle-locked-outside-every-station">The White Bicycle Locked Outside Every Station</a><a href="/stories/gas-station-receipt-with-tomorrows-date">Gas Station Receipt With Tomorrow&#39;s Date: POS Clocks, Business Days, and the Folklore of Buying Fuel From the Future</a><a href="/stories/white-van-that-waits-with-headlights-off">The White Van That Waits With Its Headlights Off: Why Parking Lot Legends Keep Returning</a></div></aside>
+    </div>
   </main>
   <footer class="site-footer">
     <p><strong>Kyunolab Mystery Archive</strong> collects legends, folklore, mysteries, and strange tales with calm source-aware notes.</p>

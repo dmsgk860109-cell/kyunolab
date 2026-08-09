@@ -17,69 +17,92 @@
   <link rel="icon" href="/favicon-48x48.png" type="image/png" sizes="48x48">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="/styles.css?v=20260804-nav-flow">
+  <link rel="stylesheet" href="/styles.css?v=20260808-board-portal">
 </head>
-<body>
-  <header class="site-header">
-    <div class="topline">A Kyuno Lab publication</div>
-    <div class="header-inner">
-      <a class="brand" href="/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
-      <form class="site-search" action="/search/" method="get" role="search" aria-label="Search Archive or Creator Library">
-        <label class="sr-only" for="global-search-type">Search target</label>
-        <select id="global-search-type" name="type" class="site-search-select" data-search-type>
-          <option value="archive" selected>Archive</option>
-          <option value="library">Creator Library</option>
-        </select>
-        <label class="sr-only" for="global-search-query">Search query</label>
-        <input id="global-search-query" name="q" class="site-search-input" type="search" placeholder="Search stories, legends, and mysteries..." autocomplete="off" data-search-input>
-        <button class="site-search-button" type="submit">SEARCH</button>
-      </form>
-      <nav class="nav"><a href="/archive">All Stories</a><a href="/newest">Newest</a><a href="/popular">Popular</a><a href="/categories">Categories</a><a href="/mystery-board">Mystery Board</a><a href="/tools">Tools</a><a href="/about">About</a><a href="/hub">Hub</a></nav>
+<body class="home-portal-page">
+  <header class="home-portal-header">
+    <div class="home-portal-header-inner">
+      <div class="home-portal-topbar">
+        <a class="home-portal-brand" href="/"><span class="home-portal-brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
+        <form class="site-search home-portal-search" action="/search/" method="get" role="search" aria-label="Search Kyunolab">
+          <input type="hidden" name="type" value="archive">
+          <label class="sr-only" for="home-portal-search-query">Search query</label>
+          <input id="home-portal-search-query" name="q" class="site-search-input" type="search" placeholder="Search Kyunolab..." autocomplete="off" data-search-input>
+          <button class="site-search-button" type="submit">Search</button>
+        </form>
+      </div>
+      <nav class="home-portal-nav" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/archive">All Stories</a>
+        <a href="/categories">Categories</a>
+        <a href="/mystery-board" class="active" aria-current="page">Mystery Board</a>
+        <a href="/scripts/">Creator Library</a>
+        <a href="/tools">Tools</a>
+        <a href="/about">About</a>
+        <a href="/hub" class="home-portal-hub-link">Hub</a>
+      </nav>
+      <section class="home-sign-system" aria-label="Kyunolab reading paths">
+          <div class="home-sign-intro">
+            <p class="label">Start Here</p>
+            <h2>Choose a story shelf first, then use the map when you want the wider site.</h2>
+            <p>Begin with archive stories, open the full index, or cross into reading guides, creator material, and future tools.</p>
+          </div>
+          <div class="home-sign-links">
+            <div>
+              <h3>Browse Stories</h3>
+              <a href="/categories/urban-legends">Urban Legends</a>
+              <a href="/categories/internet-folklore">Internet Folklore</a>
+              <a href="/categories/myths">Myths</a>
+              <a href="/categories/strange-places">Strange Places</a>
+            </div>
+            <div>
+              <h3>Use The Map</h3>
+              <a href="/archive">All Stories</a>
+              <a href="/mystery-board">Reading Guides</a>
+              <a href="/scripts/">Creator Library</a>
+              <a href="/tools">Tools</a>
+            </div>
+          </div>
+          <div class="home-small-buildings">
+            <h3>Site Notes</h3>
+            <a href="/hub">Hub</a>
+            <a href="/about">About Kyunolab</a>
+            <a href="/fiction-disclaimer">Story and source notice</a>
+          </div>
+        </section>
     </div>
   </header>
-  <main class="article-shell article-layout">
-    <aside class="article-rail article-rail-left" aria-label="Guide navigation">
-      <div class="rail-card">
-        <p class="rail-label">In this guide</p>
-        <a href="#a-good-connection-feels-like-a-clue">Good links</a><a href="#motifs-connect-different-shelves">Motifs</a><a href="#place-changes-the-story">Places</a><a href="#objects-and-messages-create-quiet-bridges">Objects</a><a href="#source-boundaries-keep-the-path-honest">Boundaries</a>
-        <a href="#faq">FAQ</a>
-      </div>
-      <div class="rail-card rail-card-subtle">
-        <p class="rail-label">Related shelves</p>
-        <a href="/mystery-board">Mystery Board</a>
-        <a href="/archive">All Stories</a>
-        <a href="/categories">Browse Categories</a>
-        <a href="/fiction-disclaimer">Story &amp; Source Notice</a>
-      </div>
-    </aside>
+  <main class="home-shell home-portal-shell board-portal-page board-guide-detail-page">
+    <div class="home-portal-layout">
+      <div class="home-main-column">
+        <article>
+          <header class="archive-article-header">
+            <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/mystery-board">Mystery Board</a><span aria-hidden="true">/</span><span aria-current="page">Related Mystery Stories, Folklore Motifs, and Archive Paths</span></nav>
+            <p class="label">Mystery Board Guide</p>
+            <h1 class="article-title">Related Mystery Stories, Folklore Motifs, and Archive Paths</h1>
+            <p class="deck">Related mystery stories should feel like a path through ideas, not a mechanical list of links. Motifs, places, objects, warnings, source limits, and repeated questions can lead readers from one record to the next while keeping each story clear on its own terms.</p>
+            <dl class="article-meta-grid">
+              <div><dt>Tags</dt><dd>Related Mystery Paths, Mystery Motifs, Archive Paths, Urban Legends, Folklore Reading</dd></div>
+              <div><dt>Best for</dt><dd>Readers who like following motifs, warnings, places, and strange objects across connected mystery records</dd></div>
+              <div><dt>Read time</dt><dd>11 min read</dd></div>
+              <div><dt>Updated</dt><dd>August 3, 2026</dd></div>
+            </dl>
+          </header>
 
-    <article>
-      <header class="archive-article-header">
-        <p class="label">Mystery Board</p>
-        <h1 class="article-title">Related Mystery Stories, Folklore Motifs, and Archive Paths</h1>
-        <p class="deck">Related mystery stories should feel like a path through ideas, not a mechanical list of links. Motifs, places, objects, warnings, source limits, and repeated questions can lead readers from one record to the next while keeping each story clear on its own terms.</p>
-        <dl class="article-meta-grid">
-          <div><dt>Tags</dt><dd>Related Mystery Paths, Mystery Motifs, Archive Paths, Urban Legends, Folklore Reading</dd></div>
-          <div><dt>Best for</dt><dd>Readers who like following motifs, warnings, places, and strange objects across connected mystery records</dd></div>
-          <div><dt>Read time</dt><dd>11 min read</dd></div>
-          <div><dt>Updated</dt><dd>August 3, 2026</dd></div>
-        </dl>
-      </header>
+          <section class="story-map" aria-label="Guide map">
+            <h2>Guide Map</h2>
+            <ol><li><a href="#a-good-connection-feels-like-a-clue">A good connection feels like a clue</a></li><li><a href="#motifs-connect-different-shelves">Motifs connect different shelves</a></li><li><a href="#place-changes-the-story">Place changes the story</a></li><li><a href="#objects-and-messages-create-quiet-bridges">Objects and messages create quiet bridges</a></li><li><a href="#source-boundaries-keep-the-path-honest">Source boundaries keep the path honest</a></li><li><a href="#faq">FAQ</a></li></ol>
+          </section>
 
-      <section class="story-map" aria-label="Guide map">
-        <h2>Guide Map</h2>
-        <ol><li><a href="#a-good-connection-feels-like-a-clue">A good connection feels like a clue</a></li><li><a href="#motifs-connect-different-shelves">Motifs connect different shelves</a></li><li><a href="#place-changes-the-story">Place changes the story</a></li><li><a href="#objects-and-messages-create-quiet-bridges">Objects and messages create quiet bridges</a></li><li><a href="#source-boundaries-keep-the-path-honest">Source boundaries keep the path honest</a></li><li><a href="#faq">FAQ</a></li></ol>
-      </section>
-
-      <section class="reading-bridge" aria-label="Recommended reading">
+          <section class="reading-bridge" aria-label="Recommended reading">
         <p class="rail-label">Read with this guide</p>
         <div>
           <a href="/stories/how-internet-glitches-become-folklore-instead-of-error-reports"><span>Legend Origins</span><strong>From Error Screens to Warning Lore: How Internet Glitches Become Folklore Instead of Error Reports</strong></a><a href="/stories/why-object-legends-often-begin-with-ordinary-tools"><span>Legend Origins</span><strong>From a Wooden Planchette to a Legend: The 1891 Ouija Patent and the Ordinary-Tool Motif</strong></a><a href="/stories/how-weather-omens-become-local-legends"><span>Legend Origins</span><strong>The Great Dark Day of 1780: How a Noon-Time Shadow Became a Weather Omen</strong></a>
         </div>
       </section>
-      <aside class="ad-slot" data-ad-slot="ad-guide-after-map" aria-label="Advertisement"><span>Advertisement</span></aside>
+          <aside class="ad-slot" data-ad-slot="ad-guide-after-map" aria-label="Advertisement"><span>Advertisement</span></aside>
 
-      <div class="story-body archive-entry">
+          <div class="story-body archive-entry">
 <h2 id="a-good-connection-feels-like-a-clue">A good connection feels like a clue</h2>
 <p>The search topic behind this page is related mystery stories: how legends connect, why folklore motifs repeat, what makes a natural archive path, and how readers can move from one record to another without confusing comparison with proof.</p>
 <p>The best related story does not interrupt the reading. It extends the question the reader already has. If one page turns on a vanishing passenger, another page about a vanished traveler may feel natural. If one page is about a forbidden room, another record about hidden spaces or boundary-breaking curiosity can deepen the pattern.</p>
@@ -109,10 +132,10 @@
 <p>The honest path is the one that says what kind of relationship exists. Some records share a motif, some share a category, some share a source problem, and some only share a mood. Naming that relationship in the surrounding context helps readers move freely without mistaking a reading path for evidence.</p>
 <p>Good related paths also help search visitors move deeper without feeling pushed. A visitor who came for one legend may discover a broader motif, then a category, then a source guide. That movement is valuable because it turns a single answer into a longer reading session built around genuine curiosity.</p>
 
-        <aside class="ad-slot" data-ad-slot="ad-guide-mid-article" aria-label="Advertisement"><span>Advertisement</span></aside>
+            <aside class="ad-slot" data-ad-slot="ad-guide-mid-article" aria-label="Advertisement"><span>Advertisement</span></aside>
 
-        <h2 id="faq">FAQ</h2>
-        <h3>Do related mystery stories prove a shared origin?</h3>
+            <h2 id="faq">FAQ</h2>
+            <h3>Do related mystery stories prove a shared origin?</h3>
         <p>Not usually. Related stories mainly help readers compare motifs, settings, objects, and questions. A shared origin needs separate evidence.</p>
 
         <h3>Why connect stories from different categories?</h3>
@@ -124,39 +147,47 @@
         <h3>Can related paths create confusion?</h3>
         <p>They can if boundaries are unclear. That is why source notes and category context matter when records sit beside one another.</p>
 
-        <h2>Story &amp; Source Note</h2>
-        <p>This guide explains related reading paths inside the Kyunolab Mystery Archive. It treats links as context and comparison, not as proof that connected stories share the same factual origin.</p>
+            <h2>Story &amp; Source Note</h2>
+            <p>This guide explains related reading paths inside the Kyunolab Mystery Archive. It treats links as context and comparison, not as proof that connected stories share the same factual origin.</p>
+          </div>
+        </article>
       </div>
-    </article>
 
-    <aside class="article-rail article-rail-right" aria-label="Related guides">
-      <div class="rail-card rail-card-network">
+      <aside class="home-portal-rail" aria-label="Related guides">
+        <div class="rail-card rail-card-network">
         <p class="rail-label">Kyunolab Network</p>
         <strong>Creator Library</strong>
         <p>Free mystery YouTube scripts, Shorts scripts, image prompts, and thumbnail ideas for video creators.</p>
         <a class="button" href="/scripts/">Open Creator Library</a>
       </div>
-      <div class="rail-card rail-feature">
-        <p class="rail-label">Read next</p>
-        <a href="/mystery-board/how-to-read-a-mystery-story-before-believing-it"><span>Critical Reading</span><strong>Mystery Reading</strong></a>
-      </div>
-      <div class="rail-card">
-        <p class="rail-label">Related records</p>
-        <a href="/stories/how-internet-glitches-become-folklore-instead-of-error-reports">From Error Screens to Warning Lore: How Internet Glitches Become Folklore Instead of Error Reports</a><a href="/stories/why-object-legends-often-begin-with-ordinary-tools">From a Wooden Planchette to a Legend: The 1891 Ouija Patent and the Ordinary-Tool Motif</a><a href="/stories/how-weather-omens-become-local-legends">The Great Dark Day of 1780: How a Noon-Time Shadow Became a Weather Omen</a>
-      </div>
-      <div class="rail-card rail-card-subtle">
-        <p class="rail-label">Mystery Board</p>
-        <a href="/mystery-board">All Guides</a>
-        <a href="/categories">Browse Categories</a>
-        <a href="/fiction-disclaimer">Source Notice</a>
-      </div>
-    </aside>
+        <section class="rail-card">
+          <p class="rail-label">In this guide</p>
+          <a href="#a-good-connection-feels-like-a-clue">Good links</a><a href="#motifs-connect-different-shelves">Motifs</a><a href="#place-changes-the-story">Places</a><a href="#objects-and-messages-create-quiet-bridges">Objects</a><a href="#source-boundaries-keep-the-path-honest">Boundaries</a>
+          <a href="#faq">FAQ</a>
+        </section>
+        <section class="rail-card rail-feature">
+          <p class="rail-label">Read next</p>
+          <a href="/mystery-board/how-to-read-a-mystery-story-before-believing-it"><span>Critical Reading</span><strong>Mystery Reading</strong></a>
+        </section>
+        <section class="rail-card">
+          <p class="rail-label">Related records</p>
+          <a href="/stories/how-internet-glitches-become-folklore-instead-of-error-reports">From Error Screens to Warning Lore: How Internet Glitches Become Folklore Instead of Error Reports</a><a href="/stories/why-object-legends-often-begin-with-ordinary-tools">From a Wooden Planchette to a Legend: The 1891 Ouija Patent and the Ordinary-Tool Motif</a><a href="/stories/how-weather-omens-become-local-legends">The Great Dark Day of 1780: How a Noon-Time Shadow Became a Weather Omen</a>
+        </section>
+        <section class="rail-card rail-card-subtle">
+          <p class="rail-label">Mystery Board</p>
+          <a href="/mystery-board">All Guides</a>
+          <a href="/archive">All Stories</a>
+          <a href="/categories">Browse Categories</a>
+          <a href="/fiction-disclaimer">Source Notice</a>
+        </section>
+      </aside>
+    </div>
   </main>
   <footer class="site-footer">
     <p><strong>Kyunolab Mystery Archive</strong> is a quiet story publication by Kyuno Lab, dedicated to legends, folklore, mysteries, and strange tales from the edges of memory.</p>
     <p><a href="/archive">All Stories</a> - <a href="/newest">Newest</a> - <a href="/popular">Popular</a> - <a href="/categories">Categories</a> - <a href="/mystery-board">Mystery Board</a> - <a href="/scripts/">Scripts</a> - <a href="/about">About</a> - <a href="/fiction-disclaimer">Story &amp; Source Notice</a> - <a href="/privacy">Privacy</a> - <a href="/rss.xml">RSS</a></p>
   </footer>
-  <script defer src="/assets/global-search.js?v=20260804-nav-flow"></script>
+  <script defer src="/assets/global-search.js?v=20260808-board-portal"></script>
   <script src="/engagement.js?v=20260706-kit-ui" defer></script>
 </body>
 </html>

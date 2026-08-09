@@ -24,21 +24,77 @@
   <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="/styles.css?v=20260804-nav-flow">
 </head>
-<body>
-  <header class="site-header">
-    <div class="topline">A Kyuno Lab publication</div>
-    <div class="header-inner">
-      <a class="brand" href="/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
-
-      <nav class="nav"><a href="/archive">All Stories</a><a href="/newest">Newest</a><a href="/popular">Popular</a><a href="/categories">Categories</a><a href="/mystery-board">Mystery Board</a><a href="/tools">Tools</a><a href="/about">About</a><a href="/hub">Hub</a></nav>
+<body class="home-portal-page">
+  <header class="home-portal-header">
+    <div class="home-portal-header-inner">
+      <div class="home-portal-topbar">
+        <a class="home-portal-brand" href="/"><span class="home-portal-brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
+        <form class="site-search home-portal-search" action="/search/" method="get" role="search" aria-label="Search Kyunolab">
+          <input type="hidden" name="type" value="archive">
+          <label class="sr-only" for="home-portal-search-query">Search query</label>
+          <input id="home-portal-search-query" name="q" class="site-search-input" type="search" placeholder="Search Kyunolab..." autocomplete="off" data-search-input>
+          <button class="site-search-button" type="submit">Search</button>
+        </form>
+      </div>
+      <nav class="home-portal-nav" aria-label="Primary homepage navigation">
+        <a href="/">Home</a>
+        <a href="/archive">All Stories</a>
+        <a href="/categories">Categories</a>
+        <a href="/mystery-board">Mystery Board</a>
+        <a href="/scripts/">Creator Library</a>
+        <a href="/tools">Tools</a>
+        <a href="/about">About</a>
+        <a href="/hub" class="home-portal-hub-link">Hub</a>
+      </nav>
+      <section class="home-sign-system" aria-label="Kyunolab reading paths">
+          <div class="home-sign-intro">
+            <p class="label">Start Here</p>
+            <h2>Choose a story shelf first, then use the map when you want the wider site.</h2>
+            <p>Begin with archive stories, open the full index, or cross into reading guides, creator material, and future tools.</p>
+          </div>
+          <div class="home-sign-links">
+            <div>
+              <h3>Browse Stories</h3>
+              <a href="/categories/urban-legends">Urban Legends</a>
+              <a href="/categories/internet-folklore">Internet Folklore</a>
+              <a href="/categories/myths">Myths</a>
+              <a href="/categories/strange-places">Strange Places</a>
+            </div>
+            <div>
+              <h3>Use The Map</h3>
+              <a href="/archive">All Stories</a>
+              <a href="/mystery-board">Reading Guides</a>
+              <a href="/scripts/">Creator Library</a>
+              <a href="/tools">Tools</a>
+            </div>
+          </div>
+          <div class="home-small-buildings">
+            <h3>Site Notes</h3>
+            <a href="/hub">Hub</a>
+            <a href="/about">About Kyunolab</a>
+            <a href="/fiction-disclaimer">Story and source notice</a>
+          </div>
+        </section>
     </div>
   </header>
-  <main class="article-shell">
-    <div class="archive-page-main publishing-center" data-publishing-center>
-      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/publishing-center/">Publishing Center</a><span aria-hidden="true">/</span><span aria-current="page">Mythic Objects</span></nav>
-      <p class="label">Internal Tool</p>
-      <h1 class="article-title">Mythic Objects</h1>
-      <style>
+  <main class="home-shell home-portal-shell publishing-portal-page">
+    <div class="home-portal-layout">
+      <div class="home-main-column publishing-center" data-publishing-center>
+        <section class="home-portal-lead" aria-label="Mythic Objects Publishing Center front entrance">
+          <article class="home-lead-story">
+            <p class="label">Internal Tool</p>
+            <h1>Mythic Objects</h1>
+            <p>Internal publishing management page for Mythic Objects archive records.</p>
+            <a class="button" href="/publishing-center/">Publishing Center</a>
+          </article>
+          <div class="home-known-list">
+            <h2>Record actions</h2>
+            <a href="/archive"><span>01</span><strong>All Stories</strong></a>
+            <a href="/categories/mythic-objects"><span>02</span><strong>Mythic Objects public shelf</strong></a>
+            <a href="/newest"><span>03</span><strong>Newest Records</strong></a>
+          </div>
+        </section>
+        <style>
         .publishing-category-list,
         .publishing-record-list {
           list-style: none;
@@ -156,10 +212,10 @@
           }
         }
       </style>
-      <section class="script-material" aria-label="Mythic Objects records">
-        <h2>Archive Records</h2>
-        <p class="publishing-status" role="status" aria-live="polite"></p>
-        <ul class="publishing-record-list">
+        <section class="home-headline-desk" aria-label="Mythic Objects records">
+          <div class="section-head"><h2>Archive Records</h2><span>Page 1 of 4</span></div>
+          <p class="publishing-status" role="status" aria-live="polite"></p>
+          <ul class="publishing-record-list">
         <li class="publishing-record">
           <span class="publishing-record-title">Spear of Destiny Legend: Holy Lance, Relic History, and the Object That Gathered Power Claims</span>
           <div class="publishing-record-actions">
@@ -352,13 +408,28 @@
             <label class="publishing-published-label"><input class="publishing-published" type="checkbox" data-storage-key="kyunolab:publishing:the-inkstone-record-that-darkens-after-names-are-spoken:naver"> Published</label>
           </div>
         </li>
-        </ul>
+          </ul>
         <nav class="publishing-pagination" aria-label="Mythic Objects pagination">
           <span aria-disabled="true">Previous</span>
           <span aria-current="page">1</span><a href="/publishing-center/mythic-objects/page-2/">2</a><a href="/publishing-center/mythic-objects/page-3/">3</a><a href="/publishing-center/mythic-objects/page-4/">4</a>
           <a href="/publishing-center/mythic-objects/page-2/">Next</a>
         </nav>
-      </section>
+        </section>
+      </div>
+      <aside class="home-portal-rail" aria-label="Publishing side paths">
+        <div class="rail-card rail-card-network">
+        <p class="rail-label">Kyunolab Network</p>
+        <strong>Creator Library</strong>
+        <p>Free mystery YouTube scripts, Shorts scripts, image prompts, and thumbnail ideas for video creators.</p>
+        <a class="button" href="/scripts/">Open Creator Library</a>
+      </div>
+        <section class="rail-card">
+          <p class="rail-label">Publishing shelves</p>
+          <a href="/publishing-center/">Publishing Center</a>
+          <a href="/categories/mythic-objects">Mythic Objects</a>
+          <a href="/archive">All Stories</a>
+        </section>
+      </aside>
     </div>
   </main>
   <footer class="site-footer">

@@ -17,69 +17,92 @@
   <link rel="icon" href="/favicon-48x48.png" type="image/png" sizes="48x48">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="/styles.css?v=20260804-nav-flow">
+  <link rel="stylesheet" href="/styles.css?v=20260808-board-portal">
 </head>
-<body>
-  <header class="site-header">
-    <div class="topline">A Kyuno Lab publication</div>
-    <div class="header-inner">
-      <a class="brand" href="/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
-      <form class="site-search" action="/search/" method="get" role="search" aria-label="Search Archive or Creator Library">
-        <label class="sr-only" for="global-search-type">Search target</label>
-        <select id="global-search-type" name="type" class="site-search-select" data-search-type>
-          <option value="archive" selected>Archive</option>
-          <option value="library">Creator Library</option>
-        </select>
-        <label class="sr-only" for="global-search-query">Search query</label>
-        <input id="global-search-query" name="q" class="site-search-input" type="search" placeholder="Search stories, legends, and mysteries..." autocomplete="off" data-search-input>
-        <button class="site-search-button" type="submit">SEARCH</button>
-      </form>
-      <nav class="nav"><a href="/archive">All Stories</a><a href="/newest">Newest</a><a href="/popular">Popular</a><a href="/categories">Categories</a><a href="/mystery-board">Mystery Board</a><a href="/tools">Tools</a><a href="/about">About</a><a href="/hub">Hub</a></nav>
+<body class="home-portal-page">
+  <header class="home-portal-header">
+    <div class="home-portal-header-inner">
+      <div class="home-portal-topbar">
+        <a class="home-portal-brand" href="/"><span class="home-portal-brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
+        <form class="site-search home-portal-search" action="/search/" method="get" role="search" aria-label="Search Kyunolab">
+          <input type="hidden" name="type" value="archive">
+          <label class="sr-only" for="home-portal-search-query">Search query</label>
+          <input id="home-portal-search-query" name="q" class="site-search-input" type="search" placeholder="Search Kyunolab..." autocomplete="off" data-search-input>
+          <button class="site-search-button" type="submit">Search</button>
+        </form>
+      </div>
+      <nav class="home-portal-nav" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/archive">All Stories</a>
+        <a href="/categories">Categories</a>
+        <a href="/mystery-board" class="active" aria-current="page">Mystery Board</a>
+        <a href="/scripts/">Creator Library</a>
+        <a href="/tools">Tools</a>
+        <a href="/about">About</a>
+        <a href="/hub" class="home-portal-hub-link">Hub</a>
+      </nav>
+      <section class="home-sign-system" aria-label="Kyunolab reading paths">
+          <div class="home-sign-intro">
+            <p class="label">Start Here</p>
+            <h2>Choose a story shelf first, then use the map when you want the wider site.</h2>
+            <p>Begin with archive stories, open the full index, or cross into reading guides, creator material, and future tools.</p>
+          </div>
+          <div class="home-sign-links">
+            <div>
+              <h3>Browse Stories</h3>
+              <a href="/categories/urban-legends">Urban Legends</a>
+              <a href="/categories/internet-folklore">Internet Folklore</a>
+              <a href="/categories/myths">Myths</a>
+              <a href="/categories/strange-places">Strange Places</a>
+            </div>
+            <div>
+              <h3>Use The Map</h3>
+              <a href="/archive">All Stories</a>
+              <a href="/mystery-board">Reading Guides</a>
+              <a href="/scripts/">Creator Library</a>
+              <a href="/tools">Tools</a>
+            </div>
+          </div>
+          <div class="home-small-buildings">
+            <h3>Site Notes</h3>
+            <a href="/hub">Hub</a>
+            <a href="/about">About Kyunolab</a>
+            <a href="/fiction-disclaimer">Story and source notice</a>
+          </div>
+        </section>
     </div>
   </header>
-  <main class="article-shell article-layout">
-    <aside class="article-rail article-rail-left" aria-label="Guide navigation">
-      <div class="rail-card">
-        <p class="rail-label">In this guide</p>
-        <a href="#the-wider-topic-readers-bring-to-the-page">Topic</a><a href="#how-the-pattern-appears-in-strange-stories">Patterns</a><a href="#sources-uncertainty-and-careful-language">Sources</a><a href="#how-the-topic-leads-into-the-archive">Archive paths</a><a href="#a-calm-way-to-keep-reading">Keep reading</a>
-        <a href="#faq">FAQ</a>
-      </div>
-      <div class="rail-card rail-card-subtle">
-        <p class="rail-label">Related shelves</p>
-        <a href="/mystery-board">Mystery Board</a>
-        <a href="/archive">All Stories</a>
-        <a href="/categories">Browse Categories</a>
-        <a href="/fiction-disclaimer">Story &amp; Source Notice</a>
-      </div>
-    </aside>
+  <main class="home-shell home-portal-shell board-portal-page board-guide-detail-page">
+    <div class="home-portal-layout">
+      <div class="home-main-column">
+        <article>
+          <header class="archive-article-header">
+            <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/mystery-board">Mystery Board</a><span aria-hidden="true">/</span><span aria-current="page">Internet Folklore, Digital Errors, and Stories From Glitches</span></nav>
+            <p class="label">Mystery Board Guide</p>
+            <h1 class="article-title">Internet Folklore, Digital Errors, and Stories From Glitches</h1>
+            <p class="deck">Internet Folklore, Digital Errors, and Stories From Glitches is a reader-facing Mystery Board guide to internet folklore and digital errors. It treats the subject as a broad archive path rather than a single yes-or-no question, using examples such as a broken image, a copied caption, a map glitch, and a strange upload to show how strange stories become easier to read when context, source limits, and related records stay visible.</p>
+            <dl class="article-meta-grid">
+              <div><dt>Tags</dt><dd>Internet Folklore, Digital Errors, Glitches, Online Legends, Story Spread</dd></div>
+              <div><dt>Best for</dt><dd>Readers interested in internet folklore and digital errors, source boundaries, related stories, and calm archive reading</dd></div>
+              <div><dt>Read time</dt><dd>11 min read</dd></div>
+              <div><dt>Updated</dt><dd>August 3, 2026</dd></div>
+            </dl>
+          </header>
 
-    <article>
-      <header class="archive-article-header">
-        <p class="label">Mystery Board</p>
-        <h1 class="article-title">Internet Folklore, Digital Errors, and Stories From Glitches</h1>
-        <p class="deck">Internet Folklore, Digital Errors, and Stories From Glitches is a reader-facing Mystery Board guide to internet folklore and digital errors. It treats the subject as a broad archive path rather than a single yes-or-no question, using examples such as a broken image, a copied caption, a map glitch, and a strange upload to show how strange stories become easier to read when context, source limits, and related records stay visible.</p>
-        <dl class="article-meta-grid">
-          <div><dt>Tags</dt><dd>Internet Folklore, Digital Errors, Glitches, Online Legends, Story Spread</dd></div>
-          <div><dt>Best for</dt><dd>Readers interested in internet folklore and digital errors, source boundaries, related stories, and calm archive reading</dd></div>
-          <div><dt>Read time</dt><dd>11 min read</dd></div>
-          <div><dt>Updated</dt><dd>August 3, 2026</dd></div>
-        </dl>
-      </header>
+          <section class="story-map" aria-label="Guide map">
+            <h2>Guide Map</h2>
+            <ol><li><a href="#the-wider-topic-readers-bring-to-the-page">The wider topic readers bring to the page</a></li><li><a href="#how-the-pattern-appears-in-strange-stories">How the pattern appears in strange stories</a></li><li><a href="#sources-uncertainty-and-careful-language">Sources, uncertainty, and careful language</a></li><li><a href="#how-the-topic-leads-into-the-archive">How the topic leads into the archive</a></li><li><a href="#a-calm-way-to-keep-reading">A calm way to keep reading</a></li><li><a href="#faq">FAQ</a></li></ol>
+          </section>
 
-      <section class="story-map" aria-label="Guide map">
-        <h2>Guide Map</h2>
-        <ol><li><a href="#the-wider-topic-readers-bring-to-the-page">The wider topic readers bring to the page</a></li><li><a href="#how-the-pattern-appears-in-strange-stories">How the pattern appears in strange stories</a></li><li><a href="#sources-uncertainty-and-careful-language">Sources, uncertainty, and careful language</a></li><li><a href="#how-the-topic-leads-into-the-archive">How the topic leads into the archive</a></li><li><a href="#a-calm-way-to-keep-reading">A calm way to keep reading</a></li><li><a href="#faq">FAQ</a></li></ol>
-      </section>
-
-      <section class="reading-bridge" aria-label="Recommended reading">
+          <section class="reading-bridge" aria-label="Recommended reading">
         <p class="rail-label">Read with this guide</p>
         <div>
           <a href="/stories/why-mirror-legends-cross-from-folklore-into-internet-stories"><span>Legend Origins</span><strong>Why Mirror Legends Cross From Folklore Into Internet Stories</strong></a><a href="/stories/how-vanishing-road-stories-move-from-travelers-to-maps"><span>Legend Origins</span><strong>From a Vanishing Route to a Map Myth: The 2012 Sandy Island Survey Incident</strong></a><a href="/stories/why-receipt-legends-keep-returning-in-modern-folklore"><span>Legend Origins</span><strong>How the 1901 Receipt Became a Modern Record-Legend</strong></a>
         </div>
       </section>
-      <aside class="ad-slot" data-ad-slot="ad-guide-after-map" aria-label="Advertisement"><span>Advertisement</span></aside>
+          <aside class="ad-slot" data-ad-slot="ad-guide-after-map" aria-label="Advertisement"><span>Advertisement</span></aside>
 
-      <div class="story-body archive-entry">
+          <div class="story-body archive-entry">
 <h2 id="the-wider-topic-readers-bring-to-the-page">The wider topic readers bring to the page</h2>
 <p>Readers usually arrive at internet folklore and digital errors through several doors. One visitor may want a quick definition, another may remember a broken image, and another may be trying to understand why a copied caption keeps returning in altered forms. Digital Errors should let those searches meet inside one readable explanation instead of scattering them into separate answers.</p>
 <p>The center of Digital Errors is simple: online communities can turn glitches, typos, screenshots, captions, and mistaken context into stories that feel larger than the original error. For internet folklore and digital errors, that idea keeps the subject broad enough for discovery while still close to actual mystery records. It lets this page answer practical reader questions through a broken image, a copied caption, and related story context rather than through a stiff list of search phrases.</p>
@@ -106,10 +129,10 @@
 <p>For Kyunolab, internet folklore and digital errors is useful because it sends readers back to the stories with a clearer eye. Internet Folklore, Digital Errors, and Stories From Glitches should make a broken image, a copied caption, a map glitch, and a strange upload feel connected enough to compare, but distinct enough that each one still deserves its own careful reading.</p>
 <p>A reader who finishes Digital Errors should know the topic, the boundary, and the next move. For internet folklore and digital errors, that is the quiet promise of the Mystery Board: not to solve every strange story at once, but to make the archive easier to enter, compare, and revisit.</p>
 
-        <aside class="ad-slot" data-ad-slot="ad-guide-mid-article" aria-label="Advertisement"><span>Advertisement</span></aside>
+            <aside class="ad-slot" data-ad-slot="ad-guide-mid-article" aria-label="Advertisement"><span>Advertisement</span></aside>
 
-        <h2 id="faq">FAQ</h2>
-        <h3>What does this guide explain about internet folklore and digital errors?</h3>
+            <h2 id="faq">FAQ</h2>
+            <h3>What does this guide explain about internet folklore and digital errors?</h3>
         <p>It explains internet folklore and digital errors as a broad mystery-reading subject, using examples such as a broken image and a copied caption to show how stories, sources, and reader questions connect.</p>
 
         <h3>Does this guide prove that the related stories are factual?</h3>
@@ -121,39 +144,47 @@
         <h3>Where should readers go after this guide?</h3>
         <p>The best next step is to follow a related archive record, category shelf, or source note where the same subject appears inside a specific story.</p>
 
-        <h2>Story &amp; Source Note</h2>
-        <p>This Mystery Board guide explains internet folklore and digital errors as a public reading topic for the Kyunolab Mystery Archive. It is not evidence for any individual legend, folklore tradition, myth, internet mystery, or unexplained claim.</p>
+            <h2>Story &amp; Source Note</h2>
+            <p>This Mystery Board guide explains internet folklore and digital errors as a public reading topic for the Kyunolab Mystery Archive. It is not evidence for any individual legend, folklore tradition, myth, internet mystery, or unexplained claim.</p>
+          </div>
+        </article>
       </div>
-    </article>
 
-    <aside class="article-rail article-rail-right" aria-label="Related guides">
-      <div class="rail-card rail-card-network">
+      <aside class="home-portal-rail" aria-label="Related guides">
+        <div class="rail-card rail-card-network">
         <p class="rail-label">Kyunolab Network</p>
         <strong>Creator Library</strong>
         <p>Free mystery YouTube scripts, Shorts scripts, image prompts, and thumbnail ideas for video creators.</p>
         <a class="button" href="/scripts/">Open Creator Library</a>
       </div>
-      <div class="rail-card rail-feature">
-        <p class="rail-label">Read next</p>
-        <a href="/mystery-board/why-urban-legends-use-ordinary-places"><span>Urban Legend Settings</span><strong>Urban Legend Settings</strong></a>
-      </div>
-      <div class="rail-card">
-        <p class="rail-label">Related records</p>
-        <a href="/stories/why-mirror-legends-cross-from-folklore-into-internet-stories">Why Mirror Legends Cross From Folklore Into Internet Stories</a><a href="/stories/how-vanishing-road-stories-move-from-travelers-to-maps">From a Vanishing Route to a Map Myth: The 2012 Sandy Island Survey Incident</a><a href="/stories/why-receipt-legends-keep-returning-in-modern-folklore">How the 1901 Receipt Became a Modern Record-Legend</a>
-      </div>
-      <div class="rail-card rail-card-subtle">
-        <p class="rail-label">Mystery Board</p>
-        <a href="/mystery-board">All Guides</a>
-        <a href="/categories">Browse Categories</a>
-        <a href="/fiction-disclaimer">Source Notice</a>
-      </div>
-    </aside>
+        <section class="rail-card">
+          <p class="rail-label">In this guide</p>
+          <a href="#the-wider-topic-readers-bring-to-the-page">Topic</a><a href="#how-the-pattern-appears-in-strange-stories">Patterns</a><a href="#sources-uncertainty-and-careful-language">Sources</a><a href="#how-the-topic-leads-into-the-archive">Archive paths</a><a href="#a-calm-way-to-keep-reading">Keep reading</a>
+          <a href="#faq">FAQ</a>
+        </section>
+        <section class="rail-card rail-feature">
+          <p class="rail-label">Read next</p>
+          <a href="/mystery-board/why-urban-legends-use-ordinary-places"><span>Urban Legend Settings</span><strong>Urban Legend Settings</strong></a>
+        </section>
+        <section class="rail-card">
+          <p class="rail-label">Related records</p>
+          <a href="/stories/why-mirror-legends-cross-from-folklore-into-internet-stories">Why Mirror Legends Cross From Folklore Into Internet Stories</a><a href="/stories/how-vanishing-road-stories-move-from-travelers-to-maps">From a Vanishing Route to a Map Myth: The 2012 Sandy Island Survey Incident</a><a href="/stories/why-receipt-legends-keep-returning-in-modern-folklore">How the 1901 Receipt Became a Modern Record-Legend</a>
+        </section>
+        <section class="rail-card rail-card-subtle">
+          <p class="rail-label">Mystery Board</p>
+          <a href="/mystery-board">All Guides</a>
+          <a href="/archive">All Stories</a>
+          <a href="/categories">Browse Categories</a>
+          <a href="/fiction-disclaimer">Source Notice</a>
+        </section>
+      </aside>
+    </div>
   </main>
   <footer class="site-footer">
     <p><strong>Kyunolab Mystery Archive</strong> is a quiet story publication by Kyuno Lab, dedicated to legends, folklore, mysteries, and strange tales from the edges of memory.</p>
     <p><a href="/archive">All Stories</a> - <a href="/newest">Newest</a> - <a href="/popular">Popular</a> - <a href="/categories">Categories</a> - <a href="/mystery-board">Mystery Board</a> - <a href="/scripts/">Scripts</a> - <a href="/about">About</a> - <a href="/fiction-disclaimer">Story &amp; Source Notice</a> - <a href="/privacy">Privacy</a> - <a href="/rss.xml">RSS</a></p>
   </footer>
-  <script defer src="/assets/global-search.js?v=20260804-nav-flow"></script>
+  <script defer src="/assets/global-search.js?v=20260808-board-portal"></script>
   <script src="/engagement.js?v=20260706-kit-ui" defer></script>
 </body>
 </html>

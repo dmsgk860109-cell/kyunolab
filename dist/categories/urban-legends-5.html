@@ -23,32 +23,80 @@
   <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="/styles.css?v=20260804-nav-flow">
 </head>
-<body>
-  <header class="site-header">
-    <div class="topline">A Kyuno Lab publication</div>
-    <div class="header-inner">
-      <a class="brand" href="/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
-
-      <form class="site-search" action="/search/" method="get" role="search" aria-label="Search Archive or Creator Library">
-        <label class="sr-only" for="global-search-type">Search target</label>
-        <select id="global-search-type" name="type" class="site-search-select" data-search-type>
-          <option value="archive" selected>Archive</option>
-          <option value="library">Creator Library</option>
-        </select>
-        <label class="sr-only" for="global-search-query">Search query</label>
-        <input id="global-search-query" name="q" class="site-search-input" type="search" placeholder="Search stories, legends, and mysteries..." autocomplete="off" data-search-input>
-        <button class="site-search-button" type="submit">SEARCH</button>
-      </form>
-      <nav class="nav"><a href="/archive">All Stories</a><a href="/newest">Newest</a><a href="/popular">Popular</a><a href="/categories" class="active" aria-current="page">Categories</a><a href="/mystery-board">Mystery Board</a><a href="/tools">Tools</a><a href="/about">About</a><a href="/hub">Hub</a></nav>
+<body class="home-portal-page">
+  <header class="home-portal-header">
+    <div class="home-portal-header-inner">
+      <div class="home-portal-topbar">
+        <a class="home-portal-brand" href="/"><span class="home-portal-brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
+        <form class="site-search home-portal-search" action="/search/" method="get" role="search" aria-label="Search Kyunolab">
+          <input type="hidden" name="type" value="archive">
+          <label class="sr-only" for="home-portal-search-query">Search query</label>
+          <input id="home-portal-search-query" name="q" class="site-search-input" type="search" placeholder="Search Kyunolab..." autocomplete="off" data-search-input>
+          <button class="site-search-button" type="submit">Search</button>
+        </form>
+      </div>
+      <nav class="home-portal-nav" aria-label="Primary homepage navigation">
+        <a href="/">Home</a>
+        <a href="/archive">All Stories</a>
+        <a href="/categories" class="active" aria-current="page">Categories</a>
+        <a href="/mystery-board">Mystery Board</a>
+        <a href="/scripts/">Creator Library</a>
+        <a href="/tools">Tools</a>
+        <a href="/about">About</a>
+        <a href="/hub" class="home-portal-hub-link">Hub</a>
+      </nav>
+      <section class="home-sign-system" aria-label="Kyunolab reading paths">
+          <div class="home-sign-intro">
+            <p class="label">Start Here</p>
+            <h2>Choose a story shelf first, then use the map when you want the wider site.</h2>
+            <p>Begin with archive stories, open the full index, or cross into reading guides, creator material, and future tools.</p>
+          </div>
+          <div class="home-sign-links">
+            <div>
+              <h3>Browse Stories</h3>
+              <a href="/categories/urban-legends">Urban Legends</a>
+              <a href="/categories/internet-folklore">Internet Folklore</a>
+              <a href="/categories/myths">Myths</a>
+              <a href="/categories/strange-places">Strange Places</a>
+            </div>
+            <div>
+              <h3>Use The Map</h3>
+              <a href="/archive">All Stories</a>
+              <a href="/mystery-board">Reading Guides</a>
+              <a href="/scripts/">Creator Library</a>
+              <a href="/tools">Tools</a>
+            </div>
+          </div>
+          <div class="home-small-buildings">
+            <h3>Site Notes</h3>
+            <a href="/hub">Hub</a>
+            <a href="/about">About Kyunolab</a>
+            <a href="/fiction-disclaimer">Story and source notice</a>
+          </div>
+        </section>
     </div>
   </header>
-  <main class="article-shell article-layout">
-    <aside class="article-rail article-rail-left" aria-label="Archive navigation">
-    <div class="rail-card"><p class="rail-label">Reader Paths</p><a href="/archive">All Stories</a><a href="/newest">Newest Records</a><a href="/popular">Popular Records</a><a href="/categories">Browse Categories</a><a href="/mystery-board">Mystery Board</a></div>
-    <div class="rail-card rail-card-subtle"><p class="rail-label">Archive Shelves</p><a href="/categories/urban-legends">Urban Legends</a><a href="/categories/internet-folklore">Internet Folklore</a><a href="/categories/myths">Myths</a><a href="/categories/strange-places">Strange Places</a></div>
-    <div class="rail-card"><p class="rail-label">Source Guide</p><a href="/fiction-disclaimer">Story &amp; Source Notice</a><a href="/about">About Kyunolab</a></div>
-  </aside>
-    <div class="archive-page-main"><p class="label">Modern Strange Records</p><h1 class="article-title">Urban Legends</h1><p class="deck">Urban legends, cautionary tales, roadside rumors, and modern folklore explained through origin, meaning, versions, and why they still feel possible.</p><aside class="ad-slot" data-ad-slot="ad-category-after-intro" aria-label="Advertisement"><span>Advertisement</span></aside><div class="story-list"><article class="story-row">
+  <main class="home-shell home-portal-shell category-detail-portal-page">
+    <div class="home-portal-layout">
+      <div class="home-main-column">
+        <section class="home-portal-lead category-portal-lead" aria-label="Urban Legends front entrance">
+          <article class="home-lead-story category-lead-story">
+            <p class="label">Modern Strange Records</p>
+            <h1>Urban Legends</h1>
+            <p>Urban legends, cautionary tales, roadside rumors, and modern folklore explained through origin, meaning, versions, and why they still feel possible.</p>
+            <a class="button" href="/categories">Open all categories</a>
+          </article>
+          <div class="home-known-list category-entrance-list">
+            <h2>Start in this shelf</h2>
+            <a href="/stories/the-apartment-intercom-that-calls-its-own-lobby-why-this-street-story-keeps-returning"><span>01</span><strong>The Apartment Intercom That Calls Its Own Lobby: Why This Street Story Keeps Returning</strong><em>Urban Legends</em></a><a href="/stories/the-night-bus-stop-added-with-white-tape-origin-and-meaning-of-a-neighborhood-legend"><span>02</span><strong>The Night Bus Stop Added With White Tape: Origin and Meaning of a Neighborhood Legend</strong><em>Urban Legends</em></a><a href="/stories/the-underpass-graffiti-that-gives-tomorrow-s-date-a-modern-urban-legend-explained"><span>03</span><strong>The Underpass Graffiti That Gives Tomorrow’s Date: A Modern Urban Legend Explained</strong><em>Urban Legends</em></a><a href="/stories/the-corner-store-bell-that-rings-from-the-stockroom-why-this-street-story-keeps-returning"><span>04</span><strong>The Corner Store Bell That Rings From the Stockroom: Why This Street Story Keeps Returning</strong><em>Urban Legends</em></a><a href="/stories/the-cinema-seat-printed-on-no-seating-plan-origin-and-meaning-of-a-neighborhood-legend"><span>05</span><strong>The Cinema Seat Printed on No Seating Plan: Origin and Meaning of a Neighborhood Legend</strong><em>Urban Legends</em></a>
+          </div>
+        </section>
+        
+        <aside class="ad-slot" data-ad-slot="ad-category-after-intro" aria-label="Advertisement"><span>Advertisement</span></aside>
+        <section class="home-headline-desk archive-story-index" aria-label="Urban Legends story list">
+          <div class="section-head"><h2>Urban Legends Records</h2><span>Page 5 of 8</span></div>
+          <div class="archive-story-index-grid">
+            <div class="story-list"><article class="story-row">
           <span class="tag">Urban Legends</span>
           <h3><a href="/stories/the-apartment-intercom-that-calls-its-own-lobby-why-this-street-story-keeps-returning">The Apartment Intercom That Calls Its Own Lobby: Why This Street Story Keeps Returning</a></h3>
           <p>A calm investigation of an apartment intercom displays the lobby as both caller and destination.</p>
@@ -120,13 +168,24 @@
           <h3><a href="/stories/the-diner-booth-reserved-for-a-passenger-who-never-arrives-a-modern-urban-legend">The Diner Booth Reserved for a Passenger Who Never Arrives: A Modern Urban Legend</a></h3>
           <p>A source-aware entry centered on a diner keeps one booth empty for a passenger whose bus is no longer on the schedule.</p>
           <div class="meta">Urban Legends - Building Legend - 10 min read - Updated Aug 2, 2026</div>
-        </article></div><nav class="pagination" aria-label="Archive pagination"><div class="pagination-status">Page 5 of 8</div><div class="pagination-links"><a class="page-link page-step" href="/categories/urban-legends-4">Previous</a><a class="page-link" href="/categories/urban-legends">1</a><a class="page-link" href="/categories/urban-legends-2">2</a><a class="page-link" href="/categories/urban-legends-3">3</a><a class="page-link" href="/categories/urban-legends-4">4</a><span class="page-link is-current" aria-current="page">5</span><a class="page-link" href="/categories/urban-legends-6">6</a><a class="page-link" href="/categories/urban-legends-7">7</a><a class="page-link" href="/categories/urban-legends-8">8</a><a class="page-link page-step" href="/categories/urban-legends-6">Next</a></div></nav></div>
-    <aside class="article-rail article-rail-right" aria-label="Recommended archive paths"><div class="rail-card rail-card-network">
+        </article></div>
+            <aside class="home-context-card">
+              <p class="label">Category road</p>
+              <h3>This shelf should lead directly into stories.</h3>
+              <p>Use this page to choose a record, then follow related tags, guides, and archive links from the article itself.</p>
+              <div class="category-links"><a href="/newest">Newest Records</a><a href="/popular">Known Records</a><a href="/mystery-board">Mystery Board</a></div>
+            </aside>
+          </div>
+          <nav class="pagination" aria-label="Archive pagination"><div class="pagination-status">Page 5 of 8</div><div class="pagination-links"><a class="page-link page-step" href="/categories/urban-legends-4">Previous</a><a class="page-link" href="/categories/urban-legends">1</a><a class="page-link" href="/categories/urban-legends-2">2</a><a class="page-link" href="/categories/urban-legends-3">3</a><a class="page-link" href="/categories/urban-legends-4">4</a><span class="page-link is-current" aria-current="page">5</span><a class="page-link" href="/categories/urban-legends-6">6</a><a class="page-link" href="/categories/urban-legends-7">7</a><a class="page-link" href="/categories/urban-legends-8">8</a><a class="page-link page-step" href="/categories/urban-legends-6">Next</a></div></nav>
+        </section>
+      </div>
+      <aside class="home-portal-rail" aria-label="Recommended archive paths"><div class="rail-card rail-card-network">
         <p class="rail-label">Kyunolab Network</p>
         <strong>Creator Library</strong>
         <p>Free mystery YouTube scripts, Shorts scripts, image prompts, and thumbnail ideas for video creators.</p>
         <a class="button" href="/scripts/">Open Creator Library</a>
       </div><div class="rail-card rail-feature"><p class="rail-label">Start here</p><a href="/stories/the-apartment-intercom-that-calls-its-own-lobby-why-this-street-story-keeps-returning"><span>Urban Legends</span><strong>The Apartment Intercom That Calls Its Own Lobby: Why This Street Story Keeps Returning</strong></a></div><div class="rail-card"><p class="rail-label">Related stories</p><a href="/stories/the-night-bus-stop-added-with-white-tape-origin-and-meaning-of-a-neighborhood-legend">The Night Bus Stop Added With White Tape: Origin and Meaning of a Neighborhood Legend</a><a href="/stories/the-underpass-graffiti-that-gives-tomorrow-s-date-a-modern-urban-legend-explained">The Underpass Graffiti That Gives Tomorrow’s Date: A Modern Urban Legend Explained</a><a href="/stories/the-corner-store-bell-that-rings-from-the-stockroom-why-this-street-story-keeps-returning">The Corner Store Bell That Rings From the Stockroom: Why This Street Story Keeps Returning</a></div></aside>
+    </div>
   </main>
   <footer class="site-footer">
     <p><strong>Kyunolab Mystery Archive</strong> collects legends, folklore, mysteries, and strange tales with calm source-aware notes.</p>

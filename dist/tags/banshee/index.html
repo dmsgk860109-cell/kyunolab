@@ -19,69 +19,133 @@
   <link rel="icon" href="/favicon-48x48.png" type="image/png" sizes="48x48">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="/styles.css?v=20260706-kit-ui">
+  <link rel="stylesheet" href="/styles.css?v=20260804-nav-flow">
 </head>
-<body>
-  <header class="site-header">
-    <div class="topline">A Kyuno Lab publication</div>
-    <div class="header-inner">
-      <a class="brand" href="/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
-      <nav class="nav"><a href="/newest">Newest</a><a href="/popular">Popular</a><a href="/categories">Categories</a><a href="/mystery-board">Mystery Board</a><a href="/tools">Tools</a><a href="/about">About</a><a href="/hub">Hub</a></nav>
+<body class="home-portal-page">
+  <header class="home-portal-header">
+    <div class="home-portal-header-inner">
+      <div class="home-portal-topbar">
+        <a class="home-portal-brand" href="/"><span class="home-portal-brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
+        <form class="site-search home-portal-search" action="/search/" method="get" role="search" aria-label="Search Kyunolab">
+          <input type="hidden" name="type" value="archive">
+          <label class="sr-only" for="tag-portal-search-query">Search query</label>
+          <input id="tag-portal-search-query" name="q" class="site-search-input" type="search" placeholder="Search Kyunolab..." autocomplete="off" data-search-input>
+          <button class="site-search-button" type="submit">Search</button>
+        </form>
+      </div>
+      <nav class="home-portal-nav" aria-label="Primary homepage navigation">
+        <a href="/">Home</a>
+        <a href="/archive">All Stories</a>
+        <a href="/categories">Categories</a>
+        <a href="/mystery-board">Mystery Board</a>
+        <a href="/scripts/">Creator Library</a>
+        <a href="/tools">Tools</a>
+        <a href="/about">About</a>
+        <a href="/hub" class="home-portal-hub-link">Hub</a>
+      </nav>
+      <section class="home-sign-system" aria-label="Kyunolab reading paths">
+          <div class="home-sign-intro">
+            <p class="label">Start Here</p>
+            <h2>Choose a story shelf first, then use the map when you want the wider site.</h2>
+            <p>Begin with archive stories, open the full index, or cross into reading guides, creator material, and future tools.</p>
+          </div>
+          <div class="home-sign-links">
+            <div>
+              <h3>Browse Stories</h3>
+              <a href="/categories/urban-legends">Urban Legends</a>
+              <a href="/categories/internet-folklore">Internet Folklore</a>
+              <a href="/categories/myths">Myths</a>
+              <a href="/categories/strange-places">Strange Places</a>
+            </div>
+            <div>
+              <h3>Use The Map</h3>
+              <a href="/archive">All Stories</a>
+              <a href="/mystery-board">Reading Guides</a>
+              <a href="/scripts/">Creator Library</a>
+              <a href="/tools">Tools</a>
+            </div>
+          </div>
+          <div class="home-small-buildings">
+            <h3>Site Notes</h3>
+            <a href="/hub">Hub</a>
+            <a href="/about">About Kyunolab</a>
+            <a href="/fiction-disclaimer">Story and source notice</a>
+          </div>
+        </section>
     </div>
   </header>
 
-  <main class="article-shell article-layout">
-    <aside class="article-rail article-rail-left" aria-label="Tag archive paths">
-      <div class="rail-card">
-        <p class="rail-label">This tag</p>
-        <a href="/tags/banshee/">Banshee</a>
-        <a href="/categories">Browse all categories</a>
-        <a href="/newest">Latest articles</a>
-        <a href="/popular">Popular articles</a>
-        <a href="/archive">Archive Index</a>
-      </div>
-    </aside>
-
-    <div class="archive-page-main">
-      <p class="label">Tag Archive</p>
-      <h1 class="article-title">Stories Tagged &quot;Banshee&quot;</h1>
-      <p class="deck">A small internal archive path for Kyunolab stories connected to Banshee.</p>
-      <aside class="ad-slot" data-ad-slot="ad-tag-after-intro" aria-label="Advertisement"><span>Advertisement</span></aside>
-      <div class="story-list">
+  <main class="home-shell home-portal-shell tag-portal-page">
+    <div class="home-portal-layout">
+      <div class="home-main-column">
+        <section class="home-portal-lead tag-portal-lead" aria-label="Banshee tag entrance">
+          <article class="home-lead-story">
+            <p class="label">Tag Archive</p>
+            <h1>Stories Tagged &quot;Banshee&quot;</h1>
+            <p>A small internal archive path for Kyunolab stories connected to Banshee.</p>
+            <a class="button" href="/categories">Browse categories</a>
+          </article>
+          <div class="home-known-list">
+            <h2>Start with this tag</h2>
+            <a href="/stories/banshee-irish-folklore"><span>01</span><strong>Banshee: Irish Death Cry, Family Warning, and the Woman of the Fairy Mound</strong><em>Classic Folklore</em></a>
+          </div>
+        </section>
+        <aside class="ad-slot" data-ad-slot="ad-tag-after-intro" aria-label="Advertisement"><span>Advertisement</span></aside>
+        <section class="home-headline-desk archive-story-index" aria-label="Banshee tagged stories">
+          <div class="section-head"><h2>Banshee Records</h2><span>1 linked page</span></div>
+          <div class="archive-story-index-grid">
+            <div class="story-list">
         <article class="story-row">
           <span class="tag">Classic Folklore</span>
           <h3><a href="/stories/banshee-irish-folklore">Banshee: Irish Death Cry, Family Warning, and the Woman of the Fairy Mound</a></h3>
           <p>The banshee is the Irish supernatural figure whose cry warns of death, not a monster that causes it, linking family memory, keening, and the Otherworld.</p>
           <small>Classic Folklore - 11 min read</small>
         </article>
+            </div>
+            <aside class="home-context-card">
+              <p class="label">Tag road</p>
+              <h3>Use tags as side streets, not the whole destination.</h3>
+              <p>This page gathers related archive records and guides, then points readers back into full stories, category shelves, and newer records.</p>
+              <div class="category-links"><a href="/archive">All Stories</a><a href="/newest">Newest Records</a><a href="/popular">Known Records</a></div>
+            </aside>
+          </div>
+          <nav class="pagination" aria-label="Tag pagination">
+            <div class="pagination-status">Page 1 of 1</div>
+            <div class="pagination-links">
+              <span class="page-link page-step is-disabled" aria-disabled="true">Previous</span>
+              <span class="page-link is-current" aria-current="page">1</span>
+              <span class="page-link page-step is-disabled" aria-disabled="true">Next</span>
+            </div>
+          </nav>
+        </section>
       </div>
-      <nav class="pagination" aria-label="Tag pagination">
-        <div class="pagination-status">Page 1 of 1</div>
-        <div class="pagination-links">
-          <span class="page-link page-step is-disabled" aria-disabled="true">Previous</span>
-          <span class="page-link is-current" aria-current="page">1</span>
-          <span class="page-link page-step is-disabled" aria-disabled="true">Next</span>
-        </div>
-      </nav>
-    </div>
 
-    <aside class="article-rail article-rail-right" aria-label="Recommended archive paths">
-      <div class="rail-card rail-card-network">
+      <aside class="home-portal-rail" aria-label="Recommended archive paths">
+        <div class="rail-card rail-card-network">
         <p class="rail-label">Kyunolab Network</p>
         <strong>Creator Library</strong>
         <p>Free mystery YouTube scripts, Shorts scripts, image prompts, and thumbnail ideas for video creators.</p>
         <a class="button" href="/scripts/">Open Creator Library</a>
       </div>
-      <div class="rail-card rail-feature">
-        <p class="rail-label">Start here</p>
-        <a href="/stories/banshee-irish-folklore"><strong>Banshee: Irish Death Cry, Family Warning, and the Woman of the Fairy Mound</strong><span>Classic Folklore</span></a>
-      </div>
-    </aside>
+        <section class="rail-card rail-feature">
+          <p class="rail-label">Start here</p>
+          <a href="/stories/banshee-irish-folklore"><strong>Banshee: Irish Death Cry, Family Warning, and the Woman of the Fairy Mound</strong><span>Classic Folklore</span></a>
+        </section>
+        <section class="rail-card">
+          <p class="rail-label">Archive roads</p>
+          <a href="/categories">Browse all categories</a>
+          <a href="/newest">Latest articles</a>
+          <a href="/popular">Popular articles</a>
+          <a href="/archive">Archive Index</a>
+        </section>
+      </aside>
+    </div>
   </main>
 
   <footer class="site-footer">
     <p><strong>Kyunolab Mystery Archive</strong> is a quiet story publication by Kyuno Lab, dedicated to legends, folklore, mysteries, and strange tales from the edges of memory.</p>
     <p><a href="/archive">Archive Index</a> - <a href="/newest">Newest</a> - <a href="/popular">Popular</a> - <a href="/categories">Categories</a> - <a href="/tools">Tools</a> - <a href="/hub">Hub</a> - <a href="/about">About</a> - <a href="/fiction-disclaimer">Story &amp; Source Notice</a> - <a href="/privacy">Privacy</a> - <a href="/rss.xml">RSS</a></p>
   </footer>
+  <script defer src="/assets/global-search.js?v=20260804-nav-flow"></script>
 </body>
 </html>

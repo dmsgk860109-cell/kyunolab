@@ -254,73 +254,72 @@ ${section.paragraphs.map((text) => `<p>${linkText(text)}</p>`).join('\n')}`).joi
     ogTitle: guide.ogTitle || guide.title,
     ogDescription: guide.ogDescription || guide.excerpt,
     type: 'article',
-    content: `  <main class="article-shell article-layout">
-    <aside class="article-rail article-rail-left" aria-label="Guide navigation">
-      <div class="rail-card">
-        <p class="rail-label">In this guide</p>
-        ${guide.sections.map((section) => `<a href="#${escapeAttr(section.id)}">${escapeHtml(section.nav || section.title)}</a>`).join('')}
-        <a href="#faq">FAQ</a>
-      </div>
-      <div class="rail-card rail-card-subtle">
-        <p class="rail-label">Related shelves</p>
-        <a href="/mystery-board.html">Mystery Board</a>
-        <a href="/archive.html">All Stories</a>
-        <a href="/categories.html">Browse Categories</a>
-        <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a>
-      </div>
-    </aside>
+    bodyClass: 'home-portal-page',
+    headerHtml: renderHomePortalHeader(canonicalPath),
+    pageStyleVersion: boardPortalStyleVersion,
+    content: `  <main class="home-shell home-portal-shell board-portal-page board-guide-detail-page">
+    <div class="home-portal-layout">
+      <div class="home-main-column">
+        <article>
+          <header class="archive-article-header">
+            <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/mystery-board.html">Mystery Board</a><span aria-hidden="true">/</span><span aria-current="page">${escapeHtml(guide.title)}</span></nav>
+            <p class="label">Mystery Board Guide</p>
+            <h1 class="article-title">${escapeHtml(guide.title)}</h1>
+            <p class="deck">${escapeHtml(guide.deck || guide.excerpt)}</p>
+            <dl class="article-meta-grid">
+              <div><dt>Tags</dt><dd>${escapeHtml((guide.tags || []).join(', '))}</dd></div>
+              <div><dt>Best for</dt><dd>${escapeHtml(guide.bestFor || 'Archive readers')}</dd></div>
+              <div><dt>Read time</dt><dd>${escapeHtml(guide.readTime)}</dd></div>
+              <div><dt>Updated</dt><dd>${formatDate(guide.updatedAt || guide.publishedAt)}</dd></div>
+            </dl>
+          </header>
 
-    <article>
-      <header class="archive-article-header">
-        <p class="label">Mystery Board</p>
-        <h1 class="article-title">${escapeHtml(guide.title)}</h1>
-        <p class="deck">${escapeHtml(guide.deck || guide.excerpt)}</p>
-        <dl class="article-meta-grid">
-          <div><dt>Tags</dt><dd>${escapeHtml((guide.tags || []).join(', '))}</dd></div>
-          <div><dt>Best for</dt><dd>${escapeHtml(guide.bestFor || 'Archive readers')}</dd></div>
-          <div><dt>Read time</dt><dd>${escapeHtml(guide.readTime)}</dd></div>
-          <div><dt>Updated</dt><dd>${formatDate(guide.updatedAt || guide.publishedAt)}</dd></div>
-        </dl>
-      </header>
+          <section class="story-map" aria-label="Guide map">
+            <h2>Guide Map</h2>
+            <ol>${mapItems}<li><a href="#faq">FAQ</a></li></ol>
+          </section>
 
-      <section class="story-map" aria-label="Guide map">
-        <h2>Guide Map</h2>
-        <ol>${mapItems}<li><a href="#faq">FAQ</a></li></ol>
-      </section>
+          ${renderReadingBridge(relatedStories)}
+          ${renderAdSlot('ad-guide-after-map')}
 
-      ${renderReadingBridge(relatedStories)}
-      ${renderAdSlot('ad-guide-after-map')}
-
-      <div class="story-body archive-entry">
+          <div class="story-body archive-entry">
 ${sections}
 
-        ${renderAdSlot('ad-guide-mid-article')}
+            ${renderAdSlot('ad-guide-mid-article')}
 
-        <h2 id="faq">FAQ</h2>
-        ${faq}
+            <h2 id="faq">FAQ</h2>
+            ${faq}
 
-        <h2>Story &amp; Source Note</h2>
-        <p>${escapeHtml(guide.sourceNote)}</p>
+            <h2>Story &amp; Source Note</h2>
+            <p>${escapeHtml(guide.sourceNote)}</p>
+          </div>
+        </article>
       </div>
-    </article>
 
-    <aside class="article-rail article-rail-right" aria-label="Related guides">
-      ${renderKyunolabNetworkCard()}
-      <div class="rail-card rail-feature">
-        <p class="rail-label">Read next</p>
-        <a href="${escapeAttr(nextGuide.url || `/mystery-board/${nextGuide.slug}`)}"><span>${escapeHtml(nextGuide.tag || nextGuide.category)}</span><strong>${escapeHtml(nextGuide.shortTitle || nextGuide.title)}</strong></a>
-      </div>
-      <div class="rail-card">
-        <p class="rail-label">Related records</p>
-        ${relatedStories.slice(0, 3).map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}
-      </div>
-      <div class="rail-card rail-card-subtle">
-        <p class="rail-label">Mystery Board</p>
-        <a href="/mystery-board.html">All Guides</a>
-        <a href="/categories.html">Browse Categories</a>
-        <a href="/fiction-disclaimer.html">Source Notice</a>
-      </div>
-    </aside>
+      <aside class="home-portal-rail" aria-label="Related guides">
+        ${renderKyunolabNetworkCard()}
+        <section class="rail-card">
+          <p class="rail-label">In this guide</p>
+          ${guide.sections.map((section) => `<a href="#${escapeAttr(section.id)}">${escapeHtml(section.nav || section.title)}</a>`).join('')}
+          <a href="#faq">FAQ</a>
+        </section>
+        <section class="rail-card rail-feature">
+          <p class="rail-label">Read next</p>
+          <a href="${escapeAttr(nextGuide.url || `/mystery-board/${nextGuide.slug}`)}"><span>${escapeHtml(nextGuide.tag || nextGuide.category)}</span><strong>${escapeHtml(nextGuide.shortTitle || nextGuide.title)}</strong></a>
+        </section>
+        <section class="rail-card">
+          <p class="rail-label">Related records</p>
+          ${relatedStories.slice(0, 3).map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}
+        </section>
+        <section class="rail-card rail-card-subtle">
+          <p class="rail-label">Mystery Board</p>
+          <a href="/mystery-board.html">All Guides</a>
+          <a href="/archive.html">All Stories</a>
+          <a href="/categories.html">Browse Categories</a>
+          <a href="/fiction-disclaimer.html">Source Notice</a>
+        </section>
+      </aside>
+    </div>
   </main>`
   });
 }

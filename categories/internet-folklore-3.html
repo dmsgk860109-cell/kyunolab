@@ -23,32 +23,80 @@
   <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="/styles.css?v=20260804-nav-flow">
 </head>
-<body>
-  <header class="site-header">
-    <div class="topline">A Kyuno Lab publication</div>
-    <div class="header-inner">
-      <a class="brand" href="/"><span class="brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
-
-      <form class="site-search" action="/search/" method="get" role="search" aria-label="Search Archive or Creator Library">
-        <label class="sr-only" for="global-search-type">Search target</label>
-        <select id="global-search-type" name="type" class="site-search-select" data-search-type>
-          <option value="archive" selected>Archive</option>
-          <option value="library">Creator Library</option>
-        </select>
-        <label class="sr-only" for="global-search-query">Search query</label>
-        <input id="global-search-query" name="q" class="site-search-input" type="search" placeholder="Search stories, legends, and mysteries..." autocomplete="off" data-search-input>
-        <button class="site-search-button" type="submit">SEARCH</button>
-      </form>
-      <nav class="nav"><a href="/archive">All Stories</a><a href="/newest">Newest</a><a href="/popular">Popular</a><a href="/categories" class="active" aria-current="page">Categories</a><a href="/mystery-board">Mystery Board</a><a href="/tools">Tools</a><a href="/about">About</a><a href="/hub">Hub</a></nav>
+<body class="home-portal-page">
+  <header class="home-portal-header">
+    <div class="home-portal-header-inner">
+      <div class="home-portal-topbar">
+        <a class="home-portal-brand" href="/"><span class="home-portal-brand-mark"><img src="/icon-192.png" alt="" aria-hidden="true"></span><span><strong>Kyunolab Mystery Archive</strong><em>Legends, folklore, mysteries, and strange tales.</em></span></a>
+        <form class="site-search home-portal-search" action="/search/" method="get" role="search" aria-label="Search Kyunolab">
+          <input type="hidden" name="type" value="archive">
+          <label class="sr-only" for="home-portal-search-query">Search query</label>
+          <input id="home-portal-search-query" name="q" class="site-search-input" type="search" placeholder="Search Kyunolab..." autocomplete="off" data-search-input>
+          <button class="site-search-button" type="submit">Search</button>
+        </form>
+      </div>
+      <nav class="home-portal-nav" aria-label="Primary homepage navigation">
+        <a href="/">Home</a>
+        <a href="/archive">All Stories</a>
+        <a href="/categories" class="active" aria-current="page">Categories</a>
+        <a href="/mystery-board">Mystery Board</a>
+        <a href="/scripts/">Creator Library</a>
+        <a href="/tools">Tools</a>
+        <a href="/about">About</a>
+        <a href="/hub" class="home-portal-hub-link">Hub</a>
+      </nav>
+      <section class="home-sign-system" aria-label="Kyunolab reading paths">
+          <div class="home-sign-intro">
+            <p class="label">Start Here</p>
+            <h2>Choose a story shelf first, then use the map when you want the wider site.</h2>
+            <p>Begin with archive stories, open the full index, or cross into reading guides, creator material, and future tools.</p>
+          </div>
+          <div class="home-sign-links">
+            <div>
+              <h3>Browse Stories</h3>
+              <a href="/categories/urban-legends">Urban Legends</a>
+              <a href="/categories/internet-folklore">Internet Folklore</a>
+              <a href="/categories/myths">Myths</a>
+              <a href="/categories/strange-places">Strange Places</a>
+            </div>
+            <div>
+              <h3>Use The Map</h3>
+              <a href="/archive">All Stories</a>
+              <a href="/mystery-board">Reading Guides</a>
+              <a href="/scripts/">Creator Library</a>
+              <a href="/tools">Tools</a>
+            </div>
+          </div>
+          <div class="home-small-buildings">
+            <h3>Site Notes</h3>
+            <a href="/hub">Hub</a>
+            <a href="/about">About Kyunolab</a>
+            <a href="/fiction-disclaimer">Story and source notice</a>
+          </div>
+        </section>
     </div>
   </header>
-  <main class="article-shell article-layout">
-    <aside class="article-rail article-rail-left" aria-label="Archive navigation">
-    <div class="rail-card"><p class="rail-label">Reader Paths</p><a href="/archive">All Stories</a><a href="/newest">Newest Records</a><a href="/popular">Popular Records</a><a href="/categories">Browse Categories</a><a href="/mystery-board">Mystery Board</a></div>
-    <div class="rail-card rail-card-subtle"><p class="rail-label">Archive Shelves</p><a href="/categories/urban-legends">Urban Legends</a><a href="/categories/internet-folklore">Internet Folklore</a><a href="/categories/myths">Myths</a><a href="/categories/strange-places">Strange Places</a></div>
-    <div class="rail-card"><p class="rail-label">Source Guide</p><a href="/fiction-disclaimer">Story &amp; Source Notice</a><a href="/about">About Kyunolab</a></div>
-  </aside>
-    <div class="archive-page-main"><p class="label">Modern Strange Records</p><h1 class="article-title">Internet Folklore</h1><p class="deck">Internet folklore, digital legends, online myths, cursed images, screenshots, games, and forum-born stories traced through meaning, spread, and source limits.</p><aside class="ad-slot" data-ad-slot="ad-category-after-intro" aria-label="Advertisement"><span>Advertisement</span></aside><div class="story-list"><article class="story-row">
+  <main class="home-shell home-portal-shell category-detail-portal-page">
+    <div class="home-portal-layout">
+      <div class="home-main-column">
+        <section class="home-portal-lead category-portal-lead" aria-label="Internet Folklore front entrance">
+          <article class="home-lead-story category-lead-story">
+            <p class="label">Modern Strange Records</p>
+            <h1>Internet Folklore</h1>
+            <p>Internet folklore, digital legends, online myths, cursed images, screenshots, games, and forum-born stories traced through meaning, spread, and source limits.</p>
+            <a class="button" href="/categories">Open all categories</a>
+          </article>
+          <div class="home-known-list category-entrance-list">
+            <h2>Start in this shelf</h2>
+            <a href="/stories/the-shared-document-version-named-after-a-dead-link"><span>01</span><strong>The Shared Document Version Named After a Dead Link</strong><em>Internet Folklore</em></a><a href="/stories/the-browser-history-export-with-a-site-not-yet-online"><span>02</span><strong>The Browser History Export With a Site Not Yet Online</strong><em>Internet Folklore</em></a><a href="/stories/the-livestream-viewer-list-that-counted-one-silent-room"><span>03</span><strong>The Livestream Viewer List That Counted One Silent Room</strong><em>Internet Folklore</em></a><a href="/stories/the-group-chat-read-receipt-from-a-removed-member"><span>04</span><strong>The Group Chat Read Receipt From a Removed Member</strong><em>Internet Folklore</em></a><a href="/stories/the-comment-edit-history-with-a-line-no-one-typed"><span>05</span><strong>The Comment Edit History With a Line No One Typed</strong><em>Internet Folklore</em></a>
+          </div>
+        </section>
+        
+        <aside class="ad-slot" data-ad-slot="ad-category-after-intro" aria-label="Advertisement"><span>Advertisement</span></aside>
+        <section class="home-headline-desk archive-story-index" aria-label="Internet Folklore story list">
+          <div class="section-head"><h2>Internet Folklore Records</h2><span>Page 3 of 8</span></div>
+          <div class="archive-story-index-grid">
+            <div class="story-list"><article class="story-row">
           <span class="tag">Internet Folklore</span>
           <h3><a href="/stories/the-shared-document-version-named-after-a-dead-link">The Shared Document Version Named After a Dead Link</a></h3>
           <p>The Shared Document Version Named After a Dead Link follows a shared document version history names a dead link as if it were an editor, showing how ordinary paperwork can become the center of a legend, mystery, or symbolic tradition.</p>
@@ -120,13 +168,24 @@
           <h3><a href="/stories/the-app-crash-report-that-described-the-room">The App Crash Report That Described the Room</a></h3>
           <p>The phone crash report includes a phrase that seems to describe the room around the device.</p>
           <div class="meta">Internet Folklore - Crash Report Legend - 9 min read - Updated Aug 2, 2026</div>
-        </article></div><nav class="pagination" aria-label="Archive pagination"><div class="pagination-status">Page 3 of 8</div><div class="pagination-links"><a class="page-link page-step" href="/categories/internet-folklore-2">Previous</a><a class="page-link" href="/categories/internet-folklore">1</a><a class="page-link" href="/categories/internet-folklore-2">2</a><span class="page-link is-current" aria-current="page">3</span><a class="page-link" href="/categories/internet-folklore-4">4</a><a class="page-link" href="/categories/internet-folklore-5">5</a><a class="page-link" href="/categories/internet-folklore-6">6</a><a class="page-link" href="/categories/internet-folklore-7">7</a><a class="page-link" href="/categories/internet-folklore-8">8</a><a class="page-link page-step" href="/categories/internet-folklore-4">Next</a></div></nav></div>
-    <aside class="article-rail article-rail-right" aria-label="Recommended archive paths"><div class="rail-card rail-card-network">
+        </article></div>
+            <aside class="home-context-card">
+              <p class="label">Category road</p>
+              <h3>This shelf should lead directly into stories.</h3>
+              <p>Use this page to choose a record, then follow related tags, guides, and archive links from the article itself.</p>
+              <div class="category-links"><a href="/newest">Newest Records</a><a href="/popular">Known Records</a><a href="/mystery-board">Mystery Board</a></div>
+            </aside>
+          </div>
+          <nav class="pagination" aria-label="Archive pagination"><div class="pagination-status">Page 3 of 8</div><div class="pagination-links"><a class="page-link page-step" href="/categories/internet-folklore-2">Previous</a><a class="page-link" href="/categories/internet-folklore">1</a><a class="page-link" href="/categories/internet-folklore-2">2</a><span class="page-link is-current" aria-current="page">3</span><a class="page-link" href="/categories/internet-folklore-4">4</a><a class="page-link" href="/categories/internet-folklore-5">5</a><a class="page-link" href="/categories/internet-folklore-6">6</a><a class="page-link" href="/categories/internet-folklore-7">7</a><a class="page-link" href="/categories/internet-folklore-8">8</a><a class="page-link page-step" href="/categories/internet-folklore-4">Next</a></div></nav>
+        </section>
+      </div>
+      <aside class="home-portal-rail" aria-label="Recommended archive paths"><div class="rail-card rail-card-network">
         <p class="rail-label">Kyunolab Network</p>
         <strong>Creator Library</strong>
         <p>Free mystery YouTube scripts, Shorts scripts, image prompts, and thumbnail ideas for video creators.</p>
         <a class="button" href="/scripts/">Open Creator Library</a>
       </div><div class="rail-card rail-feature"><p class="rail-label">Start here</p><a href="/stories/the-shared-document-version-named-after-a-dead-link"><span>Internet Folklore</span><strong>The Shared Document Version Named After a Dead Link</strong></a></div><div class="rail-card"><p class="rail-label">Related stories</p><a href="/stories/the-browser-history-export-with-a-site-not-yet-online">The Browser History Export With a Site Not Yet Online</a><a href="/stories/the-livestream-viewer-list-that-counted-one-silent-room">The Livestream Viewer List That Counted One Silent Room</a><a href="/stories/the-group-chat-read-receipt-from-a-removed-member">The Group Chat Read Receipt From a Removed Member</a></div></aside>
+    </div>
   </main>
   <footer class="site-footer">
     <p><strong>Kyunolab Mystery Archive</strong> collects legends, folklore, mysteries, and strange tales with calm source-aware notes.</p>
