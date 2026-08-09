@@ -1470,7 +1470,8 @@ function renderArchivePortalHeader(currentPath = '/') {
       </div>
       <nav class="home-portal-nav" aria-label="Primary archive navigation">
         ${homePortalNavLink('/', 'Home', pathForNav === '/')}
-        ${homePortalNavLink('/archive.html', 'All Stories', pathForNav === '/archive' || /^\/archive-\d+$/.test(pathForNav))}
+        ${homePortalNavLink('/popular.html', 'Known Stories', pathForNav === '/popular')}
+        ${homePortalNavLink('/newest.html', 'Newest Stories', pathForNav === '/newest')}
         ${homePortalNavLink('/categories.html', 'Categories', pathForNav === '/categories' || pathForNav.startsWith('/categories/'))}
         ${homePortalNavLink('/mystery-board.html', 'Mystery Board', pathForNav === '/mystery-board' || pathForNav.startsWith('/mystery-board/'))}
         ${homePortalNavLink('/scripts/', 'Creator Library', pathForNav === '/scripts' || pathForNav.startsWith('/scripts/'))}
