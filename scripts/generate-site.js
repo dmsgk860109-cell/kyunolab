@@ -13,7 +13,7 @@ const buildArgs = parseBuildArgs(process.argv.slice(2));
 const siteOutputRoot = path.resolve(buildArgs.outputRoot || root);
 const creatorPackOptions = buildArgs.creatorPackRoot ? { root: buildArgs.creatorPackRoot } : {};
 const siteUrl = 'https://kyunolab.com';
-const styleVersion = '20260811-creator-package-flow';
+const styleVersion = '20260811-creator-toolkit-compact';
 const creatorLibraryScriptVersion = '20260722-copy-fields';
 const pageSize = 12;
 const libraryPageSize = 10;
@@ -1948,9 +1948,9 @@ function renderCreatorToolkitSection(script) {
   const toolkit = creatorToolkitData(script);
   return `<section id="creator-toolkit" class="script-material creator-toolkit" aria-label="Creator toolkit">
         <h2>Creator Toolkit</h2>
-        <p class="section-deck">Use this as a compact production bench: choose the tool type, then keep the output aligned with the narration and image-led format.</p>
-        <div class="creator-toolkit-grid">
-          ${toolkit.map((item) => `<article>
+        <p class="section-deck">A quick production checklist: pick one option from each row, then keep the output aligned with the narration and image-led format.</p>
+        <div class="creator-toolkit-list">
+          ${toolkit.map((item) => `<article class="creator-toolkit-row">
             <div class="toolkit-heading"><span>${escapeHtml(item.step)}</span><h3>${escapeHtml(item.title)}</h3></div>
             <p>${escapeHtml(item.text)}</p>
             <div class="toolkit-terms">${item.terms.map((term) => `<code>${escapeHtml(term)}</code>`).join('')}</div>
@@ -2165,14 +2165,14 @@ function renderProductionWorkflowSection(script) {
       ['05', 'Finish', 'Add consistent music and export the video.']
     ]
     : [
-      ['①', 'Story', 'Read the Story Summary.'],
-      ['②', 'Format', 'Choose Long-form or Short-form.'],
-      ['③', 'Narration', 'Prepare the Scene narration.'],
-      ['④', 'Image', 'Create images from the Image Prompts.'],
-      ['⑤', 'Music', 'Choose music from the mood keywords.'],
-      ['⑥', 'Voice', 'Prepare the voice track.'],
-      ['⑦', 'Edit', 'Place the Scenes in order.'],
-      ['⑧', 'Finish', 'Export the video.']
+      ['01', 'Story', 'Read the Story Summary.'],
+      ['02', 'Format', 'Choose Long-form or Short-form.'],
+      ['03', 'Narration', 'Prepare the Scene narration.'],
+      ['04', 'Image', 'Create images from the Image Prompts.'],
+      ['05', 'Music', 'Choose music from the mood keywords.'],
+      ['06', 'Voice', 'Prepare the voice track.'],
+      ['07', 'Edit', 'Place the Scenes in order.'],
+      ['08', 'Finish', 'Export the video.']
     ];
 
   return `<section id="production-workflow" class="script-material production-workflow" aria-label="Production workflow">
