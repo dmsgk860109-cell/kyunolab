@@ -2491,14 +2491,11 @@ function renderProductionSceneCard({ number, duration, narration, narrationParts
             <div>
               <p class="scene-card-kicker">Scene ${String(number).padStart(2, '0')} <span>${escapeHtml(sceneRole)}</span></p>
               <h3>${escapeHtml(sceneTitle)}</h3>
-              <p class="scene-card-runtime">${escapeHtml(duration)}</p>
+              <p class="scene-card-runtime"><strong>Estimated Playback Time:</strong> ${escapeHtml(duration)}</p>
             </div>
           </header>
           <div class="scene-card-grid">
-            <div class="scene-card-main">
-              ${narrationHtml}
-            </div>
-            <aside class="scene-card-side" aria-label="Scene production support">
+            <div class="scene-card-side" aria-label="Scene production support">
               ${sceneChecklist}
               <div class="scene-support-panel">
                 <h4>Production Support</h4>
@@ -2507,7 +2504,10 @@ function renderProductionSceneCard({ number, duration, narration, narrationParts
                 ${soundEffect ? `<p><strong>Sound:</strong> ${escapeHtml(soundEffect)}</p>` : ''}
                 <p><strong>Edit:</strong> ${escapeHtml(direction)}</p>
               </div>
-            </aside>
+            </div>
+            <div class="scene-card-main">
+              ${narrationHtml}
+            </div>
           </div>
           <div class="scene-production-fields" hidden>
             ${productionFields}
@@ -2565,14 +2565,17 @@ function renderNarrationPart(part, index, useSceneBeatLabels = false) {
   const narrationLabel = useSceneBeatLabels ? 'Voiceover Narration' : 'Narration';
   const noteLabel = useSceneBeatLabels ? 'Beat Note' : 'Creator Note';
   const noteButtonLabel = useSceneBeatLabels ? 'Copy Beat Note' : 'Copy Creator Note';
+  const actions = [
+    `<button class="narration-part-copy-button narration-field-copy-button" type="button" data-copy-field="narration">Copy Narration</button>`,
+    part.creatorNote ? `<button class="narration-part-copy-button narration-field-copy-button" type="button" data-copy-field="creator-note">${noteButtonLabel}</button>` : ''
+  ].filter(Boolean).join('\n');
   const fields = [
     `<h4>${partTitle}</h4>`,
     `<p class="narration-part-script"><strong>${narrationLabel}:</strong> ${escapeHtml(part.narration)}</p>`,
-    `<button class="narration-part-copy-button narration-field-copy-button" type="button" data-copy-field="narration">Copy Narration</button>`,
     `<p class="narration-part-time"><strong>Estimated Reading Time:</strong> ${escapeHtml(part.readingTime)}</p>`,
+    renderVisualBeats(part.visualBeats),
     part.creatorNote ? `<p class="narration-part-note"><strong>${noteLabel}:</strong> ${escapeHtml(part.creatorNote)}</p>` : '',
-    part.creatorNote ? `<button class="narration-part-copy-button narration-field-copy-button" type="button" data-copy-field="creator-note">${noteButtonLabel}</button>` : '',
-    renderVisualBeats(part.visualBeats)
+    `<div class="narration-part-actions">${actions}</div>`
   ].filter(Boolean).join('\n');
   return `<section class="narration-part">${fields}</section>`;
 }
@@ -2628,9 +2631,11 @@ function renderVisualBeats(beats = []) {
   const beatHtml = beats.map((beat, index) => {
     const fields = [
       `<p class="visual-beat-image-prompt"><span>${escapeHtml(beat.label || `Image Prompt ${index + 1}`)}:</span> ${escapeHtml(beat.imagePrompt)}</p>`,
-      `<button class="narration-part-copy-button narration-field-copy-button" type="button" data-copy-field="image-prompt">Copy Image Prompt</button>`,
       beat.motionPrompt ? `<p class="visual-beat-motion-prompt"><span>Beat Motion:</span> ${escapeHtml(beat.motionPrompt)}</p>` : '',
-      beat.motionPrompt ? `<button class="narration-part-copy-button narration-field-copy-button" type="button" data-copy-field="motion-prompt">Copy Motion Prompt</button>` : ''
+      `<div class="visual-beat-actions">
+        <button class="narration-part-copy-button narration-field-copy-button" type="button" data-copy-field="image-prompt">Copy Image Prompt</button>
+        ${beat.motionPrompt ? `<button class="narration-part-copy-button narration-field-copy-button" type="button" data-copy-field="motion-prompt">Copy Motion Prompt</button>` : ''}
+      </div>`
     ].filter(Boolean).join('\n');
     return `<div class="visual-beat">${fields}</div>`;
   }).join('');
