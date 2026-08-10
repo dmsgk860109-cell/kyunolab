@@ -2334,11 +2334,11 @@ function renderStandardCreatorPack(entry) {
   const standardSection = threeBeatLayout ? `${renderWholeVideoStandard(entry, model)}
       ` : '';
   return `${standardSection}<section class="script-material creator-format creator-format-long">
-        <h2>${threeBeatLayout ? 'Image + Narration Long-form Creator' : 'Long-form Creator'}</h2>
+        <h2>Long-form</h2>
         ${renderStandardLongFormCreator(model)}
       </section>
       <section class="script-material creator-format creator-format-short">
-        <h2>Short-form Creator</h2>
+        <h2>Short-form</h2>
         ${renderStandardShortFormCreator(model)}
       </section>`;
 }
@@ -2434,7 +2434,7 @@ function standardAdvancedProductionInfo(scene) {
 }
 
 function formatApproxSeconds(seconds) {
-  return `≈ ${Number(seconds)} sec`;
+  return `about ${Number(seconds)} sec`;
 }
 
 function formatSecondsLabel(seconds) {
@@ -2484,18 +2484,56 @@ function renderProductionSceneCard({ number, duration, narration, narrationParts
     : strictStored
       ? renderPlainNarration(narration, number - 1, format, { strictStored, readingTime: plainReadingTime })
       : renderPlainNarration(narration, number - 1, format);
+  const sceneTitle = sceneFocus || `Scene ${number}`;
+  const sceneChecklist = renderSceneChecklist({ narrationParts, imagePrompt, direction, music, soundEffect, advanced });
   return `<article class="scene-workspace">
-          <h3>Scene ${number}</h3>
-          <div class="scene-workspace-meta">
-            <p><strong>Scene Role:</strong> ${escapeHtml(sceneRole)}</p>
-            <p><strong>Estimated Playback Time:</strong> ${escapeHtml(duration)}</p>
+          <header class="scene-card-header">
+            <div>
+              <p class="scene-card-kicker">Scene ${String(number).padStart(2, '0')} <span>${escapeHtml(sceneRole)}</span></p>
+              <h3>${escapeHtml(sceneTitle)}</h3>
+              <p class="scene-card-runtime">${escapeHtml(duration)}</p>
+            </div>
+          </header>
+          <div class="scene-card-grid">
+            <div class="scene-card-main">
+              ${narrationHtml}
+            </div>
+            <aside class="scene-card-side" aria-label="Scene production support">
+              ${sceneChecklist}
+              <div class="scene-support-panel">
+                <h4>Production Support</h4>
+                <p><strong>Voice:</strong> ${escapeHtml(voiceDirection)}</p>
+                <p><strong>Audio:</strong> ${escapeHtml(music)}</p>
+                ${soundEffect ? `<p><strong>Sound:</strong> ${escapeHtml(soundEffect)}</p>` : ''}
+                <p><strong>Edit:</strong> ${escapeHtml(direction)}</p>
+              </div>
+            </aside>
           </div>
-          ${narrationHtml}
-          <div class="scene-production-fields">
+          <div class="scene-production-fields" hidden>
             ${productionFields}
           </div>
           ${renderAdvancedProductionPanel(advancedId, advanced)}
         </article>`;
+}
+
+function renderSceneChecklist({ narrationParts = [], imagePrompt, direction, music, soundEffect, advanced }) {
+  const visualCount = narrationParts
+    .flatMap((part) => part.visualBeats || [])
+    .filter((beat) => beat.imagePrompt).length + (imagePrompt ? 1 : 0);
+  const motionCount = narrationParts
+    .flatMap((part) => part.visualBeats || [])
+    .filter((beat) => beat.motionPrompt).length + (direction ? 1 : 0);
+  const rows = [
+    ['Narration', narrationParts.length ? `${narrationParts.length} beats` : 'included'],
+    ['Image prompt', visualCount ? `${visualCount} included` : 'needed'],
+    ['Motion notes', motionCount ? 'included' : 'optional'],
+    ['Audio notes', music || soundEffect ? 'included' : 'optional'],
+    ['Advanced details', advanced ? 'included' : 'optional']
+  ];
+  return `<div class="scene-checklist">
+                <h4>Scene Checklist</h4>
+                ${rows.map(([label, value]) => `<p><span>${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong></p>`).join('')}
+              </div>`;
 }
 
 function renderPlainNarration(narration, sceneIndex, format, options = {}) {
@@ -2683,7 +2721,7 @@ function sceneRoleForScene(sceneIndex, narration, sceneFocus) {
 
 function estimatedReadingTime(narration) {
   const seconds = estimatedNarrationSecondsFromText(narration);
-  return `≈ ${seconds} sec`;
+  return `about ${seconds} sec`;
 }
 
 function estimatedNarrationSecondsFromText(narration) {
