@@ -61,6 +61,10 @@ const SCRIPT_STATIC_DIRS = [
   'resources'
 ];
 
+const SCRIPT_STATIC_FILES = [
+  'creator-library.js'
+];
+
 const DATA_FILES = [
   'archive-search-index.json',
   'creator-library-search-index.json'
@@ -134,6 +138,10 @@ function copyScriptHtml() {
     }
   }
 
+  for (const file of SCRIPT_STATIC_FILES) {
+    copyRequiredFile(path.join('scripts', file));
+  }
+
   for (const dir of SCRIPT_STATIC_DIRS) {
     copyDirectory(path.join('scripts', dir), path.join('scripts', dir));
   }
@@ -186,6 +194,7 @@ function verifyDist() {
     'robots.txt',
     '_headers',
     '_redirects',
+    'scripts/creator-library.js',
     'scripts/osiris-isis-resurrection-myth-youtube-script.html',
     'data/archive-search-index.json',
     'data/creator-library-search-index.json'
@@ -250,6 +259,10 @@ function findMissingStaticReferences(files) {
 }
 
 function shouldCheckReference(ref) {
+  if (ref.startsWith('/scripts/') && /\.[a-z0-9]+(?:[?#]|$)/i.test(ref)) {
+    return true;
+  }
+
   return ref.startsWith('/')
     && !ref.startsWith('//')
     && !ref.startsWith('/api/')
