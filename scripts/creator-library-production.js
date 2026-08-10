@@ -258,6 +258,7 @@ function validateCreatorProductionFields(result, scenePlan, longformResult) {
 }
 
 function buildCreatorNoteForPart(context) {
+  if (hasArchiveProductionSource(context)) return buildArchiveCreatorNoteForPart(context);
   const records = selectProductionFactRecords(context, { preferVisual: false }).slice(0, 3);
   const primary = records[0] || {};
   const secondary = selectSceneBoundaryRecord(context, records)
@@ -277,6 +278,36 @@ function buildCreatorNoteForPart(context) {
     noteParts.push(noteCautionForFact(primary, context));
   }
   return sanitizeProductionText(noteParts.filter(Boolean).slice(0, 2).join(' '));
+}
+
+function buildArchiveCreatorNoteForPart(context) {
+  const source = context.normalizedInput.archiveNarrative || {};
+  const sceneIndex = Number(context.scene?.sceneIndex || 1) - 1;
+  const partIndex = Number(context.partPlan?.partIndex || 1);
+  const notes = [
+    [
+      'Keep the opening tied to the empty yellow room, old carpet, fluorescent hum, and the noclip premise.',
+      'Do not claim that the Backrooms is a verified hidden dimension; keep it as internet folklore.'
+    ],
+    [
+      'Show the spread through image boards, forums, videos, games, wikis, and collaborative retelling.',
+      'Keep the original prompt separate from later levels, entities, survival rules, and analog horror branches.'
+    ],
+    [
+      'Let liminal space and office-like non-place carry the unease before adding expanded lore.',
+      'Present minimalist, wiki-era, and analog horror versions as branches from the first yellow-room image.'
+    ],
+    [
+      'Keep the continuity question visible: different Backrooms communities preserve different versions.',
+      'Use public reference points as orientation, not as proof that the supernatural place is real.'
+    ],
+    [
+      'Return to the room as a symbol of isolation, repetition, failed navigation, and empty designed spaces.',
+      'Close with the Backrooms as a shared digital labyrinth that remains open because the first image still works.'
+    ]
+  ];
+  const fallback = `Keep this part tied to ${source.visualAnchor || context.normalizedInput.topic}.`;
+  return sanitizeProductionText(notes[sceneIndex]?.[partIndex - 1] || fallback);
 }
 
 function uniquifyCreatorNote(note, context, seen) {
@@ -492,6 +523,7 @@ function realizeVisualFact(record, context = {}) {
 }
 
 function buildImagePromptForBeat(context) {
+  if (hasArchiveProductionSource(context)) return buildArchiveImagePromptForBeat(context);
   const { normalizedInput, productionProfile, scene, partPlan, beatIndex, beatPlan } = context;
   const subject = safePromptValue(beatPlan.subject || normalizedInput.topic);
   const actionOrState = imageActionPhrase(beatPlan.actionOrState);
@@ -512,7 +544,29 @@ function buildImagePromptForBeat(context) {
   ].filter(Boolean).join(' '));
 }
 
+function hasArchiveProductionSource(context) {
+  const source = context?.normalizedInput?.archiveNarrative;
+  return Boolean(source && source.sourceKind === 'archive-story' && source.visualAnchor);
+}
+
+function buildArchiveImagePromptForBeat(context) {
+  const { scene, partPlan, beatIndex, productionProfile } = context;
+  const subject = archiveVisualSubjectForBeat(context);
+  const composition = compositionForBeat(scene, partPlan, beatIndex);
+  const lighting = lightingForScene(scene, productionProfile);
+  const atmosphere = safePromptValue(selectAtmosphere(productionProfile, scene));
+  const phase = visualPhaseForBeat(partPlan, beatIndex);
+  const sequence = sequenceLabelForScene(scene.sceneIndex);
+  return sanitizeProductionText([
+    `A realistic digital-documentary image shows ${subject}.`,
+    `Frame one clear scene as ${composition}, with ${lighting}, ${atmosphere}, muted yellow tones, and liminal internet-folklore restraint.`,
+    `This should feel like ${phase} during the ${sequence}.`,
+    'No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.'
+  ].join(' '));
+}
+
 function buildBeatMotionForBeat(context) {
+  if (hasArchiveProductionSource(context)) return buildArchiveBeatMotionForBeat(context);
   const { scene, partPlan, beatIndex, beatPlan, productionProfile } = context;
   const subject = safeMotionValue(beatPlan.subject || context.normalizedInput.topic, context.normalizedInput.topic);
   const setting = safePromptValue(beatPlan.setting);
@@ -532,6 +586,60 @@ function buildBeatMotionForBeat(context) {
       ? 'End with a slow hold and no new action.'
       : `Use only light shifts that match the ${productionProfile.profileType} tone.`;
   return sanitizeProductionText(`${movements[movementIndex]} ${ending}`);
+}
+
+function buildArchiveBeatMotionForBeat(context) {
+  const subject = archiveVisualSubjectForBeat(context);
+  const beatIndex = Number(context.beatIndex || 0);
+  const partIndex = Number(context.partPlan?.partIndex || 1);
+  const sceneIndex = Number(context.scene?.sceneIndex || 1);
+  const movements = [
+    `Use a slow controlled push into ${subject}, holding the frame long enough for the viewer to read the space.`,
+    `Use a restrained lateral drift across ${subject}, keeping the movement smooth and documentary.`,
+    `Begin with a static hold on ${subject}, then pull back slightly to show how it connects to the source story.`
+  ];
+  const endings = [
+    'Let the first movement feel like an entrance into the legend, not a sudden scare.',
+    'Keep the motion clear enough to suggest repetition, distance, and failed navigation.',
+    'Keep later lore visible as a layer around the original image, not as a replacement for it.',
+    'Use minimal movement so the source boundary feels deliberate and easy to follow.',
+    'End with a slow hold that leaves the route unresolved.'
+  ];
+  return sanitizeProductionText(`${movements[(beatIndex + partIndex - 1) % movements.length]} ${endings[sceneIndex - 1] || 'Keep the movement restrained and source-aware.'}`);
+}
+
+function archiveVisualSubjectForBeat(context) {
+  const source = context.normalizedInput.archiveNarrative || {};
+  const sceneIndex = Number(context.scene?.sceneIndex || 1) - 1;
+  const beatIndex = Number(context.beatIndex || 0);
+  const visualSets = [
+    [
+      'an empty yellow room with old carpet, fluorescent ceiling panels, and no visible exit',
+      'a person-sized viewpoint at the edge of a repeating office-like room',
+      'a close detail of yellow wallpaper, stained carpet, and cold fluorescent light'
+    ],
+    [
+      'a repeating corridor that suggests a digital maze without showing screens',
+      'a simple map-like arrangement of rooms and corridors with no readable labels',
+      'a distant hallway turning into another identical yellow room'
+    ],
+    [
+      'the original empty-room atmosphere beside subtle hints of later levels',
+      'a restrained found-footage style hallway with no creatures in view',
+      'a quiet survival-guide table with blank cards, thread, and room sketches'
+    ],
+    [
+      'two archive folders representing different Backrooms continuities without readable text',
+      'a desk with reference cards, photo edges, and a yellow-room image turned face down',
+      'a source-checking scene that separates the original prompt from later lore'
+    ],
+    [
+      'the yellow room seen from farther back, with darkness beyond the last doorway',
+      'a final corridor that feels open, quiet, and unresolved',
+      'an empty room where the light keeps humming after the story ends'
+    ]
+  ];
+  return visualSets[sceneIndex]?.[beatIndex % 3] || source.visualAnchor || context.normalizedInput.topic;
 }
 
 function determineVisualBeatCount(context, visualRecords) {
@@ -784,6 +892,7 @@ function sanitizeProductionText(value) {
 }
 
 function buildSceneFocusForScene(context) {
+  if (hasArchiveProductionSource(context)) return buildArchiveSceneFocusForScene(context);
   const fact = selectPublicFact(
     context.scene.requiredEvents,
     context.scene.requiredEntities,
@@ -793,6 +902,18 @@ function buildSceneFocusForScene(context) {
   );
   const subject = selectEntityFromRecords(context.scene.factRecords || [], context.normalizedInput.topic);
   return sanitizeProductionText(`The central visual should keep ${subject} tied to ${plainVisualClause(stripFinalPunctuation(fact))}.`);
+}
+
+function buildArchiveSceneFocusForScene(context) {
+  const sceneIndex = Number(context.scene?.sceneIndex || 1) - 1;
+  const focuses = [
+    'Keep the opening focused on the empty yellow room, fluorescent hum, old carpet, and the noclip premise.',
+    'Show how the Backrooms spreads from one image into forums, videos, games, wikis, and collaborative retelling.',
+    'Separate the original empty-room fear from later levels, entities, survival guides, and analog horror branches.',
+    'Make the source boundary visible by treating different continuities as community versions, not one fixed canon.',
+    'Return to the Backrooms as digital folklore about isolation, repetition, failed exits, and shared mapping.'
+  ];
+  return sanitizeProductionText(focuses[sceneIndex] || `Keep the scene tied to ${context.normalizedInput.archiveNarrative?.visualAnchor || context.normalizedInput.topic}.`);
 }
 
 function noteCautionForPart(context, narration) {

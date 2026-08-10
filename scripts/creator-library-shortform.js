@@ -359,6 +359,7 @@ function buildShortformScenePlan(normalizedInput, scenePlan) {
 }
 
 function buildShortformNarrationForScene(context) {
+  if (hasArchiveShortformSource(context)) return archiveShortformNarration(context);
   const records = selectShortformFactRecords(context);
   const primary = records[0] || {};
   const primaryKey = exactTextKey(realizeShortformFact(primary, context));
@@ -371,6 +372,7 @@ function buildShortformNarrationForScene(context) {
 }
 
 function buildShortformSceneFocus(context) {
+  if (hasArchiveShortformSource(context)) return archiveShortformFocus(context);
   const records = selectShortformFactRecords(context);
   const record = records.find((item) => !isGenericFocusFact(item, context) && ((item.visualTerms || []).length || (item.settingTerms || []).length))
     || records.find((item) => !isGenericFocusFact(item, context))
@@ -382,6 +384,7 @@ function buildShortformSceneFocus(context) {
 }
 
 function buildShortformImagePrompt(context) {
+  if (hasArchiveShortformSource(context)) return archiveShortformImagePrompt(context);
   const subject = selectImageSubject(context);
   const visualAnchor = selectPromptVisualAnchor(context);
   const setting = selectPromptSetting(context);
@@ -397,6 +400,65 @@ function buildShortformImagePrompt(context) {
     'No readable text, logos, watermarks, modern objects, graphic gore, or cartoon styling.'
   ].join(' ');
   return sanitizeImagePrompt(prompt);
+}
+
+function hasArchiveShortformSource(context) {
+  const source = context?.normalizedInput?.archiveNarrative;
+  return Boolean(source && source.sourceKind === 'archive-story' && source.visualAnchor);
+}
+
+function archiveShortformNarration(context) {
+  const source = context.normalizedInput.archiveNarrative;
+  const anchor = cleanArchiveShortText(source.visualAnchor || 'an empty yellow room');
+  const lines = [
+    `The Backrooms begins with ${lowercaseStart(anchor)}. One ordinary room feels wrong, and the way out is already missing.`,
+    'Then the noclip idea turns that room into a digital labyrinth. A person slips out of reality and finds corridors that keep repeating.',
+    'Online communities expand the premise into levels, entities, survival rules, games, wikis, and analog horror. The first image still holds the center.',
+    'Different versions do not share one official canon. That uncertainty is part of the folklore, not a reason to pretend the place is real.',
+    'The legend lasts because the room feels familiar before it feels impossible. The Backrooms remains a shared map of isolation and failed exits.'
+  ];
+  return sanitizeShortformText(lines[context.sceneIndex] || lines[0]);
+}
+
+function archiveShortformFocus(context) {
+  const source = context.normalizedInput.archiveNarrative;
+  const focus = [
+    source.visualAnchor || 'the empty yellow room',
+    'the noclip premise and endless repeating rooms',
+    'levels, entities, survival rules, and analog horror branches',
+    'different continuities and the source limit around the legend',
+    'isolation, repetition, failed navigation, and empty designed spaces'
+  ][context.sceneIndex] || source.visualAnchor || context.normalizedInput.topic;
+  return sanitizeShortformText(`${context.shortScene.role}: ${focus}.`);
+}
+
+function archiveShortformImagePrompt(context) {
+  const source = context.normalizedInput.archiveNarrative;
+  const subjects = [
+    'an empty yellow room with old carpet and fluorescent light',
+    'a lonely corridor that seems to repeat beyond the frame',
+    'a wall of map notes, level numbers, and survival-rule clues without readable text',
+    'two different archive folders for two different Backrooms continuities',
+    'the same yellow room seen from farther away, open and unresolved'
+  ];
+  const subject = subjects[context.sceneIndex] || subjects[0];
+  const compositions = [
+    'as a vertical opening shot with strong negative space',
+    'as a slow corridor composition with the exit hidden',
+    'as a clean production-board composition with symbolic notes but no readable words',
+    'as a restrained documentary comparison shot',
+    'as a quiet final frame with the room fading into darkness'
+  ];
+  const prompt = [
+    `A realistic digital-documentary scene shows ${subject}, framed ${compositions[context.sceneIndex] || compositions[0]}.`,
+    'Use dim fluorescent light, muted yellow walls, old carpet texture, and quiet liminal unease.',
+    'No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.'
+  ].join(' ');
+  return sanitizeImagePrompt(prompt);
+}
+
+function cleanArchiveShortText(value) {
+  return sanitizeShortformText(value).replace(/\.$/, '');
 }
 
 function buildShortformMotion(context) {

@@ -63,6 +63,7 @@ function buildCreatorLibraryEntry(story, category, options = {}) {
 
 function assembleCreatorLibraryEntry({ story, category, normalizedInput, longformResult, productionResult, shortformResult, publishedAt }) {
   const subject = cleanSubject(story.title);
+  const titleSubject = cleanCreatorTitleSubject(story.title, subject);
   const slug = `${story.slug}-youtube-script`;
   const motif = story.primaryTag || story.tag || story.contentDNA?.centralMotif || category.title;
   const setting = settingForStory(story);
@@ -93,9 +94,9 @@ function assembleCreatorLibraryEntry({ story, category, normalizedInput, longfor
     creatorPipelineVersion: CREATOR_PIPELINE_VERSION,
     contentType: 'script',
     originalStorySlug: story.slug,
-    title: `${subject} YouTube Script`,
-    seoTitle: `Free ${subject} YouTube Script`,
-    metaDescription: `A creator-ready production workspace for ${subject}, with long-form scenes, Shorts narration, image prompts, music keywords, and editing notes.`,
+    title: `${titleSubject} YouTube Script`,
+    seoTitle: `Free ${titleSubject} YouTube Script`,
+    metaDescription: `A creator-ready production workspace for ${titleSubject}, with long-form scenes, Shorts narration, image prompts, music keywords, and editing notes.`,
     genre: `${category.title} Creator Library`,
     creatorCategorySlug: category.slug,
     estimatedVideoLength,
@@ -113,7 +114,7 @@ function assembleCreatorLibraryEntry({ story, category, normalizedInput, longfor
       'shorts script',
       'image prompt'
     ]),
-    deck: `${subject} is prepared as a creator-ready production workspace based on the archive record, with long-form scenes, Shorts narration, image prompts, music keywords, and editing notes.`,
+    deck: `${titleSubject} is prepared as a creator-ready production workspace based on the archive record, with long-form scenes, Shorts narration, image prompts, music keywords, and editing notes.`,
     logline: sentence(angle),
     coreMotif: motif,
     mainSubject: subject,
@@ -499,6 +500,21 @@ function cleanSubject(title) {
     .replace(/:.*$/, '')
     .replace(/\s+/g, ' ')
     .trim();
+}
+
+function cleanCreatorTitleSubject(title, fallback) {
+  const value = String(title || '')
+    .replace(/\s+/g, ' ')
+    .trim();
+  if (!value) return fallback || 'Archive Story';
+  const words = value.split(/\s+/);
+  if (words.length <= 12) return value;
+  const colonParts = value.split(':').map((part) => part.trim()).filter(Boolean);
+  if (colonParts.length >= 2) {
+    const candidate = `${colonParts[0]}: ${colonParts[1].split(/\s+/).slice(0, 7).join(' ')}`;
+    if (candidate.split(/\s+/).length >= 6) return candidate;
+  }
+  return words.slice(0, 12).join(' ');
 }
 
 function sentence(text) {

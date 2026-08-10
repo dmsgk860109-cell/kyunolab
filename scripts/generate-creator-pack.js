@@ -85,10 +85,22 @@ function generateCreatorPacksForSlugs(slugs, options = {}) {
 }
 
 function loadGenerationContext(options = {}) {
-  const stories = options.stories || readJson(storiesPath);
+  const stories = options.stories || loadStoriesWithDetailFiles();
   const categories = options.categories || readJson(categoriesPath);
   const existingPacks = options.existingPacks || loadExistingCreatorPacks(options);
   return { stories, categories, existingPacks };
+}
+
+function loadStoriesWithDetailFiles() {
+  const stories = readJson(storiesPath);
+  const detailRoot = path.join(root, 'data', 'stories');
+  if (!fs.existsSync(detailRoot)) return stories;
+  return stories.map((story) => {
+    const detailPath = path.join(detailRoot, `${story.slug}.json`);
+    if (!fs.existsSync(detailPath)) return story;
+    const detail = readJson(detailPath);
+    return { ...story, ...detail };
+  });
 }
 
 function resolveStoryForSlug(slug, context) {

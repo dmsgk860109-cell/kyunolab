@@ -214,6 +214,9 @@ const SCENE_TYPE_PRIORITIES = {
 };
 
 function buildCreatorLongform(normalizedInput, scenePlan) {
+  if (hasArchiveNarrativeSource(normalizedInput)) {
+    return buildArchiveDerivedLongform(normalizedInput, scenePlan);
+  }
   const context = createLongformContext(normalizedInput, scenePlan);
   const scenes = scenePlan.scenes.map((scene) => ({
     sceneIndex: scene.sceneIndex,
@@ -258,6 +261,147 @@ function buildCreatorLongform(normalizedInput, scenePlan) {
     throw error;
   }
   return result;
+}
+
+function hasArchiveNarrativeSource(normalizedInput) {
+  const source = normalizedInput?.archiveNarrative;
+  return Boolean(source && source.sourceKind === 'archive-story' && source.visualAnchor && (source.coreStoryElements?.length || source.bodySections?.length));
+}
+
+function buildArchiveDerivedLongform(normalizedInput, scenePlan) {
+  const context = createLongformContext(normalizedInput, scenePlan);
+  const source = normalizedInput.archiveNarrative || {};
+  const scenes = (scenePlan.scenes || []).map((scene, sceneIndex) => ({
+    sceneIndex: scene.sceneIndex,
+    role: scene.role,
+    narrationParts: (scene.narrationParts || []).map((partPlan, partOffset) => {
+      const narration = archiveNarrationPart(source, normalizedInput, sceneIndex, partOffset);
+      const sourceFactIds = sourceIdsForArchivePart(scene, partPlan, context);
+      const sourceRecords = sourceFactIds.map((id) => context.factById.get(id)).filter(Boolean);
+      const part = {
+        partIndex: partPlan.partIndex,
+        narration,
+        wordCount: countWords(narration),
+        estimatedReadSeconds: estimateNarrationReadTime(narration),
+        sourceFactIds,
+        usedFactTypes: unique(sourceRecords.map((record) => record.factType)),
+        usedFactTexts: sourceRecords.map((record) => record.factText),
+        generatedSentenceCount: splitSentences(narration).length,
+        sourceFieldRefs: unique([
+          ...(partPlan.sourceFieldRefs || []),
+          ...(scene.sourceFieldRefs || []),
+          ...(source.sourceRefs || [])
+        ])
+      };
+      const validation = validateNarrationPart(part, { normalizedInput, scene, partPlan, context });
+      if (!validation.valid) {
+        const error = new Error(`Creator Long-form Part invalid for ${normalizedInput.slug}`);
+        error.code = 'CREATOR_LONGFORM_PART_INVALID';
+        error.slug = normalizedInput.slug;
+        error.errors = validation.errors;
+        throw error;
+      }
+      sourceFactIds.forEach((id) => context.globalUsedFactIds.add(id));
+      return part;
+    })
+  }));
+  const allNarration = scenes.flatMap((scene) => scene.narrationParts.map((part) => part.narration)).join(' ');
+  const totalWordCount = countWords(allNarration);
+  const narrationReadSeconds = estimateNarrationReadTime(allNarration);
+  const result = {
+    schemaVersion: LONGFORM_SCHEMA_VERSION,
+    scenePlanSchemaVersion: scenePlan.schemaVersion || '',
+    slug: scenePlan.slug || normalizedInput.slug || '',
+    scenes,
+    totalWordCount,
+    narrationReadSeconds,
+    targetFinalVideoSeconds: clamp(Math.max(scenePlan.targetFinalVideoSeconds || TARGET_FINAL_MIN_SECONDS, narrationReadSeconds + 40), TARGET_FINAL_MIN_SECONDS, TARGET_FINAL_MAX_SECONDS),
+    diagnostics: {
+      factRecordCount: context.factRecords.length,
+      usedFactIds: [...context.globalUsedFactIds],
+      archiveNarrativeUsed: true
+    },
+    warnings: []
+  };
+  const validation = validateCreatorLongform(result, scenePlan);
+  if (!validation.valid) {
+    const error = new Error(`Creator Long-form invalid for ${scenePlan.slug}`);
+    error.code = 'CREATOR_LONGFORM_INVALID';
+    error.slug = scenePlan.slug;
+    error.errors = validation.errors;
+    throw error;
+  }
+  return result;
+}
+
+function archiveNarrationPart(source, normalizedInput, sceneIndex, partOffset) {
+  const subject = cleanNarrationText(source.title || normalizedInput.topic || 'The story');
+  const topic = cleanNarrationText(source.topic || subject);
+  const anchor = cleanNarrationText(source.visualAnchor || source.excerpt || subject);
+  const category = cleanNarrationText(source.category || normalizedInput.categoryName || 'the archive');
+  const core = source.coreStoryElements || [];
+  const variants = source.variants || [];
+  const uncertainty = source.uncertainty || [];
+  const evidence = source.evidence || [];
+  const interpretation = source.interpretation || [];
+  const keywords = source.keywords || [];
+  const references = source.references || [];
+  const body = source.bodySections || [];
+  const section = body[sceneIndex] || body[0] || {};
+  const sectionText = firstUsefulSentence(section.paragraphs) || source.summaryAnswer || source.deck || source.excerpt || anchor;
+  const referenceNames = references.map((item) => item.title).filter(Boolean).slice(0, 3).join(', ');
+  const keywordLine = keywords.filter((item) => !/meaning|legend|story$/i.test(item)).slice(0, 5).join(', ');
+  const templates = [
+    [
+      `${subject} opens with ${lowercaseStart(anchor)}. It feels like someone has found an ordinary interior that refuses to stay ordinary: yellow walls, old carpet, fluorescent noise, and no clear exit. That image gives the story a body before any explanation arrives, and the first fear is simple. A normal room has become a place that may never end.`,
+      `After the opening image comes the rule that made the legend travel: a person can noclip out of reality and enter endless empty rooms. In the archive record, ${topic} belongs to ${category}, so the opening act works as a remembered online premise rather than a verified hidden place. The room stays visible while the legend starts stepping farther inward.`
+    ],
+    [
+      `${source.whereItAppears || 'The idea spread through image boards, forums, videos, games, collaborative fiction, and wider online discussions of liminal spaces.'} That spread matters because the Backrooms did not become famous as one closed tale. It became a place that many people could add to: another corridor, another rule, another level, and another reason the exit might never appear.`,
+      `${core[2] || 'Later communities expanded the idea into levels, entities, survival guides, archives, and shared lore.'} The expansion works best when it does not bury the plain yellow-room image. The archive frame keeps the original prompt, the collaborative wiki era, and the analog horror versions in separate layers, so the growth feels wide without turning every layer into one official canon.`
+    ],
+    [
+      `${core[1] || 'The original image evokes yellow walls, old carpet, fluorescent lights, and office-like non-place.'} This is where the narration can slow down. The Backrooms works because it feels designed for people and emptied of them at the same time. Liminal space, endless rooms, and workplace-like non-place are not decoration here; they explain why the image feels familiar before it feels impossible.`,
+      `${sentenceFromFragment(variants[0] || 'The minimalist original Backrooms is an infinite empty office-like maze.')} ${sentenceFromFragment(variants[1] || 'The wiki-era Backrooms becomes a multi-level shared universe with rules and creatures.')} ${sentenceFromFragment(variants[2] || 'Analog horror versions often turn it into found footage, institutional footage, or failed-research narrative.')} These versions work as branches from the same first image, not as replacements for it.`
+    ],
+    [
+      `${uncertainty[0] || 'Different Backrooms communities maintain different continuities.'} That uncertainty is part of the story itself. There is no single authority for every level, entity, rule, or exit. What can be held together is the folklore pattern: an ordinary-looking room becomes an impossible system because online audiences keep returning to it and rebuilding it.`,
+      `${evidence[0] || 'Know Your Meme documents the Backrooms as a creepypasta originating from 4chan image-board culture.'} ${evidence[1] || 'Backrooms Wikidot materials document the growth of collaborative writing around levels, guides, and multiple interpretations.'} ${referenceNames ? `For orientation, the archive points toward ${referenceNames}.` : 'The archive keeps public references visible for orientation.'} Those sources act as guardrails, keeping the legend vivid without claiming that the supernatural place is real.`
+    ],
+    [
+      `${source.whyItMatters || 'It transformed an ordinary interior photograph into shared folklore about isolation, repetition, failed navigation, and spaces designed for people but emptied of them.'} The ending returns to the same room from the beginning. By then, the room can hold memes, fear, games, wikis, and analog horror without needing one final answer.`,
+      `${sentenceFromFragment(interpretation[0] || 'The Backrooms can be read as digital folklore built from collaborative retelling.')} ${keywordLine ? `Terms such as ${keywordLine} describe how the story is actually recognized.` : 'The closing details stay close to the images that made the story recognizable.'} The ending leaves the Backrooms as a digital labyrinth: not a proven location, but a shared strange place that people keep mapping because the first image still feels open.`
+    ]
+  ];
+  return cleanNarrationText(templates[sceneIndex]?.[partOffset] || sectionText);
+}
+
+function sentenceFromFragment(value) {
+  let text = cleanNarrationText(value);
+  text = text
+    .replace(/\bThe minimalist original Backrooms as\b/i, 'The minimalist original Backrooms works as')
+    .replace(/\bThe wiki-era Backrooms as\b/i, 'The wiki-era Backrooms becomes')
+    .replace(/\bAnalog horror Backrooms as\b/i, 'Analog horror Backrooms appears as')
+    .replace(/^Read the Backrooms as\b/i, 'The Backrooms can be read as');
+  if (hasSentencePredicate(text)) return ensureSentence(text);
+  return ensureSentence(text);
+}
+
+function sourceIdsForArchivePart(scene, partPlan, context) {
+  const ids = unique([
+    ...(partPlan.sourceFactIds || []),
+    ...(scene.sourceFactIds || [])
+  ]).filter((id) => context.factById.has(id));
+  if (ids.length) return ids.slice(0, 4);
+  return context.factRecords.slice(0, 4).map((record) => record.id);
+}
+
+function firstUsefulSentence(paragraphs = []) {
+  for (const paragraph of paragraphs || []) {
+    const sentence = splitSentences(paragraph).find((item) => countWords(item) >= 10 && !/find a clear|the point is not/i.test(item));
+    if (sentence) return sentence;
+  }
+  return '';
 }
 
 function resolveDuplicateNarrationParts(scenes, context, normalizedInput, scenePlan) {

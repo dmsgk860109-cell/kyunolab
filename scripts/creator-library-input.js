@@ -143,6 +143,7 @@ function normalizeCreatorStoryInput(story = {}, category = {}) {
     sourceContext: compatibility.sourceContext,
     meaningOptions: compatibility.meaningOptions,
     visualVocabulary: compatibility.visualVocabulary,
+    archiveNarrative: buildArchiveNarrativeSource(story),
     forbiddenInventions: collectArray([
       sourceValue(brief.prohibitedInventions, 'storyBrief.prohibitedInventions', sourceFieldMap, 'forbiddenInventions'),
       sourceValue(story.prohibitedInventions, 'story.prohibitedInventions', sourceFieldMap, 'forbiddenInventions'),
@@ -341,6 +342,68 @@ function collectSourceEvidence(story, brief, sourceFieldMap, warnings) {
   ], warnings);
 }
 
+function buildArchiveNarrativeSource(story = {}) {
+  const brief = objectValue(story.storyBrief);
+  const article = objectValue(story.longformArticle);
+  const searchSummary = objectValue(story.searchSummary);
+  const contentDNA = objectValue(story.contentDNA);
+  const references = Array.isArray(story.references) ? story.references : Array.isArray(article.references) ? article.references : [];
+  const opening = Array.isArray(article.opening) ? article.opening.map(sanitizeCreatorInputText).filter(Boolean) : [];
+  const storyBody = Array.isArray(article.storyBody) ? article.storyBody : [];
+  const bodySections = storyBody.map((section) => ({
+    id: sanitizeCreatorInputText(section.id || section.heading || ''),
+    heading: sanitizeCreatorInputText(section.heading || ''),
+    paragraphs: Array.isArray(section.paragraphs)
+      ? section.paragraphs.map(sanitizeCreatorInputText).filter(Boolean)
+      : []
+  })).filter((section) => section.heading || section.paragraphs.length);
+  const coreStoryElements = Array.isArray(brief.coreStoryElements) ? brief.coreStoryElements.map(sanitizeCreatorInputText).filter(Boolean) : [];
+  const variants = Array.isArray(brief.reportedVariants) ? brief.reportedVariants.map(sanitizeCreatorInputText).filter(Boolean) : [];
+  const uncertainty = Array.isArray(brief.uncertainDetails) ? brief.uncertainDetails.map(sanitizeCreatorInputText).filter(Boolean) : [];
+  const evidence = Array.isArray(brief.existenceEvidence) ? brief.existenceEvidence.map(sanitizeCreatorInputText).filter(Boolean) : [];
+  const interpretation = Array.isArray(brief.editorialInterpretationOptions) ? brief.editorialInterpretationOptions.map(sanitizeCreatorInputText).filter(Boolean) : [];
+  const names = Array.isArray(brief.knownNames) ? brief.knownNames.map(sanitizeCreatorInputText).filter(Boolean) : [];
+  const keywords = [
+    ...(Array.isArray(story.relatedKeywords) ? story.relatedKeywords : []),
+    ...(Array.isArray(article.relatedKeywords) ? article.relatedKeywords : []),
+    ...(Array.isArray(contentDNA.subjectSpecificVocabulary) ? contentDNA.subjectSpecificVocabulary : [])
+  ].map(sanitizeCreatorInputText).filter(Boolean);
+  const visualAnchor = sanitizeCreatorInputText(contentDNA.sceneAnchor || coreStoryElements.find((item) => /yellow|room|fluorescent|image|place|object|road|forest|sea|temple/i.test(item)) || story.excerpt || story.title);
+  return {
+    sourceKind: 'archive-story',
+    sourceRefs: [
+      'story.storyBrief',
+      'story.searchSummary',
+      'story.longformArticle',
+      references.length ? 'story.references' : ''
+    ].filter(Boolean),
+    title: sanitizeCreatorInputText(story.title || story.h1 || brief.topic || ''),
+    topic: sanitizeCreatorInputText(brief.topic || story.title || ''),
+    category: sanitizeCreatorInputText(story.category || brief.category || ''),
+    sourceStatus: sanitizeCreatorInputText(story.sourceStatus || brief.existenceStatus || ''),
+    visualAnchor,
+    deck: sanitizeCreatorInputText(article.deck || story.introSummary || story.excerpt || ''),
+    excerpt: sanitizeCreatorInputText(story.excerpt || ''),
+    summaryAnswer: sanitizeCreatorInputText(story.summaryAnswer || ''),
+    whatItIs: sanitizeCreatorInputText(searchSummary.whatItIs || ''),
+    whereItAppears: sanitizeCreatorInputText(searchSummary.whereItAppears || ''),
+    whyItMatters: sanitizeCreatorInputText(searchSummary.whyItMatters || ''),
+    opening,
+    bodySections,
+    coreStoryElements,
+    variants,
+    uncertainty,
+    evidence,
+    interpretation,
+    names,
+    keywords: uniqueText(keywords).slice(0, 12),
+    references: references.map((item) => ({
+      title: sanitizeCreatorInputText(item.title || ''),
+      url: sanitizeCreatorInputText(item.url || '')
+    })).filter((item) => item.title || item.url)
+  };
+}
+
 function collectArray(values, warnings) {
   const output = [];
   for (const item of values) {
@@ -417,6 +480,19 @@ function objectValue(value) {
 
 function normalizeComparable(value) {
   return String(value || '').toLowerCase().replace(/\s+/g, ' ').trim();
+}
+
+function uniqueText(values) {
+  const seen = new Set();
+  const output = [];
+  for (const value of values || []) {
+    const text = sanitizeCreatorInputText(value);
+    const key = normalizeComparable(text);
+    if (!text || seen.has(key)) continue;
+    seen.add(key);
+    output.push(text);
+  }
+  return output;
 }
 
 module.exports = {
