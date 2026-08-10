@@ -3143,6 +3143,9 @@ h1 {
   display: grid;
   gap: 14px;
 }
+.script-detail-portal-page [id] {
+  scroll-margin-top: 118px;
+}
 .script-detail-portal-page .script-material,
 .script-detail-portal-page .script-summary,
 .script-detail-portal-page .script-version-cta,
@@ -3169,10 +3172,43 @@ h1 {
 .script-detail-portal-page .creator-reference-list p {
   color: var(--home-muted);
 }
+.script-detail-portal-page .section-deck {
+  margin: -4px 0 14px;
+  max-width: 760px;
+  color: var(--home-muted);
+}
 .script-detail-portal-page .script-summary dl,
 .script-detail-portal-page .creator-toolkit-grid,
 .script-detail-portal-page .narration-guide-grid {
   gap: 10px;
+}
+.script-detail-portal-page .creator-toolkit-grid {
+  grid-template-columns: 1fr;
+}
+.script-detail-portal-page .creator-toolkit article {
+  display: grid;
+  grid-template-columns: minmax(132px, .42fr) minmax(0, 1fr) minmax(190px, .8fr);
+  gap: 14px;
+  align-items: start;
+}
+.script-detail-portal-page .creator-toolkit .toolkit-heading {
+  display: grid;
+  gap: 8px;
+}
+.script-detail-portal-page .creator-toolkit .toolkit-heading span {
+  width: 34px;
+  height: 34px;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid var(--home-line);
+  border-radius: 999px;
+  color: var(--home-orange);
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+}
+.script-detail-portal-page .creator-toolkit .toolkit-heading h3 {
+  margin: 0;
 }
 .script-detail-portal-page .script-summary dl div,
 .script-detail-portal-page .creator-toolkit article,
@@ -3193,11 +3229,75 @@ h1 {
 }
 .script-detail-portal-page .workflow-step-number,
 .script-detail-portal-page .toolkit-terms code,
+.script-detail-portal-page .creator-search-terms code,
 .script-detail-portal-page .narration-search-terms code,
 .script-detail-portal-page .narration-copy-button {
   border-color: var(--home-line);
   background: var(--home-panel);
   color: var(--home-ink);
+}
+.script-detail-portal-page .toolkit-terms {
+  justify-content: flex-start;
+  margin-top: 0;
+}
+.script-detail-portal-page .creator-format {
+  padding: 0;
+  overflow: hidden;
+}
+.script-detail-portal-page .creator-format-header {
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--home-line);
+  background: #150F0B;
+  color: #FFF8EC;
+}
+.script-detail-portal-page .creator-format-header .rail-label {
+  margin: 0 0 8px;
+  color: #F0B46E;
+}
+.script-detail-portal-page .creator-format-header h2 {
+  margin: 0;
+  color: #FFF8EC;
+  font-size: 28px;
+}
+.script-detail-portal-page .creator-format-header p:last-child {
+  margin: 8px 0 0;
+  max-width: 760px;
+  color: #F4E5D4;
+}
+.script-detail-portal-page .creator-format-body {
+  padding: 16px;
+}
+.script-detail-portal-page .creator-format-short {
+  margin-top: 30px;
+  border-top: 3px solid var(--home-ink);
+}
+.script-detail-portal-page .creator-search-profile dl {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin: 14px 0 0;
+}
+.script-detail-portal-page .creator-search-profile dl div {
+  padding: 10px 12px;
+  border: 1px solid var(--home-line);
+  border-radius: 6px;
+  background: #FFF9F1;
+}
+.script-detail-portal-page .creator-search-profile dt {
+  color: var(--home-orange);
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+}
+.script-detail-portal-page .creator-search-profile dd {
+  margin: 4px 0 0;
+  color: var(--home-ink);
+}
+.script-detail-portal-page .creator-search-terms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
 }
 .script-detail-portal-page .production-workflow li::after {
   background: var(--home-line);
@@ -4195,6 +4295,85 @@ textarea {
   .home-portal-page .home-known-list a {
     grid-template-columns: 32px minmax(0, 1fr);
   }
+  .script-detail-portal-page .script-package-map .script-meta-grid,
+  .script-detail-portal-page .creator-search-profile dl {
+    grid-template-columns: 1fr;
+  }
+  .script-detail-portal-page .creator-toolkit article {
+    grid-template-columns: 1fr;
+  }
+  .script-detail-portal-page .creator-format-body,
+  .script-detail-portal-page .creator-format-header,
+  .script-detail-portal-page .script-material,
+  .script-detail-portal-page .script-summary,
+  .script-detail-portal-page .script-version-cta,
+  .script-detail-portal-page .creator-reference-list {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+  }
+  .script-detail-portal-page .creator-format-header h2 {
+    font-size: 24px;
+  }
+  .script-detail-portal-page .creator-format-body {
+    padding: 12px;
+  }
+  .script-detail-portal-page .narration-part-script,
+  .script-detail-portal-page .visual-beat,
+  .script-detail-portal-page .scene-support-panel p,
+  .script-detail-portal-page .creator-search-profile dd,
+  .script-detail-portal-page .toolkit-terms code,
+  .script-detail-portal-page .creator-search-terms code {
+    overflow-wrap: anywhere;
+  }
+  .script-detail-portal-page .script-detail-hero,
+  .script-detail-portal-page .script-detail-hero h1,
+  .script-detail-portal-page .script-detail-hero p,
+  .script-detail-portal-page .script-package-map,
+  .script-detail-portal-page .script-package-map a,
+  .script-detail-portal-page .script-package-map em,
+  .script-detail-portal-page .script-summary dd,
+  .script-detail-portal-page .section-deck,
+  .script-detail-portal-page .creator-toolkit article p {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+  .script-detail-portal-page,
+  .script-detail-portal-page .home-portal-layout,
+  .script-detail-portal-page .home-main-column,
+  .script-detail-portal-page .script-detail-content-stack,
+  .script-detail-portal-page .script-prompt-list,
+  .script-detail-portal-page .scene-workspace,
+  .script-detail-portal-page .scene-card-grid,
+  .script-detail-portal-page .scene-card-main,
+  .script-detail-portal-page .scene-card-side,
+  .script-detail-portal-page .scene-narration-parts,
+  .script-detail-portal-page .narration-part,
+  .script-detail-portal-page .visual-beats {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+  }
+  .script-detail-portal-page .home-portal-lead,
+  .script-detail-portal-page .script-detail-lead {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .script-detail-portal-page .toolkit-terms,
+  .script-detail-portal-page .creator-search-terms,
+  .script-detail-portal-page .narration-part-actions,
+  .script-detail-portal-page .visual-beat-actions {
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .script-detail-portal-page .toolkit-terms code,
+  .script-detail-portal-page .creator-search-terms code,
+  .script-detail-portal-page .narration-part-copy-button {
+    max-width: 100%;
+    white-space: normal;
+  }
   .utility-placeholder-grid {
     grid-template-columns: 1fr;
   }
@@ -4316,5 +4495,53 @@ textarea {
   .home-portal-header .home-sign-intro p {
     min-width: 0;
     overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 560px) {
+  .script-detail-portal-page,
+  .script-detail-portal-page * {
+    min-width: 0;
+  }
+  .script-detail-portal-page .home-portal-layout,
+  .script-detail-portal-page .home-portal-lead,
+  .script-detail-portal-page .script-detail-lead,
+  .script-detail-portal-page .script-package-map .script-meta-grid,
+  .script-detail-portal-page .creator-toolkit-grid,
+  .script-detail-portal-page .creator-toolkit article,
+  .script-detail-portal-page .creator-search-profile dl,
+  .script-detail-portal-page .scene-card-grid,
+  .script-detail-portal-page .scene-card-side,
+  .script-detail-portal-page .scene-card-main,
+  .script-detail-portal-page .narration-part,
+  .script-detail-portal-page .visual-beats {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    max-width: 100%;
+  }
+  .script-detail-portal-page .home-lead-story h1,
+  .script-detail-portal-page .home-lead-story p,
+  .script-detail-portal-page .home-known-list a,
+  .script-detail-portal-page .home-known-list strong,
+  .script-detail-portal-page .home-known-list em,
+  .script-detail-portal-page .script-summary dd,
+  .script-detail-portal-page .section-deck,
+  .script-detail-portal-page .creator-format-header h2,
+  .script-detail-portal-page .creator-format-header p,
+  .script-detail-portal-page .narration-part-script,
+  .script-detail-portal-page .visual-beat,
+  .script-detail-portal-page .scene-support-panel p,
+  .script-detail-portal-page .creator-search-profile dd {
+    max-width: 100%;
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+  .script-detail-portal-page .creator-format-body,
+  .script-detail-portal-page .scene-card-side,
+  .script-detail-portal-page .narration-part {
+    padding-left: 12px;
+    padding-right: 12px;
   }
 }

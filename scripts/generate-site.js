@@ -13,7 +13,7 @@ const buildArgs = parseBuildArgs(process.argv.slice(2));
 const siteOutputRoot = path.resolve(buildArgs.outputRoot || root);
 const creatorPackOptions = buildArgs.creatorPackRoot ? { root: buildArgs.creatorPackRoot } : {};
 const siteUrl = 'https://kyunolab.com';
-const styleVersion = '20260811-creator-scene-stack';
+const styleVersion = '20260811-creator-package-flow';
 const creatorLibraryScriptVersion = '20260722-copy-fields';
 const pageSize = 12;
 const libraryPageSize = 10;
@@ -1816,7 +1816,8 @@ function renderScriptDetailPage(script) {
   const prepareArea = `${renderCreatorToolkitSection(script)}
       ${renderProductionWorkflowSection(script)}`;
   const createArea = renderCreatorPack(script);
-  const finishArea = `${originalStory ? `<aside class="script-version-cta creator-original-story"><p class="rail-label">Original archive story</p><p>Read the original archive story.</p><a class="button" href="/stories/${escapeAttr(originalStory.slug)}">${escapeHtml(originalStory.title)}</a></aside>` : ''}
+  const finishArea = `${originalStory ? `<aside id="original-archive-story" class="script-version-cta creator-original-story"><p class="rail-label">Original archive story</p><p>Read the original archive story.</p><a class="button" href="/stories/${escapeAttr(originalStory.slug)}">${escapeHtml(originalStory.title)}</a></aside>` : ''}
+      ${renderCreatorSeoSection(script, originalStory, creatorCategory)}
       <section class="script-material creator-reference">
         <h2>Reference</h2>
         <p>${escapeHtml(usageNote)}</p>
@@ -1869,10 +1870,12 @@ function renderScriptDetailLead(script, originalStory, creatorCategory) {
           </article>
           <div class="home-known-list script-package-map">
             <h2>Package map</h2>
-            <a href="#creator-materials"><span>01</span><strong>Story context and information</strong><em>${escapeHtml(sourceLabel)}</em></a>
-            <a href="#creator-materials"><span>02</span><strong>Creator toolkit and workflow</strong><em>${escapeHtml(script.estimatedVideoLength || 'Video package')}</em></a>
-            <a href="#creator-materials"><span>03</span><strong>Longform, Shorts, prompts, thumbnails</strong><em>${escapeHtml(scriptFeatureSummary(script) || 'Production materials')}</em></a>
-            <a href="${categoryHref}"><span>04</span><strong>${escapeHtml(categoryTitle)}</strong><em>Open the related creator shelf</em></a>
+            <a href="#story-context"><span>01</span><strong>Story context and information</strong><em>${escapeHtml(sourceLabel)}</em></a>
+            <a href="#creator-toolkit"><span>02</span><strong>Creator toolkit and workflow</strong><em>${escapeHtml(script.estimatedVideoLength || 'Video package')}</em></a>
+            <a href="#long-form"><span>03</span><strong>Long-form production script</strong><em>Scene narration, image prompts, and notes</em></a>
+            <a href="#short-form"><span>04</span><strong>Short-form production script</strong><em>Compact version for short video</em></a>
+            <a href="#search-profile"><span>05</span><strong>Search profile</strong><em>Topic, intent, and related terms</em></a>
+            <a href="${categoryHref}"><span>06</span><strong>${escapeHtml(categoryTitle)}</strong><em>Open the related creator shelf</em></a>
             ${renderScriptMetaGrid(script)}
           </div>
         </section>`;
@@ -1916,7 +1919,7 @@ function renderStorySummarySection(script, originalStory) {
     ? `Use the original archive record as the source reference, but keep factual claims, legendary motifs, and interpretive atmosphere clearly separated.`
     : `Treat the material as a source-aware mystery package, keeping factual claims, legendary motifs, and interpretive atmosphere clearly separated.`;
 
-  return `<section class="script-material">
+  return `<section id="story-context" class="script-material">
         <h2>Story Summary</h2>
         <p>${escapeHtml(script.logline || script.deck || `${subject} is prepared as a creator-ready mystery video topic.`)}</p>
         <p>${escapeHtml(`${subject} works as a video because it gives the creator a clear subject, a recognizable setting, and a central motif around ${motif}. The production should help viewers understand the main event, the background, and the emotional shape of the story before moving into platform-specific execution.`)}</p>
@@ -1935,7 +1938,7 @@ function renderStoryInformationSection(script, originalStory) {
     ['Difficulty', script.difficulty || 'Beginner-friendly production package']
   ];
 
-  return `<section class="search-summary script-summary" aria-label="Story information">
+  return `<section id="story-information" class="search-summary script-summary" aria-label="Story information">
         <h2>Story Information</h2>
         <dl>${info.map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value || 'Creator-ready mystery production')}</dd></div>`).join('')}</dl>
       </section>`;
@@ -1943,15 +1946,45 @@ function renderStoryInformationSection(script, originalStory) {
 
 function renderCreatorToolkitSection(script) {
   const toolkit = creatorToolkitData(script);
-  return `<section class="script-material creator-toolkit" aria-label="Creator toolkit">
+  return `<section id="creator-toolkit" class="script-material creator-toolkit" aria-label="Creator toolkit">
         <h2>Creator Toolkit</h2>
+        <p class="section-deck">Use this as a compact production bench: choose the tool type, then keep the output aligned with the narration and image-led format.</p>
         <div class="creator-toolkit-grid">
           ${toolkit.map((item) => `<article>
-            <h3>${escapeHtml(item.title)}</h3>
+            <div class="toolkit-heading"><span>${escapeHtml(item.step)}</span><h3>${escapeHtml(item.title)}</h3></div>
             <p>${escapeHtml(item.text)}</p>
             <div class="toolkit-terms">${item.terms.map((term) => `<code>${escapeHtml(term)}</code>`).join('')}</div>
           </article>`).join('')}
         </div>
+      </section>`;
+}
+
+function renderCreatorSeoSection(script, originalStory, creatorCategory) {
+  const subject = scriptMainSubject(script, originalStory);
+  const motif = scriptCoreMotif(script);
+  const categoryTitle = creatorCategory ? creatorCategory.title : script.genre || 'Creator Library';
+  const terms = [
+    subject,
+    motif,
+    script.genre,
+    script.estimatedVideoLength,
+    'image narration video',
+    'YouTube script',
+    originalStory ? originalStory.title : ''
+  ].filter(Boolean).slice(0, 8);
+  const rows = [
+    ['Main topic', subject],
+    ['Search intent', `Creator package for making an image-led narration video about ${subject}.`],
+    ['Content type', `${categoryTitle} script package`],
+    ['Best use', scriptFeatureSummary(script) || 'Long-form narration, Shorts narration, image prompts, and production notes'],
+    ['Source relationship', originalStory ? `Based on the Kyunolab archive record: ${originalStory.title}` : 'Connected to Kyunolab archive-style source context']
+  ];
+
+  return `<section id="search-profile" class="script-material creator-search-profile" aria-label="Search profile">
+        <div class="section-head"><h2>Search Profile</h2><span>for this package</span></div>
+        <p>${escapeHtml(script.metaDescription || script.deck || `${subject} prepared as a creator-ready video package.`)}</p>
+        <dl>${rows.map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join('')}</dl>
+        <div class="creator-search-terms">${terms.map((term) => `<code>${escapeHtml(term)}</code>`).join('')}</div>
       </section>`;
 }
 
@@ -2090,26 +2123,31 @@ function creatorToolkitData(script) {
 
   return [
     {
+      step: '01',
       title: 'Images',
       text: 'Create one clear visual for each Scene with any image tool you prefer.',
       terms: ['Example: GPT', 'Example: Midjourney', 'Example: Flux', 'Example: SDXL']
     },
     {
+      step: '02',
       title: 'Narration',
       text: 'Turn the Scene narration into a clear voice track using AI voice or a natural recording.',
       terms: ['Example: AI narration', 'Example: text to speech', 'Example: natural AI voice', 'Example: voice over']
     },
       {
+        step: '03',
         title: 'Background Music',
         text: 'Choose quiet music that supports the mood without covering the narration.',
         terms: ['Example: Dark Ambient', 'Example: Cinematic Drone', 'Example: Mystery Atmosphere', 'Example: Low Drone']
       },
     {
+      step: '04',
       title: 'Editing',
       text: 'Assemble the visuals, voice, and music in Scene order with your preferred editor.',
       terms: ['Example: CapCut', 'Example: DaVinci Resolve', 'Example: Premiere Pro', 'Example: video editor']
     },
     {
+      step: '05',
       title: 'Motion (Optional)',
       text: motionText,
       terms: ['Example: Motion Prompt', 'Example: image to video', 'Example: slow push-in', 'Example: subtle camera motion']
@@ -2137,7 +2175,7 @@ function renderProductionWorkflowSection(script) {
       ['⑧', 'Finish', 'Export the video.']
     ];
 
-  return `<section class="script-material production-workflow" aria-label="Production workflow">
+  return `<section id="production-workflow" class="script-material production-workflow" aria-label="Production workflow">
         <h2>Production Workflow</h2>
         <ol>
           ${steps.map(([number, label, text]) => `<li><span class="workflow-step-number" aria-hidden="true">${escapeHtml(number)}</span><div><strong>${escapeHtml(label)}</strong><p>${escapeHtml(text)}</p></div></li>`).join('')}
@@ -2333,13 +2371,21 @@ function renderStandardCreatorPack(entry) {
   const threeBeatLayout = hasThreeBeatLongform(entry);
   const standardSection = threeBeatLayout ? `${renderWholeVideoStandard(entry, model)}
       ` : '';
-  return `${standardSection}<section class="script-material creator-format creator-format-long">
-        <h2>Long-form</h2>
-        ${renderStandardLongFormCreator(model)}
+  return `${standardSection}<section id="long-form" class="script-material creator-format creator-format-long">
+        <div class="creator-format-header">
+          <p class="rail-label">Production script</p>
+          <h2>Long-form</h2>
+          <p>Use this section as the full video path: each Scene contains narration, image prompts, motion notes, and production support.</p>
+        </div>
+        <div class="creator-format-body">${renderStandardLongFormCreator(model)}</div>
       </section>
-      <section class="script-material creator-format creator-format-short">
-        <h2>Short-form</h2>
-        ${renderStandardShortFormCreator(model)}
+      <section id="short-form" class="script-material creator-format creator-format-short">
+        <div class="creator-format-header">
+          <p class="rail-label">Compact script</p>
+          <h2>Short-form</h2>
+          <p>Use this section when the same archive idea needs a shorter, cleaner version for a compact video.</p>
+        </div>
+        <div class="creator-format-body">${renderStandardShortFormCreator(model)}</div>
       </section>`;
 }
 
