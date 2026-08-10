@@ -158,7 +158,12 @@
   }
 
   function cleanFieldText(item, label) {
-    return item.textContent.replace(new RegExp('^\\s*' + label + ':\\s*', 'i'), '').trim();
+    var aliases = {
+      'Narration': '(Narration|Voiceover Narration)',
+      'Creator Note': '(Creator Note|Beat Note)'
+    };
+    var labelPattern = aliases[label] || label;
+    return item.textContent.replace(new RegExp('^\\s*' + labelPattern + ':\\s*', 'i'), '').trim();
   }
 
   function cleanBeatText(item) {

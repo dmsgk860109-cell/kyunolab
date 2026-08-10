@@ -22,11 +22,10 @@ const {
 
 const root = path.resolve(__dirname, '..');
 const storiesPath = path.join(root, 'data', 'stories.json');
-const scriptsPath = path.join(root, 'data', 'scripts.json');
+const creatorPackManifestPath = path.join(root, 'data', 'creator-packs', 'manifest.json');
 const categoriesPath = path.join(root, 'data', 'categories.json');
 const stories = readJson(storiesPath);
 const categories = readJson(categoriesPath);
-const scripts = readJson(scriptsPath);
 
 const fixtureSlugs = [
   'maui-slows-the-sun-myth',
@@ -114,7 +113,7 @@ function assertModelShape(slug, model) {
   if (model.shortForm.scenes.length !== 5) fail(slug, 'Short-form scene count mismatch');
   const longParts = model.longForm.scenes.flatMap((scene) => scene.narrationParts);
   const visualBeats = longParts.flatMap((part) => part.visualBeats);
-  if (longParts.length !== 10) fail(slug, 'Long-form part count must be 10');
+  if (longParts.length < 10 || longParts.length > 15) fail(slug, 'Long-form part count must be between 10 and 15');
   if (!visualBeats.length) fail(slug, 'Visual Beats missing');
   for (const field of ['totalWordCount', 'narrationReadSeconds', 'finalVideoSeconds']) {
     if (!model.longForm.runtime[field]) fail(slug, `Long-form runtime missing ${field}`);
@@ -331,7 +330,7 @@ function assertRequireDidNotBuild(beforeHashes) {
 function snapshotProtectedFiles() {
   const files = [
     storiesPath,
-    scriptsPath,
+    creatorPackManifestPath,
     categoriesPath,
     ...listHtmlFiles(path.join(root, 'scripts'))
   ];

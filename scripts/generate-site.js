@@ -1814,7 +1814,7 @@ function renderScriptDetailPage(script) {
   const storyArea = `${renderStorySummarySection(script, originalStory)}
       ${renderStoryInformationSection(script, originalStory)}`;
   const prepareArea = `${renderCreatorToolkitSection(script)}
-      ${renderProductionWorkflowSection()}`;
+      ${renderProductionWorkflowSection(script)}`;
   const createArea = renderCreatorPack(script);
   const finishArea = `${originalStory ? `<aside class="script-version-cta creator-original-story"><p class="rail-label">Original archive story</p><p>Read the original archive story.</p><a class="button" href="/stories/${escapeAttr(originalStory.slug)}">${escapeHtml(originalStory.title)}</a></aside>` : ''}
       <section class="script-material creator-reference">
@@ -2117,17 +2117,25 @@ function creatorToolkitData(script) {
   ];
 }
 
-function renderProductionWorkflowSection() {
-  const steps = [
-    ['①', 'Story', 'Read the Story Summary.'],
-    ['②', 'Format', 'Choose Long-form or Short-form.'],
-    ['③', 'Narration', 'Prepare the Scene narration.'],
-    ['④', 'Image', 'Create images from the Image Prompts.'],
-    ['⑤', 'Music', 'Choose music from the mood keywords.'],
-    ['⑥', 'Voice', 'Prepare the voice track.'],
-    ['⑦', 'Edit', 'Place the Scenes in order.'],
-    ['⑧', 'Finish', 'Export the video.']
-  ];
+function renderProductionWorkflowSection(script) {
+  const steps = hasThreeBeatLongform(script)
+    ? [
+      ['01', 'Source', 'Read the Archive source before changing the script.'],
+      ['02', 'Narration', 'Record the viewer-facing narration in Scene order.'],
+      ['03', 'Images', 'Create one clear image for each narration beat.'],
+      ['04', 'Edit', 'Place images, voice, and restrained movement in order.'],
+      ['05', 'Finish', 'Add consistent music and export the video.']
+    ]
+    : [
+      ['①', 'Story', 'Read the Story Summary.'],
+      ['②', 'Format', 'Choose Long-form or Short-form.'],
+      ['③', 'Narration', 'Prepare the Scene narration.'],
+      ['④', 'Image', 'Create images from the Image Prompts.'],
+      ['⑤', 'Music', 'Choose music from the mood keywords.'],
+      ['⑥', 'Voice', 'Prepare the voice track.'],
+      ['⑦', 'Edit', 'Place the Scenes in order.'],
+      ['⑧', 'Finish', 'Export the video.']
+    ];
 
   return `<section class="script-material production-workflow" aria-label="Production workflow">
         <h2>Production Workflow</h2>
@@ -2139,6 +2147,11 @@ function renderProductionWorkflowSection() {
           <p>You do not need to make the first version perfect. Finishing the first video from beginning to end matters most.</p>
         </aside>
       </section>`;
+}
+
+function hasThreeBeatLongform(script) {
+  return Array.isArray(script?.visualGuide)
+    && script.visualGuide.some((scene) => Array.isArray(scene.narrationParts) && scene.narrationParts.length === 3);
 }
 
 function isStandardCreatorPack(entry) {
@@ -2173,8 +2186,8 @@ function validateCreatorPackForRender(entry) {
       requireStoredField(scene, field, { slug, section: 'longForm', sceneIndex: sceneIndex + 1, field });
     }
     const parts = scene.narrationParts;
-    if (!Array.isArray(parts) || parts.length !== 2) {
-      throwCreatorRenderError({ slug, section: 'longForm', sceneIndex: sceneIndex + 1, field: 'narrationParts', message: 'Standard long-form Scene requires exactly 2 Narration Parts.' });
+    if (!Array.isArray(parts) || parts.length < 2 || parts.length > 3) {
+      throwCreatorRenderError({ slug, section: 'longForm', sceneIndex: sceneIndex + 1, field: 'narrationParts', message: 'Standard long-form Scene requires 2 or 3 Narration Parts.' });
     }
     parts.forEach((part, partIndex) => {
       for (const field of ['narration', 'creatorNote', 'estimatedReadingTime']) {
@@ -2317,13 +2330,35 @@ function buildCreatorRenderModel(entry) {
 
 function renderStandardCreatorPack(entry) {
   const model = buildCreatorRenderModel(entry);
-  return `<section class="script-material creator-format creator-format-long">
-        <h2>Long-form Creator</h2>
+  const threeBeatLayout = hasThreeBeatLongform(entry);
+  const standardSection = threeBeatLayout ? `${renderWholeVideoStandard(entry, model)}
+      ` : '';
+  return `${standardSection}<section class="script-material creator-format creator-format-long">
+        <h2>${threeBeatLayout ? 'Image + Narration Long-form Creator' : 'Long-form Creator'}</h2>
         ${renderStandardLongFormCreator(model)}
       </section>
       <section class="script-material creator-format creator-format-short">
         <h2>Short-form Creator</h2>
         ${renderStandardShortFormCreator(model)}
+      </section>`;
+}
+
+function renderWholeVideoStandard(entry, model) {
+  const sceneCount = model.longForm.scenes.length;
+  const beatCount = model.longForm.scenes
+    .flatMap((scene) => scene.narrationParts || [])
+    .flatMap((part) => part.visualBeats || []).length;
+  const runtime = model.longForm.runtime.estimatedFinalRuntime || formatSecondsLabel(model.longForm.runtime.finalVideoSeconds);
+  return `<section class="search-summary script-summary creator-video-standard" aria-label="Whole video production standard">
+        <h2>Whole Video Standard</h2>
+        <dl>
+          <div><dt>Video Format</dt><dd>Image-led mystery narration video</dd></div>
+          <div><dt>Length Target</dt><dd>${escapeHtml(runtime)}</dd></div>
+          <div><dt>Scene Plan</dt><dd>${escapeHtml(`${sceneCount} scenes / ${beatCount} image beats`)}</dd></div>
+          <div><dt>Voice Tone</dt><dd>${escapeHtml(entry.mood || 'Calm, curious, and restrained')}</dd></div>
+          <div><dt>Visual Style</dt><dd>Readable still images, quiet camera movement, no busy text inside the image</dd></div>
+          <div><dt>Music And Sound</dt><dd>Use one restrained atmosphere across the whole video so the scenes feel connected.</dd></div>
+        </dl>
       </section>`;
 }
 
@@ -2480,20 +2515,25 @@ function renderPlainNarration(narration, sceneIndex, format, options = {}) {
 
 function renderNarrationParts(narration, parts) {
   const copyText = parts.map((part) => part.narration).filter(Boolean).join('\n\n');
+  const useSceneBeatLabels = parts.length === 3;
   return `<div class="scene-narration-parts">
             <p class="scene-narration scene-narration-copy-source" hidden><strong>Narration:</strong> ${escapeHtml(copyText)}</p>
-            ${parts.map(renderNarrationPart).join('')}
+            ${parts.map((part, index) => renderNarrationPart(part, index, useSceneBeatLabels)).join('')}
           </div>`;
 }
 
-function renderNarrationPart(part, index) {
+function renderNarrationPart(part, index, useSceneBeatLabels = false) {
+  const partTitle = useSceneBeatLabels ? `Scene Beat ${index + 1}` : `Narration Part ${index + 1}`;
+  const narrationLabel = useSceneBeatLabels ? 'Voiceover Narration' : 'Narration';
+  const noteLabel = useSceneBeatLabels ? 'Beat Note' : 'Creator Note';
+  const noteButtonLabel = useSceneBeatLabels ? 'Copy Beat Note' : 'Copy Creator Note';
   const fields = [
-    `<h4>Narration Part ${index + 1}</h4>`,
-    `<p class="narration-part-script"><strong>Narration:</strong> ${escapeHtml(part.narration)}</p>`,
+    `<h4>${partTitle}</h4>`,
+    `<p class="narration-part-script"><strong>${narrationLabel}:</strong> ${escapeHtml(part.narration)}</p>`,
     `<button class="narration-part-copy-button narration-field-copy-button" type="button" data-copy-field="narration">Copy Narration</button>`,
     `<p class="narration-part-time"><strong>Estimated Reading Time:</strong> ${escapeHtml(part.readingTime)}</p>`,
-    part.creatorNote ? `<p class="narration-part-note"><strong>Creator Note:</strong> ${escapeHtml(part.creatorNote)}</p>` : '',
-    part.creatorNote ? `<button class="narration-part-copy-button narration-field-copy-button" type="button" data-copy-field="creator-note">Copy Creator Note</button>` : '',
+    part.creatorNote ? `<p class="narration-part-note"><strong>${noteLabel}:</strong> ${escapeHtml(part.creatorNote)}</p>` : '',
+    part.creatorNote ? `<button class="narration-part-copy-button narration-field-copy-button" type="button" data-copy-field="creator-note">${noteButtonLabel}</button>` : '',
     renderVisualBeats(part.visualBeats)
   ].filter(Boolean).join('\n');
   return `<section class="narration-part">${fields}</section>`;

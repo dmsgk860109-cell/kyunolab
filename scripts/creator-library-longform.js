@@ -353,24 +353,24 @@ function archiveNarrationPart(source, normalizedInput, sceneIndex, partOffset) {
   const keywordLine = keywords.filter((item) => !/meaning|legend|story$/i.test(item)).slice(0, 5).join(', ');
   const templates = [
     [
-      `${subject} opens with ${lowercaseStart(anchor)}. It feels like someone has found an ordinary interior that refuses to stay ordinary: yellow walls, old carpet, fluorescent noise, and no clear exit. That image gives the story a body before any explanation arrives, and the first fear is simple. A normal room has become a place that may never end.`,
-      `After the opening image comes the rule that made the legend travel: a person can noclip out of reality and enter endless empty rooms. In the archive record, ${topic} belongs to ${category}, so the opening act works as a remembered online premise rather than a verified hidden place. The room stays visible while the legend starts stepping farther inward.`
+      `${subject} opens with ${lowercaseStart(anchor)}. That first image gives the story a body before any explanation arrives, because the viewer can picture the scene before the meaning is fully named. The account begins with a concrete trace, then lets the larger mystery gather around it.`,
+      `After the opening image, the record begins to show why the subject kept moving through memory and retelling. In the archive record, ${topic} belongs to ${category}, so the opening act works as a remembered account with a clear cultural or folkloric frame. The scene stays visible while the story starts stepping farther inward.`
     ],
     [
-      `${source.whereItAppears || 'The idea spread through image boards, forums, videos, games, collaborative fiction, and wider online discussions of liminal spaces.'} That spread matters because the Backrooms did not become famous as one closed tale. It became a place that many people could add to: another corridor, another rule, another level, and another reason the exit might never appear.`,
-      `${core[2] || 'Later communities expanded the idea into levels, entities, survival guides, archives, and shared lore.'} The expansion works best when it does not bury the plain yellow-room image. The archive frame keeps the original prompt, the collaborative wiki era, and the analog horror versions in separate layers, so the growth feels wide without turning every layer into one official canon.`
+      `${sentenceFromFragment(source.whereItAppears || sectionText)} That setting matters because the story did not survive as a loose label. It survived because people could keep returning to the same pressure, the same image, or the same strange question from different directions.`,
+      `${sentenceFromFragment(core[0] || source.summaryAnswer || sectionText)} The account works best when that central movement stays visible. The archive frame keeps the action, the setting, and the source boundary in separate layers, so the story feels wide without turning every detail into one forced answer.`
     ],
     [
-      `${core[1] || 'The original image evokes yellow walls, old carpet, fluorescent lights, and office-like non-place.'} This is where the narration can slow down. The Backrooms works because it feels designed for people and emptied of them at the same time. Liminal space, endless rooms, and workplace-like non-place are not decoration here; they explain why the image feels familiar before it feels impossible.`,
-      `${sentenceFromFragment(variants[0] || 'The minimalist original Backrooms is an infinite empty office-like maze.')} ${sentenceFromFragment(variants[1] || 'The wiki-era Backrooms becomes a multi-level shared universe with rules and creatures.')} ${sentenceFromFragment(variants[2] || 'Analog horror versions often turn it into found footage, institutional footage, or failed-research narrative.')} These versions work as branches from the same first image, not as replacements for it.`
+      `${sentenceFromFragment(core[1] || anchor)} This is where the account can slow down. The important detail is not decoration; it explains why the story feels recognizable before it feels strange. The image carries memory, fear, belief, or wonder without needing every question answered at once.`,
+      `${sentenceFromFragment(variants[0] || interpretation[0] || sectionText)} ${sentenceFromFragment(variants[1] || uncertainty[0] || source.summaryAnswer || sectionText)} These versions work as branches from the same central material, not as replacements for it. Each one changes the emphasis while keeping the source image close enough to recognize.`
     ],
     [
-      `${uncertainty[0] || 'Different Backrooms communities maintain different continuities.'} That uncertainty is part of the story itself. There is no single authority for every level, entity, rule, or exit. What can be held together is the folklore pattern: an ordinary-looking room becomes an impossible system because online audiences keep returning to it and rebuilding it.`,
-      `${evidence[0] || 'Know Your Meme documents the Backrooms as a creepypasta originating from 4chan image-board culture.'} ${evidence[1] || 'Backrooms Wikidot materials document the growth of collaborative writing around levels, guides, and multiple interpretations.'} ${referenceNames ? `For orientation, the archive points toward ${referenceNames}.` : 'The archive keeps public references visible for orientation.'} Those sources act as guardrails, keeping the legend vivid without claiming that the supernatural place is real.`
+      `${sentenceFromFragment(uncertainty[0] || 'Different retellings preserve different emphases.')} That uncertainty is part of the story itself. There may not be one final authority for every name, place, object, or version. What can be held together is the pattern that made the account memorable in the first place.`,
+      `${sentenceFromFragment(evidence[0] || source.sourceContext || sectionText)} ${evidence[1] ? sentenceFromFragment(evidence[1]) : ''} ${referenceNames ? `For orientation, the archive points toward ${referenceNames}.` : 'The archive keeps public references visible for orientation.'} Those sources act as guardrails, keeping the story vivid without pretending that every detail has the same certainty.`
     ],
     [
-      `${source.whyItMatters || 'It transformed an ordinary interior photograph into shared folklore about isolation, repetition, failed navigation, and spaces designed for people but emptied of them.'} The ending returns to the same room from the beginning. By then, the room can hold memes, fear, games, wikis, and analog horror without needing one final answer.`,
-      `${sentenceFromFragment(interpretation[0] || 'The Backrooms can be read as digital folklore built from collaborative retelling.')} ${keywordLine ? `Terms such as ${keywordLine} describe how the story is actually recognized.` : 'The closing details stay close to the images that made the story recognizable.'} The ending leaves the Backrooms as a digital labyrinth: not a proven location, but a shared strange place that people keep mapping because the first image still feels open.`
+      `${sentenceFromFragment(source.whyItMatters || source.summaryAnswer || sectionText)} The ending returns to the same image from the beginning. By then, the detail can hold story, setting, memory, and interpretation without needing one final answer.`,
+      `${sentenceFromFragment(interpretation[0] || source.summaryAnswer || sectionText)} ${keywordLine ? `Terms such as ${keywordLine} describe how the story is actually recognized.` : 'The closing details stay close to the images that made the story recognizable.'} The ending leaves ${topic} as a clear archive subject: not a flattened summary, but a story that stays memorable because the first image still feels open.`
     ]
   ];
   return cleanNarrationText(templates[sceneIndex]?.[partOffset] || sectionText);
@@ -383,8 +383,14 @@ function sentenceFromFragment(value) {
     .replace(/\bThe wiki-era Backrooms as\b/i, 'The wiki-era Backrooms becomes')
     .replace(/\bAnalog horror Backrooms as\b/i, 'Analog horror Backrooms appears as')
     .replace(/^Read the Backrooms as\b/i, 'The Backrooms can be read as');
+  const sentences = splitSentences(ensureSentence(text));
+  if (sentences.length > 1) {
+    return sentences.map((sentence) => hasSentencePredicate(sentence)
+      ? sentence
+      : ensureSentence(`The archive detail points to ${lowercaseStart(stripFinalPunctuation(sentence))}`)).join(' ');
+  }
   if (hasSentencePredicate(text)) return ensureSentence(text);
-  return ensureSentence(text);
+  return ensureSentence(`The archive detail points to ${lowercaseStart(text)}`);
 }
 
 function sourceIdsForArchivePart(scene, partPlan, context) {

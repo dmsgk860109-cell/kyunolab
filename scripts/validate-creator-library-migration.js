@@ -5,14 +5,16 @@ const {
   validateCreatorLibraryEntry
 } = require('./creator-library-pipeline');
 const {
-  assertCreatorEntryIsSaveable
+  assertCreatorEntryIsSaveable,
+  iterateCreatorPacks
 } = require('./creator-library-store');
 const {
   validateCreatorPackForRender
 } = require('./generate-site');
 
 const root = path.resolve(__dirname, '..');
-const scripts = readJson(path.join(root, 'data', 'scripts.json'));
+const creatorPackRoot = path.join(root, 'data', 'creator-packs');
+const scripts = iterateCreatorPacks({ root: creatorPackRoot });
 const stories = readJson(path.join(root, 'data', 'stories.json'));
 const categories = readJson(path.join(root, 'data', 'categories.json'));
 
@@ -34,7 +36,7 @@ function main() {
 
 function validateSlugSet() {
   const slugs = scripts.map((entry) => entry.slug);
-  if (new Set(slugs).size !== slugs.length) fail('data/scripts.json', 'duplicate script slug found');
+  if (new Set(slugs).size !== slugs.length) fail('data/creator-packs', 'duplicate script slug found');
 }
 
 function validateEntry(entry) {

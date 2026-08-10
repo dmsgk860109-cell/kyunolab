@@ -146,7 +146,7 @@ function validateCreatorLibraryEntry(entry) {
   for (const field of ['slug', 'originalStorySlug', 'creatorCategorySlug']) {
     if (!hasValue(entry[field])) errors.push(errorFor('entry', field));
   }
-  if (!Array.isArray(entry.longformScript) || entry.longformScript.length !== 10) errors.push(errorFor('longForm', 'longformScript'));
+  if (!Array.isArray(entry.longformScript) || entry.longformScript.length < 10 || entry.longformScript.length > 15) errors.push(errorFor('longForm', 'longformScript'));
   if (!Array.isArray(entry.visualGuide) || entry.visualGuide.length !== 5) errors.push(errorFor('longForm', 'visualGuide'));
   validateVisualGuide(entry, errors);
   validateShortForm(entry, errors);
@@ -175,7 +175,7 @@ function validateVisualGuide(entry, errors) {
     for (const field of ['sceneRole', 'sceneFocus', 'backgroundMusic', 'voiceDirection', 'soundEffect', 'visualDirection']) {
       if (!hasValue(scene[field])) errors.push(errorFor('longForm', field, sceneIndex + 1));
     }
-    if (!Array.isArray(scene.narrationParts) || scene.narrationParts.length !== 2) {
+    if (!Array.isArray(scene.narrationParts) || scene.narrationParts.length < 2 || scene.narrationParts.length > 3) {
       errors.push(errorFor('longForm', 'narrationParts', sceneIndex + 1));
       return;
     }

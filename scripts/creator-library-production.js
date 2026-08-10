@@ -284,26 +284,32 @@ function buildArchiveCreatorNoteForPart(context) {
   const source = context.normalizedInput.archiveNarrative || {};
   const sceneIndex = Number(context.scene?.sceneIndex || 1) - 1;
   const partIndex = Number(context.partPlan?.partIndex || 1);
+  const section = (source.bodySections || [])[sceneIndex] || {};
+  const anchor = plainVisualClause(stripFinalPunctuation(source.visualAnchor || context.normalizedInput.topic));
+  const sectionDetail = plainVisualClause(stripFinalPunctuation(section.heading || (section.paragraphs || [])[0] || anchor));
+  const variant = plainVisualClause(stripFinalPunctuation((source.variants || [])[0] || source.whereItAppears || sectionDetail));
+  const evidence = plainVisualClause(stripFinalPunctuation((source.evidence || [])[0] || source.sourceContext || source.summaryAnswer || sectionDetail));
+  const meaning = plainVisualClause(stripFinalPunctuation(source.whyItMatters || (source.interpretation || [])[0] || source.summaryAnswer || sectionDetail));
   const notes = [
     [
-      'Keep the opening tied to the empty yellow room, old carpet, fluorescent hum, and the noclip premise.',
-      'Do not claim that the Backrooms is a verified hidden dimension; keep it as internet folklore.'
+      `Frame the opening around ${anchor}.`,
+      `Keep the first source limit visible around ${sectionDetail}.`
     ],
     [
-      'Show the spread through image boards, forums, videos, games, wikis, and collaborative retelling.',
-      'Keep the original prompt separate from later levels, entities, survival rules, and analog horror branches.'
+      `Show the wider setting through ${sectionDetail}.`,
+      `Keep the central action separate from later explanation around ${variant}.`
     ],
     [
-      'Let liminal space and office-like non-place carry the unease before adding expanded lore.',
-      'Present minimalist, wiki-era, and analog horror versions as branches from the first yellow-room image.'
+      `Treat variant details as branches around ${variant}.`,
+      `Keep the visual attention on ${anchor} before adding later interpretation.`
     ],
     [
-      'Keep the continuity question visible: different Backrooms communities preserve different versions.',
-      'Use public reference points as orientation, not as proof that the supernatural place is real.'
+      `Make the source boundary explicit through ${evidence}.`,
+      'Use reference points as orientation, not as stronger proof than the archive gives.'
     ],
     [
-      'Return to the room as a symbol of isolation, repetition, failed navigation, and empty designed spaces.',
-      'Close with the Backrooms as a shared digital labyrinth that remains open because the first image still works.'
+      `Return to ${meaning} as the closing pressure.`,
+      `Close with ${context.normalizedInput.topic} as an archive story that remains open because the first image still works.`
     ]
   ];
   const fallback = `Keep this part tied to ${source.visualAnchor || context.normalizedInput.topic}.`;
@@ -589,7 +595,7 @@ function buildBeatMotionForBeat(context) {
 }
 
 function buildArchiveBeatMotionForBeat(context) {
-  const subject = archiveVisualSubjectForBeat(context);
+  const subject = safeMotionValue(archiveVisualSubjectForBeat(context), context.normalizedInput.topic);
   const beatIndex = Number(context.beatIndex || 0);
   const partIndex = Number(context.partPlan?.partIndex || 1);
   const sceneIndex = Number(context.scene?.sceneIndex || 1);
@@ -612,34 +618,48 @@ function archiveVisualSubjectForBeat(context) {
   const source = context.normalizedInput.archiveNarrative || {};
   const sceneIndex = Number(context.scene?.sceneIndex || 1) - 1;
   const beatIndex = Number(context.beatIndex || 0);
+  const section = (source.bodySections || [])[sceneIndex] || {};
+  const candidates = [
+    source.visualAnchor,
+    (source.coreStoryElements || [])[sceneIndex],
+    section.heading,
+    (section.paragraphs || [])[0],
+    (source.variants || [])[beatIndex],
+    (source.evidence || [])[beatIndex],
+    (source.interpretation || [])[beatIndex],
+    (source.keywords || [])[beatIndex],
+    context.normalizedInput.topic
+  ].map((item) => safePromptValue(item)).filter(Boolean);
+  const base = candidates.find((item) => item && !/^the central archive detail$/i.test(item)) || context.normalizedInput.topic;
+  const supporting = candidates.find((item) => item !== base) || source.category || context.normalizedInput.categoryName || 'archive context';
   const visualSets = [
     [
-      'an empty yellow room with old carpet, fluorescent ceiling panels, and no visible exit',
-      'a person-sized viewpoint at the edge of a repeating office-like room',
-      'a close detail of yellow wallpaper, stained carpet, and cold fluorescent light'
+      `the opening archive image of ${base}`,
+      `${base} framed beside ${supporting}`,
+      `a close symbolic detail from ${base}`
     ],
     [
-      'a repeating corridor that suggests a digital maze without showing screens',
-      'a simple map-like arrangement of rooms and corridors with no readable labels',
-      'a distant hallway turning into another identical yellow room'
+      `${base} placed inside its wider setting`,
+      `a grounded retelling scene around ${supporting}`,
+      `${base} shown as a remembered account`
     ],
     [
-      'the original empty-room atmosphere beside subtle hints of later levels',
-      'a restrained found-footage style hallway with no creatures in view',
-      'a quiet survival-guide table with blank cards, thread, and room sketches'
+      `${base} held as the central visual clue`,
+      `variant details around ${supporting}`,
+      `a careful comparison scene around ${base}`
     ],
     [
-      'two archive folders representing different Backrooms continuities without readable text',
-      'a desk with reference cards, photo edges, and a yellow-room image turned face down',
-      'a source-checking scene that separates the original prompt from later lore'
+      `source materials surrounding ${base}`,
+      `separate record layers around ${supporting}`,
+      `${base} viewed through a source boundary`
     ],
     [
-      'the yellow room seen from farther back, with darkness beyond the last doorway',
-      'a final corridor that feels open, quiet, and unresolved',
-      'an empty room where the light keeps humming after the story ends'
+      `a closing image built around ${base}`,
+      `${supporting} returning to the first visual`,
+      `${base} left with a restrained unresolved mood`
     ]
   ];
-  return visualSets[sceneIndex]?.[beatIndex % 3] || source.visualAnchor || context.normalizedInput.topic;
+  return sanitizeProductionText(visualSets[sceneIndex]?.[beatIndex % 3] || base);
 }
 
 function determineVisualBeatCount(context, visualRecords) {
@@ -906,14 +926,27 @@ function buildSceneFocusForScene(context) {
 
 function buildArchiveSceneFocusForScene(context) {
   const sceneIndex = Number(context.scene?.sceneIndex || 1) - 1;
-  const focuses = [
-    'Keep the opening focused on the empty yellow room, fluorescent hum, old carpet, and the noclip premise.',
-    'Show how the Backrooms spreads from one image into forums, videos, games, wikis, and collaborative retelling.',
-    'Separate the original empty-room fear from later levels, entities, survival guides, and analog horror branches.',
-    'Make the source boundary visible by treating different continuities as community versions, not one fixed canon.',
-    'Return to the Backrooms as digital folklore about isolation, repetition, failed exits, and shared mapping.'
+  const source = context.normalizedInput.archiveNarrative || {};
+  const section = (source.bodySections || [])[sceneIndex] || {};
+  const candidates = [
+    source.visualAnchor,
+    section.heading,
+    (source.coreStoryElements || [])[sceneIndex],
+    (source.variants || [])[0],
+    (source.evidence || [])[0],
+    source.whyItMatters,
+    source.summaryAnswer,
+    context.normalizedInput.topic
+  ].map((item) => plainVisualClause(stripFinalPunctuation(item))).filter(Boolean);
+  const focus = candidates.find((item) => item && !/^the central archive detail$/i.test(item)) || context.normalizedInput.topic;
+  const verbs = [
+    'Keep the opening tied to',
+    'Show the wider setting around',
+    'Separate versions and details around',
+    'Make the source boundary visible around',
+    'Return the ending to'
   ];
-  return sanitizeProductionText(focuses[sceneIndex] || `Keep the scene tied to ${context.normalizedInput.archiveNarrative?.visualAnchor || context.normalizedInput.topic}.`);
+  return sanitizeProductionText(`${verbs[sceneIndex] || 'Keep the scene tied to'} ${focus}.`);
 }
 
 function noteCautionForPart(context, narration) {

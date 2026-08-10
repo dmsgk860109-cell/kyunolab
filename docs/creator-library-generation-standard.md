@@ -2,9 +2,9 @@
 
 Status: Active
 
-Standard version: Creator Library Generation Standard v2.0
+Standard version: Creator Library Generation Standard v2.1
 
-Last confirmed: 2026-07-23
+Last confirmed: 2026-08-11
 
 Applies to:
 
@@ -56,7 +56,7 @@ The production pipeline is:
 2. Story Brief
 3. Long-form Narration
 4. Scene
-5. Narration Part
+5. Narration Part / Scene Beat
 6. Creator Note
 7. Visual Beats
 8. Image Prompt
@@ -86,6 +86,7 @@ The active stored pipeline version is `single-path-v1`. All Creator Packs in `da
 - Must not contain internal Kyunolab instructions.
 - Must align with the declared long-form runtime in a reasonable way.
 - Must not include Creator Note, Image Prompt, Motion, Sound, Music, Voice, or field labels.
+- Image-led long-form packages should use 5 scenes with 3 viewer-facing Scene Beats when a full article test or regeneration requires the newer production layout. Existing stored 2-part scenes remain renderable until migrated.
 
 ### Creator Note
 

@@ -41,7 +41,7 @@ function main() {
   assertFile('scripts/creator-library.js');
 
   const standard = readText('docs/creator-library-generation-standard.md');
-  requireText(standard, 'Creator Library Generation Standard v2.0', 'standard document version is missing');
+  requireText(standard, 'Creator Library Generation Standard v2.1', 'standard document version is missing');
   requireText(standard, 'Renderer does not provide a legacy compatibility path', 'renderer final contract is missing');
   requireText(standard, 'Short-form Image Prompt', 'Short-form Image Prompt contract is missing');
   requireText(standard, 'Do not add new subject-specific production functions', 'hardcoding rule is missing');
@@ -91,6 +91,12 @@ function validateFixture(fixture, stories, scripts) {
   if (scenes.length < 3) error(fixture.scriptSlug, 'visualGuide', 'expected multiple production scenes');
   if (!parts.length) error(fixture.scriptSlug, 'narrationParts', 'expected Narration Parts');
   if (!beats.length) error(fixture.scriptSlug, 'visualBeats', 'expected Visual Beats');
+  scenes.forEach((scene, sceneIndex) => {
+    const sceneParts = Array.isArray(scene.narrationParts) ? scene.narrationParts : [];
+    if (sceneParts.length < 2 || sceneParts.length > 3) {
+      error(fixture.scriptSlug, 'narrationParts', `Scene ${sceneIndex + 1} must contain 2 or 3 Narration Parts / Scene Beats`);
+    }
+  });
 
   validateLongform(fixture, script);
   validateProductionFields(fixture, scenes, parts, beats, packedProduction);

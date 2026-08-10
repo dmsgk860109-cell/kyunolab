@@ -107,7 +107,7 @@ function assertProductionSchema(slug, normalizedInput, scenePlan, longformResult
     for (const field of ['sceneFocus', 'backgroundMusic', 'voiceDirection', 'soundEffect']) {
       if (!scene[field]) fail(slug, `Scene ${sceneIndex + 1} missing ${field}`);
     }
-    if (scene.narrationParts.length !== 2) fail(slug, `Scene ${sceneIndex + 1} must contain 2 parts`);
+    if (scene.narrationParts.length < 2 || scene.narrationParts.length > 3) fail(slug, `Scene ${sceneIndex + 1} must contain 2 or 3 parts`);
     scene.narrationParts.forEach((part, partIndex) => {
       if (part.partIndex !== partIndex + 1) fail(slug, `Scene ${sceneIndex + 1} Part ${partIndex + 1} index mismatch`);
       if (!part.creatorNote) fail(slug, `Scene ${sceneIndex + 1} Part ${partIndex + 1} missing Creator Note`);

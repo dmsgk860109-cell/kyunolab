@@ -183,10 +183,42 @@ function classifyCreatorContentType(source = {}) {
 }
 
 function sanitizeCreatorInputText(value) {
+  if (Array.isArray(value)) {
+    return value.map(sanitizeCreatorInputText).filter(Boolean).join(' ');
+  }
+  if (value && typeof value === 'object') {
+    const preferredFields = [
+      'text',
+      'content',
+      'paragraph',
+      'summary',
+      'answer',
+      'title',
+      'heading',
+      'description',
+      'detail',
+      'factText',
+      'name',
+      'label',
+      'value'
+    ];
+    for (const field of preferredFields) {
+      const text = sanitizeCreatorInputText(value[field]);
+      if (text) return text;
+    }
+    return Object.values(value).map(sanitizeCreatorInputText).filter(Boolean).join(' ');
+  }
   let text = String(value ?? '')
     .replace(/\s+/g, ' ')
     .trim();
   if (!text) return '';
+
+  text = text
+    .replace(/\bis\s+a\s+pre-existing\s+[a-z\s-]+\s+subject\s+built\s+around\s+/i, 'centers on ')
+    .replace(/\bis\s+a\s+pre-existing\s+[a-z\s-]+\s+subject\b/i, 'is an existing story subject')
+    .replace(/\bThis article follows\b/i, 'The account follows')
+    .replace(/\bthe article treats it as\b/i, 'the record treats it as')
+    .replace(/\bso the article treats it as\b/i, 'so the record treats it as');
 
   for (const pattern of INTERNAL_TEMPLATE_PATTERNS) {
     text = text.replace(pattern, '').replace(/\s+/g, ' ').trim();

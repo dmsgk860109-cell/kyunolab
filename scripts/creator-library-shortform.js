@@ -409,49 +409,64 @@ function hasArchiveShortformSource(context) {
 
 function archiveShortformNarration(context) {
   const source = context.normalizedInput.archiveNarrative;
-  const anchor = cleanArchiveShortText(source.visualAnchor || 'an empty yellow room');
+  const anchor = cleanArchiveShortText(source.visualAnchor || context.normalizedInput.topic);
+  const topic = cleanArchiveShortText(source.topic || context.normalizedInput.topic);
+  const summary = compactFact(source.summaryAnswer || source.excerpt || topic, 14, topic);
+  const variant = compactFact((source.variants || [])[0] || source.whereItAppears || summary, 12, topic);
+  const evidence = compactFact((source.evidence || [])[0] || source.sourceContext || summary, 12, topic);
+  const meaning = compactFact(source.whyItMatters || (source.interpretation || [])[0] || summary, 12, topic);
   const lines = [
-    `The Backrooms begins with ${lowercaseStart(anchor)}. One ordinary room feels wrong, and the way out is already missing.`,
-    'Then the noclip idea turns that room into a digital labyrinth. A person slips out of reality and finds corridors that keep repeating.',
-    'Online communities expand the premise into levels, entities, survival rules, games, wikis, and analog horror. The first image still holds the center.',
-    'Different versions do not share one official canon. That uncertainty is part of the folklore, not a reason to pretend the place is real.',
-    'The legend lasts because the room feels familiar before it feels impossible. The Backrooms remains a shared map of isolation and failed exits.'
+    `${topic} begins with ${lowercaseStart(anchor)}. The first image gives the short a clear place to start.`,
+    `The account then moves into ${summary}. That pressure explains why the story keeps its shape.`,
+    `One version emphasizes ${variant}. Other retellings can shift the detail without erasing the core image.`,
+    `The source trail points to ${evidence}. The short should keep that boundary visible.`,
+    `The ending returns to ${meaning}. The story stays memorable because the first image still carries weight.`
   ];
   return sanitizeShortformText(lines[context.sceneIndex] || lines[0]);
 }
 
 function archiveShortformFocus(context) {
   const source = context.normalizedInput.archiveNarrative;
+  const topic = context.normalizedInput.topic;
+  const primaryFact = selectPrimaryFact(context);
   const focus = [
-    source.visualAnchor || 'the empty yellow room',
-    'the noclip premise and endless repeating rooms',
-    'levels, entities, survival rules, and analog horror branches',
-    'different continuities and the source limit around the legend',
-    'isolation, repetition, failed navigation, and empty designed spaces'
-  ][context.sceneIndex] || source.visualAnchor || context.normalizedInput.topic;
-  return sanitizeShortformText(`${context.shortScene.role}: ${focus}.`);
+    source.visualAnchor || primaryFact,
+    primaryFact,
+    (source.variants || [])[0],
+    (source.evidence || [])[0] || source.sourceContext,
+    source.whyItMatters || (source.interpretation || [])[0]
+  ][context.sceneIndex] || primaryFact || source.visualAnchor || topic;
+  let compact = compactFact(focus, 10, topic) || cleanArchiveShortText(topic);
+  if (countWords(`${context.shortScene.role}: ${compact}`) < 5) {
+    compact = compactFact(primaryFact, 14, topic) || `${cleanArchiveShortText(topic)} source detail`;
+  }
+  if (countWords(`${context.shortScene.role}: ${compact}`) < 5) {
+    compact = `${cleanArchiveShortText(topic)} source detail`;
+  }
+  return sanitizeShortformText(`${context.shortScene.role}: ${compact}.`);
 }
 
 function archiveShortformImagePrompt(context) {
   const source = context.normalizedInput.archiveNarrative;
+  const topic = context.normalizedInput.topic;
   const subjects = [
-    'an empty yellow room with old carpet and fluorescent light',
-    'a lonely corridor that seems to repeat beyond the frame',
-    'a wall of map notes, level numbers, and survival-rule clues without readable text',
-    'two different archive folders for two different Backrooms continuities',
-    'the same yellow room seen from farther away, open and unresolved'
+    source.visualAnchor,
+    source.summaryAnswer || source.excerpt,
+    (source.variants || [])[0],
+    (source.evidence || [])[0] || source.sourceContext,
+    source.whyItMatters || (source.interpretation || [])[0]
   ];
-  const subject = subjects[context.sceneIndex] || subjects[0];
+  const subject = compactFact(subjects[context.sceneIndex] || source.visualAnchor || topic, 12, topic) || cleanArchiveShortText(topic);
   const compositions = [
     'as a vertical opening shot with strong negative space',
-    'as a slow corridor composition with the exit hidden',
-    'as a clean production-board composition with symbolic notes but no readable words',
+    'as a slow contextual composition with the key detail centered',
+    'as a clean comparison shot with symbolic notes but no readable words',
     'as a restrained documentary comparison shot',
-    'as a quiet final frame with the room fading into darkness'
+    'as a quiet final frame with the central image held clearly'
   ];
   const prompt = [
     `A realistic digital-documentary scene shows ${subject}, framed ${compositions[context.sceneIndex] || compositions[0]}.`,
-    'Use dim fluorescent light, muted yellow walls, old carpet texture, and quiet liminal unease.',
+    'Use restrained light, grounded texture, and a calm archive-documentary mood.',
     'No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.'
   ].join(' ');
   return sanitizeImagePrompt(prompt);
