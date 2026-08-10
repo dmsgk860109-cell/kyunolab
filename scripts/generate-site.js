@@ -13,7 +13,7 @@ const buildArgs = parseBuildArgs(process.argv.slice(2));
 const siteOutputRoot = path.resolve(buildArgs.outputRoot || root);
 const creatorPackOptions = buildArgs.creatorPackRoot ? { root: buildArgs.creatorPackRoot } : {};
 const siteUrl = 'https://kyunolab.com';
-const styleVersion = '20260811-creator-toolkit-compact';
+const styleVersion = '20260811-creator-standard-polish';
 const creatorLibraryScriptVersion = '20260722-copy-fields';
 const pageSize = 12;
 const libraryPageSize = 10;
@@ -2375,10 +2375,15 @@ function renderStandardCreatorPack(entry) {
         <div class="creator-format-header">
           <p class="rail-label">Production script</p>
           <h2>Long-form</h2>
-          <p>Use this section as the full video path: each Scene contains narration, image prompts, motion notes, and production support.</p>
+          <p>Use this section as the full video path: each Scene contains narration first, then image prompts, motion notes, and production support.</p>
         </div>
         <div class="creator-format-body">${renderStandardLongFormCreator(model)}</div>
       </section>
+      <div class="creator-format-transition" aria-label="Next creator format">
+        <span>Next format</span>
+        <strong>Short-form version</strong>
+        <p>The same archive idea is condensed below for a compact video without mixing it into the long-form script.</p>
+      </div>
       <section id="short-form" class="script-material creator-format creator-format-short">
         <div class="creator-format-header">
           <p class="rail-label">Compact script</p>
@@ -2541,6 +2546,10 @@ function renderProductionSceneCard({ number, duration, narration, narrationParts
             </div>
           </header>
           <div class="scene-card-grid">
+            <div class="scene-card-main" aria-label="Scene narration and visual beats">
+              <p class="scene-flow-label">Narration and image beats</p>
+              ${narrationHtml}
+            </div>
             <div class="scene-card-side" aria-label="Scene production support">
               ${sceneChecklist}
               <div class="scene-support-panel">
@@ -2550,9 +2559,6 @@ function renderProductionSceneCard({ number, duration, narration, narrationParts
                 ${soundEffect ? `<p><strong>Sound:</strong> ${escapeHtml(soundEffect)}</p>` : ''}
                 <p><strong>Edit:</strong> ${escapeHtml(direction)}</p>
               </div>
-            </div>
-            <div class="scene-card-main">
-              ${narrationHtml}
             </div>
           </div>
           <div class="scene-production-fields" hidden>

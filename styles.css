@@ -4618,3 +4618,115 @@ textarea {
     align-items: stretch;
   }
 }
+
+
+/* Creator standard polish for script detail pages. */
+.script-detail-portal-page .creator-video-standard {
+  border-top: 3px solid var(--home-ink);
+}
+.script-detail-portal-page .creator-format-transition {
+  display: grid;
+  gap: 4px;
+  margin: 22px 0;
+  padding: 14px 18px;
+  border-top: 2px solid var(--home-ink);
+  border-bottom: 1px solid var(--home-line);
+  background: #FFF9F1;
+}
+.script-detail-portal-page .creator-format-transition span {
+  color: var(--home-orange);
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.script-detail-portal-page .creator-format-transition strong {
+  color: var(--home-ink);
+  font-size: 21px;
+  line-height: 1.2;
+}
+.script-detail-portal-page .creator-format-transition p {
+  margin: 0;
+  max-width: 780px;
+  color: var(--home-muted);
+}
+.script-detail-portal-page .creator-format-short {
+  margin-top: 0;
+}
+.script-detail-portal-page .scene-workspace {
+  overflow: hidden;
+  background: var(--home-panel);
+  box-shadow: 0 1px 0 rgba(21, 15, 11, .04);
+}
+.script-detail-portal-page .scene-card-header {
+  border-bottom: 2px solid #2A1B12;
+}
+.script-detail-portal-page .scene-card-main {
+  padding: 14px;
+  background: var(--home-panel);
+}
+.script-detail-portal-page .scene-flow-label {
+  margin: 0 0 10px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: var(--home-orange);
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.script-detail-portal-page .scene-card-side {
+  border-top: 1px solid var(--home-line);
+  border-bottom: 0;
+}
+.script-detail-portal-page .scene-checklist,
+.script-detail-portal-page .scene-support-panel {
+  background: #FFFDF8;
+}
+.script-detail-portal-page .narration-part {
+  border: 1px solid var(--home-line);
+  border-radius: 6px;
+  background: #FFFDF8;
+}
+.script-detail-portal-page .narration-part + .narration-part {
+  margin-top: 10px;
+}
+.script-detail-portal-page .narration-part h4 {
+  display: inline-flex;
+  width: fit-content;
+  padding: 4px 8px;
+  border: 1px solid var(--home-line);
+  border-radius: 999px;
+  background: #FFF9F1;
+  color: var(--home-orange);
+}
+.script-detail-portal-page .narration-part-script {
+  font-size: 16px;
+  line-height: 1.65;
+}
+.script-detail-portal-page .visual-beats {
+  border-top: 1px solid var(--home-line);
+  padding-top: 10px;
+}
+.script-detail-portal-page .visual-beat {
+  background: #FFF9F1;
+}
+.script-detail-portal-page .creator-search-profile {
+  border-top: 3px solid var(--home-ink);
+}
+@media (min-width: 980px) {
+  .script-detail-portal-page .scene-card-side {
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  }
+}
+@media (max-width: 760px) {
+  .script-detail-portal-page .creator-format-transition {
+    padding: 12px;
+  }
+  .script-detail-portal-page .scene-card-main {
+    padding: 12px;
+  }
+}
