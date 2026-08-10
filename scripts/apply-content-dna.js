@@ -264,7 +264,8 @@ function renderStoryPage(story, previousStory, nextStory) {
 <body class="home-portal-page">
   ${renderArchivePortalHeader(cleanUrl)}
   <main class="home-shell home-portal-shell archive-story-portal-page">
-    <div class="home-portal-layout">
+    <div class="home-portal-layout article-map-layout archive-story-map-layout">
+      ${renderArchiveStoryMapRail(story, sections)}
       <div class="home-main-column">
         ${renderBreadcrumb(story)}
         ${renderArchiveStoryLead(story, title, description, sections, longformArticle)}
@@ -1395,7 +1396,6 @@ function absoluteImageUrl(value) {
 
 function renderArchiveStoryLead(story, title, description, sections, longformArticle) {
   const deck = longformArticle?.deck || story.introSummary || story.excerpt || story.summaryAnswer || description;
-  const mapLinks = sections.slice(0, 5).map((section, index) => `<a href="#${escapeAttr(section.id)}"><span>${String(index + 1).padStart(2, '0')}</span><strong>${escapeHtml(section.title)}</strong></a>`).join('');
   return `<section class="home-portal-lead archive-story-lead" aria-label="Archive story front entrance">
           <article class="home-lead-story archive-story-hero">
             <p class="label">${escapeHtml(story.category)}</p>
@@ -1404,13 +1404,19 @@ function renderArchiveStoryLead(story, title, description, sections, longformArt
             <p class="article-updated">Updated ${escapeHtml(formatDate(story.updatedAt || story.publishedAt))}</p>
             <a class="button" href="#story-content">Start reading</a>
           </article>
-          <div class="home-known-list archive-record-map">
-            <h2>Record map</h2>
-            ${mapLinks}
-            <a href="/categories/${escapeAttr(story.categorySlug)}.html"><span>${String(Math.min(sections.length + 1, 6)).padStart(2, '0')}</span><strong>More ${escapeHtml(story.category)}</strong><em>Open the archive shelf</em></a>
-            ${renderArchiveStoryCompactMeta(story)}
-          </div>
         </section>`;
+}
+
+function renderArchiveStoryMapRail(story, sections) {
+  const mapLinks = sections.slice(0, 5).map((section, index) => `<a${index === 0 ? ' class="is-current"' : ''} href="#${escapeAttr(section.id)}"><span>${String(index + 1).padStart(2, '0')}</span><strong>${escapeHtml(section.title)}</strong></a>`).join('');
+  return `<aside class="home-left-rail article-rail article-rail-left archive-story-left-rail" aria-label="Archive record map">
+      <section class="rail-card article-map-card archive-record-map">
+        <h2>Record map</h2>
+        ${mapLinks}
+        <a href="/categories/${escapeAttr(story.categorySlug)}.html"><span>${String(Math.min(sections.length + 1, 6)).padStart(2, '0')}</span><strong>More ${escapeHtml(story.category)}</strong><em>Open the archive shelf</em></a>
+        ${renderArchiveStoryCompactMeta(story)}
+      </section>
+    </aside>`;
 }
 
 function renderArchiveStoryCompactMeta(story) {
@@ -1439,10 +1445,7 @@ function renderArchiveStoryPortalRail(story, sections, relatedStories, readNextS
   return `<aside class="home-portal-rail archive-story-portal-rail" aria-label="Archive story side paths">
       ${renderKyunolabNetworkCard()}
       ${readNextCard}
-      <section class="rail-card">
-        <p class="rail-label">In this record</p>
-        ${sectionLinks}
-      </section>
+
       <section class="rail-card rail-card-subtle">
         <p class="rail-label">Archive roads</p>
         <a href="/categories/${escapeAttr(story.categorySlug)}.html">${escapeHtml(story.category)}</a>

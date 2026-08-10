@@ -1745,8 +1745,9 @@ ${(section.paragraphs || []).map((text) => `<p>${escapeHtml(text)}</p>`).join('\
     footerSection: 'scripts',
     bodyClass: 'home-portal-page',
     headerHtml: renderCreatorPortalHeader(canonicalPath),
-    content: `  <main class="home-shell home-portal-shell creator-portal-page creator-guide-page">
-    <div class="home-portal-layout">
+    content: `  <main class="home-shell home-portal-shell creator-portal-page creator-guide-page library-board-detail-page">
+    <div class="home-portal-layout article-map-layout library-board-map-layout">
+      ${renderLibraryBoardPostLeftRail(post, sections)}
       <div class="home-main-column">
         <article>
           <header class="archive-article-header">
@@ -1761,10 +1762,6 @@ ${(section.paragraphs || []).map((text) => `<p>${escapeHtml(text)}</p>`).join('\
               <div><dt>Updated</dt><dd>${formatDate(post.updatedAt || post.publishedAt)}</dd></div>
             </dl>
           </header>
-          <section class="story-map" aria-label="Guide map">
-            <h2>Guide Map</h2>
-            <ol>${mapItems}</ol>
-          </section>
           ${renderAdSlot('ad-library-board-after-map')}
           <div class="story-body archive-entry">
 ${body}
@@ -1776,10 +1773,6 @@ ${body}
       </div>
       <aside class="home-portal-rail creator-portal-rail" aria-label="Related creator resources">
         ${renderKyunolabNetworkCard('scripts')}
-        <section class="rail-card">
-          <p class="rail-label">In this guide</p>
-          ${sections.map((section) => `<a href="#${escapeAttr(section.id)}">${escapeHtml(section.nav || section.title)}</a>`).join('')}
-        </section>
         <section class="rail-card rail-feature">
           <p class="rail-label">Read next</p>
           <a href="/scripts/board/${escapeAttr(nextPost.slug)}/"><span>${escapeHtml(nextPost.tag || nextPost.category || 'Library Board')}</span><strong>${escapeHtml(nextPost.title)}</strong></a>
@@ -1801,6 +1794,22 @@ ${body}
   });
 }
 
+
+function renderLibraryBoardPostLeftRail(post, sections) {
+  const mapItems = sections.map((section, index) => `<a${index === 0 ? ' class="is-current"' : ''} href="#${escapeAttr(section.id)}"><span>${String(index + 1).padStart(2, '0')}</span><strong>${escapeHtml(section.nav || section.title)}</strong></a>`).join('');
+  return `<aside class="home-left-rail article-rail article-rail-left library-board-left-rail" aria-label="Library Board guide map">
+      <section class="rail-card article-map-card story-map">
+        <h2>Guide Map</h2>
+        ${mapItems}
+      </section>
+      <section class="rail-card rail-card-subtle">
+        <p class="rail-label">Board roads</p>
+        <a href="/scripts/board/">Library Board</a>
+        <a href="/scripts/">Creator Library</a>
+        <a href="/scripts/categories/">Library Categories</a>
+      </section>
+    </aside>`;
+}
 function renderScriptDetailPage(script) {
   const originalStory = stories.find((story) => story.slug === script.originalStorySlug);
   const relatedScripts = sortNewest(creatorScripts).filter((item) => item.slug !== script.slug).slice(0, 4);
@@ -1827,7 +1836,8 @@ function renderScriptDetailPage(script) {
         <div class="related-grid">${relatedScripts.map(renderRelatedScriptLink).join('')}</div>
       </section>`;
   const content = `  <main class="home-shell home-portal-shell creator-portal-page script-detail-portal-page">
-    <div class="home-portal-layout">
+    <div class="home-portal-layout article-map-layout script-detail-map-layout">
+      ${renderScriptDetailLeftRail({ script, originalStory, creatorCategory })}
       <div class="home-main-column">
         <nav class="breadcrumb script-detail-breadcrumb" aria-label="Breadcrumb"><a href="/scripts/">Creator Library</a><span aria-hidden="true">/</span>${creatorCategory ? `<a href="/scripts/categories/${escapeAttr(creatorCategory.slug)}/">${escapeHtml(creatorCategory.title)}</a><span aria-hidden="true">/</span>` : ''}<span aria-current="page">${escapeHtml(script.title)}</span></nav>
         ${renderScriptDetailLead(script, originalStory, creatorCategory)}
@@ -1858,9 +1868,6 @@ function renderScriptDetailPage(script) {
 }
 
 function renderScriptDetailLead(script, originalStory, creatorCategory) {
-  const sourceLabel = originalStory ? originalStory.title : 'Archive source route';
-  const categoryHref = creatorCategory ? `/scripts/categories/${escapeAttr(creatorCategory.slug)}/` : '/scripts/categories/';
-  const categoryTitle = creatorCategory ? creatorCategory.title : 'Library Categories';
   return `<section class="home-portal-lead script-detail-lead" aria-label="Creator script package front entrance">
           <article class="home-lead-story script-detail-hero">
             <p class="label">${escapeHtml(script.genre || 'Creator Library Package')}</p>
@@ -1868,17 +1875,25 @@ function renderScriptDetailLead(script, originalStory, creatorCategory) {
             <p>${escapeHtml(script.deck || 'A creator-ready mystery video package with narration, prompts, and production notes.')}</p>
             <a class="button" href="#creator-materials">Open production material</a>
           </article>
-          <div class="home-known-list script-package-map">
-            <h2>Package map</h2>
-            <a href="#story-context"><span>01</span><strong>Story context and information</strong><em>${escapeHtml(sourceLabel)}</em></a>
-            <a href="#creator-toolkit"><span>02</span><strong>Creator toolkit and workflow</strong><em>${escapeHtml(script.estimatedVideoLength || 'Video package')}</em></a>
-            <a href="#long-form"><span>03</span><strong>Long-form production script</strong><em>Scene narration, image prompts, and notes</em></a>
-            <a href="#short-form"><span>04</span><strong>Short-form production script</strong><em>Compact version for short video</em></a>
-            <a href="#search-profile"><span>05</span><strong>Search profile</strong><em>Topic, intent, and related terms</em></a>
-            <a href="${categoryHref}"><span>06</span><strong>${escapeHtml(categoryTitle)}</strong><em>Open the related creator shelf</em></a>
-            ${renderScriptMetaGrid(script)}
-          </div>
         </section>`;
+}
+
+function renderScriptDetailLeftRail({ script, originalStory, creatorCategory }) {
+  const sourceLabel = originalStory ? originalStory.title : 'Archive source route';
+  const categoryHref = creatorCategory ? `/scripts/categories/${escapeAttr(creatorCategory.slug)}/` : '/scripts/categories/';
+  const categoryTitle = creatorCategory ? creatorCategory.title : 'Library Categories';
+  return `<aside class="home-left-rail article-rail article-rail-left script-detail-left-rail" aria-label="Creator package map">
+      <section class="rail-card article-map-card script-package-map">
+        <h2>Package map</h2>
+        <a href="#story-context"><span>01</span><strong>Story context and information</strong><em>${escapeHtml(sourceLabel)}</em></a>
+        <a href="#creator-toolkit"><span>02</span><strong>Creator toolkit and workflow</strong><em>${escapeHtml(script.estimatedVideoLength || 'Video package')}</em></a>
+        <a href="#long-form"><span>03</span><strong>Long-form production script</strong><em>Scene narration, image prompts, and notes</em></a>
+        <a href="#short-form"><span>04</span><strong>Short-form production script</strong><em>Compact version for short video</em></a>
+        <a href="#search-profile"><span>05</span><strong>Search profile</strong><em>Topic, intent, and related terms</em></a>
+        <a href="${categoryHref}"><span>06</span><strong>${escapeHtml(categoryTitle)}</strong><em>Open the related creator shelf</em></a>
+        ${renderScriptMetaGrid(script)}
+      </section>
+    </aside>`;
 }
 
 function renderScriptDetailPortalRail({ script, originalStory, relatedScripts, categoryScripts, creatorCategory }) {
