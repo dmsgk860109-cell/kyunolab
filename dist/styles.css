@@ -289,7 +289,7 @@ main.home-shell {
   overflow-y: auto;
   overscroll-behavior: contain;
   padding-right: 2px;
-  scrollbar-gutter: auto;
+  scrollbar-gutter: stable;
   font-family: Arial, sans-serif;
 }
 .home-portal-rail {
@@ -316,8 +316,8 @@ main.home-shell {
 .home-layout > .home-rail::-webkit-scrollbar,
 .home-portal-rail::-webkit-scrollbar,
 .article-rail::-webkit-scrollbar {
-  width: 3px;
-  height: 3px;
+  width: 4px;
+  height: 4px;
 }
 .home-left-rail::-webkit-scrollbar-button,
 .home-layout > .home-rail::-webkit-scrollbar-button,
@@ -338,7 +338,7 @@ main.home-shell {
 .home-portal-rail::-webkit-scrollbar-thumb,
 .article-rail::-webkit-scrollbar-thumb {
   border-radius: 999px;
-  background: rgba(15, 10, 6, .12);
+  background: rgba(15, 10, 6, .22);
 }
 .home-left-rail:hover::-webkit-scrollbar-thumb,
 .home-layout > .home-rail:hover::-webkit-scrollbar-thumb,

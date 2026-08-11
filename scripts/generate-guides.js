@@ -4,10 +4,12 @@ const { loadStories } = require('./lib/load-stories');
 
 const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://kyunolab.com';
-const styleVersion = '20260811-page-map-crossroads';
-const boardPortalStyleVersion = '20260811-page-map-crossroads';
+const styleVersion = '20260811-left-rail-recommendations';
+const boardPortalStyleVersion = '20260811-left-rail-recommendations';
 const guides = readJson(path.join(root, 'data', 'guides.json'));
 const stories = loadStories(root);
+const creatorScripts = loadCreatorScripts();
+const libraryBoardPosts = readOptionalJson(path.join(root, 'data', 'library-board.json'));
 const storyById = new Map(stories.map((story) => [story.id || story.slug, story]));
 const guideById = new Map(guides.map((guide) => [guide.id || guide.slug, guide]));
 
@@ -318,7 +320,9 @@ ${sections}
 function renderBoardLeftRail() {
   return `<aside class="home-left-rail article-rail article-rail-left board-left-rail" aria-label="Mystery Board navigation">
       <section class="rail-card"><p class="rail-label">Page Map</p><a href="#board-start"><span>01</span> Reading Desk</a><a href="#board-guide-desk"><span>02</span> Guide Desk</a><a href="#board-guide-paths"><span>03</span> Guide Paths</a><a href="#board-guide-index"><span>04</span> Board Index</a><a href="#board-crossroads"><span>05</span> Cross Roads</a></section>
-      <section class="rail-card rail-card-subtle"><p class="rail-label">Cross Roads</p><a href="/archive.html">Mystery Archive</a><a href="/scripts/">Creator Library</a><a href="/tools.html">Tools</a><a href="/fiction-disclaimer.html">Story &amp; Source Notice</a></section>
+      ${renderStoryRecommendationCard('Archive Records', getBoardArchiveRecommendations(), 3)}
+      ${renderScriptRecommendationCard('Creator Packages', sortNewest(creatorScripts), 2)}
+      ${renderLibraryBoardRecommendationCard('Library Board', libraryBoardPosts, 2)}
     </aside>`;
 }
 
@@ -330,8 +334,28 @@ function renderBoardGuideLeftRail(guide) {
         ${mapItems}
         <a href="#faq"><span>FAQ</span><strong>FAQ</strong></a>
       </section>
-      <section class="rail-card rail-card-subtle"><p class="rail-label">Cross Roads</p><a href="/mystery-board.html">Mystery Board</a><a href="/archive.html">Mystery Archive</a><a href="/scripts/">Creator Library</a><a href="/tools.html">Tools</a></section>
+      ${renderScriptRecommendationCard('Creator Packages', sortNewest(creatorScripts), 2)}
+      ${renderLibraryBoardRecommendationCard('Library Board', libraryBoardPosts, 2)}
+      ${renderStoryRecommendationCard('Archive Starters', getBoardArchiveRecommendations(), 3)}
     </aside>`;
+}
+
+function renderStoryRecommendationCard(label, items, limit = 3) {
+  return renderRailRecommendationCard(label, items, (story) => `/stories/${escapeAttr(story.slug)}`, limit);
+}
+
+function renderScriptRecommendationCard(label, items, limit = 3) {
+  return renderRailRecommendationCard(label, items, (script) => `/scripts/${escapeAttr(script.slug)}`, limit);
+}
+
+function renderLibraryBoardRecommendationCard(label, items, limit = 3) {
+  return renderRailRecommendationCard(label, items, (post) => `/scripts/board/${escapeAttr(post.slug)}/`, limit);
+}
+
+function renderRailRecommendationCard(label, items, hrefForItem, limit) {
+  const links = (items || []).filter(Boolean).slice(0, limit).map((item) => `<a href="${hrefForItem(item)}">${escapeHtml(item.shortTitle || item.title)}</a>`).join('');
+  if (!links) return '';
+  return `<section class="rail-card rail-card-subtle"><p class="rail-label">${escapeHtml(label)}</p>${links}</section>`;
 }
 function renderReadingBridge(relatedStories) {
   if (!relatedStories.length) return '';
@@ -353,6 +377,16 @@ function renderRowsWithMidAd(rowsHtml, slotName) {
   if (rows.length < 7) return rows.join('\n');
   rows.splice(6, 0, renderAdSlot(slotName));
   return rows.join('\n');
+}
+
+function getBoardArchiveRecommendations() {
+  return getStoriesBySlug([
+    'woman-in-white-roadside-legend',
+    'backrooms-digital-labyrinth',
+    'baba-yaga-folklore',
+    'bloody-mary-mirror-legend',
+    'paris-catacombs-legends'
+  ]);
 }
 
 function renderPage({ canonicalPath, title, description, ogTitle, ogDescription, type, content, bodyClass, headerHtml, pageStyleVersion }) {
@@ -517,6 +551,15 @@ function getStoriesBySlug(slugs) {
   return slugs.map((slug) => stories.find((story) => story.slug === slug)).filter(Boolean);
 }
 
+function sortNewest(items) {
+  return [...(items || [])].sort((a, b) => {
+    const bTime = Date.parse(b.publishedAt || b.updatedAt || '') || 0;
+    const aTime = Date.parse(a.publishedAt || a.updatedAt || '') || 0;
+    if (bTime !== aTime) return bTime - aTime;
+    return String(a.title || '').localeCompare(String(b.title || ''));
+  });
+}
+
 function renderFooter() {
   return `<footer class="site-footer">
     <p><strong>Kyunolab Mystery Archive</strong> is a quiet story publication by Kyuno Lab, dedicated to legends, folklore, mysteries, and strange tales from the edges of memory.</p>
@@ -542,6 +585,27 @@ function writeFile(fileName, content) {
 
 function readJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, 'utf8'));
+}
+
+function readOptionalJson(filePath, fallback = []) {
+  if (!fs.existsSync(filePath)) return fallback;
+  return readJson(filePath);
+}
+
+function loadCreatorScripts() {
+  const packRoot = path.join(root, 'data', 'creator-packs');
+  if (!fs.existsSync(packRoot)) return [];
+  return fs.readdirSync(packRoot, { withFileTypes: true })
+    .filter((entry) => entry.isFile() && entry.name.endsWith('.json') && entry.name !== 'manifest.json')
+    .map((entry) => {
+      try {
+        const script = readJson(path.join(packRoot, entry.name));
+        return { ...script, slug: script.slug || script.id || entry.name.replace(/\.json$/, '') };
+      } catch (error) {
+        return null;
+      }
+    })
+    .filter((script) => script && script.slug);
 }
 
 function escapeHtml(value) {

@@ -13,7 +13,7 @@ const buildArgs = parseBuildArgs(process.argv.slice(2));
 const siteOutputRoot = path.resolve(buildArgs.outputRoot || root);
 const creatorPackOptions = buildArgs.creatorPackRoot ? { root: buildArgs.creatorPackRoot } : {};
 const siteUrl = 'https://kyunolab.com';
-const styleVersion = '20260811-page-map-crossroads';
+const styleVersion = '20260811-left-rail-recommendations';
 const creatorLibraryScriptVersion = '20260722-copy-fields';
 const pageSize = 12;
 const libraryPageSize = 10;
@@ -1805,13 +1805,9 @@ function renderLibraryBoardPostLeftRail(post, sections) {
         <h2>Guide Map</h2>
         ${mapItems}
       </section>
-      <section class="rail-card rail-card-subtle">
-        <p class="rail-label">Cross Roads</p>
-        <a href="/scripts/board/">Library Board</a>
-        <a href="/scripts/">Creator Library</a>
-        <a href="/archive.html">Mystery Archive</a>
-        <a href="/tools.html">Tools</a>
-      </section>
+      ${renderScriptRecommendationCard('Creator Packages', sortNewest(creatorScripts), 2)}
+      ${renderStoryRecommendationCard('Archive Records', getKnownRecordStories(), 2)}
+      ${renderGuideRecommendationCard('Mystery Board', guides, 2)}
     </aside>`;
 }
 function renderScriptDetailPage(script) {
@@ -3777,22 +3773,50 @@ function renderHomeRail({ featuredStory, popularStories, essentialStories }) {
 function renderHomeLeftRail() {
   return `<aside class="home-left-rail article-rail article-rail-left" aria-label="Homepage archive navigation">
       <div class="rail-card"><p class="rail-label">Page Map</p><a href="#archive-start"><span>01</span> Front Entrance</a><a href="#headline-desk"><span>02</span> Headline Desk</a><a href="#reader-paths"><span>03</span> Reader Paths</a><a href="#motif-lanes"><span>04</span> Motif Lanes</a><a href="#categories"><span>05</span> Story Shelves</a><a href="#latest"><span>06</span> Latest Records</a></div>
-      <div class="rail-card rail-card-subtle"><p class="rail-label">Cross Roads</p><a href="/scripts/">Creator Library</a><a href="/mystery-board.html">Mystery Board</a><a href="/tools.html">Tools</a><a href="/fiction-disclaimer.html">Story &amp; Source Notice</a></div>
+      ${renderScriptRecommendationCard('Creator Packages', sortNewest(creatorScripts), 2)}
+      ${renderGuideRecommendationCard('Board Guides', guides, 2)}
+      ${renderLibraryBoardRecommendationCard('Library Board', libraryBoardPosts, 2)}
     </aside>`;
 }
 
 function renderScriptsLeftRail() {
   return `<aside class="home-left-rail article-rail article-rail-left" aria-label="Creator Library navigation">
       <div class="rail-card"><p class="rail-label">Page Map</p><a href="#library-start"><span>01</span> Production Desk</a><a href="#script-board"><span>02</span> Format Desk</a><a href="#featured-scripts"><span>03</span> Featured Scripts</a><a href="#latest-scripts"><span>04</span> Latest Scripts</a><a href="#script-categories"><span>05</span> Script Shelves</a><a href="#creator-resources"><span>06</span> Cross Roads</a></div>
-      <div class="rail-card rail-card-subtle"><p class="rail-label">Cross Roads</p><a href="/archive.html">Mystery Archive</a><a href="/mystery-board.html">Mystery Board</a><a href="/tools.html">Tools</a><a href="/fiction-disclaimer.html">Story &amp; Source Notice</a></div>
+      ${renderStoryRecommendationCard('Archive Records', getKnownRecordStories(), 3)}
+      ${renderGuideRecommendationCard('Board Guides', guides, 2)}
+      ${renderLibraryBoardRecommendationCard('Library Board', libraryBoardPosts, 2)}
     </aside>`;
 }
 
 function renderScriptsBoardLeftRail() {
   return `<aside class="home-left-rail article-rail article-rail-left" aria-label="Library Board navigation">
       <div class="rail-card"><p class="rail-label">Page Map</p><a href="#library-board-start"><span>01</span> Guide Desk</a><a href="#library-board-structure"><span>02</span> Structure Desk</a><a href="#library-board-paths"><span>03</span> Guide Paths</a><a href="#library-board-index"><span>04</span> Board Index</a><a href="#library-board-crossroads"><span>05</span> Cross Roads</a></div>
-      <div class="rail-card rail-card-subtle"><p class="rail-label">Cross Roads</p><a href="/scripts/">Creator Library</a><a href="/archive.html">Mystery Archive</a><a href="/mystery-board.html">Mystery Board</a><a href="/tools.html">Tools</a></div>
+      ${renderScriptRecommendationCard('Creator Packages', sortNewest(creatorScripts), 2)}
+      ${renderStoryRecommendationCard('Archive Records', getKnownRecordStories(), 2)}
+      ${renderGuideRecommendationCard('Mystery Board', guides, 2)}
     </aside>`;
+}
+
+function renderStoryRecommendationCard(label, items, limit = 3) {
+  return renderRailRecommendationCard(label, items, (story) => `/stories/${escapeAttr(story.slug)}`, limit);
+}
+
+function renderScriptRecommendationCard(label, items, limit = 3) {
+  return renderRailRecommendationCard(label, items, (script) => `/scripts/${escapeAttr(script.slug)}`, limit);
+}
+
+function renderGuideRecommendationCard(label, items, limit = 3) {
+  return renderRailRecommendationCard(label, items, (guide) => guide.url || `/mystery-board/${escapeAttr(guide.slug)}`, limit);
+}
+
+function renderLibraryBoardRecommendationCard(label, items, limit = 3) {
+  return renderRailRecommendationCard(label, items, (post) => `/scripts/board/${escapeAttr(post.slug)}/`, limit);
+}
+
+function renderRailRecommendationCard(label, items, hrefForItem, limit) {
+  const links = (items || []).filter(Boolean).slice(0, limit).map((item) => `<a href="${hrefForItem(item)}">${escapeHtml(item.shortTitle || item.title)}</a>`).join('');
+  if (!links) return '';
+  return `<div class="rail-card rail-card-subtle"><p class="rail-label">${escapeHtml(label)}</p>${links}</div>`;
 }
 
 function renderScriptsHomeRail({ featuredScript, latestScripts, creatorCategories }) {
