@@ -374,7 +374,9 @@ function visualDirectionFromProductionScene(scene) {
 function estimateLongformVideoLength(story, longformScript, longformResult) {
   const score = informationDepthScore(story);
   const runtime = buildRuntimePlan(longformScript, '', longformResult);
+  const hasFullProductionShape = (longformScript || []).length >= 15 && runtime.totalWordCount >= 900;
   if (score >= 14 && runtime.finalVideoSeconds >= 480) return '8-10 minutes';
+  if (hasFullProductionShape && runtime.finalVideoSeconds >= 420) return '7-8 minutes';
   if (score >= 10 && runtime.finalVideoSeconds >= 420) return '7-8 minutes';
   if (runtime.finalVideoSeconds >= 360) return '6-7 minutes';
   return '5-6 minutes';
