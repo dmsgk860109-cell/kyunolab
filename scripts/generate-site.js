@@ -13,7 +13,7 @@ const buildArgs = parseBuildArgs(process.argv.slice(2));
 const siteOutputRoot = path.resolve(buildArgs.outputRoot || root);
 const creatorPackOptions = buildArgs.creatorPackRoot ? { root: buildArgs.creatorPackRoot } : {};
 const siteUrl = 'https://kyunolab.com';
-const styleVersion = '20260811-sidebar-ad-top';
+const styleVersion = '20260811-rail-ad-polish';
 const creatorLibraryScriptVersion = '20260722-copy-fields';
 const pageSize = 12;
 const libraryPageSize = 10;
@@ -1064,7 +1064,7 @@ function renderCreatorPortalRail({ featuredScript, latestScripts, creatorCategor
   const latest = latestScripts.slice(0, 4);
   const categoryLinks = creatorCategories.slice(0, 4);
   return `<aside class="home-portal-rail creator-portal-rail" aria-label="Creator Library side paths">
-      ${renderKyunolabNetworkCard('scripts')}
+      ${renderAdSlot('ad-creator-home-rail-top', 'rail-ad-slot')}
       ${featuredScript ? `<section class="rail-card rail-feature"><p class="rail-label">Start here</p><a href="/scripts/${escapeAttr(featuredScript.slug)}"><span>${escapeHtml(featuredScript.genre || 'Script package')}</span><strong>${escapeHtml(featuredScript.title)}</strong></a></section>` : ''}
       <section class="rail-card">
         <p class="rail-label">Latest packages</p>
@@ -1842,7 +1842,6 @@ function renderScriptDetailPage(script) {
         <nav class="breadcrumb script-detail-breadcrumb" aria-label="Breadcrumb"><a href="/scripts/">Creator Library</a><span aria-hidden="true">/</span>${creatorCategory ? `<a href="/scripts/categories/${escapeAttr(creatorCategory.slug)}/">${escapeHtml(creatorCategory.title)}</a><span aria-hidden="true">/</span>` : ''}<span aria-current="page">${escapeHtml(script.title)}</span></nav>
         ${renderScriptDetailLead(script, originalStory, creatorCategory)}
         <section class="notice"><strong>Creator package:</strong> This page is a production-ready script building. It keeps the original archive route, creator format, narration material, image prompts, thumbnails, and reference note connected without turning the package into a category menu.</section>
-        ${renderAdSlot('ad-script-detail-after-intro')}
         <div id="creator-materials" class="script-detail-content-stack">
           ${storyArea}
           ${prepareArea}
@@ -3737,7 +3736,7 @@ function renderHomePortalRail({ popularStories, essentialStories, guideLinks, li
   const guides = guideLinks.slice(0, 3);
   const scripts = libraryScripts.slice(0, 2);
   return `<aside class="home-portal-rail" aria-label="Kyunolab side paths">
-      ${renderKyunolabNetworkCard('archive')}
+      ${renderAdSlot('ad-home-rail-top', 'rail-ad-slot')}
       <section class="rail-card">
         <p class="rail-label">Known Buildings</p>
         ${popular.map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}

@@ -7,7 +7,7 @@ const { buildPublicArticlePlan } = require('./public-article-plan');
 
 const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://kyunolab.com';
-const styleVersion = '20260811-sidebar-ad-top';
+const styleVersion = '20260811-rail-ad-polish';
 const stories = loadStories(root);
 const categories = readJson(path.join(root, 'data', 'categories.json'));
 const scripts = readOptionalJson(path.join(root, 'data', 'scripts.json'), []);
@@ -276,7 +276,6 @@ function renderStoryPage(story, previousStory, nextStory) {
         </div>` : `${renderReadingBridge(story, recommendationSlots.bridge)}
         <div id="story-content" class="story-body archive-entry">
           ${renderOpening(story)}
-          ${renderAdSlot('ad-article-after-opening')}
           ${sections.map((section, index) => `${renderSection(section)}${renderArchiveInsightBox(story, index, sections.length)}`).join('\n')}
           ${renderAdSlot('ad-article-mid-1')}
           ${renderFaq(story)}
@@ -383,7 +382,7 @@ function renderLongformArticle(article) {
   const opening = renderParagraphs(article.opening);
 
   return `<div class="story-body archive-entry longform-archive-entry">
-          ${opening ? `${opening}\n          ${renderAdSlot('ad-article-after-opening')}\n          ` : ''}${storyBody}
+          ${opening ? `${opening}\n          ` : ''}${storyBody}
         </div>
         ${renderAdSlot('ad-article-mid-1')}
         <section class="story-supplement story-qa" aria-labelledby="story-qa-heading">

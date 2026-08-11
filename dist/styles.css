@@ -288,8 +288,8 @@ main.home-shell {
   max-height: calc(100vh - 138px);
   overflow-y: auto;
   overscroll-behavior: contain;
-  padding-right: 4px;
-  scrollbar-gutter: stable;
+  padding-right: 2px;
+  scrollbar-gutter: auto;
   font-family: Arial, sans-serif;
 }
 .home-portal-rail {
@@ -300,9 +300,51 @@ main.home-shell {
   max-height: calc(100vh - 138px);
   overflow-y: auto;
   overscroll-behavior: contain;
-  padding-right: 4px;
-  scrollbar-gutter: stable;
+  padding-right: 2px;
+  scrollbar-gutter: auto;
   font-family: Arial, sans-serif;
+}
+
+.home-left-rail,
+.home-layout > .home-rail,
+.home-portal-rail,
+.article-rail {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(15, 10, 6, .16) transparent;
+}
+.home-left-rail::-webkit-scrollbar,
+.home-layout > .home-rail::-webkit-scrollbar,
+.home-portal-rail::-webkit-scrollbar,
+.article-rail::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+.home-left-rail::-webkit-scrollbar-button,
+.home-layout > .home-rail::-webkit-scrollbar-button,
+.home-portal-rail::-webkit-scrollbar-button,
+.article-rail::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+  display: none;
+}
+.home-left-rail::-webkit-scrollbar-track,
+.home-layout > .home-rail::-webkit-scrollbar-track,
+.home-portal-rail::-webkit-scrollbar-track,
+.article-rail::-webkit-scrollbar-track {
+  background: transparent;
+}
+.home-left-rail::-webkit-scrollbar-thumb,
+.home-layout > .home-rail::-webkit-scrollbar-thumb,
+.home-portal-rail::-webkit-scrollbar-thumb,
+.article-rail::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(15, 10, 6, .12);
+}
+.home-left-rail:hover::-webkit-scrollbar-thumb,
+.home-layout > .home-rail:hover::-webkit-scrollbar-thumb,
+.home-portal-rail:hover::-webkit-scrollbar-thumb,
+.article-rail:hover::-webkit-scrollbar-thumb {
+  background: rgba(15, 10, 6, .28);
 }
 .home-portal-lead {
   display: grid;
@@ -1682,8 +1724,8 @@ h1 {
   max-height: calc(100vh - 138px);
   overflow-y: auto;
   overscroll-behavior: contain;
-  padding-right: 4px;
-  scrollbar-gutter: stable;
+  padding-right: 2px;
+  scrollbar-gutter: auto;
   font-family: Arial, sans-serif;
 }
 .rail-card {
