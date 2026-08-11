@@ -59,7 +59,9 @@ function main() {
   const osirisPath = path.join(DIST, 'scripts/osiris-isis-resurrection-myth-youtube-script.html');
   if (fs.existsSync(osirisPath)) {
     const osiris = fs.readFileSync(osirisPath, 'utf8');
-    if (!osiris.includes('A cinematic mythic documentary scene shows Osiris and Isis introduced through Osiris within Egyptian cultural context')) {
+    const osirisPrompt = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'creator-packs', 'osiris-isis-resurrection-myth-youtube-script.json'), 'utf8'))
+      ?.shortForm?.scenes?.[0]?.imagePrompt;
+    if (!osirisPrompt || !osiris.includes(osirisPrompt.slice(0, 120))) {
       failures.push('Osiris latest Short-form Image Prompt was not found in dist HTML.');
     }
   }

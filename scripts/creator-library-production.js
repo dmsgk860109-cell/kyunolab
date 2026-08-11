@@ -12,7 +12,7 @@ const {
 
 const PRODUCTION_SCHEMA_VERSION = '1.0';
 const SCENE_COUNT = 5;
-const PARTS_PER_SCENE = 2;
+const PARTS_PER_SCENE = 3;
 const INTERNAL_METADATA_PATTERNS = [
   /establish the point/i,
   /develop the point/i,
@@ -201,7 +201,7 @@ function validateCreatorProductionFields(result, scenePlan, longformResult) {
       errors.push(detailError(result, sceneNumber, 0, 0, 'soundEffect', 'Sound Effect contains an unrelated office or digital preset.'));
     }
     if (!Array.isArray(scene.narrationParts) || scene.narrationParts.length !== PARTS_PER_SCENE) {
-      errors.push(detailError(result, sceneNumber, 0, 0, 'narrationParts', 'Each Scene must contain exactly 2 Narration Parts.'));
+      errors.push(detailError(result, sceneNumber, 0, 0, 'narrationParts', 'Each Scene must contain exactly 3 Narration Parts.'));
     }
     const sceneMotions = [];
     (scene.narrationParts || []).forEach((part, partIndex) => {

@@ -63,8 +63,8 @@ function buildCreatorScenePlan(normalizedInput, options = {}) {
   const rules = sceneRulesForContentType(normalizedInput.contentType);
   const warnings = [...(normalizedInput.warnings || [])];
   const missingRequiredFields = [...(normalizedInput.missingRequiredFields || [])];
-  const targetNarrationSeconds = options.targetNarrationSeconds || 295;
-  const targetFinalVideoSeconds = options.targetFinalVideoSeconds || 340;
+  const targetNarrationSeconds = options.targetNarrationSeconds || 430;
+  const targetFinalVideoSeconds = options.targetFinalVideoSeconds || 460;
   const factRecords = Array.isArray(normalizedInput.factRecords) ? normalizedInput.factRecords : [];
   const scenes = rules.map((sceneRule, sceneIndex) => {
     const sceneFacts = selectSceneFactRecords(factRecords, sceneRule, sceneIndex);
@@ -86,9 +86,13 @@ function buildCreatorScenePlan(normalizedInput, options = {}) {
         ? [...normalizedInput.sourceContext, ...normalizedInput.sourceEvidence].filter(Boolean).slice(0, 3)
         : [],
       meaningGuidance: sceneRule.fields.includes('meaningOptions') ? normalizedInput.meaningOptions.slice(0, 3) : [],
-      narrationParts: [0, 1].map((offset) => ({
+      narrationParts: [0, 1, 2].map((offset) => ({
         partIndex: offset + 1,
-        purpose: offset === 0 ? `${sceneRule.role}: establish the point` : `${sceneRule.role}: develop the point`,
+        purpose: offset === 0
+          ? `${sceneRule.role}: establish the point`
+          : offset === 1
+            ? `${sceneRule.role}: develop the point`
+            : `${sceneRule.role}: close the point`,
         sourceFactIds: partFacts[offset].map((record) => record.id),
         sourceFacts: partFacts[offset].map((record) => record.factText),
         sourceFieldRefs,
@@ -154,7 +158,7 @@ function validateCreatorScenePlan(scenePlan) {
       if (isInternalInstruction(fact)) errors.push(`Scene ${sceneIndex + 1} sourceFacts contain internal instruction.`);
       if (isIncompleteFactFragment(fact)) errors.push(`Scene ${sceneIndex + 1} sourceFacts contain incomplete fragment.`);
     }
-    if (!Array.isArray(scene.narrationParts) || scene.narrationParts.length !== 2) errors.push(`Scene ${sceneIndex + 1} must contain exactly 2 narration parts.`);
+    if (!Array.isArray(scene.narrationParts) || scene.narrationParts.length !== 3) errors.push(`Scene ${sceneIndex + 1} must contain exactly 3 narration parts.`);
     (scene.narrationParts || []).forEach((part) => {
       if (!Array.isArray(part.sourceFactIds) || !part.sourceFactIds.length) {
         errors.push(`Scene ${sceneIndex + 1} Part ${part.partIndex || '?'} has no sourceFactIds.`);
@@ -167,8 +171,8 @@ function validateCreatorScenePlan(scenePlan) {
         if (isInternalInstruction(fact)) errors.push(`Scene ${sceneIndex + 1} Part ${part.partIndex || '?'} sourceFacts contain internal instruction.`);
         if (isIncompleteFactFragment(fact)) errors.push(`Scene ${sceneIndex + 1} Part ${part.partIndex || '?'} sourceFacts contain incomplete fragment.`);
       }
-      if (!Number.isFinite(part.targetWords) || part.targetWords < 55 || part.targetWords > 80) {
-        errors.push(`Scene ${sceneIndex + 1} Part ${part.partIndex || '?'} targetWords is outside 55-80.`);
+      if (!Number.isFinite(part.targetWords) || part.targetWords < 58 || part.targetWords > 78) {
+        errors.push(`Scene ${sceneIndex + 1} Part ${part.partIndex || '?'} targetWords is outside 58-78.`);
       }
       totalTargetWords += Number(part.targetWords || 0);
       allPartFacts.push(...(part.sourceFacts || []));
@@ -177,7 +181,7 @@ function validateCreatorScenePlan(scenePlan) {
     validateSceneRoleFactCoverage(scene, factById, rules[sceneIndex], sceneIndex, errors);
   });
 
-  if (totalTargetWords < 620 || totalTargetWords > 760) errors.push(`targetWords total is outside 620-760: ${totalTargetWords}`);
+  if (totalTargetWords < 940 || totalTargetWords > 1080) errors.push(`targetWords total is outside 940-1080: ${totalTargetWords}`);
   if (hasUnreasonableFactDuplication(allPartFacts)) errors.push('Scene Plan repeats the same source fact too often.');
   if (hasUnreasonableFactIdDuplication(allPartFactIds)) errors.push('Scene Plan repeats the same sourceFactId too often.');
 
@@ -272,22 +276,23 @@ function selectRequiredEntities(normalizedInput, sceneRule) {
 }
 
 function splitFactRecordsForParts(sourceFacts) {
-  if (sourceFacts.length >= 4) return [sourceFacts.slice(0, 2), sourceFacts.slice(2, 4)];
-  if (sourceFacts.length >= 3) return [[sourceFacts[0], sourceFacts[1]], [sourceFacts[2]]];
-  if (sourceFacts.length >= 2) return [[sourceFacts[0]], [sourceFacts[1]]];
-  if (sourceFacts.length === 1) return [[sourceFacts[0]], [sourceFacts[0]]];
-  return [[], []];
+  if (sourceFacts.length >= 5) return [sourceFacts.slice(0, 2), sourceFacts.slice(2, 4), sourceFacts.slice(4, 5)];
+  if (sourceFacts.length >= 4) return [sourceFacts.slice(0, 2), sourceFacts.slice(2, 3), sourceFacts.slice(3, 4)];
+  if (sourceFacts.length >= 3) return [[sourceFacts[0]], [sourceFacts[1]], [sourceFacts[2]]];
+  if (sourceFacts.length >= 2) return [[sourceFacts[0]], [sourceFacts[1]], [sourceFacts[0]]];
+  if (sourceFacts.length === 1) return [[sourceFacts[0]], [sourceFacts[0]], [sourceFacts[0]]];
+  return [[], [], []];
 }
 
 function targetWordsForPart(sceneIndex, partIndex) {
   const targets = [
-    [68, 70],
-    [70, 72],
-    [70, 72],
-    [66, 68],
-    [68, 70]
+    [66, 68, 66],
+    [68, 70, 68],
+    [70, 70, 68],
+    [66, 68, 66],
+    [66, 68, 66]
   ];
-  return targets[sceneIndex]?.[partIndex] || 68;
+  return targets[sceneIndex]?.[partIndex] || 66;
 }
 
 function isUsableSceneFact(value) {
@@ -311,13 +316,13 @@ function comparableFact(value) {
 function hasUnreasonableFactDuplication(facts) {
   const counts = new Map();
   facts.map(comparableFact).filter(Boolean).forEach((key) => counts.set(key, (counts.get(key) || 0) + 1));
-  return Array.from(counts.values()).some((count) => count > 7);
+  return Array.from(counts.values()).some((count) => count > 9);
 }
 
 function hasUnreasonableFactIdDuplication(factIds) {
   const counts = new Map();
   factIds.filter(Boolean).forEach((id) => counts.set(id, (counts.get(id) || 0) + 1));
-  return Array.from(counts.values()).some((count) => count > 4);
+  return Array.from(counts.values()).some((count) => count > 6);
 }
 
 function validateFactRefs(factIds, factById, sceneRule, label, errors) {

@@ -8,12 +8,12 @@ const {
 } = require('./creator-library-facts');
 
 const LONGFORM_SCHEMA_VERSION = '1.1';
-const TARGET_TOTAL_MIN_WORDS = 620;
-const TARGET_TOTAL_MAX_WORDS = 760;
-const TARGET_READ_MIN_SECONDS = 265;
-const TARGET_READ_MAX_SECONDS = 325;
-const TARGET_FINAL_MIN_SECONDS = 300;
-const TARGET_FINAL_MAX_SECONDS = 360;
+const TARGET_TOTAL_MIN_WORDS = 900;
+const TARGET_TOTAL_MAX_WORDS = 1120;
+const TARGET_READ_MIN_SECONDS = 380;
+const TARGET_READ_MAX_SECONDS = 500;
+const TARGET_FINAL_MIN_SECONDS = 420;
+const TARGET_FINAL_MAX_SECONDS = 479;
 
 const FORBIDDEN_META_PATTERNS = [
   /Defining Event/i,
@@ -354,23 +354,28 @@ function archiveNarrationPart(source, normalizedInput, sceneIndex, partOffset) {
   const templates = [
     [
       `${subject} opens with ${lowercaseStart(anchor)}. That first image gives the story a body before any explanation arrives, because the viewer can picture the scene before the meaning is fully named. The account begins with a concrete trace, then lets the larger mystery gather around it.`,
-      `After the opening image, the record begins to show why the subject kept moving through memory and retelling. In the archive record, ${topic} belongs to ${category}, so the opening act works as a remembered account with a clear cultural or folkloric frame. The scene stays visible while the story starts stepping farther inward.`
+      `After the opening image, the record begins to show why the subject kept moving through memory and retelling. In the archive record, ${topic} belongs to ${category}, so the opening act works as a remembered account with a clear cultural or folkloric frame. The scene stays visible while the story starts stepping farther inward.`,
+      `The narration stays close to that first trace. The subject is not only introduced; it is approached through a room, road, object, place, or memory that already carries pressure. The opening closes by leaving the image present, waiting for the next detail to explain why it endured. Nothing has to be solved yet; the first scene only has to make the ordinary detail feel charged.`
     ],
     [
       `${sentenceFromFragment(source.whereItAppears || sectionText)} That setting matters because the story did not survive as a loose label. It survived because people could keep returning to the same pressure, the same image, or the same strange question from different directions.`,
-      `${sentenceFromFragment(core[0] || source.summaryAnswer || sectionText)} The account works best when that central movement stays visible. The archive frame keeps the action, the setting, and the source boundary in separate layers, so the story feels wide without turning every detail into one forced answer.`
+      `${sentenceFromFragment(core[0] || source.summaryAnswer || sectionText)} The account works best when that central movement stays visible. The archive frame keeps the action, the setting, and the source boundary in separate layers, so the story feels wide without turning every detail into one forced answer.`,
+      `${sentenceFromFragment(core[1] || core[0] || source.summaryAnswer || sectionText)} This beat moves like story, not a list of notes. The narration can slow down, point to one concrete detail, and then let that detail carry the audience into the next turn. The scene works best when each fact feels discovered in sequence, as if the record is opening one line at a time.`
     ],
     [
       `${sentenceFromFragment(core[1] || anchor)} This is where the account can slow down. The important detail is not decoration; it explains why the story feels recognizable before it feels strange. The image carries memory, fear, belief, or wonder without needing every question answered at once.`,
-      `${sentenceFromFragment(variants[0] || interpretation[0] || sectionText)} ${sentenceFromFragment(variants[1] || uncertainty[0] || source.summaryAnswer || sectionText)} These versions work as branches from the same central material, not as replacements for it. Each one changes the emphasis while keeping the source image close enough to recognize.`
+      `${sentenceFromFragment(variants[0] || interpretation[0] || sectionText)} ${sentenceFromFragment(variants[1] || uncertainty[0] || source.summaryAnswer || sectionText)} These versions work as branches from the same central material, not as replacements for it. Each one changes the emphasis while keeping the source image close enough to recognize.`,
+      `${sentenceFromFragment(core[2] || variants[0] || interpretation[0] || sectionText)} The middle scene lets the pattern become larger. It does not need to solve the story; it needs to show how the same image can keep gathering new weight as the account is repeated. By the end of this beat, the original detail feels less isolated and more like part of a larger tradition.`
     ],
     [
       `${sentenceFromFragment(uncertainty[0] || 'Different retellings preserve different emphases.')} That uncertainty is part of the story itself. There may not be one final authority for every name, place, object, or version. What can be held together is the pattern that made the account memorable in the first place.`,
-      `${sentenceFromFragment(evidence[0] || source.sourceContext || sectionText)} ${evidence[1] ? sentenceFromFragment(evidence[1]) : ''} ${referenceNames ? `For orientation, the archive points toward ${referenceNames}.` : 'The archive keeps public references visible for orientation.'} Those sources act as guardrails, keeping the story vivid without pretending that every detail has the same certainty.`
+      `${sentenceFromFragment(evidence[0] || source.sourceContext || sectionText)} ${evidence[1] ? sentenceFromFragment(evidence[1]) : ''} ${referenceNames ? `For orientation, the archive points toward ${referenceNames}.` : 'The archive keeps public references visible for orientation.'} Those sources act as guardrails, keeping the story vivid without pretending that every detail has the same certainty.`,
+      `${sentenceFromFragment(uncertainty[1] || evidence[0] || source.sourceContext || sectionText)} The narration can acknowledge limits without becoming cold. This is the part where the story remains alive, while the source trail separates tradition, later retelling, and careful possibility. That separation gives the ending more trust, because the mystery is not being flattened into certainty.`
     ],
     [
       `${sentenceFromFragment(source.whyItMatters || source.summaryAnswer || sectionText)} The ending returns to the same image from the beginning. By then, the detail can hold story, setting, memory, and interpretation without needing one final answer.`,
-      `${sentenceFromFragment(interpretation[0] || source.summaryAnswer || sectionText)} ${keywordLine ? `Terms such as ${keywordLine} describe how the story is actually recognized.` : 'The closing details stay close to the images that made the story recognizable.'} The ending leaves ${topic} as a clear archive subject: not a flattened summary, but a story that stays memorable because the first image still feels open.`
+      `${sentenceFromFragment(interpretation[0] || source.summaryAnswer || sectionText)} ${keywordLine ? `Terms such as ${keywordLine} describe how the story is actually recognized.` : 'The closing details stay close to the images that made the story recognizable.'} The ending leaves ${topic} as a clear archive subject: not a flattened summary, but a story that stays memorable because the first image still feels open.`,
+      `Close by returning to the story rather than to a checklist. The final beat leaves ${topic} with a usable shape for narration: a beginning image, a sequence of pressure, a careful source boundary, and one lingering reason the story can still be told. The last line can feel quiet, because the strongest image is already doing the work.`
     ]
   ];
   return cleanNarrationText(templates[sceneIndex]?.[partOffset] || sectionText);
@@ -757,8 +762,8 @@ function validateCreatorLongform(result, scenePlan) {
 
   (result?.scenes || []).forEach((scene, sceneIndex) => {
     if (scene.sceneIndex !== sceneIndex + 1) errors.push(`Scene ${sceneIndex + 1} has invalid sceneIndex.`);
-    if (!Array.isArray(scene.narrationParts) || scene.narrationParts.length !== 2) {
-      errors.push(`Scene ${sceneIndex + 1} must contain 2 narration parts.`);
+    if (!Array.isArray(scene.narrationParts) || scene.narrationParts.length !== 3) {
+      errors.push(`Scene ${sceneIndex + 1} must contain 3 narration parts.`);
     }
     (scene.narrationParts || []).forEach((part) => {
       const label = `Scene ${sceneIndex + 1} Part ${part.partIndex || '?'}`;
@@ -786,15 +791,15 @@ function validateCreatorLongform(result, scenePlan) {
     });
   });
 
-  if (allParts.length !== 10) errors.push(`Long-form must contain exactly 10 narration parts, found ${allParts.length}.`);
+  if (allParts.length !== 15) errors.push(`Long-form must contain exactly 15 narration parts, found ${allParts.length}.`);
   void factUseCounts;
   if (result.totalWordCount !== countWords(allNarrationTexts.join(' '))) errors.push('Long-form totalWordCount does not match narration.');
-  if (result.totalWordCount < 550 || result.totalWordCount > 830) {
-    errors.push(`Long-form total word count outside 550-830: ${result.totalWordCount}`);
+  if (result.totalWordCount < TARGET_TOTAL_MIN_WORDS || result.totalWordCount > TARGET_TOTAL_MAX_WORDS) {
+    errors.push(`Long-form total word count outside ${TARGET_TOTAL_MIN_WORDS}-${TARGET_TOTAL_MAX_WORDS}: ${result.totalWordCount}`);
   }
   if (result.narrationReadSeconds !== estimateNarrationReadTime(allNarrationTexts.join(' '))) errors.push('Long-form read time does not match narration.');
-  if (result.narrationReadSeconds < 235 || result.narrationReadSeconds > 355) {
-    errors.push(`Narration read time outside 235-355 seconds: ${result.narrationReadSeconds}`);
+  if (result.narrationReadSeconds < TARGET_READ_MIN_SECONDS || result.narrationReadSeconds > TARGET_READ_MAX_SECONDS) {
+    errors.push(`Narration read time outside ${TARGET_READ_MIN_SECONDS}-${TARGET_READ_MAX_SECONDS} seconds: ${result.narrationReadSeconds}`);
   }
   if (result.targetFinalVideoSeconds < result.narrationReadSeconds) errors.push('Final video seconds must not be shorter than narration read seconds.');
   if (result.targetFinalVideoSeconds < TARGET_FINAL_MIN_SECONDS || result.targetFinalVideoSeconds > TARGET_FINAL_MAX_SECONDS) {
