@@ -1475,7 +1475,12 @@ function detectShortformFactlessScene(scene, field = 'narration', context = {}) 
   const overlap = factTexts.some((fact) => tokenOverlap(value, fact) >= 2);
   if (overlap) return false;
   const entityOverlap = (scene?.usedFactTexts || []).some((fact) => hasEntityLikeOverlap(value, fact));
-  return !entityOverlap;
+  if (entityOverlap) return false;
+  if (field === 'sceneFocus') {
+    const narration = sanitizeShortformText(scene?.narration);
+    if (narration && (tokenOverlap(value, narration) >= 2 || hasEntityLikeOverlap(value, narration))) return false;
+  }
+  return true;
 }
 
 function tokenOverlap(value, text) {
