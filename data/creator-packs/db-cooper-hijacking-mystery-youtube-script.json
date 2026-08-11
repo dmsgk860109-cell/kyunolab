@@ -1,338 +1,189 @@
 {
   "contentType": "script",
-  "coreMotif": "Unsolved Case",
+  "coreMotif": "Ransom, Parachute, and Vanishing Identity",
   "creatorCategorySlug": "unexplained-mysteries",
   "creatorPipelineVersion": "single-path-v1",
-  "deck": "D.B. Cooper Hijacking is prepared as a creator-ready production workspace based on the archive record, with long-form scenes, Shorts narration, image prompts, music keywords, and editing notes.",
-  "difficulty": "Beginner-friendly production package",
-  "estimatedVideoLength": "5-6 minutes",
+  "deck": "A source-based image and narration package for D.B. Cooper hijacking mystery, built from the Kyunolab archive record with 5 scenes, 15 voiceover beats, image prompts, and restrained production notes for a 7-8 minute video.",
+  "difficulty": "Beginner-friendly image and narration production package",
+  "estimatedVideoLength": "7-8 minutes",
   "genre": "Unexplained Mysteries Creator Library",
   "id": "db-cooper-hijacking-mystery-youtube-script",
   "imagePrompts": [
-    "A realistic location-documentary style image shows Ordinary placed within ordinary records with unresolved details in the 1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Ordinary, records, unresolved as supporting visual details. This should feel like an opening visual with one clear focal point during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Cooper held as the central visual in the 1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Cooper, Cooper Hijacking, Hijacking as supporting visual details. This should feel like an opening visual that adds a second visual detail during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Cooper connected to on November 24, 1971, a man using the name Dan Cooper boarded Northwest Orient Flight 305 from Portland to Seattle in the 1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified. Frame one clear scene as a close visual detail that supports the current narration, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Cooper, name, November as supporting visual details. This should feel like an opening visual that widens the frame without adding new story elements during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Cooper connected to on November 24, 1971, a man using the name Dan Cooper boarded Northwest Orient Flight 305 from Portland to Seattle in the 1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Cooper, name, November as supporting visual details. This should feel like a follow-up visual with one clear focal point during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows D connected to 1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified in the 1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include D, Hijacking, airplane as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Ordinary placed within ordinary records with unresolved details in the 1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified. Frame one clear scene as a close visual detail that supports the current narration, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Ordinary, records, unresolved as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Cooper connected to on November 24, 1971, a man using the name Dan Cooper boarded Northwest Orient Flight 305 from Portland to Seattle in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Cooper, name, November as supporting visual details. This should feel like an opening visual with one clear focal point during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows D shown through source material connected to unexplained Mysteries / Unsolved Case / Evidence-limited public record in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a medium composition that shows the important action or state, with low directional light with restrained contrast, documentary uncertainty, and cultural context from public. Include D, Unsolved Case, record as supporting visual details. This should feel like an opening visual that adds a second visual detail during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Aviation connected to aviation records in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a close visual detail that supports the current narration, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Aviation, records, Cooper as supporting visual details. This should feel like an opening visual that widens the frame without adding new story elements during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Aviation connected to aviation records in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Aviation, records, Cooper as supporting visual details. This should feel like a follow-up visual with one clear focal point during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows D connected to 1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a medium composition that shows the important action or state, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Unexplained Mysteries. Include D, Hijacking, airplane as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Cooper connected to on November 24, 1971, a man using the name Dan Cooper boarded Northwest Orient Flight 305 from Portland to Seattle in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a close visual detail that supports the current narration, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Cooper, name, November as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Cooper connected to on November 24, 1971, a man using the name Dan Cooper boarded Northwest Orient Flight 305 from Portland to Seattle in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a clear tabletop or archival composition, with soft archival light, careful documentary restraint, and cultural context from Unexplained Mysteries. Include Cooper, name, November as supporting visual details. This should feel like an opening visual with one clear focal point during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows D shown through source material connected to unexplained Mysteries / Unsolved Case / Evidence-limited public record in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a medium frame that separates the main subject from supporting evidence, with soft archival light, careful documentary restraint, and cultural context from public. Include D, Unsolved Case, record as supporting visual details. This should feel like an opening visual that adds a second visual detail during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows D.B. Cooper shown through source material connected to the case left behind physical and documentary fragments: witness descriptions, a tie, parachute material, aircraft evidence, and serial-numbered ransom bills in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a medium frame that separates the main subject from supporting evidence, with soft archival light, careful documentary restraint, and cultural context from Unexplained Mysteries. Include behind, physical, documentary as supporting visual details. This should feel like a follow-up visual with one clear focal point during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Cooper connected to on November 24, 1971, a man using the name Dan Cooper boarded Northwest Orient Flight 305 from Portland to Seattle in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a close archival detail with the source boundary visible, with soft archival light, careful documentary restraint, and cultural context from Unexplained Mysteries. Include Cooper, name, November as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Cooper connected to on November 24, 1971, a man using the name Dan Cooper boarded Northwest Orient Flight 305 from Portland to Seattle in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a close archival detail with the source boundary visible, with soft archival light, careful documentary restraint, and cultural context from Unexplained Mysteries. Include Cooper, name, November as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows D associated with a variant where the FBI investigated hundreds of people and considered many suspects, but no identity was confirmed in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include D, FBI, investigated as supporting visual details. This should feel like an opening visual with one clear focal point during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows D shown through source material connected to unexplained Mysteries / Unsolved Case / Evidence-limited public record in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from public. Include D, Unsolved Case, record as supporting visual details. This should feel like an opening visual that adds a second visual detail during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Cooper framed by the interpretation that the Cooper case lasts because the ending happens in the dark in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Cooper, lasts, because as supporting visual details. This should feel like a follow-up visual with one clear focal point during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows D associated with a variant where source and variant record in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include D, record, variant as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Cooper framed by the interpretation that the Cooper case lasts because the ending happens in the dark in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a wide reflective composition with negative space, with subdued fading light, quiet reflective tension, and cultural context from Unexplained Mysteries. Include Cooper, lasts, because as supporting visual details. This should feel like an opening visual with one clear focal point during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Cooper connected to the Cooper case lasts because the ending happens in the dark in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, and cultural context from Unexplained Mysteries. Include Cooper, lasts, because as supporting visual details. This should feel like an opening visual that adds a second visual detail during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Cooper connected to one possible reading is that the Cooper case lasts because the ending happens in the dark in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, and cultural context from Unexplained Mysteries. Include Cooper, possible, reading as supporting visual details. This should feel like an opening visual that widens the frame without adding new story elements during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Cooper connected to one possible reading is that the Cooper case lasts because the ending happens in the dark in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, and cultural context from Unexplained Mysteries. Include Cooper, possible, reading as supporting visual details. This should feel like a follow-up visual with one clear focal point during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows D shown through source material connected to unexplained Mysteries / Unsolved Case / Evidence-limited public record in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a wider reflective frame that keeps the ending unresolved, with subdued fading light, quiet reflective tension, and cultural context from public. Include D, Unsolved Case, record as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Cooper framed by the interpretation that the Cooper case lasts because the ending happens in the dark in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a wider reflective frame that keeps the ending unresolved, with subdued fading light, quiet reflective tension, and cultural context from Unexplained Mysteries. Include Cooper, lasts, because as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the final sequence. No gore, readable text, logos, watermarks, or modern objects."
+    "1970s airport boarding gate atmosphere with suited anonymous man silhouette, no logos, 1970s, procedural, rainy, restrained, unresolved mood, source-aware documentary style.",
+    "airplane cabin seat with briefcase under low light, no readable note, 1970s, procedural, rainy, restrained, unresolved mood, source-aware documentary style.",
+    "ransom money bundles on plain table, documentary restraint, no serial numbers readable, 1970s, procedural, rainy, restrained, unresolved mood, source-aware documentary style.",
+    "flight path map with blurred route lines, no readable city names, 1970s, procedural, rainy, restrained, unresolved mood, source-aware documentary style.",
+    "parachute pack beside dark airplane interior, tense procedural mood, 1970s, procedural, rainy, restrained, unresolved mood, source-aware documentary style.",
+    "stewardess viewpoint toward empty aisle and suited figure silhouette, 1970s, procedural, rainy, restrained, unresolved mood, source-aware documentary style.",
+    "rear aircraft stairs open to rainy night sky, no figure close-up, 1970s, procedural, rainy, restrained, unresolved mood, source-aware documentary style.",
+    "dark forest below storm clouds from high altitude, cinematic but restrained, 1970s, procedural, rainy, restrained, unresolved mood, source-aware documentary style.",
+    "money bag silhouette against aircraft doorway, no action spectacle, 1970s, procedural, rainy, restrained, unresolved mood, source-aware documentary style.",
+    "investigation desk with tie, ticket stub, and blank evidence cards, 1970s, procedural, rainy, restrained, unresolved mood, source-aware documentary style.",
+    "riverbank with weathered cash fragments implied, no readable bills, 1970s, procedural, rainy, restrained, unresolved mood, source-aware documentary style.",
+    "search team lights in rainy forest distance, respectful documentary style, 1970s, procedural, rainy, restrained, unresolved mood, source-aware documentary style.",
+    "suspect board with faces obscured and strings, no readable names, 1970s, procedural, rainy, restrained, unresolved mood, source-aware documentary style.",
+    "empty airplane seat after landing, briefcase gone, quiet unresolved, 1970s, procedural, rainy, restrained, unresolved mood, source-aware documentary style.",
+    "final rainy forest under night sky with aircraft lights fading away, 1970s, procedural, rainy, restrained, unresolved mood, source-aware documentary style."
   ],
   "imagePromptsIncluded": true,
-  "logline": "D.B. Cooper is treated through one concrete anchor: the 1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified.",
+  "logline": "D.B. Cooper becomes a production package about the calm hijacker who took ransom money, jumped into the night, and left one of America's most enduring unresolved identities.",
   "longformIncluded": true,
   "longformScript": [
-    "The setting gives the scene a concrete frame: Ordinary records with unresolved details. The account identifies the central subject clearly: Cooper Hijacking: Ransom, Parachute, and the Unsolved Man in the Suit. The action moves through a specific event: On November 24, 1971, a man using the name Dan Cooper boarded Northwest Orient Flight 305 from Portland to Seattle.",
-    "The story starts from a clear disturbance: 1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified. The opening identity is already specific: Db cooper hijacking mystery. The next fact gives the sequence a concrete action: The FBI closed active resource commitment to the case in 2016, but the recovered ransom money, the tie, the alias, and the unanswered jump keep the mystery alive.",
-    "The source trail matters before the claim is treated as certain: Unexplained Mysteries / Unsolved Case / Evidence-limited public record. The account then gives a direct movement: Aviation records is one event in the main sequence. The action moves through a specific event: Cooper is the name attached to the unknown man who hijacked Northwest Orient Flight 305 on November 24, 1971, received $200,000 in ransom, and parachuted from the aircraft into the night.",
-    "The surviving record gives the narration a source limit: Cooper appears in source material connected with FBI case history and later public-history summaries of the NORJAK investigation. The surviving record gives the narration a source limit: References such as FBI and HISTORY are used as orientation points, not as proof for every later claim. The surviving record gives the narration a source limit: Cooper is treated through FBI case history and later public-history summaries of the NORJAK investigation.",
-    "The scene has a clear visible point: On November 24, 1971, a man using the name Dan Cooper boarded Northwest Orient Flight 305 from Portland to Seattle. The account stays careful because the evidence has boundaries: The case left behind physical and documentary fragments: witness descriptions, a tie, parachute material, aircraft evidence, and serial-numbered ransom bills. The next fact gives the sequence a concrete action: On November 24, 1971, a man using the name Dan Cooper boarded Northwest Orient Flight 305 from Portland to Seattle.",
-    "The source trail matters before the claim is treated as certain: Later retellings do not always keep the same emphasis. The account then gives a direct movement: Cooper turns on one missing or unresolved point: the 1971 airplane hijacking in which a man parachuted into the night with ransom money. The action moves through a specific event: The FBI investigated hundreds of people and considered many suspects, but no identity was confirmed.",
-    "The versions do not always preserve the same emphasis: The FBI investigated hundreds of people and considered many suspects, but no identity was confirmed. One interpretation stays close to the material: The Cooper case lasts because the ending happens in the dark. The versions do not always preserve the same emphasis: Source and variant record. The versions do not always preserve the same emphasis: Cooper itself came from media confusion.",
-    "The symbolic reading grows out of the recorded details: Cooper Hijacking is best read as an unexplained mysteries entry built around 1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified. The symbolic reading grows out of the recorded details: Cooper is treated through one concrete anchor: the 1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified.",
-    "The ending depends on what changes afterward: The Cooper case lasts because the ending happens in the dark. The result is stated through a concrete outcome: One possible reading is that the Cooper case lasts because the ending happens in the dark. The ending depends on what changes afterward: 1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified.",
-    "The surviving record gives the narration a source limit: The FBI investigated hundreds of people and considered many suspects, but no identity was confirmed. The surviving record gives the narration a source limit: Those references are useful for keeping official records, witness claims, and unresolved details separate. The surviving record gives the narration a source limit: Cooper, unresolved points stay unresolved when the available record does not close them."
+    "The D.B. Cooper mystery begins with calm, not chaos. A man in a suit boards a plane, passes a note, claims to have a bomb, and begins one of the most famous unsolved cases in American memory. The unsettling detail is composure. He does not look like a myth at first. He looks ordinary enough to disappear. The ordinary suit makes the mystery harder to close, because the figure could almost vanish into any crowd. His calmness gives the case a strange pressure, as if the drama is happening under a controlled surface.",
+    "That ordinary appearance is central to the legend. Cooper becomes memorable because he is both specific and blank. There is a flight, a ransom, parachutes, weather, crew testimony, and later evidence. But the person at the center remains unfinished. The name itself is partly an accident of reporting and memory. The blank center gives the case its afterlife; a known criminal would have ended the myth differently. The mistaken or borrowed name helps turn the person into an outline rather than a finished biography.",
+    "The strongest opening holds the contradiction: a crime with many concrete details and an identity that refuses to settle. The man in the suit enters history through procedure, negotiation, and aviation records, then exits into rain, darkness, and argument. Procedure gives the story credibility, while the disappearance gives it legend. The details make the event firm while the missing identity keeps it open.",
+    "The hijacking's structure gives the story its grip. Cooper presents a threat, demands money and parachutes, releases passengers, and keeps the crew involved in a controlled sequence. The details feel procedural rather than chaotic, which makes the later disappearance even stranger. The controlled sequence makes Cooper feel prepared, and preparation makes his vanishing more disturbing. Every procedural step adds credibility to the later impossibility of the escape.",
+    "Aviation gives the mystery a narrow stage. The cabin, the note, the briefcase, the crew, the ransom, and the instructions all unfold inside a machine moving through weather. The audience can picture the limits: metal walls, scheduled flight, official response, and a man preparing to step outside them. The aircraft narrows the world to a cabin, a crew, a briefcase, and decisions made under pressure. The cabin becomes a contained stage where ordinary travel turns into negotiation.",
+    "The ransom money gives the case physical weight. Cash can be counted, bundled, tracked, lost, found, or searched for. It turns the story from rumor into investigation. Even when the man vanishes, the money keeps asking where the path went. The money keeps the event physical, a bundle of proof that can survive after the man disappears. The ransom is tangible enough to count but not enough to explain where he went.",
+    "The jump is the image that makes D.B. Cooper legendary. A man opens the rear stairs of an aircraft and leaves with ransom money into a cold, dark, rainy night. Whether he survived is the question that keeps the case alive. The act is bold, desperate, calculated, and nearly impossible to watch directly. The jump turns the case from negotiation into wilderness mystery. The night jump is the point where documentation gives way to weather.",
+    "The landscape below matters because it becomes the mystery's receiving surface. Forest, river, weather, altitude, and uncertainty replace the controlled cabin. Once Cooper jumps, the case leaves witnesses behind. The sky takes him out of the story, and the ground does not immediately give him back. The ground below becomes a silent accomplice because it receives the answer and gives back almost nothing. Forest and river become part of the case because they may have received what witnesses could not see.",
+    "That absence is more powerful than a clear chase. The moment after the jump is almost silent. Investigators can estimate, search, map, and theorize, but the central image remains a man disappearing from an aircraft into darkness with a bag of money. The absence after the jump is what lets the case keep expanding through theory. The search keeps returning to the same gap: a man left the plane, and the story did not end.",
+    "The investigation gives the mystery a long afterlife. Suspects appear, theories develop, physical evidence is examined, and the case becomes part of American crime folklore. Yet the evidence never closes the loop. The story keeps producing possible answers without producing one final identity. The investigation becomes a long corridor of partial answers. The final mystery is not only survival, but whether a documented person can vanish into an unfinished name.",
+    "The later discovery of ransom money along the Columbia River gave the case one of its most haunting images. Money that should have vanished with the man reappears, damaged and partial. It proves the story touched the ground somewhere, but it does not explain the ending. The river money is haunting because it is both evidence and refusal.",
+    "That is the pattern of the case. Each clue narrows something and opens something else. A tie, a ticket, a note described but not preserved, parachutes, flight path, weather, and money all matter. Together they create a case that feels knowable in pieces and unreachable as a whole. Each clue adds texture without giving the story a final face.",
+    "By the end, D.B. Cooper is not only a hijacking case. It is a story about identity disappearing under documentation. The event is recorded, investigated, and remembered, but the person slips past the archive. The more details survive, the more striking the blank center becomes. The archive records the act while the actor remains unfinished.",
+    "The strongest ending avoids declaring a suspect without proof. The mystery does not need a false conclusion. Its power comes from the gap between action and identity. Someone did this. Someone prepared, spoke, waited, jumped, and vanished. The archive can show the outline but not the face. A false certainty would shrink the case; the open identity is what keeps it alive.",
+    "The final image is not a triumphant escape or a confirmed death. It is rain over dark forest and a plane continuing without the man who changed its story. D.B. Cooper remains unforgettable because he stepped out of a documented event and into unresolved American legend. The night holds the final answer just beyond the reach of every later search."
   ],
-  "mainSubject": "D.B. Cooper Hijacking",
-  "metaDescription": "A creator-ready production workspace for D.B. Cooper Hijacking, with long-form scenes, Shorts narration, image prompts, music keywords, and editing notes.",
-  "mood": "documentary, unresolved, and tense",
+  "mainSubject": "D.B. Cooper hijacking mystery",
+  "metaDescription": "A 7-8 minute source-based D.B. Cooper hijacking mystery video script with story-led narration, image prompts, Shorts script, thumbnail ideas, and production workflow.",
+  "mood": "1970s, procedural, rainy, restrained, unresolved",
   "motionPrompts": [
-    "Use a slow controlled push toward Ordinary, with placed within ordinary records with unresolved details staying fixed as the opening anchor and Ordinary visible. Use only light shifts that match the place or event mystery tone.",
-    "Use a restrained lateral pan across the 1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified, letting Cooper hold the opening detail while Cooper Hijacking stays in frame. Use only light shifts that match the place or event mystery tone.",
-    "Start with a static hold, then pull back slightly to reveal connected to on November 24, 1971, a man using the name Dan Cooper boarded and November within the wider frame. Use only light shifts that match the place or event mystery tone.",
-    "Use a restrained lateral pan across the 1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified, letting Cooper hold the follow-up anchor while Cooper stays in frame. Use only light shifts that match the place or event mystery tone.",
-    "Start with a static hold, then pull back slightly to reveal connected to 1971 airplane hijacking in which a man parachuted into the night and Hijacking within the wider frame. Use only light shifts that match the place or event mystery tone.",
-    "Use a slow controlled push toward Ordinary, with placed within ordinary records with unresolved details staying fixed as the follow-up wider frame and unresolved visible. Use only light shifts that match the place or event mystery tone.",
-    "Use a slow controlled push toward Cooper, with connected to on November 24, 1971, a man using the name Dan Cooper boarded staying fixed as the opening anchor and Cooper visible. Use only light shifts that match the place or event mystery tone.",
-    "Use a restrained lateral pan across FBI case history and later public-history summaries of the NORJAK investigation, letting D hold the opening detail while Unsolved Case stays in frame. Use only light shifts that match the place or event mystery tone.",
-    "Start with a static hold, then pull back slightly to reveal connected to aviation records and Cooper within the wider frame. Use only light shifts that match the place or event mystery tone.",
-    "Use a restrained lateral pan across FBI case history and later public-history summaries of the NORJAK investigation, letting Aviation hold the follow-up anchor while Aviation stays in frame. Use only light shifts that match the place or event mystery tone.",
-    "Start with a static hold, then pull back slightly to reveal connected to 1971 airplane hijacking in which a man parachuted into the night and Hijacking within the wider frame. Use only light shifts that match the place or event mystery tone. Let Hijacking remain the distinct a follow-up visual that adds a second visual detail.",
-    "Use a slow controlled push toward Cooper, with connected to on November 24, 1971, a man using the name Dan Cooper boarded staying fixed as the follow-up wider frame and November visible. Use only light shifts that match the place or event mystery tone.",
-    "Use a slow controlled push toward Cooper, with connected to on November 24, 1971, a man using the name Dan Cooper boarded staying fixed as the opening anchor and Cooper visible. Keep the movement restrained and documentary.",
-    "Use a restrained lateral pan across FBI case history and later public-history summaries of the NORJAK investigation, letting D hold the opening detail while Unsolved Case stays in frame. Keep the movement restrained and documentary.",
-    "Use a restrained lateral pan across FBI case history and later public-history summaries of the NORJAK investigation, letting D.B. Cooper hold the follow-up anchor while behind stays in frame. Keep the movement restrained and documentary.",
-    "Start with a static hold, then pull back slightly to reveal connected to on November 24, 1971, a man using the name Dan Cooper boarded and name within the wider frame. Keep the movement restrained and documentary.",
-    "Use a slow controlled push toward Cooper, with connected to on November 24, 1971, a man using the name Dan Cooper boarded staying fixed as the follow-up wider frame and November visible. Keep the movement restrained and documentary.",
-    "Use a slow controlled push toward D, with associated with a variant where the FBI investigated hundreds of people and considered many staying fixed as the opening anchor and D visible. Use only light shifts that match the place or event mystery tone.",
-    "Use a restrained lateral pan across FBI case history and later public-history summaries of the NORJAK investigation, letting D hold the opening detail while Unsolved Case stays in frame. Use only light shifts that match the place or event mystery tone. Let Unsolved Case remain the distinct an opening visual that adds a second visual detail.",
-    "Use a restrained lateral pan across FBI case history and later public-history summaries of the NORJAK investigation, letting Cooper hold the follow-up anchor while Cooper stays in frame. Use only light shifts that match the place or event mystery tone.",
-    "Start with a static hold, then pull back slightly to reveal associated with a variant where source and variant record and record within the wider frame. Use only light shifts that match the place or event mystery tone.",
-    "Use a slow controlled push toward Cooper, with framed by the interpretation that the Cooper case lasts because the ending happens in staying fixed as the opening anchor and Cooper visible. End with a slow hold and no new action.",
-    "Use a restrained lateral pan across FBI case history and later public-history summaries of the NORJAK investigation, letting Cooper hold the opening detail while lasts stays in frame. End with a slow hold and no new action.",
-    "Start with a static hold, then pull back slightly to reveal connected to one possible reading is that the Cooper case lasts because the ending and reading within the wider frame. End with a slow hold and no new action.",
-    "Use a restrained lateral pan across FBI case history and later public-history summaries of the NORJAK investigation, letting Cooper hold the follow-up anchor while Cooper stays in frame. End with a slow hold and no new action.",
-    "Start with a static hold, then pull back slightly to reveal shown through source material connected to unexplained Mysteries / Unsolved Case / Evidence-limited public and Unsolved Case within the wider frame. End with a slow hold and no new action.",
-    "Use a slow controlled push toward Cooper, with framed by the interpretation that the Cooper case lasts because the ending happens in staying fixed as the follow-up wider frame and because visible. End with a slow hold and no new action."
+    "Optional edit: slow push toward the central shape while the 1970s airport boarding gate atmosphere with suited anonymous man silhouette remains the focus.",
+    "Optional edit: restrained lateral drift across the frame while the airplane cabin seat with briefcase under low light remains the focus.",
+    "Optional edit: slow hold with a tiny light change while the ransom money bundles on plain table remains the focus.",
+    "Optional edit: gentle pullback that leaves negative space while the flight path map with blurred route lines remains the focus.",
+    "Optional edit: slow fade from foreground object to background threshold while the parachute pack beside dark airplane interior remains the focus.",
+    "Optional edit: slow push toward the central shape while the stewardess viewpoint toward empty aisle and suited figure silhouette remains the focus.",
+    "Optional edit: restrained lateral drift across the frame while the rear aircraft stairs open to rainy night sky remains the focus.",
+    "Optional edit: slow hold with a tiny light change while the dark forest below storm clouds from high altitude remains the focus.",
+    "Optional edit: gentle pullback that leaves negative space while the money bag silhouette against aircraft doorway remains the focus.",
+    "Optional edit: slow fade from foreground object to background threshold while the investigation desk with tie remains the focus.",
+    "Optional edit: slow push toward the central shape while the riverbank with weathered cash fragments implied remains the focus.",
+    "Optional edit: restrained lateral drift across the frame while the search team lights in rainy forest distance remains the focus.",
+    "Optional edit: slow hold with a tiny light change while the suspect board with faces obscured and strings remains the focus.",
+    "Optional edit: gentle pullback that leaves negative space while the empty airplane seat after landing remains the focus.",
+    "Optional edit: slow fade from foreground object to background threshold while the final rainy forest under night sky with aircraft lights fading away remains the focus."
   ],
   "originalStorySlug": "db-cooper-hijacking-mystery",
   "pipelineDiagnostics": {
     "fallbackUsed": false,
+    "finalPolish": "raised batch 002 narration to seven-minute range",
+    "imagePromptCount": 15,
+    "motionPromptCount": 15,
+    "narrationBeatCount": 15,
     "normalizedInputSchemaVersion": "1.0",
-    "scenePlanSchemaVersion": "1.0"
+    "polishedAt": "2026-08-12",
+    "polishedBy": "codex-manual-source-based-batch-002-polish",
+    "qualityDirection": "raise narration length and remove production-like narration phrasing",
+    "regeneratedAt": "2026-08-12",
+    "regeneratedBy": "codex-manual-source-based-batch-002",
+    "sceneCount": 5,
+    "scenePlanSchemaVersion": "1.0",
+    "shortSceneCount": 5,
+    "sourceStorySlug": "db-cooper-hijacking-mystery"
   },
   "publishedAt": "2026-07-21",
   "runtimePlan": {
-    "estimatedFinalRuntime": "5-6 minutes",
-    "estimatedFinalSeconds": 341,
-    "finalVideoSeconds": 341,
-    "narrationReadSeconds": 306,
-    "narrationReadTime": "5 min 06 sec",
-    "plannedTransitionAndVisualTime": "35 sec",
-    "totalWordCount": 719
+    "estimatedFinalRuntime": "7-8 minutes",
+    "estimatedFinalSeconds": 480,
+    "finalVideoSeconds": 480,
+    "narrationReadSeconds": 447,
+    "narrationReadTime": "7 min 27 sec",
+    "plannedTransitionAndVisualTime": "0 min 33 sec",
+    "totalWordCount": 1051
   },
   "schemaVersion": "single-path-v1",
   "seoTitle": "Free D.B. Cooper Hijacking YouTube Script",
   "setting": "quiet archival setting",
   "shortForm": {
-    "finalVideoSeconds": 58,
-    "narrationReadSeconds": 46,
+    "finalVideoSeconds": 60,
+    "narrationReadSeconds": 58,
     "scenes": [
       {
-        "backgroundMusic": "quiet opening pulse, low drone, slow piano, short-form low density",
-        "estimatedReadSeconds": 7,
-        "imagePrompt": "A atmospheric location documentary scene shows D.B. Cooper introduced through Cooper within a quiet archive-like workspace with physical evidence nearby, framed as a vertical short-form frame with strong negative space. Use natural low light with restrained contrast and documentary mystery atmosphere within the story culture and source context; center the frame on Cooper. No readable text, logos, watermarks, modern objects, graphic gore, or cartoon styling.",
-        "motionPrompt": "Use a slow controlled push toward D.B. Cooper, keeping Cooper as the central visual anchor.",
-        "narration": "Cooper starts with november 24, 1971, a man using the name Dan. Ordinary records with unresolved details.",
-        "role": "What and Where",
-        "sceneFocus": "What and Where: D.B. Cooper tied to november 24, 1971, a man using.",
+        "backgroundMusic": "compact atmospheric bed matching the long-form tone",
+        "estimatedReadSeconds": 24,
+        "imagePrompt": "Vertical documentary image: 1970s airport boarding gate atmosphere with suited anonymous man silhouette, no logos, clear single focal point, no readable text, no logos, no modern UI unless the subject requires modern digital context.",
+        "motionPrompt": "Slow restrained movement that supports the narration without adding new story events.",
+        "narration": "The D.B. Cooper mystery begins with calm, not chaos. A man in a suit boards a plane, passes a note, claims to have a bomb, and begins one of the most famous unsolved cases in American memory. The unsettling detail is composure. He does not look like a myth at first. He looks ordinary enough to disappear.",
+        "role": "Opening Hook",
+        "sceneFocus": "A calm man becomes an unsolved name.",
         "sceneIndex": 1,
-        "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-        "sourceFactIds": [
-          "fact-001",
-          "fact-014",
-          "fact-002",
-          "fact-003",
-          "fact-058"
-        ],
-        "sourceFieldRefs": [
-          "storyBrief.knownNames",
-          "story.subjectSpecificVocabulary",
-          "storyBrief.cultureOrContext",
-          "story.sceneAnchor",
-          "factRecords.settingTerms",
-          "storyBrief.coreStoryElements",
-          "contentDNA.requiredSpecificDetails",
-          "publicArticlePlan",
-          "story.excerpt",
-          "story.detail",
-          "contentDNA.sceneAnchor",
-          "contentDNA.culturalFrame",
-          "story.title",
-          "derived.problemFromDetail"
-        ],
-        "usedFactTexts": [
-          "On November 24, 1971, a man using the name Dan Cooper boarded Northwest Orient Flight 305 from Portland to Seattle.",
-          "Ordinary records with unresolved details.",
-          "Cooper Hijacking: Ransom, Parachute, and the Unsolved Man in the Suit.",
-          "Db cooper hijacking mystery.",
-          "1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified."
-        ],
-        "voiceDirection": "Clear short-form pace, clean pauses, restrained tone, light emphasis on \"Cooper\"."
+        "soundEffect": "subtle ambience only",
+        "voiceDirection": "Clear short-form delivery with one clean pause."
       },
       {
-        "backgroundMusic": "sparse documentary bed, low drone, slow piano, short-form low density",
-        "estimatedReadSeconds": 11,
-        "imagePrompt": "A atmospheric location documentary scene shows D.B. Cooper positioned beside name as the source detail becomes visible within a quiet archive-like workspace with physical evidence nearby, framed in a clean medium shot with the key detail near the center. Use soft archival light and controlled shadows and documentary mystery atmosphere within the story culture and source context; center the frame on name. No readable text, logos, watermarks, modern objects, graphic gore, or cartoon styling.",
-        "motionPrompt": "Use a restrained lateral pan across name, then settle quietly on D.B. Cooper.",
-        "narration": "Cooper moves through november 24, 1971, a man using the name Dan. The detail points to the FBI closed active resource commitment to the case.",
-        "role": "Core Record",
-        "sceneFocus": "Core Record: D.B. Cooper tied to november 24, 1971, a man using.",
+        "backgroundMusic": "compact atmospheric bed matching the long-form tone",
+        "estimatedReadSeconds": 17,
+        "imagePrompt": "Vertical documentary image: flight path map with blurred route lines, no readable city names, clear single focal point, no readable text, no logos, no modern UI unless the subject requires modern digital context.",
+        "motionPrompt": "Slow restrained movement that supports the narration without adding new story events.",
+        "narration": "The hijacking's structure gives the story its grip. Cooper presents a threat, demands money and parachutes, releases passengers, and keeps the crew involved in a controlled sequence. The details feel procedural rather than chaotic, which makes the later disappearance even stranger.",
+        "role": "The Hijacking",
+        "sceneFocus": "The event is controlled and specific.",
         "sceneIndex": 2,
-        "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-        "sourceFactIds": [
-          "fact-001",
-          "fact-013",
-          "fact-017",
-          "fact-015",
-          "fact-058"
-        ],
-        "sourceFieldRefs": [
-          "storyBrief.coreStoryElements",
-          "contentDNA.requiredSpecificDetails",
-          "publicArticlePlan",
-          "story.excerpt",
-          "story.sceneAnchor",
-          "story.detail",
-          "contentDNA.sceneAnchor",
-          "storyBrief.existenceEvidence",
-          "story.researchSources",
-          "story.evidence",
-          "derived.problemFromDetail"
-        ],
-        "usedFactTexts": [
-          "On November 24, 1971, a man using the name Dan Cooper boarded Northwest Orient Flight 305 from Portland to Seattle.",
-          "Aviation records.",
-          "The FBI closed active resource commitment to the case in 2016, but the recovered ransom money, the tie, the alias, and the unanswered jump keep the mystery alive.",
-          "Unexplained Mysteries / Unsolved Case / Evidence-limited public record.",
-          "1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified."
-        ],
-        "voiceDirection": "Careful pace, clean pauses, restrained tone, light emphasis on \"Cooper\"."
+        "soundEffect": "subtle ambience only",
+        "voiceDirection": "Clear short-form delivery with one clean pause."
       },
       {
-        "backgroundMusic": "sparse documentary bed, low drone, slow piano, short-form low density",
-        "estimatedReadSeconds": 11,
-        "imagePrompt": "A atmospheric location documentary scene shows D.B. Cooper positioned beside November as the source detail becomes visible within a quiet archive-like workspace with physical evidence nearby, framed as a close readable detail with the background still visible. Use soft archival light and controlled shadows and documentary mystery atmosphere within the story culture and source context; center the frame on November. No readable text, logos, watermarks, modern objects, graphic gore, or cartoon styling.",
-        "motionPrompt": "Begin with a still frame, then gently pull back to reveal November.",
-        "narration": "D turns on unexplained Mysteries / Unsolved Case / Evidence-limited public record. The source frame stays with witness descriptions, a tie, parachute material, aircraft evidence.",
-        "role": "Key Evidence",
-        "sceneFocus": "Key Evidence: D.B. Cooper tied to witness descriptions, a tie, parachute material, aircraft.",
+        "backgroundMusic": "compact atmospheric bed matching the long-form tone",
+        "estimatedReadSeconds": 23,
+        "imagePrompt": "Vertical documentary image: rear aircraft stairs open to rainy night sky, no figure close-up, clear single focal point, no readable text, no logos, no modern UI unless the subject requires modern digital context.",
+        "motionPrompt": "Slow restrained movement that supports the narration without adding new story events.",
+        "narration": "The jump is the image that makes D.B. Cooper legendary. A man opens the rear stairs of an aircraft and leaves with ransom money into a cold, dark, rainy night. Whether he survived is the question that keeps the case alive. The act is bold, desperate, calculated, and nearly impossible to watch directly.",
+        "role": "The Jump",
+        "sceneFocus": "The disappearance happens in weather and darkness.",
         "sceneIndex": 3,
-        "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-        "sourceFactIds": [
-          "fact-015",
-          "fact-026",
-          "fact-027",
-          "fact-040",
-          "fact-001"
-        ],
-        "sourceFieldRefs": [
-          "storyBrief.existenceEvidence",
-          "story.researchSources",
-          "story.evidence",
-          "storyBrief.coreStoryElements",
-          "story.title",
-          "storyBrief.knownNames",
-          "contentDNA.requiredSpecificDetails",
-          "contentDNA.culturalFrame",
-          "publicArticlePlan",
-          "story.subjectSpecificVocabulary",
-          "contentDNA.subjectSpecificVocabulary",
-          "story.excerpt",
-          "story.sceneAnchor",
-          "story.detail",
-          "contentDNA.sceneAnchor",
-          "derived.turningPointFromDetail",
-          "derived.outcomeFromDetail",
-          "derived.problemFromDetail"
-        ],
-        "usedFactTexts": [
-          "Unexplained Mysteries / Unsolved Case / Evidence-limited public record.",
-          "The case left behind physical and documentary fragments: witness descriptions, a tie, parachute material, aircraft evidence, and serial-numbered ransom bills.",
-          "Later retellings do not always keep the same emphasis.",
-          "On November 24, 1971, a man using the name Dan Cooper boarded Northwest Orient Flight 305 from Portland to Seattle.",
-          "On November 24, 1971, a man using the name Dan Cooper boarded Northwest Orient Flight 305 from Portland to Seattle."
-        ],
-        "voiceDirection": "Careful pace, clean pauses, restrained tone, light emphasis on \"Unexplained\"."
+        "soundEffect": "subtle ambience only",
+        "voiceDirection": "Clear short-form delivery with one clean pause."
       },
       {
-        "backgroundMusic": "quiet opening pulse, low drone, slow piano, short-form low density",
-        "estimatedReadSeconds": 8,
-        "imagePrompt": "A atmospheric location documentary scene shows D.B. Cooper introduced through 1971 within a quiet archive-like workspace with physical evidence nearby, framed with foreground evidence leading toward the main subject. Use natural low light with restrained contrast and documentary mystery atmosphere within the story culture and source context; center the frame on 1971. No readable text, logos, watermarks, modern objects, graphic gore, or cartoon styling.",
-        "motionPrompt": "Reveal 1971 from foreground to background with subtle parallax and restrained movement.",
-        "narration": "D shifts through the FBI investigated hundreds of people and considered many. Some versions keep source and variant record.",
-        "role": "Main Explanations",
-        "sceneFocus": "Main Explanations: D.B. Cooper tied to the FBI investigated hundreds of people.",
+        "backgroundMusic": "compact atmospheric bed matching the long-form tone",
+        "estimatedReadSeconds": 18,
+        "imagePrompt": "Vertical documentary image: investigation desk with tie, ticket stub, and blank evidence cards, clear single focal point, no readable text, no logos, no modern UI unless the subject requires modern digital context.",
+        "motionPrompt": "Slow restrained movement that supports the narration without adding new story events.",
+        "narration": "The investigation gives the mystery a long afterlife. Suspects appear, theories develop, physical evidence is examined, and the case becomes part of American crime folklore. Yet the evidence never closes the loop. The story keeps producing possible answers without producing one final identity.",
+        "role": "Investigation and Evidence",
+        "sceneFocus": "Clues remain strong but incomplete.",
         "sceneIndex": 4,
-        "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-        "sourceFactIds": [
-          "fact-004",
-          "fact-005",
-          "fact-006",
-          "fact-015",
-          "fact-009"
-        ],
-        "sourceFieldRefs": [
-          "storyBrief.reportedVariants",
-          "contentDNA.requiredSpecificDetails",
-          "publicArticlePlan",
-          "storyBrief.coreStoryElements",
-          "publicArticlePlan.publicSourceNote",
-          "story.publicSourceBasis",
-          "storyBrief.cultureOrContext",
-          "story.evidence",
-          "story.researchSources",
-          "storyBrief.existenceEvidence",
-          "storyBrief.editorialInterpretationOptions",
-          "contentDNA.uniqueAngle",
-          "story.summaryAnswer"
-        ],
-        "usedFactTexts": [
-          "The FBI investigated hundreds of people and considered many suspects, but no identity was confirmed.",
-          "Source and variant record.",
-          "Cooper itself came from media confusion.",
-          "Unexplained Mysteries / Unsolved Case / Evidence-limited public record.",
-          "The Cooper case lasts because the ending happens in the dark."
-        ],
-        "voiceDirection": "Clear short-form pace, clean pauses, restrained tone, light emphasis on \"investigated\"."
+        "soundEffect": "subtle ambience only",
+        "voiceDirection": "Clear short-form delivery with one clean pause."
       },
       {
-        "backgroundMusic": "soft reflective drone, low drone, slow piano, short-form low density",
-        "estimatedReadSeconds": 10,
-        "imagePrompt": "A atmospheric location documentary scene shows D.B. Cooper held in a quiet final composition around using within a quiet archive-like workspace with physical evidence nearby, framed as a restrained final frame that leaves room for narration. Use soft fading light with low contrast and documentary mystery atmosphere within the story culture and source context; center the frame on using. No readable text, logos, watermarks, modern objects, graphic gore, or cartoon styling.",
-        "motionPrompt": "Hold briefly on D.B. Cooper, then let the light shift softly around using.",
-        "narration": "Cooper ends with the Cooper case lasts because the ending happens. The ending leaves one possible reading is that the Cooper case lasts.",
-        "role": "What Remains Unresolved",
-        "sceneFocus": "What Remains Unresolved: D.B. Cooper tied to the Cooper case lasts because the ending.",
+        "backgroundMusic": "compact atmospheric bed matching the long-form tone",
+        "estimatedReadSeconds": 19,
+        "imagePrompt": "Vertical documentary image: suspect board with faces obscured and strings, no readable names, clear single focal point, no readable text, no logos, no modern UI unless the subject requires modern digital context.",
+        "motionPrompt": "Slow restrained movement that supports the narration without adding new story events.",
+        "narration": "By the end, D.B. Cooper is not only a hijacking case. It is a story about identity disappearing under documentation. The event is recorded, investigated, and remembered, but the person slips past the archive. The more details survive, the more striking the blank center becomes.",
+        "role": "Ending and Use",
+        "sceneFocus": "The mystery survives because the identity stays open.",
         "sceneIndex": 5,
-        "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-        "sourceFactIds": [
-          "fact-019",
-          "fact-023",
-          "fact-057",
-          "fact-009",
-          "fact-015"
-        ],
-        "sourceFieldRefs": [
-          "publicArticlePlan",
-          "derived.outcomeFromDetail",
-          "storyBrief.editorialInterpretationOptions",
-          "contentDNA.uniqueAngle",
-          "story.summaryAnswer",
-          "contentDNA.requiredSpecificDetails"
-        ],
-        "usedFactTexts": [
-          "The Cooper case lasts because the ending happens in the dark.",
-          "One possible reading is that the Cooper case lasts because the ending happens in the dark.",
-          "1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified.",
-          "The Cooper case lasts because the ending happens in the dark.",
-          "Unexplained Mysteries / Unsolved Case / Evidence-limited public record."
-        ],
-        "voiceDirection": "Slow final pace, clean pauses, restrained tone, light emphasis on \"Cooper\"."
+        "soundEffect": "subtle ambience only",
+        "voiceDirection": "Clear short-form delivery with one clean pause."
       }
     ],
-    "totalWordCount": 109
+    "totalWordCount": 239
   },
   "shortSceneFocuses": [
-    "What and Where: D.B. Cooper tied to november 24, 1971, a man using.",
-    "Core Record: D.B. Cooper tied to november 24, 1971, a man using.",
-    "Key Evidence: D.B. Cooper tied to witness descriptions, a tie, parachute material, aircraft.",
-    "Main Explanations: D.B. Cooper tied to the FBI investigated hundreds of people.",
-    "What Remains Unresolved: D.B. Cooper tied to the Cooper case lasts because the ending."
+    "A calm man becomes an unsolved name.",
+    "The event is controlled and specific.",
+    "The disappearance happens in weather and darkness.",
+    "Clues remain strong but incomplete.",
+    "The mystery survives because the identity stays open."
   ],
   "shortsIncluded": true,
   "shortsScript": [
-    "Cooper starts with november 24, 1971, a man using the name Dan. Ordinary records with unresolved details.",
-    "Cooper moves through november 24, 1971, a man using the name Dan. The detail points to the FBI closed active resource commitment to the case.",
-    "D turns on unexplained Mysteries / Unsolved Case / Evidence-limited public record. The source frame stays with witness descriptions, a tie, parachute material, aircraft evidence.",
-    "D shifts through the FBI investigated hundreds of people and considered many. Some versions keep source and variant record.",
-    "Cooper ends with the Cooper case lasts because the ending happens. The ending leaves one possible reading is that the Cooper case lasts."
+    "The D.B. Cooper mystery begins with calm, not chaos. A man in a suit boards a plane, passes a note, claims to have a bomb, and begins one of the most famous unsolved cases in American memory. The unsettling detail is composure. He does not look like a myth at first. He looks ordinary enough to disappear.",
+    "The hijacking's structure gives the story its grip. Cooper presents a threat, demands money and parachutes, releases passengers, and keeps the crew involved in a controlled sequence. The details feel procedural rather than chaotic, which makes the later disappearance even stranger.",
+    "The jump is the image that makes D.B. Cooper legendary. A man opens the rear stairs of an aircraft and leaves with ransom money into a cold, dark, rainy night. Whether he survived is the question that keeps the case alive. The act is bold, desperate, calculated, and nearly impossible to watch directly.",
+    "The investigation gives the mystery a long afterlife. Suspects appear, theories develop, physical evidence is examined, and the case becomes part of American crime folklore. Yet the evidence never closes the loop. The story keeps producing possible answers without producing one final identity.",
+    "By the end, D.B. Cooper is not only a hijacking case. It is a story about identity disappearing under documentation. The event is recorded, investigated, and remembered, but the person slips past the archive. The more details survive, the more striking the blank center becomes."
   ],
   "slug": "db-cooper-hijacking-mystery-youtube-script",
   "storageSchemaVersion": "creator-pack-file-v1",
   "subtitleLines": [
-    "D.B. Cooper Hijacking begins with a familiar image.",
-    "D.B. Cooper is the name attached to the unknown man who hijacked Northwest Orient Flight 305 on November 24, 1971, received $200,000 in ransom, and parachuted from the aircraft into the night. His identity and fate remain unresolved.",
-    "The ending leaves a question behind."
+    "A source-based package for D.B. Cooper hijacking mystery.",
+    "Five scenes, fifteen voiceover beats.",
+    "Built for image-led narration."
   ],
   "tags": [
     "unexplained mysteries script",
@@ -343,782 +194,245 @@
     "image prompt"
   ],
   "thumbnailIdeas": [
-    "D.B. Cooper Hijacking with bold text: THE STORY STILL REMAINS",
-    "A close-up of the key image from D.B. Cooper Hijacking",
-    "Split thumbnail: familiar legend on one side, unresolved question on the other"
+    "D.B. Cooper hijacking mystery with the title: Ransom, Parachute, and Vanishing Identity",
+    "D.B. Cooper hijacking mystery in shadow with a clear mystery title",
+    "D.B. Cooper hijacking mystery as a restrained documentary thumbnail",
+    "D.B. Cooper hijacking mystery with one symbolic object in the foreground"
   ],
   "thumbnailIdeasIncluded": true,
   "title": "D.B. Cooper Hijacking YouTube Script",
-  "updatedAt": "2026-07-21",
-  "usageNote": "Use this page as a production workspace for a video based on the archive entry for D.B. Cooper Hijacking. Keep source limits clear and avoid presenting later interpretations as verified facts.",
+  "updatedAt": "2026-08-12",
+  "usageNote": "Use this package as a production aid for an image-led narration video. Keep the original archive record separate from creator-facing adaptation notes.",
   "visualGuide": [
     {
-      "backgroundMusic": "soft reflective drone, low drone, slow piano, sparse documentary bed, slow tempo with restrained weight",
-      "directionTip": "The central visual should show on November 24, 1971, a man using the name Dan Cooper boarded Northwest Orient Flight 305 from Portland to Seattle.",
+      "backgroundMusic": "dark quiet ambient bed, soft low pulse, no melodic lead",
       "narrationParts": [
         {
-          "creatorNote": "Cooper must stay tied to cooper Hijacking: Ransom, Parachute, and the Unsolved Man in the Suit. Do not add figures, motives, or incidents beyond 1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified.",
-          "estimatedReadingTime": "≈ 25 sec",
-          "narration": "The setting gives the scene a concrete frame: Ordinary records with unresolved details. The account identifies the central subject clearly: Cooper Hijacking: Ransom, Parachute, and the Unsolved Man in the Suit. The action moves through a specific event: On November 24, 1971, a man using the name Dan Cooper boarded Northwest Orient Flight 305 from Portland to Seattle.",
-          "sourceFactIds": [
-            "fact-014",
-            "fact-002",
-            "fact-001"
-          ],
-          "sourceFieldRefs": [
-            "contentDNA.culturalFrame",
-            "story.title",
-            "storyBrief.coreStoryElements"
-          ],
-          "usedFactTexts": [
-            "Ordinary records with unresolved details.",
-            "Cooper Hijacking: Ransom, Parachute, and the Unsolved Man in the Suit.",
-            "On November 24, 1971, a man using the name Dan Cooper boarded Northwest Orient Flight 305 from Portland to Seattle."
-          ],
+          "creatorNote": "Keep this beat viewer-facing and story-led.",
+          "estimatedReadingTime": "about 24 sec",
+          "narration": "The D.B. Cooper mystery begins with calm, not chaos. A man in a suit boards a plane, passes a note, claims to have a bomb, and begins one of the most famous unsolved cases in American memory. The unsettling detail is composure. He does not look like a myth at first. He looks ordinary enough to disappear.",
           "visualBeats": [
             {
-              "beatMotion": "Use a slow controlled push toward Ordinary, with placed within ordinary records with unresolved details staying fixed as the opening anchor and Ordinary visible. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Ordinary placed within ordinary records with unresolved details in the 1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Ordinary, records, unresolved as supporting visual details. This should feel like an opening visual with one clear focal point during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a slow controlled push toward Ordinary, with placed within ordinary records with unresolved details staying fixed as the opening anchor and Ordinary visible. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-014"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.culturalFrame",
-                "story.title",
-                "storyBrief.coreStoryElements",
-                "derived.problemFromDetail",
-                "storyBrief.knownNames"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a restrained lateral pan across the 1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified, letting Cooper hold the opening detail while Cooper Hijacking stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Cooper held as the central visual in the 1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Cooper, Cooper Hijacking, Hijacking as supporting visual details. This should feel like an opening visual that adds a second visual detail during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Use a restrained lateral pan across the 1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified, letting Cooper hold the opening detail while Cooper Hijacking stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-002"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.culturalFrame",
-                "story.title",
-                "storyBrief.coreStoryElements",
-                "derived.problemFromDetail",
-                "storyBrief.knownNames"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal connected to on November 24, 1971, a man using the name Dan Cooper boarded and November within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Cooper connected to on November 24, 1971, a man using the name Dan Cooper boarded Northwest Orient Flight 305 from Portland to Seattle in the 1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified. Frame one clear scene as a close visual detail that supports the current narration, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Cooper, name, November as supporting visual details. This should feel like an opening visual that widens the frame without adding new story elements during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal connected to on November 24, 1971, a man using the name Dan Cooper boarded and November within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-001"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.culturalFrame",
-                "story.title",
-                "storyBrief.coreStoryElements",
-                "derived.problemFromDetail",
-                "storyBrief.knownNames"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "1970s airport boarding gate atmosphere with suited anonymous man silhouette, no logos, 1970s, procedural, rainy, restrained, unresolved mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow push toward the central shape while the 1970s airport boarding gate atmosphere with suited anonymous man silhouette remains the focus."
             }
           ]
         },
         {
-          "creatorNote": "Cooper must stay tied to on November 24, 1971, a man using the name Dan Cooper boarded Northwest Orient Flight 305 from Portland to Seattle. Do not add figures, motives, or incidents beyond ordinary records with unresolved details.",
-          "estimatedReadingTime": "≈ 31 sec",
-          "narration": "The story starts from a clear disturbance: 1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified. The opening identity is already specific: Db cooper hijacking mystery. The next fact gives the sequence a concrete action: The FBI closed active resource commitment to the case in 2016, but the recovered ransom money, the tie, the alias, and the unanswered jump keep the mystery alive.",
-          "sourceFactIds": [
-            "fact-058",
-            "fact-003",
-            "fact-017"
-          ],
-          "sourceFieldRefs": [
-            "derived.problemFromDetail",
-            "storyBrief.knownNames",
-            "publicArticlePlan",
-            "storyBrief.coreStoryElements"
-          ],
-          "usedFactTexts": [
-            "1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified.",
-            "Db cooper hijacking mystery.",
-            "The FBI closed active resource commitment to the case in 2016, but the recovered ransom money, the tie, the alias, and the unanswered jump keep the mystery alive."
-          ],
+          "creatorNote": "Let the source boundary stay clear without stopping the story.",
+          "estimatedReadingTime": "about 21 sec",
+          "narration": "That ordinary appearance is central to the legend. Cooper becomes memorable because he is both specific and blank. There is a flight, a ransom, parachutes, weather, crew testimony, and later evidence. But the person at the center remains unfinished. The name itself is partly an accident of reporting and memory.",
           "visualBeats": [
             {
-              "beatMotion": "Use a restrained lateral pan across the 1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified, letting Cooper hold the follow-up anchor while Cooper stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Cooper connected to on November 24, 1971, a man using the name Dan Cooper boarded Northwest Orient Flight 305 from Portland to Seattle in the 1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Cooper, name, November as supporting visual details. This should feel like a follow-up visual with one clear focal point during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a restrained lateral pan across the 1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified, letting Cooper hold the follow-up anchor while Cooper stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-001"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.culturalFrame",
-                "story.title",
-                "storyBrief.coreStoryElements",
-                "derived.problemFromDetail",
-                "storyBrief.knownNames"
-              ],
-              "usedFactTexts": []
-            },
+              "imagePrompt": "airplane cabin seat with briefcase under low light, no readable note, 1970s, procedural, rainy, restrained, unresolved mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: restrained lateral drift across the frame while the airplane cabin seat with briefcase under low light remains the focus."
+            }
+          ]
+        },
+        {
+          "creatorNote": "Use one concrete image, then let the narration carry the meaning.",
+          "estimatedReadingTime": "about 17 sec",
+          "narration": "The strongest opening holds the contradiction: a crime with many concrete details and an identity that refuses to settle. The man in the suit enters history through procedure, negotiation, and aviation records, then exits into rain, darkness, and argument.",
+          "visualBeats": [
             {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal connected to 1971 airplane hijacking in which a man parachuted into the night and Hijacking within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows D connected to 1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified in the 1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include D, Hijacking, airplane as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal connected to 1971 airplane hijacking in which a man parachuted into the night and Hijacking within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-058"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.culturalFrame",
-                "story.title",
-                "storyBrief.coreStoryElements",
-                "derived.problemFromDetail",
-                "storyBrief.knownNames"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a slow controlled push toward Ordinary, with placed within ordinary records with unresolved details staying fixed as the follow-up wider frame and unresolved visible. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Ordinary placed within ordinary records with unresolved details in the 1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified. Frame one clear scene as a close visual detail that supports the current narration, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Ordinary, records, unresolved as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Use a slow controlled push toward Ordinary, with placed within ordinary records with unresolved details staying fixed as the follow-up wider frame and unresolved visible. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-014"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.culturalFrame",
-                "story.title",
-                "storyBrief.coreStoryElements",
-                "derived.problemFromDetail",
-                "storyBrief.knownNames"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "ransom money bundles on plain table, documentary restraint, no serial numbers readable, 1970s, procedural, rainy, restrained, unresolved mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow hold with a tiny light change while the ransom money bundles on plain table remains the focus."
             }
           ]
         }
       ],
-      "sceneFocus": "The central visual should show on November 24, 1971, a man using the name Dan Cooper boarded Northwest Orient Flight 305 from Portland to Seattle.",
-      "sceneRole": "What, When, and Where",
-      "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-      "sourceFactIds": [
-        "fact-014",
-        "fact-002",
-        "fact-001",
-        "fact-058",
-        "fact-003",
-        "fact-017"
-      ],
-      "sourceFieldRefs": [
-        "contentDNA.culturalFrame",
-        "story.title",
-        "storyBrief.coreStoryElements",
-        "derived.problemFromDetail",
-        "storyBrief.knownNames",
-        "publicArticlePlan"
-      ],
-      "visualDirection": "Hold the establishing image briefly, then begin a slow push toward the main detail.",
-      "voiceDirection": "Calm documentary pace, short pauses between ideas, natural restraint, with light emphasis on \"cooper hijacking mystery\" when it appears."
+      "sceneFocus": "A calm man becomes an unsolved name.",
+      "sceneRole": "Opening Hook",
+      "soundEffect": "low environmental hum, soft distant texture",
+      "visualDirection": "Use one image-led frame per narration beat. Keep motion optional and restrained.",
+      "voiceDirection": "Calm documentary narration with story rhythm and clear pauses."
     },
     {
-      "backgroundMusic": "steady low tension, low drone, slow piano, sparse documentary bed, slow tempo with restrained weight",
-      "directionTip": "The central visual should show on November 24, 1971, a man using the name Dan Cooper boarded Northwest Orient Flight 305 from Portland to Seattle. Frame it through on November 24, 1971, a man using the name Dan Cooper boarded Northwest Orient Flight 305 from Portland to Seattle.",
+      "backgroundMusic": "low archive drone, restrained room tone, no melody over narration",
       "narrationParts": [
         {
-          "creatorNote": "Cooper must stay tied to on November 24, 1971, a man using the name Dan Cooper boarded Northwest Orient Flight 305 from Portland to Seattle. Do not add figures, motives, or incidents beyond 1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified.",
-          "estimatedReadingTime": "≈ 31 sec",
-          "narration": "The source trail matters before the claim is treated as certain: Unexplained Mysteries / Unsolved Case / Evidence-limited public record. The account then gives a direct movement: Aviation records is one event in the main sequence. The action moves through a specific event: Cooper is the name attached to the unknown man who hijacked Northwest Orient Flight 305 on November 24, 1971, received $200,000 in ransom, and parachuted from the aircraft into the night.",
-          "sourceFactIds": [
-            "fact-015",
-            "fact-013",
-            "fact-047"
-          ],
-          "sourceFieldRefs": [
-            "contentDNA.requiredSpecificDetails",
-            "story.excerpt",
-            "publicArticlePlan",
-            "storyBrief.coreStoryElements"
-          ],
-          "usedFactTexts": [
-            "Unexplained Mysteries / Unsolved Case / Evidence-limited public record.",
-            "Aviation records.",
-            "Cooper is the name attached to the unknown man who hijacked Northwest Orient Flight 305 on November 24, 1971, received $200,000 in ransom, and parachuted from the aircraft into the night."
-          ],
+          "creatorNote": "Keep this beat viewer-facing and story-led.",
+          "estimatedReadingTime": "about 17 sec",
+          "narration": "The hijacking's structure gives the story its grip. Cooper presents a threat, demands money and parachutes, releases passengers, and keeps the crew involved in a controlled sequence. The details feel procedural rather than chaotic, which makes the later disappearance even stranger.",
           "visualBeats": [
             {
-              "beatMotion": "Use a slow controlled push toward Cooper, with connected to on November 24, 1971, a man using the name Dan Cooper boarded staying fixed as the opening anchor and Cooper visible. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Cooper connected to on November 24, 1971, a man using the name Dan Cooper boarded Northwest Orient Flight 305 from Portland to Seattle in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Cooper, name, November as supporting visual details. This should feel like an opening visual with one clear focal point during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a slow controlled push toward Cooper, with connected to on November 24, 1971, a man using the name Dan Cooper boarded staying fixed as the opening anchor and Cooper visible. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-001"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.coreStoryElements",
-                "contentDNA.requiredSpecificDetails",
-                "derived.problemFromDetail",
-                "publicArticlePlan"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a restrained lateral pan across FBI case history and later public-history summaries of the NORJAK investigation, letting D hold the opening detail while Unsolved Case stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows D shown through source material connected to unexplained Mysteries / Unsolved Case / Evidence-limited public record in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a medium composition that shows the important action or state, with low directional light with restrained contrast, documentary uncertainty, and cultural context from public. Include D, Unsolved Case, record as supporting visual details. This should feel like an opening visual that adds a second visual detail during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Use a restrained lateral pan across FBI case history and later public-history summaries of the NORJAK investigation, letting D hold the opening detail while Unsolved Case stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-015"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.coreStoryElements",
-                "contentDNA.requiredSpecificDetails",
-                "derived.problemFromDetail",
-                "publicArticlePlan"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal connected to aviation records and Cooper within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Aviation connected to aviation records in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a close visual detail that supports the current narration, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Aviation, records, Cooper as supporting visual details. This should feel like an opening visual that widens the frame without adding new story elements during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal connected to aviation records and Cooper within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-013"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.coreStoryElements",
-                "contentDNA.requiredSpecificDetails",
-                "derived.problemFromDetail",
-                "publicArticlePlan"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "flight path map with blurred route lines, no readable city names, 1970s, procedural, rainy, restrained, unresolved mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: gentle pullback that leaves negative space while the flight path map with blurred route lines remains the focus."
             }
           ]
         },
         {
-          "creatorNote": "Aviation must stay tied to aviation records. Keep the source boundary around unexplained Mysteries / Unsolved Case / Evidence-limited public record source-limited, without turning it into a stronger claim.",
-          "estimatedReadingTime": "≈ 33 sec",
-          "narration": "The surviving record gives the narration a source limit: Cooper appears in source material connected with FBI case history and later public-history summaries of the NORJAK investigation. The surviving record gives the narration a source limit: References such as FBI and HISTORY are used as orientation points, not as proof for every later claim. The surviving record gives the narration a source limit: Cooper is treated through FBI case history and later public-history summaries of the NORJAK investigation.",
-          "sourceFactIds": [
-            "fact-028",
-            "fact-033",
-            "fact-032"
-          ],
-          "sourceFieldRefs": [
-            "publicArticlePlan",
-            "publicArticlePlan.publicSourceNote"
-          ],
-          "usedFactTexts": [
-            "Cooper appears in source material connected with FBI case history and later public-history summaries of the NORJAK investigation.",
-            "References such as FBI and HISTORY are used as orientation points, not as proof for every later claim.",
-            "Cooper is treated through FBI case history and later public-history summaries of the NORJAK investigation."
-          ],
+          "creatorNote": "Let the source boundary stay clear without stopping the story.",
+          "estimatedReadingTime": "about 20 sec",
+          "narration": "Aviation gives the mystery a narrow stage. The cabin, the note, the briefcase, the crew, the ransom, and the instructions all unfold inside a machine moving through weather. The audience can picture the limits: metal walls, scheduled flight, official response, and a man preparing to step outside them.",
           "visualBeats": [
             {
-              "beatMotion": "Use a restrained lateral pan across FBI case history and later public-history summaries of the NORJAK investigation, letting Aviation hold the follow-up anchor while Aviation stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Aviation connected to aviation records in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Aviation, records, Cooper as supporting visual details. This should feel like a follow-up visual with one clear focal point during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a restrained lateral pan across FBI case history and later public-history summaries of the NORJAK investigation, letting Aviation hold the follow-up anchor while Aviation stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-013"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.coreStoryElements",
-                "contentDNA.requiredSpecificDetails",
-                "derived.problemFromDetail",
-                "publicArticlePlan"
-              ],
-              "usedFactTexts": []
-            },
+              "imagePrompt": "parachute pack beside dark airplane interior, tense procedural mood, 1970s, procedural, rainy, restrained, unresolved mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow fade from foreground object to background threshold while the parachute pack beside dark airplane interior remains the focus."
+            }
+          ]
+        },
+        {
+          "creatorNote": "Use one concrete image, then let the narration carry the meaning.",
+          "estimatedReadingTime": "about 17 sec",
+          "narration": "The ransom money gives the case physical weight. Cash can be counted, bundled, tracked, lost, found, or searched for. It turns the story from rumor into investigation. Even when the man vanishes, the money keeps asking where the path went.",
+          "visualBeats": [
             {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal connected to 1971 airplane hijacking in which a man parachuted into the night and Hijacking within the wider frame. Use only light shifts that match the place or event mystery tone. Let Hijacking remain the distinct a follow-up visual that adds a second visual detail.",
-              "imagePrompt": "A realistic location-documentary style image shows D connected to 1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a medium composition that shows the important action or state, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Unexplained Mysteries. Include D, Hijacking, airplane as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal connected to 1971 airplane hijacking in which a man parachuted into the night and Hijacking within the wider frame. Use only light shifts that match the place or event mystery tone. Let Hijacking remain the distinct a follow-up visual that adds a second visual detail.",
-              "sourceFactIds": [
-                "fact-058"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.coreStoryElements",
-                "contentDNA.requiredSpecificDetails",
-                "derived.problemFromDetail",
-                "publicArticlePlan"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a slow controlled push toward Cooper, with connected to on November 24, 1971, a man using the name Dan Cooper boarded staying fixed as the follow-up wider frame and November visible. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Cooper connected to on November 24, 1971, a man using the name Dan Cooper boarded Northwest Orient Flight 305 from Portland to Seattle in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a close visual detail that supports the current narration, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Cooper, name, November as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Use a slow controlled push toward Cooper, with connected to on November 24, 1971, a man using the name Dan Cooper boarded staying fixed as the follow-up wider frame and November visible. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-001"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.coreStoryElements",
-                "contentDNA.requiredSpecificDetails",
-                "derived.problemFromDetail",
-                "publicArticlePlan"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "stewardess viewpoint toward empty aisle and suited figure silhouette, 1970s, procedural, rainy, restrained, unresolved mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow push toward the central shape while the stewardess viewpoint toward empty aisle and suited figure silhouette remains the focus."
             }
           ]
         }
       ],
-      "sceneFocus": "The central visual should show on November 24, 1971, a man using the name Dan Cooper boarded Northwest Orient Flight 305 from Portland to Seattle. Frame it through on November 24, 1971, a man using the name Dan Cooper boarded Northwest Orient Flight 305 from Portland to Seattle.",
-      "sceneRole": "Core Record or Event",
-      "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-      "sourceFactIds": [
-        "fact-015",
-        "fact-013",
-        "fact-047",
-        "fact-028",
-        "fact-033",
-        "fact-032"
-      ],
-      "sourceFieldRefs": [
-        "contentDNA.requiredSpecificDetails",
-        "story.excerpt",
-        "publicArticlePlan",
-        "storyBrief.coreStoryElements",
-        "publicArticlePlan.publicSourceNote"
-      ],
-      "visualDirection": "Start steady, begin a slow push toward the main detail, and cut after the scene consequence is clear.",
-      "voiceDirection": "Calm documentary pace, short pauses between ideas, slight tension, with light emphasis on \"Unsolved Case\" when it appears."
+      "sceneFocus": "The event is controlled and specific.",
+      "sceneRole": "The Hijacking",
+      "soundEffect": "subtle paper, room tone, distant air",
+      "visualDirection": "Use one image-led frame per narration beat. Keep motion optional and restrained.",
+      "voiceDirection": "Calm documentary narration with story rhythm and clear pauses."
     },
     {
-      "backgroundMusic": "sparse documentary bed, low drone, slow piano, slow tempo with restrained weight",
-      "directionTip": "The central visual should show on November 24, 1971, a man using the name Dan Cooper boarded Northwest Orient Flight 305 from Portland to Seattle. Frame it through the source boundary around unexplained Mysteries / Unsolved Case / Evidence-limited public record.",
+      "backgroundMusic": "dark quiet ambient bed, soft low pulse, no melodic lead",
       "narrationParts": [
         {
-          "creatorNote": "D. must stay tied to the source boundary around unexplained Mysteries / Unsolved Case / Evidence-limited public record. Do not add figures, motives, or incidents beyond on November 24, 1971, a man using the name Dan Cooper boarded Northwest Orient Flight 305 from Portland to Seattle.",
-          "estimatedReadingTime": "≈ 36 sec",
-          "narration": "The scene has a clear visible point: On November 24, 1971, a man using the name Dan Cooper boarded Northwest Orient Flight 305 from Portland to Seattle. The account stays careful because the evidence has boundaries: The case left behind physical and documentary fragments: witness descriptions, a tie, parachute material, aircraft evidence, and serial-numbered ransom bills. The next fact gives the sequence a concrete action: On November 24, 1971, a man using the name Dan Cooper boarded Northwest Orient Flight 305 from Portland to Seattle.",
-          "sourceFactIds": [
-            "fact-040",
-            "fact-026",
-            "fact-001"
-          ],
-          "sourceFieldRefs": [
-            "publicArticlePlan",
-            "storyBrief.coreStoryElements"
-          ],
-          "usedFactTexts": [
-            "On November 24, 1971, a man using the name Dan Cooper boarded Northwest Orient Flight 305 from Portland to Seattle.",
-            "The case left behind physical and documentary fragments: witness descriptions, a tie, parachute material, aircraft evidence, and serial-numbered ransom bills.",
-            "On November 24, 1971, a man using the name Dan Cooper boarded Northwest Orient Flight 305 from Portland to Seattle."
-          ],
+          "creatorNote": "Keep this beat viewer-facing and story-led.",
+          "estimatedReadingTime": "about 23 sec",
+          "narration": "The jump is the image that makes D.B. Cooper legendary. A man opens the rear stairs of an aircraft and leaves with ransom money into a cold, dark, rainy night. Whether he survived is the question that keeps the case alive. The act is bold, desperate, calculated, and nearly impossible to watch directly.",
           "visualBeats": [
             {
-              "beatMotion": "Use a slow controlled push toward Cooper, with connected to on November 24, 1971, a man using the name Dan Cooper boarded staying fixed as the opening anchor and Cooper visible. Keep the movement restrained and documentary.",
-              "imagePrompt": "A realistic location-documentary style image shows Cooper connected to on November 24, 1971, a man using the name Dan Cooper boarded Northwest Orient Flight 305 from Portland to Seattle in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a clear tabletop or archival composition, with soft archival light, careful documentary restraint, and cultural context from Unexplained Mysteries. Include Cooper, name, November as supporting visual details. This should feel like an opening visual with one clear focal point during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a slow controlled push toward Cooper, with connected to on November 24, 1971, a man using the name Dan Cooper boarded staying fixed as the opening anchor and Cooper visible. Keep the movement restrained and documentary.",
-              "sourceFactIds": [
-                "fact-040"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.requiredSpecificDetails",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a restrained lateral pan across FBI case history and later public-history summaries of the NORJAK investigation, letting D hold the opening detail while Unsolved Case stays in frame. Keep the movement restrained and documentary.",
-              "imagePrompt": "A realistic location-documentary style image shows D shown through source material connected to unexplained Mysteries / Unsolved Case / Evidence-limited public record in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a medium frame that separates the main subject from supporting evidence, with soft archival light, careful documentary restraint, and cultural context from public. Include D, Unsolved Case, record as supporting visual details. This should feel like an opening visual that adds a second visual detail during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Use a restrained lateral pan across FBI case history and later public-history summaries of the NORJAK investigation, letting D hold the opening detail while Unsolved Case stays in frame. Keep the movement restrained and documentary.",
-              "sourceFactIds": [
-                "fact-015"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.requiredSpecificDetails",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "rear aircraft stairs open to rainy night sky, no figure close-up, 1970s, procedural, rainy, restrained, unresolved mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: restrained lateral drift across the frame while the rear aircraft stairs open to rainy night sky remains the focus."
             }
           ]
         },
         {
-          "creatorNote": "Cooper must stay tied to the source boundary around the case left behind physical and documentary fragments: witness descriptions, a tie, parachute material, aircraft evidence, and serial-numbered ransom bills. Do not add figures, motives, or incidents beyond on November 24, 1971, a man using the name Dan Cooper boarded Northwest Orient Flight 305 from Portland to Seattle.",
-          "estimatedReadingTime": "≈ 31 sec",
-          "narration": "The source trail matters before the claim is treated as certain: Later retellings do not always keep the same emphasis. The account then gives a direct movement: Cooper turns on one missing or unresolved point: the 1971 airplane hijacking in which a man parachuted into the night with ransom money. The action moves through a specific event: The FBI investigated hundreds of people and considered many suspects, but no identity was confirmed.",
-          "sourceFactIds": [
-            "fact-027",
-            "fact-020",
-            "fact-018"
-          ],
-          "sourceFieldRefs": [
-            "publicArticlePlan"
-          ],
-          "usedFactTexts": [
-            "Later retellings do not always keep the same emphasis.",
-            "Cooper turns on one missing or unresolved point: the 1971 airplane hijacking in which a man parachuted into the night with ransom money.",
-            "The FBI investigated hundreds of people and considered many suspects, but no identity was confirmed."
-          ],
+          "creatorNote": "Let the source boundary stay clear without stopping the story.",
+          "estimatedReadingTime": "about 20 sec",
+          "narration": "The landscape below matters because it becomes the mystery's receiving surface. Forest, river, weather, altitude, and uncertainty replace the controlled cabin. Once Cooper jumps, the case leaves witnesses behind. The sky takes him out of the story, and the ground does not immediately give him back.",
           "visualBeats": [
             {
-              "beatMotion": "Use a restrained lateral pan across FBI case history and later public-history summaries of the NORJAK investigation, letting D.B. Cooper hold the follow-up anchor while behind stays in frame. Keep the movement restrained and documentary.",
-              "imagePrompt": "A realistic location-documentary style image shows D.B. Cooper shown through source material connected to the case left behind physical and documentary fragments: witness descriptions, a tie, parachute material, aircraft evidence, and serial-numbered ransom bills in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a medium frame that separates the main subject from supporting evidence, with soft archival light, careful documentary restraint, and cultural context from Unexplained Mysteries. Include behind, physical, documentary as supporting visual details. This should feel like a follow-up visual with one clear focal point during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a restrained lateral pan across FBI case history and later public-history summaries of the NORJAK investigation, letting D.B. Cooper hold the follow-up anchor while behind stays in frame. Keep the movement restrained and documentary.",
-              "sourceFactIds": [
-                "fact-026"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.requiredSpecificDetails",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
-            },
+              "imagePrompt": "dark forest below storm clouds from high altitude, cinematic but restrained, 1970s, procedural, rainy, restrained, unresolved mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow hold with a tiny light change while the dark forest below storm clouds from high altitude remains the focus."
+            }
+          ]
+        },
+        {
+          "creatorNote": "Use one concrete image, then let the narration carry the meaning.",
+          "estimatedReadingTime": "about 18 sec",
+          "narration": "That absence is more powerful than a clear chase. The moment after the jump is almost silent. Investigators can estimate, search, map, and theorize, but the central image remains a man disappearing from an aircraft into darkness with a bag of money.",
+          "visualBeats": [
             {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal connected to on November 24, 1971, a man using the name Dan Cooper boarded and name within the wider frame. Keep the movement restrained and documentary.",
-              "imagePrompt": "A realistic location-documentary style image shows Cooper connected to on November 24, 1971, a man using the name Dan Cooper boarded Northwest Orient Flight 305 from Portland to Seattle in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a close archival detail with the source boundary visible, with soft archival light, careful documentary restraint, and cultural context from Unexplained Mysteries. Include Cooper, name, November as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal connected to on November 24, 1971, a man using the name Dan Cooper boarded and name within the wider frame. Keep the movement restrained and documentary.",
-              "sourceFactIds": [
-                "fact-001"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.requiredSpecificDetails",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a slow controlled push toward Cooper, with connected to on November 24, 1971, a man using the name Dan Cooper boarded staying fixed as the follow-up wider frame and November visible. Keep the movement restrained and documentary.",
-              "imagePrompt": "A realistic location-documentary style image shows Cooper connected to on November 24, 1971, a man using the name Dan Cooper boarded Northwest Orient Flight 305 from Portland to Seattle in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a close archival detail with the source boundary visible, with soft archival light, careful documentary restraint, and cultural context from Unexplained Mysteries. Include Cooper, name, November as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Use a slow controlled push toward Cooper, with connected to on November 24, 1971, a man using the name Dan Cooper boarded staying fixed as the follow-up wider frame and November visible. Keep the movement restrained and documentary.",
-              "sourceFactIds": [
-                "fact-040"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.requiredSpecificDetails",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "money bag silhouette against aircraft doorway, no action spectacle, 1970s, procedural, rainy, restrained, unresolved mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: gentle pullback that leaves negative space while the money bag silhouette against aircraft doorway remains the focus."
             }
           ]
         }
       ],
-      "sceneFocus": "The central visual should show on November 24, 1971, a man using the name Dan Cooper boarded Northwest Orient Flight 305 from Portland to Seattle. Frame it through the source boundary around unexplained Mysteries / Unsolved Case / Evidence-limited public record.",
-      "sceneRole": "Evidence and Key Details",
-      "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-      "sourceFactIds": [
-        "fact-040",
-        "fact-026",
-        "fact-001",
-        "fact-027",
-        "fact-020",
-        "fact-018"
-      ],
-      "sourceFieldRefs": [
-        "publicArticlePlan",
-        "storyBrief.coreStoryElements"
-      ],
-      "visualDirection": "Hold the source-focused image long enough to read the visual idea, then fade softly into the next scene.",
-      "voiceDirection": "Careful pace, short pauses between ideas, natural restraint, with light emphasis on \"Hijacking\" when it appears."
+      "sceneFocus": "The disappearance happens in weather and darkness.",
+      "sceneRole": "The Jump",
+      "soundEffect": "low environmental hum, soft distant texture",
+      "visualDirection": "Use one image-led frame per narration beat. Keep motion optional and restrained.",
+      "voiceDirection": "Calm documentary narration with story rhythm and clear pauses."
     },
     {
-      "backgroundMusic": "soft reflective drone, low drone, slow piano, sparse documentary bed, slow tempo with restrained weight",
-      "directionTip": "The central visual should show the FBI investigated hundreds of people and considered many suspects, but no identity was confirmed.",
+      "backgroundMusic": "low archive drone, restrained room tone, no melody over narration",
       "narrationParts": [
         {
-          "creatorNote": "D. must stay tied to the variant detail that the FBI investigated hundreds of people and considered many suspects, but no identity was confirmed. Use the interpretation connected to the Cooper case lasts because the ending happens in the dark as interpretation, not as a new event.",
-          "estimatedReadingTime": "≈ 30 sec",
-          "narration": "The versions do not always preserve the same emphasis: The FBI investigated hundreds of people and considered many suspects, but no identity was confirmed. One interpretation stays close to the material: The Cooper case lasts because the ending happens in the dark. The versions do not always preserve the same emphasis: Source and variant record. The versions do not always preserve the same emphasis: Cooper itself came from media confusion.",
-          "sourceFactIds": [
-            "fact-004",
-            "fact-009",
-            "fact-005",
-            "fact-006"
-          ],
-          "sourceFieldRefs": [
-            "storyBrief.reportedVariants",
-            "storyBrief.editorialInterpretationOptions"
-          ],
-          "usedFactTexts": [
-            "The FBI investigated hundreds of people and considered many suspects, but no identity was confirmed.",
-            "The Cooper case lasts because the ending happens in the dark.",
-            "Source and variant record.",
-            "Cooper itself came from media confusion."
-          ],
+          "creatorNote": "Keep this beat viewer-facing and story-led.",
+          "estimatedReadingTime": "about 18 sec",
+          "narration": "The investigation gives the mystery a long afterlife. Suspects appear, theories develop, physical evidence is examined, and the case becomes part of American crime folklore. Yet the evidence never closes the loop. The story keeps producing possible answers without producing one final identity.",
           "visualBeats": [
             {
-              "beatMotion": "Use a slow controlled push toward D, with associated with a variant where the FBI investigated hundreds of people and considered many staying fixed as the opening anchor and D visible. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows D associated with a variant where the FBI investigated hundreds of people and considered many suspects, but no identity was confirmed in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include D, FBI, investigated as supporting visual details. This should feel like an opening visual with one clear focal point during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a slow controlled push toward D, with associated with a variant where the FBI investigated hundreds of people and considered many staying fixed as the opening anchor and D visible. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-004"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.reportedVariants",
-                "contentDNA.requiredSpecificDetails",
-                "storyBrief.editorialInterpretationOptions"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a restrained lateral pan across FBI case history and later public-history summaries of the NORJAK investigation, letting D hold the opening detail while Unsolved Case stays in frame. Use only light shifts that match the place or event mystery tone. Let Unsolved Case remain the distinct an opening visual that adds a second visual detail.",
-              "imagePrompt": "A realistic location-documentary style image shows D shown through source material connected to unexplained Mysteries / Unsolved Case / Evidence-limited public record in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from public. Include D, Unsolved Case, record as supporting visual details. This should feel like an opening visual that adds a second visual detail during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Use a restrained lateral pan across FBI case history and later public-history summaries of the NORJAK investigation, letting D hold the opening detail while Unsolved Case stays in frame. Use only light shifts that match the place or event mystery tone. Let Unsolved Case remain the distinct an opening visual that adds a second visual detail.",
-              "sourceFactIds": [
-                "fact-015"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.reportedVariants",
-                "contentDNA.requiredSpecificDetails",
-                "storyBrief.editorialInterpretationOptions"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "investigation desk with tie, ticket stub, and blank evidence cards, 1970s, procedural, rainy, restrained, unresolved mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow fade from foreground object to background threshold while the investigation desk with tie remains the focus."
             }
           ]
         },
         {
-          "creatorNote": "D. must stay tied to the variant detail that source and variant record. Keep the source boundary around unexplained Mysteries / Unsolved Case / Evidence-limited public record source-limited, without turning it into a stronger claim.",
-          "estimatedReadingTime": "≈ 31 sec",
-          "narration": "The symbolic reading grows out of the recorded details: Cooper Hijacking is best read as an unexplained mysteries entry built around 1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified. The symbolic reading grows out of the recorded details: Cooper is treated through one concrete anchor: the 1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified.",
-          "sourceFactIds": [
-            "fact-046",
-            "fact-016"
-          ],
-          "sourceFieldRefs": [
-            "story.summaryAnswer",
-            "contentDNA.uniqueAngle"
-          ],
-          "usedFactTexts": [
-            "Cooper Hijacking is best read as an unexplained mysteries entry built around 1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified.",
-            "Cooper is treated through one concrete anchor: the 1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified."
-          ],
+          "creatorNote": "Let the source boundary stay clear without stopping the story.",
+          "estimatedReadingTime": "about 20 sec",
+          "narration": "The later discovery of ransom money along the Columbia River gave the case one of its most haunting images. Money that should have vanished with the man reappears, damaged and partial. It proves the story touched the ground somewhere, but it does not explain the ending.",
           "visualBeats": [
             {
-              "beatMotion": "Use a restrained lateral pan across FBI case history and later public-history summaries of the NORJAK investigation, letting Cooper hold the follow-up anchor while Cooper stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Cooper framed by the interpretation that the Cooper case lasts because the ending happens in the dark in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Cooper, lasts, because as supporting visual details. This should feel like a follow-up visual with one clear focal point during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a restrained lateral pan across FBI case history and later public-history summaries of the NORJAK investigation, letting Cooper hold the follow-up anchor while Cooper stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-009"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.reportedVariants",
-                "contentDNA.requiredSpecificDetails",
-                "storyBrief.editorialInterpretationOptions"
-              ],
-              "usedFactTexts": []
-            },
+              "imagePrompt": "riverbank with weathered cash fragments implied, no readable bills, 1970s, procedural, rainy, restrained, unresolved mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow push toward the central shape while the riverbank with weathered cash fragments implied remains the focus."
+            }
+          ]
+        },
+        {
+          "creatorNote": "Use one concrete image, then let the narration carry the meaning.",
+          "estimatedReadingTime": "about 20 sec",
+          "narration": "That is the pattern of the case. Each clue narrows something and opens something else. A tie, a ticket, a note described but not preserved, parachutes, flight path, weather, and money all matter. Together they create a case that feels knowable in pieces and unreachable as a whole.",
+          "visualBeats": [
             {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal associated with a variant where source and variant record and record within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows D associated with a variant where source and variant record in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include D, record, variant as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal associated with a variant where source and variant record and record within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-005"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.reportedVariants",
-                "contentDNA.requiredSpecificDetails",
-                "storyBrief.editorialInterpretationOptions"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "search team lights in rainy forest distance, respectful documentary style, 1970s, procedural, rainy, restrained, unresolved mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: restrained lateral drift across the frame while the search team lights in rainy forest distance remains the focus."
             }
           ]
         }
       ],
-      "sceneFocus": "The central visual should show the FBI investigated hundreds of people and considered many suspects, but no identity was confirmed.",
-      "sceneRole": "Major Explanations and Uncertainty",
-      "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-      "sourceFactIds": [
-        "fact-004",
-        "fact-009",
-        "fact-005",
-        "fact-006",
-        "fact-046",
-        "fact-016"
-      ],
-      "sourceFieldRefs": [
-        "storyBrief.reportedVariants",
-        "storyBrief.editorialInterpretationOptions",
-        "story.summaryAnswer",
-        "contentDNA.uniqueAngle"
-      ],
-      "visualDirection": "Hold the establishing image briefly, then begin a slow push toward the main detail.",
-      "voiceDirection": "Calm documentary pace, short pauses between ideas, natural restraint, with light emphasis on \"Hijacking\" when it appears."
+      "sceneFocus": "Clues remain strong but incomplete.",
+      "sceneRole": "Investigation and Evidence",
+      "soundEffect": "subtle paper, room tone, distant air",
+      "visualDirection": "Use one image-led frame per narration beat. Keep motion optional and restrained.",
+      "voiceDirection": "Calm documentary narration with story rhythm and clear pauses."
     },
     {
-      "backgroundMusic": "soft reflective drone, low drone, slow piano, sparse documentary bed, low density with a soft ending",
-      "directionTip": "The central visual should show the Cooper case lasts because the ending happens in the dark.",
+      "backgroundMusic": "dark quiet ambient bed, soft low pulse, no melodic lead",
       "narrationParts": [
         {
-          "creatorNote": "Cooper must stay tied to the interpretation connected to the Cooper case lasts because the ending happens in the dark. Keep the source boundary around unexplained Mysteries / Unsolved Case / Evidence-limited public record source-limited, without turning it into a stronger claim.",
-          "estimatedReadingTime": "≈ 29 sec",
-          "narration": "The ending depends on what changes afterward: The Cooper case lasts because the ending happens in the dark. The result is stated through a concrete outcome: One possible reading is that the Cooper case lasts because the ending happens in the dark. The ending depends on what changes afterward: 1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified.",
-          "sourceFactIds": [
-            "fact-019",
-            "fact-023",
-            "fact-057"
-          ],
-          "sourceFieldRefs": [
-            "publicArticlePlan",
-            "derived.outcomeFromDetail"
-          ],
-          "usedFactTexts": [
-            "The Cooper case lasts because the ending happens in the dark.",
-            "One possible reading is that the Cooper case lasts because the ending happens in the dark.",
-            "1971 airplane hijacking in which a man parachuted into the night with ransom money and was never identified."
-          ],
+          "creatorNote": "Keep this beat viewer-facing and story-led.",
+          "estimatedReadingTime": "about 19 sec",
+          "narration": "By the end, D.B. Cooper is not only a hijacking case. It is a story about identity disappearing under documentation. The event is recorded, investigated, and remembered, but the person slips past the archive. The more details survive, the more striking the blank center becomes.",
           "visualBeats": [
             {
-              "beatMotion": "Use a slow controlled push toward Cooper, with framed by the interpretation that the Cooper case lasts because the ending happens in staying fixed as the opening anchor and Cooper visible. End with a slow hold and no new action.",
-              "imagePrompt": "A realistic location-documentary style image shows Cooper framed by the interpretation that the Cooper case lasts because the ending happens in the dark in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a wide reflective composition with negative space, with subdued fading light, quiet reflective tension, and cultural context from Unexplained Mysteries. Include Cooper, lasts, because as supporting visual details. This should feel like an opening visual with one clear focal point during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a slow controlled push toward Cooper, with framed by the interpretation that the Cooper case lasts because the ending happens in staying fixed as the opening anchor and Cooper visible. End with a slow hold and no new action.",
-              "sourceFactIds": [
-                "fact-009"
-              ],
-              "sourceFieldRefs": [
-                "publicArticlePlan",
-                "storyBrief.editorialInterpretationOptions",
-                "contentDNA.requiredSpecificDetails",
-                "derived.outcomeFromDetail"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a restrained lateral pan across FBI case history and later public-history summaries of the NORJAK investigation, letting Cooper hold the opening detail while lasts stays in frame. End with a slow hold and no new action.",
-              "imagePrompt": "A realistic location-documentary style image shows Cooper connected to the Cooper case lasts because the ending happens in the dark in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, and cultural context from Unexplained Mysteries. Include Cooper, lasts, because as supporting visual details. This should feel like an opening visual that adds a second visual detail during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Use a restrained lateral pan across FBI case history and later public-history summaries of the NORJAK investigation, letting Cooper hold the opening detail while lasts stays in frame. End with a slow hold and no new action.",
-              "sourceFactIds": [
-                "fact-019"
-              ],
-              "sourceFieldRefs": [
-                "publicArticlePlan",
-                "storyBrief.editorialInterpretationOptions",
-                "contentDNA.requiredSpecificDetails",
-                "derived.outcomeFromDetail"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal connected to one possible reading is that the Cooper case lasts because the ending and reading within the wider frame. End with a slow hold and no new action.",
-              "imagePrompt": "A realistic location-documentary style image shows Cooper connected to one possible reading is that the Cooper case lasts because the ending happens in the dark in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, and cultural context from Unexplained Mysteries. Include Cooper, possible, reading as supporting visual details. This should feel like an opening visual that widens the frame without adding new story elements during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal connected to one possible reading is that the Cooper case lasts because the ending and reading within the wider frame. End with a slow hold and no new action.",
-              "sourceFactIds": [
-                "fact-023"
-              ],
-              "sourceFieldRefs": [
-                "publicArticlePlan",
-                "storyBrief.editorialInterpretationOptions",
-                "contentDNA.requiredSpecificDetails",
-                "derived.outcomeFromDetail"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "suspect board with faces obscured and strings, no readable names, 1970s, procedural, rainy, restrained, unresolved mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow hold with a tiny light change while the suspect board with faces obscured and strings remains the focus."
             }
           ]
         },
         {
-          "creatorNote": "Cooper must stay tied to one possible reading is that the Cooper case lasts because the ending happens in the dark. Let the Cooper case lasts because the ending happens in the dark define the result for this Part.",
-          "estimatedReadingTime": "≈ 29 sec",
-          "narration": "The surviving record gives the narration a source limit: The FBI investigated hundreds of people and considered many suspects, but no identity was confirmed. The surviving record gives the narration a source limit: Those references are useful for keeping official records, witness claims, and unresolved details separate. The surviving record gives the narration a source limit: Cooper, unresolved points stay unresolved when the available record does not close them.",
-          "sourceFactIds": [
-            "fact-035",
-            "fact-030",
-            "fact-039"
-          ],
-          "sourceFieldRefs": [
-            "publicArticlePlan.publicSourceNote",
-            "publicArticlePlan"
-          ],
-          "usedFactTexts": [
-            "The FBI investigated hundreds of people and considered many suspects, but no identity was confirmed.",
-            "Those references are useful for keeping official records, witness claims, and unresolved details separate.",
-            "Cooper, unresolved points stay unresolved when the available record does not close them."
-          ],
+          "creatorNote": "Let the source boundary stay clear without stopping the story.",
+          "estimatedReadingTime": "about 20 sec",
+          "narration": "The strongest ending avoids declaring a suspect without proof. The mystery does not need a false conclusion. Its power comes from the gap between action and identity. Someone did this. Someone prepared, spoke, waited, jumped, and vanished. The archive can show the outline but not the face.",
           "visualBeats": [
             {
-              "beatMotion": "Use a restrained lateral pan across FBI case history and later public-history summaries of the NORJAK investigation, letting Cooper hold the follow-up anchor while Cooper stays in frame. End with a slow hold and no new action.",
-              "imagePrompt": "A realistic location-documentary style image shows Cooper connected to one possible reading is that the Cooper case lasts because the ending happens in the dark in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, and cultural context from Unexplained Mysteries. Include Cooper, possible, reading as supporting visual details. This should feel like a follow-up visual with one clear focal point during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a restrained lateral pan across FBI case history and later public-history summaries of the NORJAK investigation, letting Cooper hold the follow-up anchor while Cooper stays in frame. End with a slow hold and no new action.",
-              "sourceFactIds": [
-                "fact-023"
-              ],
-              "sourceFieldRefs": [
-                "publicArticlePlan",
-                "storyBrief.editorialInterpretationOptions",
-                "contentDNA.requiredSpecificDetails",
-                "derived.outcomeFromDetail"
-              ],
-              "usedFactTexts": []
-            },
+              "imagePrompt": "empty airplane seat after landing, briefcase gone, quiet unresolved, 1970s, procedural, rainy, restrained, unresolved mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: gentle pullback that leaves negative space while the empty airplane seat after landing remains the focus."
+            }
+          ]
+        },
+        {
+          "creatorNote": "Use one concrete image, then let the narration carry the meaning.",
+          "estimatedReadingTime": "about 20 sec",
+          "narration": "The final image is not a triumphant escape or a confirmed death. It is rain over dark forest and a plane continuing without the man who changed its story. D.B. Cooper remains unforgettable because he stepped out of a documented event and into unresolved American legend.",
+          "visualBeats": [
             {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal shown through source material connected to unexplained Mysteries / Unsolved Case / Evidence-limited public and Unsolved Case within the wider frame. End with a slow hold and no new action.",
-              "imagePrompt": "A realistic location-documentary style image shows D shown through source material connected to unexplained Mysteries / Unsolved Case / Evidence-limited public record in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a wider reflective frame that keeps the ending unresolved, with subdued fading light, quiet reflective tension, and cultural context from public. Include D, Unsolved Case, record as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal shown through source material connected to unexplained Mysteries / Unsolved Case / Evidence-limited public and Unsolved Case within the wider frame. End with a slow hold and no new action.",
-              "sourceFactIds": [
-                "fact-015"
-              ],
-              "sourceFieldRefs": [
-                "publicArticlePlan",
-                "storyBrief.editorialInterpretationOptions",
-                "contentDNA.requiredSpecificDetails",
-                "derived.outcomeFromDetail"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a slow controlled push toward Cooper, with framed by the interpretation that the Cooper case lasts because the ending happens in staying fixed as the follow-up wider frame and because visible. End with a slow hold and no new action.",
-              "imagePrompt": "A realistic location-documentary style image shows Cooper framed by the interpretation that the Cooper case lasts because the ending happens in the dark in FBI case history and later public-history summaries of the NORJAK investigation. Frame one clear scene as a wider reflective frame that keeps the ending unresolved, with subdued fading light, quiet reflective tension, and cultural context from Unexplained Mysteries. Include Cooper, lasts, because as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Use a slow controlled push toward Cooper, with framed by the interpretation that the Cooper case lasts because the ending happens in staying fixed as the follow-up wider frame and because visible. End with a slow hold and no new action.",
-              "sourceFactIds": [
-                "fact-009"
-              ],
-              "sourceFieldRefs": [
-                "publicArticlePlan",
-                "storyBrief.editorialInterpretationOptions",
-                "contentDNA.requiredSpecificDetails",
-                "derived.outcomeFromDetail"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "final rainy forest under night sky with aircraft lights fading away, 1970s, procedural, rainy, restrained, unresolved mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow fade from foreground object to background threshold while the final rainy forest under night sky with aircraft lights fading away remains the focus."
             }
           ]
         }
       ],
-      "sceneFocus": "The central visual should show the Cooper case lasts because the ending happens in the dark.",
-      "sceneRole": "What Remains Unresolved",
-      "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-      "sourceFactIds": [
-        "fact-019",
-        "fact-023",
-        "fact-057",
-        "fact-035",
-        "fact-030",
-        "fact-039"
-      ],
-      "sourceFieldRefs": [
-        "publicArticlePlan",
-        "derived.outcomeFromDetail",
-        "publicArticlePlan.publicSourceNote"
-      ],
-      "visualDirection": "Begin with a slow pullback, hold briefly after the final narration line, then fade to black.",
-      "voiceDirection": "Slow pace with a soft ending, short pauses between ideas, natural restraint, with light emphasis on \"Hijacking\" when it appears."
+      "sceneFocus": "The mystery survives because the identity stays open.",
+      "sceneRole": "Ending and Use",
+      "soundEffect": "low environmental hum, soft distant texture",
+      "visualDirection": "Use one image-led frame per narration beat. Keep motion optional and restrained.",
+      "voiceDirection": "Calm documentary narration with story rhythm and clear pauses."
     }
   ]
 }

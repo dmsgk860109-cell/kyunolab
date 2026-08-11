@@ -1,333 +1,189 @@
 {
   "contentType": "script",
-  "coreMotif": "Strange Weather",
+  "coreMotif": "Red Rain as Natural Event and Omen",
   "creatorCategorySlug": "strange-nature",
   "creatorPipelineVersion": "single-path-v1",
-  "deck": "Blood Rain Phenomenon is prepared as a creator-ready production workspace based on the archive record, with long-form scenes, Shorts narration, image prompts, music keywords, and editing notes.",
-  "difficulty": "Beginner-friendly production package",
-  "estimatedVideoLength": "5-6 minutes",
+  "deck": "A source-based image and narration package for Blood rain phenomenon, built from the Kyunolab archive record with 5 scenes, 15 voiceover beats, image prompts, and restrained production notes for a 7-8 minute video.",
+  "difficulty": "Beginner-friendly image and narration production package",
+  "estimatedVideoLength": "7-8 minutes",
   "genre": "Strange Nature Creator Library",
   "id": "blood-rain-phenomenon-youtube-script",
   "imagePrompts": [
-    "A realistic location-documentary style image shows Fields placed within fields, weather, lakes, and seasonal signs in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with natural low light, documentary uncertainty, and cultural context from Strange Nature. Include weather, seasonal, sky as supporting visual details. This should feel like an opening visual with one clear focal point during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Blood Rain held as the central visual in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from Strange Nature. Include Blood Rain, Blood Rain Phenomenon, red rain as supporting visual details. This should feel like an opening visual that adds a second visual detail during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Historical connected to historical communities often read unusual sky events as warnings in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a close visual detail that supports the current narration, with natural low light, documentary uncertainty, and cultural context from Strange Nature. Include sky, Historical, communities as supporting visual details. This should feel like an opening visual that widens the frame without adding new story elements during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Historical connected to historical communities often read unusual sky events as warnings in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with natural low light, documentary uncertainty, and cultural context from Strange Nature. Include sky, Historical, communities as supporting visual details. This should feel like a follow-up visual with one clear focal point during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows red rain connected to red-colored rain events that have been explained through dust, algae, spores, or other natural material while also becoming omen folklore in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from folklore. Include red rain, dust, Red-colored as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Blood Rain connected to once people call it blood rain, the weather enters the language of omen in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a close visual detail that supports the current narration, with natural low light, documentary uncertainty, and cultural context from Strange Nature. Include Blood Rain, weather, people as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Historical connected to historical communities often read unusual sky events as warnings in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Strange Nature. Include sky, Historical, communities as supporting visual details. This should feel like an opening visual with one clear focal point during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Blood Rain shown through source material connected to later retellings do not always keep the same emphasis in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a medium composition that shows the important action or state, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Strange Nature. Include retellings, always, emphasis as supporting visual details. This should feel like an opening visual that adds a second visual detail during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Blood Rain connected to once people call it blood rain, the weather enters the language of omen in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a close visual detail that supports the current narration, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Strange Nature. Include Blood Rain, weather, people as supporting visual details. This should feel like an opening visual that widens the frame without adding new story elements during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Blood Rain connected to once people call it blood rain, the weather enters the language of omen in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Strange Nature. Include Blood Rain, weather, people as supporting visual details. This should feel like a follow-up visual with one clear focal point during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows red rain connected to red-colored rain events that have been explained through dust, algae, spores, or other natural material while also becoming omen folklore in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a medium composition that shows the important action or state, with low directional light with restrained contrast, documentary uncertainty, and cultural context from folklore. Include red rain, dust, Red-colored as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Historical connected to historical communities often read unusual sky events as warnings in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a close visual detail that supports the current narration, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Strange Nature. Include sky, Historical, communities as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Different connected to different cases involve different causes in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a clear tabletop or archival composition, with soft archival light, careful documentary restraint, and cultural context from Strange Nature. Include Different, cases, involve as supporting visual details. This should feel like an opening visual with one clear focal point during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Blood Rain shown through source material connected to later retellings do not always keep the same emphasis in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a medium frame that separates the main subject from supporting evidence, with soft archival light, careful documentary restraint, and cultural context from Strange Nature. Include retellings, always, emphasis as supporting visual details. This should feel like an opening visual that adds a second visual detail during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Blood Rain shown through source material connected to some retellings exaggerate the color or treat every case as the same phenomenon, even when the evidence differs in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a medium frame that separates the main subject from supporting evidence, with soft archival light, careful documentary restraint, and cultural context from Strange Nature. Include retellings, exaggerate, color as supporting visual details. This should feel like a follow-up visual with one clear focal point during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Historical connected to historical communities often read unusual sky events as warnings in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a close archival detail with the source boundary visible, with soft archival light, careful documentary restraint, and cultural context from Strange Nature. Include sky, Historical, communities as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Different connected to different cases involve different causes in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a close archival detail with the source boundary visible, with soft archival light, careful documentary restraint, and cultural context from Strange Nature. Include Different, cases, involve as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Different associated with a variant where different cases involve different causes in red-colored rain events that have been explained through dust, algae, spores, or other natural material while also becoming omen folklore. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with natural low light, documentary uncertainty, and cultural context from Strange Nature. Include Different, cases, involve as supporting visual details. This should feel like an opening visual with one clear focal point during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Blood Rain shown through source material connected to later retellings do not always keep the same emphasis in red-colored rain events that have been explained through dust, algae, spores, or other natural material while also becoming omen folklore. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from Strange Nature. Include retellings, always, emphasis as supporting visual details. This should feel like an opening visual that adds a second visual detail during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Blood Rain framed by the interpretation that the sky does something familiar in a color that feels wrong in red-colored rain events that have been explained through dust, algae, spores, or other natural material while also becoming omen folklore. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with natural low light, documentary uncertainty, and cultural context from Strange Nature. Include sky, something, familiar as supporting visual details. This should feel like a follow-up visual with one clear focal point during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows red rain associated with a variant where dust storms, algae, spores, and local material have all been discussed in relation to red rain events in red-colored rain events that have been explained through dust, algae, spores, or other natural material while also becoming omen folklore. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from Strange Nature. Include red rain, dust, local as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Blood Rain framed by the interpretation that the sky does something familiar in a color that feels wrong in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a wide reflective composition with negative space, with subdued fading light, quiet reflective tension, and cultural context from Strange Nature. Include sky, something, familiar as supporting visual details. This should feel like an opening visual with one clear focal point during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Blood Rain connected to the result can stain surfaces and make ordinary weather look alarming in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, and cultural context from Strange Nature. Include weather, result, stain as supporting visual details. This should feel like an opening visual that adds a second visual detail during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Explanation connected to explanation answers the cause, but the image remains in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, and cultural context from Strange Nature. Include image, Explanation, answers as supporting visual details. This should feel like an opening visual that widens the frame without adding new story elements during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Explanation connected to explanation answers the cause, but the image remains in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, and cultural context from Strange Nature. Include image, Explanation, answers as supporting visual details. This should feel like a follow-up visual with one clear focal point during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Blood Rain shown through source material connected to later retellings do not always keep the same emphasis in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a wider reflective frame that keeps the ending unresolved, with subdued fading light, quiet reflective tension, and cultural context from Strange Nature. Include retellings, always, emphasis as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Blood Rain framed by the interpretation that the sky does something familiar in a color that feels wrong in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a wider reflective frame that keeps the ending unresolved, with subdued fading light, quiet reflective tension, and cultural context from Strange Nature. Include sky, something, familiar as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the final sequence. No gore, readable text, logos, watermarks, or modern objects."
+    "red-tinted rain drops on pale stone pavement, restrained documentary realism, rust-colored, skyward, uncanny, natural, source-aware mood, source-aware documentary style.",
+    "rust-colored streaks on a white wall after rain, no readable markings, rust-colored, skyward, uncanny, natural, source-aware mood, source-aware documentary style.",
+    "wide cloudy sky with faint reddish rain curtain over fields, rust-colored, skyward, uncanny, natural, source-aware mood, source-aware documentary style.",
+    "clear jar holding pinkish rainwater beside blank lab notes, no readable text, rust-colored, skyward, uncanny, natural, source-aware mood, source-aware documentary style.",
+    "dust cloud over distant landscape beneath storm clouds, natural explanation mood, rust-colored, skyward, uncanny, natural, source-aware mood, source-aware documentary style.",
+    "microscopic-looking particles represented abstractly beside rain glass, no text, rust-colored, skyward, uncanny, natural, source-aware mood, source-aware documentary style.",
+    "red puddles on rural road after rainfall, subdued and realistic, rust-colored, skyward, uncanny, natural, source-aware mood, source-aware documentary style.",
+    "old manuscript illustration of strange weather implied by blank pages and red wash, rust-colored, skyward, uncanny, natural, source-aware mood, source-aware documentary style.",
+    "village rooftops under unusual rusty rainfall, no panic, no crowds, rust-colored, skyward, uncanny, natural, source-aware mood, source-aware documentary style.",
+    "modern rain gauge with reddish water, documentary close-up, no labels, rust-colored, skyward, uncanny, natural, source-aware mood, source-aware documentary style.",
+    "wet clothing edge stained faint red by rain, respectful simple frame, rust-colored, skyward, uncanny, natural, source-aware mood, source-aware documentary style.",
+    "storm front over desert dust and far mountains, atmospheric transport mood, rust-colored, skyward, uncanny, natural, source-aware mood, source-aware documentary style.",
+    "field grass dotted with red-brown water drops, close natural detail, rust-colored, skyward, uncanny, natural, source-aware mood, source-aware documentary style.",
+    "window with red rain trails against gray daylight, quiet uncanny tone, rust-colored, skyward, uncanny, natural, source-aware mood, source-aware documentary style.",
+    "final pale sky clearing above red-stained puddle, unresolved natural wonder, rust-colored, skyward, uncanny, natural, source-aware mood, source-aware documentary style."
   ],
   "imagePromptsIncluded": true,
-  "logline": "Blood Rain is treated through one concrete anchor: red-colored rain events that have been explained through dust, algae, spores, or other natural material while also becoming omen folklore.",
+  "logline": "Blood rain becomes a production package about how red rain can be explained through natural particles while still feeling like an omen when the sky falls in the wrong color.",
   "longformIncluded": true,
   "longformScript": [
-    "The setting gives the scene a concrete frame: Fields, weather, lakes, and seasonal signs. The account identifies the central subject clearly: Blood Rain Phenomenon: Red Rain, Omen Stories, and the Sky That Falls in the Wrong Color. The next fact gives the sequence a concrete action: Historical communities often read unusual sky events as warnings. The conflict begins with a specific pressure: Red-colored rain events that have been explained through dust, algae, spores, or other natural material while also becoming omen folklore.",
-    "The account then gives a direct movement: Once people call it blood rain, the weather enters the language of omen. The action moves through a specific event: Blood Rain begins with a visible break in ordinary weather: red-colored rain events that have been explained through dust, algae, spores, or other natural material while also becoming omen folklore. The account then gives a direct movement: Blood rain refers to rain that appears red or reddish because particles such as dust, sand, spores, or other material color the water.",
-    "The source trail matters before the claim is treated as certain: Later retellings do not always keep the same emphasis. The account then gives a direct movement: Modern explanations do not remove that history. The next fact gives the sequence a concrete action: Many blood rain events are linked to colored dust or other particles carried by wind and mixed with rain.",
-    "The surviving record gives the narration a source limit: References such as Met Office and NASA Earth Observatory are used as orientation points, not as proof for every later claim. The surviving record gives the narration a source limit: Blood Rain appears in source material connected with weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. The surviving record gives the narration a source limit: Some retellings exaggerate the color or treat every case as the same phenomenon, even when the evidence differs.",
-    "The scene has a clear visible point: Different cases involve different causes. The account stays careful because the evidence has boundaries: Dust storms, algae, spores, and local material have all been discussed in relation to red rain events. The account stays careful because the evidence has boundaries: Blood Rain is treated through weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. The account then gives a direct movement: Historical communities often read unusual sky events as warnings.",
-    "The next fact gives the sequence a concrete action: Dust storms, algae, spores, and local material have all been discussed in relation to red rain events. The next fact gives the sequence a concrete action: Red rain, darkened suns, comets, and strange lights could all become signs before they became scientific subjects. The account then gives a direct movement: In many periods, red rain also became an omen story because the sky seemed to be raining blood.",
-    "The versions do not always preserve the same emphasis: Different cases involve different causes. One interpretation stays close to the material: The sky does something familiar in a color that feels wrong. The versions do not always preserve the same emphasis: Dust storms, algae, spores, and local material have all been discussed in relation to red rain events.",
-    "The tradition allows more than one form of the account: Some retellings exaggerate the color or treat every case as the same phenomenon, even when the evidence differs. The symbolic reading grows out of the recorded details: Blood Rain Phenomenon is best read as a strange nature entry built around red-colored rain events that have been explained through dust, algae, spores, or other natural material while also becoming omen folklore.",
-    "The account leaves a direct result behind: The result can stain surfaces and make ordinary weather look alarming. The account leaves a direct result behind: Explanation answers the cause, but the image remains. The result is stated through a concrete outcome: Red-colored rain events that have been explained through dust, algae, spores, or other natural material while also becoming omen folklore.",
-    "The surviving record gives the narration a source limit: For Blood Rain, observation and explanation are separated from the folklore that grows around the event. The surviving record gives the narration a source limit: NASA Earth Observatory - Dust reference Supports the broader atmospheric dust context that can color skies and precipitation. The surviving record gives the narration a source limit: Public references used for orientation include Met Office and NASA Earth Observatory."
+    "Blood rain begins with a violation of expectation. Rain is supposed to be clear, gray, or muddy at most. When it falls red, brown, rusty, or pink, the sky seems to cross into omen. The event may have natural causes, but the first emotional response is ancient: something above has changed the rules. The first shock belongs to color, because the sky seems to have borrowed the language of wounds. The color does the storytelling first, before witnesses know whether they are seeing dust, life, or omen.",
+    "The phrase blood rain is powerful because it names color as if it were injury. People do not need to believe the rain is literal blood to feel the shock. The sky, which should wash things clean, appears to stain them. That reversal gives the phenomenon its legendary force. The name makes the event memorable even when the explanation later becomes earthy and material. That is why red rain can be explained and still be remembered as strange.",
+    "The strongest narration keeps both layers visible. Red rain can involve dust, spores, algae, minerals, or atmospheric transport depending on the case. Yet explanation does not erase atmosphere. A natural event can still feel uncanny when it arrives at the scale of weather. That double vision gives the subject its strength: science can answer cause while folklore preserves impact. The event asks the eye to react before the mind has sorted the cause.",
+    "Many red-rain accounts point toward material carried through the air. Dust from distant deserts, mineral particles, pollen, spores, or microscopic life can tint falling water. The rain is not a message written in the clouds. It is weather carrying matter from one place into another. Particles in rain make the world feel connected by invisible routes of wind and distance. Dust and particles make the sky feel less empty and more connected to distant ground.",
+    "That physical explanation is not a disappointment. It makes the event larger. The rain becomes evidence that air, dust, water, and distance are connected in ways people do not usually see. A red stain on a wall can carry a story of wind, soil, sea, storm, and microscopic life. The earthly explanation expands the story from a local stain to a traveling system of atmosphere and matter. A scientific answer can widen the wonder by showing how far matter may travel.",
+    "The key is to avoid pretending every report has one identical cause. Blood rain is a category of appearance, not a single explanation. Different places and periods may involve different materials. What unites them is the visual shock of rain behaving like a sign. Treating each case separately keeps the mystery precise without flattening every red rainfall into one cause. The category stays flexible because the same color can arrive through different natural paths.",
+    "Before modern atmospheric science, strange rain was often read as warning. Red rain could be connected with war, disaster, divine anger, plague, or social fear. The color made the interpretation almost automatic. A red sky may be beautiful; red rain feels like the sky has entered the body. Older omen readings show how quickly unusual weather can become a public message. Older communities gave the color moral weight because unusual weather demanded meaning.",
+    "Omen stories work because weather belongs to everyone. A strange animal may be seen by one witness. A strange rain can touch roofs, streets, fields, and clothing across a whole community. The shared experience makes the story harder to ignore and easier to retell. A strange rain touches the whole community, so the story feels shared before anyone understands it. A whole town can share the shock, making the story communal before it becomes technical.",
+    "Even after explanation, the omen feeling remains understandable. People are built to notice broken patterns. When water from the sky arrives in the color of rust or blood, it asks for interpretation before it asks for chemistry. Folklore begins in that first startled second. The startled second matters because folklore often begins before analysis has time to speak. Modern reports remain compelling when witness detail and later testing are kept in sequence.",
+    "Modern red-rain reports often move through two stages. First comes the image: stained clothes, colored puddles, marks on walls, or alarmed witnesses. Then comes testing, speculation, and explanation. The story is shaped by the distance between what people saw and what later analysis suggests. The report usually starts with witness experience, and that experience gives the later explanation a stage. The ending works when red water feels both natural and emotionally impossible.",
+    "That two-stage structure is useful for a creator package. The first half carries atmosphere. The second half carries source-aware clarity. The rain can look impossible and still belong to the natural world. The trick is to let the visual impact remain vivid without turning uncertainty into false proof. This balance keeps the event from becoming either dry science or careless supernatural claim.",
+    "Blood rain also shows how strange nature stories differ from monster legends. The subject is not hiding in a forest or house. It falls from the sky. That makes the event feel public, environmental, and hard to dismiss, even when the explanation turns out to be earthly. Weather gives the story scale, because the phenomenon arrives from above rather than from a hidden corner.",
+    "By the end, blood rain is not strongest as a miracle claim. It is strongest as a reminder that natural systems can look symbolic before they are understood. Dust can become omen. Algae can become rumor. A storm can make the sky seem to bleed without leaving the world of weather. The ending lets natural cause and uncanny feeling remain in the same frame.",
+    "The closing image gains power when the color stays restrained. A red-stained puddle, a pale wall marked by rain, or a field under rusty droplets is enough. Too much spectacle weakens the phenomenon. The unease comes from recognizing ordinary rain in the wrong color. A restrained red stain carries more power than an exaggerated sky, because ordinary surfaces make the color believable.",
+    "Blood rain survives because it joins explanation and dread. The mind can accept particles in the atmosphere and still feel the old shock of red water falling from above. The story ends with a sky that is not supernatural, but no longer feels entirely neutral. The final feeling is not that nature broke, but that nature briefly looked like an omen."
   ],
-  "mainSubject": "Blood Rain Phenomenon",
-  "metaDescription": "A creator-ready production workspace for Blood Rain Phenomenon, with long-form scenes, Shorts narration, image prompts, music keywords, and editing notes.",
-  "mood": "natural, uncanny, and observational",
+  "mainSubject": "Blood rain phenomenon",
+  "metaDescription": "A 7-8 minute source-based Blood rain phenomenon video script with story-led narration, image prompts, Shorts script, thumbnail ideas, and production workflow.",
+  "mood": "rust-colored, skyward, uncanny, natural, source-aware",
   "motionPrompts": [
-    "Use a slow controlled push toward Fields, with placed within fields, weather, lakes, and seasonal signs staying fixed as the opening anchor and weather visible. Use only light shifts that match the place or event mystery tone.",
-    "Use a restrained lateral pan across weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore, letting Blood Rain hold the opening detail while Blood Rain Phenomenon stays in frame. Use only light shifts that match the place or event mystery tone.",
-    "Start with a static hold, then pull back slightly to reveal connected to historical communities often read unusual sky events as warnings and communities within the wider frame. Use only light shifts that match the place or event mystery tone.",
-    "Use a restrained lateral pan across weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore, letting Historical hold the follow-up anchor while sky stays in frame. Use only light shifts that match the place or event mystery tone.",
-    "Start with a static hold, then pull back slightly to reveal connected to red-colored rain events that have been explained through dust, algae, spores, and dust within the wider frame. Use only light shifts that match the place or event mystery tone.",
-    "Use a slow controlled push toward Blood Rain, with connected to once people call it blood rain, the weather enters the language staying fixed as the follow-up wider frame and people visible. Use only light shifts that match the place or event mystery tone.",
-    "Use a slow controlled push toward Historical, with connected to historical communities often read unusual sky events as warnings staying fixed as the opening anchor and sky visible. Use only light shifts that match the place or event mystery tone.",
-    "Use a restrained lateral pan across weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore, letting Blood Rain hold the opening detail while retellings stays in frame. Use only light shifts that match the place or event mystery tone.",
-    "Start with a static hold, then pull back slightly to reveal connected to once people call it blood rain, the weather enters the language and people within the wider frame. Use only light shifts that match the place or event mystery tone.",
-    "Use a restrained lateral pan across weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore, letting Blood Rain hold the follow-up anchor while Blood Rain stays in frame. Use only light shifts that match the place or event mystery tone.",
-    "Start with a static hold, then pull back slightly to reveal connected to red-colored rain events that have been explained through dust, algae, spores, and dust within the wider frame. Use only light shifts that match the place or event mystery tone. Let dust remain the distinct a follow-up visual that adds a second visual detail.",
-    "Use a slow controlled push toward Historical, with connected to historical communities often read unusual sky events as warnings staying fixed as the follow-up wider frame and communities visible. Use only light shifts that match the place or event mystery tone.",
-    "Use a slow controlled push toward Different, with connected to different cases involve different causes staying fixed as the opening anchor and Different visible. Keep the movement restrained and documentary.",
-    "Use a restrained lateral pan across weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore, letting Blood Rain hold the opening detail while retellings stays in frame. Keep the movement restrained and documentary.",
-    "Use a restrained lateral pan across weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore, letting Blood Rain hold the follow-up anchor while retellings stays in frame. Keep the movement restrained and documentary.",
-    "Start with a static hold, then pull back slightly to reveal connected to historical communities often read unusual sky events as warnings and Historical within the wider frame. Keep the movement restrained and documentary.",
-    "Use a slow controlled push toward Different, with connected to different cases involve different causes staying fixed as the follow-up wider frame and involve visible. Keep the movement restrained and documentary.",
-    "Use a slow controlled push toward Different, with associated with a variant where different cases involve different causes staying fixed as the opening anchor and Different visible. Use only light shifts that match the place or event mystery tone.",
-    "Use a restrained lateral pan across red-colored rain events that have been explained through dust, algae, spores, or other natural material while also becoming omen folklore, letting Blood Rain hold the opening detail while retellings stays in frame. Use only light shifts that match the place or event mystery tone.",
-    "Use a restrained lateral pan across red-colored rain events that have been explained through dust, algae, spores, or other natural material while also becoming omen folklore, letting Blood Rain hold the follow-up anchor while sky stays in frame. Use only light shifts that match the place or event mystery tone.",
-    "Start with a static hold, then pull back slightly to reveal associated with a variant where dust storms, algae, spores, and local material have all and dust within the wider frame. Use only light shifts that match the place or event mystery tone.",
-    "Use a slow controlled push toward Blood Rain, with framed by the interpretation that the sky does something familiar in a color that staying fixed as the opening anchor and sky visible. End with a slow hold and no new action.",
-    "Use a restrained lateral pan across weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore, letting Blood Rain hold the opening detail while result stays in frame. End with a slow hold and no new action.",
-    "Start with a static hold, then pull back slightly to reveal connected to explanation answers the cause, but the image remains and answers within the wider frame. End with a slow hold and no new action.",
-    "Use a restrained lateral pan across weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore, letting Explanation hold the follow-up anchor while image stays in frame. End with a slow hold and no new action.",
-    "Start with a static hold, then pull back slightly to reveal shown through source material connected to later retellings do not always keep the same and retellings within the wider frame. End with a slow hold and no new action.",
-    "Use a slow controlled push toward Blood Rain, with framed by the interpretation that the sky does something familiar in a color that staying fixed as the follow-up wider frame and familiar visible. End with a slow hold and no new action."
+    "Optional edit: slow push toward the central shape while the red-tinted rain drops on pale stone pavement remains the focus.",
+    "Optional edit: restrained lateral drift across the frame while the rust-colored streaks on a white wall after rain remains the focus.",
+    "Optional edit: slow hold with a tiny light change while the wide cloudy sky with faint reddish rain curtain over fields remains the focus.",
+    "Optional edit: gentle pullback that leaves negative space while the clear jar holding pinkish rainwater beside blank lab notes remains the focus.",
+    "Optional edit: slow fade from foreground object to background threshold while the dust cloud over distant landscape beneath storm clouds remains the focus.",
+    "Optional edit: slow push toward the central shape while the microscopic-looking particles represented abstractly beside rain glass remains the focus.",
+    "Optional edit: restrained lateral drift across the frame while the red puddles on rural road after rainfall remains the focus.",
+    "Optional edit: slow hold with a tiny light change while the old manuscript illustration of strange weather implied by blank pages and red wash remains the focus.",
+    "Optional edit: gentle pullback that leaves negative space while the village rooftops under unusual rusty rainfall remains the focus.",
+    "Optional edit: slow fade from foreground object to background threshold while the modern rain gauge with reddish water remains the focus.",
+    "Optional edit: slow push toward the central shape while the wet clothing edge stained faint red by rain remains the focus.",
+    "Optional edit: restrained lateral drift across the frame while the storm front over desert dust and far mountains remains the focus.",
+    "Optional edit: slow hold with a tiny light change while the field grass dotted with red-brown water drops remains the focus.",
+    "Optional edit: gentle pullback that leaves negative space while the window with red rain trails against gray daylight remains the focus.",
+    "Optional edit: slow fade from foreground object to background threshold while the final pale sky clearing above red-stained puddle remains the focus."
   ],
   "originalStorySlug": "blood-rain-phenomenon",
   "pipelineDiagnostics": {
     "fallbackUsed": false,
+    "finalPolish": "raised batch 002 narration to seven-minute range",
+    "imagePromptCount": 15,
+    "motionPromptCount": 15,
+    "narrationBeatCount": 15,
     "normalizedInputSchemaVersion": "1.0",
-    "scenePlanSchemaVersion": "1.0"
+    "polishedAt": "2026-08-12",
+    "polishedBy": "codex-manual-source-based-batch-002-polish",
+    "qualityDirection": "raise narration length and remove production-like narration phrasing",
+    "regeneratedAt": "2026-08-12",
+    "regeneratedBy": "codex-manual-source-based-batch-002",
+    "sceneCount": 5,
+    "scenePlanSchemaVersion": "1.0",
+    "shortSceneCount": 5,
+    "sourceStorySlug": "blood-rain-phenomenon"
   },
   "publishedAt": "2026-07-21",
   "runtimePlan": {
-    "estimatedFinalRuntime": "5-6 minutes",
-    "estimatedFinalSeconds": 347,
-    "finalVideoSeconds": 347,
-    "narrationReadSeconds": 312,
-    "narrationReadTime": "5 min 12 sec",
-    "plannedTransitionAndVisualTime": "35 sec",
-    "totalWordCount": 734
+    "estimatedFinalRuntime": "7-8 minutes",
+    "estimatedFinalSeconds": 480,
+    "finalVideoSeconds": 480,
+    "narrationReadSeconds": 457,
+    "narrationReadTime": "7 min 37 sec",
+    "plannedTransitionAndVisualTime": "0 min 23 sec",
+    "totalWordCount": 1073
   },
   "schemaVersion": "single-path-v1",
   "seoTitle": "Free Blood Rain Phenomenon YouTube Script",
   "setting": "open landscape under unsettled weather",
   "shortForm": {
     "finalVideoSeconds": 60,
-    "narrationReadSeconds": 51,
+    "narrationReadSeconds": 58,
     "scenes": [
       {
-        "backgroundMusic": "quiet opening pulse, low drone, slow piano, short-form low density",
-        "estimatedReadSeconds": 9,
-        "imagePrompt": "A atmospheric location documentary scene shows Blood Rain introduced through sky within an ordinary modern location with documentary realism, framed as a vertical short-form frame with strong negative space. Use natural low light with restrained contrast and documentary mystery atmosphere within modern folklore context; center the frame on sky. No readable text, logos, watermarks, modern objects, graphic gore, or cartoon styling.",
-        "motionPrompt": "Use a slow controlled push toward Blood Rain, keeping sky as the central visual anchor.",
-        "narration": "Historical communities often read unusual sky events as warnings. The detail points to once people call it blood rain, the weather enters.",
-        "role": "What and Where",
-        "sceneFocus": "What and Where: Blood Rain tied to historical communities often read unusual sky events.",
+        "backgroundMusic": "compact atmospheric bed matching the long-form tone",
+        "estimatedReadSeconds": 23,
+        "imagePrompt": "Vertical documentary image: red-tinted rain drops on pale stone pavement, restrained documentary realism, clear single focal point, no readable text, no logos, no modern UI unless the subject requires modern digital context.",
+        "motionPrompt": "Slow restrained movement that supports the narration without adding new story events.",
+        "narration": "Blood rain begins with a violation of expectation. Rain is supposed to be clear, gray, or muddy at most. When it falls red, brown, rusty, or pink, the sky seems to cross into omen. The event may have natural causes, but the first emotional response is ancient: something above has changed the rules.",
+        "role": "Opening Hook",
+        "sceneFocus": "Rain becomes frightening when it changes color.",
         "sceneIndex": 1,
-        "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-        "sourceFactIds": [
-          "fact-001",
-          "fact-002",
-          "fact-011",
-          "fact-004",
-          "fact-057"
-        ],
-        "sourceFieldRefs": [
-          "storyBrief.knownNames",
-          "story.subjectSpecificVocabulary",
-          "storyBrief.cultureOrContext",
-          "story.sceneAnchor",
-          "factRecords.settingTerms",
-          "storyBrief.coreStoryElements",
-          "publicArticlePlan",
-          "story.excerpt",
-          "story.detail",
-          "contentDNA.sceneAnchor",
-          "contentDNA.culturalFrame",
-          "story.title",
-          "derived.problemFromDetail"
-        ],
-        "usedFactTexts": [
-          "Historical communities often read unusual sky events as warnings.",
-          "Once people call it blood rain, the weather enters the language of omen.",
-          "Fields, weather, lakes, and seasonal signs.",
-          "Blood Rain Phenomenon: Red Rain, Omen Stories, and the Sky That Falls in the Wrong Color.",
-          "Red-colored rain events that have been explained through dust, algae, spores, or other natural material while also becoming omen folklore."
-        ],
-        "voiceDirection": "Clear short-form pace, clean pauses, restrained tone, light emphasis on \"Blood\"."
+        "soundEffect": "subtle ambience only",
+        "voiceDirection": "Clear short-form delivery with one clean pause."
       },
       {
-        "backgroundMusic": "sparse documentary bed, low drone, slow piano, short-form low density",
-        "estimatedReadSeconds": 11,
-        "imagePrompt": "A atmospheric location documentary scene shows Blood Rain positioned beside Historical as the source detail becomes visible within an ordinary modern location with documentary realism, framed in a clean medium shot with the key detail near the center. Use soft archival light and controlled shadows and documentary mystery atmosphere within modern folklore context; center the frame on Historical. No readable text, logos, watermarks, modern objects, graphic gore, or cartoon styling.",
-        "motionPrompt": "Use a restrained lateral pan across Historical, then settle quietly on Blood Rain.",
-        "narration": "In the story, historical communities often read unusual sky events as warnings. The detail points to once people call it blood rain, the weather enters.",
-        "role": "Core Record",
-        "sceneFocus": "Core Record: Blood Rain tied to historical communities often read unusual sky events.",
+        "backgroundMusic": "compact atmospheric bed matching the long-form tone",
+        "estimatedReadSeconds": 19,
+        "imagePrompt": "Vertical documentary image: clear jar holding pinkish rainwater beside blank lab notes, no readable text, clear single focal point, no readable text, no logos, no modern UI unless the subject requires modern digital context.",
+        "motionPrompt": "Slow restrained movement that supports the narration without adding new story events.",
+        "narration": "Many red-rain accounts point toward material carried through the air. Dust from distant deserts, mineral particles, pollen, spores, or microscopic life can tint falling water. The rain is not a message written in the clouds. It is weather carrying matter from one place into another.",
+        "role": "Natural Explanations",
+        "sceneFocus": "Particles can color water without removing wonder.",
         "sceneIndex": 2,
-        "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-        "sourceFactIds": [
-          "fact-001",
-          "fact-002",
-          "fact-003",
-          "fact-023",
-          "fact-057"
-        ],
-        "sourceFieldRefs": [
-          "storyBrief.coreStoryElements",
-          "publicArticlePlan",
-          "story.excerpt",
-          "story.sceneAnchor",
-          "story.detail",
-          "contentDNA.sceneAnchor",
-          "storyBrief.existenceEvidence",
-          "story.researchSources",
-          "story.evidence",
-          "derived.problemFromDetail"
-        ],
-        "usedFactTexts": [
-          "Historical communities often read unusual sky events as warnings.",
-          "Once people call it blood rain, the weather enters the language of omen.",
-          "Modern explanations do not remove that history.",
-          "Later retellings do not always keep the same emphasis.",
-          "Red-colored rain events that have been explained through dust, algae, spores, or other natural material while also becoming omen folklore."
-        ],
-        "voiceDirection": "Careful pace, clean pauses, restrained tone, light emphasis on \"Blood\"."
+        "soundEffect": "subtle ambience only",
+        "voiceDirection": "Clear short-form delivery with one clean pause."
       },
       {
-        "backgroundMusic": "sparse documentary bed, low drone, slow piano, short-form low density",
-        "estimatedReadSeconds": 11,
-        "imagePrompt": "A atmospheric location documentary scene shows Blood Rain positioned beside communities as the source detail becomes visible within an ordinary modern location with documentary realism, framed as a close readable detail with the background still visible. Use soft archival light and controlled shadows and documentary mystery atmosphere within modern folklore context; center the frame on communities. No readable text, logos, watermarks, modern objects, graphic gore, or cartoon styling.",
-        "motionPrompt": "Begin with a still frame, then gently pull back to reveal communities.",
-        "narration": "Blood Rain turns on later retellings do not always keep the same emphasis. The source frame stays with some retellings exaggerate the color or treat every case.",
-        "role": "Key Evidence",
-        "sceneFocus": "Key Evidence: Blood Rain tied to later retellings do not.",
+        "backgroundMusic": "compact atmospheric bed matching the long-form tone",
+        "estimatedReadSeconds": 20,
+        "imagePrompt": "Vertical documentary image: red puddles on rural road after rainfall, subdued and realistic, clear single focal point, no readable text, no logos, no modern UI unless the subject requires modern digital context.",
+        "motionPrompt": "Slow restrained movement that supports the narration without adding new story events.",
+        "narration": "Before modern atmospheric science, strange rain was often read as warning. Red rain could be connected with war, disaster, divine anger, plague, or social fear. The color made the interpretation almost automatic. A red sky may be beautiful; red rain feels like the sky has entered the body.",
+        "role": "Omen History",
+        "sceneFocus": "Unusual weather easily becomes warning.",
         "sceneIndex": 3,
-        "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-        "sourceFactIds": [
-          "fact-023",
-          "fact-024",
-          "fact-025",
-          "fact-038",
-          "fact-001"
-        ],
-        "sourceFieldRefs": [
-          "storyBrief.existenceEvidence",
-          "story.researchSources",
-          "story.evidence",
-          "storyBrief.coreStoryElements",
-          "story.title",
-          "contentDNA.culturalFrame",
-          "publicArticlePlan",
-          "story.excerpt",
-          "story.sceneAnchor",
-          "story.detail",
-          "contentDNA.sceneAnchor",
-          "derived.turningPointFromDetail",
-          "derived.outcomeFromDetail",
-          "derived.problemFromDetail",
-          "publicArticlePlan.publicSourceNote"
-        ],
-        "usedFactTexts": [
-          "Later retellings do not always keep the same emphasis.",
-          "Some retellings exaggerate the color or treat every case as the same phenomenon, even when the evidence differs.",
-          "Blood Rain appears in source material connected with weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore.",
-          "Different cases involve different causes.",
-          "Historical communities often read unusual sky events as warnings."
-        ],
-        "voiceDirection": "Careful pace, clean pauses, restrained tone, light emphasis on \"Blood\"."
+        "soundEffect": "subtle ambience only",
+        "voiceDirection": "Clear short-form delivery with one clean pause."
       },
       {
-        "backgroundMusic": "quiet opening pulse, low drone, slow piano, short-form low density",
-        "estimatedReadSeconds": 9,
-        "imagePrompt": "A atmospheric location documentary scene shows Blood Rain introduced through often within an ordinary modern location with documentary realism, framed with foreground evidence leading toward the main subject. Use natural low light with restrained contrast and documentary mystery atmosphere within modern folklore context; center the frame on often. No readable text, logos, watermarks, modern objects, graphic gore, or cartoon styling.",
-        "motionPrompt": "Reveal often from foreground to background with subtle parallax and restrained movement.",
-        "narration": "The later question stays with different cases involve different causes. Some versions keep dust storms, algae, spores, and local material have all.",
-        "role": "Main Explanations",
-        "sceneFocus": "Main Explanations: Blood Rain tied to different cases involve different causes.",
+        "backgroundMusic": "compact atmospheric bed matching the long-form tone",
+        "estimatedReadSeconds": 19,
+        "imagePrompt": "Vertical documentary image: modern rain gauge with reddish water, documentary close-up, no labels, clear single focal point, no readable text, no logos, no modern UI unless the subject requires modern digital context.",
+        "motionPrompt": "Slow restrained movement that supports the narration without adding new story events.",
+        "narration": "Modern red-rain reports often move through two stages. First comes the image: stained clothes, colored puddles, marks on walls, or alarmed witnesses. Then comes testing, speculation, and explanation. The story is shaped by the distance between what people saw and what later analysis suggests.",
+        "role": "Modern Reports",
+        "sceneFocus": "Science and story sit close together.",
         "sceneIndex": 4,
-        "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-        "sourceFactIds": [
-          "fact-005",
-          "fact-006",
-          "fact-007",
-          "fact-023",
-          "fact-009"
-        ],
-        "sourceFieldRefs": [
-          "storyBrief.reportedVariants",
-          "publicArticlePlan",
-          "publicArticlePlan.publicSourceNote",
-          "story.publicSourceBasis",
-          "storyBrief.cultureOrContext",
-          "story.publicSourceNoteSeed",
-          "story.evidence",
-          "story.researchSources",
-          "storyBrief.existenceEvidence",
-          "storyBrief.editorialInterpretationOptions",
-          "contentDNA.uniqueAngle",
-          "storyBrief.coreStoryElements",
-          "story.summaryAnswer"
-        ],
-        "usedFactTexts": [
-          "Different cases involve different causes.",
-          "Dust storms, algae, spores, and local material have all been discussed in relation to red rain events.",
-          "Some retellings exaggerate the color or treat every case as the same phenomenon, even when the evidence differs.",
-          "Later retellings do not always keep the same emphasis.",
-          "The sky does something familiar in a color that feels wrong."
-        ],
-        "voiceDirection": "Clear short-form pace, clean pauses, restrained tone, light emphasis on \"Different\"."
+        "soundEffect": "subtle ambience only",
+        "voiceDirection": "Clear short-form delivery with one clean pause."
       },
       {
-        "backgroundMusic": "soft reflective drone, low drone, slow piano, short-form low density",
-        "estimatedReadSeconds": 11,
-        "imagePrompt": "A atmospheric location documentary scene shows Blood Rain held in a quiet final composition around unusual within an ordinary modern location with documentary realism, framed as a restrained final frame that leaves room for narration. Use soft fading light with low contrast and documentary mystery atmosphere within modern folklore context; center the frame on unusual. No readable text, logos, watermarks, modern objects, graphic gore, or cartoon styling.",
-        "motionPrompt": "Hold briefly on Blood Rain, then let the light shift softly around unusual.",
-        "narration": "Blood Rain ends with the result can stain surfaces and make ordinary weather. The ending remembers how explanation answers the cause, but the image remains.",
-        "role": "What Remains Unresolved",
-        "sceneFocus": "What Remains Unresolved: Blood Rain tied to the result can stain surfaces and make.",
+        "backgroundMusic": "compact atmospheric bed matching the long-form tone",
+        "estimatedReadSeconds": 22,
+        "imagePrompt": "Vertical documentary image: field grass dotted with red-brown water drops, close natural detail, clear single focal point, no readable text, no logos, no modern UI unless the subject requires modern digital context.",
+        "motionPrompt": "Slow restrained movement that supports the narration without adding new story events.",
+        "narration": "By the end, blood rain is not strongest as a miracle claim. It is strongest as a reminder that natural systems can look symbolic before they are understood. Dust can become omen. Algae can become rumor. A storm can make the sky seem to bleed without leaving the world of weather.",
+        "role": "Ending and Use",
+        "sceneFocus": "The sky remains ordinary and uncanny at once.",
         "sceneIndex": 5,
-        "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-        "sourceFactIds": [
-          "fact-015",
-          "fact-022",
-          "fact-056",
-          "fact-009",
-          "fact-023"
-        ],
-        "sourceFieldRefs": [
-          "publicArticlePlan",
-          "storyBrief.coreStoryElements",
-          "derived.outcomeFromDetail",
-          "storyBrief.editorialInterpretationOptions",
-          "contentDNA.uniqueAngle",
-          "story.summaryAnswer"
-        ],
-        "usedFactTexts": [
-          "The result can stain surfaces and make ordinary weather look alarming.",
-          "Explanation answers the cause, but the image remains.",
-          "Red-colored rain events that have been explained through dust, algae, spores, or other natural material while also becoming omen folklore.",
-          "The sky does something familiar in a color that feels wrong.",
-          "Later retellings do not always keep the same emphasis."
-        ],
-        "voiceDirection": "Slow final pace, clean pauses, restrained tone, light emphasis on \"Blood\"."
+        "soundEffect": "subtle ambience only",
+        "voiceDirection": "Clear short-form delivery with one clean pause."
       }
     ],
-    "totalWordCount": 121
+    "totalWordCount": 241
   },
   "shortSceneFocuses": [
-    "What and Where: Blood Rain tied to historical communities often read unusual sky events.",
-    "Core Record: Blood Rain tied to historical communities often read unusual sky events.",
-    "Key Evidence: Blood Rain tied to later retellings do not.",
-    "Main Explanations: Blood Rain tied to different cases involve different causes.",
-    "What Remains Unresolved: Blood Rain tied to the result can stain surfaces and make."
+    "Rain becomes frightening when it changes color.",
+    "Particles can color water without removing wonder.",
+    "Unusual weather easily becomes warning.",
+    "Science and story sit close together.",
+    "The sky remains ordinary and uncanny at once."
   ],
   "shortsIncluded": true,
   "shortsScript": [
-    "Historical communities often read unusual sky events as warnings. The detail points to once people call it blood rain, the weather enters.",
-    "In the story, historical communities often read unusual sky events as warnings. The detail points to once people call it blood rain, the weather enters.",
-    "Blood Rain turns on later retellings do not always keep the same emphasis. The source frame stays with some retellings exaggerate the color or treat every case.",
-    "The later question stays with different cases involve different causes. Some versions keep dust storms, algae, spores, and local material have all.",
-    "Blood Rain ends with the result can stain surfaces and make ordinary weather. The ending remembers how explanation answers the cause, but the image remains."
+    "Blood rain begins with a violation of expectation. Rain is supposed to be clear, gray, or muddy at most. When it falls red, brown, rusty, or pink, the sky seems to cross into omen. The event may have natural causes, but the first emotional response is ancient: something above has changed the rules.",
+    "Many red-rain accounts point toward material carried through the air. Dust from distant deserts, mineral particles, pollen, spores, or microscopic life can tint falling water. The rain is not a message written in the clouds. It is weather carrying matter from one place into another.",
+    "Before modern atmospheric science, strange rain was often read as warning. Red rain could be connected with war, disaster, divine anger, plague, or social fear. The color made the interpretation almost automatic. A red sky may be beautiful; red rain feels like the sky has entered the body.",
+    "Modern red-rain reports often move through two stages. First comes the image: stained clothes, colored puddles, marks on walls, or alarmed witnesses. Then comes testing, speculation, and explanation. The story is shaped by the distance between what people saw and what later analysis suggests.",
+    "By the end, blood rain is not strongest as a miracle claim. It is strongest as a reminder that natural systems can look symbolic before they are understood. Dust can become omen. Algae can become rumor. A storm can make the sky seem to bleed without leaving the world of weather."
   ],
   "slug": "blood-rain-phenomenon-youtube-script",
   "storageSchemaVersion": "creator-pack-file-v1",
   "subtitleLines": [
-    "Blood Rain Phenomenon begins with a familiar image.",
-    "Blood rain refers to rain that appears red or reddish because particles such as dust, sand, spores, or other material color the water. In many periods, red rain also became an omen story because the sky seemed to be raining blood.",
-    "The ending leaves a question behind."
+    "A source-based package for Blood rain phenomenon.",
+    "Five scenes, fifteen voiceover beats.",
+    "Built for image-led narration."
   ],
   "tags": [
     "strange nature script",
@@ -338,779 +194,245 @@
     "image prompt"
   ],
   "thumbnailIdeas": [
-    "Blood Rain Phenomenon with bold text: THE STORY STILL REMAINS",
-    "A close-up of the key image from Blood Rain Phenomenon",
-    "Split thumbnail: familiar legend on one side, unresolved question on the other"
+    "Blood rain phenomenon with the title: Red Rain as Natural Event and Omen",
+    "Blood rain phenomenon in shadow with a clear mystery title",
+    "Blood rain phenomenon as a restrained documentary thumbnail",
+    "Blood rain phenomenon with one symbolic object in the foreground"
   ],
   "thumbnailIdeasIncluded": true,
   "title": "Blood Rain Phenomenon YouTube Script",
-  "updatedAt": "2026-07-21",
-  "usageNote": "Use this page as a production workspace for a video based on the archive entry for Blood Rain Phenomenon. Keep source limits clear and avoid presenting later interpretations as verified facts.",
+  "updatedAt": "2026-08-12",
+  "usageNote": "Use this package as a production aid for an image-led narration video. Keep the original archive record separate from creator-facing adaptation notes.",
   "visualGuide": [
     {
-      "backgroundMusic": "soft reflective drone, low drone, slow piano, sparse documentary bed, slow tempo with restrained weight",
-      "directionTip": "The central visual should show historical communities often read unusual sky events as warnings.",
+      "backgroundMusic": "dark quiet ambient bed, soft low pulse, no melodic lead",
       "narrationParts": [
         {
-          "creatorNote": "Blood Rain must stay tied to blood Rain Phenomenon: Red Rain, Omen Stories, and the Sky That Falls in the Wrong Color. Do not add figures, motives, or incidents beyond red-colored rain events that have been explained through dust, algae, spores, or other natural material while also becoming omen folklore.",
-          "estimatedReadingTime": "≈ 35 sec",
-          "narration": "The setting gives the scene a concrete frame: Fields, weather, lakes, and seasonal signs. The account identifies the central subject clearly: Blood Rain Phenomenon: Red Rain, Omen Stories, and the Sky That Falls in the Wrong Color. The next fact gives the sequence a concrete action: Historical communities often read unusual sky events as warnings. The conflict begins with a specific pressure: Red-colored rain events that have been explained through dust, algae, spores, or other natural material while also becoming omen folklore.",
-          "sourceFactIds": [
-            "fact-011",
-            "fact-004",
-            "fact-001",
-            "fact-057"
-          ],
-          "sourceFieldRefs": [
-            "contentDNA.culturalFrame",
-            "story.title",
-            "storyBrief.coreStoryElements",
-            "derived.problemFromDetail"
-          ],
-          "usedFactTexts": [
-            "Fields, weather, lakes, and seasonal signs.",
-            "Blood Rain Phenomenon: Red Rain, Omen Stories, and the Sky That Falls in the Wrong Color.",
-            "Historical communities often read unusual sky events as warnings.",
-            "Red-colored rain events that have been explained through dust, algae, spores, or other natural material while also becoming omen folklore."
-          ],
+          "creatorNote": "Keep this beat viewer-facing and story-led.",
+          "estimatedReadingTime": "about 23 sec",
+          "narration": "Blood rain begins with a violation of expectation. Rain is supposed to be clear, gray, or muddy at most. When it falls red, brown, rusty, or pink, the sky seems to cross into omen. The event may have natural causes, but the first emotional response is ancient: something above has changed the rules.",
           "visualBeats": [
             {
-              "beatMotion": "Use a slow controlled push toward Fields, with placed within fields, weather, lakes, and seasonal signs staying fixed as the opening anchor and weather visible. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Fields placed within fields, weather, lakes, and seasonal signs in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with natural low light, documentary uncertainty, and cultural context from Strange Nature. Include weather, seasonal, sky as supporting visual details. This should feel like an opening visual with one clear focal point during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a slow controlled push toward Fields, with placed within fields, weather, lakes, and seasonal signs staying fixed as the opening anchor and weather visible. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-011"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.culturalFrame",
-                "story.title",
-                "storyBrief.coreStoryElements",
-                "derived.problemFromDetail"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a restrained lateral pan across weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore, letting Blood Rain hold the opening detail while Blood Rain Phenomenon stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Blood Rain held as the central visual in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from Strange Nature. Include Blood Rain, Blood Rain Phenomenon, red rain as supporting visual details. This should feel like an opening visual that adds a second visual detail during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Use a restrained lateral pan across weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore, letting Blood Rain hold the opening detail while Blood Rain Phenomenon stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-004"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.culturalFrame",
-                "story.title",
-                "storyBrief.coreStoryElements",
-                "derived.problemFromDetail"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal connected to historical communities often read unusual sky events as warnings and communities within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Historical connected to historical communities often read unusual sky events as warnings in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a close visual detail that supports the current narration, with natural low light, documentary uncertainty, and cultural context from Strange Nature. Include sky, Historical, communities as supporting visual details. This should feel like an opening visual that widens the frame without adding new story elements during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal connected to historical communities often read unusual sky events as warnings and communities within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-001"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.culturalFrame",
-                "story.title",
-                "storyBrief.coreStoryElements",
-                "derived.problemFromDetail"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "red-tinted rain drops on pale stone pavement, restrained documentary realism, rust-colored, skyward, uncanny, natural, source-aware mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow push toward the central shape while the red-tinted rain drops on pale stone pavement remains the focus."
             }
           ]
         },
         {
-          "creatorNote": "Historical must stay tied to historical communities often read unusual sky events as warnings. Do not add figures, motives, or incidents beyond fields, weather, lakes, and seasonal signs.",
-          "estimatedReadingTime": "≈ 37 sec",
-          "narration": "The account then gives a direct movement: Once people call it blood rain, the weather enters the language of omen. The action moves through a specific event: Blood Rain begins with a visible break in ordinary weather: red-colored rain events that have been explained through dust, algae, spores, or other natural material while also becoming omen folklore. The account then gives a direct movement: Blood rain refers to rain that appears red or reddish because particles such as dust, sand, spores, or other material color the water.",
-          "sourceFactIds": [
-            "fact-002",
-            "fact-017",
-            "fact-046"
-          ],
-          "sourceFieldRefs": [
-            "storyBrief.coreStoryElements",
-            "publicArticlePlan",
-            "story.excerpt"
-          ],
-          "usedFactTexts": [
-            "Once people call it blood rain, the weather enters the language of omen.",
-            "Blood Rain begins with a visible break in ordinary weather: red-colored rain events that have been explained through dust, algae, spores, or other natural material while also becoming omen folklore.",
-            "Blood rain refers to rain that appears red or reddish because particles such as dust, sand, spores, or other material color the water."
-          ],
+          "creatorNote": "Let the source boundary stay clear without stopping the story.",
+          "estimatedReadingTime": "about 21 sec",
+          "narration": "The phrase blood rain is powerful because it names color as if it were injury. People do not need to believe the rain is literal blood to feel the shock. The sky, which should wash things clean, appears to stain them. That reversal gives the phenomenon its legendary force.",
           "visualBeats": [
             {
-              "beatMotion": "Use a restrained lateral pan across weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore, letting Historical hold the follow-up anchor while sky stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Historical connected to historical communities often read unusual sky events as warnings in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with natural low light, documentary uncertainty, and cultural context from Strange Nature. Include sky, Historical, communities as supporting visual details. This should feel like a follow-up visual with one clear focal point during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a restrained lateral pan across weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore, letting Historical hold the follow-up anchor while sky stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-001"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.culturalFrame",
-                "story.title",
-                "storyBrief.coreStoryElements",
-                "derived.problemFromDetail"
-              ],
-              "usedFactTexts": []
-            },
+              "imagePrompt": "rust-colored streaks on a white wall after rain, no readable markings, rust-colored, skyward, uncanny, natural, source-aware mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: restrained lateral drift across the frame while the rust-colored streaks on a white wall after rain remains the focus."
+            }
+          ]
+        },
+        {
+          "creatorNote": "Use one concrete image, then let the narration carry the meaning.",
+          "estimatedReadingTime": "about 18 sec",
+          "narration": "The strongest narration keeps both layers visible. Red rain can involve dust, spores, algae, minerals, or atmospheric transport depending on the case. Yet explanation does not erase atmosphere. A natural event can still feel uncanny when it arrives at the scale of weather.",
+          "visualBeats": [
             {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal connected to red-colored rain events that have been explained through dust, algae, spores, and dust within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows red rain connected to red-colored rain events that have been explained through dust, algae, spores, or other natural material while also becoming omen folklore in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from folklore. Include red rain, dust, Red-colored as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal connected to red-colored rain events that have been explained through dust, algae, spores, and dust within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-057"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.culturalFrame",
-                "story.title",
-                "storyBrief.coreStoryElements",
-                "derived.problemFromDetail"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a slow controlled push toward Blood Rain, with connected to once people call it blood rain, the weather enters the language staying fixed as the follow-up wider frame and people visible. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Blood Rain connected to once people call it blood rain, the weather enters the language of omen in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a close visual detail that supports the current narration, with natural low light, documentary uncertainty, and cultural context from Strange Nature. Include Blood Rain, weather, people as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Use a slow controlled push toward Blood Rain, with connected to once people call it blood rain, the weather enters the language staying fixed as the follow-up wider frame and people visible. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-002"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.culturalFrame",
-                "story.title",
-                "storyBrief.coreStoryElements",
-                "derived.problemFromDetail"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "wide cloudy sky with faint reddish rain curtain over fields, rust-colored, skyward, uncanny, natural, source-aware mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow hold with a tiny light change while the wide cloudy sky with faint reddish rain curtain over fields remains the focus."
             }
           ]
         }
       ],
-      "sceneFocus": "The central visual should show historical communities often read unusual sky events as warnings.",
-      "sceneRole": "What, When, and Where",
-      "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-      "sourceFactIds": [
-        "fact-011",
-        "fact-004",
-        "fact-001",
-        "fact-057",
-        "fact-002",
-        "fact-017",
-        "fact-046"
-      ],
-      "sourceFieldRefs": [
-        "contentDNA.culturalFrame",
-        "story.title",
-        "storyBrief.coreStoryElements",
-        "derived.problemFromDetail",
-        "publicArticlePlan",
-        "story.excerpt"
-      ],
-      "visualDirection": "Hold the establishing image briefly, then begin a slow push toward the main detail.",
-      "voiceDirection": "Calm documentary pace, short pauses between ideas, natural restraint, with light emphasis on \"Blood Rain\" when it appears."
+      "sceneFocus": "Rain becomes frightening when it changes color.",
+      "sceneRole": "Opening Hook",
+      "soundEffect": "low environmental hum, soft distant texture",
+      "visualDirection": "Use one image-led frame per narration beat. Keep motion optional and restrained.",
+      "voiceDirection": "Calm documentary narration with story rhythm and clear pauses."
     },
     {
-      "backgroundMusic": "steady low tension, low drone, slow piano, sparse documentary bed, slow tempo with restrained weight",
-      "directionTip": "The central visual should show historical communities often read unusual sky events as warnings. Frame it through historical communities often read unusual sky events as warnings.",
+      "backgroundMusic": "low archive drone, restrained room tone, no melody over narration",
       "narrationParts": [
         {
-          "creatorNote": "Historical must stay tied to historical communities often read unusual sky events as warnings. Do not add figures, motives, or incidents beyond red-colored rain events that have been explained through dust, algae, spores, or other natural material while also becoming omen folklore.",
-          "estimatedReadingTime": "≈ 26 sec",
-          "narration": "The source trail matters before the claim is treated as certain: Later retellings do not always keep the same emphasis. The account then gives a direct movement: Modern explanations do not remove that history. The next fact gives the sequence a concrete action: Many blood rain events are linked to colored dust or other particles carried by wind and mixed with rain.",
-          "sourceFactIds": [
-            "fact-023",
-            "fact-003",
-            "fact-014"
-          ],
-          "sourceFieldRefs": [
-            "publicArticlePlan",
-            "storyBrief.coreStoryElements"
-          ],
-          "usedFactTexts": [
-            "Later retellings do not always keep the same emphasis.",
-            "Modern explanations do not remove that history.",
-            "Many blood rain events are linked to colored dust or other particles carried by wind and mixed with rain."
-          ],
+          "creatorNote": "Keep this beat viewer-facing and story-led.",
+          "estimatedReadingTime": "about 19 sec",
+          "narration": "Many red-rain accounts point toward material carried through the air. Dust from distant deserts, mineral particles, pollen, spores, or microscopic life can tint falling water. The rain is not a message written in the clouds. It is weather carrying matter from one place into another.",
           "visualBeats": [
             {
-              "beatMotion": "Use a slow controlled push toward Historical, with connected to historical communities often read unusual sky events as warnings staying fixed as the opening anchor and sky visible. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Historical connected to historical communities often read unusual sky events as warnings in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Strange Nature. Include sky, Historical, communities as supporting visual details. This should feel like an opening visual with one clear focal point during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a slow controlled push toward Historical, with connected to historical communities often read unusual sky events as warnings staying fixed as the opening anchor and sky visible. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-001"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan",
-                "derived.problemFromDetail"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a restrained lateral pan across weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore, letting Blood Rain hold the opening detail while retellings stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Blood Rain shown through source material connected to later retellings do not always keep the same emphasis in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a medium composition that shows the important action or state, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Strange Nature. Include retellings, always, emphasis as supporting visual details. This should feel like an opening visual that adds a second visual detail during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Use a restrained lateral pan across weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore, letting Blood Rain hold the opening detail while retellings stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-023"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan",
-                "derived.problemFromDetail"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal connected to once people call it blood rain, the weather enters the language and people within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Blood Rain connected to once people call it blood rain, the weather enters the language of omen in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a close visual detail that supports the current narration, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Strange Nature. Include Blood Rain, weather, people as supporting visual details. This should feel like an opening visual that widens the frame without adding new story elements during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal connected to once people call it blood rain, the weather enters the language and people within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-002"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan",
-                "derived.problemFromDetail"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "clear jar holding pinkish rainwater beside blank lab notes, no readable text, rust-colored, skyward, uncanny, natural, source-aware mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: gentle pullback that leaves negative space while the clear jar holding pinkish rainwater beside blank lab notes remains the focus."
             }
           ]
         },
         {
-          "creatorNote": "Blood Rain must stay tied to once people call it blood rain, the weather enters the language of omen. Keep the source boundary around later retellings do not always keep the same emphasis source-limited, without turning it into a stronger claim.",
-          "estimatedReadingTime": "≈ 36 sec",
-          "narration": "The surviving record gives the narration a source limit: References such as Met Office and NASA Earth Observatory are used as orientation points, not as proof for every later claim. The surviving record gives the narration a source limit: Blood Rain appears in source material connected with weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. The surviving record gives the narration a source limit: Some retellings exaggerate the color or treat every case as the same phenomenon, even when the evidence differs.",
-          "sourceFactIds": [
-            "fact-029",
-            "fact-025",
-            "fact-024"
-          ],
-          "sourceFieldRefs": [
-            "publicArticlePlan.publicSourceNote",
-            "publicArticlePlan"
-          ],
-          "usedFactTexts": [
-            "References such as Met Office and NASA Earth Observatory are used as orientation points, not as proof for every later claim.",
-            "Blood Rain appears in source material connected with weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore.",
-            "Some retellings exaggerate the color or treat every case as the same phenomenon, even when the evidence differs."
-          ],
+          "creatorNote": "Let the source boundary stay clear without stopping the story.",
+          "estimatedReadingTime": "about 21 sec",
+          "narration": "That physical explanation is not a disappointment. It makes the event larger. The rain becomes evidence that air, dust, water, and distance are connected in ways people do not usually see. A red stain on a wall can carry a story of wind, soil, sea, storm, and microscopic life.",
           "visualBeats": [
             {
-              "beatMotion": "Use a restrained lateral pan across weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore, letting Blood Rain hold the follow-up anchor while Blood Rain stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Blood Rain connected to once people call it blood rain, the weather enters the language of omen in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Strange Nature. Include Blood Rain, weather, people as supporting visual details. This should feel like a follow-up visual with one clear focal point during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a restrained lateral pan across weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore, letting Blood Rain hold the follow-up anchor while Blood Rain stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-002"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan",
-                "derived.problemFromDetail"
-              ],
-              "usedFactTexts": []
-            },
+              "imagePrompt": "dust cloud over distant landscape beneath storm clouds, natural explanation mood, rust-colored, skyward, uncanny, natural, source-aware mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow fade from foreground object to background threshold while the dust cloud over distant landscape beneath storm clouds remains the focus."
+            }
+          ]
+        },
+        {
+          "creatorNote": "Use one concrete image, then let the narration carry the meaning.",
+          "estimatedReadingTime": "about 19 sec",
+          "narration": "The key is to avoid pretending every report has one identical cause. Blood rain is a category of appearance, not a single explanation. Different places and periods may involve different materials. What unites them is the visual shock of rain behaving like a sign.",
+          "visualBeats": [
             {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal connected to red-colored rain events that have been explained through dust, algae, spores, and dust within the wider frame. Use only light shifts that match the place or event mystery tone. Let dust remain the distinct a follow-up visual that adds a second visual detail.",
-              "imagePrompt": "A realistic location-documentary style image shows red rain connected to red-colored rain events that have been explained through dust, algae, spores, or other natural material while also becoming omen folklore in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a medium composition that shows the important action or state, with low directional light with restrained contrast, documentary uncertainty, and cultural context from folklore. Include red rain, dust, Red-colored as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal connected to red-colored rain events that have been explained through dust, algae, spores, and dust within the wider frame. Use only light shifts that match the place or event mystery tone. Let dust remain the distinct a follow-up visual that adds a second visual detail.",
-              "sourceFactIds": [
-                "fact-057"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan",
-                "derived.problemFromDetail"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a slow controlled push toward Historical, with connected to historical communities often read unusual sky events as warnings staying fixed as the follow-up wider frame and communities visible. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Historical connected to historical communities often read unusual sky events as warnings in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a close visual detail that supports the current narration, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Strange Nature. Include sky, Historical, communities as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Use a slow controlled push toward Historical, with connected to historical communities often read unusual sky events as warnings staying fixed as the follow-up wider frame and communities visible. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-001"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan",
-                "derived.problemFromDetail"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "microscopic-looking particles represented abstractly beside rain glass, no text, rust-colored, skyward, uncanny, natural, source-aware mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow push toward the central shape while the microscopic-looking particles represented abstractly beside rain glass remains the focus."
             }
           ]
         }
       ],
-      "sceneFocus": "The central visual should show historical communities often read unusual sky events as warnings. Frame it through historical communities often read unusual sky events as warnings.",
-      "sceneRole": "Core Record or Event",
-      "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-      "sourceFactIds": [
-        "fact-023",
-        "fact-003",
-        "fact-014",
-        "fact-029",
-        "fact-025",
-        "fact-024"
-      ],
-      "sourceFieldRefs": [
-        "publicArticlePlan",
-        "storyBrief.coreStoryElements",
-        "publicArticlePlan.publicSourceNote"
-      ],
-      "visualDirection": "Start steady, begin a slow push toward the main detail, and cut after the scene consequence is clear.",
-      "voiceDirection": "Calm documentary pace, short pauses between ideas, slight tension, with light emphasis on \"Blood Rain\" when it appears."
+      "sceneFocus": "Particles can color water without removing wonder.",
+      "sceneRole": "Natural Explanations",
+      "soundEffect": "subtle paper, room tone, distant air",
+      "visualDirection": "Use one image-led frame per narration beat. Keep motion optional and restrained.",
+      "voiceDirection": "Calm documentary narration with story rhythm and clear pauses."
     },
     {
-      "backgroundMusic": "sparse documentary bed, low drone, slow piano, slow tempo with restrained weight",
-      "directionTip": "The central visual should show historical communities often read unusual sky events as warnings. Frame it through the source boundary around later retellings do not always keep the same emphasis.",
+      "backgroundMusic": "dark quiet ambient bed, soft low pulse, no melodic lead",
       "narrationParts": [
         {
-          "creatorNote": "Different must stay tied to the source boundary around later retellings do not always keep the same emphasis. Do not add figures, motives, or incidents beyond historical communities often read unusual sky events as warnings.",
-          "estimatedReadingTime": "≈ 34 sec",
-          "narration": "The scene has a clear visible point: Different cases involve different causes. The account stays careful because the evidence has boundaries: Dust storms, algae, spores, and local material have all been discussed in relation to red rain events. The account stays careful because the evidence has boundaries: Blood Rain is treated through weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. The account then gives a direct movement: Historical communities often read unusual sky events as warnings.",
-          "sourceFactIds": [
-            "fact-038",
-            "fact-032",
-            "fact-028",
-            "fact-001"
-          ],
-          "sourceFieldRefs": [
-            "publicArticlePlan",
-            "publicArticlePlan.publicSourceNote",
-            "storyBrief.coreStoryElements"
-          ],
-          "usedFactTexts": [
-            "Different cases involve different causes.",
-            "Dust storms, algae, spores, and local material have all been discussed in relation to red rain events.",
-            "Blood Rain is treated through weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore.",
-            "Historical communities often read unusual sky events as warnings."
-          ],
+          "creatorNote": "Keep this beat viewer-facing and story-led.",
+          "estimatedReadingTime": "about 20 sec",
+          "narration": "Before modern atmospheric science, strange rain was often read as warning. Red rain could be connected with war, disaster, divine anger, plague, or social fear. The color made the interpretation almost automatic. A red sky may be beautiful; red rain feels like the sky has entered the body.",
           "visualBeats": [
             {
-              "beatMotion": "Use a slow controlled push toward Different, with connected to different cases involve different causes staying fixed as the opening anchor and Different visible. Keep the movement restrained and documentary.",
-              "imagePrompt": "A realistic location-documentary style image shows Different connected to different cases involve different causes in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a clear tabletop or archival composition, with soft archival light, careful documentary restraint, and cultural context from Strange Nature. Include Different, cases, involve as supporting visual details. This should feel like an opening visual with one clear focal point during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a slow controlled push toward Different, with connected to different cases involve different causes staying fixed as the opening anchor and Different visible. Keep the movement restrained and documentary.",
-              "sourceFactIds": [
-                "fact-038"
-              ],
-              "sourceFieldRefs": [
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan.publicSourceNote"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a restrained lateral pan across weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore, letting Blood Rain hold the opening detail while retellings stays in frame. Keep the movement restrained and documentary.",
-              "imagePrompt": "A realistic location-documentary style image shows Blood Rain shown through source material connected to later retellings do not always keep the same emphasis in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a medium frame that separates the main subject from supporting evidence, with soft archival light, careful documentary restraint, and cultural context from Strange Nature. Include retellings, always, emphasis as supporting visual details. This should feel like an opening visual that adds a second visual detail during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Use a restrained lateral pan across weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore, letting Blood Rain hold the opening detail while retellings stays in frame. Keep the movement restrained and documentary.",
-              "sourceFactIds": [
-                "fact-023"
-              ],
-              "sourceFieldRefs": [
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan.publicSourceNote"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "red puddles on rural road after rainfall, subdued and realistic, rust-colored, skyward, uncanny, natural, source-aware mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: restrained lateral drift across the frame while the red puddles on rural road after rainfall remains the focus."
             }
           ]
         },
         {
-          "creatorNote": "Some must stay tied to the source boundary around some retellings exaggerate the color or treat every case as the same phenomenon, even when the evidence differs. Do not add figures, motives, or incidents beyond different cases involve different causes.",
-          "estimatedReadingTime": "≈ 33 sec",
-          "narration": "The next fact gives the sequence a concrete action: Dust storms, algae, spores, and local material have all been discussed in relation to red rain events. The next fact gives the sequence a concrete action: Red rain, darkened suns, comets, and strange lights could all become signs before they became scientific subjects. The account then gives a direct movement: In many periods, red rain also became an omen story because the sky seemed to be raining blood.",
-          "sourceFactIds": [
-            "fact-016",
-            "fact-019",
-            "fact-047"
-          ],
-          "sourceFieldRefs": [
-            "publicArticlePlan",
-            "storyBrief.coreStoryElements",
-            "story.excerpt"
-          ],
-          "usedFactTexts": [
-            "Dust storms, algae, spores, and local material have all been discussed in relation to red rain events.",
-            "Red rain, darkened suns, comets, and strange lights could all become signs before they became scientific subjects.",
-            "In many periods, red rain also became an omen story because the sky seemed to be raining blood."
-          ],
+          "creatorNote": "Let the source boundary stay clear without stopping the story.",
+          "estimatedReadingTime": "about 19 sec",
+          "narration": "Omen stories work because weather belongs to everyone. A strange animal may be seen by one witness. A strange rain can touch roofs, streets, fields, and clothing across a whole community. The shared experience makes the story harder to ignore and easier to retell.",
           "visualBeats": [
             {
-              "beatMotion": "Use a restrained lateral pan across weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore, letting Blood Rain hold the follow-up anchor while retellings stays in frame. Keep the movement restrained and documentary.",
-              "imagePrompt": "A realistic location-documentary style image shows Blood Rain shown through source material connected to some retellings exaggerate the color or treat every case as the same phenomenon, even when the evidence differs in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a medium frame that separates the main subject from supporting evidence, with soft archival light, careful documentary restraint, and cultural context from Strange Nature. Include retellings, exaggerate, color as supporting visual details. This should feel like a follow-up visual with one clear focal point during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a restrained lateral pan across weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore, letting Blood Rain hold the follow-up anchor while retellings stays in frame. Keep the movement restrained and documentary.",
-              "sourceFactIds": [
-                "fact-024"
-              ],
-              "sourceFieldRefs": [
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan.publicSourceNote"
-              ],
-              "usedFactTexts": []
-            },
+              "imagePrompt": "old manuscript illustration of strange weather implied by blank pages and red wash, rust-colored, skyward, uncanny, natural, source-aware mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow hold with a tiny light change while the old manuscript illustration of strange weather implied by blank pages and red wash remains the focus."
+            }
+          ]
+        },
+        {
+          "creatorNote": "Use one concrete image, then let the narration carry the meaning.",
+          "estimatedReadingTime": "about 19 sec",
+          "narration": "Even after explanation, the omen feeling remains understandable. People are built to notice broken patterns. When water from the sky arrives in the color of rust or blood, it asks for interpretation before it asks for chemistry. Folklore begins in that first startled second.",
+          "visualBeats": [
             {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal connected to historical communities often read unusual sky events as warnings and Historical within the wider frame. Keep the movement restrained and documentary.",
-              "imagePrompt": "A realistic location-documentary style image shows Historical connected to historical communities often read unusual sky events as warnings in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a close archival detail with the source boundary visible, with soft archival light, careful documentary restraint, and cultural context from Strange Nature. Include sky, Historical, communities as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal connected to historical communities often read unusual sky events as warnings and Historical within the wider frame. Keep the movement restrained and documentary.",
-              "sourceFactIds": [
-                "fact-001"
-              ],
-              "sourceFieldRefs": [
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan.publicSourceNote"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a slow controlled push toward Different, with connected to different cases involve different causes staying fixed as the follow-up wider frame and involve visible. Keep the movement restrained and documentary.",
-              "imagePrompt": "A realistic location-documentary style image shows Different connected to different cases involve different causes in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a close archival detail with the source boundary visible, with soft archival light, careful documentary restraint, and cultural context from Strange Nature. Include Different, cases, involve as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Use a slow controlled push toward Different, with connected to different cases involve different causes staying fixed as the follow-up wider frame and involve visible. Keep the movement restrained and documentary.",
-              "sourceFactIds": [
-                "fact-038"
-              ],
-              "sourceFieldRefs": [
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan.publicSourceNote"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "village rooftops under unusual rusty rainfall, no panic, no crowds, rust-colored, skyward, uncanny, natural, source-aware mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: gentle pullback that leaves negative space while the village rooftops under unusual rusty rainfall remains the focus."
             }
           ]
         }
       ],
-      "sceneFocus": "The central visual should show historical communities often read unusual sky events as warnings. Frame it through the source boundary around later retellings do not always keep the same emphasis.",
-      "sceneRole": "Evidence and Key Details",
-      "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-      "sourceFactIds": [
-        "fact-038",
-        "fact-032",
-        "fact-028",
-        "fact-001",
-        "fact-016",
-        "fact-019",
-        "fact-047"
-      ],
-      "sourceFieldRefs": [
-        "publicArticlePlan",
-        "publicArticlePlan.publicSourceNote",
-        "storyBrief.coreStoryElements",
-        "story.excerpt"
-      ],
-      "visualDirection": "Hold the source-focused image long enough to read the visual idea, then fade softly into the next scene.",
-      "voiceDirection": "Careful pace, short pauses between ideas, natural restraint, with light emphasis on \"Blood Rain\" when it appears."
+      "sceneFocus": "Unusual weather easily becomes warning.",
+      "sceneRole": "Omen History",
+      "soundEffect": "low environmental hum, soft distant texture",
+      "visualDirection": "Use one image-led frame per narration beat. Keep motion optional and restrained.",
+      "voiceDirection": "Calm documentary narration with story rhythm and clear pauses."
     },
     {
-      "backgroundMusic": "soft reflective drone, low drone, slow piano, sparse documentary bed, slow tempo with restrained weight",
-      "directionTip": "The central visual should show different cases involve different causes.",
+      "backgroundMusic": "low archive drone, restrained room tone, no melody over narration",
       "narrationParts": [
         {
-          "creatorNote": "Different must stay tied to the variant detail that different cases involve different causes. Use the interpretation connected to the sky does something familiar in a color that feels wrong as interpretation, not as a new event.",
-          "estimatedReadingTime": "≈ 25 sec",
-          "narration": "The versions do not always preserve the same emphasis: Different cases involve different causes. One interpretation stays close to the material: The sky does something familiar in a color that feels wrong. The versions do not always preserve the same emphasis: Dust storms, algae, spores, and local material have all been discussed in relation to red rain events.",
-          "sourceFactIds": [
-            "fact-005",
-            "fact-009",
-            "fact-006"
-          ],
-          "sourceFieldRefs": [
-            "storyBrief.reportedVariants",
-            "storyBrief.editorialInterpretationOptions"
-          ],
-          "usedFactTexts": [
-            "Different cases involve different causes.",
-            "The sky does something familiar in a color that feels wrong.",
-            "Dust storms, algae, spores, and local material have all been discussed in relation to red rain events."
-          ],
+          "creatorNote": "Keep this beat viewer-facing and story-led.",
+          "estimatedReadingTime": "about 19 sec",
+          "narration": "Modern red-rain reports often move through two stages. First comes the image: stained clothes, colored puddles, marks on walls, or alarmed witnesses. Then comes testing, speculation, and explanation. The story is shaped by the distance between what people saw and what later analysis suggests.",
           "visualBeats": [
             {
-              "beatMotion": "Use a slow controlled push toward Different, with associated with a variant where different cases involve different causes staying fixed as the opening anchor and Different visible. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Different associated with a variant where different cases involve different causes in red-colored rain events that have been explained through dust, algae, spores, or other natural material while also becoming omen folklore. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with natural low light, documentary uncertainty, and cultural context from Strange Nature. Include Different, cases, involve as supporting visual details. This should feel like an opening visual with one clear focal point during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a slow controlled push toward Different, with associated with a variant where different cases involve different causes staying fixed as the opening anchor and Different visible. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-005"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.reportedVariants",
-                "publicArticlePlan",
-                "storyBrief.editorialInterpretationOptions"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a restrained lateral pan across red-colored rain events that have been explained through dust, algae, spores, or other natural material while also becoming omen folklore, letting Blood Rain hold the opening detail while retellings stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Blood Rain shown through source material connected to later retellings do not always keep the same emphasis in red-colored rain events that have been explained through dust, algae, spores, or other natural material while also becoming omen folklore. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from Strange Nature. Include retellings, always, emphasis as supporting visual details. This should feel like an opening visual that adds a second visual detail during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Use a restrained lateral pan across red-colored rain events that have been explained through dust, algae, spores, or other natural material while also becoming omen folklore, letting Blood Rain hold the opening detail while retellings stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-023"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.reportedVariants",
-                "publicArticlePlan",
-                "storyBrief.editorialInterpretationOptions"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "modern rain gauge with reddish water, documentary close-up, no labels, rust-colored, skyward, uncanny, natural, source-aware mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow fade from foreground object to background threshold while the modern rain gauge with reddish water remains the focus."
             }
           ]
         },
         {
-          "creatorNote": "red rain must stay tied to the variant detail that dust storms, algae, spores, and local material have all been discussed in relation to red rain events. Keep the source boundary around later retellings do not always keep the same emphasis source-limited, without turning it into a stronger claim.",
-          "estimatedReadingTime": "≈ 30 sec",
-          "narration": "The tradition allows more than one form of the account: Some retellings exaggerate the color or treat every case as the same phenomenon, even when the evidence differs. The symbolic reading grows out of the recorded details: Blood Rain Phenomenon is best read as a strange nature entry built around red-colored rain events that have been explained through dust, algae, spores, or other natural material while also becoming omen folklore.",
-          "sourceFactIds": [
-            "fact-007",
-            "fact-045"
-          ],
-          "sourceFieldRefs": [
-            "storyBrief.reportedVariants",
-            "story.summaryAnswer"
-          ],
-          "usedFactTexts": [
-            "Some retellings exaggerate the color or treat every case as the same phenomenon, even when the evidence differs.",
-            "Blood Rain Phenomenon is best read as a strange nature entry built around red-colored rain events that have been explained through dust, algae, spores, or other natural material while also becoming omen folklore."
-          ],
+          "creatorNote": "Let the source boundary stay clear without stopping the story.",
+          "estimatedReadingTime": "about 20 sec",
+          "narration": "That two-stage structure is useful for a creator package. The first half carries atmosphere. The second half carries source-aware clarity. The rain can look impossible and still belong to the natural world. The trick is to let the visual impact remain vivid without turning uncertainty into false proof.",
           "visualBeats": [
             {
-              "beatMotion": "Use a restrained lateral pan across red-colored rain events that have been explained through dust, algae, spores, or other natural material while also becoming omen folklore, letting Blood Rain hold the follow-up anchor while sky stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Blood Rain framed by the interpretation that the sky does something familiar in a color that feels wrong in red-colored rain events that have been explained through dust, algae, spores, or other natural material while also becoming omen folklore. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with natural low light, documentary uncertainty, and cultural context from Strange Nature. Include sky, something, familiar as supporting visual details. This should feel like a follow-up visual with one clear focal point during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a restrained lateral pan across red-colored rain events that have been explained through dust, algae, spores, or other natural material while also becoming omen folklore, letting Blood Rain hold the follow-up anchor while sky stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-009"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.reportedVariants",
-                "publicArticlePlan",
-                "storyBrief.editorialInterpretationOptions"
-              ],
-              "usedFactTexts": []
-            },
+              "imagePrompt": "wet clothing edge stained faint red by rain, respectful simple frame, rust-colored, skyward, uncanny, natural, source-aware mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow push toward the central shape while the wet clothing edge stained faint red by rain remains the focus."
+            }
+          ]
+        },
+        {
+          "creatorNote": "Use one concrete image, then let the narration carry the meaning.",
+          "estimatedReadingTime": "about 20 sec",
+          "narration": "Blood rain also shows how strange nature stories differ from monster legends. The subject is not hiding in a forest or house. It falls from the sky. That makes the event feel public, environmental, and hard to dismiss, even when the explanation turns out to be earthly.",
+          "visualBeats": [
             {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal associated with a variant where dust storms, algae, spores, and local material have all and dust within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows red rain associated with a variant where dust storms, algae, spores, and local material have all been discussed in relation to red rain events in red-colored rain events that have been explained through dust, algae, spores, or other natural material while also becoming omen folklore. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from Strange Nature. Include red rain, dust, local as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal associated with a variant where dust storms, algae, spores, and local material have all and dust within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-006"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.reportedVariants",
-                "publicArticlePlan",
-                "storyBrief.editorialInterpretationOptions"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "storm front over desert dust and far mountains, atmospheric transport mood, rust-colored, skyward, uncanny, natural, source-aware mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: restrained lateral drift across the frame while the storm front over desert dust and far mountains remains the focus."
             }
           ]
         }
       ],
-      "sceneFocus": "The central visual should show different cases involve different causes.",
-      "sceneRole": "Major Explanations and Uncertainty",
-      "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-      "sourceFactIds": [
-        "fact-005",
-        "fact-009",
-        "fact-006",
-        "fact-007",
-        "fact-045"
-      ],
-      "sourceFieldRefs": [
-        "storyBrief.reportedVariants",
-        "storyBrief.editorialInterpretationOptions",
-        "story.summaryAnswer"
-      ],
-      "visualDirection": "Hold the establishing image briefly, then begin a slow push toward the main detail.",
-      "voiceDirection": "Calm documentary pace, short pauses between ideas, natural restraint, with light emphasis on \"Blood Rain\" when it appears."
+      "sceneFocus": "Science and story sit close together.",
+      "sceneRole": "Modern Reports",
+      "soundEffect": "subtle paper, room tone, distant air",
+      "visualDirection": "Use one image-led frame per narration beat. Keep motion optional and restrained.",
+      "voiceDirection": "Calm documentary narration with story rhythm and clear pauses."
     },
     {
-      "backgroundMusic": "soft reflective drone, low drone, slow piano, sparse documentary bed, low density with a soft ending",
-      "directionTip": "The central visual should show the result can stain surfaces and make ordinary weather look alarming.",
+      "backgroundMusic": "dark quiet ambient bed, soft low pulse, no melodic lead",
       "narrationParts": [
         {
-          "creatorNote": "Explanation must stay tied to the interpretation connected to the sky does something familiar in a color that feels wrong. Keep the source boundary around later retellings do not always keep the same emphasis source-limited, without turning it into a stronger claim.",
-          "estimatedReadingTime": "≈ 26 sec",
-          "narration": "The account leaves a direct result behind: The result can stain surfaces and make ordinary weather look alarming. The account leaves a direct result behind: Explanation answers the cause, but the image remains. The result is stated through a concrete outcome: Red-colored rain events that have been explained through dust, algae, spores, or other natural material while also becoming omen folklore.",
-          "sourceFactIds": [
-            "fact-015",
-            "fact-022",
-            "fact-056"
-          ],
-          "sourceFieldRefs": [
-            "publicArticlePlan",
-            "storyBrief.coreStoryElements",
-            "derived.outcomeFromDetail"
-          ],
-          "usedFactTexts": [
-            "The result can stain surfaces and make ordinary weather look alarming.",
-            "Explanation answers the cause, but the image remains.",
-            "Red-colored rain events that have been explained through dust, algae, spores, or other natural material while also becoming omen folklore."
-          ],
+          "creatorNote": "Keep this beat viewer-facing and story-led.",
+          "estimatedReadingTime": "about 22 sec",
+          "narration": "By the end, blood rain is not strongest as a miracle claim. It is strongest as a reminder that natural systems can look symbolic before they are understood. Dust can become omen. Algae can become rumor. A storm can make the sky seem to bleed without leaving the world of weather.",
           "visualBeats": [
             {
-              "beatMotion": "Use a slow controlled push toward Blood Rain, with framed by the interpretation that the sky does something familiar in a color that staying fixed as the opening anchor and sky visible. End with a slow hold and no new action.",
-              "imagePrompt": "A realistic location-documentary style image shows Blood Rain framed by the interpretation that the sky does something familiar in a color that feels wrong in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a wide reflective composition with negative space, with subdued fading light, quiet reflective tension, and cultural context from Strange Nature. Include sky, something, familiar as supporting visual details. This should feel like an opening visual with one clear focal point during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a slow controlled push toward Blood Rain, with framed by the interpretation that the sky does something familiar in a color that staying fixed as the opening anchor and sky visible. End with a slow hold and no new action.",
-              "sourceFactIds": [
-                "fact-009"
-              ],
-              "sourceFieldRefs": [
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "storyBrief.editorialInterpretationOptions",
-                "derived.outcomeFromDetail"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a restrained lateral pan across weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore, letting Blood Rain hold the opening detail while result stays in frame. End with a slow hold and no new action.",
-              "imagePrompt": "A realistic location-documentary style image shows Blood Rain connected to the result can stain surfaces and make ordinary weather look alarming in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, and cultural context from Strange Nature. Include weather, result, stain as supporting visual details. This should feel like an opening visual that adds a second visual detail during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Use a restrained lateral pan across weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore, letting Blood Rain hold the opening detail while result stays in frame. End with a slow hold and no new action.",
-              "sourceFactIds": [
-                "fact-015"
-              ],
-              "sourceFieldRefs": [
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "storyBrief.editorialInterpretationOptions",
-                "derived.outcomeFromDetail"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal connected to explanation answers the cause, but the image remains and answers within the wider frame. End with a slow hold and no new action.",
-              "imagePrompt": "A realistic location-documentary style image shows Explanation connected to explanation answers the cause, but the image remains in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, and cultural context from Strange Nature. Include image, Explanation, answers as supporting visual details. This should feel like an opening visual that widens the frame without adding new story elements during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal connected to explanation answers the cause, but the image remains and answers within the wider frame. End with a slow hold and no new action.",
-              "sourceFactIds": [
-                "fact-022"
-              ],
-              "sourceFieldRefs": [
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "storyBrief.editorialInterpretationOptions",
-                "derived.outcomeFromDetail"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "field grass dotted with red-brown water drops, close natural detail, rust-colored, skyward, uncanny, natural, source-aware mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow hold with a tiny light change while the field grass dotted with red-brown water drops remains the focus."
             }
           ]
         },
         {
-          "creatorNote": "Explanation must stay tied to explanation answers the cause, but the image remains. Let the result can stain surfaces and make ordinary weather look alarming define the result for this Part.",
-          "estimatedReadingTime": "≈ 31 sec",
-          "narration": "The surviving record gives the narration a source limit: For Blood Rain, observation and explanation are separated from the folklore that grows around the event. The surviving record gives the narration a source limit: NASA Earth Observatory - Dust reference Supports the broader atmospheric dust context that can color skies and precipitation. The surviving record gives the narration a source limit: Public references used for orientation include Met Office and NASA Earth Observatory.",
-          "sourceFactIds": [
-            "fact-033",
-            "fact-054",
-            "fact-026"
-          ],
-          "sourceFieldRefs": [
-            "publicArticlePlan.publicSourceNote",
-            "story.researchSources",
-            "storyBrief.existenceEvidence",
-            "publicArticlePlan"
-          ],
-          "usedFactTexts": [
-            "For Blood Rain, observation and explanation are separated from the folklore that grows around the event.",
-            "NASA Earth Observatory - Dust reference Supports the broader atmospheric dust context that can color skies and precipitation.",
-            "Public references used for orientation include Met Office and NASA Earth Observatory."
-          ],
+          "creatorNote": "Let the source boundary stay clear without stopping the story.",
+          "estimatedReadingTime": "about 18 sec",
+          "narration": "The closing image should keep the color restrained. A red-stained puddle, a pale wall marked by rain, or a field under rusty droplets is enough. Too much spectacle weakens the phenomenon. The unease comes from recognizing ordinary rain in the wrong color.",
           "visualBeats": [
             {
-              "beatMotion": "Use a restrained lateral pan across weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore, letting Explanation hold the follow-up anchor while image stays in frame. End with a slow hold and no new action.",
-              "imagePrompt": "A realistic location-documentary style image shows Explanation connected to explanation answers the cause, but the image remains in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, and cultural context from Strange Nature. Include image, Explanation, answers as supporting visual details. This should feel like a follow-up visual with one clear focal point during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a restrained lateral pan across weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore, letting Explanation hold the follow-up anchor while image stays in frame. End with a slow hold and no new action.",
-              "sourceFactIds": [
-                "fact-022"
-              ],
-              "sourceFieldRefs": [
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "storyBrief.editorialInterpretationOptions",
-                "derived.outcomeFromDetail"
-              ],
-              "usedFactTexts": []
-            },
+              "imagePrompt": "window with red rain trails against gray daylight, quiet uncanny tone, rust-colored, skyward, uncanny, natural, source-aware mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: gentle pullback that leaves negative space while the window with red rain trails against gray daylight remains the focus."
+            }
+          ]
+        },
+        {
+          "creatorNote": "Use one concrete image, then let the narration carry the meaning.",
+          "estimatedReadingTime": "about 19 sec",
+          "narration": "Blood rain survives because it joins explanation and dread. The mind can accept particles in the atmosphere and still feel the old shock of red water falling from above. The story ends with a sky that is not supernatural, but no longer feels entirely neutral.",
+          "visualBeats": [
             {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal shown through source material connected to later retellings do not always keep the same and retellings within the wider frame. End with a slow hold and no new action.",
-              "imagePrompt": "A realistic location-documentary style image shows Blood Rain shown through source material connected to later retellings do not always keep the same emphasis in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a wider reflective frame that keeps the ending unresolved, with subdued fading light, quiet reflective tension, and cultural context from Strange Nature. Include retellings, always, emphasis as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal shown through source material connected to later retellings do not always keep the same and retellings within the wider frame. End with a slow hold and no new action.",
-              "sourceFactIds": [
-                "fact-023"
-              ],
-              "sourceFieldRefs": [
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "storyBrief.editorialInterpretationOptions",
-                "derived.outcomeFromDetail"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a slow controlled push toward Blood Rain, with framed by the interpretation that the sky does something familiar in a color that staying fixed as the follow-up wider frame and familiar visible. End with a slow hold and no new action.",
-              "imagePrompt": "A realistic location-documentary style image shows Blood Rain framed by the interpretation that the sky does something familiar in a color that feels wrong in weather reporting, natural science summaries, historical omen traditions, and strange-nature folklore. Frame one clear scene as a wider reflective frame that keeps the ending unresolved, with subdued fading light, quiet reflective tension, and cultural context from Strange Nature. Include sky, something, familiar as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Use a slow controlled push toward Blood Rain, with framed by the interpretation that the sky does something familiar in a color that staying fixed as the follow-up wider frame and familiar visible. End with a slow hold and no new action.",
-              "sourceFactIds": [
-                "fact-009"
-              ],
-              "sourceFieldRefs": [
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "storyBrief.editorialInterpretationOptions",
-                "derived.outcomeFromDetail"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "final pale sky clearing above red-stained puddle, unresolved natural wonder, rust-colored, skyward, uncanny, natural, source-aware mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow fade from foreground object to background threshold while the final pale sky clearing above red-stained puddle remains the focus."
             }
           ]
         }
       ],
-      "sceneFocus": "The central visual should show the result can stain surfaces and make ordinary weather look alarming.",
-      "sceneRole": "What Remains Unresolved",
-      "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-      "sourceFactIds": [
-        "fact-015",
-        "fact-022",
-        "fact-056",
-        "fact-033",
-        "fact-054",
-        "fact-026"
-      ],
-      "sourceFieldRefs": [
-        "publicArticlePlan",
-        "storyBrief.coreStoryElements",
-        "derived.outcomeFromDetail",
-        "publicArticlePlan.publicSourceNote",
-        "story.researchSources",
-        "storyBrief.existenceEvidence"
-      ],
-      "visualDirection": "Begin with a slow pullback, hold briefly after the final narration line, then fade to black.",
-      "voiceDirection": "Slow pace with a soft ending, short pauses between ideas, natural restraint, with light emphasis on \"Blood Rain\" when it appears."
+      "sceneFocus": "The sky remains ordinary and uncanny at once.",
+      "sceneRole": "Ending and Use",
+      "soundEffect": "low environmental hum, soft distant texture",
+      "visualDirection": "Use one image-led frame per narration beat. Keep motion optional and restrained.",
+      "voiceDirection": "Calm documentary narration with story rhythm and clear pauses."
     }
   ]
 }

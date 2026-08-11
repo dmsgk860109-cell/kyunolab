@@ -1,312 +1,188 @@
 {
   "contentType": "script",
-  "coreMotif": "Modern Myth",
+  "coreMotif": "Digital Labyrinth and Liminal Folklore",
   "creatorCategorySlug": "internet-folklore",
   "creatorPipelineVersion": "single-path-v1",
-  "deck": "The Backrooms: Digital Labyrinth, Liminal Space, and the Internet's Endless Yellow Room is prepared as a creator-ready production workspace based on the archive record, with long-form scenes, Shorts narration, image prompts, music keywords, and editing notes.",
-  "difficulty": "Beginner-friendly production package",
-  "estimatedVideoLength": "5-6 minutes",
+  "deck": "A source-based image and narration package for The Backrooms digital labyrinth, built from the Kyunolab archive record with 5 scenes, 15 voiceover beats, image prompts, and restrained production notes for a 7-8 minute video.",
+  "difficulty": "Beginner-friendly image and narration production package",
+  "estimatedVideoLength": "7-8 minutes",
   "genre": "Internet Folklore Creator Library",
   "id": "backrooms-digital-labyrinth-youtube-script",
   "imagePrompts": [
-    "A realistic digital-documentary image shows an empty yellow room with old carpet, fluorescent ceiling panels, and no visible exit. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with dim screen-adjacent light, digital mystery, muted yellow tones, and liminal internet-folklore restraint. This should feel like an opening visual with one clear focal point during the first sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-    "A realistic digital-documentary image shows a person-sized viewpoint at the edge of a repeating office-like room. Frame one clear scene as a medium composition that shows the important action or state, with dim screen-adjacent light, digital mystery, muted yellow tones, and liminal internet-folklore restraint. This should feel like an opening visual that adds a second visual detail during the first sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-    "A realistic digital-documentary image shows a close detail of yellow wallpaper, stained carpet, and cold fluorescent light. Frame one clear scene as a close visual detail that supports the current narration, with dim screen-adjacent light, digital mystery, muted yellow tones, and liminal internet-folklore restraint. This should feel like an opening visual that widens the frame without adding new story elements during the first sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-    "A realistic digital-documentary image shows an empty yellow room with old carpet, fluorescent ceiling panels, and no visible exit. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with dim screen-adjacent light, digital mystery, muted yellow tones, and liminal internet-folklore restraint. This should feel like a follow-up visual with one clear focal point during the first sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-    "A realistic digital-documentary image shows a person-sized viewpoint at the edge of a repeating office-like room. Frame one clear scene as a medium composition that shows the important action or state, with dim screen-adjacent light, digital mystery, muted yellow tones, and liminal internet-folklore restraint. This should feel like a follow-up visual that adds a second visual detail during the first sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-    "A realistic digital-documentary image shows a close detail of yellow wallpaper, stained carpet, and cold fluorescent light. Frame one clear scene as a close visual detail that supports the current narration, with dim screen-adjacent light, digital mystery, muted yellow tones, and liminal internet-folklore restraint. This should feel like a follow-up visual that widens the frame without adding new story elements during the first sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-    "A realistic digital-documentary image shows a repeating corridor that suggests a digital maze without showing screens. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with low directional light with restrained contrast, digital mystery, muted yellow tones, and liminal internet-folklore restraint. This should feel like an opening visual with one clear focal point during the second sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-    "A realistic digital-documentary image shows a simple map-like arrangement of rooms and corridors with no readable labels. Frame one clear scene as a medium composition that shows the important action or state, with low directional light with restrained contrast, digital mystery, muted yellow tones, and liminal internet-folklore restraint. This should feel like an opening visual that adds a second visual detail during the second sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-    "A realistic digital-documentary image shows a distant hallway turning into another identical yellow room. Frame one clear scene as a close visual detail that supports the current narration, with low directional light with restrained contrast, digital mystery, muted yellow tones, and liminal internet-folklore restraint. This should feel like an opening visual that widens the frame without adding new story elements during the second sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-    "A realistic digital-documentary image shows a repeating corridor that suggests a digital maze without showing screens. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with low directional light with restrained contrast, digital mystery, muted yellow tones, and liminal internet-folklore restraint. This should feel like a follow-up visual with one clear focal point during the second sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-    "A realistic digital-documentary image shows a simple map-like arrangement of rooms and corridors with no readable labels. Frame one clear scene as a medium composition that shows the important action or state, with low directional light with restrained contrast, digital mystery, muted yellow tones, and liminal internet-folklore restraint. This should feel like a follow-up visual that adds a second visual detail during the second sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-    "A realistic digital-documentary image shows a distant hallway turning into another identical yellow room. Frame one clear scene as a close visual detail that supports the current narration, with low directional light with restrained contrast, digital mystery, muted yellow tones, and liminal internet-folklore restraint. This should feel like a follow-up visual that widens the frame without adding new story elements during the second sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-    "A realistic digital-documentary image shows the original empty-room atmosphere beside subtle hints of later levels. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with dim screen-adjacent light, digital mystery, muted yellow tones, and liminal internet-folklore restraint. This should feel like an opening visual with one clear focal point during the middle sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-    "A realistic digital-documentary image shows a restrained found-footage style hallway with no creatures in view. Frame one clear scene as a medium composition that shows the important action or state, with dim screen-adjacent light, digital mystery, muted yellow tones, and liminal internet-folklore restraint. This should feel like an opening visual that adds a second visual detail during the middle sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-    "A realistic digital-documentary image shows a quiet survival-guide table with blank cards, thread, and room sketches. Frame one clear scene as a close visual detail that supports the current narration, with dim screen-adjacent light, digital mystery, muted yellow tones, and liminal internet-folklore restraint. This should feel like an opening visual that widens the frame without adding new story elements during the middle sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-    "A realistic digital-documentary image shows the original empty-room atmosphere beside subtle hints of later levels. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with dim screen-adjacent light, digital mystery, muted yellow tones, and liminal internet-folklore restraint. This should feel like a follow-up visual with one clear focal point during the middle sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-    "A realistic digital-documentary image shows a restrained found-footage style hallway with no creatures in view. Frame one clear scene as a medium composition that shows the important action or state, with dim screen-adjacent light, digital mystery, muted yellow tones, and liminal internet-folklore restraint. This should feel like a follow-up visual that adds a second visual detail during the middle sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-    "A realistic digital-documentary image shows a quiet survival-guide table with blank cards, thread, and room sketches. Frame one clear scene as a close visual detail that supports the current narration, with dim screen-adjacent light, digital mystery, muted yellow tones, and liminal internet-folklore restraint. This should feel like a follow-up visual that widens the frame without adding new story elements during the middle sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-    "A realistic digital-documentary image shows two archive folders representing different Backrooms continuities without readable text. Frame one clear scene as a clear tabletop or archival composition, with soft archival light, careful documentary restraint, muted yellow tones, and liminal internet-folklore restraint. This should feel like an opening visual with one clear focal point during the fourth sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-    "A realistic digital-documentary image shows a desk with reference cards, photo edges, and a yellow-room image turned face down. Frame one clear scene as a medium frame that separates the main subject from supporting evidence, with soft archival light, careful documentary restraint, muted yellow tones, and liminal internet-folklore restraint. This should feel like an opening visual that adds a second visual detail during the fourth sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-    "A realistic digital-documentary image shows two archive folders representing different Backrooms continuities without readable text. Frame one clear scene as a medium frame that separates the main subject from supporting evidence, with soft archival light, careful documentary restraint, muted yellow tones, and liminal internet-folklore restraint. This should feel like a follow-up visual with one clear focal point during the fourth sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-    "A realistic digital-documentary image shows a desk with reference cards, photo edges, and a yellow-room image turned face down. Frame one clear scene as a close archival detail with the source boundary visible, with soft archival light, careful documentary restraint, muted yellow tones, and liminal internet-folklore restraint. This should feel like a follow-up visual that adds a second visual detail during the fourth sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-    "A realistic digital-documentary image shows the yellow room seen from farther back, with darkness beyond the last doorway. Frame one clear scene as a wide reflective composition with negative space, with subdued fading light, quiet reflective tension, muted yellow tones, and liminal internet-folklore restraint. This should feel like an opening visual with one clear focal point during the final sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-    "A realistic digital-documentary image shows a final corridor that feels open, quiet, and unresolved. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, muted yellow tones, and liminal internet-folklore restraint. This should feel like an opening visual that adds a second visual detail during the final sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-    "A realistic digital-documentary image shows an empty room where the light keeps humming after the story ends. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, muted yellow tones, and liminal internet-folklore restraint. This should feel like an opening visual that widens the frame without adding new story elements during the final sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-    "A realistic digital-documentary image shows the yellow room seen from farther back, with darkness beyond the last doorway. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, muted yellow tones, and liminal internet-folklore restraint. This should feel like a follow-up visual with one clear focal point during the final sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-    "A realistic digital-documentary image shows a final corridor that feels open, quiet, and unresolved. Frame one clear scene as a wider reflective frame that keeps the ending unresolved, with subdued fading light, quiet reflective tension, muted yellow tones, and liminal internet-folklore restraint. This should feel like a follow-up visual that adds a second visual detail during the final sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements."
+    "empty yellow office-like room with stained carpet and fluorescent panels, documentary realism, no readable text, empty, fluorescent, recursive, uneasy, documentary mood, source-aware documentary style.",
+    "long repeating corridor of yellow walls and low ceiling lights, liminal interior, no people, empty, fluorescent, recursive, uneasy, documentary mood, source-aware documentary style.",
+    "carpeted room corner with a dark opening beyond it, quiet fluorescent unease, empty, fluorescent, recursive, uneasy, documentary mood, source-aware documentary style.",
+    "old computer screen beside a blurred room photograph, internet folklore atmosphere, no readable UI, empty, fluorescent, recursive, uneasy, documentary mood, source-aware documentary style.",
+    "archive desk with printed anonymous image turned away from readable text, dim room, empty, fluorescent, recursive, uneasy, documentary mood, source-aware documentary style.",
+    "forking hallway with simple signs obscured and unreadable, yellow wall repetition, empty, fluorescent, recursive, uneasy, documentary mood, source-aware documentary style.",
+    "empty office hallway after closing with buzzing lights and damp carpet texture, empty, fluorescent, recursive, uneasy, documentary mood, source-aware documentary style.",
+    "plain conference-room doorway leading into another identical room, no furniture crowding, empty, fluorescent, recursive, uneasy, documentary mood, source-aware documentary style.",
+    "fluorescent ceiling grid above endless yellow partitions, restrained liminal horror, empty, fluorescent, recursive, uneasy, documentary mood, source-aware documentary style.",
+    "file drawers and level maps without readable labels, digital labyrinth archive mood, empty, fluorescent, recursive, uneasy, documentary mood, source-aware documentary style.",
+    "survival notes represented by blank cards and a flashlight on carpet, no readable writing, empty, fluorescent, recursive, uneasy, documentary mood, source-aware documentary style.",
+    "wide maze of office corridors seen from above, subtle impossible geometry, empty, fluorescent, recursive, uneasy, documentary mood, source-aware documentary style.",
+    "closed mall service corridor with yellow light and dark maintenance door, empty, fluorescent, recursive, uneasy, documentary mood, source-aware documentary style.",
+    "single room corner with carpet fading into shadow, no entities visible, empty, fluorescent, recursive, uneasy, documentary mood, source-aware documentary style.",
+    "final empty yellow room with one unreachable doorway, quiet unresolved ending, empty, fluorescent, recursive, uneasy, documentary mood, source-aware documentary style."
   ],
   "imagePromptsIncluded": true,
-  "logline": "It works as digital folklore because an unsettling image and short caption became a shared mythos of levels, entities, survival rules, and analog horror videos.",
+  "logline": "The Backrooms becomes a production package about how one empty yellow-room premise grew into a shared digital labyrinth of levels, entities, exits, and contradictory rules.",
   "longformIncluded": true,
   "longformScript": [
-    "The Backrooms: Digital Labyrinth, Liminal Space, and the Internet's Endless Yellow Room opens with an empty yellow room, fluorescent hum, and the feeling that an ordinary image has opened too far. It feels like someone has found an ordinary interior that refuses to stay ordinary: yellow walls, old carpet, fluorescent noise, and no clear exit. That image gives the story a body before any explanation arrives, and the first fear is simple. A normal room has become a place that may never end.",
-    "After the opening image comes the rule that made the legend travel: a person can noclip out of reality and enter endless empty rooms. In the archive record, The Backrooms digital labyrinth belongs to Internet Folklore, so the opening act works as a remembered online premise rather than a verified hidden place. The room stays visible while the legend starts stepping farther inward.",
-    "The idea spread through image boards, forums, videos, games, collaborative fiction, and wider online discussions of liminal spaces. That spread matters because the Backrooms did not become famous as one closed tale. It became a place that many people could add to: another corridor, another rule, another level, and another reason the exit might never appear.",
-    "Later communities expanded the idea into levels, entities, survival guides, archives, and shared lore. The expansion works best when it does not bury the plain yellow-room image. The archive frame keeps the original prompt, the collaborative wiki era, and the analog horror versions in separate layers, so the growth feels wide without turning every layer into one official canon.",
-    "The original image evokes yellow walls, old carpet, fluorescent lights, and office-like non-place. This is where the narration can slow down. The Backrooms works because it feels designed for people and emptied of them at the same time. Liminal space, endless rooms, and workplace-like non-place are not decoration here; they explain why the image feels familiar before it feels impossible.",
-    "The minimalist original Backrooms works as an infinite empty office-like maze. The wiki-era Backrooms becomes a multi-level shared universe with rules and creatures. Analog horror Backrooms appears as found footage, institutional footage, or failed-research narrative. These versions work as branches from the same first image, not as replacements for it.",
-    "Different Backrooms communities maintain different continuities. That uncertainty is part of the story itself. There is no single authority for every level, entity, rule, or exit. What can be held together is the folklore pattern: an ordinary-looking room becomes an impossible system because online audiences keep returning to it and rebuilding it.",
-    "Know Your Meme documents the Backrooms as a creepypasta originating from 4chan /x/ image-board culture. Backrooms Wikidot materials document the growth of collaborative writing around levels, guides, and multiple interpretations. For orientation, the archive points toward Know Your Meme - The Backrooms, Know Your Meme - Creepypasta, Backrooms Wikidot - FAQ. Those sources act as guardrails, keeping the legend vivid without claiming that the supernatural place is real.",
-    "It transformed an ordinary interior photograph into shared folklore about isolation, repetition, failed navigation, and spaces designed for people but emptied of them. The ending returns to the same room from the beginning. By then, the room can hold memes, fear, games, wikis, and analog horror without needing one final answer.",
-    "The Backrooms can be read as digital folklore built from collaborative retelling. Terms such as Backrooms, liminal space, noclip, creepypasta, analog horror describe how the story is actually recognized. The ending leaves the Backrooms as a digital labyrinth: not a proven location, but a shared strange place that people keep mapping because the first image still feels open."
+    "The Backrooms begin with an ordinary room that feels wrong before anything happens. Yellow walls, dull carpet, fluorescent light, and office-like emptiness become more frightening than a visible monster. The first fear is not pursuit. It is recognition. The place looks close to somewhere people have already been, but it has no reason to be waiting there. The fear works because the place feels remembered by the body before the mind can explain why it is afraid.",
+    "That familiarity is why the legend spread so quickly. A fantasy dungeon announces itself as fiction. The Backrooms look like a mistake inside the real world, a forgotten office zone or service corridor that should have ended after one turn. The horror arrives when the ordinary refuses to stop being ordinary, even as it becomes impossible to leave. Every repeated wall makes the room less like architecture and more like a thought that cannot find its ending.",
+    "The original premise is simple enough to survive retelling: someone slips out of normal reality and lands in a place that should not exist. No elaborate origin is needed. The phrase noclip gives the fall a digital feeling, as if reality has collision errors and the person has passed through the floor of the world. That digital slip gives the legend a modern doorway, where software language becomes a myth about reality breaking.",
+    "The Backrooms belong to internet folklore because the story did not stay locked in one finished text. A short image and premise became a shared space. People added levels, rules, exits, entities, survival warnings, maps, files, and found-footage fragments. The legend expanded because the first room left so much empty space for others to enter. The empty first room becomes a blank page, and the internet keeps writing corridors into it.",
+    "That expansion changed the shape of the fear. The earliest Backrooms were frightening because they were plain and endless. Later versions became a labyrinth with named levels and specialized dangers. Both versions matter, but they do different work. One traps the mind in repetition. The other turns repetition into a whole world of community-made rules. The minimalist version traps the listener in atmosphere, while the expanded version invites the listener to study the trap.",
+    "The source boundary stays important. The Backrooms are not a hidden dimension with confirmed expeditions. They are a fictional internet legend, a collaborative setting, and a liminal image tradition. The uncertainty worth keeping is cultural rather than factual: why so many people recognized that room as a place they had almost seen before. The source boundary keeps the story honest while leaving the emotional mystery untouched.",
+    "Liminal spaces give the Backrooms their emotional grammar. A hallway after closing, an empty office, a carpeted conference area, or a fluorescent service room can feel suspended between purposes. It is not abandoned enough to be ruin and not active enough to be safe. It feels paused, and the pause becomes the threat. The space feels between uses, as if people left seconds ago or were never meant to arrive at all.",
+    "The Backrooms turn that pause into a world. Nothing in the first room needs to move. The light hums, the carpet looks damp, the walls repeat, and the air seems stale. The imagination starts doing the dangerous work. If the room is empty, why does it feel watched? If it is ordinary, why is there no exit? That unanswered feeling makes the still room more active than a corridor full of visible threats.",
+    "The strongest narration lets the emptiness stay central. Later creatures and levels can appear, but the room itself remains the anchor. The fear works because the place does not explain itself. The listener is left with a familiar architecture that has lost its human purpose and kept only its lighting, texture, and silence. The best unease comes from the room remaining almost reasonable, because almost reasonable spaces are harder to dismiss.",
+    "As communities built more Backrooms material, the labyrinth gained structure. Level 0, dangerous levels, habitable zones, entities, survival items, and exits gave the setting the feeling of a strange archive. The world became something readers could study, compare, and navigate, even while the core premise remained impossible. The archive-like levels make fear feel organized, as if the maze has learned to file its own victims.",
+    "That system-building is part of the legend's appeal. People are drawn to rules when a place feels unstable. A list of levels promises orientation. An entity guide promises danger can be named. A survival note promises someone has been there before. The Backrooms become frightening and comforting at the same time because the maze offers information without offering escape. A guide can name a danger, but it also proves that the danger has been encountered before.",
+    "Different Backrooms communities do not share one single canon. That is not a weakness. It is how digital folklore behaves. The legend survives by branching. Minimalist versions, wiki versions, analog-horror versions, and meme versions all keep returning to the same basic fear: a person falls out of reality into a place built from ordinary wrongness. That branching is why the Backrooms can remain familiar while changing shape from community to community.",
+    "The Backrooms endure because they make modern space feel unstable. Offices, malls, hotels, schools, and service corridors already contain zones where people move without belonging. The legend gives those zones a myth. It says the background of daily life might continue forever if someone takes the wrong step. The myth gives modern emptiness a language, turning background spaces into places with appetite.",
+    "The ending should not overexplain the maze. If the Backrooms become too clear, they lose the unease that made them travel. The best closing image is still a room that looks almost harmless: yellow wall, buzzing light, empty carpet, and a corner that suggests another corner after it. The fear remains because nothing final arrives. The unresolved room keeps its power because a clean explanation would give the visitor a wall to lean against.",
+    "In the end, the Backrooms are a digital legend about slipping beneath the surface of normal design. The world does not turn into a haunted castle. It becomes a workplace corridor with no workers, a room with no task, a map with no outside. That is enough. The room is ordinary, and that is exactly why it stays open. The last doorway matters because it promises continuation without promising rescue."
   ],
-  "mainSubject": "The Backrooms",
-  "metaDescription": "A creator-ready production workspace for The Backrooms: Digital Labyrinth, Liminal Space, and the Internet's Endless Yellow Room, with long-form scenes, Shorts narration, image prompts, music keywords, and editing notes.",
-  "mood": "digital, liminal, and unsettling",
+  "mainSubject": "The Backrooms digital labyrinth",
+  "metaDescription": "A 7-8 minute source-based The Backrooms digital labyrinth video script with story-led narration, image prompts, Shorts script, thumbnail ideas, and production workflow.",
+  "mood": "empty, fluorescent, recursive, uneasy, documentary",
   "motionPrompts": [
-    "Use a slow controlled push into an empty yellow room with old carpet, fluorescent ceiling panels, and no visible exit, holding the frame long enough for the viewer to read the space. Let the first movement feel like an entrance into the legend, not a sudden scare.",
-    "Use a restrained lateral drift across a person-sized viewpoint at the edge of a repeating office-like room, keeping the movement smooth and documentary. Let the first movement feel like an entrance into the legend, not a sudden scare.",
-    "Begin with a static hold on a close detail of yellow wallpaper, stained carpet, and cold fluorescent light, then pull back slightly to show how it connects to the source story. Let the first movement feel like an entrance into the legend, not a sudden scare.",
-    "Use a restrained lateral drift across an empty yellow room with old carpet, fluorescent ceiling panels, and no visible exit, keeping the movement smooth and documentary. Let the first movement feel like an entrance into the legend, not a sudden scare.",
-    "Begin with a static hold on a person-sized viewpoint at the edge of a repeating office-like room, then pull back slightly to show how it connects to the source story. Let the first movement feel like an entrance into the legend, not a sudden scare.",
-    "Use a slow controlled push into a close detail of yellow wallpaper, stained carpet, and cold fluorescent light, holding the frame long enough for the viewer to read the space. Let the first movement feel like an entrance into the legend, not a sudden scare.",
-    "Use a slow controlled push into a repeating corridor that suggests a digital maze without showing screens, holding the frame long enough for the viewer to read the space. Keep the motion clear enough to suggest repetition, distance, and failed navigation.",
-    "Use a restrained lateral drift across a simple map-like arrangement of rooms and corridors with no readable labels, keeping the movement smooth and documentary. Keep the motion clear enough to suggest repetition, distance, and failed navigation.",
-    "Begin with a static hold on a distant hallway turning into another identical yellow room, then pull back slightly to show how it connects to the source story. Keep the motion clear enough to suggest repetition, distance, and failed navigation.",
-    "Use a restrained lateral drift across a repeating corridor that suggests a digital maze without showing screens, keeping the movement smooth and documentary. Keep the motion clear enough to suggest repetition, distance, and failed navigation.",
-    "Begin with a static hold on a simple map-like arrangement of rooms and corridors with no readable labels, then pull back slightly to show how it connects to the source story. Keep the motion clear enough to suggest repetition, distance, and failed navigation.",
-    "Use a slow controlled push into a distant hallway turning into another identical yellow room, holding the frame long enough for the viewer to read the space. Keep the motion clear enough to suggest repetition, distance, and failed navigation.",
-    "Use a slow controlled push into the original empty-room atmosphere beside subtle hints of later levels, holding the frame long enough for the viewer to read the space. Keep later lore visible as a layer around the original image, not as a replacement for it.",
-    "Use a restrained lateral drift across a restrained found-footage style hallway with no creatures in view, keeping the movement smooth and documentary. Keep later lore visible as a layer around the original image, not as a replacement for it.",
-    "Begin with a static hold on a quiet survival-guide table with blank cards, thread, and room sketches, then pull back slightly to show how it connects to the source story. Keep later lore visible as a layer around the original image, not as a replacement for it.",
-    "Use a restrained lateral drift across the original empty-room atmosphere beside subtle hints of later levels, keeping the movement smooth and documentary. Keep later lore visible as a layer around the original image, not as a replacement for it.",
-    "Begin with a static hold on a restrained found-footage style hallway with no creatures in view, then pull back slightly to show how it connects to the source story. Keep later lore visible as a layer around the original image, not as a replacement for it.",
-    "Use a slow controlled push into a quiet survival-guide table with blank cards, thread, and room sketches, holding the frame long enough for the viewer to read the space. Keep later lore visible as a layer around the original image, not as a replacement for it.",
-    "Use a slow controlled push into two archive folders representing different Backrooms continuities without readable text, holding the frame long enough for the viewer to read the space. Use minimal movement so the source boundary feels deliberate and easy to follow.",
-    "Use a restrained lateral drift across a desk with reference cards, photo edges, and a yellow-room image turned face down, keeping the movement smooth and documentary. Use minimal movement so the source boundary feels deliberate and easy to follow.",
-    "Use a restrained lateral drift across two archive folders representing different Backrooms continuities without readable text, keeping the movement smooth and documentary. Use minimal movement so the source boundary feels deliberate and easy to follow.",
-    "Begin with a static hold on a desk with reference cards, photo edges, and a yellow-room image turned face down, then pull back slightly to show how it connects to the source story. Use minimal movement so the source boundary feels deliberate and easy to follow.",
-    "Use a slow controlled push into the yellow room seen from farther back, with darkness beyond the last doorway, holding the frame long enough for the viewer to read the space. End with a slow hold that leaves the route unresolved.",
-    "Use a restrained lateral drift across a final corridor that feels open, quiet, and unresolved, keeping the movement smooth and documentary. End with a slow hold that leaves the route unresolved.",
-    "Begin with a static hold on an empty room where the light keeps humming after the story ends, then pull back slightly to show how it connects to the source story. End with a slow hold that leaves the route unresolved.",
-    "Use a restrained lateral drift across the yellow room seen from farther back, with darkness beyond the last doorway, keeping the movement smooth and documentary. End with a slow hold that leaves the route unresolved.",
-    "Begin with a static hold on a final corridor that feels open, quiet, and unresolved, then pull back slightly to show how it connects to the source story. End with a slow hold that leaves the route unresolved."
+    "Optional edit: slow push toward the central shape while the empty yellow office-like room with stained carpet and fluorescent panels remains the focus.",
+    "Optional edit: restrained lateral drift across the frame while the long repeating corridor of yellow walls and low ceiling lights remains the focus.",
+    "Optional edit: slow hold with a tiny light change while the carpeted room corner with a dark opening beyond it remains the focus.",
+    "Optional edit: gentle pullback that leaves negative space while the old computer screen beside a blurred room photograph remains the focus.",
+    "Optional edit: slow fade from foreground object to background threshold while the archive desk with printed anonymous image turned away from readable text remains the focus.",
+    "Optional edit: slow push toward the central shape while the forking hallway with simple signs obscured and unreadable remains the focus.",
+    "Optional edit: restrained lateral drift across the frame while the empty office hallway after closing with buzzing lights and damp carpet texture remains the focus.",
+    "Optional edit: slow hold with a tiny light change while the plain conference-room doorway leading into another identical room remains the focus.",
+    "Optional edit: gentle pullback that leaves negative space while the fluorescent ceiling grid above endless yellow partitions remains the focus.",
+    "Optional edit: slow fade from foreground object to background threshold while the file drawers and level maps without readable labels remains the focus.",
+    "Optional edit: slow push toward the central shape while the survival notes represented by blank cards and a flashlight on carpet remains the focus.",
+    "Optional edit: restrained lateral drift across the frame while the wide maze of office corridors seen from above remains the focus.",
+    "Optional edit: slow hold with a tiny light change while the closed mall service corridor with yellow light and dark maintenance door remains the focus.",
+    "Optional edit: gentle pullback that leaves negative space while the single room corner with carpet fading into shadow remains the focus.",
+    "Optional edit: slow fade from foreground object to background threshold while the final empty yellow room with one unreachable doorway remains the focus."
   ],
   "originalStorySlug": "backrooms-digital-labyrinth",
   "pipelineDiagnostics": {
     "fallbackUsed": false,
+    "imagePromptCount": 15,
+    "motionPromptCount": 15,
+    "narrationBeatCount": 15,
     "normalizedInputSchemaVersion": "1.0",
-    "scenePlanSchemaVersion": "1.0"
+    "polishedAt": "2026-08-12",
+    "polishedBy": "codex-manual-source-based-batch-002-polish",
+    "qualityDirection": "raise narration length and remove production-like narration phrasing",
+    "regeneratedAt": "2026-08-12",
+    "regeneratedBy": "codex-manual-source-based-batch-002",
+    "sceneCount": 5,
+    "scenePlanSchemaVersion": "1.0",
+    "shortSceneCount": 5,
+    "sourceStorySlug": "backrooms-digital-labyrinth"
   },
   "publishedAt": "2026-07-21",
   "runtimePlan": {
-    "estimatedFinalRuntime": "5-6 minutes",
-    "estimatedFinalSeconds": 340,
-    "finalVideoSeconds": 340,
-    "narrationReadSeconds": 255,
-    "narrationReadTime": "4 min 15 sec",
-    "plannedTransitionAndVisualTime": "1 min 25 sec",
-    "totalWordCount": 600
+    "estimatedFinalRuntime": "7-8 minutes",
+    "estimatedFinalSeconds": 480,
+    "finalVideoSeconds": 480,
+    "narrationReadSeconds": 456,
+    "narrationReadTime": "7 min 36 sec",
+    "plannedTransitionAndVisualTime": "0 min 24 sec",
+    "totalWordCount": 1072
   },
   "schemaVersion": "single-path-v1",
   "seoTitle": "Free The Backrooms: Digital Labyrinth, Liminal Space, and the Internet's Endless Yellow Room YouTube Script",
   "setting": "dim online archive space",
   "shortForm": {
     "finalVideoSeconds": 60,
-    "narrationReadSeconds": 53,
+    "narrationReadSeconds": 58,
     "scenes": [
       {
-        "backgroundMusic": "quiet opening pulse, low electronic pulse, dark ambient bed, short-form low density",
-        "estimatedReadSeconds": 14,
-        "imagePrompt": "A realistic digital-documentary scene shows an empty yellow room with old carpet and fluorescent light, framed as a vertical opening shot with strong negative space. Use dim fluorescent light, muted yellow walls, old carpet texture, and quiet liminal unease. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-        "motionPrompt": "Use a slow controlled push toward The Backrooms, keeping person as the central visual anchor.",
-        "narration": "The Backrooms begins with an empty yellow room, fluorescent hum, and the feeling that an ordinary image has opened too far. One ordinary room feels wrong, and the way out is already missing.",
-        "role": "Initial Appearance",
-        "sceneFocus": "Initial Appearance: An empty yellow room, fluorescent hum, and the feeling that an ordinary image has opened too far.",
+        "backgroundMusic": "compact atmospheric bed matching the long-form tone",
+        "estimatedReadSeconds": 24,
+        "imagePrompt": "Vertical documentary image: empty yellow office-like room with stained carpet and fluorescent panels, documentary realism, no readable text, clear single focal point, no readable text, no logos, no modern UI unless the subject requires modern digital context.",
+        "motionPrompt": "Slow restrained movement that supports the narration without adding new story events.",
+        "narration": "The Backrooms begin with an ordinary room that feels wrong before anything happens. Yellow walls, dull carpet, fluorescent light, and office-like emptiness become more frightening than a visible monster. The first fear is not pursuit. It is recognition. The place looks close to somewhere people have already been, but it has no reason to be waiting there.",
+        "role": "Opening Hook",
+        "sceneFocus": "The room begins before the monster.",
         "sceneIndex": 1,
-        "soundEffect": "quiet keyboard input, restrained digital texture, subtle screen interaction",
-        "sourceFactIds": [
-          "fact-001",
-          "fact-007",
-          "fact-022",
-          "fact-004",
-          "fact-005"
-        ],
-        "sourceFieldRefs": [
-          "storyBrief.coreStoryElements",
-          "contentDNA.sceneAnchor",
-          "contentDNA.requiredSpecificDetails",
-          "story.summaryAnswer",
-          "story.excerpt",
-          "storyBrief.knownNames",
-          "storyBrief.cultureOrContext",
-          "storyBrief.topic",
-          "derived.problemFromDetail",
-          "story.title"
-        ],
-        "usedFactTexts": [
-          "A person accidentally noclips out of reality and enters endless empty rooms.",
-          "4chan /x/, creepypasta, liminal space photography, collaborative wiki writing, analog horror, YouTube and meme culture.",
-          "It works as digital folklore because an unsettling image and short caption became a shared mythos of levels, entities, survival rules, and analog horror videos.",
-          "The Backrooms digital labyrinth.",
-          "The Backrooms: Digital Labyrinth, Liminal Space, and the Internet's Endless Yellow Room."
-        ],
-        "voiceDirection": "Clear short-form pace, clean pauses, restrained tone, light emphasis on \"Backrooms\"."
+        "soundEffect": "subtle ambience only",
+        "voiceDirection": "Clear short-form delivery with one clean pause."
       },
       {
-        "backgroundMusic": "steady low tension, low electronic pulse, dark ambient bed, short-form low density",
-        "estimatedReadSeconds": 10,
-        "imagePrompt": "A realistic digital-documentary scene shows a lonely corridor that seems to repeat beyond the frame, framed as a slow corridor composition with the exit hidden. Use dim fluorescent light, muted yellow walls, old carpet texture, and quiet liminal unease. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-        "motionPrompt": "Use a restrained lateral pan across accidentally, then settle quietly on The Backrooms.",
-        "narration": "Then the noclip idea turns that room into a digital labyrinth. A person slips out of reality and finds corridors that keep repeating.",
-        "role": "Core Clue",
-        "sceneFocus": "Core Clue: the noclip premise and endless repeating rooms.",
+        "backgroundMusic": "compact atmospheric bed matching the long-form tone",
+        "estimatedReadSeconds": 23,
+        "imagePrompt": "Vertical documentary image: old computer screen beside a blurred room photograph, internet folklore atmosphere, no readable UI, clear single focal point, no readable text, no logos, no modern UI unless the subject requires modern digital context.",
+        "motionPrompt": "Slow restrained movement that supports the narration without adding new story events.",
+        "narration": "The Backrooms belong to internet folklore because the story did not stay locked in one finished text. A short image and premise became a shared space. People added levels, rules, exits, entities, survival warnings, maps, files, and found-footage fragments. The legend expanded because the first room left so much empty space for others to enter.",
+        "role": "Origin and Spread",
+        "sceneFocus": "A short image prompt becomes collaborative folklore.",
         "sceneIndex": 2,
-        "soundEffect": "quiet keyboard input, restrained digital texture, subtle screen interaction",
-        "sourceFactIds": [
-          "fact-001",
-          "fact-002",
-          "fact-003",
-          "fact-015",
-          "fact-007"
-        ],
-        "sourceFieldRefs": [
-          "storyBrief.coreStoryElements",
-          "contentDNA.sceneAnchor",
-          "contentDNA.requiredSpecificDetails",
-          "story.summaryAnswer",
-          "story.excerpt",
-          "storyBrief.topic",
-          "story.title",
-          "storyBrief.knownNames",
-          "contentDNA.subjectSpecificVocabulary",
-          "derived.turningPointFromDetail",
-          "derived.outcomeFromDetail",
-          "category.title",
-          "derived.problemFromDetail",
-          "storyBrief.cultureOrContext"
-        ],
-        "usedFactTexts": [
-          "A person accidentally noclips out of reality and enters endless empty rooms.",
-          "The original image evokes yellow walls, old carpet, fluorescent lights, and office-like non-place.",
-          "Later communities expanded the idea into levels, entities, survival guides, archives, and shared lore.",
-          "The backrooms and the birth of a digital labyrinth meaning.",
-          "4chan /x/, creepypasta, liminal space photography, collaborative wiki writing, analog horror, YouTube and meme culture."
-        ],
-        "voiceDirection": "Clear short-form pace, clean pauses, restrained tone, light emphasis on \"digital\"."
+        "soundEffect": "subtle ambience only",
+        "voiceDirection": "Clear short-form delivery with one clean pause."
       },
       {
-        "backgroundMusic": "quiet opening pulse, low electronic pulse, dark ambient bed, short-form low density",
-        "estimatedReadSeconds": 9,
-        "imagePrompt": "A realistic digital-documentary scene shows a wall of map notes, level numbers, and survival-rule clues without readable text, framed as a clean production-board composition with symbolic notes but no readable words. Use dim fluorescent light, muted yellow walls, old carpet texture, and quiet liminal unease. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-        "motionPrompt": "Begin with a still frame, then gently pull back to reveal noclips.",
-        "narration": "Online communities expand the premise into levels, entities, survival rules, games, wikis, and analog horror. The first image still holds the center.",
-        "role": "Spread or Development",
-        "sceneFocus": "Spread or Development: levels, entities, survival rules, and analog horror branches.",
+        "backgroundMusic": "compact atmospheric bed matching the long-form tone",
+        "estimatedReadSeconds": 23,
+        "imagePrompt": "Vertical documentary image: empty office hallway after closing with buzzing lights and damp carpet texture, clear single focal point, no readable text, no logos, no modern UI unless the subject requires modern digital context.",
+        "motionPrompt": "Slow restrained movement that supports the narration without adding new story events.",
+        "narration": "Liminal spaces give the Backrooms their emotional grammar. A hallway after closing, an empty office, a carpeted conference area, or a fluorescent service room can feel suspended between purposes. It is not abandoned enough to be ruin and not active enough to be safe. It feels paused, and the pause becomes the threat.",
+        "role": "Liminal Space",
+        "sceneFocus": "The setting is frightening because it feels between uses.",
         "sceneIndex": 3,
-        "soundEffect": "quiet keyboard input, restrained digital texture, subtle screen interaction",
-        "sourceFactIds": [
-          "fact-019",
-          "fact-001",
-          "fact-002",
-          "fact-003",
-          "fact-013"
-        ],
-        "sourceFieldRefs": [
-          "derived.turningPointFromDetail",
-          "storyBrief.coreStoryElements",
-          "contentDNA.sceneAnchor",
-          "contentDNA.requiredSpecificDetails",
-          "story.summaryAnswer",
-          "story.excerpt"
-        ],
-        "usedFactTexts": [
-          "It works as digital folklore because an unsettling image and short caption became a shared mythos of levels, entities, survival rules, and analog horror videos.",
-          "A person accidentally noclips out of reality and enters endless empty rooms.",
-          "The original image evokes yellow walls, old carpet, fluorescent lights, and office-like non-place.",
-          "Later communities expanded the idea into levels, entities, survival guides, archives, and shared lore.",
-          "The Backrooms digital labyrinth centers on internet folklore / Community retelling / interpretation."
-        ],
-        "voiceDirection": "Clear short-form pace, clean pauses, restrained tone, light emphasis on \"image\"."
+        "soundEffect": "subtle ambience only",
+        "voiceDirection": "Clear short-form delivery with one clean pause."
       },
       {
-        "backgroundMusic": "sparse documentary bed, low electronic pulse, dark ambient bed, short-form low density",
-        "estimatedReadSeconds": 10,
-        "imagePrompt": "A realistic digital-documentary scene shows two different archive folders for two different Backrooms continuities, framed as a restrained documentary comparison shot. Use dim fluorescent light, muted yellow walls, old carpet texture, and quiet liminal unease. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-        "motionPrompt": "Reveal reality from foreground to background with subtle parallax and restrained movement.",
-        "narration": "Different versions do not share one official canon. That uncertainty is part of the folklore, not a reason to pretend the place is real.",
-        "role": "Attribution and Uncertainty",
-        "sceneFocus": "Attribution and Uncertainty: different continuities and the source limit around the legend.",
+        "backgroundMusic": "compact atmospheric bed matching the long-form tone",
+        "estimatedReadSeconds": 20,
+        "imagePrompt": "Vertical documentary image: file drawers and level maps without readable labels, digital labyrinth archive mood, clear single focal point, no readable text, no logos, no modern UI unless the subject requires modern digital context.",
+        "motionPrompt": "Slow restrained movement that supports the narration without adding new story events.",
+        "narration": "As communities built more Backrooms material, the labyrinth gained structure. Level 0, dangerous levels, habitable zones, entities, survival items, and exits gave the setting the feeling of a strange archive. The world became something readers could study, compare, and navigate, even while the core premise remained impossible.",
+        "role": "Levels and Lore",
+        "sceneFocus": "Later canons turn emptiness into a maze of systems.",
         "sceneIndex": 4,
-        "soundEffect": "quiet keyboard input, restrained digital texture, subtle screen interaction",
-        "sourceFactIds": [
-          "fact-007",
-          "fact-013",
-          "fact-008",
-          "fact-009",
-          "fact-010"
-        ],
-        "sourceFieldRefs": [
-          "storyBrief.cultureOrContext",
-          "contentDNA.requiredSpecificDetails"
-        ],
-        "usedFactTexts": [
-          "4chan /x/, creepypasta, liminal space photography, collaborative wiki writing, analog horror, YouTube and meme culture.",
-          "The Backrooms digital labyrinth centers on internet folklore / Community retelling / interpretation.",
-          "Read the Backrooms as digital folklore built from collaborative retelling.",
-          "Explain liminal space aesthetics as central to the legend's emotional force.",
-          "Separate the original image/prompt from later expanded canon and location hunting."
-        ],
-        "voiceDirection": "Careful pace, clean pauses, restrained tone, light emphasis on \"folklore\"."
+        "soundEffect": "subtle ambience only",
+        "voiceDirection": "Clear short-form delivery with one clean pause."
       },
       {
-        "backgroundMusic": "soft reflective drone, low electronic pulse, dark ambient bed, short-form low density",
-        "estimatedReadSeconds": 10,
-        "imagePrompt": "A realistic digital-documentary scene shows the same yellow room seen from farther away, open and unresolved, framed as a quiet final frame with the room fading into darkness. Use dim fluorescent light, muted yellow walls, old carpet texture, and quiet liminal unease. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-        "motionPrompt": "Hold briefly on The Backrooms, then let the light shift softly around a person accidentally noclips out.",
-        "narration": "The legend lasts because the room feels familiar before it feels impossible. The Backrooms remains a shared map of isolation and failed exits.",
-        "role": "Digital Legacy",
-        "sceneFocus": "Digital Legacy: isolation, repetition, failed navigation, and empty designed spaces.",
+        "backgroundMusic": "compact atmospheric bed matching the long-form tone",
+        "estimatedReadSeconds": 20,
+        "imagePrompt": "Vertical documentary image: closed mall service corridor with yellow light and dark maintenance door, clear single focal point, no readable text, no logos, no modern UI unless the subject requires modern digital context.",
+        "motionPrompt": "Slow restrained movement that supports the narration without adding new story events.",
+        "narration": "The Backrooms endure because they make modern space feel unstable. Offices, malls, hotels, schools, and service corridors already contain zones where people move without belonging. The legend gives those zones a myth. It says the background of daily life might continue forever if someone takes the wrong step.",
+        "role": "Ending and Use",
+        "sceneFocus": "The legend remains strongest when the exit is not solved.",
         "sceneIndex": 5,
-        "soundEffect": "quiet keyboard input, restrained digital texture, subtle screen interaction",
-        "sourceFactIds": [
-          "fact-020",
-          "fact-008",
-          "fact-009",
-          "fact-010",
-          "fact-007"
-        ],
-        "sourceFieldRefs": [
-          "derived.outcomeFromDetail",
-          "storyBrief.editorialInterpretationOptions",
-          "contentDNA.uniqueAngle",
-          "storyBrief.cultureOrContext"
-        ],
-        "usedFactTexts": [
-          "It works as digital folklore because an unsettling image and short caption became a shared mythos of levels, entities, survival rules, and analog horror videos.",
-          "Read the Backrooms as digital folklore built from collaborative retelling.",
-          "Explain liminal space aesthetics as central to the legend's emotional force.",
-          "Separate the original image/prompt from later expanded canon and location hunting.",
-          "4chan /x/, creepypasta, liminal space photography, collaborative wiki writing, analog horror, YouTube and meme culture."
-        ],
-        "voiceDirection": "Slow final pace, clean pauses, restrained tone, light emphasis on \"Backrooms\"."
+        "soundEffect": "subtle ambience only",
+        "voiceDirection": "Clear short-form delivery with one clean pause."
       }
     ],
-    "totalWordCount": 125
+    "totalWordCount": 260
   },
   "shortSceneFocuses": [
-    "Initial Appearance: An empty yellow room, fluorescent hum, and the feeling that an ordinary image has opened too far.",
-    "Core Clue: the noclip premise and endless repeating rooms.",
-    "Spread or Development: levels, entities, survival rules, and analog horror branches.",
-    "Attribution and Uncertainty: different continuities and the source limit around the legend.",
-    "Digital Legacy: isolation, repetition, failed navigation, and empty designed spaces."
+    "The room begins before the monster.",
+    "A short image prompt becomes collaborative folklore.",
+    "The setting is frightening because it feels between uses.",
+    "Later canons turn emptiness into a maze of systems.",
+    "The legend remains strongest when the exit is not solved."
   ],
   "shortsIncluded": true,
   "shortsScript": [
-    "The Backrooms begins with an empty yellow room, fluorescent hum, and the feeling that an ordinary image has opened too far. One ordinary room feels wrong, and the way out is already missing.",
-    "Then the noclip idea turns that room into a digital labyrinth. A person slips out of reality and finds corridors that keep repeating.",
-    "Online communities expand the premise into levels, entities, survival rules, games, wikis, and analog horror. The first image still holds the center.",
-    "Different versions do not share one official canon. That uncertainty is part of the folklore, not a reason to pretend the place is real.",
-    "The legend lasts because the room feels familiar before it feels impossible. The Backrooms remains a shared map of isolation and failed exits."
+    "The Backrooms begin with an ordinary room that feels wrong before anything happens. Yellow walls, dull carpet, fluorescent light, and office-like emptiness become more frightening than a visible monster. The first fear is not pursuit. It is recognition. The place looks close to somewhere people have already been, but it has no reason to be waiting there.",
+    "The Backrooms belong to internet folklore because the story did not stay locked in one finished text. A short image and premise became a shared space. People added levels, rules, exits, entities, survival warnings, maps, files, and found-footage fragments. The legend expanded because the first room left so much empty space for others to enter.",
+    "Liminal spaces give the Backrooms their emotional grammar. A hallway after closing, an empty office, a carpeted conference area, or a fluorescent service room can feel suspended between purposes. It is not abandoned enough to be ruin and not active enough to be safe. It feels paused, and the pause becomes the threat.",
+    "As communities built more Backrooms material, the labyrinth gained structure. Level 0, dangerous levels, habitable zones, entities, survival items, and exits gave the setting the feeling of a strange archive. The world became something readers could study, compare, and navigate, even while the core premise remained impossible.",
+    "The Backrooms endure because they make modern space feel unstable. Offices, malls, hotels, schools, and service corridors already contain zones where people move without belonging. The legend gives those zones a myth. It says the background of daily life might continue forever if someone takes the wrong step."
   ],
   "slug": "backrooms-digital-labyrinth-youtube-script",
   "storageSchemaVersion": "creator-pack-file-v1",
   "subtitleLines": [
-    "The Backrooms begins with a familiar image.",
-    "A person accidentally noclips out of reality and enters endless empty rooms.",
-    "The ending leaves a question behind."
+    "A source-based package for The Backrooms digital labyrinth.",
+    "Five scenes, fifteen voiceover beats.",
+    "Built for image-led narration."
   ],
   "tags": [
     "internet folklore script",
@@ -317,830 +193,245 @@
     "image prompt"
   ],
   "thumbnailIdeas": [
-    "Backrooms with bold text: THE STORY STILL REMAINS",
-    "A close-up of the key image from Backrooms",
-    "Split thumbnail: familiar legend on one side, unresolved question on the other"
+    "The Backrooms digital labyrinth with the title: Digital Labyrinth and Liminal Folklore",
+    "The Backrooms digital labyrinth in shadow with a clear mystery title",
+    "The Backrooms digital labyrinth as a restrained documentary thumbnail",
+    "The Backrooms digital labyrinth with one symbolic object in the foreground"
   ],
   "thumbnailIdeasIncluded": true,
   "title": "The Backrooms: Digital Labyrinth, Liminal Space, and the Internet's Endless Yellow Room YouTube Script",
-  "updatedAt": "2026-07-21",
-  "usageNote": "Use this page as a production workspace for a video based on the archive entry for The Backrooms. Keep source limits clear and avoid presenting later interpretations as verified facts.",
+  "updatedAt": "2026-08-12",
+  "usageNote": "Use this package as a production aid for an image-led narration video. Keep the original archive record separate from creator-facing adaptation notes.",
   "visualGuide": [
     {
-      "backgroundMusic": "quiet opening pulse, low electronic pulse, dark ambient bed, sparse digital texture, slow tempo with restrained weight",
-      "directionTip": "Keep the opening focused on the empty yellow room, fluorescent hum, old carpet, and the noclip premise.",
+      "backgroundMusic": "dark quiet ambient bed, soft low pulse, no melodic lead",
       "narrationParts": [
         {
-          "creatorNote": "Keep the opening tied to the empty yellow room, old carpet, fluorescent hum, and the noclip premise.",
-          "estimatedReadingTime": "≈ 35 sec",
-          "narration": "The Backrooms: Digital Labyrinth, Liminal Space, and the Internet's Endless Yellow Room opens with an empty yellow room, fluorescent hum, and the feeling that an ordinary image has opened too far. It feels like someone has found an ordinary interior that refuses to stay ordinary: yellow walls, old carpet, fluorescent noise, and no clear exit. That image gives the story a body before any explanation arrives, and the first fear is simple. A normal room has become a place that may never end.",
-          "sourceFactIds": [
-            "fact-004",
-            "fact-001",
-            "fact-022",
-            "fact-007"
-          ],
-          "sourceFieldRefs": [
-            "storyBrief.topic",
-            "storyBrief.coreStoryElements",
-            "derived.problemFromDetail",
-            "storyBrief.cultureOrContext",
-            "story.title",
-            "story.storyBrief",
-            "story.searchSummary",
-            "story.longformArticle",
-            "story.references"
-          ],
-          "usedFactTexts": [
-            "The Backrooms digital labyrinth.",
-            "A person accidentally noclips out of reality and enters endless empty rooms.",
-            "It works as digital folklore because an unsettling image and short caption became a shared mythos of levels, entities, survival rules, and analog horror videos.",
-            "4chan /x/, creepypasta, liminal space photography, collaborative wiki writing, analog horror, YouTube and meme culture."
-          ],
+          "creatorNote": "Keep this beat viewer-facing and story-led.",
+          "estimatedReadingTime": "about 24 sec",
+          "narration": "The Backrooms begin with an ordinary room that feels wrong before anything happens. Yellow walls, dull carpet, fluorescent light, and office-like emptiness become more frightening than a visible monster. The first fear is not pursuit. It is recognition. The place looks close to somewhere people have already been, but it has no reason to be waiting there.",
           "visualBeats": [
             {
-              "beatMotion": "Use a slow controlled push into an empty yellow room with old carpet, fluorescent ceiling panels, and no visible exit, holding the frame long enough for the viewer to read the space. Let the first movement feel like an entrance into the legend, not a sudden scare.",
-              "imagePrompt": "A realistic digital-documentary image shows an empty yellow room with old carpet, fluorescent ceiling panels, and no visible exit. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with dim screen-adjacent light, digital mystery, muted yellow tones, and liminal internet-folklore restraint. This should feel like an opening visual with one clear focal point during the first sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a slow controlled push into an empty yellow room with old carpet, fluorescent ceiling panels, and no visible exit, holding the frame long enough for the viewer to read the space. Let the first movement feel like an entrance into the legend, not a sudden scare.",
-              "sourceFactIds": [
-                "fact-001"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.topic",
-                "storyBrief.coreStoryElements",
-                "derived.problemFromDetail",
-                "storyBrief.cultureOrContext",
-                "story.title"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a restrained lateral drift across a person-sized viewpoint at the edge of a repeating office-like room, keeping the movement smooth and documentary. Let the first movement feel like an entrance into the legend, not a sudden scare.",
-              "imagePrompt": "A realistic digital-documentary image shows a person-sized viewpoint at the edge of a repeating office-like room. Frame one clear scene as a medium composition that shows the important action or state, with dim screen-adjacent light, digital mystery, muted yellow tones, and liminal internet-folklore restraint. This should feel like an opening visual that adds a second visual detail during the first sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Use a restrained lateral drift across a person-sized viewpoint at the edge of a repeating office-like room, keeping the movement smooth and documentary. Let the first movement feel like an entrance into the legend, not a sudden scare.",
-              "sourceFactIds": [
-                "fact-004"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.topic",
-                "storyBrief.coreStoryElements",
-                "derived.problemFromDetail",
-                "storyBrief.cultureOrContext",
-                "story.title"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Begin with a static hold on a close detail of yellow wallpaper, stained carpet, and cold fluorescent light, then pull back slightly to show how it connects to the source story. Let the first movement feel like an entrance into the legend, not a sudden scare.",
-              "imagePrompt": "A realistic digital-documentary image shows a close detail of yellow wallpaper, stained carpet, and cold fluorescent light. Frame one clear scene as a close visual detail that supports the current narration, with dim screen-adjacent light, digital mystery, muted yellow tones, and liminal internet-folklore restraint. This should feel like an opening visual that widens the frame without adding new story elements during the first sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Begin with a static hold on a close detail of yellow wallpaper, stained carpet, and cold fluorescent light, then pull back slightly to show how it connects to the source story. Let the first movement feel like an entrance into the legend, not a sudden scare.",
-              "sourceFactIds": [
-                "fact-005"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.topic",
-                "storyBrief.coreStoryElements",
-                "derived.problemFromDetail",
-                "storyBrief.cultureOrContext",
-                "story.title"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "empty yellow office-like room with stained carpet and fluorescent panels, documentary realism, no readable text, empty, fluorescent, recursive, uneasy, documentary mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow push toward the central shape while the empty yellow office-like room with stained carpet and fluorescent panels remains the focus."
             }
           ]
         },
         {
-          "creatorNote": "Do not claim that the Backrooms is a verified hidden dimension; keep it as internet folklore.",
-          "estimatedReadingTime": "≈ 27 sec",
-          "narration": "After the opening image comes the rule that made the legend travel: a person can noclip out of reality and enter endless empty rooms. In the archive record, The Backrooms digital labyrinth belongs to Internet Folklore, so the opening act works as a remembered online premise rather than a verified hidden place. The room stays visible while the legend starts stepping farther inward.",
-          "sourceFactIds": [
-            "fact-022",
-            "fact-007",
-            "fact-004",
-            "fact-001"
-          ],
-          "sourceFieldRefs": [
-            "storyBrief.topic",
-            "storyBrief.coreStoryElements",
-            "derived.problemFromDetail",
-            "storyBrief.cultureOrContext",
-            "story.title",
-            "story.storyBrief",
-            "story.searchSummary",
-            "story.longformArticle",
-            "story.references"
-          ],
-          "usedFactTexts": [
-            "It works as digital folklore because an unsettling image and short caption became a shared mythos of levels, entities, survival rules, and analog horror videos.",
-            "4chan /x/, creepypasta, liminal space photography, collaborative wiki writing, analog horror, YouTube and meme culture.",
-            "The Backrooms digital labyrinth.",
-            "A person accidentally noclips out of reality and enters endless empty rooms."
-          ],
+          "creatorNote": "Let the source boundary stay clear without stopping the story.",
+          "estimatedReadingTime": "about 25 sec",
+          "narration": "That familiarity is why the legend spread so quickly. A fantasy dungeon announces itself as fiction. The Backrooms look like a mistake inside the real world, a forgotten office zone or service corridor that should have ended after one turn. The horror arrives when the ordinary refuses to stop being ordinary, even as it becomes impossible to leave.",
           "visualBeats": [
             {
-              "beatMotion": "Use a restrained lateral drift across an empty yellow room with old carpet, fluorescent ceiling panels, and no visible exit, keeping the movement smooth and documentary. Let the first movement feel like an entrance into the legend, not a sudden scare.",
-              "imagePrompt": "A realistic digital-documentary image shows an empty yellow room with old carpet, fluorescent ceiling panels, and no visible exit. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with dim screen-adjacent light, digital mystery, muted yellow tones, and liminal internet-folklore restraint. This should feel like a follow-up visual with one clear focal point during the first sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a restrained lateral drift across an empty yellow room with old carpet, fluorescent ceiling panels, and no visible exit, keeping the movement smooth and documentary. Let the first movement feel like an entrance into the legend, not a sudden scare.",
-              "sourceFactIds": [
-                "fact-022"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.topic",
-                "storyBrief.coreStoryElements",
-                "derived.problemFromDetail",
-                "storyBrief.cultureOrContext",
-                "story.title"
-              ],
-              "usedFactTexts": []
-            },
+              "imagePrompt": "long repeating corridor of yellow walls and low ceiling lights, liminal interior, no people, empty, fluorescent, recursive, uneasy, documentary mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: restrained lateral drift across the frame while the long repeating corridor of yellow walls and low ceiling lights remains the focus."
+            }
+          ]
+        },
+        {
+          "creatorNote": "Use one concrete image, then let the narration carry the meaning.",
+          "estimatedReadingTime": "about 23 sec",
+          "narration": "The original premise is simple enough to survive retelling: someone slips out of normal reality and lands in a place that should not exist. No elaborate origin is needed. The phrase noclip gives the fall a digital feeling, as if reality has collision errors and the person has passed through the floor of the world.",
+          "visualBeats": [
             {
-              "beatMotion": "Begin with a static hold on a person-sized viewpoint at the edge of a repeating office-like room, then pull back slightly to show how it connects to the source story. Let the first movement feel like an entrance into the legend, not a sudden scare.",
-              "imagePrompt": "A realistic digital-documentary image shows a person-sized viewpoint at the edge of a repeating office-like room. Frame one clear scene as a medium composition that shows the important action or state, with dim screen-adjacent light, digital mystery, muted yellow tones, and liminal internet-folklore restraint. This should feel like a follow-up visual that adds a second visual detail during the first sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Begin with a static hold on a person-sized viewpoint at the edge of a repeating office-like room, then pull back slightly to show how it connects to the source story. Let the first movement feel like an entrance into the legend, not a sudden scare.",
-              "sourceFactIds": [
-                "fact-007"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.topic",
-                "storyBrief.coreStoryElements",
-                "derived.problemFromDetail",
-                "storyBrief.cultureOrContext",
-                "story.title"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a slow controlled push into a close detail of yellow wallpaper, stained carpet, and cold fluorescent light, holding the frame long enough for the viewer to read the space. Let the first movement feel like an entrance into the legend, not a sudden scare.",
-              "imagePrompt": "A realistic digital-documentary image shows a close detail of yellow wallpaper, stained carpet, and cold fluorescent light. Frame one clear scene as a close visual detail that supports the current narration, with dim screen-adjacent light, digital mystery, muted yellow tones, and liminal internet-folklore restraint. This should feel like a follow-up visual that widens the frame without adding new story elements during the first sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Use a slow controlled push into a close detail of yellow wallpaper, stained carpet, and cold fluorescent light, holding the frame long enough for the viewer to read the space. Let the first movement feel like an entrance into the legend, not a sudden scare.",
-              "sourceFactIds": [
-                "fact-001"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.topic",
-                "storyBrief.coreStoryElements",
-                "derived.problemFromDetail",
-                "storyBrief.cultureOrContext",
-                "story.title"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "carpeted room corner with a dark opening beyond it, quiet fluorescent unease, empty, fluorescent, recursive, uneasy, documentary mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow hold with a tiny light change while the carpeted room corner with a dark opening beyond it remains the focus."
             }
           ]
         }
       ],
-      "sceneFocus": "Keep the opening focused on the empty yellow room, fluorescent hum, old carpet, and the noclip premise.",
-      "sceneRole": "Initial Appearance",
-      "soundEffect": "quiet keyboard input, subtle screen interaction, low electronic room tone",
-      "sourceFactIds": [
-        "fact-004",
-        "fact-001",
-        "fact-022",
-        "fact-007"
-      ],
-      "sourceFieldRefs": [
-        "storyBrief.topic",
-        "storyBrief.coreStoryElements",
-        "derived.problemFromDetail",
-        "storyBrief.cultureOrContext",
-        "story.title",
-        "story.storyBrief",
-        "story.searchSummary",
-        "story.longformArticle",
-        "story.references"
-      ],
-      "visualDirection": "Hold the establishing image briefly, then begin a slow push toward the main detail.",
-      "voiceDirection": "Calm documentary pace, short pauses between ideas, natural restraint, with light emphasis on \"Backrooms digital labyrinth\" when it appears."
+      "sceneFocus": "The room begins before the monster.",
+      "sceneRole": "Opening Hook",
+      "soundEffect": "low environmental hum, soft distant texture",
+      "visualDirection": "Use one image-led frame per narration beat. Keep motion optional and restrained.",
+      "voiceDirection": "Calm documentary narration with story rhythm and clear pauses."
     },
     {
-      "backgroundMusic": "steady low tension, low electronic pulse, dark ambient bed, sparse digital texture, slow tempo with restrained weight",
-      "directionTip": "Show how the Backrooms spreads from one image into forums, videos, games, wikis, and collaborative retelling.",
+      "backgroundMusic": "low archive drone, restrained room tone, no melody over narration",
       "narrationParts": [
         {
-          "creatorNote": "Show the spread through image boards, forums, videos, games, wikis, and collaborative retelling.",
-          "estimatedReadingTime": "≈ 24 sec",
-          "narration": "The idea spread through image boards, forums, videos, games, collaborative fiction, and wider online discussions of liminal spaces. That spread matters because the Backrooms did not become famous as one closed tale. It became a place that many people could add to: another corridor, another rule, another level, and another reason the exit might never appear.",
-          "sourceFactIds": [
-            "fact-001",
-            "fact-015",
-            "fact-007",
-            "fact-002"
-          ],
-          "sourceFieldRefs": [
-            "storyBrief.coreStoryElements",
-            "contentDNA.subjectSpecificVocabulary",
-            "storyBrief.cultureOrContext",
-            "story.storyBrief",
-            "story.searchSummary",
-            "story.longformArticle",
-            "story.references"
-          ],
-          "usedFactTexts": [
-            "A person accidentally noclips out of reality and enters endless empty rooms.",
-            "The backrooms and the birth of a digital labyrinth meaning.",
-            "4chan /x/, creepypasta, liminal space photography, collaborative wiki writing, analog horror, YouTube and meme culture.",
-            "The original image evokes yellow walls, old carpet, fluorescent lights, and office-like non-place."
-          ],
+          "creatorNote": "Keep this beat viewer-facing and story-led.",
+          "estimatedReadingTime": "about 23 sec",
+          "narration": "The Backrooms belong to internet folklore because the story did not stay locked in one finished text. A short image and premise became a shared space. People added levels, rules, exits, entities, survival warnings, maps, files, and found-footage fragments. The legend expanded because the first room left so much empty space for others to enter.",
           "visualBeats": [
             {
-              "beatMotion": "Use a slow controlled push into a repeating corridor that suggests a digital maze without showing screens, holding the frame long enough for the viewer to read the space. Keep the motion clear enough to suggest repetition, distance, and failed navigation.",
-              "imagePrompt": "A realistic digital-documentary image shows a repeating corridor that suggests a digital maze without showing screens. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with low directional light with restrained contrast, digital mystery, muted yellow tones, and liminal internet-folklore restraint. This should feel like an opening visual with one clear focal point during the second sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a slow controlled push into a repeating corridor that suggests a digital maze without showing screens, holding the frame long enough for the viewer to read the space. Keep the motion clear enough to suggest repetition, distance, and failed navigation.",
-              "sourceFactIds": [
-                "fact-015"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.coreStoryElements",
-                "contentDNA.subjectSpecificVocabulary",
-                "storyBrief.cultureOrContext"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a restrained lateral drift across a simple map-like arrangement of rooms and corridors with no readable labels, keeping the movement smooth and documentary. Keep the motion clear enough to suggest repetition, distance, and failed navigation.",
-              "imagePrompt": "A realistic digital-documentary image shows a simple map-like arrangement of rooms and corridors with no readable labels. Frame one clear scene as a medium composition that shows the important action or state, with low directional light with restrained contrast, digital mystery, muted yellow tones, and liminal internet-folklore restraint. This should feel like an opening visual that adds a second visual detail during the second sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Use a restrained lateral drift across a simple map-like arrangement of rooms and corridors with no readable labels, keeping the movement smooth and documentary. Keep the motion clear enough to suggest repetition, distance, and failed navigation.",
-              "sourceFactIds": [
-                "fact-001"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.coreStoryElements",
-                "contentDNA.subjectSpecificVocabulary",
-                "storyBrief.cultureOrContext"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Begin with a static hold on a distant hallway turning into another identical yellow room, then pull back slightly to show how it connects to the source story. Keep the motion clear enough to suggest repetition, distance, and failed navigation.",
-              "imagePrompt": "A realistic digital-documentary image shows a distant hallway turning into another identical yellow room. Frame one clear scene as a close visual detail that supports the current narration, with low directional light with restrained contrast, digital mystery, muted yellow tones, and liminal internet-folklore restraint. This should feel like an opening visual that widens the frame without adding new story elements during the second sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Begin with a static hold on a distant hallway turning into another identical yellow room, then pull back slightly to show how it connects to the source story. Keep the motion clear enough to suggest repetition, distance, and failed navigation.",
-              "sourceFactIds": [
-                "fact-002"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.coreStoryElements",
-                "contentDNA.subjectSpecificVocabulary",
-                "storyBrief.cultureOrContext"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "old computer screen beside a blurred room photograph, internet folklore atmosphere, no readable UI, empty, fluorescent, recursive, uneasy, documentary mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: gentle pullback that leaves negative space while the old computer screen beside a blurred room photograph remains the focus."
             }
           ]
         },
         {
-          "creatorNote": "Keep the original prompt separate from later levels, entities, survival rules, and analog horror branches.",
-          "estimatedReadingTime": "≈ 25 sec",
-          "narration": "Later communities expanded the idea into levels, entities, survival guides, archives, and shared lore. The expansion works best when it does not bury the plain yellow-room image. The archive frame keeps the original prompt, the collaborative wiki era, and the analog horror versions in separate layers, so the growth feels wide without turning every layer into one official canon.",
-          "sourceFactIds": [
-            "fact-007",
-            "fact-002",
-            "fact-001",
-            "fact-015"
-          ],
-          "sourceFieldRefs": [
-            "storyBrief.coreStoryElements",
-            "contentDNA.subjectSpecificVocabulary",
-            "storyBrief.cultureOrContext",
-            "story.storyBrief",
-            "story.searchSummary",
-            "story.longformArticle",
-            "story.references"
-          ],
-          "usedFactTexts": [
-            "4chan /x/, creepypasta, liminal space photography, collaborative wiki writing, analog horror, YouTube and meme culture.",
-            "The original image evokes yellow walls, old carpet, fluorescent lights, and office-like non-place.",
-            "A person accidentally noclips out of reality and enters endless empty rooms.",
-            "The backrooms and the birth of a digital labyrinth meaning."
-          ],
+          "creatorNote": "Let the source boundary stay clear without stopping the story.",
+          "estimatedReadingTime": "about 23 sec",
+          "narration": "That expansion changed the shape of the fear. The earliest Backrooms were frightening because they were plain and endless. Later versions became a labyrinth with named levels and specialized dangers. Both versions matter, but they do different work. One traps the mind in repetition. The other turns repetition into a whole world of community-made rules.",
           "visualBeats": [
             {
-              "beatMotion": "Use a restrained lateral drift across a repeating corridor that suggests a digital maze without showing screens, keeping the movement smooth and documentary. Keep the motion clear enough to suggest repetition, distance, and failed navigation.",
-              "imagePrompt": "A realistic digital-documentary image shows a repeating corridor that suggests a digital maze without showing screens. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with low directional light with restrained contrast, digital mystery, muted yellow tones, and liminal internet-folklore restraint. This should feel like a follow-up visual with one clear focal point during the second sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a restrained lateral drift across a repeating corridor that suggests a digital maze without showing screens, keeping the movement smooth and documentary. Keep the motion clear enough to suggest repetition, distance, and failed navigation.",
-              "sourceFactIds": [
-                "fact-002"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.coreStoryElements",
-                "contentDNA.subjectSpecificVocabulary",
-                "storyBrief.cultureOrContext"
-              ],
-              "usedFactTexts": []
-            },
+              "imagePrompt": "archive desk with printed anonymous image turned away from readable text, dim room, empty, fluorescent, recursive, uneasy, documentary mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow fade from foreground object to background threshold while the archive desk with printed anonymous image turned away from readable text remains the focus."
+            }
+          ]
+        },
+        {
+          "creatorNote": "Use one concrete image, then let the narration carry the meaning.",
+          "estimatedReadingTime": "about 23 sec",
+          "narration": "The source boundary stays important. The Backrooms are not a hidden dimension with confirmed expeditions. They are a fictional internet legend, a collaborative setting, and a liminal image tradition. The uncertainty worth keeping is cultural rather than factual: why so many people recognized that room as a place they had almost seen before.",
+          "visualBeats": [
             {
-              "beatMotion": "Begin with a static hold on a simple map-like arrangement of rooms and corridors with no readable labels, then pull back slightly to show how it connects to the source story. Keep the motion clear enough to suggest repetition, distance, and failed navigation.",
-              "imagePrompt": "A realistic digital-documentary image shows a simple map-like arrangement of rooms and corridors with no readable labels. Frame one clear scene as a medium composition that shows the important action or state, with low directional light with restrained contrast, digital mystery, muted yellow tones, and liminal internet-folklore restraint. This should feel like a follow-up visual that adds a second visual detail during the second sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Begin with a static hold on a simple map-like arrangement of rooms and corridors with no readable labels, then pull back slightly to show how it connects to the source story. Keep the motion clear enough to suggest repetition, distance, and failed navigation.",
-              "sourceFactIds": [
-                "fact-007"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.coreStoryElements",
-                "contentDNA.subjectSpecificVocabulary",
-                "storyBrief.cultureOrContext"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a slow controlled push into a distant hallway turning into another identical yellow room, holding the frame long enough for the viewer to read the space. Keep the motion clear enough to suggest repetition, distance, and failed navigation.",
-              "imagePrompt": "A realistic digital-documentary image shows a distant hallway turning into another identical yellow room. Frame one clear scene as a close visual detail that supports the current narration, with low directional light with restrained contrast, digital mystery, muted yellow tones, and liminal internet-folklore restraint. This should feel like a follow-up visual that widens the frame without adding new story elements during the second sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Use a slow controlled push into a distant hallway turning into another identical yellow room, holding the frame long enough for the viewer to read the space. Keep the motion clear enough to suggest repetition, distance, and failed navigation.",
-              "sourceFactIds": [
-                "fact-015"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.coreStoryElements",
-                "contentDNA.subjectSpecificVocabulary",
-                "storyBrief.cultureOrContext"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "forking hallway with simple signs obscured and unreadable, yellow wall repetition, empty, fluorescent, recursive, uneasy, documentary mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow push toward the central shape while the forking hallway with simple signs obscured and unreadable remains the focus."
             }
           ]
         }
       ],
-      "sceneFocus": "Show how the Backrooms spreads from one image into forums, videos, games, wikis, and collaborative retelling.",
-      "sceneRole": "Spread and Core Clues",
-      "soundEffect": "quiet keyboard input, subtle screen interaction, low electronic room tone",
-      "sourceFactIds": [
-        "fact-001",
-        "fact-015",
-        "fact-007",
-        "fact-002"
-      ],
-      "sourceFieldRefs": [
-        "storyBrief.coreStoryElements",
-        "contentDNA.subjectSpecificVocabulary",
-        "storyBrief.cultureOrContext",
-        "story.storyBrief",
-        "story.searchSummary",
-        "story.longformArticle",
-        "story.references"
-      ],
-      "visualDirection": "Start steady, begin a slow push toward the main detail, and cut after the scene consequence is clear.",
-      "voiceDirection": "Calm documentary pace, short pauses between ideas, slight tension, with light emphasis on \"Backrooms\" when it appears."
+      "sceneFocus": "A short image prompt becomes collaborative folklore.",
+      "sceneRole": "Origin and Spread",
+      "soundEffect": "subtle paper, room tone, distant air",
+      "visualDirection": "Use one image-led frame per narration beat. Keep motion optional and restrained.",
+      "voiceDirection": "Calm documentary narration with story rhythm and clear pauses."
     },
     {
-      "backgroundMusic": "soft reflective drone, low electronic pulse, dark ambient bed, sparse digital texture, slow tempo with restrained weight",
-      "directionTip": "Separate the original empty-room fear from later levels, entities, survival guides, and analog horror branches.",
+      "backgroundMusic": "dark quiet ambient bed, soft low pulse, no melodic lead",
       "narrationParts": [
         {
-          "creatorNote": "Let liminal space and office-like non-place carry the unease before adding expanded lore.",
-          "estimatedReadingTime": "≈ 26 sec",
-          "narration": "The original image evokes yellow walls, old carpet, fluorescent lights, and office-like non-place. This is where the narration can slow down. The Backrooms works because it feels designed for people and emptied of them at the same time. Liminal space, endless rooms, and workplace-like non-place are not decoration here; they explain why the image feels familiar before it feels impossible.",
-          "sourceFactIds": [
-            "fact-019",
-            "fact-013",
-            "fact-001",
-            "fact-002"
-          ],
-          "sourceFieldRefs": [
-            "derived.turningPointFromDetail",
-            "contentDNA.requiredSpecificDetails",
-            "storyBrief.coreStoryElements",
-            "story.storyBrief",
-            "story.searchSummary",
-            "story.longformArticle",
-            "story.references"
-          ],
-          "usedFactTexts": [
-            "It works as digital folklore because an unsettling image and short caption became a shared mythos of levels, entities, survival rules, and analog horror videos.",
-            "The Backrooms digital labyrinth centers on internet folklore / Community retelling / interpretation.",
-            "A person accidentally noclips out of reality and enters endless empty rooms.",
-            "The original image evokes yellow walls, old carpet, fluorescent lights, and office-like non-place."
-          ],
+          "creatorNote": "Keep this beat viewer-facing and story-led.",
+          "estimatedReadingTime": "about 23 sec",
+          "narration": "Liminal spaces give the Backrooms their emotional grammar. A hallway after closing, an empty office, a carpeted conference area, or a fluorescent service room can feel suspended between purposes. It is not abandoned enough to be ruin and not active enough to be safe. It feels paused, and the pause becomes the threat.",
           "visualBeats": [
             {
-              "beatMotion": "Use a slow controlled push into the original empty-room atmosphere beside subtle hints of later levels, holding the frame long enough for the viewer to read the space. Keep later lore visible as a layer around the original image, not as a replacement for it.",
-              "imagePrompt": "A realistic digital-documentary image shows the original empty-room atmosphere beside subtle hints of later levels. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with dim screen-adjacent light, digital mystery, muted yellow tones, and liminal internet-folklore restraint. This should feel like an opening visual with one clear focal point during the middle sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a slow controlled push into the original empty-room atmosphere beside subtle hints of later levels, holding the frame long enough for the viewer to read the space. Keep later lore visible as a layer around the original image, not as a replacement for it.",
-              "sourceFactIds": [
-                "fact-019"
-              ],
-              "sourceFieldRefs": [
-                "derived.turningPointFromDetail",
-                "contentDNA.requiredSpecificDetails",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a restrained lateral drift across a restrained found-footage style hallway with no creatures in view, keeping the movement smooth and documentary. Keep later lore visible as a layer around the original image, not as a replacement for it.",
-              "imagePrompt": "A realistic digital-documentary image shows a restrained found-footage style hallway with no creatures in view. Frame one clear scene as a medium composition that shows the important action or state, with dim screen-adjacent light, digital mystery, muted yellow tones, and liminal internet-folklore restraint. This should feel like an opening visual that adds a second visual detail during the middle sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Use a restrained lateral drift across a restrained found-footage style hallway with no creatures in view, keeping the movement smooth and documentary. Keep later lore visible as a layer around the original image, not as a replacement for it.",
-              "sourceFactIds": [
-                "fact-013"
-              ],
-              "sourceFieldRefs": [
-                "derived.turningPointFromDetail",
-                "contentDNA.requiredSpecificDetails",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Begin with a static hold on a quiet survival-guide table with blank cards, thread, and room sketches, then pull back slightly to show how it connects to the source story. Keep later lore visible as a layer around the original image, not as a replacement for it.",
-              "imagePrompt": "A realistic digital-documentary image shows a quiet survival-guide table with blank cards, thread, and room sketches. Frame one clear scene as a close visual detail that supports the current narration, with dim screen-adjacent light, digital mystery, muted yellow tones, and liminal internet-folklore restraint. This should feel like an opening visual that widens the frame without adding new story elements during the middle sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Begin with a static hold on a quiet survival-guide table with blank cards, thread, and room sketches, then pull back slightly to show how it connects to the source story. Keep later lore visible as a layer around the original image, not as a replacement for it.",
-              "sourceFactIds": [
-                "fact-001"
-              ],
-              "sourceFieldRefs": [
-                "derived.turningPointFromDetail",
-                "contentDNA.requiredSpecificDetails",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "empty office hallway after closing with buzzing lights and damp carpet texture, empty, fluorescent, recursive, uneasy, documentary mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: restrained lateral drift across the frame while the empty office hallway after closing with buzzing lights and damp carpet texture remains the focus."
             }
           ]
         },
         {
-          "creatorNote": "Present minimalist, wiki-era, and analog horror versions as branches from the first yellow-room image.",
-          "estimatedReadingTime": "≈ 21 sec",
-          "narration": "The minimalist original Backrooms works as an infinite empty office-like maze. The wiki-era Backrooms becomes a multi-level shared universe with rules and creatures. Analog horror Backrooms appears as found footage, institutional footage, or failed-research narrative. These versions work as branches from the same first image, not as replacements for it.",
-          "sourceFactIds": [
-            "fact-001",
-            "fact-002",
-            "fact-019",
-            "fact-013"
-          ],
-          "sourceFieldRefs": [
-            "derived.turningPointFromDetail",
-            "contentDNA.requiredSpecificDetails",
-            "storyBrief.coreStoryElements",
-            "story.storyBrief",
-            "story.searchSummary",
-            "story.longformArticle",
-            "story.references"
-          ],
-          "usedFactTexts": [
-            "A person accidentally noclips out of reality and enters endless empty rooms.",
-            "The original image evokes yellow walls, old carpet, fluorescent lights, and office-like non-place.",
-            "It works as digital folklore because an unsettling image and short caption became a shared mythos of levels, entities, survival rules, and analog horror videos.",
-            "The Backrooms digital labyrinth centers on internet folklore / Community retelling / interpretation."
-          ],
+          "creatorNote": "Let the source boundary stay clear without stopping the story.",
+          "estimatedReadingTime": "about 24 sec",
+          "narration": "The Backrooms turn that pause into a world. Nothing in the first room needs to move. The light hums, the carpet looks damp, the walls repeat, and the air seems stale. The imagination starts doing the dangerous work. If the room is empty, why does it feel watched? If it is ordinary, why is there no exit?",
           "visualBeats": [
             {
-              "beatMotion": "Use a restrained lateral drift across the original empty-room atmosphere beside subtle hints of later levels, keeping the movement smooth and documentary. Keep later lore visible as a layer around the original image, not as a replacement for it.",
-              "imagePrompt": "A realistic digital-documentary image shows the original empty-room atmosphere beside subtle hints of later levels. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with dim screen-adjacent light, digital mystery, muted yellow tones, and liminal internet-folklore restraint. This should feel like a follow-up visual with one clear focal point during the middle sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a restrained lateral drift across the original empty-room atmosphere beside subtle hints of later levels, keeping the movement smooth and documentary. Keep later lore visible as a layer around the original image, not as a replacement for it.",
-              "sourceFactIds": [
-                "fact-001"
-              ],
-              "sourceFieldRefs": [
-                "derived.turningPointFromDetail",
-                "contentDNA.requiredSpecificDetails",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
-            },
+              "imagePrompt": "plain conference-room doorway leading into another identical room, no furniture crowding, empty, fluorescent, recursive, uneasy, documentary mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow hold with a tiny light change while the plain conference-room doorway leading into another identical room remains the focus."
+            }
+          ]
+        },
+        {
+          "creatorNote": "Use one concrete image, then let the narration carry the meaning.",
+          "estimatedReadingTime": "about 23 sec",
+          "narration": "The strongest narration lets the emptiness stay central. Later creatures and levels can appear, but the room itself remains the anchor. The fear works because the place does not explain itself. The listener is left with a familiar architecture that has lost its human purpose and kept only its lighting, texture, and silence.",
+          "visualBeats": [
             {
-              "beatMotion": "Begin with a static hold on a restrained found-footage style hallway with no creatures in view, then pull back slightly to show how it connects to the source story. Keep later lore visible as a layer around the original image, not as a replacement for it.",
-              "imagePrompt": "A realistic digital-documentary image shows a restrained found-footage style hallway with no creatures in view. Frame one clear scene as a medium composition that shows the important action or state, with dim screen-adjacent light, digital mystery, muted yellow tones, and liminal internet-folklore restraint. This should feel like a follow-up visual that adds a second visual detail during the middle sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Begin with a static hold on a restrained found-footage style hallway with no creatures in view, then pull back slightly to show how it connects to the source story. Keep later lore visible as a layer around the original image, not as a replacement for it.",
-              "sourceFactIds": [
-                "fact-002"
-              ],
-              "sourceFieldRefs": [
-                "derived.turningPointFromDetail",
-                "contentDNA.requiredSpecificDetails",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a slow controlled push into a quiet survival-guide table with blank cards, thread, and room sketches, holding the frame long enough for the viewer to read the space. Keep later lore visible as a layer around the original image, not as a replacement for it.",
-              "imagePrompt": "A realistic digital-documentary image shows a quiet survival-guide table with blank cards, thread, and room sketches. Frame one clear scene as a close visual detail that supports the current narration, with dim screen-adjacent light, digital mystery, muted yellow tones, and liminal internet-folklore restraint. This should feel like a follow-up visual that widens the frame without adding new story elements during the middle sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Use a slow controlled push into a quiet survival-guide table with blank cards, thread, and room sketches, holding the frame long enough for the viewer to read the space. Keep later lore visible as a layer around the original image, not as a replacement for it.",
-              "sourceFactIds": [
-                "fact-003"
-              ],
-              "sourceFieldRefs": [
-                "derived.turningPointFromDetail",
-                "contentDNA.requiredSpecificDetails",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "fluorescent ceiling grid above endless yellow partitions, restrained liminal horror, empty, fluorescent, recursive, uneasy, documentary mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: gentle pullback that leaves negative space while the fluorescent ceiling grid above endless yellow partitions remains the focus."
             }
           ]
         }
       ],
-      "sceneFocus": "Separate the original empty-room fear from later levels, entities, survival guides, and analog horror branches.",
-      "sceneRole": "Key Development or Later Additions",
-      "soundEffect": "quiet keyboard input, subtle screen interaction, low electronic room tone",
-      "sourceFactIds": [
-        "fact-019",
-        "fact-013",
-        "fact-001",
-        "fact-002"
-      ],
-      "sourceFieldRefs": [
-        "derived.turningPointFromDetail",
-        "contentDNA.requiredSpecificDetails",
-        "storyBrief.coreStoryElements",
-        "story.storyBrief",
-        "story.searchSummary",
-        "story.longformArticle",
-        "story.references"
-      ],
-      "visualDirection": "Hold the establishing image briefly, then begin a slow push toward the main detail.",
-      "voiceDirection": "Calm documentary pace, short pauses between ideas, natural restraint, with light emphasis on \"Backrooms\" when it appears."
+      "sceneFocus": "The setting is frightening because it feels between uses.",
+      "sceneRole": "Liminal Space",
+      "soundEffect": "low environmental hum, soft distant texture",
+      "visualDirection": "Use one image-led frame per narration beat. Keep motion optional and restrained.",
+      "voiceDirection": "Calm documentary narration with story rhythm and clear pauses."
     },
     {
-      "backgroundMusic": "sparse documentary bed, low electronic pulse, dark ambient bed, sparse digital texture, slow tempo with restrained weight",
-      "directionTip": "Make the source boundary visible by treating different continuities as community versions, not one fixed canon.",
+      "backgroundMusic": "low archive drone, restrained room tone, no melody over narration",
       "narrationParts": [
         {
-          "creatorNote": "Keep the continuity question visible: different Backrooms communities preserve different versions.",
-          "estimatedReadingTime": "≈ 22 sec",
-          "narration": "Different Backrooms communities maintain different continuities. That uncertainty is part of the story itself. There is no single authority for every level, entity, rule, or exit. What can be held together is the folklore pattern: an ordinary-looking room becomes an impossible system because online audiences keep returning to it and rebuilding it.",
-          "sourceFactIds": [
-            "fact-007",
-            "fact-013"
-          ],
-          "sourceFieldRefs": [
-            "storyBrief.cultureOrContext",
-            "contentDNA.requiredSpecificDetails",
-            "story.storyBrief",
-            "story.searchSummary",
-            "story.longformArticle",
-            "story.references"
-          ],
-          "usedFactTexts": [
-            "4chan /x/, creepypasta, liminal space photography, collaborative wiki writing, analog horror, YouTube and meme culture.",
-            "The Backrooms digital labyrinth centers on internet folklore / Community retelling / interpretation."
-          ],
+          "creatorNote": "Keep this beat viewer-facing and story-led.",
+          "estimatedReadingTime": "about 20 sec",
+          "narration": "As communities built more Backrooms material, the labyrinth gained structure. Level 0, dangerous levels, habitable zones, entities, survival items, and exits gave the setting the feeling of a strange archive. The world became something readers could study, compare, and navigate, even while the core premise remained impossible.",
           "visualBeats": [
             {
-              "beatMotion": "Use a slow controlled push into two archive folders representing different Backrooms continuities without readable text, holding the frame long enough for the viewer to read the space. Use minimal movement so the source boundary feels deliberate and easy to follow.",
-              "imagePrompt": "A realistic digital-documentary image shows two archive folders representing different Backrooms continuities without readable text. Frame one clear scene as a clear tabletop or archival composition, with soft archival light, careful documentary restraint, muted yellow tones, and liminal internet-folklore restraint. This should feel like an opening visual with one clear focal point during the fourth sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a slow controlled push into two archive folders representing different Backrooms continuities without readable text, holding the frame long enough for the viewer to read the space. Use minimal movement so the source boundary feels deliberate and easy to follow.",
-              "sourceFactIds": [
-                "fact-007"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.cultureOrContext",
-                "contentDNA.requiredSpecificDetails"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a restrained lateral drift across a desk with reference cards, photo edges, and a yellow-room image turned face down, keeping the movement smooth and documentary. Use minimal movement so the source boundary feels deliberate and easy to follow.",
-              "imagePrompt": "A realistic digital-documentary image shows a desk with reference cards, photo edges, and a yellow-room image turned face down. Frame one clear scene as a medium frame that separates the main subject from supporting evidence, with soft archival light, careful documentary restraint, muted yellow tones, and liminal internet-folklore restraint. This should feel like an opening visual that adds a second visual detail during the fourth sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Use a restrained lateral drift across a desk with reference cards, photo edges, and a yellow-room image turned face down, keeping the movement smooth and documentary. Use minimal movement so the source boundary feels deliberate and easy to follow.",
-              "sourceFactIds": [
-                "fact-013"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.cultureOrContext",
-                "contentDNA.requiredSpecificDetails"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "file drawers and level maps without readable labels, digital labyrinth archive mood, empty, fluorescent, recursive, uneasy, documentary mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow fade from foreground object to background threshold while the file drawers and level maps without readable labels remains the focus."
             }
           ]
         },
         {
-          "creatorNote": "Use public reference points as orientation, not as proof that the supernatural place is real.",
-          "estimatedReadingTime": "≈ 29 sec",
-          "narration": "Know Your Meme documents the Backrooms as a creepypasta originating from 4chan /x/ image-board culture. Backrooms Wikidot materials document the growth of collaborative writing around levels, guides, and multiple interpretations. For orientation, the archive points toward Know Your Meme - The Backrooms, Know Your Meme - Creepypasta, Backrooms Wikidot - FAQ. Those sources act as guardrails, keeping the legend vivid without claiming that the supernatural place is real.",
-          "sourceFactIds": [
-            "fact-013",
-            "fact-007"
-          ],
-          "sourceFieldRefs": [
-            "storyBrief.cultureOrContext",
-            "contentDNA.requiredSpecificDetails",
-            "story.storyBrief",
-            "story.searchSummary",
-            "story.longformArticle",
-            "story.references"
-          ],
-          "usedFactTexts": [
-            "The Backrooms digital labyrinth centers on internet folklore / Community retelling / interpretation.",
-            "4chan /x/, creepypasta, liminal space photography, collaborative wiki writing, analog horror, YouTube and meme culture."
-          ],
+          "creatorNote": "Let the source boundary stay clear without stopping the story.",
+          "estimatedReadingTime": "about 25 sec",
+          "narration": "That system-building is part of the legend's appeal. People are drawn to rules when a place feels unstable. A list of levels promises orientation. An entity guide promises danger can be named. A survival note promises someone has been there before. The Backrooms become frightening and comforting at the same time because the maze offers information without offering escape.",
           "visualBeats": [
             {
-              "beatMotion": "Use a restrained lateral drift across two archive folders representing different Backrooms continuities without readable text, keeping the movement smooth and documentary. Use minimal movement so the source boundary feels deliberate and easy to follow.",
-              "imagePrompt": "A realistic digital-documentary image shows two archive folders representing different Backrooms continuities without readable text. Frame one clear scene as a medium frame that separates the main subject from supporting evidence, with soft archival light, careful documentary restraint, muted yellow tones, and liminal internet-folklore restraint. This should feel like a follow-up visual with one clear focal point during the fourth sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a restrained lateral drift across two archive folders representing different Backrooms continuities without readable text, keeping the movement smooth and documentary. Use minimal movement so the source boundary feels deliberate and easy to follow.",
-              "sourceFactIds": [
-                "fact-013"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.cultureOrContext",
-                "contentDNA.requiredSpecificDetails"
-              ],
-              "usedFactTexts": []
-            },
+              "imagePrompt": "survival notes represented by blank cards and a flashlight on carpet, no readable writing, empty, fluorescent, recursive, uneasy, documentary mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow push toward the central shape while the survival notes represented by blank cards and a flashlight on carpet remains the focus."
+            }
+          ]
+        },
+        {
+          "creatorNote": "Use one concrete image, then let the narration carry the meaning.",
+          "estimatedReadingTime": "about 23 sec",
+          "narration": "Different Backrooms communities do not share one single canon. That is not a weakness. It is how digital folklore behaves. The legend survives by branching. Minimalist versions, wiki versions, analog-horror versions, and meme versions all keep returning to the same basic fear: a person falls out of reality into a place built from ordinary wrongness.",
+          "visualBeats": [
             {
-              "beatMotion": "Begin with a static hold on a desk with reference cards, photo edges, and a yellow-room image turned face down, then pull back slightly to show how it connects to the source story. Use minimal movement so the source boundary feels deliberate and easy to follow.",
-              "imagePrompt": "A realistic digital-documentary image shows a desk with reference cards, photo edges, and a yellow-room image turned face down. Frame one clear scene as a close archival detail with the source boundary visible, with soft archival light, careful documentary restraint, muted yellow tones, and liminal internet-folklore restraint. This should feel like a follow-up visual that adds a second visual detail during the fourth sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Begin with a static hold on a desk with reference cards, photo edges, and a yellow-room image turned face down, then pull back slightly to show how it connects to the source story. Use minimal movement so the source boundary feels deliberate and easy to follow.",
-              "sourceFactIds": [
-                "fact-007"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.cultureOrContext",
-                "contentDNA.requiredSpecificDetails"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "wide maze of office corridors seen from above, subtle impossible geometry, empty, fluorescent, recursive, uneasy, documentary mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: restrained lateral drift across the frame while the wide maze of office corridors seen from above remains the focus."
             }
           ]
         }
       ],
-      "sceneFocus": "Make the source boundary visible by treating different continuities as community versions, not one fixed canon.",
-      "sceneRole": "Evidence, Attribution, and Uncertainty",
-      "soundEffect": "quiet keyboard input, subtle screen interaction, low electronic room tone",
-      "sourceFactIds": [
-        "fact-007",
-        "fact-013"
-      ],
-      "sourceFieldRefs": [
-        "storyBrief.cultureOrContext",
-        "contentDNA.requiredSpecificDetails",
-        "story.storyBrief",
-        "story.searchSummary",
-        "story.longformArticle",
-        "story.references"
-      ],
-      "visualDirection": "Hold the source-focused image long enough to read the visual idea, then fade softly into the next scene.",
-      "voiceDirection": "Careful pace, short pauses between ideas, natural restraint, with light emphasis on \"Backrooms\" when it appears."
+      "sceneFocus": "Later canons turn emptiness into a maze of systems.",
+      "sceneRole": "Levels and Lore",
+      "soundEffect": "subtle paper, room tone, distant air",
+      "visualDirection": "Use one image-led frame per narration beat. Keep motion optional and restrained.",
+      "voiceDirection": "Calm documentary narration with story rhythm and clear pauses."
     },
     {
-      "backgroundMusic": "soft reflective drone, low electronic pulse, dark ambient bed, sparse digital texture, low density with a soft ending",
-      "directionTip": "Return to the Backrooms as digital folklore about isolation, repetition, failed exits, and shared mapping.",
+      "backgroundMusic": "dark quiet ambient bed, soft low pulse, no melodic lead",
       "narrationParts": [
         {
-          "creatorNote": "Return to the room as a symbol of isolation, repetition, failed navigation, and empty designed spaces.",
-          "estimatedReadingTime": "≈ 22 sec",
-          "narration": "It transformed an ordinary interior photograph into shared folklore about isolation, repetition, failed navigation, and spaces designed for people but emptied of them. The ending returns to the same room from the beginning. By then, the room can hold memes, fear, games, wikis, and analog horror without needing one final answer.",
-          "sourceFactIds": [
-            "fact-020",
-            "fact-008",
-            "fact-007",
-            "fact-009"
-          ],
-          "sourceFieldRefs": [
-            "derived.outcomeFromDetail",
-            "storyBrief.editorialInterpretationOptions",
-            "storyBrief.cultureOrContext",
-            "story.storyBrief",
-            "story.searchSummary",
-            "story.longformArticle",
-            "story.references"
-          ],
-          "usedFactTexts": [
-            "It works as digital folklore because an unsettling image and short caption became a shared mythos of levels, entities, survival rules, and analog horror videos.",
-            "Read the Backrooms as digital folklore built from collaborative retelling.",
-            "4chan /x/, creepypasta, liminal space photography, collaborative wiki writing, analog horror, YouTube and meme culture.",
-            "Explain liminal space aesthetics as central to the legend's emotional force."
-          ],
+          "creatorNote": "Keep this beat viewer-facing and story-led.",
+          "estimatedReadingTime": "about 20 sec",
+          "narration": "The Backrooms endure because they make modern space feel unstable. Offices, malls, hotels, schools, and service corridors already contain zones where people move without belonging. The legend gives those zones a myth. It says the background of daily life might continue forever if someone takes the wrong step.",
           "visualBeats": [
             {
-              "beatMotion": "Use a slow controlled push into the yellow room seen from farther back, with darkness beyond the last doorway, holding the frame long enough for the viewer to read the space. End with a slow hold that leaves the route unresolved.",
-              "imagePrompt": "A realistic digital-documentary image shows the yellow room seen from farther back, with darkness beyond the last doorway. Frame one clear scene as a wide reflective composition with negative space, with subdued fading light, quiet reflective tension, muted yellow tones, and liminal internet-folklore restraint. This should feel like an opening visual with one clear focal point during the final sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a slow controlled push into the yellow room seen from farther back, with darkness beyond the last doorway, holding the frame long enough for the viewer to read the space. End with a slow hold that leaves the route unresolved.",
-              "sourceFactIds": [
-                "fact-008"
-              ],
-              "sourceFieldRefs": [
-                "derived.outcomeFromDetail",
-                "storyBrief.editorialInterpretationOptions",
-                "storyBrief.cultureOrContext"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a restrained lateral drift across a final corridor that feels open, quiet, and unresolved, keeping the movement smooth and documentary. End with a slow hold that leaves the route unresolved.",
-              "imagePrompt": "A realistic digital-documentary image shows a final corridor that feels open, quiet, and unresolved. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, muted yellow tones, and liminal internet-folklore restraint. This should feel like an opening visual that adds a second visual detail during the final sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Use a restrained lateral drift across a final corridor that feels open, quiet, and unresolved, keeping the movement smooth and documentary. End with a slow hold that leaves the route unresolved.",
-              "sourceFactIds": [
-                "fact-020"
-              ],
-              "sourceFieldRefs": [
-                "derived.outcomeFromDetail",
-                "storyBrief.editorialInterpretationOptions",
-                "storyBrief.cultureOrContext"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Begin with a static hold on an empty room where the light keeps humming after the story ends, then pull back slightly to show how it connects to the source story. End with a slow hold that leaves the route unresolved.",
-              "imagePrompt": "A realistic digital-documentary image shows an empty room where the light keeps humming after the story ends. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, muted yellow tones, and liminal internet-folklore restraint. This should feel like an opening visual that widens the frame without adding new story elements during the final sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Begin with a static hold on an empty room where the light keeps humming after the story ends, then pull back slightly to show how it connects to the source story. End with a slow hold that leaves the route unresolved.",
-              "sourceFactIds": [
-                "fact-009"
-              ],
-              "sourceFieldRefs": [
-                "derived.outcomeFromDetail",
-                "storyBrief.editorialInterpretationOptions",
-                "storyBrief.cultureOrContext"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "closed mall service corridor with yellow light and dark maintenance door, empty, fluorescent, recursive, uneasy, documentary mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow hold with a tiny light change while the closed mall service corridor with yellow light and dark maintenance door remains the focus."
             }
           ]
         },
         {
-          "creatorNote": "Close with the Backrooms as a shared digital labyrinth that remains open because the first image still works.",
-          "estimatedReadingTime": "≈ 25 sec",
-          "narration": "The Backrooms can be read as digital folklore built from collaborative retelling. Terms such as Backrooms, liminal space, noclip, creepypasta, analog horror describe how the story is actually recognized. The ending leaves the Backrooms as a digital labyrinth: not a proven location, but a shared strange place that people keep mapping because the first image still feels open.",
-          "sourceFactIds": [
-            "fact-007",
-            "fact-009",
-            "fact-020",
-            "fact-008"
-          ],
-          "sourceFieldRefs": [
-            "derived.outcomeFromDetail",
-            "storyBrief.editorialInterpretationOptions",
-            "storyBrief.cultureOrContext",
-            "story.storyBrief",
-            "story.searchSummary",
-            "story.longformArticle",
-            "story.references"
-          ],
-          "usedFactTexts": [
-            "4chan /x/, creepypasta, liminal space photography, collaborative wiki writing, analog horror, YouTube and meme culture.",
-            "Explain liminal space aesthetics as central to the legend's emotional force.",
-            "It works as digital folklore because an unsettling image and short caption became a shared mythos of levels, entities, survival rules, and analog horror videos.",
-            "Read the Backrooms as digital folklore built from collaborative retelling."
-          ],
+          "creatorNote": "Let the source boundary stay clear without stopping the story.",
+          "estimatedReadingTime": "about 23 sec",
+          "narration": "The ending should not overexplain the maze. If the Backrooms become too clear, they lose the unease that made them travel. The best closing image is still a room that looks almost harmless: yellow wall, buzzing light, empty carpet, and a corner that suggests another corner after it. The fear remains because nothing final arrives.",
           "visualBeats": [
             {
-              "beatMotion": "Use a restrained lateral drift across the yellow room seen from farther back, with darkness beyond the last doorway, keeping the movement smooth and documentary. End with a slow hold that leaves the route unresolved.",
-              "imagePrompt": "A realistic digital-documentary image shows the yellow room seen from farther back, with darkness beyond the last doorway. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, muted yellow tones, and liminal internet-folklore restraint. This should feel like a follow-up visual with one clear focal point during the final sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a restrained lateral drift across the yellow room seen from farther back, with darkness beyond the last doorway, keeping the movement smooth and documentary. End with a slow hold that leaves the route unresolved.",
-              "sourceFactIds": [
-                "fact-009"
-              ],
-              "sourceFieldRefs": [
-                "derived.outcomeFromDetail",
-                "storyBrief.editorialInterpretationOptions",
-                "storyBrief.cultureOrContext"
-              ],
-              "usedFactTexts": []
-            },
+              "imagePrompt": "single room corner with carpet fading into shadow, no entities visible, empty, fluorescent, recursive, uneasy, documentary mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: gentle pullback that leaves negative space while the single room corner with carpet fading into shadow remains the focus."
+            }
+          ]
+        },
+        {
+          "creatorNote": "Use one concrete image, then let the narration carry the meaning.",
+          "estimatedReadingTime": "about 25 sec",
+          "narration": "In the end, the Backrooms are a digital legend about slipping beneath the surface of normal design. The world does not turn into a haunted castle. It becomes a workplace corridor with no workers, a room with no task, a map with no outside. That is enough. The room is ordinary, and that is exactly why it stays open.",
+          "visualBeats": [
             {
-              "beatMotion": "Begin with a static hold on a final corridor that feels open, quiet, and unresolved, then pull back slightly to show how it connects to the source story. End with a slow hold that leaves the route unresolved.",
-              "imagePrompt": "A realistic digital-documentary image shows a final corridor that feels open, quiet, and unresolved. Frame one clear scene as a wider reflective frame that keeps the ending unresolved, with subdued fading light, quiet reflective tension, muted yellow tones, and liminal internet-folklore restraint. This should feel like a follow-up visual that adds a second visual detail during the final sequence. No readable text, logos, watermarks, graphic gore, cartoon styling, or unrelated fantasy elements.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Begin with a static hold on a final corridor that feels open, quiet, and unresolved, then pull back slightly to show how it connects to the source story. End with a slow hold that leaves the route unresolved.",
-              "sourceFactIds": [
-                "fact-007"
-              ],
-              "sourceFieldRefs": [
-                "derived.outcomeFromDetail",
-                "storyBrief.editorialInterpretationOptions",
-                "storyBrief.cultureOrContext"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "final empty yellow room with one unreachable doorway, quiet unresolved ending, empty, fluorescent, recursive, uneasy, documentary mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow fade from foreground object to background threshold while the final empty yellow room with one unreachable doorway remains the focus."
             }
           ]
         }
       ],
-      "sceneFocus": "Return to the Backrooms as digital folklore about isolation, repetition, failed exits, and shared mapping.",
-      "sceneRole": "Meaning and Digital Legacy",
-      "soundEffect": "paper handling, quiet keyboard input, low room tone",
-      "sourceFactIds": [
-        "fact-020",
-        "fact-008",
-        "fact-007",
-        "fact-009"
-      ],
-      "sourceFieldRefs": [
-        "derived.outcomeFromDetail",
-        "storyBrief.editorialInterpretationOptions",
-        "storyBrief.cultureOrContext",
-        "story.storyBrief",
-        "story.searchSummary",
-        "story.longformArticle",
-        "story.references"
-      ],
-      "visualDirection": "Begin with a slow pullback, hold briefly after the final narration line, then fade to black.",
-      "voiceDirection": "Slow pace with a soft ending, short pauses between ideas, natural restraint, with light emphasis on \"Backrooms\" when it appears."
+      "sceneFocus": "The legend remains strongest when the exit is not solved.",
+      "sceneRole": "Ending and Use",
+      "soundEffect": "low environmental hum, soft distant texture",
+      "visualDirection": "Use one image-led frame per narration beat. Keep motion optional and restrained.",
+      "voiceDirection": "Calm documentary narration with story rhythm and clear pauses."
     }
   ]
 }
