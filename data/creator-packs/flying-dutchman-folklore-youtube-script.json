@@ -1,322 +1,179 @@
 {
   "contentType": "script",
-  "coreMotif": "Ghost Ship Legend",
+  "coreMotif": "ghost ship, doomed voyage, storm horizon, and maritime warning",
   "creatorCategorySlug": "unexplained-mysteries",
   "creatorPipelineVersion": "single-path-v1",
-  "deck": "Flying Dutchman Folklore is prepared as a creator-ready production workspace based on the archive record, with long-form scenes, Shorts narration, image prompts, music keywords, and editing notes.",
-  "difficulty": "Beginner-friendly production package",
-  "estimatedVideoLength": "5-6 minutes",
+  "deck": "A source-based image and narration package for Flying Dutchman Folklore, built from the Kyunolab archive record with 5 scenes, 15 voiceover beats, image prompts, and restrained production notes for a 7-8 minute video.",
+  "difficulty": "Beginner-friendly image and narration production package",
+  "estimatedVideoLength": "7-8 minutes",
   "genre": "Unexplained Mysteries Creator Library",
   "id": "flying-dutchman-folklore-youtube-script",
   "imagePrompts": [
-    "A realistic location-documentary style image shows Ordinary placed within ordinary records with unresolved details in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Ordinary, records, unresolved as supporting visual details. This should feel like an opening visual with one clear focal point during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Flying Dutchman Folklore held as the central visual in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from Folklore. Include Flying Dutchman Folklore, Flying Dutchman, ghost ship as supporting visual details. This should feel like an opening visual that adds a second visual detail during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Others connected to others focus less on the cause and more on the sighting in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a close visual detail that supports the current narration, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Others, focus, cause as supporting visual details. This should feel like an opening visual that widens the frame without adding new story elements during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Others connected to others focus less on the cause and more on the sighting in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Others, focus, cause as supporting visual details. This should feel like a follow-up visual with one clear focal point during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Weather connected to weather, distance, and fear can all reshape what sailors think they see in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Weather, reshape, sailors as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows The Flying Dutchman connected to the ship is often treated as an omen, especially for sailors who see it during dangerous weather or at a distance in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a close visual detail that supports the current narration, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include weather, often, treated as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Others connected to others focus less on the cause and more on the sighting in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Others, focus, cause as supporting visual details. This should feel like an opening visual with one clear focal point during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Sea shown through source material connected to sea folklore often turns uncertain sightings into stories because the horizon is difficult to verify in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a medium composition that shows the important action or state, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Sea. Include Sea, folklore, often as supporting visual details. This should feel like an opening visual that adds a second visual detail during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows The Flying Dutchman connected to the ship is often treated as an omen, especially for sailors who see it during dangerous weather or at a distance in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a close visual detail that supports the current narration, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Unexplained Mysteries. Include weather, often, treated as supporting visual details. This should feel like an opening visual that widens the frame without adding new story elements during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows The Flying Dutchman connected to the ship is often treated as an omen, especially for sailors who see it during dangerous weather or at a distance in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Unexplained Mysteries. Include weather, often, treated as supporting visual details. This should feel like a follow-up visual with one clear focal point during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Weather connected to weather, distance, and fear can all reshape what sailors think they see in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a medium composition that shows the important action or state, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Weather, reshape, sailors as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Others connected to others focus less on the cause and more on the sighting in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a close visual detail that supports the current narration, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Others, focus, cause as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Others connected to others focus less on the cause and more on the sighting in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a clear tabletop or archival composition, with soft archival light, careful documentary restraint, and cultural context from Unexplained Mysteries. Include Others, focus, cause as supporting visual details. This should feel like an opening visual with one clear focal point during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Sea shown through source material connected to sea folklore often turns uncertain sightings into stories because the horizon is difficult to verify in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a medium frame that separates the main subject from supporting evidence, with soft archival light, careful documentary restraint, and cultural context from Sea. Include Sea, folklore, often as supporting visual details. This should feel like an opening visual that adds a second visual detail during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows The Flying Dutchman shown through source material connected to later retellings do not always keep the same emphasis in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a medium frame that separates the main subject from supporting evidence, with soft archival light, careful documentary restraint, and cultural context from Unexplained Mysteries. Include retellings, always, emphasis as supporting visual details. This should feel like a follow-up visual with one clear focal point during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Others connected to others focus less on the cause and more on the sighting in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a close archival detail with the source boundary visible, with soft archival light, careful documentary restraint, and cultural context from Unexplained Mysteries. Include Others, focus, cause as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Others connected to others focus less on the cause and more on the sighting in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a close archival detail with the source boundary visible, with soft archival light, careful documentary restraint, and cultural context from Unexplained Mysteries. Include Others, focus, cause as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Literary associated with a variant where literary and operatic versions helped standardize parts of the legend, but sailor lore and popular retellings preserve multiple forms in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with natural low light, documentary uncertainty, and cultural context from legend. Include Literary, operatic, versions as supporting visual details. This should feel like an opening visual with one clear focal point during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Sea shown through source material connected to sea folklore often turns uncertain sightings into stories because the horizon is difficult to verify in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from Sea. Include Sea, folklore, often as supporting visual details. This should feel like an opening visual that adds a second visual detail during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows The Flying Dutchman framed by the interpretation that the ship moves, but it never arrives in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include never, arrives, Others as supporting visual details. This should feel like a follow-up visual with one clear focal point during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows The Flying Dutchman associated with a variant where later versions and source comparison in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include versions, comparison, Others as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows The Flying Dutchman framed by the interpretation that the ship moves, but it never arrives in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a wide reflective composition with negative space, with subdued fading light, quiet reflective tension, and cultural context from Unexplained Mysteries. Include never, arrives, Others as supporting visual details. This should feel like an opening visual with one clear focal point during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows ghost ship connected to maritime legend of a ghost ship condemned to sail and appear at sea as an omen in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, and cultural context from legend. Include ghost ship, maritime legend, sea as supporting visual details. This should feel like an opening visual that adds a second visual detail during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows The Flying Dutchman framed by the interpretation that that makes it a lasting maritime image of guilt, warning, and the fear that the sea can keep what it takes in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, and cultural context from sea. Include image, sea, makes as supporting visual details. This should feel like an opening visual that widens the frame without adding new story elements during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows The Flying Dutchman framed by the interpretation that that makes it a lasting maritime image of guilt, warning, and the fear that the sea can keep what it takes in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, and cultural context from sea. Include image, sea, makes as supporting visual details. This should feel like a follow-up visual with one clear focal point during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Sea shown through source material connected to sea folklore often turns uncertain sightings into stories because the horizon is difficult to verify in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a wider reflective frame that keeps the ending unresolved, with subdued fading light, quiet reflective tension, and cultural context from Sea. Include Sea, folklore, often as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the final sequence. No gore, readable text, logos, watermarks, or modern objects."
+    "distant sailing ship on a storm horizon, distant ghost ship, storm horizon, old sails, rough sea, no readable ship names, painterly documentary realism, maritime, storm-lit, doomed, lonely, legendary mood, source-aware documentary style.",
+    "empty sea under green-gray clouds, distant ghost ship, storm horizon, old sails, rough sea, no readable ship names, painterly documentary realism, maritime, storm-lit, doomed, lonely, legendary mood, source-aware documentary style.",
+    "old mast silhouette emerging from mist, distant ghost ship, storm horizon, old sails, rough sea, no readable ship names, painterly documentary realism, maritime, storm-lit, doomed, lonely, legendary mood, source-aware documentary style.",
+    "shadowed captain figure at a wheel without visible face, distant ghost ship, storm horizon, old sails, rough sea, no readable ship names, painterly documentary realism, maritime, storm-lit, doomed, lonely, legendary mood, source-aware documentary style.",
+    "storm-bent sails under lightning far away, distant ghost ship, storm horizon, old sails, rough sea, no readable ship names, painterly documentary realism, maritime, storm-lit, doomed, lonely, legendary mood, source-aware documentary style.",
+    "old nautical chart with a dark route line and no labels, distant ghost ship, storm horizon, old sails, rough sea, no readable ship names, painterly documentary realism, maritime, storm-lit, doomed, lonely, legendary mood, source-aware documentary style.",
+    "ship deck with sailors absent and ropes under rain, distant ghost ship, storm horizon, old sails, rough sea, no readable ship names, painterly documentary realism, maritime, storm-lit, doomed, lonely, legendary mood, source-aware documentary style.",
+    "ghostly sail shape beyond wet rigging, distant ghost ship, storm horizon, old sails, rough sea, no readable ship names, painterly documentary realism, maritime, storm-lit, doomed, lonely, legendary mood, source-aware documentary style.",
+    "lantern light on waves during a storm, distant ghost ship, storm horizon, old sails, rough sea, no readable ship names, painterly documentary realism, maritime, storm-lit, doomed, lonely, legendary mood, source-aware documentary style.",
+    "old harbor tavern window looking toward dark water, distant ghost ship, storm horizon, old sails, rough sea, no readable ship names, painterly documentary realism, maritime, storm-lit, doomed, lonely, legendary mood, source-aware documentary style.",
+    "stack of sea tales and compass under dim light, distant ghost ship, storm horizon, old sails, rough sea, no readable ship names, painterly documentary realism, maritime, storm-lit, doomed, lonely, legendary mood, source-aware documentary style.",
+    "multiple faint ship silhouettes in fog, distant ghost ship, storm horizon, old sails, rough sea, no readable ship names, painterly documentary realism, maritime, storm-lit, doomed, lonely, legendary mood, source-aware documentary style.",
+    "final ghost ship fading into storm mist, distant ghost ship, storm horizon, old sails, rough sea, no readable ship names, painterly documentary realism, maritime, storm-lit, doomed, lonely, legendary mood, source-aware documentary style.",
+    "empty horizon after the ship disappears, distant ghost ship, storm horizon, old sails, rough sea, no readable ship names, painterly documentary realism, maritime, storm-lit, doomed, lonely, legendary mood, source-aware documentary style.",
+    "dark sea under a pale break in clouds, distant ghost ship, storm horizon, old sails, rough sea, no readable ship names, painterly documentary realism, maritime, storm-lit, doomed, lonely, legendary mood, source-aware documentary style."
   ],
   "imagePromptsIncluded": true,
-  "logline": "The Flying Dutchman is treated through one concrete anchor: the maritime legend of a ghost ship condemned to sail and appear at sea as an omen.",
+  "logline": "Flying Dutchman Folklore becomes a production package about ghost ship, doomed voyage, storm horizon, and maritime warning.",
   "longformIncluded": true,
   "longformScript": [
-    "The setting gives the scene a concrete frame: Ordinary records with unresolved details. The account identifies the central subject clearly: Flying Dutchman Folklore: The Ghost Ship, the Horizon, and a Maritime Legend is the named subject at the center of this retelling. The action moves through a specific event: Others focus less on the cause and more on the sighting.",
-    "The story starts from a clear disturbance: Weather, distance, and fear can all reshape what sailors think they see. The account then gives a direct movement: The ship is often treated as an omen, especially for sailors who see it during dangerous weather or at a distance. The story starts from a clear disturbance: The Flying Dutchman became powerful because it gives that uncertainty a named vessel.",
-    "The source trail matters before the claim is treated as certain: Sea folklore often turns uncertain sightings into stories because the horizon is difficult to verify. The account then gives a direct movement: The central image is a ship that cannot make harbor. The action moves through a specific event: The Flying Dutchman turns on one missing or unresolved point: the maritime legend of a ghost ship condemned to sail and appear at sea as an omen.",
-    "The conflict begins with a specific pressure: Maritime legend of a ghost ship condemned to sail and appear at sea as an omen. The conflict begins with a specific pressure: That makes it a lasting maritime image of guilt, warning, and the fear that the sea can keep what it takes. The surviving record gives the narration a source limit: Literary and operatic versions helped standardize parts of the legend, but sailor lore and popular retellings preserve multiple forms.",
-    "The scene has a clear visible point: Others focus less on the cause and more on the sighting. The account stays careful because the evidence has boundaries: Later retellings do not always keep the same emphasis. The account stays careful because the evidence has boundaries: References such as Encyclopaedia Britannica and Wikipedia are used as orientation points, not as proof for every later claim. The next fact gives the sequence a concrete action: Others focus less on the cause and more on the sighting.",
-    "The account then gives a direct movement: The Flying Dutchman is a maritime legend about a ghost ship condemned to sail the seas and appear on the horizon. The next fact gives the sequence a concrete action: It moves through storm, mist, or strange light, not as ordinary traffic but as a warning. The action moves through a specific event: Some versions connect the curse to a captain who defies God, fate, or the sea itself.",
-    "The versions do not always preserve the same emphasis: Literary and operatic versions helped standardize parts of the legend, but sailor lore and popular retellings preserve multiple forms. One interpretation stays close to the material: The ship moves, but it never arrives. The versions do not always preserve the same emphasis: Later versions differ around the captain, the route, the curse, and whether seeing the ship predicts death, disaster, or bad weather.",
-    "The symbolic reading grows out of the recorded details: The Flying Dutchman is treated through one concrete anchor: the maritime legend of a ghost ship condemned to sail and appear at sea as an omen. The symbolic reading grows out of the recorded details: Flying Dutchman Folklore is best read as an unexplained mysteries entry built around maritime legend of a ghost ship condemned to sail and appear at sea as an omen.",
-    "The ending depends on what changes afterward: Maritime legend of a ghost ship condemned to sail and appear at sea as an omen. The meaning remains tied to what the account actually says: That makes it a lasting maritime image of guilt, warning, and the fear that the sea can keep what it takes. The meaning remains tied to what the account actually says: One possible reading is that the Flying Dutchman may be read as a story about endless passage.",
-    "The surviving record gives the narration a source limit: The Flying Dutchman appears in source material connected with maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. The surviving record gives the narration a source limit: For The Flying Dutchman, unresolved points stay unresolved when the available record does not close them. The surviving record gives the narration a source limit: The Flying Dutchman is treated through maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions."
+    "The Flying Dutchman begins as a horizon story. Sailors look across bad weather and see a ship that should not be there, moving under storm light as if it belongs more to warning than to navigation. The pressure stays close to storm seas, sailing routes, and maritime folklore, so the moment feels placed rather than floating. The audience can follow the strangeness without losing the human scale. The doorway is set.",
+    "The image is simple and strong: a vessel condemned to sail and never make harbor. No monster has to rise from the water. The ship itself becomes the haunting because every sail points toward motion without arrival. The opening works because the first image changes the ordinary world around it. Inside Flying Dutchman Folklore, familiar details become charged with memory and expectation. The first unease remains.",
+    "That is why the opening should stay wide. The viewer needs the sea, the weather, and the distance. The Flying Dutchman is frightening because it is close enough to see and far enough to remain unreachable. The beginning remains patient in feeling, but the story itself keeps moving. Each detail points toward the next turn instead of sitting alone. The account has begun.",
+    "Many versions connect the ghost ship to a captain whose pride, oath, or defiance drives the vessel into doom. The details shift, but the moral pattern remains steady: a human choice meets the sea's power and loses. The second movement gives the account a wider frame, so the first strange image does not have to carry the whole mystery by itself. The pressure deepens.",
+    "The captain matters because he turns weather into consequence. A storm is dangerous by itself, but a cursed voyage makes the storm feel personal. The sea becomes the place where arrogance is forced to keep moving forever. The background matters because it shows why this story could survive outside a single moment. Place, memory, and witness pressure start to join together. The pattern becomes clearer.",
+    "The best narration keeps the curse legendary rather than legalistic. The viewer does not need one fixed contract. They need the feeling that the ship crossed a boundary and was sentenced to become its own warning. By now the subject is no longer only an image. It has a setting, a pattern, and a reason to keep returning in retellings. The middle distance tightens.",
+    "In maritime folklore, seeing the Flying Dutchman is often a bad sign. The ship is less a destination than an omen, a shape that appears when the sea is already dangerous and makes the danger feel fated. The middle section lets the strongest symbol come forward. The audience can see why this detail, and not only the title, became the part people remember. The next turn is earned.",
+    "That omen role explains why the legend lasted. Sailors needed stories for conditions that could change faster than explanation. A ghost ship gave fear a visible form and gave the ocean's uncertainty a name. This is where the account slows down without becoming static. The central image is examined from another angle, and the meaning becomes easier to feel. The central image holds.",
+    "The ship also carries loneliness. It is crewed and yet unreachable, moving and yet trapped, visible and yet separate from the living world. That contradiction turns the Flying Dutchman into one of folklore's cleanest images of doom. The story gains depth when the visible detail carries both literal and symbolic force. That double weight keeps the subject from becoming thin. The meaning keeps gathering.",
+    "The Flying Dutchman changes as it travels through sea stories, literature, opera, film, and popular culture. Sometimes the captain is central. Sometimes the ship itself matters more. Sometimes romance, punishment, or spectacle enters the frame. The source boundary matters here because uncertainty is part of the account's shape. The story can stay atmospheric without pretending every version is settled. The boundary stays visible.",
+    "Yet the core image remains stable. A doomed ship is seen at sea, unable to arrive. That simple structure lets the legend survive different eras without losing its identity. The ship can change costume and still remain cursed. A careful frame lets competing explanations remain present. That does not weaken the mood; it shows why the subject keeps inviting retelling. The uncertainty stays useful.",
+    "Those variations can enrich the story without scattering it. Every version returns to the same emotional center: motion without rest, sight without rescue, and a horizon that refuses to become harbor. The account is strongest when it respects limits and still leaves room for wonder. The unanswered part becomes structure, not decoration. The source line remains clear.",
+    "By the end, the Flying Dutchman is not only a ship. It is a maritime way of imagining consequences that cannot be escaped. The sea becomes court, prison, road, and grave at the same time. The ending returns to the image that made the subject memorable. The story has moved, but it does not need to close every door. The image can linger.",
+    "The legend endures because it turns a sailor's deepest fear into an image: the voyage that never ends. A ship is built to travel toward land, but this one is remembered because it can never complete that promise. What remains is the afterlife of the account: the part people can carry away, redraw, repeat, or test against the world they know. The ending stays open.",
+    "The final image is a horizon after the sail has vanished. The viewer is left with weather, water, and the suspicion that somewhere beyond sight, the ship is still moving because folklore has never allowed it to stop. The final movement lets the mystery keep breathing. The viewer leaves with a clear shape, a source boundary, and one image that refuses to disappear. The final silence remains. The horizon keeps the curse moving even after the sail has almost disappeared. The last impression stays grounded in storm seas, sailing routes, and maritime folklore, where ghost ship, doomed voyage, storm horizon, and maritime warning remains specific enough to remember and open enough to retell."
   ],
   "mainSubject": "Flying Dutchman Folklore",
-  "metaDescription": "A creator-ready production workspace for Flying Dutchman Folklore, with long-form scenes, Shorts narration, image prompts, music keywords, and editing notes.",
-  "mood": "documentary, unresolved, and tense",
+  "metaDescription": "A 7-8 minute source-based Flying Dutchman Folklore video script with story-led narration, image prompts, Shorts script, thumbnail ideas, and production workflow.",
+  "mood": "maritime, storm-lit, doomed, lonely, legendary",
   "motionPrompts": [
-    "Use a slow controlled push toward Ordinary, with placed within ordinary records with unresolved details staying fixed as the opening anchor and Ordinary visible. Use only light shifts that match the place or event mystery tone.",
-    "Use a restrained lateral pan across maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions, letting Flying Dutchman Folklore hold the opening detail while Flying Dutchman stays in frame. Use only light shifts that match the place or event mystery tone.",
-    "Start with a static hold, then pull back slightly to reveal connected to others focus less on the cause and more on the sighting and cause within the wider frame. Use only light shifts that match the place or event mystery tone.",
-    "Use a restrained lateral pan across maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions, letting Others hold the follow-up anchor while Others stays in frame. Use only light shifts that match the place or event mystery tone.",
-    "Start with a static hold, then pull back slightly to reveal connected to weather, distance, and fear can all reshape what sailors think they see and distance within the wider frame. Use only light shifts that match the place or event mystery tone.",
-    "Use a slow controlled push toward The Flying Dutchman, with connected to the ship is often treated as an omen, especially for sailors who staying fixed as the follow-up wider frame and treated visible. Use only light shifts that match the place or event mystery tone.",
-    "Use a slow controlled push toward Others, with connected to others focus less on the cause and more on the sighting staying fixed as the opening anchor and Others visible. Use only light shifts that match the place or event mystery tone.",
-    "Use a restrained lateral pan across maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions, letting Sea hold the opening detail while folklore stays in frame. Use only light shifts that match the place or event mystery tone.",
-    "Start with a static hold, then pull back slightly to reveal connected to the ship is often treated as an omen, especially for sailors who and treated within the wider frame. Use only light shifts that match the place or event mystery tone.",
-    "Use a restrained lateral pan across maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions, letting The Flying Dutchman hold the follow-up anchor while weather stays in frame. Use only light shifts that match the place or event mystery tone.",
-    "Start with a static hold, then pull back slightly to reveal connected to weather, distance, and fear can all reshape what sailors think they see and distance within the wider frame. Use only light shifts that match the place or event mystery tone. Let distance remain the distinct a follow-up visual that adds a second visual detail.",
-    "Use a slow controlled push toward Others, with connected to others focus less on the cause and more on the sighting staying fixed as the follow-up wider frame and cause visible. Use only light shifts that match the place or event mystery tone.",
-    "Use a slow controlled push toward Others, with connected to others focus less on the cause and more on the sighting staying fixed as the opening anchor and Others visible. Keep the movement restrained and documentary.",
-    "Use a restrained lateral pan across maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions, letting Sea hold the opening detail while folklore stays in frame. Keep the movement restrained and documentary.",
-    "Use a restrained lateral pan across maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions, letting The Flying Dutchman hold the follow-up anchor while Later stays in frame. Keep the movement restrained and documentary.",
-    "Start with a static hold, then pull back slightly to reveal connected to others focus less on the cause and more on the sighting and focus within the wider frame. Keep the movement restrained and documentary.",
-    "Use a slow controlled push toward Others, with connected to others focus less on the cause and more on the sighting staying fixed as the follow-up wider frame and cause visible. Keep the movement restrained and documentary.",
-    "Use a slow controlled push toward Literary, with associated with a variant where literary and operatic versions helped standardize parts of the staying fixed as the opening anchor and Literary visible. Use only light shifts that match the place or event mystery tone.",
-    "Use a restrained lateral pan across maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions, letting Sea hold the opening detail while folklore stays in frame. Use only light shifts that match the place or event mystery tone. Let folklore remain the distinct an opening visual that adds a second visual detail.",
-    "Use a restrained lateral pan across maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions, letting The Flying Dutchman hold the follow-up anchor while moves stays in frame. Use only light shifts that match the place or event mystery tone.",
-    "Start with a static hold, then pull back slightly to reveal associated with a variant where later versions and source comparison and versions within the wider frame. Use only light shifts that match the place or event mystery tone.",
-    "Use a slow controlled push toward The Flying Dutchman, with framed by the interpretation that the ship moves, but it never arrives staying fixed as the opening anchor and moves visible. End with a slow hold and no new action.",
-    "Use a restrained lateral pan across maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions, letting ghost ship hold the opening detail while maritime legend stays in frame. End with a slow hold and no new action.",
-    "Start with a static hold, then pull back slightly to reveal framed by the interpretation that that makes it a lasting maritime image of guilt and makes within the wider frame. End with a slow hold and no new action.",
-    "Use a restrained lateral pan across maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions, letting The Flying Dutchman hold the follow-up anchor while image stays in frame. End with a slow hold and no new action.",
-    "Start with a static hold, then pull back slightly to reveal shown through source material connected to sea folklore often turns uncertain sightings into stories and folklore within the wider frame. End with a slow hold and no new action."
+    "Optional edit: slow push toward the central shape while the frame remains quiet. Focus on: distant sailing ship on a storm horizon.",
+    "Optional edit: restrained lateral drift across the scene, with no new story event added. Focus on: empty sea under green-gray clouds.",
+    "Optional edit: slow hold with a tiny light change, keeping the image-led format. Focus on: old mast silhouette emerging from mist.",
+    "Optional edit: slow push toward the central shape while the frame remains quiet. Focus on: shadowed captain figure at a wheel without visible face.",
+    "Optional edit: restrained lateral drift across the scene, with no new story event added. Focus on: storm-bent sails under lightning far away.",
+    "Optional edit: slow hold with a tiny light change, keeping the image-led format. Focus on: old nautical chart with a dark route line and no labels.",
+    "Optional edit: slow push toward the central shape while the frame remains quiet. Focus on: ship deck with sailors absent and ropes under rain.",
+    "Optional edit: restrained lateral drift across the scene, with no new story event added. Focus on: ghostly sail shape beyond wet rigging.",
+    "Optional edit: slow hold with a tiny light change, keeping the image-led format. Focus on: lantern light on waves during a storm.",
+    "Optional edit: slow push toward the central shape while the frame remains quiet. Focus on: old harbor tavern window looking toward dark water.",
+    "Optional edit: restrained lateral drift across the scene, with no new story event added. Focus on: stack of sea tales and compass under dim light.",
+    "Optional edit: slow hold with a tiny light change, keeping the image-led format. Focus on: multiple faint ship silhouettes in fog.",
+    "Optional edit: slow push toward the central shape while the frame remains quiet. Focus on: final ghost ship fading into storm mist.",
+    "Optional edit: restrained lateral drift across the scene, with no new story event added. Focus on: empty horizon after the ship disappears.",
+    "Optional edit: slow hold with a tiny light change, keeping the image-led format. Focus on: dark sea under a pale break in clouds."
   ],
   "originalStorySlug": "flying-dutchman-folklore",
   "pipelineDiagnostics": {
     "fallbackUsed": false,
+    "imagePromptCount": 15,
+    "motionPromptCount": 15,
+    "narrationBeatCount": 15,
     "normalizedInputSchemaVersion": "1.0",
-    "scenePlanSchemaVersion": "1.0"
+    "qualityDirection": "source-based story-led image and narration package",
+    "regeneratedAt": "2026-08-12",
+    "regeneratedBy": "codex-manual-source-based-batch-003",
+    "sceneCount": 5,
+    "scenePlanSchemaVersion": "1.0",
+    "shortSceneCount": 5,
+    "sourceStorySlug": "flying-dutchman-folklore"
   },
   "publishedAt": "2026-07-21",
   "runtimePlan": {
-    "estimatedFinalRuntime": "5-6 minutes",
-    "estimatedFinalSeconds": 352,
-    "finalVideoSeconds": 352,
-    "narrationReadSeconds": 317,
-    "narrationReadTime": "5 min 17 sec",
-    "plannedTransitionAndVisualTime": "35 sec",
-    "totalWordCount": 745
+    "estimatedFinalRuntime": "7-8 minutes",
+    "estimatedFinalSeconds": 480,
+    "finalVideoSeconds": 480,
+    "narrationReadSeconds": 431,
+    "narrationReadTime": "7 min 11 sec",
+    "plannedTransitionAndVisualTime": "0 min 49 sec",
+    "totalWordCount": 1013
   },
   "schemaVersion": "single-path-v1",
   "seoTitle": "Free Flying Dutchman Folklore YouTube Script",
-  "setting": "misty waterside landscape",
+  "setting": "storm seas, sailing routes, and maritime folklore",
   "shortForm": {
-    "finalVideoSeconds": 59,
-    "narrationReadSeconds": 47,
+    "finalVideoSeconds": 60,
+    "narrationReadSeconds": 20,
     "scenes": [
       {
-        "backgroundMusic": "quiet opening pulse, low drone, slow piano, short-form low density",
-        "estimatedReadSeconds": 9,
-        "imagePrompt": "A atmospheric location documentary scene shows The Flying Dutchman introduced through Others within a quiet archive-like workspace with physical evidence nearby, framed as a vertical short-form frame with strong negative space. Use natural low light with restrained contrast and documentary mystery atmosphere within the story culture and source context; center the frame on Others. No readable text, logos, watermarks, modern objects, graphic gore, or cartoon styling.",
-        "motionPrompt": "Use a slow controlled push toward The Flying Dutchman, keeping Others as the central visual anchor.",
-        "narration": "Others focus less on the cause and more. The detail points to the ship is often treated as an omen, especially.",
-        "role": "What and Where",
-        "sceneFocus": "What and Where: The Flying Dutchman tied to others focus less on the cause.",
+        "backgroundMusic": "compact atmospheric bed matching the long-form tone",
+        "estimatedReadSeconds": 8,
+        "imagePrompt": "Vertical documentary image: distant sailing ship on a storm horizon, distant ghost ship, storm horizon, old sails, rough sea, no readable ship names, painterly documentary realism, clear single focal point, no readable text, no logos.",
+        "motionPrompt": "Slow restrained movement that supports the narration without adding new story events.",
+        "narration": "A ship that cannot reach harbor becomes a warning about pride, storms, and endless return.",
+        "role": "Opening Hook",
+        "sceneFocus": "The legend begins with a ship seen where no safe ship should be.",
         "sceneIndex": 1,
-        "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-        "sourceFactIds": [
-          "fact-001",
-          "fact-009",
-          "fact-007",
-          "fact-002",
-          "fact-017"
-        ],
-        "sourceFieldRefs": [
-          "storyBrief.knownNames",
-          "story.subjectSpecificVocabulary",
-          "storyBrief.cultureOrContext",
-          "story.sceneAnchor",
-          "factRecords.settingTerms",
-          "storyBrief.coreStoryElements",
-          "publicArticlePlan",
-          "story.excerpt",
-          "story.detail",
-          "contentDNA.sceneAnchor",
-          "contentDNA.culturalFrame",
-          "story.title"
-        ],
-        "usedFactTexts": [
-          "Others focus less on the cause and more on the sighting.",
-          "The ship is often treated as an omen, especially for sailors who see it during dangerous weather or at a distance.",
-          "Ordinary records with unresolved details.",
-          "Flying Dutchman Folklore: The Ghost Ship, the Horizon, and a Maritime Legend.",
-          "Weather, distance, and fear can all reshape what sailors think they see."
-        ],
-        "voiceDirection": "Clear short-form pace, clean pauses, restrained tone, light emphasis on \"Others\"."
+        "soundEffect": "subtle ambience only",
+        "voiceDirection": "Clear short-form delivery with one clean pause."
       },
       {
-        "backgroundMusic": "sparse documentary bed, low drone, slow piano, short-form low density",
-        "estimatedReadSeconds": 10,
-        "imagePrompt": "A atmospheric location documentary scene shows The Flying Dutchman positioned beside focus as the source detail becomes visible within a quiet archive-like workspace with physical evidence nearby, framed in a clean medium shot with the key detail near the center. Use soft archival light and controlled shadows and documentary mystery atmosphere within the story culture and source context; center the frame on focus. No readable text, logos, watermarks, modern objects, graphic gore, or cartoon styling.",
-        "motionPrompt": "Use a restrained lateral pan across focus, then settle quietly on The Flying Dutchman.",
-        "narration": "In the story, others focus less on the cause and more. The detail points to the ship is often treated as an omen, especially.",
-        "role": "Core Record",
-        "sceneFocus": "Core Record: The Flying Dutchman tied to others focus less on the cause.",
+        "backgroundMusic": "compact atmospheric bed matching the long-form tone",
+        "estimatedReadSeconds": 8,
+        "imagePrompt": "Vertical documentary image: shadowed captain figure at a wheel without visible face, distant ghost ship, storm horizon, old sails, rough sea, no readable ship names, painterly documentary realism, clear single focal point, no readable text, no logos.",
+        "motionPrompt": "Slow restrained movement that supports the narration without adding new story events.",
+        "narration": "The curse gives the ship a moral shape.",
+        "role": "Doomed Captain",
+        "sceneFocus": "The curse gives the ship a moral shape.",
         "sceneIndex": 2,
-        "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-        "sourceFactIds": [
-          "fact-001",
-          "fact-009",
-          "fact-010",
-          "fact-021",
-          "fact-017"
-        ],
-        "sourceFieldRefs": [
-          "storyBrief.coreStoryElements",
-          "publicArticlePlan",
-          "story.excerpt",
-          "story.sceneAnchor",
-          "story.detail",
-          "contentDNA.sceneAnchor",
-          "storyBrief.existenceEvidence",
-          "story.researchSources",
-          "story.evidence"
-        ],
-        "usedFactTexts": [
-          "Others focus less on the cause and more on the sighting.",
-          "The ship is often treated as an omen, especially for sailors who see it during dangerous weather or at a distance.",
-          "The central image is a ship that cannot make harbor.",
-          "Sea folklore often turns uncertain sightings into stories because the horizon is difficult to verify.",
-          "Weather, distance, and fear can all reshape what sailors think they see."
-        ],
-        "voiceDirection": "Careful pace, clean pauses, restrained tone, light emphasis on \"Others\"."
+        "soundEffect": "subtle ambience only",
+        "voiceDirection": "Clear short-form delivery with one clean pause."
       },
       {
-        "backgroundMusic": "sparse documentary bed, low drone, slow piano, short-form low density",
-        "estimatedReadSeconds": 12,
-        "imagePrompt": "A atmospheric location documentary scene shows The Flying Dutchman positioned beside cause as the source detail becomes visible within a quiet archive-like workspace with physical evidence nearby, framed as a close readable detail with the background still visible. Use soft archival light and controlled shadows and documentary mystery atmosphere within the story culture and source context; center the frame on cause. No readable text, logos, watermarks, modern objects, graphic gore, or cartoon styling.",
-        "motionPrompt": "Begin with a still frame, then gently pull back to reveal cause.",
-        "narration": "The key turn comes when sea folklore often turns uncertain sightings into stories because. The source frame stays with later retellings do not always keep the same emphasis.",
-        "role": "Key Evidence",
-        "sceneFocus": "Key Evidence: The Flying Dutchman tied to sea folklore often turns uncertain sightings.",
+        "backgroundMusic": "compact atmospheric bed matching the long-form tone",
+        "estimatedReadSeconds": 8,
+        "imagePrompt": "Vertical documentary image: ship deck with sailors absent and ropes under rain, distant ghost ship, storm horizon, old sails, rough sea, no readable ship names, painterly documentary realism, clear single focal point, no readable text, no logos.",
+        "motionPrompt": "Slow restrained movement that supports the narration without adding new story events.",
+        "narration": "The sighting functions as an omen at sea.",
+        "role": "Sailor Warning",
+        "sceneFocus": "The sighting functions as an omen at sea.",
         "sceneIndex": 3,
-        "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-        "sourceFactIds": [
-          "fact-021",
-          "fact-022",
-          "fact-023",
-          "fact-034",
-          "fact-001"
-        ],
-        "sourceFieldRefs": [
-          "storyBrief.existenceEvidence",
-          "story.researchSources",
-          "story.evidence",
-          "storyBrief.coreStoryElements",
-          "story.title",
-          "contentDNA.culturalFrame",
-          "publicArticlePlan",
-          "story.excerpt",
-          "story.sceneAnchor",
-          "story.detail",
-          "contentDNA.sceneAnchor",
-          "derived.turningPointFromDetail",
-          "derived.outcomeFromDetail",
-          "derived.problemFromDetail",
-          "publicArticlePlan.publicSourceNote"
-        ],
-        "usedFactTexts": [
-          "Sea folklore often turns uncertain sightings into stories because the horizon is difficult to verify.",
-          "Later retellings do not always keep the same emphasis.",
-          "Literary and operatic versions helped standardize parts of the legend, but sailor lore and popular retellings preserve multiple forms.",
-          "Others focus less on the cause and more on the sighting.",
-          "Others focus less on the cause and more on the sighting."
-        ],
-        "voiceDirection": "Careful pace, clean pauses, restrained tone, light emphasis on \"folklore\"."
+        "soundEffect": "subtle ambience only",
+        "voiceDirection": "Clear short-form delivery with one clean pause."
       },
       {
-        "backgroundMusic": "quiet opening pulse, low drone, slow piano, short-form low density",
-        "estimatedReadSeconds": 6,
-        "imagePrompt": "A atmospheric location documentary scene shows The Flying Dutchman introduced through sighting. within a quiet archive-like workspace with physical evidence nearby, framed with foreground evidence leading toward the main subject. Use natural low light with restrained contrast and documentary mystery atmosphere within the story culture and source context; center the frame on sighting.. No readable text, logos, watermarks, modern objects, graphic gore, or cartoon styling.",
-        "motionPrompt": "Reveal sighting. from foreground to background with subtle parallax and restrained movement.",
-        "narration": "The later question stays with literary and operatic versions helped standardize parts. Later versions.",
-        "role": "Main Explanations",
-        "sceneFocus": "Main Explanations: The Flying Dutchman tied to literary and operatic versions helped standardize parts.",
+        "backgroundMusic": "compact atmospheric bed matching the long-form tone",
+        "estimatedReadSeconds": 8,
+        "imagePrompt": "Vertical documentary image: old harbor tavern window looking toward dark water, distant ghost ship, storm horizon, old sails, rough sea, no readable ship names, painterly documentary realism, clear single focal point, no readable text, no logos.",
+        "motionPrompt": "Slow restrained movement that supports the narration without adding new story events.",
+        "narration": "Different retellings keep the same central image.",
+        "role": "Changing Versions",
+        "sceneFocus": "Different retellings keep the same central image.",
         "sceneIndex": 4,
-        "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-        "sourceFactIds": [
-          "fact-003",
-          "fact-004",
-          "fact-020",
-          "fact-021",
-          "fact-005"
-        ],
-        "sourceFieldRefs": [
-          "storyBrief.reportedVariants",
-          "publicArticlePlan",
-          "storyBrief.coreStoryElements",
-          "publicArticlePlan.publicSourceNote",
-          "story.publicSourceBasis",
-          "storyBrief.cultureOrContext",
-          "story.publicSourceNoteSeed",
-          "story.evidence",
-          "story.researchSources",
-          "storyBrief.existenceEvidence",
-          "storyBrief.editorialInterpretationOptions",
-          "contentDNA.uniqueAngle",
-          "story.summaryAnswer"
-        ],
-        "usedFactTexts": [
-          "Literary and operatic versions helped standardize parts of the legend, but sailor lore and popular retellings preserve multiple forms.",
-          "Later versions and source comparison.",
-          "Later versions differ around the captain, the route, the curse, and whether seeing the ship predicts death, disaster, or bad weather.",
-          "Sea folklore often turns uncertain sightings into stories because the horizon is difficult to verify.",
-          "The ship moves, but it never arrives."
-        ],
-        "voiceDirection": "Clear short-form pace, clean pauses, restrained tone, light emphasis on \"Literary\"."
+        "soundEffect": "subtle ambience only",
+        "voiceDirection": "Clear short-form delivery with one clean pause."
       },
       {
-        "backgroundMusic": "soft reflective drone, low drone, slow piano, short-form low density",
-        "estimatedReadSeconds": 10,
-        "imagePrompt": "A atmospheric location documentary scene shows The Flying Dutchman held in a quiet final composition around others focus less on the cause and more within a quiet archive-like workspace with physical evidence nearby, framed as a restrained final frame that leaves room for narration. Use soft fading light with low contrast and documentary mystery atmosphere within the story culture and source context; center the frame on others focus less on the cause. No readable text, logos, watermarks, modern objects, graphic gore, or cartoon styling.",
-        "motionPrompt": "Hold briefly on The Flying Dutchman, then let the light shift softly around others focus less.",
-        "narration": "ghost ship ends with maritime legend of a ghost ship condemned to sail. The meaning points to the ship moves, but it never arrives.",
-        "role": "What Remains Unresolved",
-        "sceneFocus": "What Remains Unresolved: The Flying Dutchman tied to maritime legend of a ghost ship condemned.",
+        "backgroundMusic": "compact atmospheric bed matching the long-form tone",
+        "estimatedReadSeconds": 8,
+        "imagePrompt": "Vertical documentary image: final ghost ship fading into storm mist, distant ghost ship, storm horizon, old sails, rough sea, no readable ship names, painterly documentary realism, clear single focal point, no readable text, no logos.",
+        "motionPrompt": "Slow restrained movement that supports the narration without adding new story events.",
+        "narration": "The ghost ship remains powerful because it never lands.",
+        "role": "Final Horizon",
+        "sceneFocus": "The ghost ship remains powerful because it never lands.",
         "sceneIndex": 5,
-        "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-        "sourceFactIds": [
-          "fact-046",
-          "fact-005",
-          "fact-006",
-          "fact-008",
-          "fact-021"
-        ],
-        "sourceFieldRefs": [
-          "derived.outcomeFromDetail",
-          "storyBrief.editorialInterpretationOptions",
-          "contentDNA.uniqueAngle",
-          "publicArticlePlan",
-          "story.summaryAnswer",
-          "storyBrief.coreStoryElements"
-        ],
-        "usedFactTexts": [
-          "Maritime legend of a ghost ship condemned to sail and appear at sea as an omen.",
-          "The ship moves, but it never arrives.",
-          "That makes it a lasting maritime image of guilt, warning, and the fear that the sea can keep what it takes.",
-          "The Flying Dutchman is treated through one concrete anchor: the maritime legend of a ghost ship condemned to sail and appear at sea as an omen.",
-          "Sea folklore often turns uncertain sightings into stories because the horizon is difficult to verify."
-        ],
-        "voiceDirection": "Slow final pace, clean pauses, restrained tone, light emphasis on \"Maritime\"."
+        "soundEffect": "subtle ambience only",
+        "voiceDirection": "Clear short-form delivery with one clean pause."
       }
     ],
-    "totalWordCount": 111
+    "totalWordCount": 47
   },
   "shortSceneFocuses": [
-    "What and Where: The Flying Dutchman tied to others focus less on the cause.",
-    "Core Record: The Flying Dutchman tied to others focus less on the cause.",
-    "Key Evidence: The Flying Dutchman tied to sea folklore often turns uncertain sightings.",
-    "Main Explanations: The Flying Dutchman tied to literary and operatic versions helped standardize parts.",
-    "What Remains Unresolved: The Flying Dutchman tied to maritime legend of a ghost ship condemned."
+    "The legend begins with a ship seen where no safe ship should be.",
+    "The curse gives the ship a moral shape.",
+    "The sighting functions as an omen at sea.",
+    "Different retellings keep the same central image.",
+    "The ghost ship remains powerful because it never lands."
   ],
   "shortsIncluded": true,
   "shortsScript": [
-    "Others focus less on the cause and more. The detail points to the ship is often treated as an omen, especially.",
-    "In the story, others focus less on the cause and more. The detail points to the ship is often treated as an omen, especially.",
-    "The key turn comes when sea folklore often turns uncertain sightings into stories because. The source frame stays with later retellings do not always keep the same emphasis.",
-    "The later question stays with literary and operatic versions helped standardize parts. Later versions.",
-    "ghost ship ends with maritime legend of a ghost ship condemned to sail. The meaning points to the ship moves, but it never arrives."
+    "A ship that cannot reach harbor becomes a warning about pride, storms, and endless return.",
+    "The curse gives the ship a moral shape.",
+    "The sighting functions as an omen at sea.",
+    "Different retellings keep the same central image.",
+    "The ghost ship remains powerful because it never lands."
   ],
   "slug": "flying-dutchman-folklore-youtube-script",
   "storageSchemaVersion": "creator-pack-file-v1",
@@ -340,754 +197,238 @@
   ],
   "thumbnailIdeasIncluded": true,
   "title": "Flying Dutchman Folklore YouTube Script",
-  "updatedAt": "2026-07-21",
-  "usageNote": "Use this page as a production workspace for a video based on the archive entry for Flying Dutchman Folklore. Keep source limits clear and avoid presenting later interpretations as verified facts.",
+  "updatedAt": "2026-08-12",
+  "usageNote": "Use this page as a production workspace for an image-led narration video based on the archive entry for Flying Dutchman Folklore. Keep source limits clear and keep narration viewer-facing.",
   "visualGuide": [
     {
-      "backgroundMusic": "soft reflective drone, low drone, slow piano, sparse documentary bed, slow tempo with restrained weight",
-      "directionTip": "The central visual should show others focus less on the cause and more on the sighting.",
+      "backgroundMusic": "low ocean drone, distant creaking wood, slow mournful strings",
       "narrationParts": [
         {
-          "creatorNote": "Flying Dutchman Folklore must stay tied to flying Dutchman Folklore: The Ghost Ship, the Horizon, and a Maritime Legend. Do not add figures, motives, or incidents beyond weather, distance, and fear can all reshape what sailors think they see.",
-          "estimatedReadingTime": "≈ 26 sec",
-          "narration": "The setting gives the scene a concrete frame: Ordinary records with unresolved details. The account identifies the central subject clearly: Flying Dutchman Folklore: The Ghost Ship, the Horizon, and a Maritime Legend is the named subject at the center of this retelling. The action moves through a specific event: Others focus less on the cause and more on the sighting.",
-          "sourceFactIds": [
-            "fact-007",
-            "fact-002",
-            "fact-001"
-          ],
-          "sourceFieldRefs": [
-            "contentDNA.culturalFrame",
-            "story.title",
-            "storyBrief.coreStoryElements"
-          ],
-          "usedFactTexts": [
-            "Ordinary records with unresolved details.",
-            "Flying Dutchman Folklore: The Ghost Ship, the Horizon, and a Maritime Legend.",
-            "Others focus less on the cause and more on the sighting."
-          ],
+          "creatorNote": "Keep this beat viewer-facing and story-led.",
+          "estimatedReadingTime": "about 30 sec",
+          "narration": "The Flying Dutchman begins as a horizon story. Sailors look across bad weather and see a ship that should not be there, moving under storm light as if it belongs more to warning than to navigation. The pressure stays close to storm seas, sailing routes, and maritime folklore, so the moment feels placed rather than floating. The audience can follow the strangeness without losing the human scale. The doorway is set.",
           "visualBeats": [
             {
-              "beatMotion": "Use a slow controlled push toward Ordinary, with placed within ordinary records with unresolved details staying fixed as the opening anchor and Ordinary visible. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Ordinary placed within ordinary records with unresolved details in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Ordinary, records, unresolved as supporting visual details. This should feel like an opening visual with one clear focal point during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a slow controlled push toward Ordinary, with placed within ordinary records with unresolved details staying fixed as the opening anchor and Ordinary visible. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-007"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.culturalFrame",
-                "story.title",
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a restrained lateral pan across maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions, letting Flying Dutchman Folklore hold the opening detail while Flying Dutchman stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Flying Dutchman Folklore held as the central visual in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from Folklore. Include Flying Dutchman Folklore, Flying Dutchman, ghost ship as supporting visual details. This should feel like an opening visual that adds a second visual detail during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Use a restrained lateral pan across maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions, letting Flying Dutchman Folklore hold the opening detail while Flying Dutchman stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-002"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.culturalFrame",
-                "story.title",
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal connected to others focus less on the cause and more on the sighting and cause within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Others connected to others focus less on the cause and more on the sighting in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a close visual detail that supports the current narration, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Others, focus, cause as supporting visual details. This should feel like an opening visual that widens the frame without adding new story elements during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal connected to others focus less on the cause and more on the sighting and cause within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-001"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.culturalFrame",
-                "story.title",
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "distant sailing ship on a storm horizon, distant ghost ship, storm horizon, old sails, rough sea, no readable ship names, painterly documentary realism, maritime, storm-lit, doomed, lonely, legendary mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow push toward the central shape while the frame remains quiet. Focus on: distant sailing ship on a storm horizon."
             }
           ]
         },
         {
-          "creatorNote": "Others must stay tied to others focus less on the cause and more on the sighting. Do not add figures, motives, or incidents beyond ordinary records with unresolved details.",
-          "estimatedReadingTime": "≈ 29 sec",
-          "narration": "The story starts from a clear disturbance: Weather, distance, and fear can all reshape what sailors think they see. The account then gives a direct movement: The ship is often treated as an omen, especially for sailors who see it during dangerous weather or at a distance. The story starts from a clear disturbance: The Flying Dutchman became powerful because it gives that uncertainty a named vessel.",
-          "sourceFactIds": [
-            "fact-017",
-            "fact-009",
-            "fact-018"
-          ],
-          "sourceFieldRefs": [
-            "publicArticlePlan",
-            "storyBrief.coreStoryElements"
-          ],
-          "usedFactTexts": [
-            "Weather, distance, and fear can all reshape what sailors think they see.",
-            "The ship is often treated as an omen, especially for sailors who see it during dangerous weather or at a distance.",
-            "The Flying Dutchman became powerful because it gives that uncertainty a named vessel."
-          ],
+          "creatorNote": "Let the source boundary stay clear without stopping the story.",
+          "estimatedReadingTime": "about 28 sec",
+          "narration": "The image is simple and strong: a vessel condemned to sail and never make harbor. No monster has to rise from the water. The ship itself becomes the haunting because every sail points toward motion without arrival. The opening works because the first image changes the ordinary world around it. Inside Flying Dutchman Folklore, familiar details become charged with memory and expectation. The first unease remains.",
           "visualBeats": [
             {
-              "beatMotion": "Use a restrained lateral pan across maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions, letting Others hold the follow-up anchor while Others stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Others connected to others focus less on the cause and more on the sighting in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Others, focus, cause as supporting visual details. This should feel like a follow-up visual with one clear focal point during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a restrained lateral pan across maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions, letting Others hold the follow-up anchor while Others stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-001"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.culturalFrame",
-                "story.title",
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan"
-              ],
-              "usedFactTexts": []
-            },
+              "imagePrompt": "empty sea under green-gray clouds, distant ghost ship, storm horizon, old sails, rough sea, no readable ship names, painterly documentary realism, maritime, storm-lit, doomed, lonely, legendary mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: restrained lateral drift across the scene, with no new story event added. Focus on: empty sea under green-gray clouds."
+            }
+          ]
+        },
+        {
+          "creatorNote": "Use one concrete image, then let the narration carry the meaning.",
+          "estimatedReadingTime": "about 27 sec",
+          "narration": "That is why the opening should stay wide. The viewer needs the sea, the weather, and the distance. The Flying Dutchman is frightening because it is close enough to see and far enough to remain unreachable. The beginning remains patient in feeling, but the story itself keeps moving. Each detail points toward the next turn instead of sitting alone. The account has begun.",
+          "visualBeats": [
             {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal connected to weather, distance, and fear can all reshape what sailors think they see and distance within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Weather connected to weather, distance, and fear can all reshape what sailors think they see in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Weather, reshape, sailors as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal connected to weather, distance, and fear can all reshape what sailors think they see and distance within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-017"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.culturalFrame",
-                "story.title",
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a slow controlled push toward The Flying Dutchman, with connected to the ship is often treated as an omen, especially for sailors who staying fixed as the follow-up wider frame and treated visible. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows The Flying Dutchman connected to the ship is often treated as an omen, especially for sailors who see it during dangerous weather or at a distance in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a close visual detail that supports the current narration, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include weather, often, treated as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Use a slow controlled push toward The Flying Dutchman, with connected to the ship is often treated as an omen, especially for sailors who staying fixed as the follow-up wider frame and treated visible. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-009"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.culturalFrame",
-                "story.title",
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "old mast silhouette emerging from mist, distant ghost ship, storm horizon, old sails, rough sea, no readable ship names, painterly documentary realism, maritime, storm-lit, doomed, lonely, legendary mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow hold with a tiny light change, keeping the image-led format. Focus on: old mast silhouette emerging from mist."
             }
           ]
         }
       ],
-      "sceneFocus": "The central visual should show others focus less on the cause and more on the sighting.",
-      "sceneRole": "What, When, and Where",
-      "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-      "sourceFactIds": [
-        "fact-007",
-        "fact-002",
-        "fact-001",
-        "fact-017",
-        "fact-009",
-        "fact-018"
-      ],
-      "sourceFieldRefs": [
-        "contentDNA.culturalFrame",
-        "story.title",
-        "storyBrief.coreStoryElements",
-        "publicArticlePlan"
-      ],
-      "visualDirection": "Hold the establishing image briefly, then begin a slow push toward the main detail.",
-      "voiceDirection": "Calm documentary pace, short pauses between ideas, natural restraint, with light emphasis on \"Flying Dutchman\" when it appears."
+      "sceneFocus": "The legend begins with a ship seen where no safe ship should be.",
+      "sceneRole": "Opening Hook",
+      "soundEffect": "subtle environmental texture only",
+      "visualDirection": "Use one image-led frame per narration beat. Keep motion optional and restrained.",
+      "voiceDirection": "Calm documentary narration with story rhythm, measured pauses, and no creator-facing phrasing."
     },
     {
-      "backgroundMusic": "steady low tension, low drone, slow piano, sparse documentary bed, slow tempo with restrained weight",
-      "directionTip": "The central visual should show others focus less on the cause and more on the sighting. Frame it through others focus less on the cause and more on the sighting.",
+      "backgroundMusic": "low ocean drone, distant creaking wood, slow mournful strings",
       "narrationParts": [
         {
-          "creatorNote": "Others must stay tied to others focus less on the cause and more on the sighting. Do not add figures, motives, or incidents beyond weather, distance, and fear can all reshape what sailors think they see.",
-          "estimatedReadingTime": "≈ 33 sec",
-          "narration": "The source trail matters before the claim is treated as certain: Sea folklore often turns uncertain sightings into stories because the horizon is difficult to verify. The account then gives a direct movement: The central image is a ship that cannot make harbor. The action moves through a specific event: The Flying Dutchman turns on one missing or unresolved point: the maritime legend of a ghost ship condemned to sail and appear at sea as an omen.",
-          "sourceFactIds": [
-            "fact-021",
-            "fact-010",
-            "fact-013"
-          ],
-          "sourceFieldRefs": [
-            "publicArticlePlan",
-            "storyBrief.coreStoryElements"
-          ],
-          "usedFactTexts": [
-            "Sea folklore often turns uncertain sightings into stories because the horizon is difficult to verify.",
-            "The central image is a ship that cannot make harbor.",
-            "The Flying Dutchman turns on one missing or unresolved point: the maritime legend of a ghost ship condemned to sail and appear at sea as an omen."
-          ],
+          "creatorNote": "Keep this beat viewer-facing and story-led.",
+          "estimatedReadingTime": "about 27 sec",
+          "narration": "Many versions connect the ghost ship to a captain whose pride, oath, or defiance drives the vessel into doom. The details shift, but the moral pattern remains steady: a human choice meets the sea's power and loses. The second movement gives the account a wider frame, so the first strange image does not have to carry the whole mystery by itself. The pressure deepens.",
           "visualBeats": [
             {
-              "beatMotion": "Use a slow controlled push toward Others, with connected to others focus less on the cause and more on the sighting staying fixed as the opening anchor and Others visible. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Others connected to others focus less on the cause and more on the sighting in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Others, focus, cause as supporting visual details. This should feel like an opening visual with one clear focal point during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a slow controlled push toward Others, with connected to others focus less on the cause and more on the sighting staying fixed as the opening anchor and Others visible. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-001"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a restrained lateral pan across maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions, letting Sea hold the opening detail while folklore stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Sea shown through source material connected to sea folklore often turns uncertain sightings into stories because the horizon is difficult to verify in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a medium composition that shows the important action or state, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Sea. Include Sea, folklore, often as supporting visual details. This should feel like an opening visual that adds a second visual detail during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Use a restrained lateral pan across maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions, letting Sea hold the opening detail while folklore stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-021"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal connected to the ship is often treated as an omen, especially for sailors who and treated within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows The Flying Dutchman connected to the ship is often treated as an omen, especially for sailors who see it during dangerous weather or at a distance in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a close visual detail that supports the current narration, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Unexplained Mysteries. Include weather, often, treated as supporting visual details. This should feel like an opening visual that widens the frame without adding new story elements during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal connected to the ship is often treated as an omen, especially for sailors who and treated within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-009"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "shadowed captain figure at a wheel without visible face, distant ghost ship, storm horizon, old sails, rough sea, no readable ship names, painterly documentary realism, maritime, storm-lit, doomed, lonely, legendary mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow push toward the central shape while the frame remains quiet. Focus on: shadowed captain figure at a wheel without visible face."
             }
           ]
         },
         {
-          "creatorNote": "Weather must stay tied to the ship is often treated as an omen, especially for sailors who see it during dangerous weather or at a distance. Keep the source boundary around sea folklore often turns uncertain sightings into stories because the horizon is difficult to verify source-limited, without turning it into a stronger claim.",
-          "estimatedReadingTime": "≈ 34 sec",
-          "narration": "The conflict begins with a specific pressure: Maritime legend of a ghost ship condemned to sail and appear at sea as an omen. The conflict begins with a specific pressure: That makes it a lasting maritime image of guilt, warning, and the fear that the sea can keep what it takes. The surviving record gives the narration a source limit: Literary and operatic versions helped standardize parts of the legend, but sailor lore and popular retellings preserve multiple forms.",
-          "sourceFactIds": [
-            "fact-047",
-            "fact-019",
-            "fact-023"
-          ],
-          "sourceFieldRefs": [
-            "derived.problemFromDetail",
-            "publicArticlePlan",
-            "publicArticlePlan.publicSourceNote"
-          ],
-          "usedFactTexts": [
-            "Maritime legend of a ghost ship condemned to sail and appear at sea as an omen.",
-            "That makes it a lasting maritime image of guilt, warning, and the fear that the sea can keep what it takes.",
-            "Literary and operatic versions helped standardize parts of the legend, but sailor lore and popular retellings preserve multiple forms."
-          ],
+          "creatorNote": "Let the source boundary stay clear without stopping the story.",
+          "estimatedReadingTime": "about 28 sec",
+          "narration": "The captain matters because he turns weather into consequence. A storm is dangerous by itself, but a cursed voyage makes the storm feel personal. The sea becomes the place where arrogance is forced to keep moving forever. The background matters because it shows why this story could survive outside a single moment. Place, memory, and witness pressure start to join together. The pattern becomes clearer.",
           "visualBeats": [
             {
-              "beatMotion": "Use a restrained lateral pan across maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions, letting The Flying Dutchman hold the follow-up anchor while weather stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows The Flying Dutchman connected to the ship is often treated as an omen, especially for sailors who see it during dangerous weather or at a distance in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Unexplained Mysteries. Include weather, often, treated as supporting visual details. This should feel like a follow-up visual with one clear focal point during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a restrained lateral pan across maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions, letting The Flying Dutchman hold the follow-up anchor while weather stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-009"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan"
-              ],
-              "usedFactTexts": []
-            },
+              "imagePrompt": "storm-bent sails under lightning far away, distant ghost ship, storm horizon, old sails, rough sea, no readable ship names, painterly documentary realism, maritime, storm-lit, doomed, lonely, legendary mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: restrained lateral drift across the scene, with no new story event added. Focus on: storm-bent sails under lightning far away."
+            }
+          ]
+        },
+        {
+          "creatorNote": "Use one concrete image, then let the narration carry the meaning.",
+          "estimatedReadingTime": "about 27 sec",
+          "narration": "The best narration keeps the curse legendary rather than legalistic. The viewer does not need one fixed contract. They need the feeling that the ship crossed a boundary and was sentenced to become its own warning. By now the subject is no longer only an image. It has a setting, a pattern, and a reason to keep returning in retellings. The middle distance tightens.",
+          "visualBeats": [
             {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal connected to weather, distance, and fear can all reshape what sailors think they see and distance within the wider frame. Use only light shifts that match the place or event mystery tone. Let distance remain the distinct a follow-up visual that adds a second visual detail.",
-              "imagePrompt": "A realistic location-documentary style image shows Weather connected to weather, distance, and fear can all reshape what sailors think they see in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a medium composition that shows the important action or state, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Weather, reshape, sailors as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal connected to weather, distance, and fear can all reshape what sailors think they see and distance within the wider frame. Use only light shifts that match the place or event mystery tone. Let distance remain the distinct a follow-up visual that adds a second visual detail.",
-              "sourceFactIds": [
-                "fact-017"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a slow controlled push toward Others, with connected to others focus less on the cause and more on the sighting staying fixed as the follow-up wider frame and cause visible. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Others connected to others focus less on the cause and more on the sighting in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a close visual detail that supports the current narration, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Others, focus, cause as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Use a slow controlled push toward Others, with connected to others focus less on the cause and more on the sighting staying fixed as the follow-up wider frame and cause visible. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-001"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "old nautical chart with a dark route line and no labels, distant ghost ship, storm horizon, old sails, rough sea, no readable ship names, painterly documentary realism, maritime, storm-lit, doomed, lonely, legendary mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow hold with a tiny light change, keeping the image-led format. Focus on: old nautical chart with a dark route line and no labels."
             }
           ]
         }
       ],
-      "sceneFocus": "The central visual should show others focus less on the cause and more on the sighting. Frame it through others focus less on the cause and more on the sighting.",
-      "sceneRole": "Core Record or Event",
-      "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-      "sourceFactIds": [
-        "fact-021",
-        "fact-010",
-        "fact-013",
-        "fact-047",
-        "fact-019",
-        "fact-023"
-      ],
-      "sourceFieldRefs": [
-        "publicArticlePlan",
-        "storyBrief.coreStoryElements",
-        "derived.problemFromDetail",
-        "publicArticlePlan.publicSourceNote"
-      ],
-      "visualDirection": "Start steady, begin a slow push toward the main detail, and cut after the scene consequence is clear.",
-      "voiceDirection": "Calm documentary pace, short pauses between ideas, slight tension, with light emphasis on \"Flying Dutchman\" when it appears."
+      "sceneFocus": "The curse gives the ship a moral shape.",
+      "sceneRole": "Doomed Captain",
+      "soundEffect": "subtle environmental texture only",
+      "visualDirection": "Use one image-led frame per narration beat. Keep motion optional and restrained.",
+      "voiceDirection": "Calm documentary narration with story rhythm, measured pauses, and no creator-facing phrasing."
     },
     {
-      "backgroundMusic": "sparse documentary bed, low drone, slow piano, slow tempo with restrained weight",
-      "directionTip": "The central visual should show others focus less on the cause and more on the sighting. Frame it through the source boundary around sea folklore often turns uncertain sightings into stories because the horizon is difficult to verify.",
+      "backgroundMusic": "low ocean drone, distant creaking wood, slow mournful strings",
       "narrationParts": [
         {
-          "creatorNote": "Sea must stay tied to the source boundary around sea folklore often turns uncertain sightings into stories because the horizon is difficult to verify. Do not add figures, motives, or incidents beyond others focus less on the cause and more on the sighting.",
-          "estimatedReadingTime": "≈ 36 sec",
-          "narration": "The scene has a clear visible point: Others focus less on the cause and more on the sighting. The account stays careful because the evidence has boundaries: Later retellings do not always keep the same emphasis. The account stays careful because the evidence has boundaries: References such as Encyclopaedia Britannica and Wikipedia are used as orientation points, not as proof for every later claim. The next fact gives the sequence a concrete action: Others focus less on the cause and more on the sighting.",
-          "sourceFactIds": [
-            "fact-034",
-            "fact-022",
-            "fact-028",
-            "fact-001"
-          ],
-          "sourceFieldRefs": [
-            "publicArticlePlan",
-            "publicArticlePlan.publicSourceNote",
-            "storyBrief.coreStoryElements"
-          ],
-          "usedFactTexts": [
-            "Others focus less on the cause and more on the sighting.",
-            "Later retellings do not always keep the same emphasis.",
-            "References such as Encyclopaedia Britannica and Wikipedia are used as orientation points, not as proof for every later claim.",
-            "Others focus less on the cause and more on the sighting."
-          ],
+          "creatorNote": "Keep this beat viewer-facing and story-led.",
+          "estimatedReadingTime": "about 29 sec",
+          "narration": "In maritime folklore, seeing the Flying Dutchman is often a bad sign. The ship is less a destination than an omen, a shape that appears when the sea is already dangerous and makes the danger feel fated. The middle section lets the strongest symbol come forward. The audience can see why this detail, and not only the title, became the part people remember. The next turn is earned.",
           "visualBeats": [
             {
-              "beatMotion": "Use a slow controlled push toward Others, with connected to others focus less on the cause and more on the sighting staying fixed as the opening anchor and Others visible. Keep the movement restrained and documentary.",
-              "imagePrompt": "A realistic location-documentary style image shows Others connected to others focus less on the cause and more on the sighting in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a clear tabletop or archival composition, with soft archival light, careful documentary restraint, and cultural context from Unexplained Mysteries. Include Others, focus, cause as supporting visual details. This should feel like an opening visual with one clear focal point during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a slow controlled push toward Others, with connected to others focus less on the cause and more on the sighting staying fixed as the opening anchor and Others visible. Keep the movement restrained and documentary.",
-              "sourceFactIds": [
-                "fact-034"
-              ],
-              "sourceFieldRefs": [
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan.publicSourceNote"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a restrained lateral pan across maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions, letting Sea hold the opening detail while folklore stays in frame. Keep the movement restrained and documentary.",
-              "imagePrompt": "A realistic location-documentary style image shows Sea shown through source material connected to sea folklore often turns uncertain sightings into stories because the horizon is difficult to verify in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a medium frame that separates the main subject from supporting evidence, with soft archival light, careful documentary restraint, and cultural context from Sea. Include Sea, folklore, often as supporting visual details. This should feel like an opening visual that adds a second visual detail during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Use a restrained lateral pan across maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions, letting Sea hold the opening detail while folklore stays in frame. Keep the movement restrained and documentary.",
-              "sourceFactIds": [
-                "fact-021"
-              ],
-              "sourceFieldRefs": [
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan.publicSourceNote"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "ship deck with sailors absent and ropes under rain, distant ghost ship, storm horizon, old sails, rough sea, no readable ship names, painterly documentary realism, maritime, storm-lit, doomed, lonely, legendary mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow push toward the central shape while the frame remains quiet. Focus on: ship deck with sailors absent and ropes under rain."
             }
           ]
         },
         {
-          "creatorNote": "Others must stay tied to the source boundary around later retellings do not always keep the same emphasis. Do not add figures, motives, or incidents beyond others focus less on the cause and more on the sighting.",
-          "estimatedReadingTime": "≈ 32 sec",
-          "narration": "The account then gives a direct movement: The Flying Dutchman is a maritime legend about a ghost ship condemned to sail the seas and appear on the horizon. The next fact gives the sequence a concrete action: It moves through storm, mist, or strange light, not as ordinary traffic but as a warning. The action moves through a specific event: Some versions connect the curse to a captain who defies God, fate, or the sea itself.",
-          "sourceFactIds": [
-            "fact-037",
-            "fact-011",
-            "fact-014"
-          ],
-          "sourceFieldRefs": [
-            "story.excerpt",
-            "publicArticlePlan",
-            "storyBrief.coreStoryElements"
-          ],
-          "usedFactTexts": [
-            "The Flying Dutchman is a maritime legend about a ghost ship condemned to sail the seas and appear on the horizon.",
-            "It moves through storm, mist, or strange light, not as ordinary traffic but as a warning.",
-            "Some versions connect the curse to a captain who defies God, fate, or the sea itself."
-          ],
+          "creatorNote": "Let the source boundary stay clear without stopping the story.",
+          "estimatedReadingTime": "about 27 sec",
+          "narration": "That omen role explains why the legend lasted. Sailors needed stories for conditions that could change faster than explanation. A ghost ship gave fear a visible form and gave the ocean's uncertainty a name. This is where the account slows down without becoming static. The central image is examined from another angle, and the meaning becomes easier to feel. The central image holds.",
           "visualBeats": [
             {
-              "beatMotion": "Use a restrained lateral pan across maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions, letting The Flying Dutchman hold the follow-up anchor while Later stays in frame. Keep the movement restrained and documentary.",
-              "imagePrompt": "A realistic location-documentary style image shows The Flying Dutchman shown through source material connected to later retellings do not always keep the same emphasis in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a medium frame that separates the main subject from supporting evidence, with soft archival light, careful documentary restraint, and cultural context from Unexplained Mysteries. Include retellings, always, emphasis as supporting visual details. This should feel like a follow-up visual with one clear focal point during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a restrained lateral pan across maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions, letting The Flying Dutchman hold the follow-up anchor while Later stays in frame. Keep the movement restrained and documentary.",
-              "sourceFactIds": [
-                "fact-022"
-              ],
-              "sourceFieldRefs": [
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan.publicSourceNote"
-              ],
-              "usedFactTexts": []
-            },
+              "imagePrompt": "ghostly sail shape beyond wet rigging, distant ghost ship, storm horizon, old sails, rough sea, no readable ship names, painterly documentary realism, maritime, storm-lit, doomed, lonely, legendary mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: restrained lateral drift across the scene, with no new story event added. Focus on: ghostly sail shape beyond wet rigging."
+            }
+          ]
+        },
+        {
+          "creatorNote": "Use one concrete image, then let the narration carry the meaning.",
+          "estimatedReadingTime": "about 27 sec",
+          "narration": "The ship also carries loneliness. It is crewed and yet unreachable, moving and yet trapped, visible and yet separate from the living world. That contradiction turns the Flying Dutchman into one of folklore's cleanest images of doom. The story gains depth when the visible detail carries both literal and symbolic force. That double weight keeps the subject from becoming thin. The meaning keeps gathering.",
+          "visualBeats": [
             {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal connected to others focus less on the cause and more on the sighting and focus within the wider frame. Keep the movement restrained and documentary.",
-              "imagePrompt": "A realistic location-documentary style image shows Others connected to others focus less on the cause and more on the sighting in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a close archival detail with the source boundary visible, with soft archival light, careful documentary restraint, and cultural context from Unexplained Mysteries. Include Others, focus, cause as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal connected to others focus less on the cause and more on the sighting and focus within the wider frame. Keep the movement restrained and documentary.",
-              "sourceFactIds": [
-                "fact-001"
-              ],
-              "sourceFieldRefs": [
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan.publicSourceNote"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a slow controlled push toward Others, with connected to others focus less on the cause and more on the sighting staying fixed as the follow-up wider frame and cause visible. Keep the movement restrained and documentary.",
-              "imagePrompt": "A realistic location-documentary style image shows Others connected to others focus less on the cause and more on the sighting in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a close archival detail with the source boundary visible, with soft archival light, careful documentary restraint, and cultural context from Unexplained Mysteries. Include Others, focus, cause as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Use a slow controlled push toward Others, with connected to others focus less on the cause and more on the sighting staying fixed as the follow-up wider frame and cause visible. Keep the movement restrained and documentary.",
-              "sourceFactIds": [
-                "fact-034"
-              ],
-              "sourceFieldRefs": [
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan.publicSourceNote"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "lantern light on waves during a storm, distant ghost ship, storm horizon, old sails, rough sea, no readable ship names, painterly documentary realism, maritime, storm-lit, doomed, lonely, legendary mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow hold with a tiny light change, keeping the image-led format. Focus on: lantern light on waves during a storm."
             }
           ]
         }
       ],
-      "sceneFocus": "The central visual should show others focus less on the cause and more on the sighting. Frame it through the source boundary around sea folklore often turns uncertain sightings into stories because the horizon is difficult to verify.",
-      "sceneRole": "Evidence and Key Details",
-      "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-      "sourceFactIds": [
-        "fact-034",
-        "fact-022",
-        "fact-028",
-        "fact-001",
-        "fact-037",
-        "fact-011",
-        "fact-014"
-      ],
-      "sourceFieldRefs": [
-        "publicArticlePlan",
-        "publicArticlePlan.publicSourceNote",
-        "storyBrief.coreStoryElements",
-        "story.excerpt"
-      ],
-      "visualDirection": "Hold the source-focused image long enough to read the visual idea, then fade softly into the next scene.",
-      "voiceDirection": "Careful pace, short pauses between ideas, natural restraint, with light emphasis on \"Flying Dutchman\" when it appears."
+      "sceneFocus": "The sighting functions as an omen at sea.",
+      "sceneRole": "Sailor Warning",
+      "soundEffect": "subtle environmental texture only",
+      "visualDirection": "Use one image-led frame per narration beat. Keep motion optional and restrained.",
+      "voiceDirection": "Calm documentary narration with story rhythm, measured pauses, and no creator-facing phrasing."
     },
     {
-      "backgroundMusic": "soft reflective drone, low drone, slow piano, sparse documentary bed, slow tempo with restrained weight",
-      "directionTip": "The central visual should show literary and operatic versions helped standardize parts of the legend, but sailor lore and popular retellings preserve multiple forms.",
+      "backgroundMusic": "low ocean drone, distant creaking wood, slow mournful strings",
       "narrationParts": [
         {
-          "creatorNote": "Literary must stay tied to the variant detail that literary and operatic versions helped standardize parts of the legend, but sailor lore and popular retellings preserve multiple forms. Use the interpretation connected to the ship moves, but it never arrives as interpretation, not as a new event.",
-          "estimatedReadingTime": "≈ 31 sec",
-          "narration": "The versions do not always preserve the same emphasis: Literary and operatic versions helped standardize parts of the legend, but sailor lore and popular retellings preserve multiple forms. One interpretation stays close to the material: The ship moves, but it never arrives. The versions do not always preserve the same emphasis: Later versions differ around the captain, the route, the curse, and whether seeing the ship predicts death, disaster, or bad weather.",
-          "sourceFactIds": [
-            "fact-003",
-            "fact-005",
-            "fact-020"
-          ],
-          "sourceFieldRefs": [
-            "storyBrief.reportedVariants",
-            "storyBrief.editorialInterpretationOptions",
-            "publicArticlePlan"
-          ],
-          "usedFactTexts": [
-            "Literary and operatic versions helped standardize parts of the legend, but sailor lore and popular retellings preserve multiple forms.",
-            "The ship moves, but it never arrives.",
-            "Later versions differ around the captain, the route, the curse, and whether seeing the ship predicts death, disaster, or bad weather."
-          ],
+          "creatorNote": "Keep this beat viewer-facing and story-led.",
+          "estimatedReadingTime": "about 27 sec",
+          "narration": "The Flying Dutchman changes as it travels through sea stories, literature, opera, film, and popular culture. Sometimes the captain is central. Sometimes the ship itself matters more. Sometimes romance, punishment, or spectacle enters the frame. The source boundary matters here because uncertainty is part of the account's shape. The story can stay atmospheric without pretending every version is settled. The boundary stays visible.",
           "visualBeats": [
             {
-              "beatMotion": "Use a slow controlled push toward Literary, with associated with a variant where literary and operatic versions helped standardize parts of the staying fixed as the opening anchor and Literary visible. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Literary associated with a variant where literary and operatic versions helped standardize parts of the legend, but sailor lore and popular retellings preserve multiple forms in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with natural low light, documentary uncertainty, and cultural context from legend. Include Literary, operatic, versions as supporting visual details. This should feel like an opening visual with one clear focal point during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a slow controlled push toward Literary, with associated with a variant where literary and operatic versions helped standardize parts of the staying fixed as the opening anchor and Literary visible. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-003"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.reportedVariants",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "storyBrief.editorialInterpretationOptions"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a restrained lateral pan across maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions, letting Sea hold the opening detail while folklore stays in frame. Use only light shifts that match the place or event mystery tone. Let folklore remain the distinct an opening visual that adds a second visual detail.",
-              "imagePrompt": "A realistic location-documentary style image shows Sea shown through source material connected to sea folklore often turns uncertain sightings into stories because the horizon is difficult to verify in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from Sea. Include Sea, folklore, often as supporting visual details. This should feel like an opening visual that adds a second visual detail during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Use a restrained lateral pan across maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions, letting Sea hold the opening detail while folklore stays in frame. Use only light shifts that match the place or event mystery tone. Let folklore remain the distinct an opening visual that adds a second visual detail.",
-              "sourceFactIds": [
-                "fact-021"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.reportedVariants",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "storyBrief.editorialInterpretationOptions"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "old harbor tavern window looking toward dark water, distant ghost ship, storm horizon, old sails, rough sea, no readable ship names, painterly documentary realism, maritime, storm-lit, doomed, lonely, legendary mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow push toward the central shape while the frame remains quiet. Focus on: old harbor tavern window looking toward dark water."
             }
           ]
         },
         {
-          "creatorNote": "Literary must stay tied to the variant detail that later versions and source comparison. Keep the source boundary around sea folklore often turns uncertain sightings into stories because the horizon is difficult to verify source-limited, without turning it into a stronger claim.",
-          "estimatedReadingTime": "≈ 31 sec",
-          "narration": "The symbolic reading grows out of the recorded details: The Flying Dutchman is treated through one concrete anchor: the maritime legend of a ghost ship condemned to sail and appear at sea as an omen. The symbolic reading grows out of the recorded details: Flying Dutchman Folklore is best read as an unexplained mysteries entry built around maritime legend of a ghost ship condemned to sail and appear at sea as an omen.",
-          "sourceFactIds": [
-            "fact-008",
-            "fact-036"
-          ],
-          "sourceFieldRefs": [
-            "contentDNA.uniqueAngle",
-            "story.summaryAnswer"
-          ],
-          "usedFactTexts": [
-            "The Flying Dutchman is treated through one concrete anchor: the maritime legend of a ghost ship condemned to sail and appear at sea as an omen.",
-            "Flying Dutchman Folklore is best read as an unexplained mysteries entry built around maritime legend of a ghost ship condemned to sail and appear at sea as an omen."
-          ],
+          "creatorNote": "Let the source boundary stay clear without stopping the story.",
+          "estimatedReadingTime": "about 27 sec",
+          "narration": "Yet the core image remains stable. A doomed ship is seen at sea, unable to arrive. That simple structure lets the legend survive different eras without losing its identity. The ship can change costume and still remain cursed. A careful frame lets competing explanations remain present. That does not weaken the mood; it shows why the subject keeps inviting retelling. The uncertainty stays useful.",
           "visualBeats": [
             {
-              "beatMotion": "Use a restrained lateral pan across maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions, letting The Flying Dutchman hold the follow-up anchor while moves stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows The Flying Dutchman framed by the interpretation that the ship moves, but it never arrives in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include never, arrives, Others as supporting visual details. This should feel like a follow-up visual with one clear focal point during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a restrained lateral pan across maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions, letting The Flying Dutchman hold the follow-up anchor while moves stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-005"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.reportedVariants",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "storyBrief.editorialInterpretationOptions"
-              ],
-              "usedFactTexts": []
-            },
+              "imagePrompt": "stack of sea tales and compass under dim light, distant ghost ship, storm horizon, old sails, rough sea, no readable ship names, painterly documentary realism, maritime, storm-lit, doomed, lonely, legendary mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: restrained lateral drift across the scene, with no new story event added. Focus on: stack of sea tales and compass under dim light."
+            }
+          ]
+        },
+        {
+          "creatorNote": "Use one concrete image, then let the narration carry the meaning.",
+          "estimatedReadingTime": "about 24 sec",
+          "narration": "Those variations can enrich the story without scattering it. Every version returns to the same emotional center: motion without rest, sight without rescue, and a horizon that refuses to become harbor. The account is strongest when it respects limits and still leaves room for wonder. The unanswered part becomes structure, not decoration. The source line remains clear.",
+          "visualBeats": [
             {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal associated with a variant where later versions and source comparison and versions within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows The Flying Dutchman associated with a variant where later versions and source comparison in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include versions, comparison, Others as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal associated with a variant where later versions and source comparison and versions within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-004"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.reportedVariants",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "storyBrief.editorialInterpretationOptions"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "multiple faint ship silhouettes in fog, distant ghost ship, storm horizon, old sails, rough sea, no readable ship names, painterly documentary realism, maritime, storm-lit, doomed, lonely, legendary mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow hold with a tiny light change, keeping the image-led format. Focus on: multiple faint ship silhouettes in fog."
             }
           ]
         }
       ],
-      "sceneFocus": "The central visual should show literary and operatic versions helped standardize parts of the legend, but sailor lore and popular retellings preserve multiple forms.",
-      "sceneRole": "Major Explanations and Uncertainty",
-      "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-      "sourceFactIds": [
-        "fact-003",
-        "fact-005",
-        "fact-020",
-        "fact-008",
-        "fact-036"
-      ],
-      "sourceFieldRefs": [
-        "storyBrief.reportedVariants",
-        "storyBrief.editorialInterpretationOptions",
-        "publicArticlePlan",
-        "contentDNA.uniqueAngle",
-        "story.summaryAnswer"
-      ],
-      "visualDirection": "Hold the establishing image briefly, then begin a slow push toward the main detail.",
-      "voiceDirection": "Calm documentary pace, short pauses between ideas, natural restraint, with light emphasis on \"Flying Dutchman\" when it appears."
+      "sceneFocus": "Different retellings keep the same central image.",
+      "sceneRole": "Changing Versions",
+      "soundEffect": "subtle environmental texture only",
+      "visualDirection": "Use one image-led frame per narration beat. Keep motion optional and restrained.",
+      "voiceDirection": "Calm documentary narration with story rhythm, measured pauses, and no creator-facing phrasing."
     },
     {
-      "backgroundMusic": "soft reflective drone, low drone, slow piano, sparse documentary bed, low density with a soft ending",
-      "directionTip": "The central visual should show maritime legend of a ghost ship condemned to sail and appear at sea as an omen.",
+      "backgroundMusic": "low ocean drone, distant creaking wood, slow mournful strings",
       "narrationParts": [
         {
-          "creatorNote": "ghost ship must stay tied to the interpretation connected to the ship moves, but it never arrives. Keep the source boundary around sea folklore often turns uncertain sightings into stories because the horizon is difficult to verify source-limited, without turning it into a stronger claim.",
-          "estimatedReadingTime": "≈ 34 sec",
-          "narration": "The ending depends on what changes afterward: Maritime legend of a ghost ship condemned to sail and appear at sea as an omen. The meaning remains tied to what the account actually says: That makes it a lasting maritime image of guilt, warning, and the fear that the sea can keep what it takes. The meaning remains tied to what the account actually says: One possible reading is that the Flying Dutchman may be read as a story about endless passage.",
-          "sourceFactIds": [
-            "fact-046",
-            "fact-006",
-            "fact-033"
-          ],
-          "sourceFieldRefs": [
-            "derived.outcomeFromDetail",
-            "storyBrief.editorialInterpretationOptions",
-            "publicArticlePlan"
-          ],
-          "usedFactTexts": [
-            "Maritime legend of a ghost ship condemned to sail and appear at sea as an omen.",
-            "That makes it a lasting maritime image of guilt, warning, and the fear that the sea can keep what it takes.",
-            "One possible reading is that the Flying Dutchman may be read as a story about endless passage."
-          ],
+          "creatorNote": "Keep this beat viewer-facing and story-led.",
+          "estimatedReadingTime": "about 27 sec",
+          "narration": "By the end, the Flying Dutchman is not only a ship. It is a maritime way of imagining consequences that cannot be escaped. The sea becomes court, prison, road, and grave at the same time. The ending returns to the image that made the subject memorable. The story has moved, but it does not need to close every door. The image can linger.",
           "visualBeats": [
             {
-              "beatMotion": "Use a slow controlled push toward The Flying Dutchman, with framed by the interpretation that the ship moves, but it never arrives staying fixed as the opening anchor and moves visible. End with a slow hold and no new action.",
-              "imagePrompt": "A realistic location-documentary style image shows The Flying Dutchman framed by the interpretation that the ship moves, but it never arrives in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a wide reflective composition with negative space, with subdued fading light, quiet reflective tension, and cultural context from Unexplained Mysteries. Include never, arrives, Others as supporting visual details. This should feel like an opening visual with one clear focal point during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a slow controlled push toward The Flying Dutchman, with framed by the interpretation that the ship moves, but it never arrives staying fixed as the opening anchor and moves visible. End with a slow hold and no new action.",
-              "sourceFactIds": [
-                "fact-005"
-              ],
-              "sourceFieldRefs": [
-                "derived.outcomeFromDetail",
-                "storyBrief.editorialInterpretationOptions",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "contentDNA.uniqueAngle"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a restrained lateral pan across maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions, letting ghost ship hold the opening detail while maritime legend stays in frame. End with a slow hold and no new action.",
-              "imagePrompt": "A realistic location-documentary style image shows ghost ship connected to maritime legend of a ghost ship condemned to sail and appear at sea as an omen in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, and cultural context from legend. Include ghost ship, maritime legend, sea as supporting visual details. This should feel like an opening visual that adds a second visual detail during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Use a restrained lateral pan across maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions, letting ghost ship hold the opening detail while maritime legend stays in frame. End with a slow hold and no new action.",
-              "sourceFactIds": [
-                "fact-046"
-              ],
-              "sourceFieldRefs": [
-                "derived.outcomeFromDetail",
-                "storyBrief.editorialInterpretationOptions",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "contentDNA.uniqueAngle"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal framed by the interpretation that that makes it a lasting maritime image of guilt and makes within the wider frame. End with a slow hold and no new action.",
-              "imagePrompt": "A realistic location-documentary style image shows The Flying Dutchman framed by the interpretation that that makes it a lasting maritime image of guilt, warning, and the fear that the sea can keep what it takes in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, and cultural context from sea. Include image, sea, makes as supporting visual details. This should feel like an opening visual that widens the frame without adding new story elements during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal framed by the interpretation that that makes it a lasting maritime image of guilt and makes within the wider frame. End with a slow hold and no new action.",
-              "sourceFactIds": [
-                "fact-006"
-              ],
-              "sourceFieldRefs": [
-                "derived.outcomeFromDetail",
-                "storyBrief.editorialInterpretationOptions",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "contentDNA.uniqueAngle"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "final ghost ship fading into storm mist, distant ghost ship, storm horizon, old sails, rough sea, no readable ship names, painterly documentary realism, maritime, storm-lit, doomed, lonely, legendary mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow push toward the central shape while the frame remains quiet. Focus on: final ghost ship fading into storm mist."
             }
           ]
         },
         {
-          "creatorNote": "Sea must stay tied to the interpretation connected to that makes it a lasting maritime image of guilt, warning, and the fear that the sea can keep what it takes. Let maritime legend of a ghost ship condemned to sail and appear at sea as an omen define the result for this Part.",
-          "estimatedReadingTime": "≈ 32 sec",
-          "narration": "The surviving record gives the narration a source limit: The Flying Dutchman appears in source material connected with maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. The surviving record gives the narration a source limit: For The Flying Dutchman, unresolved points stay unresolved when the available record does not close them. The surviving record gives the narration a source limit: The Flying Dutchman is treated through maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions.",
-          "sourceFactIds": [
-            "fact-024",
-            "fact-031",
-            "fact-027"
-          ],
-          "sourceFieldRefs": [
-            "publicArticlePlan",
-            "publicArticlePlan.publicSourceNote"
-          ],
-          "usedFactTexts": [
-            "The Flying Dutchman appears in source material connected with maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions.",
-            "For The Flying Dutchman, unresolved points stay unresolved when the available record does not close them.",
-            "The Flying Dutchman is treated through maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions."
-          ],
+          "creatorNote": "Let the source boundary stay clear without stopping the story.",
+          "estimatedReadingTime": "about 28 sec",
+          "narration": "The legend endures because it turns a sailor's deepest fear into an image: the voyage that never ends. A ship is built to travel toward land, but this one is remembered because it can never complete that promise. What remains is the afterlife of the account: the part people can carry away, redraw, repeat, or test against the world they know. The ending stays open.",
           "visualBeats": [
             {
-              "beatMotion": "Use a restrained lateral pan across maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions, letting The Flying Dutchman hold the follow-up anchor while image stays in frame. End with a slow hold and no new action.",
-              "imagePrompt": "A realistic location-documentary style image shows The Flying Dutchman framed by the interpretation that that makes it a lasting maritime image of guilt, warning, and the fear that the sea can keep what it takes in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, and cultural context from sea. Include image, sea, makes as supporting visual details. This should feel like a follow-up visual with one clear focal point during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a restrained lateral pan across maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions, letting The Flying Dutchman hold the follow-up anchor while image stays in frame. End with a slow hold and no new action.",
-              "sourceFactIds": [
-                "fact-006"
-              ],
-              "sourceFieldRefs": [
-                "derived.outcomeFromDetail",
-                "storyBrief.editorialInterpretationOptions",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "contentDNA.uniqueAngle"
-              ],
-              "usedFactTexts": []
-            },
+              "imagePrompt": "empty horizon after the ship disappears, distant ghost ship, storm horizon, old sails, rough sea, no readable ship names, painterly documentary realism, maritime, storm-lit, doomed, lonely, legendary mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: restrained lateral drift across the scene, with no new story event added. Focus on: empty horizon after the ship disappears."
+            }
+          ]
+        },
+        {
+          "creatorNote": "Use one concrete image, then let the narration carry the meaning.",
+          "estimatedReadingTime": "about 48 sec",
+          "narration": "The final image is a horizon after the sail has vanished. The viewer is left with weather, water, and the suspicion that somewhere beyond sight, the ship is still moving because folklore has never allowed it to stop. The final movement lets the mystery keep breathing. The viewer leaves with a clear shape, a source boundary, and one image that refuses to disappear. The final silence remains. The horizon keeps the curse moving even after the sail has almost disappeared. The last impression stays grounded in storm seas, sailing routes, and maritime folklore, where ghost ship, doomed voyage, storm horizon, and maritime warning remains specific enough to remember and open enough to retell.",
+          "visualBeats": [
             {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal shown through source material connected to sea folklore often turns uncertain sightings into stories and folklore within the wider frame. End with a slow hold and no new action.",
-              "imagePrompt": "A realistic location-documentary style image shows Sea shown through source material connected to sea folklore often turns uncertain sightings into stories because the horizon is difficult to verify in maritime folklore, literary references, sea-legend summaries, and ghost-ship traditions. Frame one clear scene as a wider reflective frame that keeps the ending unresolved, with subdued fading light, quiet reflective tension, and cultural context from Sea. Include Sea, folklore, often as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal shown through source material connected to sea folklore often turns uncertain sightings into stories and folklore within the wider frame. End with a slow hold and no new action.",
-              "sourceFactIds": [
-                "fact-021"
-              ],
-              "sourceFieldRefs": [
-                "derived.outcomeFromDetail",
-                "storyBrief.editorialInterpretationOptions",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "contentDNA.uniqueAngle"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "dark sea under a pale break in clouds, distant ghost ship, storm horizon, old sails, rough sea, no readable ship names, painterly documentary realism, maritime, storm-lit, doomed, lonely, legendary mood, source-aware documentary style.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow hold with a tiny light change, keeping the image-led format. Focus on: dark sea under a pale break in clouds."
             }
           ]
         }
       ],
-      "sceneFocus": "The central visual should show maritime legend of a ghost ship condemned to sail and appear at sea as an omen.",
-      "sceneRole": "What Remains Unresolved",
-      "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-      "sourceFactIds": [
-        "fact-046",
-        "fact-006",
-        "fact-033",
-        "fact-024",
-        "fact-031",
-        "fact-027"
-      ],
-      "sourceFieldRefs": [
-        "derived.outcomeFromDetail",
-        "storyBrief.editorialInterpretationOptions",
-        "publicArticlePlan",
-        "publicArticlePlan.publicSourceNote"
-      ],
-      "visualDirection": "Begin with a slow pullback, hold briefly after the final narration line, then fade to black.",
-      "voiceDirection": "Slow pace with a soft ending, short pauses between ideas, natural restraint, with light emphasis on \"Flying Dutchman\" when it appears."
+      "sceneFocus": "The ghost ship remains powerful because it never lands.",
+      "sceneRole": "Final Horizon",
+      "soundEffect": "subtle environmental texture only",
+      "visualDirection": "Use one image-led frame per narration beat. Keep motion optional and restrained.",
+      "voiceDirection": "Calm documentary narration with story rhythm, measured pauses, and no creator-facing phrasing."
     }
   ]
 }
