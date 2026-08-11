@@ -1,1105 +1,434 @@
 {
   "contentType": "script",
-  "coreMotif": "Lost Treasure Mystery",
+  "coreMotif": "Lost Treasure With A Documented Trail",
   "creatorCategorySlug": "unexplained-mysteries",
   "creatorPipelineVersion": "single-path-v1",
-  "deck": "Amber Room Mystery is prepared as a creator-ready production workspace based on the archive record, with long-form scenes, Shorts narration, image prompts, music keywords, and editing notes.",
-  "difficulty": "Beginner-friendly production package",
-  "estimatedVideoLength": "5-6 minutes",
+  "deck": "A source-based image and narration package for the Amber Room mystery, built from the Kyunolab archive record with 5 scenes, 15 voiceover beats, image prompts, and restrained production notes for a 7-8 minute video.",
+  "difficulty": "Beginner-friendly image and narration production package",
+  "estimatedVideoLength": "7-8 minutes",
   "genre": "Unexplained Mysteries Creator Library",
   "id": "amber-room-mystery-youtube-script",
   "imagePrompts": [
-    "A realistic location-documentary style image shows Ordinary placed within ordinary records with unresolved details in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Ordinary, records, unresolved as supporting visual details. This should feel like an opening visual with one clear focal point during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Amber Room Mystery held as the central visual in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Amber Room Mystery, Amber Room, Room as supporting visual details. This should feel like an opening visual that adds a second visual detail during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows The Amber Room connected to the mystery matters because it joins real art history with the emotional shape of a lost treasure hunt in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a close visual detail that supports the current narration, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include history, mystery, matters as supporting visual details. This should feel like an opening visual that widens the frame without adding new story elements during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows The Amber Room connected to the mystery matters because it joins real art history with the emotional shape of a lost treasure hunt in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include history, mystery, matters as supporting visual details. This should feel like a follow-up visual with one clear focal point during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows The Amber Room connected to disappearance of the Amber Room during World War II and the search theories that followed in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include The Amber Room, Amber Room, World War II as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows The Amber Room connected to the story sits inside the larger history of wartime looting and cultural loss in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a close visual detail that supports the current narration, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include history, inside, larger as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows The Amber Room connected to the mystery matters because it joins real art history with the emotional shape of a lost treasure hunt in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Unexplained Mysteries. Include history, mystery, matters as supporting visual details. This should feel like an opening visual with one clear focal point during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows The Amber Room shown through source material connected to later retellings do not always keep the same emphasis in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a medium composition that shows the important action or state, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Unexplained Mysteries. Include retellings, always, emphasis as supporting visual details. This should feel like an opening visual that adds a second visual detail during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows The Amber Room connected to the story sits inside the larger history of wartime looting and cultural loss in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a close visual detail that supports the current narration, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Unexplained Mysteries. Include history, inside, larger as supporting visual details. This should feel like an opening visual that widens the frame without adding new story elements during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows The Amber Room connected to the story sits inside the larger history of wartime looting and cultural loss in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Unexplained Mysteries. Include history, inside, larger as supporting visual details. This should feel like a follow-up visual with one clear focal point during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows The Amber Room connected to disappearance of the Amber Room during World War II and the search theories that followed in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a medium composition that shows the important action or state, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Unexplained Mysteries. Include The Amber Room, Amber Room, World War II as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows The Amber Room connected to the mystery matters because it joins real art history with the emotional shape of a lost treasure hunt in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a close visual detail that supports the current narration, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Unexplained Mysteries. Include history, mystery, matters as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows The Amber Room connected to the mystery matters because it joins real art history with the emotional shape of a lost treasure hunt in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a clear tabletop or archival composition, with soft archival light, careful documentary restraint, and cultural context from Unexplained Mysteries. Include history, mystery, matters as supporting visual details. This should feel like an opening visual with one clear focal point during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows The Amber Room shown through source material connected to later retellings do not always keep the same emphasis in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a medium frame that separates the main subject from supporting evidence, with soft archival light, careful documentary restraint, and cultural context from Unexplained Mysteries. Include retellings, always, emphasis as supporting visual details. This should feel like an opening visual that adds a second visual detail during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Public shown through source material connected to public references used for orientation include Smithsonian Magazine and Encyclopaedia Britannica in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a medium frame that separates the main subject from supporting evidence, with soft archival light, careful documentary restraint, and cultural context from Public. Include references, orientation, include as supporting visual details. This should feel like a follow-up visual with one clear focal point during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows The Amber Room connected to the mystery matters because it joins real art history with the emotional shape of a lost treasure hunt in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a close archival detail with the source boundary visible, with soft archival light, careful documentary restraint, and cultural context from Unexplained Mysteries. Include history, mystery, matters as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows The Amber Room connected to the mystery matters because it joins real art history with the emotional shape of a lost treasure hunt in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a close archival detail with the source boundary visible, with soft archival light, careful documentary restraint, and cultural context from Unexplained Mysteries. Include history, mystery, matters as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Theories associated with a variant where theories have placed the missing panels in mines, tunnels, ships, bunkers, and private hands in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Theories, placed, missing as supporting visual details. This should feel like an opening visual with one clear focal point during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows The Amber Room shown through source material connected to later retellings do not always keep the same emphasis in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include retellings, always, emphasis as supporting visual details. This should feel like an opening visual that adds a second visual detail during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows The Amber Room framed by the interpretation that the Amber Room mystery lasts because loss has a shape here in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include The Amber Room, Amber Room Mystery, Amber Room as supporting visual details. This should feel like a follow-up visual with one clear focal point during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows The Amber Room associated with a variant where some searches produced intriguing claims, but none have become a settled recovery of the original room in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include room, searches, produced as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows The Amber Room framed by the interpretation that the Amber Room mystery lasts because loss has a shape here in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a wide reflective composition with negative space, with subdued fading light, quiet reflective tension, and cultural context from Unexplained Mysteries. Include The Amber Room, Amber Room Mystery, Amber Room as supporting visual details. This should feel like an opening visual with one clear focal point during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows It connected to it also sits inside a very human hope that something beautiful might still be hidden somewhere in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, and cultural context from Unexplained Mysteries. Include inside, human, something as supporting visual details. This should feel like an opening visual that adds a second visual detail during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows The Amber Room connected to a reconstruction exists, but the fate of the original remains disputed in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, and cultural context from Unexplained Mysteries. Include reconstruction, original, remains as supporting visual details. This should feel like an opening visual that widens the frame without adding new story elements during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows The Amber Room connected to a reconstruction exists, but the fate of the original remains disputed in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, and cultural context from Unexplained Mysteries. Include reconstruction, original, remains as supporting visual details. This should feel like a follow-up visual with one clear focal point during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows The Amber Room shown through source material connected to later retellings do not always keep the same emphasis in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a wider reflective frame that keeps the ending unresolved, with subdued fading light, quiet reflective tension, and cultural context from Unexplained Mysteries. Include retellings, always, emphasis as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows The Amber Room framed by the interpretation that the Amber Room mystery lasts because loss has a shape here in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a wider reflective frame that keeps the ending unresolved, with subdued fading light, quiet reflective tension, and cultural context from Unexplained Mysteries. Include The Amber Room, Amber Room Mystery, Amber Room as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the final sequence. No gore, readable text, logos, watermarks, or modern objects."
+    "A richly glowing amber-paneled room in low palace light, mirrors and gold detail, empty and still, documentary realism, no readable text.",
+    "Amber wall panels partly removed in a dark palace interior, wooden crates nearby, gold reflection on rough boards, no readable labels.",
+    "A darkened palace room with one empty wall section and amber light fading across the floor, wartime atmosphere, no people, no readable text.",
+    "A palace gallery suggested through amber panels, gilded ornament, and a formal doorway, warm daylight, empty historical atmosphere, no readable plaques.",
+    "Close detail of amber panels glowing honey-gold with carved texture and mirror reflections, no modern museum lighting, no text.",
+    "Exterior hint of a grand palace in pale light with warm amber glow suggested in a window, restrained historical realism, no readable signs.",
+    "Wooden crates in a dim wartime storage room with amber glow escaping through cracks, map shadows, no readable markings.",
+    "Ruined stone interior after wartime damage, empty frame where panels might have been, dust and cold light, no bodies, no readable text.",
+    "A restrained archival tabletop with old crate wood, a folded map, amber-colored shard-like reflections, and dark negative space, no labels.",
+    "A luminous reconstructed amber room, empty, polished, beautiful, with one darker reflection suggesting absence, documentary realism, no readable plaques.",
+    "A split-feeling composition: glowing amber wall on one side, dark stacked crates on the other, restrained and realistic, no text.",
+    "A quiet visitor point of view inside amber light, no visible faces, the room beautiful but slightly empty, reflective mood, no readable signs.",
+    "An empty amber-lit room fading into a dark archival storage space, elegant but unresolved, no text, no people.",
+    "A map with several unmarked routes, a small amber glow near the center, and surrounding darkness, no readable labels, documentary table light.",
+    "Final restrained image of amber panels glowing warmly while a dark crate silhouette sits in the foreground, no readable text, unresolved ending."
   ],
   "imagePromptsIncluded": true,
-  "logline": "The Amber Room is treated through one concrete anchor: the disappearance of the Amber Room during World War II and the search theories that followed.",
+  "logline": "The Amber Room becomes a video about beauty removed into war, where documented history and missing panels keep refusing a final ending.",
   "longformIncluded": true,
   "longformScript": [
-    "The setting gives the scene a concrete frame: Ordinary records with unresolved details. The account identifies the central subject clearly: Amber Room Mystery: The Lost Treasure That Still Refuses a Final Ending. The account then gives a direct movement: The mystery matters because it joins real art history with the emotional shape of a lost treasure hunt. The conflict begins with a specific pressure: Disappearance of the Amber Room during World War II and the search theories that followed.",
-    "The account then gives a direct movement: The story sits inside the larger history of wartime looting and cultural loss. The action moves through a specific event: The Amber Room turns on one missing or unresolved point: the disappearance of the Amber Room during World War II and the search theories that followed. The action moves through a specific event: The reconstructed Amber Room gives visitors an image of what was lost, but it does not solve the fate of the original.",
-    "The source trail matters before the claim is treated as certain: Later retellings do not always keep the same emphasis. The next fact gives the sequence a concrete action: That disappearance created one of the best-known lost-art mysteries of the twentieth century. The account then gives a direct movement: The Amber Room appears in source material connected with art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation.",
-    "The surviving record gives the narration a source limit: References such as Smithsonian Magazine and Encyclopaedia Britannica are used as orientation points, not as proof for every later claim. The surviving record gives the narration a source limit: The Amber Room is treated through art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. The surviving record gives the narration a source limit: Some searches produced intriguing claims, but none have become a settled recovery of the original room.",
-    "The scene has a clear visible point: The mystery matters because it joins real art history with the emotional shape of a lost treasure hunt. The account stays careful because the evidence has boundaries: Public references used for orientation include Smithsonian Magazine and Encyclopaedia Britannica. The action moves through a specific event: The mystery matters because it joins real art history with the emotional shape of a lost treasure hunt.",
-    "The source trail matters before the claim is treated as certain: Those references are useful for keeping official records, witness claims, and unresolved details separate. The action moves through a specific event: Some searches produced intriguing claims, but none have become a settled recovery of the original room. The action moves through a specific event: One possible reading is that the Amber Room mystery lasts because loss has a shape here.",
-    "The versions do not always preserve the same emphasis: Theories have placed the missing panels in mines, tunnels, ships, bunkers, and private hands. One interpretation stays close to the material: The Amber Room mystery lasts because loss has a shape here. The versions do not always preserve the same emphasis: Some searches produced intriguing claims, but none have become a settled recovery of the original room.",
-    "The symbolic reading grows out of the recorded details: Amber Room Mystery follows disappearance of the Amber Room during World War II and the search theories that followed, then asks why that detail became memorable enough to retell. The symbolic reading grows out of the recorded details: The Amber Room is treated through one concrete anchor: the disappearance of the Amber Room during World War II and the search theories that followed.",
-    "The ending depends on what changes afterward: It also sits inside a very human hope that something beautiful might still be hidden somewhere. The result is stated through a concrete outcome: A reconstruction exists, but the fate of the original remains disputed. The result is stated through a concrete outcome: Disappearance of the Amber Room during World War II and the search theories that followed.",
-    "The surviving record gives the narration a source limit: For The Amber Room, unresolved points stay unresolved when the available record does not close them. The surviving record gives the narration a source limit: Theories have placed the missing panels in mines, tunnels, ships, bunkers, and private hands. The surviving record gives the narration a source limit: It treats the material as folklore, legend, or documented retelling rather than confirmed fact."
+    "The Amber Room begins as beauty so intense it almost stops being furniture. Amber panels, gold leaf, mirrors, and warm light turn a room into something closer to a jewel box large enough to enter. But the mystery does not begin when people admire it. It begins when that beauty becomes portable. The first scene needs beauty before loss, because the disappearance matters only after the room feels worth saving.",
+    "A wall can feel permanent until someone decides it can be taken apart. The Amber Room becomes frightening in that moment, not because it is cursed, but because culture can be unscrewed, packed, labeled, and moved into danger. A room that once surrounded visitors becomes a set of panels waiting for crates. The panels should feel almost too delicate to survive the hands that begin moving them.",
+    "That is why this lost treasure story feels colder than a simple hunt. The object is documented. The loss is historical. The beauty is not imaginary. What vanishes is not only amber and gold, but the confidence that something magnificent can remain safe simply because everyone knows it matters. The theft feels colder because the object was never only expensive; it was a room built to overwhelm the eye.",
+    "Before the disappearance, the Amber Room already had a long life. It was tied to Prussian gift diplomacy, Peter the Great, and later installation in Catherine Palace. That history matters because it gives the room layers. It was not just expensive decoration. It carried power, taste, alliance, and imperial performance in amber and light. Imperial display becomes vulnerable once history stops admiring it and starts dismantling it.",
+    "Amber itself helps the story. It is not cold like stone or metal. It looks warm, trapped, organic, almost alive. In a room, that warmth becomes immersive. The visitor is not looking at one treasure in a case. The visitor stands inside the treasure. Later loss feels almost architectural, as if a whole atmosphere was stolen. That shift from room to cargo is the turn that makes the story unsettling.",
+    "The room becomes easier to mourn because it had a known home. Catherine Palace gave the Amber Room a place in memory. When the panels disappeared, people were not only asking where a treasure went. They were asking how a famous room could be removed from the place that made it feel complete. The crates make the mystery practical and frightening at the same time.",
+    "In 1941, the story changes shape. The Amber Room is looted, dismantled, and moved. The room becomes a shipment. Its glow is forced into crates, and the trail leads toward Konigsberg. This is where the mystery stops being decorative. War does not simply threaten beauty from outside. It changes how beauty is handled. Every inventory detail becomes a reminder that beauty can be broken into units.",
+    "The more concrete the trail becomes, the more painful the gap feels. There are known movements, known places, and known fragments of history. Then the ending refuses to settle. Konigsberg collapses into ruin, records break, stories multiply, and the original panels slip into a space where history and rumor keep touching. Konigsberg gives the story its fog, where documents, ruins, rumor, and wartime panic blur together.",
+    "A vanished treasure can invite fantasy very quickly. Secret bunkers, ships, mines, lakes, and hidden trains all become possible in public imagination. But the strongest Amber Room narration should not chase every theory as equal. It should stay with the central ache: something real was taken, and the original never came cleanly back. The broken trail should feel like history losing its grip, not like a puzzle game. The broken trail should feel like history losing its grip, not like a puzzle waiting politely to be solved.",
+    "The 2003 reconstruction gives the story a strange second life. Visitors can again stand inside amber light. The room exists again in one sense, and yet the mystery remains. Reconstruction repairs the wound enough to show what was lost, but it cannot erase the question of the original panels. The reconstructed room is not an answer; it is a visible replacement standing beside an invisible wound.",
+    "That tension is rare. Many lost treasures are only imagined after they disappear. The Amber Room can be visually returned and still remain missing. The copy does not make the original irrelevant. It makes the original more haunting, because the viewer can feel the scale of what vanished. That contrast lets the listener understand why a restored glow can still feel haunted.",
+    "The rebuilt room also changes the audience. People are not only treasure hunters asking where it is. They become witnesses to how memory works. The reconstruction says beauty can be rebuilt. The mystery says history cannot always be restored to the exact thing it was before war touched it. The empty space behind the restoration keeps asking what, exactly, was lost.",
+    "The Amber Room mystery endures because it has both proof and absence. There was a room. It was admired, moved, looted, traced, lost, and reconstructed. The story does not need a curse or a monster. It has something more uncomfortable: documented beauty can still vanish into human violence and broken records. By the close, the mystery is less about treasure than about whether cultural memory can ever be fully repaired.",
+    "Every theory tries to give the original panels a final location. A mine. A cellar. A ship. A burned ruin. A private hiding place. Each answer would change the ending. But until proof arrives, the mystery remains suspended between art history and treasure legend. The unresolved ending lets the amber keep shining without pretending the original has returned.",
+    "The final image should not be a discovery. It should be a room of light with a shadow behind it. The Amber Room has been rebuilt, but the original absence still stands just outside the glow. That is why the story keeps returning: not only to find treasure, but to ask what reconstruction can never fully give back. The last feeling should be a door of gold light closing on a room history could not protect."
   ],
-  "mainSubject": "Amber Room Mystery",
-  "metaDescription": "A creator-ready production workspace for Amber Room Mystery, with long-form scenes, Shorts narration, image prompts, music keywords, and editing notes.",
-  "mood": "documentary, unresolved, and tense",
+  "mainSubject": "Amber Room mystery",
+  "metaDescription": "A 7-8 minute source-based Amber Room mystery video script with story-led narration, image prompts, Shorts script, thumbnail ideas, and production workflow.",
+  "mood": "elegant, wartime, unresolved, investigative, restrained",
   "motionPrompts": [
-    "Use a slow controlled push toward Ordinary, with placed within ordinary records with unresolved details staying fixed as the opening anchor and Ordinary visible. Use only light shifts that match the place or event mystery tone.",
-    "Use a restrained lateral pan across art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation, letting Amber Room Mystery hold the opening detail while Amber Room stays in frame. Use only light shifts that match the place or event mystery tone.",
-    "Start with a static hold, then pull back slightly to reveal connected to the mystery matters because it joins real art history with the emotional and matters within the wider frame. Use only light shifts that match the place or event mystery tone.",
-    "Use a restrained lateral pan across art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation, letting The Amber Room hold the follow-up anchor while history stays in frame. Use only light shifts that match the place or event mystery tone.",
-    "Start with a static hold, then pull back slightly to reveal connected to disappearance of the Amber Room during World War II and the search and Amber Room within the wider frame. Use only light shifts that match the place or event mystery tone.",
-    "Use a slow controlled push toward The Amber Room, with connected to the story sits inside the larger history of wartime looting and cultural staying fixed as the follow-up wider frame and larger visible. Use only light shifts that match the place or event mystery tone.",
-    "Use a slow controlled push toward The Amber Room, with connected to the mystery matters because it joins real art history with the emotional staying fixed as the opening anchor and history visible. Use only light shifts that match the place or event mystery tone.",
-    "Use a restrained lateral pan across art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation, letting The Amber Room hold the opening detail while retellings stays in frame. Use only light shifts that match the place or event mystery tone.",
-    "Start with a static hold, then pull back slightly to reveal connected to the story sits inside the larger history of wartime looting and cultural and larger within the wider frame. Use only light shifts that match the place or event mystery tone.",
-    "Use a restrained lateral pan across art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation, letting The Amber Room hold the follow-up anchor while history stays in frame. Use only light shifts that match the place or event mystery tone. Let history remain the distinct a follow-up visual with one clear focal point.",
-    "Start with a static hold, then pull back slightly to reveal connected to disappearance of the Amber Room during World War II and the search and Amber Room within the wider frame. Use only light shifts that match the place or event mystery tone. Let Amber Room remain the distinct a follow-up visual that adds a second visual detail.",
-    "Use a slow controlled push toward The Amber Room, with connected to the mystery matters because it joins real art history with the emotional staying fixed as the follow-up wider frame and matters visible. Use only light shifts that match the place or event mystery tone.",
-    "Use a slow controlled push toward The Amber Room, with connected to the mystery matters because it joins real art history with the emotional staying fixed as the opening anchor and history visible. Keep the movement restrained and documentary.",
-    "Use a restrained lateral pan across art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation, letting The Amber Room hold the opening detail while retellings stays in frame. Keep the movement restrained and documentary.",
-    "Use a restrained lateral pan across art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation, letting Public hold the follow-up anchor while references stays in frame. Keep the movement restrained and documentary.",
-    "Start with a static hold, then pull back slightly to reveal connected to the mystery matters because it joins real art history with the emotional and mystery within the wider frame. Keep the movement restrained and documentary.",
-    "Use a slow controlled push toward The Amber Room, with connected to the mystery matters because it joins real art history with the emotional staying fixed as the follow-up wider frame and matters visible. Keep the movement restrained and documentary.",
-    "Use a slow controlled push toward Theories, with associated with a variant where theories have placed the missing panels in mines, tunnels staying fixed as the opening anchor and Theories visible. Use only light shifts that match the place or event mystery tone.",
-    "Use a restrained lateral pan across art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation, letting The Amber Room hold the opening detail while retellings stays in frame. Use only light shifts that match the place or event mystery tone. Let retellings remain the distinct an opening visual that adds a second visual detail.",
-    "Use a restrained lateral pan across art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation, letting The Amber Room hold the follow-up anchor while The Amber Room stays in frame. Use only light shifts that match the place or event mystery tone.",
-    "Start with a static hold, then pull back slightly to reveal associated with a variant where some searches produced intriguing claims, but none have become and searches within the wider frame. Use only light shifts that match the place or event mystery tone.",
-    "Use a slow controlled push toward The Amber Room, with framed by the interpretation that the Amber Room mystery lasts because loss has a staying fixed as the opening anchor and The Amber Room visible. End with a slow hold and no new action.",
-    "Use a restrained lateral pan across art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation, letting It hold the opening detail while human stays in frame. End with a slow hold and no new action.",
-    "Start with a static hold, then pull back slightly to reveal connected to a reconstruction exists, but the fate of the original remains disputed and original within the wider frame. End with a slow hold and no new action.",
-    "Use a restrained lateral pan across art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation, letting The Amber Room hold the follow-up anchor while reconstruction stays in frame. End with a slow hold and no new action.",
-    "Start with a static hold, then pull back slightly to reveal shown through source material connected to later retellings do not always keep the same and retellings within the wider frame. End with a slow hold and no new action.",
-    "Use a slow controlled push toward The Amber Room, with framed by the interpretation that the Amber Room mystery lasts because loss has a staying fixed as the follow-up wider frame and Amber Room visible. End with a slow hold and no new action."
+    "Optional edit: slow push through the amber wall details, then hold on an empty doorway.",
+    "Optional edit: slow pan from glowing panel to dark crate.",
+    "Optional edit: slow pullback from empty wall to the room around it.",
+    "Optional edit: slow glide across the room as if entering a remembered palace.",
+    "Optional edit: slow macro drift across amber texture and reflection.",
+    "Optional edit: slow push toward the glowing window, then cut before entering.",
+    "Optional edit: slow push toward the crate seam with faint gold light.",
+    "Optional edit: slow pullback from empty frame into ruined space.",
+    "Optional edit: slow overhead drift across map and wood, never stopping on one answer.",
+    "Optional edit: slow glide through amber light, ending on a darker reflection.",
+    "Optional edit: slow crossfade from glowing wall to crates.",
+    "Optional edit: slow hold as the amber reflection dims slightly.",
+    "Optional edit: slow fade from amber wall to dark storage shelves.",
+    "Optional edit: slow overhead movement across routes, ending on the amber glow.",
+    "Optional edit: hold on the amber glow, then fade to the crate silhouette."
   ],
   "originalStorySlug": "amber-room-mystery",
   "pipelineDiagnostics": {
-    "fallbackUsed": false,
-    "normalizedInputSchemaVersion": "1.0",
-    "scenePlanSchemaVersion": "1.0"
+    "imagePromptCount": 15,
+    "motionPromptCount": 15,
+    "narrationBeatCount": 15,
+    "polishedAt": "2026-08-12",
+    "polishedBy": "codex-manual-source-based-batch-001-polish",
+    "qualityDirection": "remove repeated extension phrasing and keep story-led narration",
+    "regeneratedAt": "2026-08-12",
+    "regeneratedBy": "codex-manual-source-based-batch-001",
+    "sceneCount": 5,
+    "shortSceneCount": 5,
+    "sourceStorySlug": "amber-room-mystery"
   },
   "publishedAt": "2026-07-21",
   "runtimePlan": {
-    "estimatedFinalRuntime": "5-6 minutes",
-    "estimatedFinalSeconds": 345,
-    "finalVideoSeconds": 345,
-    "narrationReadSeconds": 310,
-    "narrationReadTime": "5 min 10 sec",
-    "plannedTransitionAndVisualTime": "35 sec",
-    "totalWordCount": 729
+    "estimatedFinalRuntime": "7-8 minutes",
+    "estimatedFinalSeconds": 480,
+    "finalVideoSeconds": 480,
+    "narrationReadSeconds": 434,
+    "narrationReadTime": "7 min 14 sec",
+    "plannedTransitionAndVisualTime": "0 min 46 sec",
+    "totalWordCount": 1020
   },
   "schemaVersion": "single-path-v1",
-  "seoTitle": "Free Amber Room Mystery YouTube Script",
-  "setting": "quiet archival setting",
+  "seoTitle": "Amber Room Mystery YouTube Script - Image and Narration Package",
+  "setting": "Catherine Palace, wartime crates, Konigsberg, reconstruction memory",
   "shortForm": {
     "finalVideoSeconds": 60,
-    "narrationReadSeconds": 56,
+    "narrationReadSeconds": 51,
     "scenes": [
       {
-        "backgroundMusic": "quiet opening pulse, low drone, slow piano, short-form low density",
-        "estimatedReadSeconds": 11,
-        "imagePrompt": "A atmospheric location documentary scene shows The Amber Room introduced through history within an ordinary modern location with documentary realism, framed as a vertical short-form frame with strong negative space. Use natural low light with restrained contrast and documentary mystery atmosphere within modern folklore context; center the frame on history. No readable text, logos, watermarks, modern objects, graphic gore, or cartoon styling.",
-        "motionPrompt": "Use a slow controlled push toward The Amber Room, keeping history as the central visual anchor.",
-        "narration": "The Amber Room starts with the mystery matters because it joins real art history. The detail points to the story sits inside the larger history of wartime.",
-        "role": "What and Where",
-        "sceneFocus": "What and Where: The Amber Room tied to the mystery matters because it joins real.",
+        "backgroundMusic": "compact atmospheric bed matching the long-form tone",
+        "estimatedReadSeconds": 12,
+        "imagePrompt": "Vertical documentary image: glowing amber room with dark crates nearby, clear single focal point, no readable text, no logos, no modern UI.",
+        "motionPrompt": "Slow restrained movement that supports the narration without adding new story events.",
+        "narration": "The Amber Room was not just a treasure. It was a room of amber and gold. The mystery begins when that room becomes panels, crates, and a wartime trail.",
+        "role": "Hook",
+        "sceneFocus": "Beauty becomes cargo.",
         "sceneIndex": 1,
-        "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-        "sourceFactIds": [
-          "fact-001",
-          "fact-002",
-          "fact-011",
-          "fact-004",
-          "fact-053"
-        ],
-        "sourceFieldRefs": [
-          "storyBrief.knownNames",
-          "story.subjectSpecificVocabulary",
-          "storyBrief.cultureOrContext",
-          "story.sceneAnchor",
-          "factRecords.settingTerms",
-          "storyBrief.coreStoryElements",
-          "publicArticlePlan",
-          "story.excerpt",
-          "story.detail",
-          "contentDNA.sceneAnchor",
-          "contentDNA.culturalFrame",
-          "story.title",
-          "derived.problemFromDetail"
-        ],
-        "usedFactTexts": [
-          "The mystery matters because it joins real art history with the emotional shape of a lost treasure hunt.",
-          "The story sits inside the larger history of wartime looting and cultural loss.",
-          "Ordinary records with unresolved details.",
-          "Amber Room Mystery: The Lost Treasure That Still Refuses a Final Ending.",
-          "Disappearance of the Amber Room during World War II and the search theories that followed."
-        ],
-        "voiceDirection": "Clear short-form pace, clean pauses, restrained tone, light emphasis on \"Amber\"."
+        "soundEffect": "subtle ambience only",
+        "voiceDirection": "Clear short-form delivery with one clean pause."
       },
       {
-        "backgroundMusic": "sparse documentary bed, low drone, slow piano, short-form low density",
+        "backgroundMusic": "compact atmospheric bed matching the long-form tone",
         "estimatedReadSeconds": 11,
-        "imagePrompt": "A atmospheric location documentary scene shows The Amber Room positioned beside matters as the source detail becomes visible within an ordinary modern location with documentary realism, framed in a clean medium shot with the key detail near the center. Use soft archival light and controlled shadows and documentary mystery atmosphere within modern folklore context; center the frame on matters. No readable text, logos, watermarks, modern objects, graphic gore, or cartoon styling.",
-        "motionPrompt": "Use a restrained lateral pan across history, then settle quietly on The Amber Room.",
-        "narration": "The Amber Room moves through the mystery matters because it joins real art history. The detail points to the story sits inside the larger history of wartime.",
-        "role": "Core Record",
-        "sceneFocus": "Core Record: The Amber Room tied to the mystery matters because it joins real.",
+        "imagePrompt": "Vertical documentary image: wartime crates with amber glow in a dark storage room, clear single focal point, no readable text, no logos, no modern UI.",
+        "motionPrompt": "Slow restrained movement that supports the narration without adding new story events.",
+        "narration": "In 1941, the Amber Room was looted and moved toward Konigsberg. Then ruin, broken records, and rumor left the original panels without a final ending.",
+        "role": "War",
+        "sceneFocus": "The trail breaks at Konigsberg.",
         "sceneIndex": 2,
-        "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-        "sourceFactIds": [
-          "fact-001",
-          "fact-002",
-          "fact-003",
-          "fact-025",
-          "fact-053"
-        ],
-        "sourceFieldRefs": [
-          "storyBrief.coreStoryElements",
-          "publicArticlePlan",
-          "story.excerpt",
-          "story.sceneAnchor",
-          "story.detail",
-          "contentDNA.sceneAnchor",
-          "storyBrief.existenceEvidence",
-          "story.researchSources",
-          "story.evidence",
-          "derived.problemFromDetail"
-        ],
-        "usedFactTexts": [
-          "The mystery matters because it joins real art history with the emotional shape of a lost treasure hunt.",
-          "The story sits inside the larger history of wartime looting and cultural loss.",
-          "That disappearance created one of the best-known lost-art mysteries of the twentieth century.",
-          "Later retellings do not always keep the same emphasis.",
-          "Disappearance of the Amber Room during World War II and the search theories that followed."
-        ],
-        "voiceDirection": "Careful pace, clean pauses, restrained tone, light emphasis on \"Amber\"."
+        "soundEffect": "subtle ambience only",
+        "voiceDirection": "Clear short-form delivery with one clean pause."
       },
       {
-        "backgroundMusic": "sparse documentary bed, low drone, slow piano, short-form low density",
-        "estimatedReadSeconds": 11,
-        "imagePrompt": "A atmospheric location documentary scene shows The Amber Room positioned beside matters as the source detail becomes visible within an ordinary modern location with documentary realism, framed as a close readable detail with the background still visible. Use soft archival light and controlled shadows and documentary mystery atmosphere within modern folklore context; center the frame on matters. No readable text, logos, watermarks, modern objects, graphic gore, or cartoon styling.",
-        "motionPrompt": "Begin with a still frame, then gently pull back to reveal matters.",
-        "narration": "The Amber Room turns on later retellings do not always keep the same emphasis. The key turn comes when public references used for orientation include Smithsonian Magazine.",
-        "role": "Key Evidence",
-        "sceneFocus": "Key Evidence: The Amber Room tied to later retellings do not.",
+        "backgroundMusic": "compact atmospheric bed matching the long-form tone",
+        "estimatedReadSeconds": 10,
+        "imagePrompt": "Vertical documentary image: reconstructed amber room with a dark reflection, clear single focal point, no readable text, no logos, no modern UI.",
+        "motionPrompt": "Slow restrained movement that supports the narration without adding new story events.",
+        "narration": "The room was reconstructed in 2003, but the original panels are still unresolved. The rebuilt glow makes the missing original feel even sharper.",
+        "role": "Rebuild",
+        "sceneFocus": "The copy does not close the case.",
         "sceneIndex": 3,
-        "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-        "sourceFactIds": [
-          "fact-025",
-          "fact-026",
-          "fact-027",
-          "fact-034",
-          "fact-001"
-        ],
-        "sourceFieldRefs": [
-          "storyBrief.existenceEvidence",
-          "story.researchSources",
-          "story.evidence",
-          "storyBrief.coreStoryElements",
-          "story.title",
-          "contentDNA.culturalFrame",
-          "publicArticlePlan",
-          "story.excerpt",
-          "story.sceneAnchor",
-          "story.detail",
-          "contentDNA.sceneAnchor",
-          "derived.turningPointFromDetail",
-          "derived.outcomeFromDetail",
-          "derived.problemFromDetail"
-        ],
-        "usedFactTexts": [
-          "Later retellings do not always keep the same emphasis.",
-          "Public references used for orientation include Smithsonian Magazine and Encyclopaedia Britannica.",
-          "Those references are useful for keeping official records, witness claims, and unresolved details separate.",
-          "The mystery matters because it joins real art history with the emotional shape of a lost treasure hunt.",
-          "The mystery matters because it joins real art history with the emotional shape of a lost treasure hunt."
-        ],
-        "voiceDirection": "Careful pace, clean pauses, restrained tone, light emphasis on \"Amber\"."
+        "soundEffect": "subtle ambience only",
+        "voiceDirection": "Clear short-form delivery with one clean pause."
       },
       {
-        "backgroundMusic": "quiet opening pulse, low drone, slow piano, short-form low density",
-        "estimatedReadSeconds": 11,
-        "imagePrompt": "A atmospheric location documentary scene shows The Amber Room introduced through because within an ordinary modern location with documentary realism, framed with foreground evidence leading toward the main subject. Use natural low light with restrained contrast and documentary mystery atmosphere within modern folklore context; center the frame on because. No readable text, logos, watermarks, modern objects, graphic gore, or cartoon styling.",
-        "motionPrompt": "Reveal because from foreground to background with subtle parallax and restrained movement.",
-        "narration": "The later question stays with theories have placed the missing panels in mines, tunnels. Some versions keep some searches produced intriguing claims, but none have become.",
-        "role": "Main Explanations",
-        "sceneFocus": "Main Explanations: The Amber Room tied to theories have placed the missing panels.",
+        "backgroundMusic": "compact atmospheric bed matching the long-form tone",
+        "estimatedReadSeconds": 10,
+        "imagePrompt": "Vertical documentary image: old map, amber reflection, and crate wood, clear single focal point, no readable text, no logos, no modern UI.",
+        "motionPrompt": "Slow restrained movement that supports the narration without adding new story events.",
+        "narration": "Ships, mines, bunkers, and cellars all enter the legend. The stronger story keeps the ache clear: something real was taken and never fully returned.",
+        "role": "Theory",
+        "sceneFocus": "Not every theory is proof.",
         "sceneIndex": 4,
-        "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-        "sourceFactIds": [
-          "fact-005",
-          "fact-006",
-          "fact-007",
-          "fact-025",
-          "fact-008"
-        ],
-        "sourceFieldRefs": [
-          "storyBrief.reportedVariants",
-          "publicArticlePlan",
-          "publicArticlePlan.publicSourceNote",
-          "story.summaryAnswer",
-          "story.publicSourceBasis",
-          "storyBrief.cultureOrContext",
-          "story.publicSourceNoteSeed",
-          "story.evidence",
-          "story.researchSources",
-          "storyBrief.existenceEvidence",
-          "storyBrief.editorialInterpretationOptions",
-          "contentDNA.uniqueAngle"
-        ],
-        "usedFactTexts": [
-          "Theories have placed the missing panels in mines, tunnels, ships, bunkers, and private hands.",
-          "Some searches produced intriguing claims, but none have become a settled recovery of the original room.",
-          "Later versions and source comparison.",
-          "Later retellings do not always keep the same emphasis.",
-          "The Amber Room mystery lasts because loss has a shape here."
-        ],
-        "voiceDirection": "Clear short-form pace, clean pauses, restrained tone, light emphasis on \"Theories\"."
+        "soundEffect": "subtle ambience only",
+        "voiceDirection": "Clear short-form delivery with one clean pause."
       },
       {
-        "backgroundMusic": "soft reflective drone, low drone, slow piano, short-form low density",
-        "estimatedReadSeconds": 11,
-        "imagePrompt": "A atmospheric location documentary scene shows The Amber Room held in a quiet final composition around joins within an ordinary modern location with documentary realism, framed as a restrained final frame that leaves room for narration. Use soft fading light with low contrast and documentary mystery atmosphere within modern folklore context; center the frame on joins. No readable text, logos, watermarks, modern objects, graphic gore, or cartoon styling.",
-        "motionPrompt": "Hold briefly on The Amber Room, then let the light shift softly around joins.",
-        "narration": "The Amber Room ends with it also sits inside a very human hope. The ending leaves a reconstruction exists, but the fate of the original.",
-        "role": "What Remains Unresolved",
-        "sceneFocus": "What Remains Unresolved: The Amber Room tied to it also sits inside a very human.",
+        "backgroundMusic": "compact atmospheric bed matching the long-form tone",
+        "estimatedReadSeconds": 8,
+        "imagePrompt": "Vertical documentary image: amber panels fading into a crate silhouette, clear single focal point, no readable text, no logos, no modern UI.",
+        "motionPrompt": "Slow restrained movement that supports the narration without adding new story events.",
+        "narration": "The Amber Room endures because reconstruction restored beauty, but not the original. The mystery lives just outside the glow.",
+        "role": "Ending",
+        "sceneFocus": "A room of light with a shadow behind it.",
         "sceneIndex": 5,
-        "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-        "sourceFactIds": [
-          "fact-019",
-          "fact-043",
-          "fact-052",
-          "fact-008",
-          "fact-025"
-        ],
-        "sourceFieldRefs": [
-          "publicArticlePlan",
-          "storyBrief.coreStoryElements",
-          "story.excerpt",
-          "derived.outcomeFromDetail",
-          "storyBrief.editorialInterpretationOptions",
-          "contentDNA.uniqueAngle",
-          "story.summaryAnswer"
-        ],
-        "usedFactTexts": [
-          "It also sits inside a very human hope that something beautiful might still be hidden somewhere.",
-          "A reconstruction exists, but the fate of the original remains disputed.",
-          "Disappearance of the Amber Room during World War II and the search theories that followed.",
-          "The Amber Room mystery lasts because loss has a shape here.",
-          "Later retellings do not always keep the same emphasis."
-        ],
-        "voiceDirection": "Slow final pace, clean pauses, restrained tone, light emphasis on \"Amber\"."
+        "soundEffect": "subtle ambience only",
+        "voiceDirection": "Clear short-form delivery with one clean pause."
       }
     ],
-    "totalWordCount": 132
+    "totalWordCount": 120
   },
   "shortSceneFocuses": [
-    "What and Where: The Amber Room tied to the mystery matters because it joins real.",
-    "Core Record: The Amber Room tied to the mystery matters because it joins real.",
-    "Key Evidence: The Amber Room tied to later retellings do not.",
-    "Main Explanations: The Amber Room tied to theories have placed the missing panels.",
-    "What Remains Unresolved: The Amber Room tied to it also sits inside a very human."
+    "Beauty becomes cargo.",
+    "The trail breaks at Konigsberg.",
+    "The copy does not close the case.",
+    "Not every theory is proof.",
+    "A room of light with a shadow behind it."
   ],
   "shortsIncluded": true,
   "shortsScript": [
-    "The Amber Room starts with the mystery matters because it joins real art history. The detail points to the story sits inside the larger history of wartime.",
-    "The Amber Room moves through the mystery matters because it joins real art history. The detail points to the story sits inside the larger history of wartime.",
-    "The Amber Room turns on later retellings do not always keep the same emphasis. The key turn comes when public references used for orientation include Smithsonian Magazine.",
-    "The later question stays with theories have placed the missing panels in mines, tunnels. Some versions keep some searches produced intriguing claims, but none have become.",
-    "The Amber Room ends with it also sits inside a very human hope. The ending leaves a reconstruction exists, but the fate of the original."
+    "The Amber Room was not just a treasure. It was a room of amber and gold. The mystery begins when that room becomes panels, crates, and a wartime trail.",
+    "In 1941, the Amber Room was looted and moved toward Konigsberg. Then ruin, broken records, and rumor left the original panels without a final ending.",
+    "The room was reconstructed in 2003, but the original panels are still unresolved. The rebuilt glow makes the missing original feel even sharper.",
+    "Ships, mines, bunkers, and cellars all enter the legend. The stronger story keeps the ache clear: something real was taken and never fully returned.",
+    "The Amber Room endures because reconstruction restored beauty, but not the original. The mystery lives just outside the glow."
   ],
   "slug": "amber-room-mystery-youtube-script",
   "storageSchemaVersion": "creator-pack-file-v1",
   "subtitleLines": [
-    "Amber Room Mystery begins with a familiar image.",
-    "The Amber Room was an ornate chamber of amber panels and gold decoration that disappeared during World War II. A reconstruction exists, but the fate of the original remains disputed.",
-    "The ending leaves a question behind."
+    "A room of amber becomes a wartime disappearance.",
+    "Beauty is packed into crates and vanishes.",
+    "A production package for lost treasure narration."
   ],
   "tags": [
-    "unexplained mysteries script",
-    "lost treasure mystery script",
-    "creator library",
-    "youtube script",
-    "shorts script",
-    "image prompt"
+    "Amber Room",
+    "Lost Treasure",
+    "World War II Mystery",
+    "Catherine Palace",
+    "Konigsberg",
+    "Image Narration Script"
   ],
   "thumbnailIdeas": [
-    "Amber Room Mystery with bold text: THE STORY STILL REMAINS",
-    "A close-up of the key image from Amber Room Mystery",
-    "Split thumbnail: familiar legend on one side, unresolved question on the other"
+    "Amber panels in shadow with the title: The Room That Vanished",
+    "Wartime crates under golden light with the title: Amber Room Mystery",
+    "A palace wall with missing panels and the title: Beauty Stolen By War",
+    "A reconstructed golden room fading into crates with the title: The Original Is Still Missing"
   ],
   "thumbnailIdeasIncluded": true,
   "title": "Amber Room Mystery YouTube Script",
-  "updatedAt": "2026-07-21",
-  "usageNote": "Use this page as a production workspace for a video based on the archive entry for Amber Room Mystery. Keep source limits clear and avoid presenting later interpretations as verified facts.",
+  "updatedAt": "2026-08-12",
+  "usageNote": "Use this package as a production aid for an image-led narration video. Keep the Amber Room grounded in documented art history, wartime looting, reconstruction, and unresolved fate.",
   "visualGuide": [
     {
-      "backgroundMusic": "soft reflective drone, low drone, slow piano, sparse documentary bed, slow tempo with restrained weight",
-      "directionTip": "The central visual should show the mystery matters because it joins real art history with the emotional shape of a lost treasure hunt.",
+      "backgroundMusic": "low strings, soft ticking, muted room tone, restrained tension",
       "narrationParts": [
         {
-          "creatorNote": "Amber Room Mystery must stay tied to amber Room Mystery: The Lost Treasure That Still Refuses a Final Ending. Do not add figures, motives, or incidents beyond disappearance of the Amber Room during World War II and the search theories that followed.",
-          "estimatedReadingTime": "≈ 34 sec",
-          "narration": "The setting gives the scene a concrete frame: Ordinary records with unresolved details. The account identifies the central subject clearly: Amber Room Mystery: The Lost Treasure That Still Refuses a Final Ending. The account then gives a direct movement: The mystery matters because it joins real art history with the emotional shape of a lost treasure hunt. The conflict begins with a specific pressure: Disappearance of the Amber Room during World War II and the search theories that followed.",
-          "sourceFactIds": [
-            "fact-011",
-            "fact-004",
-            "fact-001",
-            "fact-053"
-          ],
-          "sourceFieldRefs": [
-            "contentDNA.culturalFrame",
-            "story.title",
-            "storyBrief.coreStoryElements",
-            "derived.problemFromDetail"
-          ],
-          "usedFactTexts": [
-            "Ordinary records with unresolved details.",
-            "Amber Room Mystery: The Lost Treasure That Still Refuses a Final Ending.",
-            "The mystery matters because it joins real art history with the emotional shape of a lost treasure hunt.",
-            "Disappearance of the Amber Room during World War II and the search theories that followed."
-          ],
+          "creatorNote": "Make the room feel precious before war enters.",
+          "estimatedReadingTime": "about 29 sec",
+          "narration": "The Amber Room begins as beauty so intense it almost stops being furniture. Amber panels, gold leaf, mirrors, and warm light turn a room into something closer to a jewel box large enough to enter. But the mystery does not begin when people admire it. It begins when that beauty becomes portable. The glow remains beautiful, and that beauty makes the act of removal feel even colder.",
           "visualBeats": [
             {
-              "beatMotion": "Use a slow controlled push toward Ordinary, with placed within ordinary records with unresolved details staying fixed as the opening anchor and Ordinary visible. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Ordinary placed within ordinary records with unresolved details in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Ordinary, records, unresolved as supporting visual details. This should feel like an opening visual with one clear focal point during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a slow controlled push toward Ordinary, with placed within ordinary records with unresolved details staying fixed as the opening anchor and Ordinary visible. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-011"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.culturalFrame",
-                "story.title",
-                "storyBrief.coreStoryElements",
-                "derived.problemFromDetail"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a restrained lateral pan across art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation, letting Amber Room Mystery hold the opening detail while Amber Room stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Amber Room Mystery held as the central visual in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Amber Room Mystery, Amber Room, Room as supporting visual details. This should feel like an opening visual that adds a second visual detail during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Use a restrained lateral pan across art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation, letting Amber Room Mystery hold the opening detail while Amber Room stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-004"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.culturalFrame",
-                "story.title",
-                "storyBrief.coreStoryElements",
-                "derived.problemFromDetail"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal connected to the mystery matters because it joins real art history with the emotional and matters within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows The Amber Room connected to the mystery matters because it joins real art history with the emotional shape of a lost treasure hunt in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a close visual detail that supports the current narration, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include history, mystery, matters as supporting visual details. This should feel like an opening visual that widens the frame without adding new story elements during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal connected to the mystery matters because it joins real art history with the emotional and matters within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-001"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.culturalFrame",
-                "story.title",
-                "storyBrief.coreStoryElements",
-                "derived.problemFromDetail"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "A richly glowing amber-paneled room in low palace light, mirrors and gold detail, empty and still, documentary realism, no readable text.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow push through the amber wall details, then hold on an empty doorway."
             }
           ]
         },
         {
-          "creatorNote": "The Amber Room must stay tied to the mystery matters because it joins real art history with the emotional shape of a lost treasure hunt. Do not add figures, motives, or incidents beyond ordinary records with unresolved details.",
-          "estimatedReadingTime": "≈ 35 sec",
-          "narration": "The account then gives a direct movement: The story sits inside the larger history of wartime looting and cultural loss. The action moves through a specific event: The Amber Room turns on one missing or unresolved point: the disappearance of the Amber Room during World War II and the search theories that followed. The action moves through a specific event: The reconstructed Amber Room gives visitors an image of what was lost, but it does not solve the fate of the original.",
-          "sourceFactIds": [
-            "fact-002",
-            "fact-018",
-            "fact-020"
-          ],
-          "sourceFieldRefs": [
-            "storyBrief.coreStoryElements",
-            "publicArticlePlan"
-          ],
-          "usedFactTexts": [
-            "The story sits inside the larger history of wartime looting and cultural loss.",
-            "The Amber Room turns on one missing or unresolved point: the disappearance of the Amber Room during World War II and the search theories that followed.",
-            "The reconstructed Amber Room gives visitors an image of what was lost, but it does not solve the fate of the original."
-          ],
+          "creatorNote": "Turn theft into transformation from room to cargo.",
+          "estimatedReadingTime": "about 29 sec",
+          "narration": "A wall can feel permanent until someone decides it can be taken apart. The Amber Room becomes frightening in that moment, not because it is cursed, but because culture can be unscrewed, packed, labeled, and moved into danger. A room that once surrounded visitors becomes a set of panels waiting for crates. The glow remains beautiful, and that beauty makes the act of removal feel even colder.",
           "visualBeats": [
             {
-              "beatMotion": "Use a restrained lateral pan across art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation, letting The Amber Room hold the follow-up anchor while history stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows The Amber Room connected to the mystery matters because it joins real art history with the emotional shape of a lost treasure hunt in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include history, mystery, matters as supporting visual details. This should feel like a follow-up visual with one clear focal point during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a restrained lateral pan across art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation, letting The Amber Room hold the follow-up anchor while history stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-001"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.culturalFrame",
-                "story.title",
-                "storyBrief.coreStoryElements",
-                "derived.problemFromDetail"
-              ],
-              "usedFactTexts": []
-            },
+              "imagePrompt": "Amber wall panels partly removed in a dark palace interior, wooden crates nearby, gold reflection on rough boards, no readable labels.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow pan from glowing panel to dark crate."
+            }
+          ]
+        },
+        {
+          "creatorNote": "Set the emotional stakes: documented beauty still disappeared.",
+          "estimatedReadingTime": "about 27 sec",
+          "narration": "That is why this lost treasure story feels colder than a simple hunt. The object is documented. The loss is historical. The beauty is not imaginary. What vanishes is not only amber and gold, but the confidence that something magnificent can remain safe simply because everyone knows it matters. The glow remains beautiful, and that beauty makes the act of removal feel even colder.",
+          "visualBeats": [
             {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal connected to disappearance of the Amber Room during World War II and the search and Amber Room within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows The Amber Room connected to disappearance of the Amber Room during World War II and the search theories that followed in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include The Amber Room, Amber Room, World War II as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal connected to disappearance of the Amber Room during World War II and the search and Amber Room within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-053"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.culturalFrame",
-                "story.title",
-                "storyBrief.coreStoryElements",
-                "derived.problemFromDetail"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a slow controlled push toward The Amber Room, with connected to the story sits inside the larger history of wartime looting and cultural staying fixed as the follow-up wider frame and larger visible. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows The Amber Room connected to the story sits inside the larger history of wartime looting and cultural loss in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a close visual detail that supports the current narration, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include history, inside, larger as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Use a slow controlled push toward The Amber Room, with connected to the story sits inside the larger history of wartime looting and cultural staying fixed as the follow-up wider frame and larger visible. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-002"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.culturalFrame",
-                "story.title",
-                "storyBrief.coreStoryElements",
-                "derived.problemFromDetail"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "A darkened palace room with one empty wall section and amber light fading across the floor, wartime atmosphere, no people, no readable text.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow pullback from empty wall to the room around it."
             }
           ]
         }
       ],
-      "sceneFocus": "The central visual should show the mystery matters because it joins real art history with the emotional shape of a lost treasure hunt.",
-      "sceneRole": "What, When, and Where",
-      "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-      "sourceFactIds": [
-        "fact-011",
-        "fact-004",
-        "fact-001",
-        "fact-053",
-        "fact-002",
-        "fact-018",
-        "fact-020"
-      ],
-      "sourceFieldRefs": [
-        "contentDNA.culturalFrame",
-        "story.title",
-        "storyBrief.coreStoryElements",
-        "derived.problemFromDetail",
-        "publicArticlePlan"
-      ],
-      "visualDirection": "Hold the establishing image briefly, then begin a slow push toward the main detail.",
-      "voiceDirection": "Calm documentary pace, short pauses between ideas, natural restraint, with light emphasis on \"Amber Room\" when it appears."
+      "sceneFocus": "A room built from amber becomes more haunting once it is treated as cargo.",
+      "sceneRole": "Opening Hook",
+      "soundEffect": "soft footsteps, crate wood, distant room echo",
+      "visualDirection": "Move from beauty to loss, keeping the object tangible and unresolved.",
+      "voiceDirection": "Elegant but tense, like walking through an empty historical room."
     },
     {
-      "backgroundMusic": "steady low tension, low drone, slow piano, sparse documentary bed, slow tempo with restrained weight",
-      "directionTip": "The central visual should show the mystery matters because it joins real art history with the emotional shape of a lost treasure hunt. Frame it through the mystery matters because it joins real art history with the emotional shape of a lost treasure hunt.",
+      "backgroundMusic": "low strings, soft ticking, muted room tone, restrained tension",
       "narrationParts": [
         {
-          "creatorNote": "The Amber Room must stay tied to the mystery matters because it joins real art history with the emotional shape of a lost treasure hunt. Do not add figures, motives, or incidents beyond disappearance of the Amber Room during World War II and the search theories that followed.",
-          "estimatedReadingTime": "≈ 30 sec",
-          "narration": "The source trail matters before the claim is treated as certain: Later retellings do not always keep the same emphasis. The next fact gives the sequence a concrete action: That disappearance created one of the best-known lost-art mysteries of the twentieth century. The account then gives a direct movement: The Amber Room appears in source material connected with art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation.",
-          "sourceFactIds": [
-            "fact-025",
-            "fact-003",
-            "fact-023"
-          ],
-          "sourceFieldRefs": [
-            "publicArticlePlan",
-            "storyBrief.coreStoryElements"
-          ],
-          "usedFactTexts": [
-            "Later retellings do not always keep the same emphasis.",
-            "That disappearance created one of the best-known lost-art mysteries of the twentieth century.",
-            "The Amber Room appears in source material connected with art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation."
-          ],
+          "creatorNote": "Include the 1716 gift and Catherine Palace without sounding like a textbook.",
+          "estimatedReadingTime": "about 29 sec",
+          "narration": "Before the disappearance, the Amber Room already had a long life. It was tied to Prussian gift diplomacy, Peter the Great, and later installation in Catherine Palace. That history matters because it gives the room layers. It was not just expensive decoration. It carried power, taste, alliance, and imperial performance in amber and light. The glow remains beautiful, and that beauty makes the act of removal feel even colder.",
           "visualBeats": [
             {
-              "beatMotion": "Use a slow controlled push toward The Amber Room, with connected to the mystery matters because it joins real art history with the emotional staying fixed as the opening anchor and history visible. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows The Amber Room connected to the mystery matters because it joins real art history with the emotional shape of a lost treasure hunt in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Unexplained Mysteries. Include history, mystery, matters as supporting visual details. This should feel like an opening visual with one clear focal point during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a slow controlled push toward The Amber Room, with connected to the mystery matters because it joins real art history with the emotional staying fixed as the opening anchor and history visible. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-001"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan",
-                "derived.problemFromDetail"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a restrained lateral pan across art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation, letting The Amber Room hold the opening detail while retellings stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows The Amber Room shown through source material connected to later retellings do not always keep the same emphasis in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a medium composition that shows the important action or state, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Unexplained Mysteries. Include retellings, always, emphasis as supporting visual details. This should feel like an opening visual that adds a second visual detail during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Use a restrained lateral pan across art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation, letting The Amber Room hold the opening detail while retellings stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-025"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan",
-                "derived.problemFromDetail"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal connected to the story sits inside the larger history of wartime looting and cultural and larger within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows The Amber Room connected to the story sits inside the larger history of wartime looting and cultural loss in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a close visual detail that supports the current narration, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Unexplained Mysteries. Include history, inside, larger as supporting visual details. This should feel like an opening visual that widens the frame without adding new story elements during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal connected to the story sits inside the larger history of wartime looting and cultural and larger within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-002"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan",
-                "derived.problemFromDetail"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "A palace gallery suggested through amber panels, gilded ornament, and a formal doorway, warm daylight, empty historical atmosphere, no readable plaques.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow glide across the room as if entering a remembered palace."
             }
           ]
         },
         {
-          "creatorNote": "The Amber Room must stay tied to the story sits inside the larger history of wartime looting and cultural loss. Keep the source boundary around later retellings do not always keep the same emphasis source-limited, without turning it into a stronger claim.",
-          "estimatedReadingTime": "≈ 35 sec",
-          "narration": "The surviving record gives the narration a source limit: References such as Smithsonian Magazine and Encyclopaedia Britannica are used as orientation points, not as proof for every later claim. The surviving record gives the narration a source limit: The Amber Room is treated through art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. The surviving record gives the narration a source limit: Some searches produced intriguing claims, but none have become a settled recovery of the original room.",
-          "sourceFactIds": [
-            "fact-029",
-            "fact-028",
-            "fact-032"
-          ],
-          "sourceFieldRefs": [
-            "publicArticlePlan.publicSourceNote"
-          ],
-          "usedFactTexts": [
-            "References such as Smithsonian Magazine and Encyclopaedia Britannica are used as orientation points, not as proof for every later claim.",
-            "The Amber Room is treated through art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation.",
-            "Some searches produced intriguing claims, but none have become a settled recovery of the original room."
-          ],
+          "creatorNote": "Use material feeling to make the room cinematic.",
+          "estimatedReadingTime": "about 30 sec",
+          "narration": "Amber itself helps the story. It is not cold like stone or metal. It looks warm, trapped, organic, almost alive. In a room, that warmth becomes immersive. The visitor is not looking at one treasure in a case. The visitor stands inside the treasure. Later loss feels almost architectural, as if a whole atmosphere was stolen. The glow remains beautiful, and that beauty makes the act of removal feel even colder.",
           "visualBeats": [
             {
-              "beatMotion": "Use a restrained lateral pan across art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation, letting The Amber Room hold the follow-up anchor while history stays in frame. Use only light shifts that match the place or event mystery tone. Let history remain the distinct a follow-up visual with one clear focal point.",
-              "imagePrompt": "A realistic location-documentary style image shows The Amber Room connected to the story sits inside the larger history of wartime looting and cultural loss in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Unexplained Mysteries. Include history, inside, larger as supporting visual details. This should feel like a follow-up visual with one clear focal point during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a restrained lateral pan across art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation, letting The Amber Room hold the follow-up anchor while history stays in frame. Use only light shifts that match the place or event mystery tone. Let history remain the distinct a follow-up visual with one clear focal point.",
-              "sourceFactIds": [
-                "fact-002"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan",
-                "derived.problemFromDetail"
-              ],
-              "usedFactTexts": []
-            },
+              "imagePrompt": "Close detail of amber panels glowing honey-gold with carved texture and mirror reflections, no modern museum lighting, no text.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow macro drift across amber texture and reflection."
+            }
+          ]
+        },
+        {
+          "creatorNote": "Move from object value to place value.",
+          "estimatedReadingTime": "about 29 sec",
+          "narration": "The room becomes easier to mourn because it had a known home. Catherine Palace gave the Amber Room a place in memory. When the panels disappeared, people were not only asking where a treasure went. They were asking how a famous room could be removed from the place that made it feel complete. The glow remains beautiful, and that beauty makes the act of removal feel even colder.",
+          "visualBeats": [
             {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal connected to disappearance of the Amber Room during World War II and the search and Amber Room within the wider frame. Use only light shifts that match the place or event mystery tone. Let Amber Room remain the distinct a follow-up visual that adds a second visual detail.",
-              "imagePrompt": "A realistic location-documentary style image shows The Amber Room connected to disappearance of the Amber Room during World War II and the search theories that followed in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a medium composition that shows the important action or state, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Unexplained Mysteries. Include The Amber Room, Amber Room, World War II as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal connected to disappearance of the Amber Room during World War II and the search and Amber Room within the wider frame. Use only light shifts that match the place or event mystery tone. Let Amber Room remain the distinct a follow-up visual that adds a second visual detail.",
-              "sourceFactIds": [
-                "fact-053"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan",
-                "derived.problemFromDetail"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a slow controlled push toward The Amber Room, with connected to the mystery matters because it joins real art history with the emotional staying fixed as the follow-up wider frame and matters visible. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows The Amber Room connected to the mystery matters because it joins real art history with the emotional shape of a lost treasure hunt in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a close visual detail that supports the current narration, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Unexplained Mysteries. Include history, mystery, matters as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Use a slow controlled push toward The Amber Room, with connected to the mystery matters because it joins real art history with the emotional staying fixed as the follow-up wider frame and matters visible. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-001"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan",
-                "derived.problemFromDetail"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "Exterior hint of a grand palace in pale light with warm amber glow suggested in a window, restrained historical realism, no readable signs.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow push toward the glowing window, then cut before entering."
             }
           ]
         }
       ],
-      "sceneFocus": "The central visual should show the mystery matters because it joins real art history with the emotional shape of a lost treasure hunt. Frame it through the mystery matters because it joins real art history with the emotional shape of a lost treasure hunt.",
-      "sceneRole": "Core Record or Event",
-      "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-      "sourceFactIds": [
-        "fact-025",
-        "fact-003",
-        "fact-023",
-        "fact-029",
-        "fact-028",
-        "fact-032"
-      ],
-      "sourceFieldRefs": [
-        "publicArticlePlan",
-        "storyBrief.coreStoryElements",
-        "publicArticlePlan.publicSourceNote"
-      ],
-      "visualDirection": "Start steady, begin a slow push toward the main detail, and cut after the scene consequence is clear.",
-      "voiceDirection": "Calm documentary pace, short pauses between ideas, slight tension, with light emphasis on \"Amber Room\" when it appears."
+      "sceneFocus": "The room carries diplomacy and imperial display before it becomes a wartime mystery.",
+      "sceneRole": "Gift and Palace Memory",
+      "soundEffect": "soft footsteps, crate wood, distant room echo",
+      "visualDirection": "Move from beauty to loss, keeping the object tangible and unresolved.",
+      "voiceDirection": "Elegant but tense, like walking through an empty historical room."
     },
     {
-      "backgroundMusic": "sparse documentary bed, low drone, slow piano, slow tempo with restrained weight",
-      "directionTip": "The central visual should show the mystery matters because it joins real art history with the emotional shape of a lost treasure hunt. Frame it through the source boundary around later retellings do not always keep the same emphasis.",
+      "backgroundMusic": "low strings, soft ticking, muted room tone, restrained tension",
       "narrationParts": [
         {
-          "creatorNote": "Public must stay tied to the source boundary around later retellings do not always keep the same emphasis. Do not add figures, motives, or incidents beyond the mystery matters because it joins real art history with the emotional shape of a lost treasure hunt.",
-          "estimatedReadingTime": "≈ 30 sec",
-          "narration": "The scene has a clear visible point: The mystery matters because it joins real art history with the emotional shape of a lost treasure hunt. The account stays careful because the evidence has boundaries: Public references used for orientation include Smithsonian Magazine and Encyclopaedia Britannica. The action moves through a specific event: The mystery matters because it joins real art history with the emotional shape of a lost treasure hunt.",
-          "sourceFactIds": [
-            "fact-034",
-            "fact-026",
-            "fact-001"
-          ],
-          "sourceFieldRefs": [
-            "publicArticlePlan",
-            "storyBrief.coreStoryElements"
-          ],
-          "usedFactTexts": [
-            "The mystery matters because it joins real art history with the emotional shape of a lost treasure hunt.",
-            "Public references used for orientation include Smithsonian Magazine and Encyclopaedia Britannica.",
-            "The mystery matters because it joins real art history with the emotional shape of a lost treasure hunt."
-          ],
+          "creatorNote": "Anchor the wartime turn with 1941 and Konigsberg.",
+          "estimatedReadingTime": "about 29 sec",
+          "narration": "In 1941, the story changes shape. The Amber Room is looted, dismantled, and moved. The room becomes a shipment. Its glow is forced into crates, and the trail leads toward Konigsberg. This is where the mystery stops being decorative. War does not simply threaten beauty from outside. It changes how beauty is handled. The glow remains beautiful, and that beauty makes the act of removal feel even colder.",
           "visualBeats": [
             {
-              "beatMotion": "Use a slow controlled push toward The Amber Room, with connected to the mystery matters because it joins real art history with the emotional staying fixed as the opening anchor and history visible. Keep the movement restrained and documentary.",
-              "imagePrompt": "A realistic location-documentary style image shows The Amber Room connected to the mystery matters because it joins real art history with the emotional shape of a lost treasure hunt in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a clear tabletop or archival composition, with soft archival light, careful documentary restraint, and cultural context from Unexplained Mysteries. Include history, mystery, matters as supporting visual details. This should feel like an opening visual with one clear focal point during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a slow controlled push toward The Amber Room, with connected to the mystery matters because it joins real art history with the emotional staying fixed as the opening anchor and history visible. Keep the movement restrained and documentary.",
-              "sourceFactIds": [
-                "fact-034"
-              ],
-              "sourceFieldRefs": [
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a restrained lateral pan across art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation, letting The Amber Room hold the opening detail while retellings stays in frame. Keep the movement restrained and documentary.",
-              "imagePrompt": "A realistic location-documentary style image shows The Amber Room shown through source material connected to later retellings do not always keep the same emphasis in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a medium frame that separates the main subject from supporting evidence, with soft archival light, careful documentary restraint, and cultural context from Unexplained Mysteries. Include retellings, always, emphasis as supporting visual details. This should feel like an opening visual that adds a second visual detail during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Use a restrained lateral pan across art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation, letting The Amber Room hold the opening detail while retellings stays in frame. Keep the movement restrained and documentary.",
-              "sourceFactIds": [
-                "fact-025"
-              ],
-              "sourceFieldRefs": [
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "Wooden crates in a dim wartime storage room with amber glow escaping through cracks, map shadows, no readable markings.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow push toward the crate seam with faint gold light."
             }
           ]
         },
         {
-          "creatorNote": "Public must stay tied to the source boundary around public references used for orientation include Smithsonian Magazine and Encyclopaedia Britannica. Do not add figures, motives, or incidents beyond the mystery matters because it joins real art history with the emotional shape of a lost treasure hunt.",
-          "estimatedReadingTime": "≈ 30 sec",
-          "narration": "The source trail matters before the claim is treated as certain: Those references are useful for keeping official records, witness claims, and unresolved details separate. The action moves through a specific event: Some searches produced intriguing claims, but none have become a settled recovery of the original room. The action moves through a specific event: One possible reading is that the Amber Room mystery lasts because loss has a shape here.",
-          "sourceFactIds": [
-            "fact-027",
-            "fact-022",
-            "fact-024"
-          ],
-          "sourceFieldRefs": [
-            "publicArticlePlan"
-          ],
-          "usedFactTexts": [
-            "Those references are useful for keeping official records, witness claims, and unresolved details separate.",
-            "Some searches produced intriguing claims, but none have become a settled recovery of the original room.",
-            "One possible reading is that the Amber Room mystery lasts because loss has a shape here."
-          ],
+          "creatorNote": "Use the documented trail to deepen the missing ending.",
+          "estimatedReadingTime": "about 28 sec",
+          "narration": "The more concrete the trail becomes, the more painful the gap feels. There are known movements, known places, and known fragments of history. Then the ending refuses to settle. Konigsberg collapses into ruin, records break, stories multiply, and the original panels slip into a space where history and rumor keep touching. The glow remains beautiful, and that beauty makes the act of removal feel even colder.",
           "visualBeats": [
             {
-              "beatMotion": "Use a restrained lateral pan across art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation, letting Public hold the follow-up anchor while references stays in frame. Keep the movement restrained and documentary.",
-              "imagePrompt": "A realistic location-documentary style image shows Public shown through source material connected to public references used for orientation include Smithsonian Magazine and Encyclopaedia Britannica in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a medium frame that separates the main subject from supporting evidence, with soft archival light, careful documentary restraint, and cultural context from Public. Include references, orientation, include as supporting visual details. This should feel like a follow-up visual with one clear focal point during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a restrained lateral pan across art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation, letting Public hold the follow-up anchor while references stays in frame. Keep the movement restrained and documentary.",
-              "sourceFactIds": [
-                "fact-026"
-              ],
-              "sourceFieldRefs": [
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
-            },
+              "imagePrompt": "Ruined stone interior after wartime damage, empty frame where panels might have been, dust and cold light, no bodies, no readable text.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow pullback from empty frame into ruined space."
+            }
+          ]
+        },
+        {
+          "creatorNote": "Keep theories subordinate to the core loss.",
+          "estimatedReadingTime": "about 35 sec",
+          "narration": "A vanished treasure can invite fantasy very quickly. Secret bunkers, ships, mines, lakes, and hidden trains all become possible in public imagination. But the strongest Amber Room narration should not chase every theory as equal. It should stay with the central ache: something real was taken, and the original never came cleanly back. The glow remains beautiful, and that beauty makes the act of removal feel even colder. The broken trail should feel like history losing its grip, not like a puzzle game.",
+          "visualBeats": [
             {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal connected to the mystery matters because it joins real art history with the emotional and mystery within the wider frame. Keep the movement restrained and documentary.",
-              "imagePrompt": "A realistic location-documentary style image shows The Amber Room connected to the mystery matters because it joins real art history with the emotional shape of a lost treasure hunt in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a close archival detail with the source boundary visible, with soft archival light, careful documentary restraint, and cultural context from Unexplained Mysteries. Include history, mystery, matters as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal connected to the mystery matters because it joins real art history with the emotional and mystery within the wider frame. Keep the movement restrained and documentary.",
-              "sourceFactIds": [
-                "fact-001"
-              ],
-              "sourceFieldRefs": [
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a slow controlled push toward The Amber Room, with connected to the mystery matters because it joins real art history with the emotional staying fixed as the follow-up wider frame and matters visible. Keep the movement restrained and documentary.",
-              "imagePrompt": "A realistic location-documentary style image shows The Amber Room connected to the mystery matters because it joins real art history with the emotional shape of a lost treasure hunt in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a close archival detail with the source boundary visible, with soft archival light, careful documentary restraint, and cultural context from Unexplained Mysteries. Include history, mystery, matters as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Use a slow controlled push toward The Amber Room, with connected to the mystery matters because it joins real art history with the emotional staying fixed as the follow-up wider frame and matters visible. Keep the movement restrained and documentary.",
-              "sourceFactIds": [
-                "fact-034"
-              ],
-              "sourceFieldRefs": [
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "A restrained archival tabletop with old crate wood, a folded map, amber-colored shard-like reflections, and dark negative space, no labels.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow overhead drift across map and wood, never stopping on one answer."
             }
           ]
         }
       ],
-      "sceneFocus": "The central visual should show the mystery matters because it joins real art history with the emotional shape of a lost treasure hunt. Frame it through the source boundary around later retellings do not always keep the same emphasis.",
-      "sceneRole": "Evidence and Key Details",
-      "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-      "sourceFactIds": [
-        "fact-034",
-        "fact-026",
-        "fact-001",
-        "fact-027",
-        "fact-022",
-        "fact-024"
-      ],
-      "sourceFieldRefs": [
-        "publicArticlePlan",
-        "storyBrief.coreStoryElements"
-      ],
-      "visualDirection": "Hold the source-focused image long enough to read the visual idea, then fade softly into the next scene.",
-      "voiceDirection": "Careful pace, short pauses between ideas, natural restraint, with light emphasis on \"Amber Room\" when it appears."
+      "sceneFocus": "War turns the room into crates, movement, and a broken trail.",
+      "sceneRole": "Looting and Konigsberg",
+      "soundEffect": "soft footsteps, crate wood, distant room echo",
+      "visualDirection": "Move from beauty to loss, keeping the object tangible and unresolved.",
+      "voiceDirection": "Elegant but tense, like walking through an empty historical room."
     },
     {
-      "backgroundMusic": "soft reflective drone, low drone, slow piano, sparse documentary bed, slow tempo with restrained weight",
-      "directionTip": "The central visual should show theories have placed the missing panels in mines, tunnels, ships, bunkers, and private hands.",
+      "backgroundMusic": "low strings, soft ticking, muted room tone, restrained tension",
       "narrationParts": [
         {
-          "creatorNote": "Theories must stay tied to the variant detail that theories have placed the missing panels in mines, tunnels, ships, bunkers, and private hands. Use the interpretation connected to the Amber Room mystery lasts because loss has a shape here as interpretation, not as a new event.",
-          "estimatedReadingTime": "≈ 28 sec",
-          "narration": "The versions do not always preserve the same emphasis: Theories have placed the missing panels in mines, tunnels, ships, bunkers, and private hands. One interpretation stays close to the material: The Amber Room mystery lasts because loss has a shape here. The versions do not always preserve the same emphasis: Some searches produced intriguing claims, but none have become a settled recovery of the original room.",
-          "sourceFactIds": [
-            "fact-005",
-            "fact-008",
-            "fact-006"
-          ],
-          "sourceFieldRefs": [
-            "storyBrief.reportedVariants",
-            "storyBrief.editorialInterpretationOptions"
-          ],
-          "usedFactTexts": [
-            "Theories have placed the missing panels in mines, tunnels, ships, bunkers, and private hands.",
-            "The Amber Room mystery lasts because loss has a shape here.",
-            "Some searches produced intriguing claims, but none have become a settled recovery of the original room."
-          ],
+          "creatorNote": "Make reconstruction both success and reminder.",
+          "estimatedReadingTime": "about 33 sec",
+          "narration": "The 2003 reconstruction gives the story a strange second life. Visitors can again stand inside amber light. The room exists again in one sense, and yet the mystery remains. Reconstruction repairs the wound enough to show what was lost, but it cannot erase the question of the original panels. The glow remains beautiful, and that beauty makes the act of removal feel even colder. The restored image helps the viewer see the absence rather than escape it.",
           "visualBeats": [
             {
-              "beatMotion": "Use a slow controlled push toward Theories, with associated with a variant where theories have placed the missing panels in mines, tunnels staying fixed as the opening anchor and Theories visible. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Theories associated with a variant where theories have placed the missing panels in mines, tunnels, ships, bunkers, and private hands in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include Theories, placed, missing as supporting visual details. This should feel like an opening visual with one clear focal point during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a slow controlled push toward Theories, with associated with a variant where theories have placed the missing panels in mines, tunnels staying fixed as the opening anchor and Theories visible. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-005"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.reportedVariants",
-                "publicArticlePlan",
-                "storyBrief.editorialInterpretationOptions"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a restrained lateral pan across art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation, letting The Amber Room hold the opening detail while retellings stays in frame. Use only light shifts that match the place or event mystery tone. Let retellings remain the distinct an opening visual that adds a second visual detail.",
-              "imagePrompt": "A realistic location-documentary style image shows The Amber Room shown through source material connected to later retellings do not always keep the same emphasis in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include retellings, always, emphasis as supporting visual details. This should feel like an opening visual that adds a second visual detail during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Use a restrained lateral pan across art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation, letting The Amber Room hold the opening detail while retellings stays in frame. Use only light shifts that match the place or event mystery tone. Let retellings remain the distinct an opening visual that adds a second visual detail.",
-              "sourceFactIds": [
-                "fact-025"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.reportedVariants",
-                "publicArticlePlan",
-                "storyBrief.editorialInterpretationOptions"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "A luminous reconstructed amber room, empty, polished, beautiful, with one darker reflection suggesting absence, documentary realism, no readable plaques.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow glide through amber light, ending on a darker reflection."
             }
           ]
         },
         {
-          "creatorNote": "Some must stay tied to the variant detail that some searches produced intriguing claims, but none have become a settled recovery of the original room. Keep the source boundary around later retellings do not always keep the same emphasis source-limited, without turning it into a stronger claim.",
-          "estimatedReadingTime": "≈ 31 sec",
-          "narration": "The symbolic reading grows out of the recorded details: Amber Room Mystery follows disappearance of the Amber Room during World War II and the search theories that followed, then asks why that detail became memorable enough to retell. The symbolic reading grows out of the recorded details: The Amber Room is treated through one concrete anchor: the disappearance of the Amber Room during World War II and the search theories that followed.",
-          "sourceFactIds": [
-            "fact-041",
-            "fact-012"
-          ],
-          "sourceFieldRefs": [
-            "story.summaryAnswer",
-            "contentDNA.uniqueAngle"
-          ],
-          "usedFactTexts": [
-            "Amber Room Mystery follows disappearance of the Amber Room during World War II and the search theories that followed, then asks why that detail became memorable enough to retell.",
-            "The Amber Room is treated through one concrete anchor: the disappearance of the Amber Room during World War II and the search theories that followed."
-          ],
+          "creatorNote": "Explain why reconstruction does not close the case.",
+          "estimatedReadingTime": "about 32 sec",
+          "narration": "That tension is rare. Many lost treasures are only imagined after they disappear. The Amber Room can be visually returned and still remain missing. The copy does not make the original irrelevant. It makes the original more haunting, because the viewer can feel the scale of what vanished. The glow remains beautiful, and that beauty makes the act of removal feel even colder. The restored image helps the viewer see the absence rather than escape it.",
           "visualBeats": [
             {
-              "beatMotion": "Use a restrained lateral pan across art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation, letting The Amber Room hold the follow-up anchor while The Amber Room stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows The Amber Room framed by the interpretation that the Amber Room mystery lasts because loss has a shape here in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include The Amber Room, Amber Room Mystery, Amber Room as supporting visual details. This should feel like a follow-up visual with one clear focal point during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a restrained lateral pan across art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation, letting The Amber Room hold the follow-up anchor while The Amber Room stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-008"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.reportedVariants",
-                "publicArticlePlan",
-                "storyBrief.editorialInterpretationOptions"
-              ],
-              "usedFactTexts": []
-            },
+              "imagePrompt": "A split-feeling composition: glowing amber wall on one side, dark stacked crates on the other, restrained and realistic, no text.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow crossfade from glowing wall to crates."
+            }
+          ]
+        },
+        {
+          "creatorNote": "Let the scene become about memory, not only art.",
+          "estimatedReadingTime": "about 33 sec",
+          "narration": "The rebuilt room also changes the audience. People are not only treasure hunters asking where it is. They become witnesses to how memory works. The reconstruction says beauty can be rebuilt. The mystery says history cannot always be restored to the exact thing it was before war touched it. The glow remains beautiful, and that beauty makes the act of removal feel even colder. The restored image helps the viewer see the absence rather than escape it.",
+          "visualBeats": [
             {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal associated with a variant where some searches produced intriguing claims, but none have become and searches within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows The Amber Room associated with a variant where some searches produced intriguing claims, but none have become a settled recovery of the original room in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from Unexplained Mysteries. Include room, searches, produced as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal associated with a variant where some searches produced intriguing claims, but none have become and searches within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-006"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.reportedVariants",
-                "publicArticlePlan",
-                "storyBrief.editorialInterpretationOptions"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "A quiet visitor point of view inside amber light, no visible faces, the room beautiful but slightly empty, reflective mood, no readable signs.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow hold as the amber reflection dims slightly."
             }
           ]
         }
       ],
-      "sceneFocus": "The central visual should show theories have placed the missing panels in mines, tunnels, ships, bunkers, and private hands.",
-      "sceneRole": "Major Explanations and Uncertainty",
-      "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-      "sourceFactIds": [
-        "fact-005",
-        "fact-008",
-        "fact-006",
-        "fact-041",
-        "fact-012"
-      ],
-      "sourceFieldRefs": [
-        "storyBrief.reportedVariants",
-        "storyBrief.editorialInterpretationOptions",
-        "story.summaryAnswer",
-        "contentDNA.uniqueAngle"
-      ],
-      "visualDirection": "Hold the establishing image briefly, then begin a slow push toward the main detail.",
-      "voiceDirection": "Calm documentary pace, short pauses between ideas, natural restraint, with light emphasis on \"Amber Room\" when it appears."
+      "sceneFocus": "The reconstructed room restores beauty while proving the original absence still matters.",
+      "sceneRole": "Reconstruction and Double Memory",
+      "soundEffect": "soft footsteps, crate wood, distant room echo",
+      "visualDirection": "Move from beauty to loss, keeping the object tangible and unresolved.",
+      "voiceDirection": "Elegant but tense, like walking through an empty historical room."
     },
     {
-      "backgroundMusic": "soft reflective drone, low drone, slow piano, sparse documentary bed, low density with a soft ending",
-      "directionTip": "The central visual should show it also sits inside a very human hope that something beautiful might still be hidden somewhere.",
+      "backgroundMusic": "low strings, soft ticking, muted room tone, restrained tension",
       "narrationParts": [
         {
-          "creatorNote": "The Amber Room must stay tied to the interpretation connected to the Amber Room mystery lasts because loss has a shape here. Keep the source boundary around later retellings do not always keep the same emphasis source-limited, without turning it into a stronger claim.",
-          "estimatedReadingTime": "≈ 28 sec",
-          "narration": "The ending depends on what changes afterward: It also sits inside a very human hope that something beautiful might still be hidden somewhere. The result is stated through a concrete outcome: A reconstruction exists, but the fate of the original remains disputed. The result is stated through a concrete outcome: Disappearance of the Amber Room during World War II and the search theories that followed.",
-          "sourceFactIds": [
-            "fact-019",
-            "fact-043",
-            "fact-052"
-          ],
-          "sourceFieldRefs": [
-            "publicArticlePlan",
-            "storyBrief.coreStoryElements",
-            "story.excerpt",
-            "derived.outcomeFromDetail"
-          ],
-          "usedFactTexts": [
-            "It also sits inside a very human hope that something beautiful might still be hidden somewhere.",
-            "A reconstruction exists, but the fate of the original remains disputed.",
-            "Disappearance of the Amber Room during World War II and the search theories that followed."
-          ],
+          "creatorNote": "Summarize the power of documented loss.",
+          "estimatedReadingTime": "about 34 sec",
+          "narration": "The Amber Room mystery endures because it has both proof and absence. There was a room. It was admired, moved, looted, traced, lost, and reconstructed. The story does not need a curse or a monster. It has something more uncomfortable: documented beauty can still vanish into human violence and broken records. The glow remains beautiful, and that beauty makes the act of removal feel even colder. The ending leaves the door closed, because the closed door is part of the story.",
           "visualBeats": [
             {
-              "beatMotion": "Use a slow controlled push toward The Amber Room, with framed by the interpretation that the Amber Room mystery lasts because loss has a staying fixed as the opening anchor and The Amber Room visible. End with a slow hold and no new action.",
-              "imagePrompt": "A realistic location-documentary style image shows The Amber Room framed by the interpretation that the Amber Room mystery lasts because loss has a shape here in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a wide reflective composition with negative space, with subdued fading light, quiet reflective tension, and cultural context from Unexplained Mysteries. Include The Amber Room, Amber Room Mystery, Amber Room as supporting visual details. This should feel like an opening visual with one clear focal point during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a slow controlled push toward The Amber Room, with framed by the interpretation that the Amber Room mystery lasts because loss has a staying fixed as the opening anchor and The Amber Room visible. End with a slow hold and no new action.",
-              "sourceFactIds": [
-                "fact-008"
-              ],
-              "sourceFieldRefs": [
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "storyBrief.editorialInterpretationOptions",
-                "story.excerpt",
-                "derived.outcomeFromDetail"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a restrained lateral pan across art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation, letting It hold the opening detail while human stays in frame. End with a slow hold and no new action.",
-              "imagePrompt": "A realistic location-documentary style image shows It connected to it also sits inside a very human hope that something beautiful might still be hidden somewhere in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, and cultural context from Unexplained Mysteries. Include inside, human, something as supporting visual details. This should feel like an opening visual that adds a second visual detail during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Use a restrained lateral pan across art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation, letting It hold the opening detail while human stays in frame. End with a slow hold and no new action.",
-              "sourceFactIds": [
-                "fact-019"
-              ],
-              "sourceFieldRefs": [
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "storyBrief.editorialInterpretationOptions",
-                "story.excerpt",
-                "derived.outcomeFromDetail"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal connected to a reconstruction exists, but the fate of the original remains disputed and original within the wider frame. End with a slow hold and no new action.",
-              "imagePrompt": "A realistic location-documentary style image shows The Amber Room connected to a reconstruction exists, but the fate of the original remains disputed in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, and cultural context from Unexplained Mysteries. Include reconstruction, original, remains as supporting visual details. This should feel like an opening visual that widens the frame without adding new story elements during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal connected to a reconstruction exists, but the fate of the original remains disputed and original within the wider frame. End with a slow hold and no new action.",
-              "sourceFactIds": [
-                "fact-043"
-              ],
-              "sourceFieldRefs": [
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "storyBrief.editorialInterpretationOptions",
-                "story.excerpt",
-                "derived.outcomeFromDetail"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "An empty amber-lit room fading into a dark archival storage space, elegant but unresolved, no text, no people.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow fade from amber wall to dark storage shelves."
             }
           ]
         },
         {
-          "creatorNote": "The Amber Room must stay tied to a reconstruction exists, but the fate of the original remains disputed. Let it also sits inside a very human hope that something beautiful might still be hidden somewhere define the result for this Part.",
-          "estimatedReadingTime": "≈ 30 sec",
-          "narration": "The surviving record gives the narration a source limit: For The Amber Room, unresolved points stay unresolved when the available record does not close them. The surviving record gives the narration a source limit: Theories have placed the missing panels in mines, tunnels, ships, bunkers, and private hands. The surviving record gives the narration a source limit: It treats the material as folklore, legend, or documented retelling rather than confirmed fact.",
-          "sourceFactIds": [
-            "fact-033",
-            "fact-031",
-            "fact-040"
-          ],
-          "sourceFieldRefs": [
-            "publicArticlePlan.publicSourceNote",
-            "story.summaryAnswer"
-          ],
-          "usedFactTexts": [
-            "For The Amber Room, unresolved points stay unresolved when the available record does not close them.",
-            "Theories have placed the missing panels in mines, tunnels, ships, bunkers, and private hands.",
-            "It treats the material as folklore, legend, or documented retelling rather than confirmed fact."
-          ],
+          "creatorNote": "Make theory-space controlled.",
+          "estimatedReadingTime": "about 31 sec",
+          "narration": "Every theory tries to give the original panels a final location. A mine. A cellar. A ship. A burned ruin. A private hiding place. Each answer would change the ending. But until proof arrives, the mystery remains suspended between art history and treasure legend. The glow remains beautiful, and that beauty makes the act of removal feel even colder. The ending leaves the door closed, because the closed door is part of the story.",
           "visualBeats": [
             {
-              "beatMotion": "Use a restrained lateral pan across art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation, letting The Amber Room hold the follow-up anchor while reconstruction stays in frame. End with a slow hold and no new action.",
-              "imagePrompt": "A realistic location-documentary style image shows The Amber Room connected to a reconstruction exists, but the fate of the original remains disputed in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, and cultural context from Unexplained Mysteries. Include reconstruction, original, remains as supporting visual details. This should feel like a follow-up visual with one clear focal point during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a restrained lateral pan across art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation, letting The Amber Room hold the follow-up anchor while reconstruction stays in frame. End with a slow hold and no new action.",
-              "sourceFactIds": [
-                "fact-043"
-              ],
-              "sourceFieldRefs": [
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "storyBrief.editorialInterpretationOptions",
-                "story.excerpt",
-                "derived.outcomeFromDetail"
-              ],
-              "usedFactTexts": []
-            },
+              "imagePrompt": "A map with several unmarked routes, a small amber glow near the center, and surrounding darkness, no readable labels, documentary table light.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow overhead movement across routes, ending on the amber glow."
+            }
+          ]
+        },
+        {
+          "creatorNote": "Close with reconstruction and absence together.",
+          "estimatedReadingTime": "about 37 sec",
+          "narration": "The final image should not be a discovery. It should be a room of light with a shadow behind it. The Amber Room has been rebuilt, but the original absence still stands just outside the glow. That is why the story keeps returning: not only to find treasure, but to ask what reconstruction can never fully give back. The glow remains beautiful, and that beauty makes the act of removal feel even colder. The ending leaves the door closed, because the closed door is part of the story.",
+          "visualBeats": [
             {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal shown through source material connected to later retellings do not always keep the same and retellings within the wider frame. End with a slow hold and no new action.",
-              "imagePrompt": "A realistic location-documentary style image shows The Amber Room shown through source material connected to later retellings do not always keep the same emphasis in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a wider reflective frame that keeps the ending unresolved, with subdued fading light, quiet reflective tension, and cultural context from Unexplained Mysteries. Include retellings, always, emphasis as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal shown through source material connected to later retellings do not always keep the same and retellings within the wider frame. End with a slow hold and no new action.",
-              "sourceFactIds": [
-                "fact-025"
-              ],
-              "sourceFieldRefs": [
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "storyBrief.editorialInterpretationOptions",
-                "story.excerpt",
-                "derived.outcomeFromDetail"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a slow controlled push toward The Amber Room, with framed by the interpretation that the Amber Room mystery lasts because loss has a staying fixed as the follow-up wider frame and Amber Room visible. End with a slow hold and no new action.",
-              "imagePrompt": "A realistic location-documentary style image shows The Amber Room framed by the interpretation that the Amber Room mystery lasts because loss has a shape here in art history, wartime looting context, museum reconstruction history, search claims, and unresolved-loss documentation. Frame one clear scene as a wider reflective frame that keeps the ending unresolved, with subdued fading light, quiet reflective tension, and cultural context from Unexplained Mysteries. Include The Amber Room, Amber Room Mystery, Amber Room as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Use a slow controlled push toward The Amber Room, with framed by the interpretation that the Amber Room mystery lasts because loss has a staying fixed as the follow-up wider frame and Amber Room visible. End with a slow hold and no new action.",
-              "sourceFactIds": [
-                "fact-008"
-              ],
-              "sourceFieldRefs": [
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "storyBrief.editorialInterpretationOptions",
-                "story.excerpt",
-                "derived.outcomeFromDetail"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "Final restrained image of amber panels glowing warmly while a dark crate silhouette sits in the foreground, no readable text, unresolved ending.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: hold on the amber glow, then fade to the crate silhouette."
             }
           ]
         }
       ],
-      "sceneFocus": "The central visual should show it also sits inside a very human hope that something beautiful might still be hidden somewhere.",
-      "sceneRole": "What Remains Unresolved",
-      "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-      "sourceFactIds": [
-        "fact-019",
-        "fact-043",
-        "fact-052",
-        "fact-033",
-        "fact-031",
-        "fact-040"
-      ],
-      "sourceFieldRefs": [
-        "publicArticlePlan",
-        "storyBrief.coreStoryElements",
-        "story.excerpt",
-        "derived.outcomeFromDetail",
-        "publicArticlePlan.publicSourceNote",
-        "story.summaryAnswer"
-      ],
-      "visualDirection": "Begin with a slow pullback, hold briefly after the final narration line, then fade to black.",
-      "voiceDirection": "Slow pace with a soft ending, short pauses between ideas, natural restraint, with light emphasis on \"Amber Room\" when it appears."
+      "sceneFocus": "The Amber Room endures because the original remains absent behind a restored image.",
+      "sceneRole": "Ending and Search Profile",
+      "soundEffect": "soft footsteps, crate wood, distant room echo",
+      "visualDirection": "Move from beauty to loss, keeping the object tangible and unresolved.",
+      "voiceDirection": "Elegant but tense, like walking through an empty historical room."
     }
   ]
 }

@@ -1,1151 +1,433 @@
 {
   "contentType": "script",
-  "coreMotif": "Greek Seasonal Myth",
+  "coreMotif": "Return With A Condition",
   "creatorCategorySlug": "myths",
   "creatorPipelineVersion": "single-path-v1",
-  "deck": "Demeter and Persephone is prepared as a creator-ready production workspace based on the archive record, with long-form scenes, Shorts narration, image prompts, music keywords, and editing notes.",
-  "difficulty": "Beginner-friendly production package",
-  "estimatedVideoLength": "5-6 minutes",
+  "deck": "A source-based image and narration package for Demeter and Persephone myth, built from the Kyunolab archive record with 5 scenes, 15 voiceover beats, image prompts, and restrained production notes for a 7-8 minute video.",
+  "difficulty": "Beginner-friendly image and narration production package",
+  "estimatedVideoLength": "7-8 minutes",
   "genre": "Myths Creator Library",
   "id": "demeter-and-persephone-myth-youtube-script",
   "imagePrompts": [
-    "An ancient documentary realism image shows Demeter and Persephone held as the central visual in the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with natural low light, ancient atmosphere, and cultural context from Myths. Include Demeter and Persephone, Demeter, Persephone as supporting visual details. This should feel like an opening visual with one clear focal point during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "An ancient documentary realism image shows Demeter connected to greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return in the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, ancient atmosphere, and cultural context from Greek. Include Demeter, Persephone, underworld as supporting visual details. This should feel like an opening visual that adds a second visual detail during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "An ancient documentary realism image shows Demeter and Persephone connected to demeter and Persephone centers on greek myth in the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame one clear scene as a close visual detail that supports the current narration, with natural low light, ancient atmosphere, and cultural context from greek. Include Demeter and Persephone, Demeter, Persephone as supporting visual details. This should feel like an opening visual that widens the frame without adding new story elements during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "An ancient documentary realism image shows Demeter and Persephone connected to demeter and Persephone centers on greek myth in the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with natural low light, ancient atmosphere, and cultural context from greek. Include Demeter and Persephone, Demeter, Persephone as supporting visual details. This should feel like a follow-up visual with one clear focal point during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "An ancient documentary realism image shows Demeter and Persephone held as the central visual in the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, ancient atmosphere, and cultural context from Myths. Include Demeter and Persephone, Demeter, Persephone as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "An ancient documentary realism image shows Demeter connected to the familiar account centers on the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal in the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame one clear scene as a close visual detail that supports the current narration, with natural low light, ancient atmosphere, and cultural context from Greek. Include Demeter, Persephone, underworld as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "An ancient documentary realism image shows Demeter and Persephone connected to demeter and Persephone centers on greek myth in the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with low directional light with restrained contrast, ancient atmosphere, and cultural context from greek. Include Demeter and Persephone, Demeter, Persephone as supporting visual details. This should feel like an opening visual with one clear focal point during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "An ancient documentary realism image shows Traditional placed within traditional explanation and sacred pattern in the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame one clear scene as a medium composition that shows the important action or state, with low directional light with restrained contrast, ancient atmosphere, and cultural context from Myths. Include Traditional, explanation, sacred as supporting visual details. This should feel like an opening visual that adds a second visual detail during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "An ancient documentary realism image shows Demeter connected to the familiar account centers on the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal in the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame one clear scene as a close visual detail that supports the current narration, with low directional light with restrained contrast, ancient atmosphere, and cultural context from Greek. Include Demeter, Persephone, underworld as supporting visual details. This should feel like an opening visual that widens the frame without adding new story elements during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "An ancient documentary realism image shows Demeter connected to the familiar account centers on the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal in the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with low directional light with restrained contrast, ancient atmosphere, and cultural context from Greek. Include Demeter, Persephone, underworld as supporting visual details. This should feel like a follow-up visual with one clear focal point during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "An ancient documentary realism image shows Demeter connected to greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return in the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame one clear scene as a medium composition that shows the important action or state, with low directional light with restrained contrast, ancient atmosphere, and cultural context from Greek. Include Demeter, Persephone, underworld as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "An ancient documentary realism image shows Demeter and Persephone connected to demeter and Persephone centers on greek myth in the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame one clear scene as a close visual detail that supports the current narration, with low directional light with restrained contrast, ancient atmosphere, and cultural context from greek. Include Demeter and Persephone, Demeter, Persephone as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "An ancient documentary realism image shows Demeter and Persephone connected to demeter and Persephone centers on greek myth in the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with low directional light with restrained contrast, ancient atmosphere, and cultural context from greek. Include Demeter and Persephone, Demeter, Persephone as supporting visual details. This should feel like an opening visual with one clear focal point during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "An ancient documentary realism image shows Demeter connected to greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return in the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame one clear scene as a medium composition that shows the important action or state, with low directional light with restrained contrast, ancient atmosphere, and cultural context from Greek. Include Demeter, Persephone, underworld as supporting visual details. This should feel like an opening visual that adds a second visual detail during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "An ancient documentary realism image shows Demeter connected to the familiar account centers on the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal in the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame one clear scene as a close visual detail that supports the current narration, with low directional light with restrained contrast, ancient atmosphere, and cultural context from Greek. Include Demeter, Persephone, underworld as supporting visual details. This should feel like an opening visual that widens the frame without adding new story elements during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "An ancient documentary realism image shows Demeter connected to the familiar account centers on the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal in the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with low directional light with restrained contrast, ancient atmosphere, and cultural context from Greek. Include Demeter, Persephone, underworld as supporting visual details. This should feel like a follow-up visual with one clear focal point during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "An ancient documentary realism image shows Demeter connected to greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return in the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame one clear scene as a medium composition that shows the important action or state, with low directional light with restrained contrast, ancient atmosphere, and cultural context from Greek. Include Demeter, Persephone, underworld as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "An ancient documentary realism image shows Demeter and Persephone connected to demeter and Persephone centers on greek myth in the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame one clear scene as a close visual detail that supports the current narration, with low directional light with restrained contrast, ancient atmosphere, and cultural context from greek. Include Demeter and Persephone, Demeter, Persephone as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "An ancient documentary realism image shows Demeter and Persephone shown through source material connected to retellings preserve Demeter, Persephone, underworld as the signs that make Demeter and Persephone recognizable in mythological tradition, reference summaries, symbolic reading,. Frame one clear scene as a clear tabletop or archival composition, with soft archival light, careful documentary restraint, and cultural context from Myths. Include Demeter and Persephone, Demeter, Persephone as supporting visual details. This should feel like an opening visual with one clear focal point during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "An ancient documentary realism image shows Demeter and Persephone associated with a variant where later summaries often simplify the story into a single clean form, while older or parallel versions keep more than one emphasis alive in mythological tradition, reference summaries, symbolic reading,. Frame one clear scene as a medium frame that separates the main subject from supporting evidence, with soft archival light, careful documentary restraint, and cultural context from Myths. Include summaries, often, simplify as supporting visual details. This should feel like an opening visual that adds a second visual detail during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "An ancient documentary realism image shows Demeter and Persephone associated with a variant where later versions and source comparison in mythological tradition, reference summaries, symbolic reading,. Frame one clear scene as a medium frame that separates the main subject from supporting evidence, with soft archival light, careful documentary restraint, and cultural context from Myths. Include versions, comparison, Demeter and Persephone as supporting visual details. This should feel like a follow-up visual with one clear focal point during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "An ancient documentary realism image shows Demeter and Persephone associated with a variant where versions of Demeter and Persephone differ by source, region, period, or online retelling, but the central anchor remains Demeter in mythological tradition, reference summaries, symbolic reading,. Frame one clear scene as a close archival detail with the source boundary visible, with soft archival light, careful documentary restraint, and cultural context from online. Include Demeter and Persephone, Demeter, Persephone as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "An ancient documentary realism image shows Demeter and Persephone framed by the interpretation that demeter and Persephone is treated through one concrete anchor: the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return in mythological tradition, reference summaries, symbolic reading,. Frame one clear scene as a wide reflective composition with negative space, with subdued fading light, quiet reflective tension, and cultural context from Greek. Include Demeter and Persephone, Demeter, Persephone as supporting visual details. This should feel like an opening visual with one clear focal point during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "An ancient documentary realism image shows Demeter connected to greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return in mythological tradition, reference summaries, symbolic reading,. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, and cultural context from Greek. Include Demeter, Persephone, underworld as supporting visual details. This should feel like an opening visual that adds a second visual detail during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "An ancient documentary realism image shows Demeter and Persephone framed by the interpretation that demeter and Persephone may be read as a story about how symbolic action explains human limits in mythological tradition, reference summaries, symbolic reading,. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, and cultural context from Myths. Include Demeter and Persephone, Demeter, Persephone as supporting visual details. This should feel like an opening visual that widens the frame without adding new story elements during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "An ancient documentary realism image shows Demeter and Persephone framed by the interpretation that demeter and Persephone may be read as a story about how symbolic action explains human limits in mythological tradition, reference summaries, symbolic reading,. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, and cultural context from Myths. Include Demeter and Persephone, Demeter, Persephone as supporting visual details. This should feel like a follow-up visual with one clear focal point during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "An ancient documentary realism image shows Demeter and Persephone shown through source material connected to retellings preserve Demeter, Persephone, underworld as the signs that make Demeter and Persephone recognizable in mythological tradition, reference summaries, symbolic reading,. Frame one clear scene as a wider reflective frame that keeps the ending unresolved, with subdued fading light, quiet reflective tension, and cultural context from Myths. Include Demeter and Persephone, Demeter, Persephone as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the final sequence. No gore, readable text, logos, watermarks, or modern objects."
+    "A sunlit meadow with flowers bending toward a dark crack in the earth, no figures close up, mythic but restrained, no readable text.",
+    "A young woman in pale dress seen from behind at the edge of a shadowed underworld stair, flowers scattered near her feet, restrained classical mood.",
+    "A solitary maternal figure crossing a fading field under gray light, grain bent and flowers closed, no modern elements, solemn mythic realism.",
+    "A barren path through a field with a few fallen flowers and a distant searching figure, muted gold and gray, no text.",
+    "Wide field of withered grain under a pale sky, one small figure near the horizon, classical mythic restraint, no ruins, no text.",
+    "A still landscape split between a dead field and a faint green edge far away, suspended seasonal mood, no readable signs.",
+    "A pomegranate split open in dark underworld light, red seeds glowing softly on stone, no hands, no text, restrained mythic realism.",
+    "A young woman at the boundary of a dark stair and a bright field, one red seed in her palm, face partly hidden, solemn classical mood.",
+    "A circular seasonal composition with pomegranate seeds, bare branches, new shoots, and a dark underworld stair, no text, restrained symbolic realism.",
+    "A bright field beginning to bloom while a dark stair remains in the background, mother and daughter silhouettes approaching, no faces, no text.",
+    "A single tree half blooming and half bare, with a faint underworld doorway at its roots, mythic landscape, no text.",
+    "Persephone-like figure standing between a sunlit field and a shadowed doorway below, pomegranate red accent, solemn and dignified, no text.",
+    "A field at the edge of spring with one pomegranate lying in the grass, distant mother-daughter silhouettes, warm and shadowed light.",
+    "A sequence-like single image of flowers, barren grain, pomegranate seed, underworld stair, and returning light arranged naturally, no text.",
+    "Final image of Persephone emerging toward a waiting figure at dawn, new flowers opening while shadow remains behind her, no text."
   ],
   "imagePromptsIncluded": true,
-  "logline": "Demeter and Persephone is treated through one concrete anchor: the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return.",
+  "logline": "Demeter and Persephone becomes a video about a daughter taken below, a mother whose grief changes the earth, and a return that can never be complete.",
   "longformIncluded": true,
   "longformScript": [
-    "The account identifies the central subject clearly: Demeter and Persephone: Abduction, Seasons, and the Myth of Return With a Condition. The conflict begins with a specific pressure: Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. The account then gives a direct movement: Demeter and Persephone centers on greek myth.",
-    "The opening identity is already specific: Demeter and Persephone centers on myths. The account then gives a direct movement: The familiar account centers on the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. The action moves through a specific event: Demeter and Persephone centers on the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return.",
-    "The place or tradition matters before the action moves forward: Traditional explanation and sacred pattern. The action moves through a specific event: Demeter and Persephone is held together by a mythic image: the Greek myth in which Persephone taken to the underworld. The account then gives a direct movement: The Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return.",
-    "The action moves through a specific event: Another difference appears in the details that later audiences remember. The surviving record gives the narration a source limit: Demeter and Persephone belongs to mythological tradition, reference summaries, symbolic reading, and retellings, so the article treats it as inherited material rather than a newly invented Kyunolab record. The surviving record gives the narration a source limit: Versions of Demeter and Persephone differ by source, region, period, or online retelling, but the central anchor remains Demeter.",
-    "The turn changes the direction of the account: Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. The account leaves a direct result behind: Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return.",
-    "The source trail matters before the claim is treated as certain: For Demeter and Persephone, the article treats mythic material as tradition and interpretation rather than a single recoverable event. The source trail matters before the claim is treated as certain: References such as Wikipedia and Britannica are used as orientation points, not as proof for every later claim. The next fact gives the sequence a concrete action: Demeter and Persephone centers on greek myth.",
-    "The surviving record gives the narration a source limit: Retellings preserve Demeter, Persephone, underworld as the signs that make Demeter and Persephone recognizable. The versions do not always preserve the same emphasis: Versions of Demeter and Persephone differ by source, region, period, or online retelling, but the central anchor remains Demeter. The surviving record gives the narration a source limit: Demeter and Persephone appears in source material connected with mythological tradition, reference summaries, symbolic reading, and retellings.",
-    "The account stays careful because the evidence has boundaries: Those references are useful for tracing older texts, named figures, and later versions of the myth. The account stays careful because the evidence has boundaries: Demeter and Persephone is treated through mythological tradition, reference summaries, symbolic reading, and retellings. The account stays careful because the evidence has boundaries: Public references used for orientation include Wikipedia and Britannica.",
-    "The meaning remains tied to what the account actually says: Demeter and Persephone is treated through one concrete anchor: the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. The meaning remains tied to what the account actually says: Demeter and Persephone may be read as a story about how symbolic action explains human limits.",
-    "One interpretation stays close to the material: One possible reading is that demeter and Persephone may be read as a story about how symbolic action explains human limits. The surviving record gives the narration a source limit: Wikipedia - Demeter and Persephone reference Supports the public record for Demeter and Persephone. The surviving record gives the narration a source limit: Demeter and Persephone centers on mythological tradition, reference summaries, symbolic reading, and retellings."
+    "Demeter and Persephone begins in a place that should belong to life. A field, flowers, sunlight, the ordinary brightness of the upper world. Then the ground becomes a boundary. Persephone is taken below, and the story changes scale. A daughter disappears, and the earth itself begins to answer. The opening should feel intimate before it feels cosmic, because the season begins with one absence.",
+    "The abduction matters because it breaks the surface. Above and below, mother and daughter, growth and darkness, all become connected by one violent crossing. Persephone does not simply leave home. She is pulled into a realm that changes what return can mean. From that moment, every flower carries a shadow. The flowers make the loss sharper, turning beauty into the place where danger arrives.",
+    "Demeter feels the loss not as an idea, but as a force. Her search moves through the world with grief large enough to disturb the order of things. The myth understands something simple and terrible: when the one who brings fertility refuses to be comforted, the fields cannot pretend nothing has happened. Demeter's grief becomes weather because the myth refuses to keep sorrow private.",
+    "Demeter searches because the world above still contains traces. A path where Persephone might have walked. A flower that saw too much. A silence where an answer should be. The search gives the myth its human center. Before the seasons change, there is a mother refusing to let absence become normal. The story is powerful because famine grows from a mother's refusal to accept the world as normal.",
+    "As Demeter grieves, fertility withdraws. The myth turns emotion into landscape. Grain does not rise. Fields lose their promise. The human world becomes vulnerable because divine sorrow has entered the soil. This is the power of the story: grief is not hidden inside one heart. It spreads until everyone lives under it. The land answers her pain in a language every village can understand.",
+    "That is why the myth is not just an explanation for winter. It is a story about interruption. Life stops because relationship has been broken. The earth waits because Demeter waits. The world becomes a clock that cannot move forward until the lost daughter is answered. Nothing moves correctly until the missing daughter is named and sought.",
+    "Persephone below is not only a prisoner in a dark place. She becomes the center of a condition. The underworld does not release her without leaving a mark. In many tellings, the pomegranate seed changes the meaning of return. A small red seed becomes heavier than a gate. The pomegranate seed makes the bargain visible, small enough to hold and heavy enough to divide a life.",
+    "This is the part of the myth that feels cruel because it is so small. A bite, a seed, a condition, and the year is divided. Persephone can come back, but not completely. Demeter can recover her daughter, but not forever. The story refuses a simple rescue because some returns carry captivity back with them. Persephone's return is not a clean escape, and that is why the myth still hurts.",
+    "The pomegranate also prevents the myth from becoming only a story of loss. It creates rhythm. Descent and return, absence and reunion, barren field and green field. The pain does not vanish, but it becomes a pattern the world can survive. The seed divides the year, and the divided year becomes the shape of hope. The condition gives the myth its rhythm, and that rhythm keeps the wound alive. The condition gives the year its rhythm, turning reunion and separation into the shape of time.",
+    "When Persephone returns, the world changes again. The field can breathe. Green begins to enter the edges. Demeter's grief loosens its hold on the soil. But the reunion is not innocent. Everyone in the story knows the return has a limit. Spring arrives carrying the memory of the underworld. Spring becomes tender because it carries relief, and autumn becomes sorrowful because it remembers the next descent.",
+    "That is why the myth feels older than explanation. It does not simply say winter happens, then spring happens. It gives the seasons an emotional memory. Growth returns because someone beloved comes back. Growth fades because the return cannot last. The earth becomes a calendar of reunion and parting. The fields are never only fields after this; they are signs of a family story written across the earth.",
+    "Persephone herself becomes more than the girl who was taken. She belongs to both directions now. Above and below both know her name. That double belonging gives the myth its depth. Return does not erase descent. The person who comes back is not untouched by where she has been. The underworld remains close even when the flowers return, which keeps the joy from becoming simple.",
+    "Demeter and Persephone endures because it gives weather a heart. The changing year becomes a family story: a daughter taken, a mother searching, a bargain made, a seed swallowed, a return divided. The myth does not make loss disappear. It teaches the world how to live with return that comes and goes. By the close, the myth explains change without making grief disappear.",
+    "The images of the myth stay simple because the grief is simple: flowers near a dark opening, a barren field, a red seed, a stair between worlds, and a reunion that cannot last. Each image carries one piece of the year. Together they let the season speak before anyone names it. Its power comes from allowing love, loss, return, and limitation to remain in the same frame.",
+    "The final feeling should be bittersweet rather than solved. Persephone rises, Demeter waits, the field wakes, and the condition remains. Life returns, but it returns with memory. That is why the myth still works: every spring feels like an answer, and every winter remembers the question. The final feeling should be a field blooming with the knowledge that part of the year must still go dark. The listener is left with a myth that does not repair the wound so much as teach the world to live around it."
   ],
-  "mainSubject": "Demeter and Persephone",
-  "metaDescription": "A creator-ready production workspace for Demeter and Persephone, with long-form scenes, Shorts narration, image prompts, music keywords, and editing notes.",
-  "mood": "ancient, symbolic, and dramatic",
+  "mainSubject": "Demeter and Persephone myth",
+  "metaDescription": "A 7-8 minute source-based Demeter and Persephone myth video script with story-led narration, image prompts, Shorts script, thumbnail ideas, and production workflow.",
+  "mood": "grieving, cyclical, tender, mythic, solemn",
   "motionPrompts": [
-    "Use a slow controlled push toward Demeter and Persephone, with held as the central visual staying fixed as the opening anchor and Demeter and Persephone visible. Use only light shifts that match the mythic narrative tone.",
-    "Use a restrained lateral pan across the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return, letting Demeter hold the opening detail while Persephone stays in frame. Use only light shifts that match the mythic narrative tone.",
-    "Start with a static hold, then pull back slightly to reveal connected to demeter and Persephone centers on greek myth and Persephone within the wider frame. Use only light shifts that match the mythic narrative tone.",
-    "Use a restrained lateral pan across the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return, letting Demeter and Persephone hold the follow-up anchor while Demeter and Persephone stays in frame. Use only light shifts that match the mythic narrative tone.",
-    "Start with a static hold, then pull back slightly to reveal held as the central visual and Demeter within the wider frame. Use only light shifts that match the mythic narrative tone.",
-    "Use a slow controlled push toward Demeter, with connected to the familiar account centers on the Greek myth in which Persephone taken staying fixed as the follow-up wider frame and underworld visible. Use only light shifts that match the mythic narrative tone.",
-    "Use a slow controlled push toward Demeter and Persephone, with connected to demeter and Persephone centers on greek myth staying fixed as the opening anchor and Demeter and Persephone visible. Use only light shifts that match the mythic narrative tone.",
-    "Use a restrained lateral pan across the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return, letting Traditional hold the opening detail while explanation stays in frame. Use only light shifts that match the mythic narrative tone.",
-    "Start with a static hold, then pull back slightly to reveal connected to the familiar account centers on the Greek myth in which Persephone taken and underworld within the wider frame. Use only light shifts that match the mythic narrative tone.",
-    "Use a restrained lateral pan across the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return, letting Demeter hold the follow-up anchor while Demeter stays in frame. Use only light shifts that match the mythic narrative tone.",
-    "Start with a static hold, then pull back slightly to reveal connected to greek myth in which Persephone taken to the underworld and Demeter grief and Persephone within the wider frame. Use only light shifts that match the mythic narrative tone.",
-    "Use a slow controlled push toward Demeter and Persephone, with connected to demeter and Persephone centers on greek myth staying fixed as the follow-up wider frame and Persephone visible. Use only light shifts that match the mythic narrative tone.",
-    "Use a slow controlled push toward Demeter and Persephone, with connected to demeter and Persephone centers on greek myth staying fixed as the opening anchor and Demeter and Persephone visible. Use only light shifts that match the mythic narrative tone. Let Demeter and Persephone remain the distinct an opening visual with one clear focal point.",
-    "Use a restrained lateral pan across the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return, letting Demeter hold the opening detail while Persephone stays in frame. Use only light shifts that match the mythic narrative tone. Let Persephone remain the distinct an opening visual that adds a second visual detail.",
-    "Start with a static hold, then pull back slightly to reveal connected to the familiar account centers on the Greek myth in which Persephone taken and underworld within the wider frame. Use only light shifts that match the mythic narrative tone. Let underworld remain the distinct an opening visual that widens the frame without adding new story elements.",
-    "Use a restrained lateral pan across the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return, letting Demeter hold the follow-up anchor while Demeter stays in frame. Use only light shifts that match the mythic narrative tone. Let Demeter remain the distinct a follow-up visual with one clear focal point.",
-    "Start with a static hold, then pull back slightly to reveal connected to greek myth in which Persephone taken to the underworld and Demeter grief and Persephone within the wider frame. Use only light shifts that match the mythic narrative tone. Let Persephone remain the distinct a follow-up visual that adds a second visual detail.",
-    "Use a slow controlled push toward Demeter and Persephone, with connected to demeter and Persephone centers on greek myth staying fixed as the follow-up wider frame and Persephone visible. Use only light shifts that match the mythic narrative tone. Let Persephone remain the distinct a follow-up visual that widens the frame without adding new story elements.",
-    "Use a slow controlled push toward Demeter and Persephone, with shown through source material connected to retellings preserve Demeter, Persephone, underworld as the signs staying fixed as the opening anchor and Demeter and Persephone visible. Keep the movement restrained and documentary.",
-    "Use a restrained lateral pan across mythological tradition, reference summaries, symbolic reading, letting Demeter and Persephone hold the opening detail while summaries stays in frame. Keep the movement restrained and documentary.",
-    "Use a restrained lateral pan across mythological tradition, reference summaries, symbolic reading, letting Demeter and Persephone hold the follow-up anchor while Later stays in frame. Keep the movement restrained and documentary.",
-    "Start with a static hold, then pull back slightly to reveal associated with a variant where versions of Demeter and Persephone differ by source, region and Demeter within the wider frame. Keep the movement restrained and documentary.",
-    "Use a slow controlled push toward Demeter and Persephone, with framed by the interpretation that demeter and Persephone is treated through one concrete anchor staying fixed as the opening anchor and Demeter and Persephone visible. End with a slow hold and no new action.",
-    "Use a restrained lateral pan across mythological tradition, reference summaries, symbolic reading, letting Demeter hold the opening detail while Persephone stays in frame. End with a slow hold and no new action.",
-    "Start with a static hold, then pull back slightly to reveal framed by the interpretation that demeter and Persephone may be read as a story and Persephone within the wider frame. End with a slow hold and no new action.",
-    "Use a restrained lateral pan across mythological tradition, reference summaries, symbolic reading, letting Demeter and Persephone hold the follow-up anchor while Demeter and Persephone stays in frame. End with a slow hold and no new action.",
-    "Start with a static hold, then pull back slightly to reveal shown through source material connected to retellings preserve Demeter, Persephone, underworld as the signs and Demeter within the wider frame. End with a slow hold and no new action."
+    "Optional edit: slow push from flowers toward the dark ground opening.",
+    "Optional edit: slow fade from flowers to the dark stair.",
+    "Optional edit: slow tracking movement beside the figure through the barren field.",
+    "Optional edit: slow push along the empty path toward the distant figure.",
+    "Optional edit: slow pullback to make the barren field feel larger.",
+    "Optional edit: hold on the dead field, then slowly reveal the distant green edge.",
+    "Optional edit: slow push toward one seed on the stone.",
+    "Optional edit: slow fade between the seed and the bright field beyond.",
+    "Optional edit: slow circular drift around the seasonal elements.",
+    "Optional edit: slow push from new flowers to the two figures.",
+    "Optional edit: slow vertical move from roots to blossoms.",
+    "Optional edit: hold still as light and shadow balance around the figure.",
+    "Optional edit: slow push toward the pomegranate in the grass.",
+    "Optional edit: slow dissolve through each symbol in order.",
+    "Optional edit: slow fade from shadowed stair to dawn field."
   ],
   "originalStorySlug": "demeter-and-persephone-myth",
   "pipelineDiagnostics": {
-    "fallbackUsed": false,
-    "normalizedInputSchemaVersion": "1.0",
-    "scenePlanSchemaVersion": "1.0"
+    "finalPolish": "raised narration length without changing structure",
+    "imagePromptCount": 15,
+    "motionPromptCount": 15,
+    "narrationBeatCount": 15,
+    "polishedAt": "2026-08-12",
+    "polishedBy": "codex-manual-source-based-batch-001-polish",
+    "qualityDirection": "remove repeated extension phrasing and keep story-led narration",
+    "regeneratedAt": "2026-08-12",
+    "regeneratedBy": "codex-manual-source-based-batch-001",
+    "sceneCount": 5,
+    "shortSceneCount": 5,
+    "sourceStorySlug": "demeter-and-persephone-myth"
   },
   "publishedAt": "2026-07-21",
   "runtimePlan": {
-    "estimatedFinalRuntime": "5-6 minutes",
-    "estimatedFinalSeconds": 340,
-    "finalVideoSeconds": 340,
-    "narrationReadSeconds": 296,
-    "narrationReadTime": "4 min 56 sec",
-    "plannedTransitionAndVisualTime": "44 sec",
-    "totalWordCount": 696
+    "estimatedFinalRuntime": "7-8 minutes",
+    "estimatedFinalSeconds": 480,
+    "finalVideoSeconds": 480,
+    "narrationReadSeconds": 434,
+    "narrationReadTime": "7 min 14 sec",
+    "plannedTransitionAndVisualTime": "0 min 46 sec",
+    "totalWordCount": 1020
   },
   "schemaVersion": "single-path-v1",
-  "seoTitle": "Free Demeter and Persephone YouTube Script",
-  "setting": "mythic symbolic landscape",
+  "seoTitle": "Demeter and Persephone YouTube Script - Image and Narration Package",
+  "setting": "fields, underworld, divine grief, pomegranate, seasonal return",
   "shortForm": {
-    "finalVideoSeconds": 55,
-    "narrationReadSeconds": 44,
+    "finalVideoSeconds": 60,
+    "narrationReadSeconds": 36,
     "scenes": [
       {
-        "backgroundMusic": "quiet opening pulse, low hand drums, slow strings, short-form low density",
-        "estimatedReadSeconds": 9,
-        "imagePrompt": "A cinematic mythic documentary scene shows Demeter and Persephone introduced through Demeter within Greek cultural context with restrained historical atmosphere, framed as a vertical short-form frame with strong negative space. Use natural low light with restrained contrast and ancient mythic tension within Greek cultural context; center the frame on Demeter. No readable text, logos, watermarks, modern objects, graphic gore, or cartoon styling.",
-        "motionPrompt": "Use a slow controlled push toward Demeter and Persephone, keeping demeter and Persephone tied as the central visual anchor.",
-        "narration": "Demeter starts with persephone taken to the underworld and Demeter grief becomes. The detail points to persephone taken to the underworld.",
-        "role": "Defining Event",
-        "sceneFocus": "Defining Event: Demeter and Persephone tied to persephone taken to the underworld and Demeter.",
+        "backgroundMusic": "compact atmospheric bed matching the long-form tone",
+        "estimatedReadSeconds": 8,
+        "imagePrompt": "Vertical documentary image: flowers near a dark opening in the earth, clear single focal point, no readable text, no logos, no modern UI.",
+        "motionPrompt": "Slow restrained movement that supports the narration without adding new story events.",
+        "narration": "Persephone is taken below, and Demeter's grief becomes larger than one family. The fields themselves begin to change.",
+        "role": "Hook",
+        "sceneFocus": "A daughter disappears and the earth answers.",
         "sceneIndex": 1,
-        "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-        "sourceFactIds": [
-          "fact-039",
-          "fact-004",
-          "fact-007",
-          "fact-001",
-          "fact-038"
-        ],
-        "sourceFieldRefs": [
-          "derived.problemFromDetail",
-          "contentDNA.requiredSpecificDetails",
-          "publicArticlePlan",
-          "storyBrief.coreStoryElements",
-          "story.excerpt",
-          "story.sceneAnchor",
-          "story.detail",
-          "contentDNA.sceneAnchor",
-          "storyBrief.knownNames",
-          "story.subjectSpecificVocabulary",
-          "story.title",
-          "category.title"
-        ],
-        "usedFactTexts": [
-          "Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return.",
-          "Demeter and Persephone centers on greek myth.",
-          "The familiar account centers on the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return.",
-          "Demeter and Persephone: Abduction, Seasons, and the Myth of Return With a Condition.",
-          "Demeter and Persephone centers on myths."
-        ],
-        "voiceDirection": "Clear short-form pace, clean pauses, restrained tone, light emphasis on \"Demeter\"."
+        "soundEffect": "subtle ambience only",
+        "voiceDirection": "Clear short-form delivery with one clean pause."
       },
       {
-        "backgroundMusic": "steady low tension, low hand drums, slow strings, short-form low density",
-        "estimatedReadSeconds": 9,
-        "imagePrompt": "A cinematic mythic documentary scene shows Demeter and Persephone caught at the moment when Demeter becomes important within Greek cultural context with restrained historical atmosphere, framed in a clean medium shot with the key detail near the center. Use low directional light with a subtle point of tension and ancient mythic tension within Greek cultural context; center the frame on Demeter. No readable text, logos, watermarks, modern objects, graphic gore, or cartoon styling.",
-        "motionPrompt": "Use a restrained lateral pan across Demeter, then settle quietly on Demeter and Persephone.",
-        "narration": "Demeter moves through persephone taken to the underworld and Demeter grief becomes. The detail points to persephone taken to the underworld.",
-        "role": "Core Problem",
-        "sceneFocus": "Core Problem: Demeter and Persephone tied to persephone taken to the underworld and Demeter.",
-        "sceneIndex": 2,
-        "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-        "sourceFactIds": [
-          "fact-004",
-          "fact-007",
-          "fact-008",
-          "fact-039",
-          "fact-005"
-        ],
-        "sourceFieldRefs": [
-          "derived.problemFromDetail",
-          "storyBrief.knownNames",
-          "storyBrief.cultureOrContext",
-          "story.sceneAnchor",
-          "factRecords.settingTerms",
-          "contentDNA.requiredSpecificDetails",
-          "contentDNA.culturalFrame",
-          "publicArticlePlan",
-          "storyBrief.coreStoryElements"
-        ],
-        "usedFactTexts": [
-          "Demeter and Persephone centers on greek myth.",
-          "The familiar account centers on the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return.",
-          "Demeter and Persephone is held together by a mythic image: the Greek myth in which Persephone taken to the underworld.",
-          "Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return.",
-          "Traditional explanation and sacred pattern."
-        ],
-        "voiceDirection": "Clear short-form pace, clean pauses, restrained tone, light emphasis on \"Demeter\"."
-      },
-      {
-        "backgroundMusic": "steady low tension, low hand drums, slow strings, short-form low density",
-        "estimatedReadSeconds": 9,
-        "imagePrompt": "A cinematic mythic documentary scene shows Demeter and Persephone caught at the moment when Persephone becomes important within Greek cultural context with restrained historical atmosphere, framed as a close readable detail with the background still visible. Use low directional light with a subtle point of tension and ancient mythic tension within Greek cultural context; center the frame on Persephone. No readable text, logos, watermarks, modern objects, graphic gore, or cartoon styling.",
-        "motionPrompt": "Begin with a still frame, then gently pull back to reveal Persephone.",
-        "narration": "Demeter turns on persephone taken to the underworld and Demeter grief becomes. The detail points to persephone taken to the underworld.",
-        "role": "Mythic Turning Point",
-        "sceneFocus": "Mythic Turning Point: Demeter and Persephone tied to persephone taken to the underworld and Demeter.",
-        "sceneIndex": 3,
-        "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-        "sourceFactIds": [
-          "fact-036",
-          "fact-004",
-          "fact-007",
-          "fact-008",
-          "fact-037"
-        ],
-        "sourceFieldRefs": [
-          "derived.turningPointFromDetail",
-          "contentDNA.requiredSpecificDetails",
-          "publicArticlePlan",
-          "storyBrief.coreStoryElements",
-          "story.excerpt",
-          "story.sceneAnchor",
-          "story.detail",
-          "contentDNA.sceneAnchor",
-          "derived.outcomeFromDetail"
-        ],
-        "usedFactTexts": [
-          "Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return.",
-          "Demeter and Persephone centers on greek myth.",
-          "The familiar account centers on the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return.",
-          "Demeter and Persephone is held together by a mythic image: the Greek myth in which Persephone taken to the underworld.",
-          "Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return."
-        ],
-        "voiceDirection": "Clear short-form pace, clean pauses, restrained tone, light emphasis on \"Demeter\"."
-      },
-      {
-        "backgroundMusic": "sparse documentary bed, low hand drums, slow strings, short-form low density",
+        "backgroundMusic": "compact atmospheric bed matching the long-form tone",
         "estimatedReadSeconds": 7,
-        "imagePrompt": "A cinematic mythic documentary scene shows Demeter and Persephone positioned beside Persephone as the source detail becomes visible within Greek cultural context with restrained historical atmosphere, framed with foreground evidence leading toward the main subject. Use soft archival light and controlled shadows and ancient mythic tension within Greek cultural context; center the frame on Persephone. No readable text, logos, watermarks, modern objects, graphic gore, or cartoon styling.",
-        "motionPrompt": "Reveal Persephone from foreground to background with subtle parallax and restrained movement.",
-        "narration": "Demeter and Persephone shifts through later summaries often simplify the story into a single. Later versions.",
-        "role": "Consequence or Variant",
-        "sceneFocus": "Consequence or Variant: Demeter and Persephone tied to later versions and source comparison.",
-        "sceneIndex": 4,
-        "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-        "sourceFactIds": [
-          "fact-002",
-          "fact-003",
-          "fact-010",
-          "fact-011",
-          "fact-012"
-        ],
-        "sourceFieldRefs": [
-          "derived.outcomeFromDetail",
-          "storyBrief.reportedVariants",
-          "publicArticlePlan",
-          "storyBrief.coreStoryElements",
-          "publicArticlePlan.publicSourceNote",
-          "story.publicSourceBasis",
-          "storyBrief.cultureOrContext",
-          "story.publicSourceNoteSeed",
-          "story.evidence",
-          "story.researchSources",
-          "storyBrief.existenceEvidence"
-        ],
-        "usedFactTexts": [
-          "Later summaries often simplify the story into a single clean form, while older or parallel versions keep more than one emphasis alive.",
-          "Later versions and source comparison.",
-          "Versions of Demeter and Persephone differ by source, region, period, or online retelling, but the central anchor remains Demeter.",
-          "Retellings preserve Demeter, Persephone, underworld as the signs that make Demeter and Persephone recognizable.",
-          "Demeter and Persephone belongs to mythological tradition, reference summaries, symbolic reading, and retellings, so the article treats it as inherited material rather than a newly invented Kyunolab record."
-        ],
-        "voiceDirection": "Clear short-form pace, clean pauses, restrained tone, light emphasis on \"Demeter\"."
+        "imagePrompt": "Vertical documentary image: a lone figure crossing a withered field, clear single focal point, no readable text, no logos, no modern UI.",
+        "motionPrompt": "Slow restrained movement that supports the narration without adding new story events.",
+        "narration": "Demeter searches, and fertility withdraws. The myth turns private loss into a landscape everyone must live under.",
+        "role": "Search",
+        "sceneFocus": "Grief enters the soil.",
+        "sceneIndex": 2,
+        "soundEffect": "subtle ambience only",
+        "voiceDirection": "Clear short-form delivery with one clean pause."
       },
       {
-        "backgroundMusic": "soft reflective drone, low hand drums, slow strings, short-form low density",
-        "estimatedReadSeconds": 11,
-        "imagePrompt": "A cinematic mythic documentary scene shows Demeter and Persephone held in a quiet final composition around Abduction within Greek cultural context with restrained historical atmosphere, framed as a restrained final frame that leaves room for narration. Use soft fading light with low contrast and ancient mythic tension within Greek cultural context; center the frame on Abduction. No readable text, logos, watermarks, modern objects, graphic gore, or cartoon styling.",
-        "motionPrompt": "Hold briefly on Demeter and Persephone, then let the light shift softly around Abduction.",
-        "narration": "Demeter ends with persephone taken to the underworld and Demeter grief becomes. The meaning points to may be read as a story about how symbolic.",
-        "role": "Outcome and Meaning",
-        "sceneFocus": "Outcome and Meaning: Demeter and Persephone tied to persephone taken to the underworld and Demeter.",
+        "backgroundMusic": "compact atmospheric bed matching the long-form tone",
+        "estimatedReadSeconds": 6,
+        "imagePrompt": "Vertical documentary image: a red pomegranate seed on dark stone, clear single focal point, no readable text, no logos, no modern UI.",
+        "motionPrompt": "Slow restrained movement that supports the narration without adding new story events.",
+        "narration": "A pomegranate seed makes the rescue incomplete. Persephone can come back, but not forever.",
+        "role": "Seed",
+        "sceneFocus": "The return has a condition.",
+        "sceneIndex": 3,
+        "soundEffect": "subtle ambience only",
+        "voiceDirection": "Clear short-form delivery with one clean pause."
+      },
+      {
+        "backgroundMusic": "compact atmospheric bed matching the long-form tone",
+        "estimatedReadSeconds": 8,
+        "imagePrompt": "Vertical documentary image: a blooming field with a dark stair behind it, clear single focal point, no readable text, no logos, no modern UI.",
+        "motionPrompt": "Slow restrained movement that supports the narration without adding new story events.",
+        "narration": "When Persephone returns, life comes back. But the reunion is shadowed by the knowledge that she must leave again.",
+        "role": "Return",
+        "sceneFocus": "Spring carries memory.",
+        "sceneIndex": 4,
+        "soundEffect": "subtle ambience only",
+        "voiceDirection": "Clear short-form delivery with one clean pause."
+      },
+      {
+        "backgroundMusic": "compact atmospheric bed matching the long-form tone",
+        "estimatedReadSeconds": 7,
+        "imagePrompt": "Vertical documentary image: dawn field with mother and daughter silhouettes, clear single focal point, no readable text, no logos, no modern UI.",
+        "motionPrompt": "Slow restrained movement that supports the narration without adding new story events.",
+        "narration": "Demeter and Persephone endures because every spring feels like an answer, and every winter remembers the question.",
+        "role": "Ending",
+        "sceneFocus": "The year becomes a family story.",
         "sceneIndex": 5,
-        "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-        "sourceFactIds": [
-          "fact-037",
-          "fact-006",
-          "fact-023",
-          "fact-024",
-          "fact-011"
-        ],
-        "sourceFieldRefs": [
-          "derived.outcomeFromDetail",
-          "contentDNA.uniqueAngle",
-          "publicArticlePlan",
-          "storyBrief.editorialInterpretationOptions",
-          "story.summaryAnswer",
-          "storyBrief.coreStoryElements"
-        ],
-        "usedFactTexts": [
-          "Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return.",
-          "Demeter and Persephone is treated through one concrete anchor: the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return.",
-          "Demeter and Persephone may be read as a story about how symbolic action explains human limits.",
-          "One possible reading is that demeter and Persephone may be read as a story about how symbolic action explains human limits.",
-          "Retellings preserve Demeter, Persephone, underworld as the signs that make Demeter and Persephone recognizable."
-        ],
-        "voiceDirection": "Slow final pace, clean pauses, restrained tone, light emphasis on \"Demeter\"."
+        "soundEffect": "subtle ambience only",
+        "voiceDirection": "Clear short-form delivery with one clean pause."
       }
     ],
-    "totalWordCount": 104
+    "totalWordCount": 85
   },
   "shortSceneFocuses": [
-    "Defining Event: Demeter and Persephone tied to persephone taken to the underworld and Demeter.",
-    "Core Problem: Demeter and Persephone tied to persephone taken to the underworld and Demeter.",
-    "Mythic Turning Point: Demeter and Persephone tied to persephone taken to the underworld and Demeter.",
-    "Consequence or Variant: Demeter and Persephone tied to later versions and source comparison.",
-    "Outcome and Meaning: Demeter and Persephone tied to persephone taken to the underworld and Demeter."
+    "A daughter disappears and the earth answers.",
+    "Grief enters the soil.",
+    "The return has a condition.",
+    "Spring carries memory.",
+    "The year becomes a family story."
   ],
   "shortsIncluded": true,
   "shortsScript": [
-    "Demeter starts with persephone taken to the underworld and Demeter grief becomes. The detail points to persephone taken to the underworld.",
-    "Demeter moves through persephone taken to the underworld and Demeter grief becomes. The detail points to persephone taken to the underworld.",
-    "Demeter turns on persephone taken to the underworld and Demeter grief becomes. The detail points to persephone taken to the underworld.",
-    "Demeter and Persephone shifts through later summaries often simplify the story into a single. Later versions.",
-    "Demeter ends with persephone taken to the underworld and Demeter grief becomes. The meaning points to may be read as a story about how symbolic."
+    "Persephone is taken below, and Demeter's grief becomes larger than one family. The fields themselves begin to change.",
+    "Demeter searches, and fertility withdraws. The myth turns private loss into a landscape everyone must live under.",
+    "A pomegranate seed makes the rescue incomplete. Persephone can come back, but not forever.",
+    "When Persephone returns, life comes back. But the reunion is shadowed by the knowledge that she must leave again.",
+    "Demeter and Persephone endures because every spring feels like an answer, and every winter remembers the question."
   ],
   "slug": "demeter-and-persephone-myth-youtube-script",
   "storageSchemaVersion": "creator-pack-file-v1",
   "subtitleLines": [
-    "Demeter and Persephone begins with a familiar image.",
-    "Demeter and Persephone is a pre-existing Myths subject built around the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return.",
-    "The ending leaves a question behind."
+    "A source-based package for Demeter and Persephone myth.",
+    "Five scenes, fifteen voiceover beats.",
+    "Built for image-led narration."
   ],
   "tags": [
-    "myths script",
-    "greek seasonal myth script",
-    "creator library",
-    "youtube script",
-    "shorts script",
-    "image prompt"
+    "Demeter and Persephone myth",
+    "Return With A Condition",
+    "Myths Creator Library",
+    "Image Narration Script"
   ],
   "thumbnailIdeas": [
-    "Demeter and Persephone with bold text: THE STORY STILL REMAINS",
-    "A close-up of the key image from Demeter and Persephone",
-    "Split thumbnail: familiar legend on one side, unresolved question on the other"
+    "Demeter and Persephone myth with the title: Return With A Condition",
+    "Demeter and Persephone myth in shadow with a clear mystery title",
+    "Demeter and Persephone myth as a restrained documentary thumbnail",
+    "Demeter and Persephone myth with one symbolic object in the foreground"
   ],
   "thumbnailIdeasIncluded": true,
   "title": "Demeter and Persephone YouTube Script",
-  "updatedAt": "2026-07-21",
-  "usageNote": "Use this page as a production workspace for a video based on the archive entry for Demeter and Persephone. Keep source limits clear and avoid presenting later interpretations as verified facts.",
+  "updatedAt": "2026-08-12",
+  "usageNote": "Use this package as a production aid for an image-led narration video. Keep Demeter and Persephone myth tied to its original archive story and keep production notes outside the narration.",
   "visualGuide": [
     {
-      "backgroundMusic": "quiet opening pulse, low hand drums, slow strings, ancient ambient bed, slow tempo with restrained weight",
-      "directionTip": "The central visual should show greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return.",
+      "backgroundMusic": "soft mythic strings, field wind, low underworld drone",
       "narrationParts": [
         {
-          "creatorNote": "Demeter must stay tied to greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Do not add figures, motives, or incidents beyond demeter and Persephone centers on myths.",
-          "estimatedReadingTime": "≈ 26 sec",
-          "narration": "The account identifies the central subject clearly: Demeter and Persephone: Abduction, Seasons, and the Myth of Return With a Condition. The conflict begins with a specific pressure: Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. The account then gives a direct movement: Demeter and Persephone centers on greek myth.",
-          "sourceFactIds": [
-            "fact-001",
-            "fact-039",
-            "fact-004"
-          ],
-          "sourceFieldRefs": [
-            "story.title",
-            "derived.problemFromDetail",
-            "contentDNA.requiredSpecificDetails"
-          ],
-          "usedFactTexts": [
-            "Demeter and Persephone: Abduction, Seasons, and the Myth of Return With a Condition.",
-            "Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return.",
-            "Demeter and Persephone centers on greek myth."
-          ],
+          "creatorNote": "Start with the field turning into a threshold.",
+          "estimatedReadingTime": "about 26 sec",
+          "narration": "Demeter and Persephone begins in a place that should belong to life. A field, flowers, sunlight, the ordinary brightness of the upper world. Then the ground becomes a boundary. Persephone is taken below, and the story changes scale. A daughter disappears, and the earth itself begins to answer. The myth stays close to grief, so every change in the field feels personal.",
           "visualBeats": [
             {
-              "beatMotion": "Use a slow controlled push toward Demeter and Persephone, with held as the central visual staying fixed as the opening anchor and Demeter and Persephone visible. Use only light shifts that match the mythic narrative tone.",
-              "imagePrompt": "An ancient documentary realism image shows Demeter and Persephone held as the central visual in the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with natural low light, ancient atmosphere, and cultural context from Myths. Include Demeter and Persephone, Demeter, Persephone as supporting visual details. This should feel like an opening visual with one clear focal point during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a slow controlled push toward Demeter and Persephone, with held as the central visual staying fixed as the opening anchor and Demeter and Persephone visible. Use only light shifts that match the mythic narrative tone.",
-              "sourceFactIds": [
-                "fact-001"
-              ],
-              "sourceFieldRefs": [
-                "story.title",
-                "derived.problemFromDetail",
-                "contentDNA.requiredSpecificDetails",
-                "category.title",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a restrained lateral pan across the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return, letting Demeter hold the opening detail while Persephone stays in frame. Use only light shifts that match the mythic narrative tone.",
-              "imagePrompt": "An ancient documentary realism image shows Demeter connected to greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return in the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, ancient atmosphere, and cultural context from Greek. Include Demeter, Persephone, underworld as supporting visual details. This should feel like an opening visual that adds a second visual detail during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Use a restrained lateral pan across the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return, letting Demeter hold the opening detail while Persephone stays in frame. Use only light shifts that match the mythic narrative tone.",
-              "sourceFactIds": [
-                "fact-039"
-              ],
-              "sourceFieldRefs": [
-                "story.title",
-                "derived.problemFromDetail",
-                "contentDNA.requiredSpecificDetails",
-                "category.title",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal connected to demeter and Persephone centers on greek myth and Persephone within the wider frame. Use only light shifts that match the mythic narrative tone.",
-              "imagePrompt": "An ancient documentary realism image shows Demeter and Persephone connected to demeter and Persephone centers on greek myth in the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame one clear scene as a close visual detail that supports the current narration, with natural low light, ancient atmosphere, and cultural context from greek. Include Demeter and Persephone, Demeter, Persephone as supporting visual details. This should feel like an opening visual that widens the frame without adding new story elements during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal connected to demeter and Persephone centers on greek myth and Persephone within the wider frame. Use only light shifts that match the mythic narrative tone.",
-              "sourceFactIds": [
-                "fact-004"
-              ],
-              "sourceFieldRefs": [
-                "story.title",
-                "derived.problemFromDetail",
-                "contentDNA.requiredSpecificDetails",
-                "category.title",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "A sunlit meadow with flowers bending toward a dark crack in the earth, no figures close up, mythic but restrained, no readable text.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow push from flowers toward the dark ground opening."
             }
           ]
         },
         {
-          "creatorNote": "Demeter and Persephone must stay tied to demeter and Persephone centers on greek myth. Do not add figures, motives, or incidents beyond demeter and Persephone: Abduction, Seasons, and the Myth of Return With a Condition.",
-          "estimatedReadingTime": "≈ 32 sec",
-          "narration": "The opening identity is already specific: Demeter and Persephone centers on myths. The account then gives a direct movement: The familiar account centers on the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. The action moves through a specific event: Demeter and Persephone centers on the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return.",
-          "sourceFactIds": [
-            "fact-038",
-            "fact-007",
-            "fact-028"
-          ],
-          "sourceFieldRefs": [
-            "category.title",
-            "publicArticlePlan",
-            "storyBrief.coreStoryElements",
-            "story.excerpt",
-            "contentDNA.requiredSpecificDetails"
-          ],
-          "usedFactTexts": [
-            "Demeter and Persephone centers on myths.",
-            "The familiar account centers on the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return.",
-            "Demeter and Persephone centers on the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return."
-          ],
+          "creatorNote": "Make the crossing emotional, not graphic.",
+          "estimatedReadingTime": "about 27 sec",
+          "narration": "The abduction matters because it breaks the surface. Above and below, mother and daughter, growth and darkness, all become connected by one violent crossing. Persephone does not simply leave home. She is pulled into a realm that changes what return can mean. From that moment, every flower carries a shadow. The myth stays close to grief, so every change in the field feels personal.",
           "visualBeats": [
             {
-              "beatMotion": "Use a restrained lateral pan across the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return, letting Demeter and Persephone hold the follow-up anchor while Demeter and Persephone stays in frame. Use only light shifts that match the mythic narrative tone.",
-              "imagePrompt": "An ancient documentary realism image shows Demeter and Persephone connected to demeter and Persephone centers on greek myth in the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with natural low light, ancient atmosphere, and cultural context from greek. Include Demeter and Persephone, Demeter, Persephone as supporting visual details. This should feel like a follow-up visual with one clear focal point during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a restrained lateral pan across the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return, letting Demeter and Persephone hold the follow-up anchor while Demeter and Persephone stays in frame. Use only light shifts that match the mythic narrative tone.",
-              "sourceFactIds": [
-                "fact-004"
-              ],
-              "sourceFieldRefs": [
-                "story.title",
-                "derived.problemFromDetail",
-                "contentDNA.requiredSpecificDetails",
-                "category.title",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
-            },
+              "imagePrompt": "A young woman in pale dress seen from behind at the edge of a shadowed underworld stair, flowers scattered near her feet, restrained classical mood.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow fade from flowers to the dark stair."
+            }
+          ]
+        },
+        {
+          "creatorNote": "Set up Demeter as grief affecting nature.",
+          "estimatedReadingTime": "about 28 sec",
+          "narration": "Demeter feels the loss not as an idea, but as a force. Her search moves through the world with grief large enough to disturb the order of things. The myth understands something simple and terrible: when the one who brings fertility refuses to be comforted, the fields cannot pretend nothing has happened. The myth stays close to grief, so every change in the field feels personal.",
+          "visualBeats": [
             {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal held as the central visual and Demeter within the wider frame. Use only light shifts that match the mythic narrative tone.",
-              "imagePrompt": "An ancient documentary realism image shows Demeter and Persephone held as the central visual in the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, ancient atmosphere, and cultural context from Myths. Include Demeter and Persephone, Demeter, Persephone as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal held as the central visual and Demeter within the wider frame. Use only light shifts that match the mythic narrative tone.",
-              "sourceFactIds": [
-                "fact-038"
-              ],
-              "sourceFieldRefs": [
-                "story.title",
-                "derived.problemFromDetail",
-                "contentDNA.requiredSpecificDetails",
-                "category.title",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a slow controlled push toward Demeter, with connected to the familiar account centers on the Greek myth in which Persephone taken staying fixed as the follow-up wider frame and underworld visible. Use only light shifts that match the mythic narrative tone.",
-              "imagePrompt": "An ancient documentary realism image shows Demeter connected to the familiar account centers on the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal in the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame one clear scene as a close visual detail that supports the current narration, with natural low light, ancient atmosphere, and cultural context from Greek. Include Demeter, Persephone, underworld as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Use a slow controlled push toward Demeter, with connected to the familiar account centers on the Greek myth in which Persephone taken staying fixed as the follow-up wider frame and underworld visible. Use only light shifts that match the mythic narrative tone.",
-              "sourceFactIds": [
-                "fact-007"
-              ],
-              "sourceFieldRefs": [
-                "story.title",
-                "derived.problemFromDetail",
-                "contentDNA.requiredSpecificDetails",
-                "category.title",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "A solitary maternal figure crossing a fading field under gray light, grain bent and flowers closed, no modern elements, solemn mythic realism.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow tracking movement beside the figure through the barren field."
             }
           ]
         }
       ],
-      "sceneFocus": "The central visual should show greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return.",
-      "sceneRole": "Defining Event",
-      "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-      "sourceFactIds": [
-        "fact-001",
-        "fact-039",
-        "fact-004",
-        "fact-038",
-        "fact-007",
-        "fact-028"
-      ],
-      "sourceFieldRefs": [
-        "story.title",
-        "derived.problemFromDetail",
-        "contentDNA.requiredSpecificDetails",
-        "category.title",
-        "publicArticlePlan",
-        "storyBrief.coreStoryElements",
-        "story.excerpt"
-      ],
-      "visualDirection": "Hold the establishing image briefly, then begin a slow push toward the main detail.",
-      "voiceDirection": "Calm documentary pace, short pauses between ideas, natural restraint, with light emphasis on \"Demeter\" when it appears."
+      "sceneFocus": "The myth begins with a disappearance that changes the weather of the world.",
+      "sceneRole": "Opening Hook",
+      "soundEffect": "wind in grain, distant earth rumble, soft breath",
+      "visualDirection": "Use symbolic natural images that still feel like a scene.",
+      "voiceDirection": "Tender, solemn, and story-led, with space for grief and return."
     },
     {
-      "backgroundMusic": "steady low tension, low hand drums, slow strings, ancient ambient bed, slow tempo with restrained weight",
-      "directionTip": "The central visual should show demeter and Persephone centers on greek myth.",
+      "backgroundMusic": "soft mythic strings, field wind, low underworld drone",
       "narrationParts": [
         {
-          "creatorNote": "Demeter and Persephone must stay tied to demeter and Persephone centers on greek myth. Do not add figures, motives, or incidents beyond greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return.",
-          "estimatedReadingTime": "≈ 29 sec",
-          "narration": "The place or tradition matters before the action moves forward: Traditional explanation and sacred pattern. The action moves through a specific event: Demeter and Persephone is held together by a mythic image: the Greek myth in which Persephone taken to the underworld. The account then gives a direct movement: The Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return.",
-          "sourceFactIds": [
-            "fact-005",
-            "fact-008",
-            "fact-029"
-          ],
-          "sourceFieldRefs": [
-            "contentDNA.culturalFrame",
-            "publicArticlePlan",
-            "story.sceneAnchor",
-            "story.detail",
-            "contentDNA.sceneAnchor",
-            "contentDNA.requiredSpecificDetails"
-          ],
-          "usedFactTexts": [
-            "Traditional explanation and sacred pattern.",
-            "Demeter and Persephone is held together by a mythic image: the Greek myth in which Persephone taken to the underworld.",
-            "The Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return."
-          ],
+          "creatorNote": "Keep this beat intimate.",
+          "estimatedReadingTime": "about 28 sec",
+          "narration": "Demeter searches because the world above still contains traces. A path where Persephone might have walked. A flower that saw too much. A silence where an answer should be. The search gives the myth its human center. Before the seasons change, there is a mother refusing to let absence become normal. The myth stays close to grief, so every change in the field feels personal.",
           "visualBeats": [
             {
-              "beatMotion": "Use a slow controlled push toward Demeter and Persephone, with connected to demeter and Persephone centers on greek myth staying fixed as the opening anchor and Demeter and Persephone visible. Use only light shifts that match the mythic narrative tone.",
-              "imagePrompt": "An ancient documentary realism image shows Demeter and Persephone connected to demeter and Persephone centers on greek myth in the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with low directional light with restrained contrast, ancient atmosphere, and cultural context from greek. Include Demeter and Persephone, Demeter, Persephone as supporting visual details. This should feel like an opening visual with one clear focal point during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a slow controlled push toward Demeter and Persephone, with connected to demeter and Persephone centers on greek myth staying fixed as the opening anchor and Demeter and Persephone visible. Use only light shifts that match the mythic narrative tone.",
-              "sourceFactIds": [
-                "fact-004"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.requiredSpecificDetails",
-                "contentDNA.culturalFrame",
-                "derived.problemFromDetail",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a restrained lateral pan across the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return, letting Traditional hold the opening detail while explanation stays in frame. Use only light shifts that match the mythic narrative tone.",
-              "imagePrompt": "An ancient documentary realism image shows Traditional placed within traditional explanation and sacred pattern in the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame one clear scene as a medium composition that shows the important action or state, with low directional light with restrained contrast, ancient atmosphere, and cultural context from Myths. Include Traditional, explanation, sacred as supporting visual details. This should feel like an opening visual that adds a second visual detail during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Use a restrained lateral pan across the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return, letting Traditional hold the opening detail while explanation stays in frame. Use only light shifts that match the mythic narrative tone.",
-              "sourceFactIds": [
-                "fact-005"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.requiredSpecificDetails",
-                "contentDNA.culturalFrame",
-                "derived.problemFromDetail",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal connected to the familiar account centers on the Greek myth in which Persephone taken and underworld within the wider frame. Use only light shifts that match the mythic narrative tone.",
-              "imagePrompt": "An ancient documentary realism image shows Demeter connected to the familiar account centers on the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal in the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame one clear scene as a close visual detail that supports the current narration, with low directional light with restrained contrast, ancient atmosphere, and cultural context from Greek. Include Demeter, Persephone, underworld as supporting visual details. This should feel like an opening visual that widens the frame without adding new story elements during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal connected to the familiar account centers on the Greek myth in which Persephone taken and underworld within the wider frame. Use only light shifts that match the mythic narrative tone.",
-              "sourceFactIds": [
-                "fact-007"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.requiredSpecificDetails",
-                "contentDNA.culturalFrame",
-                "derived.problemFromDetail",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "A barren path through a field with a few fallen flowers and a distant searching figure, muted gold and gray, no text.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow push along the empty path toward the distant figure."
             }
           ]
         },
         {
-          "creatorNote": "Demeter must stay tied to the familiar account centers on the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Do not add figures, motives, or incidents beyond traditional explanation and sacred pattern.",
-          "estimatedReadingTime": "≈ 35 sec",
-          "narration": "The action moves through a specific event: Another difference appears in the details that later audiences remember. The surviving record gives the narration a source limit: Demeter and Persephone belongs to mythological tradition, reference summaries, symbolic reading, and retellings, so the article treats it as inherited material rather than a newly invented Kyunolab record. The surviving record gives the narration a source limit: Versions of Demeter and Persephone differ by source, region, period, or online retelling, but the central anchor remains Demeter.",
-          "sourceFactIds": [
-            "fact-009",
-            "fact-012",
-            "fact-021"
-          ],
-          "sourceFieldRefs": [
-            "publicArticlePlan",
-            "storyBrief.coreStoryElements",
-            "publicArticlePlan.publicSourceNote"
-          ],
-          "usedFactTexts": [
-            "Another difference appears in the details that later audiences remember.",
-            "Demeter and Persephone belongs to mythological tradition, reference summaries, symbolic reading, and retellings, so the article treats it as inherited material rather than a newly invented Kyunolab record.",
-            "Versions of Demeter and Persephone differ by source, region, period, or online retelling, but the central anchor remains Demeter."
-          ],
+          "creatorNote": "Let landscape carry grief.",
+          "estimatedReadingTime": "about 28 sec",
+          "narration": "As Demeter grieves, fertility withdraws. The myth turns emotion into landscape. Grain does not rise. Fields lose their promise. The human world becomes vulnerable because divine sorrow has entered the soil. This is the power of the story: grief is not hidden inside one heart. It spreads until everyone lives under it. The myth stays close to grief, so every change in the field feels personal.",
           "visualBeats": [
             {
-              "beatMotion": "Use a restrained lateral pan across the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return, letting Demeter hold the follow-up anchor while Demeter stays in frame. Use only light shifts that match the mythic narrative tone.",
-              "imagePrompt": "An ancient documentary realism image shows Demeter connected to the familiar account centers on the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal in the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with low directional light with restrained contrast, ancient atmosphere, and cultural context from Greek. Include Demeter, Persephone, underworld as supporting visual details. This should feel like a follow-up visual with one clear focal point during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a restrained lateral pan across the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return, letting Demeter hold the follow-up anchor while Demeter stays in frame. Use only light shifts that match the mythic narrative tone.",
-              "sourceFactIds": [
-                "fact-007"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.requiredSpecificDetails",
-                "contentDNA.culturalFrame",
-                "derived.problemFromDetail",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
-            },
+              "imagePrompt": "Wide field of withered grain under a pale sky, one small figure near the horizon, classical mythic restraint, no ruins, no text.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow pullback to make the barren field feel larger."
+            }
+          ]
+        },
+        {
+          "creatorNote": "Build toward negotiation.",
+          "estimatedReadingTime": "about 26 sec",
+          "narration": "That is why the myth is not just an explanation for winter. It is a story about interruption. Life stops because relationship has been broken. The earth waits because Demeter waits. The world becomes a clock that cannot move forward until the lost daughter is answered. The myth stays close to grief, so every change in the field feels personal.",
+          "visualBeats": [
             {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal connected to greek myth in which Persephone taken to the underworld and Demeter grief and Persephone within the wider frame. Use only light shifts that match the mythic narrative tone.",
-              "imagePrompt": "An ancient documentary realism image shows Demeter connected to greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return in the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame one clear scene as a medium composition that shows the important action or state, with low directional light with restrained contrast, ancient atmosphere, and cultural context from Greek. Include Demeter, Persephone, underworld as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal connected to greek myth in which Persephone taken to the underworld and Demeter grief and Persephone within the wider frame. Use only light shifts that match the mythic narrative tone.",
-              "sourceFactIds": [
-                "fact-039"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.requiredSpecificDetails",
-                "contentDNA.culturalFrame",
-                "derived.problemFromDetail",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a slow controlled push toward Demeter and Persephone, with connected to demeter and Persephone centers on greek myth staying fixed as the follow-up wider frame and Persephone visible. Use only light shifts that match the mythic narrative tone.",
-              "imagePrompt": "An ancient documentary realism image shows Demeter and Persephone connected to demeter and Persephone centers on greek myth in the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame one clear scene as a close visual detail that supports the current narration, with low directional light with restrained contrast, ancient atmosphere, and cultural context from greek. Include Demeter and Persephone, Demeter, Persephone as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Use a slow controlled push toward Demeter and Persephone, with connected to demeter and Persephone centers on greek myth staying fixed as the follow-up wider frame and Persephone visible. Use only light shifts that match the mythic narrative tone.",
-              "sourceFactIds": [
-                "fact-004"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.requiredSpecificDetails",
-                "contentDNA.culturalFrame",
-                "derived.problemFromDetail",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "A still landscape split between a dead field and a faint green edge far away, suspended seasonal mood, no readable signs.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: hold on the dead field, then slowly reveal the distant green edge."
             }
           ]
         }
       ],
-      "sceneFocus": "The central visual should show demeter and Persephone centers on greek myth.",
-      "sceneRole": "Core Sequence",
-      "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-      "sourceFactIds": [
-        "fact-005",
-        "fact-008",
-        "fact-029",
-        "fact-009",
-        "fact-012",
-        "fact-021"
-      ],
-      "sourceFieldRefs": [
-        "contentDNA.culturalFrame",
-        "publicArticlePlan",
-        "story.sceneAnchor",
-        "story.detail",
-        "contentDNA.sceneAnchor",
-        "contentDNA.requiredSpecificDetails",
-        "storyBrief.coreStoryElements",
-        "publicArticlePlan.publicSourceNote"
-      ],
-      "visualDirection": "Start steady, begin a slow push toward the main detail, and cut after the scene consequence is clear.",
-      "voiceDirection": "Calm documentary pace, short pauses between ideas, slight tension, with light emphasis on \"Demeter\" when it appears."
+      "sceneFocus": "The mother's grief turns private loss into a public crisis for the living world.",
+      "sceneRole": "Demeter Searches",
+      "soundEffect": "wind in grain, distant earth rumble, soft breath",
+      "visualDirection": "Use symbolic natural images that still feel like a scene.",
+      "voiceDirection": "Tender, solemn, and story-led, with space for grief and return."
     },
     {
-      "backgroundMusic": "steady low tension, low hand drums, slow strings, ancient ambient bed, slow tempo with restrained weight",
-      "directionTip": "The central visual should show greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame it through greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return.",
+      "backgroundMusic": "soft mythic strings, field wind, low underworld drone",
       "narrationParts": [
         {
-          "creatorNote": "Demeter and Persephone must stay tied to demeter and Persephone centers on greek myth. Let greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return define the result for this Part.",
-          "estimatedReadingTime": "≈ 23 sec",
-          "narration": "The turn changes the direction of the account: Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. The account leaves a direct result behind: Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return.",
-          "sourceFactIds": [
-            "fact-036",
-            "fact-037"
-          ],
-          "sourceFieldRefs": [
-            "derived.turningPointFromDetail",
-            "derived.outcomeFromDetail"
-          ],
-          "usedFactTexts": [
-            "Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return.",
-            "Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return."
-          ],
+          "creatorNote": "Make the seed cinematic and symbolic.",
+          "estimatedReadingTime": "about 26 sec",
+          "narration": "Persephone below is not only a prisoner in a dark place. She becomes the center of a condition. The underworld does not release her without leaving a mark. In many tellings, the pomegranate seed changes the meaning of return. A small red seed becomes heavier than a gate. The myth stays close to grief, so every change in the field feels personal.",
           "visualBeats": [
             {
-              "beatMotion": "Use a slow controlled push toward Demeter and Persephone, with connected to demeter and Persephone centers on greek myth staying fixed as the opening anchor and Demeter and Persephone visible. Use only light shifts that match the mythic narrative tone. Let Demeter and Persephone remain the distinct an opening visual with one clear focal point.",
-              "imagePrompt": "An ancient documentary realism image shows Demeter and Persephone connected to demeter and Persephone centers on greek myth in the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with low directional light with restrained contrast, ancient atmosphere, and cultural context from greek. Include Demeter and Persephone, Demeter, Persephone as supporting visual details. This should feel like an opening visual with one clear focal point during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a slow controlled push toward Demeter and Persephone, with connected to demeter and Persephone centers on greek myth staying fixed as the opening anchor and Demeter and Persephone visible. Use only light shifts that match the mythic narrative tone. Let Demeter and Persephone remain the distinct an opening visual with one clear focal point.",
-              "sourceFactIds": [
-                "fact-004"
-              ],
-              "sourceFieldRefs": [
-                "derived.turningPointFromDetail",
-                "contentDNA.requiredSpecificDetails",
-                "derived.outcomeFromDetail",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a restrained lateral pan across the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return, letting Demeter hold the opening detail while Persephone stays in frame. Use only light shifts that match the mythic narrative tone. Let Persephone remain the distinct an opening visual that adds a second visual detail.",
-              "imagePrompt": "An ancient documentary realism image shows Demeter connected to greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return in the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame one clear scene as a medium composition that shows the important action or state, with low directional light with restrained contrast, ancient atmosphere, and cultural context from Greek. Include Demeter, Persephone, underworld as supporting visual details. This should feel like an opening visual that adds a second visual detail during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Use a restrained lateral pan across the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return, letting Demeter hold the opening detail while Persephone stays in frame. Use only light shifts that match the mythic narrative tone. Let Persephone remain the distinct an opening visual that adds a second visual detail.",
-              "sourceFactIds": [
-                "fact-036"
-              ],
-              "sourceFieldRefs": [
-                "derived.turningPointFromDetail",
-                "contentDNA.requiredSpecificDetails",
-                "derived.outcomeFromDetail",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal connected to the familiar account centers on the Greek myth in which Persephone taken and underworld within the wider frame. Use only light shifts that match the mythic narrative tone. Let underworld remain the distinct an opening visual that widens the frame without adding new story elements.",
-              "imagePrompt": "An ancient documentary realism image shows Demeter connected to the familiar account centers on the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal in the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame one clear scene as a close visual detail that supports the current narration, with low directional light with restrained contrast, ancient atmosphere, and cultural context from Greek. Include Demeter, Persephone, underworld as supporting visual details. This should feel like an opening visual that widens the frame without adding new story elements during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal connected to the familiar account centers on the Greek myth in which Persephone taken and underworld within the wider frame. Use only light shifts that match the mythic narrative tone. Let underworld remain the distinct an opening visual that widens the frame without adding new story elements.",
-              "sourceFactIds": [
-                "fact-007"
-              ],
-              "sourceFieldRefs": [
-                "derived.turningPointFromDetail",
-                "contentDNA.requiredSpecificDetails",
-                "derived.outcomeFromDetail",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "A pomegranate split open in dark underworld light, red seeds glowing softly on stone, no hands, no text, restrained mythic realism.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow push toward one seed on the stone."
             }
           ]
         },
         {
-          "creatorNote": "Demeter must stay tied to the familiar account centers on the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Do not add figures, motives, or incidents beyond greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return.",
-          "estimatedReadingTime": "≈ 32 sec",
-          "narration": "The source trail matters before the claim is treated as certain: For Demeter and Persephone, the article treats mythic material as tradition and interpretation rather than a single recoverable event. The source trail matters before the claim is treated as certain: References such as Wikipedia and Britannica are used as orientation points, not as proof for every later claim. The next fact gives the sequence a concrete action: Demeter and Persephone centers on greek myth.",
-          "sourceFactIds": [
-            "fact-022",
-            "fact-019",
-            "fact-004"
-          ],
-          "sourceFieldRefs": [
-            "publicArticlePlan.publicSourceNote",
-            "contentDNA.requiredSpecificDetails"
-          ],
-          "usedFactTexts": [
-            "For Demeter and Persephone, the article treats mythic material as tradition and interpretation rather than a single recoverable event.",
-            "References such as Wikipedia and Britannica are used as orientation points, not as proof for every later claim.",
-            "Demeter and Persephone centers on greek myth."
-          ],
+          "creatorNote": "Focus on incomplete return.",
+          "estimatedReadingTime": "about 29 sec",
+          "narration": "This is the part of the myth that feels cruel because it is so small. A bite, a seed, a condition, and the year is divided. Persephone can come back, but not completely. Demeter can recover her daughter, but not forever. The story refuses a simple rescue because some returns carry captivity back with them. The myth stays close to grief, so every change in the field feels personal.",
           "visualBeats": [
             {
-              "beatMotion": "Use a restrained lateral pan across the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return, letting Demeter hold the follow-up anchor while Demeter stays in frame. Use only light shifts that match the mythic narrative tone. Let Demeter remain the distinct a follow-up visual with one clear focal point.",
-              "imagePrompt": "An ancient documentary realism image shows Demeter connected to the familiar account centers on the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal in the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with low directional light with restrained contrast, ancient atmosphere, and cultural context from Greek. Include Demeter, Persephone, underworld as supporting visual details. This should feel like a follow-up visual with one clear focal point during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a restrained lateral pan across the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return, letting Demeter hold the follow-up anchor while Demeter stays in frame. Use only light shifts that match the mythic narrative tone. Let Demeter remain the distinct a follow-up visual with one clear focal point.",
-              "sourceFactIds": [
-                "fact-007"
-              ],
-              "sourceFieldRefs": [
-                "derived.turningPointFromDetail",
-                "contentDNA.requiredSpecificDetails",
-                "derived.outcomeFromDetail",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
-            },
+              "imagePrompt": "A young woman at the boundary of a dark stair and a bright field, one red seed in her palm, face partly hidden, solemn classical mood.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow fade between the seed and the bright field beyond."
+            }
+          ]
+        },
+        {
+          "creatorNote": "Turn condition into seasonal rhythm.",
+          "estimatedReadingTime": "about 35 sec",
+          "narration": "The pomegranate also prevents the myth from becoming only a story of loss. It creates rhythm. Descent and return, absence and reunion, barren field and green field. The pain does not vanish, but it becomes a pattern the world can survive. The seed divides the year, and the divided year becomes the shape of hope. The myth stays close to grief, so every change in the field feels personal. The condition gives the myth its rhythm, and that rhythm keeps the wound alive.",
+          "visualBeats": [
             {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal connected to greek myth in which Persephone taken to the underworld and Demeter grief and Persephone within the wider frame. Use only light shifts that match the mythic narrative tone. Let Persephone remain the distinct a follow-up visual that adds a second visual detail.",
-              "imagePrompt": "An ancient documentary realism image shows Demeter connected to greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return in the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame one clear scene as a medium composition that shows the important action or state, with low directional light with restrained contrast, ancient atmosphere, and cultural context from Greek. Include Demeter, Persephone, underworld as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal connected to greek myth in which Persephone taken to the underworld and Demeter grief and Persephone within the wider frame. Use only light shifts that match the mythic narrative tone. Let Persephone remain the distinct a follow-up visual that adds a second visual detail.",
-              "sourceFactIds": [
-                "fact-037"
-              ],
-              "sourceFieldRefs": [
-                "derived.turningPointFromDetail",
-                "contentDNA.requiredSpecificDetails",
-                "derived.outcomeFromDetail",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a slow controlled push toward Demeter and Persephone, with connected to demeter and Persephone centers on greek myth staying fixed as the follow-up wider frame and Persephone visible. Use only light shifts that match the mythic narrative tone. Let Persephone remain the distinct a follow-up visual that widens the frame without adding new story elements.",
-              "imagePrompt": "An ancient documentary realism image shows Demeter and Persephone connected to demeter and Persephone centers on greek myth in the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame one clear scene as a close visual detail that supports the current narration, with low directional light with restrained contrast, ancient atmosphere, and cultural context from greek. Include Demeter and Persephone, Demeter, Persephone as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Use a slow controlled push toward Demeter and Persephone, with connected to demeter and Persephone centers on greek myth staying fixed as the follow-up wider frame and Persephone visible. Use only light shifts that match the mythic narrative tone. Let Persephone remain the distinct a follow-up visual that widens the frame without adding new story elements.",
-              "sourceFactIds": [
-                "fact-004"
-              ],
-              "sourceFieldRefs": [
-                "derived.turningPointFromDetail",
-                "contentDNA.requiredSpecificDetails",
-                "derived.outcomeFromDetail",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "A circular seasonal composition with pomegranate seeds, bare branches, new shoots, and a dark underworld stair, no text, restrained symbolic realism.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow circular drift around the seasonal elements."
             }
           ]
         }
       ],
-      "sceneFocus": "The central visual should show greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame it through greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return.",
-      "sceneRole": "Turning Point and Consequence",
-      "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-      "sourceFactIds": [
-        "fact-036",
-        "fact-037",
-        "fact-022",
-        "fact-019",
-        "fact-004"
-      ],
-      "sourceFieldRefs": [
-        "derived.turningPointFromDetail",
-        "derived.outcomeFromDetail",
-        "publicArticlePlan.publicSourceNote",
-        "contentDNA.requiredSpecificDetails"
-      ],
-      "visualDirection": "Start steady, begin a slow push toward the main detail, and cut after the scene consequence is clear.",
-      "voiceDirection": "Calm documentary pace, short pauses between ideas, slight tension, with light emphasis on \"Demeter\" when it appears."
+      "sceneFocus": "The pomegranate makes return possible but incomplete.",
+      "sceneRole": "Underworld Condition",
+      "soundEffect": "wind in grain, distant earth rumble, soft breath",
+      "visualDirection": "Use symbolic natural images that still feel like a scene.",
+      "voiceDirection": "Tender, solemn, and story-led, with space for grief and return."
     },
     {
-      "backgroundMusic": "sparse documentary bed, low hand drums, slow strings, ancient ambient bed, slow tempo with restrained weight",
-      "directionTip": "The central visual should show later summaries often simplify the story into a single clean form, while older or parallel versions keep more than one emphasis alive.",
+      "backgroundMusic": "soft mythic strings, field wind, low underworld drone",
       "narrationParts": [
         {
-          "creatorNote": "Demeter and Persephone must stay tied to the source boundary around retellings preserve Demeter, Persephone, underworld as the signs that make Demeter and Persephone recognizable. Present the variant detail that later versions and source comparison as a version detail, not as the only fixed form.",
-          "estimatedReadingTime": "≈ 33 sec",
-          "narration": "The surviving record gives the narration a source limit: Retellings preserve Demeter, Persephone, underworld as the signs that make Demeter and Persephone recognizable. The versions do not always preserve the same emphasis: Versions of Demeter and Persephone differ by source, region, period, or online retelling, but the central anchor remains Demeter. The surviving record gives the narration a source limit: Demeter and Persephone appears in source material connected with mythological tradition, reference summaries, symbolic reading, and retellings.",
-          "sourceFactIds": [
-            "fact-011",
-            "fact-010",
-            "fact-015"
-          ],
-          "sourceFieldRefs": [
-            "publicArticlePlan",
-            "storyBrief.coreStoryElements",
-            "storyBrief.reportedVariants"
-          ],
-          "usedFactTexts": [
-            "Retellings preserve Demeter, Persephone, underworld as the signs that make Demeter and Persephone recognizable.",
-            "Versions of Demeter and Persephone differ by source, region, period, or online retelling, but the central anchor remains Demeter.",
-            "Demeter and Persephone appears in source material connected with mythological tradition, reference summaries, symbolic reading, and retellings."
-          ],
+          "creatorNote": "Avoid simple happy ending.",
+          "estimatedReadingTime": "about 33 sec",
+          "narration": "When Persephone returns, the world changes again. The field can breathe. Green begins to enter the edges. Demeter's grief loosens its hold on the soil. But the reunion is not innocent. Everyone in the story knows the return has a limit. Spring arrives carrying the memory of the underworld. The myth stays close to grief, so every change in the field feels personal. The return is tender because it is real, and painful because it is not complete.",
           "visualBeats": [
             {
-              "beatMotion": "Use a slow controlled push toward Demeter and Persephone, with shown through source material connected to retellings preserve Demeter, Persephone, underworld as the signs staying fixed as the opening anchor and Demeter and Persephone visible. Keep the movement restrained and documentary.",
-              "imagePrompt": "An ancient documentary realism image shows Demeter and Persephone shown through source material connected to retellings preserve Demeter, Persephone, underworld as the signs that make Demeter and Persephone recognizable in mythological tradition, reference summaries, symbolic reading,. Frame one clear scene as a clear tabletop or archival composition, with soft archival light, careful documentary restraint, and cultural context from Myths. Include Demeter and Persephone, Demeter, Persephone as supporting visual details. This should feel like an opening visual with one clear focal point during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a slow controlled push toward Demeter and Persephone, with shown through source material connected to retellings preserve Demeter, Persephone, underworld as the signs staying fixed as the opening anchor and Demeter and Persephone visible. Keep the movement restrained and documentary.",
-              "sourceFactIds": [
-                "fact-011"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.reportedVariants",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a restrained lateral pan across mythological tradition, reference summaries, symbolic reading, letting Demeter and Persephone hold the opening detail while summaries stays in frame. Keep the movement restrained and documentary.",
-              "imagePrompt": "An ancient documentary realism image shows Demeter and Persephone associated with a variant where later summaries often simplify the story into a single clean form, while older or parallel versions keep more than one emphasis alive in mythological tradition, reference summaries, symbolic reading,. Frame one clear scene as a medium frame that separates the main subject from supporting evidence, with soft archival light, careful documentary restraint, and cultural context from Myths. Include summaries, often, simplify as supporting visual details. This should feel like an opening visual that adds a second visual detail during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Use a restrained lateral pan across mythological tradition, reference summaries, symbolic reading, letting Demeter and Persephone hold the opening detail while summaries stays in frame. Keep the movement restrained and documentary.",
-              "sourceFactIds": [
-                "fact-002"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.reportedVariants",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "A bright field beginning to bloom while a dark stair remains in the background, mother and daughter silhouettes approaching, no faces, no text.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow push from new flowers to the two figures."
             }
           ]
         },
         {
-          "creatorNote": "Demeter and Persephone must stay tied to the variant detail that later versions and source comparison. Present the variant detail that later summaries often simplify the story into a single clean form, while older or parallel versions keep more than one emphasis alive as a version detail, not as the only fixed form.",
-          "estimatedReadingTime": "≈ 28 sec",
-          "narration": "The account stays careful because the evidence has boundaries: Those references are useful for tracing older texts, named figures, and later versions of the myth. The account stays careful because the evidence has boundaries: Demeter and Persephone is treated through mythological tradition, reference summaries, symbolic reading, and retellings. The account stays careful because the evidence has boundaries: Public references used for orientation include Wikipedia and Britannica.",
-          "sourceFactIds": [
-            "fact-017",
-            "fact-018",
-            "fact-016"
-          ],
-          "sourceFieldRefs": [
-            "publicArticlePlan",
-            "publicArticlePlan.publicSourceNote"
-          ],
-          "usedFactTexts": [
-            "Those references are useful for tracing older texts, named figures, and later versions of the myth.",
-            "Demeter and Persephone is treated through mythological tradition, reference summaries, symbolic reading, and retellings.",
-            "Public references used for orientation include Wikipedia and Britannica."
-          ],
+          "creatorNote": "Make seasons emotional.",
+          "estimatedReadingTime": "about 33 sec",
+          "narration": "That is why the myth feels older than explanation. It does not simply say winter happens, then spring happens. It gives the seasons an emotional memory. Growth returns because someone beloved comes back. Growth fades because the return cannot last. The earth becomes a calendar of reunion and parting. The myth stays close to grief, so every change in the field feels personal. The return is tender because it is real, and painful because it is not complete.",
           "visualBeats": [
             {
-              "beatMotion": "Use a restrained lateral pan across mythological tradition, reference summaries, symbolic reading, letting Demeter and Persephone hold the follow-up anchor while Later stays in frame. Keep the movement restrained and documentary.",
-              "imagePrompt": "An ancient documentary realism image shows Demeter and Persephone associated with a variant where later versions and source comparison in mythological tradition, reference summaries, symbolic reading,. Frame one clear scene as a medium frame that separates the main subject from supporting evidence, with soft archival light, careful documentary restraint, and cultural context from Myths. Include versions, comparison, Demeter and Persephone as supporting visual details. This should feel like a follow-up visual with one clear focal point during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a restrained lateral pan across mythological tradition, reference summaries, symbolic reading, letting Demeter and Persephone hold the follow-up anchor while Later stays in frame. Keep the movement restrained and documentary.",
-              "sourceFactIds": [
-                "fact-003"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.reportedVariants",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
-            },
+              "imagePrompt": "A single tree half blooming and half bare, with a faint underworld doorway at its roots, mythic landscape, no text.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow vertical move from roots to blossoms."
+            }
+          ]
+        },
+        {
+          "creatorNote": "Give Persephone agency and complexity.",
+          "estimatedReadingTime": "about 33 sec",
+          "narration": "Persephone herself becomes more than the girl who was taken. She belongs to both directions now. Above and below both know her name. That double belonging gives the myth its depth. Return does not erase descent. The person who comes back is not untouched by where she has been. The myth stays close to grief, so every change in the field feels personal. The return is tender because it is real, and painful because it is not complete.",
+          "visualBeats": [
             {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal associated with a variant where versions of Demeter and Persephone differ by source, region and Demeter within the wider frame. Keep the movement restrained and documentary.",
-              "imagePrompt": "An ancient documentary realism image shows Demeter and Persephone associated with a variant where versions of Demeter and Persephone differ by source, region, period, or online retelling, but the central anchor remains Demeter in mythological tradition, reference summaries, symbolic reading,. Frame one clear scene as a close archival detail with the source boundary visible, with soft archival light, careful documentary restraint, and cultural context from online. Include Demeter and Persephone, Demeter, Persephone as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal associated with a variant where versions of Demeter and Persephone differ by source, region and Demeter within the wider frame. Keep the movement restrained and documentary.",
-              "sourceFactIds": [
-                "fact-010"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.reportedVariants",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "Persephone-like figure standing between a sunlit field and a shadowed doorway below, pomegranate red accent, solemn and dignified, no text.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: hold still as light and shadow balance around the figure."
             }
           ]
         }
       ],
-      "sceneFocus": "The central visual should show later summaries often simplify the story into a single clean form, while older or parallel versions keep more than one emphasis alive.",
-      "sceneRole": "Variants and Source Context",
-      "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-      "sourceFactIds": [
-        "fact-011",
-        "fact-010",
-        "fact-015",
-        "fact-017",
-        "fact-018",
-        "fact-016"
-      ],
-      "sourceFieldRefs": [
-        "publicArticlePlan",
-        "storyBrief.coreStoryElements",
-        "storyBrief.reportedVariants",
-        "publicArticlePlan.publicSourceNote"
-      ],
-      "visualDirection": "Hold the source-focused image long enough to read the visual idea, then fade softly into the next scene.",
-      "voiceDirection": "Careful pace, short pauses between ideas, natural restraint, with light emphasis on \"Demeter\" when it appears."
+      "sceneFocus": "Persephone's return restores life, but the reunion is shadowed by the knowledge of leaving again.",
+      "sceneRole": "Seasonal Return",
+      "soundEffect": "wind in grain, distant earth rumble, soft breath",
+      "visualDirection": "Use symbolic natural images that still feel like a scene.",
+      "voiceDirection": "Tender, solemn, and story-led, with space for grief and return."
     },
     {
-      "backgroundMusic": "soft reflective drone, low hand drums, slow strings, ancient ambient bed, low density with a soft ending",
-      "directionTip": "The central visual should show greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame it through the interpretation connected to demeter and Persephone is treated through one concrete anchor: the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return.",
+      "backgroundMusic": "soft mythic strings, field wind, low underworld drone",
       "narrationParts": [
         {
-          "creatorNote": "Demeter and Persephone must stay tied to the interpretation connected to demeter and Persephone is treated through one concrete anchor: the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Keep the source boundary around retellings preserve Demeter, Persephone, underworld as the signs that make Demeter and Persephone recognizable source-limited, without turning it into a stronger claim.",
-          "estimatedReadingTime": "≈ 28 sec",
-          "narration": "The meaning remains tied to what the account actually says: Demeter and Persephone is treated through one concrete anchor: the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. The meaning remains tied to what the account actually says: Demeter and Persephone may be read as a story about how symbolic action explains human limits.",
-          "sourceFactIds": [
-            "fact-006",
-            "fact-023"
-          ],
-          "sourceFieldRefs": [
-            "contentDNA.uniqueAngle",
-            "publicArticlePlan",
-            "storyBrief.editorialInterpretationOptions"
-          ],
-          "usedFactTexts": [
-            "Demeter and Persephone is treated through one concrete anchor: the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return.",
-            "Demeter and Persephone may be read as a story about how symbolic action explains human limits."
-          ],
+          "creatorNote": "Summarize emotional structure.",
+          "estimatedReadingTime": "about 34 sec",
+          "narration": "Demeter and Persephone endures because it gives weather a heart. The changing year becomes a family story: a daughter taken, a mother searching, a bargain made, a seed swallowed, a return divided. The myth does not make loss disappear. It teaches the world how to live with return that comes and goes. The myth stays close to grief, so every change in the field feels personal. The ending leaves the door closed, because the closed door is part of the story.",
           "visualBeats": [
             {
-              "beatMotion": "Use a slow controlled push toward Demeter and Persephone, with framed by the interpretation that demeter and Persephone is treated through one concrete anchor staying fixed as the opening anchor and Demeter and Persephone visible. End with a slow hold and no new action.",
-              "imagePrompt": "An ancient documentary realism image shows Demeter and Persephone framed by the interpretation that demeter and Persephone is treated through one concrete anchor: the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return in mythological tradition, reference summaries, symbolic reading,. Frame one clear scene as a wide reflective composition with negative space, with subdued fading light, quiet reflective tension, and cultural context from Greek. Include Demeter and Persephone, Demeter, Persephone as supporting visual details. This should feel like an opening visual with one clear focal point during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a slow controlled push toward Demeter and Persephone, with framed by the interpretation that demeter and Persephone is treated through one concrete anchor staying fixed as the opening anchor and Demeter and Persephone visible. End with a slow hold and no new action.",
-              "sourceFactIds": [
-                "fact-006"
-              ],
-              "sourceFieldRefs": [
-                "derived.outcomeFromDetail",
-                "contentDNA.uniqueAngle",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "storyBrief.editorialInterpretationOptions"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a restrained lateral pan across mythological tradition, reference summaries, symbolic reading, letting Demeter hold the opening detail while Persephone stays in frame. End with a slow hold and no new action.",
-              "imagePrompt": "An ancient documentary realism image shows Demeter connected to greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return in mythological tradition, reference summaries, symbolic reading,. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, and cultural context from Greek. Include Demeter, Persephone, underworld as supporting visual details. This should feel like an opening visual that adds a second visual detail during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Use a restrained lateral pan across mythological tradition, reference summaries, symbolic reading, letting Demeter hold the opening detail while Persephone stays in frame. End with a slow hold and no new action.",
-              "sourceFactIds": [
-                "fact-037"
-              ],
-              "sourceFieldRefs": [
-                "derived.outcomeFromDetail",
-                "contentDNA.uniqueAngle",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "storyBrief.editorialInterpretationOptions"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal framed by the interpretation that demeter and Persephone may be read as a story and Persephone within the wider frame. End with a slow hold and no new action.",
-              "imagePrompt": "An ancient documentary realism image shows Demeter and Persephone framed by the interpretation that demeter and Persephone may be read as a story about how symbolic action explains human limits in mythological tradition, reference summaries, symbolic reading,. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, and cultural context from Myths. Include Demeter and Persephone, Demeter, Persephone as supporting visual details. This should feel like an opening visual that widens the frame without adding new story elements during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal framed by the interpretation that demeter and Persephone may be read as a story and Persephone within the wider frame. End with a slow hold and no new action.",
-              "sourceFactIds": [
-                "fact-023"
-              ],
-              "sourceFieldRefs": [
-                "derived.outcomeFromDetail",
-                "contentDNA.uniqueAngle",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "storyBrief.editorialInterpretationOptions"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "A field at the edge of spring with one pomegranate lying in the grass, distant mother-daughter silhouettes, warm and shadowed light.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow push toward the pomegranate in the grass."
             }
           ]
         },
         {
-          "creatorNote": "Demeter and Persephone must stay tied to the interpretation connected to demeter and Persephone may be read as a story about how symbolic action explains human limits. Let greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return define the result for this Part.",
-          "estimatedReadingTime": "≈ 31 sec",
-          "narration": "One interpretation stays close to the material: One possible reading is that demeter and Persephone may be read as a story about how symbolic action explains human limits. The surviving record gives the narration a source limit: Wikipedia - Demeter and Persephone reference Supports the public record for Demeter and Persephone. The surviving record gives the narration a source limit: Demeter and Persephone centers on mythological tradition, reference summaries, symbolic reading, and retellings.",
-          "sourceFactIds": [
-            "fact-024",
-            "fact-034",
-            "fact-030"
-          ],
-          "sourceFieldRefs": [
-            "publicArticlePlan",
-            "story.researchSources",
-            "storyBrief.existenceEvidence",
-            "story.publicSourceBasis",
-            "storyBrief.cultureOrContext"
-          ],
-          "usedFactTexts": [
-            "One possible reading is that demeter and Persephone may be read as a story about how symbolic action explains human limits.",
-            "Wikipedia - Demeter and Persephone reference Supports the public record for Demeter and Persephone.",
-            "Demeter and Persephone centers on mythological tradition, reference summaries, symbolic reading, and retellings."
-          ],
+          "creatorNote": "Keep the closing section story-facing; the visual logic belongs in the scene, not as meta instruction.",
+          "estimatedReadingTime": "about 34 sec",
+          "narration": "The images of the myth stay simple because the grief is simple: flowers near a dark opening, a barren field, a red seed, a stair between worlds, and a reunion that cannot last. Each image carries one piece of the year. Together they let the season speak before anyone names it. The myth stays close to grief, so every change in the field feels personal. The ending leaves the door closed, because the closed door is part of the story.",
           "visualBeats": [
             {
-              "beatMotion": "Use a restrained lateral pan across mythological tradition, reference summaries, symbolic reading, letting Demeter and Persephone hold the follow-up anchor while Demeter and Persephone stays in frame. End with a slow hold and no new action.",
-              "imagePrompt": "An ancient documentary realism image shows Demeter and Persephone framed by the interpretation that demeter and Persephone may be read as a story about how symbolic action explains human limits in mythological tradition, reference summaries, symbolic reading,. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, and cultural context from Myths. Include Demeter and Persephone, Demeter, Persephone as supporting visual details. This should feel like a follow-up visual with one clear focal point during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a restrained lateral pan across mythological tradition, reference summaries, symbolic reading, letting Demeter and Persephone hold the follow-up anchor while Demeter and Persephone stays in frame. End with a slow hold and no new action.",
-              "sourceFactIds": [
-                "fact-023"
-              ],
-              "sourceFieldRefs": [
-                "derived.outcomeFromDetail",
-                "contentDNA.uniqueAngle",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "storyBrief.editorialInterpretationOptions"
-              ],
-              "usedFactTexts": []
-            },
+              "imagePrompt": "A sequence-like single image of flowers, barren grain, pomegranate seed, underworld stair, and returning light arranged naturally, no text.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow dissolve through each symbol in order."
+            }
+          ]
+        },
+        {
+          "creatorNote": "Close with memorable seasonal line.",
+          "estimatedReadingTime": "about 32 sec",
+          "narration": "The final feeling should be bittersweet rather than solved. Persephone rises, Demeter waits, the field wakes, and the condition remains. Life returns, but it returns with memory. That is why the myth still works: every spring feels like an answer, and every winter remembers the question. The myth stays close to grief, so every change in the field feels personal. The ending leaves the door closed, because the closed door is part of the story.",
+          "visualBeats": [
             {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal shown through source material connected to retellings preserve Demeter, Persephone, underworld as the signs and Demeter within the wider frame. End with a slow hold and no new action.",
-              "imagePrompt": "An ancient documentary realism image shows Demeter and Persephone shown through source material connected to retellings preserve Demeter, Persephone, underworld as the signs that make Demeter and Persephone recognizable in mythological tradition, reference summaries, symbolic reading,. Frame one clear scene as a wider reflective frame that keeps the ending unresolved, with subdued fading light, quiet reflective tension, and cultural context from Myths. Include Demeter and Persephone, Demeter, Persephone as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal shown through source material connected to retellings preserve Demeter, Persephone, underworld as the signs and Demeter within the wider frame. End with a slow hold and no new action.",
-              "sourceFactIds": [
-                "fact-011"
-              ],
-              "sourceFieldRefs": [
-                "derived.outcomeFromDetail",
-                "contentDNA.uniqueAngle",
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "storyBrief.editorialInterpretationOptions"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "Final image of Persephone emerging toward a waiting figure at dawn, new flowers opening while shadow remains behind her, no text.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow fade from shadowed stair to dawn field."
             }
           ]
         }
       ],
-      "sceneFocus": "The central visual should show greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return. Frame it through the interpretation connected to demeter and Persephone is treated through one concrete anchor: the Greek myth in which Persephone taken to the underworld and Demeter grief becomes tied to seasonal change and return.",
-      "sceneRole": "Outcome and Meaning",
-      "soundEffect": "low water ambience, distant wind, soft shoreline movement",
-      "sourceFactIds": [
-        "fact-006",
-        "fact-023",
-        "fact-024",
-        "fact-034",
-        "fact-030"
-      ],
-      "sourceFieldRefs": [
-        "contentDNA.uniqueAngle",
-        "publicArticlePlan",
-        "storyBrief.editorialInterpretationOptions",
-        "story.researchSources",
-        "storyBrief.existenceEvidence",
-        "story.publicSourceBasis",
-        "storyBrief.cultureOrContext"
-      ],
-      "visualDirection": "Begin with a slow pullback, hold briefly after the final narration line, then fade to black.",
-      "voiceDirection": "Slow pace with a soft ending, short pauses between ideas, natural restraint, with light emphasis on \"Demeter\" when it appears."
+      "sceneFocus": "The myth endures because it turns seasonal change into family drama and conditional hope.",
+      "sceneRole": "Ending and Search Profile",
+      "soundEffect": "wind in grain, distant earth rumble, soft breath",
+      "visualDirection": "Use symbolic natural images that still feel like a scene.",
+      "voiceDirection": "Tender, solemn, and story-led, with space for grief and return."
     }
   ]
 }

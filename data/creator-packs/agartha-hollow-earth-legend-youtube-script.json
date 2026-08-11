@@ -1,1115 +1,435 @@
 {
   "contentType": "script",
-  "coreMotif": "Hidden World",
+  "coreMotif": "Hidden World Beneath the Map",
   "creatorCategorySlug": "lost-worlds",
   "creatorPipelineVersion": "single-path-v1",
-  "deck": "Agartha Hollow Earth Legend is prepared as a creator-ready production workspace based on the archive record, with long-form scenes, Shorts narration, image prompts, music keywords, and editing notes.",
-  "difficulty": "Beginner-friendly production package",
-  "estimatedVideoLength": "5-6 minutes",
+  "deck": "A source-based image and narration package for the Agartha Hollow Earth legend, built from the Kyunolab archive record with 5 scenes, 15 voiceover beats, image prompts, and restrained production notes for a 7-8 minute video.",
+  "difficulty": "Beginner-friendly image and narration production package",
+  "estimatedVideoLength": "7-8 minutes",
   "genre": "Lost Worlds Creator Library",
   "id": "agartha-hollow-earth-legend-youtube-script",
   "imagePrompts": [
-    "A realistic location-documentary style image shows Maps placed within maps, tickets, routes, and almost-places in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with natural low light, documentary uncertainty, and cultural context from Lost Worlds. Include almost-places, belongs, esoteric as supporting visual details. This should feel like an opening visual with one clear focal point during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Agartha held as the central visual in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from Legend. Include Agartha, Agartha Hollow Earth Legend, Hollow Earth as supporting visual details. This should feel like an opening visual that adds a second visual detail during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows It connected to it belongs to esoteric reception and speculative geography rather than confirmed exploration in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a close visual detail that supports the current narration, with natural low light, documentary uncertainty, and cultural context from Lost Worlds. Include belongs, esoteric, reception as supporting visual details. This should feel like an opening visual that widens the frame without adding new story elements during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows It connected to it belongs to esoteric reception and speculative geography rather than confirmed exploration in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with natural low light, documentary uncertainty, and cultural context from Lost Worlds. Include belongs, esoteric, reception as supporting visual details. This should feel like a follow-up visual with one clear focal point during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Agartha connected to esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath the earth in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from legend. Include Agartha, Agharta, Esoteric as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Maps placed within maps, tickets, routes, and almost-places in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a close visual detail that supports the current narration, with natural low light, documentary uncertainty, and cultural context from Lost Worlds. Include almost-places, belongs, esoteric as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows It connected to it belongs to esoteric reception and speculative geography rather than confirmed exploration in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Lost Worlds. Include belongs, esoteric, reception as supporting visual details. This should feel like an opening visual with one clear focal point during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Agartha shown through source material connected to later retellings do not always keep the same emphasis in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a medium composition that shows the important action or state, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Lost Worlds. Include retellings, always, emphasis as supporting visual details. This should feel like an opening visual that adds a second visual detail during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Agartha connected to the common idea presents Agartha or Agharta as a hidden inner realm in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a close visual detail that supports the current narration, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Lost Worlds. Include Agartha, Agharta, common as supporting visual details. This should feel like an opening visual that widens the frame without adding new story elements during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Agartha connected to the common idea presents Agartha or Agharta as a hidden inner realm in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Lost Worlds. Include Agartha, Agharta, common as supporting visual details. This should feel like a follow-up visual with one clear focal point during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Agartha connected to esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath the earth in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a medium composition that shows the important action or state, with low directional light with restrained contrast, documentary uncertainty, and cultural context from legend. Include Agartha, Agharta, Esoteric as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows It connected to it belongs to esoteric reception and speculative geography rather than confirmed exploration in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a close visual detail that supports the current narration, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Lost Worlds. Include belongs, esoteric, reception as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows It connected to it belongs to esoteric reception and speculative geography rather than confirmed exploration in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a clear tabletop or archival composition, with soft archival light, careful documentary restraint, and cultural context from Lost Worlds. Include belongs, esoteric, reception as supporting visual details. This should feel like an opening visual with one clear focal point during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Agartha shown through source material connected to later retellings do not always keep the same emphasis in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a medium frame that separates the main subject from supporting evidence, with soft archival light, careful documentary restraint, and cultural context from Lost Worlds. Include retellings, always, emphasis as supporting visual details. This should feel like an opening visual that adds a second visual detail during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows These shown through source material connected to these variations show reception history more than evidence in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a medium frame that separates the main subject from supporting evidence, with soft archival light, careful documentary restraint, and cultural context from Lost Worlds. Include history, These, variations as supporting visual details. This should feel like a follow-up visual with one clear focal point during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows It connected to it belongs to esoteric reception and speculative geography rather than confirmed exploration in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a close archival detail with the source boundary visible, with soft archival light, careful documentary restraint, and cultural context from Lost Worlds. Include belongs, esoteric, reception as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows It connected to it belongs to esoteric reception and speculative geography rather than confirmed exploration in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a close archival detail with the source boundary visible, with soft archival light, careful documentary restraint, and cultural context from Lost Worlds. Include belongs, esoteric, reception as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Agartha associated with a variant where later versions differ around spelling, location, rulers, tunnels, entrances, and spiritual meaning in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with natural low light, documentary uncertainty, and cultural context from Lost Worlds. Include versions, differ, belongs as supporting visual details. This should feel like an opening visual with one clear focal point during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Agartha shown through source material connected to later retellings do not always keep the same emphasis in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from Lost Worlds. Include retellings, always, emphasis as supporting visual details. This should feel like an opening visual that adds a second visual detail during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows It framed by the interpretation that it turns the unknown into a structure underfoot in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with natural low light, documentary uncertainty, and cultural context from Lost Worlds. Include turns, unknown, structure as supporting visual details. This should feel like a follow-up visual with one clear focal point during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Agartha associated with a variant where some connect Agartha with polar openings, underground cities, or secret adepts in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from Lost Worlds. Include Agartha, connect, polar as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows It framed by the interpretation that it turns the unknown into a structure underfoot in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a wide reflective composition with negative space, with subdued fading light, quiet reflective tension, and cultural context from Lost Worlds. Include turns, unknown, structure as supporting visual details. This should feel like an opening visual with one clear focal point during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Agartha connected to esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath the earth in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, and cultural context from legend. Include Agartha, Agharta, Esoteric as supporting visual details. This should feel like an opening visual that adds a second visual detail during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Agartha framed by the interpretation that agartha is treated through one concrete anchor: the esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath the earth in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, and cultural context from legend. Include Agartha, Agharta, treated as supporting visual details. This should feel like an opening visual that widens the frame without adding new story elements during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Agartha framed by the interpretation that agartha is treated through one concrete anchor: the esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath the earth in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, and cultural context from legend. Include Agartha, Agharta, treated as supporting visual details. This should feel like a follow-up visual with one clear focal point during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-    "A realistic location-documentary style image shows Agartha shown through source material connected to later retellings do not always keep the same emphasis in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a wider reflective frame that keeps the ending unresolved, with subdued fading light, quiet reflective tension, and cultural context from Lost Worlds. Include retellings, always, emphasis as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the final sequence. No gore, readable text, logos, watermarks, or modern objects."
+    "An old world map on a desk with a faint second map glowing beneath it, dark edges, archival lamplight, subterranean mystery, documentary realism.",
+    "Close view of contour lines and mountain ranges on an antique map, with a dark circular passage suggested under the paper surface, no readable labels.",
+    "A dim archive room with a suspended map and a faint underground city silhouette below it, restrained esoteric mood, no fantasy crowds.",
+    "An archive desk with variant spellings on unlabeled note cards turned away from the camera, old maps, dim lamp, no readable text.",
+    "A nineteenth-century style study with closed books, a globe, and a dark map of imagined inner chambers, subdued lamplight, documentary realism.",
+    "A layered earth cross-section rendered as a realistic archive illustration with a faint hidden realm below mountains and ice, no labels, warm and dark palette.",
+    "A vast dark underground hall suggested by distant lights and stone arches, no visible crowds, no fantasy palace excess, restrained lost-world realism.",
+    "A sealed stone doorway beneath a mountain interior, faint warm light under the threshold, no symbols readable, quiet guarded mood.",
+    "A lone figure seen from behind at the edge of a dark underground passage, map in hand, warm light far below, no readable text.",
+    "A restrained view of Earth as an old scientific illustration with a dark inner glow and polar shadow, archival style, no labels, no sci-fi machinery.",
+    "An archive table with a geological cross-section beside an esoteric map, both partly visible, quiet contrast, no readable text.",
+    "A quiet mountain landscape at dusk with a faint warm glow implied deep beneath the ground, realistic and restrained, no visible entrance.",
+    "An old map lying flat in dim light, its edges lifting slightly as if another layer exists below, warm shadows, no readable place names.",
+    "A dark archive corridor lined with map drawers, one drawer slightly open with warm light inside, no readable labels, restrained mystery.",
+    "Final image of a world map fading into a dark underground passage, the surface still visible above, quiet unresolved ending, no text."
   ],
   "imagePromptsIncluded": true,
-  "logline": "Agartha is treated through one concrete anchor: the esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath the earth.",
+  "logline": "Agartha becomes a video about a hidden realm imagined beneath the map, where occult geography turns the unknown downward instead of outward.",
   "longformIncluded": true,
   "longformScript": [
-    "The setting gives the scene a concrete frame: Maps, tickets, routes, and almost-places. The account identifies the central subject clearly: Agartha Hollow Earth Legend: Hidden Realm, Inner World, and the Geography Beneath the Map is the named subject at the center of this retelling. The account then gives a direct movement: It belongs to esoteric reception and speculative geography rather than confirmed exploration.",
-    "The story starts from a clear disturbance: Esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath the earth is the problem that pushes the story into motion. The opening identity is already specific: Agartha Hollow Earth Legend is the named subject at the center of this retelling. The action moves through a specific event: Agartha is anchored by a place image: the esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath the earth.",
-    "The source trail matters before the claim is treated as certain: Later retellings do not always keep the same emphasis. The action moves through a specific event: The common idea presents Agartha or Agharta as a hidden inner realm. The next fact gives the sequence a concrete action: Agartha developed through esoteric writing, occult geography, and later lost-world imagination.",
-    "The surviving record gives the narration a source limit: References such as Encyclopaedia Britannica and Theosophy Wiki are used as orientation points, not as proof for every later claim. The surviving record gives the narration a source limit: Those references are useful for understanding the source trail without flattening it into one version. The surviving record gives the narration a source limit: Agartha is treated through esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography.",
-    "The scene has a clear visible point: It belongs to esoteric reception and speculative geography rather than confirmed exploration. The account stays careful because the evidence has boundaries: These variations show reception history more than evidence. The account stays careful because the evidence has boundaries: Public references used for orientation include Encyclopaedia Britannica and Theosophy Wiki. The action moves through a specific event: It belongs to esoteric reception and speculative geography rather than confirmed exploration.",
-    "The next fact gives the sequence a concrete action: At the center of Agartha Hollow Earth Legend is esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath the earth. The action moves through a specific event: Its power comes from combining map, initiation, secrecy, and the dream of a civilization preserved from ordinary history. The account then gives a direct movement: Agartha appears in source material connected with esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography.",
-    "The versions do not always preserve the same emphasis: Later versions differ around spelling, location, rulers, tunnels, entrances, and spiritual meaning. One interpretation stays close to the material: It turns the unknown into a structure underfoot. The versions do not always preserve the same emphasis: Some connect Agartha with polar openings, underground cities, or secret adepts.",
-    "The tradition allows more than one form of the account: These variations show reception history more than evidence. The symbolic reading grows out of the recorded details: Agartha is treated through one concrete anchor: the esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath the earth. The symbolic reading grows out of the recorded details: One possible reading is that agartha may be read as a fantasy of hidden order beneath visible disorder.",
-    "The ending depends on what changes afterward: Esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath the earth is the outcome left by the story. The meaning remains tied to what the account actually says: Agartha centers on the legend may be read as a lost-world story about hidden order. The meaning remains tied to what the account actually says: Agartha may be read as a fantasy of hidden order beneath visible disorder.",
-    "The surviving record gives the narration a source limit: For Agartha, location, memory, and later legend are kept in separate layers. The surviving record gives the narration a source limit: Some connect Agartha with polar openings, underground cities, or secret adepts. The surviving record gives the narration a source limit: Theosophy Wiki - Agartha reference Supports esoteric reception and variant naming around Agartha."
+    "Agartha begins with a simple change in direction. Most lost-world stories send the imagination outward, beyond a sea or mountain range. Agartha sends it downward. The familiar world stays where it is, but another realm is imagined beneath it, close enough to haunt every line of geography. The opening should feel like a familiar atlas becoming uneasy one layer at a time.",
+    "That is why the legend feels different from an island or ruin. A hidden island can be sailed toward. A buried city can be excavated. But Agartha sits beneath the idea of the world itself. It turns roads, borders, mountains, and capitals into the roof of another story. That closeness turns every ordinary border into a possible ceiling.",
+    "The strongest version of Agartha is not a claim that geography has failed in a simple way. It is a story about the hunger for hidden order. Somewhere below ordinary history, the legend imagines a realm older, wiser, stranger, or more guarded than the world above. The mystery is strongest when the hidden order feels desired before it feels proven.",
+    "The source boundary matters. Agartha is not verified geology or archaeology. It belongs to occult geography, esoteric writing, and reception history. Names such as Agartha, Agharta, and Agarttha move through different retellings, and the spellings themselves feel like traces from a tradition that never became one fixed place. The shifting spellings make the legend feel copied through half-lit rooms rather than fixed by a single authority.",
+    "Saint-Yves d'Alveydre and hidden-order writing helped give Agartha a modern esoteric shape. The legend does not behave like a discovered cave system. It behaves like symbolic geography: a world underneath the world, a kingdom behind history, a place that explains why ordinary maps feel incomplete. The listener should feel that the place is less a destination than an explanation people wanted badly enough to name.",
+    "Once a hidden kingdom is placed beneath the earth, every surface can become a veil. Mountains may hide entrances. Deserts may cover passages. Polar regions may become thresholds in later Hollow Earth imagination. The details change, but the feeling stays: the world above is only the visible floor. Even when the path is vague, the downward direction gives the legend a physical weight.",
+    "Agartha is powerful because it is not merely empty underground space. It is imagined as a realm with order. That detail changes the fear. A cave can be accidental. A kingdom is intentional. If something is organized beneath the map, then the surface world may not simply be ignorant. It may be excluded. A kingdom below the map makes secrecy feel organized, patient, and older than the people searching for it.",
+    "The hidden realm also carries the feeling of guardianship. Agartha is not usually imagined as a place anyone can enter by curiosity alone. The entrances are conditional, secret, symbolic, or guarded. The question is not only where the door is. The question is who would be allowed to pass through it. The guarded threshold keeps the listener outside with the same curiosity that sustains the legend.",
+    "This is where the story becomes less about travel and more about worthiness. A map can show distance, but it cannot show permission. Agartha survives because it turns location into a moral and spiritual problem. The hidden world is close, maybe even below the listener, but knowing and entering are not the same thing. Distance matters here because the hidden place is powerful only while it remains partly withheld. That withheld permission is what makes the entrance more interesting than any open doorway.",
+    "Hollow Earth ideas gave Agartha a larger stage. The hidden kingdom could be placed inside a whole imagined interior world, joined to old maps, polar openings, secret routes, and stories of civilizations below. The image is powerful because it makes the planet feel double: one world measured above, another dreamed within. The Hollow Earth frame widens the shadow without turning the story into a travel report.",
+    "This is where the story needs a clear boundary. The appeal of Agartha does not depend on proving that geology is secretly wrong. Its appeal comes from the imaginative pressure of hidden order. If the video pretends certainty, the story becomes weaker. Mystery works better when the boundary is clear. A careful voice lets the legend breathe as folklore, not as a claim the page cannot support.",
+    "The world under the map remains compelling because it turns ordinary ground into a threshold. A street, a mountain, a desert, or a sheet of ice can suddenly feel like a roof. Agartha is not strongest as a destination. It is strongest as the suspicion that the surface is not the whole story. The best image is still the surface world, because the surface is what the hidden realm presses against.",
+    "By the end, Agartha has done something simple and lasting. It has made the map feel incomplete. Not because the archive proves a hidden kingdom under the earth, but because the legend understands a human feeling: visible geography may not answer every question. Some stories point past the edge. Agartha points beneath the page. By the close, the listener should feel that a map can be accurate and still feel incomplete.",
+    "That is why the legend should be told with restraint. Too much certainty turns it into a false report. Too much spectacle turns it into decoration. The better version lets the hidden world remain hidden. It gives the viewer maps, names, tunnels, and silence, then leaves enough darkness for imagination to keep working. Restraint keeps Agartha from becoming mere spectacle; silence gives the hidden realm its dignity.",
+    "Agartha is not just a place people fail to find. It is a shape people give to the unknown when the horizon is no longer far enough. The legend turns downward, under roads and borders and familiar rooms, and asks whether the world has another story hidden beneath its floor. The final impression is not discovery but pressure, as if the floor of the known world has become thin."
   ],
-  "mainSubject": "Agartha Hollow Earth Legend",
-  "metaDescription": "A creator-ready production workspace for Agartha Hollow Earth Legend, with long-form scenes, Shorts narration, image prompts, music keywords, and editing notes.",
-  "mood": "distant, misty, and contemplative",
+  "mainSubject": "Agartha Hollow Earth legend",
+  "metaDescription": "A 7-8 minute source-based Agartha Hollow Earth video script with story-led narration, image prompts, Shorts script, thumbnail ideas, and production workflow.",
+  "mood": "quiet, esoteric, subterranean, restrained, mysterious",
   "motionPrompts": [
-    "Use a slow controlled push toward Maps, with placed within maps, tickets, routes, and almost-places staying fixed as the opening anchor and Maps visible. Use only light shifts that match the place or event mystery tone.",
-    "Use a restrained lateral pan across esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography, letting Agartha hold the opening detail while Agartha Hollow Earth Legend stays in frame. Use only light shifts that match the place or event mystery tone.",
-    "Start with a static hold, then pull back slightly to reveal connected to it belongs to esoteric reception and speculative geography rather than confirmed exploration and reception within the wider frame. Use only light shifts that match the place or event mystery tone.",
-    "Use a restrained lateral pan across esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography, letting It hold the follow-up anchor while belongs stays in frame. Use only light shifts that match the place or event mystery tone.",
-    "Start with a static hold, then pull back slightly to reveal connected to esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath and Agharta within the wider frame. Use only light shifts that match the place or event mystery tone.",
-    "Use a slow controlled push toward Maps, with placed within maps, tickets, routes, and almost-places staying fixed as the follow-up wider frame and routes visible. Use only light shifts that match the place or event mystery tone.",
-    "Use a slow controlled push toward It, with connected to it belongs to esoteric reception and speculative geography rather than confirmed exploration staying fixed as the opening anchor and belongs visible. Use only light shifts that match the place or event mystery tone.",
-    "Use a restrained lateral pan across esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography, letting Agartha hold the opening detail while retellings stays in frame. Use only light shifts that match the place or event mystery tone.",
-    "Start with a static hold, then pull back slightly to reveal connected to the common idea presents Agartha or Agharta as a hidden inner realm and common within the wider frame. Use only light shifts that match the place or event mystery tone.",
-    "Use a restrained lateral pan across esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography, letting Agartha hold the follow-up anchor while Agartha stays in frame. Use only light shifts that match the place or event mystery tone.",
-    "Start with a static hold, then pull back slightly to reveal connected to esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath and Agharta within the wider frame. Use only light shifts that match the place or event mystery tone. Let Agharta remain the distinct a follow-up visual that adds a second visual detail.",
-    "Use a slow controlled push toward It, with connected to it belongs to esoteric reception and speculative geography rather than confirmed exploration staying fixed as the follow-up wider frame and reception visible. Use only light shifts that match the place or event mystery tone.",
-    "Use a slow controlled push toward It, with connected to it belongs to esoteric reception and speculative geography rather than confirmed exploration staying fixed as the opening anchor and belongs visible. Keep the movement restrained and documentary.",
-    "Use a restrained lateral pan across esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography, letting Agartha hold the opening detail while retellings stays in frame. Keep the movement restrained and documentary.",
-    "Use a restrained lateral pan across esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography, letting These hold the follow-up anchor while history stays in frame. Keep the movement restrained and documentary.",
-    "Start with a static hold, then pull back slightly to reveal connected to it belongs to esoteric reception and speculative geography rather than confirmed exploration and esoteric within the wider frame. Keep the movement restrained and documentary.",
-    "Use a slow controlled push toward It, with connected to it belongs to esoteric reception and speculative geography rather than confirmed exploration staying fixed as the follow-up wider frame and reception visible. Keep the movement restrained and documentary.",
-    "Use a slow controlled push toward Agartha, with associated with a variant where later versions differ around spelling, location, rulers, tunnels, entrances staying fixed as the opening anchor and Later visible. Use only light shifts that match the place or event mystery tone.",
-    "Use a restrained lateral pan across esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography, letting Agartha hold the opening detail while retellings stays in frame. Use only light shifts that match the place or event mystery tone. Let retellings remain the distinct an opening visual that adds a second visual detail.",
-    "Use a restrained lateral pan across esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography, letting It hold the follow-up anchor while turns stays in frame. Use only light shifts that match the place or event mystery tone.",
-    "Start with a static hold, then pull back slightly to reveal associated with a variant where some connect Agartha with polar openings, underground cities, and connect within the wider frame. Use only light shifts that match the place or event mystery tone.",
-    "Use a slow controlled push toward It, with framed by the interpretation that it turns the unknown into a structure underfoot staying fixed as the opening anchor and turns visible. End with a slow hold and no new action.",
-    "Use a restrained lateral pan across esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography, letting Agartha hold the opening detail while Agharta stays in frame. End with a slow hold and no new action.",
-    "Start with a static hold, then pull back slightly to reveal framed by the interpretation that agartha is treated through one concrete anchor: the esoteric and treated within the wider frame. End with a slow hold and no new action.",
-    "Use a restrained lateral pan across esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography, letting Agartha hold the follow-up anchor while Agartha stays in frame. End with a slow hold and no new action.",
-    "Start with a static hold, then pull back slightly to reveal shown through source material connected to later retellings do not always keep the same and retellings within the wider frame. End with a slow hold and no new action."
+    "Optional edit: slow push from the surface map to the faint lower layer.",
+    "Optional edit: slow lateral drift across map lines while a shadow opens below them.",
+    "Optional edit: slow fade from map surface to the hidden city silhouette, then hold.",
+    "Optional edit: slow overhead drift across papers and map edges.",
+    "Optional edit: slow pull from globe to closed book and shadow map.",
+    "Optional edit: slow vertical move from surface mountains down to the hidden layer.",
+    "Optional edit: slow push into the hall while the distant lights remain small.",
+    "Optional edit: hold on the closed doorway, then slowly widen to show the surrounding stone.",
+    "Optional edit: slow fade from the figure to the distant light, stopping before the path is clear.",
+    "Optional edit: slow rotation-like drift across the old illustration.",
+    "Optional edit: slow pan from the scientific cross-section to the symbolic map.",
+    "Optional edit: slow pull from mountain peak down toward the dark base.",
+    "Optional edit: slow push toward the lifted map edge.",
+    "Optional edit: slow hold on the open drawer while the light remains soft.",
+    "Optional edit: slow fade from the map to the passage, ending before the passage opens."
   ],
   "originalStorySlug": "agartha-hollow-earth-legend",
   "pipelineDiagnostics": {
-    "fallbackUsed": false,
-    "normalizedInputSchemaVersion": "1.0",
-    "scenePlanSchemaVersion": "1.0"
+    "finalPolish": "removed remaining meta phrasing",
+    "imagePromptCount": 15,
+    "motionPromptCount": 15,
+    "narrationBeatCount": 15,
+    "polishedAt": "2026-08-12",
+    "polishedBy": "codex-manual-source-based-batch-001-polish",
+    "qualityDirection": "remove repeated extension phrasing and keep story-led narration",
+    "regeneratedAt": "2026-08-12",
+    "regeneratedBy": "codex-manual-source-based-batch-001",
+    "sceneCount": 5,
+    "shortSceneCount": 5,
+    "sourceStorySlug": "agartha-hollow-earth-legend"
   },
   "publishedAt": "2026-07-21",
   "runtimePlan": {
-    "estimatedFinalRuntime": "5-6 minutes",
-    "estimatedFinalSeconds": 340,
-    "finalVideoSeconds": 340,
-    "narrationReadSeconds": 300,
-    "narrationReadTime": "5 min 00 sec",
-    "plannedTransitionAndVisualTime": "40 sec",
-    "totalWordCount": 704
+    "estimatedFinalRuntime": "7-8 minutes",
+    "estimatedFinalSeconds": 480,
+    "finalVideoSeconds": 480,
+    "narrationReadSeconds": 428,
+    "narrationReadTime": "7 min 8 sec",
+    "plannedTransitionAndVisualTime": "0 min 52 sec",
+    "totalWordCount": 1005
   },
   "schemaVersion": "single-path-v1",
-  "seoTitle": "Free Agartha Hollow Earth Legend YouTube Script",
-  "setting": "quiet archival setting",
+  "seoTitle": "Agartha Hollow Earth Legend YouTube Script - Image and Narration Package",
+  "setting": "maps, occult geography, imagined inner earth, hidden kingdom traditions",
   "shortForm": {
-    "finalVideoSeconds": 59,
-    "narrationReadSeconds": 47,
+    "finalVideoSeconds": 60,
+    "narrationReadSeconds": 48,
     "scenes": [
       {
-        "backgroundMusic": "quiet opening pulse, low drone, slow piano, short-form low density",
-        "estimatedReadSeconds": 7,
-        "imagePrompt": "A atmospheric location documentary scene shows Agartha introduced through belongs within a quiet archive-like workspace with physical evidence nearby, framed as a vertical short-form frame with strong negative space. Use natural low light with restrained contrast and documentary mystery atmosphere within the story culture and source context; center the frame on belongs. No readable text, logos, watermarks, modern objects, graphic gore, or cartoon styling.",
-        "motionPrompt": "Use a slow controlled push toward Agartha, keeping belongs as the central visual anchor.",
-        "narration": "Agartha starts with it belongs to esoteric reception and speculative geography rather. Maps, tickets, routes, and almost-places.",
-        "role": "What and Where",
-        "sceneFocus": "What and Where: Agartha tied to it belongs to esoteric reception and speculative.",
-        "sceneIndex": 1,
-        "soundEffect": "field wind, dry grass movement, soft footstep texture",
-        "sourceFactIds": [
-          "fact-001",
-          "fact-015",
-          "fact-007",
-          "fact-008",
-          "fact-062"
-        ],
-        "sourceFieldRefs": [
-          "storyBrief.knownNames",
-          "story.subjectSpecificVocabulary",
-          "storyBrief.cultureOrContext",
-          "story.sceneAnchor",
-          "factRecords.settingTerms",
-          "storyBrief.coreStoryElements",
-          "publicArticlePlan",
-          "story.summaryAnswer",
-          "story.excerpt",
-          "story.detail",
-          "contentDNA.sceneAnchor",
-          "contentDNA.culturalFrame",
-          "story.title",
-          "derived.problemFromDetail"
-        ],
-        "usedFactTexts": [
-          "It belongs to esoteric reception and speculative geography rather than confirmed exploration.",
-          "Maps, tickets, routes, and almost-places.",
-          "Agartha Hollow Earth Legend: Hidden Realm, Inner World, and the Geography Beneath the Map.",
-          "Agartha Hollow Earth Legend.",
-          "Esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath the earth."
-        ],
-        "voiceDirection": "Clear short-form pace, clean pauses, restrained tone, light emphasis on \"Agartha\"."
-      },
-      {
-        "backgroundMusic": "sparse documentary bed, low drone, slow piano, short-form low density",
-        "estimatedReadSeconds": 10,
-        "imagePrompt": "A atmospheric location documentary scene shows Agartha positioned beside esoteric as the source detail becomes visible within a quiet archive-like workspace with physical evidence nearby, framed in a clean medium shot with the key detail near the center. Use soft archival light and controlled shadows and documentary mystery atmosphere within the story culture and source context; center the frame on esoteric. No readable text, logos, watermarks, modern objects, graphic gore, or cartoon styling.",
-        "motionPrompt": "Use a restrained lateral pan across esoteric, then settle quietly on Agartha.",
-        "narration": "Agartha moves through it belongs to esoteric reception and speculative geography rather. The detail points to the common idea presents Agartha or Agharta.",
-        "role": "Core Record",
-        "sceneFocus": "Core Record: Agartha tied to it belongs to esoteric reception and speculative.",
-        "sceneIndex": 2,
-        "soundEffect": "field wind, dry grass movement, soft footstep texture",
-        "sourceFactIds": [
-          "fact-001",
-          "fact-002",
-          "fact-003",
-          "fact-025",
-          "fact-062"
-        ],
-        "sourceFieldRefs": [
-          "storyBrief.coreStoryElements",
-          "publicArticlePlan",
-          "story.summaryAnswer",
-          "story.excerpt",
-          "story.sceneAnchor",
-          "story.detail",
-          "contentDNA.sceneAnchor",
-          "storyBrief.existenceEvidence",
-          "story.researchSources",
-          "story.evidence",
-          "derived.problemFromDetail"
-        ],
-        "usedFactTexts": [
-          "It belongs to esoteric reception and speculative geography rather than confirmed exploration.",
-          "The common idea presents Agartha or Agharta as a hidden inner realm.",
-          "Agartha developed through esoteric writing, occult geography, and later lost-world imagination.",
-          "Later retellings do not always keep the same emphasis.",
-          "Esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath the earth."
-        ],
-        "voiceDirection": "Careful pace, clean pauses, restrained tone, light emphasis on \"Agartha\"."
-      },
-      {
-        "backgroundMusic": "sparse documentary bed, low drone, slow piano, short-form low density",
+        "backgroundMusic": "compact atmospheric bed matching the long-form tone",
         "estimatedReadSeconds": 11,
-        "imagePrompt": "A atmospheric location documentary scene shows Agartha positioned beside reception as the source detail becomes visible within a quiet archive-like workspace with physical evidence nearby, framed as a close readable detail with the background still visible. Use soft archival light and controlled shadows and documentary mystery atmosphere within the story culture and source context; center the frame on reception. No readable text, logos, watermarks, modern objects, graphic gore, or cartoon styling.",
-        "motionPrompt": "Begin with a still frame, then gently pull back to reveal reception.",
-        "narration": "Agartha turns on later retellings do not always keep the same emphasis. The key turn comes when these variations show reception history more than evidence.",
-        "role": "Key Evidence",
-        "sceneFocus": "Key Evidence: Agartha tied to later retellings do not.",
-        "sceneIndex": 3,
-        "soundEffect": "field wind, dry grass movement, soft footstep texture",
-        "sourceFactIds": [
-          "fact-025",
-          "fact-026",
-          "fact-027",
-          "fact-042",
-          "fact-001"
-        ],
-        "sourceFieldRefs": [
-          "storyBrief.existenceEvidence",
-          "story.researchSources",
-          "story.evidence",
-          "storyBrief.coreStoryElements",
-          "story.title",
-          "storyBrief.knownNames",
-          "contentDNA.culturalFrame",
-          "publicArticlePlan",
-          "story.summaryAnswer",
-          "story.excerpt",
-          "story.sceneAnchor",
-          "story.detail",
-          "contentDNA.sceneAnchor",
-          "derived.turningPointFromDetail",
-          "derived.outcomeFromDetail",
-          "derived.problemFromDetail",
-          "publicArticlePlan.publicSourceNote"
-        ],
-        "usedFactTexts": [
-          "Later retellings do not always keep the same emphasis.",
-          "These variations show reception history more than evidence.",
-          "Public references used for orientation include Encyclopaedia Britannica and Theosophy Wiki.",
-          "It belongs to esoteric reception and speculative geography rather than confirmed exploration.",
-          "It belongs to esoteric reception and speculative geography rather than confirmed exploration."
-        ],
-        "voiceDirection": "Careful pace, clean pauses, restrained tone, light emphasis on \"Agartha\"."
+        "imagePrompt": "Vertical documentary image: an antique map with a faint underground layer glowing beneath it, clear single focal point, no readable text, no logos, no modern UI.",
+        "motionPrompt": "Slow restrained movement that supports the narration without adding new story events.",
+        "narration": "Agartha is not a lost island beyond the sea. It is a hidden realm imagined beneath the map, close enough to make ordinary ground feel suspicious.",
+        "role": "Hook",
+        "sceneFocus": "A hidden world under the map.",
+        "sceneIndex": 1,
+        "soundEffect": "subtle ambience only",
+        "voiceDirection": "Clear short-form delivery with one clean pause."
       },
       {
-        "backgroundMusic": "quiet opening pulse, low drone, slow piano, short-form low density",
-        "estimatedReadSeconds": 10,
-        "imagePrompt": "A atmospheric location documentary scene shows Agartha introduced through speculative within a quiet archive-like workspace with physical evidence nearby, framed with foreground evidence leading toward the main subject. Use natural low light with restrained contrast and documentary mystery atmosphere within the story culture and source context; center the frame on speculative. No readable text, logos, watermarks, modern objects, graphic gore, or cartoon styling.",
-        "motionPrompt": "Reveal speculative from foreground to background with subtle parallax and restrained movement.",
-        "narration": "Agartha shifts through later versions differ around spelling, location, rulers, tunnels, entrances. Some versions keep some connect Agartha with polar openings, underground cities.",
-        "role": "Main Explanations",
-        "sceneFocus": "Main Explanations: Agartha tied to later versions differ around spelling, location, rulers.",
-        "sceneIndex": 4,
-        "soundEffect": "field wind, dry grass movement, soft footstep texture",
-        "sourceFactIds": [
-          "fact-009",
-          "fact-010",
-          "fact-011",
-          "fact-025",
-          "fact-014"
-        ],
-        "sourceFieldRefs": [
-          "storyBrief.reportedVariants",
-          "publicArticlePlan",
-          "publicArticlePlan.publicSourceNote",
-          "story.publicSourceBasis",
-          "storyBrief.cultureOrContext",
-          "story.publicSourceNoteSeed",
-          "story.evidence",
-          "story.researchSources",
-          "storyBrief.existenceEvidence",
-          "storyBrief.editorialInterpretationOptions",
-          "contentDNA.uniqueAngle",
-          "storyBrief.coreStoryElements",
-          "story.summaryAnswer"
-        ],
-        "usedFactTexts": [
-          "Later versions differ around spelling, location, rulers, tunnels, entrances, and spiritual meaning.",
-          "Some connect Agartha with polar openings, underground cities, or secret adepts.",
-          "These variations show reception history more than evidence.",
-          "Later retellings do not always keep the same emphasis.",
-          "It turns the unknown into a structure underfoot."
-        ],
-        "voiceDirection": "Clear short-form pace, clean pauses, restrained tone, light emphasis on \"Agartha\"."
-      },
-      {
-        "backgroundMusic": "soft reflective drone, low drone, slow piano, short-form low density",
+        "backgroundMusic": "compact atmospheric bed matching the long-form tone",
         "estimatedReadSeconds": 9,
-        "imagePrompt": "A atmospheric location documentary scene shows Agartha held in a quiet final composition around it belongs to esoteric reception and speculative geography rather than within a quiet archive-like workspace with physical evidence nearby, framed as a restrained final frame that leaves room for narration. Use soft fading light with low contrast and documentary mystery atmosphere within the story culture and source context; center the frame on it belongs to esoteric reception and speculative. No readable text, logos, watermarks, modern objects, graphic gore, or cartoon styling.",
-        "motionPrompt": "Hold briefly on Agartha, then let the light shift softly around it belongs to esoteric reception.",
-        "narration": "Agartha ends with esoteric hidden-world legend of Agartha or Agharta. The meaning points to it turns the unknown into a structure underfoot.",
-        "role": "What Remains Unresolved",
-        "sceneFocus": "What Remains Unresolved: Agartha tied to esoteric hidden-world legend of Agartha or Agharta.",
+        "imagePrompt": "Vertical documentary image: an archive desk with old maps and closed esoteric books, clear single focal point, no readable text, no logos, no modern UI.",
+        "motionPrompt": "Slow restrained movement that supports the narration without adding new story events.",
+        "narration": "The stronger Agartha story keeps its boundary clear. It belongs to occult geography and hidden-world legend, not confirmed archaeology or geology.",
+        "role": "Source",
+        "sceneFocus": "Occult geography, not verified geology.",
+        "sceneIndex": 2,
+        "soundEffect": "subtle ambience only",
+        "voiceDirection": "Clear short-form delivery with one clean pause."
+      },
+      {
+        "backgroundMusic": "compact atmospheric bed matching the long-form tone",
+        "estimatedReadSeconds": 11,
+        "imagePrompt": "Vertical documentary image: a sealed underground stone doorway with warm light under it, clear single focal point, no readable text, no logos, no modern UI.",
+        "motionPrompt": "Slow restrained movement that supports the narration without adding new story events.",
+        "narration": "Agartha works because it is not just a cave. It is imagined as an ordered hidden realm where the real question is who may enter.",
+        "role": "Kingdom",
+        "sceneFocus": "The door is about permission.",
+        "sceneIndex": 3,
+        "soundEffect": "subtle ambience only",
+        "voiceDirection": "Clear short-form delivery with one clean pause."
+      },
+      {
+        "backgroundMusic": "compact atmospheric bed matching the long-form tone",
+        "estimatedReadSeconds": 6,
+        "imagePrompt": "Vertical documentary image: an old earth cross-section with a dark inner glow, clear single focal point, no readable text, no logos, no modern UI.",
+        "motionPrompt": "Slow restrained movement that supports the narration without adding new story events.",
+        "narration": "Hollow Earth ideas gave Agartha a larger stage: one world measured above, another dreamed underneath.",
+        "role": "Hollow Earth",
+        "sceneFocus": "The planet feels double.",
+        "sceneIndex": 4,
+        "soundEffect": "subtle ambience only",
+        "voiceDirection": "Clear short-form delivery with one clean pause."
+      },
+      {
+        "backgroundMusic": "compact atmospheric bed matching the long-form tone",
+        "estimatedReadSeconds": 11,
+        "imagePrompt": "Vertical documentary image: a quiet map fading into a dark passage below, clear single focal point, no readable text, no logos, no modern UI.",
+        "motionPrompt": "Slow restrained movement that supports the narration without adding new story events.",
+        "narration": "Agartha endures because it does not need to be found to change the feeling of the map. It makes the surface feel like a roof.",
+        "role": "Ending",
+        "sceneFocus": "The map feels incomplete.",
         "sceneIndex": 5,
-        "soundEffect": "field wind, dry grass movement, soft footstep texture",
-        "sourceFactIds": [
-          "fact-061",
-          "fact-014",
-          "fact-016",
-          "fact-036",
-          "fact-025"
-        ],
-        "sourceFieldRefs": [
-          "derived.outcomeFromDetail",
-          "storyBrief.editorialInterpretationOptions",
-          "contentDNA.uniqueAngle",
-          "publicArticlePlan",
-          "storyBrief.coreStoryElements",
-          "story.summaryAnswer"
-        ],
-        "usedFactTexts": [
-          "Esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath the earth.",
-          "It turns the unknown into a structure underfoot.",
-          "Agartha is treated through one concrete anchor: the esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath the earth.",
-          "Agartha centers on the legend may be read as a lost-world story about hidden order.",
-          "Later retellings do not always keep the same emphasis."
-        ],
-        "voiceDirection": "Slow final pace, clean pauses, restrained tone, light emphasis on \"Agartha\"."
+        "soundEffect": "subtle ambience only",
+        "voiceDirection": "Clear short-form delivery with one clean pause."
       }
     ],
-    "totalWordCount": 110
+    "totalWordCount": 112
   },
   "shortSceneFocuses": [
-    "What and Where: Agartha tied to it belongs to esoteric reception and speculative.",
-    "Core Record: Agartha tied to it belongs to esoteric reception and speculative.",
-    "Key Evidence: Agartha tied to later retellings do not.",
-    "Main Explanations: Agartha tied to later versions differ around spelling, location, rulers.",
-    "What Remains Unresolved: Agartha tied to esoteric hidden-world legend of Agartha or Agharta."
+    "A hidden world under the map.",
+    "Occult geography, not verified geology.",
+    "The door is about permission.",
+    "The planet feels double.",
+    "The map feels incomplete."
   ],
   "shortsIncluded": true,
   "shortsScript": [
-    "Agartha starts with it belongs to esoteric reception and speculative geography rather. Maps, tickets, routes, and almost-places.",
-    "Agartha moves through it belongs to esoteric reception and speculative geography rather. The detail points to the common idea presents Agartha or Agharta.",
-    "Agartha turns on later retellings do not always keep the same emphasis. The key turn comes when these variations show reception history more than evidence.",
-    "Agartha shifts through later versions differ around spelling, location, rulers, tunnels, entrances. Some versions keep some connect Agartha with polar openings, underground cities.",
-    "Agartha ends with esoteric hidden-world legend of Agartha or Agharta. The meaning points to it turns the unknown into a structure underfoot."
+    "Agartha is not a lost island beyond the sea. It is a hidden realm imagined beneath the map, close enough to make ordinary ground feel suspicious.",
+    "The stronger Agartha story keeps its boundary clear. It belongs to occult geography and hidden-world legend, not confirmed archaeology or geology.",
+    "Agartha works because it is not just a cave. It is imagined as an ordered hidden realm where the real question is who may enter.",
+    "Hollow Earth ideas gave Agartha a larger stage: one world measured above, another dreamed underneath.",
+    "Agartha endures because it does not need to be found to change the feeling of the map. It makes the surface feel like a roof."
   ],
   "slug": "agartha-hollow-earth-legend-youtube-script",
   "storageSchemaVersion": "creator-pack-file-v1",
   "subtitleLines": [
-    "Agartha Hollow Earth Legend begins with a familiar image.",
-    "Agartha, also spelled Agharta in some sources, is a hidden-world legend often connected with hollow-earth and esoteric geography. It is imagined as an inner realm, secret civilization, or spiritual center beneath ordinary maps.",
-    "The ending leaves a question behind."
+    "A hidden world beneath the familiar map.",
+    "A legend where geography turns inward.",
+    "A video package for quiet lost-world narration."
   ],
   "tags": [
-    "lost worlds script",
-    "hidden world script",
-    "creator library",
-    "youtube script",
-    "shorts script",
-    "image prompt"
+    "Agartha",
+    "Hollow Earth",
+    "Lost Worlds",
+    "Occult Geography",
+    "Hidden Kingdom",
+    "Image Narration Script"
   ],
   "thumbnailIdeas": [
-    "Agartha Hollow Earth Legend with bold text: THE STORY STILL REMAINS",
-    "A close-up of the key image from Agartha Hollow Earth Legend",
-    "Split thumbnail: familiar legend on one side, unresolved question on the other"
+    "A map layered over a dark inner world with the title: The Kingdom Beneath The Map",
+    "A circular tunnel under an old world map with the title: Agartha Explained",
+    "A hidden city suggested below the earth with the title: Not A Place On The Map",
+    "A lamplit archive desk and underground passage with the title: The Hollow Earth Legend"
   ],
   "thumbnailIdeasIncluded": true,
   "title": "Agartha Hollow Earth Legend YouTube Script",
-  "updatedAt": "2026-07-21",
-  "usageNote": "Use this page as a production workspace for a video based on the archive entry for Agartha Hollow Earth Legend. Keep source limits clear and avoid presenting later interpretations as verified facts.",
+  "updatedAt": "2026-08-12",
+  "usageNote": "Use this package as a production aid for an image-led narration video. Keep Agartha framed as occult geography and reception history, not verified geology.",
   "visualGuide": [
     {
-      "backgroundMusic": "soft reflective drone, low drone, slow piano, sparse documentary bed, slow tempo with restrained weight",
-      "directionTip": "The central visual should show it belongs to esoteric reception and speculative geography rather than confirmed exploration.",
+      "backgroundMusic": "deep low drone, distant wind, slow strings, no melody over narration",
       "narrationParts": [
         {
-          "creatorNote": "Agartha must stay tied to agartha Hollow Earth Legend: Hidden Realm, Inner World, and the Geography Beneath the Map. Do not add figures, motives, or incidents beyond esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath the earth.",
-          "estimatedReadingTime": "≈ 27 sec",
-          "narration": "The setting gives the scene a concrete frame: Maps, tickets, routes, and almost-places. The account identifies the central subject clearly: Agartha Hollow Earth Legend: Hidden Realm, Inner World, and the Geography Beneath the Map is the named subject at the center of this retelling. The account then gives a direct movement: It belongs to esoteric reception and speculative geography rather than confirmed exploration.",
-          "sourceFactIds": [
-            "fact-015",
-            "fact-007",
-            "fact-001"
-          ],
-          "sourceFieldRefs": [
-            "contentDNA.culturalFrame",
-            "story.title",
-            "storyBrief.coreStoryElements"
-          ],
-          "usedFactTexts": [
-            "Maps, tickets, routes, and almost-places.",
-            "Agartha Hollow Earth Legend: Hidden Realm, Inner World, and the Geography Beneath the Map.",
-            "It belongs to esoteric reception and speculative geography rather than confirmed exploration."
-          ],
+          "creatorNote": "Open with the downward turn as the main hook.",
+          "estimatedReadingTime": "about 27 sec",
+          "narration": "Agartha begins with a simple change in direction. Most lost-world stories send the imagination outward, beyond a sea or mountain range. Agartha sends it downward. The familiar world stays where it is, but another realm is imagined beneath it, close enough to haunt every line of geography. The map remains familiar, and that familiarity makes the hidden layer feel nearer than a distant myth.",
           "visualBeats": [
             {
-              "beatMotion": "Use a slow controlled push toward Maps, with placed within maps, tickets, routes, and almost-places staying fixed as the opening anchor and Maps visible. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Maps placed within maps, tickets, routes, and almost-places in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with natural low light, documentary uncertainty, and cultural context from Lost Worlds. Include almost-places, belongs, esoteric as supporting visual details. This should feel like an opening visual with one clear focal point during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a slow controlled push toward Maps, with placed within maps, tickets, routes, and almost-places staying fixed as the opening anchor and Maps visible. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-015"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.culturalFrame",
-                "story.title",
-                "storyBrief.coreStoryElements",
-                "derived.problemFromDetail",
-                "storyBrief.knownNames"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a restrained lateral pan across esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography, letting Agartha hold the opening detail while Agartha Hollow Earth Legend stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Agartha held as the central visual in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from Legend. Include Agartha, Agartha Hollow Earth Legend, Hollow Earth as supporting visual details. This should feel like an opening visual that adds a second visual detail during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Use a restrained lateral pan across esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography, letting Agartha hold the opening detail while Agartha Hollow Earth Legend stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-007"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.culturalFrame",
-                "story.title",
-                "storyBrief.coreStoryElements",
-                "derived.problemFromDetail",
-                "storyBrief.knownNames"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal connected to it belongs to esoteric reception and speculative geography rather than confirmed exploration and reception within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows It connected to it belongs to esoteric reception and speculative geography rather than confirmed exploration in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a close visual detail that supports the current narration, with natural low light, documentary uncertainty, and cultural context from Lost Worlds. Include belongs, esoteric, reception as supporting visual details. This should feel like an opening visual that widens the frame without adding new story elements during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal connected to it belongs to esoteric reception and speculative geography rather than confirmed exploration and reception within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-001"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.culturalFrame",
-                "story.title",
-                "storyBrief.coreStoryElements",
-                "derived.problemFromDetail",
-                "storyBrief.knownNames"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "An old world map on a desk with a faint second map glowing beneath it, dark edges, archival lamplight, subterranean mystery, documentary realism.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow push from the surface map to the faint lower layer."
             }
           ]
         },
         {
-          "creatorNote": "It must stay tied to it belongs to esoteric reception and speculative geography rather than confirmed exploration. Do not add figures, motives, or incidents beyond maps, tickets, routes, and almost-places.",
-          "estimatedReadingTime": "≈ 34 sec",
-          "narration": "The story starts from a clear disturbance: Esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath the earth is the problem that pushes the story into motion. The opening identity is already specific: Agartha Hollow Earth Legend is the named subject at the center of this retelling. The action moves through a specific event: Agartha is anchored by a place image: the esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath the earth.",
-          "sourceFactIds": [
-            "fact-062",
-            "fact-008",
-            "fact-019"
-          ],
-          "sourceFieldRefs": [
-            "derived.problemFromDetail",
-            "storyBrief.knownNames",
-            "publicArticlePlan"
-          ],
-          "usedFactTexts": [
-            "Esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath the earth.",
-            "Agartha Hollow Earth Legend.",
-            "Agartha is anchored by a place image: the esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath the earth."
-          ],
+          "creatorNote": "Make the map feel unstable without claiming physical proof.",
+          "estimatedReadingTime": "about 28 sec",
+          "narration": "That is why the legend feels different from an island or ruin. A hidden island can be sailed toward. A buried city can be excavated. But Agartha sits beneath the idea of the world itself. It turns roads, borders, mountains, and capitals into the roof of another story. The map remains familiar, and that familiarity makes the hidden layer feel nearer than a distant myth.",
           "visualBeats": [
             {
-              "beatMotion": "Use a restrained lateral pan across esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography, letting It hold the follow-up anchor while belongs stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows It connected to it belongs to esoteric reception and speculative geography rather than confirmed exploration in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with natural low light, documentary uncertainty, and cultural context from Lost Worlds. Include belongs, esoteric, reception as supporting visual details. This should feel like a follow-up visual with one clear focal point during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a restrained lateral pan across esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography, letting It hold the follow-up anchor while belongs stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-001"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.culturalFrame",
-                "story.title",
-                "storyBrief.coreStoryElements",
-                "derived.problemFromDetail",
-                "storyBrief.knownNames"
-              ],
-              "usedFactTexts": []
-            },
+              "imagePrompt": "Close view of contour lines and mountain ranges on an antique map, with a dark circular passage suggested under the paper surface, no readable labels.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow lateral drift across map lines while a shadow opens below them."
+            }
+          ]
+        },
+        {
+          "creatorNote": "End the hook with the emotional engine: secret order beneath ordinary reality.",
+          "estimatedReadingTime": "about 27 sec",
+          "narration": "The strongest version of Agartha is not a claim that geography has failed in a simple way. It is a story about the hunger for hidden order. Somewhere below ordinary history, the legend imagines a realm older, wiser, stranger, or more guarded than the world above. The map remains familiar, and that familiarity makes the hidden layer feel nearer than a distant myth.",
+          "visualBeats": [
             {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal connected to esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath and Agharta within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Agartha connected to esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath the earth in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from legend. Include Agartha, Agharta, Esoteric as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal connected to esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath and Agharta within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-062"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.culturalFrame",
-                "story.title",
-                "storyBrief.coreStoryElements",
-                "derived.problemFromDetail",
-                "storyBrief.knownNames"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a slow controlled push toward Maps, with placed within maps, tickets, routes, and almost-places staying fixed as the follow-up wider frame and routes visible. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Maps placed within maps, tickets, routes, and almost-places in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a close visual detail that supports the current narration, with natural low light, documentary uncertainty, and cultural context from Lost Worlds. Include almost-places, belongs, esoteric as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the first sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Use a slow controlled push toward Maps, with placed within maps, tickets, routes, and almost-places staying fixed as the follow-up wider frame and routes visible. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-015"
-              ],
-              "sourceFieldRefs": [
-                "contentDNA.culturalFrame",
-                "story.title",
-                "storyBrief.coreStoryElements",
-                "derived.problemFromDetail",
-                "storyBrief.knownNames"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "A dim archive room with a suspended map and a faint underground city silhouette below it, restrained esoteric mood, no fantasy crowds.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow fade from map surface to the hidden city silhouette, then hold."
             }
           ]
         }
       ],
-      "sceneFocus": "The central visual should show it belongs to esoteric reception and speculative geography rather than confirmed exploration.",
-      "sceneRole": "What, When, and Where",
-      "soundEffect": "field wind, dry grass movement, soft footstep texture",
-      "sourceFactIds": [
-        "fact-015",
-        "fact-007",
-        "fact-001",
-        "fact-062",
-        "fact-008",
-        "fact-019"
-      ],
-      "sourceFieldRefs": [
-        "contentDNA.culturalFrame",
-        "story.title",
-        "storyBrief.coreStoryElements",
-        "derived.problemFromDetail",
-        "storyBrief.knownNames",
-        "publicArticlePlan"
-      ],
-      "visualDirection": "Hold the establishing image briefly, then begin a slow push toward the main detail.",
-      "voiceDirection": "Calm documentary pace, short pauses between ideas, natural restraint, with light emphasis on \"Agartha\" when it appears."
+      "sceneFocus": "A familiar map becomes unsettling when the unknown is imagined underneath it.",
+      "sceneRole": "Opening Hook",
+      "soundEffect": "wind, hollow air, distant stone echo",
+      "visualDirection": "Use maps, thresholds, empty spaces, and distance rather than spectacle.",
+      "voiceDirection": "Quiet, curious, and restrained, with pauses around the unknown."
     },
     {
-      "backgroundMusic": "steady low tension, low drone, slow piano, sparse documentary bed, slow tempo with restrained weight",
-      "directionTip": "The central visual should show it belongs to esoteric reception and speculative geography rather than confirmed exploration. Frame it through it belongs to esoteric reception and speculative geography rather than confirmed exploration.",
+      "backgroundMusic": "low archive drone, soft paper rustle, restrained dark ambience",
       "narrationParts": [
         {
-          "creatorNote": "It must stay tied to it belongs to esoteric reception and speculative geography rather than confirmed exploration. Do not add figures, motives, or incidents beyond esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath the earth.",
-          "estimatedReadingTime": "≈ 25 sec",
-          "narration": "The source trail matters before the claim is treated as certain: Later retellings do not always keep the same emphasis. The action moves through a specific event: The common idea presents Agartha or Agharta as a hidden inner realm. The next fact gives the sequence a concrete action: Agartha developed through esoteric writing, occult geography, and later lost-world imagination.",
-          "sourceFactIds": [
-            "fact-025",
-            "fact-002",
-            "fact-003"
-          ],
-          "sourceFieldRefs": [
-            "publicArticlePlan",
-            "storyBrief.coreStoryElements"
-          ],
-          "usedFactTexts": [
-            "Later retellings do not always keep the same emphasis.",
-            "The common idea presents Agartha or Agharta as a hidden inner realm.",
-            "Agartha developed through esoteric writing, occult geography, and later lost-world imagination."
-          ],
+          "creatorNote": "Keep the verification boundary inside the story rhythm.",
+          "estimatedReadingTime": "about 28 sec",
+          "narration": "The source boundary matters. Agartha is not verified geology or archaeology. It belongs to occult geography, esoteric writing, and reception history. Names such as Agartha, Agharta, and Agarttha move through different retellings, and the spellings themselves feel like traces from a tradition that never became one fixed place. The map remains familiar, and that familiarity makes the hidden layer feel nearer than a distant myth.",
           "visualBeats": [
             {
-              "beatMotion": "Use a slow controlled push toward It, with connected to it belongs to esoteric reception and speculative geography rather than confirmed exploration staying fixed as the opening anchor and belongs visible. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows It connected to it belongs to esoteric reception and speculative geography rather than confirmed exploration in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Lost Worlds. Include belongs, esoteric, reception as supporting visual details. This should feel like an opening visual with one clear focal point during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a slow controlled push toward It, with connected to it belongs to esoteric reception and speculative geography rather than confirmed exploration staying fixed as the opening anchor and belongs visible. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-001"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan",
-                "derived.problemFromDetail"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a restrained lateral pan across esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography, letting Agartha hold the opening detail while retellings stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Agartha shown through source material connected to later retellings do not always keep the same emphasis in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a medium composition that shows the important action or state, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Lost Worlds. Include retellings, always, emphasis as supporting visual details. This should feel like an opening visual that adds a second visual detail during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Use a restrained lateral pan across esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography, letting Agartha hold the opening detail while retellings stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-025"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan",
-                "derived.problemFromDetail"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal connected to the common idea presents Agartha or Agharta as a hidden inner realm and common within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Agartha connected to the common idea presents Agartha or Agharta as a hidden inner realm in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a close visual detail that supports the current narration, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Lost Worlds. Include Agartha, Agharta, common as supporting visual details. This should feel like an opening visual that widens the frame without adding new story elements during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal connected to the common idea presents Agartha or Agharta as a hidden inner realm and common within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-002"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan",
-                "derived.problemFromDetail"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "An archive desk with variant spellings on unlabeled note cards turned away from the camera, old maps, dim lamp, no readable text.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow overhead drift across papers and map edges."
             }
           ]
         },
         {
-          "creatorNote": "Agartha must stay tied to the common idea presents Agartha or Agharta as a hidden inner realm. Keep the source boundary around later retellings do not always keep the same emphasis source-limited, without turning it into a stronger claim.",
-          "estimatedReadingTime": "≈ 32 sec",
-          "narration": "The surviving record gives the narration a source limit: References such as Encyclopaedia Britannica and Theosophy Wiki are used as orientation points, not as proof for every later claim. The surviving record gives the narration a source limit: Those references are useful for understanding the source trail without flattening it into one version. The surviving record gives the narration a source limit: Agartha is treated through esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography.",
-          "sourceFactIds": [
-            "fact-030",
-            "fact-028",
-            "fact-029"
-          ],
-          "sourceFieldRefs": [
-            "publicArticlePlan.publicSourceNote",
-            "publicArticlePlan"
-          ],
-          "usedFactTexts": [
-            "References such as Encyclopaedia Britannica and Theosophy Wiki are used as orientation points, not as proof for every later claim.",
-            "Those references are useful for understanding the source trail without flattening it into one version.",
-            "Agartha is treated through esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography."
-          ],
+          "creatorNote": "Use Saint-Yves as context, not as a lecture.",
+          "estimatedReadingTime": "about 26 sec",
+          "narration": "Saint-Yves d'Alveydre and hidden-order writing helped give Agartha a modern esoteric shape. The legend does not behave like a discovered cave system. It behaves like symbolic geography: a world underneath the world, a kingdom behind history, a place that explains why ordinary maps feel incomplete. The map remains familiar, and that familiarity makes the hidden layer feel nearer than a distant myth.",
           "visualBeats": [
             {
-              "beatMotion": "Use a restrained lateral pan across esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography, letting Agartha hold the follow-up anchor while Agartha stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Agartha connected to the common idea presents Agartha or Agharta as a hidden inner realm in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Lost Worlds. Include Agartha, Agharta, common as supporting visual details. This should feel like a follow-up visual with one clear focal point during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a restrained lateral pan across esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography, letting Agartha hold the follow-up anchor while Agartha stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-002"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan",
-                "derived.problemFromDetail"
-              ],
-              "usedFactTexts": []
-            },
+              "imagePrompt": "A nineteenth-century style study with closed books, a globe, and a dark map of imagined inner chambers, subdued lamplight, documentary realism.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow pull from globe to closed book and shadow map."
+            }
+          ]
+        },
+        {
+          "creatorNote": "Let the geography expand while staying imagined.",
+          "estimatedReadingTime": "about 28 sec",
+          "narration": "Once a hidden kingdom is placed beneath the earth, every surface can become a veil. Mountains may hide entrances. Deserts may cover passages. Polar regions may become thresholds in later Hollow Earth imagination. The details change, but the feeling stays: the world above is only the visible floor. The map remains familiar, and that familiarity makes the hidden layer feel nearer than a distant myth.",
+          "visualBeats": [
             {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal connected to esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath and Agharta within the wider frame. Use only light shifts that match the place or event mystery tone. Let Agharta remain the distinct a follow-up visual that adds a second visual detail.",
-              "imagePrompt": "A realistic location-documentary style image shows Agartha connected to esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath the earth in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a medium composition that shows the important action or state, with low directional light with restrained contrast, documentary uncertainty, and cultural context from legend. Include Agartha, Agharta, Esoteric as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal connected to esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath and Agharta within the wider frame. Use only light shifts that match the place or event mystery tone. Let Agharta remain the distinct a follow-up visual that adds a second visual detail.",
-              "sourceFactIds": [
-                "fact-062"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan",
-                "derived.problemFromDetail"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a slow controlled push toward It, with connected to it belongs to esoteric reception and speculative geography rather than confirmed exploration staying fixed as the follow-up wider frame and reception visible. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows It connected to it belongs to esoteric reception and speculative geography rather than confirmed exploration in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a close visual detail that supports the current narration, with low directional light with restrained contrast, documentary uncertainty, and cultural context from Lost Worlds. Include belongs, esoteric, reception as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the second sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Use a slow controlled push toward It, with connected to it belongs to esoteric reception and speculative geography rather than confirmed exploration staying fixed as the follow-up wider frame and reception visible. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-001"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan",
-                "derived.problemFromDetail"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "A layered earth cross-section rendered as a realistic archive illustration with a faint hidden realm below mountains and ice, no labels, warm and dark palette.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow vertical move from surface mountains down to the hidden layer."
             }
           ]
         }
       ],
-      "sceneFocus": "The central visual should show it belongs to esoteric reception and speculative geography rather than confirmed exploration. Frame it through it belongs to esoteric reception and speculative geography rather than confirmed exploration.",
-      "sceneRole": "Core Record or Event",
-      "soundEffect": "field wind, dry grass movement, soft footstep texture",
-      "sourceFactIds": [
-        "fact-025",
-        "fact-002",
-        "fact-003",
-        "fact-030",
-        "fact-028",
-        "fact-029"
-      ],
-      "sourceFieldRefs": [
-        "publicArticlePlan",
-        "storyBrief.coreStoryElements",
-        "publicArticlePlan.publicSourceNote"
-      ],
-      "visualDirection": "Start steady, begin a slow push toward the main detail, and cut after the scene consequence is clear.",
-      "voiceDirection": "Calm documentary pace, short pauses between ideas, slight tension, with light emphasis on \"Agartha\" when it appears."
+      "sceneFocus": "Agartha grows from esoteric writing and hidden-world reception rather than verified geology.",
+      "sceneRole": "Occult Geography",
+      "soundEffect": "paper movement, distant room tone, faint air",
+      "visualDirection": "Keep the frame simple and image-led, with one central object or place.",
+      "voiceDirection": "Calm documentary voice with source-aware restraint."
     },
     {
-      "backgroundMusic": "sparse documentary bed, low drone, slow piano, slow tempo with restrained weight",
-      "directionTip": "The central visual should show it belongs to esoteric reception and speculative geography rather than confirmed exploration. Frame it through the source boundary around later retellings do not always keep the same emphasis.",
+      "backgroundMusic": "deep low drone, distant wind, slow strings, no melody over narration",
       "narrationParts": [
         {
-          "creatorNote": "It must stay tied to the source boundary around later retellings do not always keep the same emphasis. Do not add figures, motives, or incidents beyond it belongs to esoteric reception and speculative geography rather than confirmed exploration.",
-          "estimatedReadingTime": "≈ 32 sec",
-          "narration": "The scene has a clear visible point: It belongs to esoteric reception and speculative geography rather than confirmed exploration. The account stays careful because the evidence has boundaries: These variations show reception history more than evidence. The account stays careful because the evidence has boundaries: Public references used for orientation include Encyclopaedia Britannica and Theosophy Wiki. The action moves through a specific event: It belongs to esoteric reception and speculative geography rather than confirmed exploration.",
-          "sourceFactIds": [
-            "fact-042",
-            "fact-026",
-            "fact-027",
-            "fact-001"
-          ],
-          "sourceFieldRefs": [
-            "publicArticlePlan",
-            "publicArticlePlan.publicSourceNote",
-            "storyBrief.coreStoryElements"
-          ],
-          "usedFactTexts": [
-            "It belongs to esoteric reception and speculative geography rather than confirmed exploration.",
-            "These variations show reception history more than evidence.",
-            "Public references used for orientation include Encyclopaedia Britannica and Theosophy Wiki.",
-            "It belongs to esoteric reception and speculative geography rather than confirmed exploration."
-          ],
+          "creatorNote": "Push the idea of order under the map.",
+          "estimatedReadingTime": "about 30 sec",
+          "narration": "Agartha is powerful because it is not merely empty underground space. It is imagined as a realm with order. That detail changes the fear. A cave can be accidental. A kingdom is intentional. If something is organized beneath the map, then the surface world may not simply be ignorant. It may be excluded. The map remains familiar, and that familiarity makes the hidden layer feel nearer than a distant myth.",
           "visualBeats": [
             {
-              "beatMotion": "Use a slow controlled push toward It, with connected to it belongs to esoteric reception and speculative geography rather than confirmed exploration staying fixed as the opening anchor and belongs visible. Keep the movement restrained and documentary.",
-              "imagePrompt": "A realistic location-documentary style image shows It connected to it belongs to esoteric reception and speculative geography rather than confirmed exploration in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a clear tabletop or archival composition, with soft archival light, careful documentary restraint, and cultural context from Lost Worlds. Include belongs, esoteric, reception as supporting visual details. This should feel like an opening visual with one clear focal point during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a slow controlled push toward It, with connected to it belongs to esoteric reception and speculative geography rather than confirmed exploration staying fixed as the opening anchor and belongs visible. Keep the movement restrained and documentary.",
-              "sourceFactIds": [
-                "fact-042"
-              ],
-              "sourceFieldRefs": [
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan.publicSourceNote"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a restrained lateral pan across esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography, letting Agartha hold the opening detail while retellings stays in frame. Keep the movement restrained and documentary.",
-              "imagePrompt": "A realistic location-documentary style image shows Agartha shown through source material connected to later retellings do not always keep the same emphasis in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a medium frame that separates the main subject from supporting evidence, with soft archival light, careful documentary restraint, and cultural context from Lost Worlds. Include retellings, always, emphasis as supporting visual details. This should feel like an opening visual that adds a second visual detail during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Use a restrained lateral pan across esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography, letting Agartha hold the opening detail while retellings stays in frame. Keep the movement restrained and documentary.",
-              "sourceFactIds": [
-                "fact-025"
-              ],
-              "sourceFieldRefs": [
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan.publicSourceNote"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "A vast dark underground hall suggested by distant lights and stone arches, no visible crowds, no fantasy palace excess, restrained lost-world realism.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow push into the hall while the distant lights remain small."
             }
           ]
         },
         {
-          "creatorNote": "These must stay tied to the source boundary around these variations show reception history more than evidence. Do not add figures, motives, or incidents beyond it belongs to esoteric reception and speculative geography rather than confirmed exploration.",
-          "estimatedReadingTime": "≈ 34 sec",
-          "narration": "The next fact gives the sequence a concrete action: At the center of Agartha Hollow Earth Legend is esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath the earth. The action moves through a specific event: Its power comes from combining map, initiation, secrecy, and the dream of a civilization preserved from ordinary history. The account then gives a direct movement: Agartha appears in source material connected with esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography.",
-          "sourceFactIds": [
-            "fact-049",
-            "fact-006",
-            "fact-023"
-          ],
-          "sourceFieldRefs": [
-            "story.summaryAnswer",
-            "storyBrief.coreStoryElements",
-            "publicArticlePlan"
-          ],
-          "usedFactTexts": [
-            "At the center of Agartha Hollow Earth Legend is esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath the earth.",
-            "Its power comes from combining map, initiation, secrecy, and the dream of a civilization preserved from ordinary history.",
-            "Agartha appears in source material connected with esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography."
-          ],
+          "creatorNote": "Keep access as the central drama.",
+          "estimatedReadingTime": "about 29 sec",
+          "narration": "The hidden realm also carries the feeling of guardianship. Agartha is not usually imagined as a place anyone can enter by curiosity alone. The entrances are conditional, secret, symbolic, or guarded. The question is not only where the door is. The question is who would be allowed to pass through it. The map remains familiar, and that familiarity makes the hidden layer feel nearer than a distant myth.",
           "visualBeats": [
             {
-              "beatMotion": "Use a restrained lateral pan across esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography, letting These hold the follow-up anchor while history stays in frame. Keep the movement restrained and documentary.",
-              "imagePrompt": "A realistic location-documentary style image shows These shown through source material connected to these variations show reception history more than evidence in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a medium frame that separates the main subject from supporting evidence, with soft archival light, careful documentary restraint, and cultural context from Lost Worlds. Include history, These, variations as supporting visual details. This should feel like a follow-up visual with one clear focal point during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a restrained lateral pan across esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography, letting These hold the follow-up anchor while history stays in frame. Keep the movement restrained and documentary.",
-              "sourceFactIds": [
-                "fact-026"
-              ],
-              "sourceFieldRefs": [
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan.publicSourceNote"
-              ],
-              "usedFactTexts": []
-            },
+              "imagePrompt": "A sealed stone doorway beneath a mountain interior, faint warm light under the threshold, no symbols readable, quiet guarded mood.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: hold on the closed doorway, then slowly widen to show the surrounding stone."
+            }
+          ]
+        },
+        {
+          "creatorNote": "End with permission instead of coordinates.",
+          "estimatedReadingTime": "about 37 sec",
+          "narration": "This is where the story becomes less about travel and more about worthiness. A map can show distance, but it cannot show permission. Agartha survives because it turns location into a moral and spiritual problem. The hidden world is close, maybe even below the listener, but knowing and entering are not the same thing. The map remains familiar, and that familiarity makes the hidden layer feel nearer than a distant myth. Distance matters here because the hidden place is powerful only while it remains partly withheld.",
+          "visualBeats": [
             {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal connected to it belongs to esoteric reception and speculative geography rather than confirmed exploration and esoteric within the wider frame. Keep the movement restrained and documentary.",
-              "imagePrompt": "A realistic location-documentary style image shows It connected to it belongs to esoteric reception and speculative geography rather than confirmed exploration in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a close archival detail with the source boundary visible, with soft archival light, careful documentary restraint, and cultural context from Lost Worlds. Include belongs, esoteric, reception as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal connected to it belongs to esoteric reception and speculative geography rather than confirmed exploration and esoteric within the wider frame. Keep the movement restrained and documentary.",
-              "sourceFactIds": [
-                "fact-001"
-              ],
-              "sourceFieldRefs": [
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan.publicSourceNote"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a slow controlled push toward It, with connected to it belongs to esoteric reception and speculative geography rather than confirmed exploration staying fixed as the follow-up wider frame and reception visible. Keep the movement restrained and documentary.",
-              "imagePrompt": "A realistic location-documentary style image shows It connected to it belongs to esoteric reception and speculative geography rather than confirmed exploration in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a close archival detail with the source boundary visible, with soft archival light, careful documentary restraint, and cultural context from Lost Worlds. Include belongs, esoteric, reception as supporting visual details. This should feel like a follow-up visual that widens the frame without adding new story elements during the middle sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Use a slow controlled push toward It, with connected to it belongs to esoteric reception and speculative geography rather than confirmed exploration staying fixed as the follow-up wider frame and reception visible. Keep the movement restrained and documentary.",
-              "sourceFactIds": [
-                "fact-042"
-              ],
-              "sourceFieldRefs": [
-                "publicArticlePlan",
-                "storyBrief.coreStoryElements",
-                "publicArticlePlan.publicSourceNote"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "A lone figure seen from behind at the edge of a dark underground passage, map in hand, warm light far below, no readable text.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow fade from the figure to the distant light, stopping before the path is clear."
             }
           ]
         }
       ],
-      "sceneFocus": "The central visual should show it belongs to esoteric reception and speculative geography rather than confirmed exploration. Frame it through the source boundary around later retellings do not always keep the same emphasis.",
-      "sceneRole": "Evidence and Key Details",
-      "soundEffect": "field wind, dry grass movement, soft footstep texture",
-      "sourceFactIds": [
-        "fact-042",
-        "fact-026",
-        "fact-027",
-        "fact-001",
-        "fact-049",
-        "fact-006",
-        "fact-023"
-      ],
-      "sourceFieldRefs": [
-        "publicArticlePlan",
-        "publicArticlePlan.publicSourceNote",
-        "storyBrief.coreStoryElements",
-        "story.summaryAnswer"
-      ],
-      "visualDirection": "Hold the source-focused image long enough to read the visual idea, then fade softly into the next scene.",
-      "voiceDirection": "Careful pace, short pauses between ideas, natural restraint, with light emphasis on \"Agartha\" when it appears."
+      "sceneFocus": "The legend works because it gives the hidden world order, guardianship, and distance.",
+      "sceneRole": "The Hidden Kingdom",
+      "soundEffect": "wind, hollow air, distant stone echo",
+      "visualDirection": "Use maps, thresholds, empty spaces, and distance rather than spectacle.",
+      "voiceDirection": "Quiet, curious, and restrained, with pauses around the unknown."
     },
     {
-      "backgroundMusic": "soft reflective drone, low drone, slow piano, sparse documentary bed, slow tempo with restrained weight",
-      "directionTip": "The central visual should show later versions differ around spelling, location, rulers, tunnels, entrances, and spiritual meaning.",
+      "backgroundMusic": "low archive drone, soft paper rustle, restrained dark ambience",
       "narrationParts": [
         {
-          "creatorNote": "Agartha must stay tied to the variant detail that later versions differ around spelling, location, rulers, tunnels, entrances, and spiritual meaning. Use the interpretation connected to it turns the unknown into a structure underfoot as interpretation, not as a new event.",
-          "estimatedReadingTime": "≈ 24 sec",
-          "narration": "The versions do not always preserve the same emphasis: Later versions differ around spelling, location, rulers, tunnels, entrances, and spiritual meaning. One interpretation stays close to the material: It turns the unknown into a structure underfoot. The versions do not always preserve the same emphasis: Some connect Agartha with polar openings, underground cities, or secret adepts.",
-          "sourceFactIds": [
-            "fact-009",
-            "fact-014",
-            "fact-010"
-          ],
-          "sourceFieldRefs": [
-            "storyBrief.reportedVariants",
-            "storyBrief.editorialInterpretationOptions"
-          ],
-          "usedFactTexts": [
-            "Later versions differ around spelling, location, rulers, tunnels, entrances, and spiritual meaning.",
-            "It turns the unknown into a structure underfoot.",
-            "Some connect Agartha with polar openings, underground cities, or secret adepts."
-          ],
+          "creatorNote": "Connect Agartha to Hollow Earth without endorsing it.",
+          "estimatedReadingTime": "about 35 sec",
+          "narration": "Hollow Earth ideas gave Agartha a larger stage. The hidden kingdom could be placed inside a whole imagined interior world, joined to old maps, polar openings, secret routes, and stories of civilizations below. The image is powerful because it makes the planet feel double: one world measured above, another dreamed within. The map remains familiar, and that familiarity makes the hidden layer feel nearer than a distant myth. The wider tradition adds atmosphere, but the narration still keeps belief and proof separate.",
           "visualBeats": [
             {
-              "beatMotion": "Use a slow controlled push toward Agartha, with associated with a variant where later versions differ around spelling, location, rulers, tunnels, entrances staying fixed as the opening anchor and Later visible. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Agartha associated with a variant where later versions differ around spelling, location, rulers, tunnels, entrances, and spiritual meaning in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a wide establishing composition with the main subject easy to identify, with natural low light, documentary uncertainty, and cultural context from Lost Worlds. Include versions, differ, belongs as supporting visual details. This should feel like an opening visual with one clear focal point during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a slow controlled push toward Agartha, with associated with a variant where later versions differ around spelling, location, rulers, tunnels, entrances staying fixed as the opening anchor and Later visible. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-009"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.reportedVariants",
-                "publicArticlePlan",
-                "storyBrief.editorialInterpretationOptions"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a restrained lateral pan across esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography, letting Agartha hold the opening detail while retellings stays in frame. Use only light shifts that match the place or event mystery tone. Let retellings remain the distinct an opening visual that adds a second visual detail.",
-              "imagePrompt": "A realistic location-documentary style image shows Agartha shown through source material connected to later retellings do not always keep the same emphasis in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from Lost Worlds. Include retellings, always, emphasis as supporting visual details. This should feel like an opening visual that adds a second visual detail during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Use a restrained lateral pan across esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography, letting Agartha hold the opening detail while retellings stays in frame. Use only light shifts that match the place or event mystery tone. Let retellings remain the distinct an opening visual that adds a second visual detail.",
-              "sourceFactIds": [
-                "fact-025"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.reportedVariants",
-                "publicArticlePlan",
-                "storyBrief.editorialInterpretationOptions"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "A restrained view of Earth as an old scientific illustration with a dark inner glow and polar shadow, archival style, no labels, no sci-fi machinery.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow rotation-like drift across the old illustration."
             }
           ]
         },
         {
-          "creatorNote": "Agartha must stay tied to the variant detail that some connect Agartha with polar openings, underground cities, or secret adepts. Keep the source boundary around later retellings do not always keep the same emphasis source-limited, without turning it into a stronger claim.",
-          "estimatedReadingTime": "≈ 32 sec",
-          "narration": "The tradition allows more than one form of the account: These variations show reception history more than evidence. The symbolic reading grows out of the recorded details: Agartha is treated through one concrete anchor: the esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath the earth. The symbolic reading grows out of the recorded details: One possible reading is that agartha may be read as a fantasy of hidden order beneath visible disorder.",
-          "sourceFactIds": [
-            "fact-011",
-            "fact-016",
-            "fact-040"
-          ],
-          "sourceFieldRefs": [
-            "storyBrief.reportedVariants",
-            "contentDNA.uniqueAngle",
-            "publicArticlePlan"
-          ],
-          "usedFactTexts": [
-            "These variations show reception history more than evidence.",
-            "Agartha is treated through one concrete anchor: the esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath the earth.",
-            "One possible reading is that agartha may be read as a fantasy of hidden order beneath visible disorder."
-          ],
+          "creatorNote": "Make caution feel like strength, not a disclaimer.",
+          "estimatedReadingTime": "about 34 sec",
+          "narration": "This is also where the narration must stay careful. The appeal of Agartha does not depend on proving that geology is secretly wrong. Its appeal comes from the imaginative pressure of hidden order. If the video pretends certainty, the story becomes weaker. Mystery works better when the boundary is clear. The map remains familiar, and that familiarity makes the hidden layer feel nearer than a distant myth. The wider tradition adds atmosphere, but the narration still keeps belief and proof separate.",
           "visualBeats": [
             {
-              "beatMotion": "Use a restrained lateral pan across esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography, letting It hold the follow-up anchor while turns stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows It framed by the interpretation that it turns the unknown into a structure underfoot in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a medium composition that shows the consequence or second idea clearly, with natural low light, documentary uncertainty, and cultural context from Lost Worlds. Include turns, unknown, structure as supporting visual details. This should feel like a follow-up visual with one clear focal point during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a restrained lateral pan across esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography, letting It hold the follow-up anchor while turns stays in frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-014"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.reportedVariants",
-                "publicArticlePlan",
-                "storyBrief.editorialInterpretationOptions"
-              ],
-              "usedFactTexts": []
-            },
+              "imagePrompt": "An archive table with a geological cross-section beside an esoteric map, both partly visible, quiet contrast, no readable text.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow pan from the scientific cross-section to the symbolic map."
+            }
+          ]
+        },
+        {
+          "creatorNote": "Close with a reusable visual idea.",
+          "estimatedReadingTime": "about 36 sec",
+          "narration": "The world under the map remains compelling because it turns ordinary ground into a threshold. A street, a mountain, a desert, or a sheet of ice can suddenly feel like a roof. Agartha is not strongest as a destination. It is strongest as the suspicion that the surface is not the whole story. The map remains familiar, and that familiarity makes the hidden layer feel nearer than a distant myth. The wider tradition adds atmosphere, but the narration still keeps belief and proof separate.",
+          "visualBeats": [
             {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal associated with a variant where some connect Agartha with polar openings, underground cities, and connect within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "imagePrompt": "A realistic location-documentary style image shows Agartha associated with a variant where some connect Agartha with polar openings, underground cities, or secret adepts in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a medium composition that shows the important action or state, with natural low light, documentary uncertainty, and cultural context from Lost Worlds. Include Agartha, connect, polar as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the fourth sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal associated with a variant where some connect Agartha with polar openings, underground cities, and connect within the wider frame. Use only light shifts that match the place or event mystery tone.",
-              "sourceFactIds": [
-                "fact-010"
-              ],
-              "sourceFieldRefs": [
-                "storyBrief.reportedVariants",
-                "publicArticlePlan",
-                "storyBrief.editorialInterpretationOptions"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "A quiet mountain landscape at dusk with a faint warm glow implied deep beneath the ground, realistic and restrained, no visible entrance.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow pull from mountain peak down toward the dark base."
             }
           ]
         }
       ],
-      "sceneFocus": "The central visual should show later versions differ around spelling, location, rulers, tunnels, entrances, and spiritual meaning.",
-      "sceneRole": "Major Explanations and Uncertainty",
-      "soundEffect": "field wind, dry grass movement, soft footstep texture",
-      "sourceFactIds": [
-        "fact-009",
-        "fact-014",
-        "fact-010",
-        "fact-011",
-        "fact-016",
-        "fact-040"
-      ],
-      "sourceFieldRefs": [
-        "storyBrief.reportedVariants",
-        "storyBrief.editorialInterpretationOptions",
-        "contentDNA.uniqueAngle",
-        "publicArticlePlan"
-      ],
-      "visualDirection": "Hold the establishing image briefly, then begin a slow push toward the main detail.",
-      "voiceDirection": "Calm documentary pace, short pauses between ideas, natural restraint, with light emphasis on \"Agartha\" when it appears."
+      "sceneFocus": "Hollow Earth ideas give Agartha a wider stage while also demanding caution.",
+      "sceneRole": "Hollow Earth Afterlife",
+      "soundEffect": "paper movement, distant room tone, faint air",
+      "visualDirection": "Keep the frame simple and image-led, with one central object or place.",
+      "voiceDirection": "Calm documentary voice with source-aware restraint."
     },
     {
-      "backgroundMusic": "soft reflective drone, low drone, slow piano, sparse documentary bed, low density with a soft ending",
-      "directionTip": "The central visual should show esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath the earth.",
+      "backgroundMusic": "deep low drone, distant wind, slow strings, no melody over narration",
       "narrationParts": [
         {
-          "creatorNote": "It must stay tied to the interpretation connected to it turns the unknown into a structure underfoot. Keep the source boundary around later retellings do not always keep the same emphasis source-limited, without turning it into a stronger claim.",
-          "estimatedReadingTime": "≈ 32 sec",
-          "narration": "The ending depends on what changes afterward: Esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath the earth is the outcome left by the story. The meaning remains tied to what the account actually says: Agartha centers on the legend may be read as a lost-world story about hidden order. The meaning remains tied to what the account actually says: Agartha may be read as a fantasy of hidden order beneath visible disorder.",
-          "sourceFactIds": [
-            "fact-061",
-            "fact-036",
-            "fact-038"
-          ],
-          "sourceFieldRefs": [
-            "derived.outcomeFromDetail",
-            "publicArticlePlan",
-            "storyBrief.coreStoryElements",
-            "storyBrief.editorialInterpretationOptions"
-          ],
-          "usedFactTexts": [
-            "Esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath the earth.",
-            "Agartha centers on the legend may be read as a lost-world story about hidden order.",
-            "Agartha may be read as a fantasy of hidden order beneath visible disorder."
-          ],
+          "creatorNote": "Return to the first map image for closure.",
+          "estimatedReadingTime": "about 37 sec",
+          "narration": "By the end, Agartha has done something simple and lasting. It has made the map feel incomplete. Not because the archive proves a hidden kingdom under the earth, but because the legend understands a human feeling: visible geography may not answer every question. Some stories point past the edge. Agartha points beneath the page. The map remains familiar, and that familiarity makes the hidden layer feel nearer than a distant myth. The ending leaves the door closed, because the closed door is part of the story.",
           "visualBeats": [
             {
-              "beatMotion": "Use a slow controlled push toward It, with framed by the interpretation that it turns the unknown into a structure underfoot staying fixed as the opening anchor and turns visible. End with a slow hold and no new action.",
-              "imagePrompt": "A realistic location-documentary style image shows It framed by the interpretation that it turns the unknown into a structure underfoot in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a wide reflective composition with negative space, with subdued fading light, quiet reflective tension, and cultural context from Lost Worlds. Include turns, unknown, structure as supporting visual details. This should feel like an opening visual with one clear focal point during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a slow controlled push toward It, with framed by the interpretation that it turns the unknown into a structure underfoot staying fixed as the opening anchor and turns visible. End with a slow hold and no new action.",
-              "sourceFactIds": [
-                "fact-014"
-              ],
-              "sourceFieldRefs": [
-                "derived.outcomeFromDetail",
-                "storyBrief.editorialInterpretationOptions",
-                "publicArticlePlan",
-                "contentDNA.uniqueAngle",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Use a restrained lateral pan across esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography, letting Agartha hold the opening detail while Agharta stays in frame. End with a slow hold and no new action.",
-              "imagePrompt": "A realistic location-documentary style image shows Agartha connected to esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath the earth in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, and cultural context from legend. Include Agartha, Agharta, Esoteric as supporting visual details. This should feel like an opening visual that adds a second visual detail during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Use a restrained lateral pan across esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography, letting Agartha hold the opening detail while Agharta stays in frame. End with a slow hold and no new action.",
-              "sourceFactIds": [
-                "fact-061"
-              ],
-              "sourceFieldRefs": [
-                "derived.outcomeFromDetail",
-                "storyBrief.editorialInterpretationOptions",
-                "publicArticlePlan",
-                "contentDNA.uniqueAngle",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
-            },
-            {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal framed by the interpretation that agartha is treated through one concrete anchor: the esoteric and treated within the wider frame. End with a slow hold and no new action.",
-              "imagePrompt": "A realistic location-documentary style image shows Agartha framed by the interpretation that agartha is treated through one concrete anchor: the esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath the earth in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, and cultural context from legend. Include Agartha, Agharta, treated as supporting visual details. This should feel like an opening visual that widens the frame without adding new story elements during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 3",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal framed by the interpretation that agartha is treated through one concrete anchor: the esoteric and treated within the wider frame. End with a slow hold and no new action.",
-              "sourceFactIds": [
-                "fact-016"
-              ],
-              "sourceFieldRefs": [
-                "derived.outcomeFromDetail",
-                "storyBrief.editorialInterpretationOptions",
-                "publicArticlePlan",
-                "contentDNA.uniqueAngle",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "An old map lying flat in dim light, its edges lifting slightly as if another layer exists below, warm shadows, no readable place names.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow push toward the lifted map edge."
             }
           ]
         },
         {
-          "creatorNote": "Agartha must stay tied to the interpretation connected to agartha is treated through one concrete anchor: the esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath the earth. Let esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath the earth define the result for this Part.",
-          "estimatedReadingTime": "≈ 27 sec",
-          "narration": "The surviving record gives the narration a source limit: For Agartha, location, memory, and later legend are kept in separate layers. The surviving record gives the narration a source limit: Some connect Agartha with polar openings, underground cities, or secret adepts. The surviving record gives the narration a source limit: Theosophy Wiki - Agartha reference Supports esoteric reception and variant naming around Agartha.",
-          "sourceFactIds": [
-            "fact-035",
-            "fact-033",
-            "fact-059"
-          ],
-          "sourceFieldRefs": [
-            "publicArticlePlan.publicSourceNote",
-            "story.researchSources",
-            "storyBrief.existenceEvidence"
-          ],
-          "usedFactTexts": [
-            "For Agartha, location, memory, and later legend are kept in separate layers.",
-            "Some connect Agartha with polar openings, underground cities, or secret adepts.",
-            "Theosophy Wiki - Agartha reference Supports esoteric reception and variant naming around Agartha."
-          ],
+          "creatorNote": "Define the production tone for this subject.",
+          "estimatedReadingTime": "about 36 sec",
+          "narration": "That is why the legend should be told with restraint. Too much certainty turns it into a false report. Too much spectacle turns it into decoration. The better version lets the hidden world remain hidden. It gives the viewer maps, names, tunnels, and silence, then leaves enough darkness for imagination to keep working. The map remains familiar, and that familiarity makes the hidden layer feel nearer than a distant myth. The ending leaves the door closed, because the closed door is part of the story.",
           "visualBeats": [
             {
-              "beatMotion": "Use a restrained lateral pan across esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography, letting Agartha hold the follow-up anchor while Agartha stays in frame. End with a slow hold and no new action.",
-              "imagePrompt": "A realistic location-documentary style image shows Agartha framed by the interpretation that agartha is treated through one concrete anchor: the esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath the earth in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a close detail that leaves the ending open, with subdued fading light, quiet reflective tension, and cultural context from legend. Include Agartha, Agharta, treated as supporting visual details. This should feel like a follow-up visual with one clear focal point during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 1",
-              "motionPrompt": "Use a restrained lateral pan across esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography, letting Agartha hold the follow-up anchor while Agartha stays in frame. End with a slow hold and no new action.",
-              "sourceFactIds": [
-                "fact-016"
-              ],
-              "sourceFieldRefs": [
-                "derived.outcomeFromDetail",
-                "storyBrief.editorialInterpretationOptions",
-                "publicArticlePlan",
-                "contentDNA.uniqueAngle",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
-            },
+              "imagePrompt": "A dark archive corridor lined with map drawers, one drawer slightly open with warm light inside, no readable labels, restrained mystery.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow hold on the open drawer while the light remains soft."
+            }
+          ]
+        },
+        {
+          "creatorNote": "Final line should feel poetic but clear.",
+          "estimatedReadingTime": "about 35 sec",
+          "narration": "Agartha is not just a place people fail to find. It is a shape people give to the unknown when the horizon is no longer far enough. The legend turns downward, under roads and borders and familiar rooms, and asks whether the world has another story hidden beneath its floor. The map remains familiar, and that familiarity makes the hidden layer feel nearer than a distant myth. The ending leaves the door closed, because the closed door is part of the story.",
+          "visualBeats": [
             {
-              "beatMotion": "Start with a static hold, then pull back slightly to reveal shown through source material connected to later retellings do not always keep the same and retellings within the wider frame. End with a slow hold and no new action.",
-              "imagePrompt": "A realistic location-documentary style image shows Agartha shown through source material connected to later retellings do not always keep the same emphasis in esoteric writing, hollow-earth reception, lost-world folklore, and later occult geography. Frame one clear scene as a wider reflective frame that keeps the ending unresolved, with subdued fading light, quiet reflective tension, and cultural context from Lost Worlds. Include retellings, always, emphasis as supporting visual details. This should feel like a follow-up visual that adds a second visual detail during the final sequence. No gore, readable text, logos, watermarks, or modern objects.",
-              "label": "Image Prompt 2",
-              "motionPrompt": "Start with a static hold, then pull back slightly to reveal shown through source material connected to later retellings do not always keep the same and retellings within the wider frame. End with a slow hold and no new action.",
-              "sourceFactIds": [
-                "fact-025"
-              ],
-              "sourceFieldRefs": [
-                "derived.outcomeFromDetail",
-                "storyBrief.editorialInterpretationOptions",
-                "publicArticlePlan",
-                "contentDNA.uniqueAngle",
-                "storyBrief.coreStoryElements"
-              ],
-              "usedFactTexts": []
+              "imagePrompt": "Final image of a world map fading into a dark underground passage, the surface still visible above, quiet unresolved ending, no text.",
+              "label": "Image Prompt",
+              "motionPrompt": "Optional edit: slow fade from the map to the passage, ending before the passage opens."
             }
           ]
         }
       ],
-      "sceneFocus": "The central visual should show esoteric hidden-world legend of Agartha or Agharta as an inner realm beneath the earth.",
-      "sceneRole": "What Remains Unresolved",
-      "soundEffect": "field wind, dry grass movement, soft footstep texture",
-      "sourceFactIds": [
-        "fact-061",
-        "fact-036",
-        "fact-038",
-        "fact-035",
-        "fact-033",
-        "fact-059"
-      ],
-      "sourceFieldRefs": [
-        "derived.outcomeFromDetail",
-        "publicArticlePlan",
-        "storyBrief.coreStoryElements",
-        "storyBrief.editorialInterpretationOptions",
-        "publicArticlePlan.publicSourceNote",
-        "story.researchSources",
-        "storyBrief.existenceEvidence"
-      ],
-      "visualDirection": "Begin with a slow pullback, hold briefly after the final narration line, then fade to black.",
-      "voiceDirection": "Slow pace with a soft ending, short pauses between ideas, natural restraint, with light emphasis on \"Agartha\" when it appears."
+      "sceneFocus": "Agartha endures because it makes the map feel incomplete without needing to become a verified place.",
+      "sceneRole": "Ending and Search Profile",
+      "soundEffect": "wind, hollow air, distant stone echo",
+      "visualDirection": "Use maps, thresholds, empty spaces, and distance rather than spectacle.",
+      "voiceDirection": "Quiet, curious, and restrained, with pauses around the unknown."
     }
   ]
 }
