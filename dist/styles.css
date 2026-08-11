@@ -1800,6 +1800,19 @@ h1 {
   border-top: 0;
   padding-top: 0;
 }
+.home-left-rail .rail-card a:has(span) {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+}
+.home-left-rail .rail-card a span {
+  color: var(--muted);
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.45;
+}
 .rail-feature {
   background: var(--ink);
   color: #fff;

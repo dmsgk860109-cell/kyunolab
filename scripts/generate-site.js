@@ -13,7 +13,7 @@ const buildArgs = parseBuildArgs(process.argv.slice(2));
 const siteOutputRoot = path.resolve(buildArgs.outputRoot || root);
 const creatorPackOptions = buildArgs.creatorPackRoot ? { root: buildArgs.creatorPackRoot } : {};
 const siteUrl = 'https://kyunolab.com';
-const styleVersion = '20260811-board-main-map';
+const styleVersion = '20260811-page-map-crossroads';
 const creatorLibraryScriptVersion = '20260722-copy-fields';
 const pageSize = 12;
 const libraryPageSize = 10;
@@ -1002,7 +1002,7 @@ function renderCreatorSignSystem() {
 
 function renderCreatorPortalLead({ featuredScript, latestScripts }) {
   const starters = latestScripts.slice(0, 5);
-  return `<section class="home-portal-lead creator-portal-lead" aria-label="Creator Library front entrance">
+  return `<section id="library-start" class="home-portal-lead creator-portal-lead" aria-label="Creator Library front entrance">
           <article class="home-lead-story">
             <p class="label">Creator Library Production Desk</p>
             <h1>Turn strange archive ideas into creator-ready packages.</h1>
@@ -1579,7 +1579,7 @@ function renderScriptBoardPage(scripts, boardPosts = []) {
 function renderLibraryBoardPortalLead(boardPosts) {
   const starters = boardPosts.slice(0, 5);
   const first = starters[0];
-  return `<section class="home-portal-lead library-board-portal-lead" aria-label="Library Board front entrance">
+  return `<section id="library-board-start" class="home-portal-lead library-board-portal-lead" aria-label="Library Board front entrance">
           <article class="home-lead-story">
             <p class="label">Library Board Guide Desk</p>
             <h1>Understand the production system before choosing a package.</h1>
@@ -1599,7 +1599,7 @@ function renderLibraryBoardStarterLink(post, index) {
 
 function renderLibraryBoardStructureDesk(boardPosts) {
   const rows = boardPosts.slice(0, 4).map((post) => `<a class="home-headline-row library-board-row" href="/scripts/board/${escapeAttr(post.slug)}/"><span>${escapeHtml(post.tag || post.category || 'Guide')}</span><strong>${escapeHtml(post.title)}</strong></a>`).join('');
-  return `<section class="home-headline-desk library-board-structure-desk" aria-label="Library Board structure desk">
+  return `<section id="library-board-structure" class="home-headline-desk library-board-structure-desk" aria-label="Library Board structure desk">
           <div class="section-head"><h2>Structure Desk</h2><span>How creator resources connect</span></div>
           <div class="headline-desk-grid">
             <div class="headline-list">${rows}</div>
@@ -1643,7 +1643,7 @@ function renderLibraryBoardGuidePaths(boardPosts) {
       ])
     }
   ];
-  return `<section class="home-reader-paths library-board-guide-paths" aria-label="Library Board guide paths">
+  return `<section id="library-board-paths" class="home-reader-paths library-board-guide-paths" aria-label="Library Board guide paths">
           <div class="section-head"><h2>Library Guide Paths</h2><span>Creator guidance that leads back to packages</span></div>
           <div class="home-path-grid">${groups.map(renderLibraryBoardPathGroup).join('')}</div>
         </section>`;
@@ -1662,14 +1662,14 @@ function renderLibraryBoardSmallLink(post) {
 }
 
 function renderLibraryBoardGuideIndex(boardPosts) {
-  return `<section class="home-headline-desk library-board-guide-index" aria-label="All Library Board guides">
+  return `<section id="library-board-index" class="home-headline-desk library-board-guide-index" aria-label="All Library Board guides">
           <div class="section-head"><h2>All Library Board Guides</h2><span>${escapeHtml(`${boardPosts.length} public guides`)}</span></div>
           ${boardPosts.length ? `<div class="script-list">${boardPosts.map(renderLibraryBoardPostRow).join('\n')}</div>` : `<div class="notice"><strong>No Library Board guides yet:</strong> This board is ready for future Creator Library guidance.</div>`}
         </section>`;
 }
 
 function renderLibraryBoardCrossroads({ latestScripts, guideLinks, popularStories }) {
-  return `<section class="home-crossroads library-board-crossroads" aria-label="Library Board crossroads">
+  return `<section id="library-board-crossroads" class="home-crossroads library-board-crossroads" aria-label="Library Board crossroads">
           <div class="section-head"><h2>Creator Roads</h2><span>Board guidance should connect both ways</span></div>
           <div class="home-crossroad-grid">
             <article>
@@ -1806,10 +1806,11 @@ function renderLibraryBoardPostLeftRail(post, sections) {
         ${mapItems}
       </section>
       <section class="rail-card rail-card-subtle">
-        <p class="rail-label">Board roads</p>
+        <p class="rail-label">Cross Roads</p>
         <a href="/scripts/board/">Library Board</a>
         <a href="/scripts/">Creator Library</a>
-        <a href="/scripts/categories/">Library Categories</a>
+        <a href="/archive.html">Mystery Archive</a>
+        <a href="/tools.html">Tools</a>
       </section>
     </aside>`;
 }
@@ -3594,7 +3595,7 @@ function renderHomePortalSearchForm() {
 
 function renderHomePortalLead({ featuredStory, popularStories }) {
   const knownStories = popularStories.slice(0, 5);
-  return `<section class="home-portal-lead" aria-label="Kyunolab front entrance">
+  return `<section id="archive-start" class="home-portal-lead" aria-label="Kyunolab front entrance">
           <article class="home-lead-story">
             <p class="label">Featured Archive Building</p>
             <h1>Known strange stories form the front entrance, not just category labels.</h1>
@@ -3615,7 +3616,7 @@ function renderHomeKnownStoryLink(story, index) {
 function renderHomeHeadlineDesk(headlineStories, guideLinks) {
   const guide = guideLinks[0];
   const guideLink = guide ? renderHomeGuideRow(guide, 'Guide') : '';
-  return `<section class="home-headline-desk" aria-label="Featured story desk">
+  return `<section id="headline-desk" class="home-headline-desk" aria-label="Featured story desk">
           <div class="section-head"><h2>Headline Desk</h2><span>Selected entry points</span></div>
           <div class="headline-desk-grid">
             <div class="headline-list">${headlineStories.map(renderHomeHeadlineRow).join('')}${guideLink}</div>
@@ -3629,14 +3630,14 @@ function renderHomeHeadlineDesk(headlineStories, guideLinks) {
 }
 
 function renderHomeReaderPaths(groups) {
-  return `<section class="home-reader-paths" aria-label="Reader paths">
+  return `<section id="reader-paths" class="home-reader-paths" aria-label="Reader paths">
           <div class="section-head"><h2>Reader Paths</h2><span>Curated routes</span></div>
           <div class="home-path-grid">${groups.map(renderHomeReaderPathGroup).join('')}</div>
         </section>`;
 }
 
 function renderHomeMotifLanes(lanes) {
-  return `<section class="home-motif-lanes" aria-label="Motif lanes">
+  return `<section id="motif-lanes" class="home-motif-lanes" aria-label="Motif lanes">
           <div class="section-head"><h2>Motif Lanes</h2><span>Browse by recurring idea</span></div>
           <div class="home-motif-grid">${lanes.map(renderHomeMotifLane).join('')}</div>
         </section>`;
@@ -3775,25 +3776,22 @@ function renderHomeRail({ featuredStory, popularStories, essentialStories }) {
 
 function renderHomeLeftRail() {
   return `<aside class="home-left-rail article-rail article-rail-left" aria-label="Homepage archive navigation">
-    <div class="rail-card"><p class="rail-label">Reader Paths</p><a href="/archive.html">All Stories</a><a href="/newest.html">Newest Records</a><a href="/popular.html">Known Records</a><a href="/categories.html">Browse Categories</a><a href="/mystery-board.html">Mystery Board</a></div>
-      <div class="rail-card rail-card-subtle"><p class="rail-label">Archive Shelves</p><a href="/categories/urban-legends.html">Urban Legends</a><a href="/categories/internet-folklore.html">Internet Folklore</a><a href="/categories/myths.html">Myths</a><a href="/categories/strange-places.html">Strange Places</a></div>
-      <div class="rail-card"><p class="rail-label">Source Guide</p><a href="/fiction-disclaimer.html">Story &amp; Source Notice</a><a href="/about.html">About Kyunolab</a></div>
+      <div class="rail-card"><p class="rail-label">Page Map</p><a href="#archive-start"><span>01</span> Front Entrance</a><a href="#headline-desk"><span>02</span> Headline Desk</a><a href="#reader-paths"><span>03</span> Reader Paths</a><a href="#motif-lanes"><span>04</span> Motif Lanes</a><a href="#categories"><span>05</span> Story Shelves</a><a href="#latest"><span>06</span> Latest Records</a></div>
+      <div class="rail-card rail-card-subtle"><p class="rail-label">Cross Roads</p><a href="/scripts/">Creator Library</a><a href="/mystery-board.html">Mystery Board</a><a href="/tools.html">Tools</a><a href="/fiction-disclaimer.html">Story &amp; Source Notice</a></div>
     </aside>`;
 }
 
 function renderScriptsLeftRail() {
   return `<aside class="home-left-rail article-rail article-rail-left" aria-label="Creator Library navigation">
-      <div class="rail-card"><p class="rail-label">Creator Paths</p><a href="/scripts/">Creator Home</a><a href="/scripts/categories/">Library Categories</a><a href="/scripts/board/">Library Board</a></div>
-      <div class="rail-card rail-card-subtle"><p class="rail-label">Script Shelves</p><a href="/scripts/featured/">Featured Scripts</a><a href="/scripts/latest/">Latest Scripts</a><a href="/scripts/categories/">Browse by Script Type</a></div>
-      <div class="rail-card"><p class="rail-label">Usage Guide</p><a href="#script-board">Library Board</a><a href="/fiction-disclaimer.html">Story and source notice</a></div>
+      <div class="rail-card"><p class="rail-label">Page Map</p><a href="#library-start"><span>01</span> Production Desk</a><a href="#script-board"><span>02</span> Format Desk</a><a href="#featured-scripts"><span>03</span> Featured Scripts</a><a href="#latest-scripts"><span>04</span> Latest Scripts</a><a href="#script-categories"><span>05</span> Script Shelves</a><a href="#creator-resources"><span>06</span> Cross Roads</a></div>
+      <div class="rail-card rail-card-subtle"><p class="rail-label">Cross Roads</p><a href="/archive.html">Mystery Archive</a><a href="/mystery-board.html">Mystery Board</a><a href="/tools.html">Tools</a><a href="/fiction-disclaimer.html">Story &amp; Source Notice</a></div>
     </aside>`;
 }
 
 function renderScriptsBoardLeftRail() {
   return `<aside class="home-left-rail article-rail article-rail-left" aria-label="Library Board navigation">
-      <div class="rail-card"><p class="rail-label">Creator Paths</p><a href="/scripts/">Creator Home</a><a href="/scripts/categories/">Library Categories</a><a href="/scripts/board/">Library Board</a></div>
-      <div class="rail-card rail-card-subtle"><p class="rail-label">Script Shelves</p><a href="/scripts/featured/">Featured Scripts</a><a href="/scripts/latest/">Latest Scripts</a><a href="/scripts/categories/">Browse by Script Type</a></div>
-      <div class="rail-card"><p class="rail-label">Usage Guide</p><a href="/scripts/board/">Library Board</a><a href="/scripts/">Free Mystery YouTube Scripts</a></div>
+      <div class="rail-card"><p class="rail-label">Page Map</p><a href="#library-board-start"><span>01</span> Guide Desk</a><a href="#library-board-structure"><span>02</span> Structure Desk</a><a href="#library-board-paths"><span>03</span> Guide Paths</a><a href="#library-board-index"><span>04</span> Board Index</a><a href="#library-board-crossroads"><span>05</span> Cross Roads</a></div>
+      <div class="rail-card rail-card-subtle"><p class="rail-label">Cross Roads</p><a href="/scripts/">Creator Library</a><a href="/archive.html">Mystery Archive</a><a href="/mystery-board.html">Mystery Board</a><a href="/tools.html">Tools</a></div>
     </aside>`;
 }
 

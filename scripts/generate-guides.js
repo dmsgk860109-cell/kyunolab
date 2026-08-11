@@ -4,8 +4,8 @@ const { loadStories } = require('./lib/load-stories');
 
 const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://kyunolab.com';
-const styleVersion = '20260811-board-main-map';
-const boardPortalStyleVersion = '20260811-board-main-map';
+const styleVersion = '20260811-page-map-crossroads';
+const boardPortalStyleVersion = '20260811-page-map-crossroads';
 const guides = readJson(path.join(root, 'data', 'guides.json'));
 const stories = loadStories(root);
 const storyById = new Map(stories.map((story) => [story.id || story.slug, story]));
@@ -91,7 +91,7 @@ function renderBoardPage() {
 }
 
 function renderBoardPortalLead({ primary, boardStarters }) {
-  return `<section class="home-portal-lead board-portal-lead" aria-label="Mystery Board front entrance">
+  return `<section id="board-start" class="home-portal-lead board-portal-lead" aria-label="Mystery Board front entrance">
           <article class="home-lead-story">
             <p class="label">Mystery Board Reading Desk</p>
             <h1>Use the guide desk before the archive gets too wide.</h1>
@@ -117,7 +117,7 @@ function renderBoardGuideDesk({ sourceGuides, writingGuides, navigationGuides })
     getGuideBySlug('what-is-an-urban-legend'),
     getGuideBySlug('why-internet-folklore-spreads')
   ].filter(Boolean).filter(uniqueGuide);
-  return `<section class="home-headline-desk board-guide-desk" aria-label="Mystery Board guide desk">
+  return `<section id="board-guide-desk" class="home-headline-desk board-guide-desk" aria-label="Mystery Board guide desk">
           <div class="section-head"><h2>Guide Desk</h2><span>Context before deeper reading</span></div>
           <div class="headline-desk-grid">
             <div class="headline-list">${deskRows.map((guide) => renderBoardGuideRow(guide)).join('')}</div>
@@ -153,7 +153,7 @@ function renderBoardGuidePaths({ sourceGuides, writingGuides, navigationGuides }
       guides: navigationGuides
     }
   ];
-  return `<section class="home-reader-paths board-guide-paths" aria-label="Mystery Board reading paths">
+  return `<section id="board-guide-paths" class="home-reader-paths board-guide-paths" aria-label="Mystery Board reading paths">
           <div class="section-head"><h2>Reading Guide Paths</h2><span>Board topics that lead back to real records</span></div>
           <div class="home-path-grid">${groups.map(renderBoardPathGroup).join('')}</div>
         </section>`;
@@ -172,7 +172,7 @@ function renderBoardGuideSmallLink(guide) {
 }
 
 function renderBoardGuideIndex(rows) {
-  return `<section class="home-headline-desk board-guide-index" aria-label="All Mystery Board guides">
+  return `<section id="board-guide-index" class="home-headline-desk board-guide-index" aria-label="All Mystery Board guides">
           <div class="section-head"><h2>All Mystery Board Guides</h2><span>${escapeHtml(`${guides.length} public guides`)}</span></div>
           <div class="archive-story-index-grid">
             <div class="story-list">
@@ -188,7 +188,7 @@ ${rows.join('\n')}
 }
 
 function renderBoardCrossroads() {
-  return `<section class="home-crossroads board-crossroads" aria-label="Mystery Board crossroads">
+  return `<section id="board-crossroads" class="home-crossroads board-crossroads" aria-label="Mystery Board crossroads">
           <div class="section-head"><h2>Board Crossroads</h2><span>Guides should connect both ways</span></div>
           <div class="home-crossroad-grid">
             <article>
@@ -317,9 +317,8 @@ ${sections}
 
 function renderBoardLeftRail() {
   return `<aside class="home-left-rail article-rail article-rail-left board-left-rail" aria-label="Mystery Board navigation">
-      <section class="rail-card"><p class="rail-label">Board Paths</p><a href="/mystery-board.html">Mystery Board Home</a><a href="/mystery-board/how-to-check-source-status">Source Status</a><a href="/mystery-board/how-to-build-a-reading-path-through-the-strange-archive">Reading Paths</a><a href="/mystery-board/how-to-find-internal-link-opportunities-without-forcing-them">Internal Links</a></section>
-      <section class="rail-card rail-card-subtle"><p class="rail-label">Archive Roads</p><a href="/archive.html">All Stories</a><a href="/categories.html">Categories</a><a href="/scripts/">Creator Library</a><a href="/tools.html">Tools</a></section>
-      <section class="rail-card"><p class="rail-label">Source Guide</p><a href="/fiction-disclaimer.html">Story and Source Notice</a><a href="/about.html">About Kyunolab</a></section>
+      <section class="rail-card"><p class="rail-label">Page Map</p><a href="#board-start"><span>01</span> Reading Desk</a><a href="#board-guide-desk"><span>02</span> Guide Desk</a><a href="#board-guide-paths"><span>03</span> Guide Paths</a><a href="#board-guide-index"><span>04</span> Board Index</a><a href="#board-crossroads"><span>05</span> Cross Roads</a></section>
+      <section class="rail-card rail-card-subtle"><p class="rail-label">Cross Roads</p><a href="/archive.html">Mystery Archive</a><a href="/scripts/">Creator Library</a><a href="/tools.html">Tools</a><a href="/fiction-disclaimer.html">Story &amp; Source Notice</a></section>
     </aside>`;
 }
 
@@ -331,7 +330,7 @@ function renderBoardGuideLeftRail(guide) {
         ${mapItems}
         <a href="#faq"><span>FAQ</span><strong>FAQ</strong></a>
       </section>
-      <section class="rail-card rail-card-subtle"><p class="rail-label">Board roads</p><a href="/mystery-board.html">Mystery Board</a><a href="/archive.html">All Stories</a><a href="/categories.html">Categories</a></section>
+      <section class="rail-card rail-card-subtle"><p class="rail-label">Cross Roads</p><a href="/mystery-board.html">Mystery Board</a><a href="/archive.html">Mystery Archive</a><a href="/scripts/">Creator Library</a><a href="/tools.html">Tools</a></section>
     </aside>`;
 }
 function renderReadingBridge(relatedStories) {
