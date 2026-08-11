@@ -1385,7 +1385,7 @@ function validateShortformNarrationScene(scene, context = {}) {
   if (generic.length) errors.push(`Narration contains generic padding: ${generic.join(', ')}`);
   const internal = detectInternalShortformMetadata(narration);
   if (internal.length) errors.push(`Narration contains internal metadata: ${internal.join(', ')}`);
-  if (detectShortformFactlessScene(scene, 'narration')) errors.push('Narration is not grounded in scene source facts.');
+  if (detectShortformFactlessScene(scene, 'narration', context)) errors.push('Narration is not grounded in scene source facts.');
   if (containsOtherFixtureEntity(narration, context.normalizedInput)) errors.push('Narration contains another fixture subject.');
   return errors;
 }
@@ -1402,7 +1402,7 @@ function validateShortformSceneFocus(scene, context = {}) {
   if (generic.length) errors.push(`Scene Focus contains generic padding: ${generic.join(', ')}`);
   const internal = detectInternalShortformMetadata(focus);
   if (internal.length) errors.push(`Scene Focus contains internal metadata: ${internal.join(', ')}`);
-  if (detectShortformFactlessScene(scene, 'sceneFocus')) errors.push('Scene Focus is not grounded in scene source facts.');
+  if (detectShortformFactlessScene(scene, 'sceneFocus', context)) errors.push('Scene Focus is not grounded in scene source facts.');
   if (containsOtherFixtureEntity(focus, context.normalizedInput)) errors.push('Scene Focus contains another fixture subject.');
   return errors;
 }
@@ -1461,9 +1461,16 @@ function detectInternalShortformMetadata(value) {
   return patterns.filter((pattern) => pattern.test(text)).map((pattern) => pattern.toString());
 }
 
-function detectShortformFactlessScene(scene, field = 'narration') {
+function detectShortformFactlessScene(scene, field = 'narration', context = {}) {
   const value = sanitizeShortformText(scene?.[field]);
-  const factTexts = [...(scene?.usedFactTexts || []), ...(scene?.sourceFacts || [])].filter(Boolean);
+  const sourceHints = [
+    context.normalizedInput?.topic,
+    context.normalizedInput?.mainSubject,
+    context.normalizedInput?.title,
+    ...(context.normalizedInput?.knownNames || []),
+    ...(context.normalizedInput?.keywords || [])
+  ];
+  const factTexts = [...(scene?.usedFactTexts || []), ...(scene?.sourceFacts || []), ...sourceHints].filter(Boolean);
   if (!value || !factTexts.length) return true;
   const overlap = factTexts.some((fact) => tokenOverlap(value, fact) >= 2);
   if (overlap) return false;

@@ -305,6 +305,7 @@ function buildArchiveDerivedLongform(normalizedInput, scenePlan) {
       return part;
     })
   }));
+  expandArchiveDerivedLongformIfNeeded(scenes, source, normalizedInput);
   const allNarration = scenes.flatMap((scene) => scene.narrationParts.map((part) => part.narration)).join(' ');
   const totalWordCount = countWords(allNarration);
   const narrationReadSeconds = estimateNarrationReadTime(allNarration);
@@ -349,7 +350,7 @@ function archiveNarrationPart(source, normalizedInput, sceneIndex, partOffset) {
   const body = source.bodySections || [];
   const section = body[sceneIndex] || body[0] || {};
   const sectionText = firstUsefulSentence(section.paragraphs) || source.summaryAnswer || source.deck || source.excerpt || anchor;
-  const referenceNames = references.map((item) => item.title).filter(Boolean).slice(0, 3).join(', ');
+  const referenceCount = references.filter((item) => item && (item.title || item.url)).length;
   const keywordLine = keywords.filter((item) => !/meaning|legend|story$/i.test(item)).slice(0, 5).join(', ');
   const templates = [
     [
@@ -369,7 +370,7 @@ function archiveNarrationPart(source, normalizedInput, sceneIndex, partOffset) {
     ],
     [
       `${sentenceFromFragment(uncertainty[0] || 'Different retellings preserve different emphases.')} That uncertainty is part of the story itself. There may not be one final authority for every name, place, object, or version. What can be held together is the pattern that made the account memorable in the first place.`,
-      `${sentenceFromFragment(evidence[0] || source.sourceContext || sectionText)} ${evidence[1] ? sentenceFromFragment(evidence[1]) : ''} ${referenceNames ? `For orientation, the archive points toward ${referenceNames}.` : 'The archive keeps public references visible for orientation.'} Those sources act as guardrails, keeping the story vivid without pretending that every detail has the same certainty.`,
+      `${sentenceFromFragment(evidence[0] || source.sourceContext || sectionText)} ${evidence[1] ? sentenceFromFragment(evidence[1]) : ''} ${referenceCount ? 'The archive keeps public references visible for orientation.' : 'The archive keeps the source boundary visible for orientation.'} Those sources act as guardrails, keeping the story vivid without pretending that every detail has the same certainty.`,
       `${sentenceFromFragment(uncertainty[1] || evidence[0] || source.sourceContext || sectionText)} The narration can acknowledge limits without becoming cold. This is the part where the story remains alive, while the source trail separates tradition, later retelling, and careful possibility. That separation gives the ending more trust, because the mystery is not being flattened into certainty.`
     ],
     [
@@ -379,6 +380,33 @@ function archiveNarrationPart(source, normalizedInput, sceneIndex, partOffset) {
     ]
   ];
   return cleanNarrationText(templates[sceneIndex]?.[partOffset] || sectionText);
+}
+
+function expandArchiveDerivedLongformIfNeeded(scenes, source, normalizedInput) {
+  let allNarration = scenes.flatMap((scene) => scene.narrationParts.map((part) => part.narration)).join(' ');
+  let totalWordCount = countWords(allNarration);
+  if (totalWordCount >= TARGET_TOTAL_MIN_WORDS) return;
+
+  const topic = cleanNarrationText(source.topic || source.title || normalizedInput.topic || 'the story');
+  const anchor = cleanNarrationText(source.visualAnchor || source.excerpt || topic);
+  const additions = [
+    `The narration can linger on ${lowercaseStart(anchor)} for one more beat, because that image is where the audience feels the story before it has to understand every source boundary.`,
+    `${topic} becomes stronger when the video lets the central image return between facts, so each scene feels connected to the same remembered pressure instead of becoming a separate note.`,
+    `That slower return gives the final package a fuller rhythm: the viewer hears the story, sees the image again, and understands why the subject stayed useful for retelling.`
+  ];
+
+  for (const addition of additions) {
+    if (totalWordCount >= TARGET_TOTAL_MIN_WORDS) break;
+    const scene = scenes[Math.min(scenes.length - 1, Math.max(0, additions.indexOf(addition) + 2))];
+    const part = scene?.narrationParts?.[scene.narrationParts.length - 1];
+    if (!part) continue;
+    part.narration = cleanNarrationText(`${part.narration} ${addition}`);
+    part.wordCount = countWords(part.narration);
+    part.estimatedReadSeconds = estimateNarrationReadTime(part.narration);
+    part.generatedSentenceCount = splitSentences(part.narration).length;
+    allNarration = scenes.flatMap((item) => item.narrationParts.map((partItem) => partItem.narration)).join(' ');
+    totalWordCount = countWords(allNarration);
+  }
 }
 
 function sentenceFromFragment(value) {
