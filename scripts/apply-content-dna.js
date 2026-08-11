@@ -7,7 +7,7 @@ const { buildPublicArticlePlan } = require('./public-article-plan');
 
 const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://kyunolab.com';
-const styleVersion = '20260811-rail-ad-polish';
+const styleVersion = '20260811-board-main-map';
 const stories = loadStories(root);
 const categories = readJson(path.join(root, 'data', 'categories.json'));
 const scripts = readOptionalJson(path.join(root, 'data', 'scripts.json'), []);

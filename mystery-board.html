@@ -17,7 +17,7 @@
   <link rel="icon" href="/favicon-48x48.png" type="image/png" sizes="48x48">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="/styles.css?v=20260808-board-portal">
+  <link rel="stylesheet" href="/styles.css?v=20260811-board-main-map">
 </head>
 <body class="home-portal-page">
   <header class="home-portal-header">
@@ -73,8 +73,13 @@
         </section>
     </div>
   </header>
-  <main class="home-shell home-portal-shell board-portal-page">
-    <div class="home-portal-layout">
+  <main class="home-shell home-portal-shell board-portal-page board-home-map-page">
+    <div class="home-portal-layout article-map-layout portal-map-layout board-home-map-layout">
+      <aside class="home-left-rail article-rail article-rail-left board-left-rail" aria-label="Mystery Board navigation">
+      <section class="rail-card"><p class="rail-label">Board Paths</p><a href="/mystery-board">Mystery Board Home</a><a href="/mystery-board/how-to-check-source-status">Source Status</a><a href="/mystery-board/how-to-build-a-reading-path-through-the-strange-archive">Reading Paths</a><a href="/mystery-board/how-to-find-internal-link-opportunities-without-forcing-them">Internal Links</a></section>
+      <section class="rail-card rail-card-subtle"><p class="rail-label">Archive Roads</p><a href="/archive">All Stories</a><a href="/categories">Categories</a><a href="/scripts/">Creator Library</a><a href="/tools">Tools</a></section>
+      <section class="rail-card"><p class="rail-label">Source Guide</p><a href="/fiction-disclaimer">Story and Source Notice</a><a href="/about">About Kyunolab</a></section>
+    </aside>
       <div class="home-main-column">
         <section class="home-portal-lead board-portal-lead" aria-label="Mystery Board front entrance">
           <article class="home-lead-story">
@@ -480,12 +485,7 @@
         </section>
       </div>
       <aside class="home-portal-rail" aria-label="Mystery Board side paths">
-      <div class="rail-card rail-card-network">
-        <p class="rail-label">Kyunolab Network</p>
-        <strong>Creator Library</strong>
-        <p>Free mystery YouTube scripts, Shorts scripts, image prompts, and thumbnail ideas for video creators.</p>
-        <a class="button" href="/scripts/">Open Creator Library</a>
-      </div>
+      <aside class="ad-slot rail-ad-slot" data-ad-slot="ad-board-rail-top" aria-label="Advertisement"><span>Advertisement</span></aside>
       <section class="rail-card rail-feature">
         <p class="rail-label">Start here</p>
         <a href="/mystery-board/how-to-audit-a-large-static-archive-before-deployment"><span>Archive Reading Paths</span><strong>Archive Reading Paths</strong></a>
@@ -511,7 +511,7 @@
     <p><strong>Kyunolab Mystery Archive</strong> is a quiet story publication by Kyuno Lab, dedicated to legends, folklore, mysteries, and strange tales from the edges of memory.</p>
     <p><a href="/archive">All Stories</a> - <a href="/newest">Newest</a> - <a href="/popular">Popular</a> - <a href="/categories">Categories</a> - <a href="/mystery-board">Mystery Board</a> - <a href="/scripts/">Scripts</a> - <a href="/about">About</a> - <a href="/fiction-disclaimer">Story &amp; Source Notice</a> - <a href="/privacy">Privacy</a> - <a href="/rss.xml">RSS</a></p>
   </footer>
-  <script defer src="/assets/global-search.js?v=20260808-board-portal"></script>
+  <script defer src="/assets/global-search.js?v=20260811-board-main-map"></script>
   <script src="/engagement.js?v=20260706-kit-ui" defer></script>
 </body>
 </html>

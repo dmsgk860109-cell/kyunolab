@@ -13,7 +13,7 @@ const buildArgs = parseBuildArgs(process.argv.slice(2));
 const siteOutputRoot = path.resolve(buildArgs.outputRoot || root);
 const creatorPackOptions = buildArgs.creatorPackRoot ? { root: buildArgs.creatorPackRoot } : {};
 const siteUrl = 'https://kyunolab.com';
-const styleVersion = '20260811-rail-ad-polish';
+const styleVersion = '20260811-board-main-map';
 const creatorLibraryScriptVersion = '20260722-copy-fields';
 const pageSize = 12;
 const libraryPageSize = 10;
@@ -149,8 +149,9 @@ function renderHomePage({ featuredStory, latestStories, popularStories, essentia
 </head>
 <body class="home-portal-page">
   ${renderHomePortalHeader()}
-  <main class="home-shell home-portal-shell">
-    <div class="home-portal-layout">
+  <main class="home-shell home-portal-shell archive-home-map-page">
+    <div class="home-portal-layout article-map-layout portal-map-layout archive-home-map-layout">
+      ${renderHomeLeftRail()}
       <div class="home-main-column">
         ${renderHomePortalLead({ featuredStory, popularStories })}
         <section class="notice"><strong>Story &amp; Source Notice:</strong> This site explores folklore, legends, mysteries, and source-aware retellings. Unverified traditions are presented as stories, not as verified fact.</section>
@@ -907,8 +908,9 @@ function renderScriptsHomePage(scripts) {
     footerSection: 'scripts',
     bodyClass: 'home-portal-page',
     headerHtml: renderCreatorPortalHeader('/scripts/'),
-    content: `  <main class="home-shell home-portal-shell creator-portal-page scripts-home-page">
-    <div class="home-portal-layout">
+    content: `  <main class="home-shell home-portal-shell creator-portal-page scripts-home-page creator-home-map-page">
+    <div class="home-portal-layout article-map-layout portal-map-layout creator-home-map-layout">
+      ${renderScriptsLeftRail()}
       <div class="home-main-column">
         ${renderCreatorPortalLead({ featuredScript, latestScripts })}
         <section class="notice"><strong>Creator Note:</strong> Creator Library pages are production materials. Original archive stories stay separate from narration drafts, Shorts hooks, image prompts, thumbnail ideas, and subtitle lines.</section>
@@ -1555,8 +1557,9 @@ function renderScriptBoardPage(scripts, boardPosts = []) {
     footerSection: 'scripts',
     bodyClass: 'home-portal-page',
     headerHtml: renderCreatorPortalHeader('/scripts/board/'),
-    content: `  <main class="home-shell home-portal-shell creator-portal-page library-board-portal-page">
-    <div class="home-portal-layout">
+    content: `  <main class="home-shell home-portal-shell creator-portal-page library-board-portal-page library-board-home-map-page">
+    <div class="home-portal-layout article-map-layout portal-map-layout library-board-home-map-layout">
+      ${renderScriptsBoardLeftRail()}
       <div class="home-main-column">
         ${renderLibraryBoardPortalLead(boardStarters)}
         <section class="notice"><strong>Library Board purpose:</strong> These are public creator guides. They explain formats, categories, scene workspaces, source separation, and production flow before a visitor opens a script package.</section>
@@ -1693,7 +1696,7 @@ function renderLibraryBoardCrossroads({ latestScripts, guideLinks, popularStorie
 
 function renderLibraryBoardPortalRail({ boardStarters, latestScripts, featuredScript, guideLinks }) {
   return `<aside class="home-portal-rail creator-portal-rail library-board-portal-rail" aria-label="Library Board side paths">
-      ${renderKyunolabNetworkCard('scripts')}
+      ${renderAdSlot('ad-library-board-rail-top', 'rail-ad-slot')}
       ${featuredScript ? `<section class="rail-card rail-feature"><p class="rail-label">Script package</p><a href="/scripts/${escapeAttr(featuredScript.slug)}"><span>${escapeHtml(featuredScript.genre || 'Creator package')}</span><strong>${escapeHtml(featuredScript.title)}</strong></a></section>` : ''}
       <section class="rail-card">
         <p class="rail-label">Board starters</p>
@@ -1772,7 +1775,7 @@ ${body}
         </article>
       </div>
       <aside class="home-portal-rail creator-portal-rail" aria-label="Related creator resources">
-        ${renderKyunolabNetworkCard('scripts')}
+        ${renderAdSlot('ad-library-board-post-rail-top', 'rail-ad-slot')}
         <section class="rail-card rail-feature">
           <p class="rail-label">Read next</p>
           <a href="/scripts/board/${escapeAttr(nextPost.slug)}/"><span>${escapeHtml(nextPost.tag || nextPost.category || 'Library Board')}</span><strong>${escapeHtml(nextPost.title)}</strong></a>
@@ -3787,7 +3790,7 @@ function renderScriptsLeftRail() {
 }
 
 function renderScriptsBoardLeftRail() {
-  return `<aside class="article-rail article-rail-left" aria-label="Library Board navigation">
+  return `<aside class="home-left-rail article-rail article-rail-left" aria-label="Library Board navigation">
       <div class="rail-card"><p class="rail-label">Creator Paths</p><a href="/scripts/">Creator Home</a><a href="/scripts/categories/">Library Categories</a><a href="/scripts/board/">Library Board</a></div>
       <div class="rail-card rail-card-subtle"><p class="rail-label">Script Shelves</p><a href="/scripts/featured/">Featured Scripts</a><a href="/scripts/latest/">Latest Scripts</a><a href="/scripts/categories/">Browse by Script Type</a></div>
       <div class="rail-card"><p class="rail-label">Usage Guide</p><a href="/scripts/board/">Library Board</a><a href="/scripts/">Free Mystery YouTube Scripts</a></div>

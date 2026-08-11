@@ -4,8 +4,8 @@ const { loadStories } = require('./lib/load-stories');
 
 const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://kyunolab.com';
-const styleVersion = '20260811-rail-ad-polish';
-const boardPortalStyleVersion = '20260808-board-portal';
+const styleVersion = '20260811-board-main-map';
+const boardPortalStyleVersion = '20260811-board-main-map';
 const guides = readJson(path.join(root, 'data', 'guides.json'));
 const stories = loadStories(root);
 const storyById = new Map(stories.map((story) => [story.id || story.slug, story]));
@@ -71,8 +71,9 @@ function renderBoardPage() {
     bodyClass: 'home-portal-page',
     headerHtml: renderHomePortalHeader('/mystery-board.html'),
     pageStyleVersion: boardPortalStyleVersion,
-    content: `  <main class="home-shell home-portal-shell board-portal-page">
-    <div class="home-portal-layout">
+    content: `  <main class="home-shell home-portal-shell board-portal-page board-home-map-page">
+    <div class="home-portal-layout article-map-layout portal-map-layout board-home-map-layout">
+      ${renderBoardLeftRail()}
       <div class="home-main-column">
         ${renderBoardPortalLead({ primary, boardStarters })}
         <section class="notice"><strong>Board purpose:</strong> Mystery Board pages are public reading guides. They help visitors understand source limits, story types, recurring motifs, and archive paths before moving into individual records.</section>
@@ -214,7 +215,7 @@ function renderBoardCrossroads() {
 
 function renderBoardPortalRail({ primary, boardStarters, relatedArchiveRecords }) {
   return `<aside class="home-portal-rail" aria-label="Mystery Board side paths">
-      ${renderKyunolabNetworkCard()}
+      ${renderAdSlot('ad-board-rail-top', 'rail-ad-slot')}
       <section class="rail-card rail-feature">
         <p class="rail-label">Start here</p>
         <a href="${escapeAttr(primary.url || `/mystery-board/${primary.slug}`)}"><span>${escapeHtml(primary.tag || primary.category)}</span><strong>${escapeHtml(primary.shortTitle || primary.title)}</strong></a>
@@ -257,8 +258,9 @@ ${section.paragraphs.map((text) => `<p>${linkText(text)}</p>`).join('\n')}`).joi
     bodyClass: 'home-portal-page',
     headerHtml: renderHomePortalHeader(canonicalPath),
     pageStyleVersion: boardPortalStyleVersion,
-    content: `  <main class="home-shell home-portal-shell board-portal-page board-guide-detail-page">
-    <div class="home-portal-layout">
+    content: `  <main class="home-shell home-portal-shell board-portal-page board-guide-detail-page board-guide-map-page">
+    <div class="home-portal-layout article-map-layout portal-map-layout board-guide-map-layout">
+      ${renderBoardGuideLeftRail(guide)}
       <div class="home-main-column">
         <article>
           <header class="archive-article-header">
@@ -273,12 +275,6 @@ ${section.paragraphs.map((text) => `<p>${linkText(text)}</p>`).join('\n')}`).joi
               <div><dt>Updated</dt><dd>${formatDate(guide.updatedAt || guide.publishedAt)}</dd></div>
             </dl>
           </header>
-
-          <section class="story-map" aria-label="Guide map">
-            <h2>Guide Map</h2>
-            <ol>${mapItems}<li><a href="#faq">FAQ</a></li></ol>
-          </section>
-
           ${renderReadingBridge(relatedStories)}
           ${renderAdSlot('ad-guide-after-map')}
 
@@ -297,12 +293,7 @@ ${sections}
       </div>
 
       <aside class="home-portal-rail" aria-label="Related guides">
-        ${renderKyunolabNetworkCard()}
-        <section class="rail-card">
-          <p class="rail-label">In this guide</p>
-          ${guide.sections.map((section) => `<a href="#${escapeAttr(section.id)}">${escapeHtml(section.nav || section.title)}</a>`).join('')}
-          <a href="#faq">FAQ</a>
-        </section>
+        ${renderAdSlot('ad-board-guide-rail-top', 'rail-ad-slot')}
         <section class="rail-card rail-feature">
           <p class="rail-label">Read next</p>
           <a href="${escapeAttr(nextGuide.url || `/mystery-board/${nextGuide.slug}`)}"><span>${escapeHtml(nextGuide.tag || nextGuide.category)}</span><strong>${escapeHtml(nextGuide.shortTitle || nextGuide.title)}</strong></a>
@@ -324,6 +315,25 @@ ${sections}
   });
 }
 
+function renderBoardLeftRail() {
+  return `<aside class="home-left-rail article-rail article-rail-left board-left-rail" aria-label="Mystery Board navigation">
+      <section class="rail-card"><p class="rail-label">Board Paths</p><a href="/mystery-board.html">Mystery Board Home</a><a href="/mystery-board/how-to-check-source-status">Source Status</a><a href="/mystery-board/how-to-build-a-reading-path-through-the-strange-archive">Reading Paths</a><a href="/mystery-board/how-to-find-internal-link-opportunities-without-forcing-them">Internal Links</a></section>
+      <section class="rail-card rail-card-subtle"><p class="rail-label">Archive Roads</p><a href="/archive.html">All Stories</a><a href="/categories.html">Categories</a><a href="/scripts/">Creator Library</a><a href="/tools.html">Tools</a></section>
+      <section class="rail-card"><p class="rail-label">Source Guide</p><a href="/fiction-disclaimer.html">Story and Source Notice</a><a href="/about.html">About Kyunolab</a></section>
+    </aside>`;
+}
+
+function renderBoardGuideLeftRail(guide) {
+  const mapItems = guide.sections.map((section, index) => `<a${index === 0 ? ' class="is-current"' : ''} href="#${escapeAttr(section.id)}"><span>${String(index + 1).padStart(2, '0')}</span><strong>${escapeHtml(section.nav || section.title)}</strong></a>`).join('');
+  return `<aside class="home-left-rail article-rail article-rail-left board-guide-left-rail" aria-label="Mystery Board guide map">
+      <section class="rail-card article-map-card story-map">
+        <h2>Guide Map</h2>
+        ${mapItems}
+        <a href="#faq"><span>FAQ</span><strong>FAQ</strong></a>
+      </section>
+      <section class="rail-card rail-card-subtle"><p class="rail-label">Board roads</p><a href="/mystery-board.html">Mystery Board</a><a href="/archive.html">All Stories</a><a href="/categories.html">Categories</a></section>
+    </aside>`;
+}
 function renderReadingBridge(relatedStories) {
   if (!relatedStories.length) return '';
   return `<section class="reading-bridge" aria-label="Recommended reading">
