@@ -7,7 +7,7 @@ const { buildPublicArticlePlan } = require('./public-article-plan');
 
 const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://kyunolab.com';
-const styleVersion = '20260811-article-map-rail-fix';
+const styleVersion = '20260811-sidebar-ad-top';
 const stories = loadStories(root);
 const categories = readJson(path.join(root, 'data', 'categories.json'));
 const scripts = readOptionalJson(path.join(root, 'data', 'scripts.json'), []);
@@ -914,8 +914,8 @@ function renderRightRail(story, relatedStories, readNextStory) {
     .slice(0, 4)
     .map((item) => `<a href="/stories/${escapeAttr(item.slug)}">${escapeHtml(item.title)}</a>`)
     .join('');
-  return `<aside class="article-rail article-rail-right" aria-label="Recommended reading">
-      ${renderKyunolabNetworkCard()}
+  return `<aside class="home-portal-rail article-rail article-rail-right archive-story-portal-rail" aria-label="Recommended reading">
+      ${renderAdSlot('ad-archive-rail-top', 'rail-ad-slot')}
       ${readNextCard}${relatedLinks ? `
       <div class="rail-card"><p class="rail-label">Related stories</p>${relatedLinks}</div>` : ''}
     </aside>`;
@@ -1442,8 +1442,8 @@ function renderArchiveStoryPortalRail(story, sections, relatedStories, readNextS
     .slice(0, 4)
     .map((item) => `<a href="/stories/${escapeAttr(item.slug)}">${escapeHtml(item.title)}</a>`)
     .join('');
-  return `<aside class="home-portal-rail archive-story-portal-rail" aria-label="Archive story side paths">
-      ${renderKyunolabNetworkCard()}
+  return `<aside class="home-portal-rail article-rail article-rail-right archive-story-portal-rail" aria-label="Archive story side paths">
+      ${renderAdSlot('ad-archive-rail-top', 'rail-ad-slot')}
       ${readNextCard}
 
       <section class="rail-card rail-card-subtle">
@@ -1525,7 +1525,7 @@ function renderSiteSearchForm() {
 }
 
 function renderFooter() {
-  return `<footer class="site-footer"><p><strong>Kyunolab Mystery Archive</strong> is a quiet story publication by Kyuno Lab, dedicated to legends, folklore, mysteries, and strange tales from the edges of memory.</p><p><a href="/archive.html">Archive Index</a> - <a href="/newest.html">Newest</a> - <a href="/popular.html">Popular</a> - <a href="/categories.html">Categories</a> - <a href="/scripts/">Scripts</a> - <a href="/tools.html">Tools</a> - <a href="/hub.html">Hub</a> - <a href="/about.html">About</a> - <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a> - <a href="/privacy.html">Privacy</a> - <a href="/rss.xml">RSS</a></p></footer>`;
+  return `<footer class="site-footer"><p><strong>Kyunolab Mystery Archive</strong> is a quiet story publication by Kyuno Lab, dedicated to legends, folklore, mysteries, and strange tales from the edges of memory.</p><p><a href="/archive.html">Archive Index</a> - <a href="/newest.html">Newest</a> - <a href="/popular.html">Popular</a> - <a href="/categories.html">Categories</a> - <a href="/scripts/">Scripts</a> - <a href="/tools.html">Tools</a> - <a href="/hub.html">Hub</a> - <a href="/about.html">About</a> - <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a> - <a href="/privacy.html">Privacy</a> - <a href="/rss.xml">RSS</a></p></footer><a class="back-to-top" href="#" aria-label="Back to top">Top</a>`;
 }
 
 function formatDate(value) {

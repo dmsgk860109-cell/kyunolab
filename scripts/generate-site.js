@@ -13,7 +13,7 @@ const buildArgs = parseBuildArgs(process.argv.slice(2));
 const siteOutputRoot = path.resolve(buildArgs.outputRoot || root);
 const creatorPackOptions = buildArgs.creatorPackRoot ? { root: buildArgs.creatorPackRoot } : {};
 const siteUrl = 'https://kyunolab.com';
-const styleVersion = '20260811-article-map-rail-fix';
+const styleVersion = '20260811-sidebar-ad-top';
 const creatorLibraryScriptVersion = '20260722-copy-fields';
 const pageSize = 12;
 const libraryPageSize = 10;
@@ -1902,8 +1902,7 @@ function renderScriptDetailPortalRail({ script, originalStory, relatedScripts, c
     : relatedScripts.slice(0, 3).map((item) => `<a href="/scripts/${escapeAttr(item.slug)}">${escapeHtml(item.title)}</a>`).join('');
   const categoryLink = creatorCategory ? `<a href="/scripts/categories/${escapeAttr(creatorCategory.slug)}/">${escapeHtml(creatorCategory.title)} shelf</a>` : '<a href="/scripts/categories/">Library Categories</a>';
   return `<aside class="home-portal-rail creator-portal-rail script-detail-rail" aria-label="Creator script side paths">
-      ${renderKyunolabNetworkCard('scripts')}
-      <section class="rail-card rail-feature"><p class="rail-label">Current package</p><a href="/scripts/${escapeAttr(script.slug)}"><span>${escapeHtml(script.genre || 'Creator package')}</span><strong>${escapeHtml(script.title)}</strong></a></section>
+      ${renderAdSlot('ad-script-rail-top', 'rail-ad-slot')}
       ${originalStory ? `<section class="rail-card"><p class="rail-label">Original record</p><a href="/stories/${escapeAttr(originalStory.slug)}"><strong>${escapeHtml(originalStory.title)}</strong><span>Read the archive version</span></a></section>` : ''}
       <section class="rail-card rail-card-subtle">
         <p class="rail-label">Same shelf</p>
@@ -4327,12 +4326,12 @@ function renderFooter(section = 'archive') {
     return `<footer class="site-footer">
     <p><strong>Kyunolab Creator Library</strong> provides creator-ready scripts, Shorts hooks, image prompts, thumbnail ideas, and planning resources connected to the Kyunolab Mystery Archive.</p>
     <p><a href="/scripts/">Scripts Home</a> - <a href="/scripts/latest/">Latest</a> - <a href="/scripts/featured/">Featured</a> - <a href="/scripts/categories/">Library Categories</a> - <a href="/scripts/board/">Library Board</a> - <a href="/">Mystery Archive</a> - <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a> - <a href="/privacy.html">Privacy</a> - <a href="/rss.xml">RSS</a></p>
-  </footer>`;
+  </footer><a class="back-to-top" href="#" aria-label="Back to top">Top</a>`;
   }
   return `<footer class="site-footer">
     <p><strong>Kyunolab Mystery Archive</strong> collects legends, folklore, mysteries, and strange tales with calm source-aware notes.</p>
     <p><a href="/archive.html">All Stories</a> - <a href="/newest.html">Newest</a> - <a href="/popular.html">Popular</a> - <a href="/categories.html">Categories</a> - <a href="/scripts/">Scripts</a> - <a href="/tools.html">Tools</a> - <a href="/hub.html">Hub</a> - <a href="/about.html">About</a> - <a href="/fiction-disclaimer.html">Story &amp; Source Notice</a> - <a href="/privacy.html">Privacy</a> - <a href="/rss.xml">RSS</a> - <a href="/publishing-center/">Publishing Center</a></p>
-  </footer>`;
+  </footer><a class="back-to-top" href="#" aria-label="Back to top">Top</a>`;
 }
 
 function renderLeftRail(label = 'Archive navigation') {
@@ -4347,7 +4346,7 @@ function renderRightRail(items, label) {
   const safeItems = items.length ? items : stories.slice(0, 4);
   const feature = safeItems[0];
   const related = safeItems.slice(1, 4);
-  return `<aside class="article-rail article-rail-right" aria-label="${escapeAttr(label)}">${renderKyunolabNetworkCard('archive')}<div class="rail-card rail-feature"><p class="rail-label">Start here</p><a href="/stories/${escapeAttr(feature.slug)}"><span>${escapeHtml(feature.category)}</span><strong>${escapeHtml(feature.title)}</strong></a></div><div class="rail-card"><p class="rail-label">Related stories</p>${related.map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}</div></aside>`;
+  return `<aside class="article-rail article-rail-right" aria-label="${escapeAttr(label)}">${renderAdSlot('ad-archive-rail-top', 'rail-ad-slot')}<div class="rail-card rail-feature"><p class="rail-label">Start here</p><a href="/stories/${escapeAttr(feature.slug)}"><span>${escapeHtml(feature.category)}</span><strong>${escapeHtml(feature.title)}</strong></a></div><div class="rail-card"><p class="rail-label">Related stories</p>${related.map((story) => `<a href="/stories/${escapeAttr(story.slug)}">${escapeHtml(story.title)}</a>`).join('')}</div></aside>`;
 }
 
 function renderCategoryRightRail() {

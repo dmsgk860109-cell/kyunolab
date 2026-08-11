@@ -4,7 +4,7 @@ const { loadStories } = require('./lib/load-stories');
 
 const root = path.resolve(__dirname, '..');
 const siteUrl = 'https://kyunolab.com';
-const styleVersion = '20260811-article-map-rail-fix';
+const styleVersion = '20260811-sidebar-ad-top';
 const boardPortalStyleVersion = '20260808-board-portal';
 const guides = readJson(path.join(root, 'data', 'guides.json'));
 const stories = loadStories(root);
