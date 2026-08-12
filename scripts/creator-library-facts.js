@@ -390,6 +390,15 @@ function ensureMinimumTypedCandidates(candidates, story, context, add) {
   if (!hasType('turning-point')) add(usableText, 'derived.turningPointFromDetail', 'turning-point', 9);
   if (!hasType('outcome')) add(usableText, 'derived.outcomeFromDetail', 'outcome', 9);
   if (!hasType('source-context')) add(context.category?.title || context.category?.name || story.categorySlug, 'derived.sourceContextFromCategory', 'source-context', 9);
+  const visualFact = buildDerivedVisualFact(story, context, usableText);
+  if (visualFact) add(visualFact, 'derived.visualFromDetail', 'visual', 9);
+}
+
+function buildDerivedVisualFact(story, context, fallbackText) {
+  const dna = objectValue(story.contentDNA);
+  const visualSource = cleanText(dna.sceneAnchor || story.sceneAnchor || story.detail || fallbackText || context.topic);
+  if (!visualSource) return '';
+  return `The main visual image centers on ${lowercaseStart(visualSource)}.`;
 }
 
 function createFactRecord({ factType, factText, rawText, sourceRef, sourcePriority, sequenceIndex, context }) {
