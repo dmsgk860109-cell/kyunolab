@@ -2100,6 +2100,35 @@ h1 {
   font-size: 18px;
   line-height: 1.15;
 }
+.board-bottom-links .related-grid > article {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-width: 0;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  border-radius: 4px;
+  padding: 16px;
+}
+.board-bottom-links .related-grid > article > .rail-label {
+  margin: 0 0 10px;
+}
+.board-bottom-links .related-grid > article > a {
+  display: block;
+  min-width: 0;
+  border: 0;
+  border-top: 1px solid var(--line);
+  background: transparent;
+  border-radius: 0;
+  padding: 12px 0;
+}
+.board-bottom-links .related-grid > article > a:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+}
+.board-bottom-links .related-grid > article > a:last-child {
+  padding-bottom: 0;
+}
 .prev-next {
   display: grid;
   grid-template-columns: 1fr 1fr;
