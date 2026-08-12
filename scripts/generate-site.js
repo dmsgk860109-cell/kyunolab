@@ -1769,6 +1769,9 @@ ${(section.paragraphs || []).map((text) => `<p>${escapeHtml(text)}</p>`).join('\
           <div class="story-body archive-entry">
 ${body}
 
+            ${renderLibraryBoardSeoSection(post)}
+            ${renderLibraryBoardBottomLinks(post, boardPosts)}
+
             <h2>Library Board Note</h2>
             <p>Library Board guides explain how the Creator Library works. Individual production materials remain inside Creator Library script pages.</p>
           </div>
@@ -1797,6 +1800,48 @@ ${body}
   });
 }
 
+function renderLibraryBoardSeoSection(post) {
+  const terms = Array.from(new Set([
+    post.title,
+    post.tag,
+    ...(post.tags || []),
+    'Creator Library guide',
+    'script format guide',
+    'archive connected production'
+  ].filter(Boolean))).slice(0, 8);
+  const searchQuestions = [
+    `How should a creator use ${post.tag || 'a Creator Library guide'}?`,
+    'When should a script page stay connected to the original archive record?',
+    'How do Creator Library guides help with video planning?'
+  ];
+  return `<section id="search-profile" class="script-material creator-search-profile board-seo-profile" aria-label="Search profile">
+        <div class="section-head"><h2>Search Profile</h2><span>for this guide</span></div>
+        <p>${escapeHtml(post.excerpt || post.metaDescription || post.deck || 'This Library Board guide explains how to use Creator Library material while keeping the original archive route visible.')}</p>
+        <div class="script-search-grid">
+          <div><h3>Search intent</h3><p>Readers who land here are usually deciding how to use a Creator Library resource, how to choose a format, or how to keep a production connected to the original Mystery Archive record.</p></div>
+          <div><h3>Related terms</h3><p>${terms.map(escapeHtml).join(', ')}</p></div>
+          <div><h3>Useful questions</h3><p>${searchQuestions.map(escapeHtml).join(' ')}</p></div>
+        </div>
+      </section>`;
+}
+
+function renderLibraryBoardBottomLinks(post, boardPosts = []) {
+  const relatedBoard = boardPosts.filter((item) => item.slug !== post.slug).slice(0, 3);
+  const scriptLinks = sortNewest(creatorScripts).slice(0, 3);
+  const archiveLinks = getKnownRecordStories().slice(0, 3);
+  const boardItems = relatedBoard.map((item) => `<a href="/scripts/board/${escapeAttr(item.slug)}/"><span>${escapeHtml(item.tag || item.category || 'Library Board')}</span><strong>${escapeHtml(item.title)}</strong></a>`).join('');
+  const scriptItems = scriptLinks.map((script) => `<a href="/scripts/${escapeAttr(script.slug)}"><span>${escapeHtml(script.category || script.scriptType || 'Creator Package')}</span><strong>${escapeHtml(script.title)}</strong></a>`).join('');
+  const archiveItems = archiveLinks.map((story) => `<a href="/stories/${escapeAttr(story.slug)}"><span>${escapeHtml(story.category || 'Archive Record')}</span><strong>${escapeHtml(story.title)}</strong></a>`).join('');
+  return `<section id="continue-reading" class="related-articles board-bottom-links" aria-label="Continue reading">
+        <div class="section-head"><h2>Continue Reading</h2><span>related paths</span></div>
+        <div class="related-grid">
+          ${boardItems ? `<article><p class="rail-label">Library Board</p>${boardItems}</article>` : ''}
+          ${scriptItems ? `<article><p class="rail-label">Creator Packages</p>${scriptItems}</article>` : ''}
+          ${archiveItems ? `<article><p class="rail-label">Mystery Archive</p>${archiveItems}</article>` : ''}
+        </div>
+      </section>`;
+}
+
 
 function renderLibraryBoardPostLeftRail(post, sections) {
   const mapItems = sections.map((section, index) => `<a${index === 0 ? ' class="is-current"' : ''} href="#${escapeAttr(section.id)}"><span>${String(index + 1).padStart(2, '0')}</span><strong>${escapeHtml(section.nav || section.title)}</strong></a>`).join('');
@@ -1804,6 +1849,8 @@ function renderLibraryBoardPostLeftRail(post, sections) {
       <section class="rail-card article-map-card story-map">
         <h2>Guide Map</h2>
         ${mapItems}
+        <a href="#search-profile"><span>SEO</span><strong>Search Profile</strong></a>
+        <a href="#continue-reading"><span>Next</span><strong>Continue Reading</strong></a>
       </section>
       ${renderScriptRecommendationCard('Creator Packages', sortNewest(creatorScripts), 2)}
       ${renderStoryRecommendationCard('Archive Records', getKnownRecordStories(), 2)}

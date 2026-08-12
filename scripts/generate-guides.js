@@ -290,6 +290,9 @@ ${sections}
 
             <h2>Story &amp; Source Note</h2>
             <p>${escapeHtml(guide.sourceNote)}</p>
+
+            ${renderGuideSeoSection(guide, relatedStories)}
+            ${renderGuideBottomLinks(guide, relatedStories, relatedGuides)}
           </div>
         </article>
       </div>
@@ -317,6 +320,45 @@ ${sections}
   });
 }
 
+function renderGuideSeoSection(guide, relatedStories = []) {
+  const terms = Array.from(new Set([
+    guide.title,
+    guide.tag,
+    guide.category,
+    ...(guide.tags || []),
+    'Mystery Board guide',
+    'archive reading path',
+    'source-aware folklore'
+  ].filter(Boolean))).slice(0, 8);
+  const storyTerms = relatedStories.slice(0, 3).map((story) => story.title).filter(Boolean);
+  return `<section id="search-profile" class="script-material creator-search-profile board-seo-profile" aria-label="Search profile">
+        <div class="section-head"><h2>Search Profile</h2><span>for this guide</span></div>
+        <p>${escapeHtml(guide.excerpt || guide.metaDescription || guide.deck || 'This Mystery Board guide helps readers understand how to move through Kyunolab Mystery Archive with clear context.')}</p>
+        <div class="script-search-grid">
+          <div><h3>Search intent</h3><p>Readers who arrive here are usually trying to understand a mystery topic, compare story types, check source limits, or find a better path into the archive.</p></div>
+          <div><h3>Related terms</h3><p>${terms.map(escapeHtml).join(', ')}</p></div>
+          <div><h3>Connected records</h3><p>${(storyTerms.length ? storyTerms : ['Kyunolab Mystery Archive', 'related stories', 'reading guides']).map(escapeHtml).join(', ')}</p></div>
+        </div>
+      </section>`;
+}
+
+function renderGuideBottomLinks(guide, relatedStories = [], relatedGuides = []) {
+  const guideLinks = (relatedGuides.length ? relatedGuides : guides.filter((item) => item.slug !== guide.slug)).slice(0, 3);
+  const storyLinks = relatedStories.length ? relatedStories.slice(0, 3) : getBoardArchiveRecommendations().slice(0, 3);
+  const libraryLinks = libraryBoardPosts.slice(0, 3);
+  const guideItems = guideLinks.map((item) => `<a href="${escapeAttr(item.url || `/mystery-board/${item.slug}`)}"><span>${escapeHtml(item.tag || item.category || 'Mystery Board')}</span><strong>${escapeHtml(item.shortTitle || item.title)}</strong></a>`).join('');
+  const storyItems = storyLinks.map((story) => `<a href="/stories/${escapeAttr(story.slug)}"><span>${escapeHtml(story.category || 'Archive Record')}</span><strong>${escapeHtml(story.title)}</strong></a>`).join('');
+  const libraryItems = libraryLinks.map((post) => `<a href="/scripts/board/${escapeAttr(post.slug)}/"><span>${escapeHtml(post.tag || post.category || 'Library Board')}</span><strong>${escapeHtml(post.title)}</strong></a>`).join('');
+  return `<section id="continue-reading" class="related-articles board-bottom-links" aria-label="Continue reading">
+        <div class="section-head"><h2>Continue Reading</h2><span>related paths</span></div>
+        <div class="related-grid">
+          ${guideItems ? `<article><p class="rail-label">Mystery Board</p>${guideItems}</article>` : ''}
+          ${storyItems ? `<article><p class="rail-label">Archive Records</p>${storyItems}</article>` : ''}
+          ${libraryItems ? `<article><p class="rail-label">Creator Library</p>${libraryItems}</article>` : ''}
+        </div>
+      </section>`;
+}
+
 function renderBoardLeftRail() {
   return `<aside class="home-left-rail article-rail article-rail-left board-left-rail" aria-label="Mystery Board navigation">
       <section class="rail-card"><p class="rail-label">Page Map</p><a href="#board-start"><span>01</span> Reading Desk</a><a href="#board-guide-desk"><span>02</span> Guide Desk</a><a href="#board-guide-paths"><span>03</span> Guide Paths</a><a href="#board-guide-index"><span>04</span> Board Index</a><a href="#board-crossroads"><span>05</span> Cross Roads</a></section>
@@ -333,6 +375,8 @@ function renderBoardGuideLeftRail(guide) {
         <h2>Guide Map</h2>
         ${mapItems}
         <a href="#faq"><span>FAQ</span><strong>FAQ</strong></a>
+        <a href="#search-profile"><span>SEO</span><strong>Search Profile</strong></a>
+        <a href="#continue-reading"><span>Next</span><strong>Continue Reading</strong></a>
       </section>
       ${renderScriptRecommendationCard('Creator Packages', sortNewest(creatorScripts), 2)}
       ${renderLibraryBoardRecommendationCard('Library Board', libraryBoardPosts, 2)}
