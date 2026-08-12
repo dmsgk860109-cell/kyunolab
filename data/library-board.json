@@ -396,9 +396,9 @@
     "slug": "how-to-read-scene-focus-before-writing-visual-prompts",
     "title": "How to Read Scene Focus Before Writing Visual Prompts",
     "metaTitle": "How to Read Scene Focus Before Writing Visual Prompts | Library Board",
-    "metaDescription": "A Library Board guide to using Scene Focus as the director's intent before copying or adapting an Image Prompt.",
-    "excerpt": "A guide to understanding Scene Focus as the production intention behind the Image Prompt.",
-    "deck": "Scene Focus tells the creator what the viewer should notice or feel before the Image Prompt supplies the full visual instruction.",
+    "metaDescription": "A Creator Library guide to reading scene focus before writing image prompts, so visuals support the story instead of pulling the video away from it.",
+    "excerpt": "Use this Library Board guide to turn Scene Focus into stronger image prompts without losing the archive story, narration rhythm, or production purpose.",
+    "deck": "Scene Focus is the bridge between story and image. Before a creator writes or adapts a visual prompt, the focus line should explain what the scene needs the viewer to notice and why that detail belongs in the video.",
     "category": "Library Board",
     "tag": "Visual Planning",
     "tags": [
@@ -407,44 +407,89 @@
       "Visual Direction",
       "Creator Library"
     ],
-    "readTime": "3 min read",
+    "readTime": "9 min read",
     "publishedAt": "2026-07-18",
-    "updatedAt": "2026-07-18",
+    "updatedAt": "2026-08-12",
     "sections": [
       {
-        "id": "scene-focus-is-the-intention",
-        "title": "Scene Focus is the intention",
-        "nav": "Intention",
+        "id": "read-scene-focus-as-the-visual-job",
+        "title": "Read Scene Focus as the visual job",
+        "nav": "Visual job",
         "paragraphs": [
-          "Scene Focus is not a short version of the prompt. It explains the role of the image in the viewer's experience.",
-          "It may point to doubt, isolation, discovery, danger, or a small detail that changes the meaning of the Scene."
+          "Scene Focus is not a decorative label. It is the visual job of the scene. It tells the creator what the image needs to accomplish before they begin writing or adapting a prompt. If a scene is about a room becoming uncomfortable, the visual job may be to make ordinary surfaces feel too empty. If a scene is about a roadside legend, the visual job may be to show isolation, distance, and the moment before recognition.",
+          "This is different from simply naming objects. A prompt can list a hallway, a light, a shadow, and a door without explaining why those details matter. Scene Focus should make the reason visible. It tells the creator which part of the story the image is serving, so the final visual does not become a random attractive frame.",
+          "The best focus line can be read before the prompt and still make sense. It should let the creator understand the mood, subject, and production purpose in one movement. That keeps the image connected to the script package rather than floating beside it.",
+          "For Kyunolab pages, this matters because many topics are built from familiar details. A blank room, a road bend, a mirror, a lake, a staircase, or a distant building may be more important than a dramatic monster. Scene Focus protects that ordinary center before the image prompt begins.",
+          "A useful focus line also keeps the creator from starting with tool behavior. Image tools often reward dramatic language, but the page needs story discipline before technical variation. When the visual job is clear, the creator can use any tool while still aiming for the same scene result."
         ]
       },
       {
-        "id": "image-prompts-translate-that-intention",
-        "title": "Image Prompts translate that intention",
-        "nav": "Prompt role",
+        "id": "connect-focus-to-the-narration-beat",
+        "title": "Connect focus to the narration beat",
+        "nav": "Narration beat",
         "paragraphs": [
-          "The Image Prompt turns the focus into a concrete scene. It describes space, subject, light, mood, color, camera feeling, and realism.",
-          "Reading Scene Focus first helps the creator judge whether the generated image supports the story instead of only looking attractive."
+          "A visual prompt should grow from the narration beat. If the narration is telling the viewer that a place feels wrong because it is too familiar, the prompt should not suddenly create a fantasy landscape. If the narration is explaining source uncertainty, the prompt should avoid visual certainty that the story does not support. Scene Focus helps keep that connection visible.",
+          "Before writing the prompt, read the narration aloud or imagine it as voiceover. Ask what the viewer should be seeing during those words. The answer does not need to illustrate every sentence. It needs to carry the emotional center of the beat. One strong image can support several lines when the focus is clear.",
+          "This method also prevents the common problem of over-explaining through visuals. A creator may be tempted to show every symbol in the story at once. Scene Focus should narrow the choice. It says which visual idea belongs in this moment and which ideas should wait for another scene.",
+          "The result is easier to edit. The voice and image feel like they were planned together, and the viewer does not have to resolve a conflict between what is being said and what is being shown.",
+          "This also helps when a creator adapts a package into a shorter version. The long-form scene may contain more context, but the image still needs to serve one beat. Scene Focus tells the creator what can be compressed and what must remain visible."
         ]
       },
       {
-        "id": "use-focus-to-reject-the-wrong-image",
-        "title": "Use Focus to reject the wrong image",
-        "nav": "Image choice",
+        "id": "turn-focus-into-prompt-constraints",
+        "title": "Turn focus into prompt constraints",
+        "nav": "Prompt limits",
         "paragraphs": [
-          "A generated image can be technically good and still wrong for the Scene. If it misses the Scene Focus, it should be revised.",
-          "The question is not only whether the image looks mysterious. The question is whether it makes the viewer understand the right moment."
+          "Scene Focus should become practical prompt constraints. If the focus is ordinary unease, the prompt should restrict spectacle. If the focus is a remembered legend, the prompt may need period-neutral details rather than modern props. If the focus is a source boundary, the prompt should avoid claiming proof through the image. Constraints are not there to weaken creativity. They protect the story.",
+          "Good constraints tell the image tool what to avoid as well as what to show. No readable text, no logos, no monsters when the story is about absence, no crowded symbolic collage when the scene needs restraint. These limits help the creator get usable images faster and reduce the need to repair the result later.",
+          "The focus line does not need to include every constraint, but it should imply them. A creator reading it should understand what would break the scene. If the prompt violates the focus, the image may still look impressive, but it will not belong to the package.",
+          "This is especially important for archive-connected material. The prompt should adapt the record for video without inventing a new visual mythology. Scene Focus keeps the creator close to the source while still leaving room for atmosphere."
         ]
       },
       {
-        "id": "keep-the-visual-choice-specific",
-        "title": "Keep the visual choice specific",
-        "nav": "Specificity",
+        "id": "choose-one-clear-visual-center",
+        "title": "Choose one clear visual center",
+        "nav": "Visual center",
         "paragraphs": [
-          "Strong mystery visuals usually depend on one clear subject. A crowded image can weaken the story because the viewer does not know where to look.",
-          "Scene Focus helps narrow the image before the prompt expands it."
+          "Most scene prompts work better with one clear visual center. The center may be an empty hallway, a parked car, a mirror, a lake surface, a doorway, a room corner, or a figure kept distant and uncertain. The viewer should know where to look. If the scene has too many centers, the video becomes harder to follow.",
+          "Scene Focus helps choose that center before the prompt becomes too crowded. It asks: what single image carries this beat? A scene can still include surrounding detail, but those details should support the center rather than compete with it. The image should feel readable at a glance because video viewers do not study a frame forever.",
+          "A clear center also helps thumbnail and Shorts adaptation later. A prompt built around one strong visual idea can be reused, cropped, or simplified more easily. A prompt built around many details may collapse when it is reduced to a smaller format.",
+          "For mystery and folklore topics, clarity is not the enemy of atmosphere. The image can be quiet, strange, or unresolved while still having a clear center. In fact, the mystery often becomes stronger when the viewer understands exactly what ordinary detail has become uncomfortable."
+        ]
+      },
+      {
+        "id": "keep-atmosphere-from-taking-over",
+        "title": "Keep atmosphere from taking over",
+        "nav": "Atmosphere",
+        "paragraphs": [
+          "Atmosphere is useful, but it should not replace the scene. Words like eerie, cinematic, dark, mysterious, liminal, and unsettling can support a prompt, but they cannot carry it alone. If the prompt only describes atmosphere, the image tool may produce something generic. Scene Focus should make the atmosphere specific to the story.",
+          "A stronger prompt connects mood to a concrete detail. Instead of asking for a scary hallway, it can ask for fluorescent office light, stained carpet, empty beige walls, and a corridor that seems too long. Instead of asking for a haunted road, it can ask for wet asphalt, a bend, low headlights, and a distant shoulder with no clear figure. The atmosphere comes from the chosen details.",
+          "This keeps the Creator Library aligned with the Archive. Kyunolab topics often work because a normal thing begins to feel wrong. The prompt should preserve that transformation. Too much generic horror language can flatten the difference between one story and another.",
+          "Scene Focus is the tool that keeps atmosphere disciplined. It lets the creator use mood without letting mood erase the subject.",
+          "When atmosphere is tied to a precise detail, the prompt becomes easier to judge. The creator can ask whether the image shows the chosen detail clearly enough. If the mood is present but the detail is missing, the prompt needs revision."
+        ]
+      },
+      {
+        "id": "check-the-image-against-the-archive-record",
+        "title": "Check the image against the archive record",
+        "nav": "Archive check",
+        "paragraphs": [
+          "After writing the prompt, compare it against the original archive record. The image does not need to reproduce the article exactly, but it should still feel like it belongs to the same topic. If the record is about a rumor, the prompt should not visually declare a verified fact. If the record is about a place, the prompt should respect the kind of place being described.",
+          "This check is simple but important. Creator Library pages are production packages, not separate fictional universes. The image prompt can heighten, simplify, and frame the archive material for video, but it should not detach from the page that gave it meaning.",
+          "The archive check also helps with internal linking. A viewer who moves from the script package back to the archive article should recognize the connection. The visual language does not have to match every detail, but the subject and tone should feel continuous.",
+          "When a prompt passes this check, the creator can use it with more confidence. The image may still need technical refinement, but the story direction is stable."
+        ]
+      },
+      {
+        "id": "finish-with-a-producible-image-path",
+        "title": "Finish with a producible image path",
+        "nav": "Image path",
+        "paragraphs": [
+          "A Scene Focus section succeeds when it leads to a producible image path. The creator understands the visual job, connects it to the narration, chooses a center, applies useful limits, and checks the result against the archive. That path turns the prompt from a guess into a production decision.",
+          "The final prompt should be clear enough to copy, but not so overbuilt that it becomes fragile. It should tell the image tool what matters most, what mood to carry, and what errors to avoid. It should leave room for visual variation while protecting the story.",
+          "This is the reason Scene Focus belongs before visual prompt writing. It gives the creator a calm decision point before the technical asset is produced. When the focus is strong, the prompt has a better chance of becoming an image that actually serves the video.",
+          "The goal is not perfect art direction. The goal is a useful production path: one scene, one visual job, one image center, and one clear connection back to the story.",
+          "This makes Scene Focus a quality checkpoint as much as a writing aid. If the prompt result feels unrelated, too crowded, too literal, or too theatrical, the creator can return to the focus line and correct the direction before generating more images."
         ]
       }
     ]
@@ -454,9 +499,9 @@
     "slug": "how-background-music-keywords-shape-a-mystery-video",
     "title": "How Background Music Keywords Shape a Mystery Video",
     "metaTitle": "How Background Music Keywords Shape a Mystery Video | Library Board",
-    "metaDescription": "A Library Board guide to reading background music keywords as mood direction rather than track recommendations.",
-    "excerpt": "A guide to using background music keywords to support narration without overwhelming the story.",
-    "deck": "Creator Library music guidance is written as search language, not as a required track list. The keywords help creators find a mood that fits the Scene.",
+    "metaDescription": "A Creator Library guide to using background music keywords for mystery videos without overpowering narration, story pacing, or archive tone.",
+    "excerpt": "Use this Library Board guide to choose background music keywords that support mystery narration without turning every scene into the same heavy horror mood.",
+    "deck": "Background music keywords are small production signals, but they shape how a mystery video feels. They should support narration, pacing, and restraint instead of competing with the story.",
     "category": "Library Board",
     "tag": "Background Music",
     "tags": [
@@ -465,44 +510,93 @@
       "Mood",
       "Creator Library"
     ],
-    "readTime": "3 min read",
+    "readTime": "9 min read",
     "publishedAt": "2026-07-18",
-    "updatedAt": "2026-07-18",
+    "updatedAt": "2026-08-12",
     "sections": [
       {
-        "id": "music-should-support-the-voice",
-        "title": "Music should support the voice",
-        "nav": "Support voice",
+        "id": "treat-music-keywords-as-tone-guides",
+        "title": "Treat music keywords as tone guides",
+        "nav": "Tone guide",
         "paragraphs": [
-          "In a mystery video, background music should leave space for narration. If the music competes with the voice, the story becomes harder to follow.",
-          "The best track is usually the one the viewer feels before they notice it."
+          "Background music keywords are not a soundtrack by themselves. They are tone guides. They tell the creator what kind of musical atmosphere may support the scene: quiet drone, low pulse, reflective ambient, soft tension, unresolved ending, distant hum, or minimal piano. The keyword gives direction before the creator chooses a track.",
+          "This matters because mystery videos can easily become too heavy. If every scene uses aggressive horror music, the viewer stops feeling the difference between setup, context, reveal, uncertainty, and ending. A keyword should help the creator choose the right amount of pressure for the moment.",
+          "The best music keyword is specific enough to guide the search, but broad enough to allow different tools and libraries. It should not force one track or one platform. It should describe the role of the music inside the scene.",
+          "For Kyunolab production, music usually supports image-led narration. The voice carries the story. The image carries the visual center. Music should color the space around them without taking control.",
+          "A tone guide should be written for the creator, not for the search engine alone. It should help someone imagine the audio texture before they search a library or generate a track. If the keyword only sounds stylish but gives no production direction, it is not doing enough work."
         ]
       },
       {
-        "id": "keywords-describe-the-mood",
-        "title": "Keywords describe the mood",
-        "nav": "Keywords",
+        "id": "keep-the-narration-in-front",
+        "title": "Keep the narration in front",
+        "nav": "Narration first",
         "paragraphs": [
-          "Terms like Dark Ambient, Low Drone, Suspense Piano, and Mystery Atmosphere are search directions. They describe emotional texture, not one specific source.",
-          "The creator can use these terms in any music library, editor, or generation tool that fits their workflow."
+          "The first rule of background music is that narration stays in front. A mystery video can survive simple music, but it cannot survive a buried voice. If the viewer has to fight the soundtrack to understand the story, the music is failing its job no matter how cinematic it sounds.",
+          "Music keywords should therefore imply restraint. Words like low, soft, minimal, distant, slow, quiet, and ambient are useful because they remind the creator that the track sits under speech. The keyword should help avoid music with strong vocals, busy rhythm, sudden rises, or emotional cues that compete with the voice.",
+          "This is especially important for Library packages where the narration has been written as a usable script. The voiceover is not a placeholder. It is the main production asset. Music should make that narration easier to absorb, not more dramatic than the words can support.",
+          "A good test is to imagine the first thirty seconds with the music at low volume. If the music makes the narration feel clearer and more focused, it belongs. If it distracts attention away from the sentence, choose a different direction.",
+          "Volume is only one part of this check. The frequency range, rhythm, and emotional movement of the track can also interfere with speech. A soft track may still be distracting if it rises under every sentence or uses tones that fight the voice."
         ]
       },
       {
-        "id": "match-the-scene-not-the-whole-video",
-        "title": "Match the Scene, not the whole video",
-        "nav": "Scene mood",
+        "id": "match-music-to-scene-purpose",
+        "title": "Match music to scene purpose",
+        "nav": "Scene purpose",
         "paragraphs": [
-          "A video may need more than one mood. The opening might need quiet curiosity, while the middle might need tension and the ending might need restraint.",
-          "Scene-level music keywords help each moment carry its own weight."
+          "Different scenes need different kinds of support. An opening hook may need a faint pulse or uneasy bed. A context scene may need very quiet ambience so explanation can breathe. A source boundary may need neutral restraint rather than dread. A closing scene may need unresolved fading sound. Music keywords should follow these jobs.",
+          "When the same keyword is used across every scene, the video can become flat. The viewer may hear tension, but not progression. The soundtrack should help the piece move from curiosity to recognition to uncertainty. It does not need to change dramatically, but it should respect the shape of the story.",
+          "This is where the scene purpose and music keyword should be read together. If the scene is about information, the music should not shout. If the scene is about atmosphere, the music can carry more mood. If the scene is about ending, the music may need space and patience.",
+          "The goal is not musical complexity. The goal is emotional alignment. The track should help the viewer feel the correct kind of attention for that part of the video.",
+          "The creator can also use scene purpose to decide when silence is stronger than music. Some moments need a thin bed. Some moments need a small sound cue. Some moments need the voice to stand almost alone. The keyword should leave space for those choices."
         ]
       },
       {
-        "id": "avoid-overstating-the-mystery",
-        "title": "Avoid overstating the mystery",
-        "nav": "Restraint",
+        "id": "avoid-generic-horror-pressure",
+        "title": "Avoid generic horror pressure",
+        "nav": "No generic horror",
         "paragraphs": [
-          "Music should not force fear onto a story. Kyunolab works best when tension comes from the record, the image, and the unanswered question.",
-          "A restrained track often keeps the mystery more believable."
+          "Many mystery topics are not helped by generic horror pressure. Loud stingers, heavy impacts, sharp strings, and constant dread can make different stories feel identical. A folklore guide, internet legend, strange place, or source-aware mystery may need unease, but it does not always need horror scoring.",
+          "Music keywords should protect the specific identity of the topic. The Backrooms may call for fluorescent hum and low ambient unease. A roadside legend may call for quiet night road texture. A myth retelling may call for solemn space. A strange place may need environmental stillness. The keyword should point toward that identity.",
+          "Generic pressure also creates a trust problem. If the music insists that something is terrifying before the story earns it, the video can feel manipulative. Kyunolab works better when the atmosphere grows from the details rather than being forced over them.",
+          "A restrained keyword lets the viewer decide how unsettling the subject feels. That often creates a stronger mystery than a soundtrack that tells the viewer exactly how to react.",
+          "This restraint also helps the site identity. Kyunolab is not trying to make every archive record sound like the same haunted trailer. The sound should respect folklore, internet memory, strange places, myths, and source-aware uncertainty as different kinds of mystery."
+        ]
+      },
+      {
+        "id": "use-sound-and-music-as-separate-layers",
+        "title": "Use sound and music as separate layers",
+        "nav": "Sound layers",
+        "paragraphs": [
+          "Background music and sound effect notes should not be treated as the same thing. Music shapes the emotional bed. Sound effects can anchor the scene: fluorescent buzz, faint road noise, distant wind, soft room tone, water movement, or a low mechanical hum. Keeping those layers separate gives the creator more control.",
+          "A scene may need almost no music if the sound texture is strong. An empty office corridor with a low fluorescent hum can feel more specific than a dramatic ambient track. A lake story may benefit from subtle water sound more than a heavy drone. The keyword should leave room for that decision.",
+          "Separating layers also helps editing. The creator can lower music under important narration, bring in a sound cue for a transition, or let a scene end with room tone. The video becomes more readable because the audio is built around the story rather than one constant track.",
+          "The Library Board should encourage this practical thinking. Music keywords are useful, but they are only one part of the audio plan.",
+          "This separation also helps creators reuse a package. They can keep the same narration and image plan while changing only the music bed for a different platform or duration. The story remains stable even when the audio treatment changes."
+        ]
+      },
+      {
+        "id": "keep-audio-consistent-across-the-video",
+        "title": "Keep audio consistent across the video",
+        "nav": "Consistency",
+        "paragraphs": [
+          "A mystery video should not feel like five unrelated soundtracks stitched together. Even when scene keywords vary, the overall audio identity should remain consistent. The creator can move from low ambience to softer drone to quiet unresolved ending, but the changes should feel like one world.",
+          "This is especially true for image-led videos. The visuals may change from scene to scene, so audio becomes one of the elements that holds the piece together. If every scene uses a different musical style, the viewer may feel the edit more than the story.",
+          "A useful method is to choose one main audio family for the whole video and then adjust intensity by scene. The hook may be slightly stronger. The context may be thinner. The ending may fade longer. The family remains stable even when the scene changes.",
+          "Music keywords should support that method. They should create variation inside a shared mood, not a playlist of disconnected moods.",
+          "Consistency does not mean every scene uses the same loop. It means the viewer feels one production world. The creator can vary density, brightness, rhythm, and fade length while keeping the same general emotional temperature across the package."
+        ]
+      },
+      {
+        "id": "finish-with-a-clear-audio-check",
+        "title": "Finish with a clear audio check",
+        "nav": "Audio check",
+        "paragraphs": [
+          "Before finishing production, check the audio against the story. Can the narration be understood? Does the music support the scene purpose? Do sound effects make the image more specific? Does the video keep one overall mood? These questions matter more than whether the track sounds impressive by itself.",
+          "A good audio plan should make the video easier to watch. It should help the viewer stay inside the story, notice the important details, and feel the ending without being pushed too hard. The best background music often works because the viewer barely notices it until the scene is over.",
+          "For Kyunolab Creator Library pages, music keywords are therefore small but important production cues. They should guide the creator toward restraint, continuity, and story support. They are not a replacement for narration or image direction.",
+          "The final goal is simple: choose audio that lets the mystery breathe. If the viewer remembers the story more clearly because of the sound, the keywords did their job.",
+          "A final listen should happen after the scenes are assembled, not only while choosing tracks. Music that sounded good alone may be too heavy under narration. Sound that felt subtle in one scene may become repetitive across the whole video. The check belongs at the end as well as the beginning.",
+          "The strongest audio choice is the one that disappears into the viewing experience. The viewer should remember the room, the road, the mirror, the source question, or the final unresolved image before they remember the track. That is how background music supports a mystery instead of replacing it."
         ]
       }
     ]
@@ -512,9 +606,9 @@
     "slug": "how-advanced-production-notes-should-stay-optional",
     "title": "How Advanced Production Notes Should Stay Optional",
     "metaTitle": "How Advanced Production Notes Should Stay Optional | Library Board",
-    "metaDescription": "A Library Board guide to using Advanced Production notes without letting them interrupt the basic Scene workflow.",
-    "excerpt": "A guide to treating advanced production information as optional support after the basic Scene is complete.",
-    "deck": "Advanced Production exists to improve a Scene, not to make the basic workflow harder. This guide explains why it stays folded until the creator wants more detail.",
+    "metaDescription": "A Creator Library guide explaining why advanced production notes should remain optional support instead of becoming required steps on script package pages.",
+    "excerpt": "Use this Library Board guide to keep advanced production notes helpful, optional, and subordinate to narration, image prompts, and the original archive story.",
+    "deck": "Advanced production notes can improve a video, but they should not make the page feel heavier than the story. They work best as optional support for creators who want more control after the core scene is already usable.",
     "category": "Library Board",
     "tag": "Advanced Production",
     "tags": [
@@ -523,44 +617,95 @@
       "Sound Effects",
       "Creator Library"
     ],
-    "readTime": "3 min read",
+    "readTime": "9 min read",
     "publishedAt": "2026-07-18",
-    "updatedAt": "2026-07-18",
+    "updatedAt": "2026-08-12",
     "sections": [
       {
-        "id": "basic-production-must-work-first",
-        "title": "Basic production must work first",
-        "nav": "Basic first",
+        "id": "define-advanced-notes-as-support",
+        "title": "Define advanced notes as support",
+        "nav": "Support role",
         "paragraphs": [
-          "Every Scene should be usable with the visible fields alone. Narration, Scene Focus, Image Prompt, music keywords, and Editing Guide must be enough to produce the moment.",
-          "Advanced Production is for creators who want extra refinement after that basic structure is clear."
+          "Advanced production notes should be support, not the main path. They may suggest camera movement, negative prompts, thumbnail variation, audio layering, pacing refinements, or editing restraint. Those details can improve a video, but they should not be required for the scene to make sense.",
+          "The core scene should already work with narration and image direction. A creator should be able to produce a simple image-led voiceover video before opening any advanced field. If the advanced notes are necessary to understand the scene, the basic structure is not strong enough.",
+          "This separation keeps the Creator Library usable for different creators. Some will want detailed control. Others will want a fast production path. Optional notes let both groups use the same page without forcing one workflow onto everyone.",
+          "The role is therefore clear: advanced notes refine the production after the story, voice, and image are already aligned.",
+          "This support role should be visible in the writing itself. Advanced notes should sound like refinements a creator may use after the main scene is understood. They should not sound like a warning that the basic package is unfinished or too weak to produce."
         ]
       },
       {
-        "id": "folded-notes-protect-the-workflow",
-        "title": "Folded notes protect the workflow",
-        "nav": "Folded notes",
+        "id": "protect-the-main-reading-flow",
+        "title": "Protect the main reading flow",
+        "nav": "Reading flow",
         "paragraphs": [
-          "Keeping advanced notes collapsed prevents the page from overwhelming beginners. It also helps experienced creators move quickly through the core Scene.",
-          "The button makes extra detail available without pushing it into the main production path."
+          "A page can become difficult to read when every production detail is visible at once. If advanced notes interrupt the narration, image prompt, or scene purpose, the creator may lose the thread. Optional presentation protects the main reading flow by keeping the essential path clear.",
+          "The creator should first understand what the scene does. Then they should see the narration and image material. Only after that should they decide whether advanced details are useful. This order lets the page stay readable even when the package contains a lot of production support.",
+          "Optional advanced notes are especially useful on text-heavy pages. They give depth without making the first pass feel crowded. The creator can open them when needed, ignore them when not needed, and still trust that the core scene is complete.",
+          "This is not hiding quality. It is staging quality. The page gives the creator the right information at the right level of attention.",
+          "The main reading flow is also important for search visitors. A person landing on the page should be able to understand the guide before meeting technical details. If advanced notes arrive too early, the visitor may mistake the page for an internal checklist instead of a public Creator Library guide.",
+          "That clarity also protects the writer. When the advanced layer is optional, future updates can improve motion notes, negative prompts, and thumbnail advice without rewriting the whole article. The core guide remains stable, while the optional production support can become richer over time."
         ]
       },
       {
-        "id": "motion-and-sound-are-not-always-needed",
-        "title": "Motion and sound are not always needed",
-        "nav": "Optional assets",
+        "id": "avoid-making-simple-videos-feel-incomplete",
+        "title": "Avoid making simple videos feel incomplete",
+        "nav": "Simple videos",
         "paragraphs": [
-          "Some Scenes benefit from motion prompts, sound effects, or transition notes. Others are stronger when they stay quiet and still.",
-          "Optional information should match the Scene instead of repeating the same suggestion everywhere."
+          "Many Kyunolab videos can work as simple still-image narration pieces. They do not always need motion, complex transitions, layered sound, or elaborate thumbnail testing. If advanced notes feel mandatory, creators may assume a simple video is unfinished even when the story would be stronger with restraint.",
+          "This matters because the site is built around archive-connected material. The strongest asset is often the story itself: the ordinary detail, the repeated legend, the uncertain source, the strange place, or the image that feels wrong. Advanced production should frame that asset, not compete with it.",
+          "A simple production can still be polished. A clear voice, readable image, restrained music, and careful pacing may be enough. Optional notes should help creators improve that foundation, not pressure them into adding features that weaken the mood.",
+          "The page should make this permission visible. Advanced notes are available, but the creator is allowed to keep the video clean.",
+          "This is also a practical production concern. A creator producing many videos needs a route that can be repeated without exhausting every possible refinement. Optional notes give them room to improve important pages without making every page feel like a full studio build."
         ]
       },
       {
-        "id": "advanced-does-not-mean-complicated",
-        "title": "Advanced does not mean complicated",
-        "nav": "Simple detail",
+        "id": "use-advanced-notes-for-specific-problems",
+        "title": "Use advanced notes for specific problems",
+        "nav": "Specific problems",
         "paragraphs": [
-          "Advanced Production should remain practical. It may describe a slow push-in, a faint room tone, or a simple color direction.",
-          "The goal is better control, not professional complexity."
+          "Advanced notes are most useful when they solve specific production problems. A negative prompt can prevent unwanted text or fantasy elements. A motion note can suggest a slow push-in when the still image needs small movement. A thumbnail variation can help frame the subject for discovery. A sound note can prevent the music from becoming too loud.",
+          "Specific notes are better than broad instruction. Telling a creator to make the scene cinematic is less useful than explaining what should stay still, what should move slowly, what should be avoided, and what detail should remain visible. Advanced notes should reduce guessing.",
+          "This also helps quality control. A creator can check whether the note solved the problem. Did the negative prompt remove the unwanted element? Did the motion support the scene? Did the thumbnail keep the topic clear? Practical notes lead to practical checks.",
+          "When advanced notes are specific, they become a helpful production layer instead of a vague demand for more complexity.",
+          "Specific problem solving keeps advanced notes measurable. The creator can compare the result before and after using the note. If the note does not make the image cleaner, the motion calmer, the thumbnail clearer, or the audio easier to understand, it can be ignored."
+        ]
+      },
+      {
+        "id": "keep-optional-notes-connected-to-the-archive",
+        "title": "Keep optional notes connected to the archive",
+        "nav": "Archive link",
+        "paragraphs": [
+          "Optional notes should still respect the original archive record. A motion suggestion, negative prompt, or thumbnail idea can change how the story is presented, but it should not change what the story is. The archive connection remains active even in the advanced layer.",
+          "This is where overproduction can quietly break a page. A creator may add visual symbols that do not belong, push the scene into a genre the article does not support, or make a thumbnail promise that the archive record cannot satisfy. Advanced notes should prevent that drift, not encourage it.",
+          "A good optional note therefore reminds the creator what must remain stable: the subject, tone, central image, source boundary, and viewer promise. It can offer refinements while still pointing back to the story path.",
+          "The Creator Library works best when every layer, from summary to advanced detail, still belongs to the same archive route.",
+          "Archive connection is the limit that keeps advanced work from becoming decorative excess. A camera move, negative prompt, or thumbnail idea should make the original record easier to understand. If it makes the record look like a different story, the note has gone too far.",
+          "This archive limit is especially useful for thumbnails. A thumbnail can be more direct than a scene image, but it should still advertise the real topic. Optional thumbnail notes should sharpen the promise, not replace it with a louder but less accurate hook."
+        ]
+      },
+      {
+        "id": "make-advanced-notes-easy-to-skip-and-easy-to-use",
+        "title": "Make advanced notes easy to skip and easy to use",
+        "nav": "Easy to use",
+        "paragraphs": [
+          "Optional notes need a clear interface. They should be easy to skip when the creator wants the main path, and easy to use when the creator wants more detail. A collapsed or clearly separated section can do this better than a long uninterrupted wall of production instructions.",
+          "The label matters too. The creator should understand that advanced notes are additional help, not missing required work. Phrases like optional, advanced, production support, or refinement can make the role clear. The page should not make the creator feel that the video is incomplete if they do not open every detail.",
+          "When notes are opened, they should be structured for action. A creator should be able to copy, adapt, or check them without rewriting a paragraph of explanation. The advanced layer should be detailed enough to help but organized enough to use quickly.",
+          "This keeps the page flexible. It supports fast creators, careful creators, and future improvements without changing the basic production route.",
+          "The page should also avoid guilt. A creator who skips advanced notes should still feel that they used the package correctly. The optional layer is there for polish, adaptation, and troubleshooting, not as a hidden requirement."
+        ]
+      },
+      {
+        "id": "finish-with-a-core-first-workflow",
+        "title": "Finish with a core-first workflow",
+        "nav": "Core first",
+        "paragraphs": [
+          "The safest workflow is core first, advanced second. Read the story context. Understand the scene purpose. Use the narration. Match the image prompt. Check the audio mood. Then open advanced notes only where they improve the production. This order keeps the page from becoming heavier than the video needs.",
+          "A core-first workflow also makes regeneration easier. Future updates can improve advanced notes without destabilizing the central script package. The page can grow richer while the main route remains clear for creators who need a reliable starting point.",
+          "Advanced production notes are valuable when they stay in their proper role. They give creators more control, protect common failure points, and support polish. They become a problem only when they take over the page or make simple production feel inadequate.",
+          "The final standard is simple: the scene should work without advanced notes, and work better with them when the creator chooses to use them.",
+          "That standard keeps the Library scalable. Some packages will need more advanced support than others, but every package should still offer a clear basic route. The optional layer can grow over time while the creator always knows where production truly begins.",
+          "The final review should ask two questions. Can the page be produced without opening the advanced layer? And if the advanced layer is opened, does it make the production clearer rather than heavier? If both answers are yes, the optional structure is working."
         ]
       }
     ]
