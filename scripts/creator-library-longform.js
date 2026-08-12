@@ -275,7 +275,7 @@ function buildArchiveDerivedLongform(normalizedInput, scenePlan) {
     sceneIndex: scene.sceneIndex,
     role: scene.role,
     narrationParts: (scene.narrationParts || []).map((partPlan, partOffset) => {
-      const narration = archiveNarrationPart(source, normalizedInput, sceneIndex, partOffset);
+      const narration = constrainNarrationPartLength(archiveNarrationPart(source, normalizedInput, sceneIndex, partOffset));
       const sourceFactIds = sourceIdsForArchivePart(scene, partPlan, context);
       const sourceRecords = sourceFactIds.map((id) => context.factById.get(id)).filter(Boolean);
       const part = {
@@ -380,6 +380,39 @@ function archiveNarrationPart(source, normalizedInput, sceneIndex, partOffset) {
     ]
   ];
   return cleanNarrationText(templates[sceneIndex]?.[partOffset] || sectionText);
+}
+
+function constrainNarrationPartLength(value, maxWords = 120) {
+  let text = cleanNarrationText(value);
+  const removableWords = [
+    'actually',
+    'fully',
+    'careful',
+    'clear',
+    'same',
+    'larger',
+    'final',
+    'usable',
+    'quiet',
+    'already',
+    'one'
+  ];
+  for (const word of removableWords) {
+    if (countWords(text) <= maxWords) break;
+    text = cleanNarrationText(text.replace(new RegExp(`\\b${word}\\b`, 'i'), ''));
+  }
+  if (countWords(text) <= maxWords) return text;
+  const sentences = splitSentences(text);
+  if (sentences.length <= 1) return text;
+  const last = sentences[sentences.length - 1];
+  const shorterLast = shortenSentenceByWords(last, countWords(text) - maxWords);
+  return cleanNarrationText([...sentences.slice(0, -1), shorterLast].join(' '));
+}
+
+function shortenSentenceByWords(sentence, removeCount) {
+  const words = cleanNarrationText(sentence).split(/\s+/).filter(Boolean);
+  const targetLength = Math.max(8, words.length - Math.max(1, removeCount));
+  return ensureSentence(words.slice(0, targetLength).join(' '));
 }
 
 function expandArchiveDerivedLongformIfNeeded(scenes, source, normalizedInput) {

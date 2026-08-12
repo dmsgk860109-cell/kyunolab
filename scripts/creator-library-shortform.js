@@ -173,8 +173,17 @@ function buildCreatorShortform(normalizedInput, scenePlan, longformResult, produ
       productionScene,
       sceneIndex
     };
-    const narration = uniquifyShortformText(buildShortformNarrationForScene(context), context, seenNarrations, 'narration');
-    const sceneFocus = uniquifyShortformText(buildShortformSceneFocus({ ...context, narration }), { ...context, narration }, seenFocuses, 'sceneFocus');
+    const narration = repairShortformText(
+      uniquifyShortformText(buildShortformNarrationForScene(context), context, seenNarrations, 'narration'),
+      context,
+      'narration'
+    );
+    const sceneFocusContext = { ...context, narration };
+    const sceneFocus = repairShortformText(
+      uniquifyShortformText(buildShortformSceneFocus(sceneFocusContext), sceneFocusContext, seenFocuses, 'sceneFocus'),
+      sceneFocusContext,
+      'sceneFocus'
+    );
     const imagePrompt = buildShortformImagePrompt({ ...context, narration, sceneFocus });
     const sceneContext = { ...context, narration, sceneFocus, imagePrompt };
     const wordCount = countWords(narration);
@@ -198,6 +207,7 @@ function buildCreatorShortform(normalizedInput, scenePlan, longformResult, produ
     };
   });
   normalizeShortformRuntimeWindow(scenes, normalizedInput);
+  repairShortformScenesAfterRuntime(scenes, normalizedInput);
   const totalNarration = scenes.map((scene) => scene.narration).join(' ');
   const totalWordCount = countWords(totalNarration);
   const narrationReadSeconds = estimateShortformReadTime(totalNarration);
@@ -359,7 +369,7 @@ function buildShortformScenePlan(normalizedInput, scenePlan) {
 }
 
 function buildShortformNarrationForScene(context) {
-  if (hasArchiveShortformSource(context)) return archiveShortformNarration(context);
+  if (hasArchiveShortformSource(context)) return repairShortformText(archiveShortformNarration(context), context, 'narration');
   const records = selectShortformFactRecords(context);
   const primary = records[0] || {};
   const primaryKey = exactTextKey(realizeShortformFact(primary, context));
@@ -368,11 +378,11 @@ function buildShortformNarrationForScene(context) {
   const secondarySentence = secondary.id && secondary.id !== primary.id
     ? buildShortformFactSentence(secondary, context, { followup: true })
     : '';
-  return sanitizeShortformText([primarySentence, secondarySentence].filter(Boolean).join(' '));
+  return repairShortformText([primarySentence, secondarySentence].filter(Boolean).join(' '), context, 'narration');
 }
 
 function buildShortformSceneFocus(context) {
-  if (hasArchiveShortformSource(context)) return archiveShortformFocus(context);
+  if (hasArchiveShortformSource(context)) return repairShortformText(archiveShortformFocus(context), context, 'sceneFocus');
   const records = selectShortformFactRecords(context);
   const record = records.find((item) => !isGenericFocusFact(item, context) && ((item.visualTerms || []).length || (item.settingTerms || []).length))
     || records.find((item) => !isGenericFocusFact(item, context))
@@ -380,7 +390,7 @@ function buildShortformSceneFocus(context) {
     || {};
   const subject = cleanShortformEntity(selectImageSubject(context)) || selectEntityFromRecords(records, context.normalizedInput.topic);
   const fact = realizeShortformFocusFact(record, context);
-  return sanitizeShortformText(`${context.shortScene.role}: ${subject} tied to ${fact}.`);
+  return repairShortformText(`${context.shortScene.role}: ${subject} tied to ${fact}.`, context, 'sceneFocus');
 }
 
 function buildShortformImagePrompt(context) {
@@ -925,6 +935,24 @@ function updateShortformSceneTiming(scene) {
   scene.estimatedReadSeconds = estimateShortformReadTime(scene.narration);
 }
 
+function repairShortformScenesAfterRuntime(scenes, normalizedInput) {
+  scenes.forEach((scene, index) => {
+    scene.narration = repairShortformText(scene.narration, {
+      normalizedInput,
+      shortScene: scene,
+      sceneIndex: index,
+      narration: scene.narration
+    }, 'narration');
+    scene.sceneFocus = repairShortformText(scene.sceneFocus, {
+      normalizedInput,
+      shortScene: scene,
+      sceneIndex: index,
+      narration: scene.narration
+    }, 'sceneFocus');
+    updateShortformSceneTiming(scene);
+  });
+}
+
 function buildShortformLengthSupportSentence(scene, normalizedInput) {
   const anchor = selectShortformNarrationAnchor(scene, normalizedInput);
   return anchor ? `${capitalize(anchor)} stays in view.` : '';
@@ -962,8 +990,9 @@ function uniquifyShortformText(text, context, seen, field) {
 
 function selectPrimaryFact(context) {
   const topic = context.normalizedInput.topic;
-  return context.shortScene.sourceFacts.find((fact) => hasUsefulSpecificity(fact, topic))
-    || context.scene.sourceFacts?.find((fact) => hasUsefulSpecificity(fact, topic))
+  const shortFacts = context.shortScene?.sourceFacts || context.shortScene?.usedFactTexts || [];
+  return shortFacts.find((fact) => hasUsefulSpecificity(fact, topic))
+    || context.scene?.sourceFacts?.find((fact) => hasUsefulSpecificity(fact, topic))
     || context.normalizedInput.coreProblem?.[0]
     || context.normalizedInput.eventSequence?.[0]
     || context.normalizedInput.topic;
@@ -1213,6 +1242,62 @@ function cleanShortformFactClause(value) {
     .trim();
 }
 
+function repairShortformText(value, context = {}, field = '') {
+  let text = sanitizeShortformText(value);
+  if (!text) return text;
+  const anchor = compactFact(selectPrimaryFact(context), field === 'sceneFocus' ? 8 : 12, context.normalizedInput?.topic || '')
+    || cleanShortformEntity(context.normalizedInput?.topic || 'the source detail')
+    || 'the source detail';
+  const lowerAnchor = lowercaseStart(anchor);
+  text = text
+    .replace(/\bopens on\s*[.!?]?$/i, `opens on ${lowerAnchor}.`)
+    .replace(/\bis shaped by\s*[.!?]?$/i, `is shaped by ${lowerAnchor}.`)
+    .replace(/\bchanges when\s*[.!?]?$/i, `changes when ${lowerAnchor} becomes visible.`)
+    .replace(/\bdepends on\s*[.!?]?$/i, `depends on ${lowerAnchor}.`)
+    .replace(/\bshifts through\s*[.!?]?$/i, `shifts through ${lowerAnchor}.`)
+    .replace(/\bends with\s*[.!?]?$/i, `ends with ${lowerAnchor}.`)
+    .replace(/\b(the ending|the result|that detail|the detail)\s+leaves\s*[.!?]?$/i, `$1 leaves ${lowerAnchor} unresolved.`)
+    .replace(/\bmatters because\s*[.!?]?$/i, `matters because ${lowerAnchor} remains visible.`)
+    .replace(/\bthat detail points to\s*[.!?]?$/i, `that detail points to ${lowerAnchor}.`)
+    .replace(/\bthe detail remains\s*[.!?]?$/i, `the detail remains tied to ${lowerAnchor}.`)
+    .replace(/\bkeep\s*[.!?]?$/i, `keep ${lowerAnchor} visible.`);
+  text = sanitizeShortformText(text);
+  if (field === 'sceneFocus') {
+    const scene = { ...(context.shortScene || {}), narration: context.narration || '', sceneFocus: text };
+    if (detectShortformFactlessScene(scene, 'sceneFocus', { normalizedInput: context.normalizedInput || {}, sceneNumber: (context.sceneIndex || 0) + 1 })) {
+      const groundedAnchor = selectGroundedShortformAnchor(context, anchor);
+      text = sanitizeShortformText(`${context.shortScene?.role || 'Scene focus'}: ${groundedAnchor}.`);
+    }
+  }
+  return text;
+}
+
+function selectGroundedShortformAnchor(context = {}, fallback = '') {
+  const topic = context.normalizedInput?.topic || '';
+  const candidates = [
+    ...(context.shortScene?.sourceFacts || []),
+    ...(context.shortScene?.usedFactTexts || []),
+    fallback,
+    topic
+  ];
+  return candidates
+    .map((value) => compactGroundingFact(value, 8, topic))
+    .find((value) => value && !/^the source (?:boundary|limit)/i.test(value))
+    || compactGroundingFact(fallback || topic, 8, topic)
+    || 'the source detail';
+}
+
+function compactGroundingFact(value, maxWords, topic = '') {
+  const raw = sanitizeShortformText(value)
+    .replace(new RegExp(`^${escapeRegExp(topic)}\\s*`, 'i'), '')
+    .replace(/^[a-z\s-]+:\s*/i, '')
+    .replace(/[.!?]+$/g, '')
+    .trim();
+  const words = raw.split(/\s+/).filter(Boolean);
+  if (!words.length) return '';
+  return cleanShortformFactClause(lowercaseStart(trimWeakEnding(words.slice(0, maxWords)).join(' ')));
+}
+
 function startsWithSubject(fact, subject) {
   const factKey = exactTextKey(fact);
   const subjectKey = exactTextKey(subject);
@@ -1413,7 +1498,8 @@ function detectBrokenShortformText(value) {
     /\b(?:begins with|centered on|focusing on)\s+works because\b/i,
     /\bworks because\s+(?:the|a|an|and|or|with)?\s*$/i,
     /\b(?:opens on|is shaped by|changes when|is tested by|points to)\s+(?:and|or|with|to|of|in|on|as)\b/i,
-    /\b(?:opens on|is shaped by|changes when|depends on|shifts through|ends with|leaves|matters because)\s*[.!?]?$/i,
+    /\b(?:opens on|is shaped by|changes when|depends on|shifts through|ends with|matters because)\s*[.!?]?$/i,
+    /\b(?:the ending|the result|that detail|the detail)\s+leaves\s*[.!?]?$/i,
     /\b(?:the result leaves|that detail points to|the detail remains|keep)\s*(?:and|or|with|to|of)?\s*[.!?]?$/i,
     /\b(?:some versions keep|different tellings keep|that moment leads back to|that is why)\s*[.!?]?$/i,
     /\bundefined\b|\bnull\b|\[object Object\]/i
