@@ -715,9 +715,9 @@
     "slug": "how-creator-library-categories-organize-script-packages",
     "title": "How Creator Library Categories Organize Script Packages",
     "metaTitle": "How Creator Library Categories Organize Script Packages | Library Board",
-    "metaDescription": "A Library Board guide to understanding Creator Library categories as production shelves rather than archive categories.",
-    "excerpt": "A guide to reading Creator Library categories as script-package shelves for video production.",
-    "deck": "Creator Library categories help creators find production-ready script packages. They are connected to the archive, but they are not the same as archive reading categories.",
+    "metaDescription": "A Creator Library guide to using categories as script-package shelves, so creators can find production material without confusing it with archive records.",
+    "excerpt": "Use this Library Board guide to understand how Creator Library categories organize video script packages while keeping them connected to the original archive.",
+    "deck": "Creator Library categories are production shelves. They help creators find script packages by use, topic, and workflow, while the original archive categories remain the story-side map.",
     "category": "Library Board",
     "tag": "Library Categories",
     "tags": [
@@ -726,44 +726,91 @@
       "Script Packages",
       "Library Board"
     ],
-    "readTime": "4 min read",
+    "readTime": "9 min read",
     "publishedAt": "2026-07-18",
-    "updatedAt": "2026-07-18",
+    "updatedAt": "2026-08-12",
     "sections": [
       {
-        "id": "categories-act-like-production-shelves",
-        "title": "Categories act like production shelves",
-        "nav": "Shelves",
+        "id": "treat-library-categories-as-production-shelves",
+        "title": "Treat Library categories as production shelves",
+        "nav": "Production shelves",
         "paragraphs": [
-          "In the Creator Library, a category is a shelf of script packages. It helps the creator find topics by the kind of video they want to make.",
-          "Urban Legends, Internet Folklore, Myths, and Mythic Objects may all need different pacing, visuals, and tone."
+          "Creator Library categories should be understood as production shelves, not as a second version of the Mystery Archive. The Archive organizes original records, folklore entries, strange places, myths, and source-aware stories. The Library organizes material that helps a creator turn those records into video packages.",
+          "This difference matters because the same subject can have two jobs. In the Archive, a topic is something to read. In the Library, the same topic becomes narration, scene structure, image prompts, thumbnail ideas, and production support. A category label should help the visitor know which job they are opening.",
+          "A production shelf should therefore answer a practical question: what kind of script package is this? A creator may be looking for lost worlds, internet folklore, mythic objects, urban legends, strange places, or short-form ideas. The category should make that path visible before the visitor opens an individual page.",
+          "The goal is not to create more labels for their own sake. The goal is to make a growing script collection readable. When the shelves are clear, the Library can expand without becoming a loose pile of disconnected production pages.",
+          "A category should also help the creator understand what not to expect. If the page is a Library shelf, the visitor should expect production-ready packages rather than full original essays. If they want the deeper story record, the shelf should provide a road back to the Archive instead of trying to become the Archive itself."
         ]
       },
       {
-        "id": "category-does-not-change-the-template",
-        "title": "Category does not change the template",
-        "nav": "Template",
+        "id": "separate-category-use-from-archive-identity",
+        "title": "Separate category use from archive identity",
+        "nav": "Use vs identity",
         "paragraphs": [
-          "Every category still uses the same production structure. Story comes first, then Toolkit, Workflow, Long-form Creator, Short-form Creator, and reference material.",
-          "That consistency lets creators move between topics without learning a new page format each time."
+          "A Library category may resemble an Archive category, but it does not have the same role. Archive identity tells readers what kind of story they are reading. Library use tells creators what kind of production package they can make from it. Those two meanings should stay close, but not collapse into one another.",
+          "For example, an internet folklore archive record may become a Library script package for a long-form video, a Shorts hook, or a prompt set. The archive category explains the story world. The Library category explains how the material is arranged for production. Both are useful, but they answer different visitor needs.",
+          "This separation keeps navigation honest. A reader who wants the original record should be able to move back to the Archive. A creator who wants a script package should be able to stay inside the Library. Category language should make that choice easier, not blur the route.",
+          "If the category names become too abstract, users may not know what they are choosing. If they become too identical to archive shelves, users may not understand why the Library exists. The best category names sit between familiar topic identity and clear creator use."
         ]
       },
       {
-        "id": "the-category-sets-expectations",
-        "title": "The category sets expectations",
-        "nav": "Expectations",
+        "id": "organize-by-creator-intent",
+        "title": "Organize by creator intent",
+        "nav": "Creator intent",
         "paragraphs": [
-          "A category helps the creator anticipate the kind of assets they may need. A haunted place may lean on atmosphere, while a mythic object may need a clear central prop.",
-          "The Scene details still make the final decisions, but the category gives the first production direction."
+          "A strong Library category begins with creator intent. The visitor is usually asking what they can make, not only what they can read. They may want a ready long-form narration, a short video angle, a visual prompt set, a thumbnail route, or a story package that can be adapted into several formats.",
+          "This intent should guide the shelf design. A category that collects similar production needs is easier to use than a category that only repeats broad topic words. The topic still matters, but the production use gives the category its Library function.",
+          "Creator intent also helps internal linking. A script package can point to related packages that solve similar production problems, not only packages with similar subject matter. A page about one mystery can lead to another package with a comparable video shape, pacing challenge, or visual approach.",
+          "That makes the Library more useful over time. It becomes a working production system instead of a static list of scripts. The visitor can move from one package to another because the categories understand what the creator is trying to build.",
+          "This intent-based structure becomes more important as the site adds tools. A creator might begin with a story category, then move to a script package, then later use a tool for prompt cleanup, narration planning, or thumbnail review. Categories should make those future roads feel natural."
         ]
       },
       {
-        "id": "archive-and-library-stay-separate",
-        "title": "Archive and Library stay separate",
-        "nav": "Separation",
+        "id": "keep-category-pages-readable",
+        "title": "Keep category pages readable",
+        "nav": "Readable pages",
         "paragraphs": [
-          "Archive categories organize reading records. Library categories organize creator materials.",
-          "The two systems can point to each other, but they serve different jobs."
+          "Category pages should be readable as pages, not only functional as indexes. A visitor should quickly understand what the shelf contains, why the category exists, and which package is a good starting point. This is especially important for a text-heavy site where structure carries the visual weight.",
+          "A good category page can include a short introduction, featured packages, latest packages, related shelves, and routes back to the Archive. It should not become a wall of links with no explanation. The page should help visitors choose, not simply prove that many items exist.",
+          "The order matters. Start with the category promise, then show strong entry points, then allow deeper browsing. If every link appears at the same weight, the creator has to do too much sorting. If the page gives clear entry points, the shelf feels curated.",
+          "Readable category pages also support search visitors. Someone who lands on a category should understand the page even before clicking a script. The category becomes a useful public guide as well as a navigation tool."
+        ]
+      },
+      {
+        "id": "connect-categories-back-to-original-records",
+        "title": "Connect categories back to original records",
+        "nav": "Archive route",
+        "paragraphs": [
+          "Library categories should always preserve a route back to the original archive records. The Library is built from the Archive. If that connection disappears, the script packages can look like generic creator assets rather than Kyunolab production material.",
+          "This does not mean every category page needs to explain the full archive system. It means the route should be visible. A creator browsing script packages should be able to find the original story, source-aware guide, or related archive shelf when they need more context.",
+          "The archive route also protects quality. When a creator can move back to the original record, they are less likely to treat the script package as a detached prompt. They can check the story, tone, source boundary, and central image before adapting the material.",
+          "Good categories therefore work like bridges. They help creators browse production material while keeping the original reading path nearby. The visitor can move between Archive and Library without feeling that they entered two unrelated sites.",
+          "The connection should be visible but not noisy. A shelf can point toward the Archive through a clear button, side route, or related block. It does not need to repeat the same links everywhere. The visitor should feel guided, not surrounded by duplicate navigation."
+        ]
+      },
+      {
+        "id": "avoid-category-overlap-that-confuses-users",
+        "title": "Avoid category overlap that confuses users",
+        "nav": "Avoid overlap",
+        "paragraphs": [
+          "Some overlap is natural in a growing Library, but category overlap should not confuse users. If the same package could belong everywhere, the shelves stop helping. If categories are too narrow, the site creates too many doors with too few pages behind them. The balance is practical, not theoretical.",
+          "A useful category should have enough shared production logic to justify its shelf. The packages should feel related in topic, format, or creator use. If the only connection is vague mystery atmosphere, the category may be too loose. If the connection is so specific that only one page fits, it may be better as a tag or related link.",
+          "This is where periodic review matters. As the Library grows, some categories may need to merge, split, or be renamed. The goal is not to preserve the first version forever. The goal is to keep the browsing experience clear as the number of packages increases.",
+          "Clear categories reduce friction. A creator should not wonder where to start, why two shelves look identical, or whether they are missing a better route. The shelf should make the next click feel obvious.",
+          "Overlap can be handled with secondary tags, related shelves, and internal recommendations. The primary category should still tell the visitor where the package mainly belongs. That keeps the main shelf simple while allowing the broader network to remain rich."
+        ]
+      },
+      {
+        "id": "finish-with-a-scalable-library-map",
+        "title": "Finish with a scalable Library map",
+        "nav": "Scalable map",
+        "paragraphs": [
+          "The final purpose of Library categories is scale. A small collection can survive with simple lists, but a growing Creator Library needs shelves that can hold many script packages without becoming chaotic. Categories give the Library a map that can grow with the site.",
+          "A scalable map should keep three ideas visible: the creator use, the archive connection, and the next production step. If those ideas are present, a visitor can browse by interest, return to the original story, and choose a package that fits their workflow.",
+          "This structure also supports future tools. When tool pages arrive, Library categories can connect to them naturally: image tools, narration tools, prompt workflows, thumbnail helpers, or editing guides. The category shelf becomes one part of a larger production road system.",
+          "A good category system does not need to be flashy. It needs to be stable, understandable, and useful. If it helps creators find the right package and still understand where that package came from, it is doing its job.",
+          "A scalable map also makes maintenance easier. When a new package is added, the question is not where can it be forced to fit, but which shelf helps the right creator find it. That practical test keeps the category system aligned with real use.",
+          "The final test is whether a new visitor can understand the shelf without prior explanation. If the category name, introduction, featured items, and cross routes make the next step clear, the shelf is strong enough to support more packages."
         ]
       }
     ]
@@ -773,9 +820,9 @@
     "slug": "how-original-archive-records-and-creator-scripts-stay-separate",
     "title": "How Original Archive Records and Creator Scripts Stay Separate",
     "metaTitle": "How Original Archive Records and Creator Scripts Stay Separate | Library Board",
-    "metaDescription": "A Library Board guide explaining the boundary between Kyunolab Archive records and Creator Library production pages.",
-    "excerpt": "A guide to the boundary between reading records and creator-facing production materials.",
-    "deck": "Kyunolab keeps Archive records and Creator Library scripts connected but separate. This guide explains why that boundary matters for readers and creators.",
+    "metaDescription": "A Creator Library guide explaining how original archive records and creator scripts should stay separate while remaining linked across Kyunolab.",
+    "excerpt": "Use this Library Board guide to keep archive records and creator scripts connected without mixing story articles, narration packages, prompts, and production notes.",
+    "deck": "Original archive records and creator scripts are connected, but they are not the same page type. Separation protects reading quality, production usefulness, and internal navigation.",
     "category": "Library Board",
     "tag": "Archive Connection",
     "tags": [
@@ -784,44 +831,92 @@
       "Source Boundaries",
       "Creator Library"
     ],
-    "readTime": "4 min read",
+    "readTime": "9 min read",
     "publishedAt": "2026-07-18",
-    "updatedAt": "2026-07-18",
+    "updatedAt": "2026-08-12",
     "sections": [
       {
-        "id": "archive-is-for-reading",
-        "title": "Archive is for reading",
-        "nav": "Archive role",
+        "id": "define-the-two-page-jobs",
+        "title": "Define the two page jobs",
+        "nav": "Two jobs",
         "paragraphs": [
-          "The Mystery Archive presents the record as a reading experience. It focuses on story, source status, meaning, atmosphere, and related archive paths.",
-          "It does not need to behave like a production checklist."
+          "An original archive record and a creator script have different jobs. The archive record is a reader-facing article. It explains the story, its motif, its cultural or internet context, and its source boundary. The creator script is a production package. It turns that material into narration, scenes, prompts, thumbnail ideas, and workflow support.",
+          "The two pages should be connected because the script package depends on the archive record. But they should not be merged. If the archive article becomes full of production instructions, it stops reading like a story. If the script package becomes a full archive essay, it becomes harder to use for production.",
+          "This separation is one of the main reasons the Kyunolab structure can grow. Readers can browse the Archive without being pulled into production material. Creators can browse the Library without losing the original source route. Each side serves its own visitor need.",
+          "The simplest rule is this: the Archive explains what the story is, while the Library helps turn that story into a video. The connection should be strong, but the page jobs should remain distinct.",
+          "This distinction should be visible in layout as well as text. Archive pages can prioritize reading flow, answer blocks, source-aware sections, and related story paths. Script pages can prioritize package maps, scene material, copy buttons, production notes, and creator routes. The design should reinforce the job."
         ]
       },
       {
-        "id": "creator-library-is-for-making",
-        "title": "Creator Library is for making",
-        "nav": "Library role",
+        "id": "protect-the-archive-reading-experience",
+        "title": "Protect the archive reading experience",
+        "nav": "Reading",
         "paragraphs": [
-          "The Creator Library turns selected archive material into production-ready assets. It gives narration, prompts, music direction, editing guidance, and optional advanced notes.",
-          "Its purpose is not just to explain the story. Its purpose is to help someone make a finished video."
+          "The Archive should remain readable for visitors who want stories, folklore, strange places, myths, and source-aware explanations. Those readers may not care about video production. If a page forces them through prompts, toolkit notes, scene checklists, or narration fields, the reading experience becomes weaker.",
+          "A strong archive record can still link to creator material. It can show that a script package exists, recommend related Library pages, and point to tools when they are useful. But those links should not take over the article. The article should first satisfy the reader who came to understand the story.",
+          "This protects search intent as well. A visitor searching for a legend or mystery likely expects an explanation, not a production workspace. If the archive record answers that intent clearly, the site earns trust. The creator route can then appear as a secondary path for visitors who want to do more with the material.",
+          "Reader trust is valuable. Once the Archive feels dependable, the Library connection becomes more attractive because it feels like an extension of a clear record, not a replacement for one.",
+          "The Archive can still support creators indirectly. A strong article gives better raw material for scripts, prompts, and narration. But it does that by being a better article first. The reader-facing record should not become weaker in order to make production easier."
         ]
       },
       {
-        "id": "connections-should-be-clear-not-blended",
-        "title": "Connections should be clear, not blended",
-        "nav": "Connections",
+        "id": "protect-the-script-production-experience",
+        "title": "Protect the script production experience",
+        "nav": "Production",
         "paragraphs": [
-          "A script page may link back to the original record, but it should not replace that record. The reading page and production page should each keep their own role.",
-          "That separation helps the site stay understandable as both the Archive and the Creator Library grow."
+          "The creator script should remain useful for production. A creator opening the page should quickly understand the package: story context, video length, scene structure, narration, image prompts, Shorts material, thumbnails, and related production guidance. They should not have to search through a full archive article to find the assets.",
+          "This does not mean the script page ignores context. In fact, the best script packages begin with story context. But that context should prepare production. It should orient the creator, not repeat the entire archive record. The detailed reading path belongs on the original article.",
+          "Production pages need a different rhythm. They need copyable material, visible scene units, compact tool guidance, optional advanced notes, and clear routes to related packages. Their structure should make the creator feel that the video can be built from the page.",
+          "If the script page becomes too essay-like, the creator may lose the workflow. Separation keeps the package practical while still respecting the story that created it.",
+          "The script page can point back to the article whenever deeper context is needed. That link is more useful than stuffing the entire archive explanation into the production page. The creator gets a clean workflow and still has access to the full record when the project requires it."
         ]
       },
       {
-        "id": "the-boundary-protects-trust",
-        "title": "The boundary protects trust",
-        "nav": "Trust",
+        "id": "use-links-as-bridges-not-mixtures",
+        "title": "Use links as bridges, not mixtures",
+        "nav": "Bridge links",
         "paragraphs": [
-          "Legends, folklore, mysteries, and invented narrative treatments can easily blur together. Clear page roles help prevent that confusion.",
-          "The Archive preserves the record. The Library adapts the record for production."
+          "Internal links should act as bridges between page types. A script package should link back to the original archive record. An archive record should link toward the creator package when it exists. Board guides can explain how to use either side. Tools can later support specific production steps. The links connect the system without mixing every function into one page.",
+          "This bridge approach makes the site easier to navigate. Visitors can choose the route they need. A reader can stay in the Archive. A creator can move into the Library. Someone looking for guidance can open the Board. The page does not need to solve every job at once because the roads between jobs are clear.",
+          "Links should also be labeled honestly. A button to the original record should say that it opens the archive version. A Library route should say that it opens a script or production package. The visitor should know what kind of page is coming before they click.",
+          "Good bridge links create trust. They show that the site is connected by design rather than patched together after the fact.",
+          "Bridge links also make later site changes safer. If tools, new Library formats, or richer board guides are added, the existing pages can point toward them without changing their own identity. The page remains focused while the road network grows."
+        ]
+      },
+      {
+        "id": "keep-source-boundaries-visible",
+        "title": "Keep source boundaries visible",
+        "nav": "Source boundary",
+        "paragraphs": [
+          "Source boundaries should remain visible on both sides, but they should be handled differently. The archive record should explain what is known, what is uncertain, and what should be treated as folklore, rumor, legend, or internet culture. The script package should carry that awareness into production choices without becoming a full source essay.",
+          "This is important because video production can make uncertain material feel more definite than it is. A dramatic narration line, strong image, or bold thumbnail can accidentally imply proof. The Library should help creators avoid that by keeping the archive connection and source limits nearby.",
+          "The separation helps here too. The archive page can hold deeper explanation. The script page can translate the boundary into practical production notes: avoid false certainty, keep the tone source-aware, do not show proof that the record does not provide, and let mystery remain unresolved when appropriate.",
+          "When source boundaries are visible in the right way, the site can tell compelling stories without pretending every tradition is verified fact."
+        ]
+      },
+      {
+        "id": "avoid-duplicating-the-same-page-in-two-places",
+        "title": "Avoid duplicating the same page in two places",
+        "nav": "No duplicates",
+        "paragraphs": [
+          "The Archive and Library should not become duplicate versions of the same page. Duplication creates confusion for visitors and for search engines. If two pages have the same purpose and similar content, users may not know which one to open. The site also loses the advantage of having clear page types.",
+          "The safer structure is transformation, not duplication. The Library transforms the archive record into a production package. It may summarize the story, but then it moves into script material, scene design, image prompts, and creator workflow. The Archive remains the deeper reading record.",
+          "This also makes future updates easier. If the archive article is improved, the Library package can be refreshed to match it. If the production format changes, the archive article does not need to absorb those changes. Each page can improve inside its own role.",
+          "A linked pair is stronger than two blurred copies. The visitor gets both a reading page and a production page, with each one doing the job it is best suited to do.",
+          "This also helps future regeneration. When the archive changes, the Library can be refreshed from the improved source. When the Library format improves, scripts can be rebuilt without rewriting the original article. Separation gives each side room to evolve."
+        ]
+      },
+      {
+        "id": "finish-with-a-clear-two-way-route",
+        "title": "Finish with a clear two-way route",
+        "nav": "Two-way route",
+        "paragraphs": [
+          "The final goal is a clear two-way route. From an archive record, a visitor can move into the creator script if they want production material. From a creator script, a visitor can return to the archive record if they need the original story. The road should work in both directions.",
+          "This route supports the larger Kyunolab structure. Archive, Library, Board, and future Tools can remain independent buildings while still sharing roads. The visitor does not need every function on every page because the navigation makes the next step visible.",
+          "A clean separation also helps quality control. When reviewing a page, the question becomes simpler. Is this page doing its own job well? Is the bridge to the related page clear? If both answers are yes, the structure is working.",
+          "Original records and creator scripts should stay separate because separation makes both stronger. The Archive can be a better archive, the Library can be a better production system, and the visitor can move between them without losing the story.",
+          "The route should be obvious near the top and near the lower reading path. Visitors should not have to hunt for the connected page type. A clean two-way road makes the whole site feel intentional, especially when Archive, Library, Board, and Tools continue to grow.",
+          "That clarity is what makes the separation worth keeping. The reader gets a focused story page, the creator gets a focused production page, and the site gains a stronger internal structure because each road has a clear destination."
         ]
       }
     ]
@@ -831,9 +926,9 @@
     "slug": "how-to-build-a-complete-video-from-one-script-page",
     "title": "How to Build a Complete Video From One Script Page",
     "metaTitle": "How to Build a Complete Video From One Script Page | Library Board",
-    "metaDescription": "A Library Board guide to following one Creator Library page from Story through Finish to complete a mystery video.",
-    "excerpt": "A guide to using one Creator Library script page as a complete path from story understanding to finished video.",
-    "deck": "A Creator Library page is designed to carry the creator from understanding the story to assembling the final video. This guide explains the intended flow.",
+    "metaDescription": "A Creator Library guide to building a complete image-led narration video from one script page, using story context, scenes, prompts, audio, and final checks.",
+    "excerpt": "Use this Library Board guide to move from one Creator Library script page to a complete video without losing the story, scene order, or archive connection.",
+    "deck": "A good script page should be enough to build a complete video. The creator still chooses tools and style, but the page should provide the story route, scene structure, narration, prompts, and production checks.",
     "category": "Library Board",
     "tag": "Production Flow",
     "tags": [
@@ -842,44 +937,92 @@
       "Creator Library",
       "Script Page"
     ],
-    "readTime": "4 min read",
+    "readTime": "9 min read",
     "publishedAt": "2026-07-18",
-    "updatedAt": "2026-07-18",
+    "updatedAt": "2026-08-12",
     "sections": [
       {
-        "id": "begin-with-story",
-        "title": "Begin with Story",
-        "nav": "Story",
+        "id": "start-with-the-page-purpose",
+        "title": "Start with the page purpose",
+        "nav": "Page purpose",
         "paragraphs": [
-          "Start by reading Story Summary and Story Information. This gives the topic, mood, core motif, setting, and production difficulty before any assets are made.",
-          "The first step is not copying a prompt. The first step is knowing what kind of video the story wants to become."
+          "A complete video begins by understanding what the script page is for. The page is not only a text article, and it is not only a prompt list. It is a production package built from an archive record. Before copying anything, the creator should understand the subject, intended video length, scene count, and production style.",
+          "The page purpose tells the creator what kind of video they are making. Is it a long-form image-led narration? A short-form hook? A package with both formats? A topic that needs careful source boundaries? A story that depends on one strong visual center? The first read should answer those questions.",
+          "This prevents a common production mistake: starting with a single asset and trying to build the whole video around it. A strong thumbnail, prompt, or narration line can be useful, but the finished video needs a route. The page purpose gives that route before the creator begins assembling pieces.",
+          "When the purpose is clear, the creator can move faster without becoming careless. They know what the page promises and what the final video should feel like.",
+          "This first check also helps the creator decide whether to use the whole package or only part of it. A long-form package may contain Shorts material, thumbnail ideas, and related paths, but the creator should know which output they are building before choosing assets."
         ]
       },
       {
-        "id": "prepare-the-basic-assets",
-        "title": "Prepare the basic assets",
-        "nav": "Prepare",
+        "id": "read-the-story-context-before-copying-assets",
+        "title": "Read the story context before copying assets",
+        "nav": "Story context",
         "paragraphs": [
-          "Creator Toolkit shows the asset types to prepare: images, narration, background music, editing, and optional motion.",
-          "Production Workflow then turns that preparation into a simple order of work."
+          "The story context should be read before copying narration or prompts. It explains what the topic is, why it belongs in Kyunolab, and how the creator should understand the archive connection. Without that context, production assets can be used correctly in a technical sense but incorrectly in a story sense.",
+          "A creator should look for the central image, the tone, the category, and the source boundary. Those details guide every later decision. They affect how the voice should sound, what the image should show, how intense the music should be, and what the thumbnail should promise.",
+          "This does not require a long study session. It requires a careful orientation. The creator should be able to say, in plain language, what story the video is telling before they begin producing it. If they cannot, they should return to the context section or open the original archive record.",
+          "Story context is the anchor. It keeps the production from becoming a technically polished but generic mystery video.",
+          "The context read is also where the creator can decide how much explanation the viewer needs. Some subjects require more setup before the central image makes sense. Others work because the first image is immediately understandable. The page should help the creator notice that difference."
         ]
       },
       {
-        "id": "create-scene-by-scene",
-        "title": "Create Scene by Scene",
-        "nav": "Create",
+        "id": "follow-the-scene-order",
+        "title": "Follow the scene order",
+        "nav": "Scene order",
         "paragraphs": [
-          "Choose Long-form Creator or Short-form Creator. Then work through the Scenes in order.",
-          "Each Scene gives the narration first, then the visual and editing material needed to produce that moment."
+          "A script page is easiest to produce when the creator follows the scene order. Scene 01 usually opens the subject or hook. Later scenes provide context, develop the central image, introduce uncertainty, widen the pattern, or close with an unresolved beat. The order is part of the production design.",
+          "Skipping around can be useful during review, but the first production pass should respect the sequence. The creator needs to hear how the narration develops and see how each image supports the next. A video may feel disjointed if the scenes are treated as independent clips rather than connected beats.",
+          "Scene order also helps with pacing. A long-form video needs changes in pressure. It cannot simply repeat the same mood. The script page should guide the creator from opening attention to deeper explanation and then toward a final impression that feels earned.",
+          "Following the scene order does not remove creative choice. It gives creative choices a spine. The creator can adjust visuals, voice, and music while still preserving the route of the story."
         ]
       },
       {
-        "id": "finish-with-the-reference-area",
-        "title": "Finish with the reference area",
-        "nav": "Finish",
+        "id": "produce-one-complete-scene-at-a-time",
+        "title": "Produce one complete scene at a time",
+        "nav": "One scene",
         "paragraphs": [
-          "After production, use the Finish area for the original story, usage note, and related script paths.",
-          "The page is complete when the creator can understand the source, make the video, and know where the material came from."
+          "A complete video is built scene by scene. For each scene, the creator should gather the narration, image prompt, visual notes, audio direction, and optional production support before moving on. This keeps the work organized and prevents later confusion.",
+          "Producing one complete scene at a time is especially helpful for image-led videos. The creator can record or generate the voiceover, create the still image, choose the audio bed, and decide whether motion is needed. Each scene becomes a small finished unit that can later be assembled into the full video.",
+          "This method also reveals weak spots early. If a scene has narration but no clear image, the prompt needs work. If the image is strong but does not match the voiceover, the focus needs repair. If the audio overwhelms the voice, the production support needs adjustment.",
+          "The page should make this process natural. A creator should not have to jump across unrelated sections to finish one scene. The materials for that scene should feel like they belong together.",
+          "This scene-by-scene method makes review easier too. Instead of asking whether the whole video is finished, the creator can ask whether Scene 01 is complete, then Scene 02, and so on. Small checks prevent large repairs later."
+        ]
+      },
+      {
+        "id": "use-toolkit-and-advanced-notes-only-where-needed",
+        "title": "Use toolkit and advanced notes only where needed",
+        "nav": "Use support",
+        "paragraphs": [
+          "Toolkit guidance and advanced notes should support the build, not slow it down. The creator can use the toolkit to choose asset types, then use advanced notes when a scene needs extra control. They do not need to treat every optional field as a required production step.",
+          "This matters for scale. A creator may build many videos from many script pages. If every page feels like a large technical project, production becomes exhausting. The core route should remain simple: story, scenes, narration, image, audio, edit, final check.",
+          "Advanced notes become useful when they solve a problem. A negative prompt can clean an image. A motion suggestion can give a still frame gentle life. A thumbnail variation can sharpen discovery. But if the core scene already works, the creator can keep the production restrained.",
+          "A complete video is not the same thing as a maximal video. The right support is whatever makes the story clearer and the finished piece easier to watch.",
+          "This is why optional support should be organized around use rather than pressure. A creator can open the note when a problem appears, use it, and return to the main path. The support layer should feel like a workbench nearby, not an obstacle in the road."
+        ]
+      },
+      {
+        "id": "assemble-and-check-the-whole-video",
+        "title": "Assemble and check the whole video",
+        "nav": "Final check",
+        "paragraphs": [
+          "After the scenes are produced, the creator should assemble the whole video and check it as one piece. Individual scenes may work well on their own while the full video still feels uneven. The final check looks for pacing, audio consistency, image continuity, and story clarity.",
+          "The creator should ask whether the viewer can follow the story from the first image to the final pause. Does the opening make the subject clear? Does the middle add context or pressure? Does the ending leave the right kind of impression? Are there scenes that repeat the same point without adding anything?",
+          "Audio should be checked at this stage too. Music that sounded subtle in isolation may compete with narration once all scenes are assembled. Sound effects may repeat too often. The final mix should keep the voice in front and the mood consistent.",
+          "This whole-video check is where the script page proves its usefulness. If the page has provided a clear route, the creator should be able to assemble the production without rebuilding the story from scratch.",
+          "The creator should also watch for promise drift. If the title, thumbnail, opening narration, and final scene seem to describe different videos, the package needs tightening. A complete video should feel like one promise carried through several scenes."
+        ]
+      },
+      {
+        "id": "finish-with-archive-and-publishing-checks",
+        "title": "Finish with archive and publishing checks",
+        "nav": "Publish check",
+        "paragraphs": [
+          "Before publishing, the creator should check the video against the original archive record. The finished piece does not need to repeat the article, but it should still represent the same subject, tone, and source boundary. If the video has drifted into a different promise, the page has not been followed carefully enough.",
+          "Publishing checks should also include title, description, thumbnail, and internal link choices. The viewer should understand whether the video is a story explanation, a mystery narration, a short-form hook, or a creator adaptation. The promise should match the content.",
+          "The script page can support this by keeping related paths visible: original archive story, related scripts, board guides, and future tool routes. A complete video does not end the site journey. It can point viewers back into the Archive or forward into more creator material.",
+          "The final standard is simple: one script page should give the creator enough structure to make one complete video without losing the original story. If the finished video feels coherent, source-aware, and watchable, the page has done its job.",
+          "A publishing check should also ask whether the viewer has a next path. If the video points people back to the original record, related scripts, or a useful guide, the production becomes part of the site network rather than a dead end.",
+          "That final link path also helps the site itself. A published video can send people back to the archive, while the archive can send creators toward the script package. One page produces the video, but the whole network supports the visitor journey."
         ]
       }
     ]
