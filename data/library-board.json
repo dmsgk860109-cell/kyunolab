@@ -1,53 +1,87 @@
 [
-  {
+    {
     "id": "how-to-choose-between-long-form-and-short-form-scripts",
     "slug": "how-to-choose-between-long-form-and-short-form-scripts",
     "title": "How to Choose Between Long-form and Short-form Scripts",
     "metaTitle": "How to Choose Between Long-form and Short-form Scripts | Library Board",
-    "metaDescription": "A Library Board guide to choosing long-form or short-form Creator Library materials without treating one format as a shortened version of the other.",
-    "excerpt": "A practical guide to deciding whether a Creator Library topic should become a long-form video, a short-form video, or both as separate productions.",
-    "deck": "Long-form and short-form scripts serve different jobs inside the Creator Library. This guide explains how to choose the right production path before opening the Scene workspace.",
+    "metaDescription": "A practical Creator Library guide to choosing long-form scripts, short-form scripts, or both from one archive story while preserving story depth and viewer intent.",
+    "excerpt": "Use this Library Board guide to decide whether an archive record should become a long-form production, a short-form production, or two separate videos with different viewer jobs.",
+    "deck": "Long-form and short-form scripts are not large and small versions of the same page. They are separate production paths. The right choice depends on how much story, context, atmosphere, and visual pressure the archive record needs before it feels complete.",
     "category": "Library Board",
     "tag": "Script Formats",
     "tags": ["Creator Library", "Long-form", "Short-form", "Script Formats"],
-    "readTime": "4 min read",
+    "readTime": "9 min read",
     "publishedAt": "2026-07-18",
-    "updatedAt": "2026-07-18",
+    "updatedAt": "2026-08-12",
     "sections": [
       {
-        "id": "start-with-the-viewing-context",
-        "title": "Start with the viewing context",
-        "nav": "Viewing context",
+        "id": "start-with-the-viewer-job",
+        "title": "Start with the viewer job",
+        "nav": "Viewer job",
         "paragraphs": [
-          "Long-form is built for viewers who want the full shape of a mystery. It gives room for background, uncertainty, atmosphere, and gradual escalation.",
-          "Short-form is built for viewers who need one clear idea quickly. It should feel complete on its own, not like a trimmed preview of a longer video."
+          "The first decision is not length. It is what the viewer is supposed to receive from the piece. Some archive records ask the viewer to spend time with a full mystery: the ordinary beginning, the detail that turns strange, the versions that spread, the uncertainty around sources, and the feeling that remains after the explanation runs out. Other records work because one image or question lands quickly and does not need a long corridor before it becomes clear.",
+          "That is the real difference between long-form and short-form inside the Creator Library. A long-form script gives the viewer a guided passage through the record. It has room to let the story breathe, show why people remember it, and connect the archive source to the production choices. A short-form script gives the viewer one complete strike: a premise, a turn, and a final image that can stand alone without feeling like a broken fragment.",
+          "The weak version of this decision treats short-form as a chopped-down long video, or treats long-form as a short idea padded with repeated explanation. The stronger version begins with the viewer job. If the viewer needs orientation, atmosphere, and source boundaries, the topic is asking for long-form. If the viewer needs one sharp moment that can be understood at once, the topic may be asking for short-form."
         ]
       },
       {
-        "id": "choose-long-form-when-the-story-needs-room",
-        "title": "Choose long-form when the story needs room",
+        "id": "choose-long-form-when-the-story-needs-room-to-become-clear",
+        "title": "Choose long-form when the story needs room to become clear",
         "nav": "Long-form",
         "paragraphs": [
-          "Use the long-form version when the subject depends on context. Legends with disputed origins, layered motifs, multiple versions, or source boundaries usually need more space.",
-          "A strong long-form script does not simply add more explanation. It lets the viewer move through the mystery one Scene at a time."
+          "Long-form fits an archive record when the mystery depends on context. The viewer may need to know where the story is said to come from, how the detail is usually described, why the image keeps returning, and which parts should be treated as folklore rather than verified fact. Those layers do not have to become a lecture, but they do need space. Without that space, the story may look simple even when its appeal is built from repetition, uncertainty, and atmosphere.",
+          "Use long-form when the strongest material is not only the final reveal but the path toward it. Road legends, ritual warnings, internet folklore, mythic objects, vanished places, and disputed mystery records often need this pace. Their power comes from the way ordinary details gather pressure. A roadside bend matters because someone is already driving alone at night. An empty room matters because it looks normal before it feels impossible. A named object matters because people argue over whether it is history, rumor, symbol, or performance.",
+          "A good long-form script should still feel like a story. Each section or scene needs movement: the setup, the first strange detail, the wider pattern, the competing readings, the source boundary, and the unresolved ending. The creator should not add length just to meet a runtime. The extra room should let the viewer understand why the archive record deserves attention and why the mystery remains memorable even after the factual limits are named."
         ]
       },
       {
-        "id": "choose-short-form-when-the-core-image-is-clear",
-        "title": "Choose short-form when the core image is clear",
+        "id": "choose-short-form-when-one-image-can-carry-the-whole-piece",
+        "title": "Choose short-form when one image can carry the whole piece",
         "nav": "Short-form",
         "paragraphs": [
-          "Use the short-form version when one image, object, location, or question can carry the whole piece. The viewer should understand the premise almost immediately.",
-          "A good short-form script keeps only the pressure point of the story. It moves quickly, but it still has a beginning, a turn, and a final beat."
+          "Short-form fits when a single image, object, place, or question can carry the whole piece. The viewer should understand the pressure point almost immediately: a passenger who disappears, a hallway that should not continue, a mirror phrase that sounds dangerous, a receipt dated too early, a room that looks ordinary and wrong at the same time. The format works when the core image already contains a beginning and a question.",
+          "The short version should not apologize for being brief. It should choose one clean angle and finish it. The opening names the strange thing, the middle sharpens why it matters, and the ending leaves the viewer with a memorable final beat. That final beat can be a line, a visual return, or a small unresolved turn. What matters is that the viewer does not feel pushed away before the piece has completed its promise.",
+          "Short-form becomes weak when it tries to carry every source note, every variation, and every explanation. If the archive record depends on many disputed details, the short should select one visible detail and keep the rest implied. It can point back to the archive or to a long-form package for deeper context, but the short itself should stay focused. One complete moment is stronger than a crowded miniature version of the full article."
         ]
       },
       {
-        "id": "use-both-with-different-intentions",
-        "title": "Use both with different intentions",
+        "id": "use-both-when-the-topic-has-two-different-uses",
+        "title": "Use both when the topic has two different uses",
         "nav": "Using both",
         "paragraphs": [
-          "The same archive record can support both formats. The important thing is to treat each version as its own production.",
-          "Long-form should guide the viewer through the record. Short-form should capture the strongest single moment without flattening the story."
+          "Some archive records can support both formats, but that does not mean one format is the leftover version of the other. They work together when each has a different viewer job. The long-form piece can explain the full route through the archive record. The short-form piece can isolate the image that makes a viewer want to know more. When both pieces know their own job, they reinforce each other instead of repeating each other.",
+          "A familiar legend is the easiest example. The long-form version can explain the versions, the setting, the social fear behind the story, and the reason people keep retelling it. The short-form version can focus on one moment: the empty back seat, the phrase in the mirror, the knock at the wrong door, the room that should have ended. The viewer who watches the short receives a finished moment. The viewer who follows the long-form receives the full route.",
+          "When using both, write the long-form first only if it helps clarify the story spine. Then build the short-form as its own finished piece, not as a trailer with missing parts. The short should not say, in effect, come back later for the real story. It should give a complete dramatic beat while leaving a natural road back to the archive record, the category shelf, or the longer production package."
+        ]
+      },
+      {
+        "id": "keep-the-archive-record-in-charge-of-the-format",
+        "title": "Keep the archive record in charge of the format",
+        "nav": "Archive record",
+        "paragraphs": [
+          "The Creator Library exists because the archive record comes first. A format decision should never pull the subject away from its original story, source boundary, or category route. The script package is a production layer built from the record, not a replacement for it. If the archive article treats a subject as folklore, the script should not pretend it has become verified fact. If the archive article preserves uncertainty, the script should not erase that uncertainty just to make the ending cleaner.",
+          "Before choosing long-form or short-form, look at what the archive record is actually doing. Is it a known legend with shared cultural memory? Is it a newer internet folklore item with a traceable origin? Is it a motif-style record built around paperwork, a place, a strange rule, or an object that appears in the wrong setting? Each type changes the amount of context the viewer needs and the kind of visual support that will make the video feel grounded.",
+          "This is also where internal linking matters. A long-form package should point back to the original archive record for fuller reading and source context. A short-form package should keep the archive route visible enough that the piece does not detach from Kyunolab Mystery Archive. The viewer may enter through a video script, but the road should still lead back to the story shelf that made the production possible."
+        ]
+      },
+      {
+        "id": "match-the-format-to-the-production-workflow",
+        "title": "Match the format to the production workflow",
+        "nav": "Workflow",
+        "paragraphs": [
+          "The format choice also changes the production workflow. Long-form needs a scene path. The creator needs to know where the opening hook ends, where the background begins, when the central mystery becomes visible, and how the ending returns to the first image without sounding repetitive. Image prompts should support that path by showing different stages of the story, not the same mood card over and over.",
+          "Short-form needs compression without confusion. The creator needs fewer beats, a sharper voiceover, and one or two visuals that can carry the entire piece. The image prompt should not become overloaded with every detail from the archive record. It should make the central pressure visible at a glance. Background music, motion, and sound can support the turn, but they should not make the short feel larger than its idea.",
+          "This is why the Library Board should guide the decision before a creator opens the production material. The wrong format makes the rest of the page harder to use. A long-form idea forced into short-form becomes rushed. A short-form image stretched into long-form becomes repetitive. The best choice makes narration, image prompts, thumbnails, and workflow feel like parts of the same video instead of separate boxes of material."
+        ]
+      },
+      {
+        "id": "make-the-final-format-choice",
+        "title": "Make the final format choice",
+        "nav": "Decision path",
+        "paragraphs": [
+          "Choose long-form when the viewer needs context, sequence, atmosphere, and source boundaries. Choose short-form when the viewer can understand the subject through one sharp image or question. Choose both when the archive record has a full story path and a separate single moment strong enough to stand alone. This decision is not about making more pages. It is about choosing the production shape that protects the story.",
+          "A useful final test is simple. If removing the background makes the piece confusing, use long-form. If adding background makes the strongest moment feel slower, use short-form. If both statements are true in different ways, create both, but give each one its own structure. The long-form should feel like a guided archive journey. The short-form should feel like a complete concentrated encounter.",
+          "The goal is not to fill every possible format for every topic. The goal is to help a creator open the right production door, preserve the archive record, and make a video that feels complete in the form the viewer actually sees. When the format follows the story instead of forcing the story to fit the format, the Creator Library becomes easier to use and the archive connection becomes stronger."
         ]
       }
     ]
