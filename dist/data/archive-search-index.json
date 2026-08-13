@@ -1,5 +1,275 @@
 [
   {
+    "id": "tunguska-event-mystery",
+    "slug": "tunguska-event-mystery",
+    "title": "Tunguska Event Mystery: Siberian Blast, Flattened Forest, and the Explosion Without a Crater",
+    "url": "/stories/tunguska-event-mystery",
+    "category": "Unexplained Mysteries",
+    "summary": "Tunguska Event is a pre-existing Unexplained Mysteries subject built around the 1908 Siberian explosion that flattened forest over a vast area and became a major mystery of atmospheric impact evidence.",
+    "description": "Tunguska Event explains the 1908 Siberian explosion that flattened forest over a vast area and became a major mystery of atmospheric impact evidence,.",
+    "tags": [
+      "Impact Mystery",
+      "Tunguska Event",
+      "Siberian blast",
+      "flattened forest"
+    ],
+    "motif": "Impact Mystery",
+    "topics": [
+      "UnexplainedMysteryRecord",
+      "Unexplained Mysteries / Impact Mystery / Evidence-limited public record",
+      "tunguska event mystery",
+      "Tunguska Event is treated through one concrete anchor: the 1908 Siberian explosion that flattened forest over a vast area and became a major mystery of atmospheric impact evidence.",
+      "Tunguska Event",
+      "Siberian blast",
+      "flattened forest",
+      "1908 explosion",
+      "no crater"
+    ]
+  },
+  {
+    "id": "flannan-isles-lighthouse-mystery",
+    "slug": "flannan-isles-lighthouse-mystery",
+    "title": "Flannan Isles Lighthouse Mystery: Missing Keepers, Empty Station, and the Sea Record That Stayed Open",
+    "url": "/stories/flannan-isles-lighthouse-mystery",
+    "category": "Unexplained Mysteries",
+    "summary": "Flannan Isles Lighthouse Mystery is a pre-existing Unexplained Mysteries subject built around the 1900 disappearance of three lighthouse keepers from the Flannan Isles station and the unanswered questions left by the empty lighthouse.",
+    "description": "Flannan Isles Lighthouse Mystery explains the 1900 disappearance of three lighthouse keepers from the Flannan Isles station and the unanswered.",
+    "tags": [
+      "Disappearance Mystery",
+      "Flannan Isles Lighthouse Mystery",
+      "missing keepers",
+      "empty lighthouse"
+    ],
+    "motif": "Disappearance Mystery",
+    "topics": [
+      "UnexplainedMysteryRecord",
+      "Unexplained Mysteries / Disappearance Mystery / Evidence-limited public record",
+      "flannan isles lighthouse mystery",
+      "Flannan Isles Lighthouse Mystery is treated through one concrete anchor: the 1900 disappearance of three lighthouse keepers from the Flannan Isles station and the unanswered questions left by the empty lighthouse.",
+      "Flannan Isles",
+      "missing keepers",
+      "empty lighthouse",
+      "1900 disappearance",
+      "sea record"
+    ]
+  },
+  {
+    "id": "trojan-horse-legend",
+    "slug": "trojan-horse-legend",
+    "title": "Trojan Horse Legend: Hidden Soldiers, Wooden Gift, and the Object That Opened a City",
+    "url": "/stories/trojan-horse-legend",
+    "category": "Mythic Objects",
+    "summary": "Trojan Horse is a pre-existing Mythic Objects subject built around the Greek legendary object used as a deceptive gift, hiding soldiers inside a wooden horse and ending the war at Troy.",
+    "description": "Trojan Horse explains the Greek legendary object used as a deceptive gift, hiding soldiers inside a wooden horse and ending the war at Troy, with.",
+    "tags": [
+      "War Trick Object",
+      "Trojan Horse",
+      "wooden horse",
+      "hidden soldiers"
+    ],
+    "motif": "War Trick Object",
+    "topics": [
+      "MythicObjectRecord",
+      "Mythic Objects / War Trick Object / Mythic tradition and symbolic reading",
+      "trojan horse greek legend",
+      "Trojan Horse is treated through one concrete anchor: the Greek legendary object used as a deceptive gift, hiding soldiers inside a wooden horse and ending the war at Troy.",
+      "Trojan Horse",
+      "wooden horse",
+      "hidden soldiers",
+      "deceptive gift",
+      "Troy"
+    ]
+  },
+  {
+    "id": "mjolnir-thor-hammer-myth",
+    "slug": "mjolnir-thor-hammer-myth",
+    "title": "Mjolnir: Returning Weapon, Thunder Sign, and the Object That Carries Protection",
+    "url": "/stories/mjolnir-thor-hammer-myth",
+    "category": "Mythic Objects",
+    "summary": "Mjolnir is a pre-existing Mythic Objects subject built around the hammer of Thor in Norse mythology, remembered as a returning weapon, thunder sign, protective symbol, and divine object.",
+    "description": "Mjolnir explains the hammer of Thor in Norse mythology, remembered as a returning weapon, thunder sign, protective symbol, and divine object, with.",
+    "tags": [
+      "Divine Weapon Object",
+      "Mjolnir",
+      "thunder weapon",
+      "returning weapon"
+    ],
+    "motif": "Divine Weapon Object",
+    "topics": [
+      "MythicObjectRecord",
+      "Mythic Objects / Divine Weapon Object / Mythic tradition and symbolic reading",
+      "mjolnir norse mythology",
+      "Mjolnir is treated through one concrete anchor: the hammer of Thor in Norse mythology, remembered as a returning weapon, thunder sign, protective symbol, and divine object.",
+      "Mjolnir",
+      "returning weapon",
+      "thunder weapon",
+      "protective symbol",
+      "Norse myth"
+    ]
+  },
+  {
+    "id": "mount-olympus-mythic-home",
+    "slug": "mount-olympus-mythic-home",
+    "title": "Mount Olympus: Greek Divine Home, Clouded Summit, and the Place Where Gods Look Down",
+    "url": "/stories/mount-olympus-mythic-home",
+    "category": "Legendary Places",
+    "summary": "Mount Olympus is a pre-existing Legendary Places subject built around the Greek mountain and mythic home of the Olympian gods, remembered as both a real place and a divine height.",
+    "description": "Mount Olympus explains the Greek mountain and mythic home of the Olympian gods, remembered as both a real place and a divine height, with versions,.",
+    "tags": [
+      "Greek Divine Place",
+      "Mount Olympus",
+      "Olympian gods",
+      "Greek mountain"
+    ],
+    "motif": "Greek Divine Place",
+    "topics": [
+      "LegendaryPlaceRecord",
+      "Legendary Places / Greek Divine Place / Mythic tradition and symbolic reading",
+      "mount olympus greek mythology",
+      "Mount Olympus is treated through one concrete anchor: the Greek mountain and mythic home of the Olympian gods, remembered as both a real place and a divine height.",
+      "Mount Olympus",
+      "Olympian gods",
+      "Greek mountain",
+      "divine home",
+      "clouded summit"
+    ]
+  },
+  {
+    "id": "valhalla-norse-afterlife",
+    "slug": "valhalla-norse-afterlife",
+    "title": "Valhalla: Odin Hall, Chosen Warriors, and the Norse Place Waiting for Battle Again",
+    "url": "/stories/valhalla-norse-afterlife",
+    "category": "Legendary Places",
+    "summary": "Valhalla is a pre-existing Legendary Places subject built around the Norse mythic hall where chosen warriors are received by Odin and prepared for the final battle.",
+    "description": "Valhalla explains the Norse mythic hall where chosen warriors are received by Odin and prepared for the final battle, with versions, source limits,.",
+    "tags": [
+      "Norse Afterlife Place",
+      "Valhalla",
+      "Odin",
+      "chosen warriors"
+    ],
+    "motif": "Norse Afterlife Place",
+    "topics": [
+      "LegendaryPlaceRecord",
+      "Legendary Places / Norse Afterlife Place / Mythic tradition and symbolic reading",
+      "valhalla norse afterlife",
+      "Valhalla is treated through one concrete anchor: the Norse mythic hall where chosen warriors are received by Odin and prepared for the final battle.",
+      "Valhalla",
+      "Odin",
+      "chosen warriors",
+      "Norse afterlife",
+      "final battle"
+    ]
+  },
+  {
+    "id": "bioluminescent-bay-phenomenon",
+    "slug": "bioluminescent-bay-phenomenon",
+    "title": "Bioluminescent Bay Phenomenon: Glowing Water, Tiny Organisms, and the Shore That Lights Up at Night",
+    "url": "/stories/bioluminescent-bay-phenomenon",
+    "category": "Strange Nature",
+    "summary": "Bioluminescent Bay is a pre-existing Strange Nature subject built around the natural phenomenon in which microscopic organisms make dark coastal water glow blue-green when waves or movement disturb it.",
+    "description": "Bioluminescent Bay explains the natural phenomenon in which microscopic organisms make dark coastal water glow blue-green when waves or movement.",
+    "tags": [
+      "Glowing Water Phenomenon",
+      "Bioluminescent Bay",
+      "glowing water",
+      "dinoflagellates"
+    ],
+    "motif": "Glowing Water Phenomenon",
+    "topics": [
+      "StrangeNatureRecord",
+      "Strange Nature / Glowing Water Phenomenon / Evidence-limited public record",
+      "bioluminescent bay phenomenon",
+      "Bioluminescent Bay is treated through one concrete anchor: the natural phenomenon in which microscopic organisms make dark coastal water glow blue-green when waves or movement disturb it.",
+      "bioluminescent bay",
+      "glowing water",
+      "dinoflagellates",
+      "night shore",
+      "blue-green light"
+    ]
+  },
+  {
+    "id": "catatumbo-lightning-phenomenon",
+    "slug": "catatumbo-lightning-phenomenon",
+    "title": "Catatumbo Lightning: Lake Maracaibo Storms, Night Flashes, and the Sky That Keeps Returning",
+    "url": "/stories/catatumbo-lightning-phenomenon",
+    "category": "Strange Nature",
+    "summary": "Catatumbo Lightning is a pre-existing Strange Nature subject built around the recurring lightning phenomenon near Lake Maracaibo where frequent night flashes became a natural spectacle and regional marker.",
+    "description": "Catatumbo Lightning explains the recurring lightning phenomenon near Lake Maracaibo where frequent night flashes became a natural spectacle and.",
+    "tags": [
+      "Lightning Phenomenon",
+      "Catatumbo Lightning",
+      "Lake Maracaibo",
+      "night flashes"
+    ],
+    "motif": "Lightning Phenomenon",
+    "topics": [
+      "StrangeNatureRecord",
+      "Strange Nature / Lightning Phenomenon / Evidence-limited public record",
+      "catatumbo lightning phenomenon",
+      "Catatumbo Lightning is treated through one concrete anchor: the recurring lightning phenomenon near Lake Maracaibo where frequent night flashes became a natural spectacle and regional marker.",
+      "Catatumbo Lightning",
+      "Lake Maracaibo",
+      "night flashes",
+      "Venezuela",
+      "recurring storms"
+    ]
+  },
+  {
+    "id": "tantalus-punishment-myth",
+    "slug": "tantalus-punishment-myth",
+    "title": "Tantalus Punishment Myth: Forbidden Feast, Water, Fruit, and Desire Kept Just Out of Reach",
+    "url": "/stories/tantalus-punishment-myth",
+    "category": "Myths",
+    "summary": "Tantalus is a pre-existing Myths subject built around the Greek myth of Tantalus punished in the underworld with water and fruit that recede whenever he reaches for them.",
+    "description": "Tantalus explains the Greek myth of Tantalus punished in the underworld with water and fruit that recede whenever he reaches for them, with versions,.",
+    "tags": [
+      "Greek Punishment Myth",
+      "Tantalus",
+      "forbidden feast",
+      "receding water"
+    ],
+    "motif": "Greek Punishment Myth",
+    "topics": [
+      "MythRecord",
+      "Myths / Greek Punishment Myth / Mythic tradition and symbolic reading",
+      "tantalus punishment myth",
+      "Tantalus is treated through one concrete anchor: the Greek myth of Tantalus punished in the underworld with water and fruit that recede whenever he reaches for them.",
+      "Tantalus",
+      "forbidden feast",
+      "receding water",
+      "unreachable fruit",
+      "Greek underworld"
+    ]
+  },
+  {
+    "id": "sisyphus-boulder-myth",
+    "slug": "sisyphus-boulder-myth",
+    "title": "Sisyphus and the Boulder: Endless Labor, Divine Punishment, and the Hill That Never Ends",
+    "url": "/stories/sisyphus-boulder-myth",
+    "category": "Myths",
+    "summary": "Sisyphus and the Boulder is a pre-existing Myths subject built around the Greek myth of a king condemned to roll a boulder uphill forever, only for it to fall back before completion.",
+    "description": "Sisyphus and the Boulder explains the Greek myth of a king condemned to roll a boulder uphill forever, only for it to fall back before completion, with.",
+    "tags": [
+      "Greek Punishment Myth",
+      "Sisyphus and the Boulder",
+      "boulder",
+      "endless labor"
+    ],
+    "motif": "Greek Punishment Myth",
+    "topics": [
+      "MythRecord",
+      "Myths / Greek Punishment Myth / Mythic tradition and symbolic reading",
+      "sisyphus boulder myth",
+      "Sisyphus and the Boulder is treated through one concrete anchor: the Greek myth of a king condemned to roll a boulder uphill forever, only for it to fall back before completion.",
+      "Sisyphus",
+      "boulder",
+      "endless labor",
+      "Greek underworld",
+      "divine punishment"
+    ]
+  },
+  {
     "id": "basilisk-mythic-creature",
     "slug": "basilisk-mythic-creature",
     "title": "Basilisk: Deadly Gaze, Serpent King, and the Creature Small Enough to Terrify a Bestiary",
