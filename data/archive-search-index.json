@@ -1,5 +1,545 @@
 [
   {
+    "id": "basilisk-mythic-creature",
+    "slug": "basilisk-mythic-creature",
+    "title": "Basilisk: Deadly Gaze, Serpent King, and the Creature Small Enough to Terrify a Bestiary",
+    "url": "/stories/basilisk-mythic-creature",
+    "category": "Mythic Creatures",
+    "summary": "Basilisk is a pre-existing Mythic Creatures subject built around the legendary serpent-like creature remembered through deadly gaze, poisonous breath, rooster associations, and medieval bestiary tradition.",
+    "description": "Basilisk explains the legendary serpent-like creature remembered through deadly gaze, poisonous breath, rooster associations, and medieval bestiary.",
+    "tags": [
+      "Deadly Gaze Creature",
+      "Basilisk",
+      "deadly gaze",
+      "serpent king"
+    ],
+    "motif": "Deadly Gaze Creature",
+    "topics": [
+      "MythicCreatureRecord",
+      "Mythic Creatures / Deadly Gaze Creature / Mythic tradition and symbolic reading",
+      "basilisk mythic creature",
+      "Basilisk is treated through one concrete anchor: the legendary serpent-like creature remembered through deadly gaze, poisonous breath, rooster associations, and medieval bestiary tradition.",
+      "Basilisk",
+      "deadly gaze",
+      "serpent king",
+      "bestiary",
+      "poisonous breath"
+    ]
+  },
+  {
+    "id": "draugr-norse-folklore",
+    "slug": "draugr-norse-folklore",
+    "title": "Draugr Folklore: Restless Dead, Barrow Fear, and the Body That Would Not Stay Buried",
+    "url": "/stories/draugr-norse-folklore",
+    "category": "Mythic Creatures",
+    "summary": "Draugr is a pre-existing Mythic Creatures subject built around the Norse undead figure remembered through burial mounds, physical danger, haunting presence, and saga tradition.",
+    "description": "Draugr explains the Norse undead figure remembered through burial mounds, physical danger, haunting presence, and saga tradition, with versions, source.",
+    "tags": [
+      "Norse Undead Folklore",
+      "Draugr",
+      "Norse folklore",
+      "burial mound"
+    ],
+    "motif": "Norse Undead Folklore",
+    "topics": [
+      "MythicCreatureRecord",
+      "Mythic Creatures / Norse Undead Folklore / Mythic tradition and symbolic reading",
+      "draugr norse folklore",
+      "Draugr is treated through one concrete anchor: the Norse undead figure remembered through burial mounds, physical danger, haunting presence, and saga tradition.",
+      "Draugr",
+      "Norse folklore",
+      "burial mound",
+      "restless dead",
+      "saga tradition"
+    ]
+  },
+  {
+    "id": "okiku-doll-legend",
+    "slug": "okiku-doll-legend",
+    "title": "Okiku Doll Legend: Growing Hair, Temple Display, and the Japanese Doll People Kept Watching",
+    "url": "/stories/okiku-doll-legend",
+    "category": "Modern Legends",
+    "summary": "Okiku Doll is a pre-existing Modern Legends subject built around the Japanese haunted-doll legend associated with hair said to grow, temple display, family memory, and later paranormal retellings.",
+    "description": "Okiku Doll explains the Japanese haunted-doll legend associated with hair said to grow, temple display, family memory, and later paranormal retellings,.",
+    "tags": [
+      "Haunted Doll Legend",
+      "Okiku Doll",
+      "growing hair",
+      "haunted doll"
+    ],
+    "motif": "Haunted Doll Legend",
+    "topics": [
+      "ModernLegendRecord",
+      "Modern Legends / Haunted Doll Legend / Source-aware folklore record",
+      "okiku doll legend",
+      "Okiku Doll is treated through one concrete anchor: the Japanese haunted-doll legend associated with hair said to grow, temple display, family memory, and later paranormal retellings.",
+      "Okiku Doll",
+      "growing hair",
+      "haunted doll",
+      "Japanese legend",
+      "temple display"
+    ]
+  },
+  {
+    "id": "crying-boy-painting-urban-legend",
+    "slug": "crying-boy-painting-urban-legend",
+    "title": "Crying Boy Painting Urban Legend: House Fires, Newspaper Panic, and the Picture That Survived",
+    "url": "/stories/crying-boy-painting-urban-legend",
+    "category": "Urban Legends",
+    "summary": "Crying Boy Painting is a pre-existing Urban Legends subject built around the British urban legend that reproductions of a crying child painting survived house fires and became treated as cursed objects.",
+    "description": "Crying Boy Painting explains the British urban legend that reproductions of a crying child painting survived house fires and became treated as cursed.",
+    "tags": [
+      "Cursed Object Legend",
+      "Crying Boy Painting",
+      "house fire",
+      "cursed picture"
+    ],
+    "motif": "Cursed Object Legend",
+    "topics": [
+      "UrbanLegendRecord",
+      "Urban Legends / Cursed Object Legend / Source-aware folklore record",
+      "crying boy painting urban legend",
+      "Crying Boy Painting is treated through one concrete anchor: the British urban legend that reproductions of a crying child painting survived house fires and became treated as cursed objects.",
+      "Crying Boy painting",
+      "house fire",
+      "cursed picture",
+      "newspaper panic",
+      "surviving print"
+    ]
+  },
+  {
+    "id": "spring-heeled-jack-legend",
+    "slug": "spring-heeled-jack-legend",
+    "title": "Spring-Heeled Jack: Leaping Attacks, Victorian Panic, and the Figure That Would Not Stay Human",
+    "url": "/stories/spring-heeled-jack-legend",
+    "category": "Modern Legends",
+    "summary": "Spring-Heeled Jack is a pre-existing Modern Legends subject built around the Victorian legend of a leaping attacker remembered through sensational reports, strange physical details, and urban fear.",
+    "description": "Spring-Heeled Jack explains the Victorian legend of a leaping attacker remembered through sensational reports, strange physical details, and urban.",
+    "tags": [
+      "Victorian Urban Legend",
+      "Spring-Heeled Jack",
+      "Victorian panic",
+      "leaping attacker"
+    ],
+    "motif": "Victorian Urban Legend",
+    "topics": [
+      "ModernLegendRecord",
+      "Modern Legends / Victorian Urban Legend / Source-aware folklore record",
+      "spring heeled jack legend",
+      "Spring-Heeled Jack is treated through one concrete anchor: the Victorian legend of a leaping attacker remembered through sensational reports, strange physical details, and urban fear.",
+      "Spring-Heeled Jack",
+      "Victorian panic",
+      "leaping attacker",
+      "London reports",
+      "urban fear"
+    ]
+  },
+  {
+    "id": "green-children-of-woolpit-legend",
+    "slug": "green-children-of-woolpit-legend",
+    "title": "Green Children of Woolpit: Strange Visitors, Green Skin, and the Medieval Story of Another Country",
+    "url": "/stories/green-children-of-woolpit-legend",
+    "category": "Classic Folklore",
+    "summary": "Green Children of Woolpit is a pre-existing Classic Folklore subject built around the medieval English account of two green-skinned children said to have appeared near Woolpit and described a strange homeland.",
+    "description": "Green Children of Woolpit explains the medieval English account of two green-skinned children said to have appeared near Woolpit and described a.",
+    "tags": [
+      "Medieval Folklore",
+      "Green Children of Woolpit",
+      "green skin",
+      "medieval England"
+    ],
+    "motif": "Medieval Folklore",
+    "topics": [
+      "ClassicFolkloreRecord",
+      "Classic Folklore / Medieval Folklore / Source-aware folklore record",
+      "green children of woolpit legend",
+      "Green Children of Woolpit is treated through one concrete anchor: the medieval English account of two green-skinned children said to have appeared near Woolpit and described a strange homeland.",
+      "Green Children of Woolpit",
+      "green skin",
+      "medieval England",
+      "Woolpit",
+      "strange homeland"
+    ]
+  },
+  {
+    "id": "dancing-plague-of-1518-mystery",
+    "slug": "dancing-plague-of-1518-mystery",
+    "title": "Dancing Plague of 1518: Strasbourg Records, Exhaustion, and the Mystery of a Public Frenzy",
+    "url": "/stories/dancing-plague-of-1518-mystery",
+    "category": "Unexplained Mysteries",
+    "summary": "Dancing Plague of 1518 is a pre-existing Unexplained Mysteries subject built around the Strasbourg event remembered through reports of people dancing for days, public anxiety, medical explanation, and unresolved interpretation.",
+    "description": "Dancing Plague of 1518 explains the Strasbourg event remembered through reports of people dancing for days, public anxiety, medical explanation, and.",
+    "tags": [
+      "Historical Mystery",
+      "Dancing Plague of 1518",
+      "Strasbourg",
+      "public frenzy"
+    ],
+    "motif": "Historical Mystery",
+    "topics": [
+      "UnexplainedMysteryRecord",
+      "Unexplained Mysteries / Historical Mystery / Evidence-limited public record",
+      "dancing plague of 1518 mystery",
+      "Dancing Plague of 1518 is treated through one concrete anchor: the Strasbourg event remembered through reports of people dancing for days, public anxiety, medical explanation, and unresolved interpretation.",
+      "Dancing Plague of 1518",
+      "Strasbourg",
+      "public frenzy",
+      "exhaustion",
+      "historical record"
+    ]
+  },
+  {
+    "id": "why-salt-is-used-for-protection-in-folklore",
+    "slug": "why-salt-is-used-for-protection-in-folklore",
+    "title": "Why Salt Is Used for Protection in Folklore: Purity, Thresholds, and the Line Danger Should Not Cross",
+    "url": "/stories/why-salt-is-used-for-protection-in-folklore",
+    "category": "Legend Origins",
+    "summary": "Salt Protection Folklore is a pre-existing Legend Origins subject built around the repeated folklore pattern that uses salt as a sign of purity, preservation, boundary-making, and protection at thresholds.",
+    "description": "Salt Protection Folklore explains the repeated folklore pattern that uses salt as a sign of purity, preservation, boundary-making, and protection at.",
+    "tags": [
+      "Protection Motif",
+      "Salt Protection Folklore",
+      "purity",
+      "threshold"
+    ],
+    "motif": "Protection Motif",
+    "topics": [
+      "LegendOriginRecord",
+      "Legend Origins / Protection Motif / Folklore origin and motif record",
+      "salt protection folklore origin",
+      "Salt Protection Folklore is treated through one concrete anchor: the repeated folklore pattern that uses salt as a sign of purity, preservation, boundary-making, and protection at thresholds.",
+      "salt protection",
+      "purity",
+      "threshold",
+      "preservation",
+      "protective boundary"
+    ]
+  },
+  {
+    "id": "why-knocking-on-wood-became-good-luck",
+    "slug": "why-knocking-on-wood-became-good-luck",
+    "title": "Why Knocking on Wood Became Good Luck: Trees, Touch, and the Habit of Protecting a Hope",
+    "url": "/stories/why-knocking-on-wood-became-good-luck",
+    "category": "Legend Origins",
+    "summary": "Knocking on Wood is a pre-existing Legend Origins subject built around the superstition pattern in which touching or knocking on wood protects a wish, reverses a boast, or calls on older tree symbolism.",
+    "description": "Knocking on Wood explains the superstition pattern in which touching or knocking on wood protects a wish, reverses a boast, or calls on older tree.",
+    "tags": [
+      "Good Luck Motif",
+      "Knocking on Wood",
+      "touch wood",
+      "good luck"
+    ],
+    "motif": "Good Luck Motif",
+    "topics": [
+      "LegendOriginRecord",
+      "Legend Origins / Good Luck Motif / Folklore origin and motif record",
+      "knocking on wood good luck origin",
+      "Knocking on Wood is treated through one concrete anchor: the superstition pattern in which touching or knocking on wood protects a wish, reverses a boast, or calls on older tree symbolism.",
+      "knocking on wood",
+      "touch wood",
+      "good luck",
+      "tree symbolism",
+      "protective habit"
+    ]
+  },
+  {
+    "id": "lemuria-lost-continent-legend",
+    "slug": "lemuria-lost-continent-legend",
+    "title": "Lemuria: Lost Continent Theory, Occult Geography, and the World That Moved From Science to Legend",
+    "url": "/stories/lemuria-lost-continent-legend",
+    "category": "Lost Worlds",
+    "summary": "Lemuria is a pre-existing Lost Worlds subject built around the lost-continent idea that began as a scientific hypothesis and later moved into occult geography, mythic speculation, and popular legend.",
+    "description": "Lemuria explains the lost-continent idea that began as a scientific hypothesis and later moved into occult geography, mythic speculation, and popular.",
+    "tags": [
+      "Lost Continent Legend",
+      "Lemuria",
+      "lost continent",
+      "scientific hypothesis"
+    ],
+    "motif": "Lost Continent Legend",
+    "topics": [
+      "LostWorldRecord",
+      "Lost Worlds / Lost Continent Legend / Mythic tradition and symbolic reading",
+      "lemuria lost continent legend",
+      "Lemuria is treated through one concrete anchor: the lost-continent idea that began as a scientific hypothesis and later moved into occult geography, mythic speculation, and popular legend.",
+      "Lemuria",
+      "lost continent",
+      "scientific hypothesis",
+      "occult geography",
+      "mythic speculation"
+    ]
+  },
+  {
+    "id": "shambhala-hidden-kingdom-legend",
+    "slug": "shambhala-hidden-kingdom-legend",
+    "title": "Shambhala: Hidden Kingdom, Sacred Geography, and the Place Sought Beyond Ordinary Maps",
+    "url": "/stories/shambhala-hidden-kingdom-legend",
+    "category": "Lost Worlds",
+    "summary": "Shambhala is a pre-existing Lost Worlds subject built around the hidden kingdom tradition associated with sacred geography, Buddhist imagination, later esoteric searching, and ideal rule.",
+    "description": "Shambhala explains the hidden kingdom tradition associated with sacred geography, Buddhist imagination, later esoteric searching, and ideal rule, with.",
+    "tags": [
+      "Hidden Kingdom Legend",
+      "Shambhala",
+      "hidden kingdom",
+      "sacred geography"
+    ],
+    "motif": "Hidden Kingdom Legend",
+    "topics": [
+      "LostWorldRecord",
+      "Lost Worlds / Hidden Kingdom Legend / Mythic tradition and symbolic reading",
+      "shambhala hidden kingdom legend",
+      "Shambhala is treated through one concrete anchor: the hidden kingdom tradition associated with sacred geography, Buddhist imagination, later esoteric searching, and ideal rule.",
+      "Shambhala",
+      "hidden kingdom",
+      "sacred geography",
+      "Buddhist tradition",
+      "ideal realm"
+    ]
+  },
+  {
+    "id": "roc-giant-bird-myth",
+    "slug": "roc-giant-bird-myth",
+    "title": "Roc Myth: Giant Bird, Ocean Voyages, and the Creature Large Enough to Carry an Elephant",
+    "url": "/stories/roc-giant-bird-myth",
+    "category": "Mythic Creatures",
+    "summary": "Roc is a pre-existing Mythic Creatures subject built around the giant bird of Arabic and Indian Ocean storytelling remembered through travel tales, impossible size, and carried-away animals.",
+    "description": "Roc explains the giant bird of Arabic and Indian Ocean storytelling remembered through travel tales, impossible size, and carried-away animals, with.",
+    "tags": [
+      "Giant Bird Myth",
+      "Roc",
+      "giant bird",
+      "Sinbad"
+    ],
+    "motif": "Giant Bird Myth",
+    "topics": [
+      "MythicCreatureRecord",
+      "Mythic Creatures / Giant Bird Myth / Mythic tradition and symbolic reading",
+      "roc giant bird myth",
+      "Roc is treated through one concrete anchor: the giant bird of Arabic and Indian Ocean storytelling remembered through travel tales, impossible size, and carried-away animals.",
+      "Roc",
+      "giant bird",
+      "travel tales",
+      "impossible size",
+      "carried-away animals"
+    ]
+  },
+  {
+    "id": "manticore-mythic-creature",
+    "slug": "manticore-mythic-creature",
+    "title": "Manticore: Human Face, Lion Body, Scorpion Tail, and the Creature Built From Distant Fear",
+    "url": "/stories/manticore-mythic-creature",
+    "category": "Mythic Creatures",
+    "summary": "Manticore is a pre-existing Mythic Creatures subject built around the legendary hybrid creature described with a human-like face, lion body, dangerous tail, and a reputation carried through bestiaries.",
+    "description": "Manticore explains the legendary hybrid creature described with a human-like face, lion body, dangerous tail, and a reputation carried through.",
+    "tags": [
+      "Hybrid Creature",
+      "Manticore",
+      "human face",
+      "scorpion tail"
+    ],
+    "motif": "Hybrid Creature",
+    "topics": [
+      "MythicCreatureRecord",
+      "Mythic Creatures / Hybrid Creature / Mythic tradition and symbolic reading",
+      "manticore mythic creature",
+      "Manticore is treated through one concrete anchor: the legendary hybrid creature described with a human-like face, lion body, dangerous tail, and a reputation carried through bestiaries.",
+      "manticore",
+      "hybrid creature",
+      "human face",
+      "scorpion tail",
+      "bestiary"
+    ]
+  },
+  {
+    "id": "redcap-border-folklore",
+    "slug": "redcap-border-folklore",
+    "title": "Redcap Folklore: Border Castles, Iron Boots, and the Violent Warning of Ruined Places",
+    "url": "/stories/redcap-border-folklore",
+    "category": "Classic Folklore",
+    "summary": "Redcap is a pre-existing Classic Folklore subject built around the border folklore figure associated with ruined castles, iron boots, blood-red caps, and dangerous threshold places.",
+    "description": "Redcap explains the border folklore figure associated with ruined castles, iron boots, blood-red caps, and dangerous threshold places, with versions,.",
+    "tags": [
+      "Border Folklore",
+      "Redcap",
+      "ruined castle",
+      "iron boots"
+    ],
+    "motif": "Border Folklore",
+    "topics": [
+      "ClassicFolkloreRecord",
+      "Classic Folklore / Border Folklore / Source-aware folklore record",
+      "redcap border folklore",
+      "Redcap is treated through one concrete anchor: the border folklore figure associated with ruined castles, iron boots, blood-red caps, and dangerous threshold places.",
+      "Redcap",
+      "border folklore",
+      "ruined castle",
+      "iron boots",
+      "blood-red cap"
+    ]
+  },
+  {
+    "id": "aokigahara-forest-folklore",
+    "slug": "aokigahara-forest-folklore",
+    "title": "Aokigahara Forest Folklore: Lava Trees, Silence, and the Difficult Legend Around Mount Fuji",
+    "url": "/stories/aokigahara-forest-folklore",
+    "category": "Strange Places",
+    "summary": "Aokigahara Forest is a pre-existing Strange Places subject built around the Japanese forest near Mount Fuji known through volcanic landscape, dense trees, cultural memory, and difficult modern reputation.",
+    "description": "Aokigahara Forest explains the Japanese forest near Mount Fuji known through volcanic landscape, dense trees, cultural memory, and difficult modern.",
+    "tags": [
+      "Forest Folklore",
+      "Aokigahara Forest",
+      "Mount Fuji",
+      "lava forest"
+    ],
+    "motif": "Forest Folklore",
+    "topics": [
+      "StrangePlaceRecord",
+      "Strange Places / Forest Folklore / Source-aware folklore record",
+      "aokigahara forest folklore",
+      "Aokigahara Forest is treated through one concrete anchor: the Japanese forest near Mount Fuji known through volcanic landscape, dense trees, cultural memory, and difficult modern reputation.",
+      "Aokigahara",
+      "Mount Fuji",
+      "lava forest",
+      "dense trees",
+      "Japanese forest"
+    ]
+  },
+  {
+    "id": "winchester-mystery-house-legend",
+    "slug": "winchester-mystery-house-legend",
+    "title": "Winchester Mystery House: Stairways, Doors to Nowhere, and the Mansion Built Into a Legend",
+    "url": "/stories/winchester-mystery-house-legend",
+    "category": "Strange Places",
+    "summary": "Winchester Mystery House is a pre-existing Strange Places subject built around the California mansion remembered through unusual architecture, Sarah Winchester stories, spiritualist interpretation, and tourist legend.",
+    "description": "Winchester Mystery House explains the California mansion remembered through unusual architecture, Sarah Winchester stories, spiritualist.",
+    "tags": [
+      "Mansion Legend",
+      "Winchester Mystery House",
+      "Sarah Winchester",
+      "doors to nowhere"
+    ],
+    "motif": "Mansion Legend",
+    "topics": [
+      "StrangePlaceRecord",
+      "Strange Places / Mansion Legend / Source-aware folklore record",
+      "winchester mystery house legend",
+      "Winchester Mystery House is treated through one concrete anchor: the California mansion remembered through unusual architecture, Sarah Winchester stories, spiritualist interpretation, and tourist legend.",
+      "Winchester Mystery House",
+      "Sarah Winchester",
+      "doors to nowhere",
+      "stairways",
+      "haunted mansion"
+    ]
+  },
+  {
+    "id": "local-58-analog-horror-internet-folklore",
+    "slug": "local-58-analog-horror-internet-folklore",
+    "title": "Local 58 Analog Horror: Emergency Broadcasts, Found Television, and the Signal That Feels Wrong",
+    "url": "/stories/local-58-analog-horror-internet-folklore",
+    "category": "Internet Folklore",
+    "summary": "Local 58 is a pre-existing Internet Folklore subject built around the analog horror web series that uses public-access television, emergency broadcasts, and corrupted signals as internet-era folklore.",
+    "description": "Local 58 explains the analog horror web series that uses public-access television, emergency broadcasts, and corrupted signals as internet-era.",
+    "tags": [
+      "Analog Horror Folklore",
+      "Local 58",
+      "analog horror",
+      "emergency broadcast"
+    ],
+    "motif": "Analog Horror Folklore",
+    "topics": [
+      "InternetFolkloreRecord",
+      "Internet Folklore / Analog Horror Folklore / Source-aware folklore record",
+      "local 58 analog horror internet folklore",
+      "Local 58 is treated through one concrete anchor: the analog horror web series that uses public-access television, emergency broadcasts, and corrupted signals as internet-era folklore.",
+      "Local 58",
+      "analog horror",
+      "emergency broadcast",
+      "found television",
+      "corrupted signal"
+    ]
+  },
+  {
+    "id": "scp-foundation-internet-folklore",
+    "slug": "scp-foundation-internet-folklore",
+    "title": "SCP Foundation: Collaborative Horror, Classified Files, and the Archive That Became Internet Folklore",
+    "url": "/stories/scp-foundation-internet-folklore",
+    "category": "Internet Folklore",
+    "summary": "SCP Foundation is a pre-existing Internet Folklore subject built around the collaborative online fiction project framed as classified containment files, anomalous objects, and shared archive mythology.",
+    "description": "SCP Foundation explains the collaborative online fiction project framed as classified containment files, anomalous objects, and shared archive.",
+    "tags": [
+      "Collaborative Internet Folklore",
+      "SCP Foundation",
+      "containment file",
+      "anomaly archive"
+    ],
+    "motif": "Collaborative Internet Folklore",
+    "topics": [
+      "InternetFolkloreRecord",
+      "Internet Folklore / Collaborative Internet Folklore / Source-aware folklore record",
+      "scp foundation internet folklore",
+      "SCP Foundation is treated through one concrete anchor: the collaborative online fiction project framed as classified containment files, anomalous objects, and shared archive mythology.",
+      "SCP Foundation",
+      "containment file",
+      "anomaly archive",
+      "collaborative horror",
+      "internet folklore"
+    ]
+  },
+  {
+    "id": "the-killer-in-the-backseat-urban-legend",
+    "slug": "the-killer-in-the-backseat-urban-legend",
+    "title": "The Killer in the Backseat: Headlight Warnings, Road Fear, and the Danger Behind the Driver",
+    "url": "/stories/the-killer-in-the-backseat-urban-legend",
+    "category": "Urban Legends",
+    "summary": "The Killer in the Backseat is a pre-existing Urban Legends subject built around the driving legend in which another motorist tries to warn a driver about a hidden attacker in the rear seat.",
+    "description": "The Killer in the Backseat explains the driving legend in which another motorist tries to warn a driver about a hidden attacker in the rear seat, with.",
+    "tags": [
+      "Road Safety Legend",
+      "The Killer in the Backseat",
+      "headlight warning",
+      "rear seat"
+    ],
+    "motif": "Road Safety Legend",
+    "topics": [
+      "UrbanLegendRecord",
+      "Urban Legends / Road Safety Legend / Source-aware folklore record",
+      "killer in the backseat urban legend",
+      "The Killer in the Backseat is treated through one concrete anchor: the driving legend in which another motorist tries to warn a driver about a hidden attacker in the rear seat.",
+      "killer in the backseat",
+      "headlight warning",
+      "rear seat",
+      "night road",
+      "driver danger"
+    ]
+  },
+  {
+    "id": "the-babysitter-and-the-man-upstairs-urban-legend",
+    "slug": "the-babysitter-and-the-man-upstairs-urban-legend",
+    "title": "The Babysitter and the Man Upstairs: Phone Calls, Empty House, and the Voice Already Inside",
+    "url": "/stories/the-babysitter-and-the-man-upstairs-urban-legend",
+    "category": "Urban Legends",
+    "summary": "The Babysitter and the Man Upstairs is a pre-existing Urban Legends subject built around the urban legend in which a babysitter receives threatening calls that are traced to someone already inside the house.",
+    "description": "The Babysitter and the Man Upstairs explains the urban legend in which a babysitter receives threatening calls that are traced to someone already.",
+    "tags": [
+      "Home-Intruder Warning Legend",
+      "The Babysitter and the Man Upstairs",
+      "upstairs intruder",
+      "empty house"
+    ],
+    "motif": "Home-Intruder Warning Legend",
+    "topics": [
+      "UrbanLegendRecord",
+      "Urban Legends / Home-Intruder Warning Legend / Source-aware folklore record",
+      "the babysitter and the man upstairs urban legend",
+      "The Babysitter and the Man Upstairs is treated through one concrete anchor: the urban legend in which a babysitter receives threatening calls that are traced to someone already inside the house.",
+      "babysitter calls",
+      "upstairs intruder",
+      "empty house",
+      "police trace",
+      "home safety warning"
+    ]
+  },
+  {
     "id": "why-names-have-power-in-legends",
     "slug": "why-names-have-power-in-legends",
     "title": "Why Names Have Power in Legends: The Name That Ended the Bargain and Rewired a Warning Tradition",

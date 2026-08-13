@@ -269,6 +269,7 @@ function renderStoryPage(story, previousStory, nextStory) {
       <div class="home-main-column">
         ${renderBreadcrumb(story)}
         ${renderArchiveStoryLead(story, title, description, sections, longformArticle)}
+        ${renderMetaGrid(story)}
         ${renderSearchSummary(story)}
         ${longformArticle ? `${renderReadingBridge(story, recommendationSlots.bridge)}
         <div id="story-content" class="archive-story-content-anchor">
@@ -1398,7 +1399,7 @@ function renderArchiveStoryLead(story, title, description, sections, longformArt
   return `<section class="home-portal-lead archive-story-lead" aria-label="Archive story front entrance">
           <article class="home-lead-story archive-story-hero">
             <p class="label">${escapeHtml(story.category)}</p>
-            <h1>${escapeHtml(title)}</h1>
+            <h1 class="article-title">${escapeHtml(title)}</h1>
             <p>${escapeHtml(deck)}</p>
             <p class="article-updated">Updated ${escapeHtml(formatDate(story.updatedAt || story.publishedAt))}</p>
             <a class="button" href="#story-content">Start reading</a>
