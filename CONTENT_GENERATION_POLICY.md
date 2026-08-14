@@ -105,6 +105,33 @@ However, older Kyunolab content cannot be used as evidence that a new topic exis
 
 New article generation must not create new original archive stories.
 
+## Post-production Publication Review (required before push)
+
+Before pushing a new archive batch, run this practical review and fix issues found:
+
+1. Mandatory sections
+   - Quick Answer
+   - FAQ
+   - Story & Source Note
+   - Related Articles
+   - Final QA Checklist
+2. Source boundary checks
+   - The page must explicitly separate known facts / reported variants / interpretive reading.
+   - Uncertain details must be marked as uncertainty, not presented as confirmed claims.
+   - `researchSources` and `storyBrief.existenceEvidence` must be populated and non-placeholder.
+3. Editorial safety
+   - No invented names, events, places, objects, dialogue, dates, witnesses, causes, or endings outside source-trail scope.
+   - No template-like repetitive cadence across the batch (re-phrased but still distinct by topic).
+4. Metadata and SEO coherence
+   - Title, H1, display title, slug, and canonical URL must align.
+   - `seedKeyword` / `primaryKeyword` should reflect the real topic term and match topic intent.
+5. Relatedness quality
+   - At least 3 related story links are expected.
+   - Related items should improve topical navigation, not duplicate the same cluster repeatedly.
+6. Validation command
+   - Run `node scripts/validate-publish.js --slugs=...`
+   - Do not proceed with deployment if validation fails.
+
 ## Code Locations
 
 - Unified policy constants and Story Brief validation: `scripts/content-policy.js`
