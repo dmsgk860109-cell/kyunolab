@@ -48,7 +48,10 @@ for (const story of stories) {
       : generatedDNA.sectionBlueprint
   };
   if (policyAppliesToStory(story) && story.storyBrief) {
-    story.publicArticlePlan = buildPublicArticlePlan(story);
+    const preserveRepairedPublicPlan =
+      story.publicArticlePlan &&
+      String(story.generatorVersion || '').startsWith('known-story-body-repair');
+    if (!preserveRepairedPublicPlan) story.publicArticlePlan = buildPublicArticlePlan(story);
     if (story.publicArticlePlan?.dek) story.introSummary = story.publicArticlePlan.dek;
     story.contentDNA.sectionBlueprint = story.publicArticlePlan.sections.map((section) => ({
       title: section.heading,
@@ -299,7 +302,7 @@ ${scriptCta ? `        ${scriptCta}
 }
 
 function buildBodySections(story) {
-  const plan = buildPublicArticlePlan(story);
+  const plan = story.publicArticlePlan || buildPublicArticlePlan(story);
   if (plan?.sections?.length) {
     return plan.sections.map((section) => ({
       id: section.id || slugify(section.heading),
@@ -492,9 +495,10 @@ function sectionParagraphs(story, heading, index, vocabulary, details) {
 }
 
 function renderOpening(story) {
-  const plan = buildPublicArticlePlan(story);
+  const plan = story.publicArticlePlan || buildPublicArticlePlan(story);
   if (plan?.introduction?.length) {
-    return plan.introduction
+    const paragraphs = plan.introduction.length > 1 ? plan.introduction.slice(1) : plan.introduction;
+    return paragraphs
       .map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`)
       .join('\n        ');
   }
@@ -583,7 +587,7 @@ function isDeprecatedPublicSection(title) {
 }
 
 function renderFaq(story) {
-  const plan = buildPublicArticlePlan(story);
+  const plan = story.publicArticlePlan || buildPublicArticlePlan(story);
   if (plan?.faq?.length) {
     return `<h2 id="faq">Frequently Asked Questions</h2>
       <div class="faq-list">
@@ -626,7 +630,7 @@ ${questions.map((item) => `        <h3>${escapeHtml(item.q || item.question)}</h
 }
 
 function renderSourceNote(story) {
-  const plan = buildPublicArticlePlan(story);
+  const plan = story.publicArticlePlan || buildPublicArticlePlan(story);
   if (plan?.publicSourceNote) {
     return `<h2 id="source-note">Story &amp; Source Note</h2>
         <p>${escapeHtml(plan.publicSourceNote)}</p>`;
@@ -790,7 +794,7 @@ function renderSearchSummary(story) {
       </div>
     </aside>`;
   }
-  const plan = buildPublicArticlePlan(story);
+  const plan = story.publicArticlePlan || buildPublicArticlePlan(story);
   if (plan?.quickAnswer) {
     const paragraphs = Array.isArray(plan.quickAnswer.paragraphs)
       ? plan.quickAnswer.paragraphs
@@ -859,7 +863,7 @@ function renderReadingBridge(story, relatedStories) {
 
 function renderRelatedArticles(relatedStories) {
   if (!relatedStories.length) return '';
-  const items = relatedStories.slice(0, 6).map((story) => `<a href="/stories/${escapeAttr(story.slug)}"><span>${escapeHtml(story.category)}</span><strong>${escapeHtml(story.title)}</strong></a>`).join('');
+  const items = relatedStories.slice(0, 6).map((story) => `<a href="/stories/${escapeAttr(story.slug)}"><span>${escapeHtml(story.category)}</span><strong>${escapeHtml(story.title)}</strong><span class="sr-only">.</span></a>`).join('');
   return `<section class="related-articles" aria-label="Related articles"><div class="section-head"><h2>Related Articles</h2></div><div class="related-grid">${items}</div></section>`;
 }
 
